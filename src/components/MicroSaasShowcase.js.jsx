@@ -20,7 +20,7 @@ export function MicroSaasShowcase() {
             category: 'ai-ml',
             price: '$29/month',
             rating: 4.9,
-            features['SEO optimization', 'Readability scoring', 'Content suggestions', 'Performance analytics'],
+            features['SEO optimization', 'Readability scoring', 'Content suggestions', 'Performance analytics'],;
             badge: 'Popular',
             color: 'from-purple-500 to-cyan-500'
         },
@@ -32,7 +32,7 @@ export function MicroSaasShowcase() {
             category: 'security',
             price: '$99/month',
             rating: 4.8,
-            features['Real-time monitoring', 'AI threat detection', 'Automated response', 'Compliance reporting'],
+            features['Real-time monitoring', 'AI threat detection', 'Automated response', 'Compliance reporting'],;
             badge: 'New',
             color: 'from-blue-500 to-green-500'
         },
@@ -44,7 +44,7 @@ export function MicroSaasShowcase() {
             category: 'analytics',
             price: '$49/month',
             rating: 4.7,
-            features['Interactive dashboards', 'Custom reports', 'Data integration', 'Real-time updates'],
+            features['Interactive dashboards', 'Custom reports', 'Data integration', 'Real-time updates'],;
             badge: 'Pro',
             color: 'from-green-500 to-teal-500'
         },
@@ -56,7 +56,7 @@ export function MicroSaasShowcase() {
             category: 'automation',
             price: '$39/month',
             rating: 4.6,
-            features['AI personalization', 'Automated workflows', 'Advanced segmentation', 'Performance tracking'],
+            features['AI personalization', 'Automated workflows', 'Advanced segmentation', 'Performance tracking'],;
             badge: 'Featured',
             color: 'from-red-500 to-orange-500'
         },
@@ -68,7 +68,7 @@ export function MicroSaasShowcase() {
             category: 'ai-ml',
             price: '$59/month',
             rating: 4.9,
-            features['24/7 availability', 'AI-powered responses', 'Multi-language support', 'Integration APIs'],
+            features['24/7 availability', 'AI-powered responses', 'Multi-language support', 'Integration APIs'],;
             badge: 'AI',
             color: 'from-pink-500 to-rose-500'
         },
@@ -80,7 +80,7 @@ export function MicroSaasShowcase() {
             category: 'automation',
             price: '$19/month',
             rating: 4.5,
-            features['Automated invoicing', 'Expense tracking', 'Financial reporting', 'Payment reminders'],
+            features['Automated invoicing', 'Expense tracking', 'Financial reporting', 'Payment reminders'],;
             badge: 'Finance',
             color: 'from-yellow-500 to-amber-500'
         },
@@ -92,7 +92,7 @@ export function MicroSaasShowcase() {
             category: 'cloud',
             price: '$79/month',
             rating: 4.8,
-            features['Multi-cloud support', 'Cost optimization', 'Performance monitoring', 'Security compliance'],
+            features['Multi-cloud support', 'Cost optimization', 'Performance monitoring', 'Security compliance'],;
             badge: 'Enterprise',
             color: 'from-indigo-500 to-purple-500'
         },
@@ -104,7 +104,7 @@ export function MicroSaasShowcase() {
             category: 'ai-ml',
             price: '$45/month',
             rating: 4.7,
-            features['AI-powered analysis', 'Competitor insights', 'Keyword research', 'Performance tracking'],
+            features['AI-powered analysis', 'Competitor insights', 'Keyword research', 'Performance tracking'],;
             badge: 'SEO',
             color: 'from-emerald-500 to-blue-500'
         }

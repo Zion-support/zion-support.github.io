@@ -125,7 +125,7 @@ const EquipmentPage = () => {
                 reviewCount: 156,
                 description: "Reliable 2U server with excellent performance and enterprise support."
 
-            ].map((equipment, index) => (
+            ].map((equipment, index) => (;
               <EquipmentCard key={index} equipment={equipment} />
             ))
           )}

@@ -111,7 +111,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
       price: '$899',
       period: '/month',
       description: 'Perfect for small clinics and practices',
-      features[
+      features[;
         'Up to 1,000 patients',
         'Basic predictive analytics',
         'Standard risk scoring',
@@ -119,7 +119,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
         'Basic reporting',
         'Up to 10 user licenses',
         'Core integrations'
-      ],
+      ],;
       cta: 'Start Free Trial',
       popular: false
     },
@@ -128,7 +128,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
       price: '$1,799',
       period: '/month',
       description: 'Ideal for growing healthcare organizations',
-      features[
+      features[;
         'Up to 10,000 patients',
         'Advanced AI analytics',
         'Real-time monitoring',
@@ -139,7 +139,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
         'API access',
         'Custom workflows',
         'Advanced AI models'
-      ],
+      ],;
       cta: 'Start Free Trial',
       popular: true
     },
@@ -148,7 +148,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
       price: '$4,999',
       period: '/month',
       description: 'For large healthcare systems with complex needs',
-      features[
+      features[;
         'Unlimited patients',
         'Premium AI analytics',
         '24/7 dedicated support',
@@ -293,10 +293,10 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -373,14 +373,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Clinical Applications Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -457,14 +457,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>
                 <p className="text-slate-300">{application.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -538,14 +538,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <span className="text-slate-300 text-lg">{benefit}</span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Compliance Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -619,14 +619,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
                 <Shield className="w-8 h-8 text-red-400 mx-auto mb-2" />
                 <span className="text-slate-300 font-medium text-sm">{feature}</span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -703,14 +703,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-slate-300">{useCase.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -786,7 +786,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
                     : 'border-slate-700/50'
                 }`}
 
-                {plan.popular && (
+                {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -819,14 +819,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
                 }`}>
                   {plan.cta}
                 </button>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -876,7 +876,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {

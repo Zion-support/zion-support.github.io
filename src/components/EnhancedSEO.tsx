@@ -32,7 +32,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   author = 'Zion Tech Group',
   section,
   tags = [],
-  const defaultKeywords = [
+  const defaultKeywords = [;
     'AI solutions',
     'cloud computing',
     'cybersecurity',
@@ -116,7 +116,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       "Digital Transformation",
       "Technology Consulting"
     ]
-    "sameAs": [
+    "sameAs": [;
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
       "https://facebook.com/ziontechgroup"

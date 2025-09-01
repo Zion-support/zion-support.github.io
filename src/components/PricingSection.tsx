@@ -163,8 +163,8 @@ export function PricingSection() {
                   }`}
 
                   Get Started
-                </Link>
-              </motion.div>
+                </Link>;
+              </motion.div>;
             )})}
         </div>
 

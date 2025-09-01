@@ -43,11 +43,11 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
     switch (sortBy) {;
       case 'rating':;
         return b.rating - a.rating;
-      case 'price':
+      case 'price':;
         return a.price - b.price;
-      case 'aiScore':
+      case 'aiScore':;
         return b.aiScore - a.aiScore;
-      default:
+      default:;
         return 0}
   });
 

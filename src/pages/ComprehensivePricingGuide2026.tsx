@@ -107,7 +107,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
         </section>
 
         {/* Filters Section */}
-        <section className="py-8">
+        <section className="py-8">;
           <div className="container mx-auto px-4">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -148,7 +148,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
         </section>
 
         {/* Pricing Details Section */}
-        <section className="py-12">
+        <section className="py-12">;
           <div className="container mx-auto px-4">
             {filteredPricing.map((servicePricing, index) => (
               <motion.div
@@ -199,7 +199,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                 </div>
 
                 {/* Market Analysis */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-6 text-center">Market Analysis</h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="text-center">
@@ -217,7 +217,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                   </div>
 
                   {/* Competitors */}
-                  <div className="mt-6">
+                  <div className="mt-6">;
                     <h4 className="text-lg font-semibold text-white mb-3 text-center">Competitor Pricing</h4>
                     <div className="grid grid-cols-1 md: grid-cols-2 gap-3">
                       {servicePricing.marketAnalysis.competitors.map((competitor, idx)  => (
@@ -226,12 +226,12 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </div>;
                 </div>
 
                 {/* Pricing Tiers */}
-                <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
-                  {servicePricing.pricingTiers.map((tier, tierIndex)  => (
+                <div className="grid grid-cols-1 md: grid-cols-3 gap-6">;
+                  {servicePricing.pricingTiers.map((tier, tierIndex)  => (;
                     <motion.div
                       key={tier.name}
                       initial = {
@@ -279,7 +279,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                       </div>
 
                       {/* Features */}
-                      <div className="mb-6">
+                      <div className="mb-6">;
                         <h4 className="text-lg font-semibold text-white mb-3">Features</h4>
                         <div className="space-y-2">
                           {tier.features.map((feature, idx) => (
@@ -289,10 +289,10 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                             </div>
                           ))}
                         </div>
-                      </div>
+                      </div>;
 
                       {/* Limitations */}
-                      {tier.limitations.length > 0 && (
+                      {tier.limitations.length > 0 && (;
                         <div className="mb-6">
                           <h4 className="text-lg font-semibold text-white mb-3">Limitations</h4>
                           <div className="space-y-2">
@@ -307,7 +307,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                       )}
 
                       {/* Target Audience */}
-                      <div className="mb-6">
+                      <div className="mb-6">;
                         <h4 className="text-lg font-semibold text-white mb-3">Target Audience</h4>
                         <div className="flex flex-wrap gap-2">
                           {tier.targetAudience.map((audience, idx) => (
@@ -316,10 +316,10 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                             </span>
                           ))}
                         </div>
-                      </div>
+                      </div>;
 
                       {/* Key Metrics */}
-                      <div className="space-y-3 mb-6">
+                      <div className="space-y-3 mb-6">;
                         <div className="flex justify-between">
                           <span className="text-zinc-400">ROI:</span>
                           <span className="text-white font-medium">{tier.roi}</span>
@@ -332,18 +332,18 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                           <span className="text-zinc-400">Support:</span>
                           <span className="text-white font-medium">{tier.support}</span>
                         </div>
-                      </div>
+                      </div>;
 
                       {/* Market Comparison */}
-                      <div className="mb-6 p-3 bg-white/5 rounded-lg">
+                      <div className="mb-6 p-3 bg-white/5 rounded-lg">;
                         <div className="text-center">
                           <div className="text-sm text-zinc-400 mb-1">Market Position</div>
                           <div className="text-white font-medium">{tier.marketComparison}</div>
                         </div>
-                      </div>
+                      </div>;
 
                       {/* Volume Discounts */}
-                      <div className="mb-6">
+                      <div className="mb-6">;
                         <h4 className="text-lg font-semibold text-white mb-3">Volume Discounts</h4>
                         <div className="space-y-2">
                           {tier.volumeDiscounts.map((discount, idx) => (
@@ -352,18 +352,18 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                             </div>
                           ))}
                         </div>
-                      </div>
+                      </div>;
 
                       {/* CTA Button */}
-                      <button className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-                        Get Started
-                      </button>
+                      <button className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300">;
+                        Get Started;
+                      </button>;
                     </motion.div>
                   ))}
                 </div>
 
                 {/* Special Offers */}
-                <div className="mt-8 bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-2xl p-6 border border-white/10">
+                <div className="mt-8 bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-2xl p-6 border border-white/10">;
                   <h3 className="text-2xl font-bold text-white mb-6 text-center">Special Offers</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <div className="text-center p-4 bg-white/5 rounded-lg">
@@ -390,7 +390,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
         </section>
 
         {/* Market Trends Section */}
-        <section className="py-16">
+        <section className="py-16">;
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -432,7 +432,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
         </section>
 
         {/* Contact CTA Section */}
-        <section className="py-16">
+        <section className="py-16">;
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

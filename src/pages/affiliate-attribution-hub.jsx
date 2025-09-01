@@ -48,19 +48,19 @@ const AffiliateAttributionHub = () => {
     const platformFeatures = [
         {
             category: "Affiliate Management",
-            features["Affiliate onboarding", "Performance tracking", "Commission rules", "Payment processing"]
-        },
+            features["Affiliate onboarding", "Performance tracking", "Commission rules", "Payment processing"];
+        },;
         {
             category: "Analytics & Reporting",
-            features["Real-time dashboards", "Custom reports", "ROI analysis", "Conversion tracking"]
-        },
+            features["Real-time dashboards", "Custom reports", "ROI analysis", "Conversion tracking"];
+        },;
         {
             category: "Fraud Prevention",
-            features["Click fraud detection", "Conversion validation", "IP monitoring", "Behavioral analysis"]
-        },
+            features["Click fraud detection", "Conversion validation", "IP monitoring", "Behavioral analysis"];
+        },;
         {
             category: "Integration & APIs",
-            features["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"]
+            features["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"];
         }
     ];
     const benefits = [

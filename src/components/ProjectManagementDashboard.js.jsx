@@ -10,15 +10,15 @@ const mockProjects = [
         progress: 65,
         startDate: '2024-01-15',
         endDate: '2024-06-30',
-        team['John Smith', 'Sarah Johnson', 'Mike Chen'],
+        team['John Smith', 'Sarah Johnson', 'Mike Chen'],;
         budget: 150000,
         spent: 97500,
-        tasks[
+        tasks[;
             { id: '1', name: 'Frontend Development', status: 'completed', assignee: 'John Smith', dueDate: '2024-03-15', priority: 'high', estimatedHours: 80, actualHours: 75 },
             { id: '2', name: 'Backend API', status: 'in-progress', assignee: 'Sarah Johnson', dueDate: '2024-04-30', priority: 'high', estimatedHours: 120, actualHours: 85 },
             { id: '3', name: 'AI Integration', status: 'todo', assignee: 'Mike Chen', dueDate: '2024-05-15', priority: 'medium', estimatedHours: 100, actualHours: 0 }
         ]
-    },
+    },;
     {
         id: '2',
         name: 'Blockchain Supply Chain Tracker',
@@ -28,14 +28,14 @@ const mockProjects = [
         progress: 25,
         startDate: '2024-03-01',
         endDate: '2024-08-31',
-        team['Emily Davis', 'Alex Rodriguez'],
+        team['Emily Davis', 'Alex Rodriguez'],;
         budget: 200000,
         spent: 50000,
-        tasks[
+        tasks[;
             { id: '4', name: 'Smart Contract Development', status: 'in-progress', assignee: 'Emily Davis', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 150, actualHours: 60 },
             { id: '5', name: 'Frontend Interface', status: 'todo', assignee: 'Alex Rodriguez', dueDate: '2024-05-30', priority: 'high', estimatedHours: 90, actualHours: 0 }
         ]
-    },
+    },;
     {
         id: '3',
         name: 'Mobile Banking App',
@@ -45,10 +45,10 @@ const mockProjects = [
         progress: 90,
         startDate: '2024-02-01',
         endDate: '2024-04-30',
-        team['Lisa Wang', 'David Kim'],
+        team['Lisa Wang', 'David Kim'],;
         budget: 120000,
         spent: 108000,
-        tasks[
+        tasks[;
             { id: '6', name: 'Core Banking Features', status: 'completed', assignee: 'Lisa Wang', dueDate: '2024-03-30', priority: 'high', estimatedHours: 200, actualHours: 190 },
             { id: '7', name: 'Security Testing', status: 'review', assignee: 'David Kim', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 40, actualHours: 35 }
         ]

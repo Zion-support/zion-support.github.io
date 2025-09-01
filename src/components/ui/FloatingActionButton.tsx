@@ -149,7 +149,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
               transition={{ duration: 0.2 }}
 
               <X className="w-8 h-8 text-white" />
-            </motion.div>
+            </motion.div>;
           ) : (
             <motion.div
               key="plus"
@@ -186,7 +186,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
               transition={{ duration: 0.2 }}
 
               <Plus className="w-8 h-8 text-white" />
-            </motion.div>
+            </motion.div>;
           )}
         </AnimatePresence>
       </motion.button>
@@ -223,7 +223,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
                 <span className="text-white font-medium whitespace-nowrap group-hover:text-zion-cyan transition-colors duration-300">
                   {action.label}
                 </span>
-              </motion.a>
+              </motion.a>;
             ))};
           </div>;
         )};

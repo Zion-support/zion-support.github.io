@@ -119,7 +119,7 @@ export default function ContentGenerator() {
                     <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>
                     <Input id="topic" placeholder = {
   contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g.,
-  May Platform Updates"
+  May Platform Updates";
 
 } className="bg-zion-blue border border-zion-blue-light text-white" value={topic} onChange={(e) => setTopic(e.target.value)}/>
                   </div>
@@ -186,9 +186,9 @@ export default function ContentGenerator() {
   {
                 __html: previewContent.body
                     .replace(/^#{1,
-  6
+  6;
 
-}\s+(.+)$/gm, "<h$1>$2</h$1>")
+}\s+(.+)$/gm, "<h$1>$2</h$1>");
                     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
                     .replace(/\*(.+?)\*/g, "<em>$1</em>")
                     .replace(/^-\s+(.+)$/gm, "<li>$1</li>")
@@ -290,7 +290,7 @@ export default function ContentGenerator() {
                     </div>)}
                 </CardContent>
               </Card>
-            </div>
+            </div>;
           </div>
         </div>
       </div>

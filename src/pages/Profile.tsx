@@ -101,7 +101,7 @@ const Profile: React.FC = () => {;
     sessionTimeout: 30,
     passwordLastChanged: '2024-01-15',
     lastLogin: '2024-01-20 14:30:00',
-    loginHistory[
+    loginHistory[;
       { date: '2024-01-20 14:30:00', location: 'San Francisco, CA', device: 'Chrome on MacBook Pro', status: 'success' },
       { date: '2024-01-19 09:15:00', location: 'San Francisco, CA', device: 'Safari on iPhone', status: 'success' },
       { date: '2024-01-18 16:45:00', location: 'New York, NY', device: 'Chrome on Windows', status: 'success' },
@@ -173,7 +173,7 @@ const Profile: React.FC = () => {;
   };
 
   const handleNotificationToggle = (key: keyof NotificationSettings) => {;
-    setNotifications(prev => ({;
+setNotifications(prev: > ({;
       ...prev,;
       [key]: !prev[key];
     }));
@@ -299,13 +299,13 @@ const Profile: React.FC = () => {;
               </div>
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
               <div className="text-slate-400 text-sm">{stat.label}</div>
-            </motion.div>
+            </motion.div>;
           ))}
         </div>
       </div>
 
       {/* Profile Form */}
-      <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
+      <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">;
         <h3 className="text-xl font-semibold text-white mb-6">Personal Information</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -550,7 +550,7 @@ const Profile: React.FC = () => {;
               disabled={isLoading}
               className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg shadow-green-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
 
-              {isLoading ? (
+              {isLoading ? (;
                 <>
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
                   Saving...
@@ -562,12 +562,12 @@ const Profile: React.FC = () => {;
                 </>
               )}
             </button>
-          </div>
+          </div>;
         )}
       </div>
 
       {/* Achievements */}
-      <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
+      <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">;
         <h3 className="text-xl font-semibold text-white mb-6">Achievements</h3>
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">
           {achievements.map((achievement, index)  => (
@@ -620,7 +620,7 @@ const Profile: React.FC = () => {;
               }`}>
                 {achievement.description}
               </p>
-              {achievement.earned && (
+              {achievement.earned && (;
                 <div className="mt-3 flex items-center gap-2 text-yellow-400 text-sm">
                   <CheckCircle className="w-4 h-4" />
                   Earned
@@ -779,14 +779,14 @@ const Profile: React.FC = () => {;
                 {showPasswords.confirm ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
-          </div>
+          </div>;
 
           <button
             onClick={handlePasswordChange}
             disabled={isLoading}
             className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
 
-            {isLoading ? (
+            {isLoading ? (;
               <>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
                 Changing Password...
@@ -802,7 +802,7 @@ const Profile: React.FC = () => {;
       </div>
 
       {/* Security Settings */}
-      <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
+      <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">;
         <h3 className="text-xl font-semibold text-white mb-6">Security Settings</h3>
 
         <div className="space-y-6">
@@ -860,7 +860,7 @@ const Profile: React.FC = () => {;
       </div>
 
       {/* Login History */}
-      <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
+      <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">;
         <h3 className="text-xl font-semibold text-white mb-6">Login History</h3>
 
         <div className="space-y-4">

@@ -20,7 +20,7 @@ const updatePasswordSchema = z
 })
     .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
-    path["confirmPassword"],
+    path["confirmPassword"],;
 });
 export default function UpdatePassword() {
     const [isLoading, setIsLoading] = useState(false);

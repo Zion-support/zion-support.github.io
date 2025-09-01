@@ -7,127 +7,127 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             category: "Quantum Computing",
             icon: Atom,
             description: "Next-generation computing that leverages quantum mechanics for unprecedented processing power",
-            technologies[
+            technologies[;
                 {
                     name: "Quantum Neural Networks",
                     description: "AI systems powered by quantum computing for complex pattern recognition",
                     href: "/quantum-neural-network-platform",
-                    features["Quantum Algorithms", "Superior Performance", "Future-Proof Architecture"],
+                    features["Quantum Algorithms", "Superior Performance", "Future-Proof Architecture"],;
                     status: "Research & Development"
                 },
                 {
                     name: "Quantum Edge Computing",
                     description: "Quantum processing at the edge for real-time applications",
                     href: "/quantum-edge-computing-platform",
-                    features["Low Latency", "High Security", "Scalable Infrastructure"],
+                    features["Low Latency", "High Security", "Scalable Infrastructure"],;
                     status: "Emerging Technology"
 
-            ]
-        },
+            ];
+        },;
         {
             category: "Space Technology",
             icon: Satellite,
             description: "Innovative solutions for space exploration, satellite systems, and space-based services",
-            technologies[
+            technologies[;
                 {
                     name: "Satellite IoT Networks",
                     description: "Global IoT connectivity through satellite constellations",
                     href: "/space-tech",
-                    features["Global Coverage", "Low Power", "Real-time Data"],
+                    features["Global Coverage", "Low Power", "Real-time Data"],;
                     status: "Active Development"
                 },
                 {
                     name: "Space Analytics Platform",
                     description: "AI-powered analysis of space data and satellite imagery",
                     href: "/space-tech",
-                    features["Earth Observation", "Climate Monitoring", "Resource Management"],
+                    features["Earth Observation", "Climate Monitoring", "Resource Management"],;
                     status: "Production Ready"
 
-            ]
-        },
+            ];
+        },;
         {
             category: "5G & Edge Computing",
             icon: Network,
             description: "Advanced networking technologies enabling ultra-fast connectivity and edge processing",
-            technologies[
+            technologies[;
                 {
                     name: "5G Enterprise Solutions",
                     description: "Enterprise-grade 5G network optimization and management",
                     href: "/5g-enterprise-solutions",
-                    features["Network Slicing", "Edge Computing", "IoT Integration"],
+                    features["Network Slicing", "Edge Computing", "IoT Integration"],;
                     status: "Deployment Ready"
                 },
                 {
                     name: "Edge AI Processing",
                     description: "AI processing at the network edge for real-time applications",
                     href: "/services/edge-computing",
-                    features["Low Latency", "High Bandwidth", "Distributed Processing"],
+                    features["Low Latency", "High Bandwidth", "Distributed Processing"],;
                     status: "Production Ready"
 
-            ]
-        },
+            ];
+        },;
         {
             category: "Autonomous Systems",
             icon: Brain,
             description: "Self-learning and self-optimizing systems that operate independently",
-            technologies[
+            technologies[;
                 {
                     name: "Autonomous Business Operations",
                     description: "AI-driven business process automation platform",
                     href: "/autonomous-business-operations-platform",
-                    features["Process Automation", "Decision Support", "Performance Analytics"],
+                    features["Process Automation", "Decision Support", "Performance Analytics"],;
                     status: "Production Ready"
                 },
                 {
                     name: "AI Autonomous Research Assistant",
                     description: "Intelligent research and development automation",
                     href: "/ai-autonomous-research-assistant",
-                    features["Research Automation", "Data Analysis", "Insight Generation"],
+                    features["Research Automation", "Data Analysis", "Insight Generation"],;
                     status: "Research & Development"
 
-            ]
-        },
+            ];
+        },;
         {
             category: "Advanced AI & ML",
             icon: Cpu,
             description: "Cutting-edge artificial intelligence and machine learning technologies",
-            technologies[
+            technologies[;
                 {
                     name: "AI-Powered IT Asset Management",
                     description: "Intelligent IT asset lifecycle management",
                     href: "/ai-powered-it-asset-management",
-                    features["Asset Tracking", "Predictive Maintenance", "Cost Optimization"],
+                    features["Asset Tracking", "Predictive Maintenance", "Cost Optimization"],;
                     status: "Production Ready"
                 },
                 {
                     name: "AI Workflow Automation",
                     description: "Intelligent business process automation",
                     href: "/services/ai-workflow-automation",
-                    features["Process Optimization", "Error Reduction", "Efficiency Gains"],
+                    features["Process Optimization", "Error Reduction", "Efficiency Gains"],;
                     status: "Production Ready"
 
-            ]
-        },
+            ];
+        },;
         {
             category: "Blockchain & Web3",
             icon: CircuitBoard,
             description: "Decentralized technologies and next-generation internet infrastructure",
-            technologies[
+            technologies[;
                 {
                     name: "Blockchain Enterprise Solutions",
                     description: "Enterprise-grade blockchain implementation and consulting",
                     href: "/services/blockchain-enterprise-solutions",
-                    features["Smart Contracts", "Supply Chain", "Digital Identity"],
+                    features["Smart Contracts", "Supply Chain", "Digital Identity"],;
                     status: "Production Ready"
                 },
                 {
                     name: "DeFi Infrastructure",
                     description: "Decentralized finance infrastructure and solutions",
                     href: "/services/blockchain-defi-solutions",
-                    features["DeFi Protocols", "Liquidity Management", "Risk Assessment"],
+                    features["DeFi Protocols", "Liquidity Management", "Risk Assessment"],;
                     status: "Active Development"
 
-            ]
+            ];
 
     ];
     const researchAreas = [
@@ -196,9 +196,9 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             default:
                 return "text-gray-400 bg-gray-400/20"}
     };
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden">;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -240,10 +240,10 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             </div>
           </motion.div>
         </div>
-      </div>
+      </div>;
 
       {/* Technologies Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">;
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-16">
           {technologies.map((category, categoryIndex) => (<motion.div key={category.category} variants={itemVariants}>
               <div className="text-center mb-12">
@@ -293,7 +293,7 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
       </div>
 
       {/* Research & Development Section */}
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-t border-purple-500/20">
+      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-t border-purple-500/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {
   { opacity: 0,
@@ -374,7 +374,7 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
       </div>
 
       {/* CTA Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
         <motion.div initial = {
   { opacity: 0,
   y: 20 

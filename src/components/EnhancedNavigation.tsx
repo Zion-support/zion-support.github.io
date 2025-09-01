@@ -185,7 +185,7 @@ const navigationItems: NavigationItem[] = [
 ];
 
 export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ 
-  className = '',;
+className:  '',;
   onThemeChange ;
 }) => {;
   const [isOpen, setIsOpen] = useState(false);

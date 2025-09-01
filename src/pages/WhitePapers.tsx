@@ -5,28 +5,6 @@ import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, 
 import SEO from '@/components/SEO';
 
 export default function WhitePapers() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const categories = [
-    { id: 'all', name: 'All Categories', icon: <FileText className="w-5 h-5" />, count: 0 },;
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },;
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },;
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },;
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },;
-    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },;
-    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 6 };
-  ];
-
-  const sortOptions = [;
-    { value: 'newest', label: 'Newest First' },;
-    { value: 'popular', label: 'Most Popular' },;
-    { value: 'alphabetical', label: 'Alphabetical' },;
-    { value: 'downloads', label: 'Most Downloaded' };
-import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
-export default function WhitePapers() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [sortBy, setSortBy] = useState('newest');
@@ -127,14 +105,13 @@ export default function WhitePapers() {
       tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],
       coverImage: '/images/whitepapers/digital-transformation-roi.jpg',
       fileSize: '2.2 MB',
+      language: 'English',
+      rating: 4.5,
+      featured: false,
+      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],
+      coverImage: '/images/whitepapers/digital-transformation-roi.jpg',
+      fileSize: '2.2 MB',
       language: 'English'
-      rating: 4.5,;
-      featured: false,;
-      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],;
-      coverImage: '/images/whitepapers/digital-transformation-roi.jpg',;
-      fileSize: '2.2 MB',;
-      language: 'English';
-    };
     }
   ];
 
@@ -156,19 +133,6 @@ export default function WhitePapers() {
       description: 'Real-world examples of successful cloud transformations',
       icon: <Cloud className="w-6 h-6" />,
       link: '/insights/cloud-success-stories'
-    },;
-    {;
-      title: 'Cloud Migration Success Stories',;
-      description: 'Real-world examples of successful cloud transformations',;
-      icon: <Cloud className="w-6 h-6" />,;
-      link: '/insights/cloud-success-stories';
-    };
-  ];
-
-  const getCategoryCount = (categoryId: string) => {;
-    if (categoryId === 'all') {;
-      return whitePapers.length;
-
     }
   ];
 
@@ -180,20 +144,6 @@ export default function WhitePapers() {
   };
 
   // Update counts
-  const formatDate = (dateString: string) => {;
-    return new Date(dateString).toLocaleDateString('en-US', {;
-      year: 'numeric',;
-      month: 'long',;
-      day: 'numeric';
-    });
-  };
-
-  const formatDownloads = (downloads: number) => {;
-    if (downloads >= 1000000) {;
-      return (downloads / 1000000).toFixed(1) + 'M';
-    } else if (downloads >= 1000) {
-      return (downloads / 1000).toFixed(1) + 'K';
-
   categories.forEach(cat => {
     cat.count = getCategoryCount(cat.id);
   });
@@ -388,7 +338,7 @@ export default function WhitePapers() {
                   className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
                     paper.featured ? 'ring-2 ring-zion-cyan' : ''
                   }`}
-
+                >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
@@ -414,11 +364,6 @@ export default function WhitePapers() {
                       <span
                         key={index}
                         className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-                {/* Tags */}
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {paper.tags.map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-slate-700/50 rounded-full text-xs text-slate-300">
                       >
                         {tag}
                       </span>
@@ -496,28 +441,5 @@ export default function WhitePapers() {
         </div>
       </div>
     </div>
-  )}
-      {/* Subscribe to Updates */}
-      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Stay Updated
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Subscribe to receive notifications about new white papers, research updates, and industry insights.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-            />
-            <button className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">;
-              Subscribe;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
   );
 }

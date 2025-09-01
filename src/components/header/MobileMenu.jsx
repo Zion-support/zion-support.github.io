@@ -25,12 +25,12 @@ export function MobileMenu({ className }) {
   const toggleMenu = () => setIsOpen(!isOpen);
   
   const navigationItems = [
-    { href: '/', label: 'Home', icon: Home, matches: (path) => path === '/' },
-    { href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace') },
-    { href: '/talent', label: 'Talent', icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },
-    { href: '/categories', label: 'Categories', icon: Store, matches: (path) => path.startsWith('/categories') },
-    { href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment') },
-    { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },
+    { href: '/', label: 'Home', icon: Home, matches: (path) => path === '/' },;
+    { href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace') },;
+    { href: '/talent', label: 'Talent', icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },;
+    { href: '/categories', label: 'Categories', icon: Store, matches: (path) => path.startsWith('/categories') },;
+    { href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment') },;
+    { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },;
   ];
   
   if (isAuthenticated) {
@@ -151,7 +151,7 @@ export function MobileMenu({ className }) {
               )}
             </div>
           </div>
-        </div>
+        </div>;
       )}
     </div>
   );

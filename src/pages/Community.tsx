@@ -184,14 +184,14 @@ export default function Community() {
 
 export default function Community(...args[]):  {
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO 
         title="Community - Zion Tech Group"
         description="Join our community of technology professionals and enthusiasts. Share knowledge, get help, and connect with peers."
       />
       
       {/* Header */}
-      <div className="bg-slate-800/50 border-b border-slate-700">
+      <div className="bg-slate-800/50 border-b border-slate-700">;
         <div className="container mx-auto px-4 py-16">
           <motion.div
             initial = {
@@ -267,7 +267,7 @@ const Community: React.FC = () => {
 
   const communityCategories: CommunityCategory[] = [
     {
-      id: 'general',
+      id: 'general',;
       name: 'General Discussion',
       description: 'General topics about Zion Tech Group and technology',
       icon: Users,
@@ -276,7 +276,7 @@ const Community: React.FC = () => {
       topics: ['Company News', 'Technology Trends', 'Industry Updates']
     },
     {
-      id: 'ai-services',
+      id: 'ai-services',;
       name: 'AI Services',
       description: 'Discussions about our AI and machine learning services',
       icon: TrendingUp,
@@ -285,7 +285,7 @@ const Community: React.FC = () => {
       topics: ['AI Integration', 'Machine Learning', 'AI Best Practices']
     },
     {
-      id: 'cloud-infrastructure',
+      id: 'cloud-infrastructure',;
       name: 'Cloud & Infrastructure',
       description: 'Cloud computing, DevOps, and infrastructure topics',
       icon: TrendingUp,
@@ -294,7 +294,7 @@ const Community: React.FC = () => {
       topics: ['Cloud Migration', 'DevOps', 'Infrastructure Management']
     },
     {
-      id: 'security-compliance',
+      id: 'security-compliance',;
       name: 'Security & Compliance',
       description: 'Cybersecurity, compliance, and data protection',
       icon: TrendingUp,
@@ -303,7 +303,7 @@ const Community: React.FC = () => {
       topics: ['Cybersecurity', 'Compliance', 'Data Protection']
     },
     {
-      id: 'micro-saas',
+      id: 'micro-saas',;
       name: 'Micro SaaS Solutions',
       description: 'Our micro SaaS products and integrations',
       icon: TrendingUp,
@@ -312,7 +312,7 @@ const Community: React.FC = () => {
       topics: ['Product Updates', 'Integration Guides', 'Best Practices']
     },
     {
-      id: 'support',
+      id: 'support',;
       name: 'Support & Help',
       description: 'Get help and support from the community',
       icon: MessageCircle,
@@ -324,11 +324,11 @@ const Community: React.FC = () => {
 
   const communityPosts: CommunityPost[] = [
     {
-      id: '1',
+      id: '1',;
       title: 'Getting Started with AI Business Intelligence - Best Practices',
       content: 'I\'ve been using Zion Tech Group\'s AI Business Intelligence service for the past month and wanted to share some best practices I\'ve learned...',
       author: {
-        name: 'Sarah Chen',
+        name: 'Sarah Chen',;
         avatar: '/avatars/sarah.jpg',
         role: 'Senior Data Scientist',
         verified: true
@@ -343,11 +343,11 @@ const Community: React.FC = () => {
       isFeatured: true
     },
     {
-      id: '2',
+      id: '2',;
       title: 'Cloud Migration Success Story: From On-Prem to Multi-Cloud',
       content: 'Just completed our migration to Zion Tech Group\'s cloud infrastructure. Here\'s our journey and lessons learned...',
       author: {
-        name: 'Michael Rodriguez',
+        name: 'Michael Rodriguez',;
         avatar: '/avatars/michael.jpg',
         role: 'DevOps Engineer',
         verified: true
@@ -362,11 +362,11 @@ const Community: React.FC = () => {
       isFeatured: true
     },
     {
-      id: '3',
+      id: '3',;
       title: 'Zero Trust Security Implementation Guide',
       content: 'Comprehensive guide on implementing zero trust security using Zion Tech Group\'s security services...',
       author: {
-        name: 'Alex Thompson',
+        name: 'Alex Thompson',;
         avatar: '/avatars/alex.jpg',
         role: 'Security Architect',
         verified: true
@@ -381,11 +381,11 @@ const Community: React.FC = () => {
       isFeatured: false
     },
     {
-      id: '4',
+      id: '4',;
       title: 'Micro CRM Integration with Salesforce - Step by Step',
       content: 'Detailed walkthrough of integrating our Micro CRM with Salesforce. Includes code examples and troubleshooting tips...',
       author: {
-        name: 'Jennifer Lee',
+        name: 'Jennifer Lee',;
         avatar: '/avatars/jennifer.jpg',
         role: 'Integration Specialist',
         verified: false
@@ -400,11 +400,11 @@ const Community: React.FC = () => {
       isFeatured: false
     },
     {
-      id: '5',
+      id: '5',;
       title: 'AI Content Creation API Performance Optimization',
       content: 'Tips and tricks for optimizing performance when using the AI Content Creation API at scale...',
       author: {
-        name: 'David Kim',
+        name: 'David Kim',;
         avatar: '/avatars/david.jpg',
         role: 'Software Engineer',
         verified: true
@@ -595,7 +595,7 @@ const Community: React.FC = () => {
                     Learn More
                   </div>
                 </div>
-              </Link>
+              </Link>;
             </motion.div>
           ))}
         </div>
@@ -915,7 +915,7 @@ const Community: React.FC = () => {
       </div>
 
       {/* Create New Post Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Share Your Knowledge
@@ -939,10 +939,10 @@ const Community: React.FC = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </div>;
 
       {/* Community Stats */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center">
             <Users className="w-12 h-12 text-blue-400 mx-auto mb-4" />
@@ -968,7 +968,7 @@ const Community: React.FC = () => {
             <p className="text-gray-300">Featured Posts</p>
           </div>
         </div>
-      </div>
+      </div>;
     </div>
   )};
             </Link>;

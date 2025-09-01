@@ -149,25 +149,25 @@ const fiveGBenefits = [
     title: "Ultra-High Speed",
     description: "10-100x faster than 4G for lightning-fast data transmission",
     icon: Zap,
-    examples["Gigabit speeds", "Instant downloads", "Real-time streaming"]
-  },
+    examples["Gigabit speeds", "Instant downloads", "Real-time streaming"];
+  },;
   {
     title: "Low Latency",
     description: "Ultra-low latency for real-time applications and services",
     icon: Clock,
-    examples["Real-time gaming", "Autonomous vehicles", "Remote surgery"]
-  },
+    examples["Real-time gaming", "Autonomous vehicles", "Remote surgery"];
+  },;
   {
     title: "Massive Connectivity",
     description: "Support for millions of IoT devices per square kilometer",
     icon: Network,
-    examples["Smart cities", "Industrial IoT", "Connected devices"]
-  },
+    examples["Smart cities", "Industrial IoT", "Connected devices"];
+  },;
   {
     title: "Network Slicing",
     description: "Virtual network segmentation for different service requirements",
     icon: Layers,
-    examples["Customized services", "Service isolation", "Quality guarantees"]
+    examples["Customized services", "Service isolation", "Quality guarantees"];
   }
 ];
 
@@ -278,10 +278,10 @@ export default function FiveGSolutions() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* 5G Benefits */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -365,14 +365,14 @@ export default function FiveGSolutions() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* 5G Technologies */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -457,14 +457,14 @@ export default function FiveGSolutions() {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -546,14 +546,14 @@ export default function FiveGSolutions() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -687,7 +687,7 @@ export default function FiveGSolutions() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -786,14 +786,14 @@ export default function FiveGSolutions() {
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
         <div className="container-responsive">
           <motion.div
             initial = {

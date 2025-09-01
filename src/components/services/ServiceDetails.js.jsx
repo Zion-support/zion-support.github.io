@@ -5,15 +5,15 @@ export function ServiceDetails({ country }) {
     // Get datacenters for regions (simplified - in production this would come from a real database)
     const getDatacenters = (country) => {
         const dataCenters = {
-  "United States"["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
-            "United Kingdom"["London", "Manchester", "Birmingham"],
-            "Germ"["Frankfurt", "Berlin", "Munich"],
-            "Japan"["Tokyo", "Osaka"],
-            "Australia"["Sydney", "Melbourne", "Perth"],
-            "Singapore"["Singapore Central"],
-            "Canada"["Toronto", "Montreal", "Vancouver"],
+  "United States"["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],;
+            "United Kingdom"["London", "Manchester", "Birmingham"],;
+            "Germ"["Frankfurt", "Berlin", "Munich"],;
+            "Japan"["Tokyo", "Osaka"],;
+            "Australia"["Sydney", "Melbourne", "Perth"],;
+            "Singapore"["Singapore Central"],;
+            "Canada"["Toronto", "Montreal", "Vancouver"],;
   // Default for other countries
-            "default"["Major metropolitan areas"]
+            "default"["Major metropolitan areas"];
         
 
 };

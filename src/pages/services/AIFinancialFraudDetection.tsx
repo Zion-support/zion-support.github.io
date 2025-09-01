@@ -72,14 +72,14 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
       plan: "Starter",
       price: "$799",
       period: "/month",
-      features["Up to 10K transactions/month", "Basic fraud detection", "Email alerts", "Standard support"],
+      features["Up to 10K transactions/month", "Basic fraud detection", "Email alerts", "Standard support"],;
       popular: false
     },
     {
       plan: "Professional",
       price: "$1,999",
       period: "/month",
-      features["Up to 100K transactions/month", "Advanced AI models", "Real-time blocking", "Priority support", "API access"],
+      features["Up to 100K transactions/month", "Advanced AI models", "Real-time blocking", "Priority support", "API access"],;
       popular: true
     },
     {
@@ -155,10 +155,10 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Features Section */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -235,14 +235,14 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-slate-300 leading-relaxed">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-slate-900">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -318,14 +318,14 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-slate-300 font-medium">{benefit}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -401,14 +401,14 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-slate-300 font-medium">{useCase}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Integrations Section */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-slate-900">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -481,14 +481,14 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-center hover:border-indigo-500 transition-colors"
 
                 <p className="text-slate-300 text-sm font-medium">{integration}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -564,7 +564,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                     : 'border-slate-700'
                 }`}
 
-                {plan.popular && (
+                {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -596,14 +596,14 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 }">
                   Get Started
                 </button>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
@@ -655,7 +655,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
       </section>
 
       {/* Contact Info */}
-      <section className="py-16 bg-slate-900">
+      <section className="py-16 bg-slate-900">;
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>

@@ -37,7 +37,7 @@ export function ServiceWorker(...args: any[]): any {
               
               newWorker.addEventListener('statechange', ()  => {
                 if (newWorker.state = == 'installed') {;
-                  setSwState(prev => ({ ;
+setSwState(prev: > ({ ;
                     ...prev, ;
                     isInstalling: anyfalse,;
                     hasUpdate: true ;

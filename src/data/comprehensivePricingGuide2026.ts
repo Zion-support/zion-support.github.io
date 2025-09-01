@@ -437,17 +437,17 @@ export const PRICING_SUMMARY_2026 = {
 
 };}}}}}}}}}}}}}}
     aiCapabilities: ["Threat Detection", "Behavioral Analytics", "Anomaly Detection", "Predictive Security", "Automated Response"],
-    complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"],
-    scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"]
+    complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"],;
+    scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"];
   },
 
   {
     id: "autonomous-supply-chain-platform-2026",
-    title: "Autonomous Supply Chain Platform 2026",
-    description: "AI-powered autonomous supply chain management platform that predicts disruptions, optimizes logistics, and automates decision-making for end-to-end supply chain visibility and efficiency.",
-    category: "Supply Chain",
-    subcategory: "Autonomous Management",
-    pricingTiers: [
+    title: "Autonomous Supply Chain Platform 2026",;
+    description: "AI-powered autonomous supply chain management platform that predicts disruptions, optimizes logistics, and automates decision-making for end-to-end supply chain visibility and efficiency.",;
+    category: "Supply Chain",;
+    subcategory: "Autonomous Management",;
+    pricingTiers: [;
       {
         name: "Business",
         price: 5999,
@@ -554,35 +554,35 @@ export const PRICING_SUMMARY_2026 = {
         innovationLevel: "Cutting-Edge"
       }
     ],
-    marketPrice: "$5,999 - $18,000/month",
-    competitors: ["SAP Ariba", "Oracle SCM", "Kinaxis", "Blue Yonder", "E2open"],
-    marketSize: "$67.2 billion by 2026",
-    growthRate: "30% annually",
+    marketPrice: "$5,999 - $18,000/month",;
+    competitors: ["SAP Ariba", "Oracle SCM", "Kinaxis", "Blue Yonder", "E2open"],;
+    marketSize: "$67.2 billion by 2026",;
+    growthRate: "30% annually",;
     contactInfo: {
       phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008, Middletown DE 19709"
+      email: "kleber@ziontechgroup.com",;
+      website: "https://ziontechgroup.com",;
+      address: "364 E Main St STE 1008, Middletown DE 19709";
     },
     technicalSpecs: {
       technology: ["AI/ML", "IoT", "Blockchain", "Cloud computing", "Mobile apps", "APIs"],
-      integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify", "WMS systems"],
-      apiEndpoints: 300,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+      integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify", "WMS systems"],;
+      apiEndpoints: 300,;
+      uptime: "99.9%",;
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"];
     },
     aiCapabilities: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Computer Vision", "Optimization"],
-    complianceFeatures: ["ISO 28000", "C-TPAT", "GDPR", "Sustainability reporting", "Trade compliance"],
-    scalabilityFeatures: ["Cloud-native", "Microservices", "Auto-scaling", "Multi-tenant", "Global deployment"]
+    complianceFeatures: ["ISO 28000", "C-TPAT", "GDPR", "Sustainability reporting", "Trade compliance"],;
+    scalabilityFeatures: ["Cloud-native", "Microservices", "Auto-scaling", "Multi-tenant", "Global deployment"];
   },
 
   {
     id: "quantum-financial-trading-platform-2026",
-    title: "Quantum Financial Trading Platform 2026",
-    description: "Revolutionary quantum computing-powered financial trading platform that provides ultra-fast market analysis, risk assessment, and automated trading strategies with quantum advantage.",
-    category: "FinTech",
-    subcategory: "Quantum Trading",
-    pricingTiers: [
+    title: "Quantum Financial Trading Platform 2026",;
+    description: "Revolutionary quantum computing-powered financial trading platform that provides ultra-fast market analysis, risk assessment, and automated trading strategies with quantum advantage.",;
+    category: "FinTech",;
+    subcategory: "Quantum Trading",;
+    pricingTiers: [;
       {
         name: "Professional",
         price: 15999,
@@ -689,35 +689,35 @@ export const PRICING_SUMMARY_2026 = {
         innovationLevel: "Revolutionary"
       }
     ],
-    marketPrice: "$15,999 - $50,000/month",
-    competitors: ["Bloomberg Terminal", "Thomson Reuters", "Interactive Brokers", "Alpaca", "QuantConnect"],
-    marketSize: "$12.3 billion by 2026",
-    growthRate: "50% annually",
+    marketPrice: "$15,999 - $50,000/month",;
+    competitors: ["Bloomberg Terminal", "Thomson Reuters", "Interactive Brokers", "Alpaca", "QuantConnect"],;
+    marketSize: "$12.3 billion by 2026",;
+    growthRate: "50% annually",;
     contactInfo: {
       phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008, Middletown DE 19709"
+      email: "kleber@ziontechgroup.com",;
+      website: "https://ziontechgroup.com",;
+      address: "364 E Main St STE 1008, Middletown DE 19709";
     },
     technicalSpecs: {
       technology: ["Quantum computing", "AI/ML", "High-performance computing", "Real-time systems", "Blockchain"],
-      integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
-      apiEndpoints: 500,
-      uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "PCI DSS", "FINRA compliance", "End-to-end encryption"]
+      integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],;
+      apiEndpoints: 500,;
+      uptime: "99.99%",;
+      security: ["SOC 2", "ISO 27001", "PCI DSS", "FINRA compliance", "End-to-end encryption"];
     },
     aiCapabilities: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Sentiment Analysis", "Risk Modeling"],
-    complianceFeatures: ["FINRA", "SEC", "PCI DSS", "GDPR", "SOX compliance"],
-    scalabilityFeatures: ["Quantum cloud", "Auto-scaling", "Multi-region", "High availability", "Disaster recovery"]
+    complianceFeatures: ["FINRA", "SEC", "PCI DSS", "GDPR", "SOX compliance"],;
+    scalabilityFeatures: ["Quantum cloud", "Auto-scaling", "Multi-region", "High availability", "Disaster recovery"];
   },
 
   {
     id: "autonomous-healthcare-diagnostics-2026",
-    title: "Autonomous Healthcare Diagnostics Platform 2026",
-    description: "AI-powered autonomous healthcare diagnostics platform that provides real-time medical imaging analysis, disease prediction, and treatment recommendations with FDA approval and HIPAA compliance.",
-    category: "Healthcare",
-    subcategory: "AI Diagnostics",
-    pricingTiers: [
+    title: "Autonomous Healthcare Diagnostics Platform 2026",;
+    description: "AI-powered autonomous healthcare diagnostics platform that provides real-time medical imaging analysis, disease prediction, and treatment recommendations with FDA approval and HIPAA compliance.",;
+    category: "Healthcare",;
+    subcategory: "AI Diagnostics",;
+    pricingTiers: [;
       {
         name: "Clinical",
         price: 7999,
@@ -824,25 +824,25 @@ export const PRICING_SUMMARY_2026 = {
         innovationLevel: "Cutting-Edge"
       }
     ],
-    marketPrice: "$7,999 - $22,000/month",
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare", "GE Healthcare"],
-    marketSize: "$45.2 billion by 2026",
-    growthRate: "35% annually",
+    marketPrice: "$7,999 - $22,000/month",;
+    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare", "GE Healthcare"],;
+    marketSize: "$45.2 billion by 2026",;
+    growthRate: "35% annually",;
     contactInfo: {
       phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008, Middletown DE 19709"
+      email: "kleber@ziontechgroup.com",;
+      website: "https://ziontechgroup.com",;
+      address: "364 E Main St STE 1008, Middletown DE 19709";
     },
     technicalSpecs: {
       technology: ["AI/ML", "Computer Vision", "Cloud computing", "Mobile apps", "APIs", "Security"],
-      integrations: ["PACS systems", "EHR systems", "DICOM", "HL7", "Telemedicine platforms"],
-      apiEndpoints: 400,
-      uptime: "99.9%",
-      security: ["HIPAA", "SOC 2", "ISO 27001", "End-to-end encryption", "Multi-factor authentication"]
+      integrations: ["PACS systems", "EHR systems", "DICOM", "HL7", "Telemedicine platforms"],;
+      apiEndpoints: 400,;
+      uptime: "99.9%",;
+      security: ["HIPAA", "SOC 2", "ISO 27001", "End-to-end encryption", "Multi-factor authentication"];
     },
     aiCapabilities: ["Computer Vision", "Machine Learning", "Natural Language Processing", "Predictive Analytics", "Pattern Recognition"],
-    complianceFeatures: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],
-    scalabilityFeatures: ["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"]
+    complianceFeatures: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],;
+    scalabilityFeatures: ["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"];
   }
 };

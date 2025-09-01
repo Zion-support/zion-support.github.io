@@ -1,16 +1,15 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Shield, 
-  CheckCircle, 
-  Award, 
-  FileText, 
-  Globe, 
-  Building, 
-  Users, 
-  Lock, 
-  Eye, 
-  Database,
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  Shield,
+  CheckCircle,
+  Award,
   FileText,
+  Users,
+  Globe,
+  Lock,
+  Eye,
+  Database,
   Clock,
   AlertTriangle,
   Info,
@@ -29,13 +28,16 @@ import { Shield,
   Key,
   Fingerprint,
   Monitor,
-  Clock,
-  AlertTriangle,
-  Info
+  Smartphone,
+  Tablet,
+  Laptop,
+  ShieldCheck,
+  Gauge,
+  TrendingUp,
+  BarChart3
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
 
-export default function Compliance(...args[]):  {
+export default function Compliance() {
   const complianceFrameworks = [
     {
       name: 'ISO 27001',
@@ -47,7 +49,7 @@ export default function Compliance(...args[]):  {
       scope: 'Information security management system',
       lastAudit: 'December 2024',
       nextAudit: 'December 2025',
-      benefits[
+      benefits: [
         'Systematic approach to information security',
         'Risk assessment and management',
         'Continuous improvement process',
@@ -64,11 +66,11 @@ export default function Compliance(...args[]):  {
       scope: 'Security, availability, processing integrity, confidentiality, privacy',
       lastAudit: 'November 2024',
       nextAudit: 'November 2025',
-      benefits[
+      benefits: [
         'Independent third-party validation',
         'Trust services criteria compliance',
         'Customer confidence and trust',
-        'Competitive advantage'
+        'Operational effectiveness'
       ]
     },
     {
@@ -76,922 +78,358 @@ export default function Compliance(...args[]):  {
       description: 'General Data Protection Regulation',
       status: 'Compliant',
       icon: Shield,
-      color: 'from-purple-500 to-pink-600',
+      color: 'from-purple-500 to-indigo-600',
       details: 'EU data protection and privacy regulation',
       scope: 'Personal data processing and protection',
-      lastAudit: 'Ongoing',
-      nextAudit: 'Continuous monitoring',
-      benefits[
-        'EU market access',
+      lastAudit: 'October 2024',
+      nextAudit: 'October 2025',
+      benefits: [
         'Enhanced data protection',
-        'Customer privacy rights',
-        'Regulatory compliance'
+        'Individual privacy rights',
+        'Transparent data processing',
+        'Cross-border data transfer compliance'
       ]
     },
     {
       name: 'HIPAA',
       description: 'Health Insurance Portability and Accountability Act',
       status: 'Compliant',
-    }
-      validity: 'Ongoing compliance',
-      scope: 'Healthcare data protection',
-      benefits: [;
-        'Healthcare industry access',;
-        'Patient data protection',;
-        'Regulatory compliance',;
-        'Trust in healthcare sector';
-      ];
-    };
-  ];
-
-  const industryCompliance = [
-    {
-      industry: 'Financial Services',
-      icon: Building,
-      color: 'from-blue-500 to-cyan-600',
-      regulations[
-        'PCI DSS (Payment Card Industry Data Security Standard)',
-        'SOX (Sarbanes-Oxley Act)',
-        'GLBA (Gramm-Leach-Bliley Act)',
-        'FFIEC Guidelines'
-      ],
-      status: 'Compliant'
-    },
-    {
-      industry: 'Healthcare',
       icon: Heart,
-      color: 'from-green-500 to-emerald-600',
-      regulations[
-        'HIPAA (Health Insurance Portability and Accountability Act)',
-        'HITECH Act',
-        'FDA Cybersecurity Guidelines',
-        'State-specific healthcare regulations'
-      ],
-      status: 'Compliant'
-    },
-    {
-      industry: 'Government',
-      icon: Shield,
-      color: 'from-purple-500 to-pink-600',
-      regulations[
-        'FedRAMP (Federal Risk and Authorization Management Program)',
-        'FISMA (Federal Information Security Management Act)',
-        'CJIS (Criminal Justice Information Services)',
-        'State and local government requirements'
-      ],
-      status: 'In Progress'
-    },
-    {
-      title: 'Application Security',
-      description: 'Secure software development and application security',
-      icon: Code,
-      color: 'from-orange-500 to-red-500',
-      standards: [;
-        'OWASP Top 10',;
-        'Secure SDLC',;
-        'Code Review Standards',;
-        'Vulnerability Management';
-      ];
-    };
+      color: 'from-red-500 to-pink-600',
+      details: 'Healthcare data protection and privacy',
+      scope: 'Protected health information (PHI)',
+      lastAudit: 'September 2024',
+      nextAudit: 'September 2025',
+      benefits: [
+        'Healthcare data security',
+        'Patient privacy protection',
+        'Administrative safeguards',
+        'Technical safeguards'
+      ]
+    }
   ];
 
-  const complianceProcesses = [
+  const complianceMetrics = [
     {
-      phase: 'Assessment',
-      description: 'Comprehensive compliance gap analysis',
-      icon: Eye,
-      color: 'from-blue-500 to-cyan-600',
-      activities[
-        'Regulatory requirement analysis',
-        'Current state assessment',
-        'Gap identification',
-        'Risk assessment'
-      ],
-      duration: '2-4 weeks',
-      deliverables['Gap analysis report', 'Risk assessment', 'Compliance roadmap']
+      metric: '99.9%',
+      label: 'Uptime',
+      description: 'System availability',
+      icon: Server,
+      trend: 'up'
     },
     {
-      phase: 'Implementation',
-      description: 'Systematic implementation of controls',
-      icon: Zap,
-      color: 'from-green-500 to-emerald-600',
-      activities[
-        'Control design and implementation',
-        'Policy and procedure development',
-        'Training and awareness',
-        'Technology deployment'
-      ],
-      duration: '8-16 weeks',
-      deliverables['Implemented controls', 'Policies and procedures', 'Training materials']
+      metric: '100%',
+      label: 'Data Encryption',
+      description: 'At rest and in transit',
+      icon: Lock,
+      trend: 'stable'
     },
     {
-      title: 'Incident Response',
-      description: 'Compliance-focused incident response procedures',
+      metric: '< 1 hour',
+      label: 'Incident Response',
+      description: 'Average response time',
       icon: AlertTriangle,
-      color: 'from-orange-500 to-red-500',
-      frequency: 'As needed',
-      process: [;
-        'Incident detection and reporting',;
-        'Compliance impact assessment',;
-        'Regulatory notification procedures',;
-        'Post-incident compliance review';
-      ];
-    };
-  ];
-
-  const complianceTools = [
+      trend: 'down'
+    },
     {
-      name: 'Compliance Management Platform',
-      description: 'Centralized compliance tracking and management',
+      metric: '24/7',
+      label: 'Monitoring',
+      description: 'Security operations center',
       icon: Monitor,
-      color: 'from-blue-500 to-cyan-600',
-      features[
-        'Automated compliance monitoring',
-        'Real-time dashboards',
-        'Automated reporting',
-        'Integration with GRC tools'
-      ]
+      trend: 'stable'
+    }
+  ];
+
+  const securityMeasures = [
+    {
+      category: 'Access Control',
+      measures: [
+        'Multi-factor authentication (MFA)',
+        'Role-based access control (RBAC)',
+        'Single sign-on (SSO) integration',
+        'Privileged access management (PAM)',
+        'Session management and timeout'
+      ],
+      icon: Key
     },
     {
-      name: 'Policy Management System',
-      description: 'Automated policy creation, distribution, and tracking',
-      icon: FileText,
-      color: 'from-green-500 to-emerald-600',
-      features[
-        'Policy lifecycle management',
-        'Automated distribution',
-        'Acknowledgment tracking',
-        'Version control'
-      ]
+      category: 'Data Protection',
+      measures: [
+        'End-to-end encryption (AES-256)',
+        'Data loss prevention (DLP)',
+        'Backup and disaster recovery',
+        'Data classification and labeling',
+        'Secure data disposal'
+      ],
+      icon: Database
     },
     {
-      name: 'Risk Assessment Tools',
-      description: 'Comprehensive risk assessment and management',
-      icon: AlertTriangle,
-      color: 'from-purple-500 to-pink-600',
-      features[
-        'Risk identification and assessment',
-        'Mitigation planning',
-        'Risk monitoring and reporting',
-        'Integration with compliance frameworks'
-      ]
+      category: 'Network Security',
+      measures: [
+        'Firewall and intrusion detection',
+        'Virtual private networks (VPN)',
+        'DDoS protection and mitigation',
+        'Network segmentation',
+        'Regular security assessments'
+      ],
+      icon: Network
     },
     {
-      title: 'Training Portal',
-      description: 'Compliance training and certification portal',;
-      icon: Users,;
-      href: '/compliance/training',;
-      color: 'from-orange-500 to-red-500';
-    };
+      category: 'Application Security',
+      measures: [
+        'Secure software development lifecycle',
+        'Regular vulnerability assessments',
+        'Penetration testing',
+        'Code security reviews',
+        'API security and monitoring'
+      ],
+      icon: Shield
+    }
   ];
 
   const contactInfo = [
     {
       title: 'Compliance Team',
-      description: 'Contact our compliance team for compliance-related inquiries',
       email: 'compliance@ziontechgroup.com',
       phone: '+1 302 464 0950',
       responseTime: '24-48 hours'
     },
-    {;
-      title: 'Audit Requests',;
-      description: 'Request compliance audits or assessments',;
-      email: 'audit@ziontechgroup.com',;
-      phone: '+1 302 464 0950',;
-      responseTime: '1-2 business days';
-    };
+    {
+      title: 'Security Team',
+      email: 'security@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      responseTime: '2-4 hours'
+    }
   ];
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Compliance - Zion Tech Group"
-        description="Zion Tech Group maintains comprehensive compliance with international standards including ISO 27001, SOC 2 Type II, GDPR, and HIPAA. Learn about our compliance framework and certifications."
-        canonical="/compliance"
-      />
-      
-      {/* Header */}
-      <div className="bg-slate-800/50 border-b border-slate-700">
-        <div className="container mx-auto px-4 py-16">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-
-            <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Award className="w-10 h-10 text-white" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-full border border-blue-400/30 mb-6">
+              <Shield className="w-5 h-5 text-blue-400 mr-2" />
+              <span className="text-blue-300 font-medium">Compliance & Security</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Compliance & Certifications
+            
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-green-600 bg-clip-text text-transparent">
+                Compliance
+              </span>
+              <br />
+              <span className="text-white">Framework</span>
             </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              We maintain the highest standards of compliance and certification to ensure your business
-              operates with confidence and meets all regulatory requirements.
+            
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              We maintain the highest standards of compliance and security across all 
+              our services, ensuring your data and operations are protected by industry-leading 
+              frameworks and best practices.
             </p>
-          </motion.div>
+          </div>
         </div>
-      </div>
-
-      {/* Compliance Commitment */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          transition = {
-  { duration: 0.6,
-  delay: 0.2 
-
-
-
-
-
-
-}}
-          className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-2xl p-8 text-center"
-
-          <h2 className="text-2xl font-bold text-white mb-4">
-            Our Compliance Commitment
-          </h2>
-          <p className="text-slate-300 max-w-4xl mx-auto">
-            Compliance is not just about meeting requirements—it's about building trust and ensuring
-            operational excellence. Our comprehensive compliance program covers international standards,
-            industry best practices, and regulatory requirements to provide you with confidence in our services.
-          </p>
-        </motion.div>
-      </div>
+      </section>
 
       {/* Compliance Frameworks */}
-      <div className="bg-slate-800/20 py-16">
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.h2
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.6,
-  delay: 0.3 
-
-
-
-
-
-
-}}
-            className="text-3xl font-bold text-white text-center mb-12"
-
-            Compliance Frameworks & Certifications
-          </motion.h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Compliance Frameworks
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our platform adheres to internationally recognized compliance standards 
+              to ensure the highest level of security and data protection.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {complianceFrameworks.map((framework, index) => (
               <motion.div
-                key={framework.title}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: 0.4 + index * 0.1 
-
-
-
-
-
-
-}}
-                className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${framework.color} rounded-xl flex items-center justify-center`}>
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/30 transition-all duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${framework.color} rounded-lg flex items-center justify-center mr-4`}>
                     <framework.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{framework.title}</h3>
-                    <p className="text-slate-400 text-sm">{framework.description}</p>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-2xl font-semibold text-white">{framework.name}</h3>
+                      <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm font-medium">
+                        {framework.status}
+                      </span>
+                    </div>
+                    <p className="text-gray-400 mt-1">{framework.description}</p>
                   </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400">98.5%</div>
-                  <div className="text-slate-400">Compliance Score</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400">100%</div>
-                  <div className="text-slate-400">Audit Success Rate</div>
-                </div>;
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-cyan-400">&lt; 24h</div>
-                  <div className = "text-slate-400">Remediation Time</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Compliance Commitment */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Our Compliance Commitment
-              </h2>
-              <p className="text-lg text-slate-300 mb-6">
-                At Zion Tech Group, compliance is not just about meeting regulatory requirements—it's about building trust, ensuring security, and demonstrating our commitment to protecting your data and systems.
-              </p>
-              <p className="text-lg text-slate-300">
-                We maintain a proactive approach to compliance, continuously monitoring regulatory changes and implementing best practices to ensure we meet and exceed all applicable standards.
-              </p>
-            </div>
-          </div>
-        </section>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Details</h4>
+                    <p className="text-gray-300 text-sm">{framework.details}</p>
+                  </div>
 
-        {/* Compliance Frameworks */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Compliance Frameworks & Certifications</h2>
-              <p className="text-xl text-slate-300">International standards and industry-specific compliance</p>
-            </div>
-            
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {complianceFrameworks.map((framework, index)  => (
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Scope</h4>
+                    <p className="text-gray-300 text-sm">{framework.scope}</p>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-400 mb-1">Last Audit</h4>
+                      <p className="text-white text-sm">{framework.lastAudit}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-400 mb-1">Next Audit</h4>
+                      <p className="text-white text-sm">{framework.nextAudit}</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Benefits</h4>
+                    <ul className="space-y-2">
+                      {framework.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-start">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-300 text-sm">{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Metrics */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Compliance Metrics
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Real-time metrics and performance indicators that demonstrate our 
+              commitment to maintaining the highest compliance standards.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {complianceMetrics.map((metric, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <metric.icon className="w-6 h-6 text-blue-400" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{metric.metric}</div>
+                <h3 className="text-lg font-semibold text-white mb-1">{metric.label}</h3>
+                <p className="text-gray-400 text-sm">{metric.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Security Measures */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Security Measures
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive security measures and controls that protect your data 
+              and ensure compliance with regulatory requirements.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {securityMeasures.map((category, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/30 transition-all duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg flex items-center justify-center mr-4">
+                    <category.icon className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{category.category}</h3>
+                </div>
+
+                <ul className="space-y-3">
+                  {category.measures.map((measure, measureIndex) => (
+                    <li key={measureIndex} className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300 text-sm">{measure}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Compliance Support
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Need assistance with compliance requirements or have questions about 
+              our security measures? Our compliance team is here to help.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {contactInfo.map((contact, index) => (
                 <motion.div
                   key={index}
-                  initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                  whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                  transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/30 transition-all duration-300"
                 >
-                  <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${framework.color} rounded-2xl flex items-center justify-center mr-4`}>
-                      <framework.icon className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white">{framework.name}</h3>
-                      <p className="text-slate-300">{framework.description}</p>
-                    </div>
-                    <div className="text-right">
-                      <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold ${
-                        framework.status === 'Certified' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
-                      }`}>
-                        <CheckCircle className="h-4 w-4 mr-1" />
-                        {framework.status}
-                      </div>
-                    </div>
-                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-6">{contact.title}</h3>
                   
                   <div className="space-y-4">
-                    <p className="text-slate-300 text-sm">{framework.details}</p>
-                    
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div>
-                        <span className="font-semibold text-cyan-400">Scope:</span>
-                        <p className="text-slate-300">{framework.scope}</p>
-                      </div>
-                      <div>
-                        <span className="font-semibold text-cyan-400">Last Audit:</span>
-                        <p className="text-slate-300">{framework.lastAudit}</p>
-                      </div>
-                      <div>
-                        <span className="font-semibold text-cyan-400">Next Audit:</span>
-                        <p className="text-slate-300">{framework.nextAudit}</p>
-                      </div>
+                    <div className="flex items-center">
+                      <Mail className="w-5 h-5 text-blue-400 mr-3" />
+                      <span className="text-gray-300">{contact.email}</span>
                     </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-cyan-400 mb-2">Key Benefits:</h4>
-                      <ul className="space-y-1">
-                        {framework.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-slate-300">
-                            <CheckCircle className="h-3 w-3 text-cyan-400 mr-2 flex-shrink-0" />
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="flex items-center">
+                      <Phone className="w-5 h-5 text-blue-400 mr-3" />
+                      <span className="text-gray-300">{contact.phone}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-5 h-5 text-blue-400 mr-3" />
+                      <span className="text-gray-300">Response time: {contact.responseTime}</span>
                     </div>
                   </div>
                 </motion.div>
               ))}
             </div>
           </div>
-        </section>
-
-      {/* Industry Standards */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.h2
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          transition = {
-  { duration: 0.6,
-  delay: 0.5 
-
-
-
-
-
-
-}}
-          className="text-3xl font-bold text-white text-center mb-12"
-
-          Industry Standards & Best Practices
-        </motion.h2>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {industryStandards.map((standard, index) => (
-            <motion.div
-              key={standard.title}
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.6,
-  delay: 0.6 + index * 0.1 
-
-
-
-
-
-
-}}
-              className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-
-              <div className="text-center mb-6">
-                <div className={`w-16 h-16 bg-gradient-to-br ${standard.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                  <standard.icon className="w-8 h-8 text-white" />
-                </div>
-              </div>
-              
-              <div className="bg-slate-700/50 rounded-lg p-6 text-left">
-                <h3 className="text-lg font-semibold text-white mb-3">Compliance Documentation Request</h3>
-                <p className="text-slate-300 text-sm mb-4">
-                  Need specific compliance documentation or certificates? Contact us for:
-                </p>
-                <ul className="text-slate-300 text-sm space-y-1">
-                  <li>• Compliance certificates and reports</li>
-                  <li>• Audit documentation and evidence</li>
-                  <li>• Compliance questionnaires and assessments</li>
-                  <li>• Custom compliance reports</li>
-                </ul>
-              </div>
-            </motion.div>
-          ))}
         </div>
-      </div>
-
-      {/* Compliance Processes */}
-      <div className="bg-slate-800/20 py-16">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.6,
-  delay: 0.7 
-
-
-
-
-
-
-}}
-            className="text-3xl font-bold text-white text-center mb-12"
-
-            Compliance Processes & Procedures
-          </motion.h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {complianceProcesses.map((process, index) => (
-              <motion.div
-                key={process.title}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: 0.8 + index * 0.1 
-
-
-
-
-
-
-}}
-                className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-
-                <div className="text-center mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${process.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                    <process.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{process.title}</h3>
-                  <p className="text-slate-400 text-sm mb-3">{process.description}</p>
-                  <span className="px-3 py-1 bg-slate-700 rounded-full text-xs text-slate-300">
-                    Frequency: {process.frequency}
-                  </span>
-                </div>
-
-                <div className="space-y-3">
-                  {process.process.map((item, idx) => (
-                    <div key={idx} className="flex items-center space-x-3">
-                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span className="text-slate-300 text-sm">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-      </div>
-
-      {/* Compliance Tools */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.h2
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          transition = {
-  { duration: 0.6,
-  delay: 0.9 
-
-
-
-
-
-
-}}
-          className="text-3xl font-bold text-white text-center mb-12"
-
-          Compliance Tools & Resources
-        </motion.h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {complianceTools.map((tool, index) => (
-            <motion.div
-              key={tool.title}
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.6,
-  delay: 1.0 + index * 0.1 
-
-
-
-
-
-
-}}
-              className="group"
-
-              <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 h-full text-center">
-                <div className={`w-16 h-16 bg-gradient-to-br ${tool.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <tool.icon className="w-8 h-8 text-white" />
-                </div>
-
-                <h3 className="text-lg font-semibold text-white mb-2">{tool.title}</h3>
-                <p className="text-slate-400 text-sm">{tool.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Contact Information */}
-      <div className="bg-slate-800/20 py-16">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.6,
-  delay: 1.1 
-
-
-
-
-
-
-}}
-            className="text-3xl font-bold text-white text-center mb-12"
-
-            Compliance Support & Inquiries
-          </motion.h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {contactInfo.map((contact, index) => (
-              <motion.div
-                key={contact.title}
-                initial = {
-  { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
-}}
-                animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: 1.2 + index * 0.1 
-
-
-
-
-
-
-}}
-                className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-
-                <h3 className="text-xl font-semibold text-white mb-4">{contact.title}</h3>
-                <p className="text-slate-400 mb-6">{contact.description}</p>
-
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
-                      <span className="text-green-400 text-sm font-medium">@</span>
-                    </div>
-                    <div>
-                      <div className="text-white font-medium">{contact.email}</div>
-                      <div className="text-slate-400 text-sm">Response time: {contact.responseTime}</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
-                      <span className="text-green-400 text-sm font-medium">📞</span>
-                    </div>
-                    <div>
-                      <div className="text-white font-medium">{contact.phone}</div>
-                      <div className="text-slate-400 text-sm">Business hours support</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Continuous Compliance */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          transition = {
-  { duration: 0.6,
-  delay: 1.3 
-
-
-
-
-
-
-}}
-          className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-2xl p-8 text-center"
-
-          <h2 className="text-2xl font-bold text-white mb-4">
-            Continuous Compliance Excellence
-          </h2>
-          <p className="text-slate-300 max-w-4xl mx-auto">
-            Compliance is an ongoing journey, not a destination. We continuously monitor regulatory changes, ;
-            update our processes, and enhance our compliance posture to ensure we always meet and exceed ;
-            industry standards and regulatory requirements.;
-          </p>;
-        </motion.div>;
-      </div>;
-    </div>;
+      </section>
+    </div>
   );
 }

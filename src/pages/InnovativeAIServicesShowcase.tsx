@@ -205,11 +205,11 @@ export default function InnovativeAIServicesShowcase() {
             Discover our comprehensive suite of AI-powered micro SaaS solutions designed to revolutionize
             how businesses operate, scale, and succeed in the digital age.
           </motion.p>
-        </div>
+        </div>;
       </section>
 
       {/* Services Grid */}
-      <section className="pb-20">
+      <section className="pb-20">;
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
@@ -292,7 +292,7 @@ export default function InnovativeAIServicesShowcase() {
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-semibold group-hover:translate-x-1 transition-all duration-300"
 
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
+                </Link>;
               </motion.div>
             ))}
           </div>
@@ -300,7 +300,7 @@ export default function InnovativeAIServicesShowcase() {
       </section>
 
       {/* Why Choose Zion Tech Group */}
-      <section className="py-16 bg-slate-900/40">
+      <section className="py-16 bg-slate-900/40">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
@@ -336,7 +336,7 @@ export default function InnovativeAIServicesShowcase() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600">
+      <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
@@ -366,7 +366,7 @@ export default function InnovativeAIServicesShowcase() {
       </section>
 
       {/* Contact & Website Section */}
-      <section className="py-16">
+      <section className="py-16">;
         <div className="container mx-auto px-4 text-center">
           <div className="bg-slate-900/40 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-6">Visit Our Website</h3>

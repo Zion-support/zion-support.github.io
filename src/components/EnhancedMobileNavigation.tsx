@@ -67,7 +67,7 @@ const navigationItems: NavigationItem[] = [
     label: 'Services',
     path: '/services',
     icon: Briefcase,
-    children[
+    children[;
       {
         label: 'AI & Machine Learning',
         path: '/services/ai',
@@ -104,8 +104,8 @@ const navigationItems: NavigationItem[] = [
         icon: Users,
         description: 'Strategic IT consulting'
 
-    ]
-  },
+    ];
+  },;
   {
     label: 'Solutions',
     path: '/solutions',
@@ -198,7 +198,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
           initial={false}
           animate = {
   { backgroundColor: isItemActive ? 'rgba(34, 221, 210,
-  0.1)' : 'transparent' 
+  0.1)' : 'transparent' ;
 
 
 
@@ -239,7 +239,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
             )}
           </Link>
 
-          {hasChildren && (
+          {hasChildren && (;
             <button
               onClick={() => toggleExpanded(item.label)}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"
@@ -251,11 +251,11 @@ export const EnhancedMobileNavigation: React.FC = () => {
                   isExpanded ? 'rotate-180' : ''
                 }`}
               />
-            </button>
+            </button>;
           )}
         </motion.div>
 
-        {hasChildren && (
+        {hasChildren && (;
           <AnimatePresence>
             {isExpanded && (
               <motion.div
@@ -368,12 +368,12 @@ export const EnhancedMobileNavigation: React.FC = () => {
 
                   <X size={24} />
                 </button>
-              </div>
+              </div>;
 
               {/* Navigation Content */}
-              <div className="flex-1 overflow-y-auto">
+              <div className="flex-1 overflow-y-auto">;
                 {/* Quick Actions */}
-                <div className="p-6 border-b border-zion-slate-light/20">
+                <div className="p-6 border-b border-zion-slate-light/20">;
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Quick Actions
                   </h3>
@@ -387,13 +387,13 @@ export const EnhancedMobileNavigation: React.FC = () => {
 
                         <action.icon size={20} className="mx-auto mb-2" />
                         <span className="text-xs font-medium">{action.label}</span>
-                      </Link>
+                      </Link>;
                     ))}
                   </div>
                 </div>
 
                 {/* Main Navigation */}
-                <nav className="p-6">
+                <nav className="p-6">;
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Navigation
                   </h3>
@@ -403,7 +403,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                 </nav>
 
                 {/* Contact Information */}
-                <div className="p-6 border-t border-zion-slate-light/20">
+                <div className="p-6 border-t border-zion-slate-light/20">;
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Contact Info
                   </h3>
@@ -429,7 +429,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
               </div>
 
               {/* Footer */}
-              <div className="p-6 border-t border-zion-slate-light/20">
+              <div className="p-6 border-t border-zion-slate-light/20">;
                 <div className="flex items-center justify-between text-sm text-zion-slate-light">
                   <span>© 2024 Zion Tech Group</span>
                   <div className="flex items-center gap-4">

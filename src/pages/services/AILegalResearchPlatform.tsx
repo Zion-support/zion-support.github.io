@@ -74,14 +74,14 @@ export default function AILegalResearchPlatform(...args[]):  {
       price: "$299",
       period: "/month",
       description: "Perfect for individual attorneys and small law firms",
-      features[
+      features[;
         "AI legal research (up to 100 queries/month)",
         "Basic document analysis",
         "Case law database access",
         "Citation checking",
         "Email support",
         "Up to 5 users"
-      ],
+      ],;
       cta: "Start Free Trial",
       popular: false
     },
@@ -90,7 +90,7 @@ export default function AILegalResearchPlatform(...args[]):  {
       price: "$799",
       period: "/month",
       description: "Ideal for growing law firms and legal teams",
-      features[
+      features[;
         "AI legal research (unlimited queries)",
         "Advanced document analysis",
         "Multi-jurisdiction research",
@@ -98,7 +98,7 @@ export default function AILegalResearchPlatform(...args[]):  {
         "Priority support",
         "Up to 25 users",
         "API access"
-      ],
+      ],;
       cta: "Start Free Trial",
       popular: true
     },
@@ -107,7 +107,7 @@ export default function AILegalResearchPlatform(...args[]):  {
       price: "$1,999",
       period: "/month",
       description: "For large law firms and corporate legal departments",
-      features[
+      features[;
         "Custom AI model training",
         "White-label solutions",
         "Advanced analytics and reporting",
@@ -184,12 +184,12 @@ export default function AILegalResearchPlatform(...args[]):  {
                 Watch Demo
               </motion.button>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -263,14 +263,14 @@ export default function AILegalResearchPlatform(...args[]):  {
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -344,14 +344,14 @@ export default function AILegalResearchPlatform(...args[]):  {
                   <TrendingUp className="w-10 h-10 text-white" />
                 </div>
                 <p className="text-lg text-white font-medium">{benefit}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -425,14 +425,14 @@ export default function AILegalResearchPlatform(...args[]):  {
                   <Scale className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{useCase}</h3>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -506,7 +506,7 @@ export default function AILegalResearchPlatform(...args[]):  {
                     : 'border-gray-700'
                 }`}
 
-                {plan.popular && (
+                {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
@@ -542,7 +542,7 @@ export default function AILegalResearchPlatform(...args[]):  {
                   }`}
 
                   {plan.cta}
-                </motion.button>
+                </motion.button>;
               </motion.div>
             ))}
           </div>
@@ -550,7 +550,7 @@ export default function AILegalResearchPlatform(...args[]):  {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -605,7 +605,7 @@ export default function AILegalResearchPlatform(...args[]):  {
       </section>
 
       {/* Contact Info */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gray-400 mb-4">
             Need help choosing the right plan? Contact our sales team

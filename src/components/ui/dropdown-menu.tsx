@@ -4,12 +4,9 @@ const DropdownMenu({ children }) {
     return (<DropdownMenuContext.Provider value = {
   { isOpen,
   setIsOpen 
-
 ;
 ;
 ;
-
-
 }}>;
       <div className="relative">;
         {children};
@@ -41,50 +38,3 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
     if (!context.isOpen)
         return null;
     const alignClasses = {
-  <<<<<<< HEAD
-        start: 'left-0',
-        center: 'left-1/2 transform -translate-x-1/2',
-  end: 'right-0';
-    ;
-
-};
-    return (<div className = {`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>
-      {children}
-    </div>)}
-export function DropdownMenuItem(...args[]):  {
-  start: 'left-0',;
-        center: 'left-1/2 transform -translate-x-1/2',;
-  ;
-  ;
-  end: 'right-0';
-    ;
-
-
-
-
-};
-    return (<div className = {`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>;
-      {children};
-    </div>);
-}
-export function DropdownMenuItem({ children, onClick, asChild = false, className = '' }) {;
-    const context = useContext(DropdownMenuContext);
-    if (!context)
-        throw new Error('DropdownMenuItem must be used within DropdownMenu');
-    const handleClick = () => {;
-        if (onClick);
-            onClick();
-        context.setIsOpen(false)};
-    if (asChild) {
-      </div>)}
-    return (<button className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none ${className}`} onClick={handleClick}>
-      {children}
-    </button>)};
-        return (<div className = {`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer ${className}`}>;
-        {children};
-      </div>);
-    }
-    return (<button className = {`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none ${className}`} onClick={handleClick}>;
-      {children};
-    </button>);
-}

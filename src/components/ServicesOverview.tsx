@@ -247,7 +247,7 @@ export function ServicesOverview(...args[]):  {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </motion.div>;
           ))}
         </div>
 
@@ -374,7 +374,7 @@ export function ServicesOverview(...args[]):  {
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
-                </div>
+                </div>;
               </motion.div>
             ))}
           </div>
@@ -385,7 +385,7 @@ export function ServicesOverview(...args[]):  {
           className="text-center"
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -395,7 +395,7 @@ export function ServicesOverview(...args[]):  {
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -433,7 +433,7 @@ export function ServicesOverview(...args[]):  {
             </div>
 
             {/* Contact Info Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">;
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-cyan/20">
                 <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
                 <p className="font-medium text-white mb-1">Address</p>

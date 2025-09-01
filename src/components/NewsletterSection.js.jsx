@@ -68,7 +68,7 @@ export function NewsletterSection() {
 
 }}/>
         <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate = {
-  { scale[1, 1.2,
+  { scale[1, 1.2,;
   1] 
 
 }} transition = {

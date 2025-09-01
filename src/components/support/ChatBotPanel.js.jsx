@@ -95,8 +95,8 @@ export function ChatBotPanel() {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    messages[{ role: "user", content: message }]
-                }),
+                    messages[{ role: "user", content: message }];
+                }),;
             });
             if (!response.ok) {
                 return {

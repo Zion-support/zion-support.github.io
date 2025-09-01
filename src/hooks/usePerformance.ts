@@ -113,8 +113,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
           // // // // // // // console.warn('Long task detected:', {
             duration: entry.duration,
-            startTime: entry.startTime,
-            name: entry.name
+            startTime: entry.startTime,;
+            name: entry.name;
           });
 
       });
@@ -384,7 +384,7 @@ export function useRenderTime() {
     renderStart.current = renderEnd;
   });
   return renderTime;
-}}}}}}}}}}}}}}}}}}}}
+
 }
 
 // Hook for monitoring specific component performance

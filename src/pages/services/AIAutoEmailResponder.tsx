@@ -3,7 +3,7 @@ import SEO from '@/components/SEO';
 
 export default function AIAutoEmailResponder(...args[]):  {
   return (
-    <div className = "min-h-screen bg-futuristic text-white">
+    <div className = "min-h-screen bg-futuristic text-white">;
       <SEO
         title="AI Auto Email Responder | Zion Tech Group"
         description="Automate customer email replies with secure AI, sentiment detection, intent routing, and CRM logging."

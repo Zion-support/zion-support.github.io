@@ -243,25 +243,25 @@ const hrBenefits = [
     title: "Operational Efficiency",
     description: "Streamlined HR processes reduce administrative overhead and improve productivity",
     icon: Zap,
-    examples["Automated workflows", "Reduced paperwork", "Faster processing", "Better accuracy"]
-  },
+    examples["Automated workflows", "Reduced paperwork", "Faster processing", "Better accuracy"];
+  },;
   {
     title: "Employee Experience",
     description: "Improved self-service capabilities and better communication enhance employee satisfaction",
     icon: Users,
-    examples["Self-service portals", "Mobile access", "Real-time updates", "Better communication"]
-  },
+    examples["Self-service portals", "Mobile access", "Real-time updates", "Better communication"];
+  },;
   {
     title: "Data-Driven Decisions",
     description: "Advanced analytics provide insights for better workforce planning and HR strategy",
     icon: BarChart3,
-    examples["Workforce analytics", "Performance insights", "Trend analysis", "Predictive modeling"]
-  },
+    examples["Workforce analytics", "Performance insights", "Trend analysis", "Predictive modeling"];
+  },;
   {
     title: "Compliance & Security",
     description: "Built-in compliance features and enterprise-grade security protect sensitive HR data",
     icon: Shield,
-    examples["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"]
+    examples["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"];
   }
 ];
 
@@ -372,10 +372,10 @@ export default function HRPlatform() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* HR Platform Benefits */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -459,14 +459,14 @@ export default function HRPlatform() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* HR Technologies */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -551,14 +551,14 @@ export default function HRPlatform() {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -640,14 +640,14 @@ export default function HRPlatform() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -781,7 +781,7 @@ export default function HRPlatform() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -880,14 +880,14 @@ export default function HRPlatform() {
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
         <div className="container-responsive">
           <motion.div
             initial = {

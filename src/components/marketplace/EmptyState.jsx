@@ -91,7 +91,7 @@ export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = fa
             label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
             onClick: onAddProduct
 
-        : onRetry
+        : onRetry;
             ? { label: 'Try Again', onClick: onRetry }
             : null;
     const customDescription = isAuthenticated

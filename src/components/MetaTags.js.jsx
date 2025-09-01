@@ -60,7 +60,7 @@ export const MetaTags = ({ title, description, keywords = 'AI, artificial intell
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
             },
-            "sameAs"[
+            "sameAs"[;
                 "https://linkedin.com/company/ziontechgroup",
                 "https://twitter.com/ziontechgroup",
                 "https://github.com/Zion-Holdings"

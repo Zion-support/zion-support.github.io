@@ -47,25 +47,25 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
     switch (category) {;
       case 'AI & Automation':;
         return <Brain className="w-8 h-8" />;
-      case 'AI & Security':
+      case 'AI & Security':;
         return <Shield className="w-8 h-8" />;
-      case 'AI & Marketing':
+      case 'AI & Marketing':;
         return <BarChart3 className="w-8 h-8" />;
-      case 'AI & Sales':
+      case 'AI & Sales':;
         return <TrendingUp className="w-8 h-8" />;
-      case 'AI & Customer Experience':
+      case 'AI & Customer Experience':;
         return <MessageSquare className="w-8 h-8" />;
-      case 'AI & Analytics':
+      case 'AI & Analytics':;
         return <Database className="w-8 h-8" />;
-      case 'Quantum Computing':
+      case 'Quantum Computing':;
         return <Box className="w-8 h-8" />;
-      case 'IoT & Edge Computing':
+      case 'IoT & Edge Computing':;
         return <Network className="w-8 h-8" />;
-      case 'Blockchain & Web3':
+      case 'Blockchain & Web3':;
         return <Wallet className="w-8 h-8" />;
-      case 'Sustainability & Technology':
+      case 'Sustainability & Technology':;
         return <Leaf className="w-8 h-8" />;
-      default:
+      default:;
         return <Sparkles className="w-8 h-8" />;
 
   };
@@ -74,25 +74,25 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
     switch (category) {;
       case 'AI & Automation':;
         return 'from-purple-500 to-pink-500';
-      case 'AI & Security':
+      case 'AI & Security':;
         return 'from-red-500 to-orange-500';
-      case 'AI & Marketing':
+      case 'AI & Marketing':;
         return 'from-blue-500 to-cyan-500';
-      case 'AI & Sales':
+      case 'AI & Sales':;
         return 'from-green-500 to-emerald-500';
-      case 'AI & Customer Experience':
+      case 'AI & Customer Experience':;
         return 'from-indigo-500 to-purple-500';
-      case 'AI & Analytics':
+      case 'AI & Analytics':;
         return 'from-cyan-500 to-blue-500';
-      case 'Quantum Computing':
+      case 'Quantum Computing':;
         return 'from-violet-500 to-purple-500';
-      case 'IoT & Edge Computing':
+      case 'IoT & Edge Computing':;
         return 'from-orange-500 to-red-500';
-      case 'Blockchain & Web3':
+      case 'Blockchain & Web3':;
         return 'from-yellow-500 to-orange-500';
-      case 'Sustainability & Technology':
+      case 'Sustainability & Technology':;
         return 'from-green-500 to-teal-500';
-      default:
+      default:;
         return 'from-gray-500 to-slate-500';
 
   };
@@ -192,12 +192,12 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 View Pricing Guide
               </Link>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       </section>
 
       {/* Service Categories */}
-      <section className="px-4 pb-20">
+      <section className="px-4 pb-20">;
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -269,14 +269,14 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* All Categories */}
-      <section className="py-16 bg-slate-900/30">
+      <section className="py-16 bg-slate-900/30">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Complete Service Portfolio</h2>
@@ -347,7 +347,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
       </section>
 
       {/* Featured Services */}
-      <section className="px-4 pb-20">
+      <section className="px-4 pb-20">;
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -447,7 +447,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </span>
-                </Link>
+                </Link>;
               </motion.div>
             ))}
           </div>
@@ -465,7 +465,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
       </section>
 
       {/* Why Choose Us */}
-      <section className="px-4 pb-20">
+      <section className="px-4 pb-20">;
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -499,7 +499,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 title: 'Enterprise Security',
                 description: 'Bank-grade security with compliance certifications and best practices'
 
-            ].map((feature, index) => (
+            ].map((feature, index) => (;
               <motion.div
                 key={index}
                 initial = {
@@ -539,14 +539,14 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="px-4 pb-20">
+      <section className="px-4 pb-20">;
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial = {

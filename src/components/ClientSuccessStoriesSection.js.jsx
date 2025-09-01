@@ -15,13 +15,13 @@ const successStories = [
             cost: "40%",
             time: "60%"
         },
-        metrics[
+        metrics[;
             { label: "Transaction Processing", before: "1,000/sec", after: "10,000/sec", improvement: "900%" },
             { label: "System Uptime", before: "95%", after: "99.9%", improvement: "5.2%" },
             { label: "Customer Satisfaction", before: "3.2/5", after: "4.8/5", improvement: "50%" },
             { label: "Development Speed", before: "6 months", after: "2 months", improvement: "67%" }
-        ],
-        technologies["AWS", "Kubernetes", "React", "Node.js", "PostgreSQL", "Redis"],
+        ],;
+        technologies["AWS", "Kubernetes", "React", "Node.js", "PostgreSQL", "Redis"],;
         team: "12 developers",
         duration: "8 months",
         budget: "$2.5M",
@@ -44,13 +44,13 @@ const successStories = [
             cost: "35%",
             time: "70%"
         },
-        metrics[
+        metrics[;
             { label: "Patient Wait Time", before: "45 minutes", after: "5 minutes", improvement: "89%" },
             { label: "Diagnostic Accuracy", before: "78%", after: "94%", improvement: "21%" },
             { label: "Platform Security", before: "Basic", after: "Enterprise-grade", improvement: "N/A" },
             { label: "User Adoption", before: "60%", after: "95%", improvement: "58%" }
-        ],
-        technologies["React Native", "Python", "TensorFlow", "AWS", "HIPAA Compliance", "WebRTC"],
+        ],;
+        technologies["React Native", "Python", "TensorFlow", "AWS", "HIPAA Compliance", "WebRTC"],;
         team: "15 developers",
         duration: "12 months",
         budget: "$3.2M",
@@ -73,13 +73,13 @@ const successStories = [
             cost: "30%",
             time: "65%"
         },
-        metrics[
+        metrics[;
             { label: "Sales Conversion", before: "2.1%", after: "6.8%", improvement: "224%" },
             { label: "Inventory Turnover", before: "4x/year", after: "12x/year", improvement: "200%" },
             { label: "Customer Retention", before: "45%", after: "78%", improvement: "73%" },
             { label: "Operational Costs", before: "$2.1M", after: "$1.4M", improvement: "33%" }
-        ],
-        technologies["React", "Next.js", "Python", "Machine Learning", "AWS", "Stripe"],
+        ],;
+        technologies["React", "Next.js", "Python", "Machine Learning", "AWS", "Stripe"],;
         team: "18 developers",
         duration: "10 months",
         budget: "$2.8M",
@@ -102,13 +102,13 @@ const successStories = [
             cost: "45%",
             time: "55%"
         },
-        metrics[
+        metrics[;
             { label: "Production Output", before: "85%", after: "98%", improvement: "15%" },
             { label: "Downtime Reduction", before: "12%", after: "2%", improvement: "83%" },
             { label: "Energy Efficiency", before: "70%", after: "92%", improvement: "31%" },
             { label: "Quality Control", before: "94%", after: "99.5%", improvement: "6%" }
-        ],
-        technologies["IoT Sensors", "Python", "Machine Learning", "Azure", "React", "Real-time Analytics"],
+        ],;
+        technologies["IoT Sensors", "Python", "Machine Learning", "Azure", "React", "Real-time Analytics"],;
         team: "20 developers",
         duration: "14 months",
         budget: "$4.1M",
@@ -131,13 +131,13 @@ const successStories = [
             cost: "50%",
             time: "75%"
         },
-        metrics[
+        metrics[;
             { label: "Student Engagement", before: "45%", after: "87%", improvement: "93%" },
             { label: "Learning Outcomes", before: "72%", after: "91%", improvement: "26%" },
             { label: "Content Delivery", before: "Manual", after: "AI-powered", improvement: "N/A" },
             { label: "Platform Scalability", before: "1,000 users", after: "50,000 users", improvement: "4,900%" }
-        ],
-        technologies["React", "Node.js", "Python", "AI/ML", "AWS", "MongoDB"],
+        ],;
+        technologies["React", "Node.js", "Python", "AI/ML", "AWS", "MongoDB"],;
         team: "16 developers",
         duration: "11 months",
         budget: "$2.9M",
@@ -160,13 +160,13 @@ const successStories = [
             cost: "60%",
             time: "80%"
         },
-        metrics[
+        metrics[;
             { label: "Energy Efficiency", before: "65%", after: "89%", improvement: "37%" },
             { label: "Renewable Integration", before: "20%", after: "75%", improvement: "275%" },
             { label: "Grid Reliability", before: "92%", after: "99.5%", improvement: "8%" },
             { label: "Operational Costs", before: "$5.2M", after: "$2.1M", improvement: "60%" }
-        ],
-        technologies["Python", "Machine Learning", "IoT", "React", "AWS", "Real-time Analytics"],
+        ],;
+        technologies["Python", "Machine Learning", "IoT", "React", "AWS", "Real-time Analytics"],;
         team: "22 developers",
         duration: "16 months",
         budget: "$5.5M",

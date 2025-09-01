@@ -95,11 +95,11 @@ const NotificationContainer: React.FC = () => {;
             className="relative"
 
             <NotificationItem notification={notification} onRemove={removeNotification} />
-          </motion.div>
+          </motion.div>;
         ))}
       </AnimatePresence>
 
-      {notifications.length > 1 && (
+      {notifications.length > 1 && (;
         <motion.button
           initial = {
   { opacity: 0,

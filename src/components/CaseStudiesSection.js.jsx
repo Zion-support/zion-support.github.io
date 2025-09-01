@@ -12,15 +12,15 @@ const caseStudies = [
         bgColor: 'from-zion-cyan/20 to-zion-blue/20',
         challenge: 'Needed to reduce diagnostic errors by 40% while improving patient outcomes',
         solution: 'Implemented custom AI diagnostic system with real-time learning capabilities',
-        results[
+        results[;
             { metric: 'Diagnostic Accuracy', value: '+95%', improvement: 'Improved from 78% to 95%' },
             { metric: 'Processing Time', value: '-70%', improvement: 'Reduced from 24 hours to 7 hours' },
             { metric: 'Cost Savings', value: '$2.5M', improvement: 'Annual savings in operational costs' },
             { metric: 'Patient Satisfaction', value: '+88%', improvement: 'Significant improvement in patient experience' }
-        ],
+        ],;
         duration: '6 months',
         team: '8 experts',
-        technologies['Machine Learning', 'Computer Vision', 'Cloud Infrastructure', 'Real-time Analytics'],
+        technologies['Machine Learning', 'Computer Vision', 'Cloud Infrastructure', 'Real-time Analytics'],;
         testimonial: 'Zion Tech Group transformed our diagnostic capabilities. The AI system has become an invaluable tool for our medical professionals.',
         author: 'Dr. Sarah Chen',
         role: 'Chief Medical Officer',
@@ -38,15 +38,15 @@ const caseStudies = [
         bgColor: 'from-zion-purple/20 to-zion-purple-dark/20',
         challenge: 'Required a scalable, secure platform to handle 10M+ daily transactions',
         solution: 'Built enterprise-grade fintech platform with advanced security and real-time processing',
-        results[
+        results[;
             { metric: 'Transaction Volume', value: '+300%', improvement: 'Increased from 3M to 12M daily transactions' },
             { metric: 'Security Score', value: '99.99%', improvement: 'Zero security breaches in 2 years' },
             { metric: 'Performance', value: '-85%', improvement: 'Reduced transaction time from 2s to 0.3s' },
             { metric: 'User Growth', value: '+250%', improvement: 'Customer base expanded significantly' }
-        ],
+        ],;
         duration: '8 months',
         team: '12 experts',
-        technologies['Blockchain', 'Microservices', 'Advanced Security', 'Real-time Processing'],
+        technologies['Blockchain', 'Microservices', 'Advanced Security', 'Real-time Processing'],;
         testimonial: 'The platform Zion built for us exceeded all expectations. It\'s not just a technical solution; it\'s a business enabler.',
         author: 'Michael Rodriguez',
         role: 'CTO',
@@ -64,15 +64,15 @@ const caseStudies = [
         bgColor: 'from-zion-cyan-light/20 to-zion-cyan/20',
         challenge: 'Needed to modernize 500+ store locations with unified digital experience',
         solution: 'Created comprehensive digital transformation strategy with omnichannel capabilities',
-        results[
+        results[;
             { metric: 'Online Sales', value: '+180%', improvement: 'E-commerce revenue increased dramatically' },
             { metric: 'Customer Engagement', value: '+120%', improvement: 'Mobile app usage and customer interaction' },
             { metric: 'Operational Efficiency', value: '+65%', improvement: 'Streamlined processes and reduced costs' },
             { metric: 'Market Share', value: '+45%', improvement: 'Expanded market presence and customer base' }
-        ],
+        ],;
         duration: '12 months',
         team: '15 experts',
-        technologies['E-commerce Platform', 'Mobile Apps', 'IoT Integration', 'Data Analytics'],
+        technologies['E-commerce Platform', 'Mobile Apps', 'IoT Integration', 'Data Analytics'],;
         testimonial: 'Zion\'s digital transformation approach revolutionized our retail operations. We\'re now a truly modern, customer-centric organization.',
         author: 'Lisa Thompson',
         role: 'VP of Digital Strategy',
@@ -90,15 +90,15 @@ const caseStudies = [
         bgColor: 'from-zion-purple-light/20 to-zion-purple/20',
         challenge: 'Required real-time monitoring and predictive maintenance for 200+ production lines',
         solution: 'Implemented comprehensive IoT solution with AI-powered predictive analytics',
-        results[
+        results[;
             { metric: 'Downtime Reduction', value: '-75%', improvement: 'Significantly reduced production interruptions' },
             { metric: 'Maintenance Costs', value: '-60%', improvement: 'Optimized maintenance schedules and costs' },
             { metric: 'Production Efficiency', value: '+45%', improvement: 'Increased overall production output' },
             { metric: 'Quality Control', value: '+92%', improvement: 'Enhanced product quality and consistency' }
-        ],
+        ],;
         duration: '10 months',
         team: '10 experts',
-        technologies['IoT Sensors', 'Predictive Analytics', 'Machine Learning', 'Cloud Platform'],
+        technologies['IoT Sensors', 'Predictive Analytics', 'Machine Learning', 'Cloud Platform'],;
         testimonial: 'The IoT solution from Zion has transformed our manufacturing operations. We\'re now operating at peak efficiency with minimal downtime.',
         author: 'David Kim',
         role: 'Operations Director',

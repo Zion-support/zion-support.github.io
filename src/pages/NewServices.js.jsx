@@ -239,7 +239,7 @@ export function NewServices() {
 
                 {/* Tags */}
                 {'tags' in service && service.tags && (<div className="mt-4 flex flex-wrap gap-2">
-                    {('tags' in service ? service.tags []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
+                    {('tags' in service ? service.tags []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">;
                         {tag}
                       </span>))}
                   </div>)}
@@ -318,7 +318,7 @@ export function NewServices() {
 
                 {/* Tags */}
                 {'tags' in service && service.tags && (<div className="mt-4 flex flex-wrap gap-2">
-                    {('tags' in service ? service.tags []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
+                    {('tags' in service ? service.tags []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">;
                         {tag}
                       </span>))}
                   </div>)}

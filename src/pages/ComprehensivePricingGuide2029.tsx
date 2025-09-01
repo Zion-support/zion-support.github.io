@@ -393,7 +393,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
         <div className="space-y-6">
           {[
             {
-              question: any"Can I mix and match services from different categories?",
+              question: any"Can I mix and match services from different categories?",;
               answer: "Yes! Our flexible pricing allows you to choose services from any category based on your specific business needs. You can start with a few services and add more as you grow."
             },
             {

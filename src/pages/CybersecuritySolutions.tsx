@@ -36,35 +36,35 @@ export default function CybersecuritySolutions(...args[]):  {
       icon: Shield,
       title: "Threat Detection & Response",
       description: "Advanced security monitoring and incident response to protect against cyber threats",
-      features["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],
+      features["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],;
       color: "from-zion-red to-zion-orange"
     },
     {
       icon: Lock,
       title: "Identity & Access Management",
       description: "Secure authentication and authorization systems for your organization",
-      features["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Privilege Management"],
+      features["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Privilege Management"],;
       color: "from-zion-blue to-zion-cyan"
     },
     {
       icon: Eye,
       title: "Security Auditing & Compliance",
       description: "Comprehensive security assessments and compliance management",
-      features["Vulnerability Assessment", "Penetration Testing", "Compliance Audits", "Risk Assessment"],
+      features["Vulnerability Assessment", "Penetration Testing", "Compliance Audits", "Risk Assessment"],;
       color: "from-zion-purple to-zion-pink"
     },
     {
       icon: Network,
       title: "Network Security",
       description: "Protect your network infrastructure with advanced security measures",
-      features["Firewall Management", "Intrusion Prevention", "VPN Solutions", "Network Monitoring"],
+      features["Firewall Management", "Intrusion Prevention", "VPN Solutions", "Network Monitoring"],;
       color: "from-zion-green to-zion-emerald"
     },
     {
       icon: Database,
       title: "Data Protection",
       description: "Safeguard sensitive data with encryption and backup solutions",
-      features["Data Encryption", "Backup & Recovery", "Data Loss Prevention", "Privacy Compliance"],
+      features["Data Encryption", "Backup & Recovery", "Data Loss Prevention", "Privacy Compliance"],;
       color: "from-zion-yellow to-zion-orange"
     },
     {
@@ -92,7 +92,7 @@ export default function CybersecuritySolutions(...args[]):  {
       description: "Sophisticated, long-term cyber attacks targeting specific organizations",
       type: "malware",
       impact: "High",
-      solutions["Advanced Threat Detection", "Behavioral Analysis", "Network Segmentation", "Incident Response"],
+      solutions["Advanced Threat Detection", "Behavioral Analysis", "Network Segmentation", "Incident Response"],;
       icon: Target
     },
     {
@@ -100,7 +100,7 @@ export default function CybersecuritySolutions(...args[]):  {
       description: "Malicious software that encrypts data and demands payment for decryption",
       type: "ransomware",
       impact: "Critical",
-      solutions["Backup Solutions", "Email Security", "User Training", "Rapid Recovery"],
+      solutions["Backup Solutions", "Email Security", "User Training", "Rapid Recovery"],;
       icon: Lock
     },
     {
@@ -108,7 +108,7 @@ export default function CybersecuritySolutions(...args[]):  {
       description: "Manipulation tactics to trick users into revealing sensitive information",
       type: "phishing",
       impact: "Medium",
-      solutions["Security Awareness Training", "Email Filtering", "Multi-Factor Authentication", "Incident Reporting"],
+      solutions["Security Awareness Training", "Email Filtering", "Multi-Factor Authentication", "Incident Reporting"],;
       icon: Users
     },
     {
@@ -116,7 +116,7 @@ export default function CybersecuritySolutions(...args[]):  {
       description: "Overwhelming systems with traffic to disrupt services",
       type: "ddos",
       impact: "Medium",
-      solutions["DDoS Protection", "Traffic Filtering", "Load Balancing", "CDN Services"],
+      solutions["DDoS Protection", "Traffic Filtering", "Load Balancing", "CDN Services"],;
       icon: Network
     },
     {
@@ -124,7 +124,7 @@ export default function CybersecuritySolutions(...args[]):  {
       description: "Security risks from employees or contractors with access to systems",
       type: "insider",
       impact: "High",
-      solutions["Access Monitoring", "Privilege Management", "Behavioral Analytics", "Regular Audits"],
+      solutions["Access Monitoring", "Privilege Management", "Behavioral Analytics", "Regular Audits"],;
       icon: Shield
     },
     {
@@ -142,31 +142,31 @@ export default function CybersecuritySolutions(...args[]):  {
     {
       name: "SOC 2 Type II",
       description: "Service Organization Control 2 compliance for data security",
-      requirements["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"],
+      requirements["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"],;
       icon: ShieldCheck
     },
     {
       name: "ISO 27001",
       description: "International standard for information security management",
-      requirements["Risk Assessment", "Security Controls", "Management System", "Continuous Improvement"],
+      requirements["Risk Assessment", "Security Controls", "Management System", "Continuous Improvement"],;
       icon: CheckCircle
     },
     {
       name: "GDPR",
       description: "General Data Protection Regulation for EU data privacy",
-      requirements["Data Protection", "User Consent", "Right to Erasure", "Data Portability"],
+      requirements["Data Protection", "User Consent", "Right to Erasure", "Data Portability"],;
       icon: Lock
     },
     {
       name: "HIPAA",
       description: "Health Insurance Portability and Accountability Act",
-      requirements["Patient Privacy", "Data Security", "Access Controls", "Audit Trails"],
+      requirements["Patient Privacy", "Data Security", "Access Controls", "Audit Trails"],;
       icon: Database
     },
     {
       name: "PCI DSS",
       description: "Payment Card Industry Data Security Standard",
-      requirements["Card Data Protection", "Network Security", "Access Control", "Monitoring"],
+      requirements["Card Data Protection", "Network Security", "Access Control", "Monitoring"],;
       icon: CreditCard
     },
     {
@@ -280,10 +280,10 @@ export default function CybersecuritySolutions(...args[]):  {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Security Services Overview */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -326,7 +326,7 @@ export default function CybersecuritySolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {securityServices.map((service, index) => (
+            {securityServices.map((service, index) => (;
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -364,7 +364,7 @@ export default function CybersecuritySolutions(...args[]):  {
       </section>
 
       {/* Threat Landscape */}
-      <section className="py-20 bg-zion-blue-dark">
+      <section className="py-20 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -407,7 +407,7 @@ export default function CybersecuritySolutions(...args[]):  {
             {threatTypes.map((threat)  => {
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 
 
@@ -507,7 +507,7 @@ export default function CybersecuritySolutions(...args[]):  {
       </section>
 
       {/* Compliance & Standards */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -550,7 +550,7 @@ export default function CybersecuritySolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {complianceFrameworks.map((framework, index) => (
+            {complianceFrameworks.map((framework, index) => (;
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -591,7 +591,7 @@ export default function CybersecuritySolutions(...args[]):  {
       </section>
 
       {/* Security Metrics */}
-      <section className="py-20 bg-gradient-to-r from-zion-red-dark to-zion-orange">
+      <section className="py-20 bg-gradient-to-r from-zion-red-dark to-zion-orange">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -634,7 +634,7 @@ export default function CybersecuritySolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {securityMetrics.map((metric, index) => (
+            {securityMetrics.map((metric, index) => (;
               <motion.div
                 key={index}
                 className="text-center"
@@ -645,14 +645,14 @@ export default function CybersecuritySolutions(...args[]):  {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{metric.label}</h3>
                 <p className="text-zion-slate-light">{metric.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </motion.div>
         </div>
       </section>
 
       {/* Security Process */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -695,7 +695,7 @@ export default function CybersecuritySolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {[
+            {[;
               {
                 step: "01",
                 title: "Security Assessment",
@@ -720,7 +720,7 @@ export default function CybersecuritySolutions(...args[]):  {
                 description: "Continuous security monitoring and regular updates",
                 icon: Monitor
 
-            ].map((phase, index) => (
+            ].map((phase, index) => (;
               <motion.div
                 key={index}
                 className="relative"
@@ -735,19 +735,19 @@ export default function CybersecuritySolutions(...args[]):  {
                   <p className="text-zion-slate-light leading-relaxed">{phase.description}</p>
                 </div>
 
-                {index < 3 && (
+                {index < 3 && (;
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
                     <ArrowRight className="w-8 h-8 text-zion-red" />
                   </div>
                 )}
-              </motion.div>
+              </motion.div>;
             ))}
           </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-red-dark">
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-red-dark">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {

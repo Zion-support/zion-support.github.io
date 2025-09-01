@@ -74,14 +74,14 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
       price: 199,
       period: "month",
       description: "Perfect for small businesses getting started with AI analytics",
-      features[
+      features[;
         "Up to 5 users",
         "Basic AI analytics",
         "Standard dashboards",
         "Email support",
         "Data integration (3 sources)",
         "Monthly reports"
-      ],
+      ],;
       popular: false
     },
     {
@@ -89,7 +89,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
       price: 499,
       period: "month",
       description: "Ideal for growing businesses with advanced analytics needs",
-      features[
+      features[;
         "Up to 25 users",
         "Advanced AI algorithms",
         "Custom dashboards",
@@ -98,7 +98,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
         "Real-time analytics",
         "Predictive modeling",
         "API access"
-      ],
+      ],;
       popular: true
     },
     {
@@ -106,7 +106,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
       price: 1299,
       period: "month",
       description: "For large organizations with complex data analytics requirements",
-      features[
+      features[;
         "Unlimited users",
         "Custom AI models",
         "White-label dashboards",
@@ -198,10 +198,10 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -279,14 +279,14 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -360,14 +360,14 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
                 <CheckCircle className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -443,7 +443,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
                     : 'border-slate-700'
                 }`}
 
-                {tier.popular && (
+                {tier.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <Badge className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white border-0">
                       Most Popular
@@ -477,7 +477,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
                   }`}
 
                   Get Started
-                </Button>
+                </Button>;
               </motion.div>
             ))}
           </div>
@@ -485,7 +485,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -559,14 +559,14 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -612,7 +612,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {

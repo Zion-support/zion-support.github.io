@@ -17,13 +17,13 @@ const ComprehensiveServicesLanding2025 = () => {
         if (industry === 'all')
             return allEnhancedServices;
         const industryMap = {
-  'finance'['FinTech & AI', 'Cybersecurity & Quantum Computing'],
-            'healthcare'['Healthcare & AI'],
-            'manufacturing'['IoT & Edge Computing', 'Blockchain & Supply Chain'],
-            'energy'['Energy & Sustainability'],
-            'logistics'['Logistics & Transportation'],
-            'legal'['Legal Tech & AI'],
-  'marketing'['Marketing & AI']
+  'finance'['FinTech & AI', 'Cybersecurity & Quantum Computing'],;
+            'healthcare'['Healthcare & AI'],;
+            'manufacturing'['IoT & Edge Computing', 'Blockchain & Supply Chain'],;
+            'energy'['Energy & Sustainability'],;
+            'logistics'['Logistics & Transportation'],;
+            'legal'['Legal Tech & AI'],;
+  'marketing'['Marketing & AI'];
         
 
 };

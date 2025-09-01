@@ -10,7 +10,7 @@ export default function SearchResultsPage() {
     const initialQuery = router.query.q || "";
     const [query, setQuery] = useState(initialQuery);
     const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading, refetch } = useInfiniteQuery({
-        queryKey["search", query],
+        queryKey["search", query],;
         queryFn: async ({ pageParam = 1 }) => {
             const res = await fetch(`/api/search?q=${encodeURIComponent(query)}&page=${pageParam}&limit=${LIMIT}`);
             if (!res.ok)

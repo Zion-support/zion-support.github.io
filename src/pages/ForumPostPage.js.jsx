@@ -28,10 +28,10 @@ const mockPost = {
     authorId: "user1",
     category: "ai-tools",
     categoryId: "ai-tools",
-    tags["machine-learning", "fine-tuning", "gpt"],
+    tags["machine-learning", "fine-tuning", "gpt"],;
     createdAt: "2025-04-01T12:00:00Z",
     updatedAt: "2025-04-01T12:00:00Z",
-    replies[],
+    replies[],;
     likes: 48,
     views: 120,
     upvotes: 48,
@@ -242,9 +242,9 @@ export default function ForumPostPage() {
 
 } keywords = {
   `community, forum, discussion, ${post.tags.join(',
-  ')
+  ');
 
-}`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>
+}`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>;
       
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">

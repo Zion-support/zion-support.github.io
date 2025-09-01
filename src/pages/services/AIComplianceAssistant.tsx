@@ -494,7 +494,7 @@ export default function AIComplianceAssistant() {
             </div>
           </div>
         </div>
-      </section>
+      </section>;
     </div>
   );
 }

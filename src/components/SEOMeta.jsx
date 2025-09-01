@@ -32,7 +32,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
             "contactType": "customer service",
             "email": "kleber@ziontechgroup.com"
         },
-        "sameAs"[
+        "sameAs"[;
             "https://linkedin.com/company/ziontechgroup",
             "https://twitter.com/ziontechgroup",
             "https://github.com/ziontechgroup"
@@ -43,7 +43,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Technology Services",
-            "itemListElement"[
+            "itemListElement"[;
                 {
                     "@type": "Offer",
                     "itemOffered": {
@@ -60,13 +60,13 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
                         "description": "Revolutionary platform combining quantum computing with artificial intelligence"
 
 
-            ]
+            ];
 
     };
     const finalStructuredData = structuredData || defaultStructuredData;
-    return (<Helmet>
+    return (<Helmet>;
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{fullTitle}</title>;
       <meta name="description" content={description}/>
       <meta name="keywords" content={keywords}/>
       <meta name="author" content="Zion Tech Group"/>

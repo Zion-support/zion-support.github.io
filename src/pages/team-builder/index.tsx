@@ -81,13 +81,13 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     setTeamRecommendation(null);
 
     const projectBriefData: ProjectBrief = {
-  userId: any'current-user-id',
+  userId: any'current-user-id',;
       createdAt: new Date().toISOString(),
       ...data,
       techStack: data.techStack?.split(',').map(s   => s.trim()).filter(s => s) || [],
-      talentFilters: any{ // Ensure talentFilters is structured correctly
-        verifiedOnly: data.talentFilters?.verifiedOnly,
-        regions: data.talentFilters?.regions?.split(',').map(r   => r.trim()).filter(r => r) || [],
+      talentFilters: any{ // Ensure talentFilters is structured correctly;
+        verifiedOnly: data.talentFilters?.verifiedOnly,;
+        regions: data.talentFilters?.regions?.split(',').map(r   => r.trim()).filter(r => r) || [],;
   
 ;
 };

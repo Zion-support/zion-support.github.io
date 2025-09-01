@@ -52,9 +52,9 @@ export default function NextGenInnovativeServices() {
 
 
     };
-    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">;
       {/* Header Section */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden">;
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div initial = {
@@ -130,10 +130,10 @@ export default function NextGenInnovativeServices() {
             </div>
           </motion.div>
         </div>
-      </div>
+      </div>;
 
       {/* Filters and Search */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">;
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-blue-400/30">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
@@ -168,7 +168,7 @@ export default function NextGenInnovativeServices() {
       </div>
 
       {/* Services Grid/List */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">;
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
           {filteredServices.map((service) => (<motion.div key={service.id} variants={itemVariants} className={`bg-white/10 backdrop-blur-sm rounded-xl border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400/20 cursor-pointer ${viewMode === 'list' ? 'p-6' : 'p-6'}`} onClick={() => setSelectedService(service)}>
               {/* Service Header */}

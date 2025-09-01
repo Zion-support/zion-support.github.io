@@ -76,14 +76,14 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
                     onClick={() => toggleService(service.id)}
                     className="ml-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
 
-                    {expandedService === service.id ? (
+                    {expandedService === service.id ? (;
                       <ChevronUp className="w-6 h-6" />
                     ) : (
                       <ChevronDown className="w-6 h-6" />
                     )}
                   </button>
                 </div>
-              </div>
+              </div>;
 
               {/* Expanded Content */}
               {expandedService === service.id && (

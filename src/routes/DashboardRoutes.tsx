@@ -220,9 +220,9 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-    </Routes>
+    </Routes>;
   );
 };
 
 export default DashboardRoutes;
-}}}}}}}}}}}}}}}}}}}}}}}}
+}}}}

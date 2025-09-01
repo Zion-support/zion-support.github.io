@@ -155,7 +155,7 @@ interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
 
 export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showTeamMembers = true,
-  showProjects = true,;
+showProjects:  true,;
   showCommunication = true,;
   showFileSharing = true,;
   maxItems = 20;
@@ -183,8 +183,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         uploadedBy: 'Sarah Johnson',
         uploadDate: '2024-01-15',
         lastModified: '2024-01-15',
-        tags['Architecture', 'AI', 'Documentation'],
-        sharedWith['Michael Chen', 'Alex Wong'],
+        tags['Architecture', 'AI', 'Documentation'],;
+        sharedWith['Michael Chen', 'Alex Wong'],;
         permissions: 'edit',
         version: '1.2'
       },
@@ -196,8 +196,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         uploadedBy: 'Michael Chen',
         uploadDate: '2024-01-14',
         lastModified: '2024-01-14',
-        tags['Migration', 'Cloud', 'Planning'],
-        sharedWith['Sarah Johnson', 'David Kim'],
+        tags['Migration', 'Cloud', 'Planning'],;
+        sharedWith['Sarah Johnson', 'David Kim'],;
         permissions: 'view',
         version: '2.1'
       },
@@ -209,8 +209,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         uploadedBy: 'David Kim',
         uploadDate: '2024-01-13',
         lastModified: '2024-01-13',
-        tags['Security', 'Audit', 'Report'],
-        sharedWith['Lisa Thompson'],
+        tags['Security', 'Audit', 'Report'],;
+        sharedWith['Lisa Thompson'],;
         permissions: 'view',
         version: '1.0'
 
@@ -358,7 +358,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                 {teamMembers.filter(m => m.status === 'online').length}
               </div>
               <div className="text-zinc-400">Online Now</div>
-            </motion.div>
+            </motion.div>;
 
             <motion.div
               initial = {
@@ -422,8 +422,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
           </div>
 
           {/* Team Members Grid */}
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {teamMembers.map((member, index)  => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">;
+            {teamMembers.map((member, index)  => (;
               <motion.div
                 key={member.id}
                 initial = {
@@ -467,7 +467,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                 </div>
 
                 {/* Status and Availability */}
-                <div className="flex items-center gap-2 mb-4">
+                <div className="flex items-center gap-2 mb-4">;
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(member.status).color}`}>
                     {member.status.charAt(0).toUpperCase() + member.status.slice(1)}
                   </span>
@@ -478,10 +478,10 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                   }`}>
                     {member.availability.charAt(0).toUpperCase() + member.availability.slice(1)}
                   </span>
-                </div>
+                </div>;
 
                 {/* Skills */}
-                <div className="mb-4">
+                <div className="mb-4">;
                   <h4 className="text-sm font-medium text-zinc-300 mb-2">Skills</h4>
                   <div className="flex flex-wrap gap-2">
                     {member.skills.slice(0, 3).map((skill) => (
@@ -501,7 +501,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                 </div>
 
                 {/* Projects */}
-                <div className="mb-4">
+                <div className="mb-4">;
                   <h4 className="text-sm font-medium text-zinc-300 mb-2">Active Projects</h4>
                   <div className="space-y-1">
                     {member.projects.slice(0, 2).map((project) => (
@@ -513,7 +513,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                 </div>
 
                 {/* Actions */}
-                <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">
+                <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">;
                   <div className="text-xs text-zinc-500">
                     Last seen: {member.lastSeen}
                   </div>
@@ -617,7 +617,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                 {projects.filter(p => p.status === 'active').length}
               </div>
               <div className="text-zinc-400">Active</div>
-            </motion.div>
+            </motion.div>;
 
             <motion.div
               initial = {
@@ -681,8 +681,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
           </div>
 
           {/* Projects List */}
-          <div className="space-y-6">
-            {projects.map((project, index) => (
+          <div className="space-y-6">;
+            {projects.map((project, index) => (;
               <motion.div
                 key={project.id}
                 initial = {
@@ -742,7 +742,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                 </div>
 
                 {/* Progress Bar */}
-                <div className="mb-4">
+                <div className="mb-4">;
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm text-zinc-300">Progress</span>
                     <span className="text-sm font-medium text-zion-cyan">{project.progress}%</span>
@@ -764,10 +764,10 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                       className="h-2 bg-zion-cyan rounded-full"
                     />
                   </div>
-                </div>
+                </div>;
 
                 {/* Project Details */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">;
                   <div className="p-3 bg-zinc-800/30 rounded-lg">
                     <div className="text-sm text-zinc-400 mb-1">Timeline</div>
                     <div className="text-white font-medium text-sm">
@@ -784,11 +784,11 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                     <div className="text-sm text-zinc-400 mb-1">Team Size</div>
                     <div className="text-white font-medium">{project.teamMembers.length} members</div>
                   </div>
-                </div>
+                </div>;
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
+                <div className="flex flex-wrap gap-2">;
+                  {project.tags.map((tag) => (;
                     <span
                       key={tag}
                       className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
@@ -797,12 +797,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
 
           {/* Add Project Button */}
-          <div className="text-center">
+          <div className="text-center">;
             <button
               onClick={() => setShowProjectForm(true)}
               className="px-8 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto"
@@ -896,7 +896,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                 {messages.filter(m => m.isRead).length}
               </div>
               <div className="text-zinc-400">Read</div>
-            </motion.div>
+            </motion.div>;
 
             <motion.div
               initial = {
@@ -930,8 +930,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
           </div>
 
           {/* Messages */}
-          <div className="space-y-4">
-            {messages.map((message, index) => (
+          <div className="space-y-4">;
+            {messages.map((message, index) => (;
               <motion.div
                 key={message.id}
                 initial = {
@@ -1014,13 +1014,13 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                       <MoreHorizontal className="w-4 h-4" />
                     </button>
                   </div>
-                </div>
+                </div>;
               </motion.div>
             ))}
           </div>
 
           {/* New Message Input */}
-          <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
+          <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">;
             <div className="flex items-center gap-3">
               <div className="flex-1">
                 <input
@@ -1125,7 +1125,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                 {files.filter(f => f.type === 'document').length}
               </div>
               <div className="text-zinc-400">Documents</div>
-            </motion.div>
+            </motion.div>;
 
             <motion.div
               initial = {
@@ -1189,8 +1189,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
           </div>
 
           {/* Files List */}
-          <div className="space-y-4">
-            {files.map((file, index) => (
+          <div className="space-y-4">;
+            {files.map((file, index) => (;
               <motion.div
                 key={file.id}
                 initial = {
@@ -1254,13 +1254,13 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                       <MoreHorizontal className="w-4 h-4" />
                     </button>
                   </div>
-                </div>
+                </div>;
               </motion.div>
             ))}
           </div>
 
           {/* Upload Files */}
-          <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">
+          <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">;
             <div className="border-2 border-dashed border-zinc-600 rounded-lg p-8">
               <FileText className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
               <h3 className="text-lg font-medium text-zinc-300 mb-2">Upload Files</h3>

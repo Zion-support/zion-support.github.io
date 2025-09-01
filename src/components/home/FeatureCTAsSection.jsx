@@ -70,7 +70,7 @@ import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection 
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2"/>
               </div>
-            </a>
+            </a>;
           ))}
         </div>
 
@@ -86,6 +86,6 @@ import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection 
             <ArrowRight className="w-5 h-5 ml-2"/>
           </a>
         </div>
-      </div>
+      </div>;
     </section>
   )};

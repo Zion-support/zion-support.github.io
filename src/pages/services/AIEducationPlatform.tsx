@@ -75,14 +75,14 @@ export default function AIEducationPlatform(...args[]):  {
       price: "$299",
       period: "/month",
       description: "Perfect for individual schools and small districts",
-      features[
+      features[;
         "AI learning paths (up to 500 students)",
         "Basic content recommendation",
         "Assessment tools",
         "Progress tracking",
         "Email support",
         "Up to 50 teachers"
-      ],
+      ],;
       cta: "Start Free Trial",
       popular: false
     },
@@ -91,7 +91,7 @@ export default function AIEducationPlatform(...args[]):  {
       price: "$799",
       period: "/month",
       description: "Ideal for school districts and larger institutions",
-      features[
+      features[;
         "AI learning paths (unlimited students)",
         "Advanced content recommendation",
         "Comprehensive analytics",
@@ -99,7 +99,7 @@ export default function AIEducationPlatform(...args[]):  {
         "Priority support",
         "Up to 500 teachers",
         "API access"
-      ],
+      ],;
       cta: "Start Free Trial",
       popular: true
     },
@@ -108,7 +108,7 @@ export default function AIEducationPlatform(...args[]):  {
       price: "$1,999",
       period: "/month",
       description: "For large educational organizations and corporations",
-      features[
+      features[;
         "Custom AI model training",
         "White-label solutions",
         "Advanced integrations",
@@ -185,12 +185,12 @@ export default function AIEducationPlatform(...args[]):  {
                 Watch Demo
               </motion.button>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -264,14 +264,14 @@ export default function AIEducationPlatform(...args[]):  {
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -345,14 +345,14 @@ export default function AIEducationPlatform(...args[]):  {
                   <TrendingUp className="w-10 h-10 text-white" />
                 </div>
                 <p className="text-lg text-white font-medium">{benefit}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -426,14 +426,14 @@ export default function AIEducationPlatform(...args[]):  {
                   <GraduationCap className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{useCase}</h3>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -507,7 +507,7 @@ export default function AIEducationPlatform(...args[]):  {
                     : 'border-gray-700'
                 }`}
 
-                {plan.popular && (
+                {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
@@ -543,7 +543,7 @@ export default function AIEducationPlatform(...args[]):  {
                   }`}
 
                   {plan.cta}
-                </motion.button>
+                </motion.button>;
               </motion.div>
             ))}
           </div>
@@ -551,7 +551,7 @@ export default function AIEducationPlatform(...args[]):  {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -606,7 +606,7 @@ export default function AIEducationPlatform(...args[]):  {
       </section>
 
       {/* Contact Info */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gray-400 mb-4">
             Need help choosing the right plan? Contact our sales team

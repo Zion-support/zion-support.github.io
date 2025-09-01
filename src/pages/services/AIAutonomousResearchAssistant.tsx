@@ -180,10 +180,10 @@ export default function AIAutonomousResearchAssistant() {
   Wifi,
   ShieldCheck,
   Bot,
-  Workflow as WorkflowIcon,
-  Eye as EyeIcon,
-  Sparkles as SparklesIcon,
-  Zap as ZapIcon,
+  Workflow as WorkflowIcon,;
+  Eye as EyeIcon,;
+  Sparkles as SparklesIcon,;
+  Zap as ZapIcon,;
   Phone,
   Mail,
   MapPin
@@ -208,8 +208,8 @@ export default function AIAutonomousResearchAssistant() {
     "Natural language output",
     "API integration capabilities",
     "Custom research templates"
-      description: "Government policy analysis and regulatory research automation",
-      icon: Globe
+      description: "Government policy analysis and regulatory research automation",;
+      icon: Globe;
     }
   ];
 
@@ -462,7 +462,7 @@ export default function AIAutonomousResearchAssistant() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -529,14 +529,14 @@ export default function AIAutonomousResearchAssistant() {
 
                   Get Started
                 </a>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -576,7 +576,7 @@ export default function AIAutonomousResearchAssistant() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -624,7 +624,7 @@ export default function AIAutonomousResearchAssistant() {
               </button>
             ))}
           </div>
-        </div>
+        </div>;
       </div>
 
       {/* Content Sections */}

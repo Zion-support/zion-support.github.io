@@ -14,8 +14,8 @@ export function ChatAssistantTrigger() {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    messages[{ role: "user", content: message }]
-                }),
+                    messages[{ role: "user", content: message }];
+                }),;
             });
             if (!response.ok) {
                 throw new Error("Failed to get response from AI assistant")}

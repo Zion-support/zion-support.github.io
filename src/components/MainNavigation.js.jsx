@@ -16,51 +16,51 @@ export function MainNavigation() {
         {
             name: 'Services',
             href: '/services',
-            dropdown[
+            dropdown[;
                 { name: 'AI Solutions', href: '/services/ai' },
                 { name: 'Cybersecurity', href: '/services/cybersecurity' },
                 { name: 'Cloud Computing', href: '/services/cloud' },
                 { name: 'IT Consulting', href: '/services/consulting' },
                 { name: 'Digital Transformation', href: '/services/digital-transformation' }
             ]
-        },
+        },;
         {
             name: 'Solutions',
             href: '/solutions',
-            dropdown[
+            dropdown[;
                 { name: 'Enterprise AI', href: '/solutions/enterprise-ai' },
                 { name: 'Quantum Computing', href: '/solutions/quantum' },
                 { name: 'Autonomous Systems', href: '/solutions/autonomous' },
                 { name: 'Blockchain', href: '/solutions/blockchain' },
                 { name: 'IoT Platform', href: '/solutions/iot' }
             ]
-        },
+        },;
         {
             name: 'Industries',
             href: '/industries',
-            dropdown[
+            dropdown[;
                 { name: 'Healthcare', href: '/industries/healthcare' },
                 { name: 'Finance', href: '/industries/finance' },
                 { name: 'Manufacturing', href: '/industries/manufacturing' },
                 { name: 'Retail', href: '/industries/retail' },
                 { name: 'Education', href: '/industries/education' }
             ]
-        },
+        },;
         {
             name: 'Resources',
             href: '/resources',
-            dropdown[
+            dropdown[;
                 { name: 'Blog', href: '/blog' },
                 { name: 'Case Studies', href: '/case-studies' },
                 { name: 'White Papers', href: '/white-papers' },
                 { name: 'Webinars', href: '/webinars' },
                 { name: 'Documentation', href: '/docs' }
             ]
-        },
+        },;
         {
             name: 'Comp',
             href: '/about',
-            dropdown[
+            dropdown[;
                 { name: 'About Us', href: '/about' },
                 { name: 'Leadership', href: '/leadership' },
                 { name: 'Careers', href: '/careers' },

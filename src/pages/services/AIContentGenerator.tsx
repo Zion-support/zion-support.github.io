@@ -88,14 +88,14 @@ export default function AIContentGenerator(...args[]):  {
       price: "$39",
       period: "/month",
       description: "Perfect for individual creators and small businesses",
-      features[
+      features[;
         "Up to 100 content pieces/month",
         "Basic AI writing tools",
         "5 content templates",
         "Standard SEO suggestions",
         "Mobile app access",
         "Email support"
-      ],
+      ],;
       popular: false
     },
     {
@@ -103,7 +103,7 @@ export default function AIContentGenerator(...args[]):  {
       price: "$99",
       period: "/month",
       description: "Ideal for growing businesses and content teams",
-      features[
+      features[;
         "Up to 500 content pieces/month",
         "Advanced AI capabilities",
         "Unlimited templates",
@@ -111,7 +111,7 @@ export default function AIContentGenerator(...args[]):  {
         "Priority support",
         "API access",
         "Team collaboration"
-      ],
+      ],;
       popular: true
     },
     {
@@ -247,7 +247,7 @@ export default function AIContentGenerator(...args[]):  {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-black/30">
+        <section className="py-20 bg-black/30">;
           <div className="container-responsive">
             <motion.div
               initial = {
@@ -323,14 +323,14 @@ export default function AIContentGenerator(...args[]):  {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Content Types Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -374,7 +374,7 @@ export default function AIContentGenerator(...args[]):  {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -418,7 +418,7 @@ export default function AIContentGenerator(...args[]):  {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="container-responsive">
             <motion.div
               initial = {
@@ -491,14 +491,14 @@ export default function AIContentGenerator(...args[]):  {
 
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 bg-black/30">
+        <section className="py-20 bg-black/30">;
           <div className="container-responsive">
             <motion.div
               initial = {
@@ -573,7 +573,7 @@ export default function AIContentGenerator(...args[]):  {
                       : 'border-slate-700/50'
                   }`}
 
-                  {plan.popular && (
+                  {plan.popular && (;
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
@@ -606,14 +606,14 @@ export default function AIContentGenerator(...args[]):  {
                   }`}>
                     {plan.cta}
                   </button>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="container-responsive">
             <motion.div
               initial = {

@@ -16,7 +16,7 @@ import {
  } from 'lucide-react';
 
 const pricingData2028 = {
-  aiServices[
+  aiServices[;
     {
       name: 'Quantum Consciousness AI',
       price: '$25,999',
@@ -29,13 +29,13 @@ const pricingData2028 = {
       trialDays: 30,
       features: ['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
       targetAudience: 'AI research institutions, Government agencies,
-  Ethics committees'
+  Ethics committees';
     
 
 
 
 
-},
+},;
     {
       name: 'Quantum Financial Trading AI',
       price: '$35,999',
@@ -46,7 +46,7 @@ const pricingData2028 = {
       roi: '600%',
       setupTime: '2-3 weeks',
       trialDays: 14,
-      features['Quantum market analysis', 'Predictive trading', 'Risk management'],
+      features['Quantum market analysis', 'Predictive trading', 'Risk management'],;
       targetAudience: 'Hedge funds, Investment banks, Trading firms'
     },
     {
@@ -59,11 +59,11 @@ const pricingData2028 = {
       roi: '450%',
       setupTime: '3-4 weeks',
       trialDays: 21,
-      features['Medical diagnosis', 'Treatment optimization', 'Drug discovery'],
+      features['Medical diagnosis', 'Treatment optimization', 'Drug discovery'],;
       targetAudience: 'Hospitals, Medical centers, Pharmaceutical companies'
 
-  ],
-  microSAAS[
+  ],;
+  microSAAS[;
     {
       name: 'AI Content Creator Pro',
       price: '$299',
@@ -74,7 +74,7 @@ const pricingData2028 = {
       roi: '300%',
       setupTime: '1-2 days',
       trialDays: 14,
-      features['AI article generation', 'Content optimization', 'Multi-language support'],
+      features['AI article generation', 'Content optimization', 'Multi-language support'],;
       targetAudience: 'Content marketers, Digital agencies, Small businesses'
     },
     {
@@ -87,7 +87,7 @@ const pricingData2028 = {
       roi: '400%',
       setupTime: '1 day',
       trialDays: 7,
-      features['High-resolution generation', 'Brand customization', 'Commercial rights'],
+      features['High-resolution generation', 'Brand customization', 'Commercial rights'],;
       targetAudience: 'Designers, Marketing agencies, E-commerce businesses'
     },
     {
@@ -100,11 +100,11 @@ const pricingData2028 = {
       roi: '500%',
       setupTime: '2-3 days',
       trialDays: 21,
-      features['Multi-language support', 'Bug detection', 'Code optimization'],
+      features['Multi-language support', 'Bug detection', 'Code optimization'],;
       targetAudience: 'Software developers, Development teams, Tech companies'
 
-  ],
-  itServices[
+  ],;
+  itServices[;
     {
       name: 'Quantum Cloud Infrastructure',
       price: '$45,999',
@@ -115,7 +115,7 @@ const pricingData2028 = {
       roi: '700%',
       setupTime: '6-8 weeks',
       trialDays: 30,
-      features['Quantum-ready nodes', 'Zero-latency networking', 'Auto-scaling'],
+      features['Quantum-ready nodes', 'Zero-latency networking', 'Auto-scaling'],;
       targetAudience: 'Enterprises, Cloud providers, Data centers'
     },
     {
@@ -128,7 +128,7 @@ const pricingData2028 = {
       roi: '500%',
       setupTime: '2-3 weeks',
       trialDays: 14,
-      features['AI threat detection', 'Zero-trust architecture', 'Automated response'],
+      features['AI threat detection', 'Zero-trust architecture', 'Automated response'],;
       targetAudience: 'Enterprises, Government agencies, Financial institutions'
     },
     {
@@ -235,11 +235,11 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
               🎯 Market Positioning
             </div>
           </motion.div>
-        </div>
+        </div>;
       </section>
 
       {/* Market Overview */}
-      <section className="py-20 bg-zion-slate-dark/50">
+      <section className="py-20 bg-zion-slate-dark/50">;
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -294,7 +294,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       </section>
 
       {/* Filters */}
-      <section className="py-12 bg-zion-slate-dark/30">
+      <section className="py-12 bg-zion-slate-dark/30">;
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Category Filter */}
@@ -313,7 +313,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
 
                   <category.icon className="w-4 h-4" />
                   {category.name}
-                </motion.button>
+                </motion.button>;
               ))}
             </div>
 
@@ -340,7 +340,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {sortedServices.map((service, index)  => (
@@ -384,14 +384,14 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
                 </div>
 
                 {/* Service Header */}
-                <div className="mb-6">
+                <div className="mb-6">;
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
                     {service.name}
                   </h3>
                   <p className="text-zion-slate-light text-sm mb-4">
                     {service.category}
                   </p>
-                </div>
+                </div>;
 
                 {/* Pricing */}
                 <div className="mb-6">
@@ -454,7 +454,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       </section>
 
       {/* ROI Calculator */}
-      <section className="py-20 bg-zion-slate-dark/50">
+      <section className="py-20 bg-zion-slate-dark/50">;
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -522,7 +522,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       </section>
 
       {/* Contact Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-6 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}

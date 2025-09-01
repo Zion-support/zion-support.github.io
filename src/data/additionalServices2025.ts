@@ -21,7 +21,7 @@ export interface AdditionalService {
     website: string;
   };
 
-export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [
+export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [;
   {
     id: "ai-sales-outreach-accelerator",
     title: "AI Sales Outreach Accelerator",

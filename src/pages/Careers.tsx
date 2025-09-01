@@ -45,13 +45,21 @@ export default function Careers() {
   ];
 
   const locations = [
-    { id: 'all', name: 'All Locations', icon: Globe, count: 12 },
-    { id: 'remote', name: 'Remote', icon: Wifi, count: 8 },
-    { id: 'middletown', name: 'Middletown, DE', icon: MapPin, count: 3 },
-    { id: 'new-york', name: 'New York, NY', icon: MapPin, count: 1 },
-    { id: 'san-francisco', name: 'San Francisco, CA', icon: MapPin, count: 1 },
-    { id: 'london', name: 'London, UK', icon: MapPin, count: 1 },
-    { id: 'singapore', name: 'Singapore', icon: MapPin, count: 1 }
+    { id: 'all', name: 'All Locations', icon: Globe },
+    { id: 'remote', name: 'Remote', icon: Wifi },
+    { id: 'middletown', name: 'Middletown, DE', icon: MapPin },
+    { id: 'new-york', name: 'New York, NY', icon: MapPin },
+    { id: 'san-francisco', name: 'San Francisco, CA', icon: MapPin },
+    { id: 'london', name: 'London, UK', icon: MapPin },
+    { id: 'singapore', name: 'Singapore', icon: MapPin }
+  ];
+
+
+  const locationFilters = [
+    { id: 'all', name: 'All Locations', count: 12 },
+    { id: 'remote', name: 'Remote', count: 8 },
+    { id: 'middletown', name: 'Middletown, DE', count: 3 },
+    { id: 'san-francisco', name: 'San Francisco, CA', count: 1 }
   ];
 
   const jobListings = [
@@ -295,7 +303,7 @@ export default function Careers() {
                 onChange={(e) => setSelectedLocation(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
               >
-                {locations.map((loc) => (
+                {locationFilters.map((loc) => (
                   <option key={loc.id} value={loc.id} className="bg-gray-800 text-white">
                     {loc.name} ({loc.count})
                   </option>

@@ -26,7 +26,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
         {
             label: 'Services',
             href: '/services',
-            children[
+            children[;
                 { label: 'AI & Machine Learning', href: '/services/ai' },
                 { label: 'Quantum Computing', href: '/services/quantum' },
                 { label: 'Cybersecurity', href: '/services/cybersecurity' },
@@ -34,32 +34,32 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
                 { label: 'Digital Transformation', href: '/services/transformation' },
                 { label: 'Consulting', href: '/services/consulting' }
             ]
-        },
+        },;
         {
             label: 'Solutions',
             href: '/solutions',
-            children[
+            children[;
                 { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
                 { label: 'Startup Solutions', href: '/solutions/startup' },
                 { label: 'Government Solutions', href: '/solutions/government' },
                 { label: 'Healthcare Solutions', href: '/solutions/healthcare' }
             ]
-        },
+        },;
         {
             label: 'Industries',
             href: '/industries',
-            children[
+            children[;
                 { label: 'Technology', href: '/industries/technology' },
                 { label: 'Healthcare', href: '/industries/healthcare' },
                 { label: 'Finance', href: '/industries/finance' },
                 { label: 'Manufacturing', href: '/industries/manufacturing' },
                 { label: 'Education', href: '/industries/education' }
             ]
-        },
+        },;
         {
             label: 'Comp',
             href: '/about',
-            children[
+            children[;
                 { label: 'About Us', href: '/about' },
                 { label: 'Careers', href: '/careers' },
                 { label: 'News', href: '/news' },

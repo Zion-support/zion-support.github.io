@@ -35,7 +35,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
   useEffect(() => {
         }
-      },
+      },;
       { threshold: 0.1 }
     );
 
@@ -84,11 +84,11 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
     switch (sortBy) {;
       case 'name':;
         return a.title.localeCompare(b.title);
-      case 'price':
+      case 'price':;
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-      case 'category':
+      case 'category':;
         return a.category.localeCompare(b.category);
-      default:
+      default:;
         return 0}
   });
 
@@ -297,13 +297,13 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
               )}
             </div>
           </div>
-        </motion.div>
+        </motion.div>;
 
         {/* Services Grid */}
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -312,8 +312,8 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 }}
           animate = {
-  isVisible ? { opacity: 1,
-  y: 0 
+  isVisible ? { opacity: 1,;
+  y: 0 ;
 
 
 
@@ -323,7 +323,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4 ;
 
 
 
@@ -333,7 +333,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {sortedServices.map((service, index)  => (
+          {sortedServices.map((service, index)  => (;
             <motion.div
               key={`${service.source}-${service.id}`}
               initial = {
@@ -403,7 +403,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
                         </span>
                       )}
                     </div>
-                  </div>
+                  </div>;
                 )}
 
                 {/* Pricing & Billing */}
@@ -455,7 +455,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -464,8 +464,8 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 }}
           animate = {
-  isVisible ? { opacity: 1,
-  y: 0 
+  isVisible ? { opacity: 1,;
+  y: 0 ;
 
 
 
@@ -475,7 +475,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
-  delay: 0.6 
+  delay: 0.6 ;
 
 
 
@@ -485,7 +485,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 }}
           className="text-center"
 
-          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;
             <h3 className="text-3xl font-bold text-white mb-6">
               Need Custom Pricing or Have Questions?
             </h3>

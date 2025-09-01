@@ -32,11 +32,11 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
                 contactType: 'customer service',
                 availableLanguage: 'English'
             },
-            sameAs[
+            sameAs[;
                 'https://linkedin.com/company/ziontechgroup',
                 'https://twitter.com/ziontechgroup',
                 'https://github.com/ziontechgroup'
-            ],
+            ],;
             ...(type === 'article' && {
                 headline: title,
                 author: {
@@ -55,14 +55,14 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
                 dateModified: modifiedTime,
                 articleSection: section,
                 keywords: tags.join(', ')
-            }),
+            }),;
             ...(type === 'service' && {
                 serviceType: title,
                 areaServed: 'Worldwide',
                 hasOfferCatalog: {
                     '@type': 'OfferCatalog',
                     name: 'Technology Services',
-                    itemListElement[
+                    itemListElement[;
                         {
                             '@type': 'Offer',
                             itemOffered: {
@@ -80,11 +80,11 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
 
                         },
                         {
-                            '@type': 'Offer',
+                            '@type': 'Offer',;
                             itemOffered: {
-                                '@type': 'Service',
-                                name: 'Cybersecurity',
-                                description: 'Comprehensive security solutions including threat detection and compliance'
+                                '@type': 'Service',;
+                                name: 'Cybersecurity',;
+                                description: 'Comprehensive security solutions including threat detection and compliance';
 
 
                     ]
@@ -148,14 +148,14 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
       <meta name="description" content={description}/>
       <meta name="keywords" content = {
   keywords.join(',
-  ')
+  ');
 
 
 
 
 
 
-}/>
+}/>;
       <meta name="author" content={author}/>
       <meta name="robots" content="index, follow"/>
       <meta name="language" content="English"/>

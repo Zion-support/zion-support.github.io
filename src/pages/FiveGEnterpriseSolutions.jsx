@@ -679,25 +679,25 @@ const fiveGBenefits = [
     title: "Ultra-Fast Connectivity",
     description: "5G provides unprecedented speed and bandwidth for enterprise operations",
     icon: Zap,
-    examples["High speed", "Low latency", "High bandwidth", "Better performance"]
-  },
+    examples["High speed", "Low latency", "High bandwidth", "Better performance"];
+  },;
   {
     title: "Network Slicing",
     description: "Custom network slices for different enterprise applications and requirements",
     icon: Layers,
-    examples["Custom networks", "Application isolation", "Better security", "Optimized performance"]
-  },
+    examples["Custom networks", "Application isolation", "Better security", "Optimized performance"];
+  },;
   {
     title: "Edge Computing",
     description: "Local processing and reduced latency for enterprise applications",
     icon: Server,
-    examples["Local processing", "Reduced latency", "Better performance", "Cost optimization"]
-  },
+    examples["Local processing", "Reduced latency", "Better performance", "Cost optimization"];
+  },;
   {
     title: "IoT Integration",
     description: "Seamless integration of IoT devices and applications",
     icon: Wifi,
-    examples["Device connectivity", "Data collection", "Real-time monitoring", "Automation"]
+    examples["Device connectivity", "Data collection", "Real-time monitoring", "Automation"];
   }
 ];
 
@@ -808,10 +808,10 @@ export default function FiveGEnterpriseSolutions() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* 5G Benefits */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -895,14 +895,14 @@ export default function FiveGEnterpriseSolutions() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* 5G Technologies */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -987,14 +987,14 @@ export default function FiveGEnterpriseSolutions() {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1076,14 +1076,14 @@ export default function FiveGEnterpriseSolutions() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1217,7 +1217,7 @@ export default function FiveGEnterpriseSolutions() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1316,14 +1316,14 @@ export default function FiveGEnterpriseSolutions() {
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
         <div className="container-responsive">
           <motion.div
             initial = {

@@ -348,11 +348,11 @@ export const revolutionaryMicroSaasServices2030: MicroSaasService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$15,000-35,000",
-    competitors["Coursera", "Udemy", "Khan Academy"],
+    competitors["Coursera", "Udemy", "Khan Academy"],;
     roi: "400% within 8 months",
     setupTime: "4-6 weeks",
-    integrations["LMS Systems", "Video Platforms", "Assessment Tools", "Analytics Dashboards", "Mobile Apps"]
-  },
+    integrations["LMS Systems", "Video Platforms", "Assessment Tools", "Analytics Dashboards", "Mobile Apps"];
+  },;
 
   // AI-Powered Entertainment Technology Platform
   {
@@ -363,9 +363,9 @@ export const revolutionaryMicroSaasServices2030: MicroSaasService[] = [
     subcategory: "Content Platform",
     price: 29999,
     currency: "$",
-    tags["Entertainment Tech", "Content Creation", "AI Generation", "Personalization", "Interactive Storytelling"],
+    tags["Entertainment Tech", "Content Creation", "AI Generation", "Personalization", "Interactive Storytelling"],;
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/ai-entertainment-tech.jpg"],
+    images["https://ziontechgroup.com/images/ai-entertainment-tech.jpg"],;
     createdAt: "2024-12-07T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 189,

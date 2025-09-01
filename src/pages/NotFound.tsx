@@ -130,7 +130,7 @@ export default function NotFound() {
             <Mail className="w-8 h-8 text-zion-cyan mb-3 group-hover:scale-110 transition-transform" />
             <span className="font-medium text-zion-slate-dark">Contact Us</span>
           </Link>
-        </div>
+        </div>;
 
         {/* Popular Pages */}
         <motion.div
@@ -269,7 +269,7 @@ export default function NotFound() {
         </div>
 
         {/* Back Button */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">;
           <button
             onClick={() => window.history.back()}
             className="inline-flex items-center gap-2 px-6 py-3 bg-zion-slate-light text-zion-slate-dark rounded-lg hover:bg-zion-slate-light/80 transition-colors"
@@ -288,7 +288,7 @@ export default function NotFound() {
         </div>
 
         {/* Footer Note */}
-        <div className="mt-12 pt-8 border-t border-zion-slate-light">
+        <div className="mt-12 pt-8 border-t border-zion-slate-light">;
           <p className="text-sm text-zion-slate-light">
             If you believe this is an error, please{' '}
             <Link to="/contact" className="text-zion-cyan hover:underline">

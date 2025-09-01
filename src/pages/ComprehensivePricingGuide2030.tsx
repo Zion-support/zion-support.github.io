@@ -72,7 +72,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
       price: 299,
-      features[
+      features[;
         'Basic AI features',
         'Email support',
         'Up to 5 users',
@@ -80,7 +80,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         'Community forum access',
         'Basic analytics',
         'Mobile app access'
-      ],
+      ],;
       color: 'from-cyan-500 to-blue-600',
       popular: false,
       bestFor: 'Small businesses, startups, individual professionals'
@@ -89,7 +89,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
       price: 999,
-      features[
+      features[;
         'Advanced AI capabilities',
         'Priority support',
         'Up to 25 users',
@@ -99,7 +99,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         'Advanced analytics dashboard',
         'White-label options',
         'Training and onboarding'
-      ],
+      ],;
       color: 'from-purple-500 to-pink-600',
       popular: true,
       bestFor: 'Growing businesses, mid-size companies, agencies'
@@ -108,7 +108,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       name: 'Enterprise',
       description: 'For large organizations with complex needs',
       price: 2999,
-      features[
+      features[;
         'Full AI suite access',
         '24/7 dedicated support',
         'Unlimited users',
@@ -119,7 +119,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         'Dedicated account manager',
         'Custom development',
         'On-premise deployment options'
-      ],
+      ],;
       color: 'from-indigo-500 to-purple-600',
       popular: false,
       bestFor: 'Large enterprises, government agencies, Fortune 500 companies';
@@ -207,10 +207,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Contact Banner */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-8 px-4">
+      <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-8 px-4">;
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-white">
             <div className="flex items-center gap-2">
@@ -230,7 +230,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       </section>
 
       {/* Search and Filter */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-6 mb-8">
             <div className="flex-1">
@@ -261,7 +261,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {category.count}
                   </span>
-                </button>
+                </button>;
               ))}
             </div>
           </div>
@@ -269,7 +269,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       </section>
 
       {/* Pricing Overview */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -487,7 +487,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       </section>
 
       {/* Pricing Benefits */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -554,7 +554,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 title: "24/7 Support",
                 description: "Round-the-clock support included in all plans. No additional support fees."
 
-            ].map((benefit, index) => (
+            ].map((benefit, index) => (;
               <motion.div
                 key={index}
                 initial = {
@@ -601,7 +601,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   <div className="text-3xl font-bold text-purple-400 mb-2">40-80%</div>
                   <div className="text-slate-300">Cost Reduction</div>
                 </div>
-              </div>
+              </div>;
               
               <Link 
                 to="/contact" 
@@ -616,7 +616,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -752,7 +752,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       </section>
 
       {/* Footer CTA */}
-      <section className="py-16">
+      <section className="py-16">;
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <div className="text-slate-300 mb-6">

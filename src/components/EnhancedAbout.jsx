@@ -33,25 +33,25 @@ export const EnhancedAbout = () => {
         {
             name: 'Kleber',
             role: 'CEO & Founder',
-            expertise['AI/ML', 'Cloud Architecture', 'Digital Transformation'],
+            expertise['AI/ML', 'Cloud Architecture', 'Digital Transformation'],;
             avatar: '👨‍💼'
         },
         {
             name: 'AI Team',
             role: 'Machine Learning Engineers',
-            expertise['Deep Learning', 'NLP', 'Computer Vision'],
+            expertise['Deep Learning', 'NLP', 'Computer Vision'],;
             avatar: '🤖'
         },
         {
             name: 'DevOps Team',
             role: 'Cloud & Infrastructure',
-            expertise['AWS/Azure', 'Kubernetes', 'CI/CD'],
+            expertise['AWS/Azure', 'Kubernetes', 'CI/CD'],;
             avatar: '☁️'
         },
         {
             name: 'Security Team',
             role: 'Cybersecurity Experts',
-            expertise['Threat Detection', 'Compliance', 'Penetration Testing'],
+            expertise['Threat Detection', 'Compliance', 'Penetration Testing'],;
             avatar: '🔒'
 
     ];
@@ -161,9 +161,9 @@ export const EnhancedAbout = () => {
 
 
     };
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <motion.div className="max-w-7xl mx-auto text-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" variants={itemVariants}>
             About{' '}
@@ -185,10 +185,10 @@ export const EnhancedAbout = () => {
             </Link>
           </motion.div>
         </motion.div>
-      </section>
+      </section>;
 
       {/* Mission & Vision */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={itemVariants}>
@@ -221,7 +221,7 @@ export const EnhancedAbout = () => {
       </section>
 
       {/* Comp Values */}
-      <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+      <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -245,7 +245,7 @@ export const EnhancedAbout = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -273,7 +273,7 @@ export const EnhancedAbout = () => {
       </section>
 
       {/* Comp Timeline */}
-      <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+      <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -309,7 +309,7 @@ export const EnhancedAbout = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div className="text-center" variants={itemVariants}>
@@ -336,7 +336,7 @@ export const EnhancedAbout = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;
         <motion.div className="max-w-4xl mx-auto text-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Work with Us?

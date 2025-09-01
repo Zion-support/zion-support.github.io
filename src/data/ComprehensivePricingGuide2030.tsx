@@ -433,7 +433,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>
 
           {/* Filters */}
-          <div className="mb-8">
+          <div className="mb-8">;
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Filter Services</h3>
 
@@ -531,7 +531,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>
 
           {/* Pricing Summary */}
-          <div className="mb-8">
+          <div className="mb-8">;
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Pricing Summary</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -558,7 +558,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
             {getFilteredServices().map(renderPricingCard)}
           </div>
 
@@ -590,7 +590,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               >
                 Clear Filters
               </button>
-            </div>
+            </div>;
           )}
 
           {/* Pricing Comparison */}

@@ -12,14 +12,14 @@ export default function MicroSAASServicesPage() {
             icon: <Users className="h-8 w-8 text-blue-500"/>,
             price: 29,
             currency: "$",
-            features[
+            features[;
                 "Contact Management",
                 "Sales Pipeline",
                 "Lead Scoring",
                 "Email Automation",
                 "Analytics Dashboard",
                 "Mobile App"
-            ],
+            ],;
             category: "Business Tools",
             badge: "Popular",
             link: "https://ziontechgroup.com/zion-crm",
@@ -40,14 +40,14 @@ export default function MicroSAASServicesPage() {
             icon: <Calendar className="h-8 w-8 text-green-500"/>,
             price: 19,
             currency: "$",
-            features[
+            features[;
                 "Task Management",
                 "Team Collaboration",
                 "Time Tracking",
                 "Resource Planning",
                 "Gantt Charts",
                 "File Sharing"
-            ],
+            ],;
             category: "Project Management",
             badge: "Essential",
             link: "https://ziontechgroup.com/zion-project",
@@ -68,14 +68,14 @@ export default function MicroSAASServicesPage() {
             icon: <BarChart3 className="h-8 w-8 text-purple-500"/>,
             price: 39,
             currency: "$",
-            features[
+            features[;
                 "Real-time Dashboards",
                 "Custom Reports",
                 "Data Integration",
                 "Predictive Analytics",
                 "Export Options",
                 "API Access"
-            ],
+            ],;
             category: "Analytics",
             badge: "Insightful",
             link: "https://ziontechgroup.com/zion-analytics",
@@ -96,14 +96,14 @@ export default function MicroSAASServicesPage() {
             icon: <MessageSquare className="h-8 w-8 text-orange-500"/>,
             price: 15,
             currency: "$",
-            features[
+            features[;
                 "Team Chat",
                 "Video Calls",
                 "File Sharing",
                 "Screen Sharing",
                 "Mobile App",
                 "Integrations"
-            ],
+            ],;
             category: "Communication",
             badge: "Collaborative",
             link: "https://ziontechgroup.com/zion-chat",
@@ -124,14 +124,14 @@ export default function MicroSAASServicesPage() {
             icon: <FileText className="h-8 w-8 text-cyan-500"/>,
             price: 25,
             currency: "$",
-            features[
+            features[;
                 "Document Storage",
                 "Version Control",
                 "Collaborative Editing",
                 "Search & Indexing",
                 "Access Control",
                 "Backup & Recovery"
-            ],
+            ],;
             category: "Document Management",
             badge: "Secure",
             link: "https://ziontechgroup.com/zion-docs",
@@ -152,14 +152,14 @@ export default function MicroSAASServicesPage() {
             icon: <CreditCard className="h-8 w-8 text-emerald-500"/>,
             price: 0,
             currency: "$",
-            features[
+            features[;
                 "Multiple Payment Methods",
                 "Recurring Billing",
                 "Invoice Generation",
                 "Fraud Protection",
                 "Analytics Dashboard",
                 "API Integration"
-            ],
+            ],;
             category: "Payments",
             badge: "Free",
             link: "https://ziontechgroup.com/zion-pay",
@@ -180,14 +180,14 @@ export default function MicroSAASServicesPage() {
             icon: <BarChart className="h-8 w-8 text-pink-500"/>,
             price: 49,
             currency: "$",
-            features[
+            features[;
                 "Email Campaigns",
                 "Lead Nurturing",
                 "A/B Testing",
                 "Conversion Tracking",
                 "Marketing Analytics",
                 "CRM Integration"
-            ],
+            ],;
             category: "Marketing",
             badge: "Automated",
             link: "https://ziontechgroup.com/zion-marketing",
@@ -208,14 +208,14 @@ export default function MicroSAASServicesPage() {
             icon: <Building className="h-8 w-8 text-indigo-500"/>,
             price: 35,
             currency: "$",
-            features[
+            features[;
                 "Stock Tracking",
                 "Order Management",
                 "Supplier Management",
                 "Barcode Scanning",
                 "Low Stock Alerts",
                 "Reporting Tools"
-            ],
+            ],;
             category: "Inventory",
             badge: "Efficient",
             link: "https://ziontechgroup.com/zion-inventory",
@@ -236,14 +236,14 @@ export default function MicroSAASServicesPage() {
             icon: <Users className="h-8 w-8 text-teal-500"/>,
             price: 45,
             currency: "$",
-            features[
+            features[;
                 "Employee Onboarding",
                 "Time Tracking",
                 "Performance Reviews",
                 "Leave Management",
                 "Payroll Integration",
                 "Compliance Tools"
-            ],
+            ],;
             category: "HR Management",
             badge: "Comprehensive",
             link: "https://ziontechgroup.com/zion-hr",
@@ -264,14 +264,14 @@ export default function MicroSAASServicesPage() {
             icon: <BarChart3 className="h-8 w-8 text-amber-500"/>,
             price: 30,
             currency: "$",
-            features[
+            features[;
                 "Invoicing",
                 "Expense Tracking",
                 "Financial Reports",
                 "Bank Reconciliation",
                 "Tax Preparation",
                 "Multi-currency"
-            ],
+            ],;
             category: "Accounting",
             badge: "Financial",
             link: "https://ziontechgroup.com/zion-books",
@@ -292,14 +292,14 @@ export default function MicroSAASServicesPage() {
             icon: <Globe className="h-8 w-8 text-red-500"/>,
             price: 40,
             currency: "$",
-            features[
+            features[;
                 "Online Store Builder",
                 "Payment Processing",
                 "Inventory Management",
                 "Order Fulfillment",
                 "Marketing Tools",
                 "Analytics Dashboard"
-            ],
+            ],;
             category: "E-commerce",
             badge: "Complete",
             link: "https://ziontechgroup.com/zion-shop",
@@ -320,14 +320,14 @@ export default function MicroSAASServicesPage() {
             icon: <FileText className="h-8 w-8 text-violet-500"/>,
             price: 55,
             currency: "$",
-            features[
+            features[;
                 "Course Creation",
                 "Student Management",
                 "Progress Tracking",
                 "Assessment Tools",
                 "Video Streaming",
                 "Mobile Learning"
-            ],
+            ],;
             category: "Education",
             badge: "Educational",
             link: "https://ziontechgroup.com/zion-academy",

@@ -48,7 +48,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
           </div>
 
           {/* Floating Elements */}
-          <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">;
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
             <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
@@ -56,7 +56,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
         </section>
 
         {/* Contact Information Banner */}
-        <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-8">
+        <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-8">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
               <div className="flex flex-col items-center">
@@ -86,7 +86,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
         </section>
 
         {/* Micro SAAS Services Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -154,7 +154,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
 
                       Learn More
                     </a>
-                  </div>
+                  </div>;
                 </div>
               ))}
             </div>
@@ -162,7 +162,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
         </section>
 
         {/* IT Infrastructure Services Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -222,7 +222,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
 
                       Schedule Consultation
                     </a>
-                  </div>
+                  </div>;
                 </div>
               ))}
             </div>
@@ -230,7 +230,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
         </section>
 
         {/* AI Services Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -301,7 +301,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
 
                       AI Consultation
                     </a>
-                  </div>
+                  </div>;
                 </div>
               ))}
             </div>
@@ -309,7 +309,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
         </section>
 
         {/* Why Choose Zion Tech Group */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -365,7 +365,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -412,7 +412,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
         </section>
 
         {/* Footer Contact */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">;
           <div className="max-w-7xl mx-auto text-center">
             <h3 className="text-3xl font-bold text-white mb-8">Contact Zion Tech Group</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

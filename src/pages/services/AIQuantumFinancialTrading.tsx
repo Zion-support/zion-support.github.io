@@ -110,8 +110,8 @@ const AIQuantumFinancialTrading = () => {
       ],
       popular: false
     }
-      description: "For large institutions and hedge funds",
-      features: [
+      description: "For large institutions and hedge funds",;
+      features: [;
         "Custom quantum computing integration",
         "Dedicated support team",
         "Custom compliance modules",
@@ -191,22 +191,22 @@ const AIQuantumFinancialTrading = () => {
               </button>
   const benefits = [
     {
-      title: "Increased Trading Speed",
+      title: "Increased Trading Speed",;
       description: "Quantum computing reduces execution time from milliseconds to microseconds",
       metric: "1000x faster"
     },
     {
-      title: "Higher Accuracy",
+      title: "Higher Accuracy",;
       description: "AI algorithms combined with quantum processing improve prediction accuracy",
       metric: "85%+ accuracy"
     },
     {
-      title: "Risk Reduction",
+      title: "Risk Reduction",;
       description: "Advanced risk management reduces portfolio volatility and losses",
       metric: "40% less risk"
     },
     {
-      title: "Cost Savings",
+      title: "Cost Savings",;
       description: "Automated trading reduces manual intervention and operational costs",
       metric: "60% cost reduction"
     }
@@ -470,7 +470,7 @@ const AIQuantumFinancialTrading = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
@@ -586,7 +586,7 @@ const AIQuantumFinancialTrading = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section>;
 
       {/* CTA Section */}
             initial = {

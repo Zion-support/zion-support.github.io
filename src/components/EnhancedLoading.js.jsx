@@ -12,8 +12,8 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
     const renderBars = () => (<div className="flex space-x-1">
       {[0, 1, 2, 3].map((i) => (<motion.div key={i} className={`w-1 ${size === 'sm' ? 'h-3' : size === 'md' ? 'h-6' : size === 'lg' ? 'h-8' : 'h-12'} bg-blue-400 rounded-full`} animate = {
   {
-                scaleY[1, 1.5, 1],
-                opacity[0.5, 1,
+                scaleY[1, 1.5, 1],;
+                opacity[0.5, 1,;
   0.5]
             
 

@@ -74,7 +74,7 @@ import { Shield, Lock, Eye, ArrowRight, CheckCircle, Zap, AlertTriangle, Users c
                 title: "User Behavior Analytics",
                 description: "Machine learning-based analysis to detect insider threats and compromised accounts"
 
-        ].map((feature, index) => (<div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-red-500/50 transition-colors">
+        ].map((feature, index) => (<div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-red-500/50 transition-colors">;
                   <feature.icon className="w-12 h-12 text-red-400 mb-6"/>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
@@ -115,7 +115,7 @@ import { Shield, Lock, Eye, ArrowRight, CheckCircle, Zap, AlertTriangle, Users c
                 title: "Monitoring",
                 description: "Continuous security operations coverage"
 
-        ].map((metric, index) => (<div key={index} className="text-center">
+        ].map((metric, index) => (<div key={index} className="text-center">;
                   <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-8 mb-4">
                     <h3 className="text-3xl font-bold text-white mb-2">{metric.metric}</h3>
                     <h4 className="text-lg font-semibold text-white">{metric.title}</h4>

@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
     content: 'Zion Tech Group transformed our data infrastructure completely. Their AI-powered analytics platform increased our operational efficiency by 300% and provided insights we never had before. The ROI was incredible - we saw a 450% return within the first 6 months.',
     rating: 5,
     industry: 'Technology',
-    results['300% efficiency increase', '450% ROI in 6 months', 'Real-time insights'],
+    results['300% efficiency increase', '450% ROI in 6 months', 'Real-time insights'],;
     avatar: '/images/avatars/sarah-chen.jpg'
   },
   {
@@ -46,7 +46,7 @@ const testimonials: Testimonial[] = [
     content: 'Implementing Zion\'s quantum optimization suite revolutionized our supply chain. We solved complex logistics problems in minutes that used to take weeks. The cost savings were immediate and substantial - over $2M annually.',
     rating: 5,
     industry: 'Manufacturing',
-    results['$2M annual savings', 'Weeks to minutes', 'Supply chain optimization'],
+    results['$2M annual savings', 'Weeks to minutes', 'Supply chain optimization'],;
     avatar: '/images/avatars/marcus-rodriguez.jpg'
   },
   {
@@ -58,7 +58,7 @@ const testimonials: Testimonial[] = [
     content: 'Zion\'s AI-powered healthcare platform has been a game-changer for our diagnostic accuracy. We\'ve seen a 95% improvement in early detection rates and significantly reduced false positives. This technology is saving lives.',
     rating: 5,
     industry: 'Healthcare',
-    results['95% detection improvement', 'Reduced false positives', 'Lives saved'],
+    results['95% detection improvement', 'Reduced false positives', 'Lives saved'],;
     avatar: '/images/avatars/emily-watson.jpg'
   },
   {
@@ -70,7 +70,7 @@ const testimonials: Testimonial[] = [
     content: 'The zero-trust security platform from Zion Tech Group has provided us with enterprise-grade protection that adapts to new threats in real-time. Our security incidents dropped by 80% in the first quarter.',
     rating: 5,
     industry: 'Financial Services',
-    results['80% fewer incidents', 'Real-time threat detection', 'Zero-trust security'],
+    results['80% fewer incidents', 'Real-time threat detection', 'Zero-trust security'],;
     avatar: '/images/avatars/james-thompson.jpg'
   },
   {
@@ -82,7 +82,7 @@ const testimonials: Testimonial[] = [
     content: 'Zion\'s multi-cloud orchestration platform streamlined our entire infrastructure. We reduced cloud costs by 40% while improving performance by 60%. The unified management interface is intuitive and powerful.',
     rating: 5,
     industry: 'Cloud Services',
-    results['40% cost reduction', '60% performance boost', 'Unified management'],
+    results['40% cost reduction', '60% performance boost', 'Unified management'],;
     avatar: '/images/avatars/lisa-park.jpg'
 
 ];
@@ -120,7 +120,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 }}
                   transition = {
   { duration: 20,
-  repeat: Infinity 
+  repeat: Infinity ;
 
 
 
@@ -143,7 +143,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                         transition={{ delay: index * 0.1 }}
 
                         <Star className="w-6 h-6 text-yellow-400 fill-current" />
-                      </motion.div>
+                      </motion.div>;
                     ))}
                   </div>
 
@@ -181,12 +181,12 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                         className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center"
 
                         <p className="text-zion-cyan font-semibold">{result}</p>
-                      </motion.div>
+                      </motion.div>;
                     ))}
                   </div>
 
                   {/* Author Info */}
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between">;
                     <div className="flex items-center space-x-4">
                       <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
                         <span className="text-white font-bold text-xl">
@@ -210,7 +210,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
           </AnimatePresence>
 
           {/* Navigation Controls */}
-          <div className="flex items-center justify-center mt-12 space-x-4">
+          <div className="flex items-center justify-center mt-12 space-x-4">;
             <motion.button
               onClick={prevTestimonial}
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
@@ -250,7 +250,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -260,7 +260,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -271,7 +271,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3 ;
 
 
 
@@ -281,7 +281,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 }}
           className="mt-20"
 
-          <div className="text-center">
+          <div className="text-center">;
             <h3 className="text-2xl font-bold text-white mb-8">
               Trusted by Industry Leaders
             </h3>
@@ -332,7 +332,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                   </div>
                   <div className="text-xl font-bold text-white mb-2">{indicator.label}</div>
                   <div className="text-sm text-gray-400">{indicator.value}</div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
@@ -342,7 +342,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -352,7 +352,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -363,7 +363,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5 ;
 
 
 
@@ -373,7 +373,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 }}
           className="text-center mt-16"
 
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 max-w-4xl mx-auto">;
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Join Our Success Stories?
             </h3>

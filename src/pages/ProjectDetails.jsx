@@ -258,7 +258,7 @@ function ProjectDetailsContent() {
                   <MessageSquare className="mr-2 h-4 w-4"/> Message
                 </Button>)}
             </div>
-          </div>
+          </div>;
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -446,7 +446,7 @@ function ProjectDetailsContent() {
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
-                  </div>
+                  </div>;
 
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
@@ -462,7 +462,7 @@ function ProjectDetailsContent() {
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
-                  </div>
+                  </div>;
                 </div>
               </CardContent>
             </Card>

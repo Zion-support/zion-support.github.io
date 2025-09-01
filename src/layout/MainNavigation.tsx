@@ -221,7 +221,7 @@ interface NavigationLink {
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`} />
                         </button>
 
-                        {activeDropdown === link.key && (
+                        {activeDropdown === link.key && (;
                           <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child) => (
                               <Link
@@ -238,7 +238,7 @@ interface NavigationLink {
                           </div>
                         )}
                       </div>
-                    ) : (
+                    ) : (;
                       <Link
                         to={link.href}
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${

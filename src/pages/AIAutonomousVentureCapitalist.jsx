@@ -679,25 +679,25 @@ const vcBenefits = [
     title: "Better Investment Decisions",
     description: "AI-powered insights enable data-driven investment decisions",
     icon: Brain,
-    examples["Data-driven insights", "Market analysis", "Risk assessment", "Portfolio optimization"]
-  },
+    examples["Data-driven insights", "Market analysis", "Risk assessment", "Portfolio optimization"];
+  },;
   {
     title: "Increased Deal Flow",
     description: "AI systems identify more investment opportunities",
     icon: Zap,
-    examples["Deal sourcing", "Market scanning", "Opportunity identification", "Better coverage"]
-  },
+    examples["Deal sourcing", "Market scanning", "Opportunity identification", "Better coverage"];
+  },;
   {
     title: "Improved Returns",
     description: "AI optimization leads to better portfolio performance",
     icon: TrendingUp,
-    examples["Portfolio optimization", "Risk management", "Exit timing", "Better performance"]
-  },
+    examples["Portfolio optimization", "Risk management", "Exit timing", "Better performance"];
+  },;
   {
     title: "Operational Efficiency",
     description: "Automation reduces manual effort and improves processes",
     icon: Rocket,
-    examples["Process automation", "Due diligence", "Reporting", "Better efficiency"]
+    examples["Process automation", "Due diligence", "Reporting", "Better efficiency"];
   }
 ];
 
@@ -808,10 +808,10 @@ export default function AIAutonomousVentureCapitalist() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* VC Benefits */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -895,14 +895,14 @@ export default function AIAutonomousVentureCapitalist() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* VC Technologies */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -987,14 +987,14 @@ export default function AIAutonomousVentureCapitalist() {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1076,14 +1076,14 @@ export default function AIAutonomousVentureCapitalist() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1217,7 +1217,7 @@ export default function AIAutonomousVentureCapitalist() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1316,14 +1316,14 @@ export default function AIAutonomousVentureCapitalist() {
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
         <div className="container-responsive">
           <motion.div
             initial = {

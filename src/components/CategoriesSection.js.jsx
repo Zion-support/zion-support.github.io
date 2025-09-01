@@ -10,7 +10,7 @@ const categories = [
         link: "/services",
         color: "from-zion-purple to-zion-purple-dark",
         gradient: "from-zion-purple/20 to-zion-purple-dark/20",
-        features["24/7 Support", "Expert Team", "Custom Solutions"],
+        features["24/7 Support", "Expert Team", "Custom Solutions"],;
         stats: "500+ Services"
     },
     {
@@ -20,7 +20,7 @@ const categories = [
         link: "/talent",
         color: "from-zion-cyan to-zion-blue",
         gradient: "from-zion-cyan/20 to-zion-blue/20",
-        features["AI Experts", "Global Network", "Verified Profiles"],
+        features["AI Experts", "Global Network", "Verified Profiles"],;
         stats: "10K+ Experts"
     },
     {
@@ -30,7 +30,7 @@ const categories = [
         link: "/equipment",
         color: "from-zion-cyan-light to-zion-cyan",
         gradient: "from-zion-cyan-light/20 to-zion-cyan/20",
-        features["High-Performance", "Flexible Rental", "24/7 Monitoring"],
+        features["High-Performance", "Flexible Rental", "24/7 Monitoring"],;
         stats: "1000+ Devices"
     },
     {
@@ -40,7 +40,7 @@ const categories = [
         link: "/category/innovation",
         color: "from-zion-purple-light to-zion-purple",
         gradient: "from-zion-purple-light/20 to-zion-purple/20",
-        features["Latest Tech", "AI Solutions", "Future-Ready"],
+        features["Latest Tech", "AI Solutions", "Future-Ready"],;
         stats: "100+ Innovations"
     },
 ];

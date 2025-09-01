@@ -74,21 +74,21 @@ export default function InnovativeServicesShowcase2026() {
     switch (category) {;
       case 'AI & Automation':;
         return <Cpu className="w-5 h-5" />;
-      case 'Quantum Computing':
+      case 'Quantum Computing':;
         return <Zap className="w-5 h-5" />;
-      case 'Blockchain':
+      case 'Blockchain':;
         return <Database className="w-5 h-5" />;
-      case 'Cybersecurity':
+      case 'Cybersecurity':;
         return <Shield className="w-5 h-5" />;
-      case 'IoT':
+      case 'IoT':;
         return <Globe className="w-5 h-5" />;
-      case 'AI & Content':
+      case 'AI & Content':;
         return <Cpu className="w-5 h-5" />;
-      case 'DevOps':
+      case 'DevOps':;
         return <Database className="w-5 h-5" />;
-      case 'Finance':
+      case 'Finance':;
         return <TrendingUp className="w-5 h-5" />;
-      case 'Sustainability':
+      case 'Sustainability':;
         return <Leaf className="w-5 h-5" />;
       default:
         return 0}
@@ -236,7 +236,7 @@ export default function InnovativeServicesShowcase2026() {
             </div>
           </div>
         </div>
-      </section>
+      </section>;
 
       {/* Services Grid */}
       <motion.div
@@ -324,7 +324,7 @@ export default function InnovativeServicesShowcase2026() {
                 </div>
 
                 {/* Pricing and ROI */}
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-4">;
                   <div className="text-2xl font-bold text-cyan-400">
                     ${service.price.toLocaleString()}
                     <span className="text-sm text-slate-400 font-normal">/mo</span>
@@ -337,7 +337,7 @@ export default function InnovativeServicesShowcase2026() {
                       {service.marketPrice}
                     </div>
                   </div>
-                </div>
+                </div>;
 
                 {/* Benefits */}
                 <div className="mb-4">

@@ -11,42 +11,42 @@ const ServiceInnovationHub = () => {
             icon: <Atom className="w-8 h-8 text-zion-cyan"/>,
             title: 'Quantum Technology',
             description: 'Revolutionary quantum computing, cryptography, and quantum internet solutions',
-            trends['Quantum Supremacy', 'Quantum Internet', 'Quantum Materials'],
+            trends['Quantum Supremacy', 'Quantum Internet', 'Quantum Materials'],;
             investment: '$150B+'
         },
         {
             icon: <Brain className="w-8 h-8 text-zion-purple"/>,
             title: 'Artificial Intelligence',
             description: 'Advanced AI consciousness, governance, and neural network optimization',
-            trends['AI Consciousness', 'AI Governance', 'Neural Optimization'],
+            trends['AI Consciousness', 'AI Governance', 'Neural Optimization'],;
             investment: '$300B+'
         },
         {
             icon: <Satellite className="w-8 h-8 text-zion-blue"/>,
             title: 'Space Technology',
             description: 'Space mining, propulsion, habitats, and debris cleanup systems',
-            trends['Space Mining', 'Space Propulsion', 'Space Habitats'],
+            trends['Space Mining', 'Space Propulsion', 'Space Habitats'],;
             investment: '$200B+'
         },
         {
             icon: <Dna className="w-8 h-8 text-zion-green"/>,
             title: 'Biotech AI',
             description: 'Synthetic biology, brain-computer interfaces, and AI-powered drug discovery',
-            trends['Synthetic Biology', 'Brain-Computer Interfaces', 'AI Drug Discovery'],
+            trends['Synthetic Biology', 'Brain-Computer Interfaces', 'AI Drug Discovery'],;
             investment: '$100B+'
         },
         {
             icon: <Leaf className="w-8 h-8 text-zion-emerald"/>,
             title: 'Green Technology',
             description: 'Fusion energy, climate engineering, and sustainable technology solutions',
-            trends['Fusion Energy', 'Climate Engineering', 'Sustainable Tech'],
+            trends['Fusion Energy', 'Climate Engineering', 'Sustainable Tech'],;
             investment: '$500B+'
         },
         {
             icon: <Cpu className="w-8 h-8 text-zion-orange"/>,
             title: 'Advanced Computing',
             description: 'Neuromorphic computing, edge AI, and model compression technologies',
-            trends['Neuromorphic Computing', 'Edge AI', 'Model Compression'],
+            trends['Neuromorphic Computing', 'Edge AI', 'Model Compression'],;
             investment: '$80B+'
         }
     ];

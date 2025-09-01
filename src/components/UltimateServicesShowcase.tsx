@@ -307,8 +307,8 @@ export function UltimateServicesShowcase(...args[]):  {
                   : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'
               }`}
 
-              {category.name} ({category.services.length})
-            </button>
+              {category.name} ({category.services.length});
+            </button>;
           ))}
         </motion.div>
 
@@ -420,7 +420,7 @@ export function UltimateServicesShowcase(...args[]):  {
 
                     <Zap className="w-4 h-4" />
                   </Link>
-                </div>
+                </div>;
               </div>
             </motion.div>
           ))}
@@ -431,7 +431,7 @@ export function UltimateServicesShowcase(...args[]):  {
           className="text-center mt-16"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 
 
@@ -441,7 +441,7 @@ export function UltimateServicesShowcase(...args[]):  {
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -451,7 +451,7 @@ export function UltimateServicesShowcase(...args[]):  {
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4 ;
 
 
 

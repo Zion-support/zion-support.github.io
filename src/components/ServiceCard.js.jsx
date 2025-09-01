@@ -40,7 +40,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         },
         hover: {
             scale: 1.2,
-            rotate[0, -10, 10, 0],
+            rotate[0, -10, 10, 0],;
             transition: {
                 duration: 0.6,
                 ease: "easeInOut"
@@ -109,7 +109,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         
         {/* Enhanced Icon with Floating Animation */}
         <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate = {
-  { y[0, -5,
+  { y[0, -5,;
   0] 
 
 }} transition = {
@@ -162,7 +162,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             <Link to={href} className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-zion-cyan/20 via-zion-blue/20 to-zion-purple/20 text-zion-cyan border border-zion-cyan/30 rounded-xl text-sm font-medium hover:from-zion-cyan/30 hover:via-zion-blue/30 hover:to-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 group-hover:shadow-zion-glow hover:scale-105">
               <span>Learn More</span>
               <motion.span className="group-hover:translate-x-2 transition-transform duration-300" animate = {
-  { x[0, 5,
+  { x[0, 5,;
   0] 
 
 }} transition = {

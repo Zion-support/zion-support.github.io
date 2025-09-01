@@ -153,7 +153,7 @@ const Resources: React.FC = (): JSX.Element => {;
       views: 3200,
       rating: 4.7,
       image: '/resources/cybersecurity-ai-webinar.jpg',
-      tags['Cybersecurity', 'AI', 'Webinar', 'Security'],
+      tags['Cybersecurity', 'AI', 'Webinar', 'Security'],;
       featured: false,
       fileSize: '450 MB',
       fileType: 'MP4',
@@ -171,7 +171,7 @@ const Resources: React.FC = (): JSX.Element => {;
       downloads: 1560,
       rating: 4.6,
       image: '/resources/blockchain-supply-chain.jpg',
-      tags['Blockchain', 'Supply Chain', 'Enterprise', 'Implementation'],
+      tags['Blockchain', 'Supply Chain', 'Enterprise', 'Implementation'],;
       featured: false,
       fileSize: '2.1 MB',
       fileType: 'PDF',
@@ -189,7 +189,7 @@ const Resources: React.FC = (): JSX.Element => {;
       downloads: 2100,
       rating: 4.8,
       image: '/resources/iot-edge-computing.jpg',
-      tags['IoT', 'Edge Computing', 'Architecture', 'Best Practices'],
+      tags['IoT', 'Edge Computing', 'Architecture', 'Best Practices'],;
       featured: false,
       fileSize: '3.2 MB',
       fileType: 'PDF',
@@ -207,7 +207,7 @@ const Resources: React.FC = (): JSX.Element => {;
       downloads: 3200,
       rating: 4.9,
       image: '/resources/ai-consciousness-research.jpg',
-      tags['AI Consciousness', 'Research', 'Breakthrough', 'Simulation'],
+      tags['AI Consciousness', 'Research', 'Breakthrough', 'Simulation'],;
       featured: false,
       items: [
         { title: 'Getting Started FAQ', type: 'FAQ', readTime: '5 min', featured: false },
@@ -387,15 +387,15 @@ const Resources: React.FC = (): JSX.Element => {;
                     </span>
                     <ExternalLink className="w-4 h-4 text-cyan-500 group-hover:text-cyan-400 transition-colors" />
                   </div>
-                </Link>
+                </Link>;
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div>;
 
         {/* Resource Categories */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {resourceCategories.map((category, categoryIndex) => (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+          {resourceCategories.map((category, categoryIndex) => (;
             <motion.div
               initial = {
   { opacity: 0,
@@ -493,7 +493,7 @@ const Resources: React.FC = (): JSX.Element => {;
                   </motion.article>
                 )})}
             </div>
-          </div>
+          </div>;
         </section>
       )}
 
@@ -615,11 +615,11 @@ const Resources: React.FC = (): JSX.Element => {;
                             {tag}
                           </span>
                           <ExternalLink className="w-3 h-3 text-cyan-500/50 group-hover:text-cyan-400 transition-colors" />
-                        </div>
-                      </div>
+                        </div>;
+                      </div>;
                     </div>
                   </div>
-                </motion.article>
+                </motion.article>;
               )})}
           </div>
         </div>

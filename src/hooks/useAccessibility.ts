@@ -70,27 +70,27 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
           navigateFocus('forward', currentElement)}
         break;
 
-      case 'Escape':
+      case 'Escape':;
         // Close modals, dropdowns, etc.
         closeActiveElements();
         break;
 
-      case 'Enter':
-      case ' ':
+      case 'Enter':;
+      case ' ':;
         // Activate buttons, links, etc.
         if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {;
           event.preventDefault();
           currentElement.click()}
         break;
 
-      case 'ArrowUp':
-      case 'ArrowDown':
+      case 'ArrowUp':;
+      case 'ArrowDown':;
         // Navigate through lists, dropdowns, etc.
         navigateVertical(key === 'ArrowUp' ? 'up' : 'down', currentElement);
         break;
 
-      case 'ArrowLeft':
-      case 'ArrowRight':
+      case 'ArrowLeft':;
+      case 'ArrowRight':;
         // Navigate through horizontal lists, tabs, etc.
         navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right', currentElement);
         break}
@@ -174,7 +174,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   const closeActiveElements = useCallback(() => {;
     // Close modals, dropdowns, etc.;
     const activeElements = document.querySelectorAll('.modal.active, .dropdown.active, .popup.active');
-    activeElements.forEach(element = > {;
+activeElements.forEach(element:  > {;
       element.classList.remove('active');
     });
 

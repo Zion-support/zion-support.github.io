@@ -210,7 +210,7 @@ export const FuturisticNavigation: React.FC = () => {;
       name: "AI & Machine Learning",
       icon: Brain,
       color: 'from-zion-cyan to-zion-blue',
-      dropdown[
+      dropdown[;
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },
         { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },
@@ -220,11 +220,11 @@ export const FuturisticNavigation: React.FC = () => {;
         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
       ]
-    },
+    },;
     {
       name: "Micro SAAS Solutions",
       icon: Cloud,
-      services[
+      services[;
         { name: "Micro SAAS Services", href: "/micro-saas" },
         { name: "Business Tools", href: "/micro-saas/business-tools" },
         { name: "Productivity Apps", href: "/micro-saas/productivity" },
@@ -232,11 +232,11 @@ export const FuturisticNavigation: React.FC = () => {;
         { name: "Custom Development", href: "/micro-saas/custom" },
         { name: "Marketplace", href: "/marketplace" }
       ]
-    },
+    },;
     {
       name: "IT Infrastructure",
       icon: Server,
-      services[
+      services[;
         { name: "IT Services", href: "/it-services" },
         { name: "Cloud Solutions", href: "/it-services/cloud" },
         { name: "Cybersecurity", href: "/it-services/cybersecurity" },
@@ -244,11 +244,11 @@ export const FuturisticNavigation: React.FC = () => {;
         { name: "Data Management", href: "/it-services/data" },
         { name: "Network Security", href: "/it-services/network-security" }
       ]
-    },
+    },;
     {
       name: "Emerging Technologies",
       icon: Rocket,
-      services[
+      services[;
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },
         { name: "Edge Computing", href: "/emerging-tech/edge" },
@@ -256,7 +256,7 @@ export const FuturisticNavigation: React.FC = () => {;
         { name: "Green Technology", href: "/green-it" },
         { name: "Space Technology", href: "/emerging-tech/space" }
       ]
-    },
+    },;
     {
       name: '2028 Services',
       href: '/innovative-services-2028',
@@ -452,7 +452,7 @@ export const FuturisticNavigation: React.FC = () => {;
                   </motion.button>
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>
-                    {activeDropdown === category.name && (
+                    {activeDropdown === category.name && (;
                       <motion.div
                         initial = {
   { opacity: 0, y: -10,
@@ -540,10 +540,10 @@ export const FuturisticNavigation: React.FC = () => {;
                                     </h4>
                                   </div>
                                 </Link>
-                              </motion.div>
+                              </motion.div>;
                             ))}
                           </div>
-                        </div>
+                        </div>;
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -551,9 +551,9 @@ export const FuturisticNavigation: React.FC = () => {;
               ))}
             </nav>
             {/* Right side actions */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4">;
               {/* Search */}
-              <form onSubmit={handleSearch} className="hidden md:block">
+              <form onSubmit={handleSearch} className="hidden md:block">;
                 <div className="relative">
                   <input
                     type="text"
@@ -566,7 +566,7 @@ export const FuturisticNavigation: React.FC = () => {;
                 </div>
               </form>
               {/* User actions */}
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2">;
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

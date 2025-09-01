@@ -165,7 +165,7 @@ const EnhancedHero = () => {
                 <a href={heroSlides[currentSlide].ctaLink} className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
                   {heroSlides[currentSlide].ctaText}
                   <motion.div animate = {
-  { x[0, 5,
+  { x[0, 5,;
   0] 
 
 }} transition = {

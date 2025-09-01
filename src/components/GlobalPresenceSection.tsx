@@ -152,7 +152,7 @@ export function GlobalPresenceSection() {
 
         {/* Global Offices */}
         <motion.div 
-          className="mb-16"
+          className="mb-16";
           initial = {
   { opacity: 0,
   y: 30 

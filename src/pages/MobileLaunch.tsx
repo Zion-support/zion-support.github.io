@@ -287,12 +287,12 @@ const MobileLaunch: React.FC = () => {
               </div>
               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-cyan-400 rounded-full animate-pulse"></div>
             </motion.div>
-          </div>
+          </div>;
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -369,14 +369,14 @@ const MobileLaunch: React.FC = () => {
 
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* App Screens Section */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -461,14 +461,14 @@ const MobileLaunch: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Download Section */}
-      <section id="download" className="py-20">
+      <section id="download" className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -540,7 +540,7 @@ const MobileLaunch: React.FC = () => {
                   option.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'
                 }`}
 
-                {option.featured && (
+                {option.featured && (;
                   <div className="flex items-center justify-center mb-4">
                     <Star className="w-5 h-5 text-yellow-400 mr-2" />
                     <span className="text-yellow-400 text-sm font-semibold">Recommended</span>
@@ -557,7 +557,7 @@ const MobileLaunch: React.FC = () => {
 
                   Download
                   <Download className="ml-2 w-4 h-4" />
-                </Link>
+                </Link>;
               </motion.div>
             ))}
           </div>
@@ -565,7 +565,7 @@ const MobileLaunch: React.FC = () => {
       </section>
 
       {/* System Requirements */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -637,14 +637,14 @@ const MobileLaunch: React.FC = () => {
 
                 <div className="text-4xl mb-3">{req.icon}</div>
                 <p className="text-white font-medium">{req.requirement}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {

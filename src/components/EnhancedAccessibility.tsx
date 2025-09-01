@@ -201,7 +201,7 @@ export const EnhancedAccessibility: React.FC = () => {
         case 'Escape':
           // Close modals, dropdowns, etc.
           const modals = document.querySelectorAll('[role="dialog"], [data-modal]');
-          modals.forEach(modal = > {;
+modals.forEach(modal:  > {;
             if (modal.getAttribute('aria-hidden') === 'false') {;
               (modal as HTMLElement).click();
 
@@ -455,14 +455,14 @@ export const EnhancedAccessibility: React.FC = () => {
                           announce(`${label} ${newSettings[key as keyof AccessibilitySettings] ? 'enabled' : 'disabled'}`);
                         }}
                         className = {`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50 ${
-                          value ? 'bg-cyan-600' : 'bg-slate-600'
+                          value ? 'bg-cyan-600' : 'bg-slate-600';
                         }`}
                         role="switch"
                         aria-checked={value}
                         aria-label={`Toggle ${label}`}
                       >
                         <span;
-                          className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
+className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                             value ? 'translate-x-6' : 'translate-x-1';
                           }`};
                         />;
@@ -670,8 +670,8 @@ const accessibilityStyles = `
     color: #ffffff !important;
   }
 
-  .high-contrast button,
-  .high-contrast input,
+  .high-contrast button,;
+  .high-contrast input,;
   .high-contrast select {
     border: 2px solid #ffffff !important;
   }

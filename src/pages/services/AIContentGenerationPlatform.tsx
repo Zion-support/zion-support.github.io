@@ -30,34 +30,34 @@ export default function AIContentGenerationPlatform(...args[]):  {
       icon: Brain,
       title: 'AI-Powered Writing',
       description: 'Advanced language models that generate high-quality, engaging content across multiple formats and industries.',
-      benefits['SEO-optimized content', 'Brand voice consistency', 'Multi-language support', 'Context-aware generation']
-    },
+      benefits['SEO-optimized content', 'Brand voice consistency', 'Multi-language support', 'Context-aware generation'];
+    },;
     {
       icon: Palette,
       title: 'Visual Content Creation',
       description: 'Generate stunning images, graphics, and visual assets using cutting-edge AI image generation technology.',
-      benefits['Custom brand styling', 'High-resolution output', 'Style transfer', 'Batch generation']
-    },
+      benefits['Custom brand styling', 'High-resolution output', 'Style transfer', 'Batch generation'];
+    },;
     {
       icon: Video,
       title: 'Video Content Generation',
       description: 'Create professional videos, animations, and multimedia content with AI-powered video generation tools.',
-      benefits['Auto-script generation', 'Voice synthesis', 'Background music', 'Template library']
-    },
+      benefits['Auto-script generation', 'Voice synthesis', 'Background music', 'Template library'];
+    },;
     {
       icon: Code,
       title: 'Technical Content',
       description: 'Generate technical documentation, code comments, and developer resources with specialized AI models.',
-      benefits['Code documentation', 'API guides', 'Tutorial generation', 'Technical writing']
-    },
+      benefits['Code documentation', 'API guides', 'Tutorial generation', 'Technical writing'];
+    },;
     {
       icon: Shield,
       title: 'Content Moderation',
       description: 'Built-in AI content filtering and moderation to ensure all generated content meets quality and safety standards.',
-      benefits['Plagiarism detection', 'Content filtering', 'Quality scoring', 'Compliance checking']
-    },
+      benefits['Plagiarism detection', 'Content filtering', 'Quality scoring', 'Compliance checking'];
+    },;
     {
-      benefits['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics']
+      benefits['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics'];
     };
       icon: Users,;
       title: 'Team Collaboration',;
@@ -71,22 +71,22 @@ export default function AIContentGenerationPlatform(...args[]):  {
       industry: 'Marketing & Advertising',
       title: 'Campaign Content Creation',
       description: 'Generate complete marketing campaigns including copy, visuals, and video content for multiple channels.',
-      metrics['50% faster campaign creation', '40% increase in engagement', '30% reduction in content costs']
-    },
+      metrics['50% faster campaign creation', '40% increase in engagement', '30% reduction in content costs'];
+    },;
     {
       industry: 'E-commerce',
       title: 'Product Descriptions & Marketing',
       description: 'Create compelling product descriptions, marketing copy, and visual assets for online stores.',
-      metrics['60% faster product onboarding', '35% improvement in conversion rates', '25% increase in SEO traffic']
-    },
+      metrics['60% faster product onboarding', '35% improvement in conversion rates', '25% increase in SEO traffic'];
+    },;
     {
       industry: 'Publishing & Media',
       title: 'Content Production',
       description: 'Generate articles, blog posts, and multimedia content for digital publishing platforms.',
-      metrics['70% increase in content output', '45% reduction in editorial time', '40% improvement in reader engagement']
-    },
+      metrics['70% increase in content output', '45% reduction in editorial time', '40% improvement in reader engagement'];
+    },;
     {
-      metrics['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles']
+      metrics['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles'];
     };
       industry: 'Corporate Communications',;
       title: 'Business Content',;
@@ -143,14 +143,14 @@ export default function AIContentGenerationPlatform(...args[]):  {
       price: '$99',
       period: '/month',
       description: 'Perfect for small businesses and individual creators',
-      features[
+      features[;
         '10,000 words per month',
         '100 AI-generated images',
         '5 video generations',
         'Basic templates',
         'Email support',
         'Standard quality output'
-      ],
+      ],;
       cta: 'Start Free Trial',
       popular: false
     },
@@ -159,7 +159,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       price: '$299',
       period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
-      features[
+      features[;
         '100,000 words per month',
         '1,000 AI-generated images',
         '50 video generations',
@@ -168,7 +168,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
         'High-quality output',
         'Team collaboration',
         'Brand voice training'
-      ],
+      ],;
       cta: 'Start Free Trial',
       popular: true
     },
@@ -177,7 +177,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       price: '$999',
       period: '/month',
       description: 'For large organizations with high-volume content needs',
-      features[
+      features[;
         'Unlimited words',
         'Unlimited images',
         'Unlimited videos',
@@ -257,13 +257,13 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <ArrowRight className="w-5 h-5" />
               </a>
             </div>
-          </motion.div>
+          </motion.div>;
 
           {/* Stats */}
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -273,7 +273,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -283,7 +283,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2 ;
 
 
 
@@ -293,7 +293,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
 
-            <div className="text-center">
+            <div className="text-center">;
               <div className="text-3xl font-bold text-white mb-2">80-90%</div>
               <div className="text-slate-400">Time Savings</div>
             </div>
@@ -314,7 +314,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -401,14 +401,14 @@ export default function AIContentGenerationPlatform(...args[]):  {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -497,14 +497,14 @@ export default function AIContentGenerationPlatform(...args[]):  {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -583,14 +583,14 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <div className="text-4xl font-bold text-white mb-4">{benefit.value}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-slate-300 leading-relaxed">{benefit.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -664,14 +664,14 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 text-center"
 
                 <div className="text-white font-semibold">{tech}</div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-slate-800/30">
+      <section id="pricing" className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -748,7 +748,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                     : 'border-slate-700/50 hover:border-purple-400/50'
                 }`}
 
-                {plan.popular && (
+                {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -783,7 +783,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                   }`}
 
                   {plan.cta}
-                </a>
+                </a>;
               </motion.div>
             ))}
           </div>
@@ -791,7 +791,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {

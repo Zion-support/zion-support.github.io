@@ -166,7 +166,7 @@ const AllServices2027: React.FC = () => {;
         </div>
       </section>
       {/* Contact Information Banner */}
-      <section className="bg-gradient-to-r from-cyan-600 to-blue-600 py-8">
+      <section className="bg-gradient-to-r from-cyan-600 to-blue-600 py-8">;
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between text-white">
             <div className="flex items-center space-x-4 mb-4 md:mb-0">
@@ -186,7 +186,7 @@ const AllServices2027: React.FC = () => {;
       </section>
 
       {/* Category Overview */}
-      <section className="py-20 bg-zion-slate">
+      <section className="py-20 bg-zion-slate">;
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -242,7 +242,7 @@ const AllServices2027: React.FC = () => {;
       </section>
 
       {/* Services Grid */}
-      <section className = "py-20 bg-zion-slate-dark">
+      <section className = "py-20 bg-zion-slate-dark">;
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -274,7 +274,7 @@ const AllServices2027: React.FC = () => {;
       </section>
 
       {/* Service Categories Deep Dive */}
-      <section className="py-20 bg-zion-slate">
+      <section className="py-20 bg-zion-slate">;
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -419,7 +419,7 @@ const AllServices2027: React.FC = () => {;
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">;
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -473,15 +473,15 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
     switch (category) {;
       case 'AI Services':;
         return <Brain className="w-5 h-5" />;
-      case 'Cybersecurity':
+      case 'Cybersecurity':;
         return <Shield className="w-5 h-5" />;
-      case 'Emerging Technology':
+      case 'Emerging Technology':;
         return <Zap className="w-5 h-5" />;
-      case 'IT Services':
+      case 'IT Services':;
         return <Code className="w-5 h-5" />;
-      case 'Telecommunications':
+      case 'Telecommunications':;
         return <Signal className="w-5 h-5" />;
-      default:
+      default:;
         return <Users className = "w-5 h-5" />};
   };
 
@@ -526,7 +526,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
 
                 <CheckCircle className="w-3 h-3" />
                 <span>{feature}</span>
-              </span>
+              </span>;
             ))}
           </div>
         </div>

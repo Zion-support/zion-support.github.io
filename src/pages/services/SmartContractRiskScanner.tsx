@@ -252,12 +252,12 @@ export default function SmartContractRiskScanner(...args: []):  {
                 Schedule Demo
               </motion.button>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       </section>
 
       {/* Market Information */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4">;
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md: grid-cols-5 gap-6">
             {Object.entries(marketInfo).map(([key, value])  => (
@@ -290,14 +290,14 @@ export default function SmartContractRiskScanner(...args: []):  {
                 <div className="text-sm text-gray-400 capitalize">
                   {key.replace(/([A-Z])/g, ' $1').trim()}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4">;
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial = {
@@ -385,14 +385,14 @@ export default function SmartContractRiskScanner(...args: []):  {
                     </ul>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Scanning Capabilities Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
+      <section className="py-20 px-4 bg-slate-800/30">;
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial = {
@@ -480,14 +480,14 @@ export default function SmartContractRiskScanner(...args: []):  {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Supported Networks Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4">;
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial = {
@@ -562,14 +562,14 @@ export default function SmartContractRiskScanner(...args: []):  {
                   <Globe className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{network}</h3>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Security Standards Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
+      <section className="py-20 px-4 bg-slate-800/30">;
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial = {
@@ -644,14 +644,14 @@ export default function SmartContractRiskScanner(...args: []):  {
                   <Award className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{standard}</h3>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4">;
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial = {
@@ -726,7 +726,7 @@ export default function SmartContractRiskScanner(...args: []):  {
                     : 'border-slate-700'
                 }`}
 
-                {plan.popular && (
+                {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
@@ -762,7 +762,7 @@ export default function SmartContractRiskScanner(...args: []):  {
                   }`}
 
                   {plan.cta}
-                </motion.button>
+                </motion.button>;
               </motion.div>
             ))}
           </div>
@@ -770,7 +770,7 @@ export default function SmartContractRiskScanner(...args: []):  {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-red-600/20 to-orange-600/20">
+      <section className="py-20 px-4 bg-gradient-to-r from-red-600/20 to-orange-600/20">;
         <div className="container mx-auto max-w-7xl text-center">
           <motion.div
             initial = {

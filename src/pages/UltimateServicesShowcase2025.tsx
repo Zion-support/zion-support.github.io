@@ -87,10 +87,10 @@ export default function UltimateServicesShowcase2025() {
             </div>
           </div>
         </div>
-      </div>
+      </div>;
 
       {/* Contact Information Banner */}
-      <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">
+      <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="flex items-center justify-center space-x-3">
@@ -125,7 +125,7 @@ export default function UltimateServicesShowcase2025() {
       </div>
 
       {/* Search and Filter Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Search */}
@@ -151,7 +151,7 @@ export default function UltimateServicesShowcase2025() {
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
 
-                {categories.map(category => (
+                {categories.map(category => (;
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -163,7 +163,7 @@ export default function UltimateServicesShowcase2025() {
       </div>
 
       {/* Contact Information Banner */}
-      <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">
+      <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -192,7 +192,7 @@ export default function UltimateServicesShowcase2025() {
       </div>
 
       {/* Service Guarantees */}
-      <div className="bg-gradient-to-r from-slate-800/50 to-slate-900/50">
+      <div className="bg-gradient-to-r from-slate-800/50 to-slate-900/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Our Service Guarantees</h2>
@@ -215,7 +215,7 @@ export default function UltimateServicesShowcase2025() {
       </div>
 
       {/* Pricing Tiers */}
-      <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50">
+      <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Pricing Tiers</h2>
@@ -241,14 +241,14 @@ export default function UltimateServicesShowcase2025() {
 
                   Get Started
                 </Link>
-              </div>
+              </div>;
             ))}
           </div>
         </div>
       </div>
 
       {/* Services Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">;
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {filteredServices.map((service) => (
             <div
@@ -276,9 +276,9 @@ export default function UltimateServicesShowcase2025() {
               </div>
 
               {/* Description */}
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-6 leading-relaxed">;
                 {service.description}
-              </p>
+              </p>;
 
               {/* Tags */}
               <div className="mb-6">
@@ -295,7 +295,7 @@ export default function UltimateServicesShowcase2025() {
               </div>
 
               {/* Pricing and ROI */}
-              <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
+              <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">;
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-2xl font-bold text-white">${service.price.toLocaleString()}</span>
                   <span className="text-gray-400">One-time</span>
@@ -312,7 +312,7 @@ export default function UltimateServicesShowcase2025() {
               </div>
 
               {/* Integrations */}
-              <div className="mb-6">
+              <div className="mb-6">;
                 <h4 className="text-white font-semibold mb-3">Integrations</h4>
                 <div className="flex flex-wrap gap-2">
                   {service.integrations.slice(0, 4).map((integration, index) => (
@@ -327,7 +327,7 @@ export default function UltimateServicesShowcase2025() {
               </div>
 
               {/* Contact Information */}
-              <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
+              <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">;
                 <h4 className="text-white font-semibold mb-3">Contact Information</h4>
                 <div className="space-y-2 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">
@@ -346,7 +346,7 @@ export default function UltimateServicesShowcase2025() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">;
                 <Link
                   to={`/services/${service.id}`}
                   className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group"
@@ -365,7 +365,7 @@ export default function UltimateServicesShowcase2025() {
               </div>
 
               {/* Contact Information */}
-              <div className="mt-6 pt-6 border-t border-white/10">
+              <div className="mt-6 pt-6 border-t border-white/10">;
                 <div className="text-center">
                   <p className="text-sm text-gray-400 mb-2">Ready to get started?</p>
                   <div className="flex flex-col sm:flex-row gap-2 text-sm">
@@ -410,7 +410,7 @@ export default function UltimateServicesShowcase2025() {
       </div>
 
       {/* Call to Action Section */}
-      <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-blue-400/30">
+      <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-blue-400/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -441,7 +441,7 @@ export default function UltimateServicesShowcase2025() {
       </div>
 
       {/* Comprehensive Footer */}
-      <div className="bg-gradient-to-r from-slate-900 to-slate-800 border-t border-blue-400/30">
+      <div className="bg-gradient-to-r from-slate-900 to-slate-800 border-t border-blue-400/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Comp Info */}

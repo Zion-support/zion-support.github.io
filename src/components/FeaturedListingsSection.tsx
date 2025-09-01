@@ -18,14 +18,14 @@ const featuredListings = [
     likes: 156,
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     price: "$15,000",
-    tags["React", "Node.js", "AI/ML", "E-commerce"],
+    tags["React", "Node.js", "AI/ML", "E-commerce"],;
     duration: "3-4 months",
     team: "5 experts",
     location: "Remote",
     featured: true,
-    technologies["React", "Node.js", "MongoDB", "AI/ML", "AWS"],
-    highlights["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"]
-  },
+    technologies["React", "Node.js", "MongoDB", "AI/ML", "AWS"],;
+    highlights["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"];
+  },;
   {
     id: 2,
     title: "Mobile Banking Application",
@@ -37,14 +37,14 @@ const featuredListings = [
     likes: 134,
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     price: "$22,000",
-    tags["React Native", "Security", "FinTech", "Biometrics"],
+    tags["React Native", "Security", "FinTech", "Biometrics"],;
     duration: "4-5 months",
     team: "6 experts",
     location: "Hybrid",
     featured: true,
-    technologies["React Native", "Node.js", "PostgreSQL", "Biometrics", "Security"],
-    highlights["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"]
-  },
+    technologies["React Native", "Node.js", "PostgreSQL", "Biometrics", "Security"],;
+    highlights["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"];
+  },;
   {
     id: 3,
     title: "Blockchain Supply Chain Platform",
@@ -53,14 +53,14 @@ const featuredListings = [
     price: "$599/month",
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400",
     rating: 4.7,
-    technologies["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],
-    highlights["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]
+    technologies["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],;
+    highlights["Zero Downtime", "Auto-scaling", "Monitoring", "Security"];
   }
-    reviews: 234
-  },
+    reviews: 234;
+  },;
   {
     id: 4,
-    title: "IoT Edge Computing Platform",
+    title: "IoT Edge Computing Platform",;
     description: "Real-time IoT data processing and analytics at the edge for instant insights.",;
     category: "IoT",;
     price: "$449/month",;
@@ -171,7 +171,7 @@ export function FeaturedListingsSection() {
 
                   Get Started
                 </Link>
-              </div>
+              </div>;
             </motion.div>
           ))}
         </div>

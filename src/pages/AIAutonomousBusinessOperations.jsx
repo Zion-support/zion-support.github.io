@@ -26,19 +26,19 @@ const AIAutonomousBusinessOperations = () => {
     const businessAreas = [
         {
             category: "Operations Management",
-            capabilities["Process optimization", "Workflow automation", "Quality control", "Performance monitoring"]
-        },
+            capabilities["Process optimization", "Workflow automation", "Quality control", "Performance monitoring"];
+        },;
         {
             category: "Financial Operations",
-            capabilities["Budget optimization", "Cost analysis", "Revenue forecasting", "Risk management"]
-        },
+            capabilities["Budget optimization", "Cost analysis", "Revenue forecasting", "Risk management"];
+        },;
         {
             category: "Human Resources",
-            capabilities["Talent acquisition", "Performance evaluation", "Training optimization", "Workforce planning"]
-        },
+            capabilities["Talent acquisition", "Performance evaluation", "Training optimization", "Workforce planning"];
+        },;
         {
             category: "Customer Operations",
-            capabilities["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"]
+            capabilities["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"];
         }
     ];
     const useCases = [

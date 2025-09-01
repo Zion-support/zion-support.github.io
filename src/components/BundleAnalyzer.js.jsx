@@ -16,7 +16,7 @@ export const BundleAnalyzer = () => {
   totalSize: 1200000, // ~1.2MB
                 totalGzipSize: 400000, // ~400KB gzipped
                 chunkCount: 45,
-                chunks[
+                chunks[;
                     {
                         name: 'react-vendor',
                         size: 170000,
@@ -75,14 +75,14 @@ export const BundleAnalyzer = () => {
                         type: 'vendor',
                         optimization: 'critical'
                     }
-                ],
-                recommendations[
+                ],;
+                recommendations[;
                     'Consolidate empty vendor chunks (stripe-vendor, pdf-vendor)',
                     'Consider code splitting for ServicesOverview page',
                     'Optimize animation-vendor bundle size',
                     'Implement tree shaking for unused dependencies',
                     'Add bundle size monitoring to CI/CD pipeline'
-                ],
+                ],;
                 score: 78,
                 lastUpdated: new Date()
             };

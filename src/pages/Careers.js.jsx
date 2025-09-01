@@ -6,29 +6,29 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Careers() {
     // Sample job listings
     const jobs = {
-  engineering[
+  engineering[;
             {
                 title: "Senior Frontend Engineer",
                 location: "Remote",
                 type: "Full-time",
                 department: "Engineering",
                 description: "Join our frontend team to build beautiful, responsive,
-  and accessible user interfaces for our AI-powered marketplace."
+  and accessible user interfaces for our AI-powered marketplace.";
             
 
-},
+},;
             {
-                title: "AI Research Engineer",
-                location: "San Francisco, CA",
-                type: "Full-time",
-                department: "Engineering",
+                title: "AI Research Engineer",;
+                location: "San Francisco, CA",;
+                type: "Full-time",;
+                department: "Engineering",;
                 description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
-            },
+            },;
             {
-                title: "Full Stack Developer",
-                location: "Remote",
-                type: "Full-time",
-                department: "Engineering",
+                title: "Full Stack Developer",;
+                location: "Remote",;
+                type: "Full-time",;
+                department: "Engineering",;
                 description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
             }
         ],

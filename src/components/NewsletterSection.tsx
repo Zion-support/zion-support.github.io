@@ -138,7 +138,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
                     <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>
                     <p className="text-gray-400">{benefit.description}</p>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
 
@@ -211,7 +211,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
                   disabled={isLoading || !email}
                   className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
 
-                  {isLoading ? (
+                  {isLoading ? (;
                     <div className="flex items-center">
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
                       Subscribing...

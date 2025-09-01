@@ -160,13 +160,13 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 name: 'New Contract',
                 address: '0x' + Math.random().toString(36).substr(2, 40),
                 network: 'ethereum',
-                abi[],
-                functions['function1', 'function2'],
-                events['Event1',
+                abi[],;
+                functions['function1', 'function2'],;
+                events['Event1',;
   'Event2']
             
 
-})} className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
+})} className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">;
                   <Plus className="w-4 h-4 inline mr-2"/>
                   Add Contract
                 </button>

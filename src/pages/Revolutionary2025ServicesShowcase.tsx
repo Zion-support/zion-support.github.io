@@ -169,9 +169,9 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             </p>
           </motion.div>
         </div>
-      </section>
+      </section>;
       {/* Search and Filters */}
-      <section className="py-12 bg-black/30">
+      <section className="py-12 bg-black/30">;
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
@@ -231,7 +231,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               </select>
             </div>
             {/* View Mode Toggle */}
-            <div className="flex gap-2">
+            <div className="flex gap-2">;
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-3 rounded-lg transition-colors ${
@@ -267,7 +267,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* AI Service Recommendation Engine */}
-      <section className="py-16 bg-gradient-to-r from-slate-900/40 to-gray-900/40">
+      <section className="py-16 bg-gradient-to-r from-slate-900/40 to-gray-900/40">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"
@@ -443,7 +443,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Service Integration Showcase */}
-      <section className="py-16 bg-gradient-to-r from-violet-900/20 to-fuchsia-900/20">
+      <section className="py-16 bg-gradient-to-r from-violet-900/20 to-fuchsia-900/20">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"
@@ -641,7 +641,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Service Comparison Matrix */}
-      <section className="py-16 bg-gradient-to-r from-slate-800/40 to-gray-800/40">
+      <section className="py-16 bg-gradient-to-r from-slate-800/40 to-gray-800/40">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"
@@ -741,7 +741,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Services Grid/List */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -824,8 +824,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
                       Learn More <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
-                  </div>
-                </motion.div>
+                  </div>;
+                </motion.div>;
               ))}
             </div>
           )}
@@ -908,8 +908,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                         </a>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </div>;
+                </motion.div>;
               ))}
             </div>
           )}
@@ -999,14 +999,14 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
                     View Services
                   </button>
-                </div>
+                </div>;
               )}
             </div>
           )}
         </div>
       </section>
       {/* Pricing Comparison Section */}
-      <section className="py-20 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
+      <section className="py-20 bg-gradient-to-r from-green-900/20 to-emerald-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Competitive Pricing Plans
@@ -1223,7 +1223,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Service Performance Dashboard */}
-      <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
+      <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Real-Time Service Performance
@@ -1535,7 +1535,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Customer Success Metrics */}
-      <section className="py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20">
+      <section className="py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Proven Customer Success
@@ -1794,7 +1794,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Global Presence & Impact */}
-      <section className="py-20 bg-gradient-to-r from-amber-900/20 to-orange-900/20">
+      <section className="py-20 bg-gradient-to-r from-amber-900/20 to-orange-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Global Presence & Impact
@@ -2059,7 +2059,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Call to Action Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
+      <section className="py-20 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
@@ -2112,7 +2112,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Service Evolution Roadmap */}
-      <section className="py-20 bg-gradient-to-r from-amber-900/20 to-orange-900/20">
+      <section className="py-20 bg-gradient-to-r from-amber-900/20 to-orange-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Service Evolution Roadmap
@@ -2313,7 +2313,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Technology Stack Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
+      <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Cutting-Edge Technology Stack
@@ -2495,7 +2495,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Statistics Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900/40 to-slate-900/40">
+      <section className="py-20 bg-gradient-to-r from-gray-900/40 to-slate-900/40">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
             Revolutionary Impact by the Numbers
@@ -2644,7 +2644,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">
+      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             What Our Clients Say
@@ -2789,7 +2789,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?

@@ -44,13 +44,13 @@ export default function AffiliateMarketingTracker(...args[]):  {
       price: "$99",
       period: "/month",
       description: "Perfect for small businesses starting with affiliate marketing",
-      features[
+      features[;
         "Up to 100 affiliates",
         "Basic tracking & analytics",
         "Email support",
         "Standard reporting",
         "Mobile app access"
-      ],
+      ],;
       popular: false
     },
     {
@@ -58,14 +58,14 @@ export default function AffiliateMarketingTracker(...args[]):  {
       price: "$299",
       period: "/month",
       description: "Ideal for growing businesses with active affiliate programs",
-      features[
+      features[;
         "Up to 500 affiliates",
         "Advanced analytics & AI insights",
         "Priority support",
         "Custom reporting",
         "API access",
         "Fraud detection"
-      ],
+      ],;
       popular: true
     },
     {
@@ -73,7 +73,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
       price: "$799",
       period: "/month",
       description: "For large-scale affiliate operations with custom requirements",
-      features[
+      features[;
         "Unlimited affiliates",
         "Custom integrations",
         "Dedicated account manager",;
@@ -174,7 +174,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -226,14 +226,14 @@ export default function AffiliateMarketingTracker(...args[]):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -287,14 +287,14 @@ export default function AffiliateMarketingTracker(...args[]):  {
                     <h3 className="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
                     <p className="text-gray-300">{benefit.description}</p>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -345,7 +345,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
                       : 'border-slate-700'
                   }`}
 
-                  {plan.popular && (
+                  {plan.popular && (;
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
@@ -380,7 +380,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
                     }`}
 
                     Get Started
-                  </Link>
+                  </Link>;
                 </motion.div>
               ))}
             </div>
@@ -388,7 +388,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
               initial = {

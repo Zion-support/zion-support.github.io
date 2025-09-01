@@ -47,11 +47,11 @@ export function Accessibility() {
             e.preventDefault();
             increaseFontSize();
             break;
-          case '-':
+          case '-':;
             e.preventDefault();
             decreaseFontSize();
             break;
-          case '0':
+          case '0':;
             e.preventDefault();
             resetSettings();
             break;
@@ -254,7 +254,7 @@ export function Accessibility() {
               </div>
 
               {/* High Contrast Toggle */}
-              <div className="mb-6">
+              <div className="mb-6">;
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
                     <Contrast className="w-4 h-4" />
@@ -286,7 +286,7 @@ export function Accessibility() {
               </div>
 
               {/* Reduced Motion Toggle */}
-              <div className="mb-6">
+              <div className="mb-6">;
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
                     <Eye className="w-4 h-4" />
@@ -318,7 +318,7 @@ export function Accessibility() {
               </div>
 
               {/* Theme Selection */}
-              <div className="mb-6">
+              <div className="mb-6">;
                 <label className="block text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
                   <Settings className="w-4 h-4" />
                   Theme
@@ -352,7 +352,7 @@ export function Accessibility() {
               </div>
 
               {/* Sound Toggle */}
-              <div className="mb-6">
+              <div className="mb-6">;
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
                     <Volume2 className="w-4 h-4" />
@@ -384,7 +384,7 @@ export function Accessibility() {
               </div>
 
               {/* Keyboard Shortcuts Help */}
-              <div className="mb-6 p-4 bg-slate-800/50 rounded-lg">
+              <div className="mb-6 p-4 bg-slate-800/50 rounded-lg">;
                 <h3 className="text-sm font-medium text-white mb-3 flex items-center gap-2">
                   <Keyboard className="w-4 h-4" />
                   Keyboard Shortcuts

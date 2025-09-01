@@ -27,7 +27,7 @@ export const EQUIPMENT_DETAILS: EquipmentItem[] = [
     price: 5000,
     category: "Quantum",
     image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=300&fit=crop",
-    specs["100+ qubit simulation", "Real-time visualization", "API integration"],
+    specs["100+ qubit simulation", "Real-time visualization", "API integration"],;
     availability: true
   },
   {

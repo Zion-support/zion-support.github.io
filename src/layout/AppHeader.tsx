@@ -768,7 +768,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
             </motion.div>
           )}
         </AnimatePresence>
-      </header>
+      </header>;
     </>
   );
 }

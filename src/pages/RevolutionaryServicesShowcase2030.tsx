@@ -247,7 +247,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
         </section>
 
         {/* Contact Information Banner */}
-        <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-8">
+        <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-8">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
               <div className="flex items-center justify-center space-x-3">
@@ -267,7 +267,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
         </section>
 
         {/* Services Showcase Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Filters and Search */}
             <div className="mb-12">
@@ -329,8 +329,8 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
               </div>
 
               {/* Category Filters */}
-              <div className="flex flex-wrap gap-4 mb-8">
-                {categories.map((category) => (
+              <div className="flex flex-wrap gap-4 mb-8">;
+                {categories.map((category) => (;
                   <button
                     key={category}
                     onClick={() => setActiveCategory(category)}
@@ -346,7 +346,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
               </div>
 
               {/* Results Summary */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">;
                 <div className="flex flex-wrap items-center justify-between gap-4 text-white">
                   <div className="flex items-center space-x-4">
                     <span className="text-sm text-gray-300">Showing {filteredServices.length} of {REVOLUTIONARY_SERVICES_2030.length} revolutionary services</span>
@@ -361,12 +361,12 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     <span className="text-green-400 font-semibold">${filteredServices.reduce((sum, service) => sum + service.price, 0).toLocaleString()}</span>
                   </div>
                 </div>
-              </div>
+              </div>;
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentServices.map((service, index)  => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;
+              {currentServices.map((service, index)  => (;
                 <motion.div
                   key={service.id}
                   initial = {
@@ -464,7 +464,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                       </span>
                       <ArrowUpRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </div>
-                  </div>
+                  </div>;
                 </motion.div>
               ))}
             </div>
@@ -509,7 +509,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50">
+        <section className="py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial = {
@@ -618,7 +618,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
               <motion.div
                 initial = {
   { opacity: 0,
-  x: 20 
+  x: 20 ;
 
 
 
@@ -628,7 +628,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 }}
                 whileInView = {
   { opacity: 1,
-  x: 0 
+  x: 0 ;
 
 
 
@@ -639,7 +639,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                 transition={{ duration: 0.8 }}
                 className="space-y-8"
 
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">;
                   <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
                   <div className="space-y-4">
                     <div className="flex items-center space-x-4">
@@ -828,7 +828,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   </span>
                   ))}
                 </div>
-              </div>
+              </div>;
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a

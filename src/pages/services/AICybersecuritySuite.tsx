@@ -202,20 +202,20 @@ export default function AICybersecuritySuite(...args[]):  {
       title: 'Threat Intelligence Platform',
       description: 'Real-time threat intelligence and analysis powered by AI',
       price: 'From $2,500/month',
-      features['Global threat monitoring', 'AI-powered analysis', 'Custom threat feeds', '24/7 monitoring']
-    },
+      features['Global threat monitoring', 'AI-powered analysis', 'Custom threat feeds', '24/7 monitoring'];
+    },;
     {
       title: 'Security Operations Center (SOC)',
       description: 'AI-enhanced SOC services with automated threat detection and response',
       price: 'From $8,000/month',
-      features['AI threat detection', 'Automated response', 'Security analysts', 'Incident management']
-    },
+      features['AI threat detection', 'Automated response', 'Security analysts', 'Incident management'];
+    },;
     {
       title: 'Vulnerability Assessment',
       description: 'Comprehensive security assessment using AI-powered scanning and analysis',
       price: 'From $5,000',
-      features['AI vulnerability scanning', 'Penetration testing', 'Security audit', 'Remediation plan']
-    },
+      features['AI vulnerability scanning', 'Penetration testing', 'Security audit', 'Remediation plan'];
+    },;
     {
       title: 'Compliance & Governance',
       description: 'AI-powered compliance monitoring and reporting for regulatory requirements',
@@ -228,18 +228,18 @@ export default function AICybersecuritySuite(...args[]):  {
     {
       title: 'Endpoint Protection',
       description: 'AI-powered endpoint security with behavioral analysis and threat prevention',
-      features['Malware detection', 'Ransomware protection', 'Device control', 'Data encryption']
-    },
+      features['Malware detection', 'Ransomware protection', 'Device control', 'Data encryption'];
+    },;
     {
       title: 'Cloud Security',
       description: 'Comprehensive cloud security monitoring and threat detection',
-      features['Multi-cloud protection', 'API security', 'Data encryption', 'Access control']
-    },
+      features['Multi-cloud protection', 'API security', 'Data encryption', 'Access control'];
+    },;
     {
       title: 'Identity & Access Management',
       description: 'AI-enhanced identity verification and access control systems',
-      features['Multi-factor authentication', 'Behavioral biometrics', 'Privileged access management', 'Single sign-on']
-    },
+      features['Multi-factor authentication', 'Behavioral biometrics', 'Privileged access management', 'Single sign-on'];
+    },;
     {
       title: 'Incident Response',
       description: 'Automated incident response with AI-powered threat containment',
@@ -428,14 +428,14 @@ export default function AICybersecuritySuite(...args[]):  {
                 <div className="text-4xl font-bold text-red-400 mb-2">{metric.metric}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{metric.title}</h3>
                 <p className="text-gray-300 text-sm">{metric.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
-        </div>
+        </div>;
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -517,7 +517,7 @@ export default function AICybersecuritySuite(...args[]):  {
       </section>
 
       {/* Services & Pricing Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -609,7 +609,7 @@ export default function AICybersecuritySuite(...args[]):  {
       </section>
 
       {/* Security Modules Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -696,7 +696,7 @@ export default function AICybersecuritySuite(...args[]):  {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -753,7 +753,7 @@ export default function AICybersecuritySuite(...args[]):  {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -807,7 +807,7 @@ export default function AICybersecuritySuite(...args[]):  {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {

@@ -642,11 +642,11 @@ export default function Events(...args: any[]): any {
                       </button>
                     </div>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
-        </section>
+        </section>;
       )}
 
       {/* Main Content */}
@@ -701,7 +701,7 @@ export default function Events(...args: any[]): any {
                   >
                     Clear all filters
                   </button>
-                </div>
+                </div>;
               )}
 
               {/* Load More Button */}

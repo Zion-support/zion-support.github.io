@@ -349,7 +349,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
         initial="hidden"
         animate="visible"
 
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">;
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (
               <motion.div
@@ -393,7 +393,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                     variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
                     className={viewMode === 'grid' ? '' : 'bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20'}
 
-                    {viewMode === 'grid' ? (
+                    {viewMode === 'grid' ? (;
                       <motion.div
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
                         variants={cardVariants}
@@ -468,7 +468,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                             <ArrowRight className="w-4 h-4" />
                           </button>
                         </div>
-                      </motion.div>
+                      </motion.div>;
                     ) : (
                       <div className="flex gap-6">
                         {/* Service Image */}
@@ -525,7 +525,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                               <ArrowRight className="w-4 h-4" />
                             </button>
                           </div>
-                        </div>
+                        </div>;
                       </div>
                     )}
                   </motion.div>
@@ -541,7 +541,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search criteria or filters</p>
-              </motion.div>
+              </motion.div>;
             )}
           </AnimatePresence>
         </div>
@@ -551,7 +551,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
         className="relative z-10 px-6 pb-20"
         initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -561,7 +561,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 }}
         animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -571,7 +571,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 }}
         transition = {
   { duration: 0.8,
-  delay: 1.2 
+  delay: 1.2 ;
 
 
 

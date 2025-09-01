@@ -261,7 +261,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -346,14 +346,14 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -435,14 +435,14 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                       </div>
                     ))}
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -518,7 +518,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                       : 'bg-white/10 backdrop-blur-sm border border-white/20'
                   }`}
 
-                  {plan.popular && (
+                  {plan.popular && (;
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
@@ -551,7 +551,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   }`}>
                     {plan.cta}
                   </button>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
 
@@ -600,7 +600,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -683,14 +683,14 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                     <p className="text-gray-400 text-sm">{testimonial.role}</p>
                     <p className="text-blue-400 text-sm">{testimonial.comp}</p>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial = {
