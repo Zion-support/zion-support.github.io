@@ -84,20 +84,30 @@ export default function BlogPage() {
             </p>
           </section>
 
-          {/* Category Filter */}
-          <section className="mb-12">
-            <div className="flex flex-wrap justify-center gap-3">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                    category === "All"
-                      ? "bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white"
-                      : "bg-white/10 hover:bg-white/20 text-white/80 hover:text-white"
-                  }`}
-                >
-                  {category}
-                </button>
+          <section className="mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.map((post) => (
+                <article key={post.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                  <div className="text-6xl mb-4 text-center">{post.image}</div>
+                  <div className="mb-4">
+                    <span className="inline-block px-3 py-1 bg-cyan-400/20 text-cyan-300 text-sm rounded-full border border-cyan-400/30">
+                      {post.category}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-white hover:text-cyan-400 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-white/70 mb-4 text-sm leading-relaxed">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between text-sm text-white/50">
+                    <span>{post.date}</span>
+                    <span>{post.readTime}</span>
+                  </div>
+                  <a href={post.id === 1 ? "/blog/autonomous-ai-systems-2025" : post.id === 3 ? "/blog/cloud-native-architecture-2025" : "/blog"} className="w-full mt-4 px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 text-center block">
+                    Read More
+                  </a>
+                </article>
               ))}
             </div>
           </section>

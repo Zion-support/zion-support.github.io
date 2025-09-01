@@ -4,193 +4,226 @@ import Head from 'next/head';
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
-      title: 'Global E-commerce Platform Automation',
-      company: 'TechRetail Inc.',
-      industry: 'E-commerce',
-      challenge: 'Managing 10,000+ daily orders across multiple regions with manual processes',
-      solution: 'Implemented autonomous order processing, inventory management, and customer service automation',
+      id: 1,
+      title: "Autonomous E-commerce Platform",
+      client: "Global Retail Chain",
+      industry: "E-commerce",
+      challenge: "Complex inventory management and customer personalization at scale",
+      solution: "AI-powered autonomous system with real-time optimization",
       results: [
-        '99.9% order accuracy',
-        '60% reduction in processing time',
-        '40% cost savings',
-        '24/7 automated operations'
+        "40% reduction in operational costs",
+        "25% increase in customer satisfaction",
+        "99.9% system uptime achieved",
+        "Automated scaling during peak periods"
       ],
-      technologies: ['AI Order Processing', 'Inventory Automation', 'Customer Service Bots', 'Real-time Analytics']
+      technologies: ["AI/ML", "Cloud Native", "Kubernetes", "Real-time Analytics"],
+      image: "🛒",
+      duration: "6 months"
     },
     {
-      title: 'Financial Services Compliance Automation',
-      company: 'SecureBank Ltd.',
-      industry: 'Financial Services',
-      challenge: 'Complex regulatory compliance requiring constant monitoring and reporting',
-      solution: 'Built autonomous compliance monitoring system with real-time risk assessment and automated reporting',
+      id: 2,
+      title: "Smart Manufacturing Automation",
+      client: "Industrial Manufacturer",
+      industry: "Manufacturing",
+      challenge: "Manual quality control processes causing production delays",
+      solution: "Computer vision AI system with autonomous defect detection",
       results: [
-        '100% compliance rate maintained',
-        '90% faster regulatory reporting',
-        'Real-time risk detection',
-        'Automated audit trails'
+        "90% reduction in quality control time",
+        "95% accuracy in defect detection",
+        "30% increase in production efficiency",
+        "24/7 autonomous operation"
       ],
-      technologies: ['Compliance Monitoring', 'Risk Assessment AI', 'Automated Reporting', 'Audit Automation']
+      technologies: ["Computer Vision", "IoT Sensors", "Edge AI", "Predictive Analytics"],
+      image: "🏭",
+      duration: "8 months"
     },
     {
-      title: 'Healthcare Data Processing Automation',
-      company: 'MediTech Solutions',
-      industry: 'Healthcare',
-      challenge: 'Processing millions of patient records while maintaining HIPAA compliance',
-      solution: 'Developed secure, autonomous data processing pipeline with privacy-preserving AI',
+      id: 3,
+      title: "Financial Services AI Platform",
+      client: "Regional Bank",
+      industry: "Financial Services",
+      challenge: "Fraud detection and risk assessment at scale",
+      solution: "Autonomous AI system with continuous learning capabilities",
       results: [
-        '10x faster data processing',
-        'Zero HIPAA violations',
-        '99.99% data accuracy',
-        'Automated quality checks'
+        "99.5% fraud detection accuracy",
+        "60% reduction in false positives",
+        "Real-time risk assessment",
+        "Compliance automation"
       ],
-      technologies: ['HIPAA-Compliant AI', 'Data Pipeline Automation', 'Privacy-Preserving ML', 'Quality Assurance']
+      technologies: ["Machine Learning", "Big Data", "Real-time Processing", "Security"],
+      image: "🏦",
+      duration: "10 months"
     },
     {
-      title: 'Manufacturing Quality Control',
-      company: 'Precision Manufacturing Co.',
-      industry: 'Manufacturing',
-      challenge: 'Manual quality inspection causing delays and inconsistent results',
-      solution: 'Implemented computer vision and AI-powered quality control automation',
+      id: 4,
+      title: "Healthcare Data Analytics",
+      client: "Hospital Network",
+      industry: "Healthcare",
+      challenge: "Patient data analysis and predictive healthcare insights",
+      solution: "Autonomous healthcare analytics platform",
       results: [
-        '95% defect detection rate',
-        '80% faster inspection process',
-        'Zero production delays',
-        'Continuous quality improvement'
+        "30% improvement in patient outcomes",
+        "Automated diagnosis assistance",
+        "Predictive health risk assessment",
+        "HIPAA-compliant data processing"
       ],
-      technologies: ['Computer Vision AI', 'Quality Control Automation', 'Predictive Maintenance', 'Real-time Monitoring']
+      technologies: ["Healthcare AI", "Data Privacy", "Predictive Analytics", "Cloud Security"],
+      image: "🏥",
+      duration: "12 months"
+    },
+    {
+      id: 5,
+      title: "Smart City Infrastructure",
+      client: "Municipal Government",
+      industry: "Government",
+      challenge: "Traffic management and urban planning optimization",
+      solution: "Autonomous traffic control and urban analytics system",
+      results: [
+        "35% reduction in traffic congestion",
+        "20% improvement in air quality",
+        "Real-time urban planning insights",
+        "Automated emergency response"
+      ],
+      technologies: ["IoT", "Smart Cities", "Real-time Analytics", "Edge Computing"],
+      image: "🏙️",
+      duration: "18 months"
+    },
+    {
+      id: 6,
+      title: "Logistics Optimization Platform",
+      client: "International Shipping Company",
+      industry: "Logistics",
+      challenge: "Complex supply chain optimization and route planning",
+      solution: "Autonomous logistics platform with AI-driven optimization",
+      results: [
+        "25% reduction in delivery times",
+        "20% decrease in fuel costs",
+        "Real-time route optimization",
+        "Automated inventory management"
+      ],
+      technologies: ["Supply Chain AI", "Route Optimization", "IoT Tracking", "Predictive Analytics"],
+      image: "🚚",
+      duration: "9 months"
     }
   ];
 
-  const industries = ['All', 'E-commerce', 'Financial Services', 'Healthcare', 'Manufacturing', 'Technology', 'Education'];
+  const industries = ["All", "E-commerce", "Manufacturing", "Financial Services", "Healthcare", "Government", "Logistics"];
 
   return (
     <>
       <Head>
-        <title>Case Studies | Zion Tech Group - Success Stories & Automation Results</title>
-        <meta name="description" content="Explore real-world case studies showcasing how Zion Tech Group's autonomous automation solutions have transformed businesses across industries." />
+        <title>Case Studies | Zion Tech Group - Success Stories</title>
+        <meta name="description" content="Explore real-world success stories and case studies showcasing Zion Tech Group's autonomous technology solutions across various industries." />
         <meta property="og:title" content="Case Studies - Zion Tech Group" />
-        <meta property="og:description" content="Success stories and automation results from real businesses." />
+        <meta property="og:description" content="Real-world success stories and autonomous technology solutions." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <nav className="mb-8">
-            <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              ← Back to Home
-            </a>
-          </nav>
-          
-          <header className="text-center mb-16">
+          <section className="text-center mb-16">
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Success Stories
+              Case Studies
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Discover how Zion Tech Group's autonomous automation solutions have transformed 
-              businesses across industries, delivering measurable results and competitive advantages.
+              Real-world success stories showcasing how our autonomous technology solutions transform businesses and drive innovation
             </p>
-          </header>
+          </section>
 
-          {/* Industry Filter */}
-          <section className="mb-12">
-            <div className="flex flex-wrap gap-3 justify-center">
-              {industries.map(industry => (
+          <section className="mx-auto max-w-7xl">
+            {/* Industry Filter */}
+            <div className="flex flex-wrap justify-center gap-3 mb-12">
+              {industries.map((industry) => (
                 <button
                   key={industry}
-                  className="px-4 py-2 rounded-lg border border-white/20 text-white/80 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300"
+                  className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
                 >
                   {industry}
                 </button>
               ))}
             </div>
-          </section>
 
-          {/* Case Studies Grid */}
-          <section className="mb-20">
+            {/* Case Studies Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-                      {study.industry}
-                    </span>
-                    <span className="text-white/60 text-sm">{study.company}</span>
+              {caseStudies.map((study) => (
+                <div key={study.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="text-6xl">{study.image}</div>
+                    <div className="text-right">
+                      <span className="inline-block px-3 py-1 bg-cyan-400/20 text-cyan-300 text-sm rounded-full border border-cyan-400/30">
+                        {study.industry}
+                      </span>
+                      <p className="text-sm text-white/60 mt-2">{study.duration}</p>
+                    </div>
                   </div>
                   
-                  <h3 className="text-2xl font-bold mb-4 text-white">{study.title}</h3>
+                  <h3 className="text-2xl font-bold mb-3 text-white hover:text-cyan-400 transition-colors">
+                    {study.title}
+                  </h3>
+                  
+                  <p className="text-sm text-cyan-300 mb-4">
+                    <strong>Client:</strong> {study.client}
+                  </p>
                   
                   <div className="mb-6">
-                    <h4 className="font-semibold text-fuchsia-400 mb-2">The Challenge</h4>
-                    <p className="text-white/80 text-sm">{study.challenge}</p>
+                    <h4 className="text-lg font-semibold mb-2 text-fuchsia-400">Challenge</h4>
+                    <p className="text-white/70 text-sm">{study.challenge}</p>
                   </div>
                   
                   <div className="mb-6">
-                    <h4 className="font-semibold text-green-400 mb-2">Our Solution</h4>
-                    <p className="text-white/80 text-sm">{study.solution}</p>
+                    <h4 className="text-lg font-semibold mb-2 text-green-400">Solution</h4>
+                    <p className="text-white/70 text-sm">{study.solution}</p>
                   </div>
                   
                   <div className="mb-6">
-                    <h4 className="font-semibold text-blue-400 mb-2">Results</h4>
+                    <h4 className="text-lg font-semibold mb-2 text-purple-400">Results</h4>
                     <ul className="space-y-1">
-                      {study.results.map((result, resultIndex) => (
-                        <li key={resultIndex} className="text-white/80 text-sm">• {result}</li>
+                      {study.results.map((result, index) => (
+                        <li key={index} className="text-white/70 text-sm flex items-center">
+                          <span className="text-green-400 mr-2">✓</span>
+                          {result}
+                        </li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div>
-                    <h4 className="font-semibold text-purple-400 mb-2">Technologies Used</h4>
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold mb-2 text-blue-400">Technologies</h4>
                     <div className="flex flex-wrap gap-2">
-                      {study.technologies.map((tech, techIndex) => (
-                        <span key={techIndex} className="px-2 py-1 bg-white/10 rounded text-xs text-white/70 border border-white/20">
+                      {study.technologies.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-white/10 text-white/80 text-xs rounded border border-white/20"
+                        >
                           {tech}
                         </span>
                       ))}
                     </div>
                   </div>
+                  
+                  <button className="w-full px-4 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
+                    View Full Case Study
+                  </button>
                 </div>
               ))}
             </div>
-          </section>
 
-          {/* Success Metrics */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold mb-12 text-center text-white">Collective Impact</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                <div className="text-white/70 text-sm">Automation Projects</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-fuchsia-400 mb-2">$50M+</div>
-                <div className="text-white/70 text-sm">Cost Savings Generated</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-                <div className="text-white/70 text-sm">Average Success Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">24/7</div>
-                <div className="text-white/70 text-sm">Automated Operations</div>
-              </div>
-            </div>
-          </section>
-
-          {/* Call to Action */}
-          <section className="text-center">
-            <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-12 border border-cyan-500/20">
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready to Write Your Success Story?</h2>
-              <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-                Join the hundreds of companies that have transformed their operations with 
-                Zion Tech Group's autonomous automation solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact" className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
-                  Start Your Project
-                </a>
-                <a href="/services" className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300">
-                  Explore Services
-                </a>
+            {/* Call to Action */}
+            <div className="text-center mt-20">
+              <div className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-12 border border-cyan-400/30">
+                <h2 className="text-3xl font-bold mb-4 text-cyan-400">Ready to Transform Your Business?</h2>
+                <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+                  Let's discuss how our autonomous technology solutions can drive innovation, improve efficiency, 
+                  and create competitive advantages for your organization.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
+                    Schedule a Consultation
+                  </button>
+                  <button className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
+                    Download Brochure
+                  </button>
+                </div>
               </div>
             </div>
           </section>

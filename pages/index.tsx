@@ -123,6 +123,9 @@ const Index: NextPage = () => {
               <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-orange-400/50">
                 Case Studies
               </a>
+              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-orange-400/50">
+                Case Studies
+              </a>
               <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
                 Contact
               </a>
@@ -300,20 +303,46 @@ const Index: NextPage = () => {
             </div>
           </section>
 
-          {/* Call to Action */}
-          <section className="mx-auto max-w-4xl px-6 pb-14">
-            <div className="bg-gradient-to-r from-cyan-400/10 to-fuchsia-400/10 backdrop-blur-xl rounded-2xl p-8 text-center">
-              <h2 className="text-3xl font-bold mb-4 text-white">Ready to Go Autonomous?</h2>
-              <p className="text-white/70 mb-6">
-                Join the future of technology with Zion Tech Group's autonomous AI solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105">
-                  Get Started Today
-                </a>
-                <a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
-                  Explore Services
-                </a>
+          {/* Footer Section */}
+          <footer className="bg-black/20 backdrop-blur-xl border-t border-white/10 mt-20">
+            <div className="container mx-auto px-6 py-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                  <h3 className="text-lg font-bold mb-4 text-cyan-400">Company</h3>
+                  <ul className="space-y-2 text-white/70">
+                    <li><a href="/about" className="hover:text-cyan-400 transition-colors">About Us</a></li>
+                    <li><a href="/news" className="hover:text-cyan-400 transition-colors">News</a></li>
+                    <li><a href="/events" className="hover:text-cyan-400 transition-colors">Events</a></li>
+                    <li><a href="/contact" className="hover:text-cyan-400 transition-colors">Contact</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-4 text-fuchsia-400">Services</h3>
+                  <ul className="space-y-2 text-white/70">
+                    <li><a href="/services" className="hover:text-fuchsia-400 transition-colors">AI Development</a></li>
+                    <li><a href="/services" className="hover:text-fuchsia-400 transition-colors">Automation</a></li>
+                    <li><a href="/services" className="hover:text-fuchsia-400 transition-colors">Cloud Infrastructure</a></li>
+                    <li><a href="/services" className="hover:text-fuchsia-400 transition-colors">Consulting</a></li>
+                  </ul>
+                </div>
+                                  <div>
+                    <h3 className="text-lg font-bold mb-4 text-green-400">Resources</h3>
+                    <ul className="space-y-2 text-white/70">
+                      <li><a href="/blog" className="hover:text-green-400 transition-colors">Blog</a></li>
+                      <li><a href="/reports" className="hover:text-green-400 transition-colors">Reports</a></li>
+                      <li><a href="/case-studies" className="hover:text-green-400 transition-colors">Case Studies</a></li>
+                      <li><a href="/resources" className="hover:text-green-400 transition-colors">Resources</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold mb-4 text-blue-400">Legal</h3>
+                    <ul className="space-y-2 text-white/70">
+                      <li><a href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+                      <li><a href="/about" className="hover:text-blue-400 transition-colors">About</a></li>
+                      <li><a href="/contact" className="hover:text-blue-400 transition-colors">Contact</a></li>
+                      <li><a href="/events" className="hover:text-blue-400 transition-colors">Events</a></li>
+                    </ul>
+                  </div>
               </div>
             </div>
           </section>
