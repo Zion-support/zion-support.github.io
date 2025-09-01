@@ -1,28 +1,22 @@
-import React, { useEffect } from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
-import dynamic from 'next/dynamic';
+import React from 'react';
+import Head from 'next/head';
 
-export type EnhancedLayoutProps = {
-  children: React.ReactNode;
-  title?: string;
+type Props = { children?: React.ReactNode };
+
+const EnhancedLayout: React.FC<Props> = ({ children }) => {
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Zion</title>
+      </Head>
+      <div className="min-h-screen bg-high-contrast-secondary text-high-contrast">
+        <div className="max-w-6xl mx-auto py-8 px-4">
+          {children}
+        </div>
+      </div>
+    </>
+  );
 };
 
-export default function EnhancedLayout({ children, title }: EnhancedLayoutProps) {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <header>
-        <EnhancedNavigation />
-        <LanguageSwitchPrompt />
-      </header>
-      <main className="flex-1 container mx-auto px-4 py-6">
-        {title && <h1 className="text-2xl font-semibold mb-4">{title}</h1>}
-        {children}
-      </main>
-      <footer>
-        <EnhancedFooter />
-      </footer>
-      <MobileTabBar />
-    </div>
-  );
-}
+export default EnhancedLayout;
