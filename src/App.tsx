@@ -1,10 +1,16 @@
-
 import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
-import ErrorBoundary from './components/ErrorBoundary';
+import { Header  } from './components/Header.tsx';
+import { Footer  } from './components/Footer.tsx';
+import { Sidebar  } from './components/Sidebar.tsx';
+import { ErrorBoundary } from 'react-error-boundary';
+import { LoadingSpinner  } from './components/ui/loading-spinner.tsx';
+
+// Enhanced Components
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import { MobileExperienceEnhancer  } from './components/MobileExperienceEnhancer.tsx';
+import { ChatAssistant  } from './components/ChatAssistant.tsx';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -27,15 +33,23 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({
 const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
 const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
 const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));
-const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
+const SupportPage = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
 const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
-const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
+const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
+const NewInnovativeServicesShowcase = lazy(() => import('./pages/NewInnovativeServicesShowcase').then(module => ({ default: module.default })));
+const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.default })));
+const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.default })));
 
 // Service Pages - Updated to use backup-pages location
 const AIThreatIntelligence = lazy(() => import('./backup-pages/src-pages/services/ai-threat-intelligence-platform').then(module => ({ default: module.AIThreatIntelligencePlatform })));
 const BlockchainSupplyChain = lazy(() => import('./backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
 const AdvancedServicesShowcase = lazy(() => import('./backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
+
+// Additional Service Pages
+const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.default })));
+const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.default })));
+const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity })));
 
 // Loading component
 const PageLoader = () => (
@@ -66,6 +80,9 @@ function App() {
                 <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
                 <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
+                <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
+                <Route path="/new-services-2025" element={<NewInnovativeServicesShowcase />} />
+                <Route path="/enhanced-new-services-2025" element={<EnhancedNewServices2025 />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/solutions" element={<SolutionsPage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />
@@ -85,7 +102,7 @@ function App() {
                 <Route path="/help" element={<Helpdesk />} />
                 <Route path="/training" element={<Training />} />
                 <Route path="/community" element={<BlogPage />} />
-                <Route path="/support" element={<Support />} />
+                <Route path="/support" element={<SupportPage />} />
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
                 <Route path="/privacy-policy" element={<BlogPage />} />

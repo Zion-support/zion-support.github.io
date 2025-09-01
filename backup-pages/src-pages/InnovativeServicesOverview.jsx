@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { comprehensiveMicroSaasServices2025 } from "../../data/2025-comprehensive-micro-saas-services";"
-import { innovativeITAIServices2025 } from "../../data/2025-innovative-it-ai-services";"
-import { expandedInnovativeServices2025 } from "../../data/2025-expanded-innovative-services";"
-import { emergingTechInnovationServices2025 } from "../../data/2025-emerging-tech-innovations";"
+import { comprehensiveMicroSaasServices2025 } from "../../data/2025-comprehensive-micro-saas-services";
+import { innovativeITAIServices2025 } from "../../data/2025-innovative-it-ai-services";
+import { expandedInnovativeServices2025 } from "../../data/2025-expanded-innovative-services";
+import { emergingTechInnovationServices2025 } from "../../data/2025-emerging-tech-innovations";
 import { enterpriseITInnovationServices2025 } from "../../data/2025-enterprise-it-innovations";
 const InnovativeServicesOverview = () => {
     const [selectedService, setSelectedService] = useState(null);
@@ -15,7 +15,7 @@ const InnovativeServicesOverview = () => {
         ...emergingTechInnovationServices2025,
         ...enterpriseITInnovationServices2025
     ];
-    const categories = ['
+    const categories = [
         { id: 'all', name: 'All Services', count: allServices.length },
         { id: 'ai-services', name: 'AI & Machine Learning', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
         { id: 'quantum-computing', name: 'Quantum Computing', count: allServices.filter(s => s.category.includes('Quantum')).length },
@@ -30,9 +30,17 @@ const InnovativeServicesOverview = () => {
     const filteredServices = selectedCategory === 'all'
         ? allServices
         : allServices.filter(service => {
-
             const category = categories.find(c => c.id === selectedCategory);
             if (!category)
                 return true;
             const categoryMappings = {
-'"
+
+
+export default function InnovativeServicesOverview() {
+  return (
+    <div>
+      <h1>InnovativeServicesOverview</h1>
+      <p>This is the InnovativeServicesOverview page.</p>
+    </div>
+  );
+}

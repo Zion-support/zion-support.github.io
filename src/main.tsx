@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
-import App from './App.jsx';
+import App from './App';
 import './index.css';
+import { registerServiceWorker } from './utils/serviceWorker';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) throw new Error('Failed to find the root element');
@@ -39,3 +40,6 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// Register service worker for PWA functionality
+registerServiceWorker();

@@ -11,14 +11,14 @@ import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload';
 import { CommunityTrust } from '../components/mobile-app/CommunityTrust';
 
 export const MobileLaunchPage = () => {
-  return()
+  return (
     <>
       <SEO
         title="Zion Mobile App - Download IT Asset Management App"
         description="Download Zion mobile app for iOS and Android. Professional IT asset management in your pocket with real-time sync, offline mode, and enterprise security."
         keywords="zion mobile app, IT asset management app, download, iOS, Android, mobile app"
       />
-      {/* <Header /> */}
+              {/* <Header /> */}
       <main>
         <MobileLaunchHero />
         <MobileFeatureShowcase />
@@ -30,6 +30,14 @@ export const MobileLaunchPage = () => {
       </main>
       <Footer />
     </>
+  )};
+
+
+export default function MobileLaunchPage() {
+  return (
+    <div>
+      <h1>MobileLaunchPage</h1>
+      <p>This is the MobileLaunchPage page.</p>
+    </div>
   );
-};
-'"
+}
