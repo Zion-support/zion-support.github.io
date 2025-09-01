@@ -19,6 +19,9 @@ const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
 const ComprehensivePricing = lazy(() => 
   import('./pages/ComprehensivePricing2025.tsx')
 );
+const ComprehensiveServicesShowcase2026 = lazy(() => 
+  import('./pages/ComprehensiveServicesShowcase2026.tsx')
+);
 
 // Loading component
 const LoadingSpinner = () => (
@@ -94,6 +97,7 @@ function App() {
 
               {/* Services routes */}
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/comprehensive-services-showcase-2026" element={<ComprehensiveServicesShowcase2026 />} />
 
               {/* Catch-all route for 404 */}
               <Route
