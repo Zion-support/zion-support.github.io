@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -10,34 +9,10 @@ import {
   Zap, 
   Globe, 
   Cpu, 
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
-  Shield,
-  Cloud,
-  Workflow,
-  Briefcase,
-  Package,
-  Target,
-  Heart,
-  DollarSign,
-  Building,
-  ShoppingCart,
-  Zap,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Globe,
-  Lock,
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
   Database,
   Network,
   Smartphone,
   Code,
-  Server,
   Chip,
   Wifi,
   Bot,
@@ -56,14 +31,12 @@ import {
   Rocket,
   Award,
   TrendingUp,
-  Cpu,
   GraduationCap,
   MessageCircle,
   HelpCircle,
   Phone,
   Mail,
   MapPin,
-<<<<<<< HEAD
   Globe as GlobeIcon
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
@@ -896,7 +869,6 @@ export default function ServicesPage() {
       </div>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive text-center">
           <motion.div
@@ -939,34 +911,5 @@ export default function ServicesPage() {
         </div>
       </section>
     </>
-=======
-      <div className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our technology services can transform your business 
-            and drive unprecedented growth and success.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 hover:bg-gray-100 font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Get in Touch
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link
-              to="/request-quote"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-semibold rounded-lg transition-all duration-200"
-            >
-              <DollarSign className="w-5 h-5 mr-2" />
-              Request Quote
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
   );
 }
