@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  pageExtensions: ['route.tsx', 'route.jsx', 'route.ts', 'route.js'],
   typescript: {
     ignoreBuildErrors: true,
   },

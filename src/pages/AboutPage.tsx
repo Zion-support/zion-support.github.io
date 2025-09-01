@@ -1,9 +1,7 @@
-import { Link } from 'react - router - dom.ts';
-import React from 'react.ts';
-export function AboutPage (...args: any[]) : any {
+import { Link } from 'react-router-dom';
+import React from 'react';
+import { motion } from 'framer-motion';
 import {
-import { motion } from 'framer - motion.ts';
-
   Users,
   Target,
   Zap,
@@ -26,8 +24,9 @@ import { motion } from 'framer - motion.ts';
   Github,
   Facebook,
   Instagram,
-} from 'lucide - react.ts';
+} from 'lucide-react';
 
+export function AboutPage() {
   const values = [
     {
       title: 'Innovation First',

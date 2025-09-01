@@ -1,18 +1,10 @@
-import { Link } from 'react - router - dom.ts';
-import React from 'react.ts';
-export function NotFoundPage (...args: any[]) : any {
-import {
-import { motion } from 'framer - motion.ts';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Home, ArrowLeft, Search, HelpCircle, Mail } from 'lucide-react';
 
-  Home,
-  Search,
-  ArrowLeft,
-  Zap,
-  Brain,
-  Shield,
-  Cpu,
-} from 'lucide - react.ts';
-
+export function NotFoundPage() {
   const popularPages = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Services', href: '/services', icon: Zap },
