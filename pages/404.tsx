@@ -1,20 +1,11 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import Link from 'next/link';
 
-const NotFoundPage: NextPage = () => {
+export default function NotFound() {
   return (
-    <div>
-      <Head>
-        <title>404 - Zion Tech Solutions</title>
-        <meta name="description" content="404 page" />
-      </Head>
-      
-      <main>
-        <h1>404</h1>
-        <p>This page is under construction.</p>
-      </main>
+    <div className="text-center space-y-4">
+      <h1 className="text-3xl font-bold">404</h1>
+      <p>Page not found.</p>
+      <Link href="/" className="text-blue-600 hover:underline">Go home</Link>
     </div>
   );
-};
-
-export default NotFoundPage;
+}
