@@ -51,8 +51,8 @@
   },
   {
     "route": "/404",
-    "title": "",
-    "h1": "404 - Page Not Found"
+    "title": "404 - Page Not Found | Zion Tech Group",
+    "h1": "404"
   },
   {
     "route": "/500",
@@ -71,13 +71,13 @@
   },
   {
     "route": "/_document",
-    "title": "Zion Tech Group - Pioneering Autonomous Business Operations",
+    "title": "",
     "h1": ""
   },
   {
     "route": "/about",
-    "title": "About Us - Zion Tech Group",
-    "h1": "We build practical AI and platform solutions"
+    "title": "About Us | Zion Tech Group",
+    "h1": "About Zion Tech Group"
   },
   {
     "route": "/agency-dashboard",
@@ -291,8 +291,8 @@
   },
   {
     "route": "/contact",
-    "title": "Contact Us - Zion Tech Group | Get Started with Revolutionary Micro SaaS Services",
-    "h1": "Let's Transform Your Business"
+    "title": "Contact Us | Zion Tech Group",
+    "h1": "Get in Touch"
   },
   {
     "route": "/cutting-edge-pricing-2025",
@@ -365,6 +365,11 @@
     "h1": "Enhanced Services Showcase"
   },
   {
+    "route": "/explore",
+    "title": "Explore Technology Categories | Zion Tech Group",
+    "h1": "Explore Technology Categories"
+  },
+  {
     "route": "/expo",
     "title": "",
     "h1": ""
@@ -411,8 +416,8 @@
   },
   {
     "route": "/",
-    "title": "",
-    "h1": ""
+    "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
+    "h1": "Zion Tech Group"
   },
   {
     "route": "/innovative-services-showcase-2025",
@@ -625,6 +630,11 @@
     "h1": "Salary Insights"
   },
   {
+    "route": "/search",
+    "title": "Search | Zion Tech Group",
+    "h1": "Search Our Services"
+  },
+  {
     "route": "/secrets-rotation-automation",
     "title": "",
     "h1": "Secrets Rotation Automation"
@@ -651,8 +661,8 @@
   },
   {
     "route": "/services",
-    "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
-    "h1": ""
+    "title": "AI & Technology Services | Zion Tech Group",
+    "h1": "AI & Technology Services"
   },
   {
     "route": "/site-health",
@@ -662,7 +672,7 @@
   {
     "route": "/sitemap",
     "title": "Sitemap | Zion Tech Group",
-    "h1": "Sitemap"
+    "h1": "Site Map"
   },
   {
     "route": "/soc2-compliance-automation",
