@@ -629,6 +629,7 @@ import {
         </div>;
       </section>;
     </div>;
-  )};
+  )
+}
 
-export default AIQuantumFinancialTrading;'"`
+export default AIQuantumFinancialTrading;

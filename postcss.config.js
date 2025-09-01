@@ -1,7 +1,12 @@
+import tailwind from '@tailwindcss/postcss';
+import autoprefixer from 'autoprefixer';
+import postcssPresetEnv from 'postcss-preset-env';
+import cssnano from 'cssnano';
+
 export default {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {
+  plugins: [
+    tailwind(),
+    autoprefixer({
       flexbox: 'no-2009',
       grid: 'autoplace',
       overrideBrowserslist: [
@@ -11,8 +16,8 @@ export default {
         'not dead',
         'not ie 11',
       ],
-    },
-    'postcss-preset-env': {
+    }),
+    postcssPresetEnv({
       stage: 3,
       features: {
         'nesting-rules': true,
@@ -31,14 +36,12 @@ export default {
         'gap-properties': true,
         'double-position-gradients': true,
       },
-    },
-    cssnano: {
+    }),
+    cssnano({
       preset: [
         'default',
         {
-          discardComments: {
-            removeAll: true,
-          },
+          discardComments: { removeAll: true },
           normalizeWhitespace: false,
           colormin: true,
           minifyFontValues: true,
@@ -53,6 +56,6 @@ export default {
           zindex: false,
         },
       ],
-    },
-  },
+    }),
+  ],
 };
