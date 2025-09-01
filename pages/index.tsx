@@ -935,7 +935,15 @@ export default function HomePage() {
                 <div className="mt-3 text-cyan-400 text-xs font-semibold group-hover:translate-x-1 transition-transform duration-300">Learn More →</div>
               </Link>
               
-              <Link href="/services" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300 text-center hover:scale-105">
+              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-rose-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🛡️</span>
+                </div>
+                <h3 className="text-lg font-semibold text-rose-300 mb-2">Privacy</h3>
+                <p className="text-white/70 text-sm">Your data, protected</p>
+              </Link>
+              
+              <Link href="/services" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300 text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-xl">🚀</span>
                 </div>
@@ -2196,11 +2204,12 @@ export default function HomePage() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">📖 Core Resources</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Main README</a> - Project overview</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Architecture Guide</a> - System design</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/API.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">API Documentation</a> - Integration guide</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/DEPLOYMENT.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Deployment Guide</a> - Setup instructions</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Contributing Guide</a> - Development workflow</li>
+                  <li>• <Link href="/README.md" className="text-blue-400 hover:text-blue-300">Main README</Link> - Project overview</li>
+                  <li>• <Link href="/ARCHITECTURE.md" className="text-blue-400 hover:text-blue-300">Architecture Guide</Link> - System design</li>
+                  <li>• <Link href="/API.md" className="text-blue-400 hover:text-blue-300">API Documentation</Link> - Integration guide</li>
+                  <li>• <Link href="/DEPLOYMENT.md" className="text-blue-400 hover:text-blue-300">Deployment Guide</Link> - Setup instructions</li>
+                  <li>• <Link href="/CONTRIBUTING.md" className="text-blue-400 hover:text-blue-300">Contributing Guide</Link> - Development workflow</li>
+                  <li>• <Link href="/PERFORMANCE.md" className="text-blue-400 hover:text-blue-300">Performance Guide</Link> - Tuning & budgets</li>
                 </ul>
                 <Link href="/automation" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Explore Redundancy →
