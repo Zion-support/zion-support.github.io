@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquare, FileText, Database, Search, Phone, Star, CheckCircle, Clock export default function MicroSAASPage () {
-
 
     const microSAASServices = [
         {

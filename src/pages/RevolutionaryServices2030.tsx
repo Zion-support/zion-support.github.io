@@ -7,7 +7,6 @@ import {
 import { allRevolutionaryServices2030 } from '../data / revolutionaryServices2030';
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Brain,
   Rocket,
   Zap,
@@ -126,7 +125,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
       <div role="button" className="relative bg - gradient - to - br from - slate - 800 / 80 via - slate - 700 / 80 to - slate - 800 / 80 backdrop - blur - xl border border - cyan - 400 / 30 rounded - 2xl p - 6 hover:border - cyan - 400 / 60 transition - all duration - 300 hover:shadow - 2xl hover:shadow - cyan - 400 / 20">
         {/* Glow effect */}
         <div role="button" className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 / 5 to - blue - 400 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300"></div>
-        
+
         {/* Header */}
         <div role="button" className="relative z - 10">
           <div role="button" className="flex items - start justify - between mb - 4">
@@ -158,20 +157,20 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                 <span className="text - slate - 400 text - sm">Pricing</span>
               </div>
               <p className="text - white font - semibold">
-                {type === 'microSaas' ? `$${service.price.toLocaleString () }/month` : 
-                 type === 'itService' ? `$${service.hourlyRate}/hour` : 
+                {type === 'microSaas' ? `$${service.price.toLocaleString () }/month` :
+                 type === 'itService' ? `$${service.hourlyRate}/hour` :
                  `$${service.price.toLocaleString () }/month`}
               </p>
             </div>
-            
+
             <div role="button" className="bg - slate - 700 / 50 rounded - lg p - 3">
               <div role="button" className="flex items - center space - x-2 mb - 1">
                 <TrendingUp className="w - 4 h - 4 text - green - 400" />
                 <span className="text - slate - 400 text - sm">ROI</span>
               </div>
               <p className="text - white font - semibold">
-                {type === 'microSaas' ? service.roi : 
-                 type === 'itService' ? 'High Value' : 
+                {type === 'microSaas' ? service.roi :
+                 type === 'itService' ? 'High Value' :
                  service.aiScore ? `${service.aiScore}/10` : 'Premium'}
               </p>
             </div>
@@ -310,7 +309,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
               <StarIcon className="w - 5 h - 5 text - cyan - 400" />
               <span className="text - cyan - 400 font - semibold">Revolutionary Services 2030</span>
             </div>
-            
+
             <h1 className="text - 5xl md:text - 7xl font - bold text - white mb - 6 leading - tight">
               <span className="bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent">
                 Future of Technology
@@ -406,22 +405,22 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                     key = {service.id}
                     initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                     animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                     transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                     className="bg - gray - 800 rounded - xl p - 6 hover:bg - gray - 700 transition - all duration - 300 transform hover:scale - 105 border border - gray - 700 hover:border - zion - cyan"
@@ -464,12 +463,12 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                   key={service.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition={{ duration: 0.5 }}
@@ -515,7 +514,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                   <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - purple - 300 transition - colors">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text - gray - 300 text - sm mb - 4 line - clamp - 3">
                     {service.description}
                   </p>
@@ -633,7 +632,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
             <p className="text - xl text - gray - 300 mb - 8">
               Contact our team of revolutionary technology experts to discuss how our 2030 services can accelerate your success.
             </p>
-            
+
             <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 8">
               <div role="button" className="text - center">
                 <Phone className="h - 8 w - 8 text - zion - cyan mx - auto mb - 4" />

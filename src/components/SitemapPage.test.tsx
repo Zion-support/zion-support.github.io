@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import SitemapPage from './SitemapPage';
 
-
 describe ('SitemapPage', () => {
   it ('renders without crashing', () => {
     render (<SitemapPage />) ;

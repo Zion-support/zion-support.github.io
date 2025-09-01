@@ -33,12 +33,12 @@ export function Accordion({
     <div className = {`space-y-1 ${className}`}>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
-          return React.cloneElement(child, { 
+          return React.cloneElement(child, {
             isOpen: openItems.includes(child.props.value),
             onToggle: ()  => handleToggle(child.props.value)
           })}
         return child})}
-export function Accordion({ 
+export function Accordion({
   children, ;
   className = '', ;
   type = 'single',;

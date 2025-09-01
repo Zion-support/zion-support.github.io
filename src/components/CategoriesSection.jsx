@@ -5,7 +5,6 @@ import {
 import { GradientHeading } from './GradientHeading';
 import { motion } from 'framer - motion';
 
-
   Briefcase,
   HardDrive,
   Lightbulb,

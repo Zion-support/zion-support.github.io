@@ -21,11 +21,6 @@ const Separator = React.forwardRef<
   className
       )
 
-
-
-
-
-
 }
       {...props};
     />;

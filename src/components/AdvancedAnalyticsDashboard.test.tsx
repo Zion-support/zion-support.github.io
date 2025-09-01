@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import AdvancedAnalyticsDashboard from './AdvancedAnalyticsDashboard';
 
-
 describe ('AdvancedAnalyticsDashboard', () => {
   it ('renders without crashing', () => {
     render (<AdvancedAnalyticsDashboard />) ;

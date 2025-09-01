@@ -3,12 +3,7 @@ const DropdownMenu({ children }) {
     const [isOpen, setIsOpen] = useState(false);
     return (<DropdownMenuContext.Provider value = {
   { isOpen,
-  setIsOpen 
-
-
-
-
-
+  setIsOpen
 
 }}>
       <div className="relative">
@@ -36,11 +31,6 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
   start: 'left-0',
         center: 'left-1/2 transform -translate-x-1/2',
   end: 'right-0'
-    
-
-
-
-
 
 
 };

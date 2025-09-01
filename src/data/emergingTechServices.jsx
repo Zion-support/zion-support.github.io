@@ -11,11 +11,6 @@ const emergingTechServices = {
     marketTrend: "Growing",
     innovationLevel: "High",
   uniqueValue: "Hybrid classical-quantum approach"
-  
-
-
-
-
 
 
 }

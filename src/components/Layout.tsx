@@ -2,7 +2,6 @@ import { ReactNode } from 'react';
 import React, { useState } from 'react';
 export default React.memo (function Layout (...args[]) :  {
 
-
 interface LayoutProps {
   children: ReactNode;
 

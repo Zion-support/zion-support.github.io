@@ -4,7 +4,6 @@ export default to;
 export default to;
 import { motion } from 'framer - motion';
 
-
   outputPath: './public / sitemap.xml',
   ...config
 
@@ -52,13 +51,13 @@ Sitemap: ${baseUrl}/sitemap.xml
 
   const generateSitemap = async () => {
     setIsGenerating (true) ;
-    
+
     // Simulate sitemap generation
     setTimeout ( () => {
       const sitemap = {
   pages: [
           { url: '/', priority: '1.0',
-  changefreq: 'daily' 
+  changefreq: 'daily'
 
 },
           { url: '/services', priority: '0.9', changefreq: 'weekly' },
@@ -75,10 +74,10 @@ Sitemap: ${baseUrl}/sitemap.xml
         ],
         totalUrls: 10,
         generatedAt: new Date () .toISOString () };
-      
+
       setSitemapData (sitemap) ;
       setIsGenerating (false) ;
-      
+
       if (onGenerate) {
         onGenerate (sitemap) ;
       }
@@ -93,16 +92,16 @@ Sitemap: ${baseUrl}/sitemap.xml
       >
         {isGenerating ? 'Generating...' : 'Generate Sitemap'}
       </button>
-      
+
       {sitemapData && (<motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           className="space - y-4"
@@ -122,7 +121,7 @@ Sitemap: ${baseUrl}/sitemap.xml
 };
             </div>
           </div>
-          
+
           <div>
             <h4 className="font - medium mb - 2">Main Pages:</h4>
             <div className="space - y-1 text - sm">
@@ -132,7 +131,7 @@ Sitemap: ${baseUrl}/sitemap.xml
                 </div>) ) }
             </div>
           </div>
-          
+
           <div>
             <h4 className="font - medium mb - 2">Service Pages:</h4>
             <div className="space - y-1 text - sm">

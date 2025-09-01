@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import PWAUpdater from './PWAUpdater';
 
-
 describe ('PWAUpdater', () => {
   it ('renders without crashing', () => {
     render (<PWAUpdater />) ;

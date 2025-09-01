@@ -4,7 +4,6 @@ export default React.memo (function FAQ () {
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   ChevronDown,
   ChevronUp,
   HelpCircle,

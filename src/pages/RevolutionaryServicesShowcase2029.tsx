@@ -6,7 +6,6 @@ import { motion } from 'framer - motion.ts';
 import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from '../../data / revolutionary - 2029 - cutting - edge - services';
 import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data / revolutionary - 2029 - emerging - tech - services';
 
-
   Search,
   Filter,
   Star,

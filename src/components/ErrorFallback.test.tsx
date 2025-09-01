@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import ErrorFallback from './ErrorFallback';
 
-
 describe ('ErrorFallback', () => {
   it ('renders without crashing', () => {
     render (<ErrorFallback />) ;

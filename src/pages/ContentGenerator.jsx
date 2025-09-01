@@ -14,7 +14,6 @@ import { useAuth } from "@/hooks / useAuth";
 export default function ContentGenerator () {
 import { toast } from "sonner";
 
-
     const { user, isLoading } = useAuth () ;
     const router = useNavigate () ;
     const [contentType, setContentType] = useState ('blog') ;
@@ -94,7 +93,7 @@ import { toast } from "sonner";
         <div className="min - h-screen bg - zion - blue flex items - center justify - center">
           <div className="animate - pulse text - white">Loading...</div>
         </div>
-        
+
       </>) }
     return (<>
 
@@ -300,5 +299,5 @@ import { toast } from "sonner";
           </div>
         </div>
       </div>
-      
+
     </>) }

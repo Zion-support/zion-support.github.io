@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react.ts';
 export default EmergingTechShowcase2025;}}
-import { Brain, 
+import { Brain,
 import { EMERGING_TECH_SERVICES_2025 } from "../data / emergingTechServices2025";
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 
-
-  Cpu, 
-  Atom, 
-  Zap, 
-  Rocket, 
-  Eye, 
-  Globe, 
-  Car, 
-  Dna, 
-  Microscope, 
+  Cpu,
+  Atom,
+  Zap,
+  Rocket,
+  Eye,
+  Globe,
+  Car,
+  Dna,
+  Microscope,
   Bot,
   ArrowRight,
   Star,
@@ -76,17 +75,17 @@ const EmergingTechShowcase2025: React.FC = () => {;
                 key={service.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 whileHover={{ y: -10 }}
@@ -197,17 +196,17 @@ const EmergingTechShowcase2025: React.FC = () => {;
             <motion.div
               initial = {
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 }}
               animate = {
   { scale: 1,
-  opacity: 1 
+  opacity: 1
 
 }}
               exit = {
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 ;
 ;

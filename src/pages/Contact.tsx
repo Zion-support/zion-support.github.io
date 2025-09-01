@@ -3,7 +3,6 @@ export default React.memo (function Contact () {
 import {
 import { motion } from 'framer - motion';
 
-
   Phone,
   Mail,
   MapPin,

@@ -44,7 +44,6 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
 
   return { min, max }};
 
-
 export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: BudgetStatusDisplayProps) => {;
   const userBudget = parseBudget(projectBriefBudget);
   const estimatedAvgCost = (estimatedCost.min + estimatedCost.max) / 2;

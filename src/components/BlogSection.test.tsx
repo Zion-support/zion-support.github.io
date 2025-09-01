@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import BlogSection from './BlogSection';
 
-
 describe ('BlogSection', () => {
   it ('renders without crashing', () => {
     render (<BlogSection />) ;

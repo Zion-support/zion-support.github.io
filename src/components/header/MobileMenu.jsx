@@ -21,9 +21,9 @@ export function MobileMenu({ className }) {
   const { user, isAuthenticated } = useAuth();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const toggleMenu = () => setIsOpen(!isOpen);
-  
+
   const navigationItems = [
     { href: '/', label: 'Home', icon: Home, matches: (path) => path === '/' },;
     { href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace') },;
@@ -32,24 +32,24 @@ export function MobileMenu({ className }) {
     { href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment') },;
     { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },;
   ];
-  
+
   if (isAuthenticated) {
-    navigationItems.push({ 
-      href: '/dashboard', 
-      label: 'Dashboard', 
-      icon: Settings, 
-      matches: (path) => path.startsWith('/dashboard') 
+    navigationItems.push({
+      href: '/dashboard',
+      label: 'Dashboard',
+      icon: Settings,
+      matches: (path) => path.startsWith('/dashboard')
     });
   }
-  
+
   return (
     <div className={cn("md:hidden", className)}>
       {/* Mobile menu button */}
-      <Button 
-        variant="ghost" 
-        size="sm" 
-        onClick={toggleMenu} 
-        className="p-2 text-white hover:bg-zion-purple/20" 
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={toggleMenu}
+        className="p-2 text-white hover:bg-zion-purple/20"
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
       >
         {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
@@ -61,10 +61,10 @@ export function MobileMenu({ className }) {
           <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">
             <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
               <h2 className="text-lg font-semibold text-white">Menu</h2>
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                onClick={toggleMenu} 
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleMenu}
                 className="p-2 text-white hover:bg-zion-purple/20"
               >
                 <X className="h-5 w-5"/>
@@ -77,10 +77,10 @@ export function MobileMenu({ className }) {
                 const Icon = item.icon;
                 const isActive = item.matches(location.pathname);
                 return (
-                  <Link 
-                    key={item.href} 
-                    to={item.href} 
-                    onClick={toggleMenu} 
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    onClick={toggleMenu}
                     className = {
   cn(
                       "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors",
@@ -88,11 +88,6 @@ export function MobileMenu({ className }) {
                         ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
                         : "hover:bg-zion-purple/10 hover:text-zion-cyan"
                     )
-
-
-
-
-
 
 }
                   >
@@ -114,17 +109,17 @@ export function MobileMenu({ className }) {
                     </span>
                   </div>
     </div>)}
-                  <Link 
-                    to="/messages" 
-                    onClick={toggleMenu} 
+                  <Link
+                    to="/messages"
+                    onClick={toggleMenu}
                     className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
                   >
                     <MessageSquare className="h-5 w-5"/>
                     <span>Messages</span>
                   </Link>
-                  <Link 
-                    to="/profile" 
-                    onClick={toggleMenu} 
+                  <Link
+                    to="/profile"
+                    onClick={toggleMenu}
                     className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
                   >
                     <Settings className="h-5 w-5"/>
@@ -133,16 +128,16 @@ export function MobileMenu({ className }) {
                 </div>
               ) : (
                 <div className="space-y-3">
-                  <Link 
-                    to="/login" 
-                    onClick={toggleMenu} 
+                  <Link
+                    to="/login"
+                    onClick={toggleMenu}
                     className="block w-full px-4 py-2 text-center bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark transition-colors"
                   >
                     Login
                   </Link>
-                  <Link 
-                    to="/signup" 
-                    onClick={toggleMenu} 
+                  <Link
+                    to="/signup"
+                    onClick={toggleMenu}
                     className="block w-full px-4 py-2 text-center border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-zion-blue-dark transition-colors"
                   >
                     Sign Up

@@ -3,7 +3,6 @@ export function EnhancedContact (...args[]) :  {
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Mail,
   Phone,
   MapPin,
@@ -111,12 +110,12 @@ interface ContactFormErrors {
     return (<motion.div
         initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
         animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
         className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light flex items - center justify - center py - 20"
@@ -127,7 +126,7 @@ interface ContactFormErrors {
             animate={{ scale: 1 }}
             transition = {
   { delay: 0.2,
-  type: "spring" 
+  type: "spring"
 
 }}
             className="w - 20 h - 20 bg - green - 500 rounded - full flex items - center justify - center mx - auto mb - 6"
@@ -138,12 +137,12 @@ interface ContactFormErrors {
           <motion.h2
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ delay: 0.3 }}
@@ -155,12 +154,12 @@ interface ContactFormErrors {
           <motion.p
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ delay: 0.4 }}
@@ -172,12 +171,12 @@ interface ContactFormErrors {
           <motion.button
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ delay: 0.5 }}
@@ -196,12 +195,12 @@ interface ContactFormErrors {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           className="text - center mb - 16"
@@ -220,12 +219,12 @@ interface ContactFormErrors {
           <motion.div
             initial = {
   { opacity: 0,
-  x: -50 
+  x: -50
 
 }}
             animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
             transition={{ delay: 0.2 }}
@@ -237,12 +236,12 @@ interface ContactFormErrors {
                   key={info.title}
                   initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                   animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                   transition={{ delay: 0.3 + index * 0.1 }}
@@ -263,12 +262,12 @@ interface ContactFormErrors {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.6 }}
@@ -300,12 +299,12 @@ interface ContactFormErrors {
           <motion.div
             initial = {
   { opacity: 0,
-  x: 50 
+  x: 50
 
 }}
             animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
             transition={{ delay: 0.3 }}
@@ -336,17 +335,17 @@ interface ContactFormErrors {
                   {errors['name'] && (<motion.p
                       initial = {
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
                       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                       exit = {
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
                       className="text - red - 400 text - sm mt - 1 flex items - center"
@@ -379,17 +378,17 @@ interface ContactFormErrors {
                   {errors['email'] && (<motion.p
                       initial = {
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
                       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                       exit = {
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
                       className="text - red - 400 text - sm mt - 1 flex items - center"
@@ -471,17 +470,17 @@ interface ContactFormErrors {
                   {errors['message'] && (<motion.p
                       initial = {
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
                       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                       exit = {
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
                       className="text - red - 400 text - sm mt - 1 flex items - center"

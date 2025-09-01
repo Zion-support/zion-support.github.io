@@ -1,47 +1,46 @@
 import { Link  } from 'react - router - dom.ts';
 import React, { useState, useEffect } from 'react.ts';
 export default React.memo (function InnovativeServices2025 (...args: any[]) : any {
-import { Brain, 
+import { Brain,
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 
-
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  Workflow, 
-  Atom, 
-  Star, 
-  Target, 
-  TrendingUp, 
-  Award, 
-  Code, 
-  Truck, 
-  Building, 
-  BarChart3, 
-  PenTool, 
-  Eye, 
-  Server, 
-  Smartphone, 
-  Database, 
-  Network, 
-  Clock, 
-  ArrowRight, 
-  Sparkles, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Satellite, 
+  Shield,
+  Cloud,
+  Rocket,
+  Globe,
+  Cpu,
+  Lock,
+  Heart,
+  Users,
+  ShoppingCart,
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  DollarSign,
+  Gauge,
+  Workflow,
+  Atom,
+  Star,
+  Target,
+  TrendingUp,
+  Award,
+  Code,
+  Truck,
+  Building,
+  BarChart3,
+  PenTool,
+  Eye,
+  Server,
+  Smartphone,
+  Database,
+  Network,
+  Clock,
+  ArrowRight,
+  Sparkles,
+  Phone,
+  Mail,
+  MapPin,
+  Satellite,
   FileText,
   Zap,
   Palette,
@@ -432,7 +431,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       <section className="relative overflow - hidden bg - gradient - to - r from - zion - blue - dark via - zion - blue to - zion - blue - light py - 20">
         <div role="button" className="absolute inset - 0 bg - black / 20"></div>
         <div role="button" className="relative z - 10 container mx - auto px - 4 text - center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -440,7 +439,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
           >
             Innovative Services 2025
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -448,7 +447,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
           >
             Discover cutting - edge AI solutions, micro SAAS platforms, and revolutionary IT services that will transform your business in 2025
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -643,7 +642,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       {/* Call to Action */}
       <section className="py - 20 bg - gradient - to - r from - zion - blue - dark via - zion - blue to - zion - blue - light">
         <div role="button" className="container mx - auto px - 4 text - center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -651,7 +650,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
           >
             Ready to Transform Your Business?
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -659,7 +658,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
           >
             Join thousands of businesses already leveraging our innovative services to stay ahead of the competition.
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}

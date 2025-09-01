@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import WebsiteAnalyzer from './WebsiteAnalyzer';
 
-
 describe ('WebsiteAnalyzer', () => {
   it ('renders without crashing', () => {
     render (<WebsiteAnalyzer />) ;

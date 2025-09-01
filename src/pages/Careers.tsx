@@ -3,7 +3,6 @@ export default React.memo (function Careers () {
 import {
 import { motion } from 'framer - motion';
 
-
   Briefcase,
   Users,
   Heart,

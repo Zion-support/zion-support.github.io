@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -47,8 +47,6 @@ export function ServiceTypeStep({ formData, updateFormData }) {
 
                     else {
                         await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
-
-
 
                     return}
                 catch (err) {

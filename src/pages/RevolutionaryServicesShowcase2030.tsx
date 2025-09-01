@@ -5,7 +5,6 @@ import { motion  } from 'framer - motion.ts';
 import { REVOLUTIONARY_SERVICES_2030 } from "../data / revolutionaryServices2030";
 import { SEO } from "../components / SEO";
 
-
   ChevronLeft,
   ChevronRight,
   Mail as MailIcon,
@@ -67,7 +66,7 @@ import { SEO } from "../components / SEO";
     const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                          service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                          service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
-    
+
     return matchesCategory && matchesSearch}) ;
 
   const sortedServices = [...filteredServices].sort ( (a, b) => {;
@@ -198,12 +197,12 @@ import { SEO } from "../components / SEO";
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -354,17 +353,17 @@ import { SEO } from "../components / SEO";
                   key={service.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.05 
+  delay: index * 0.05
 
 }}
                   className="bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - 2xl overflow - hidden hover:bg - white / 10 transition - all duration - 300 cursor - pointer group"
@@ -443,7 +442,7 @@ import { SEO } from "../components / SEO";
 
                     <ChevronLeft className="w - 5 h - 5" />
                   </button>
-                  
+
                   {Array.from ({ length: totalPages }, (_, i) => i + 1) .map ( (page) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={page}
                       onClick={ () => handlePageChange (page) }
                       className={`px - 4 py - 2 rounded - lg transition - colors ${
@@ -472,12 +471,12 @@ import { SEO } from "../components / SEO";
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -497,12 +496,12 @@ import { SEO } from "../components / SEO";
               <motion.div
                 initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                 whileInView = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition={{ duration: 0.8 }}
@@ -627,17 +626,17 @@ import { SEO } from "../components / SEO";
           <motion.div
             initial = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }}
             animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
             exit = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }}
             className="bg - slate - 900 border border - white / 20 rounded - 2xl max - w-4xl w - full max - h-[90vh] overflow - y-auto"

@@ -3,7 +3,6 @@ import React from 'react.ts';
 export default StatsSection;
 export function StatsSection (...args: any[]) : any {
 
-
   interface Stat {
     number: string;
     label: string;

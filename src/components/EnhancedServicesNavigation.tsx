@@ -3,7 +3,6 @@ import React, { useState } from 'react.ts';
 export default EnhancedServicesNavigation;
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 
-
 const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
   const [isOpen, setIsOpen] = useState (false) ;
   const [activeCategory, setActiveCategory] = useState < any> (null) ;
@@ -170,17 +169,17 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
         {isOpen && (<motion.div
             initial = {
   { opacity: 0, y: -10,
-  scale: 0.95 
+  scale: 0.95
 
 }}
             animate = {
   { opacity: 1, y: 0,
-  scale: 1 
+  scale: 1
 
 }}
             exit = {
   { opacity: 0, y: -10,
-  scale: 0.95 
+  scale: 0.95
 
 }}
             transition={{ duration: 0.2 }}
@@ -203,17 +202,17 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
                     key={category.name}
                     initial = {
   { opacity: 0,
-  x: categoryIndex % 2 === 0 ? -20 : 20 
+  x: categoryIndex % 2 === 0 ? -20 : 20
 
 }}
                     animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                     transition = {
   { duration: 0.3,
-  delay: categoryIndex * 0.1 
+  delay: categoryIndex * 0.1
 
 }}
                     className="relative group"
@@ -228,23 +227,23 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
                           <p className="text - sm opacity - 90">{category.description}</p>
                         </div>
                       </div>
-                      
+
                       <div role="button" className="space - y-2">
                         {category.services.map ( (service, serviceIndex) => (<motion.div
                             key={service.title}
                             initial = {
   { opacity: 0,
-  x: -10 
+  x: -10
 
 }}
                             animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                             transition = {
   { duration: 0.2,
-  delay: serviceIndex * 0.05 
+  delay: serviceIndex * 0.05
 
 }}
                             className="flex items - center justify - between p - 2 rounded bg - white / 20 hover:bg - white / 30 transition - colors duration - 200"
@@ -272,17 +271,17 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
                       key={link.title}
                       initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                       transition = {
   { duration: 0.3,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                     >

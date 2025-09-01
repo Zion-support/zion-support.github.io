@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import AdvancedAnalytics from './AdvancedAnalytics';
 
-
 describe ('AdvancedAnalytics', () => {
   it ('renders without crashing', () => {
     render (<AdvancedAnalytics />) ;

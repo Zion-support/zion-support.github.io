@@ -6,7 +6,6 @@ export default SecurityComplianceSection;
 import {
 import { motion } from 'framer - motion';
 
-
  * SecurityComplianceSection function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -105,16 +104,16 @@ const complianceFeatures = [
 
   return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
       <div className="max - w-7xl mx - auto px - 6">
-        <motion.div 
+        <motion.div
           className="text - center mb - 16"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -129,17 +128,17 @@ const complianceFeatures = [
           </p>
         </motion.div > initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
           className="grid grid - cols - 2 md: grid - cols - 4 gap - 8 mb - 16"
@@ -157,18 +156,18 @@ const complianceFeatures = [
               className="bg - slate - 800 border border - slate - 700 rounded - xl p - 6 hover:border - blue - 500 / 50 transition - all duration - 300"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
             >
@@ -192,29 +191,29 @@ const complianceFeatures = [
         </div>
 
         {/* Compliance Features */}
-        <motion.div 
+        <motion.div
           className="mb - 16"
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
         >
           <h3 className="text - 3xl font - bold text - white text - center mb - 8">
             Comprehensive Security Features
           </h3>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
             {complianceFeatures.map ( (category, index) => (<div key={category.category} className="bg - slate - 800 border border - slate - 700 rounded - xl p - 6">
                 <h4 className="text - xl font - bold text - white mb - 4 text - center">
@@ -231,22 +230,22 @@ const complianceFeatures = [
         </motion.div>
 
         {/* Security Metrics */}
-        <motion.div 
+        <motion.div
           className="mb - 16"
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 }}
         >
@@ -277,22 +276,22 @@ const complianceFeatures = [
         </motion.div>
 
         {/* Call to Action */}
-        <motion.div 
+        <motion.div
           className="text - center"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.8 
+  delay: 0.8
 
 }}
         >

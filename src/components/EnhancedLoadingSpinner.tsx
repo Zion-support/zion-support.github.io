@@ -5,7 +5,6 @@ export function EnhancedLoadingSpinner (...args: any[]) : any {
 export function EnhancedLoadingSpinner ({
 import { motion  } from 'framer - motion.ts';
 
-
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
   size?: 'sm' | 'md' | 'lg';
@@ -129,7 +128,7 @@ interface EnhancedLoadingSpinnerProps {
           progress: 100,
           estimatedTime: 0
         }) ;
-        
+
         setTimeout ( () => {
           setIsVisible (false) ;
           onComplete?. () ;
@@ -152,21 +151,21 @@ interface EnhancedLoadingSpinnerProps {
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
             />
-            
+
             {/* Inner ring */}
             <motion.div
               className="absolute inset - 2 border - 4 border - zion - purple / 40 rounded - full"
               animate={{ rotate: -360 }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
             />
-            
+
             {/* Center dot */}
             <motion.div
               className="absolute inset - 4 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - full"
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
             />
-            
+
             {/* Orbiting particles */}
             {[...Array (3) ].map ( (_, i) => (<motion.div
                 key={i}

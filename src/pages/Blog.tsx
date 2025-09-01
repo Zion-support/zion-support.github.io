@@ -3,7 +3,6 @@ export default Blog;
 import {
 import { motion } from 'framer - motion';
 
-
   Search,
   Filter,
   Calendar,

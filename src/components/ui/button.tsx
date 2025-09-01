@@ -32,11 +32,6 @@ export function Button({
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan';
   ;
 
-
-
-
-
-
 };
   const sizeClasses = {
   sm: 'px-3 py-1.5 text-sm',
@@ -48,11 +43,6 @@ export function Button({
   ;
   icon: 'w-10 h-10 p-0';
   ;
-
-
-
-
-
 
 };
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
@@ -80,11 +70,6 @@ export const buttonVariants = {
   ;
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan';
 ;
-
-
-
-
-
 
 };
 export type { ButtonProps };

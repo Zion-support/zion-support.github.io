@@ -3,7 +3,6 @@ export function CaseStudiesSection () {
 import { motion, AnimatePresence } from 'framer - motion';
 import { TrendingUp, Users, ArrowRight, Star, Building, Globe, Zap, Shield const caseStudies = [
 
-
     {
         id: 'healthcare - ai',
         title: 'Healthcare AI Revolution',
@@ -130,7 +129,7 @@ const industries = [
     };
     const itemVariants = {
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -153,11 +152,11 @@ const industries = [
         {/* Header */}
         <motion.div className="text - center mb - 20" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text - 4xl md:text - 5xl lg:text - 6xl font - bold text - white mb - 6">
@@ -172,15 +171,15 @@ const industries = [
           <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 4 max - w-5xl mx - auto">
             {industries.map ( (industry, index) => (<motion.div key={industry.name} initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} whileInView = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} className="text - center p - 3 rounded - xl bg - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 20">
                 <div className="text - zion - cyan mb - 2 flex justify - center">
@@ -196,7 +195,7 @@ const industries = [
         <motion.div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8 mb - 20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {caseStudies.map ( (caseStudy, index) => (<motion.div key={caseStudy.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
   { type: "spring",
-  stiffness: 300 
+  stiffness: 300
 
 }} className="relative" onHoverStart={ () => setHoveredCase (caseStudy.id) } onHoverEnd={ () => setHoveredCase (null) }>
               <div className="h - full p - 8 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - zion - cyan / 20 group cursor - pointer" onClick={ () => setSelectedCase (selectedCase === caseStudy.id ? null : caseStudy.id) }>
@@ -267,26 +266,26 @@ const industries = [
                 <AnimatePresence>
                   {selectedCase === caseStudy.id && (<motion.div className="mt - 6 p - 4 rounded - xl bg - zion - blue - dark / 60 backdrop - blur - sm border border - zion - cyan / 30" initial = {
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} transition={{ duration: 0.3 }}>
                       <h4 className="text - zion - cyan font - semibold text - sm mb - 4">Key Results:</h4>
                       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 3 mb - 4">
                         {caseStudy.results.map ( (result, idx) => (<motion.div key={idx} className="p - 3 rounded - lg bg - zion - blue - light / 20 border border - zion - cyan / 20" initial = {
   { opacity: 0,
-  x: -10 
+  x: -10
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} transition={{ delay: idx * 0.1 }}>
                             <div className="flex items - center justify - between mb - 1">
@@ -319,15 +318,15 @@ const industries = [
         {/* Call to action */}
         <motion.div className="text - center" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 }}>
           <div className="inline - block p - 1 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - 2xl">

@@ -5,7 +5,6 @@ import { motion } from 'framer - motion';
 import { useAnalytics } from "../hooks / useAnalytics";
 import { useRealTimeCollaboration } from "../hooks / useRealTimeCollaboration";
 
-
     const { trackEvent } = useAnalytics ({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -306,11 +305,11 @@ import { useRealTimeCollaboration } from "../hooks / useRealTimeCollaboration";
               <div className="space - y-3">
                 {editorState.suggestions.map (suggestion => (<motion.div key={suggestion.id} initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} className="p - 3 bg - white dark:bg - gray - 600 rounded - lg border border - gray - 200 dark:border - gray - 500">
                     <div className="flex items - start justify - between mb - 2">
@@ -398,15 +397,15 @@ import { useRealTimeCollaboration } from "../hooks / useRealTimeCollaboration";
       {enableCollaboration && (<div ref={collaborationRef} className="absolute inset - 0 pointer - events - none" style={{ zIndex: 10 }}>
           {collaboration.activeCursors.map ( ({ x, y, user }) => (<motion.div key={user.id} initial = {
   { opacity: 0,
-  scale: 0 
+  scale: 0
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} exit = {
   { opacity: 0,
-  scale: 0 
+  scale: 0
 
 }} className="absolute w - 4 h - 4" style = {
   {

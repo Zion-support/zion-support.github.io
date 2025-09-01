@@ -53,11 +53,6 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   // Placeholder;
     ;
 
-
-
-
-
-
 };
 
     return {

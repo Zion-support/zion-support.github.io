@@ -5,7 +5,6 @@ import { comprehensiveITServices2030 } from "../data / comprehensiveITServices20
 import { innovativeMicroSaasServices2030 } from "../data / innovativeMicroSaasServices2030";
 import { SEO } from "../components / SEO";
 
-
 const ComprehensiveServicesShowcase2030: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'> ('microsaas') ;
   const [searchTerm, setSearchTerm] = useState ('') ;
@@ -13,7 +12,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
 
   const getFilteredServices = () => {;
     let services: any[] = [];
-    
+
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -39,7 +38,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
 
   const getCategories = () => {;
     let services: any[] = [];
-    
+
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;

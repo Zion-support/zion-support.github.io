@@ -4,7 +4,6 @@ export const ErrorPage = ({
 export default ErrorPage;
 import { Button } from '../ui / button';
 
-
   statusCode = 404,
   title = 'Page Not Found',
   message = 'The page you are looking for does not exist.',

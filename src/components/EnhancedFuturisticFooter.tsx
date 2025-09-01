@@ -2,17 +2,16 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export const EnhancedFuturisticFooter: React.FC = () => {
 export const EnhancedFuturisticFooter: React.FC = () => {
-import { 
+import {
 import { motion } from 'framer - motion';
 
-
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
+  Facebook,
   Instagram,
   Youtube,
   Github,
@@ -271,12 +270,12 @@ import { motion } from 'framer - motion';
         <div role="button" className="absolute inset - 0 opacity - 30">
           <div role="button" className="absolute inset - 0 bg - gradient - to - br from - slate - 800 / 20 to - slate - 900 / 20"></div>
         </div>
-      
+
       <div role="button" className="relative">
         {/* Main Footer Content */}
         <div role="button" className="container - responsive py - 16">
           {/* Stats Section */}
-          <motion.div 
+          <motion.div
             className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -305,7 +304,7 @@ import { motion } from 'framer - motion';
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 8 mb - 12">
             {/* Company Info */}
             <div role="button" className="lg:col - span - 2">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -323,7 +322,7 @@ import { motion } from 'framer - motion';
                 </div>
               </div>
               <p className="text - slate - 300 mb - 6 leading - relaxed">
-                Leading provider of cutting - edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. 
+                Leading provider of cutting - edge AI solutions, cloud services, cybersecurity, and digital transformation expertise.
                 We help businesses innovate and thrive in the digital age.
               </p>
               <div role="button" className="space - y-3">
@@ -360,9 +359,9 @@ import { motion } from 'framer - motion';
                   </a>) ) }
               </div>
             </div>
-            
+
             <p className="text - gray - 300 mb - 6 max - w-md">
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,
               and digital transformation services. Transforming businesses with cutting - edge technology.
             </p>
 
@@ -666,7 +665,7 @@ import { motion } from 'framer - motion';
         </div>
       </div>
     </footer>
-            
+
             {/* Additional Contact Methods */}
             <div role="button" className="mt - 12 pt - 8 border - t border - slate - 700">
               <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6 text - center">
@@ -702,7 +701,7 @@ import { motion } from 'framer - motion';
               <Link to="/terms" className="hover:text - cyan - 400 transition - colors">Terms of Service</Link>
               <Link to="/cookies" className="hover:text - cyan - 400 transition - colors">Cookie Policy</Link>
             </div>
-            
+
             <div role="button" className="flex items - center space - x-4">
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={scrollToTop}
                 className="p - 2 bg - slate - 700 / 50 rounded - lg text - gray - 400 hover:text - cyan - 400 hover:bg - slate - 600 / 50 transition - all duration - 300 transform hover:scale - 110"

@@ -21,7 +21,6 @@ export default Home;
 export default React.memo (function Index () {
 import {
 
-
   ArrowRight,
   Users,
   Zap,

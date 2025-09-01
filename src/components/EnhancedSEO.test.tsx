@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import EnhancedSEO from './EnhancedSEO';
 
-
 describe ('EnhancedSEO', () => {
   it ('renders without crashing', () => {
     render (<EnhancedSEO />) ;

@@ -3,7 +3,6 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 export function UserExperienceOptimizer ({
 import {
 
-
   Users,
   TrendingUp,
   MousePointer,

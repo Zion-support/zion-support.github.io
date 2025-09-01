@@ -6,7 +6,6 @@ export default InteractiveTestimonials;
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
  * InteractiveTestimonials function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -105,16 +104,16 @@ const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Resea
 
   return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
       <div role="button" className="max - w-7xl mx - auto px - 6">
-        <motion.div 
+        <motion.div
           className="text - center mb - 16"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -247,16 +246,16 @@ const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Resea
 
 }}
         {/* Category Filter */}
-        <motion.div 
+        <motion.div
           className="flex flex - wrap justify - center gap - 3 mb - 12"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}

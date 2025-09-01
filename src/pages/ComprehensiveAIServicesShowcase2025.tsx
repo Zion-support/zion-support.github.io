@@ -2,14 +2,13 @@ import { Link  } from 'react - router - dom.ts';
 import React from 'react.ts';
 import { SEO  } from '@/components / SEO';
 export default React.memo (function ComprehensiveAIServicesShowcase2025 (...args[]) :  {
-import { Brain, 
+import { Brain,
 import { motion  } from 'framer - motion.ts';
 
-
-  Shield, 
-  Activity, 
-  TrendingUp, 
-  Zap, 
+  Shield,
+  Activity,
+  TrendingUp,
+  Zap,
   CheckCircle,
   ArrowRight,
   Phone,
@@ -128,7 +127,7 @@ import { motion  } from 'framer - motion.ts';
   ];
 
   return (<>
-      <SEO 
+      <SEO
         title = "Comprehensive AI Services Showcase 2025 - Zion Tech Group"
         description="Discover our comprehensive portfolio of AI - powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting - edge AI solutions."
         canonical="/comprehensive - ai - services - showcase - 2025"
@@ -143,12 +142,12 @@ import { motion  } from 'framer - motion.ts';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -186,12 +185,12 @@ import { motion  } from 'framer - motion.ts';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -211,17 +210,17 @@ import { motion  } from 'framer - motion.ts';
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className="bg - white / 5 backdrop - blur - sm rounded - xl p - 6 border border - white / 10 hover:border - cyan - 500 / 50 transition - all duration - 300"
@@ -269,12 +268,12 @@ import { motion  } from 'framer - motion.ts';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -294,17 +293,17 @@ import { motion  } from 'framer - motion.ts';
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className="bg - white / 5 backdrop - blur - sm rounded - xl p - 6 border border - white / 10 hover:border - cyan - 500 / 50 transition - all duration - 300"
@@ -325,12 +324,12 @@ import { motion  } from 'framer - motion.ts';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -350,17 +349,17 @@ import { motion  } from 'framer - motion.ts';
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className="bg - white / 5 backdrop - blur - sm rounded - lg p - 4 border border - white / 10 text - center"
@@ -378,12 +377,12 @@ import { motion  } from 'framer - motion.ts';
             <motion.h2
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -394,17 +393,17 @@ import { motion  } from 'framer - motion.ts';
             <motion.p
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               className="text - xl text - cyan - 100 mb - 8"
@@ -415,17 +414,17 @@ import { motion  } from 'framer - motion.ts';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
               className="flex flex - col sm:flex - row gap - 4 justify - center"
@@ -454,12 +453,12 @@ import { motion  } from 'framer - motion.ts';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -478,12 +477,12 @@ import { motion  } from 'framer - motion.ts';
               <motion.div
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition={{ duration: 0.6 }}
@@ -497,17 +496,17 @@ import { motion  } from 'framer - motion.ts';
               <motion.div
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
                 className="text - center"
@@ -520,17 +519,17 @@ import { motion  } from 'framer - motion.ts';
               <motion.div
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
                 className="text - center"
@@ -544,17 +543,17 @@ import { motion  } from 'framer - motion.ts';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 }}
               className="text - center mt - 12"

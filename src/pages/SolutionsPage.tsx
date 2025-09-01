@@ -4,7 +4,6 @@ export function SolutionsPage (...args: any[]) : any {
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Building,
   Target,
   Brain,

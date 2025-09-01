@@ -85,7 +85,7 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
         setSettings(prev => {
             const newSettings = {
   ...prev,
-  [key]: value 
+  [key]: value
 };
             // Add notification
             const notification = {

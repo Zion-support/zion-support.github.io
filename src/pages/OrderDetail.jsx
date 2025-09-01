@@ -9,7 +9,6 @@ import { useAuth } from '@/hooks / useAuth';
 import { useGetOrderQuery } from '@/hooks / useOrder';
 export default function OrderDetailPage () {
 
-
     const { orderId } = useParams () ;
     const { user } = useAuth () ;
     const { data: order, isLoading } = useGetOrderQuery (orderId) ;

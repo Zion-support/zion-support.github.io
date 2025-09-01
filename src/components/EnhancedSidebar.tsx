@@ -4,7 +4,6 @@ export const EnhancedSidebar: React.FC = () => {;
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Home,
   Brain,
   Cloud,
@@ -202,12 +201,12 @@ import { motion, AnimatePresence } from 'framer - motion';
           className="mb - 8"
           initial = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.5 }}
@@ -227,17 +226,17 @@ import { motion, AnimatePresence } from 'framer - motion';
           className="mb - 8"
           initial = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition = {
   { duration: 0.5,
-  delay: 0.1 
+  delay: 0.1
 
 }}
         >
@@ -247,17 +246,17 @@ import { motion, AnimatePresence } from 'framer - motion';
                 key={action.name}
                 initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                 animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
   { duration: 0.3,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
               >
@@ -282,17 +281,17 @@ import { motion, AnimatePresence } from 'framer - motion';
               key={section.title}
               initial = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.5,
-  delay: sectionIndex * 0.1 
+  delay: sectionIndex * 0.1
 
 }}
             >
@@ -305,10 +304,10 @@ import { motion, AnimatePresence } from 'framer - motion';
                     {section.title}
                   </span>
                 </div>
-                <ChevronDown 
+                <ChevronDown
                   className={`w - 4 h - 4 text - slate - 400 transition - transform duration - 200 ${
                     expandedSections.has (section.title) ? 'rotate - 180' : ''
-                  }`} 
+                  }`}
                 />
               </button>
 
@@ -316,17 +315,17 @@ import { motion, AnimatePresence } from 'framer - motion';
                 {expandedSections.has (section.title) && (<motion.div
                     initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                     animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }}
                     exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                     transition={{ duration: 0.3 }}
@@ -336,17 +335,17 @@ import { motion, AnimatePresence } from 'framer - motion';
                         key={item.name}
                         initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                         animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                         transition = {
   { duration: 0.2,
-  delay: itemIndex * 0.05 
+  delay: itemIndex * 0.05
 
 }}
                       >
@@ -364,17 +363,17 @@ import { motion, AnimatePresence } from 'framer - motion';
           className="mt - 8 p - 4 bg - zion - slate - dark / 50 border border - zion - cyan / 20 rounded - lg"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition = {
   { duration: 0.5,
-  delay: 0.5 
+  delay: 0.5
 
 }}
         >

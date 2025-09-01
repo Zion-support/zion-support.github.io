@@ -3,7 +3,6 @@ export function InnovationResearchSection () {
 import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp, Users, Star, Globe, Shield, Cpu, Network const researchAreas = [
 import { motion, AnimatePresence } from 'framer - motion';
 
-
     {
         id: 1,
         title: "Artificial Intelligence & Machine Learning",
@@ -186,7 +185,7 @@ const researchLabs = [
     };
     const itemVariants = {
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -209,11 +208,11 @@ const researchLabs = [
         {/* Header */}
         <motion.div className="text - center mb - 20" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text - 4xl md:text - 5xl lg:text - 6xl font - bold text - white mb - 6">
@@ -228,15 +227,15 @@ const researchLabs = [
           <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 4 max - w-5xl mx - auto">
             {innovationStats.map ( (stat, index) => (<motion.div key={index} initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} whileInView = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} className="text - center p - 4 rounded - xl bg - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 20">
                 <div className="text - zion - cyan mb - 2 flex justify - center">
@@ -251,15 +250,15 @@ const researchLabs = [
         {/* Research Areas */}
         <motion.div className="mb - 20" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}>
           <h3 className="text - 3xl font - bold text - white text - center mb - 12">
@@ -269,15 +268,15 @@ const researchLabs = [
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {researchAreas.map ( (area, index) => (<motion.div key={area.id} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h - full p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 20 group cursor - pointer" onClick={ () => setSelectedResearch (selectedResearch === area.id ? null : area.id) }>
@@ -335,15 +334,15 @@ const researchLabs = [
                   <AnimatePresence>
                     {selectedResearch === area.id && (<motion.div className="mt - 6 p - 4 rounded - xl bg - zion - blue - dark / 60 backdrop - blur - sm border border - zion - cyan / 30" initial = {
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} transition={{ duration: 0.3 }}>
                         <div className="grid grid - cols - 2 gap - 4 mb - 4">
@@ -387,15 +386,15 @@ const researchLabs = [
         {/* Research Labs */}
         <motion.div className="mb - 20" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}>
           <h3 className="text - 3xl font - bold text - white text - center mb - 12">
@@ -405,15 +404,15 @@ const researchLabs = [
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
             {researchLabs.map ( (lab, index) => (<motion.div key={index} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} onHoverStart={ () => setHoveredLab (index) } onHoverEnd={ () => setHoveredLab (null) } whileHover={{ y: -4 }} className="p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 20">
                 <div className="inline - flex items - center justify - center w - 12 h - 12 rounded - xl bg - gradient - to - br from - zion - cyan to - zion - purple mb - 4 shadow - lg">
@@ -445,15 +444,15 @@ const researchLabs = [
         {/* Call to action */}
         <motion.div className="text - center" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 }}>
           <div className="inline - block p - 1 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - 2xl">

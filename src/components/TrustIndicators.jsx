@@ -2,7 +2,6 @@ import React from 'react';
 export function TrustIndicatorsCompact ({ className }) {
 import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators ({ className, showStats = true, showCertifications = true }) {
 
-
     const indicators = [
         {
             icon: Shield,

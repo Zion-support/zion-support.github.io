@@ -4,7 +4,6 @@ export function NotFoundPage (...args: any[]) : any {
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Home,
   Search,
   ArrowLeft,

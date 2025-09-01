@@ -2,17 +2,16 @@ import { Link } from 'react - router - dom';
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 export default function Home () {
 export default Home;
-import { 
+import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
-  Users, 
-  TrendingUp, 
-  Award, 
-  Globe, 
-  Brain, 
-  Cloud, 
-  Shield, 
+  Users,
+  TrendingUp,
+  Award,
+  Globe,
+  Brain,
+  Cloud,
+  Shield,
 
   Zap,
   Users,
@@ -51,7 +50,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo ( () => {
-  const particles = useMemo ( () => 
+  const particles = useMemo ( () =>
     [...Array (20) ].map ( (_, i) => ({
       id: i,
       left: `${Math.random () * 100}%`,
@@ -63,7 +62,7 @@ const FuturisticBackground = React.memo ( () => {
   return (<div role="button" className="fixed inset - 0 overflow - hidden pointer - events - none" aria - hidden="true">
       {/* Animated grid with neon effect */}
       <div role="button" className="absolute inset - 0 bg-[linear - gradient (rgba (6,182,212,0.15) _1px,transparent_1px) ,linear - gradient (90deg,rgba (6,182,212,0.15) _1px,transparent_1px) ] bg-[size:50px_50px] animate - pulse"></div>
-      
+
       {/* Optimized floating particles */}
       {particles.map ( (particle) => (<motion.div
           key={particle.id}
@@ -182,7 +181,7 @@ FloatingActionButton.displayName = 'FloatingActionButton';
 const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }) => {
   const [currentSlide, setCurrentSlide] = useState (0) ;
   const [isPlaying, setIsPlaying] = useState (true) ;
-  
+
   const heroSlides = [
     {
       title: "AI - Powered Innovation",
@@ -215,7 +214,7 @@ const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }
   // Auto - advance slides
   useEffect ( () => {
     if (!isPlaying) return;
-    
+
     const interval = setInterval ( () => {
       setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) ;
     }, 5000) ;
@@ -260,7 +259,7 @@ const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }
 
   return (<section className="relative min - h-screen flex items - center justify - center overflow - hidden">
       <FuturisticBackground />
-      
+
       <div role="button" className="relative z - 10 container mx - auto px - 4 text - center">
         <AnimatePresence mode="wait">
           <motion.div
@@ -274,19 +273,19 @@ const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }
             <div role="button" className={`w - 24 h - 24 bg - gradient - to - r ${heroSlides[currentSlide].color} rounded - 3xl flex items - center justify - center mx - auto mb - 8`}>
               {React.createElement (heroSlides[currentSlide].icon, { className: "w - 12 h - 12 text - white" }) }
             </div>
-            
+
             <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent">
               {heroSlides[currentSlide].title}
             </h1>
-            
+
             <h2 className="text - 2xl md:text - 3xl font - semibold text - white mb - 6">
               {heroSlides[currentSlide].subtitle}
             </h2>
-            
+
             <p className="text - xl md:text - 2xl text - gray - 300 mb - 12 max - w-4xl mx - auto leading - relaxed">
               {heroSlides[currentSlide].description}
             </p>
-            
+
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
               <Link
                 to={heroSlides[currentSlide].link}
@@ -315,14 +314,14 @@ const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }
         </div>
 
         {/* Enhanced Stats with animations */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt - 20 grid grid - cols - 2 md:grid - cols - 4 gap - 8"
         >
-          {heroStats.map ( (stat, index) => (<motion.div 
-              key={stat.label} 
+          {heroStats.map ( (stat, index) => (<motion.div
+              key={stat.label}
               className="text - center"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
@@ -506,7 +505,7 @@ const CTASection = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text - xl text - gray - 300 mb - 12 max - w-3xl mx - auto">
-            Join hundreds of organizations that have already transformed their operations with our AI - powered solutions. 
+            Join hundreds of organizations that have already transformed their operations with our AI - powered solutions.
             Let's discuss how we can help you achieve your technology goals.
 
           </p>

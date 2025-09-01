@@ -7,7 +7,6 @@ export default React.memo (function ServicesPage () {
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Brain,
   Cloud,
   Shield,

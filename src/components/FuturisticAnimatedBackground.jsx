@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medium', colorScheme = 'multi' }) => {
 export default FuturisticAnimatedBackground;
 
-
     const canvasRef = useRef (null) ;
     const animationRef = useRef () ;
     useEffect ( () => {

@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 export function MainNavigation () {
 import ThemeToggle from "./ThemeToggle";
 
-
     const [isOpen, setIsOpen] = useState (false) ;
     const [isScrolled, setIsScrolled] = useState (false) ;
     const [activeDropdown, setActiveDropdown] = useState (null) ;

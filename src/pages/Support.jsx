@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 export default function Support () {
 
   const [activeCategory, setActiveCategory] = useState ('general') ;

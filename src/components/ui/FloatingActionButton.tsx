@@ -43,32 +43,17 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
       <motion.button
         initial = {
   { opacity: 0,
-  scale: 0 
-
-
-
-
-
+  scale: 0
 
 }}
         animate = {
   { opacity: 1,
-  scale: 1 
-
-
-
-
-
+  scale: 1
 
 }}
         transition = {
   { delay: 0.5,
-  duration: 0.3 
-
-
-
-
-
+  duration: 0.3
 
 }}
         onClick={scrollToTop}
@@ -81,32 +66,17 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
       <motion.button
         initial = {
   { opacity: 0,
-  scale: 0 
-
-
-
-
-
+  scale: 0
 
 }}
         animate = {
   { opacity: 1,
-  scale: 1 
-
-
-
-
-
+  scale: 1
 
 }}
         transition = {
   { delay: 0.6,
-  duration: 0.3 
-
-
-
-
-
+  duration: 0.3
 
 }}
         onClick={() => setIsOpen(!isOpen)}
@@ -118,32 +88,17 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
               key="close"
               initial = {
   { rotate: -90,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 }}
               animate = {
   { rotate: 0,
-  opacity: 1 
-
-
-
-
-
+  opacity: 1
 
 }}
               exit = {
   { rotate: 90,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 }}
               transition={{ duration: 0.2 }}
@@ -155,32 +110,17 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
               key="plus"
               initial = {
   { rotate: 90,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 }}
               animate = {
   { rotate: 0,
-  opacity: 1 
-
-
-
-
-
+  opacity: 1
 
 }}
               exit = {
   { rotate: -90,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 }}
               transition={{ duration: 0.2 }}
@@ -207,11 +147,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
                   delay: action.delay,
                   type: "spring",
   stiffness: 200
-                
-
-
-
-
 
 
 }}

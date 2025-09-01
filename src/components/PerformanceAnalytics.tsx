@@ -3,7 +3,6 @@ export default PerformanceAnalytics;}}}}}}}}
 import {
 import { motion } from 'framer - motion';
 
-
   Activity,
   TrendingUp,
   TrendingDown,
@@ -160,12 +159,12 @@ const PerformanceAnalytics: React.FC = () => {;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           className="text - center mb - 12"
@@ -182,12 +181,12 @@ const PerformanceAnalytics: React.FC = () => {;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ delay: 0.2 }}
@@ -234,12 +233,12 @@ const PerformanceAnalytics: React.FC = () => {;
         {performanceData && (<motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ delay: 0.3 }}
@@ -249,12 +248,12 @@ const PerformanceAnalytics: React.FC = () => {;
                 key={metric.name}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition={{ delay: 0.4 + index * 0.1 }}
@@ -286,12 +285,12 @@ const PerformanceAnalytics: React.FC = () => {;
         {performanceData && (<motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ delay: 0.5 }}
@@ -330,12 +329,12 @@ const PerformanceAnalytics: React.FC = () => {;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ delay: 0.6 }}
@@ -344,7 +343,7 @@ const PerformanceAnalytics: React.FC = () => {;
           <BarChart3 className="w - 16 h - 16 text - gray - 400 mx - auto mb - 4" />
           <h3 className="text - xl font - semibold text - white mb - 2">Performance Trends</h3>
           <p className="text - gray - 400">
-            {isMonitoring 
+            {isMonitoring
               ? 'Real - time performance data is being collected and analyzed...'
               : 'Start monitoring to view performance trends and historical data'
             }
@@ -359,12 +358,12 @@ const PerformanceAnalytics: React.FC = () => {;
         {performanceData && (<motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ delay: 0.7 }}

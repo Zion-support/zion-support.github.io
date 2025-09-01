@@ -4,7 +4,6 @@ export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
 import { GradientHeading } from './ui / GradientHeading';
 import { motion, AnimatePresence } from 'framer - motion';
 
-
  * BenefitsSection function
  * @param {*} params - Function parameters
  * @returns {*} Function return value

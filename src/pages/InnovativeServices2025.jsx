@@ -2,7 +2,6 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default InnovativeServices2025;
 
-
 const InnovativeServices2025 = () => {
   const innovativeServices = [
     {

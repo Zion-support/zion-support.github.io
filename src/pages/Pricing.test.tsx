@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import Pricing from './Pricing';
 
-
 describe ('Pricing', () => {
   it ('renders without crashing', () => {
     render (<Pricing />) ;

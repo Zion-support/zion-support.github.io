@@ -3,7 +3,6 @@ export const TeamCollaborationTools: React.FC < TeamCollaborationToolsProps> = (
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Users,
   MessageCircle,
   FileText,
@@ -130,7 +129,7 @@ interface Message {
   timestamp: string;
   type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[];
-  reactions: { type: string; count: number 
+  reactions: { type: string; count: number
 }[];
   isRead: boolean}
 
@@ -278,12 +277,12 @@ showProjects:  true,;
       {activeTab === 'team' && showTeamMembers && (<motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           className="space - y-6"
@@ -293,12 +292,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               className="p - 6 bg - zinc - 900 / 30 border border - zinc - 700 / 50 rounded - xl text - center"
@@ -310,12 +309,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.1 }}
@@ -330,12 +329,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.2 }}
@@ -350,12 +349,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.3 }}
@@ -375,12 +374,12 @@ showProjects:  true,;
                 key={member.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition={{ delay: index * 0.1 }}
@@ -468,12 +467,12 @@ showProjects:  true,;
       {activeTab === 'projects' && showProjects && (<motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           className="space - y-6"
@@ -483,12 +482,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               className="p - 6 bg - zinc - 900 / 30 border border - zinc - 700 / 50 rounded - xl text - center"
@@ -500,12 +499,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.1 }}
@@ -520,12 +519,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.2 }}
@@ -540,12 +539,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.3 }}
@@ -565,12 +564,12 @@ showProjects:  true,;
                 key={project.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition={{ delay: index * 0.1 }}
@@ -621,7 +620,7 @@ showProjects:  true,;
                       animate={{ width: `${project.progress}%` }}
                       transition = {
   { duration: 1,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                       className="h - 2 bg - zion - cyan rounded - full"
@@ -677,12 +676,12 @@ showProjects:  true,;
       {activeTab === 'communication' && showCommunication && (<motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           className="space - y-6"
@@ -692,12 +691,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               className="p - 6 bg - zinc - 900 / 30 border border - zinc - 700 / 50 rounded - xl text - center"
@@ -709,12 +708,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.1 }}
@@ -729,12 +728,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.2 }}
@@ -754,12 +753,12 @@ showProjects:  true,;
                 key={message.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition={{ delay: index * 0.1 }}
@@ -840,12 +839,12 @@ showProjects:  true,;
       {activeTab === 'files' && showFileSharing && (<motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           className="space - y-6"
@@ -855,12 +854,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               className="p - 6 bg - zinc - 900 / 30 border border - zinc - 700 / 50 rounded - xl text - center"
@@ -872,12 +871,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.1 }}
@@ -892,12 +891,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.2 }}
@@ -912,12 +911,12 @@ showProjects:  true,;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.3 }}
@@ -937,12 +936,12 @@ showProjects:  true,;
                 key={file.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition={{ delay: index * 0.1 }}

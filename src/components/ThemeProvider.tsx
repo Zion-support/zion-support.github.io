@@ -2,7 +2,6 @@ import React, { createContext, useContext, useEffect, useState } from 'react.ts'
 export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {
 export const useTheme = () => {;
 
-
 type Theme = 'light' | 'dark' | 'system';
 
 interface ThemeContextType {
@@ -36,18 +35,18 @@ interface ThemeProviderProps extends React.PropsWithChildren<{}> {
 
   useEffect ( () => {
     const root = window.document.documentElement;
-    
+
     const updateTheme = () => {;
       let effectiveTheme: 'light' | 'dark';
-      
+
       if (theme = == 'system') {;
         effectiveTheme = window.matchMedia (' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
       } else {
         effectiveTheme = theme;
       }
-      
+
       setIsDark (effectiveTheme === 'dark') ;
-      
+
       if (effectiveTheme = == 'dark') {;
         root.classList.add ('dark') ;
         root.classList.remove ('light') } else {
@@ -56,7 +55,7 @@ interface ThemeProviderProps extends React.PropsWithChildren<{}> {
     };
 
     updateTheme () ;
-    
+
     if (theme = == 'system') {;
       const mediaQuery = window.matchMedia (' (prefers - color - scheme: dark) ') ;
       mediaQuery.addEventListener ('change', updateTheme) ;

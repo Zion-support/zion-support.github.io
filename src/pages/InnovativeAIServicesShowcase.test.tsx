@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import InnovativeAIServicesShowcase from './InnovativeAIServicesShowcase';
 
-
 describe ('InnovativeAIServicesShowcase', () => {
   it ('renders without crashing', () => {
     render (<InnovativeAIServicesShowcase />) ;

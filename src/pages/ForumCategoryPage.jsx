@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { useParams, Link } from "react - router - dom";
 import { useState } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Input } from "@/components / ui / input";
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from "@/components / icons";
 import { useAuth } from "@/hooks / useAuth";
@@ -11,7 +11,6 @@ import PostCard from "@/components / community / PostCard";
 import SEO from "@/components / SEO";
 export default function ForumCategoryPage () {
 import NotFound from "./NotFound";
-
 
 // Mock category data
 const categoriesInfo = {

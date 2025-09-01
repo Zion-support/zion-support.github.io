@@ -4,7 +4,6 @@ export default React.memo (function DigitalTwin (...args: any[]) : any {
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Eye,
   Cpu,
   Network,

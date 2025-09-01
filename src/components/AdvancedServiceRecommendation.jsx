@@ -6,7 +6,6 @@ import { Button } from "./ui / button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui / card";
 import { motion } from 'framer - motion';
 
-
 const AdvancedServiceRecommendation = () => {
     const [clientProfile, setClientProfile] = useState ({
         industry: '',
@@ -185,11 +184,11 @@ const AdvancedServiceRecommendation = () => {
       {/* Header */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className="text - center mb - 8">
         <h1 className="text - 4xl font - bold text - zion - blue - dark mb - 4">
@@ -204,11 +203,11 @@ const AdvancedServiceRecommendation = () => {
       {/* Client Profile Form */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.1 }} className="bg - white rounded - lg shadow - lg p - 6 mb - 8">
         <h2 className="text - 2xl font - bold text - zion - blue - dark mb - 6 flex items - center gap - 2">
@@ -220,7 +219,7 @@ const AdvancedServiceRecommendation = () => {
           <div>
             <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Industry</label>
             <select value={clientProfile.industry} onChange = { (e) => setClientProfile (prev => ({ ...prev,
-  industry: e.target.value 
+  industry: e.target.value
 
 }) ) } className="w - full p - 3 border border - zion - slate - light rounded - md">
               <option value="">Select Industry</option>
@@ -231,7 +230,7 @@ const AdvancedServiceRecommendation = () => {
           <div>
             <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Company Size</label>
             <select value={clientProfile.companySize} onChange = { (e) => setClientProfile (prev => ({ ...prev,
-  companySize: e.target.value 
+  companySize: e.target.value
 
 }) ) } className="w - full p - 3 border border - zion - slate - light rounded - md">
               <option value="">Select Company Size</option>
@@ -242,7 +241,7 @@ const AdvancedServiceRecommendation = () => {
           <div>
             <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Budget Range</label>
             <select value={clientProfile.budget} onChange = { (e) => setClientProfile (prev => ({ ...prev,
-  budget: e.target.value 
+  budget: e.target.value
 
 }) ) } className="w - full p - 3 border border - zion - slate - light rounded - md">
               <option value="">Select Budget Range</option>
@@ -253,7 +252,7 @@ const AdvancedServiceRecommendation = () => {
           <div>
             <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Implementation Timeline</label>
             <select value={clientProfile.timeline} onChange = { (e) => setClientProfile (prev => ({ ...prev,
-  timeline: e.target.value 
+  timeline: e.target.value
 
 }) ) } className="w - full p - 3 border border - zion - slate - light rounded - md">
               <option value="">Select Timeline</option>
@@ -264,7 +263,7 @@ const AdvancedServiceRecommendation = () => {
           <div>
             <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Technology Maturity Level</label>
             <select value={clientProfile.technologyMaturity} onChange = { (e) => setClientProfile (prev => ({ ...prev,
-  technologyMaturity: e.target.value 
+  technologyMaturity: e.target.value
 
 }) ) } className="w - full p - 3 border border - zion - slate - light rounded - md">
               <option value="">Select Technology Maturity</option>
@@ -280,7 +279,7 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.primaryGoals.includes (goal) } onChange = { (e) => {
                 if (e.target.checked) {
                     setClientProfile (prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
-  goal] 
+  goal]
 
 }) ) ;
                 }
@@ -299,7 +298,7 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.challenges.includes (challenge) } onChange = { (e) => {
                 if (e.target.checked) {
                     setClientProfile (prev => ({ ...prev, challenges: [...prev.challenges,
-  challenge] 
+  challenge]
 
 }) ) ;
                 }
@@ -326,11 +325,11 @@ const AdvancedServiceRecommendation = () => {
       {/* Recommendations Results */}
       {showResults && (<motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.2 }}>
           <h2 className="text - 2xl font - bold text - zion - blue - dark mb - 6 text - center">
@@ -340,11 +339,11 @@ const AdvancedServiceRecommendation = () => {
           <div className="space - y-6">
             {recommendations.map ( (rec, index) => (<motion.div key={rec.service.id} initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} transition={{ delay: 0.1 * index }}>
                 <Card className="hover:shadow - lg transition - shadow">
@@ -435,11 +434,11 @@ const AdvancedServiceRecommendation = () => {
           {/* CTA Section */}
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.4 }} className="mt - 12 text - center">
             <div className="bg - gradient - to - r from - zion - purple via - zion - blue - light to - zion - cyan rounded - lg p - 8 text - white">

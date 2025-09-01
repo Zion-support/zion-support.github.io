@@ -3,7 +3,6 @@ export function SecurityMonitoringSystem ({
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Shield,
   AlertTriangle,
   CheckCircle,

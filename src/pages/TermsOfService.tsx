@@ -3,7 +3,6 @@ export default TermsOfService;}
 import {
 import { motion } from 'framer - motion';
 
-
   FileText,
   Shield,
   Users,
@@ -22,7 +21,7 @@ import { motion } from 'framer - motion';
 
 const TermsOfService = () => {;
   const lastUpdated = '2025 - 01 - 15';
-  
+
   const sections = [
     {
       id: 'acceptance',
@@ -180,12 +179,12 @@ const TermsOfService = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -641,41 +640,41 @@ const TermsOfService = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
             >
               <h2 className="text - 3xl font - bold text - slate - 900 text - center mb - 12">
                 Table of Contents
               </h2>
-              
+
               <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4">
                 {sections.map ( (section, index) => (<motion.a
                     key={section.id}
                     href={`#${section.id}`}
                     initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                     animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     transition = {
   { duration: 0.6,
-  delay: 0.1 * index 
+  delay: 0.1 * index
 
 }}
                     className="flex items - center gap - 3 p - 4 bg - slate - 50 rounded - lg hover:bg - slate - 100 transition - colors border border - slate - 200 hover:border - slate - 300"
@@ -697,40 +696,40 @@ const TermsOfService = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
             >
               <h2 className="text - 3xl font - bold text - slate - 900 text - center mb - 12">
                 Key Provisions
               </h2>
-              
+
               <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">
                 {keyProvisions.map ( (provision, index) => (<motion.div
                     key={provision.title}
                     initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                     animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     transition = {
   { duration: 0.6,
-  delay: 0.1 * index 
+  delay: 0.1 * index
 
 }}
                     className="bg - white rounded - xl p - 6 shadow - sm hover:shadow - lg transition - all duration - 300 border border - slate - 100 hover:border - purple - 200"
@@ -752,17 +751,17 @@ const TermsOfService = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 }}
             >
@@ -773,7 +772,7 @@ const TermsOfService = () => {;
                     </div>
                     <h2 className="text - 2xl font - bold text - slate - 900">{section.title}</h2>
                   </div>
-                  
+
                   <div className="prose prose - slate max - w-none">
                     <p className="text - lg text - slate - 700 leading - relaxed">{section.content}</p>
                   </div>
@@ -788,40 +787,40 @@ const TermsOfService = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.8 
+  delay: 0.8
 
 }}
             >
               <h2 className="text - 3xl font - bold text - slate - 900 text - center mb - 12">
                 Dispute Resolution Process
               </h2>
-              
+
               <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
                 {disputeResolution.map ( (step, index) => (<motion.div
                     key={step.step}
                     initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                     animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     transition = {
   { duration: 0.6,
-  delay: 0.1 * index 
+  delay: 0.1 * index
 
 }}
                     className="bg - white rounded - xl p - 6 shadow - sm hover:shadow - lg transition - all duration - 300 border border - slate - 100 hover:border - indigo - 200 text - center"
@@ -843,17 +842,17 @@ const TermsOfService = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 1.0 
+  delay: 1.0
 
 }}
             >
@@ -863,7 +862,7 @@ const TermsOfService = () => {;
               <p className="text - xl text - purple - 100 mb - 8">
                 Our legal team is here to help clarify any questions about our Terms of Service.
               </p>
-              
+
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 8">
                 <div className="flex items - center justify - center gap - 3 text - white">
                   <Mail className="w - 5 h - 5" />
@@ -874,7 +873,7 @@ const TermsOfService = () => {;
                   <span>+1 (555) 123 - 4567</span>
                 </div>
               </div>
-              
+
               <div className="flex flex - col sm:flex - row gap - 4 justify - center">
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - white text - purple - 600 font - semibold rounded - lg hover:bg - purple - 50 transition - colors">
                   Contact Legal Team

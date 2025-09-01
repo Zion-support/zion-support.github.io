@@ -4,7 +4,6 @@ export default ManufacturingSolutions;
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Factory,
   Cog,
   Bot,

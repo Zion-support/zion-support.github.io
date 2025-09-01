@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 export default InteractiveServiceShowcase;
 import { motion, AnimatePresence } from 'framer - motion';
 
-
 const InteractiveServiceShowcase = () => {
     const [activeCategory, setActiveCategory] = useState ('all') ;
     const [hoveredService, setHoveredService] = useState (null) ;
@@ -121,7 +120,7 @@ const InteractiveServiceShowcase = () => {
     };
     const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -134,7 +133,7 @@ const InteractiveServiceShowcase = () => {
     };
     const categoryVariants = {
   hidden: { scale: 0.8,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -150,11 +149,11 @@ const InteractiveServiceShowcase = () => {
         {/* Header Section */}
         <motion.div className="text - center mb - 20" initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           <h2 className="text - 5xl md:text - 6xl font - black text - white mb - 6">
@@ -172,11 +171,11 @@ const InteractiveServiceShowcase = () => {
         {/* Category Filter Tabs */}
         <motion.div className="flex flex - wrap justify - center gap - 4 mb - 16" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           {categories.map ( (category) => (<button key={category.id} onClick={ () => setActiveCategory (category.id) } className={`group flex items - center gap - 3 px - 6 py - 4 rounded - 2xl font - semibold transition - all duration - 300 ${activeCategory === category.id
@@ -252,15 +251,15 @@ const InteractiveServiceShowcase = () => {
         {/* Bottom CTA Section */}
         <motion.div className="text - center mt - 20" initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}>
           <div className="bg - gradient - to - r from - zion - cyan / 10 to - zion - blue / 10 backdrop - blur - md p - 12 rounded - 3xl border border - zion - cyan / 20">

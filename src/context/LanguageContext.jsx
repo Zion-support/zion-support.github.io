@@ -6,12 +6,7 @@ const LanguageProvider({ children }) {
     const isRTL = language === 'ar' || language === 'he';
     return (<LanguageContext.Provider value = {
   { language, setLanguage, t,
-  isRTL 
-
-
-
-
-
+  isRTL
 
 }}>
       {children}

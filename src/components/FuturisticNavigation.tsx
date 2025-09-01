@@ -5,7 +5,6 @@ import {
 import { MobileSidebarToggle } from './MobileSidebarToggle';
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Menu,
   X,
   Search,
@@ -285,12 +284,12 @@ import { motion, AnimatePresence } from 'framer - motion';
               className="flex items - center"
               initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
               animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
               transition={{ duration: 0.5 }}
@@ -317,17 +316,17 @@ import { motion, AnimatePresence } from 'framer - motion';
               <motion.div
                 initial = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.5,
-  delay: 0.1 
+  delay: 0.1
 
 }}
               >
@@ -342,17 +341,17 @@ import { motion, AnimatePresence } from 'framer - motion';
               <motion.div
                 initial = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.5,
-  delay: 0.15 
+  delay: 0.15
 
 }}
               >
@@ -369,17 +368,17 @@ import { motion, AnimatePresence } from 'framer - motion';
                   <motion.button
                     initial = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                     animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     transition = {
   { duration: 0.5,
-  delay: (index + 2) * 0.1 
+  delay: (index + 2) * 0.1
 
 }}
                     onClick={ () => toggleDropdown (category.name) }
@@ -401,17 +400,17 @@ import { motion, AnimatePresence } from 'framer - motion';
                       <motion.div
                         initial = {
   { opacity: 0, y: -10,
-  scale: 0.95 
+  scale: 0.95
 
 }}
                         animate = {
   { opacity: 1, y: 0,
-  scale: 1 
+  scale: 1
 
 }}
                         exit = {
   { opacity: 0, y: -10,
-  scale: 0.95 
+  scale: 0.95
 
 }}
                         transition={{ duration: 0.2 }}
@@ -427,17 +426,17 @@ import { motion, AnimatePresence } from 'framer - motion';
                                 key={service.name}
                                 initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                                 animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                                 transition = {
   { duration: 0.3,
-  delay: subIndex * 0.05 
+  delay: subIndex * 0.05
 
 }}
                               >

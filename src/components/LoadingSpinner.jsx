@@ -1,7 +1,6 @@
 import React from 'react';
 export default LoadingSpinner;
 
-
 const LoadingSpinner = ({
   size = 'md',
   color = 'blue',

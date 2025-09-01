@@ -7,7 +7,6 @@ export const TableSkeleton: React.FC<{ count?: number }> = ({ count = 5 }) => (<
 export default LoadingSkeleton;
 import { motion } from 'framer - motion.ts';
 
-
 interface SkeletonProps extends React.PropsWithChildren<{}> {
   className?: string;
   height?: string;

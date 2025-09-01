@@ -7,7 +7,6 @@ import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data / expande
 import SEO from '@/components / SEO';
 export default function PricingGuide () {
 
-
     const [selectedCategory, setSelectedCategory] = useState ('all') ;
     const filteredServices = selectedCategory === 'all'
         ? EXPANDED_SERVICES

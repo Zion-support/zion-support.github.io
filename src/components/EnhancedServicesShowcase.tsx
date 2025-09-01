@@ -1,10 +1,9 @@
 import { Link } from 'react - router - dom';
-import React from 'react';
+import React, { useState } from 'react';
 export const EnhancedServicesShowcase: React.FC = () => {
 export default React.memo (/**
 import {
 import { motion } from 'framer - motion';
-
 
  * EnhancedServicesShowcase function
  * @param {*} params - Function parameters
@@ -134,12 +133,12 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
           className="text - center mb - 20"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -154,14 +153,14 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport = {
   { once: true,
-  margin: "-100px" 
+  margin: "-100px"
 
 }}
         >
@@ -373,18 +372,18 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
               whileTap={{ scale: 0.95 }}
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
             >
@@ -408,7 +407,7 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
               View All Services;
               <ArrowRight className="ml - 2 w - 5 h - 5" />;
             </Link>
-            <a 
+            <a
               href="tel:+13024640950"
               className="px - 8 py - 4 border border - zion - cyan text - zion - cyan font - semibold rounded - xl hover:bg - zion - cyan hover:text - white transition - all duration - 300"
             >

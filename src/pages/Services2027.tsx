@@ -3,24 +3,23 @@ import React, { useState, useMemo } from 'react.ts';
 import { SEO  } from '@/components / SEO';
 export default Services2027;
 import { motion  } from 'framer - motion.ts';
-import { Search, 
+import { Search,
 
-
-  ArrowRight, 
-  DollarSign, 
-  ExternalLink, 
-  Workflow, 
-  MessageSquare, 
-  Globe, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Zap, 
-  Rocket, 
-  Heart, 
-  Lock, 
-  Users, 
+  ArrowRight,
+  DollarSign,
+  ExternalLink,
+  Workflow,
+  MessageSquare,
+  Globe,
+  Brain,
+  Shield,
+  Cloud,
+  Cpu,
+  Zap,
+  Rocket,
+  Heart,
+  Lock,
+  Users,
   BarChart3,
   Target,
   TrendingUp,
@@ -164,7 +163,7 @@ const Services2027: React.FC = () : JSX.Element => {
   const [query, setQuery] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [sortBy, setSortBy] = useState ('innovation') ;
-  
+
   const categories = [
     { id: any'all', name: 'All Services', icon: Workflow, count: SERVICES_2027.length },;
     { id: 'AI & Automation', name: 'AI & Automation', icon: Bot, count: SERVICES_2027.filter (s  => s.category === 'AI & Automation') .length },
@@ -179,7 +178,7 @@ const Services2027: React.FC = () : JSX.Element => {
 
   const filteredAndSorted = useMemo ( () => {
     let filtered = SERVICES_2027;
-    
+
     // Filter by search query
     if (query.trim () ) {
       const q = query.trim () .toLowerCase () ;
@@ -188,12 +187,12 @@ const Services2027: React.FC = () : JSX.Element => {
         s.description.toLowerCase () .includes (q) ||
         s.category.toLowerCase () .includes (q) ) ;
     }
-    
+
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter (s => s.category === selectedCategory) ;
     }
-    
+
     // Sort services
     switch (sortBy) {
       case 'price':
@@ -217,13 +216,13 @@ const Services2027: React.FC = () : JSX.Element => {
   const featuredServices = SERVICES_2027.filter (s => s.innovationLevel === 'Revolutionary') .slice (0, 3) ;
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white">
-      <SEO 
-        title="2027 Services - Zion Tech Group" 
-        description="Discover our revolutionary 2027 services including AI Autonomous Platforms, Quantum AI, Next - Gen Cybersecurity, and Metaverse Development. Leading the future of technology." 
+      <SEO
+        title="2027 Services - Zion Tech Group"
+        description="Discover our revolutionary 2027 services including AI Autonomous Platforms, Quantum AI, Next - Gen Cybersecurity, and Metaverse Development. Leading the future of technology."
         keywords="2027 services, AI autonomous, quantum AI, cybersecurity, metaverse, edge computing, digital twin"
         canonicalUrl="https://ziontechgroup.com / services2027"
       />
-      
+
       {/* Hero Section */}
       <section className="relative pt - 32 pb - 20 overflow - hidden">
         <div className="absolute inset - 0 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10"></div>
@@ -241,7 +240,7 @@ const Services2027: React.FC = () : JSX.Element => {
               Future - Ready Services
             </h1>
             <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">
-              Experience the next generation of technology with our revolutionary 2027 services. 
+              Experience the next generation of technology with our revolutionary 2027 services.
               From AI autonomous platforms to quantum computing and metaverse development.
             </p>
             <div className="flex flex - wrap justify - center gap - 4">
@@ -340,10 +339,10 @@ const Services2027: React.FC = () : JSX.Element => {
                 <div className={`w - 16 h - 16 rounded - xl bg - gradient - to - r ${service.color} flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration - 300`}>
                   <service.icon className="w - 8 h - 8 text - white" />
                 </div>
-                
+
                 <h3 className="text - xl font - bold text - white mb - 2">{service.title}</h3>
                 <p className="text - gray - 300 mb - 4">{service.description}</p>
-                
+
                 <div className="space - y-3 mb - 6">
                   {service.features.slice (0, 3) .map ( (feature, idx) => (<div key={idx} className="flex items - center space - x-2">
                       <CheckCircle className="w - 4 h - 4 text - purple - 400" />
@@ -404,10 +403,10 @@ const Services2027: React.FC = () : JSX.Element => {
                 <div className={`w - 12 h - 12 rounded - lg bg - gradient - to - r ${service.color} flex items - center justify - center mb - 3 group - hover:scale - 110 transition - transform duration - 300`}>
                   <service.icon className="w - 6 h - 6 text - white" />
                 </div>
-                
+
                 <h3 className="text - lg font - semibold text - white mb - 2">{service.title}</h3>
                 <p className="text - gray - 300 text - sm mb - 3">{service.description}</p>
-                
+
                 <div className="flex items - center justify - between mb - 3">
                   <div className="text - lg font - bold text - purple - 400">${service.price.toLocaleString () }</div>
                   <div className="text - xs text - green - 400 bg - green - 400 / 10 px - 2 py - 1 rounded - full">
@@ -441,7 +440,7 @@ const Services2027: React.FC = () : JSX.Element => {
               Ready for the Future?
             </h2>
             <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">
-              Be among the first to experience our revolutionary 2027 services and gain 
+              Be among the first to experience our revolutionary 2027 services and gain
               a competitive advantage in the rapidly evolving technology landscape.
             </p>
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">

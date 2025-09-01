@@ -80,12 +80,7 @@ export function PrimaryNav() {
                 navigate(`/search/${sugg.slug || slugify(sugg.text)}`);
             <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
   { width: 'clamp(12rem, 20vw,
-  16rem)' 
-
-
-
-
-
+  16rem)'
 
 }}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {
@@ -96,9 +91,6 @@ export function PrimaryNav() {
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
                 router(`/marketplace/listing/${sugg.id
-
-
-
 
 }`);
             }
@@ -134,11 +126,6 @@ export function PrimaryNav() {
   t('nav.cart',
   'Cart')
 
-
-
-
-
-
 }>
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>
                     {cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
@@ -170,7 +157,7 @@ export function PrimaryNav() {
                 </>)}
               {isLoggedIn && <UserMenu />}
             </div>
-          
+
           {/* Mobile menu button */}
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
             {mobileMenuOpen ? (<X className="h-6 w-6"/>) : (<Menu className="h-6 w-6"/>)}

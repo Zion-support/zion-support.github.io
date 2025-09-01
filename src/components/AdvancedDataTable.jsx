@@ -1,11 +1,10 @@
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide - react';
 import { useState, useMemo, useCallback } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
 import { motion, AnimatePresence } from 'framer - motion';
 import { useAnalytics } from "../hooks / useAnalytics";
 import { useVirtualScroll } from "../hooks / useVirtualScroll";
-
 
     const { trackEvent } = useAnalytics ({
         enableTracking: true,
@@ -180,15 +179,15 @@ import { useVirtualScroll } from "../hooks / useVirtualScroll";
         <AnimatePresence>
           {showFilters && (<motion.div initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }} exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} className="mt - 4 p - 4 bg - white dark:bg - gray - 600 rounded - lg border border - gray - 200 dark:border - gray - 500">
               <h4 className="font - medium text - gray - 900 dark:text - white mb - 3">Advanced Filters</h4>
@@ -240,11 +239,11 @@ import { useVirtualScroll } from "../hooks / useVirtualScroll";
           <div {...listProps}>
             {virtualItems.map ( (item, index) => (<motion.div key={String (item.id || index) } initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className={`flex items - center px - 4 py - 3 border - b border - gray - 100 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700 transition - colors ${onRowClick ? 'cursor - pointer' : ''} ${selectedItems.has (String (item.id || JSON.stringify (item) ) ) ? 'bg - blue - 50 dark:bg - blue - 900 / 20' : ''}`} onClick = { () => onRowClick?. (item,
   index) }>
@@ -293,7 +292,7 @@ import { useVirtualScroll } from "../hooks / useVirtualScroll";
                         : 'border border - gray - 300 dark:border - gray - 600 hover:bg - gray - 100 dark:hover:bg - gray - 600'}`}>
                     {page}
                   </button>) }) }
-              
+
               <button onClick = { () => setCurrentPage (prev => Math.min (totalPages,
   prev + 1) ) } disabled={currentPage === totalPages} className="px - 3 py - 1 text - sm border border - gray - 300 dark:border - gray - 600 rounded hover:bg - gray - 100 dark:hover:bg - gray - 600 disabled:opacity - 50 disabled:cursor - not - allowed transition - colors">
                 Next

@@ -28,7 +28,7 @@ declare namespace JSX {
   interface IntrinsicElements {
 
     [elemName: string]: ;
-  
+
 }
 }
 
@@ -85,7 +85,6 @@ declare module 'zod' {
   export { z };
   export default z;
 }
-
 
 export default useEffect;
 export default useRef;

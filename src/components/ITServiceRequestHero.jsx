@@ -5,7 +5,6 @@ export function ITServiceRequestHero () {
 import { GradientHeading } from "../ui / GradientHeading";
 import { NeonGlow } from "../ui / NeonGlow";
 
-
     const features = [
         {
             icon: <Brain className="w - 6 h - 6"/>,

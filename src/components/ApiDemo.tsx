@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react.ts';
 import { api, ApiResponse  } from '@/services / api';
 export default ApiDemo;}}}}}}}
 
-
 interface User {
 
   id: number;
@@ -94,7 +93,7 @@ const [newUser, setNewUser] = useState ({ name: '', email: '';
                 placeholder="Name"
                 value={newUser.name}
                 onChange = { (e) => setNewUser (prev => ({ ...prev,
-  name: e.target.value 
+  name: e.target.value
 
 }) ) }
                 className="px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500"
@@ -105,7 +104,7 @@ const [newUser, setNewUser] = useState ({ name: '', email: '';
                 placeholder="Email"
                 value={newUser.email}
                 onChange = { (e) => setNewUser (prev => ({ ...prev,
-  email: e.target.value 
+  email: e.target.value
 
 }) ) }
                 className="px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500"

@@ -5,7 +5,6 @@ import { comprehensiveServices } from '../data / comprehensiveServices';
 import { motion, AnimatePresence } from 'framer - motion';
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data / ultimateInnovativeServices2026';
 
-
   Brain,
   Cloud,
   Shield,

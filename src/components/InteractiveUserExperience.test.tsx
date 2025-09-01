@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import InteractiveUserExperience from './InteractiveUserExperience';
 
-
 describe ('InteractiveUserExperience', () => {
   it ('renders without crashing', () => {
     render (<InteractiveUserExperience />) ;

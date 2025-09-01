@@ -15,7 +15,6 @@ export function ComprehensiveServicesShowcase2027 (...args[]) :  {
 import { cuttingEdgeComprehensiveServices2027 } from "../../data / 2027 - cutting - edge - comprehensive - services";
 import { specializedInnovativeServices2027 } from "../../data / 2027 - specialized - innovative - services";
 
-
 const categoryColors: { [key: string]: string } = {
   'AI & Autonomous Systems': 'from - purple - 600 to - indigo - 700',
   'Quantum Computing & AI': 'from - blue - 600 to - cyan - 700',

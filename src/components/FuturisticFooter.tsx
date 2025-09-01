@@ -4,7 +4,6 @@ export const FuturisticFooter: React.FC = () => {;
 import {
 import { motion } from 'framer - motion';
 
-
   Phone,
   Mail,
   MapPin,
@@ -104,12 +103,12 @@ import { motion } from 'framer - motion';
               <motion.div
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 viewport={{ once: true }}
@@ -154,18 +153,18 @@ import { motion } from 'framer - motion';
                 <motion.div
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   viewport={{ once: true }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 >
@@ -193,18 +192,18 @@ import { motion } from 'framer - motion';
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
             className="border - t border - zion - slate / 30 mt - 12 pt - 8"

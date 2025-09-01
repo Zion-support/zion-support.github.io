@@ -18,11 +18,6 @@ const initialState: WishlistState = {
   ;
   ;
 
-
-
-
-
-
 };
 
 const wishlistSlice:  createSlice({;

@@ -2,7 +2,6 @@ import { Link, useLocation  } from 'react - router - dom.ts';
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 
-
       newExpanded.delete (section) } else {
       newExpanded.add (section) }
     setExpandedSections (newExpanded) };
@@ -90,7 +89,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
               exit={{ x: '-100%' }}
               transition = {
   { duration: 0.3,
-  ease: 'easeOut' 
+  ease: 'easeOut'
 
 }}
               className="fixed left - 0 top - 0 h - full w - 80 bg - zion - slate - dark / 95 backdrop - blur - xl border - r border - zion - cyan / 20 z - 50 lg:hidden overflow - y-auto"
@@ -124,17 +123,17 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
                         key={action.name}
                         initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                         animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                         transition = {
   { duration: 0.3,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                       >
@@ -161,17 +160,17 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
                       key={section.title}
                       initial = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                       transition = {
   { duration: 0.5,
-  delay: sectionIndex * 0.1 
+  delay: sectionIndex * 0.1
 
 }}
                     >
@@ -189,17 +188,17 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
                         {expandedSections.has (section.title) && (<motion.div
                             initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                             animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }}
                             exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                             transition={{ duration: 0.3 }}
@@ -210,17 +209,17 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
                                 key={item.name}
                                 initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                                 animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                                 transition = {
   { duration: 0.2,
-  delay: itemIndex * 0.05 
+  delay: itemIndex * 0.05
 
 }}
                               >

@@ -1,7 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer - motion.ts';
 
-
 interface NewsletterFormData {
 
   email: string;
@@ -56,7 +55,7 @@ const frequencies = [;
       // // // // // // // console.log ('Newsletter subscription:', formData) ;
 
       console.log ('Newsletter subscription: ', formData) ;
-      
+
       setStatus ('success') ;
 
       // Reset form after successful submission
@@ -91,12 +90,12 @@ const frequencies = [;
     return (<motion.div
         initial = {
   { opacity: 0,
-  scale: 0.95 
+  scale: 0.95
 
 }}
         animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
         className="bg - gradient - to - r from - green - 50 to - emerald - 50 dark: from - green - 900 / 20 dark: to - emerald - 900 / 20 rounded - 2xl p - 8 text - center border border - green - 200 dark: border - green - 800"
@@ -122,7 +121,7 @@ const frequencies = [;
           animate={{ scale: 1 }}
           transition = {
   { delay: 0.1, type: "spring",
-  bounce: 0.4 
+  bounce: 0.4
 
 }}
           className="inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - full mb - 4"
@@ -133,12 +132,12 @@ const frequencies = [;
         <motion.h2
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ delay: 0.2 }}
@@ -150,12 +149,12 @@ const frequencies = [;
         <motion.p
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ delay: 0.3 }}
@@ -168,12 +167,12 @@ const frequencies = [;
       <motion.form
         initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
         animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
         transition={{ delay: 0.4 }}
@@ -327,12 +326,12 @@ className: {`w - full py - 4 px - 6 rounded - lg font - semibold text - white tr
         {status === 'error' && (<motion.div
             initial = {
   { opacity: 0,
-  y: 10 
+  y: 10
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             className="p - 4 bg - red - 50 dark: bg - red - 900 / 20 border border - red - 200 dark: border - red - 800 rounded - lg"

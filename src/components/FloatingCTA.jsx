@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 export function FloatingCTA ({
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   variant = 'default',
   position = 'bottom - right',
 }) {

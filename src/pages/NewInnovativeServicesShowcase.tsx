@@ -6,7 +6,6 @@ import {
 import { motion } from 'framer - motion.ts';
 import { NEW_INNOVATIVE_SERVICES_2025 } from '../data / newInnovativeServices2025';
 
-
   Sparkles,
   ArrowRight,
   CheckCircle,

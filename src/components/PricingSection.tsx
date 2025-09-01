@@ -9,7 +9,6 @@ import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: Rea
 import { motion  } from 'framer - motion.ts';
 import { motion } from 'framer - motion';
 
-
  * PricingSection function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -74,16 +73,16 @@ const pricingTiers = [
 
   return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
       <div className="max - w-7xl mx - auto px - 6">
-        <motion.div 
+        <motion.div
           className="text - center mb - 16"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -104,18 +103,18 @@ const pricingTiers = [
               className={`relative ${tier.popular ? 'scale - 105' : ''}`}
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
             >
@@ -145,22 +144,22 @@ const pricingTiers = [
               </motion.div>;) }) }
         </div>
 
-        <motion.div 
+        <motion.div
           className="mt - 16 text - center"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
         >

@@ -5,7 +5,6 @@ export function SkeletonLoader (...args[]) :  {
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Loader2,
   CheckCircle,
   AlertCircle,
@@ -71,7 +70,7 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 }}
               transition = {
   { duration: 3,
-  repeat: Infinity 
+  repeat: Infinity
 
 }}
             />
@@ -83,12 +82,12 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
             className="absolute inset - 0 bg - gradient - to - br from - zion - cyan via - zion - purple to - zion - blue rounded - xl blur - lg opacity - 50"
             animate = {
   { opacity: [0.3, 0.6,
-  0.3] 
+  0.3]
 
 }}
             transition = {
   { duration: 2,
-  repeat: Infinity 
+  repeat: Infinity
 
 }}
           />
@@ -99,12 +98,12 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
           className="text - zion - cyan font - medium"
           animate = {
   { opacity: [0.5, 1,
-  0.5] 
+  0.5]
 
 }}
           transition = {
   { duration: 1.5,
-  repeat: Infinity 
+  repeat: Infinity
 
 }}
         >
@@ -156,7 +155,7 @@ interface PageLoaderProps extends React.PropsWithChildren<{}> {
 }}
             transition = {
   { duration: 4,
-  repeat: Infinity 
+  repeat: Infinity
 
 }}
           />
@@ -171,7 +170,7 @@ interface PageLoaderProps extends React.PropsWithChildren<{}> {
 }}
             transition = {
   { duration: 4, repeat: Infinity,
-  delay: 1 
+  delay: 1
 
 }}
           />
@@ -181,12 +180,12 @@ interface PageLoaderProps extends React.PropsWithChildren<{}> {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.5 }}
@@ -199,7 +198,7 @@ interface PageLoaderProps extends React.PropsWithChildren<{}> {
               animate={{ rotate: 360 }}
               transition = {
   { duration: 1, repeat: Infinity,
-  ease: "linear" 
+  ease: "linear"
 
 }}
             />
@@ -212,12 +211,12 @@ interface PageLoaderProps extends React.PropsWithChildren<{}> {
             className="text - 2xl font - bold text - white mb - 2"
             animate = {
   { opacity: [0.7, 1,
-  0.7] 
+  0.7]
 
 }}
             transition = {
   { duration: 2,
-  repeat: Infinity 
+  repeat: Infinity
 
 }}
           >
@@ -228,12 +227,12 @@ interface PageLoaderProps extends React.PropsWithChildren<{}> {
             className="text - zion - slate - light"
             animate = {
   { opacity: [0.5, 1,
-  0.5] 
+  0.5]
 
 }}
             transition = {
   { duration: 2, repeat: Infinity,
-  delay: 0.5 
+  delay: 0.5
 
 }}
           >
@@ -249,7 +248,7 @@ interface PageLoaderProps extends React.PropsWithChildren<{}> {
                 animate={{ width: "100%" }}
                 transition = {
   { duration: 3,
-  ease: "easeInOut" 
+  ease: "easeInOut"
 
 }}
               />

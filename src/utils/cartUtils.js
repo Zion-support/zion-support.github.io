@@ -17,7 +17,6 @@
   export const calculateCartSubtotal = cart => {
 export const addToCart = (cart, newItem) => {
 
-
                                   itemId,
                                   quantity) => {
                                     /**

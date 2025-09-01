@@ -4,7 +4,6 @@ export function HomePage (...args: any[]) : any {
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Brain,
   Shield,
   Cpu,

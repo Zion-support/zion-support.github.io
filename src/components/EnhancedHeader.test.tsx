@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import EnhancedHeader from './EnhancedHeader';
 
-
 describe ('EnhancedHeader', () => {
   it ('renders without crashing', () => {
     render (<EnhancedHeader />) ;

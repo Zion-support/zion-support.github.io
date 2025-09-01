@@ -4,7 +4,6 @@ export const ThemeToggle: React.FC < ThemeToggleProps> = ({ className = '' }) =>
 export default ThemeToggle;
 import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
 
-
 type Theme = 'dark' | 'light' | 'system';
 
 interface ThemeToggleProps {
@@ -27,7 +26,7 @@ interface ThemeToggleProps {
 
       root.classList.toggle ('dark', theme === 'dark') ;
     }
-    
+
     localStorage.setItem ('theme', theme) ;
   }, [theme, mounted]) ;
 
@@ -84,7 +83,7 @@ interface ThemeToggleProps {
 
     root.classList.remove ('light', 'dark') ;
     root.classList.add (effectiveTheme) ;
-    
+
     // Update CSS custom properties for smooth transitions
     if (effectiveTheme === 'dark') {
       root.style.setProperty ('--zion - bg - primary', '#0f172a') ;
@@ -125,7 +124,7 @@ interface ThemeToggleProps {
         {themes.map ( (themeOption) => {
           const Icon = themeOption.icon;
           const isActive = theme === themeOption.value;
-          
+
           return (<motion.button
               key={themeOption.value}
               onClick={ () => handleThemeChange (themeOption.value) }

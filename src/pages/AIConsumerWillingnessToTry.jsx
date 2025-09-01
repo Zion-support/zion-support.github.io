@@ -2,7 +2,6 @@ import { Helmet } from 'react - helmet - async';
 import React from 'react';
 export default AIConsumerWillingnessToTry;
 
-
 const AIConsumerWillingnessToTry = () => {
   return (<>
       <Helmet>

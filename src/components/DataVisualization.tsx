@@ -3,7 +3,6 @@ export const DataVisualization: React.FC < DataVisualizationProps> = ({
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   BarChart3,
   PieChart,
   TrendingUp,

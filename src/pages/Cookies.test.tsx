@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import Cookies from './Cookies';
 
-
 describe ('Cookies', () => {
   it ('renders without crashing', () => {
     render (<Cookies />) ;

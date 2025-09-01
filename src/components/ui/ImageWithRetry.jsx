@@ -17,22 +17,12 @@ export function ImageWithRetry({ src, fallbackSrc = '/images/image-placeholder.s
   cn('relative inline-block',
   className)
 
-
-
-
-
-
 }>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img loading="lazy" {...props} src={currentSrc} onError={handleError}/>
       {failed && (<button type="button" onClick={handleRetry} className = {
   cn('absolute bottom-1 right-1 text-xs underline',
   retryClassName)
-
-
-
-
-
 
 }>
           Retry

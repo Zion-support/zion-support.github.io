@@ -7,7 +7,6 @@ import SEO from "@/components / SEO";
 export default function Interviews () {
 import { Calendar, Clock, Video import { format, isAfter, parseISO, startOfDay } from "date - fns";
 
-
 function InterviewsContent () {
     const { interviews, isLoading, fetchInterviews } = useInterviews () ;
     const [activeTab, setActiveTab] = useState ("upcoming") ;
@@ -109,7 +108,7 @@ function InterviewsContent () {
           </TabsContent>
         </Tabs>
       </main>
-      
+
     </>) }
     return (<ProtectedRoute>
       <InterviewsContent />

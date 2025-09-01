@@ -23,7 +23,7 @@ export function ITServiceRequestHero(...args[]):  {
 
   const containerVariants = {
   hidden: { opacity: 0,
-  y: 20 
+  y: 20
 
 },
     visible: {
@@ -38,7 +38,7 @@ export function ITServiceRequestHero(...args[]):  {
 
   const itemVariants = {
   hidden: { opacity: 0,
-  y: 20 
+  y: 20
 
 },
     visible: {
@@ -55,7 +55,7 @@ export function ITServiceRequestHero(...args[]):  {
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -137,33 +137,18 @@ export function ITServiceRequestHero() {
           <motion.div
             initial = {
   { opacity: 0,
-  x: 30 
-
-
-
-
-
+  x: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
+  delay: 0.2
 
 }}
             className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8"
@@ -171,7 +156,7 @@ export function ITServiceRequestHero() {
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
               Contact Information
             </h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -182,7 +167,7 @@ export function ITServiceRequestHero() {
                   <p className="text-white font-semibold">+1 302 464 0950</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
                   <span className="text-white text-xl">✉️</span>
@@ -192,7 +177,7 @@ export function ITServiceRequestHero() {
                   <p className="text-white font-semibold">kleber@ziontechgroup.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
                   <span className="text-white text-xl">📍</span>
@@ -202,7 +187,7 @@ export function ITServiceRequestHero() {
                   <p className="text-white font-semibold text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center">
                   <span className="text-white text-xl">🌐</span>

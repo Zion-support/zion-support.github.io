@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X import { useWebhooks } from "@/hooks/useWebhooks";
@@ -161,11 +161,6 @@ export function WebhooksManager() {
                       <Switch aria-label="Toggle webhook" checked={webhook.is_active} onCheckedChange = {
   () => handleToggleStatus(webhook.id,
   webhook.is_active)
-
-
-
-
-
 
 }/>
                       <span className="ml-2 text-sm">

@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import EnhancedAnalytics from './EnhancedAnalytics';
 
-
 describe ('EnhancedAnalytics', () => {
   it ('renders without crashing', () => {
     render (<EnhancedAnalytics />) ;

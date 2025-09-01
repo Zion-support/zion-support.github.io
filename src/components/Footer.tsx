@@ -1,8 +1,7 @@
 import { Link } from 'react - router - dom';
 import React from 'react';
 export /**
-import { 
-
+import {
 
  * Footer function
  * @param {*} params - Function parameters
@@ -10,19 +9,19 @@ import {
  */
 function Footer () {
 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
-  Instagram, 
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
   Youtube,
   Github,
   Zap,
@@ -186,7 +185,7 @@ function Footer () {
       {/* Main Footer Content */}
       <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12">
         <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
-          
+
           {/* Company Info */}
           <div role="button" className="space - y-4">
             <div role="button" className="flex items - center space - x-2">
@@ -196,7 +195,7 @@ function Footer () {
               <span className="text - xl font - bold text - white">Zion Tech Group</span>
             </div>
             <p className="text - zion - slate - light text - sm leading - relaxed">
-              Leading provider of innovative AI, IT, and Micro SAAS solutions. 
+              Leading provider of innovative AI, IT, and Micro SAAS solutions.
               Transforming businesses through cutting - edge technology and expert consulting.
             </p>
             <div role="button" className="flex space - x-4">
@@ -287,7 +286,7 @@ function Footer () {
                 <p className="text - white font - medium">+1 302 464 0950</p>
               </div>
             </div>
-            
+
             <div role="button" className="flex items - center space - x-3">
               <div role="button" className="w - 10 h - 10 bg - zion - purple / 20 rounded - lg flex items - center justify - center">
                 <Mail className="w - 5 h - 5 text - zion - cyan" />
@@ -297,7 +296,7 @@ function Footer () {
                 <p className="text - white font - medium">kleber@ziontechgroup.com</p>
               </div>
             </div>
-            
+
             <div role="button" className="flex items - center space - x-3">
               <div role="button" className="w - 10 h - 10 bg - zion - purple / 20 rounded - lg flex items - center justify - center">
                 <MapPin className="w - 5 h - 5 text - zion - cyan" />
@@ -322,7 +321,7 @@ function Footer () {
                 <li><Link to="/webinars" className="hover:text - zion - cyan transition - colors">Webinars</Link></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text - zion - cyan font - medium mb - 3">Support</h4>
               <ul className="space - y-2 text - zion - slate - light">
@@ -332,7 +331,7 @@ function Footer () {
                 <li><Link to="/faq" className="hover:text - zion - cyan transition - colors">FAQ</Link></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text - zion - cyan font - medium mb - 3">Legal</h4>
               <ul className="space - y-2 text - zion - slate - light">
@@ -342,7 +341,7 @@ function Footer () {
                 <li><Link to="/compliance" className="hover:text - zion - cyan transition - colors">Compliance</Link></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text - zion - cyan font - medium mb - 3">Connect</h4>
               <ul className="space - y-2 text - zion - slate - light">
@@ -365,7 +364,7 @@ function Footer () {
               <span className="hidden md:inline">•</span>
               <span className="hidden md:inline">Empowering Innovation</span>
             </div>
-            
+
             <div role="button" className="flex items - center space - x-6 text - sm">
               <Link to="/sitemap" className="text - zion - slate - light hover:text - zion - cyan transition - colors">Sitemap</Link>
               <Link to="/accessibility" className="text - zion - slate - light hover:text - zion - cyan transition - colors">Accessibility</Link>

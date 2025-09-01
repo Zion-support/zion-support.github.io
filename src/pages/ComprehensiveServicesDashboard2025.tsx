@@ -5,7 +5,6 @@ import {
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Search,
   Filter,
   TrendingUp,

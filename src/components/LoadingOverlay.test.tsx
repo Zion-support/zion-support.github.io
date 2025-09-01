@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import LoadingOverlay from './LoadingOverlay';
 
-
 describe ('LoadingOverlay', () => {
   it ('renders without crashing', () => {
     render (<LoadingOverlay />) ;

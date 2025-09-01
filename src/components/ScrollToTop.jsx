@@ -11,7 +11,6 @@ export function ScrollToTop () {
 export function ScrollToTop = () => {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   const [isVisible, setIsVisible] = useState (false) ;
 
   useEffect ( () => {
@@ -64,22 +63,22 @@ import { motion, AnimatePresence } from 'framer - motion';
           aria - label="Scroll to top"
           initial = {
   { opacity: 0, scale: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1, scale: 1,
-  y: 0 
+  y: 0
 
 }}
           exit = {
   { opacity: 0, scale: 0,
-  y: 20 
+  y: 20
 
 }}
           whileHover = {
-  { 
-            scale: 1.1, 
+  {
+            scale: 1.1,
             y: -2,
             boxShadow: "0 20px 25px - 5px rgba (59, 130, 246, 0.3) , 0 10px 10px - 5px rgba (59, 130, 246,
   0.2) ";

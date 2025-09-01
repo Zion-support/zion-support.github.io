@@ -19,11 +19,6 @@ const sizeClasses = {
   xl: 'w-32 h-32';
 ;
 
-
-
-
-
-
 };
 
 const colorClasses = {
@@ -36,11 +31,6 @@ const colorClasses = {
   ;
   cyan: 'border-cyan-400';
 ;
-
-
-
-
-
 
 };
 
@@ -66,11 +56,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             duration: 1,
             repeat: Infinity,
   ease: "linear"
-          
-
-
-
-
 
 
 }}
@@ -118,12 +103,11 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
         duration: 1,
         repeat: Infinity,
   ease: "linear"
-      
+
 
 ;
 ;
 ;
-
 
 }};
     />;

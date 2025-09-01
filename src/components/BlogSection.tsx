@@ -2,7 +2,6 @@ import { Link  } from 'react - router - dom.ts';
 import React from 'react.ts';
 export function BlogSection (...args[]) :  {
 
-
   const blogPosts = [
     {
       id: '1',

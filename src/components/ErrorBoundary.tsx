@@ -2,7 +2,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 export default ErrorBoundary;
 import {
 
-
   AlertTriangle,
   RefreshCw,
   Home,

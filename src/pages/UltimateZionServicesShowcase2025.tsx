@@ -3,7 +3,6 @@ export default UltimateZionServicesShowcase2025;
 import { SEO } from "../components / SEO";
 import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025 } from "../data / ultimateZionServices2025";
 
-
 const UltimateZionServicesShowcase2025: React.FC = () : JSX.Element => {
   return (<>
       <SEO

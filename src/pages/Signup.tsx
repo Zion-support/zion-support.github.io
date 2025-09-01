@@ -4,7 +4,6 @@ export default Signup;
 import {
 import { motion } from 'framer - motion';
 
-
   User,
   Mail,
   Lock,

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 export default React.memo (function RequestQuote () {
-import { 
+import {
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
-
-  Calculator, 
-  FileText, 
-  Clock, 
-  CheckCircle, 
+  Calculator,
+  FileText,
+  Clock,
+  CheckCircle,
   AlertCircle,
   Building2,
   Users,
@@ -320,10 +319,10 @@ import { SEO } from '../components / SEO';
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault () ;
     setSubmitting (true) ;
-    
+
     // Simulate API call
     await new Promise (resolve => setTimeout (resolve, 2000) ) ;
-    
+
     setSubmitting (false) ;
     setSubmitted (true) ;
   };
@@ -350,11 +349,11 @@ import { SEO } from '../components / SEO';
 
   if (submitted) {
     return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex items - center justify - center">
-        <SEO 
+        <SEO
           title="Quote Requested - Zion Tech Group"
           description="Thank you for your quote request. We'll get back to you soon with a detailed proposal."
         />
-        
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -364,17 +363,17 @@ import { SEO } from '../components / SEO';
           <div role="button" className="inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - r from - green - 500 / 20 to - blue - 500 / 20 rounded - full mb - 8">
             <CheckCircle className="w - 10 h - 10 text - green - 400" />
           </div>
-          
+
           <h1 className="text - 4xl font - bold text - white mb - 6">
             Quote Request Submitted!
           </h1>
-          
+
           <p className="text - xl text - gray - 300 mb - 8 leading - relaxed">
-            Thank you for your interest in Zion Tech Group. Our team has received your 
-            request and will review it carefully. You can expect a detailed proposal 
+            Thank you for your interest in Zion Tech Group. Our team has received your
+            request and will review it carefully. You can expect a detailed proposal
             within 24 - 48 hours.
           </p>
-          
+
           <div role="button" className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 50 rounded - xl p - 6 border border - slate - 600 / 50 mb - 8">
             <h3 className="text - lg font - semibold text - white mb - 4">What happens next?</h3>
             <div role="button" className="space - y-3 text - left">
@@ -401,7 +400,7 @@ import { SEO } from '../components / SEO';
               </div>
             </div>
           </div>
-          
+
           <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
             <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={resetForm}
               className="px - 8 py - 3 bg - gradient - to - r from - green - 400 to - blue - 500 text - white font - semibold rounded - lg hover:from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105"
@@ -420,11 +419,11 @@ import { SEO } from '../components / SEO';
   }
 
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="Request Quote - Zion Tech Group"
         description="Get a custom quote for your technology project. Our team will provide detailed pricing and timelines for your specific needs."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py - 20 overflow - hidden">
         <div role="button" className="absolute inset - 0 bg - gradient - to - r from - green - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10"></div>
@@ -442,7 +441,7 @@ import { SEO } from '../components / SEO';
               Get Your < span className="bg - gradient - to - r from - green - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">Custom Quote</span>
             </h1>
             <p className="text - xl text - gray - 300 max - w-3xl mx - auto leading - relaxed">
-              Tell us about your project and we'll provide a detailed quote with pricing, 
+              Tell us about your project and we'll provide a detailed quote with pricing,
               timeline, and implementation plan tailored to your specific needs.
             </p>
           </motion.div>
@@ -487,8 +486,8 @@ import { SEO } from '../components / SEO';
                   <div role="button" className="flex items - center justify - between mb - 8">
                     {[1, 2, 3].map ( (step) => (<div role="button" key={step} className="flex items - center">
                         <div role="button" className={`w - 10 h - 10 rounded - full flex items - center justify - center font - bold text - sm ${
-                          formStep >= step 
-                            ? 'bg - gradient - to - r from - green - 400 to - blue - 500 text - white' 
+                          formStep >= step
+                            ? 'bg - gradient - to - r from - green - 400 to - blue - 500 text - white'
                             : 'bg - slate - 700 text - gray - 400'
                         }`}>
                           {step}
@@ -508,7 +507,7 @@ import { SEO } from '../components / SEO';
                         className="space - y-6"
                       >
                         <h3 className="text - 2xl font - bold text - white mb - 6">Basic Information</h3>
-                        
+
                         <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">
                           <div>
                             <label className="block text - white font - medium mb - 2">Company Name *</label>
@@ -521,7 +520,7 @@ import { SEO } from '../components / SEO';
                               placeholder="Your company name"
                             />
                           </div>
-                          
+
                           <div>
                             <label className="block text - white font - medium mb - 2">Contact Name *</label>
                             <input
@@ -547,7 +546,7 @@ import { SEO } from '../components / SEO';
                               placeholder="your.email@company.com"
                             />
                           </div>
-                          
+
                           <div>
                             <label className="block text - white font - medium mb - 2">Phone</label>
                             <input
@@ -572,7 +571,7 @@ import { SEO } from '../components / SEO';
                               {companySizes.map ( (size) => (<option key={size} value={size}>{size}</option>) ) }
                             </select>
                           </div>
-                          
+
                           <div>
                             <label className="block text - white font - medium mb - 2">Industry</label>
                             <select
@@ -595,7 +594,7 @@ import { SEO } from '../components / SEO';
                         className="space - y-6"
                       >
                         <h3 className="text - 2xl font - bold text - white mb - 6">Project Details</h3>
-                        
+
                         <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">
                           <div>
                             <label className="block text - white font - medium mb - 2">Project Type</label>
@@ -608,7 +607,7 @@ import { SEO } from '../components / SEO';
                               {projectTypes.map ( (type) => (<option key={type} value={type}>{type}</option>) ) }
                             </select>
                           </div>
-                          
+
                           <div>
                             <label className="block text - white font - medium mb - 2">Budget Range</label>
                             <select
@@ -634,7 +633,7 @@ import { SEO } from '../components / SEO';
                               {timelines.map ( (timeline) => (<option key={timeline} value={timeline}>{timeline}</option>) ) }
                             </select>
                           </div>
-                          
+
                           <div>
                             <label className="block text - white font - medium mb - 2">Urgency Level</label>
                             <select
@@ -670,7 +669,7 @@ import { SEO } from '../components / SEO';
                         className="space - y-6"
                       >
                         <h3 className="text - 2xl font - bold text - white mb - 6">Services & Preferences</h3>
-                        
+
                         <div>
                           <label className="block text - white font - medium mb - 4">Select Services (Optional) </label>
                           <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">
@@ -744,7 +743,7 @@ import { SEO } from '../components / SEO';
                         >
                           Previous
                         </button>) }
-                      
+
                       <div role="button" className="ml - auto">
                         {formStep < 3 ? (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                             onClick={nextStep}
@@ -776,7 +775,7 @@ import { SEO } from '../components / SEO';
                     <p className="text - gray - 300 text - sm mb - 4">
                       Explore our comprehensive range of technology services and solutions.
                     </p>
-                    
+
                     <div role="button" className="space - y-3">
                       {services.map ( (service) => (<div role="button" key={service.id} className="border border - slate - 600 / 50 rounded - lg overflow - hidden">
                           <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleServiceExpansion (service.id) }
@@ -790,7 +789,7 @@ import { SEO } from '../components / SEO';
                               {expandedService === service.id ? (<ChevronUp className="w - 4 h - 4 text - gray - 400" />) : (<ChevronDown className="w - 4 h - 4 text - gray - 400" />) }
                             </div>
                           </button>
-                          
+
                           {expandedService === service.id && (<motion.div
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: 'auto' }}
@@ -865,10 +864,10 @@ import { SEO } from '../components / SEO';
               Need Immediate Assistance?
             </h2>
             <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">
-              Our team is here to help. Contact us directly for urgent inquiries 
+              Our team is here to help. Contact us directly for urgent inquiries
               or to discuss your project in detail.
             </p>
-            
+
             <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
               <div role="button" className="text - center">
                 <div role="button" className="inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r from - blue - 500 / 20 to - purple - 500 / 20 rounded - xl mb - 4">
@@ -883,7 +882,7 @@ import { SEO } from '../components / SEO';
                   info@ziontechgroup.com
                 </a>
               </div>
-              
+
               <div role="button" className="text - center">
                 <div role="button" className="inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r from - green - 500 / 20 to - blue - 500 / 20 rounded - xl mb - 4">
                   <Phone className="w - 8 h - 8 text - green - 400" />
@@ -897,7 +896,7 @@ import { SEO } from '../components / SEO';
                   +1 (302) 464 - 0950
                 </a>
               </div>
-              
+
               <div role="button" className="text - center">
                 <div role="button" className="inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - xl mb - 4">
                   <Headphones className="w - 8 h - 8 text - purple - 400" />

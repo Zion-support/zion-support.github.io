@@ -3,7 +3,6 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
 export default UIEnhancer;
 import { motion, AnimatePresence } from 'framer - motion';
 
-
     const [theme, setTheme] = useState ('dark') ;
     const [isParticleMode, setIsParticleMode] = useState (enableParticles) ;
     const [showScrollToTop, setShowScrollToTop] = useState (false) ;
@@ -81,11 +80,11 @@ import { motion, AnimatePresence } from 'framer - motion';
           {/* Device Indicator */}
           <motion.div initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - cyan - 500 rounded - full shadow - lg flex items - center justify - center text - white text - xs font - bold" title={`Current device: ${deviceType}`}>
             {deviceType === 'mobile' ? '📱' : deviceType === 'tablet' ? '📱' : '💻'}
@@ -96,15 +95,15 @@ import { motion, AnimatePresence } from 'framer - motion';
       <AnimatePresence>
         {showScrollToTop && enableScrollEffects && (<motion.button initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} exit = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} onClick={scrollToTop} className="fixed bottom - 4 left - 20 z - 40 w - 12 h - 12 bg - blue - 600 hover:bg - blue - 700 text - white rounded - full shadow - lg transition - all duration - 300 hover:shadow - xl hover:scale - 110" title="Scroll to top">
             <svg className="w - 6 h - 6 mx - auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,11 +153,11 @@ import { motion, AnimatePresence } from 'framer - motion';
       {/* UI Enhancement Panel */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className="fixed top - 4 right - 20 z - 40 bg - white / 10 dark:bg - slate - 800 / 50 backdrop - blur - sm rounded - lg p - 3 border border - white / 20 dark:border - slate - 700 / 50">
         <div className="flex items - center space - x-3 text - sm text - white">

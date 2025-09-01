@@ -4,7 +4,6 @@ import {
 import { COMPREHENSIVE_PRICING_GUIDE_2031 } from '../data / comprehensivePricingGuide2031';
 import { motion } from 'framer - motion';
 
-
   CheckCircle,
   X,
   Star,

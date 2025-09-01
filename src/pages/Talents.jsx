@@ -2,7 +2,6 @@ import { Helmet } from 'react - helmet - async';
 import React from 'react';
 export default Talents;
 
-
 const Talents = () => {
   return (<>
       <Helmet>

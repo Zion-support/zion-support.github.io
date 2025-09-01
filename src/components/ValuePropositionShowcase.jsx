@@ -3,7 +3,6 @@ export function ValuePropositionShowcase () {
 import {
 import { motion } from 'framer - motion';
 
-
   TrendingUp,
   Target,
   Award,
@@ -142,7 +141,7 @@ const successStories = [
 
   const itemVariants = {
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {
@@ -156,7 +155,7 @@ const successStories = [
 
   const cardVariants = {
   hidden: { scale: 0.95,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {
@@ -175,12 +174,12 @@ const successStories = [
           className="text - center mb - 16"
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.6 }}

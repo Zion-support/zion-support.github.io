@@ -91,11 +91,6 @@ export function FilterSidebar({
   (e) => onFilterChange(group.key, option.value,
   e.target.checked)
 
-
-
-
-
-
 }
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus: ring-zion-cyan focus: ring-2"
                       />

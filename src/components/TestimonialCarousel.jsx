@@ -3,7 +3,6 @@ export function TestimonialCarousel () {
 import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight const testimonials = [;
 import { motion, AnimatePresence } from 'framer - motion';
 
-
     {
         id: 1,
         name: 'Sarah Johnson',
@@ -100,11 +99,11 @@ import { motion, AnimatePresence } from 'framer - motion';
         {/* Header */}
         <motion.div className="text - center mb - 16" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">
@@ -121,16 +120,16 @@ import { motion, AnimatePresence } from 'framer - motion';
             <motion.div key={currentIndex} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit" transition = {
   {
             x: { type: "spring", stiffness: 300,
-  damping: 30 
+  damping: 30
 
 },
             opacity: { duration: 0.2 }
         }} drag="x" dragConstraints = {
   { left: 0,
-  right: 0 
+  right: 0
 
 }} dragElastic={1} onDragEnd = { (e, { offset,
-  velocity 
+  velocity
 
 }) => {
             const swipe = swipePower (offset.x, velocity.x) ;
@@ -208,15 +207,15 @@ import { motion, AnimatePresence } from 'framer - motion';
         {/* Stats section */}
         <motion.div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 mt - 16 max - w-4xl mx - auto" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}>
           <div className="text - center p - 4 rounded - xl bg - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 20">

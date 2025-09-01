@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import ProjectManagementTimeline from './ProjectManagementTimeline';
 
-
 describe ('ProjectManagementTimeline', () => {
   it ('renders without crashing', () => {
     render (<ProjectManagementTimeline />) ;

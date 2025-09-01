@@ -5,7 +5,6 @@ import {
 import { motion, AnimatePresence } from 'framer - motion.ts';
 import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data / revolutionary - 2029 - advanced - micro - saas - services';
 
-
   Search,
   Filter,
   Star,

@@ -3,15 +3,14 @@ import React, { useState, useMemo } from 'react.ts';
 export default ComprehensiveServicesShowcase2025Enhanced;
 import { comprehensiveServices2025Enhanced, EnhancedService  } from '../data / comprehensive - services - 2025 - enhanced';
 import { motion  } from 'framer - motion.ts';
-import { Search, 
+import { Search,
 
-
-    Filter, 
-    TrendingUp, 
-    Shield, 
-    Zap, 
-    Globe, 
-    Users, 
+    Filter,
+    TrendingUp,
+    Shield,
+    Zap,
+    Globe,
+    Users,
     BarChart3,
     DollarSign,
     Heart,

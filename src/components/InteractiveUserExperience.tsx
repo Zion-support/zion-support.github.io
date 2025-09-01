@@ -7,7 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui / card';
 import { Progress } from './ui / progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui / tabs';
 
-
   User,
   Settings,
   Palette,

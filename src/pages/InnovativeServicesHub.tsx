@@ -3,7 +3,6 @@ export default InnovativeServicesHub;}}}}}}}
 import {
 import { motion } from 'framer - motion';
 
-
   Rocket,
   Brain,
   Zap,
@@ -121,7 +120,7 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
 
   const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {;
@@ -147,17 +146,17 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
             className="text - 5xl md:text - 7xl font - bold text - white mb - 6"
             initial = {
   { y: -50,
-  opacity: 0 
+  opacity: 0
 
 }}
             animate = {
   { y: 0,
-  opacity: 1 
+  opacity: 1
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
           >
@@ -167,17 +166,17 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
             className="text - xl md:text - 2xl text - indigo - 100 max - w-4xl mx - auto mb - 8"
             initial = {
   { y: 50,
-  opacity: 0 
+  opacity: 0
 
 }}
             animate = {
   { y: 0,
-  opacity: 1 
+  opacity: 1
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4
 
 }}
           >
@@ -187,17 +186,17 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
             className="flex flex - wrap justify - center gap - 4 text - sm"
             initial = {
   { scale: 0.8,
-  opacity: 0 
+  opacity: 0
 
 }}
             animate = {
   { scale: 1,
-  opacity: 1 
+  opacity: 1
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.6 
+  delay: 0.6
 
 }}
           >
@@ -222,17 +221,17 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
         className="container mx - auto px - 4 py - 16"
         initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
         animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
         transition = {
   { duration: 0.6,
-  delay: 0.8 
+  delay: 0.8
 
 }}
       >
@@ -281,7 +280,7 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
                 variants={itemVariants}
                 whileHover = {
   { y: -5,
-  scale: 1.02 
+  scale: 1.02
 
 }}
               >
@@ -360,22 +359,22 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
               className="bg - slate - 800 / 50 backdrop - blur - sm rounded - 2xl p - 6 border border - slate - 700 / 50 hover:border - blue - 500 / 50 transition - all duration - 300"
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 1.4 + index * 0.1 
+  delay: 1.4 + index * 0.1
 
 }}
               whileHover = {
   { y: -5,
-  scale: 1.02 
+  scale: 1.02
 
 }}
             >

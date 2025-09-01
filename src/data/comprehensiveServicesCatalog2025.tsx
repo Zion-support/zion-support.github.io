@@ -122,9 +122,6 @@ export const calculateServiceStats = () => {
         if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
         if (tier.id === 'enterprise') return service.price > 5000;
         return false;
-      
-
-
 
 
 }).length

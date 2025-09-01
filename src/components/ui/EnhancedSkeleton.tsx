@@ -34,11 +34,6 @@ variant:  'default',;
   card: 'w-full h-32 rounded-lg';
   ;
 
-
-
-
-
-
 };
 
   const skeletonClasses = cn(;
@@ -60,21 +55,11 @@ variant:  'default',;
   index === lines - 1 ? 'w-3/4' : 'w-full'
             )
 
-
-
-
-
-
 }
             initial={animated ? { opacity: 0.5 } : {}}
             animate = {
   animated ? { opacity: [0.5, 1,
-  0.5] 
-
-
-
-
-
+  0.5]
 
 } : {}}
             transition = {
@@ -83,12 +68,11 @@ variant:  'default',;
               repeat: Infinity,
               ease: 'easeInOut',
   delay: index * 0.1
-            
+
 
 ;
 ;
 ;
-
 
 }};
           />;
@@ -108,12 +92,7 @@ variant:  'default',;
       initial={animated ? { opacity: 0.5 } : {}}
       animate = {
   animated ? { opacity: [0.5, 1,
-  0.5] 
-
-
-
-
-
+  0.5]
 
 } : {}}
       transition = {
@@ -125,9 +104,6 @@ variant:  'default',;
 ;
 ;
 
-
-
-
 }};
     />;
   );
@@ -138,11 +114,6 @@ export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) =>
   <div className = {
   cn('p-6 space-y-4',
   className)
-
-
-
-
-
 
 }>
     <Skeleton variant="rectangular" height={24} width="60%" />
@@ -163,11 +134,6 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
   <div className = {
   cn('space-y-3',
   className)
-
-
-
-
-
 
 }>
     {/* Header */}
@@ -195,11 +161,6 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   cn('space-y-4',
   className)
 
-
-
-
-
-
 }>
     {Array.from({ length: items }).map((_, index) => (
       <div key={index} className="flex items-center space-x-4">
@@ -226,11 +187,6 @@ export const GridSkeleton: React.FC<{
   <div className = {
   cn('grid gap-4',
   className)
-
-
-
-
-
 
 } style={{
     gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`

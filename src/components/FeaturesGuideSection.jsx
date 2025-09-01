@@ -1,7 +1,6 @@
 import React from 'react';
 export function FeaturesGuideSection () {
 
-
     const features = [
         {
             title: 'AI Talent Marketplace',

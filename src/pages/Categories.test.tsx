@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import Categories from './Categories';
 
-
 describe ('Categories', () => {
   it ('renders without crashing', () => {
     render (<Categories />) ;

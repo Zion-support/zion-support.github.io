@@ -3,7 +3,6 @@ export function NewsletterSection () {
 import {
 import { motion } from 'framer - motion';
 
-
   Mail,
   Send,
   CheckCircle,

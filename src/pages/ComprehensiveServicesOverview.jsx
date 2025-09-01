@@ -10,7 +10,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 export default function ComprehensiveServicesOverview () {
 import { motion } from 'framer - motion';
 
-
 // Combine all services
 const ALL_SERVICES = [
     ...ENHANCED_INNOVATIVE_SERVICES,
@@ -214,11 +213,11 @@ const supportLevelColors = {
               </div>) : (<div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">
                 {filteredServices.map ( (service, index) => (<motion.div key={service.id} initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} transition={{ delay: index * 0.05 }}>
                     <Card className="bg - white / 5 backdrop - blur - lg border - white / 10 hover:bg - white / 10 transition - all duration - 300 group">

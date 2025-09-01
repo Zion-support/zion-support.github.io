@@ -1,35 +1,34 @@
 import { Link, useSearchParams } from 'react - router - dom';
 import React, { useState, useEffect, useMemo } from 'react';
 export default React.memo (function SearchPage () {
-import { 
+import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
-  Search, 
-  Filter, 
-  X, 
-  ArrowRight, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Users, 
-  Building, 
-  Target, 
-  Rocket, 
-  TrendingUp as TrendingUpIcon, 
-  Award, 
-  Activity, 
-  CheckCircle, 
-  AlertCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ExternalLink, 
-  HelpCircle, 
-  Lightbulb, 
-  Info, 
-  AlertTriangle, 
+  Search,
+  Filter,
+  X,
+  ArrowRight,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Users,
+  Building,
+  Target,
+  Rocket,
+  TrendingUp as TrendingUpIcon,
+  Award,
+  Activity,
+  CheckCircle,
+  AlertCircle,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  HelpCircle,
+  Lightbulb,
+  Info,
+  AlertTriangle,
   Tag,
   Bookmark,
   Share2,
@@ -231,19 +230,19 @@ interface SearchResult {
 
   const performSearch = async () => {
     setIsSearching (true) ;
-    
+
     // Simulate API call delay
     await new Promise (resolve => setTimeout (resolve, 800) ) ;
-    
+
     let filtered = mockSearchResults.filter (result => {
       const matchesQuery = result.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                           result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                           result.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ;
-      
-      const matchesFilters = selectedFilters.size === 0 || 
+
+      const matchesFilters = selectedFilters.size === 0 ||
                            selectedFilters.has (result.category.toLowerCase () .replace (/\s+/g, '-') ) ||
                            selectedFilters.has (result.type) ;
-      
+
       return matchesQuery && matchesFilters;
     }) ;
 
@@ -331,7 +330,7 @@ interface SearchResult {
 
   // Calculate filter counts
   filterOptions.forEach (filter => {
-    filter.count = mockSearchResults.filter (result => 
+    filter.count = mockSearchResults.filter (result =>
       result.category.toLowerCase () .replace (/\s+/g, '-') === filter.id ||
       result.type === filter.id) .length;
   }) ;
@@ -463,15 +462,15 @@ interface SearchResult {
                       </div>
                       {result.featured && (<Star className="w - 5 h - 5 text - yellow - 400" />) }
                     </div>
-                    
+
                     <h3 className="text - lg font - semibold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">
                       {result.title}
                     </h3>
-                    
+
                     <p className="text - sm text - slate - 400 mb - 4 group - hover:text - slate - 300 transition - colors">
                       {result.description}
                     </p>
-                    
+
                     <div role="button" className="flex items - center justify - between">
                       <span className="text - xs text - slate - 500 bg - slate - 700 / 50 px - 2 py - 1 rounded">
                         {result.category}

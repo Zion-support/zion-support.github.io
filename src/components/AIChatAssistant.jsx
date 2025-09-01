@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
   import {
 export function AIChatAssistant () {
 
-
     MessageCircle,
     Mic,
     MicOff,

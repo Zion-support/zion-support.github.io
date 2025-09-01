@@ -1,11 +1,10 @@
 import { Link } from 'react - router - dom';
-import React from 'react';
+import React, { useState } from 'react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 export default function DigitalMarketingServicesPage () {
 import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Users, Globe, Eye, Video, MessageSquare, Zap, Monitor, ShoppingCart const MarketingServices = [;
-
 
     {
         title: "Search Engine Optimization (SEO) ",

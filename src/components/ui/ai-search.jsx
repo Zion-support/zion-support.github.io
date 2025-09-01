@@ -108,7 +108,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                     verified: true,
                     featured: true
 
-
         ];
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 800));
@@ -209,30 +208,15 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         {/* Clear Button */}
         {query && (<motion.button initial = {
   { opacity: 0,
-  scale: 0.8 
-
-
-
-
-
+  scale: 0.8
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
-
-
-
-
-
+  scale: 1
 
 }} exit = {
   { opacity: 0,
-  scale: 0.8 
-
-
-
-
-
+  scale: 0.8
 
 }} onClick={() => {
                 setQuery('');
@@ -247,39 +231,19 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
       <AnimatePresence>
         {isOpen && (<motion.div className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl shadow-2xl z-50 max-h-96 overflow-hidden" initial = {
   { opacity: 0, y: -10,
-  scale: 0.95 
-
-
-
-
-
+  scale: 0.95
 
 }} animate = {
   { opacity: 1, y: 0,
-  scale: 1 
-
-
-
-
-
+  scale: 1
 
 }} exit = {
   { opacity: 0, y: -10,
-  scale: 0.95 
-
-
-
-
-
+  scale: 0.95
 
 }} transition = {
   { duration: 0.2,
-  ease: "easeOut" 
-
-
-
-
-
+  ease: "easeOut"
 
 }}>
             {/* Header */}
@@ -308,30 +272,15 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
             <AnimatePresence>
               {showFilters && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {
   { height: 0,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 }} animate = {
   { height: 'auto',
-  opacity: 1 
-
-
-
-
-
+  opacity: 1
 
 }} exit = {
   { height: 0,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 }} transition={{ duration: 0.2 }}>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -341,10 +290,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
   (e) => {
                     const selected = Array.from(e.target.selectedOptions, option => option.value);
                     setFilters(prev => ({ ...prev,
-  category: selected 
-
-
-
+  category: selected
 
 }));
                 }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
@@ -360,12 +306,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                       <label className="text-zinc-300 text-sm font-medium">Min Rating</label>
                       <select value={filters.rating} onChange = {
   (e) => setFilters(prev => ({ ...prev,
-  rating: Number(e.target.value) 
-
-
-
-
-
+  rating: Number(e.target.value)
 
 }))} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                         <option value={0}>Any Rating</option>
@@ -380,12 +321,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                       <div className="mt-1">
                         <input type="checkbox" checked={filters.verified} onChange = {
   (e) => setFilters(prev => ({ ...prev,
-  verified: e.target.checked 
-
-
-
-
-
+  verified: e.target.checked
 
 }))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"/>
                       </div>
@@ -396,12 +332,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                       <div className="mt-1">
                         <input type="checkbox" checked={filters.featured} onChange = {
   (e) => setFilters(prev => ({ ...prev,
-  featured: e.target.checked 
-
-
-
-
-
+  featured: e.target.checked
 
 }))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"/>
                       </div>
@@ -424,9 +355,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                         setQuery(search);
                         performSearch(search,
   filters);
-                    
-
-
 
 
 }} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white">
@@ -447,9 +375,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                         setQuery(suggestion);
                         performSearch(suggestion,
   filters);
-                    
-
-
 
 
 }} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white flex items-center justify-between group">

@@ -111,7 +111,7 @@ export const AccessibilityProvider = ({ children }) => {
         toggleLargeText,
         focusTrap,
         announceToScreenReader,
-  
+
 
 };
     return (<AccessibilityContext.Provider value={value}>

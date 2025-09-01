@@ -5,7 +5,6 @@ import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from "../data / advancedMicroSaasSe
 import { SEO } from "../components / SEO";
 import { SPECIALIZED_IT_SERVICES_2025 } from "../data / specializedITServices2025";
 
-
 const AdvancedServicesShowcase2025: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
   const [searchTerm, setSearchTerm] = useState < string> ('') ;
@@ -30,7 +29,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
   ];
 
   return (<div role="button" className = "min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="Advanced Services Showcase 2025 - Zion Tech Group"
         description="Explore our comprehensive portfolio of advanced micro SaaS, IT services, and AI solutions designed for the future of business technology."
       />

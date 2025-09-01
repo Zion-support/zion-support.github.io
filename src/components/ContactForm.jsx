@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 export default ContactForm;
 import { Button } from "./ui / Button";
 
-
 const ContactForm = () => {
     const [formData, setFormData] = useState ({
         firstName: '',

@@ -1,22 +1,21 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 export /**
-import { 
+import {
 import { motion, AnimatePresence } from 'framer - motion';
-
 
  * AdvancedAnalytics function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */
-function AdvancedAnalytics ({ 
+function AdvancedAnalytics ({
 
-  BarChart3, 
-  TrendingUp, 
-  Users, 
-  Eye, 
-  MousePointer, 
-  Clock, 
-  TrendingUp, 
+  BarChart3,
+  TrendingUp,
+  Users,
+  Eye,
+  MousePointer,
+  Clock,
+  TrendingUp,
   TrendingDown,
   Activity,
   Zap,
@@ -66,7 +65,7 @@ interface AdvancedAnalyticsProps {
   enableAITesting?: boolean;
 }
 
-  enabled, 
+  enabled,
   trackingId,
   enableHeatmap = false,
   enableSessionRecording = false,
@@ -101,7 +100,7 @@ interface AdvancedAnalyticsProps {
   const [currentPage, setCurrentPage] = useState < string> (window.location.pathname) ;
   const [userSession, setUserSession] = useState < string> ('') ;
   const [heatmapData, setHeatmapData] = useState < Array<{ x: number; y: number; type: 'click' | 'scroll' | 'hover' }>> ([]) ;
-  
+
   const trackingRef = useRef<{
     pageViews: number;
     clicks: number;
@@ -130,7 +129,7 @@ interface AdvancedAnalyticsProps {
 
     setCurrentPage (path) ;
     trackingRef.current.pageViews++;
-    
+
     const pageViewData = {
       sessionId: userSession,
       path,
@@ -145,7 +144,7 @@ interface AdvancedAnalyticsProps {
 
     // Send to analytics service
     this.sendAnalyticsData ('pageview', pageViewData) ;
-    
+
     // Update local state
     setAnalyticsData (prev => ({
       ...prev,
@@ -191,7 +190,7 @@ interface AdvancedAnalyticsProps {
       ...prev,
       interactions: {
         ...prev.interactions,
-        [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]: 
+        [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]:
           prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
       }
     }) ) ;
@@ -205,7 +204,7 @@ interface AdvancedAnalyticsProps {
     if ('performance' in window) {
       const navigation = performance.getEntriesByType ('navigation') [0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType ('paint') ;
-      
+
       const performanceData = {
         sessionId: userSession,
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
@@ -246,9 +245,9 @@ interface AdvancedAnalyticsProps {
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const position = { x: e.clientX, y: e.clientY };
-      
+
       trackInteraction ('click', { target, position }) ;
-      
+
       // Add to heatmap data
       if (enableHeatmap) {
         setHeatmapData (prev => [...prev, { x: position.x, y: position.y, type: 'click' }]) ;
@@ -260,9 +259,9 @@ interface AdvancedAnalyticsProps {
     const handleScroll = () => {
       clearTimeout (scrollTimeout) ;
       scrollTimeout = setTimeout ( () => {
-        trackInteraction ('scroll', { 
-          scrollY: window.scrollY, 
-          scrollHeight: document.documentElement.scrollHeight 
+        trackInteraction ('scroll', {
+          scrollY: window.scrollY,
+          scrollHeight: document.documentElement.scrollHeight
         }) ;
       }, 100) ;
     };
@@ -270,7 +269,7 @@ interface AdvancedAnalyticsProps {
     // Setup form submission tracking
     const handleFormSubmit = (e: Event) => {
       const form = e.target as HTMLFormElement;
-      trackInteraction ('form', { 
+      trackInteraction ('form', {
         formId: form.id || form.className,
         formAction: form.action,
         formMethod: form.method
@@ -479,7 +478,7 @@ interface AdvancedAnalyticsProps {
                 </div>
                 <div className="text - lg font - bold text - blue - 700">{analyticsData.pageViews.toLocaleString () }</div>
               </div>
-              
+
               <div className="bg - green - 50 p - 3 rounded - lg">
                 <div className="flex items - center gap - 2 mb - 1">
                   <Users className="w - 4 h - 4 text - green - 500" />
@@ -487,7 +486,7 @@ interface AdvancedAnalyticsProps {
                 </div>
                 <div className="text - lg font - bold text - green - 700">{analyticsData.uniqueVisitors.toLocaleString () }</div>
               </div>
-              
+
               <div className="bg - purple - 50 p - 3 rounded - lg">
                 <div className="flex items - center gap - 2 mb - 1">
                   <Clock className="w - 4 h - 4 text - purple - 500" />
@@ -495,7 +494,7 @@ interface AdvancedAnalyticsProps {
                 </div>
                 <div className="text - lg font - bold text - purple - 700">{Math.round (analyticsData.sessionDuration) }s</div>
               </div>
-              
+
               <div className="bg - orange - 50 p - 3 rounded - lg">
                 <div className="flex items - center gap - 2 mb - 1">
                   <Target className="w - 4 h - 4 text - orange - 500" />

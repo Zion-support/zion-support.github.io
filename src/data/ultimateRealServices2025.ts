@@ -5,11 +5,6 @@ export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
     icon: "🤖",
     description: "Advanced artificial intelligence solutions and development platforms",
   count: 4
-  
-
-
-
-
 
 
 },
@@ -77,12 +72,7 @@ export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
 
 export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
   "Chatbots": { icon: "💬",
-  count: 1 
-
-
-
-
-
+  count: 1
 
 },
   "Threat Intelligence": { icon: "🛡️", count: 1 },
@@ -109,11 +99,6 @@ export const ULTIMATE_PRICING_TIERS_2025 = {
     description: "Essential solutions for small to medium businesses",
     features: ["Basic functionality", "Standard support", "Core integrations",
   "Documentation"]
-  
-
-
-
-
 
 
 },
@@ -142,11 +127,6 @@ export const ULTIMATE_CONTACT_INFO_2025 = {
   emergencySupport: "24/7 available for critical issues";
 ;
 
-
-
-
-
-
 };
 
 export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
@@ -161,10 +141,5 @@ export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
   ;
   integration: "Seamless integration with existing systems and workflows";
 ;
-
-
-
-
-
 
 };

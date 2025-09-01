@@ -3,7 +3,6 @@ export class SEOOptimizer {
 export const seoOptimizer = new SEOOptimizer () ;
 export default SEOOptimizer;
 
-
   static DEFAULT_META_DESCRIPTIONS = {
     '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting - edge technology services. Transform your business with Zion Tech Group.',
     '/services':

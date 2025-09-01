@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 export function AIServicesShowcase () {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
 const aiServices = [
     {
         id: 'ai - chat',
@@ -107,7 +106,7 @@ const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analyti
     const getStatusBadge = (status) => {
         const statusConfig = {
   active: { color: 'bg - green - 500',
-  text: 'Active' 
+  text: 'Active'
 
 },
             beta: { color: 'bg - yellow - 500', text: 'Beta' },
@@ -128,7 +127,7 @@ const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analyti
     };
     const itemVariants = {
   hidden: { opacity: 0, y: 20,
-  scale: 0.95 
+  scale: 0.95
 
 },
         visible: {
@@ -152,11 +151,11 @@ const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analyti
         {/* Header Section */}
         <motion.div className="text - center mb - 16" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="inline - flex items - center gap - 2 bg - gradient - to - r from - purple - 500 / 20 to - cyan - 500 / 20 px - 4 py - 2 rounded - full border border - purple - 500 / 30 mb - 6">
@@ -181,30 +180,30 @@ const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analyti
         {/* Category Filter */}
         <motion.div className="flex flex - wrap justify - center gap - 4 mb - 12" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}>
           {categories.map ( (category, index) => (<motion.button key={category} onClick={ () => setSelectedCategory (category) } className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 ${selectedCategory === category
                 ? 'bg - gradient - to - r from - purple - 500 to - cyan - 500 text - white shadow - lg shadow - purple - 500 / 25'
                 : 'bg - white / 10 text - zion - slate - light hover:bg - white / 20 border border - white / 20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}>
               {category}
@@ -218,7 +217,7 @@ const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analyti
   {
                 y: -8,
                 scale: 1.02,
-  transition: { duration: 0.2 
+  transition: { duration: 0.2
 
 }
             }} className="relative bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - 2xl p - 6 overflow - hidden group">

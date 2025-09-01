@@ -96,7 +96,6 @@ export function ServiceProviderRegistrationForm() {
                         services: serviceTags,
                         location: formData.location
 
-
             });
             if (error) {
                 throw new Error(error.message)}
@@ -153,7 +152,6 @@ export function ServiceProviderRegistrationForm() {
                                 services: serviceTags,
                                 location: values.location
 
-
                     });
                     if (aiData) {
                         finalSummary = aiData.summary || values.bio;
@@ -164,7 +162,6 @@ export function ServiceProviderRegistrationForm() {
                 catch (error) {
                     // // // // // // // console.error("Error enhancing profile:", error);
                     // Continue with submission even if enhancement fails
-
 
             else if (generatedContent) {
                 finalSummary = generatedContent.summary;
@@ -227,7 +224,6 @@ export function ServiceProviderRegistrationForm() {
                 catch (emailError) {
                     // // // // // // // console.error("Failed to send notification email:", emailError);
                     // Continue with submission even if email fails
-
 
             toast({
                 title: "Profile Created Successfully",

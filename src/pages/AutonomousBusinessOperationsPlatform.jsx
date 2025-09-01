@@ -10,7 +10,6 @@ export default function AutonomousBusinessOperationsPlatform () {}
 import { motion } from 'framer - motion';
 import SEOHead from "../components / SEOHead";
 
-
 const AutonomousBusinessOperationsPlatform = () => {
     const features = [
                                             {
@@ -89,8 +88,8 @@ const AutonomousBusinessOperationsPlatform = () => {
               </span>
             </h1>
             <p className="text - xl text - gray - 300 max - w-3xl mx - auto mb - 8">
-              Transform your business with intelligent automation that runs 24 / 7. 
-              Our platform orchestrates your entire business operations autonomously, 
+              Transform your business with intelligent automation that runs 24 / 7.
+              Our platform orchestrates your entire business operations autonomously,
               driving efficiency and growth.
             </p>
             <div className="flex flex - col sm:flex - row gap - 4 justify - center mt - 8">
@@ -107,18 +106,18 @@ const AutonomousBusinessOperationsPlatform = () => {
         <div className="container mx - auto max - w-6xl">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text - center mb - 16">
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6">
               Platform Features
             </h2>
             <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
-              Our autonomous platform combines cutting - edge AI with business intelligence to create 
+              Our autonomous platform combines cutting - edge AI with business intelligence to create
               a truly intelligent and self - optimizing business environment.
             </p>
           </motion.div>
@@ -126,11 +125,11 @@ const AutonomousBusinessOperationsPlatform = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {features.map ( (feature, index) => (<motion.div key={index} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}/>
                                                 ,
@@ -141,11 +140,11 @@ const AutonomousBusinessOperationsPlatform = () => {
               Revolutionary Autonomous Capabilities
             </h2>
             <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
-              Our platform combines cutting - edge AI with business process automation to create 
+              Our platform combines cutting - edge AI with business process automation to create
               truly autonomous operations that work around the clock.
             </p>
           </div>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {features.map ( (feature, index) => (<div key={index} className="bg - gray - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 700 hover:border - cyan - 500 transition - all duration - 300 hover:transform hover:scale - 105">
                 <div className="w - 16 h - 16 bg - gradient - to - br from - cyan - 500 to - purple - 600 rounded - lg flex items - center justify - center mb - 4">
@@ -156,7 +155,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               </div>) ) }
                 transition = {
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - gray - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 700 hover:border - green - 500 transition - all duration - 300 hover:transform hover:scale - 105"
@@ -210,7 +209,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               See measurable improvements in your business operations and bottom line.
             </p>
           </div>
-          
+
           <div className="grid md:grid - cols - 2 gap - 8">
             <div className="space - y-6">
               {benefits.map ( (benefit, index) => (<div key={index} className="flex items - start space - x-3">
@@ -220,7 +219,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                   <p className="text - gray - 300">{benefit}</p>
                 </div>) ) }
             </div>
-            
+
             <div className="bg - gradient - to - br from - green - 500 / 10 to - blue - 600 / 10 rounded - xl p - 8 border border - green - 500 / 20">
               <h3 className="text - 2xl font - semibold mb - 4">Performance Metrics</h3>
               <div className="space - y-4">
@@ -249,11 +248,11 @@ const AutonomousBusinessOperationsPlatform = () => {
               Intelligent Automation Features
             </h2>
             <p className="text - xl text - gray - 300 max - w-2xl mx - auto">
-              Our platform combines AI, machine learning, and advanced workflow automation 
+              Our platform combines AI, machine learning, and advanced workflow automation
               to create a truly autonomous business environment.
             </p>
           </div>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             {features.map ( (feature, index) => {
                                                             const IconComponent = feature.icon;
@@ -276,11 +275,11 @@ const AutonomousBusinessOperationsPlatform = () => {
               Transform Every Business Function
             </h2>
             <p className="text - xl text - gray - 300 max - w-2xl mx - auto">
-              From front - office operations to back - office processes, our platform 
+              From front - office operations to back - office processes, our platform
               automates and optimizes every aspect of your business.
             </p>
           </div>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
             {useCases.map ( (useCase, index) => {
                                                             const IconComponent = useCase.icon;
@@ -304,7 +303,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Why Choose Autonomous Operations?
               </h2>
               <p className="text - xl text - gray - 300 mb - 8">
-                Experience unprecedented efficiency and productivity with our autonomous 
+                Experience unprecedented efficiency and productivity with our autonomous
                 business operations platform. Let AI handle the routine while you focus on strategy.
               </p>
               <div className="space - y-4">
@@ -314,7 +313,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                   </div>) ) }
               </div>
             </div>
-            
+
             <div className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 8 border border - white / 10">
               <h3 className="text - 2xl font - semibold text - white mb - 6">Performance Metrics</h3>
               <div className="space - y-6">
@@ -365,11 +364,11 @@ const AutonomousBusinessOperationsPlatform = () => {
               Industry Solutions
             </h2>
             <p className="text - xl text - gray - 300 max - w-2xl mx - auto">
-              Our platform is designed to work across industries, with specialized 
+              Our platform is designed to work across industries, with specialized
               automation solutions for your specific business needs.
             </p>
           </div>
-          
+
           <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6">
             {industries.map ( (industry, index) => (<div key={index} className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - green - 500 / 30 transition - all duration - 300 text - center">
                 <div className="w - 12 h - 12 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - lg flex items - center justify - center mx - auto mb - 4">
@@ -389,11 +388,11 @@ const AutonomousBusinessOperationsPlatform = () => {
               Built on Cutting - Edge Technology
             </h2>
             <p className="text - xl text - gray - 300 max - w-2xl mx - auto">
-              Our platform leverages the latest advancements in AI, machine learning, 
+              Our platform leverages the latest advancements in AI, machine learning,
               and cloud computing to deliver enterprise - grade performance.
             </p>
           </div>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
             <div className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 8 border border - white / 10">
               <div className="w - 16 h - 16 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - xl flex items - center justify - center mb - 6">
@@ -410,7 +409,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <li>• Deep Learning Models</li>
               </ul>
             </div>
-            
+
             <div className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 8 border border - white / 10">
               <div className="w - 16 h - 16 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - xl flex items - center justify - center mb - 6">
                 <Database className="w - 8 h - 8 text - white"/>
@@ -426,7 +425,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <li>• Disaster Recovery</li>
               </ul>
             </div>
-            
+
             <div className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 8 border border - white / 10">
               <div className="w - 16 h - 16 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - xl flex items - center justify - center mb - 6">
                 <Shield className="w - 8 h - 8 text - white"/>
@@ -453,7 +452,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               Harness the power of AI to automate complex business processes
             </p>
           </div>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             <div className="bg - white / 10 backdrop - blur - md rounded - xl p - 8 border border - white / 20 hover:border - zion - cyan / 50 transition - all duration - 300 hover:transform hover:scale - 105">
               <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - lg flex items - center justify - center mb - 6">
@@ -685,10 +684,10 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Comprehensive Business Automation
               </h2>
               <p className="text - xl text - gray - 300 mb - 8 leading - relaxed">
-                Our platform covers every aspect of business operations, from customer service 
+                Our platform covers every aspect of business operations, from customer service
                 to financial management, all running autonomously with AI oversight.
               </p>
-              
+
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">
                 {capabilities.map ( (capability, index) => (<div key={index} className="flex items - center">
                     <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0"/>
@@ -696,7 +695,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                   </div>) ) }
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - 2xl p - 8">
                 <div className="text - center mb - 6">
@@ -704,7 +703,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                   <h3 className="text - 2xl font - bold text - white mb - 2">Platform Benefits</h3>
                   <p className="text - gray - 300">Transform your business operations today</p>
                 </div>
-                
+
                 <div className="space - y-3">
                   {benefits.map ( (benefit, index) => (<div key={index} className="flex items - start">
                       <div className="w - 2 h - 2 bg - green - 400 rounded - full mt - 2 mr - 3 flex - shrink - 0"></div>
@@ -725,11 +724,11 @@ const AutonomousBusinessOperationsPlatform = () => {
               Industry Solutions
             </h2>
             <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
-              Our autonomous operations platform is designed to work across all industries, 
+              Our autonomous operations platform is designed to work across all industries,
               with specialized solutions for your specific business needs.
             </p>
           </div>
-          
+
           <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6">
             {industries.map ( (industry, index) => (<div key={index} className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - xl p - 6 text - center hover:border - green - 500 / 50 transition - all duration - 300 transform hover:scale - 105">
                 <div className="w - 12 h - 12 bg - gradient - to - r from - green - 500 to - emerald - 600 rounded - lg flex items - center justify - center mx - auto mb - 4">
@@ -748,7 +747,7 @@ const AutonomousBusinessOperationsPlatform = () => {
             Ready to Automate Your Business?
           </h2>
           <p className="text - xl text - gray - 300 mb - 8">
-            Join thousands of businesses that have transformed their operations with our 
+            Join thousands of businesses that have transformed their operations with our
             autonomous platform. Start your automation journey today.
           </p>
           <div className="flex flex - col sm:flex - row gap - 4 justify - center">
@@ -773,7 +772,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               Explore our resources to understand how autonomous operations can transform your business.
             </p>
           </div>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
             <div className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - green - 500 / 30 transition - all duration - 300">
               <div className="w - 12 h - 12 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - lg flex items - center justify - center mb - 4">
@@ -785,7 +784,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Read Docs →
               </Link>
             </div>
-            
+
             <div className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - green - 500 / 30 transition - all duration - 300">
               <div className="w - 12 h - 12 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - lg flex items - center justify - center mb - 4">
                 <Download className="w - 6 h - 6 text - white"/>
@@ -796,7 +795,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Download →
               </Link>
             </div>
-            
+
             <div className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - green - 500 / 30 transition - all duration - 300">
               <div className="w - 12 h - 12 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - lg flex items - center justify - center mb - 4">
                 <MessageSquare className="w - 6 h - 6 text - white"/>
@@ -875,7 +874,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Ready to Go Autonomous?
               </h2>
               <p className="text - xl text - gray - 300 mb - 8">
-                Start your journey toward fully autonomous business operations today 
+                Start your journey toward fully autonomous business operations today
                 and discover the unlimited potential of AI - powered business management.
               </p>
               <div className="flex flex - col sm:flex - row gap - 4 justify - center">
@@ -901,7 +900,7 @@ const AutonomousBusinessOperationsPlatform = () => {
   url: "https://ziontechgroup.com / autonomous - business - operations - platform"
 
 }}/>
-      
+
       <div className="min - h-screen bg - gradient - to - br from - black via - gray - 900 to - blue - 900">
         {/* Hero Section */}
         <section className="relative pt - 20 pb - 16 px - 4 sm:px - 6 lg:px - 8">
@@ -922,7 +921,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 </Link>
               </div>
             </div>
-            
+
             {/* Stats */}
             <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mt - 16">
               {stats.map ( (stat, index) => (<div key={index} className="text - center">
@@ -948,7 +947,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Our autonomous platform combines cutting - edge AI with business process automation to deliver unprecedented operational efficiency.
               </p>
             </div>
-            
+
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
               {features.map ( (feature, index) => (<div key={index} className="bg - gray - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 700 hover:border - cyan - 500 transition - all duration - 300">
                   <div className="flex justify - center mb - 4">
@@ -978,7 +977,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Discover how our autonomous platform is revolutionizing business operations across industries.
               </p>
             </div>
-            
+
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
               {useCases.map ( (useCase, index) => (<div key={index} className="bg - gray - 800 / 50 backdrop - blur - sm rounded - xl p - 8 border border - gray - 700">
                   <div className="flex items - start mb - 6">
@@ -1030,10 +1029,10 @@ const AutonomousBusinessOperationsPlatform = () => {
             Ready to Automate Your Business?
           </h2>
           <p className="text - xl text - gray - 300 mb - 8 leading - relaxed">
-            Join thousands of businesses that have already transformed their operations 
+            Join thousands of businesses that have already transformed their operations
             with our autonomous platform.
           </p>
-          
+
           <div className="flex flex - col sm:flex - row gap - 4 justify - center">
             <Link to="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - green - 600 to - emerald - 600 hover:from - green - 700 hover:to - emerald - 700 text - white font - semibold rounded - lg transition - all duration - 200 transform hover:scale - 105">
               Get Free Consultation < ArrowRight className="ml - 2 w - 5 h - 5"/>
@@ -1073,23 +1072,23 @@ const AutonomousBusinessOperationsPlatform = () => {
           <div className="quantum - particle"></div>
           <div className="quantum - particle"></div>
         </div>
-        
+
         <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
           <div className="max - w-4xl mx - auto">
             <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - green - 500 / 20 border border - green - 400 / 50 text - green - 400 text - sm font - medium mb - 6">
               <Zap className="w - 4 h - 4 mr - 2"/>
               Autonomous Operations Platform
             </div>
-            
+
             <h1 className="text - 5xl lg:text - 7xl font - bold mb - 6 bg - gradient - to - r from - green - 400 via - cyan - 400 to - blue - 400 bg - clip - text text - transparent">
               Autonomous Business Operations Platform
             </h1>
-            
+
             <p className="text - xl lg:text - 2xl text - gray - 300 mb - 8 max - w-3xl mx - auto">
-              Transform your business operations with our revolutionary autonomous platform. 
+              Transform your business operations with our revolutionary autonomous platform.
               Let AI manage your business 24 / 7 with intelligent automation and decision - making.
             </p>
-            
+
             <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 12">
               <button className="px - 8 py - 4 bg - gradient - to - r from - green - 500 to - cyan - 500 text - white font - semibold rounded - xl hover:from - green - 400 hover:to - cyan - 400 transition - all duration - 300 transform hover:scale - 105 shadow - lg shadow - green - 500 / 30 flex items - center">
                 <Play className="w - 5 h - 5 mr - 2"/>
@@ -1100,7 +1099,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Get Started
               </button>
             </div>
-            
+
             <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 text - center">
               <div>
                 <div className="text - 3xl font - bold text - green - 400 mb - 2">60%</div>
@@ -1131,11 +1130,11 @@ const AutonomousBusinessOperationsPlatform = () => {
               Revolutionary Autonomous Capabilities
             </h2>
             <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
-              Our platform combines cutting - edge AI with intelligent automation to deliver 
+              Our platform combines cutting - edge AI with intelligent automation to deliver
               unprecedented business operations capabilities.
             </p>
           </div>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
             {features.map ( (feature, index) => (<div key={index} className="p - 8 rounded - 2xl bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 border border - green - 500 / 30 hover:border - green - 400 / 50 transition - all duration - 300 hover:transform hover:scale - 105">
                 <div className="flex items - start space - x-4">
@@ -1169,7 +1168,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               From financial management to supply chain optimization, our platform handles every aspect of business operations.
             </p>
           </div>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             {capabilities.map ( (capability, index) => (<div key={index} className="p - 6 rounded - xl bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 border border - gray - 700 / 50 hover:border - green - 500 / 30 transition - all duration - 300">
                 <h3 className="text - xl font - bold text - green - 400 mb - 4">{capability.category}</h3>
@@ -1195,7 +1194,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               Flexible pricing options designed to scale with your business operations and automation needs.
             </p>
           </div>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
             {pricingPlans.map ( (plan, index) => (<div key={index} className={`relative p - 8 rounded - 2xl border transition - all duration - 300 hover:transform hover:scale - 105 ${plan.popular
                                                                 ? 'bg - gradient - to - br from - green - 500 / 20 to - cyan - 500 / 20 border - green - 400 / 50 shadow - 2xl shadow - green - 500 / 30'
@@ -1205,7 +1204,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                       Most Popular
                     </div>
                   </div>) }
-                
+
                 <div className="text - center mb - 8">
                   <h3 className="text - 2xl font - bold text - white mb - 2">{plan.name}</h3>
                   <div className="mb - 4">
@@ -1214,14 +1213,14 @@ const AutonomousBusinessOperationsPlatform = () => {
                   </div>
                   <p className="text - gray - 300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space - y-4 mb - 8">
                   {plan.features.map ( (feature, idx) => (<li key={idx} className="flex items - center text - gray - 300">
                       <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0"/>
                       {feature}
                     </li>) ) }
                 </ul>
-                
+
                 <button className={`w - full py - 3 px - 6 rounded - xl font - semibold transition - all duration - 300 ${plan.popular
                                                                 ? 'bg - gradient - to - r from - green - 500 to - cyan - 500 text - white hover:from - green - 400 hover:to - cyan - 400'
                                                                 : 'border border - green - 400 / 50 text - green - 400 hover:bg - green - 400 / 20'}`}>
@@ -1243,7 +1242,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               See how forward - thinking companies are transforming their operations with our autonomous platform.
             </p>
           </div>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
             {testimonials.map ( (testimonial, index) => (<div key={index} className="p - 8 rounded - 2xl bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 border border - gray - 700 / 50 hover:border - green - 500 / 30 transition - all duration - 300">
                 <div className="flex items - center mb - 4">
@@ -1254,11 +1253,11 @@ const AutonomousBusinessOperationsPlatform = () => {
                     <p className="text - gray - 400 text - sm">{testimonial.comp}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items - center mb - 4">
                   {[...Array (testimonial.rating) ].map ( (_, i) => (<Star key={i} className="w - 5 h - 5 text - yellow - 400 fill - current"/>) ) }
                 </div>
-                
+
                 <p className="text - gray - 300 italic">"{testimonial.content}"</p>
               </div>) ) }
           </div>
@@ -1275,7 +1274,7 @@ const AutonomousBusinessOperationsPlatform = () => {
             <p className="text - xl text - gray - 300 mb - 8">
               Join the autonomous revolution and experience unprecedented business efficiency and scalability.
             </p>
-            
+
             <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">
               <button className="px - 8 py - 4 bg - gradient - to - r from - green - 500 to - cyan - 500 text - white font - semibold rounded - xl hover:from - green - 400 hover:to - cyan - 400 transition - all duration - 300 transform hover:scale - 105 shadow - lg shadow - green - 500 / 30 flex items - center">
                 <Rocket className="w - 5 h - 5 mr - 2"/>
@@ -1286,7 +1285,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Schedule Demo
               </button>
             </div>
-            
+
             <p className="text - sm text - gray - 400 mt - 6">
               No credit card required • 14 - day free trial • Cancel time
             </p>
@@ -1307,7 +1306,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <li><Link to="/services / ai - autonomous - systems" className="text - gray - 300 hover:text - green - 400 transition - colors">AI Autonomous Systems</Link></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text - lg font - semibold text - green - 400 mb - 4">Solutions</h4>
               <ul className="space - y-2">
@@ -1317,7 +1316,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <li><Link to="/emerging - tech" className="text - gray - 300 hover:text - green - 400 transition - colors">Emerging Tech</Link></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text - lg font - semibold text - green - 400 mb - 4">Company</h4>
               <ul className="space - y-2">
@@ -1327,7 +1326,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <li><Link to="/contact" className="text - gray - 300 hover:text - green - 400 transition - colors">Contact</Link></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text - lg font - semibold text - green - 400 mb - 4">Resources</h4>
               <ul className="space - y-2">

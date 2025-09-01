@@ -2,7 +2,6 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default AIAutonomousBusinessPlatform2029;
 
-
 const AIAutonomousBusinessPlatform2029 = () => {
   return (<div className="min - h-screen bg - gradient - to - br from - black via - gray - 900 to - blue - 900 text - white">
       {/* Hero Section */}

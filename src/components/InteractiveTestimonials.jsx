@@ -3,7 +3,6 @@ export function InteractiveTestimonials () {
 import { motion, AnimatePresence } from 'framer - motion';
 import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2 const testimonials = [
 
-
     {
         id: '1',
         name: 'Sarah Chen',
@@ -108,7 +107,7 @@ const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & D
     };
     const itemVariants = {
   hidden: { opacity: 0, y: 20,
-  scale: 0.95 
+  scale: 0.95
 
 },
         visible: {
@@ -132,11 +131,11 @@ const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & D
         {/* Header Section */}
         <motion.div className="text - center mb - 16" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="inline - flex items - center gap - 2 bg - gradient - to - r from - blue - 500 / 20 to - purple - 500 / 20 px - 4 py - 2 rounded - full border border - blue - 500 / 30 mb - 6">
@@ -158,30 +157,30 @@ const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & D
         {/* Category Filter */}
         <motion.div className="flex flex - wrap justify - center gap - 4 mb - 12" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}>
           {categories.map ( (category, index) => (<motion.button key={category} onClick={ () => setSelectedCategory (category) } className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 ${selectedCategory === category
                 ? 'bg - gradient - to - r from - blue - 500 to - purple - 500 text - white shadow - lg shadow - blue - 500 / 25'
                 : 'bg - white / 10 text - zion - slate - light hover:bg - white / 20 border border - white / 20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}>
               {category}
@@ -193,15 +192,15 @@ const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & D
           <AnimatePresence mode="wait">
             <motion.div key={currentIndex} initial = {
   { opacity: 0,
-  x: 100 
+  x: 100
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} exit = {
   { opacity: 0,
-  x: -100 
+  x: -100
 
 }} transition={{ duration: 0.5 }} className="text - center">
               <div className="bg - gradient - to - br from - white / 5 to - white / 10 rounded - 3xl p - 12 border border - white / 20 backdrop - blur - sm relative overflow - hidden">
@@ -292,7 +291,7 @@ const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & D
   {
                 y: -8,
                 scale: 1.02,
-  transition: { duration: 0.2 
+  transition: { duration: 0.2
 
 }
             }} className="group cursor - pointer" onClick={ () => setCurrentIndex (index) }>
@@ -337,15 +336,15 @@ const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & D
         {/* Enhanced CTA Section */}
         <motion.div className="text - center mt - 20" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}>
           <div className="bg - gradient - to - r from - blue - 500 / 20 to - purple - 500 / 20 rounded - 3xl p - 12 border border - blue - 500 / 30 backdrop - blur - sm">

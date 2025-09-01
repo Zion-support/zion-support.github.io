@@ -3,7 +3,6 @@ import React, { useEffect, useMemo, useCallback } from 'react';
   export default PerformanceOptimizer;
 export const PerformanceOptimizer = ({ children }) => {
 
-
   const location = useLocation () ;
 
   // Preload critical resources

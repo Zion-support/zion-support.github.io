@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import WhitePapers from './WhitePapers';
 
-
 describe ('WhitePapers', () => {
   it ('renders without crashing', () => {
     render (<WhitePapers />) ;

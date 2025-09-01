@@ -24,7 +24,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
     };
     const iconVariants = {
   hidden: { scale: 0,
-  opacity: 0 
+  opacity: 0
 },
         visible: {
             scale: 1,

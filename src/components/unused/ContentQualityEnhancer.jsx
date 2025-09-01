@@ -229,11 +229,6 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             suggestions,
             overallScore: Math.max(0, Math.min(100,
   overallScore))
-        
-
-
-
-
 
 
 };
@@ -333,30 +328,15 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
       <AnimatePresence>
         {isOpen && (<motion.div initial = {
   { opacity: 0, scale: 0.8,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} animate = {
   { opacity: 1, scale: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} exit = {
   { opacity: 0, scale: 0.8,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} className="fixed bottom-20 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
             {/* Header */}
@@ -564,12 +544,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
   () => {
                         const report = JSON.stringify(analysis, null, 2);
                         const blob = new Blob([report],
-  { type: 'application/json' 
-
-
-
-
-
+  { type: 'application/json'
 
 });
                         const url = URL.createObjectURL(blob);

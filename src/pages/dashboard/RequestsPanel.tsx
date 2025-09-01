@@ -96,7 +96,6 @@ export default function RequestsPanel(...args[]):  {
             setSelectedQuote(null)}}
         />
 
-
       </div>
     </ProtectedRoute>
   )}

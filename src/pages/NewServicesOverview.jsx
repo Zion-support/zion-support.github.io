@@ -4,7 +4,6 @@ import React from 'react';
 export default function NewServicesOverview () {
 import Link from 'next / link';
 
-
     const serviceCategories = [
         {
             id: 'ai - services',

@@ -6,7 +6,6 @@ import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from
 import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from "../data / enhancedInnovativeServices2027";
 import { motion } from 'framer - motion';
 
-
   Brain,
   Globe,
   Zap,
@@ -105,7 +104,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                          service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                          service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
-    
+
     return matchesSearch && matchesCategory && matchesInnovation;
   }) ;
 
@@ -172,12 +171,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -187,7 +186,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
               Enhanced Innovative Services 2027
             </h1>
             <p className="text - xl text - zion - gray - light mb - 8 max - w-3xl mx - auto">
-              Discover the future of technology with our comprehensive suite of AI, quantum computing, 
+              Discover the future of technology with our comprehensive suite of AI, quantum computing,
               and cutting - edge innovative services designed to revolutionize your business.
             </p>
             <div role="button" className="flex justify - center space - x-4">
@@ -361,17 +360,17 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
               key={service.id}
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
               className="bg - white / 10 backdrop - blur - lg rounded - 2xl p - 6 hover:bg - white / 15 transition - all duration - 300 cursor - pointer group"
@@ -434,17 +433,17 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }}
             animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
             exit = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }}
             className="bg - zion - slate - dark rounded - 2xl max - w-6xl w - full max - h-[90vh] overflow - y-auto"
@@ -486,12 +485,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 {currentSlide === 0 && (<motion.div
                     initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }}
                     animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                     className="space - y-6"
@@ -536,12 +535,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 {currentSlide === 1 && (<motion.div
                     initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }}
                     animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                     className="space - y-6"
@@ -579,12 +578,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 {currentSlide === 2 && selectedService.technicalSpecs && (<motion.div
                     initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }}
                     animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                     className="space - y-6"
@@ -666,12 +665,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 {currentSlide === 3 && (<motion.div
                     initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }}
                     animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                     className="space - y-6"
@@ -681,7 +680,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                       <p className="text - zion - gray - light mb - 6">
                         Contact our team to discuss how {selectedService.title} can revolutionize your operations.
                       </p>
-                      
+
                       <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 6">
                         <div role="button" className="bg - white / 10 rounded - xl p - 6">
                           <h4 className="text - lg font - semibold text - white mb - 4">Pricing Information</h4>
@@ -795,20 +794,20 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
           <p className="text - zion - gray - light mb - 8 max - w-2xl mx - auto">
             Contact our team to discuss your needs and discover how our innovative services can transform your business.
           </p>
-          
+
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 8">
             <div role="button" className="bg - white / 10 rounded - xl p - 6">
               <Phone className="w - 8 h - 8 text - zion - cyan mx - auto mb - 4" />
               <h3 className="text - xl font - semibold text - white mb - 2">Call Us</h3>
               <p className="text - zion - gray - light">+1 302 464 0950</p>
             </div>
-            
+
             <div role="button" className="bg - white / 10 rounded - xl p - 6">
               <Mail className="w - 8 h - 8 text - zion - cyan mx - auto mb - 4" />
               <h3 className="text - xl font - semibold text - white mb - 2">Email Us</h3>
               <p className="text - zion - gray - light">kleber@ziontechgroup.com</p>
             </div>
-            
+
             <div role="button" className="bg - white / 10 rounded - xl p - 6">
               <MapPin className="w - 8 h - 8 text - zion - cyan mx - auto mb - 4" />
               <h3 className="text - xl font - semibold text - white mb - 2">Visit Us</h3>

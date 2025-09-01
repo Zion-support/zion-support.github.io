@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import SecurityMonitoringSystem from './SecurityMonitoringSystem';
 
-
 describe ('SecurityMonitoringSystem', () => {
   it ('renders without crashing', () => {
     render (<SecurityMonitoringSystem />) ;

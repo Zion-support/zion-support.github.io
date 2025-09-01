@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 export const PerformanceMonitor = () => {
 import { motion } from 'framer - motion';
 
-
   const [metrics, setMetrics] = useState ({
     fcp: null,
     lcp: null,
@@ -130,12 +129,12 @@ import { motion } from 'framer - motion';
   return (<motion.div
       initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
       className="fixed bottom - 4 right - 4 bg - black / 80 backdrop - blur - sm border border - zinc - 700 rounded - lg p - 4 text - white text - sm max - w-xs z - 50"
@@ -146,11 +145,11 @@ import { motion } from 'framer - motion';
           {score}
         </div>
       </div>
-      
+
       <div className="text - xs text - zinc - 300 mb - 2">
         {getScoreLabel (score) } • Core Web Vitals
       </div>
-      
+
       <div className="space - y-1 text - xs">
         {metrics.fcp && (<div className="flex justify - between">
             <span > FCP:</span>

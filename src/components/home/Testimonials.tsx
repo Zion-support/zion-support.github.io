@@ -32,22 +32,12 @@ interface Testimonial {
           className="text-center mb-16"
           initial = {
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}
@@ -74,32 +64,17 @@ interface Testimonial {
               key={currentIndex}
               initial = {
   { opacity: 0,
-  x: 100 
-
-
-
-
-
+  x: 100
 
 }}
               animate = {
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }}
               exit = {
   { opacity: 0,
-  x: -100 
-
-
-
-
-
+  x: -100
 
 }}
               transition={{ duration: 0.5 }}
@@ -183,30 +158,15 @@ interface Testimonial {
   { opacity: 0,
   y: 20 ;
 
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 ;
-
-
-
-
-
 
 }}
           viewport={{ once: true }}

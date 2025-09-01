@@ -78,7 +78,6 @@ export function usePerformance(options: PerformanceOptions = {}) {
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value;
 
-
       setMetrics(prev => ({ ...prev, cls: clsValue }));
     });
     // Start observing
@@ -234,13 +233,13 @@ export function usePerformance(options: PerformanceOptions = {}) {
     if (isMonitoring) return;
 
     setIsMonitoring(true);
-    
+
     // Monitor Web Vitals
     monitorWebVitals();
-    
+
     // Monitor First Input
     monitorFirstInput();
-    
+
     // Get initial metrics after page load
     if (document.readyState === 'complete') {
       getNavigationTiming();
@@ -263,17 +262,17 @@ export function usePerformance(options: PerformanceOptions = {}) {
   // Stop monitoring
   const stopMonitoring = useCallback(() => {
     setIsMonitoring(false);
-    
+
     if (observerRef.current) {
       observerRef.current.disconnect();
       observerRef.current = null;
     }
-    
+
     if (lcpObserverRef.current) {
       lcpObserverRef.current.disconnect();
       lcpObserverRef.current = null;
     }
-    
+
     if (clsObserverRef.current) {
       clsObserverRef.current.disconnect();
       clsObserverRef.current = null;
@@ -283,35 +282,35 @@ export function usePerformance(options: PerformanceOptions = {}) {
   // Get performance score
   const getPerformanceScore = useCallback(() => {
     let score = 100;
-    
+
     // FCP scoring (0-100)
     if (metrics.fcp !== null) {
       if (metrics.fcp < 1800) score -= 0;
       else if (metrics.fcp < 3000) score -= 10;
       else score -= 25;
     }
-    
+
     // LCP scoring (0-100)
     if (metrics.lcp !== null) {
       if (metrics.lcp < 2500) score -= 0;
       else if (metrics.lcp < 4000) score -= 10;
       else score -= 25;
     }
-    
+
     // FID scoring (0-100)
     if (metrics.fid !== null) {
       if (metrics.fid < 100) score -= 0;
       else if (metrics.fid < 300) score -= 10;
       else score -= 25;
     }
-    
+
     // CLS scoring (0-100)
     if (metrics.cls !== null) {
       if (metrics.cls < 0.1) score -= 0;
       else if (metrics.cls < 0.25) score -= 10;
       else score -= 25;
     }
-    
+
     return Math.max(0, score);
   }, [metrics]);
 
@@ -401,7 +400,7 @@ export function useComponentPerformance(componentName: string) {
       const endTime = performance.now();
       const totalTime = endTime - startTime.current;
       setRenderTime(totalTime);
-      
+
       // Log slow components
       if (totalTime > 16) { // 16ms = 60fps threshold
         console.warn(`Slow component render: ${componentName} took ${totalTime.toFixed(2)}ms`);

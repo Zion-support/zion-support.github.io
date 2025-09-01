@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import DataAnalytics from './DataAnalytics';
 
-
 describe ('DataAnalytics', () => {
   it ('renders without crashing', () => {
     render (<DataAnalytics />) ;

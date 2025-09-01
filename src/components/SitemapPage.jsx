@@ -4,7 +4,6 @@ import React from 'react';
   import { SEO } from './SEO';
 export default function SitemapPage () {
 
-
   const publicRoutes = completeSitemap.filter (route => !route.requiredAuth) ;
   const talentRoutes = completeSitemap.filter (route =>
       route.requiredAuth &&

@@ -5,7 +5,6 @@ import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES } from '@/data / enhancedServices';
 
-
 const ServiceCategory = ({ category, services }) => {
     const categoryServices = services.filter (service => service.category.toLowerCase () .includes (category.toLowerCase () ) ) ;
     if (categoryServices.length === 0) return null;

@@ -6,7 +6,6 @@ import { expandedInnovativeServices2025 } from "../../data / 2025 - expanded - i
 import { innovativeITAIServices2025 } from "../../data / 2025 - innovative - it - ai - services";
 import { motion } from 'framer - motion';
 
-
 const InnovativeServicesOverview = () => {
     const [selectedService, setSelectedService] = useState (null) ;
     const [selectedCategory, setSelectedCategory] = useState ('all') ;

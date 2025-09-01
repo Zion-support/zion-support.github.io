@@ -2,7 +2,6 @@ import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, Globe, Cpu, Database, Cloud export function MicroSaasShowcase () {
 
-
     const [activeCategory, setActiveCategory] = useState ('all') ;
     const categories = [
         { id: 'all', name: 'All Services', icon: <Sparkles className="h - 5 w - 5"/> },

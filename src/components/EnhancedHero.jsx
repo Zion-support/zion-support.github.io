@@ -3,7 +3,6 @@ export default EnhancedHero;
 import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const EnhancedHero = () => {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
     const [currentSlide, setCurrentSlide] = useState (0) ;
     const [isPlaying, setIsPlaying] = useState (true) ;
     const [isMuted, setIsMuted] = useState (false) ;
@@ -70,29 +69,29 @@ import { motion, AnimatePresence } from 'framer - motion';
           <AnimatePresence mode="wait">
             <motion.div key={currentSlide} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} transition={{ duration: 0.5 }} className="space - y-6">
               {/* Icon */}
               <motion.div initial = {
   { scale: 0,
-  rotate: -180 
+  rotate: -180
 
 }} animate = {
   { scale: 1,
-  rotate: 0 
+  rotate: 0
 
 }} transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }} className="text - 8xl mb - 6">
                 {heroSlides[currentSlide].icon}
@@ -101,15 +100,15 @@ import { motion, AnimatePresence } from 'framer - motion';
               {/* Title */}
               <motion.h1 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }} className="text - 4xl sm:text - 5xl lg:text - 7xl font - bold text - white leading - tight">
                 {heroSlides[currentSlide].title}
@@ -118,15 +117,15 @@ import { motion, AnimatePresence } from 'framer - motion';
               {/* Subtitle */}
               <motion.h2 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }} className="text - 2xl sm:text - 3xl lg:text - 4xl font - semibold text - blue - 300 leading - tight">
                 {heroSlides[currentSlide].subtitle}
@@ -135,15 +134,15 @@ import { motion, AnimatePresence } from 'framer - motion';
               {/* Description */}
               <motion.p initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 }} className="text - lg sm:text - xl lg:text - 2xl text - gray - 300 max - w-3xl mx - auto leading - relaxed">
                 {heroSlides[currentSlide].description}
@@ -152,26 +151,26 @@ import { motion, AnimatePresence } from 'framer - motion';
               {/* CTA Button */}
               <motion.div initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 }} className="pt - 6">
                 <a href={heroSlides[currentSlide].ctaLink} className="inline - flex items - center px - 8 py - 4 text - lg font - semibold text - white bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full hover:from - blue - 700 hover:to - purple - 700 transform hover:scale - 105 transition - all duration - 300 shadow - 2xl hover:shadow - blue - 500 / 25">
                   {heroSlides[currentSlide].ctaText}
                   <motion.div animate = {
   { x: [0, 5,
-  0] 
+  0]
 
 }} transition = {
   { duration: 1.5,
-  repeat: Infinity 
+  repeat: Infinity
 
 }} className="ml - 2">
                     →

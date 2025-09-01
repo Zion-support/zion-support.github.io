@@ -40,11 +40,6 @@ export function Switch({
   className
       )
 
-
-
-
-
-
 }
       id={id}
       {...props}
@@ -58,8 +53,6 @@ export function Switch({
 ;
 ;
 ;
-
-
 
 };
       />;

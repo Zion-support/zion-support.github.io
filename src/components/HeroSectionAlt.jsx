@@ -4,7 +4,6 @@ import { Button } from "@/components / ui / button";
 export const HeroSectionAlt = () => {
 import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles import { motion } from "framer - motion";
 
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -17,7 +16,7 @@ import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles import {
 
   const itemVariants = {
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {

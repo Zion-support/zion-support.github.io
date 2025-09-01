@@ -2,7 +2,6 @@ import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, 
 import React, { useState, useRef } from 'react';
 export function AdvancedCollaborationPlatform () {
 
-
 const mockMeetings = [
     {
         id: '1',

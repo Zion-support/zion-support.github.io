@@ -7,7 +7,6 @@ import { Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, S
 import { Textarea } from '@/components / ui / textarea';
 export default function ComprehensiveContact () {
 
-
     const [formData, setFormData] = useState ({
         name: '',
         email: '',

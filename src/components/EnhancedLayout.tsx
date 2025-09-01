@@ -6,7 +6,6 @@ import { FuturisticAnimatedBackground } from "./FuturisticAnimatedBackground";
 import { FuturisticFooter } from "./FuturisticFooter";
 import { FuturisticNavigation } from "./FuturisticNavigation";
 
-
   children: ReactNode;
   showSidebar?: boolean}
 

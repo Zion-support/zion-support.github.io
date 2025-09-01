@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 export default FloatingActionButton;
 import { motion, AnimatePresence } from 'framer - motion';
 
-
 const FloatingActionButton = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState (false) ;
   const toggleMenu = () => setIsOpen (!isOpen) ;

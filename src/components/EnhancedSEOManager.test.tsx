@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import EnhancedSEOManager from './EnhancedSEOManager';
 
-
 describe ('EnhancedSEOManager', () => {
   it ('renders without crashing', () => {
     render (<EnhancedSEOManager />) ;

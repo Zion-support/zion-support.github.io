@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react.ts';
 export default AdvancedPerformanceMonitor;
 
-
 interface PerformanceMetrics {
   fcp: number | null; // First Contentful Paint
   lcp: number | null; // Largest Contentful Paint

@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Brain,
   Cloud,
   Shield,
@@ -193,12 +192,12 @@ const categories = [
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   isVisible ? { opacity: 1,
-  y: 0 
+  y: 0
 
 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
@@ -219,17 +218,17 @@ const categories = [
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   isVisible ? { opacity: 1,
-  y: 0 
+  y: 0
 
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
           className="flex flex - wrap justify - center gap - 3 mb - 12"
@@ -252,7 +251,7 @@ const categories = [
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
           className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"
@@ -339,17 +338,17 @@ const categories = [
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   isVisible ? { opacity: 1,
-  y: 0 
+  y: 0
 
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 }}
           className="text - center mt - 16"

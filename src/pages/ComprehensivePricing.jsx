@@ -9,7 +9,6 @@ import enhancedAIServices2025 from "../data / enhancedAIServices2025";
 import enhancedITServices2025 from "../data / enhancedITServices2025";
 import enhancedMicroSaasServices2025 from "../data / enhancedMicroSaasServices2025";
 
-
 const ComprehensivePricing = () => {
     const [activeTab, setActiveTab] = useState ('microsaas') ;
     const [billingCycle, setBillingCycle] = useState ('monthly') ;

@@ -156,32 +156,17 @@ const ModeToggle = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  height: 0 
-
-
-
-
-
+  height: 0
 
 }}
               animate = {
   { opacity: 1,
-  height: 'auto' 
-
-
-
-
-
+  height: 'auto'
 
 }}
               exit = {
   { opacity: 0,
-  height: 0 
-
-
-
-
-
+  height: 0
 
 }}
               transition={{ duration: 0.3 }}
@@ -207,31 +192,31 @@ const ModeToggle = () => {;
                     </div>
                   </div>
                 ))}
-                
+
                 <div className="pt-4 border-t border-white/10 space-y-2">
-                  <Link 
-                    to="/solutions" 
+                  <Link
+                    to="/solutions"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={() => setIsOpen(false)}
                   >
                     Solutions
                   </Link>
-                  <Link 
-                    to="/about" 
+                  <Link
+                    to="/about"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={() => setIsOpen(false)}
                   >
                     About
                   </Link>
-                  <Link 
-                    to="/blog" 
+                  <Link
+                    to="/blog"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={() => setIsOpen(false)}
                   >
                     Blog
                   </Link>
-                  <Link 
-                    to="/contact" 
+                  <Link
+                    to="/contact"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={() => setIsOpen(false)}
                   >

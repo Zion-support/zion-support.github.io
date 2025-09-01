@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import TechnologyStackSection from './TechnologyStackSection';
 
-
 describe ('TechnologyStackSection', () => {
   it ('renders without crashing', () => {
     render (<TechnologyStackSection />) ;

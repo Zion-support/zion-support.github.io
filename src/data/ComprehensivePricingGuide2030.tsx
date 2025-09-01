@@ -11,7 +11,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
   const getFilteredServices = () => {;
     let services: any[] = [];
-    
+
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -40,7 +40,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
   const getCategories = () => {;
     let services: any[] = [];
-    
+
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -57,7 +57,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
   const getPriceRange = () => {;
     let services: any[] = [];
-    
+
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -452,11 +452,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   (e) => setPriceRange([priceRange[0],
   parseInt(e.target.value)])
 
-
-
-
-
-
 }
                       className="flex-1"
                     />
@@ -468,11 +463,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       onChange = {
   (e) => setPriceRange([parseInt(e.target.value),
   priceRange[1]])
-
-
-
-
-
 
 }
                       className="flex-1"
@@ -514,11 +504,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   ;
   priceRangeData[1]]);
                     setSelectedCategory('all');
-                  
-
-
-
-
 
 
 }}
@@ -578,11 +563,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   ;
   priceRangeData[1]]);
                   setSelectedCategory('all');
-                
-
-
-
-
 
 
 }}

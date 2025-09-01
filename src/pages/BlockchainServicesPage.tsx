@@ -3,7 +3,6 @@ export default BlockchainServicesPage;
 import {
 import { motion } from 'framer - motion';
 
-
   Link,
   Coins,
   Shield,
@@ -45,17 +44,17 @@ import { motion } from 'framer - motion';
                 key={index}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - zion - blue - dark / 50 backdrop - blur - sm border border - zion - cyan / 20 rounded - xl p - 6 text - center hover:border - zion - cyan / 40 transition - all duration - 300"

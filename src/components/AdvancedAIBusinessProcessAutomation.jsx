@@ -2,7 +2,6 @@ import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle,
 import React, { useState, useRef } from 'react';
 export function AdvancedAIBusinessProcessAutomation () {
 
-
 const mockBusinessProcesses = [
     {
         id: 'bp - 001',

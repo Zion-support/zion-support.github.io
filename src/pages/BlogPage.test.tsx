@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import BlogPage from './BlogPage';
 
-
 describe ('BlogPage', () => {
   it ('renders without crashing', () => {
     render (<BlogPage />) ;

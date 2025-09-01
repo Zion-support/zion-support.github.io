@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import ModernUIEnhancer from './ModernUIEnhancer';
 
-
 describe ('ModernUIEnhancer', () => {
   it ('renders without crashing', () => {
     render (<ModernUIEnhancer />) ;

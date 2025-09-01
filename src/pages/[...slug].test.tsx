@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import [...slug] from './[...slug]';
 
-
 describe ('[...slug]', () => {
   it ('renders without crashing', () => {
     render (<[...slug] />) ;

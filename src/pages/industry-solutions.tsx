@@ -4,7 +4,6 @@ export default IndustrySolutions;
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Building,
   Heart,
   Factory,

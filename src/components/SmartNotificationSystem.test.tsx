@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import SmartNotificationSystem from './SmartNotificationSystem';
 
-
 describe ('SmartNotificationSystem', () => {
   it ('renders without crashing', () => {
     render (<SmartNotificationSystem />) ;

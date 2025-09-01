@@ -80,11 +80,6 @@ export const CONTACT_INFO = {
   Middletown DE 19709';
 ;
 
-
-
-
-
-
 };
 
 // Service Statistics
@@ -99,11 +94,6 @@ export const SERVICE_STATS = {
   ;
   pricingModels: PRICING_MODELS.length;
 ;
-
-
-
-
-
 
 };
 

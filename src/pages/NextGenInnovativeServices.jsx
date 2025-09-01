@@ -4,7 +4,6 @@ export default function NextGenInnovativeServices () {
 import { motion } from 'framer - motion';
 import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeServices";
 
-
     const [searchTerm, setSearchTerm] = useState ('') ;
     const [selectedCategory, setSelectedCategory] = useState ('all') ;
     const [selectedService, setSelectedService] = useState (null) ;
@@ -37,7 +36,7 @@ import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeService
     };
     const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -54,11 +53,11 @@ import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeService
         <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text - center">
             <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 via - purple - 400 to - cyan - 400 bg - clip - text text - transparent">
@@ -228,15 +227,15 @@ import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeService
       {selectedService && (<div className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4">
           <motion.div initial = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} exit = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }} className="bg - gray - 900 rounded - 2xl max - w-4xl w - full max - h-[90vh] overflow - y-auto">
             <div className="p - 8">
@@ -388,15 +387,15 @@ import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeService
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 mb - 16">
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.8,
-  delay: 0.5 
+  delay: 0.5
 
 }} className="text - center">
           <div className="bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 border border - blue - 500 / 20 rounded - 2xl p - 12">

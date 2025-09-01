@@ -3,7 +3,6 @@ export class EnhancedErrorBoundary extends Component < Props, State> {
 import {
 import { motion } from 'framer - motion';
 
-
   AlertTriangle,
   RefreshCw,
   Home,

@@ -3,7 +3,6 @@ import React, { useEffect, useMemo } from 'react';
             import ('web - vitals') .then ( ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
 export /**
 
-
  * SEO function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -133,7 +132,7 @@ interface SEOProps {
             color: white;
             text - align: center;
           }
-          
+
           /* Optimize font loading */
           @font - face {
             font - family: 'Orbitron';
@@ -142,7 +141,7 @@ interface SEOProps {
             font - weight: 400;
             font - style: normal;
           }
-          
+
           @font - face {
             font - family: 'Orbitron';
             font - display: swap;
@@ -150,13 +149,13 @@ interface SEOProps {
             font - weight: 600;
             font - style: normal;
           }
-          
+
           /* Reduce layout shift */
           img {
             max - width: 100%;
             height: auto;
           }
-          
+
           /* Optimize animations */
           @media (prefers - reduced - motion: reduce) {
             *, *::before, *::after {
@@ -178,7 +177,7 @@ interface SEOProps {
               if (navigation) {
                 const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
                 console.log ('Page load time:', loadTime + 'ms') ;
-                
+
                 // Send to analytics if available
                 if (window.gtag) {
                   window.gtag ('event', 'timing_complete', {
@@ -188,7 +187,7 @@ interface SEOProps {
               }
             }) ;
           }
-          
+
           // Core Web Vitals monitoring
           if ('web - vital' in window) {
               getCLS (console.log) ;

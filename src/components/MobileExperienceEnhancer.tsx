@@ -4,7 +4,6 @@ export default MobileExperienceEnhancer;
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Smartphone,
   Tablet,
   Monitor,
@@ -256,13 +255,13 @@ interface MobileExperienceEnhancerProps {
         touch - action: manipulation;
         -webkit - tap - highlight - color: transparent;
       }
-      
+
       .mobile - device button,
       .mobile - device [role="button"] {
         min - height: 44px;
         min - width: 44px;
       }
-      
+
       .mobile - device input,
       .mobile - device select,
       .mobile - device textarea {

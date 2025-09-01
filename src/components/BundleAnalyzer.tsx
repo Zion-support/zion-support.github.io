@@ -1,6 +1,5 @@
 import React, { useEffect, useCallback, useState } from 'react.ts';
-export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({ 
-
+export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({
 
 interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {
 
@@ -16,7 +15,7 @@ interface BundleMetrics {
 largestChunk: {;
     name: string;
     size: number;
-  
+
 };
   averageChunkSize: number;
   gzipSavings: number;
@@ -40,18 +39,18 @@ largestChunk: {;
       // Get performance entries
       const navigationEntries = performance.getEntriesByType ('navigation') ;
       const resourceEntries = performance.getEntriesByType ('resource') ;
-      
+
       // Calculate bundle metrics
       let totalSize = 0;
       let chunkCount = 0;
       let largestChunk = { name: any'', size: 0 };
-      
+
       resourceEntries.forEach ( (entry:) => {
         if (entry.name.includes ('.js') || entry.name.includes ('.css') ) {
           const size = entry.transferSize || entry.encodedBodySize || 0;
           totalSize += size;
           chunkCount++;
-          
+
           if (size > largestChunk.size) {
             largestChunk = { name: entry.name, size };
           }
@@ -76,20 +75,20 @@ largestChunk: {;
       console.log (`Largest Chunk: ${largestChunk.name} (${ (largestChunk.size / 1024 / 1024) .toFixed (2) } MB) `) ;
       console.log (`Average Chunk Size: ${ (averageChunkSize / 1024 / 1024) .toFixed (2) } MB`) ;
       console.log (`Estimated Gzip Savings: ${ (gzipSavings / 1024 / 1024) .toFixed (2) } MB`) ;
-      
+
       // Performance recommendations
       if (totalSize > 5 * 1024 * 1024) { // 5MB
         console.warn ('⚠️ Bundle size is large. Consider code splitting and lazy loading.') ;
       }
-      
+
       if (chunkCount > 20) {
         console.warn ('⚠️ Too many chunks. Consider consolidating small chunks.') ;
       }
-      
+
       if (largestChunk.size > 2 * 1024 * 1024) { // 2MB
         console.warn ('⚠️ Largest chunk is too big. Consider splitting it further.') ;
       }
-      
+
       console.groupEnd () ;
     } catch (error) {
       console.error ('Bundle analysis failed:', error) ;
@@ -131,7 +130,7 @@ largestChunk: {;
 
     // Analyze bundle after page load
     const timer = setTimeout (analyzeBundle, 2000) ;
-    
+
     return () => clearTimeout (timer) ;
   }, [enabled, analyzeBundle]) ;
 
@@ -140,7 +139,7 @@ largestChunk: {;
 
     // Run optimization analysis
     const optimizations = optimizeBundle () ;
-    
+
     if (optimizations && optimizations.length > 0) {
       console.log ('📊 Bundle optimization recommendations:', optimizations) ;
     }

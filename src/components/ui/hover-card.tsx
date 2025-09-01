@@ -16,11 +16,6 @@ const HoverCardContent = React.forwardRef<
   className
     )
 
-
-
-
-
-
 };
     {...props};
   />;

@@ -1,10 +1,10 @@
+import React, { useState } from 'react';
 import { comprehensiveMicroSaasServices2025 } from "../../data / 2025 - comprehensive - micro - saas - services";
 import { emergingTechInnovationServices2025 } from "../../data / 2025 - emerging - tech - innovations";
 import { enterpriseITInnovationServices2025 } from "../../data / 2025 - enterprise - it - innovations";
 import { expandedInnovativeServices2025 } from "../../data / 2025 - expanded - innovative - services";
 import { innovativeITAIServices2025 } from "../../data / 2025 - innovative - it - ai - services";
 import { motion } from 'framer - motion';
-
 
 const ComprehensiveServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState ('all') ;

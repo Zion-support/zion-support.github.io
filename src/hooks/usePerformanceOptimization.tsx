@@ -139,13 +139,13 @@ const metricsRef:  useRef<PerformanceMetrics>({;
     }}, []);
 
   // Debounced function utility
-    
+
     return (...args: Parameters<T>)  => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => func(...args), delay)}}, []);
 
   // Throttled function utility
-    
+
     return (...args: Parameters<T>)  => {
       const now = Date.now();
       if (now - lastCall >= delay) {

@@ -1,10 +1,9 @@
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide - react';
 import { useState, useEffect, useCallback } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
 import { motion, AnimatePresence } from 'framer - motion';
 import { useAnalytics } from "../hooks / useAnalytics";
-
 
     const { trackEvent, trackConversion } = useAnalytics ({
         enableTracking: enableAnalytics,
@@ -171,11 +170,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
         const isPasswordField = field.name.toLowerCase () .includes ('password') ;
         return (<motion.div key={field.name} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className="space - y-2">
         <label className="block text - sm font - medium text - gray - 700 dark:text - gray - 300">
@@ -232,11 +231,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
         {/* Validation Message */}
         {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }} className="text - sm text - red - 600 dark:text - red - 400">
             {fieldValidation.message}
@@ -245,11 +244,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
     if (isSubmitted) {
         return (<motion.div initial = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} className="text - center p - 8 bg - green - 50 dark:bg - green - 900 / 20 rounded - xl border border - green - 200 dark:border - green - 700">
         <CheckCircle className="w - 16 h - 16 text - green - 500 mx - auto mb - 4"/>
@@ -263,11 +262,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
     }
     return (<motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className={`bg - white dark:bg - gray - 800 rounded - xl shadow - lg border border - gray - 200 dark:border - gray - 700 overflow - hidden ${className}`}>
       {/* Header */}
@@ -310,15 +309,15 @@ import { useAnalytics } from "../hooks / useAnalytics";
         <AnimatePresence>
           {Object.values (validation) .some (v => !v.isValid && v.isTouched) && (<motion.div initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }} exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} className="p - 3 bg - red - 50 dark:bg - red - 900 / 20 border border - red - 200 dark:border - red - 700 rounded - lg">
               <p className="text - sm text - red - 600 dark:text - red - 400">

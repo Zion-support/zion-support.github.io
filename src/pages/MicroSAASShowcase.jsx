@@ -7,7 +7,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { COMPREHENSIVE_SERVICES } from '@/data / comprehensiveServices';
 export default function MicroSAASShowcase () {
 
-
 const microSAASServices = COMPREHENSIVE_SERVICES.filter (service => service.category === 'Micro SAAS') ;
     return (<div className="min - h-screen bg - background">
       {/* Hero Section */}

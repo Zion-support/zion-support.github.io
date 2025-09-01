@@ -6,7 +6,6 @@ import { Button } from '@/components / ui / button';
   export function useErrorHandler () {
 export function ErrorBoundary ({ children, fallback, onError }) {
 
-
         AlertTriangle,
         RefreshCw,
         Home,

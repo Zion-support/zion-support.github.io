@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 export function Notification ({ id, type, title, message, duration = 5000, onClose }) {
 export function NotificationContainer ({ notifications, onClose }) {
 
-
 const notificationStyles = {
   success: {
         icon: CheckCircle,

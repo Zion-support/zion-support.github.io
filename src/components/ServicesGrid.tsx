@@ -4,7 +4,6 @@ export default ServicesGrid;
 export function ServicesGrid (...args: any[]) : any {
 import { motion } from 'framer - motion.ts';
 
-
 interface Service {
   title: string;
   description: string;

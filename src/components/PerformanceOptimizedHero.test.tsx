@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import PerformanceOptimizedHero from './PerformanceOptimizedHero';
 
-
 describe ('PerformanceOptimizedHero', () => {
   it ('renders without crashing', () => {
     render (<PerformanceOptimizedHero />) ;

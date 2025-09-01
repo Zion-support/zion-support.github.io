@@ -4,7 +4,6 @@ import {
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data / innovativeMicroSaasServices2025";
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Search,
   Filter,
   Star,
@@ -493,7 +492,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
   const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {
@@ -546,12 +545,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -583,17 +582,17 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
             className="bg - zion - slate - 800 / 50 backdrop - blur - sm border border - zion - slate - 700 rounded - 2xl p - 6"
@@ -881,17 +880,17 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
             <motion.div
               initial = {
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 }}
               animate = {
   { scale: 1,
-  opacity: 1 
+  opacity: 1
 
 }}
               exit = {
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 }}
               className="bg - zion - slate - 900 border border - zion - slate - 700 rounded - 2xl max - w-4xl w - full max - h-[90vh] overflow - y-auto"

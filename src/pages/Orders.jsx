@@ -7,7 +7,6 @@ import { useAuth } from '@/hooks / useAuth';
 import { useGetOrdersQuery } from '@/hooks / useOrders';
 export default function OrdersPage () {
 
-
     const { user } = useAuth () ;
     const { data: orders, isLoading } = useGetOrdersQuery (user?.id) ;
     const formatDate = (date) => new Date (date) .toLocaleDateString () ;

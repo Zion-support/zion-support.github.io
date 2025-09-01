@@ -1,15 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 export const AccessibilityEnhancer: React.FC < AccessibilityEnhancerProps> = ({
-import { 
+import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
-  Eye, 
-  EyeOff, 
-  Type, 
-  Contrast, 
-  ZoomIn, 
-  ZoomOut, 
+  Eye,
+  EyeOff,
+  Type,
+  Contrast,
+  ZoomIn,
+  ZoomOut,
   RotateCcw,
   Settings,
   X,
@@ -40,12 +39,12 @@ interface AccessibilityEnhancerProps {
       if (!settings.keyboardNavigation) return;
 
       const target = event.target as HTMLElement;
-      
+
       // Tab navigation enhancement
       if (event.key = == 'Tab') {
         const focusableElements = document.querySelectorAll (;
           'button, [href], input, select, textarea, [tabindex]:not ([tabindex="-1"]) ';) ;
-        
+
         const firstElement = focusableElements[0] as HTMLElement;
         const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
@@ -106,9 +105,9 @@ interface AccessibilityEnhancerProps {
       announcement.setAttribute ('aria - atomic', 'true') ;
       announcement.className = 'sr - only';
       announcement.textContent = message;
-      
+
       document.body.appendChild (announcement) ;
-      
+
       setTimeout ( () => {
         document.body.removeChild (announcement) ;
       }, 1000) ;
@@ -118,15 +117,15 @@ interface AccessibilityEnhancerProps {
   // Add accessibility attributes to interactive elements
   useEffect ( () => {
     const interactiveElements = document.querySelectorAll ('button, a, input, select, textarea') ;
-    
+
 interactiveElements.forEach (element:  > {;
       const el = element as HTMLElement;
-      
+
       // Add role if missing
       if (el.tagName = == 'BUTTON' && !el.getAttribute ('role') ) {;
         el.setAttribute ('role', 'button') ;
       }
-      
+
       // Add aria - label for elements without text
       if (!el.textContent?.trim () && !el.getAttribute ('aria - label') ) {
         const title = el.getAttribute ('title') ;
@@ -134,7 +133,7 @@ interactiveElements.forEach (element:  > {;
           el.setAttribute ('aria - label', title) ;
         }
       }
-      
+
       // Add focus indicator
       if (settings.focusIndicator) {
         el.classList.add ('focus - visible') ;
@@ -155,23 +154,23 @@ interactiveElements.forEach (element:  > {;
         --accent: #ffff00 ! important;
         --border: #ffffff ! important;
       }
-      
+
       .high - contrast * {
         color: var (--text - primary) !important;
         background - color: var (--bg - primary) !important;
         border - color: var (--border) !important;
       }
-      
+
       /* Large text mode */
       .large - text {
         font - size: 1.2em ! important;
       }
-      
+
       .large - text h1 { font - size: 2.5em ! important; }
       .large - text h2 { font - size: 2em ! important; }
       .large - text h3 { font - size: 1.75em ! important; }
       .large - text p { font - size: 1.3em ! important; }
-      
+
       /* Reduced motion */
       .reduced - motion *,
       .reduced - motion *::before,
@@ -181,17 +180,17 @@ interactiveElements.forEach (element:  > {;
         transition - duration: 0.01ms ! important;
         scroll - behavior: auto ! important;
       }
-      
+
       /* Focus indicators */
       .focus - visible:focus {
         outline: 3px solid #3b82f6 ! important;
         outline - offset: 2px ! important;
       }
-      
+
       .focus - visible:focus:not (:focus - visible) {
         outline: none ! important;
       }
-      
+
       /* Screen reader only */
       .sr - only {
         position: absolute ! important;
@@ -204,7 +203,7 @@ interactiveElements.forEach (element:  > {;
         white - space: nowrap ! important;
         border: 0 ! important;
       }
-      
+
       /* Skip to main content link */
       .skip - link {
         position: absolute;
@@ -216,7 +215,7 @@ interactiveElements.forEach (element:  > {;
         text - decoration: none;
         z - index: 1000;
       }
-      
+
       .skip - link:focus {
         top: 6px;
       }
@@ -231,7 +230,7 @@ interactiveElements.forEach (element:  > {;
   // Apply accessibility settings to the document
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
+
     // High contrast
     if (newSettings.highContrast) {
       root.style.setProperty ('--text - color', '#ffffff') ;
@@ -281,11 +280,11 @@ interactiveElements.forEach (element:  > {;
   };
 
   // Update individual setting
-  const updateSetting = <K extends keyof AccessibilitySettings> (key: K, 
+  const updateSetting = <K extends keyof AccessibilitySettings> (key: K,
     value: AccessibilitySettings[K]) => {
     const newSettings = { ...settings, [key]: value };
     saveSettings (newSettings) ;
-    
+
     // Show notification
     const notification = `Updated ${key.replace (/ ([A - Z]) /g, ' $1') .toLowerCase () }`;
     setNotifications (prev => [...prev, notification]) ;
@@ -588,13 +587,13 @@ interactiveElements.forEach (element:  > {;
 
   const applySettings = useCallback ( (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
+
     // Apply font size
     root.style.setProperty ('--zion - font - size - base', `${newSettings.fontSize}px`) ;
     root.style.setProperty ('--zion - font - size - sm', `${newSettings.fontSize * 0.875}px`) ;
     root.style.setProperty ('--zion - font - size - lg', `${newSettings.fontSize * 1.125}px`) ;
     root.style.setProperty ('--zion - font - size - xl', `${newSettings.fontSize * 1.25}px`) ;
-    
+
     // Apply high contrast
     if (newSettings.highContrast) {
       root.classList.add ('high - contrast') ;
@@ -611,21 +610,21 @@ interactiveElements.forEach (element:  > {;
       root.style.removeProperty ('--zion - text - secondary') ;
       root.style.removeProperty ('--zion - border - color') ;
     }
-    
+
     // Apply reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add ('reduced - motion') ;
     } else {
       root.classList.remove ('reduced - motion') ;
     }
-    
+
     // Apply focus indicator
     if (newSettings.focusIndicator) {
       root.classList.add ('focus - visible') ;
     } else {
       root.classList.remove ('focus - visible') ;
     }
-    
+
     // Apply keyboard navigation
     if (newSettings.keyboardNavigation) {
       document.body.classList.add ('keyboard - navigation') ;
@@ -736,7 +735,7 @@ interactiveElements.forEach (element:  > {;
                 {tabs.map ( (tab) => {
                   const Icon = tab.icon;
                   const isActive = activeTab === tab.id;
-                  
+
                   return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={tab.id}
                       onClick={ () => setActiveTab (tab.id) }
                       className={`flex - 1 flex items - center justify - center space - x-2 px - 4 py - 3 text - sm font - medium transition - colors ${

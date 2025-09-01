@@ -14,7 +14,7 @@ seller: {;
     name: string;
     rating: number;
     reviews: number;
-  
+
 };
   location: string;
   createdAt: string;

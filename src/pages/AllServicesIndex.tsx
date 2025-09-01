@@ -4,7 +4,6 @@ export default AllServicesIndex;
 import { motion   } from 'framer - motion.ts';
 import { SEO   } from '../components / SEO';
 
-
 const AllServicesIndex: React.FC = () : JSX.Element => {;
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
@@ -55,7 +54,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
       features['Sub - millisecond processing', 'Edge AI intelligence', 'Distributed computing'],;
       benefits['Reduce latency by 90%', 'Lower bandwidth costs by 70%'];
     },;
-    
+
     // Cloud & Infrastructure Services
     {
       id: 'cloud - devops',
@@ -90,7 +89,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
       features['Real - time monitoring', 'Predictive maintenance', 'Simulation modeling'],;
       benefits['Improved efficiency', 'Reduced downtime'];
     },;
-    
+
     // Data & Analytics Services
     {
       id: 'data - analytics',
@@ -125,7 +124,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
       features['Edge processing', 'Real - time analytics', 'Data filtering'],;
       benefits['Low latency', 'Real - time decisions'];
     },;
-    
+
     // Security & Compliance Services
     {
       id: 'zero - trust - network - architecture',
@@ -178,7 +177,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
         keywords="Zion Tech Group services, AI services, cloud services, data analytics, cybersecurity, micro SAAS, business solutions, service directory"
         canonical="https://ziontechgroup.com / all - services"
       />
-      
+
       <div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900">
         {/* Hero Section */}
         <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">
@@ -186,12 +185,12 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -200,10 +199,10 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
                 Complete Services Directory
               </h1>
               <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">
-                Discover our comprehensive portfolio of AI - powered micro SAAS, cloud infrastructure, 
+                Discover our comprehensive portfolio of AI - powered micro SAAS, cloud infrastructure,
                 data analytics, and security solutions designed to transform your business.
               </p>
-              
+
               {/* Search and Filter Controls */}
               <div role="button" className="max - w-4xl mx - auto mb - 8">
                 <div role="button" className="flex flex - col lg:flex - row gap - 4">
@@ -229,7 +228,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
                   </div>
                 </div>
               </div>
-              
+
               <div role="button" className="text - center">
                 <p className="text - gray - 300 mb - 4">
                   Found < span className="text - blue - 400 font - semibold">{filteredServices.length}</span > services
@@ -277,17 +276,17 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
                     key={service.id}
                     initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                     animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                     className="bg - white / 10 backdrop - blur - sm rounded - xl p - 6 border border - white / 20 hover:border - white / 40 transition - all duration - 300 group"
@@ -298,15 +297,15 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
                         {service.category}
                       </span>
                     </div>
-                    
+
                     <h3 className="text - xl font - semibold text - white mb - 3 group - hover:text - blue - 300 transition - colors duration - 300">
                       {service.title}
                     </h3>
-                    
+
                     <p className="text - gray - 300 mb - 4 leading - relaxed">
                       {service.description}
                     </p>
-                    
+
                     <div role="button" className="mb - 4">
                       <h4 className="text - sm font - semibold text - white mb - 2">Key Features:</h4>
                       <ul className="space - y-1">
@@ -316,7 +315,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
                           </li>) ) }
                       </ul>
                     </div>
-                    
+
                     <div role="button" className="mb - 4">
                       <h4 className="text - sm font - semibold text - white mb - 2">Benefits:</h4>
                       <ul className="space - y-1">
@@ -326,12 +325,12 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
                           </li>) ) }
                       </ul>
                     </div>
-                    
+
                     <div role="button" className="flex items - center justify - between mb - 4">
                       <div role="button" className="text - lg font - bold text - green - 400">{service.pricing}</div>
                       <span className="text - sm text - gray - 400">Learn more</span>
                     </div>
-                    
+
                     <div role="button" className="flex gap - 3">
                       <Link
                         to={service.url}
@@ -357,12 +356,12 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -374,7 +373,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
               <p className="text - xl text - gray - 300 mb - 8">
                 Our experts are here to help you find the perfect solution for your business needs.
               </p>
-              
+
               <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8">
                 <div role="button" className="bg - white / 10 backdrop - blur - sm rounded - lg p - 6 border border - white / 20">
                   <div role="button" className="text - 3xl mb - 4">📞</div>
@@ -384,7 +383,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
                     Book Now
                   </Link>
                 </div>
-                
+
                 <div role="button" className="bg - white / 10 backdrop - blur - sm rounded - lg p - 6 border border - white / 20">
                   <div role="button" className="text - 3xl mb - 4">💰</div>
                   <h3 className="text - xl font - semibold text - white mb - 3">Get Custom Quote</h3>
@@ -393,7 +392,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
                     Request Quote
                   </Link>
                 </div>
-                
+
                 <div role="button" className="bg - white / 10 backdrop - blur - sm rounded - lg p - 6 border border - white / 20">
                   <div role="button" className="text - 3xl mb - 4">🚀</div>
                   <h3 className="text - xl font - semibold text - white mb - 3">Start Free Trial</h3>
@@ -403,7 +402,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
                   </Link>
                 </div>
               </div>
-              
+
               <div role="button" className="bg - white / 10 backdrop - blur - sm rounded - lg p - 6 border border - white / 20">
                 <h3 className="text - xl font - semibold text - white mb - 3">Contact Information</h3>
                 <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - gray - 300">

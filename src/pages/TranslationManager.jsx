@@ -12,7 +12,6 @@ import { useTranslationService } from "@/hooks / useTranslationService";
 import SEO from "@/components / SEO";
 export default function TranslationManager () {
 
-
     const { t, i18n } = useTranslation () ;
     const isMobile = useIsMobile () ;
     const { supportedLanguages } = useLanguage () ;
@@ -240,5 +239,5 @@ export default function TranslationManager () {
           </CardContent>
         </Card>
       </main>
-      
+
     </>) }

@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import MobileSidebarToggle from './MobileSidebarToggle';
 
-
 describe ('MobileSidebarToggle', () => {
   it ('renders without crashing', () => {
     render (<MobileSidebarToggle />) ;

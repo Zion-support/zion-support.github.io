@@ -7,7 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui / card";
 import { Input } from "./ui / input";
 import { motion } from 'framer - motion';
 
-
 const AdvancedServiceInnovationHub = () => {
     const [selectedCategory, setSelectedCategory] = useState ('all') ;
     const [selectedImpact, setSelectedImpact] = useState ('all') ;
@@ -136,11 +135,11 @@ const AdvancedServiceInnovationHub = () => {
       {/* Header */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className="mb - 8">
         <div className="flex flex - col lg:flex - row lg:items - center lg:justify - between gap - 4">
@@ -169,11 +168,11 @@ const AdvancedServiceInnovationHub = () => {
           {/* Filters */}
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.1 }} className="bg - white rounded - lg shadow - lg p - 6 mb - 8">
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4">
@@ -217,20 +216,20 @@ const AdvancedServiceInnovationHub = () => {
           {/* Trends Grid */}
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.2 }} className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6 mb - 8">
             {filteredTrends.map ( (trend, index) => (<motion.div key={trend.id} initial = {
   { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
+  x: index % 2 === 0 ? -20 : 20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} transition={{ delay: 0.1 * index }}>
                 <Card className="h - full hover:shadow - lg transition - shadow">
@@ -310,20 +309,20 @@ const AdvancedServiceInnovationHub = () => {
       {/* Future Roadmap View */}
       {viewMode === 'roadmap' && (<motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.1 }} className="space - y-6">
           {futureRoadmap.map ( (roadmap, index) => (<motion.div key={roadmap.id} initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} transition={{ delay: 0.1 * index }}>
               <Card className="hover:shadow - lg transition - shadow">
@@ -406,11 +405,11 @@ const AdvancedServiceInnovationHub = () => {
       {/* Strategic Insights View */}
       {viewMode === 'insights' && (<motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.1 }} className="space - y-6">
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">
@@ -555,11 +554,11 @@ const AdvancedServiceInnovationHub = () => {
       {/* CTA Section */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.4 }} className="mt - 12 text - center">
         <div className="bg - gradient - to - r from - zion - purple via - zion - blue - light to - zion - cyan rounded - lg p - 8 text - white">

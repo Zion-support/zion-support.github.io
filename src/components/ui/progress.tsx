@@ -16,10 +16,6 @@ const Progress: React.FC<ProgressProps> = ({ value, max = 100, className;
   cn("w-full bg-slate-700 rounded-full h-2",
   className)
 
-
-
-
-
 ;
 }>;
       <div;

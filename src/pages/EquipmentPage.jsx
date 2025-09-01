@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader } from '@/components / ui / card';
 import { Filter, SortAsc, Star, ShoppingCart import { Footer } from '@/components / Footer';
 export default EquipmentPage;
 
-
 const EquipmentPage = () => {
   const [equipment, setEquipment] = useState ([]) ;
   const [loading, setLoading] = useState (true) ;

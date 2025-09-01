@@ -4,17 +4,16 @@ import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
 import { SEO  } from '@/components / SEO';
 export default React.memo (function ComprehensiveServicesLanding2028 (...args[]) :  {
-import { Brain, 
+import { Brain,
 import { motion  } from 'framer - motion.ts';
-import { revolutionaryMicroSaasServices2028, 
+import { revolutionaryMicroSaasServices2028,
 
-
-  Cloud, 
-  Shield, 
-  Rocket, 
-  Cpu, 
-  Lock, 
-  Heart, 
+  Cloud,
+  Shield,
+  Rocket,
+  Cpu,
+  Lock,
+  Heart,
   Globe,
   Zap,
   Users,
@@ -56,8 +55,8 @@ import { revolutionaryMicroSaasServices2028,
   ChevronRight,
   ChevronLeft
  } from 'lucide - react';
-  revolutionaryITInfrastructureServices2028, 
-  revolutionaryAIServices2028 
+  revolutionaryITInfrastructureServices2028,
+  revolutionaryAIServices2028
  } from '@/data / innovativeMicroSaasServices2028';
 
   const [currentTestimonial, setCurrentTestimonial] = useState (0) ;
@@ -103,7 +102,7 @@ import { revolutionaryMicroSaasServices2028,
   };
 
   return (<div role="button" className = "min - h-screen bg - gradient - to - br from - zion - blue - dark via - zion - blue to - zion - purple">
-      <SEO 
+      <SEO
         title="Comprehensive Services Landing 2028 - Zion Tech Group"
         description="Discover our comprehensive suite of innovative micro SAAS, IT infrastructure, and AI services for 2028. Transform your business with cutting - edge technology solutions."
         keywords="comprehensive services 2028, micro SAAS, IT services, AI services, technology solutions, business transformation"
@@ -114,15 +113,15 @@ import { revolutionaryMicroSaasServices2028,
       <section className="relative overflow - hidden">
         <div role="button" className="absolute inset - 0 bg - gradient - to - r from - zion - blue - dark / 80 to - zion - purple / 80"></div>
         <div role="button" className="relative z - 10 container mx - auto px - 4 py - 24 text - center">
-          <motion.h1 
+          <motion.h1
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -132,20 +131,20 @@ import { revolutionaryMicroSaasServices2028,
               Revolutionary Technology Solutions for Business Transformation
             </span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
             className="text - xl text - zion - slate - light max - w-4xl mx - auto mb - 8"
@@ -153,20 +152,20 @@ import { revolutionaryMicroSaasServices2028,
             Experience the future of technology with our comprehensive suite of micro SAAS, IT infrastructure,
             and AI services. Each solution is designed for maximum impact with proven ROI and real market pricing.
           </motion.p>
-          <motion.div 
+          <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4
 
 }}
             className="flex flex - wrap justify - center gap - 4"
@@ -198,17 +197,17 @@ import { revolutionaryMicroSaasServices2028,
                 key={stat.label}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="text - center"
@@ -226,15 +225,15 @@ import { revolutionaryMicroSaasServices2028,
       {/* Services Overview */}
       <section id="services - section" className="py - 20">;
         <div role="button" className="container mx - auto px - 4">
-          <motion.div 
+          <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -251,17 +250,17 @@ import { revolutionaryMicroSaasServices2028,
                 key={service.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - white / 10 backdrop - blur - sm rounded - xl p - 6 border border - white / 20 hover:border - zion - cyan / 50 transition - all duration - 300 hover:scale - 105 group"
@@ -320,20 +319,20 @@ import { revolutionaryMicroSaasServices2028,
               </motion.div>) ) }
           </div>
 
-          <motion.div 
+          <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 }}
             className="text - center mt - 12"
@@ -353,15 +352,15 @@ import { revolutionaryMicroSaasServices2028,
       {/* Testimonials Section */}
       <section className="py - 20 bg - white / 5 backdrop - blur - sm">;
         <div role="button" className="container mx - auto px - 4">
-          <motion.div 
+          <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -378,12 +377,12 @@ import { revolutionaryMicroSaasServices2028,
               key={currentTestimonial}
               initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }}
               animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
               transition={{ duration: 0.5 }}
@@ -446,15 +445,15 @@ import { revolutionaryMicroSaasServices2028,
       {/* Why Choose Us Section */}
       <section className="py - 20">;
         <div role="button" className="container mx - auto px - 4">
-          <motion.div 
+          <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -470,17 +469,17 @@ import { revolutionaryMicroSaasServices2028,
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
               className="text - center"
@@ -497,17 +496,17 @@ import { revolutionaryMicroSaasServices2028,
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               className="text - center"
@@ -524,17 +523,17 @@ import { revolutionaryMicroSaasServices2028,
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}
               className="text - center"
@@ -551,17 +550,17 @@ import { revolutionaryMicroSaasServices2028,
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
               className="text - center"
@@ -578,17 +577,17 @@ import { revolutionaryMicroSaasServices2028,
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 }}
               className="text - center"
@@ -605,17 +604,17 @@ import { revolutionaryMicroSaasServices2028,
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 }}
               className="text - center"
@@ -634,20 +633,20 @@ import { revolutionaryMicroSaasServices2028,
 
       {/* Service Details Modal */}
       {selectedService && (<div role="button" className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4">
-          <motion.div 
+          <motion.div
             initial = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }}
             animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
             exit = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }}
             className="bg - zion - blue - dark border border - zion - cyan / 30 rounded - xl max - w-4xl w - full max - h-[90vh] overflow - y-auto"
@@ -761,15 +760,15 @@ import { revolutionaryMicroSaasServices2028,
       {/* Contact Section */}
       <section id="contact - section" className="py - 20 bg - white / 5 backdrop - blur - sm">
         <div role="button" className="container mx - auto px - 4">
-          <motion.div 
+          <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -782,20 +781,20 @@ import { revolutionaryMicroSaasServices2028,
           </motion.div>
 
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
-            <motion.div 
+            <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
               className="text - center"
@@ -813,20 +812,20 @@ import { revolutionaryMicroSaasServices2028,
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               className="text - center"
@@ -844,20 +843,20 @@ import { revolutionaryMicroSaasServices2028,
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}
               className="text - center"
@@ -874,20 +873,20 @@ import { revolutionaryMicroSaasServices2028,
             </motion.div>
           </div>
 
-          <motion.div 
+          <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
             className="text - center mt - 12"

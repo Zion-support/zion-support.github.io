@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import SecurityComplianceSection from './SecurityComplianceSection';
 
-
 describe ('SecurityComplianceSection', () => {
   it ('renders without crashing', () => {
     render (<SecurityComplianceSection />) ;

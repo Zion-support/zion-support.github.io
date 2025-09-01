@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import ContactPage from './ContactPage';
 
-
 describe ('ContactPage', () => {
   it ('renders without crashing', () => {
     render (<ContactPage />) ;

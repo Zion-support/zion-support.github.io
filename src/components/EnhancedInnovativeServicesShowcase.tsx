@@ -3,7 +3,6 @@ import React from 'react.ts';
 export const EnhancedInnovativeServicesShowcase = () => {
 export default EnhancedInnovativeServicesShowcase;
 
-
   return (<section className="py - 20 bg - gradient - to - br from - slate - 900 to - slate - 800">
       <div className="max - w-7xl mx - auto px - 6">
         <div className="text - center mb - 16">

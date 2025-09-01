@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import OptimizedImage from './OptimizedImage';
 
-
 describe ('OptimizedImage', () => {
   it ('renders without crashing', () => {
     render (<OptimizedImage />) ;

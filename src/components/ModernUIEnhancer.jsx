@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer - motion';
 import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true, }) => {
 
-
     const [isVisible, setIsVisible] = useState (false) ;
     const [currentTheme, setCurrentTheme] = useState ('auto') ;
     const [showScrollToTop, setShowScrollToTop] = useState (false) ;
@@ -79,41 +78,41 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
         opacity: 0;
         transform: translateY (30px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
-      
+
       .fade - in - visible {
         opacity: 1;
         transform: translateY (0) }
-      
+
       .slide - in - left {
         opacity: 0;
         transform: translateX (-50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
-      
+
       .slide - in - left - visible {
         opacity: 1;
         transform: translateX (0) }
-      
+
       .slide - in - right {
         opacity: 0;
         transform: translateX (50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
-      
+
       .slide - in - right - visible {
         opacity: 1;
         transform: translateX (0) }
-      
+
       .scale - in {
         opacity: 0;
         transform: scale (0.8) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
-      
+
       .scale - in - visible {
         opacity: 1;
         transform: scale (1) }
-      
+
       .bounce - in {
         animation: bounceIn 0.8s ease - out}
-      
+
       @keyframes bounceIn {
         0% {
           opacity: 0;
@@ -127,53 +126,53 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
           opacity: 1;
           transform: scale (1) }
       }
-      
+
       .floating {
         animation: floating 3s ease - in - out infinite}
-      
+
       @keyframes floating {
         0%, 100% {
           transform: translateY (0px) }
         50% {
           transform: translateY (-10px) }
       }
-      
+
       .glow {
         animation: glow 2s ease - in - out infinite alternate}
-      
+
       @keyframes glow {
         from {
           box - shadow: 0 0 20px rgba (59, 130, 246, 0.5) }
         to {
           box - shadow: 0 0 30px rgba (59, 130, 246, 0.8) }
       }
-      
+
       .gradient - text {
         background: linear - gradient (135deg, #667eea 0%, #764ba2 100%) ;
         -webkit - background - clip: text;
         -webkit - text - fill - color: transparent;
         background - clip: text}
-      
+
       .glass - effect {
         background: rgba (255, 255, 255, 0.1) ;
         backdrop - filter: blur (10px) ;
         border: 1px solid rgba (255, 255, 255, 0.2) }
-      
+
       .glass - effect - dark {
         background: rgba (0, 0, 0, 0.1) ;
         backdrop - filter: blur (10px) ;
         border: 1px solid rgba (255, 255, 255, 0.1) }
-      
+
       .hover - lift {
         transition: transform 0.3s ease, box - shadow 0.3s ease}
-      
+
       .hover - lift:hover {
         transform: translateY (-5px) ;
         box - shadow: 0 20px 40px rgba (0, 0, 0, 0.1) }
-      
+
       .text - shadow {
         text - shadow: 2px 2px 4px rgba (0, 0, 0, 0.3) }
-      
+
       .text - shadow - light {
         text - shadow: 1px 1px 2px rgba (0, 0, 0, 0.1) }
     `;
@@ -202,55 +201,55 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
       {/* Theme Toggle Button */}
       {enableThemeToggle && (<motion.button initial = {
   { opacity: 0,
-  scale: 0 
+  scale: 0
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top - 6 right - 6 z - 50 p - 3 bg - white dark:bg - gray - 800 rounded - full shadow - lg hover:shadow - xl transition - all duration - 300 border border - gray - 200 dark:border - gray - 700" title={`Current theme: ${currentTheme}`}>
           <AnimatePresence mode="wait">
             {currentTheme === 'light' && (<motion.div key="light" initial = {
   { opacity: 0,
-  rotate: -90 
+  rotate: -90
 
 }} animate = {
   { opacity: 1,
-  rotate: 0 
+  rotate: 0
 
 }} exit = {
   { opacity: 0,
-  rotate: 90 
+  rotate: 90
 
 }} transition={{ duration: 0.3 }}>
                 <Sun className="w - 5 h - 5 text - yellow - 500"/>
               </motion.div>) }
             {currentTheme === 'dark' && (<motion.div key="dark" initial = {
   { opacity: 0,
-  rotate: -90 
+  rotate: -90
 
 }} animate = {
   { opacity: 1,
-  rotate: 0 
+  rotate: 0
 
 }} exit = {
   { opacity: 0,
-  rotate: 90 
+  rotate: 90
 
 }} transition={{ duration: 0.3 }}>
                 <Moon className="w - 5 h - 5 text - blue - 400"/>
               </motion.div>) }
             {currentTheme === 'auto' && (<motion.div key="auto" initial = {
   { opacity: 0,
-  rotate: -90 
+  rotate: -90
 
 }} animate = {
   { opacity: 1,
-  rotate: 0 
+  rotate: 0
 
 }} exit = {
   { opacity: 0,
-  rotate: 90 
+  rotate: 90
 
 }} transition={{ duration: 0.3 }}>
                 <Monitor className="w - 5 h - 5 text - gray - 600 dark:text - gray - 400"/>
@@ -261,11 +260,11 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
       {/* Device Type Indicator */}
       {enableResponsiveDesign && (<motion.div initial = {
   { opacity: 0,
-  x: -50 
+  x: -50
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} className="fixed top - 6 left - 6 z - 50 p - 2 bg - white dark:bg - gray - 800 rounded - lg shadow - lg border border - gray - 200 dark:border - gray - 700">
           <div className="flex items - center space - x-2 text - sm">
@@ -280,15 +279,15 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
       <AnimatePresence>
         {showScrollToTop && (<motion.button ref={scrollToTopRef} initial = {
   { opacity: 0,
-  scale: 0 
+  scale: 0
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} exit = {
   { opacity: 0,
-  scale: 0 
+  scale: 0
 
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToTop} className="fixed bottom - 6 left - 6 z - 50 p - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white rounded - full shadow - lg hover:shadow - xl transition - all duration - 300" title="Scroll to top">
             <ArrowUp className="w - 5 h - 5"/>
@@ -298,11 +297,11 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
       {/* Floating Action Button */}
       <motion.button initial = {
   { opacity: 0,
-  scale: 0 
+  scale: 0
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={ () => setIsVisible (!isVisible) } className="fixed bottom - 6 right - 6 z - 50 p - 3 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white rounded - full shadow - lg hover:shadow - xl transition - all duration - 300" title="UI Enhancements">
         <Palette className="w - 5 h - 5"/>
@@ -312,19 +311,19 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
       <AnimatePresence>
         {isVisible && (<motion.div initial = {
   { opacity: 0, y: 100,
-  scale: 0.8 
+  scale: 0.8
 
 }} animate = {
   { opacity: 1, y: 0,
-  scale: 1 
+  scale: 1
 
 }} exit = {
   { opacity: 0, y: 100,
-  scale: 0.8 
+  scale: 0.8
 
 }} transition = {
   { type: "spring", damping: 25,
-  stiffness: 300 
+  stiffness: 300
 
 }} className="fixed bottom - 24 right - 6 z - 50 w - 80 bg - white dark:bg - gray - 900 rounded - lg shadow - 2xl border border - gray - 200 dark:border - gray - 700 overflow - hidden">
             {/* Header */}

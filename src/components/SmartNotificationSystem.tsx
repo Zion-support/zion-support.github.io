@@ -6,7 +6,6 @@ export interface NotificationAction {
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Bell,
   X,
   CheckCircle,

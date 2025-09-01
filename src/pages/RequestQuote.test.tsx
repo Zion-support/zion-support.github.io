@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import RequestQuote from './RequestQuote';
 
-
 describe ('RequestQuote', () => {
   it ('renders without crashing', () => {
     render (<RequestQuote />) ;

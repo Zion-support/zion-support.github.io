@@ -4,7 +4,6 @@ export default MobileNavigation;
 import { motion, AnimatePresence } from 'framer - motion';
 import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, onToggle }) => {
 
-
     const [activeDropdown, setActiveDropdown] = useState (null) ;
     const [searchQuery, setSearchQuery] = useState ('') ;
     const location = useLocation () ;

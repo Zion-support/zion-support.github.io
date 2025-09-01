@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import Community from './Community';
 
-
 describe ('Community', () => {
   it ('renders without crashing', () => {
     render (<Community />) ;

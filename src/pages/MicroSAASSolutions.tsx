@@ -3,7 +3,6 @@ export default React.memo (function MicroSAASSolutions (...args[]) :  {
 import {
 import { SEO } from '../components / SEO';
 
-
   Code,
   Zap,
   Users,

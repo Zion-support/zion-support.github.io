@@ -4,7 +4,6 @@ export /**
 export default FloatingCTA;
 import { motion, AnimatePresence } from 'framer - motion';
 
-
  * FloatingCTA function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -67,7 +66,7 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
         animate={{ scale: 1 }}
         transition = {
   { duration: 0.3,
-  delay: 2 
+  delay: 2
 
 }}
       >
@@ -88,17 +87,17 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                 className="absolute bottom - 20 right - 0 bg - slate - 800 border border - slate - 700 rounded - lg shadow - xl p - 4 min - w-[200px]"
                 initial = {
   { opacity: 0, scale: 0.8,
-  y: 10 
+  y: 10
 
 }}
                 animate = {
   { opacity: 1, scale: 1,
-  y: 0 
+  y: 0
 
 }}
                 exit = {
   { opacity: 0, scale: 0.8,
-  y: 10 
+  y: 10
 
 }}
                 transition={{ duration: 0.2 }}
@@ -115,7 +114,7 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                       <div role="button" className="text - sm text - gray - 400">Get in touch</div>
                     </div>
                   </Link>
-                  
+
                   <Link
                     to="/services"
                     className="flex items - center gap - 3 p - 3 rounded - lg hover:bg - slate - 700 transition - colors duration - 200 text - white"
@@ -127,7 +126,7 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                       <div role="button" className="text - sm text - gray - 400">Explore solutions</div>
                     </div>
                   </Link>
-                  
+
                   <Link
                     to="/quote"
                     className="flex items - center gap - 3 p - 3 rounded - lg hover:bg - slate - 700 transition - colors duration - 200 text - white"
@@ -139,7 +138,7 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                       <div role="button" className="text - sm text - gray - 400">Request pricing</div>
                     </div>
                   </Link>
-                  
+
                   <div role="button" className="border - t border - slate - 600 pt - 3">
                     <div role="button" className="text - center text - sm text - gray - 400 mb - 2">
                       Available 24 / 7

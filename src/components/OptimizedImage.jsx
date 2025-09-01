@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 export const OptimizedImage = ({
 import { motion, AnimatePresence } from 'framer - motion';
-
 
   src,
   alt,

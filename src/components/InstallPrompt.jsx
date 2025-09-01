@@ -3,7 +3,6 @@ import { Button } from '@/components / ui / button';
 export const InstallPrompt = () => {
 export default InstallPrompt;
 
-
     const [deferred, setDeferred] = useState (null) ;
     useEffect ( () => {
         const handler = (e) => {

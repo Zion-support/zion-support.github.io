@@ -2,7 +2,6 @@ import React, { memo } from 'react';
 export const PerformanceOptimizedLoader = memo < LoadingSpinnerProps> ( ({
 import { motion } from 'framer - motion';
 
-
 interface LoaderProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';

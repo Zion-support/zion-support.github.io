@@ -2,7 +2,6 @@ import { Link } from 'react - router - dom';
 import React, { memo, useEffect, useState } from 'react';
 export default PerformanceOptimizedHero;
 
-
 const HeroStats = memo ( ({ stats }) => (<div className="grid grid - cols - 1 md:grid - cols - 4 gap - 8 max - w-6xl mx - auto">
     {stats.map ( (stat, index) => (<div key={index} className="text - center animate - fade - in - up group" style={{ animationDelay: `${index * 0.2}s` }} role="region" aria - label={`${stat.label} statistics`}>
         <div className="relative mb - 4">

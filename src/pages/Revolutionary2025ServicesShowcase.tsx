@@ -5,7 +5,6 @@ import { motion } from 'framer - motion';
 import { revolutionary2025AdvancedMicroSaasServices } from "../data / revolutionary - 2025 - advanced - micro - saas - v2";
 import { revolutionary2025SpecializedITAIServices } from "../data / revolutionary - 2025 - specialized - it - ai - services";
 
-
   Search,
   Filter,
   Star,
@@ -266,12 +265,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             className="text - center mb - 12"
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -289,12 +288,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 700 / 20 p - 6 rounded - xl border border - blue - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -316,17 +315,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - purple - 600 / 20 to - indigo - 700 / 20 p - 6 rounded - xl border border - purple - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
               viewport={{ once: true }}
@@ -349,17 +348,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - green - 600 / 20 to - emerald - 700 / 20 p - 6 rounded - xl border border - green - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               viewport={{ once: true }}
@@ -392,12 +391,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             className="text - center mb - 12"
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -415,12 +414,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - violet - 600 / 20 to - purple - 700 / 20 p - 6 rounded - xl border border - violet - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -450,17 +449,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 700 / 20 p - 6 rounded - xl border border - blue - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
               viewport={{ once: true }}
@@ -489,17 +488,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - green - 600 / 20 to - emerald - 700 / 20 p - 6 rounded - xl border border - green - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               viewport={{ once: true }}
@@ -540,12 +539,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             className="text - center mb - 12"
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -640,17 +639,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                   className="bg - slate - 800 / 50 p - 8 rounded - xl border border - slate - 700 hover:border - cyan - 500 transition - all duration - 300 group hover:bg - slate - 800 / 70"
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   viewport={{ once: true }}
@@ -697,17 +696,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                   className="bg - slate - 800 / 50 p - 6 rounded - xl border border - slate - 700 hover:border - cyan - 500 transition - all duration - 300"
                   initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                   whileInView = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   viewport={{ once: true }}
@@ -837,12 +836,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - green - 600 / 20 to - emerald - 700 / 20 p - 8 rounded - xl border border - green - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -877,17 +876,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 700 / 20 p - 8 rounded - xl border - 2 border - blue - 500 / 50 transform scale - 105"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               viewport={{ once: true }}
@@ -928,17 +927,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - purple - 600 / 20 to - indigo - 700 / 20 p - 8 rounded - xl border border - purple - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
               viewport={{ once: true }}
@@ -1014,12 +1013,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -1035,17 +1034,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
               viewport={{ once: true }}
@@ -1060,17 +1059,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               viewport={{ once: true }}
@@ -1085,17 +1084,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}
               viewport={{ once: true }}
@@ -1112,12 +1111,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - indigo - 600 / 20 to - purple - 700 / 20 p - 6 rounded - xl border border - indigo - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -1143,17 +1142,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - purple - 600 / 20 to - pink - 700 / 20 p - 6 rounded - xl border border - purple - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
               viewport={{ once: true }}
@@ -1178,17 +1177,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - pink - 600 / 20 to - red - 700 / 20 p - 6 rounded - xl border border - pink - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               viewport={{ once: true }}
@@ -1231,12 +1230,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -1249,17 +1248,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
               viewport={{ once: true }}
@@ -1271,17 +1270,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               viewport={{ once: true }}
@@ -1293,17 +1292,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}
               viewport={{ once: true }}
@@ -1317,12 +1316,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - emerald - 600 / 20 to - teal - 700 / 20 p - 6 rounded - xl border border - emerald - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -1336,17 +1335,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - teal - 600 / 20 to - cyan - 700 / 20 p - 6 rounded - xl border border - teal - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
               viewport={{ once: true }}
@@ -1359,17 +1358,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - cyan - 600 / 20 to - blue - 700 / 20 p - 6 rounded - xl border border - cyan - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               viewport={{ once: true }}
@@ -1395,12 +1394,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -1413,17 +1412,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
               viewport={{ once: true }}
@@ -1435,17 +1434,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               viewport={{ once: true }}
@@ -1457,17 +1456,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}
               viewport={{ once: true }}
@@ -1481,12 +1480,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - amber - 600 / 20 to - orange - 700 / 20 p - 6 rounded - xl border border - amber - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -1500,17 +1499,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - orange - 600 / 20 to - red - 700 / 20 p - 6 rounded - xl border border - orange - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
               viewport={{ once: true }}
@@ -1523,17 +1522,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - red - 600 / 20 to - pink - 700 / 20 p - 6 rounded - xl border border - red - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               viewport={{ once: true }}
@@ -1557,12 +1556,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -1611,12 +1610,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                 className="relative flex items - center"
                 initial = {
   { opacity: 0,
-  x: -50 
+  x: -50
 
 }}
                 whileInView = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition={{ duration: 0.6 }}
@@ -1640,17 +1639,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                 className="relative flex items - center"
                 initial = {
   { opacity: 0,
-  x: 50 
+  x: 50
 
 }}
                 whileInView = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
                 viewport={{ once: true }}
@@ -1673,17 +1672,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                 className="relative flex items - center"
                 initial = {
   { opacity: 0,
-  x: -50 
+  x: -50
 
 }}
                 whileInView = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
                 viewport={{ once: true }}
@@ -1706,17 +1705,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                 className="relative flex items - center"
                 initial = {
   { opacity: 0,
-  x: 50 
+  x: 50
 
 }}
                 whileInView = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 }}
                 viewport={{ once: true }}
@@ -1753,12 +1752,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center group"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -1774,17 +1773,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center group"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
               viewport={{ once: true }}
@@ -1799,17 +1798,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center group"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               viewport={{ once: true }}
@@ -1824,17 +1823,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center group"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}
               viewport={{ once: true }}
@@ -1877,12 +1876,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -1895,17 +1894,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
               viewport={{ once: true }}
@@ -1917,17 +1916,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               viewport={{ once: true }}
@@ -1939,17 +1938,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="text - center"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}
               viewport={{ once: true }}
@@ -1974,12 +1973,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - purple - 600 / 20 to - indigo - 700 / 20 p - 8 rounded - xl border border - purple - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -2000,17 +1999,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - cyan - 600 / 20 to - blue - 700 / 20 p - 8 rounded - xl border border - cyan - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               viewport={{ once: true }}
@@ -2030,17 +2029,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="bg - gradient - to - r from - green - 600 / 20 to - emerald - 700 / 20 p - 8 rounded - xl border border - green - 500 / 30"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
               viewport={{ once: true }}

@@ -1,12 +1,11 @@
 import { Link } from "react - router - dom";
 import { useState } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components / ui / form";
 import { Input } from "@/components / ui / input";
 import { Mail import { Button } from "@/components / ui / button";
 export default function ForgotPassword () {
 import { z } from "zod";
-
 
 // Form validation schema
 const forgotPasswordSchema = z.object ({
@@ -130,5 +129,5 @@ const forgotPasswordSchema = z.object ({
           </div>
         </div>
       </div>
-      
+
     </>) }

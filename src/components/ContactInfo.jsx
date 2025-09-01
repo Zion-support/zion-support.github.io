@@ -5,7 +5,6 @@ import { Button } from "../ui / button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui / card";
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo () {
 
-
     return (<section className="py - 20 bg - zion - blue - dark">
       <div className="container mx - auto px - 4">
         <div className="text - center mb - 16">

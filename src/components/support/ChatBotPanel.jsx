@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -197,11 +197,6 @@ export function ChatBotPanel() {
   cn("text-sm mb-2",
   theme === "dark" ? "text-gray-300" : "text-gray-600")
 
-
-
-
-
-
 }>
             Suggested questions:
           </p>
@@ -215,11 +210,6 @@ export function ChatBotPanel() {
   cn("text-sm mb-2 font-medium",
   theme === "dark" ? "text-gray-300" : "text-gray-600")
 
-
-
-
-
-
 }>
             Need more help?
           </p>
@@ -232,21 +222,16 @@ export function ChatBotPanel() {
             </Button>
           </div>
         </div>)}
-      
+
       <div className={
   cn("p-4 border-t",
   theme === "dark" ? "border-zion-blue-light" : "border-gray-200")
-
-
-
-
-
 
 }>
         <form onSubmit={(e) => {
             e.preventDefault();
             handleSendMessage();
-        
+
 
 }} className="flex items-center gap-2">
           <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className={
@@ -254,11 +239,6 @@ export function ChatBotPanel() {
   theme === "dark"
             ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
             : "bg-white border-gray-200")
-
-
-
-
-
 
 }/>
           <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">

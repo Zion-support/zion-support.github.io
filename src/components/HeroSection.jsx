@@ -10,7 +10,6 @@ export function HeroSection () {
 import { motion, useScroll, useTransform } from 'framer - motion';
 import { motion, useScroll, useTransform } from "framer - motion";
 
-
     const { t } = useTranslation () ;
     const containerRef = useRef (null) ;
     const { scrollYProgress } = useScroll ({
@@ -19,7 +18,7 @@ import { motion, useScroll, useTransform } from "framer - motion";
     }) ;
     const y = useTransform (scrollYProgress, [0, 1], ["0%", "50%"]) ;
     const opacity = useTransform (scrollYProgress, [0, 0.5], [1, 0]) ;
-    
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -30,7 +29,7 @@ import { motion, useScroll, useTransform } from "framer - motion";
             }
         }
     };
-    
+
     const itemVariants = {
         hidden: { y: 30, opacity: 0 },
         visible: {
@@ -42,7 +41,7 @@ import { motion, useScroll, useTransform } from "framer - motion";
             }
         }
     };
-    
+
     const floatingVariants = {
         animate: {
             y: [-15, 15, -15],
@@ -54,7 +53,7 @@ import { motion, useScroll, useTransform } from "framer - motion";
             }
         }
     };
-    
+
     const pulseVariants = {
         animate: {
             scale: [1, 1.1, 1],
@@ -66,7 +65,7 @@ import { motion, useScroll, useTransform } from "framer - motion";
             }
         }
     };
-    
+
     const particleVariants = {
         animate: {
             scale: [1, 1.2, 1],
@@ -91,9 +90,9 @@ import { motion, useScroll, useTransform } from "framer - motion";
   };
 
   const itemVariants = {
-    hidden: { 
+    hidden: {
       y: 30,
-      opacity: 0 
+      opacity: 0
     },
     visible: {
       y: 0,
@@ -161,9 +160,9 @@ import { motion, useScroll, useTransform } from "framer - motion";
 
                 {/* New stats section */}
                 <motion.div variants={itemVariants} className="mt - 16 grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
-                    <motion.div 
-                        className="text - center group" 
-                        whileHover={{ y: -5 }} 
+                    <motion.div
+                        className="text - center group"
+                        whileHover={{ y: -5 }}
                         transition={{ type: "spring", stiffness: 400 }}
                     >
                         <div className="text - 4xl font - bold text - zion - cyan mb - 2 group - hover:text - zion - cyan - light transition - colors">
@@ -171,10 +170,10 @@ import { motion, useScroll, useTransform } from "framer - motion";
                         </div>
                         <div className="text - zion - slate - light">Active Users</div>
                     </motion.div>
-                    
-                    <motion.div 
-                        className="text - center group" 
-                        whileHover={{ y: -5 }} 
+
+                    <motion.div
+                        className="text - center group"
+                        whileHover={{ y: -5 }}
                         transition={{ type: "spring", stiffness: 400 }}
                     >
                         <div className="text - 4xl font - bold text - zion - purple mb - 2 group - hover:text - zion - purple - light transition - colors">
@@ -182,10 +181,10 @@ import { motion, useScroll, useTransform } from "framer - motion";
                         </div>
                         <div className="text - zion - slate - light">AI Services</div>
                     </motion.div>
-                    
-                    <motion.div 
-                        className="text - center group" 
-                        whileHover={{ y: -5 }} 
+
+                    <motion.div
+                        className="text - center group"
+                        whileHover={{ y: -5 }}
                         transition={{ type: "spring", stiffness: 400 }}
                     >
                         <div className="text - 4xl font - bold text - zion - cyan - light mb - 2 group - hover:text - zion - cyan transition - colors">

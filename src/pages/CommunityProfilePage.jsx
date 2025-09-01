@@ -1,6 +1,6 @@
 import { useParams, Link } from "react - router - dom";
 import { useState, useEffect } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components / ui / avatar";
 import { Badge } from "@/components / ui / badge";
 import { Button } from "@/components / ui / button";
@@ -12,7 +12,6 @@ import SEO from "@/components / SEO";
 import UserBadges from "@/components / community / UserBadges";
 export default function CommunityProfilePage () {
 import { formatDistanceToNow } from "date - fns";
-
 
 // Mock user data
 const mockUser = {

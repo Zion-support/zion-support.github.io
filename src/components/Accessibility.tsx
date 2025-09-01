@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 export /**
-import { 
+import {
 import { motion, AnimatePresence } from 'framer - motion';
-
 
  * Accessibility function
  * @param {*} params - Function parameters
@@ -11,11 +10,11 @@ import { motion, AnimatePresence } from 'framer - motion';
  */
 function Accessibility () {
 
-  Accessibility as AccessibilityIcon, 
-  Type, 
-  Eye, 
-  Volume2, 
-  Keyboard, 
+  Accessibility as AccessibilityIcon,
+  Type,
+  Eye,
+  Volume2,
+  Keyboard,
   X,
   Plus,
   Minus,
@@ -163,22 +162,22 @@ interface AccessibilitySettings {
         {isOpen && (<motion.div
             initial = {
   { opacity: 0,
-  x: -400 
+  x: -400
 
 }}
             animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
             exit = {
   { opacity: 0,
-  x: -400 
+  x: -400
 
 }}
             transition = {
   { duration: 0.3,
-  ease: "easeOut" 
+  ease: "easeOut"
 
 }}
             className="fixed left - 4 bottom - 20 z - 50 w - 80 bg - slate - 900 border border - cyan - 400 / 20 rounded - lg shadow - 2xl backdrop - blur - xl"

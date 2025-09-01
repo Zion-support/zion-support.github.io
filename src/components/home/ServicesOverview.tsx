@@ -23,22 +23,12 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
           className="text-center mb-16"
           initial = {
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}
@@ -65,43 +55,23 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
               className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
               initial = {
   { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30 
-
-
-
-
-
+  x: index % 2 === 0 ? -30 : 30
 
 }}
               whileInView = {
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: index * 0.1 
-
-
-
-
-
+  delay: index * 0.1
 
 }}
               viewport={{ once: true }}
               whileHover={{
                 y: -5,
-  transition: { duration: 0.3 
-
-
-
-
-
+  transition: { duration: 0.3
 
 }
               }}
@@ -133,32 +103,17 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
                     className="flex items-center text-zion-slate-light group-hover:text-zion-slate-light/90 transition-colors duration-300"
                     initial = {
   { opacity: 0,
-  x: -20 
-
-
-
-
-
+  x: -20
 
 }}
                     whileInView = {
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }}
                     transition = {
   { duration: 0.5,
-  delay: itemIndex * 0.1 
-
-
-
-
-
+  delay: itemIndex * 0.1
 
 }}
                     viewport={{ once: true }}

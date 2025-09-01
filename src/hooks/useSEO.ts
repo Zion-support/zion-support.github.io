@@ -236,11 +236,6 @@ existingScripts.forEach(script:  > {;
   loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
         ;
 
-
-
-
-
-
 };
 
         // Track to analytics

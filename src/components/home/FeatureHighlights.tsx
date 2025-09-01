@@ -40,7 +40,7 @@ const features = [
 
   const itemVariants = {
   hidden: { opacity: 0, y: 30,
-  scale: 0.95 
+  scale: 0.95
 
 },
     visible: {
@@ -56,7 +56,7 @@ const features = [
 
   const achievementVariants = {
   hidden: { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 },
     visible: {
@@ -68,7 +68,7 @@ const features = [
 
   const techVariants = {
   hidden: { opacity: 0,
-  x: -20 
+  x: -20
 
 },
     visible: {
@@ -82,26 +82,16 @@ export function FeatureHighlights() {
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -147,11 +137,11 @@ export function FeatureHighlights() {
                   {feature.description}
                 </p>
               </div>
-              
+
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
                 {feature.title}
               </h3>
-              
+
               <p className="text-gray-400 text-sm leading-relaxed">
                 {feature.description}
               </p>
@@ -159,19 +149,14 @@ export function FeatureHighlights() {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.4 
-
-
-
-
-
+  delay: 0.4
 
 }}
         >
@@ -184,5 +169,4 @@ export function FeatureHighlights() {
     </section>;
   );
 }
-
 

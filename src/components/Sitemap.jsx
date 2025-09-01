@@ -2,12 +2,11 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default Sitemap;
 
-
 const Sitemap = () => {
     const sitemapData = {
   main[;
             { path: '/', label: 'Home',
-  description: 'Welcome to Zion Tech Group' 
+  description: 'Welcome to Zion Tech Group'
 
 },
             { path: '/about', label: 'About Us', description: 'Learn about our comp and mission' },

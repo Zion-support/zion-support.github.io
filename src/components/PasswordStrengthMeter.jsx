@@ -3,7 +3,6 @@ import { Progress } from '@/components / ui / progress';
 export function PasswordStrengthMeter ({ password }) {
 import {
 
-
   calculatePasswordStrength,
   getStrengthLabel,
 } from '@/utils / passwordStrength';

@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer - motion';
 import { useAnalytics } from '../hooks / useAnalytics';
 import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
 
-
   Shield,
   AlertTriangle,
   CheckCircle,

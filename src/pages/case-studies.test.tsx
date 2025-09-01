@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import case - studies from './case - studies';
 
-
 describe ('case - studies', () => {
   it ('renders without crashing', () => {
     render (<case - studies />) ;

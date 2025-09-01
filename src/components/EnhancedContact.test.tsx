@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import EnhancedContact from './EnhancedContact';
 
-
 describe ('EnhancedContact', () => {
   it ('renders without crashing', () => {
     render (<EnhancedContact />) ;

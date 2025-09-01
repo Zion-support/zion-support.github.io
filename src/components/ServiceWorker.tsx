@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react.ts';
 export function ServiceWorker (...args: any[]) : any {
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 
-
 interface ServiceWorkerState {
 
   isInstalled: boolean;
@@ -33,7 +32,7 @@ interface ServiceWorkerState {
             const newWorker = registration.installing;
             if (newWorker) {
               setSwState (prev => ({ ...prev, isInstalling: anytrue }) ) ;
-              
+
               newWorker.addEventListener ('statechange', () => {
                 if (newWorker.state = == 'installed') {;
 setSwState (prev: > ({ ;
@@ -81,17 +80,17 @@ setSwState (prev: > ({ ;
       {swState.hasUpdate && (<motion.div
           initial = {
   { opacity: 0,
-  y: -50 
+  y: -50
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           exit = {
   { opacity: 0,
-  y: -50 
+  y: -50
 
 }}
           className="fixed top - 4 right - 4 z - 50 bg - white dark:bg - gray - 800 rounded - lg shadow - lg border border - gray - 200 dark:border - gray - 700 p - 4 max - w-sm"

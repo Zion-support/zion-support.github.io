@@ -3,7 +3,6 @@ export default React.memo (function EnhancedTestimonialsSection (...args[]) :  {
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Star,
   Quote,
   ChevronLeft,
@@ -112,7 +111,7 @@ const testimonials: Testimonial[] = [
 
                   animate = {
   { rotate: [0,
-  360] 
+  360]
 
 }}
                   transition = {
@@ -148,12 +147,12 @@ const testimonials: Testimonial[] = [
                         key={result}
                         initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                         animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                         transition={{ delay: 0.3 + index * 0.1 }}
@@ -256,18 +255,18 @@ const testimonials: Testimonial[] = [
                   key={indicator.label}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   viewport={{ once: true }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className="text - center"

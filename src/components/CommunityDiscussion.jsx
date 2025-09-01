@@ -7,7 +7,6 @@ import { Separator } from "@/components / ui / separator";
 import { Textarea } from "@/components / ui / textarea";
 export const CommunityDiscussion = () => {
 
-
 const initialPosts = [
     {
         id: 1,

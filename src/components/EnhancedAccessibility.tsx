@@ -4,10 +4,9 @@ export const EnhancedAccessibility: React.FC < EnhancedAccessibilityProps> = ({
 export const EnhancedAccessibility: React.FC = () => {
 export default EnhancedAccessibility;
 import {
-import { 
+import {
 import { motion, AnimatePresence } from 'framer - motion';
 import { motion, AnimatePresence } from 'framer - motion';
-
 
   Volume2,
   VolumeX,
@@ -19,13 +18,13 @@ import { motion, AnimatePresence } from 'framer - motion';
   Settings,
   X
  } from 'lucide - react';
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  ZoomIn, 
-  ZoomOut, 
-  Sun, 
+  Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  ZoomIn,
+  ZoomOut,
+  Sun,
   Moon,
   Accessibility,
   Keyboard,
@@ -357,7 +356,7 @@ modals.forEach (modal:  > {;
       announcement.className = 'sr - only';
       announcement.textContent = message;
       document.body.appendChild (announcement) ;
-      
+
       setTimeout ( () => {
         document.body.removeChild (announcement) ;
       }, 1000) ;
@@ -367,7 +366,7 @@ modals.forEach (modal:  > {;
   const toggleSetting = (key: keyof AccessibilitySettings, value?: any) => {
     const newValue = value !== undefined ? value : !settings[key];
     setSettings (prev => ({ ...prev, [key]: newValue }) ) ;
-    
+
     // Announce changes to screen readers
     const settingNames = {
       highContrast: 'High contrast',
@@ -379,7 +378,7 @@ modals.forEach (modal:  > {;
       colorBlindness: 'Color blindness',
       fontSize: 'Font size'
     };
-    
+
     announceToScreenReader (`${settingNames[key]} ${newValue ? 'enabled' : 'disabled'}`) ;
   };
 
@@ -475,7 +474,7 @@ className: {`inline - block h - 4 w - 4 transform rounded - full bg - white tran
                   <Eye className="w - 4 h - 4 mr - 2" />
                   Visual
                 </h3>
-                
+
                 <label className="flex items - center space - x-3 cursor - pointer">
                   <input
                     type="checkbox"
@@ -531,7 +530,7 @@ className: {`inline - block h - 4 w - 4 transform rounded - full bg - white tran
                   <MousePointer className="w - 4 h - 4 mr - 2" />
                   Motion
                 </h3>
-                
+
                 <label className="flex items - center space - x-3 cursor - pointer">
                   <input
                     type="checkbox"
@@ -549,7 +548,7 @@ className: {`inline - block h - 4 w - 4 transform rounded - full bg - white tran
                   <Keyboard className="w - 4 h - 4 mr - 2" />
                   Navigation
                 </h3>
-                
+
                 <label className="flex items - center space - x-3 cursor - pointer">
                   <input
                     type="checkbox"
@@ -577,7 +576,7 @@ className: {`inline - block h - 4 w - 4 transform rounded - full bg - white tran
                   <Volume2 className="w - 4 h - 4 mr - 2" />
                   Screen Reader
                 </h3>
-                
+
                 <label className="flex items - center space - x-3 cursor - pointer">
                   <input
                     type="checkbox"

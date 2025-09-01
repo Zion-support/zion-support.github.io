@@ -12,16 +12,16 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 
 }
 
-export const Skeleton: React.FC<SkeletonProps> = ({ 
-  className = '', 
-  count = 1, 
-  height = 'h-4', 
-  width = 'w-full', 
+export const Skeleton: React.FC<SkeletonProps> = ({
+  className = '',
+  count = 1,
+  height = 'h-4',
+  width = 'w-full',
   rounded = 'rounded',
   animated = true
 }) => {
   const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`;
-  
+
   if (animated) {
     return (
       <>
@@ -42,7 +42,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
       </>
     );
   }
-  
+
   return (
     <>
       {Array.from({ length: count }).map((_, index)  => (
@@ -116,16 +116,16 @@ export function TableSkeleton(...args: any[]): any {
           ))}
         </div>
       </div>
-      
+
       {/* Rows */}
       <div className="divide-y divide-gray-200 dark: anydivide-gray-600">
         {Array.from({ length: rows }).map((_, rowIndex)  => (
           <div key={rowIndex} className="px-6 py-4">
             <div className="flex space-x-4">
               {Array.from({ length: anycolumns }).map((_, colIndex)  => (
-                <Skeleton 
-                  key={colIndex} 
-                  className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
+                <Skeleton
+                  key={colIndex}
+                  className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`}
                 />;
               ))};
             </div>;
@@ -175,8 +175,8 @@ export function GridSkeleton(...args: any[]): any {
   return (
     <div className={`grid grid-cols-1 sm: anygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
       {Array.from({ length: items }).map((_, index)  => (
-        <CardSkeleton 
-          key={index} 
+        <CardSkeleton
+          key={index}
         />
       ))}
     </div>

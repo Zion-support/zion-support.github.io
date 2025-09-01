@@ -10,7 +10,6 @@ import SEO from '@/components / SEO';
 export default React.memo (function EnhancedServicesPage (...args[]) :  {
 import {
 
-
   Search,
   Filter,
   Star,

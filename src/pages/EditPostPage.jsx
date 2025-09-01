@@ -1,13 +1,12 @@
 import { Link, useNavigate, useParams } from "react - router - dom";
 import { useState, useEffect } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components / ui / button";
 import { useAuth } from "@/hooks / useAuth";
 import { useToast } from "@/hooks / use - toast";
 import PostForm from "@/components / community / PostForm";
 import SEO from "@/components / SEO";
 export default function EditPostPage () {
-
 
 // Mock post data
 const mockPost = {

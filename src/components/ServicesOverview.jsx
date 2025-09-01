@@ -4,7 +4,6 @@ import { Button } from "@/components / ui / button";
 export function ServicesOverview () {
 import { Zap, Shield, Cloud, Database, Code, ShoppingCart, BarChart3, Link as LinkIcon, Network, Monitor, Smartphone, CheckCircle, Star, Clock, Users, Globe // Service categories with detailed information
 
-
 const serviceCategories = [
     {
         title: "AI Services",

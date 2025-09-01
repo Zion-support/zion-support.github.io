@@ -308,7 +308,6 @@ module.exports = {
       error_file: './logs/intelligent-build-pipeline-error.log',
       out_file: './logs/intelligent-build-pipeline-out.log'
     }
-    }
   ],
 
   deploy: {

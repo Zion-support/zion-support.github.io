@@ -3,7 +3,6 @@ import React, { useState } from 'react';
   import {
 export const Sidebar: React.FC < SidebarProps> = ({ isOpen, onToggle }) => {
 
-
     Menu,
     X,
     Home,

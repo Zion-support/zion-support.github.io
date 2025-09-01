@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw export const BundleAnalyzer = () => {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
     const [isOpen, setIsOpen] = useState (false) ;
     const [analysis, setAnalysis] = useState (null) ;
     const [isAnalyzing, setIsAnalyzing] = useState (false) ;
@@ -137,19 +136,19 @@ import { motion, AnimatePresence } from 'framer - motion';
       <AnimatePresence>
         {isOpen && (<motion.div initial = {
   { opacity: 0, y: 20,
-  scale: 0.9 
+  scale: 0.9
 
 }} animate = {
   { opacity: 1, y: 0,
-  scale: 1 
+  scale: 1
 
 }} exit = {
   { opacity: 0, y: 20,
-  scale: 0.9 
+  scale: 0.9
 
 }} transition = {
   { type: "spring", damping: 25,
-  stiffness: 300 
+  stiffness: 300
 
 }} className="fixed top - 4 right - 20 z - 50 w - 96 bg - white dark:bg - gray - 900 rounded - xl shadow - 2xl border border - gray - 200 dark:border - gray - 700 overflow - hidden" role="dialog" aria - label="Bundle Analysis">
             {/* Header */}

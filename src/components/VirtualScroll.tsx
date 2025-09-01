@@ -3,7 +3,6 @@ export function ServiceVirtualScroll (...args: any[]) : any {
 export function VirtualScroll < T> ({
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 
-
 interface VirtualScrollProps < T> {
   items: anyT[];
   height: number;
@@ -30,7 +29,7 @@ interface VirtualScrollProps < T> {
     const start = Math.floor (scrollTop / itemHeight) ;
     const visibleCount = Math.ceil (height / itemHeight) ;
     const end = start + visibleCount + overscan;
-    
+
     return {
       start: Math.max (0, start - overscan) ,
       end: Math.min (items.length, end) };
@@ -70,17 +69,17 @@ interface VirtualScrollProps < T> {
       {scrollTop > 200 && (<motion.button
           initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
           animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
           exit = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
           onClick={scrollToTop}
@@ -100,7 +99,7 @@ interface VirtualScrollProps < T> {
       >
         <div role="button" style = {
   { height: totalHeight,
-  position: 'relative' 
+  position: 'relative'
 
 }}>
           <div role="button" style={{ transform }}>
@@ -109,17 +108,17 @@ interface VirtualScrollProps < T> {
                   key={visibleRange.start + index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                   transition={{ duration: 0.2 }}

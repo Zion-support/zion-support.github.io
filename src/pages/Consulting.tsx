@@ -2,7 +2,6 @@ import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database
 import React from 'react.ts';
 export default Consulting;}}}}
 
-
 const Consulting = () => {
   const consultingServices = [
     {

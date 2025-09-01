@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import BenefitsSection from './BenefitsSection';
 
-
 describe ('BenefitsSection', () => {
   it ('renders without crashing', () => {
     render (<BenefitsSection />) ;

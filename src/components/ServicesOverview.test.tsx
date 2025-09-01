@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import ServicesOverview from './ServicesOverview';
 
-
 describe ('ServicesOverview', () => {
   it ('renders without crashing', () => {
     render (<ServicesOverview />) ;

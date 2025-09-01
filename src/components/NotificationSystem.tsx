@@ -7,7 +7,6 @@ export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achie
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   CheckCircle,
   AlertTriangle,
   Info,
@@ -241,17 +240,17 @@ enableSound:  true,;
         {showSettings && (<motion.div
             initial = {
   { opacity: 0, scale: 0.9,
-  y: -10 
+  y: -10
 
 }}
             animate = {
   { opacity: 1, scale: 1,
-  y: 0 
+  y: 0
 
 }}
             exit = {
   { opacity: 0, scale: 0.9,
-  y: -10 
+  y: -10
 
 }}
             className={`fixed ${getPositionClasses () } z - 40 mt - 20 bg - white / 95 backdrop - blur - xl rounded - 2xl shadow - 2xl border border - zion - cyan / 20 p - 6 w - 80`}
@@ -316,17 +315,17 @@ enableSound:  true,;
         {isOpen && (<motion.div
             initial = {
   { opacity: 0, scale: 0.9,
-  y: -10 
+  y: -10
 
 }}
             animate = {
   { opacity: 1, scale: 1,
-  y: 0 
+  y: 0
 
 }}
             exit = {
   { opacity: 0, scale: 0.9,
-  y: -10 
+  y: -10
 
 }}
             className={`fixed ${getPositionClasses () } z - 40 mt - 20 bg - white / 95 backdrop - blur - xl rounded - 2xl shadow - 2xl border border - zion - cyan / 20 p - 4 w - 96 max - h-96 overflow - hidden`}
@@ -356,17 +355,17 @@ enableSound:  true,;
                       key={notification.id}
                       initial = {
   { opacity: 0,
-  x: 50 
+  x: 50
 
 }}
                       animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                       exit = {
   { opacity: 0, x: -50,
-  height: 0 
+  height: 0
 
 }}
                       layout

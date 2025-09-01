@@ -55,21 +55,11 @@ export default function FuturisticNavigation() {
           {/* Logo */}
           <motion.div initial = {
   { opacity: 0,
-  x: -20 
-
-
-
-
-
+  x: -20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }} className="flex items-center space-x-3">
             <div className="relative">
@@ -91,21 +81,11 @@ export default function FuturisticNavigation() {
             {navigationItems.map((item, index) => (<div key={item.name} className="relative group">
                 <motion.button initial = {
   { opacity: 0,
-  y: -20 
-
-
-
-
-
+  y: -20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition={{ delay: index * 0.1 }} onMouseEnter={() => setActiveDropdown(item.name)} onMouseLeave={() => setActiveDropdown(null)} className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group-hover:text-cyan-400">
                   {item.icon}
@@ -116,30 +96,15 @@ export default function FuturisticNavigation() {
                 {/* Dropdown Menu */}
                 {item.children && activeDropdown === item.name && (<motion.div initial = {
   { opacity: 0, y: 10,
-  scale: 0.95 
-
-
-
-
-
+  scale: 0.95
 
 }} animate = {
   { opacity: 1, y: 0,
-  scale: 1 
-
-
-
-
-
+  scale: 1
 
 }} exit = {
   { opacity: 0, y: 10,
-  scale: 0.95 
-
-
-
-
-
+  scale: 0.95
 
 }} className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-md border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/10">
                     <div className="p-4 space-y-2">
@@ -155,21 +120,11 @@ export default function FuturisticNavigation() {
           {/* CTA Button */}
           <motion.div initial = {
   { opacity: 0,
-  x: 20 
-
-
-
-
-
+  x: 20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }} className="hidden lg:block">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
@@ -190,30 +145,15 @@ export default function FuturisticNavigation() {
       <AnimatePresence>
         {isOpen && (<motion.div initial = {
   { opacity: 0,
-  height: 0 
-
-
-
-
-
+  height: 0
 
 }} animate = {
   { opacity: 1,
-  height: 'auto' 
-
-
-
-
-
+  height: 'auto'
 
 }} exit = {
   { opacity: 0,
-  height: 0 
-
-
-
-
-
+  height: 0
 
 }} className="lg:hidden bg-black/95 backdrop-blur-md border-t border-cyan-500/20">
             <div className="px-4 py-6 space-y-4">

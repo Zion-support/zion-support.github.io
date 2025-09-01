@@ -3,7 +3,6 @@ export function PricingSection () {
 import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building const plans = [
 import { motion } from 'framer - motion';
 
-
     {
         name: "Starter",
         price: 99,
@@ -117,7 +116,7 @@ const addons = [
     };
     const itemVariants = {
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -140,11 +139,11 @@ const addons = [
         {/* Header */}
         <motion.div className="text - center mb - 16" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">
@@ -175,7 +174,7 @@ const addons = [
         <motion.div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {plans.map ( (plan, index) => (<motion.div key={plan.name} variants={itemVariants} whileHover={{ y: -8 }} transition = {
   { type: "spring",
-  stiffness: 300 
+  stiffness: 300
 
 }} className="relative">
               {/* Popular badge */}
@@ -235,15 +234,15 @@ const addons = [
         {/* Add - ons Section */}
         <motion.div className="text - center mb - 16" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}>
           <h3 className="text - 3xl font - bold text - white mb - 6">
@@ -257,7 +256,7 @@ const addons = [
         <motion.div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 max - w-4xl mx - auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {addons.map ( (addon, index) => (<motion.div key={addon.name} variants={itemVariants} whileHover={{ y: -4 }} transition = {
   { type: "spring",
-  stiffness: 300 
+  stiffness: 300
 
 }}>
               <div className="p - 6 rounded - xl bg - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 20 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 20">
@@ -294,15 +293,15 @@ const addons = [
         {/* FAQ Section */}
         <motion.div className="text - center mt - 20" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 }}>
           <h3 className="text - 2xl font - bold text - white mb - 6">Have Questions?</h3>

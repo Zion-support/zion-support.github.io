@@ -1,11 +1,10 @@
 import { Link  } from 'react - router - dom.ts';
 import { Link } from 'react - router - dom';
-import React from 'react';
+import React, { useState } from 'react';
 import React, { useState } from 'react.ts';
 export /**
 import { motion } from 'framer - motion';
 import { motion, AnimatePresence  } from 'framer - motion.ts';
-
 
  * FeaturedListingsSection function
  * @param {*} params - Function parameters
@@ -79,16 +78,16 @@ const featuredListings = [
 
   return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
       <div className="max - w-7xl mx - auto px - 6">
-        <motion.div 
+        <motion.div
           className="text - center mb - 16"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -112,8 +111,8 @@ const featuredListings = [
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="relative">
-                <img 
-                  src={listing.image} 
+                <img
+                  src={listing.image}
                   alt={listing.title}
                   className="w - full h - 48 object - cover"
                 />
@@ -167,26 +166,26 @@ const featuredListings = [
             </motion.div>) ) }
         </div>
 
-        <motion.div 
+        <motion.div
           className="mt - 16 text - center"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
         >
-          <Link 
+          <Link
             to="/services"
             className="inline - flex items - center gap - 2 px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200 hover:scale - 105"
           >

@@ -9,7 +9,6 @@ export const performSearch = (data,
 export const sortSearchResults = (results, sortBy, searchTerm) => {
 export default {
 
-
 /**
  * Highlight search terms in text with HTML mark tags
  */

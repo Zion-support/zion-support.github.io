@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react.ts';
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
 export default WebsiteAnalyzer;
-import { CheckCircle, 
+import { CheckCircle,
 import { LinkChecker, LinkInfo, PageInfo  } from '../utils / linkChecker';
 
-
-  XCircle, 
-  AlertTriangle, 
-  ExternalLink, 
-  Search, 
-  FileText, 
+  XCircle,
+  AlertTriangle,
+  ExternalLink,
+  Search,
+  FileText,
   Link as LinkIcon,
   Download,
   RefreshCw
@@ -22,7 +21,7 @@ summary: {;
     brokenLinks: number;
     missingPages: number;
     externalLinks: number;
-  
+
 };
   pages: PageInfo[];
   brokenLinks: LinkInfo[];
@@ -88,7 +87,7 @@ summary: {;
   const analyzeWebsite = async () => {
     setIsAnalyzing (true) ;
     setProgress (0) ;
-    
+
     const linkChecker = new LinkChecker ('https://ziontechgroup.com') ;
     const results: PageInfo[] = [];
     const allBrokenLinks: LinkInfo[] = [];
@@ -236,7 +235,7 @@ summary: {;
                   </div>
                 </div>
               </div>
-              
+
               <div role="button" className="bg - green - 50 p - 4 rounded - lg border border - green - 200">
                 <div role="button" className="flex items - center">
                   <CheckCircle className="w - 8 h - 8 text - green - 600 mr - 3" />
@@ -248,7 +247,7 @@ summary: {;
                   </div>
                 </div>
               </div>
-              
+
               <div role="button" className="bg - red - 50 p - 4 rounded - lg border border - red - 200">
                 <div role="button" className="flex items - center">
                   <XCircle className="w - 8 h - 8 text - red - 600 mr - 3" />
@@ -258,7 +257,7 @@ summary: {;
                   </div>
                 </div>
               </div>
-              
+
               <div role="button" className="bg - yellow - 50 p - 4 rounded - lg border border - yellow - 200">
                 <div role="button" className="flex items - center">
                   <AlertTriangle className="w - 8 h - 8 text - yellow - 600 mr - 3" />

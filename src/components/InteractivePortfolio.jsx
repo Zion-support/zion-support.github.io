@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 export function InteractivePortfolio () {
 import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar const portfolioProjects = [;
 
-
     {
         id: '1',
         title: 'AI - Powered E - commerce Platform',

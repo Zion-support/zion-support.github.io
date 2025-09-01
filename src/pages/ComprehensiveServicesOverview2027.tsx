@@ -8,7 +8,6 @@ export default React.memo (function ComprehensiveServicesOverview2027 (...args[]
 import {
 import { motion } from 'framer - motion';
 
-
   Brain,
   Shield,
   TrendingUp,
@@ -221,12 +220,12 @@ const pricingModels = [;
   const ServiceCard = ({ service }: { service}) => (<motion.div
       initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
       transition={{ duration: 0.5 }}
@@ -299,17 +298,17 @@ const pricingModels = [;
           {expandedService === service.id && (<motion.div
               initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
               animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }}
               exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
               className="space - y-2"
@@ -338,8 +337,8 @@ const pricingModels = [;
             </Link>
           </div>
         </div>
-        <Button 
-          asChild 
+        <Button
+          asChild
           className="w - full bg - gradient - to - r from - zion - cyan to - zion - blue hover:from - zion - cyan - light hover:to - zion - blue - light"
         >
           <Link to={service.href}>;
@@ -370,20 +369,20 @@ const pricingModels = [;
               2027 Edition
             </span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
             className="text - xl text - zion - slate - light max - w-3xl mx - auto"
@@ -534,8 +533,8 @@ const pricingModels = [;
         </div>
         {/* Services Grid */}
 <div role="button" className: {`grid gap - 8 ${
-          viewMode === 'grid' 
-            ? 'grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3' 
+          viewMode === 'grid'
+            ? 'grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3'
             : 'grid - cols - 1'
         }`}>
           {filteredServices.map ( (service) => (;

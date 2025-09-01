@@ -1,18 +1,17 @@
 import { Link  } from 'react - router - dom.ts';
 import React, { useState } from 'react.ts';
 export default React.memo (function PricingGuide (...args[]) :  {
-import { Calculator, 
+import { Calculator,
 import { SEO } from "../components / SEO";
 
-
-  Check, 
-  X, 
-  Star, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Cpu, 
+  Check,
+  X,
+  Star,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Cpu,
   ShoppingCart,
   MessageCircle,
   Users,
@@ -157,7 +156,7 @@ import { SEO } from "../components / SEO";
   ];
 
     <div role="button" className = "min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="Pricing Guide - Zion Tech Group"
         description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
       />
@@ -238,7 +237,7 @@ import { SEO } from "../components / SEO";
             <h2 className="text - 3xl font - bold text - white mb - 4">Choose Your Plan</h2>
             <p className="text - xl text - slate - 300">Flexible pricing options designed to scale with your business</p>
           </div>
-          
+
           <div role="button" className="grid grid - cols - 1 lg: grid - cols - 3 gap - 8">
             {pricingPlans.map ( (plan, index) => (<div role="button" key={index} className={`relative bg - slate - 800 / 50 border rounded - 2xl p - 8 ${
                 plan.popular
@@ -306,7 +305,7 @@ import { SEO } from "../components / SEO";
             <h2 className="text - 3xl font - bold text - white mb - 4">Service - Specific Pricing</h2>
             <p className="text - xl text - slate - 300">Detailed pricing for individual services and solutions</p>
           </div>
-          
+
           <div role="button" className="grid grid - cols - 1 lg: grid - cols - 2 gap - 8">
             {servicePricing.map ( (category, index) => (<div role="button" key={index} className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - 2xl p - 8">
                 <div role="button" className="flex items - center mb - 6">

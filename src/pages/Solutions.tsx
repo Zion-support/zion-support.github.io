@@ -1,6 +1,6 @@
 import { Link } from 'react - router - dom';
 import { Link } from 'react - router - dom';
-import React from 'react';
+import React, { useState } from 'react';
 import React, { useState } from 'react';
 import { SEO } from '@/components / SEO';
 export default React.memo (function Solutions () {
@@ -8,11 +8,10 @@ export default Solutions;
 import {
 import { motion } from 'framer - motion';
 
-
 const Solutions: React.FC = () => {
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 text - white">
-      <SEO 
-        title="Solutions - Zion Tech Group" 
+      <SEO
+        title="Solutions - Zion Tech Group"
         description="Explore industry and capability solutions including enterprise and healthcare."
       />
       <div role="button" className="container - responsive py - 16">
@@ -498,7 +497,7 @@ const featuredSolutions = [
   const filteredSolutions = featuredSolutions.filter (solution => {;
     const matchesSearch = solution.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                          solution.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
-    
+
     return matchesCategory && matchesSearch;
   }) ;
 
@@ -509,12 +508,12 @@ const featuredSolutions = [
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -767,7 +766,7 @@ const featuredSolutions = [
               Ready to Transform Your Business?
             </h2>
             <p className="text - zion - slate - light text - lg mb - 8">
-              Let's discuss how our technology solutions can address your specific challenges 
+              Let's discuss how our technology solutions can address your specific challenges
               and drive measurable results for your organization.
             </p>
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
@@ -793,12 +792,12 @@ const featuredSolutions = [
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -816,17 +815,17 @@ const featuredSolutions = [
                   key = {category.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   viewport={{ once: true }}
@@ -863,12 +862,12 @@ const featuredSolutions = [
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -886,17 +885,17 @@ const featuredSolutions = [
                   key = {industry.industry}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   viewport={{ once: true }}
@@ -933,12 +932,12 @@ const featuredSolutions = [
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -956,17 +955,17 @@ const featuredSolutions = [
                   key = {solution.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   viewport={{ once: true }}
@@ -975,10 +974,10 @@ const featuredSolutions = [
                   <div role="button" className="w - 16 h - 16 bg - blue - 600 / 20 rounded - xl flex items - center justify - center mb - 6">
                     <solution.icon className="w - 8 h - 8 text - blue - 400" />
                   </div>
-                  
+
                   <h3 className="text - 2xl font - bold text - white mb - 4">{solution.title}</h3>
                   <p className="text - gray - 300 mb - 6 leading - relaxed">{solution.description}</p>
-                  
+
                   {/* Features */}
                   <div role="button" className="mb - 6">
                     <h4 className="text - sm font - semibold text - blue - 400 mb - 3">Key Features</h4>
@@ -1031,12 +1030,12 @@ const featuredSolutions = [
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}

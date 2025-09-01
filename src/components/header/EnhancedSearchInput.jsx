@@ -186,11 +186,6 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
   (e) => removeRecentSearch(search,
   e)
 
-
-
-
-
-
 }
                       className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded"
 

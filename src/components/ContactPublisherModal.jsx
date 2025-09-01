@@ -4,7 +4,6 @@ import { toast } from '@/hooks / use - toast';
 export function ContactPublisherModal ({ isOpen, onClose, productId, sellerId }) {
 import { sendMessage } from "../services / messages";
 
-
     const [subject, setSubject] = useState ('') ;
     const [message, setMessage] = useState ('') ;
     const [error, setError] = useState ('') ;

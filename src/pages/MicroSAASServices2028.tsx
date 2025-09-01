@@ -4,7 +4,6 @@ export default MicroSAASServices2028;}}}
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Brain,
   Zap,
   Shield,
@@ -599,17 +598,17 @@ const microSAASServices2028 = [
                 key={service.id}
                 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="group relative bg - zion - slate / 30 backdrop - blur - sm border border - zion - slate / 40 rounded - 2xl p - 6 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - zion - cyan / 20"

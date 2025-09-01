@@ -4,7 +4,6 @@ export default React.memo (PerformanceOptimizedHero) ;}}}</motion.div>}
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   ArrowRight,
   Play,
   Star,
@@ -47,7 +46,7 @@ const PerformanceOptimizedHero: React.FC < HeroProps> = ({
 
   useEffect ( () => {
     setIsVisible (true) ;
-    
+
     const interval = setInterval ( () => {;
       setCurrentFeature ( (prev) => (prev + 1) % features.length) ;
     }, 3000) ;
@@ -63,7 +62,7 @@ const PerformanceOptimizedHero: React.FC < HeroProps> = ({
 
   const containerVariants = {
   hidden: { opacity: 0,
-  y: 50 
+  y: 50
 
 },
     visible: {

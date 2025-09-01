@@ -1,7 +1,7 @@
 import { BriefcaseIcon, PlusCircle, Kanban } from 'lucide - react';
 import { Link } from 'react - router - dom';
 import { useState, useEffect } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 import { ActiveProjectsCard } from '@/components / projects / ActiveProjectsCard';
 import { Button } from '@/components / ui / button';
 import { ClientOnboardingSteps } from '@/components / onboarding / ClientOnboardingSteps';
@@ -14,7 +14,6 @@ import { useIsMobile } from '@/hooks / use - mobile';
 import { useJobs } from '@/hooks / useJobs';
 import SEO from '@/components / SEO';
 export default function ClientDashboard () {
-
 
 function ClientDashboardContent () {
   const [activeTab, setActiveTab] = useState ('all') ;

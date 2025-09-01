@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react.ts';
 export default InnovativeServicesShowcase2030;}}
-import { Brain, 
+import { Brain,
 import { innovativeAIServices2030 } from "../data / innovativeAIServices2030";
 import { innovativeCloudDevOpsServices2030 } from "../data / innovativeCloudDevOpsServices2030";
 import { innovativeCybersecurityServices2030 } from "../data / innovativeCybersecurityServices2030";
 import { motion  } from 'framer - motion.ts';
 
-
-  Shield, 
-  Cloud, 
-  Zap, 
-  Star, 
-  CheckCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
+  Shield,
+  Cloud,
+  Zap,
+  Star,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin,
   ExternalLink,
   TrendingUp,
   Users,
@@ -55,12 +54,12 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -153,17 +152,17 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 key={service.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - xl p - 6 hover:bg - white / 10 transition - all group"
@@ -299,12 +298,12 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -345,17 +344,17 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 key={index}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 viewport={{ once: true }}
@@ -377,12 +376,12 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}

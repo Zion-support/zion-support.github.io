@@ -1,5 +1,5 @@
 import { useState } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components / ui / tabs";
 import { useAuth } from "@/hooks / useAuth";
 import CreatePostButton from "@/components / community / CreatePostButton";
@@ -7,7 +7,6 @@ import ForumCategories from "@/components / community / ForumCategories";
 import PostCard from "@/components / community / PostCard";
 import SEO from "@/components / SEO";
 export default function CommunityPage () {
-
 
 // Mock data for featured posts
 const featuredPosts = [

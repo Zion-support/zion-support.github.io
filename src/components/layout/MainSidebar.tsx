@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
+import {
+  Menu,
+  X,
+  ChevronDown,
   ChevronRight,
   Home,
   Zap,
@@ -61,8 +61,8 @@ export function MainSidebar() {
   const location = useLocation();
 
   const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
+    setExpandedSections(prev =>
+      prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
@@ -291,8 +291,8 @@ export function MainSidebar() {
             <button
               onClick={() => toggleSection(item.name.toLowerCase())}
               className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-                level === 0 
-                  ? 'text-slate-300 hover:text-white hover:bg-slate-700/50' 
+                level === 0
+                  ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'
                   : 'text-slate-400 hover:text-slate-300'
               }`}
             >
@@ -309,7 +309,7 @@ export function MainSidebar() {
                 <ChevronRight className="w-4 h-4" />
               )}
             </button>
-            
+
             {isExpanded && (
               <div className="ml-6 mt-2 space-y-1">
                 {item.children!.map(child => renderSidebarItem(child, level + 1))}

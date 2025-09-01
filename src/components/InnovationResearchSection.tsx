@@ -6,7 +6,6 @@ export default InnovationResearchSection;
 import {
 import { motion } from 'framer - motion';
 
-
  * InnovationResearchSection function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -68,7 +67,7 @@ const innovationMetrics = [
 
   return (<section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
       <div className="max - w-7xl mx - auto px - 6">
-        <motion.div 
+        <motion.div
           className="text - center mb - 16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +84,7 @@ const innovationMetrics = [
         </motion.div>
 
         {/* Innovation Metrics */}
-        <motion.div 
+        <motion.div
           className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -102,7 +101,7 @@ const innovationMetrics = [
         </motion.div>
 
         {/* Research Areas */}
-        <motion.div 
+        <motion.div
           className="mb - 16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -116,47 +115,47 @@ const innovationMetrics = [
         </motion.div>
 
         {/* Research Areas */}
-        <motion.div 
+        <motion.div
           className = "mb - 16";
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
         >
           <h3 className="text - 3xl font - bold text - white text - center mb - 12">
             Active Research Areas
           </h3>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
             {researchAreas.map ( (area, index) => (<motion.div
                 key={area.title}
                 className="bg - slate - 800 border border - slate - 700 rounded - xl p - 6 hover:border - blue - 500 / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - blue - 500 / 25"
                 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
-  delay: 0.6 + index * 0.1 
+  delay: 0.6 + index * 0.1
 
 }}
               >
@@ -164,11 +163,11 @@ const innovationMetrics = [
                   <div className={`w - 16 h - 16 bg - gradient - to - br ${area.color} rounded - xl flex items - center justify - center flex - shrink - 0`}>
                     <span className="text - 2xl">{area.icon}</span>
                   </div>
-                  
+
                   <div className="flex - 1">
                     <h4 className="text - xl font - bold text - white mb - 2">{area.title}</h4>
                     <p className="text - gray - 400 text - sm mb - 4">{area.description}</p>
-                    
+
                     <div className="mb - 2">
                       <div className="flex justify - between text - sm text - gray - 300 mb - 1">
                         <span > Research Progress</span>
@@ -182,7 +181,7 @@ const innovationMetrics = [
                           viewport={{ once: true }}
                           transition = {
   { duration: 1,
-  delay: 0.8 + index * 0.1 
+  delay: 0.8 + index * 0.1
 
 }}
                         />
@@ -194,22 +193,22 @@ const innovationMetrics = [
         </div>
 
         {/* Research Highlights */}
-        <motion.div 
+        <motion.div
           className="mb - 12"
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.8 
+  delay: 0.8
 
 }}
         >
@@ -217,7 +216,7 @@ const innovationMetrics = [
             <h3 className="text - 2xl font - bold text - white text - center mb - 6">
               Latest Research Breakthroughs
             </h3>
-            
+
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">
               <div className="text - center">
                 <div className="w - 16 h - 16 bg - gradient - to - br from - purple - 500 to - pink - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">
@@ -226,7 +225,7 @@ const innovationMetrics = [
                 <h4 className="text - lg font - bold text - white mb - 2">AI Drug Discovery</h4>
                 <p className="text - gray - 400 text - sm">Accelerating pharmaceutical research with quantum AI</p>
               </div>
-              
+
               <div className="text - center">
                 <div className="w - 16 h - 16 bg - gradient - to - br from - blue - 500 to - cyan - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">
                   <span className="text - 2xl">⚡</span>
@@ -234,7 +233,7 @@ const innovationMetrics = [
                 <h4 className="text - lg font - bold text - white mb - 2">Quantum Optimization</h4>
                 <p className="text - gray - 400 text - sm">Solving complex optimization problems 1000x faster</p>
               </div>
-              
+
               <div className="text - center">
                 <div className="w - 16 h - 16 bg - gradient - to - br from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">
                   <span className="text - 2xl">🌱</span>
@@ -246,22 +245,22 @@ const innovationMetrics = [
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="text - center"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 1.0 
+  delay: 1.0
 
 }}
         >

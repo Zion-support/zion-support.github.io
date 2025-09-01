@@ -1,7 +1,6 @@
 import React from 'react';
 export default Services;
 
-
   const categories = [
     { id: 'all', name: 'All Services', icon: Settings, count: allServices.length },
     { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: allServices.filter (s => s.category === 'AI & Analytics') .length },

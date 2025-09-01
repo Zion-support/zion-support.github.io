@@ -3,7 +3,6 @@ import React from 'react';
 import { cn } from '@/lib / utils';
 import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap export function MainSidebar () {
 
-
     const location = useLocation () ;
     const sidebarSections = [
         {

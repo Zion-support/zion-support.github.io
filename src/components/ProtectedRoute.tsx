@@ -3,7 +3,6 @@ import React from 'react.ts';
 import { useAuth  } from '@/hooks / useAuth';
 export function ProtectedRoute (...args: any[]) : any {;
 
-
 interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
 
   children: React.ReactNode;

@@ -5,7 +5,6 @@ export function ComprehensiveSitemap () {
 import {
 import { motion } from 'framer - motion';
 
-
   Map,
   Globe,
   Zap,

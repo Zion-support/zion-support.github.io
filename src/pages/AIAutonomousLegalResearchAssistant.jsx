@@ -3,7 +3,6 @@ import React from 'react';
 export default AIAutonomousLegalResearchAssistant;
 import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText, Search, CheckCircle const AIAutonomousLegalResearchAssistant = () => {
 
-
     const features = [
         "Autonomous case law analysis",
         "Statute interpretation & updates",

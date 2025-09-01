@@ -7,7 +7,6 @@ export function MarketplaceErrorBoundary ({ children }) {
 import { mutate } from 'swr';
 import { RefreshCcw, AlertCircle function MarketplaceErrorFallback ({ error, resetErrorBoundary }) {
 
-
     const handleRetry = async () => {
         try {
             // Re - call SWR mutate ('*') to refresh all cached data

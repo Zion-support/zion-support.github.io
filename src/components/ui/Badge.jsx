@@ -17,15 +17,10 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
     secondary: 'border-transparent bg-secondary text-secondary-foreground',
     destructive: 'border-transparent bg-destructive text-destructive-foreground',
   outline: 'text-foreground'
-  
-
-
-
-
 
 
 };
-  
+
 import React from 'react';
 
 const Badge = ({ children, className = '', variant = 'default' }) => {
@@ -36,7 +31,7 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
     destructive: 'border-transparent bg-destructive text-destructive-foreground',
     outline: 'text-foreground'
   };
-  
+
   return (
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}

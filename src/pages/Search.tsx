@@ -4,7 +4,6 @@ import {
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
-
   Search as SearchIcon,
   Filter,
   Server,

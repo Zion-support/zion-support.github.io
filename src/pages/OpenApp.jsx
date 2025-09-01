@@ -2,7 +2,6 @@ import { Helmet } from 'react - helmet - async';
 import React from 'react';
 export default OpenApp;
 
-
 const OpenApp = () => {
   return (<>
       <Helmet>

@@ -1,6 +1,6 @@
 import { useParams } from 'react - router - dom';
 import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { NEW_PRODUCTS } from '@/data / newProductsData';
 import { toast } from '@/hooks / use - toast';

@@ -1,6 +1,6 @@
 import { useParams } from "react - router - dom";
 import { useState, useEffect } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components / ui / avatar";
 import { Badge } from "@/components / ui / badge";
 import { HireNowCTA } from "@/components / profile / HireNowCTA";
@@ -8,7 +8,6 @@ import { supabase } from "@/integrations / supabase / client";
 import { toast } from "@/components / ui / use - toast";
 import SEO from "@/components / SEO";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {
-
 
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.
@@ -155,5 +154,5 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
           </div>
         </div>
       </div>
-      
+
     </>) }

@@ -6,7 +6,6 @@ import { motion  } from 'framer - motion.ts';
 import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES  } from '../../data / revolutionary - 2029 - cutting - edge - services';
 import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data / revolutionary - 2029 - emerging - tech - services';
 
-
   const [selectedPlan, setSelectedPlan] = useState ('enterprise') ;
   const [billingCycle, setBillingCycle] = useState ('monthly') ;
 
@@ -122,11 +121,11 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data / revolut
   const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1;
 
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="Comprehensive Pricing Guide 2029 - Zion Tech Group"
         description="Complete pricing information for our revolutionary 2029 AI, quantum computing, space technology, and emerging tech services."
       />
-      
+
       {/* Hero Section */}
       <div role="button" className="relative overflow - hidden">
         <div role="button" className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20"></div>
@@ -143,7 +142,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data / revolut
             <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">
               Transparent pricing for our revolutionary AI, quantum computing, space technology, and emerging tech services. Choose the plan that fits your business needs.
             </p>
-            
+
             {/* Billing Toggle */}
             <div role="button" className="flex items - center justify - center gap - 4 mb - 8">
               <span className={`text - lg ${billingCycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>Monthly</span>
@@ -183,11 +182,11 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data / revolut
                     Most Popular
                   </span>
                 </div>) }
-              
+
               <div role="button" className={`bg - white / 5 backdrop - blur - sm rounded - 2xl p - 8 border - 2 ${
                 plan.popular ? 'border - blue - 500' : 'border - white / 10'
               } hover:border - white / 20 transition - all duration - 300`}>
-                
+
                 {/* Plan Header */}
                 <div role="button" className="text - center mb - 8">
                   <h3 className="text - 2xl font - bold text - white mb - 2">{plan.name}</h3>
@@ -254,10 +253,10 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data / revolut
                             Popular
                           </span>) }
                       </div>
-                      
+
                       <h4 className="text - white font - semibold mb - 2">{service.name}</h4>
                       <p className="text - gray - 400 text - sm mb - 3 line - clamp - 2">{service.tagline}</p>
-                      
+
                       <div role="button" className="flex items - center justify - between mb - 3">
                         <div role="button" className="text - xl font - bold text - white">
                           {service.price}
@@ -304,7 +303,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data / revolut
           <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">
             For large organizations with specific requirements, we offer custom enterprise solutions with dedicated support, custom integrations, and tailored pricing.
           </p>
-          
+
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 8">
             <div role="button" className="text - center">
               <div role="button" className="text - 3xl text - blue - 400 mb - 2">🎯</div>

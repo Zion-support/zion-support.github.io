@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import ForgotPassword from './ForgotPassword';
 
-
 describe ('ForgotPassword', () => {
   it ('renders without crashing', () => {
     render (<ForgotPassword />) ;

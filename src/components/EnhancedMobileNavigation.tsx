@@ -1,17 +1,16 @@
 import { Link, useLocation } from 'react - router - dom';
 import React, { useState, useEffect, useRef } from 'react';
 export const EnhancedMobileNavigation: React.FC = () => {
-import { 
+import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
-  Menu, 
-  X, 
-  ChevronDown, 
-  Home, 
-  Users, 
-  Briefcase, 
-  Phone, 
+  Menu,
+  X,
+  ChevronDown,
+  Home,
+  Users,
+  Briefcase,
+  Phone,
   Info,
   Settings,
   HelpCircle,
@@ -42,7 +41,7 @@ interface NavigationItem {
 
   label: string;
   path: string;
-  icon: React.ComponentType<{ size?: number; className?: string 
+  icon: React.ComponentType<{ size?: number; className?: string
 }>;
 } from 'lucide - react';
 
@@ -250,22 +249,22 @@ const quickActions = [
             {isExpanded && (<motion.div
                 initial = {
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
                 animate = {
   { height: 'auto',
-  opacity: 1 
+  opacity: 1
 
 }}
                 exit = {
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
                 transition = {
   { duration: 0.3,
-  ease: 'easeInOut' 
+  ease: 'easeInOut'
 
 }}
                 className="overflow - hidden"
@@ -303,7 +302,7 @@ const quickActions = [
               exit={{ x: '100%' }}
               transition = {
   { duration: 0.3,
-  ease: 'easeOut' 
+  ease: 'easeOut'
 
 }}
               className="absolute right - 0 top - 0 h - full w - full max - w-sm bg - zion - slate - dark border - l border - zion - cyan / 30 shadow - 2xl"

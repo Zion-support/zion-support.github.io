@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useState } from "react";
 import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -34,7 +34,7 @@ export function ApiDocumentation() {
             <EndpointSection method="GET" endpoint="/api/jobs" description="List all available jobs with optional filtering." note="" params = {
   [
             { name: "page", type: "integer",
-  description: "Page number for pagination (default: 1)" 
+  description: "Page number for pagination (default: 1)"
 },
             { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
             { name: "category", type: "string", description: "Filter by job category" },
@@ -99,7 +99,7 @@ print(data)`
             <EndpointSection method="GET" endpoint="/api/jobs/:id" description="Get detailed information about a specific job." note="" params = {
   [
             { name: "id", type: "string", description: "The job ID",
-  required: true 
+  required: true
 }
         ]} codeExamples = {
   {
@@ -152,7 +152,7 @@ print(data)`
             <EndpointSection method="POST" endpoint="/api/jobs" description="Create a new job listing." note="Requires jobs:write scope" params = {
   [
             { name: "title", type: "string", description: "Job title",
-  required: true 
+  required: true
 },
             { name: "description", type: "string", description: "Detailed job description", required: true },
             { name: "category", type: "string", description: "Job category", required: true },
@@ -248,7 +248,7 @@ print(data)`
             <EndpointSection method="GET" endpoint="/api/talent" description="List talent profiles with optional filtering." note="" params = {
   [
             { name: "page", type: "integer",
-  description: "Page number for pagination (default: 1)" 
+  description: "Page number for pagination (default: 1)"
 },
             { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
             { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" },
@@ -306,7 +306,7 @@ print(data)`
             <EndpointSection method="GET" endpoint="/api/talent/:id" description="Get detailed information about a specific talent profile." note="" params = {
   [
             { name: "id", type: "string", description: "The talent ID",
-  required: true 
+  required: true
 }
         ]} codeExamples = {
   {
@@ -369,7 +369,7 @@ print(data)`
             <EndpointSection method="POST" endpoint="/api/quotes" description="Create a quote request for a talent." note="Requires quotes:write scope" params = {
   [
             { name: "talent_id", type: "string", description: "ID of the talent to request a quote from",
-  required: true 
+  required: true
 },
             { name: "project_name", type: "string", description: "Name of the project", required: true },
             { name: "project_summary", type: "string", description: "Brief summary of the project", required: true },
@@ -463,7 +463,7 @@ print(data)`
             <EndpointSection method="GET" endpoint="/api/quotes" description="List quote requests that you've created." note="" params = {
   [
             { name: "page", type: "integer",
-  description: "Page number for pagination (default: 1)" 
+  description: "Page number for pagination (default: 1)"
 },
             { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
             { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }

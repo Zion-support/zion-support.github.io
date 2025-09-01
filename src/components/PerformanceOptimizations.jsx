@@ -2,7 +2,6 @@ import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
 export function PerformanceOptimizations () {
 import { LoadingSpinner } from "./ui / loading - spinner";
 
-
 // Lazy load heavy components
 const LazyExpensiveComponent = lazy ( () => import ('./ExpensiveComponent') ) ;
 // Memoized component for expensive calculations
@@ -49,12 +48,12 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
     }, []) ;
     return (<div style = {
   { height: containerHeight,
-  overflow: 'auto' 
+  overflow: 'auto'
 
 }} onScroll={handleScroll} className="border border - zion - slate / 20 rounded - lg">
       <div style = {
   { height: items.length * itemHeight,
-  position: 'relative' 
+  position: 'relative'
 
 }}>
         {visibleItems.map ( (item) => (<div key={item.id || item.index} style={item.style} className="p - 3 border - b border - zion - slate / 10 hover:bg - zion - slate / 5 transition - colors">

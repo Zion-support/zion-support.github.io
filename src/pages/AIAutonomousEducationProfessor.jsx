@@ -2,7 +2,6 @@ import { Helmet } from 'react - helmet - async';
 import React from 'react';
 export default AIAutonomousEducationProfessor;
 
-
 const AIAutonomousEducationProfessor = () => {
   return (<>
       <Helmet>

@@ -5,7 +5,7 @@ interface InteractiveSearchProps {
   onSearch: (query: string) => void;
   className?: string;
 
-const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ 
+const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
   placeholder = "Search...", ;
   onSearch, ;
   className = "" ;

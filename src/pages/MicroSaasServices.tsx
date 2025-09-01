@@ -2,7 +2,6 @@ import { Helmet  } from 'react - helmet - async.ts';
 import React from 'react.ts';
 export default MicroSaasServices;
 
-
 const MicroSaasServices: React.FC = () : JSX.Element => {
 	return (<>
 			<Helmet>

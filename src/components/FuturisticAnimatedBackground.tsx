@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 export const FuturisticAnimatedBackground: React.FC = () => {;
 export default FuturisticAnimatedBackground;
 
-
   const canvasRef = useRef < HTMLCanvasElement> (null) ;
 
   useEffect ( () => {
@@ -26,18 +25,18 @@ export default FuturisticAnimatedBackground;
     if (gridCtx) {
       gridCanvas.width = canvas.width;
       gridCanvas.height = canvas.height;
-      
+
       // Draw enhanced grid
       gridCtx.strokeStyle = 'rgba (6, 182, 212, 0.1) ';
       gridCtx.lineWidth = 1;
-      
+
       for (let x = 0; x < gridCanvas.width; x += 40) {
         gridCtx.beginPath () ;
         gridCtx.moveTo (x, 0) ;
         gridCtx.lineTo (x, gridCanvas.height) ;
         gridCtx.stroke () ;
       }
-      
+
       for (let y = 0; y < gridCanvas.height; y += 40) {
         gridCtx.beginPath () ;
         gridCtx.moveTo (0, y) ;

@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import FuturisticNavigation from './FuturisticNavigation';
 
-
 describe ('FuturisticNavigation', () => {
   it ('renders without crashing', () => {
     render (<FuturisticNavigation />) ;

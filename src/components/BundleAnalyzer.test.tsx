@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import BundleAnalyzer from './BundleAnalyzer';
 
-
 describe ('BundleAnalyzer', () => {
   it ('renders without crashing', () => {
     render (<BundleAnalyzer />) ;

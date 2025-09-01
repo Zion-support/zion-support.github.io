@@ -7,7 +7,6 @@ import { FavoriteButton } from '@/components / FavoriteButton';
 import { RatingStars } from '@/components / RatingStars';
 export function ProductListingCard ({
 
-
 // Using regular img tag instead of Next.js Image
   listing,
   view = 'grid',

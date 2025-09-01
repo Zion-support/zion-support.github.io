@@ -1,11 +1,10 @@
 import { useState, useCallback } from 'react';
 import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide - react';
-import React from 'react';
+import React, { useState } from 'react';
 export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 import { motion, AnimatePresence } from 'framer - motion';
 import { useAnalytics } from "../hooks / useAnalytics";
 import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
-
 
     const { trackEvent } = useAnalytics ({
         enableTracking: true,
@@ -130,15 +129,15 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
 
           {activeTab === 'nfts' && (<motion.div key="nfts" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-4">
               <div className="flex items - center justify - between">
@@ -188,15 +187,15 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
 
           {activeTab === 'defi' && (<motion.div key="defi" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-4">
               <div className="flex items - center justify - between">
@@ -260,15 +259,15 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
 
           {activeTab === 'transactions' && (<motion.div key="transactions" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-4">
               <div className="flex items - center justify - between">
@@ -352,15 +351,15 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
         {showMintNFT && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset - 0 bg - black bg - opacity - 50 flex items - center justify - center z - 50">;
             <motion.div initial = {
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 }} animate = {
   { scale: 1,
-  opacity: 1 
+  opacity: 1
 
 }} exit = {
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 }} className="bg - white dark:bg - gray - 800 rounded - lg p - 6 w - full max - w-md mx - 4">
               <h3 className="text - lg font - semibold text - gray - 900 dark:text - white mb - 4">Mint New NFT</h3>
@@ -371,7 +370,7 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
                     Name
                   </label>
                   <input type="text" value={nftForm.name} onChange = { (e) => setNftForm (prev => ({ ...prev,
-  name: e.target.value 
+  name: e.target.value
 
 }) ) } className="w - full px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 700 text - gray - 900 dark:text - white" placeholder="NFT Name"/>
                 </div>
@@ -381,7 +380,7 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
                     Description
                   </label>
                   <textarea value={nftForm.description} onChange = { (e) => setNftForm (prev => ({ ...prev,
-  description: e.target.value 
+  description: e.target.value
 
 }) ) } className="w - full px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 700 text - gray - 900 dark:text - white" placeholder="NFT Description" rows={3}/>
                 </div>
@@ -390,7 +389,7 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
                   <label className="block text - sm font - medium text - gray - 700 dark:text - gray - 300 mb - 1">
                     Image URL (optional) </label>
                   <input type="url" value={nftForm.image} onChange = { (e) => setNftForm (prev => ({ ...prev,
-  image: e.target.value 
+  image: e.target.value
 
 }) ) } className="w - full px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 700 text - gray - 900 dark:text - white" placeholder="https://example.com / image.jpg"/>
                 </div>
@@ -414,15 +413,15 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
         {showSendTransaction && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset - 0 bg - black bg - opacity - 50 flex items - center justify - center z - 50">;
             <motion.div initial = {
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 }} animate = {
   { scale: 1,
-  opacity: 1 
+  opacity: 1
 
 }} exit = {
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 }} className="bg - white dark:bg - gray - 800 rounded - lg p - 6 w - full max - w-md mx - 4">
               <h3 className="text - lg font - semibold text - gray - 900 dark:text - white mb - 4">Send Transaction</h3>
@@ -433,7 +432,7 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
                     To Address
                   </label>
                   <input type="text" value={transactionForm.to} onChange = { (e) => setTransactionForm (prev => ({ ...prev,
-  to: e.target.value 
+  to: e.target.value
 
 }) ) } className="w - full px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 700 text - gray - 900 dark:text - white" placeholder="0x..."/>
                 </div>
@@ -442,7 +441,7 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
                   <label className="block text - sm font - medium text - gray - 700 dark:text - gray - 300 mb - 1">
                     Amount (ETH) </label>
                   <input type="number" step="0.001" value={transactionForm.value} onChange = { (e) => setTransactionForm (prev => ({ ...prev,
-  value: e.target.value 
+  value: e.target.value
 
 }) ) } className="w - full px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 700 text - gray - 900 dark:text - white" placeholder="0.1"/>
                 </div>
@@ -451,7 +450,7 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
                   <label className="block text - sm font - medium text - gray - 700 dark:text - gray - 300 mb - 1">
                     Data (optional) </label>
                   <textarea value={transactionForm.data} onChange = { (e) => setTransactionForm (prev => ({ ...prev,
-  data: e.target.value 
+  data: e.target.value
 
 }) ) } className="w - full px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 700 text - gray - 900 dark:text - white" placeholder="0x..." rows={3}/>
                 </div>

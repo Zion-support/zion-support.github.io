@@ -3,11 +3,10 @@ import React from 'react';
 export default ServiceCard;
 import { motion } from 'framer - motion';
 
-
 const ServiceCard = ({ title, description, icon, price, category, features, isPopular = false, isNew = false, href = '/services' }) => {
     const cardVariants = {
   hidden: { opacity: 0, y: 20,
-  scale: 0.95 
+  scale: 0.95
 
 },
         visible: {
@@ -29,7 +28,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
     };
     const iconVariants = {
   hidden: { scale: 0.8,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -60,7 +59,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
     };
     const badgeVariants = {
   hidden: { scale: 0,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -75,7 +74,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
       {/* Enhanced Popular Badge */}
       {isPopular && (<motion.div className="absolute - top - 3 left - 1/2 transform - translate - x-1 / 2 z - 10" initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {
   { delay: 0.2, type: "spring",
-  stiffness: 300 
+  stiffness: 300
 
 }}>
           <div className="bg - gradient - to - r from - zion - cyan via - zion - blue to - zion - purple text - white text - xs font - bold px - 4 py - 2 rounded - full shadow - lg animate - pulse">
@@ -86,15 +85,15 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
       {/* Enhanced New Badge */}
       {isNew && (<motion.div className="absolute - top - 3 right - 4 z - 10" initial = {
   { scale: 0,
-  rotate: -180 
+  rotate: -180
 
 }} animate = {
   { scale: 1,
-  rotate: 0 
+  rotate: 0
 
 }} transition = {
   { delay: 0.3, type: "spring",
-  stiffness: 300 
+  stiffness: 300
 
 }}>
           <div className="bg - gradient - to - r from - zion - purple via - zion - cyan to - zion - blue text - white text - xs font - bold px - 4 py - 2 rounded - full shadow - lg animate - bounce">
@@ -109,11 +108,11 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         {/* Enhanced Icon with Floating Animation */}
         <motion.div className="relative z - 10 text - 6xl mb - 6 text - center" variants={iconVariants} whileHover="hover" animate = {
   { y: [0, -5,
-  0] 
+  0]
 
 }} transition = {
   { duration: 3, repeat: Infinity,
-  ease: "easeInOut" 
+  ease: "easeInOut"
 
 }}>
           {icon}
@@ -162,11 +161,11 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
               <span > Learn More</span>
               <motion.span className="group - hover:translate - x-2 transition - transform duration - 300" animate = {
   { x: [0, 5,
-  0] 
+  0]
 
 }} transition = {
   { duration: 2,
-  repeat: Infinity 
+  repeat: Infinity
 
 }}>
                 →

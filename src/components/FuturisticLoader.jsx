@@ -2,7 +2,6 @@ import React from 'react';
 export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant = 'matrix' }) => {
 export default FuturisticLoader;
 
-
     const sizeClasses = {
   small: 'w - 8 h - 8',
         medium: 'w - 16 h - 16',
@@ -30,7 +29,7 @@ export default FuturisticLoader;
             <div className="absolute inset - 0 rounded - full border border - cyan - 500 / 20 animate - spin"></div>
             <div className="absolute inset - 0 rounded - full border border - cyan - 500 / 10 animate - spin" style = {
   { animationDirection: 'reverse',
-  animationDuration: '3s' 
+  animationDuration: '3s'
 
 }}></div>
           </div>) ;
@@ -103,7 +102,7 @@ export default FuturisticLoader;
             <div className="absolute inset - 0 rounded - full border - 4 border - cyan - 500 / 30 border - t-cyan - 500 animate - spin"></div>
             <div className="absolute inset - 0 rounded - full border - 4 border - blue - 500 / 20 border - t-blue - 500 animate - spin" style = {
   { animationDirection: 'reverse',
-  animationDuration: '2s' 
+  animationDuration: '2s'
 
 }}></div>
           </div>) ;

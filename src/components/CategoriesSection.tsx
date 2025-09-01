@@ -3,7 +3,6 @@ import React from 'react';
 export /**
 import { motion } from 'framer - motion';
 
-
  * CategoriesSection function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -91,7 +90,7 @@ const itemVariants = {
           backgroundSize: '50px 50px'
         }}></div>
       </div>
-      
+
       <div className="container mx - auto px - 4 relative z - 10">
         {showTitle && (<motion.div
             className="text - center mb - 16"
@@ -107,8 +106,8 @@ const itemVariants = {
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
             </p>
           </motion.div>;) }
-        
-        <motion.div 
+
+        <motion.div
           className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6"
           variants={containerVariants}
           initial="hidden"
@@ -133,8 +132,8 @@ const itemVariants = {
               </Link>
             </motion.div>) ) }
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="mt - 12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -159,16 +158,16 @@ const itemVariants = {
             className="group inline - flex items - center gap - 3 text - zion - cyan border - b-2 border - zion - cyan hover:border - zion - cyan - light transition - colors text - lg font - medium py - 2"
 
             View All Services < ArrowRight className="w - 5 h - 5 ml - 2 group - hover:translate - x-1 transition - transform" />
-        
-        <motion.div 
+
+        <motion.div
           className="mt - 12 flex justify - center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <Link 
-            to="/categories" 
+          <Link
+            to="/categories"
             className="text - cyan - 400 border - b border - cyan - 400 hover:border - cyan - 300 transition - colors flex items - center gap - 2"
           >
             View All Categories < span className="text - sm group - hover:translate - x-1 transition - transform duration - 300">→</span>

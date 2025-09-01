@@ -2,7 +2,7 @@ import { Link } from 'react - router - dom';
 import { Star, MessageSquare, Brain, Shield } from "lucide - react";
 import { useNavigate } from 'react - router - dom';
 import { useState } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Badge } from "@/components / ui / badge";
 import { Button } from "@/components / ui / button";
 import { ChatWidget } from "@/components / ChatWidget";
@@ -15,7 +15,6 @@ import { toast } from "@/hooks / use - toast";
 import { useAuth } from "@/hooks / useAuth";
 import ImageWithRetry from '@/components / ui / ImageWithRetry';
 export default function ListingDetail () {
-
 
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.

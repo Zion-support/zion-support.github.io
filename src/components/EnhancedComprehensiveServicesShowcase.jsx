@@ -5,7 +5,6 @@ import { innovativeServices2025 } from '../data / innovativeServices2025';
 import { motion } from 'framer - motion';
 import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data / ultimateInnovativeServices2027';
 
-
   Brain,
   Cloud,
   Shield,

@@ -6,7 +6,6 @@ import {
 import { MainNavigation } from './header / MainNavigation';
 import { motion, AnimatePresence } from 'framer - motion';
 
-
  * Header function
  * @param {*} params - Function parameters
  * @returns {*} Function return value

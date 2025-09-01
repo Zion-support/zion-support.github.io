@@ -7,7 +7,6 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data / comprehensivePricingGuide2
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data / innovativeMicroSaasServices2028';
 import { motion, AnimatePresence } from 'framer - motion.ts';
 
-
   Search,
   Filter,
   Star,

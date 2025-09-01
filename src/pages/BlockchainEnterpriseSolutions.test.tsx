@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import BlockchainEnterpriseSolutions from './BlockchainEnterpriseSolutions';
 
-
 describe ('BlockchainEnterpriseSolutions', () => {
   it ('renders without crashing', () => {
     render (<BlockchainEnterpriseSolutions />) ;

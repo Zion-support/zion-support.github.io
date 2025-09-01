@@ -6,7 +6,6 @@ export function FeaturedListingsSection () {
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Star,
   Eye,
   Heart,

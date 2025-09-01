@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import UserExperienceOptimizer from './UserExperienceOptimizer';
 
-
 describe ('UserExperienceOptimizer', () => {
   it ('renders without crashing', () => {
     render (<UserExperienceOptimizer />) ;

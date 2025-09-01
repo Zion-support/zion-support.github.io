@@ -8,7 +8,6 @@ import { MobileAppHero } from '@/components / mobile - app / MobileAppHero';
 import SEO from '@/components / SEO';
 export default MobileAppPage;
 
-
 const MobileAppPage = () => {
   return ( (<SEO
         title="Zion AI Marketplace App"

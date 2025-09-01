@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 export default ComprehensiveServicesLanding2025;
 import { innovativeMicroSaasServices2025 } from '../data / innovativeMicroSaasServices2025';
 
-
 const ComprehensiveServicesLanding2025 = () => {
   const [selectedIndustry, setSelectedIndustry] = useState ('all') ;
   const industries = [

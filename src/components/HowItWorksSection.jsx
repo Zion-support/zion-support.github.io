@@ -3,7 +3,6 @@ export function HowItWorksSection () {
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Search,
   Users,
   FileText,

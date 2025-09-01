@@ -3,7 +3,6 @@ export /**
 import {
 import { motion } from 'framer - motion';
 
-
  * AnalyticsManager function
  * @param {*} params - Function parameters
  * @returns {*} Function return value

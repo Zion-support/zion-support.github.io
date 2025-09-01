@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 export default DeveloperPortal;
 import {
 import { motion } from 'framer - motion';
 import SEO from '../components / SEO';
-
 
   Code,
   BookOpen,
@@ -129,7 +128,7 @@ const data = await response.json () ;
   ];
 
   return (<div className = "min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="Developer Portal - Zion Tech Group"
         description="Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform."
       />
@@ -176,12 +175,12 @@ const data = await response.json () ;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -200,17 +199,17 @@ const data = await response.json () ;
                 key={tool.title}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 6 hover:border - green - 400 / 30 transition - all duration - 200 hover:scale - 105"
@@ -250,12 +249,12 @@ const data = await response.json () ;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -358,17 +357,17 @@ const data = await response.json () ;
                 key={resource.title}
                 initial = {
   { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
+  x: index % 2 === 0 ? -20 : 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 6 hover:border - green - 400 / 30 transition - all duration - 200"
@@ -420,12 +419,12 @@ const data = await response.json () ;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -442,17 +441,17 @@ const data = await response.json () ;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
             className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 8"

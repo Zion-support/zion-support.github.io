@@ -3,7 +3,6 @@ import React from 'react.ts';
 import { SEO } from '@/components / SEO';
 export default ServicesAdvertising;
 
-
 const anchor = (url: anystring, label?: string) => (<a
     className="text - cyan - 400 underline"
     href={url}

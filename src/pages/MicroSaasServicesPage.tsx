@@ -1,7 +1,6 @@
 import React from 'react';
 import SEO from '@/components / SEO';
 
-
 const MicroSAASServicesPage = () => {
   return (<>
       <SEO

@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import MicroSAASServicesPage from './MicroSAASServicesPage';
 
-
 describe ('MicroSAASServicesPage', () => {
   it ('renders without crashing', () => {
     render (<MicroSAASServicesPage />) ;

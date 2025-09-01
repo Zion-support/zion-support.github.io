@@ -1,18 +1,17 @@
 import { Link } from 'react - router - dom';
-import React from 'react';
+import React, { useState } from 'react';
 export default React.memo (function Help () {
-import { 
+import {
 
-
-  Search, 
-  BookOpen, 
-  Video, 
-  FileText, 
-  HelpCircle, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  Clock, 
+  Search,
+  BookOpen,
+  Video,
+  FileText,
+  HelpCircle,
+  MessageCircle,
+  Phone,
+  Mail,
+  Clock,
   FileText,
   Video,
   Download,
@@ -133,7 +132,7 @@ import {
             <p className="text - xl text - slate - 300 mb - 8">
               Find answers, learn best practices, and get the most out of Zion Tech Group services
             </p>
-            
+
             {/* Search Bar */}
             <form onSubmit={handleSearch} className="max - w-2xl mx - auto">
               <div className="relative">

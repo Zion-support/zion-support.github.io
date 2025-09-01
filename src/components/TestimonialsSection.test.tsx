@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import TestimonialsSection from './TestimonialsSection';
 
-
 describe ('TestimonialsSection', () => {
   it ('renders without crashing', () => {
     render (<TestimonialsSection />) ;

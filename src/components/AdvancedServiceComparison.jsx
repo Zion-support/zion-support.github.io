@@ -8,7 +8,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui / card";
 import { Input } from "./ui / input";
 import { motion } from 'framer - motion';
 
-
 const COMPLEXITY_LEVELS = ['Basic', 'Intermediate', 'Advanced', 'Enterprise'];
 const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
     const [selectedServices, setSelectedServices] = useState ([]) ;
@@ -117,11 +116,11 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
       {/* Header */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className="text - center mb - 8">
         <h1 className="text - 4xl font - bold text - zion - blue - dark mb - 4">
@@ -135,18 +134,18 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
       {/* Filters and Controls */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.1 }} className="bg - white rounded - lg shadow - lg p - 6 mb - 8">
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 5 gap - 4">
           <div>
             <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Category</label>
             <select value={filters.category} onChange = { (e) => setFilters (prev => ({ ...prev,
-  category: e.target.value 
+  category: e.target.value
 
 }) ) } className="w - full p - 2 border border - zion - slate - light rounded - md">
               <option value="all">All Categories</option>
@@ -160,7 +159,7 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
           <div>
             <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Complexity</label>
             <select value={filters.complexity} onChange = { (e) => setFilters (prev => ({ ...prev,
-  complexity: e.target.value 
+  complexity: e.target.value
 
 }) ) } className="w - full p - 2 border border - zion - slate - light rounded - md">
               <option value="all">All Levels</option>
@@ -171,7 +170,7 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
           <div>
             <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Price Range</label>
             <select value={filters.priceRange} onChange = { (e) => setFilters (prev => ({ ...prev,
-  priceRange: e.target.value 
+  priceRange: e.target.value
 
 }) ) } className="w - full p - 2 border border - zion - slate - light rounded - md">
               <option value="all">All Prices</option>
@@ -182,7 +181,7 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
           <div>
             <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Technology</label>
             <select value={filters.technology} onChange = { (e) => setFilters (prev => ({ ...prev,
-  technology: e.target.value 
+  technology: e.target.value
 
 }) ) } className="w - full p - 2 border border - zion - slate - light rounded - md">
               <option value="all">All Technologies</option>
@@ -217,20 +216,20 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
       {/* Service Grid */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.2 }} className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 6">
         {filteredServices.map ( (service, index) => (<motion.div key={service.id} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.1 * index }}>
             <Card className={`h - full transition - all duration - 300 hover:shadow - xl ${selectedServices.includes (service.id) ? 'ring - 2 ring - zion - cyan' : ''}`}>
@@ -312,11 +311,11 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
       {/* Comparison Summary */}
       {selectedServices.length > 0 && (<motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.3 }} className="mt - 8 bg - white rounded - lg shadow - lg p - 6">
           <h3 className="text - 2xl font - bold text - zion - blue - dark mb - 4">
@@ -354,11 +353,11 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
       {/* CTA Section */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.4 }} className="mt - 12 text - center">
         <div className="bg - gradient - to - r from - zion - purple via - zion - blue - light to - zion - cyan rounded - lg p - 8 text - white">

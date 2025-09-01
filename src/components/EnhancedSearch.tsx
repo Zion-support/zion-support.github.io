@@ -3,11 +3,10 @@ import { useNavigate } from 'react - router - dom';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useDebounce } from '@/hooks / useDebounce';
-export function EnhancedSearch ({ 
-export function EnhancedSearch ({ 
+export function EnhancedSearch ({
+export function EnhancedSearch ({
 import { motion, AnimatePresence } from 'framer - motion';
 import { motion, AnimatePresence } from 'framer - motion';
-
 
 interface SearchResult {
 
@@ -132,7 +131,7 @@ const categories = [
   }) ;
   const [showFilters, setShowFilters] = useState (false) ;
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
-  
+
 // Mock suggestions
 const mockSuggestions: SearchSuggestion[] = [
   { text: 'AI compliance assistant', type: 'recent' },
@@ -157,7 +156,7 @@ const mockSuggestions: SearchSuggestion[] = [
     category: [],
     tags: []
   }) ;
-  
+
   const searchRef = useRef < HTMLDivElement> (null) ;
   const inputRef = useRef < HTMLInputElement> (null) ;
   const navigate = useNavigate () ;
@@ -170,7 +169,7 @@ const mockSuggestions: SearchSuggestion[] = [
         setSelectedIndex (-1) ;
       } else if (event.key === 'ArrowDown') {
         event.preventDefault () ;
-        setSelectedIndex (prev => 
+        setSelectedIndex (prev =>
           prev < results.length - 1 ? prev + 1 : prev) ;
       } else if (event.key === 'ArrowUp') {
         event.preventDefault () ;
@@ -200,11 +199,11 @@ const mockSuggestions: SearchSuggestion[] = [
         const matchesQuery = item.title.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ||;
                            item.description.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ||;
                            item.tags.some (tag => tag.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ) ;
-        
+
         const matchesFilters = filters.type.length === 0 || filters.type.includes (item.type) &&;
                               filters.category.length === 0 || filters.category.includes (item.category) &&;
                               filters.tags.length === 0 || filters.tags.some (tag => item.tags.includes (tag) ) ;
-        
+
         return matchesQuery && matchesFilters}) .sort ( (a, b) => b.relevance - a.relevance) .slice (0, 10) ;
 
     setResults (searchResults) }, [debouncedQuery, filters]) ;
@@ -293,7 +292,7 @@ const mockSuggestions: SearchSuggestion[] = [
     if (!query.trim () ) return;
 
     setIsLoading (true) ;
-    
+
     // Simulate API call delay
     await new Promise (resolve => setTimeout (resolve, 300) ) ;
 
@@ -302,7 +301,7 @@ const mockSuggestions: SearchSuggestion[] = [
       const matchesQuery = result.title.toLowerCase () .includes (query.toLowerCase () ) ||;
                           result.description.toLowerCase () .includes (query.toLowerCase () ) ||;
                           result.tags.some (tag => tag.toLowerCase () .includes (query.toLowerCase () ) ) ;
-      
+
       const matchesFilters = (filters.type.length === 0 || filters.type.includes (result.type) ) &&; (filters.category.length === 0 || filters.category.includes (result.category) ) &&; (filters.tags.length === 0 || filters.tags.some (tag => result.tags.includes (tag) ) ) ;
 
       return matchesQuery && matchesFilters;
@@ -422,17 +421,17 @@ setFilters (prev: > ({;
         {isOpen && (<motion.div
             initial = {
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             exit = {
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
             className="absolute top - full left - 0 right - 0 mt - 2 bg - white border border - gray - 200 rounded - xl shadow - xl z - 50 max - h-96 overflow - hidden"
@@ -457,17 +456,17 @@ setFilters (prev: > ({;
               {showFilters && (<motion.div
                   initial = {
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
                   animate = {
   { height: 'auto',
-  opacity: 1 
+  opacity: 1
 
 }}
                   exit = {
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
                   className="border - b border - gray - 200 overflow - hidden"

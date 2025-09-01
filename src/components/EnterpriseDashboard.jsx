@@ -4,7 +4,6 @@ export const EnterpriseDashboard = () => {
 import { motion, AnimatePresence } from 'framer - motion';
 import { useAnalytics } from "../hooks / useAnalytics";
 
-
     const { trackEvent } = useAnalytics ({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -281,26 +280,26 @@ import { useAnalytics } from "../hooks / useAnalytics";
         <AnimatePresence mode="wait">
           {activeTab === 'overview' && (<motion.div key="overview" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-6">
               {/* System Metrics Overview */}
               <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
                 {systemMetrics.map ( (metric) => (<motion.div key={metric.id} initial = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} className="bg - gray - 50 dark:bg - gray - 700 rounded - lg p - 6 border border - gray - 200 dark:border - gray - 600">
                     <div className="flex items - center justify - between mb - 4">
@@ -405,15 +404,15 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
           {activeTab === 'performance' && (<motion.div key="performance" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-6">
               <div className="text - center py - 8">
@@ -452,15 +451,15 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
           {activeTab === 'security' && (<motion.div key="security" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-6">
               {/* Security Controls */}
@@ -481,11 +480,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
               <div className="space - y-4">
                 {filteredSecurityAlerts.map ( (alert) => (<motion.div key={alert.id} initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} className="bg - white dark:bg - gray - 700 rounded - lg p - 6 border border - gray - 200 dark:border - gray - 600">
                     <div className="flex items - start justify - between mb - 4">
@@ -534,15 +533,15 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
           {activeTab === 'users' && (<motion.div key="users" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-6">
               {/* User Activity Controls */}
@@ -562,11 +561,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
               <div className="space - y-4">
                 {filteredUserActivities.map ( (activity) => (<motion.div key={activity.id} initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} className="bg - white dark:bg - gray - 700 rounded - lg p - 4 border border - gray - 200 dark:border - gray - 600">
                     <div className="flex items - center justify - between mb - 3">
@@ -610,15 +609,15 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
           {activeTab === 'services' && (<motion.div key="services" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-6">
               <div className="text - center py - 8">
@@ -635,11 +634,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
               <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">
                 {serviceStatuses.map ( (service) => (<motion.div key={service.id} initial = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} className="bg - white dark:bg - gray - 700 rounded - lg p - 6 border border - gray - 200 dark:border - gray - 600">
                     <div className="flex items - center justify - between mb - 4">
@@ -686,15 +685,15 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
           {activeTab === 'analytics' && (<motion.div key="analytics" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-6">
               <div className="text - center py - 8">

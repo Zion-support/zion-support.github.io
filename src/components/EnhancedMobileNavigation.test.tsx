@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import EnhancedMobileNavigation from './EnhancedMobileNavigation';
 
-
 describe ('EnhancedMobileNavigation', () => {
   it ('renders without crashing', () => {
     render (<EnhancedMobileNavigation />) ;

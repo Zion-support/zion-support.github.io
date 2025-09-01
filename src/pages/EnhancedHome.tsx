@@ -1,19 +1,18 @@
 import { Link } from 'react - router - dom';
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 export default EnhancedHome;
-import { 
+import {
 import { EnhancedSEO } from '../components / EnhancedSEO';
 import { LazyLoadWrapper, OptimizedImage } from '../components / PerformanceOptimizer';
 import { motion, AnimatePresence } from 'framer - motion';
 
-
-  Users, 
-  TrendingUp, 
-  Award, 
-  Globe, 
-  Brain, 
-  Cloud, 
-  Shield, 
+  Users,
+  TrendingUp,
+  Award,
+  Globe,
+  Brain,
+  Cloud,
+  Shield,
   Zap,
   ArrowRight,
   CheckCircle,
@@ -63,7 +62,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo ( () => {
-  const particles = useMemo ( () => 
+  const particles = useMemo ( () =>
     [...Array (15) ].map ( (_, i) => ({
       id: i,
       left: `${Math.random () * 100}%`,
@@ -75,7 +74,7 @@ const FuturisticBackground = React.memo ( () => {
   return (<div role="button" className="fixed inset - 0 overflow - hidden pointer - events - none" aria - hidden="true">
       {/* Animated grid with neon effect */}
       <div role="button" className="absolute inset - 0 bg-[linear - gradient (rgba (6,182,212,0.15) _1px,transparent_1px) ,linear - gradient (90deg,rgba (6,182,212,0.15) _1px,transparent_1px) ] bg-[size:50px_50px] animate - pulse"></div>
-      
+
       {/* Optimized floating particles */}
       {particles.map ( (particle) => (<motion.div
           key={particle.id}
@@ -105,7 +104,7 @@ FuturisticBackground.displayName = 'FuturisticBackground';
 // Enhanced hero section component
 const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }) => {
   const [currentSlide, setCurrentSlide] = useState (0) ;
-  
+
   const heroSlides = useMemo ( () => [
     {
       title: "AI - Powered Solutions",
@@ -159,12 +158,12 @@ const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }
             <Sparkles className="w - 5 h - 5 text - cyan - 400 mr - 2" />
             <span className="text - cyan - 400 font - medium">2025 Innovation Hub</span>
           </div>
-          
+
           <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent">
             Zion Tech Group
           </h1>
           <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed mb - 8">
-            Leading the future of technology with cutting - edge AI solutions, quantum computing, 
+            Leading the future of technology with cutting - edge AI solutions, quantum computing,
             and innovative micro SAAS services that transform businesses worldwide.
           </p>
 
@@ -422,26 +421,26 @@ const EnhancedHome: React.FC = () => {
   }
 
   return (<>
-      <EnhancedSEO 
+      <EnhancedSEO
         title="Zion Tech Group - Leading AI Solutions & Technology Services"
         description="Transform your business with cutting - edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation."
         keywords="AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services"
         type="website"
       />
-      
+
       <FuturisticBackground />
-      
+
       <div role="button" className="relative z - 10">
         <HeroSection onGetStarted={handleGetStarted} />
-        
+
         <LazyLoadWrapper>
           <FeaturesSection />
         </LazyLoadWrapper>
-        
+
         <LazyLoadWrapper>
           <StatsSection />
         </LazyLoadWrapper>
-        
+
         <LazyLoadWrapper>
           <CTASection />
         </LazyLoadWrapper>

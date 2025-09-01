@@ -47,16 +47,10 @@ export function FeaturesSection() {
             transition: {
                 staggerChildren: 0.1
 
-
     };
     const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 },
         visible: {
@@ -64,7 +58,6 @@ export function FeaturesSection() {
             opacity: 1,
             transition: {
                 duration: 0.5
-
 
     };
     return (<section className="py-20 bg-white relative overflow-hidden">;
@@ -77,21 +70,11 @@ export function FeaturesSection() {
         {/* Section Header */}
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-zion-blue-dark mb-6">
@@ -126,30 +109,15 @@ export function FeaturesSection() {
         {/* Additional Info */}
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
-  delay: 0.5 
-
-
-
-
-
+  delay: 0.5
 
 }} className="mt-16 text-center">
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">

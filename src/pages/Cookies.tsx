@@ -1,18 +1,17 @@
 import { Link } from 'react - router - dom';
 import { Shield, Cookie, Settings, Eye, EyeOff, CheckCircle, XCircle, Info, ExternalLink } from 'lucide - react';
-import React from 'react';
+import React, { useState } from 'react';
 export default React.memo (function Cookies () {
-import { 
+import {
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
-
-  Cookie, 
-  Shield, 
-  Settings, 
-  Eye, 
-  EyeOff, 
-  CheckCircle, 
+  Cookie,
+  Shield,
+  Settings,
+  Eye,
+  EyeOff,
+  CheckCircle,
   XCircle,
   Info,
   AlertTriangle,
@@ -140,7 +139,7 @@ import { SEO } from '../components / SEO';
 
   const updateCookiePreference = (type: string, enabled: boolean) => {
     if (type === 'essential') return; // Essential cookies cannot be disabled
-    
+
     setCookiePreferences (prev => ({
       ...prev,
       [type]: enabled
@@ -192,7 +191,7 @@ import { SEO } from '../components / SEO';
               Cookie Policy
             </h1>
             <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
-              Learn about how Zion Tech Group uses cookies to enhance your browsing experience 
+              Learn about how Zion Tech Group uses cookies to enhance your browsing experience
               and provide personalized services.
             </p>
           </motion.div>
@@ -208,12 +207,12 @@ import { SEO } from '../components / SEO';
                 What Are Cookies?
               </h2>
               <p className="text - gray - 300 mb - 4">
-                Cookies are small text files that are stored on your device when you visit our website. 
-                They help us provide you with a better experience by remembering your preferences, 
+                Cookies are small text files that are stored on your device when you visit our website.
+                They help us provide you with a better experience by remembering your preferences,
                 analyzing how you use our site, and personalizing content.
               </p>
               <p className="text - gray - 300">
-                We use cookies to make our website work properly, improve its functionality, 
+                We use cookies to make our website work properly, improve its functionality,
                 and provide you with relevant content and advertisements.
               </p>
             </div>
@@ -242,7 +241,7 @@ import { SEO } from '../components / SEO';
               Cookie < span className="bg - gradient - to - r from - orange - 400 via - red - 500 to - pink - 600 bg - clip - text text - transparent">Policy</span>
             </h1>
             <p className="text - xl text - gray - 300 max - w-3xl mx - auto leading - relaxed">
-              We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. 
+              We use cookies to enhance your browsing experience, analyze site traffic, and personalize content.
               Learn more about how we use cookies and manage your preferences.
             </p>
           </motion.div>
@@ -291,7 +290,7 @@ import { SEO } from '../components / SEO';
                         </label>
                       </div>
                     </div>
-                    
+
                     <div role="button" className="ml - 16">
                       <h4 className="text - sm font - semibold text - white mb - 2">Examples:</h4>
                       <ul className="space - y-1">
@@ -353,12 +352,12 @@ import { SEO } from '../components / SEO';
                   <div role="button" className={`inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r ${type.color} rounded - xl mb - 6`}>
                     <type.icon className="w - 8 h - 8 text - white" />
                   </div>
-                  
+
                   <h3 className="text - xl font - bold text - white mb - 4">{type.name}</h3>
                   <p className="text - gray - 300 text - sm mb - 6 leading - relaxed">
                     {type.description}
                   </p>
-                  
+
                   <div role="button" className="space - y-2">
                     <h4 className="text - sm font - semibold text - white">Examples:</h4>
                     <ul className="space - y-1">
@@ -399,7 +398,7 @@ import { SEO } from '../components / SEO';
                   <div role="button" > Provider</div>
                   <div role="button" > Type</div>
                 </div>
-                
+
                 <div role="button" className="space - y-3">
                   {cookieDetails.map ( (cookie, index) => (<motion.div
                       key={cookie.name}
@@ -527,7 +526,7 @@ import { SEO } from '../components / SEO';
               Questions About Cookies?
             </h2>
             <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">
-              If you have any questions about our cookie policy or how we use cookies, 
+              If you have any questions about our cookie policy or how we use cookies,
               please don't hesitate to contact us.
             </p>
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
@@ -582,7 +581,7 @@ import { SEO } from '../components / SEO';
                       </span>) ) }
                   </div>
                 </div>
-                
+
                 <div role="button" className="ml - 6 flex items - center">
                   {category.necessary ? (<div role="button" className="flex items - center text - blue - 400">
                       <CheckCircle className="w - 6 h - 6 mr - 2" />
@@ -612,7 +611,7 @@ import { SEO } from '../components / SEO';
           <h2 className="text - 2xl font - bold text - white mb - 6 text - center">
             Manage Your Cookie Preferences
           </h2>
-          
+
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 mb - 8">
             <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={acceptAll}
               className="flex items - center justify - center px - 6 py - 3 bg - green - 600 hover:bg - green - 700 text - white font - semibold rounded - xl transition - colors"
@@ -620,14 +619,14 @@ import { SEO } from '../components / SEO';
               <CheckCircle className="w - 5 h - 5 mr - 2" />
               Accept All Cookies
             </button>
-            
+
             <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={rejectAll}
               className="flex items - center justify - center px - 6 py - 3 bg - red - 600 hover:bg - red - 700 text - white font - semibold rounded - xl transition - colors"
             >
               <XCircle className="w - 5 h - 5 mr - 2" />
               Reject Non - Essential
             </button>
-            
+
             <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={savePreferences}
               className="flex items - center justify - center px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - semibold rounded - xl transition - colors"
             >
@@ -638,7 +637,7 @@ import { SEO } from '../components / SEO';
 
           <div role="button" className="text - center">
             <p className="text - gray - 300 mb - 4">
-              Your preferences will be saved and applied to this website. You can change these 
+              Your preferences will be saved and applied to this website. You can change these
               settings at any time by visiting this page again.
             </p>
             <p className="text - sm text - gray - 400">
@@ -657,7 +656,7 @@ import { SEO } from '../components / SEO';
               <h3 className="text - xl font - semibold text - white">Data Protection</h3>
             </div>
             <p className="text - gray - 300 mb - 4">
-              We are committed to protecting your privacy and ensuring the security of your personal data. 
+              We are committed to protecting your privacy and ensuring the security of your personal data.
               Our cookie usage complies with applicable data protection laws and regulations.
             </p>
             <Link
@@ -674,7 +673,7 @@ import { SEO } from '../components / SEO';
               <h3 className="text - xl font - semibold text - white">Third - Party Cookies</h3>
             </div>
             <p className="text - gray - 300 mb - 4">
-              Some cookies on our website are set by third - party services such as Google Analytics, 
+              Some cookies on our website are set by third - party services such as Google Analytics,
               advertising networks, and social media platforms. These services have their own privacy policies.
             </p>
             <p className="text - sm text - gray - 400">
@@ -690,44 +689,44 @@ import { SEO } from '../components / SEO';
           <h2 className="text - 3xl font - bold text - white mb - 8 text - center">
             Frequently Asked Questions
           </h2>
-          
+
           <div role="button" className="space - y-6">
             <div role="button" className="border - b border - white / 20 pb - 4">
               <h3 className="text - lg font - semibold text - white mb - 2">
                 How long do cookies stay on my device?
               </h3>
               <p className="text - gray - 300">
-                Session cookies are deleted when you close your browser, while persistent cookies can remain 
+                Session cookies are deleted when you close your browser, while persistent cookies can remain
                 for up to 2 years depending on the type and purpose.
               </p>
             </div>
-            
+
             <div role="button" className="border - b border - white / 20 pb - 4">
               <h3 className="text - lg font - semibold text - white mb - 2">
                 Can I delete cookies from my device?
               </h3>
               <p className="text - gray - 300">
-                Yes, you can delete cookies through your browser settings. However, this may affect 
+                Yes, you can delete cookies through your browser settings. However, this may affect
                 the functionality of our website and you may need to re - enter certain information.
               </p>
             </div>
-            
+
             <div role="button" className="border - b border - white / 20 pb - 4">
               <h3 className="text - lg font - semibold text - white mb - 2">
                 Do you use cookies for advertising?
               </h3>
               <p className="text - gray - 300">
-                We may use cookies to deliver personalized advertisements and track the effectiveness 
+                We may use cookies to deliver personalized advertisements and track the effectiveness
                 of our marketing campaigns. You can opt out of these cookies using the preferences above.
               </p>
             </div>
-            
+
             <div>
               <h3 className="text - lg font - semibold text - white mb - 2">
                 How do I contact you about cookies?
               </h3>
               <p className="text - gray - 300">
-                If you have questions about our cookie policy or how we use cookies, please contact us 
+                If you have questions about our cookie policy or how we use cookies, please contact us
                 through our support channels or email us at privacy@ziontechgroup.com.
               </p>
             </div>
@@ -742,10 +741,10 @@ import { SEO } from '../components / SEO';
             Questions About Our Cookie Policy?
           </h2>
           <p className="text - gray - 300 mb - 8 max - w-2xl mx - auto">
-            Our privacy team is here to help you understand how we use cookies and protect your data. 
+            Our privacy team is here to help you understand how we use cookies and protect your data.
             Contact us for more information or to exercise your data rights.
           </p>
-          
+
           <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
             <Link
               to="/contact"

@@ -26,7 +26,6 @@ export default function ForumCategories() {
                 author: 'Developer123',
                 date: '2024-01-14'
 
-
     ];
     return (<div className="space-y-4">
       {categories.map((category) => (<div key={category.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">

@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import News from './News';
 
-
 describe ('News', () => {
   it ('renders without crashing', () => {
     render (<News />) ;

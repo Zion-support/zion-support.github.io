@@ -3,7 +3,6 @@ export function BenefitsSection () {
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Zap,
   Shield,
   TrendingUp,

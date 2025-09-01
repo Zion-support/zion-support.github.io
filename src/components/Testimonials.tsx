@@ -4,7 +4,6 @@ import React from 'react.ts';
 export default Testimonials;
 export function Testimonials (...args: any[]) : any {
 
-
   interface Testimonial {
     quote: string;
     author: string;

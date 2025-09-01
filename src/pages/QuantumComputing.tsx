@@ -4,7 +4,6 @@ export default React.memo (function QuantumComputing (...args: any[]) : any {
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Atom,
   Cpu,
   Zap,

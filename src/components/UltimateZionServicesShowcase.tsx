@@ -3,7 +3,6 @@ export default UltimateZionServicesShowcase;
 import { motion  } from 'framer - motion.ts';
 import { ultimateZionServices2025  } from '../data / ultimate - zion - services - 2025';
 
-
 const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [searchTerm, setSearchTerm] = useState ('') ;
@@ -39,7 +38,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
 
   const itemVariants = {
   hidden: { opacity: 0,
-  y: 20 
+  y: 20
 
 ;
 },;
@@ -54,18 +53,18 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
       {/* Hero Section */}
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">
         <div role="button" className="max - w-7xl mx - auto text - center">
-          <motion.h1 
-            className="text - 4xl md:text - 6xl font - bold mb - 6" 
+          <motion.h1
+            className="text - 4xl md:text - 6xl font - bold mb - 6"
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
-}} 
+}}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
-}} 
+}}
             transition={{ duration: 0.6 }}
           >
             Ultimate < span className="text - transparent bg - clip - text bg - gradient - to - r from - purple - 400 to - pink - 400">
@@ -76,46 +75,46 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
               Services 2025
             </span>
           </motion.h1>
-          
-          <motion.p 
-            className="text - xl text - gray - 300 mb - 8 max - w-4xl mx - auto" 
+
+          <motion.p
+            className="text - xl text - gray - 300 mb - 8 max - w-4xl mx - auto"
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
-}} 
+}}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
-}} 
+}}
             transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
           >
-            Discover our revolutionary portfolio of cutting - edge micro SAAS services, quantum computing solutions, 
-            blockchain innovations, space technology, and AI - powered services designed to transform industries and 
+            Discover our revolutionary portfolio of cutting - edge micro SAAS services, quantum computing solutions,
+            blockchain innovations, space technology, and AI - powered services designed to transform industries and
             create unprecedented value for your business.
           </motion.p>
-          
+
           {/* Contact Information */}
-          <motion.div 
-            className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 mb - 8 max - w-4xl mx - auto border border - white / 20" 
+          <motion.div
+            className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 mb - 8 max - w-4xl mx - auto border border - white / 20"
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
-}} 
+}}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
-}} 
+}}
             transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
           >
@@ -136,7 +135,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
               <div role="button" className="text - center">
                 <div role="button" className="text - purple - 400 font - semibold text - lg mb - 2">🌐 Website</div>
                 <div role="button" className="text - gray - 300">
-                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" 
+                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer"
                      className="text - blue - 400 hover:text - blue - 300 transition - colors">
                     ziontechgroup.com
                   </a>
@@ -152,34 +151,34 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
           </motion.div>
 
           {/* Search and Filter */}
-          <motion.div 
-            className="flex flex - col md:flex - row gap - 4 justify - center items - center mb - 12" 
+          <motion.div
+            className="flex flex - col md:flex - row gap - 4 justify - center items - center mb - 12"
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
-}} 
+}}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
-}} 
+}}
             transition = {
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 }}
           >
-            <input 
-              type="text" 
-              placeholder="Search revolutionary services..." 
-              value={searchTerm} 
-              onChange={ (e) => setSearchTerm (e.target.value) } 
+            <input
+              type="text"
+              placeholder="Search revolutionary services..."
+              value={searchTerm}
+              onChange={ (e) => setSearchTerm (e.target.value) }
               className="px - 6 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - purple - 400 focus:ring - 2 focus:ring - purple - 400 / 20 w - full md:w - 80"
             />
             <div role="button" className="flex flex - wrap gap - 2">
-              {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id} 
-                  onClick={ () => setSelectedCategory (category.id) } 
+              {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+                  onClick={ () => setSelectedCategory (category.id) }
                   className={`px - 4 py - 2 rounded - lg border transition - all duration - 300 ${
                     selectedCategory === category.id
                       ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 border - purple - 400 text - white'
@@ -197,16 +196,16 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
       {/* Services Grid */}
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">
         <div role="button" className="max - w-7xl mx - auto">
-          <motion.div 
-            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8" 
-            variants={containerVariants} 
-            initial="hidden" 
-            whileInView="visible" 
+          <motion.div
+            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: anytrue }}
           >
-            {filteredServices.map ( (service, index) => (<motion.div 
-                key={service.id} 
-                variants={itemVariants} 
+            {filteredServices.map ( (service, index) => (<motion.div
+                key={service.id}
+                variants={itemVariants}
                 className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20 hover:border - white / 40 transition - all duration - 300 hover:transform hover:scale - 105 group"
               >
                 {/* Service Header */}
@@ -317,7 +316,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
                   <div role="button" className="text - xs text - gray - 400">
                     📞 <a href="tel:+13024640950" className="text - blue - 400 hover:text - blue - 300">
                       +1 302 464 0950
-                    </a> | 
+                    </a> |
                     ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text - blue - 400 hover:text - blue - 300">
                       kleber@ziontechgroup.com
                     </a>
@@ -331,16 +330,16 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
       {/* Bottom CTA Section */}
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">
         <div role="button" className="max - w-4xl mx - auto text - center">
-          <motion.div 
+          <motion.div
             className="bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded - 2xl p - 8 border border - purple - 400 / 30"
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -349,7 +348,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
               Ready to Lead the Future?
             </h2>
             <p className="text - xl text - gray - 300 mb - 8">
-              Join the revolution and transform your business with cutting - edge technology solutions. 
+              Join the revolution and transform your business with cutting - edge technology solutions.
               Our team of experts is ready to help you implement these game - changing services.
             </p>
             <div role="button" className="flex flex - col md:flex - row gap - 4 justify - center">

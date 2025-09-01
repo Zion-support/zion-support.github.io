@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import MobileLaunch from './MobileLaunch';
 
-
 describe ('MobileLaunch', () => {
   it ('renders without crashing', () => {
     render (<MobileLaunch />) ;

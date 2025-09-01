@@ -2,7 +2,6 @@ import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, 
 import React, { useState, useRef, useEffect } from 'react';
 export function AdvancedSecurityDashboard () {
 
-
 const mockThreatIntelligence = [
     {
         id: '1',

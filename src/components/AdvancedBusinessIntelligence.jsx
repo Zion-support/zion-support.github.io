@@ -2,7 +2,6 @@ import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, Ref
 import React, { useState, useRef, useEffect } from 'react';
 export function AdvancedBusinessIntelligence () {
 
-
         actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
     }
 ];

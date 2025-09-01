@@ -16,7 +16,6 @@ import { usePerformance } from '@/hooks / usePerformance';
 export function PerformanceDashboard ({ className, showDetails = false, onClose }) {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
     const { metrics, observers, performanceScore, logMetrics } = usePerformance () ;
     const [isExpanded, setIsExpanded] = useState (showDetails) ;
     const getScoreColor = (score) => {

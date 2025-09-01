@@ -4,16 +4,15 @@ import { innovativeMicroSAASServices2029  } from '../../data / innovative - micr
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 import { revolutionaryAIServices2029  } from '../../data / revolutionary - ai - services - 2029';
 import { revolutionaryITServices2029  } from '../../data / revolutionary - it - services - 2029';
-import { Star, 
+import { Star,
 
-
-  CheckCircle, 
-  ArrowRight, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
   Globe,
   Cpu,
   Lock,
@@ -114,7 +113,7 @@ import { Star,
         <div role="button" className="absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%,rgba (120,119,198,0.1) ,transparent_50%) ]"></div>
         <div role="button" className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%,rgba (120,119,198,0.1) ,transparent_50%) ]"></div>
         <div role="button" className="absolute inset - 0 bg-[radial - gradient (circle_at_20%_80%,rgba (120,119,198,0.1) ,transparent_50%) ]"></div>
-        
+
         {/* Floating Particles */}
         <div role="button" className="absolute inset - 0">
           {[...Array (50) ].map ( (_, i) => (<motion.div
@@ -155,7 +154,7 @@ import { Star,
             <Crown className="w - 4 h - 4 mr - 2 text - yellow - 400" />
             Premium 2029 Services
           </motion.div>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -168,14 +167,14 @@ import { Star,
             <br />
             <span className="text - white">Pricing Guide 2029</span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text - xl text - gray - 300 max - w-3xl mx - auto mb - 8"
           >
-            Discover our complete portfolio of revolutionary micro SAAS, AI, and IT services. 
+            Discover our complete portfolio of revolutionary micro SAAS, AI, and IT services.
             From quantum computing to emotional intelligence AI, we have solutions for every business need.
           </motion.p>
 
@@ -286,8 +285,8 @@ import { Star,
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
             className={`grid gap - 6 ${
-              viewMode === 'grid' 
-                ? 'grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 3' 
+              viewMode === 'grid'
+                ? 'grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 3'
                 : 'grid - cols - 1'
             }`}
           >
@@ -325,11 +324,11 @@ import { Star,
                             Popular
                           </span>) }
                       </div>
-                      
+
                       <p className="text - gray - 300 mb - 4 leading - relaxed">
                         {service.tagline}
                       </p>
-                      
+
                       <div role="button" className="flex items - center justify - between mb - 4">
                         <div role="button" className="flex items - center space - x-2">
                           <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />

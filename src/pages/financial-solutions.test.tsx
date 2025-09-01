@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import financial - solutions from './financial - solutions';
 
-
 describe ('financial - solutions', () => {
   it ('renders without crashing', () => {
     render (<financial - solutions />) ;

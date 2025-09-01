@@ -51,12 +51,11 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   return (
     <NotificationContext.Provider value = {
   { notifications, addNotification, removeNotification,
-  clearAll 
+  clearAll
 
 ;
 ;
 ;
-
 
 }}>;
       {children};
@@ -84,11 +83,6 @@ const NotificationContainer: React.FC = () => {;
               delay: index * 0.1,
               type: "spring",
   stiffness: 200
-            
-
-
-
-
 
 
 }}
@@ -103,22 +97,12 @@ const NotificationContainer: React.FC = () => {;
         <motion.button
           initial = {
   { opacity: 0,
-  y: 10 
-
-
-
-
-
+  y: 10
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           onClick={clearAll}
@@ -189,7 +173,7 @@ export const notify = {
   success: (title: string, message: string, options?: Partial<Notification>)  => {
     // This would be used with the context
     console.log('Success notification: ', { title, message,
-  ...options 
+  ...options
 
 })},
   error: (title: string, message: string, options?: Partial<Notification>)  => {
@@ -203,9 +187,6 @@ export const notify = {
   ;
   ;
   ...options ;
-
-
-
 
 });
   },

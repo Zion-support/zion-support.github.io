@@ -11,7 +11,6 @@ export default ContactSection;
 export function ContactSection (...args[]) :  {
 import { motion  } from 'framer - motion.ts';
 
-
   const contactInfo = [
     {
       icon: Phone,
@@ -37,12 +36,12 @@ import { motion  } from 'framer - motion.ts';
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}
@@ -61,17 +60,17 @@ import { motion  } from 'framer - motion.ts';
               key={index}
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
               viewport={{ once: true }}
@@ -90,12 +89,12 @@ import { motion  } from 'framer - motion.ts';
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}

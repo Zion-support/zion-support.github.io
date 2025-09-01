@@ -4,7 +4,6 @@ import {
 import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data / innovativeServices2027";
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Brain,
   Atom,
   Rocket,
@@ -94,12 +93,12 @@ const categoryColors: { [key: string]: string } = {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           animate = {
   isVisible ? { opacity: 1,
-  y: 0 
+  y: 0
 
 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
@@ -128,17 +127,17 @@ const categoryColors: { [key: string]: string } = {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   isVisible ? { opacity: 1,
-  y: 0 
+  y: 0
 
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
           className="mb - 12"
@@ -194,17 +193,17 @@ const categoryColors: { [key: string]: string } = {
               key={service.id}
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   isVisible ? { opacity: 1,
-  y: 0 
+  y: 0
 
 } : { opacity: 0, y: 20 }}
               transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
               className="group relative"
@@ -264,17 +263,17 @@ const categoryColors: { [key: string]: string } = {
                     <motion.div
                       initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                       animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }}
                       exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                       transition={{ duration: 0.3 }}

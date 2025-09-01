@@ -1,9 +1,8 @@
 import { Loader2 import { toast } from 'react - toastify';
 import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 export function ProductActions ({ onAddToCart }) {
-
 
     const [loading, setLoading] = useState (false) ;
     const [label, setLabel] = useState ('Add to Cart') ;

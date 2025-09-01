@@ -3,7 +3,6 @@ import { useParams, Link } from 'react - router - dom';
 import React from 'react';
 export default React.memo (function GenericPage () {
 
-
   const { '*': slug } = useParams () ;
   const slugParts = slug ? slug.split ('/') .filter (Boolean) : [];
   const path = '/' + slugParts.join ('/') ;

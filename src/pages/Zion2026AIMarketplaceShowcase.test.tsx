@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import Zion2026AIMarketplaceShowcase from './Zion2026AIMarketplaceShowcase';
 
-
 describe ('Zion2026AIMarketplaceShowcase', () => {
   it ('renders without crashing', () => {
     render (<Zion2026AIMarketplaceShowcase />) ;

@@ -5,11 +5,6 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
   sm: "w-6 h-6",
         md: "w-8 h-8",
   lg: "w-12 h-12"
-    
-
-
-
-
 
 
 };
@@ -17,23 +12,13 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
   sm: "text-sm",
         md: "text-base",
   lg: "text-lg"
-    
-
-
-
-
 
 
 };
     return (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
       <motion.div animate={{ rotate: 360 }} transition = {
   { duration: 1, repeat: Infinity,
-  ease: "linear" 
-
-
-
-
-
+  ease: "linear"
 
 }}>
         <Loader2 className={`${sizeClasses[size]} text-zion-cyan`}/>
@@ -53,11 +38,6 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
                 scale: [1, 1.5, 1],
                 opacity: [0.5, 1,
   0.5]
-            
-
-
-
-
 
 
 }} transition = {
@@ -65,11 +45,6 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
                 duration: 1.4,
                 repeat: Infinity,
   delay: index * 0.2
-            
-
-
-
-
 
 
 }}/>))}

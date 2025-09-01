@@ -1,17 +1,16 @@
 import { Link } from 'react - router - dom';
 import React from 'react';
 export default React.memo (function NewInnovativeServices2025 () {
-import { 
+import {
 import { motion } from 'framer - motion';
 
-
-  Brain, 
-  GitFork, 
-  Shield, 
-  Users, 
-  BarChart3, 
-  Eye, 
-  CheckCircle, 
+  Brain,
+  GitFork,
+  Shield,
+  Users,
+  BarChart3,
+  Eye,
+  CheckCircle,
   ArrowRight,
   Play,
   Clock,
@@ -248,12 +247,12 @@ import { motion } from 'framer - motion';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -262,16 +261,16 @@ import { motion } from 'framer - motion';
                 <Sparkles className="w - 4 h - 4 mr - 2" />
                 2025 Innovative Services Showcase
               </div>
-              
+
               <h1 className="text - 5xl md:text - 7xl font - bold text - white mb - 6 bg - gradient - to - r from - zion - cyan via - zion - purple to - zion - cyan bg - clip - text text - transparent">
                 Revolutionary AI Services
               </h1>
-              
+
               <p className="text - xl md:text - 2xl text - zion - slate - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">
-                Discover our cutting - edge AI - powered micro SAAS services designed to transform your business. 
+                Discover our cutting - edge AI - powered micro SAAS services designed to transform your business.
                 From workflow automation to data governance, we provide innovative solutions that drive growth and efficiency.
               </p>
-              
+
               <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -300,12 +299,12 @@ import { motion } from 'framer - motion';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -325,17 +324,17 @@ import { motion } from 'framer - motion';
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   viewport={{ once: true }}
@@ -348,7 +347,7 @@ import { motion } from 'framer - motion';
                         Most Popular
                       </span>
                     </div>) }
-                  
+
                   <div className="text - center mb - 6">
                     <div className={`w - 16 h - 16 bg - gradient - to - r ${service.color} rounded - xl flex items - center justify - center mx - auto mb - 4`}>
                       <service.icon className="w - 8 h - 8 text - white" />
@@ -360,14 +359,14 @@ import { motion } from 'framer - motion';
                     <p className="text - zion - slate - 300 mb - 4">{service.description}</p>
                     <div className="text - 2xl font - bold text - zion - cyan mb - 4">{service.price}</div>
                   </div>
-                  
+
                   <ul className="space - y-3 mb - 6">
                     {service.features.map ( (feature, idx) => (<li key={idx} className="flex items - center text - zion - slate - 300">
                         <CheckCircle className="w - 4 h - 4 text - zion - cyan mr - 3 flex - shrink - 0" />
                         {feature}
                       </li>) ) }
                   </ul>
-                  
+
                   <Link to={service.link}>
                     <motion.button
                       whileHover={{ scale: 1.02 }}
@@ -392,12 +391,12 @@ import { motion } from 'framer - motion';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -417,17 +416,17 @@ import { motion } from 'framer - motion';
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   viewport={{ once: true }}
@@ -460,12 +459,12 @@ import { motion } from 'framer - motion';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -485,17 +484,17 @@ import { motion } from 'framer - motion';
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   viewport={{ once: true }}
@@ -517,12 +516,12 @@ import { motion } from 'framer - motion';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -532,10 +531,10 @@ import { motion } from 'framer - motion';
                 Ready to Transform Your Business?
               </h2>
               <p className="text - xl text - zion - slate - 300 mb - 8">
-                Join forward - thinking organizations that are already leveraging our AI - powered services 
+                Join forward - thinking organizations that are already leveraging our AI - powered services
                 to drive innovation and growth.
               </p>
-              
+
               <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}

@@ -5,7 +5,6 @@ import {
 import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data / innovativeServices2028";
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Brain,
   Zap,
   Lock,

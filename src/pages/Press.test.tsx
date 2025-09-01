@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import Press from './Press';
 
-
 describe ('Press', () => {
   it ('renders without crashing', () => {
     render (<Press />) ;

@@ -2,19 +2,18 @@ import { Link } from 'react - router - dom';
 import React, { useState, useEffect } from 'react';
 import { SEO } from '@/components / SEO';
 export default React.memo (function ComprehensiveServicesShowcase2025 () {
-import { 
+import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
-  Zap, 
-  Brain, 
-  Shield, 
-  Users, 
-  HardDrive, 
-  TrendingUp, 
-  Building2, 
-  FileText, 
-  HelpCircle, 
+  Zap,
+  Brain,
+  Shield,
+  Users,
+  HardDrive,
+  TrendingUp,
+  Building2,
+  FileText,
+  HelpCircle,
   BarChart3,
   Globe,
   Cpu,
@@ -443,7 +442,7 @@ const categories = [
   const [selectedService, setSelectedService] = useState < Service | null> (null) ;
 
   const filteredServices = services.filter (service => {
-    const matchesCategory = selectedCategory === 'all' || 
+    const matchesCategory = selectedCategory === 'all' ||
       service.category.toLowerCase () .includes (selectedCategory.replace ('-', ' ') ) ;
     const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
@@ -459,7 +458,7 @@ const categories = [
   };
 
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="Comprehensive Services Showcase 2025 | Zion Tech Group"
         description="Explore our comprehensive portfolio of AI, IT, and Micro SAAS services. Discover innovative solutions designed to transform your business in 2025 and beyond."
         keywords="AI services, IT services, Micro SAAS, cybersecurity, healthcare AI, quantum computing, cloud DevOps, business intelligence"
@@ -480,7 +479,7 @@ const categories = [
               </span>
             </h1>
             <p className="text - xl md:text - 2xl text - zion - slate - light mb - 8 max - w-4xl mx - auto">
-              Discover our cutting - edge portfolio of AI, IT, and Micro SAAS services designed to 
+              Discover our cutting - edge portfolio of AI, IT, and Micro SAAS services designed to
               transform your business and drive innovation in the digital age.
             </p>
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
@@ -533,8 +532,8 @@ const categories = [
                 </button>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`flex - 1 px - 3 py - 2 rounded - md text - sm font - medium transition - colors ${
-                    viewMode === 'list' 
-                      ? 'bg - zion - cyan text - white' 
+                    viewMode === 'list'
+                      ? 'bg - zion - cyan text - white'
                       : 'text - zion - slate - light hover:text - white'
                   }`}
                 >
@@ -708,8 +707,8 @@ const categories = [
               Ready to Transform Your Business?
             </h2>
             <p className="text - xl text - zion - slate - light mb - 8 max - w-3xl mx - auto">
-              Our team of experts is ready to help you implement the right solutions 
-              for your unique business needs. Get started today and see the difference 
+              Our team of experts is ready to help you implement the right solutions
+              for your unique business needs. Get started today and see the difference
               our innovative services can make.
             </p>
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">

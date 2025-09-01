@@ -54,16 +54,10 @@ export function ServicesShowcase() {
             transition: {
                 staggerChildren: 0.1
 
-
     };
     const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 },
         visible: {
@@ -71,7 +65,6 @@ export function ServicesShowcase() {
             opacity: 1,
             transition: {
                 duration: 0.5
-
 
     };
     return (<section className="py-20 bg-zion-slate-dark relative overflow-hidden">;
@@ -84,21 +77,11 @@ export function ServicesShowcase() {
         {/* Section Header */}
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -143,30 +126,15 @@ export function ServicesShowcase() {
         {/* CTA */}
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
-  delay: 0.5 
-
-
-
-
-
+  delay: 0.5
 
 }} className="text-center mt-16">
           <Link to="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30">

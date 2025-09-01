@@ -1,7 +1,6 @@
 import React, { useEffect, useCallback, useState } from 'react';
 export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({
 
-
 interface ModernUIEnhancerProps {
   enabled?: boolean;
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import SEO from '@/components / SEO';
 export default EnhancedServices;
 
-
 const EnhancedServices = () => {
   return (<>
       <SEO

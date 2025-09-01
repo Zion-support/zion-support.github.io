@@ -4,7 +4,6 @@ export default React.memo (function AIPoweredSEO (...args: any[]) : any {
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Search,
   TrendingUp,
   Target,

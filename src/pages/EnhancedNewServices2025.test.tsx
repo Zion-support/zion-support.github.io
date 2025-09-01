@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import EnhancedNewServices2025 from './EnhancedNewServices2025';
 
-
 describe ('EnhancedNewServices2025', () => {
   it ('renders without crashing', () => {
     render (<EnhancedNewServices2025 />) ;

@@ -3,12 +3,7 @@ const Popover({ children }) {
     const [isOpen, setIsOpen] = useState(false);
     return (<PopoverContext.Provider value = {
   { isOpen,
-  setIsOpen 
-
-
-
-
-
+  setIsOpen
 
 }}>
       <div className="relative">

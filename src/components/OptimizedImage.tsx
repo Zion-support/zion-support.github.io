@@ -1,12 +1,11 @@
 import { ImageIcon, AlertCircle, Loader2  } from 'lucide - react.ts';
 import React, { useState, useRef, useEffect } from 'react.ts';
-export const AvatarImage: React.FC < Omit < OptimizedImageProps, 'rounded' | 'objectFit'> & { size?: 'sm' | 'md' | 'lg' | 'xl' }> = ({ 
+export const AvatarImage: React.FC < Omit < OptimizedImageProps, 'rounded' | 'objectFit'> & { size?: 'sm' | 'md' | 'lg' | 'xl' }> = ({
 export const CardImage: React.FC < OptimizedImageProps> = (props) => (<OptimizedImage
 export const HeroImage: React.FC < OptimizedImageProps> = (props) => (<OptimizedImage
 export const OptimizedImage: React.FC < OptimizedImageProps> = ({
 export default OptimizedImage;
 import { motion, AnimatePresence  } from 'framer - motion.ts';
-
 
 interface OptimizedImageProps extends React.PropsWithChildren<{}> {
 
@@ -53,7 +52,7 @@ interface OptimizedImageProps extends React.PropsWithChildren<{}> {
   const [hasError, setHasError] = useState (false) ;
   const [isIntersecting, setIsIntersecting] = useState (priority) ;
   const [isLoaded, setIsLoaded] = useState (false) ;
-  
+
   const imgRef = useRef < HTMLImageElement> (null) ;
   const observerRef = useRef < IntersectionObserver | null> (null) ;
 
@@ -120,7 +119,7 @@ interface OptimizedImageProps extends React.PropsWithChildren<{}> {
     if (src.startsWith ('data:') || src.startsWith ('blob:') ) {
       return src;
     }
-    
+
     // Add quality parameter for external images if possible
     try {
       const url = new URL (src) ;
@@ -152,7 +151,7 @@ interface OptimizedImageProps extends React.PropsWithChildren<{}> {
 
   // Loading skeleton
   if (!isIntersecting) {
-    return (<div 
+    return (<div
         className={`${baseClasses} bg - gray - 200 dark:bg - gray - 700 animate - pulse`}
         style={{ width, height }}
       >
@@ -164,7 +163,7 @@ interface OptimizedImageProps extends React.PropsWithChildren<{}> {
 
   // Error state
   if (hasError) {
-    return (<div 
+    return (<div
         className={`${baseClasses} bg - gray - 100 dark:bg - gray - 800 flex items - center justify - center`}
         style={{ width, height }}
       >
@@ -217,8 +216,8 @@ interface OptimizedImageProps extends React.PropsWithChildren<{}> {
 };
 
 // Specialized image components
-  size = 'md', 
-  ...props 
+  size = 'md',
+  ...props
 }) => {
   const sizeClasses = {
     sm: 'w - 8 h - 8',

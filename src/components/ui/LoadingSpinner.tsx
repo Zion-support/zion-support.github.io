@@ -17,11 +17,11 @@ export default function LoadingSpinner({
   className?: string;
 }
 
-export function LoadingSpinner({ 
-  size = 'md', 
+export function LoadingSpinner({
+  size = 'md',
   color = 'text-cyan-400',
   text,
-  className = '' 
+  className = ''
 }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-8 h-8',
@@ -50,7 +50,7 @@ export function LoadingSpinner({
         role="status"
         aria-label="Loading"
       />
-      
+
       {text && (
         <motion.p
           className={`mt-4 text-gray-400 ${textSizes[size]} font-medium`}
@@ -61,13 +61,13 @@ export function LoadingSpinner({
           <span className="text-slate-300 font-medium">{text}</span>
         </motion.p>
       )}
-      
+
       <span className="sr-only">Loading...</span>
     </div>
   );
 
 // Enhanced loading spinner with dots
-export function LoadingDots({ 
+export function LoadingDots({
   size = 'md',
   color = 'text-cyan-400',
   text,
@@ -107,7 +107,7 @@ export function LoadingDots({
           />
         ))}
       </div>
-      
+
       {text && (
         <motion.p
           className={`mt-4 text-gray-400 ${textSizes[size]} font-medium`}
@@ -118,17 +118,17 @@ export function LoadingDots({
           {text}
         </motion.p>
       )}
-      
+
       <span className="sr-only">Loading...</span>
     </div>
   );
 }
 
 // Skeleton loading component
-export function LoadingSkeleton({ 
+export function LoadingSkeleton({
   lines = 3,
   className = ''
-}: { 
+}: {
   lines?: number;
   className?: string;
 }) {
@@ -150,10 +150,10 @@ export function LoadingSkeleton({
   );
 
 // Button loading state
-export function ButtonLoader({ 
+export function ButtonLoader({
   size = 'md',
-  className = '' 
-}: { 
+  className = ''
+}: {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
 }) {
@@ -165,10 +165,10 @@ export function ButtonLoader({
   );
 
 // Page loading overlay
-export function PageLoaderOverlay({ 
+export function PageLoaderOverlay({
   text = "Loading...",
-  className = '' 
-}: { 
+  className = ''
+}: {
   text?: string;
   className?: string;
 }) {
@@ -182,7 +182,7 @@ export function PageLoaderOverlay({
 }
 
 // Full page loading component
-export function FullPageLoader({ 
+export function FullPageLoader({
   text = "Loading Zion Tech Group...",
   className = ''
 }: {

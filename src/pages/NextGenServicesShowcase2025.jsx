@@ -5,7 +5,6 @@ export default function NextGenServicesShowcase2025 () {
 import { motion } from 'framer - motion';
 import Link from 'next / link';
 
-
     const featuredServices = [
         {
             id: 'ai - consciousness - simulator',
@@ -124,11 +123,11 @@ import Link from 'next / link';
         <div className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text - center">
             <h1 className="text - 5xl md:text - 7xl font - bold text - white mb - 6">
@@ -156,11 +155,11 @@ import Link from 'next / link';
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text - center mb - 16">
             <h2 className="text - 4xl font - bold text - white mb - 4">
@@ -174,15 +173,15 @@ import Link from 'next / link';
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">
             {featuredServices.map ( (service, index) => (<motion.div key={service.id} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.8,
-  delay: index * 0.2 
+  delay: index * 0.2
 
 }} className={`relative bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm group hover:border - cyan - 500 / 50 transition - all duration - 300 ${service.popular ? 'ring - 2 ring - cyan - 400 / 50' : ''}`}>
                 {service.popular && (<div className="absolute - top - 3 left - 8">
@@ -249,11 +248,11 @@ import Link from 'next / link';
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text - center mb - 16">
             <h2 className="text - 4xl font - bold text - white mb - 4">
@@ -267,15 +266,15 @@ import Link from 'next / link';
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {microSaasServices.map ( (service, index) => (<motion.div key={index} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.8,
-  delay: index * 0.2 
+  delay: index * 0.2
 
 }} className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm hover:border - cyan - 500 / 50 transition - all duration - 300">
                 <div className="mb - 4">
@@ -314,11 +313,11 @@ import Link from 'next / link';
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text - center mb - 16">
             <h2 className="text - 4xl font - bold text - white mb - 4">
@@ -332,15 +331,15 @@ import Link from 'next / link';
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {infrastructureServices.map ( (service, index) => (<motion.div key={index} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.8,
-  delay: index * 0.2 
+  delay: index * 0.2
 
 }} className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm hover:border - purple - 500 / 50 transition - all duration - 300">
                 <div className="mb - 4">
@@ -379,11 +378,11 @@ import Link from 'next / link';
         <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }}>
             <h2 className="text - 4xl font - bold text - white mb - 4">

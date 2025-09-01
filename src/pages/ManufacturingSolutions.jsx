@@ -4,7 +4,6 @@ import React from 'react';
 export default function ManufacturingSolutions () {
 import Link from 'next / link';
 
-
     const solutions = [
         {
             icon: Brain,

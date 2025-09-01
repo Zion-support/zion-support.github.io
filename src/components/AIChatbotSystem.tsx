@@ -3,7 +3,6 @@ export const AIChatbotSystem: React.FC < AIChatbotSystemProps> = ({
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   MessageCircle,
   Send,
   Bot,
@@ -179,22 +178,22 @@ showHeader:  true,;
         {isOpen && (<motion.div
             initial = {
   { opacity: 0, scale: 0.9,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1, scale: 1,
-  y: 0 
+  y: 0
 
 }}
             exit = {
   { opacity: 0, scale: 0.9,
-  y: 20 
+  y: 20
 
 }}
             transition = {
   { duration: 0.3,
-  ease: 'easeOut' 
+  ease: 'easeOut'
 
 }}
             className="fixed bottom - 20 right - 4 z - 40 w - 96 h-[600px] bg - zinc - 900 / 95 backdrop - blur - md border border - zinc - 700 / 50 rounded - xl shadow - 2xl overflow - hidden"
@@ -237,17 +236,17 @@ showHeader:  true,;
               {showSettingsPanel && (<motion.div
                   initial = {
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
                   animate = {
   { height: 'auto',
-  opacity: 1 
+  opacity: 1
 
 }}
                   exit = {
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
                   transition={{ duration: 0.3 }}
@@ -257,7 +256,7 @@ showHeader:  true,;
                     <div role="button" className="flex items - center justify - between">
                       <span className="text - sm text - zinc - 300">Voice Input</span>
                       <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => setSettings (prev => ({ ...prev,
-  voiceEnabled: !prev.voiceEnabled 
+  voiceEnabled: !prev.voiceEnabled
 
 }) ) }
                         className={`p - 2 rounded - lg transition - colors ${
@@ -273,7 +272,7 @@ showHeader:  true,;
                     <div role="button" className="flex items - center justify - between">
                       <span className="text - sm text - zinc - 300">Auto Response</span>
                       <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => setSettings (prev => ({ ...prev,
-  autoResponse: !prev.autoResponse 
+  autoResponse: !prev.autoResponse
 
 }) ) }
                         className={`p - 2 rounded - lg transition - colors ${
@@ -296,12 +295,12 @@ showHeader:  true,;
                   key={message.id}
                   initial = {
   { opacity: 0,
-  y: 10 
+  y: 10
 
 }}
                   animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   className={`flex ${message.sender === 'user' ? 'justify - end' : 'justify - start'}`}

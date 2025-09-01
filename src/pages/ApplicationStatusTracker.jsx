@@ -6,7 +6,6 @@ import { useIsMobile } from "@/hooks / use - mobile";
 import SEO from "@/components / SEO";
 export default function ApplicationStatusTracker () {
 
-
 function ApplicationStatusTrackerContent () {
     const isMobile = useIsMobile () ;
     return (<>
@@ -37,5 +36,5 @@ function ApplicationStatusTrackerContent () {
     return (<ProtectedRoute>
 
         <ApplicationStatusTrackerContent />
-      
+
     </ProtectedRoute>) }

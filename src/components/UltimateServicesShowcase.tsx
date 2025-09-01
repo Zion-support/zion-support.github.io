@@ -15,7 +15,6 @@ import { innovativeMicroSaasSolutions2025 } from "../../data / 2025 - innovative
 import { motion } from 'framer - motion';
 import { ultimateInnovativeServices2025 } from "../../data / 2025 - ultimate - innovative - services - expansion";
 
-
   Brain,
   Cloud,
   Shield,
@@ -172,7 +171,7 @@ const patentStatusColors = {
 
   const itemVariants = {
   hidden: { opacity: 0,
-  y: 20 
+  y: 20
 
 },
     visible: {
@@ -192,12 +191,12 @@ const patentStatusColors = {
           className="text - center mb - 16"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}
@@ -236,17 +235,17 @@ const patentStatusColors = {
           className="flex flex - wrap justify - center gap - 4 mb - 12"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
         >

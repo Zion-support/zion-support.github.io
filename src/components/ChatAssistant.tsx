@@ -3,7 +3,6 @@ export const ChatAssistant: React.FC < ChatAssistantProps> = ({
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   MessageCircle,
   X,
   Send,

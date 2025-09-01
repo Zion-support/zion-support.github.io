@@ -11,7 +11,6 @@ export default ProjectMilestones;
 export default ProjectMilestones;
 export default ProjectMilestones;
 
-
 function ProjectMilestones () {
     return (<ProtectedRoute>
       <>

@@ -6,7 +6,6 @@ import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 import SEO from '../components / SEO';
 
-
   Brain,
   Zap,
   Shield,
@@ -196,7 +195,7 @@ const AIServicesPage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16">
             <div className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - purple - 400 / 20">
               <div className="text - 4xl mb - 4">🤖</div>
@@ -225,17 +224,17 @@ const AIServicesPage: React.FC = () => {
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className="bg - white / 5 backdrop - blur - lg rounded - xl p - 6 border border - purple - 400 / 20 hover:border - purple - 400 / 40 transition - all duration - 300"
@@ -260,17 +259,17 @@ const AIServicesPage: React.FC = () => {
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className="bg - white / 5 backdrop - blur - lg rounded - xl p - 6 border border - purple - 400 / 20"

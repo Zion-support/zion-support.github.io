@@ -1,6 +1,6 @@
 import { useParams } from "react - router - dom";
 import { useState, useEffect } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components / ui / avatar";
 import { Badge } from "@/components / ui / badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components / ui / card";
@@ -9,7 +9,6 @@ import { supabase } from "@/integrations / supabase / client";
 import { toast } from "@/hooks / use - toast";
 import SEO from "@/components / SEO";
 export default function ProfileDetail () {
-
 
     // useParams is typed as `` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
@@ -202,5 +201,5 @@ export default function ProfileDetail () {
           </div>
         </div>
       </div>
-      
+
     </>) }

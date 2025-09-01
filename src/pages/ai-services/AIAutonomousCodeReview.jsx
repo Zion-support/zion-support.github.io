@@ -85,21 +85,11 @@ export default function AIAutonomousCodeReview() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text-center">
             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">
@@ -137,21 +127,11 @@ export default function AIAutonomousCodeReview() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
@@ -167,30 +147,15 @@ export default function AIAutonomousCodeReview() {
             const IconComponent = feature.icon;
             return (<motion.div key={feature.title} initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition = {
   { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
+  delay: index * 0.1
 
 }} className="bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-2xl p-8 hover:border-cyan-500/50 hover:bg-gray-800/70 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}>
@@ -208,21 +173,11 @@ export default function AIAutonomousCodeReview() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
@@ -236,30 +191,15 @@ export default function AIAutonomousCodeReview() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (<motion.div key={benefit} initial = {
   { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
+  x: index % 2 === 0 ? -20 : 20
 
 }} whileInView = {
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }} transition = {
   { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
+  delay: index * 0.1
 
 }} className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"/>
@@ -274,21 +214,11 @@ export default function AIAutonomousCodeReview() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
@@ -304,30 +234,15 @@ export default function AIAutonomousCodeReview() {
             const IconComponent = useCase.icon;
             return (<motion.div key={useCase.title} initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition = {
   { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
+  delay: index * 0.1
 
 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
@@ -345,21 +260,11 @@ export default function AIAutonomousCodeReview() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
@@ -373,30 +278,15 @@ export default function AIAutonomousCodeReview() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (<motion.div key={testimonial.name} initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition = {
   { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
+  delay: index * 0.1
 
 }} className="bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-2xl p-8">
                 <div className="flex gap-1 mb-4">
@@ -419,21 +309,11 @@ export default function AIAutonomousCodeReview() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition={{ duration: 0.8 }}>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">

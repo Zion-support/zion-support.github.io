@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import DigitalTwin from './DigitalTwin';
 
-
 describe ('DigitalTwin', () => {
   it ('renders without crashing', () => {
     render (<DigitalTwin />) ;

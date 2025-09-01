@@ -84,21 +84,11 @@ export default function FuturisticServicesShowcase() {
         {/* Section Header */}
         <motion.div initial = {
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -118,30 +108,15 @@ export default function FuturisticServicesShowcase() {
         {/* Category Filter */}
         <motion.div initial = {
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition = {
   { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
+  delay: 0.2
 
 }} className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category.id
@@ -157,39 +132,19 @@ export default function FuturisticServicesShowcase() {
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
   { opacity: 0, y: 30,
-  scale: 0.9 
-
-
-
-
-
+  scale: 0.9
 
 }} animate = {
   { opacity: 1, y: 0,
-  scale: 1 
-
-
-
-
-
+  scale: 1
 
 }} exit = {
   { opacity: 0, y: -30,
-  scale: 0.9 
-
-
-
-
-
+  scale: 0.9
 
 }} transition = {
   { duration: 0.5,
-  delay: index * 0.1 
-
-
-
-
-
+  delay: index * 0.1
 
 }} onHoverStart={() => setHoveredService(service.id)} onHoverEnd={() => setHoveredService(null)} className={`relative group cursor-pointer ${service.popular ? 'ring-2 ring-cyan-500/50' : ''}`}>
                 {/* Service Card */}
@@ -244,58 +199,28 @@ export default function FuturisticServicesShowcase() {
                   {hoveredService === service.id && (<>
                       <motion.div initial = {
   { opacity: 0,
-  scale: 0 
-
-
-
-
-
+  scale: 0
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
-
-
-
-
-
+  scale: 1
 
 }} exit = {
   { opacity: 0,
-  scale: 0 
-
-
-
-
-
+  scale: 0
 
 }} className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full animate-ping"/>
                       <motion.div initial = {
   { opacity: 0,
-  scale: 0 
-
-
-
-
-
+  scale: 0
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
-
-
-
-
-
+  scale: 1
 
 }} exit = {
   { opacity: 0,
-  scale: 0 
-
-
-
-
-
+  scale: 0
 
 }} className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse"/>
                     </>)}
@@ -307,30 +232,15 @@ export default function FuturisticServicesShowcase() {
         {/* Bottom CTA */}
         <motion.div initial = {
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition = {
   { duration: 0.8,
-  delay: 0.4 
-
-
-
-
-
+  delay: 0.4
 
 }} className="text-center mt-16">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 backdrop-blur-sm">

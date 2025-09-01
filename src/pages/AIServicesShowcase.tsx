@@ -4,7 +4,6 @@ export default AIServicesShowcase;
 import { motion   } from 'framer - motion.ts';
 import { SEO   } from '../components / SEO';
 
-
 const AIServicesShowcase: React.FC = () : JSX.Element => {
   const aiServices = [
     {
@@ -62,7 +61,7 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
         keywords="AI services, micro SAAS, code security, customer analytics, DevOps automation, IoT edge computing, Zion Tech Group"
         canonical="https://ziontechgroup.com / ai - services - showcase"
       />
-      
+
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900">
         {/* Hero Section */}
         <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">
@@ -70,12 +69,12 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -84,17 +83,17 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
                 AI - Powered Micro SAAS Services
               </h1>
               <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">
-                Transform your business with our cutting - edge AI - powered micro SAAS solutions. 
+                Transform your business with our cutting - edge AI - powered micro SAAS solutions.
                 From code security to customer analytics, we deliver intelligent automation that drives real results.
               </p>
               <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-                <Link 
+                <Link
                   to="/contact"
                   className="bg - gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700 text - white font - semibold py - 3 px - 8 rounded - lg transition - all duration - 300 transform hover:scale - 105"
                 >
                   Get Started Today
                 </Link>
-                <Link 
+                <Link
                   to="/services"
                   className="border - 2 border - white text - white font - semibold py - 3 px - 8 rounded - lg hover:bg - white hover:text - gray - 900 transition - all duration - 300"
                 >
@@ -111,12 +110,12 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -136,17 +135,17 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
                   key={service.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   viewport={{ once: true }}
@@ -158,15 +157,15 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
                       {service.category}
                     </span>
                   </div>
-                  
+
                   <h3 className="text - 2xl font - bold text - white mb - 4 group - hover:text - blue - 300 transition - colors duration - 300">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text - gray - 300 mb - 6 leading - relaxed">
                     {service.description}
                   </p>
-                  
+
                   <div className="mb - 6">
                     <h4 className="text - lg font - semibold text - white mb - 3">Key Features:</h4>
                     <ul className="space - y-2">
@@ -176,7 +175,7 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
                         </li>) ) }
                     </ul>
                   </div>
-                  
+
                   <div className="mb - 6">
                     <h4 className="text - lg font - semibold text - white mb - 3">Business Impact:</h4>
                     <ul className="space - y-2">
@@ -186,12 +185,12 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
                         </li>) ) }
                     </ul>
                   </div>
-                  
+
                   <div className="flex items - center justify - between mb - 6">
                     <div className="text - 2xl font - bold text - green - 400">{service.pricing}</div>
                     <span className="text - sm text - gray - 400">14 - day free trial</span>
                   </div>
-                  
+
                   <div className="flex gap - 3">
                     <Link
                       to={service.url}
@@ -217,12 +216,12 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -273,17 +272,17 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   viewport={{ once: true }}
@@ -303,12 +302,12 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -320,7 +319,7 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
               <p className="text - xl text - gray - 300 mb - 8">
                 Join leading organizations who trust our AI - powered platforms to drive innovation and growth.
               </p>
-              
+
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 8">
                 <div className="bg - white / 10 backdrop - blur - sm rounded - lg p - 6 border border - white / 20">
                   <h3 className="text - xl font - semibold text - white mb - 3">Contact Information</h3>
@@ -330,7 +329,7 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
                     <p>📍 <span className="text - white">364 E Main St STE 1008, Middletown DE 19709</span></p>
                   </div>
                 </div>
-                
+
                 <div className="bg - white / 10 backdrop - blur - sm rounded - lg p - 6 border border - white / 20">
                   <h3 className="text - xl font - semibold text - white mb - 3">Quick Actions</h3>
                   <div className="space - y-3">
@@ -346,7 +345,7 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="text - gray - 300">
                 <p > Visit our website: <a href="https://ziontechgroup.com" className="text - blue - 400 hover:underline">https://ziontechgroup.com</a></p>
               </div>

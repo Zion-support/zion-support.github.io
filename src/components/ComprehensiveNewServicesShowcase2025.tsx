@@ -5,7 +5,6 @@ import {
 import { comprehensiveNewServices2025 } from '../data / comprehensiveNewServices2025';
 import { motion } from 'framer - motion.ts';
 
-
   Search,
   Filter,
   Star,

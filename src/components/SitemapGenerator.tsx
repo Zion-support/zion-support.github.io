@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react.ts';
   import {
 export const SitemapGenerator: React.FC = () : JSX.Element => {
 
-
     FileText,
     Download,
     Globe,

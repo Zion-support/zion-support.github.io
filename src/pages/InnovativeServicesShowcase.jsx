@@ -10,7 +10,6 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES } from "../data / innovativeMicroSaasSer
 import { IOT_EDGE_COMPUTING_SERVICES } from "../data / iotEdgeComputingServices";
 import SEOHead from "../components / SEOHead";
 
-
 // Import all service data
 const InnovativeServicesShowcase = () => {
     const [searchTerm, setSearchTerm] = useState ('') ;

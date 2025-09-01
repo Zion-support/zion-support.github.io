@@ -4,7 +4,6 @@ export default AdvancedAIServicesHub;}}}}}}
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Brain,
   Zap,
   Shield,
@@ -142,12 +141,12 @@ const AdvancedAIServicesHub: React.FC = () => {;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           className="text - center mb - 16"
@@ -164,12 +163,12 @@ const AdvancedAIServicesHub: React.FC = () => {;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ delay: 0.2 }}
@@ -205,12 +204,12 @@ const AdvancedAIServicesHub: React.FC = () => {;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ delay: 0.3 }}
@@ -235,12 +234,12 @@ const AdvancedAIServicesHub: React.FC = () => {;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ delay: 0.4 }}
@@ -251,17 +250,17 @@ const AdvancedAIServicesHub: React.FC = () => {;
                 key={service.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                 transition={{ delay: index * 0.1 }}
@@ -328,12 +327,12 @@ const AdvancedAIServicesHub: React.FC = () => {;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ delay: 0.6 }}
@@ -344,7 +343,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
               Ready to Transform Your Business?
             </h2>
             <p className="text - gray - 300 mb - 8 max - w-2xl mx - auto">
-              Our AI - powered solutions are designed to streamline operations, boost productivity, and drive growth. 
+              Our AI - powered solutions are designed to streamline operations, boost productivity, and drive growth.
               Get started today and experience the future of business automation.
             </p>
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">

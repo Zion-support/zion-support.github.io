@@ -5,7 +5,6 @@ export function FooterNewsletter () {
 import {
 import { motion } from 'framer - motion';
 
-
   Mail,
   Phone,
   MapPin,

@@ -41,11 +41,6 @@ const zionContact = {
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
 
-
-
-
-
-
 };
 
     technologies["AI/ML", "Robo-advisory", "Portfolio Optimization", "Financial Planning"]

@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import EnhancedServicesShowcase from './EnhancedServicesShowcase';
 
-
 describe ('EnhancedServicesShowcase', () => {
   it ('renders without crashing', () => {
     render (<EnhancedServicesShowcase />) ;

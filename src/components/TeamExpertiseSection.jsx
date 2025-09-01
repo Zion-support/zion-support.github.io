@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 export function TeamExpertiseSection () {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
 const teamMembers = [
     {
         id: 1,
@@ -178,7 +177,7 @@ const stats = [
     };
     const itemVariants = {
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -202,18 +201,18 @@ const stats = [
         {/* Header */}
         <motion.div className="text - center mb - 20" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text - 4xl md:text - 5xl lg:text - 6xl font - bold text - white mb - 6">
             Meet Our < span className="bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent">Expert Team</span>
           </h2>
           <p className="text - zion - slate - light text - lg md:text - xl max - w-4xl mx - auto leading - relaxed mb - 8">
-            Our world - class team of technology experts brings together decades of experience 
+            Our world - class team of technology experts brings together decades of experience
             across all major technology domains. Get to know the minds behind our success.
           </p>
 
@@ -221,15 +220,15 @@ const stats = [
           <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto">
             {stats.map ( (stat, index) => (<motion.div key={index} initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} whileInView = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} className="text - center p - 4 rounded - xl bg - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 20">
                 <div className="text - zion - cyan mb - 2 flex justify - center">
@@ -244,33 +243,33 @@ const stats = [
         {/* Expertise Areas */}
         <motion.div className="mb - 20" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}>
           <h3 className="text - 3xl font - bold text - white text - center mb - 12">
             Areas of < span className="bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent">Expertise</span>
           </h3>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">
             {expertiseAreas.map ( (area, index) => (<motion.div key={index} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} onHoverStart={ () => setHoveredExpertise (index) } onHoverEnd={ () => setHoveredExpertise (null) } whileHover={{ y: -4 }} className="p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 20">
                 <div className={`inline - flex items - center justify - center w - 16 h - 16 rounded - 2xl bg - gradient - to - br ${area.color} mb - 4 shadow - lg`}>
@@ -278,10 +277,10 @@ const stats = [
                     {area.icon}
                   </div>
                 </div>
-                
+
                 <h4 className="text - xl font - bold text - white mb - 3">{area.name}</h4>
                 <p className="text - zion - slate - light text - sm mb - 4 leading - relaxed">{area.description}</p>
-                
+
                 <div className="grid grid - cols - 3 gap - 4 text - center">
                   <div>
                     <div className="text - zion - cyan font - bold text - lg">{area.experts}</div>
@@ -303,25 +302,25 @@ const stats = [
         {/* Team Members */}
         <motion.div className="mb - 20" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}>
           <h3 className="text - 3xl font - bold text - white text - center mb - 12">
             Leadership < span className="bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent">Team</span>
           </h3>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {teamMembers.map ( (member, index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
   { type: "spring",
-  stiffness: 300 
+  stiffness: 300
 
 }} className="relative">
                 <div className="h - full p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - zion - cyan / 20 group cursor - pointer" onClick={ () => setSelectedMember (selectedMember === member.id ? null : member.id) }>
@@ -332,7 +331,7 @@ const stats = [
                         {member.name.charAt (0) }
                       </span>
                     </div>
-                    
+
                     <h4 className="text - xl font - bold text - white mb - 2 group - hover:text - zion - cyan transition - colors">
                       {member.name}
                     </h4>
@@ -377,28 +376,28 @@ const stats = [
                   <AnimatePresence>
                     {selectedMember === member.id && (<motion.div className="mt - 6 p - 4 rounded - xl bg - zion - blue - dark / 60 backdrop - blur - sm border border - zion - cyan / 30" initial = {
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} transition={{ duration: 0.3 }}>
                         <p className="text - zion - slate - light text - sm mb - 4 leading - relaxed">{member.bio}</p>
-                        
+
                         <h5 className="text - zion - cyan font - semibold text - sm mb - 2">Achievements:</h5>
                         <div className="space - y-1 mb - 4">
                           {member.achievements.map ( (achievement, idx) => (<motion.div key={idx} className="flex items - center gap - 2 text - zion - slate - light / 80 text - xs" initial = {
   { opacity: 0,
-  x: -10 
+  x: -10
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} transition={{ delay: idx * 0.1 }}>
                               <CheckCircle className="w - 3 h - 3 text - zion - cyan"/>
@@ -435,15 +434,15 @@ const stats = [
         {/* Call to action */}
         <motion.div className="text - center" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 }}>
           <div className="inline - block p - 1 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - 2xl">

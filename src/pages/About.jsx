@@ -2,7 +2,6 @@ import { Users, Target, Globe, Award, Shield, Lightbulb } from 'lucide - react';
 import React from 'react';
 export default About;
 
-
 const About = () => {
   const values = [
     {

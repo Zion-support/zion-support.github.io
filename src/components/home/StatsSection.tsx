@@ -54,22 +54,12 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           className="text-center mb-16"
           initial = {
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}
@@ -90,43 +80,23 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
               initial = {
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
+  delay: index * 0.1
 
 }}
               viewport={{ once: true }}
               whileHover={{
                 y: -8,
-  transition: { duration: 0.3 
-
-
-
-
-
+  transition: { duration: 0.3
 
 }
               }}
@@ -148,12 +118,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
                 whileInView={{ scale: 1 }}
                 transition = {
   { duration: 0.5,
-  delay: index * 0.1 + 0.5 
-
-
-
-
-
+  delay: index * 0.1 + 0.5
 
 }}
                 viewport={{ once: true }}

@@ -1,22 +1,21 @@
 import { Link } from 'react - router - dom';
 import React from 'react';
 export default React.memo (function NotFound () {
-import { 
+import {
 import { motion } from 'framer - motion';
 
-
-  Home, 
-  Search, 
-  MapPin, 
-  ArrowRight, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Users, 
-  Building, 
-  Target, 
-  Rocket, 
+  Home,
+  Search,
+  MapPin,
+  ArrowRight,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Users,
+  Building,
+  Target,
+  Rocket,
   Star,
   Cpu,
   Lock,
@@ -210,7 +209,7 @@ import { motion } from 'framer - motion';
                   </div>
                   <h3 className="text - xl font - semibold text - white">{category.title}</h3>
                 </div>
-                
+
                 <div role="button" className="space - y-3">
                   {category.services.map ( (service, serviceIndex) => (<Link
                       key={service.path}

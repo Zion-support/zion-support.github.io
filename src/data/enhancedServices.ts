@@ -1256,12 +1256,11 @@ export const ENHANCED_SERVICE_CATEGORIES = [
 // Pricing tiers for different service levels
 export const SERVICE_PRICING_TIERS = {
   basic: { range: "$500 - $2,000",
-  description: "Essential services for small businesses and startups" 
+  description: "Essential services for small businesses and startups"
 
 ;
 ;
 ;
-
 
 },;
   professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },;
@@ -1281,10 +1280,5 @@ export const CONTACT_INFO = {
   ;
   domain: "ziontechgroup.com";
 ;
-
-
-
-
-
 
 };

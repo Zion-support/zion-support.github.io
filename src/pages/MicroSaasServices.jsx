@@ -10,7 +10,6 @@ import { TrustedBySection } from "@/components / TrustedBySection";
 export default function MicroSaasServices () {
 export default MicroSAASServices;
 
-
 const categoryIcons = {
   'AI Business Solutions': Brain,
     'IT Infrastructure': Cloud,

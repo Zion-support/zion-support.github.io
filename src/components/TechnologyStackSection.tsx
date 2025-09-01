@@ -6,7 +6,6 @@ export default TechnologyStackSection;
 import {
 import { motion } from 'framer - motion';
 
-
  * TechnologyStackSection function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -86,16 +85,16 @@ const emergingTech = [
 
   return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
       <div className="max - w-7xl mx - auto px - 6">
-        <motion.div 
+        <motion.div
           className="text - center mb - 16"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -126,14 +125,14 @@ const emergingTech = [
                 </div>
                 {category.category}
               </h3>
-              
+
               <div className="space - y-4">
                 {category.technologies.map ( (tech, techIndex) => (<div key={tech.name} className="flex items - center justify - between">
                     <div className="flex items - center gap - 3">
                       <span className="text - xl">{tech.icon}</span>
                       <span className="text - gray - 300 font - medium">{tech.name}</span>
                     </div>
-                    
+
                     <div className="flex items - center gap - 2">
                       <div className="w - 20 bg - slate - 700 rounded - full h - 2">
                         <motion.div
@@ -143,7 +142,7 @@ const emergingTech = [
                           viewport={{ once: true }}
                           transition = {
   { duration: 1,
-  delay: 0.8 + techIndex * 0.1 
+  delay: 0.8 + techIndex * 0.1
 
 }}
                         />
@@ -158,29 +157,29 @@ const emergingTech = [
         </div>
 
         {/* Emerging Technologies */}
-        <motion.div 
+        <motion.div
           className="mb - 16"
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
         >
           <h3 className="text - 3xl font - bold text - white text - center mb - 8">
             Emerging Technologies
           </h3>
-          
+
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">
             {emergingTech.map ( (tech, index) => (<motion.div
                 key={tech.name}
@@ -197,22 +196,22 @@ const emergingTech = [
         </motion.div>;
 
         {/* Technology Philosophy */}
-        <motion.div 
+        <motion.div
           className="mb - 12"
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.8 
+  delay: 0.8
 
 }}
         >
@@ -220,7 +219,7 @@ const emergingTech = [
             <h3 className="text - 2xl font - bold text - white text - center mb - 6">
               Our Technology Philosophy
             </h3>
-            
+
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">
               <div className="text - center">
                 <div className="w - 16 h - 16 bg - gradient - to - br from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">
@@ -229,7 +228,7 @@ const emergingTech = [
                 <h4 className="text - lg font - bold text - white mb - 2">Innovation First</h4>
                 <p className="text - gray - 400 text - sm">Always exploring cutting - edge technologies</p>
               </div>
-              
+
               <div className="text - center">
                 <div className="w - 16 h - 16 bg - gradient - to - br from - blue - 500 to - cyan - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">
                   <span className="text - 2xl">🛡️</span>
@@ -237,7 +236,7 @@ const emergingTech = [
                 <h4 className="text - lg font - bold text - white mb - 2">Security Focused</h4>
                 <p className="text - gray - 400 text - sm">Enterprise - grade security in everything we build</p>
               </div>
-              
+
               <div className="text - center">
                 <div className="w - 16 h - 16 bg - gradient - to - br from - purple - 500 to - pink - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">
                   <span className="text - 2xl">⚡</span>
@@ -249,22 +248,22 @@ const emergingTech = [
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="text - center"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 1.0 
+  delay: 1.0
 
 }}
         >

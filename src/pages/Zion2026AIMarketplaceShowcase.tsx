@@ -1,16 +1,15 @@
 import React, { useState, useMemo } from 'react.ts';
 export default Zion2026AIMarketplaceShowcase;
 import { motion  } from 'framer - motion.ts';
-import { Search, 
+import { Search,
 import { zion2026AIMarketplaceServices  } from '../../data / zion - 2026 - ai - marketplace - services';
 
-
-  Filter, 
-  Grid3X3, 
-  List, 
-  Star, 
-  TrendingUp, 
-  Users, 
+  Filter,
+  Grid3X3,
+  List,
+  Star,
+  TrendingUp,
+  Users,
   Zap,
   Shield,
   BarChart3,
@@ -67,12 +66,12 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -83,7 +82,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
               </span>
             </h1>
             <p className="text - xl text - gray - 300 max - w-3xl mx - auto mb - 8">
-              Discover the future of AI services with our comprehensive marketplace platform. 
+              Discover the future of AI services with our comprehensive marketplace platform.
               Connect, integrate, and optimize your AI solutions with cutting - edge tools and services.
             </p>
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
@@ -163,8 +162,8 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
                 <div role="button" className="flex bg - slate - 700 rounded - lg p - 1">
                   <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                     className={`p - 2 rounded - md transition - colors ${
-                      viewMode === 'grid' 
-                        ? 'bg - blue - 500 text - white' 
+                      viewMode === 'grid'
+                        ? 'bg - blue - 500 text - white'
                         : 'text - gray - 400 hover:text - white'
                     }`}
                   >
@@ -172,8 +171,8 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
                   </button>
                   <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                     className={`p - 2 rounded - md transition - colors ${
-                      viewMode === 'list' 
-                        ? 'bg - blue - 500 text - white' 
+                      viewMode === 'list'
+                        ? 'bg - blue - 500 text - white'
                         : 'text - gray - 400 hover:text - white'
                     }`}
                   >
@@ -193,7 +192,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
               <Search className="w - 16 h - 16 text - gray - 400 mx - auto mb - 4" />
               <h3 className="text - xl text - gray - 300 mb - 2">No services found</h3>
               <p className="text - gray - 500">Try adjusting your search or filter criteria</p>
-            </div>) : (<div role="button" className={viewMode === 'grid' 
+            </div>) : (<div role="button" className={viewMode === 'grid'
               ? 'grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 3 gap - 8'
               : 'space - y-6'
             }>
@@ -201,17 +200,17 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
                   key={service.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className={`bg - slate - 800 rounded - xl overflow - hidden shadow - xl hover:shadow - 2xl transition - all duration - 300 hover:scale - 105 ${
@@ -222,8 +221,8 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
                   <div role="button" className={`p - 6 ${viewMode === 'list' ? 'flex - 1' : ''}`}>
                     <div role="button" className="flex items - center justify - between mb - 4">
                       <div role="button" className={`p - 2 rounded - lg bg - gradient - to - r ${getCategoryColor (service.category) }`}>
-                        {React.createElement (getCategoryIcon (service.category) , { 
-                          className: 'w - 6 h - 6 text - white' 
+                        {React.createElement (getCategoryIcon (service.category) , {
+                          className: 'w - 6 h - 6 text - white'
                         }) }
                       </div>
                       <span className="text - sm text - gray - 400 font - medium">{service.category}</span>
@@ -290,12 +289,12 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -305,7 +304,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text - xl text - gray - 300 mb - 8">
-              Connect with our team to discover how Zion AI Marketplace services can drive innovation, 
+              Connect with our team to discover how Zion AI Marketplace services can drive innovation,
               efficiency, and growth for your organization.
             </p>
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
@@ -327,9 +326,9 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
               </motion.button>
             </div>
             <div role="button" className="mt - 8 text - center">
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="inline - flex items - center space - x-2 text - blue - 400 hover:text - blue - 300 transition - colors duration - 300"
               >

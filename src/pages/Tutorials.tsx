@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 export default Tutorials;
 import {
 
-
   Search,
   Play,
   Clock,

@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import EnhancedLayout from './EnhancedLayout';
 
-
 describe ('EnhancedLayout', () => {
   it ('renders without crashing', () => {
     render (<EnhancedLayout />) ;

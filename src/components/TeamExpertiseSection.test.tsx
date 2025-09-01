@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import TeamExpertiseSection from './TeamExpertiseSection';
 
-
 describe ('TeamExpertiseSection', () => {
   it ('renders without crashing', () => {
     render (<TeamExpertiseSection />) ;

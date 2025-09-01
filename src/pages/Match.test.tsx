@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import Match from './Match';
 
-
 describe ('Match', () => {
   it ('renders without crashing', () => {
     render (<Match />) ;

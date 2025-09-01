@@ -92,7 +92,6 @@ export default function ForumCategories(...args[]):  {
         author: 'BusinessAnalyst',
         date: '2024-01-10'
 
-
   ];
 
   return (

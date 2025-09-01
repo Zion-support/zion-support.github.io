@@ -4,7 +4,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello ! I'm Zion Tech Group's AI a
 import { motion, AnimatePresence } from 'framer - motion';
 import { useAnalytics } from "../hooks / useAnalytics";
 
-
     const { trackEvent } = useAnalytics ({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -165,11 +164,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
     // Get message suggestions
     const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
   { opacity: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className="flex flex - wrap gap - 2 mt - 3">
       {suggestions.map ( (suggestion, index) => (<button key={index} onClick={ () => handleSuggestionClick (suggestion) } className="px - 3 py - 1 text - xs bg - blue - 100 dark:bg - blue - 900 / 30 text - blue - 700 dark:text - blue - 300 rounded - full hover:bg - blue - 200 dark:hover:bg - blue - 900 / 50 transition - colors">
@@ -189,15 +188,15 @@ import { useAnalytics } from "../hooks / useAnalytics";
       <AnimatePresence>
         {isOpen && (<motion.div initial = {
   { opacity: 0, scale: 0.9,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1, scale: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0, scale: 0.9,
-  y: 20 
+  y: 20
 
 }} className={`fixed bottom - 24 right - 6 z - 40 w - 96 bg - white dark:bg - gray - 800 rounded - xl shadow - 2xl border border - gray - 200 dark:border - gray - 700 overflow - hidden ${isMinimized ? 'h - 16' : 'h-[500px]'}`}>
             {/* Header */}
@@ -228,11 +227,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
                 <div className="flex - 1 p - 4 space - y-4 overflow - y-auto max - h-80">
                   {messages.map ( (message) => (<motion.div key={message.id} initial = {
   { opacity: 0,
-  x: message.type === 'user' ? 20 : -20 
+  x: message.type === 'user' ? 20 : -20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} className={`flex ${message.type === 'user' ? 'justify - end' : 'justify - start'}`}>
                       <div className={`flex items - start gap - 2 max - w-[80%] ${message.type === 'user' ? 'flex - row - reverse' : 'flex - row'}`}>

@@ -1,6 +1,6 @@
 import { useParams } from "react - router - dom";
 import { useState } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { HiringAnalytics } from "@/components / hiring - tracker / HiringAnalytics";
 import { KanbanBoard } from "@/components / hiring - tracker / KanbanBoard";
 import { ProtectedRoute } from "@/components / ProtectedRoute";
@@ -8,7 +8,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components / ui / ta
 import SEO from "@/components / SEO";
 export default function HiringTracker () {
 import { Briefcase function HiringTrackerContent () {
-
 
     const { jobId } = useParams () ;
     const [activeTab, setActiveTab] = useState ("kanban") ;
@@ -43,7 +42,7 @@ import { Briefcase function HiringTrackerContent () {
           </TabsContent>
         </Tabs>
       </main>
-      
+
     </>) }
     return (<ProtectedRoute>
       <HiringTrackerContent />

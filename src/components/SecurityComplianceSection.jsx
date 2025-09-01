@@ -3,7 +3,6 @@ export function SecurityComplianceSection () {
 import { motion, AnimatePresence } from 'framer - motion';
 import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, Award const securityStandards = [
 
-
     {
         name: "ISO 27001",
         category: "Information Security Management",
@@ -113,7 +112,7 @@ const securityStats = [
     };
     const itemVariants = {
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -136,11 +135,11 @@ const securityStats = [
         {/* Header */}
         <motion.div className="text - center mb - 20" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text - 4xl md:text - 5xl lg:text - 6xl font - bold text - white mb - 6">
@@ -155,15 +154,15 @@ const securityStats = [
           <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 4 max - w-5xl mx - auto">
             {securityStats.map ( (stat, index) => (<motion.div key={index} initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} whileInView = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} className="text - center p - 4 rounded - xl bg - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 20">
                 <div className="text - zion - cyan mb - 2 flex justify - center">
@@ -178,15 +177,15 @@ const securityStats = [
         {/* Security Standards */}
         <motion.div className="mb - 20" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}>
           <h3 className="text - 3xl font - bold text - white text - center mb - 12">
@@ -195,15 +194,15 @@ const securityStats = [
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
             {securityStandards.map ( (standard, index) => (<motion.div key={standard.name} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h - full p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 20 group cursor - pointer" onClick={ () => setSelectedStandard (selectedStandard === index ? null : index) }>
@@ -267,15 +266,15 @@ const securityStats = [
                   <AnimatePresence>
                     {selectedStandard === index && (<motion.div className="mt - 6 p - 4 rounded - xl bg - zion - blue - dark / 60 backdrop - blur - sm border border - zion - cyan / 30" initial = {
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} transition={{ duration: 0.3 }}>
                         {/* All Features */}
@@ -311,15 +310,15 @@ const securityStats = [
         {/* Compliance Frameworks */}
         <motion.div className="mb - 20" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}>
           <h3 className="text - 3xl font - bold text - white text - center mb - 12">
@@ -328,15 +327,15 @@ const securityStats = [
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
             {complianceFrameworks.map ( (framework, index) => (<motion.div key={framework.name} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h - full p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 20 group cursor - pointer" onClick={ () => setSelectedFramework (selectedFramework === index ? null : index) }>
@@ -400,15 +399,15 @@ const securityStats = [
                   <AnimatePresence>
                     {selectedFramework === index && (<motion.div className="mt - 6 p - 4 rounded - xl bg - zion - blue - dark / 60 backdrop - blur - sm border border - zion - cyan / 30" initial = {
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} transition={{ duration: 0.3 }}>
                         {/* All Controls */}
@@ -444,15 +443,15 @@ const securityStats = [
         {/* Security Features */}
         <motion.div className="mb - 20" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}>
           <h3 className="text - 3xl font - bold text - white text - center mb - 12">
@@ -461,15 +460,15 @@ const securityStats = [
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {securityFeatures.map ( (feature, index) => (<motion.div key={feature.title} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h - full p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 20 group cursor - pointer" onClick={ () => setSelectedFeature (selectedFeature === index ? null : index) }>
@@ -510,15 +509,15 @@ const securityStats = [
                   <AnimatePresence>
                     {selectedFeature === index && (<motion.div className="mt - 6 p - 4 rounded - xl bg - zion - blue - dark / 60 backdrop - blur - sm border border - zion - cyan / 30" initial = {
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} transition={{ duration: 0.3 }}>
                         {/* All Features */}
@@ -548,15 +547,15 @@ const securityStats = [
         {/* Call to action */}
         <motion.div className="text - center" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 }}>
           <div className="inline - block p - 1 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - 2xl">

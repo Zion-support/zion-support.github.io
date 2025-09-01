@@ -3,7 +3,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 export default ContentQualityDashboard;
 import ContentQualityAnalyzer from "../utils / contentQualityAnalyzer";
 
-
 const ContentQualityDashboard = ({ className = '' }) => {
     const [isOpen, setIsOpen] = useState (false) ;
     const [isLoading, setIsLoading] = useState (false) ;

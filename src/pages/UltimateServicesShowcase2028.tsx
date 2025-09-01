@@ -5,7 +5,6 @@ import {
 import { INNOVATIVE_SERVICES_2028 } from '../data / innovativeServices2028';
 import { motion, AnimatePresence } from 'framer - motion.ts';
 
-
   Search,
   Filter,
   Star,

@@ -4,7 +4,6 @@ export default React.memo (function InterviewAssessmentAI (...args: any[]) : any
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Users,
   Brain,
   Target,

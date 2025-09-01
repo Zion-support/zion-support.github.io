@@ -41,22 +41,12 @@ const CTASection: React.FC = (): JSX.Element => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -73,32 +63,17 @@ const CTASection: React.FC = (): JSX.Element => {
             id="cta-heading"
             initial = {
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
+  delay: 0.2
 
 }}
             viewport={{ once: true }}
@@ -110,32 +85,17 @@ const CTASection: React.FC = (): JSX.Element => {
           <motion.p
             initial = {
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.4 
-
-
-
-
-
+  delay: 0.4
 
 }}
             viewport={{ once: true }}
@@ -152,30 +112,15 @@ const CTASection: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 ;
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -186,32 +131,17 @@ const CTASection: React.FC = (): JSX.Element => {
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20"
               initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.6 + index * 0.1 
-
-
-
-
-
+  delay: 0.6 + index * 0.1
 
 }}
               viewport={{ once: true }}
@@ -233,30 +163,15 @@ const CTASection: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
           transition = {
   { duration: 0.8,
   delay: 0.8 ;
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -286,11 +201,6 @@ const CTASection: React.FC = (): JSX.Element => {
           transition = {
   { duration: 1,
   delay: 1 ;
-
-
-
-
-
 
 }}
           viewport={{ once: true }}

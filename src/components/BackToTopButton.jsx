@@ -1,8 +1,7 @@
 import { ArrowUp import { useEffect, useState } from "react";
 import { useTranslation } from "react - i18next";
-import React from 'react';
+import React, { useState } from 'react';
 export function BackToTopButton () {
-
 
     const [visible, setVisible] = useState (false) ;
     const { t } = useTranslation () ;

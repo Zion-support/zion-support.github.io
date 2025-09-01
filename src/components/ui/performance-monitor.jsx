@@ -189,21 +189,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     if (isMinimized) {
         return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial = {
   { scale: 0.8,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 }} animate = {
   { scale: 1,
-  opacity: 1 
-
-
-
-
-
+  opacity: 1
 
 }}>
         <Button size="sm" variant="outline" onClick={() => setIsMinimized(false)} className="bg-zion-blue-dark/80 backdrop-blur-md border-zion-blue-light/30 text-zinc-300 hover:text-white">
@@ -216,21 +206,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     }
     return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial = {
   { scale: 0.8,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 }} animate = {
   { scale: 1,
-  opacity: 1 
-
-
-
-
-
+  opacity: 1
 
 }}>
       <div className="bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl shadow-2xl overflow-hidden">
@@ -265,30 +245,15 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         <AnimatePresence>
           {showSettings && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {
   { height: 0,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 }} animate = {
   { height: 'auto',
-  opacity: 1 
-
-
-
-
-
+  opacity: 1
 
 }} exit = {
   { height: 0,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 }} transition={{ duration: 0.2 }}>
               <div className="space-y-3">
@@ -300,12 +265,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                       </label>
                       <input type="number" value={value} onChange = {
   (e) => setThresholds(prev => ({ ...prev,
-  [key]: Number(e.target.value) 
-
-
-
-
-
+  [key]: Number(e.target.value)
 
 }))} className="mt-1 w-full px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-xs focus:border-zion-cyan focus:outline-none"/>
                     </div>))}
@@ -327,11 +287,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   `text-lg font-bold ${getMetricColor('FPS', metrics.fps,
   thresholds.fps)
 
-
-
-
-
-
 }`}>
                 {metrics.fps}
               </div>
@@ -346,11 +301,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <div className = {
   `text-lg font-bold ${getMetricColor('Memory', metrics.memory.percentage,
   thresholds.memory)
-
-
-
-
-
 
 }`}>
                 {metrics.memory.percentage}%
@@ -367,11 +317,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   `text-lg font-bold ${getMetricColor('Render Time', metrics.renderTime,
   thresholds.renderTime)
 
-
-
-
-
-
 }`}>
                 {metrics.renderTime}ms
               </div>
@@ -387,11 +332,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   `text-lg font-bold ${getMetricColor('Network', metrics.networkLatency,
   thresholds.networkLatency)
 
-
-
-
-
-
 }`}>
                 {metrics.networkLatency}ms
               </div>
@@ -401,21 +341,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
           {/* Detailed Metrics */}
           {isExpanded && (<motion.div className="mt-4 pt-4 border-t border-zion-blue-light/30" initial = {
   { height: 0,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 }} animate = {
   { height: 'auto',
-  opacity: 1 
-
-
-
-
-
+  opacity: 1
 
 }} transition={{ duration: 0.2 }}>
               <div className="space-y-3">
@@ -429,11 +359,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     <span className = {
   `text-xs font-medium ${getMetricColor('CPU', metrics.cpuUsage,
   thresholds.cpuUsage)
-
-
-
-
-
 
 }`}>
                       {metrics.cpuUsage}%
@@ -451,11 +376,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     <span className = {
   `text-xs font-medium ${getMetricColor('Disk', metrics.diskUsage,
   thresholds.diskUsage)
-
-
-
-
-
 
 }`}>
                       {metrics.diskUsage}%
@@ -495,30 +415,15 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 const Icon = getMetricIcon(alert.metric);
                 return (<motion.div key={alert.id} className={`p-2 rounded-lg border text-xs ${getSeverityColor(alert.severity)}`} initial = {
   { opacity: 0,
-  x: 20 
-
-
-
-
-
+  x: 20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }} exit = {
   { opacity: 0,
-  x: -20 
-
-
-
-
-
+  x: -20
 
 }}>
                       <div className="flex items-center gap-2">

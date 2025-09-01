@@ -5,7 +5,6 @@ import { innovativeServices2027 } from "../data / innovativeServices2027";
 import { motion, AnimatePresence } from 'framer - motion';
 import { servicesCatalog } from "../data / servicesCatalog";
 
-
   DollarSign,
   TrendingUp,
   Clock,
@@ -153,12 +152,12 @@ import { servicesCatalog } from "../data / servicesCatalog";
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           animate = {
   isVisible ? { opacity: 1,
-  y: 0 
+  y: 0
 
 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
@@ -187,17 +186,17 @@ import { servicesCatalog } from "../data / servicesCatalog";
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   isVisible ? { opacity: 1,
-  y: 0 
+  y: 0
 
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
           className="mb - 12"
@@ -286,17 +285,17 @@ import { servicesCatalog } from "../data / servicesCatalog";
               key={`${service.source}-${service.id}`}
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   isVisible ? { opacity: 1,
-  y: 0 
+  y: 0
 
 } : { opacity: 0, y: 20 }}
               transition = {
   { duration: 0.6,
-  delay: index * 0.05 
+  delay: index * 0.05
 
 }}
               className="group relative"

@@ -3,7 +3,6 @@ import React from 'react';
 export function HomepagePromotion () {
 import { motion } from 'framer - motion';
 
-
     const featuredServices = [
         {
             id: "ai - content - generation",
@@ -56,7 +55,7 @@ import { motion } from 'framer - motion';
     };
     const itemVariants = {
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -79,11 +78,11 @@ import { motion } from 'framer - motion';
         {/* Header Section */}
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text - center mb - 16">
           <h2 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">
@@ -164,11 +163,11 @@ import { motion } from 'framer - motion';
         {/* Call to Action Section */}
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text - center">
           <div className="bg - gradient - to - r from - zion - cyan / 20 to - zion - purple / 20 border border - zion - cyan / 30 rounded - 2xl p - 8 backdrop - blur - sm">

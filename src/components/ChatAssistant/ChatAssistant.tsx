@@ -23,9 +23,6 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
   ;
   ;
 
-
-
-
 };
     setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
@@ -40,9 +37,6 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
   ;
   ;
   ;
-
-
-
 
 };
       setMessages(prev => [...prev, aiMessage]);

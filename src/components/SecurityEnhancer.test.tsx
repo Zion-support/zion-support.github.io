@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import SecurityEnhancer from './SecurityEnhancer';
 
-
 describe ('SecurityEnhancer', () => {
   it ('renders without crashing', () => {
     render (<SecurityEnhancer />) ;

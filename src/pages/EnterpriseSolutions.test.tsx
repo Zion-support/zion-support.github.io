@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import EnterpriseSolutions from './EnterpriseSolutions';
 
-
 describe ('EnterpriseSolutions', () => {
   it ('renders without crashing', () => {
     render (<EnterpriseSolutions />) ;

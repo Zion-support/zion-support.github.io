@@ -1,7 +1,7 @@
 import { Elements } from '@stripe / react - stripe - js';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react - router - dom'; // Changed from useParams
-import React from 'react';
+import React, { useState } from 'react';
 import { getStripe } from '@/utils / getStripe';
 import { NEW_PRODUCTS } from '@/data / newProductsData';
 import CardForm from '@/components / checkout / CardForm';

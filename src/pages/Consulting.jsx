@@ -2,7 +2,6 @@ import React from 'react';
 export default Consulting;
 import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase const Consulting = () => {
 
-
     const consultingServices = [
         {
             icon: Lightbulb,

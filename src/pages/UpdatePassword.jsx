@@ -1,7 +1,7 @@
 import { useForm } from "react - hook - form";
 import { useNavigate, useLocation } from "react - router - dom";
 import { useState, useEffect } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components / ui / button";
 import { cleanupAuthState } from "@/utils / authUtils";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components / ui / form";
@@ -11,7 +11,6 @@ import { toast } from "@/hooks / use - toast";
 import { zodResolver } from "@hookform / resolvers / zod";
 export default function UpdatePassword () {
 import { z } from "zod";
-
 
 // Form validation schema
 const updatePasswordSchema = z
@@ -179,5 +178,5 @@ const updatePasswordSchema = z
           </div>
         </div>
       </div>
-      
+
     </>) }

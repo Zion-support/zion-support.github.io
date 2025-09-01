@@ -18,7 +18,6 @@ export default ProductListingCard;
 export default ProductListingCard;
 export default React.memo (ProductListingCard) ;
 
-
 // Regular img tag will be used instead of next / image
 
   listing: ProductListing;

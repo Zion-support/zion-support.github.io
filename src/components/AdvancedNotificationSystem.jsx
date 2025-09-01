@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 export function AdvancedNotificationSystem () {
 import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye, EyeOff const mockNotifications = [;
 
-
     {
         id: '1',
         title: 'Project Milestone Achieved',

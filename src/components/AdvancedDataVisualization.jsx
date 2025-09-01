@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 export function AdvancedDataVisualization () {
 import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [;
 
-
     { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date ('2024 - 01 - 01') },
     { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date ('2024 - 04 - 01') },
     { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date ('2024 - 07 - 01') },
@@ -247,21 +246,21 @@ const colorPalettes = [
               <div className="space - y-3">
                 <label className="flex items - center gap - 2">
                   <input type="checkbox" checked={chartConfig.showLegend} onChange = { (e) => setChartConfig (prev => ({ ...prev,
-  showLegend: e.target.checked 
+  showLegend: e.target.checked
 
 }) ) } className="rounded border - zion - slate - light text - zion - cyan focus:ring - zion - cyan"/>
                   <span className="text - sm text - zion - slate">Show Legend</span>
                 </label>
                 <label className="flex items - center gap - 2">
                   <input type="checkbox" checked={chartConfig.showGrid} onChange = { (e) => setChartConfig (prev => ({ ...prev,
-  showGrid: e.target.checked 
+  showGrid: e.target.checked
 
 }) ) } className="rounded border - zion - slate - light text - zion - cyan focus:ring - zion - cyan"/>
                   <span className="text - sm text - zion - slate">Show Grid</span>
                 </label>
                 <label className="flex items - center gap - 2">
                   <input type="checkbox" checked={chartConfig.animate} onChange = { (e) => setChartConfig (prev => ({ ...prev,
-  animate: e.target.checked 
+  animate: e.target.checked
 
 }) ) } className="rounded border - zion - slate - light text - zion - cyan focus:ring - zion - cyan"/>
                   <span className="text - sm text - zion - slate">Animations</span>

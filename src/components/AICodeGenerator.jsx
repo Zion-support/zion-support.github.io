@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer - motion';
 import { useAICodeGeneration } from "../hooks / useAICodeGeneration";
 import { useAnalytics } from "../hooks / useAnalytics";
 
-
     const { trackEvent } = useAnalytics ({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -143,15 +142,15 @@ import { useAnalytics } from "../hooks / useAnalytics";
         <AnimatePresence mode="wait">
           {activeTab === 'generate' && (<motion.div key="generate" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-6">
               {/* Generation Form */}
@@ -161,7 +160,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
                     Describe what you want to build
                   </label>
                   <textarea value={form.prompt} onChange = { (e) => setForm (prev => ({ ...prev,
-  prompt: e.target.value 
+  prompt: e.target.value
 
 }) ) } placeholder="e.g., Create a React component for a user profile card with avatar, name, email, and edit button..." className="w - full h - 32 p - 4 border border - gray - 300 dark:border - gray - 600 rounded - lg focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent bg - white dark:bg - gray - 700 text - gray - 900 dark:text - gray - 100 resize - none" required/>
                 </div>
@@ -173,7 +172,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
                       Language
                     </label>
                     <select value={form.language} onChange = { (e) => setForm (prev => ({ ...prev,
-  language: e.target.value 
+  language: e.target.value
 
 }) ) } className="w - full p - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent bg - white dark:bg - gray - 700 text - gray - 900 dark:text - gray - 100">
                       <option value="typescript">TypeScript</option>
@@ -192,7 +191,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
                       Framework
                     </label>
                     <select value={form.framework || ''} onChange = { (e) => setForm (prev => ({ ...prev,
-  framework: e.target.value || null 
+  framework: e.target.value || null
 
 }) ) } className="w - full p - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent bg - white dark:bg - gray - 700 text - gray - 900 dark:text - gray - 100">
                       <option value="">None</option>
@@ -212,7 +211,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
                       Style
                     </label>
                     <select value={form.style} onChange = { (e) => setForm (prev => ({ ...prev,
-  style: e.target.value 
+  style: e.target.value
 
 }) ) } className="w - full p - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent bg - white dark:bg - gray - 700 text - gray - 900 dark:text - gray - 100">
                       <option value="functional">Functional</option>
@@ -227,7 +226,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
                       Quality
                     </label>
                     <select value={form.quality} onChange = { (e) => setForm (prev => ({ ...prev,
-  quality: e.target.value 
+  quality: e.target.value
 
 }) ) } className="w - full p - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent bg - white dark:bg - gray - 700 text - gray - 900 dark:text - gray - 100">
                       <option value="prototype">Prototype</option>
@@ -246,15 +245,15 @@ import { useAnalytics } from "../hooks / useAnalytics";
                 {/* Advanced Options */}
                 {showAdvanced && (<motion.div initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }} exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} className="grid grid - cols - 2 md:grid - cols - 5 gap - 4 p - 4 bg - gray - 50 dark:bg - gray - 700 rounded - lg">
                     {[
@@ -265,7 +264,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
                     { key: 'includeMetrics', label: 'Metrics', icon: Gauge }
                 ].map ( ({ key, label, icon: Icon }) => (<label key={key} className="flex items - center gap - 2 cursor - pointer">
                         <input type="checkbox" checked={form[key]} onChange = { (e) => setForm (prev => ({ ...prev,
-  [key]: e.target.checked 
+  [key]: e.target.checked
 
 }) ) } className="w - 4 h - 4 text - purple - 600 bg - gray - 100 border - gray - 300 rounded focus:ring - purple - 500 dark:focus:ring - purple - 600 dark:ring - offset - gray - 800 focus:ring - 2 dark:bg - gray - 700 dark:border - gray - 600"/>
                         <Icon className="w - 4 h - 4 text - gray - 600 dark:text - gray - 400"/>
@@ -287,11 +286,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
               {/* Generated Code Display */}
               {generatedCode && (<motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className="space - y-4">
                   <div className="flex items - center justify - between">
@@ -320,15 +319,15 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
           {activeTab === 'analyze' && (<motion.div key="analyze" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-6">
               <div>
@@ -351,11 +350,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
               {/* Analysis Results */}
               {codeAnalysis && (<motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className="space - y-6">
                   {/* Metrics Overview */}
@@ -416,15 +415,15 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
           {activeTab === 'optimize' && (<motion.div key="optimize" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-6">
               <div className="text - center py - 8">
@@ -454,15 +453,15 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
           {activeTab === 'tests' && (<motion.div key="tests" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-6">
               <div className="text - center py - 8">
@@ -483,15 +482,15 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
           {activeTab === 'docs' && (<motion.div key="docs" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-6">
               <div className="text - center py - 8">
@@ -514,11 +513,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
         {/* Suggestions Panel */}
         {suggestions.length > 0 && (<motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className="mt - 8 border - t border - gray - 200 dark:border - gray - 700 pt - 6">
             <h3 className="text - lg font - semibold text - gray - 900 dark:text - white mb - 4">
@@ -526,11 +525,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
             <div className="grid gap - 4">
               {suggestions.map ( (suggestion) => (<motion.div key={suggestion.id} initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} className="p - 4 bg - gray - 50 dark:bg - gray - 700 rounded - lg border border - gray - 200 dark:border - gray - 600">
                   <div className="flex items - start justify - between mb - 3">
@@ -578,11 +577,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
         {/* History Panel */}
         {history.length > 0 && (<motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className="mt - 8 border - t border - gray - 200 dark:border - gray - 700 pt - 6">
             <div className="flex items - center justify - between mb - 4">

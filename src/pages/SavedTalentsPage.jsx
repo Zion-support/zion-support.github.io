@@ -1,6 +1,6 @@
 import { useNavigate } from 'react - router - dom';
 import { useState, useEffect } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 import { supabase } from '@/integrations / supabase / client';
 import { TalentCard } from '@/components / talent / TalentCard';
 import { toast } from '@/components / ui / use - toast';

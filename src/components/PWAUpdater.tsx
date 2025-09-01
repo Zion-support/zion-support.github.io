@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 export default PWAUpdater;
 import { motion, AnimatePresence } from 'framer - motion';
 
-
 interface PWAUpdaterProps {
   autoCheck?: boolean;
   checkInterval?: number;

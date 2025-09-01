@@ -8,7 +8,6 @@ import { motion } from 'framer - motion';
 import { SEO } from "../components / SEO";
 import SEO from '../components / SEO';
 
-
   DollarSign,
   TrendingUp,
   Users,
@@ -152,17 +151,17 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                 key={servicePricing.serviceId}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="mb - 16"
@@ -216,12 +215,12 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                       key={tier.name}
                       initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                       transition = {

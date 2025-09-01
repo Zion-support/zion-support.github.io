@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 export default PerformanceOptimizer;
 import {
 
-
   Activity,
   Zap,
   TrendingUp,

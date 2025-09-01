@@ -3,7 +3,6 @@ export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({
 export default PerformanceMonitor;
 import { motion, AnimatePresence } from 'framer - motion';
 
-
 interface PerformanceMetrics {
   fcp: number; // First Contentful Paint
   lcp: number; // Largest Contentful Paint

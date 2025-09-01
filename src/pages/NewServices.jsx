@@ -13,7 +13,6 @@ import { COMPREHENSIVE_SERVICES } from "../data / comprehensiveServices";
 import { EMERGING_TECH_SERVICES } from "../data / emergingTechServices";
 import { motion } from 'framer - motion';
 
-
     const [selectedCategory, setSelectedCategory] = useState ('all') ;
     const [searchTerm, setSearchTerm] = useState ('') ;
     const [selectedService, setSelectedService] = useState (null) ;
@@ -39,7 +38,7 @@ import { motion } from 'framer - motion';
     };
     const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -69,11 +68,11 @@ import { motion } from 'framer - motion';
         {/* Header Section */}
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text - center mb - 16">
           <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - holographic - gradient bg - clip - text text - transparent animate - holographic - shift">
@@ -142,15 +141,15 @@ import { motion } from 'framer - motion';
         {/* Category Filter */}
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }} className="mb - 12">
           <div className="flex flex - wrap gap - 4 justify - center">
@@ -165,15 +164,15 @@ import { motion } from 'framer - motion';
         {/* Featured Services Section */}
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4
 
 }} className="mb - 16">
           <h2 className="text - 3xl font - bold text - center mb - 8 text - zion - cyan">
@@ -358,15 +357,15 @@ import { motion } from 'framer - motion';
         {/* CTA Section */}
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.8,
-  delay: 0.6 
+  delay: 0.6
 
 }} className="text - center mt - 16">
           <div className="bg - gradient - to - r from - zion - cyan / 20 via - zion - purple / 20 to - zion - cyan / 20 border border - zion - cyan / 30 rounded - 2xl p - 12 backdrop - blur - md">
@@ -397,11 +396,11 @@ import { motion } from 'framer - motion';
       {selectedService && (<div className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4">
           <motion.div initial = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} className="bg - zion - blue - dark border border - zion - cyan / 30 rounded - xl p - 8 max - w-4xl w - full max - h-[90vh] overflow - y-auto">
             <div className="flex justify - between items - start mb - 6">

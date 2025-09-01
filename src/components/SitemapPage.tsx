@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { SEO  } from '@/components / SEO';
 export function SitemapPage (...args: any[]) : any {
 
-
   const sitemapData = [
     {
       title: 'Main Pages',
@@ -47,11 +46,11 @@ export function SitemapPage (...args: any[]) : any {
   ];
 
   return (<div className = "min - h-screen bg - slate - 900 text - white py - 16">
-      <SEO 
-        title="Sitemap - Zion Tech Group" 
+      <SEO
+        title="Sitemap - Zion Tech Group"
         description="Complete sitemap of Zion Tech Group website with all pages and services organized by category."
       />
-      
+
       <div className="container mx - auto px - 4 max - w-6xl">
         <div className="text - center mb - 16">
           <h1 className="text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">
@@ -69,7 +68,7 @@ export function SitemapPage (...args: any[]) : any {
               </h2>
               <ul className="space - y-2">
                 {section.links.map ( (link, linkIndex) => (<li key={linkIndex}>
-                    <a 
+                    <a
                       href={link.url}
                       className="text - zinc - 300 hover:text - cyan - 400 transition - colors duration - 200 block py - 1"
                     >

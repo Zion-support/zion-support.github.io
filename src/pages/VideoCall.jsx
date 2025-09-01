@@ -1,11 +1,10 @@
 import { useParams, useNavigate } from 'react - router - dom';
 import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { SEO } from '@/components / SEO';
   import {
 export default function VideoCall () {
-
 
     Phone,
     PhoneOff,

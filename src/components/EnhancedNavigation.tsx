@@ -1,14 +1,13 @@
 import { Link, useLocation  } from 'react - router - dom.ts';
 import React, { useState, useEffect, useCallback } from 'react.ts';
-export const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({ 
-import { Menu, 
+export const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
+import { Menu,
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 
-
-  X, 
-  ChevronDown, 
-  Search, 
-  User, 
+  X,
+  ChevronDown,
+  Search,
+  User,
   Settings,
   Bell,
   Sun,
@@ -50,8 +49,8 @@ interface EnhancedNavigationProps extends React.PropsWithChildren<{}> {
 
 const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '/' },
-  { 
-    label: 'AI & Machine Learning', 
+  {
+    label: 'AI & Machine Learning',
     href: '/ai - services',
     icon: <Brain className="w - 4 h - 4" />,
     children: [
@@ -79,8 +78,8 @@ const navigationItems: NavigationItem[] = [
       { label: 'AI Content Creation Suite', href: '/services / ai - content - creation - suite' }
     ]
   },
-  { 
-    label: 'Cloud & Infrastructure', 
+  {
+    label: 'Cloud & Infrastructure',
     href: '/it - services',
     icon: <Cloud className="w - 4 h - 4" />,
     children: [
@@ -96,8 +95,8 @@ const navigationItems: NavigationItem[] = [
       { label: 'Digital Transformation', href: '/services / digital - transformation' }
     ]
   },
-  { 
-    label: 'Cybersecurity & Privacy', 
+  {
+    label: 'Cybersecurity & Privacy',
     href: '/services / cybersecurity',
     icon: <Shield className="w - 4 h - 4" />,
     children: [
@@ -108,8 +107,8 @@ const navigationItems: NavigationItem[] = [
       { label: 'AI Compliance Assistant', href: '/services / ai - compliance - assistant' }
     ]
   },
-  { 
-    label: 'Emerging Technologies', 
+  {
+    label: 'Emerging Technologies',
     href: '/emerging - tech',
     icon: <Atom className="w - 4 h - 4" />,
     children: [
@@ -122,8 +121,8 @@ const navigationItems: NavigationItem[] = [
       { label: 'Sustainable Technology', href: '/services / sustainable - technology' }
     ]
   },
-  { 
-    label: 'Micro SaaS Solutions', 
+  {
+    label: 'Micro SaaS Solutions',
     href: '/micro - saas',
     icon: <ShoppingCart className="w - 4 h - 4" />,
     children: [
@@ -139,8 +138,8 @@ const navigationItems: NavigationItem[] = [
       { label: 'LLM Content Studio', href: '/services / llm - content - studio' }
     ]
   },
-  { 
-    label: 'Solutions', 
+  {
+    label: 'Solutions',
     href: '/solutions',
     icon: <Building className="w - 4 h - 4" />,
     children: [
@@ -152,8 +151,8 @@ const navigationItems: NavigationItem[] = [
       { label: 'Industry Solutions', href: '/industry - solutions' }
     ]
   },
-  { 
-    label: 'Comp', 
+  {
+    label: 'Comp',
     href: '/about',
     icon: <Users className="w - 4 h - 4" />,
     children: [
@@ -167,8 +166,8 @@ const navigationItems: NavigationItem[] = [
       { label: 'Blog', href: '/blog' }
     ]
   },
-  { 
-    label: 'Resources', 
+  {
+    label: 'Resources',
     href: '/resources',
     icon: <BarChart3 className="w - 4 h - 4" />,
     children: [
@@ -213,17 +212,17 @@ className:  '',;
   const handleThemeChange = useCallback ( (newTheme: any'light' | 'dark' | 'system') => {;
     setTheme (newTheme) ;
     onThemeChange?. (newTheme) ;
-    
+
     const root = document.documentElement;
     root.classList.remove ('light', 'dark') ;
-    
+
     if (newTheme = == 'system') {;
       const systemTheme = window.matchMedia (' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
       root.classList.add (systemTheme) ;
     } else {
       root.classList.add (newTheme) ;
     }
-    
+
     localStorage.setItem ('zion - theme', newTheme) ;
   }, [onThemeChange]) ;
 
@@ -243,8 +242,8 @@ className:  '',;
   };
 
   return (<nav className = {`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
-      isScrolled 
-        ? 'bg - white / 95 dark:bg - slate - 900 / 95 backdrop - blur - md shadow - lg' 
+      isScrolled
+        ? 'bg - white / 95 dark:bg - slate - 900 / 95 backdrop - blur - md shadow - lg'
         : 'bg - transparent'
     } ${className}`}>
       <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
@@ -281,17 +280,17 @@ className:  '',;
                     {activeDropdown === item.label && (<motion.div
                         initial = {
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
                         animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                         exit = {
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
                         transition={{ duration: 0.2 }}
@@ -324,8 +323,8 @@ className:  '',;
             <div role="button" className="flex items - center space - x-2 bg - gray - 100 dark:bg - slate - 800 rounded - lg p - 1">
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('light') }
                 className={`p - 2 rounded - md transition - colors ${
-                  theme === 'light' 
-                    ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm' 
+                  theme === 'light'
+                    ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm'
                     : 'text - gray - 500 dark:text - gray - 400 hover:text - gray - 700 dark:hover:text - gray - 300'
                 }`}
               >
@@ -333,8 +332,8 @@ className:  '',;
               </button>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('dark') }
                 className={`p - 2 rounded - md transition - colors ${
-                  theme === 'dark' 
-                    ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm' 
+                  theme === 'dark'
+                    ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm'
                     : 'text - gray - 500 dark:text - gray - 400 hover:text - gray - 700 dark:hover:text - gray - 300'
                 }`}
               >
@@ -342,8 +341,8 @@ className:  '',;
               </button>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('system') }
                 className={`p - 2 rounded - md transition - colors ${
-                  theme === 'system' 
-                    ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm' 
+                  theme === 'system'
+                    ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm'
                     : 'text - gray - 500 dark:text - gray - 400 hover:text - gray - 700 dark:hover:text - gray - 300'
                 }`}
               >
@@ -397,7 +396,7 @@ className:  '',;
                                   activeDropdown === item.label ? 'rotate - 180' : ''
                                 }`} />
                               </button>
-                              
+
                               {activeDropdown === item.label && (<motion.div
                                   initial={{ opacity: 0, y: -10 }}
                                   animate={{ opacity: 1, y: 0 }}

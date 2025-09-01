@@ -1,7 +1,6 @@
 export const safeStorage = {
 export default safeStorage;
 
-
 // In - memory storage for fallback with optimizations
 const inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check

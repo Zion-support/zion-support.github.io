@@ -7,7 +7,6 @@ import { Search, Star, Phone, Mail, Globe, CheckCircle, TrendingUp, Users, Shiel
 import { TrustedBySection } from '@/components / TrustedBySection';
 export default function ExpandedServicesPage () {
 
-
     const [searchQuery, setSearchQuery] = useState ('') ;
     const [selectedCategory, setSelectedCategory] = useState ('all') ;
     const [filteredServices, setFilteredServices] = useState (EXPANDED_SERVICES) ;

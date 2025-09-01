@@ -1,11 +1,10 @@
 import { Link } from 'react - router - dom';
-import React from 'react';
+import React, { useState } from 'react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 export default function AIServicesPage () {
 import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search const AIServices = [
-
 
     {
         title: "AI Strategy Consulting",

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
     const [settings, setSettings] = useState ({
         highContrast: false,
         fontSize: 100,

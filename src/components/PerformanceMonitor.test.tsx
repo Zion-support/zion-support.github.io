@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import PerformanceMonitor from './PerformanceMonitor';
 
-
 describe ('PerformanceMonitor', () => {
   it ('renders without crashing', () => {
     render (<PerformanceMonitor />) ;

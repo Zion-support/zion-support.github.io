@@ -19,7 +19,6 @@ import { WaitlistSection } from "@/components / WaitlistSection";
 import SEO from "@/components / SEO";
 import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index () {
 
-
     const { t } = useTranslation () ;
     const { isRTL } = useLanguage () ;
     // Tools and features showcase

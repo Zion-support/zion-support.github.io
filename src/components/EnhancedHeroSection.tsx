@@ -1,14 +1,13 @@
 import { Link  } from 'react - router - dom.ts';
 import React, { useState, useEffect, memo } from 'react.ts';
 export default EnhancedHeroSection;
-import { ArrowRight, 
+import { ArrowRight,
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 
-
-  Play, 
-  Star, 
-  CheckCircle, 
-  ChevronLeft, 
+  Play,
+  Star,
+  CheckCircle,
+  ChevronLeft,
   ChevronRight,
   Zap,
   Shield,
@@ -31,7 +30,7 @@ interface HeroSlide {
   features: string[];
   gradient: string;
   icon: React.ComponentType < any>;
-  stats: { label: string; value: string; icon: React.ComponentType < any> 
+  stats: { label: string; value: string; icon: React.ComponentType < any>
 }[]}
 
 const EnhancedHeroSection = memo (function EnhancedHeroSection (...args: []) :  {
@@ -110,7 +109,7 @@ const EnhancedHeroSection = memo (function EnhancedHeroSection (...args: []) :  
           }}
           transition={{ duration: 20, repeat: Infinity }}
         ></motion.div>
-        
+
         {/* Floating particles */}
         {[...Array (6) ].map ( (_, i) => (<motion.div
             key={i}
@@ -142,12 +141,12 @@ const EnhancedHeroSection = memo (function EnhancedHeroSection (...args: []) :  
           <motion.div
             initial = {
   { opacity: 0,
-  x: -50 
+  x: -50
 
 }}
             animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -158,17 +157,17 @@ const EnhancedHeroSection = memo (function EnhancedHeroSection (...args: []) :  
                 key={currentSlide}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                 transition={{ duration: 0.5 }}
@@ -205,12 +204,12 @@ const EnhancedHeroSection = memo (function EnhancedHeroSection (...args: []) :  
                       key={feature}
                       initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                       animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                       transition={{ delay: index * 0.1 }}
@@ -276,12 +275,12 @@ const EnhancedHeroSection = memo (function EnhancedHeroSection (...args: []) :  
                       className="w - 24 h - 24 bg - zion - cyan / 20 rounded - full flex items - center justify - center mx - auto mb - 4 border border - zion - cyan / 30"
                       animate = {
   { rotate: [0,
-  360] 
+  360]
 
 }}
                       transition = {
   { duration: 20,
-  repeat: Infinity 
+  repeat: Infinity
 
 }}
                     >
@@ -300,12 +299,12 @@ const EnhancedHeroSection = memo (function EnhancedHeroSection (...args: []) :  
                   key={stat.label}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
@@ -396,7 +395,7 @@ const EnhancedHeroSection = memo (function EnhancedHeroSection (...args: []) :  
         <motion.div
           animate = {
   { y: [0, 10,
-  0] 
+  0]
 
 }}
           transition = {
@@ -409,12 +408,12 @@ const EnhancedHeroSection = memo (function EnhancedHeroSection (...args: []) :  
           <motion.div
             animate = {
   { y: [0, 12,
-  0] 
+  0]
 
 }}
             transition = {
   { duration: 2,
-  repeat: Infinity 
+  repeat: Infinity
 
 }};
             className="w - 1 h - 3 bg - zion - cyan rounded - full mt - 2";

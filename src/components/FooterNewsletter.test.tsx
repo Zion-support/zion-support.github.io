@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import FooterNewsletter from './FooterNewsletter';
 
-
 describe ('FooterNewsletter', () => {
   it ('renders without crashing', () => {
     render (<FooterNewsletter />) ;

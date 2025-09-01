@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SEO from "@/components/SEO";
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -76,7 +76,7 @@ function ReviewsModerationContent() {
           </CardContent>
         </Card>
       </main>
-      
+
     </>)}
 export default function ReviewsModeration() {
     return (<ProtectedRoute>

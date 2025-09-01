@@ -6,7 +6,6 @@ export default React.memo (function InnovativeServicesShowcase2027 (...args[]) :
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Brain, Cpu, Database, Network, Shield, Zap, Rocket, Atom,
   Globe, Cloud, Lock, Eye, Target, TrendingUp, Star, CheckCircle,
   ArrowRight, Search, Filter, Grid, List, ChevronDown
@@ -33,7 +32,7 @@ import { motion, AnimatePresence } from 'framer - motion';
   };
   const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {
@@ -47,7 +46,7 @@ import { motion, AnimatePresence } from 'framer - motion';
   };
   const cardVariants = {
   hidden: { scale: 0.8,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {
@@ -88,12 +87,12 @@ import { motion, AnimatePresence } from 'framer - motion';
         className="relative z - 10 pt - 20 pb - 16 px - 6"
         initial = {
   { opacity: 0,
-  y: -50 
+  y: -50
 
 }}
         animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
         transition={{ duration: 0.8 }}
@@ -103,17 +102,17 @@ import { motion, AnimatePresence } from 'framer - motion';
             className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent"
             initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
             animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
           >
@@ -123,17 +122,17 @@ import { motion, AnimatePresence } from 'framer - motion';
             className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto"
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4
 
 }}
           >
@@ -145,17 +144,17 @@ import { motion, AnimatePresence } from 'framer - motion';
             className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mt - 16"
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.6 
+  delay: 0.6
 
 }}
           >
@@ -179,17 +178,17 @@ import { motion, AnimatePresence } from 'framer - motion';
         className="relative z - 10 px - 6 pb - 12"
         initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
         animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
         transition = {
   { duration: 0.8,
-  delay: 0.8 
+  delay: 0.8
 
 }}
       >
@@ -264,17 +263,17 @@ import { motion, AnimatePresence } from 'framer - motion';
                 key={viewMode}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                 transition={{ duration: 0.3 }}

@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import Privacy from './Privacy';
 
-
 describe ('Privacy', () => {
   it ('renders without crashing', () => {
     render (<Privacy />) ;

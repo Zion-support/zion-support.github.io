@@ -77,7 +77,6 @@ function displayFatalError(message) {
   if (rootElement) {
     rootElement.innerHTML = `
 
-
             <div style="padding:20px;text-align:center;font-family:sans-serif;">
                 <h1>Application Error</h1>
                 <p>${message}</p>

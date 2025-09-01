@@ -2,7 +2,6 @@ import React from 'react';
 import { cn } from '@/lib / utils';
 export { GradientHeading };
 
-
 interface GradientHeadingProps {
   children: React.ReactNode;
   className?: string;

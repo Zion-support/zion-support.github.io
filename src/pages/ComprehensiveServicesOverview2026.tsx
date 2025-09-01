@@ -6,7 +6,6 @@ export default React.memo (function ComprehensiveServicesOverview2026 (...args[]
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Brain,
   Cloud,
   Shield,
@@ -237,12 +236,12 @@ import { motion, AnimatePresence } from 'framer - motion';
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -335,22 +334,22 @@ import { motion, AnimatePresence } from 'framer - motion';
                   key={category.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className="bg - white / 5 backdrop - blur - sm border border - zion - slate - 300 / 20 rounded - 2xl p - 6"
@@ -429,17 +428,17 @@ import { motion, AnimatePresence } from 'framer - motion';
                     {expandedCategory === category.id && (<motion.div
                         initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                         animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }}
                         exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                         transition={{ duration: 0.3 }}
@@ -508,12 +507,12 @@ import { motion, AnimatePresence } from 'framer - motion';
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}

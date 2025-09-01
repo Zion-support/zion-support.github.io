@@ -13,12 +13,7 @@ const ThemeProvider = ({ children }) => {
     }, [theme]);
     return (<ThemeContext.Provider value = {
   { theme,
-  setTheme 
-
-
-
-
-
+  setTheme
 
 }}>
       {children}

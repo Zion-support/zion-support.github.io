@@ -3,7 +3,6 @@ export const ResourceManagementSystem: React.FC < ResourceManagementSystemProps>
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Users,
   Calendar,
   Clock,

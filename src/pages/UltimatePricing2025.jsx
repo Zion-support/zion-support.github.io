@@ -2,7 +2,6 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default UltimatePricing2025;
 
-
 const UltimatePricing2025 = () => {
     const pricingTiers = [
         {

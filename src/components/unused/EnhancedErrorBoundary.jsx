@@ -10,7 +10,7 @@ class EnhancedErrorBoundary extends Component {
             errorInfo: null,
             errorId: null,
   showStackTrace: false
-        
+
 
 }}
     static getDerivedStateFromError(error) {
@@ -40,7 +40,7 @@ class EnhancedErrorBoundary extends Component {
                 name: error.name,
                 message: error.message,
   stack: error.stack
-            
+
 
 },
             errorInfo: {
@@ -89,11 +89,11 @@ class EnhancedErrorBoundary extends Component {
             return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
           <motion.div initial = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }} animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
             {/* Header */}
@@ -122,22 +122,12 @@ class EnhancedErrorBoundary extends Component {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           className="max-w-md mx-auto text-center p-8 bg-white rounded-xl shadow-lg"
@@ -147,12 +137,12 @@ class EnhancedErrorBoundary extends Component {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
             </svg>
           </div>
-          
+
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
           <p className="text-gray-600 mb-6">
             We're sorry, but something unexpected happened. Please try refreshing the page.
           </p>
-          
+
           <div className="space-y-3">
             <button
               onClick={() => window.location.reload()}
@@ -160,7 +150,7 @@ class EnhancedErrorBoundary extends Component {
             >
               Refresh Page
             </button>
-            
+
             <button
               onClick={() => window.history.back()}
               className="w-full bg-gray-200 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors"
@@ -168,7 +158,7 @@ class EnhancedErrorBoundary extends Component {
               Go Back
             </button>
           </div>
-          
+
           {process.env.NODE_ENV === 'development' && error && (
             <details className="mt-6 text-left">
               <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">

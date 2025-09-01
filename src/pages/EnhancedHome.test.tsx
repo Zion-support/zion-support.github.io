@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import EnhancedHome from './EnhancedHome';
 
-
 describe ('EnhancedHome', () => {
   it ('renders without crashing', () => {
     render (<EnhancedHome />) ;

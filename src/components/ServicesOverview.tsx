@@ -5,7 +5,6 @@ export function ServicesOverview (...args[]) :  {
 import {
 import { motion } from 'framer - motion';
 
-
   Brain,
   Shield,
   Rocket,
@@ -134,12 +133,12 @@ import { motion } from 'framer - motion';
           className="text - center mb - 16"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.6 }}
@@ -163,17 +162,17 @@ import { motion } from 'framer - motion';
               className="group"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
               whileHover={{ y: -10 }}
@@ -218,12 +217,12 @@ import { motion } from 'framer - motion';
           className="mb - 16"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.6 }}
@@ -238,17 +237,17 @@ import { motion } from 'framer - motion';
                 className="card - futuristic group"
                 initial = {
   { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30 
+  x: index % 2 === 0 ? -30 : 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 whileHover={{ y: -5 }}

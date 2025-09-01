@@ -10,16 +10,10 @@ export function CTASection() {
             transition: {
                 staggerChildren: 0.1
 
-
     };
     const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 },
         visible: {
@@ -27,7 +21,6 @@ export function CTASection() {
             opacity: 1,
             transition: {
                 duration: 0.5
-
 
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-blue-dark relative overflow-hidden">;
@@ -40,21 +33,11 @@ export function CTASection() {
         {/* Main CTA */}
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-6">
@@ -116,30 +99,15 @@ export function CTASection() {
         {/* Additional Info */}
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
-  delay: 0.5 
-
-
-
-
-
+  delay: 0.5
 
 }} className="text-center mt-16">
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">

@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import AIContentOptimizer from './AIContentOptimizer';
 
-
 describe ('AIContentOptimizer', () => {
   it ('renders without crashing', () => {
     render (<AIContentOptimizer />) ;

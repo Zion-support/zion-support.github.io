@@ -3,7 +3,6 @@ export default Equipment;
 import {
 import { motion } from 'framer - motion';
 
-
   Server,
   Search,
   Filter,

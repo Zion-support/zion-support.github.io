@@ -6,7 +6,6 @@ import SEO from '@/components / SEO';
   import {
 export default function PostJob () {
 
-
     Card,
     CardContent,
     CardDescription,

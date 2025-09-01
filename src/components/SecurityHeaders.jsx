@@ -2,7 +2,6 @@ import React from 'react';
 export function SecurityHeadersCompact ({ className }) {
 import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders ({ className }) {
 
-
     const securityFeatures = [
         {
             icon: Shield,

@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer - motion';
 import { useAnalytics } from "../hooks / useAnalytics";
 import { useMachineLearning } from "../hooks / useMachineLearning";
 
-
     const { trackEvent } = useAnalytics ({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -179,15 +178,15 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
         <AnimatePresence mode="wait">
           {activeTab === 'overview' && (<motion.div key="overview" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-6">
               {/* Key Metrics */}
@@ -287,15 +286,15 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
 
           {activeTab === 'models' && (<motion.div key="models" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-4">
               <div className="flex items - center justify - between">
@@ -312,25 +311,25 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
               <AnimatePresence>
                 {showCreateModel && (<motion.div initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }} exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} className="bg - gray - 50 dark:bg - gray - 800 p - 4 rounded - lg">
                     <h4 className="font - medium text - gray - 900 dark:text - white mb - 3">Create New Model</h4>
                     <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">
                       <input type="text" placeholder="Model Name" value={newModelForm.name} onChange = { (e) => setNewModelForm (prev => ({ ...prev,
-  name: e.target.value 
+  name: e.target.value
 
 }) ) } className="px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 700 text - gray - 900 dark:text - white"/>
                       <select value={newModelForm.type} onChange = { (e) => setNewModelForm (prev => ({ ...prev,
-  type: e.target.value 
+  type: e.target.value
 
 }) ) } className="px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 700 text - gray - 900 dark:text - white">
                         <option value="classification">Classification</option>
@@ -341,7 +340,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                         <option value="recommendation">Recommendation</option>
                       </select>
                       <select value={newModelForm.framework} onChange = { (e) => setNewModelForm (prev => ({ ...prev,
-  framework: e.target.value 
+  framework: e.target.value
 
 }) ) } className="px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 700 text - gray - 900 dark:text - white">
                         <option value="tensorflow">TensorFlow</option>
@@ -365,15 +364,15 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
               <AnimatePresence>
                 {showImportModel && (<motion.div initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }} exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} className="bg - gray - 50 dark:bg - gray - 800 p - 4 rounded - lg">
                     <h4 className="font - medium text - gray - 900 dark:text - white mb - 3">Import Model</h4>
@@ -452,15 +451,15 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
 
           {activeTab === 'training' && (<motion.div key="training" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-4">
               <h3 className="text - lg font - semibold text - gray - 900 dark:text - white">Training Jobs</h3>
@@ -528,7 +527,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                           </div>) }
                       </div>
                     </div>) }) }
-                
+
                 {trainingJobs.length === 0 && (<div className="text - center py - 8 text - gray - 500 dark:text - gray - 400">
                     <Activity className="w - 12 h - 12 mx - auto mb - 4 text - gray - 400"/>
                     <p > No training jobs found</p>
@@ -539,15 +538,15 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
 
           {activeTab === 'predictions' && (<motion.div key="predictions" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-4">
               <h3 className="text - lg font - semibold text - gray - 900 dark:text - white">Make Predictions</h3>
@@ -556,7 +555,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
               <div className="bg - gray - 50 dark:bg - gray - 800 p - 4 rounded - lg">
                 <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4 mb - 4">
                   <select value={predictionForm.modelId} onChange = { (e) => setPredictionForm (prev => ({ ...prev,
-  modelId: e.target.value 
+  modelId: e.target.value
 
 }) ) } className="px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 700 text - gray - 900 dark:text - white">
                     <option value="">Select a deployed model</option>
@@ -569,7 +568,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                   </button>
                 </div>
                 <textarea placeholder="Enter input data (JSON format) " value={predictionForm.input} onChange = { (e) => setPredictionForm (prev => ({ ...prev,
-  input: e.target.value 
+  input: e.target.value
 
 }) ) } rows={3} className="w - full px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 700 text - gray - 900 dark:text - white"/>
               </div>
@@ -607,7 +606,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                             <strong > Error:</strong> {prediction.error}
                           </div>) }
                       </div>) }) }
-                  
+
                   {predictions.length === 0 && (<div className="text - center py - 4 text - gray - 500 dark:text - gray - 400">
                       <Target className="w - 8 h - 8 mx - auto mb - 2 text - gray - 400"/>
                       <p > No predictions yet</p>
@@ -618,15 +617,15 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
 
           {activeTab === 'analytics' && (<motion.div key="analytics" initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }} className="space - y-4">
               <h3 className="text - lg font - semibold text - gray - 900 dark:text - white">Performance Analytics</h3>

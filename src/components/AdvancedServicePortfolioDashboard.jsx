@@ -7,7 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui / card";
 import { Input } from "./ui / input";
 import { motion } from 'framer - motion';
 
-
 const AdvancedServicePortfolioDashboard = () => {
     const [selectedCategory, setSelectedCategory] = useState ('all') ;
     const [selectedStatus, setSelectedStatus] = useState ('all') ;
@@ -172,11 +171,11 @@ const AdvancedServicePortfolioDashboard = () => {
       {/* Header */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className="mb - 8">
         <div className="flex flex - col lg:flex - row lg:items - center lg:justify - between gap - 4">
@@ -203,11 +202,11 @@ const AdvancedServicePortfolioDashboard = () => {
       {/* Portfolio Metrics */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.1 }} className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6 mb - 8">
         <Card className="hover:shadow - lg transition - shadow">
@@ -310,11 +309,11 @@ const AdvancedServicePortfolioDashboard = () => {
       {/* Filters and Controls */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.2 }} className="bg - white rounded - lg shadow - lg p - 6 mb - 8">
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 5 gap - 4">
@@ -369,11 +368,11 @@ const AdvancedServicePortfolioDashboard = () => {
       {/* Portfolio Table */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.3 }} className="mb - 8">
         <Card>
@@ -407,11 +406,11 @@ const AdvancedServicePortfolioDashboard = () => {
                 <tbody>
                   {filteredPortfolio.map ( (service, index) => (<motion.tr key={service.id} initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} transition={{ delay: 0.1 * index }} className="border - b border - zion - slate - light / 10 hover:bg - zion - blue - light / 5">
                       <td className="py - 3 px - 4">
@@ -466,11 +465,11 @@ const AdvancedServicePortfolioDashboard = () => {
       {/* Portfolio Insights */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.4 }} className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6 mb - 8">
         {/* Category Distribution */}
@@ -485,11 +484,11 @@ const AdvancedServicePortfolioDashboard = () => {
             <div className="space - y-3">
               {categories.filter (cat => cat.id !== 'all') .map ( (category, index) => (<motion.div key={category.id} initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} transition={{ delay: 0.1 * index }} className="flex items - center justify - between">
                   <div className="flex items - center gap - 3">
@@ -562,11 +561,11 @@ const AdvancedServicePortfolioDashboard = () => {
       {/* CTA Section */}
       <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ delay: 0.5 }} className="text - center">
         <div className="bg - gradient - to - r from - zion - purple via - zion - blue - light to - zion - cyan rounded - lg p - 8 text - white">

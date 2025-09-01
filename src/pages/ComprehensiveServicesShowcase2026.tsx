@@ -6,7 +6,6 @@ import {
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
-
   Search,
   Filter,
   Star,
@@ -174,17 +173,17 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                   key={service.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className="bg - white / 5 backdrop - blur - sm rounded - 2xl p - 6 border border - white / 10 hover:border - blue - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105"

@@ -19,7 +19,6 @@ import SEO from "@/components / SEO";
 export default function ProjectDetails () {
 import { format } from "date - fns";
 
-
 function ProjectDetailsContent () {
     const router = useNavigate () ;
     // Get projectId from Next.js router query params
@@ -241,9 +240,9 @@ function ProjectDetailsContent () {
                     <Video className="mr - 2 h - 4 w - 4"/> Project Room
                   </Link>
                 </Button>) }
-              
+
               { (isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes (project.status) && (<Button variant="outline" onClick={ () => router (`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`) }>
-              
+
               { (isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes (project.status) && (<Button variant="outline" onClick={ () => navigate (`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`) }>
                   <MessageSquare className="mr - 2 h - 4 w - 4"/> Message
                 </Button>) }
@@ -513,7 +512,7 @@ function ProjectDetailsContent () {
           </div>
         </div>
       </main>
-      
+
     </>) }
     return (<ProtectedRoute>
       <ProjectDetailsContent />

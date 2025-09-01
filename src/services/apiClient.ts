@@ -3,7 +3,6 @@ import { toast  } from '@/hooks / use - toast';
 export default apiClient;
 import axios from 'axios.ts';
 
-
 const apiClient = axios.create ({
   baseURL: any'/api',;
   withCredentials: true,;

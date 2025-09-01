@@ -7,7 +7,6 @@ export default CaseStudiesSection;
 import {
 import { motion } from 'framer - motion';
 
-
  * CaseStudiesSection function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -76,16 +75,16 @@ const caseStudies = [
 
   return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
       <div className="max - w-7xl mx - auto px - 6">
-        <motion.div 
+        <motion.div
           className="text - center mb - 16"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -106,18 +105,18 @@ const caseStudies = [
               className="bg - slate - 800 border border - slate - 700 rounded - xl overflow - hidden hover:border - blue - 500 / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - blue - 500 / 25"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
             >
@@ -162,22 +161,22 @@ const caseStudies = [
             </motion.div>) ) }
         </div>
 
-        <motion.div 
+        <motion.div
           className="mt - 16 text - center"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
         >

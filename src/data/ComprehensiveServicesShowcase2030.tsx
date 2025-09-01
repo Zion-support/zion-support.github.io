@@ -11,7 +11,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
 
   const getFilteredServices = () => {;
     let services: any[] = [];
-    
+
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -38,7 +38,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
 
   const getCategories = () => {;
     let services: any[] = [];
-    
+
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;

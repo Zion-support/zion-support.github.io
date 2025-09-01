@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useState, useEffect } from 'react';
 import { DragDropContext } from '@hello-pangea/dnd';
 import { useJobApplications } from '@/hooks/useJobApplications';

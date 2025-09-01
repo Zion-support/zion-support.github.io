@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 export default News;
 import { motion } from 'framer - motion';
 
-
 const News: React.FC = () => {
   const newsArticles = [
     {
@@ -84,7 +83,7 @@ const News: React.FC = () => {
   ];
   const featuredArticle = newsArticles[0];
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="News - Zion Tech Group"
         description="Stay updated with the latest news, product launches, research breakthroughs, and company updates from Zion Tech Group."
       />
@@ -103,7 +102,7 @@ const News: React.FC = () => {
               </span>
             </h1>
             <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">
-              Stay informed about our latest innovations, research breakthroughs, 
+              Stay informed about our latest innovations, research breakthroughs,
               product launches, and company milestones.
             </p>
           </motion.div>
@@ -188,7 +187,7 @@ const News: React.FC = () => {
               Latest News
             </h2>
             <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
-              Stay updated with our latest developments, research breakthroughs, 
+              Stay updated with our latest developments, research breakthroughs,
               and company announcements.
             </p>
           </motion.div>
@@ -256,7 +255,7 @@ const News: React.FC = () => {
               Stay Updated
             </h2>
             <p className="text - xl text - gray - 300 mb - 8">
-              Subscribe to our newsletter to receive the latest news, 
+              Subscribe to our newsletter to receive the latest news,
               product updates, and industry insights directly in your inbox.
             </p>
             <div className="flex flex - col sm:flex - row gap - 4 justify - center max - w-md mx - auto">

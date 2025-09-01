@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import Support from './Support';
 
-
 describe ('Support', () => {
   it ('renders without crashing', () => {
     render (<Support />) ;

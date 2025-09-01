@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 
-
 describe ('EnhancedNavigation', () => {
   it ('renders without crashing', () => {
     render (<EnhancedNavigation />) ;

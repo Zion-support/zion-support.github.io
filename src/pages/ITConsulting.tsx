@@ -3,7 +3,6 @@ export default React.memo (function ITConsulting () {
 import {
 import { motion } from 'framer - motion';
 
-
   Lightbulb,
   Target,
   TrendingUp,
@@ -115,7 +114,7 @@ import { motion } from 'framer - motion';
   ];
 
   const industries = [
-    "Healthcare", "Finance", "Manufacturing", "Retail", "Education", 
+    "Healthcare", "Finance", "Manufacturing", "Retail", "Education",
     "Government", "Technology", "Energy", "Transportation", "Media"
   ];
 
@@ -131,12 +130,12 @@ import { motion } from 'framer - motion';
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -154,17 +153,17 @@ import { motion } from 'framer - motion';
               className="flex flex - col sm:flex - row gap - 6 justify - center mb - 16"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.3 
+  delay: 0.3
 
 }}
             >
@@ -203,7 +202,7 @@ import { motion } from 'framer - motion';
               Why Choose Our IT Consulting?
             </h2>
             <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
-              Our expert consultants bring decades of experience and deep industry knowledge to help you 
+              Our expert consultants bring decades of experience and deep industry knowledge to help you
               make informed technology decisions and achieve your business objectives.
             </p>
           </motion.div>
@@ -290,12 +289,12 @@ import { motion } from 'framer - motion';
             className="text - center mb - 16"
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -381,12 +380,12 @@ import { motion } from 'framer - motion';
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}

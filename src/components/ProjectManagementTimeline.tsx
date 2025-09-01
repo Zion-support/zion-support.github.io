@@ -3,7 +3,6 @@ export const ProjectManagementTimeline: React.FC < ProjectManagementTimelineProp
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Calendar,
   Clock,
   CheckCircle,

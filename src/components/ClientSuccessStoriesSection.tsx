@@ -6,7 +6,6 @@ export default ClientSuccessStoriesSection;
 import {
 import { motion } from 'framer - motion';
 
-
  * ClientSuccessStoriesSection function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -89,16 +88,16 @@ const successStories = [
 
   return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
       <div className="max - w-7xl mx - auto px - 6">
-        <motion.div 
+        <motion.div
           className="text - center mb - 16"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -113,17 +112,17 @@ const successStories = [
           </p>
         </motion.div > initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
           className="grid grid - cols - 2 md: grid - cols - 4 gap - 8 mb - 16"
@@ -151,18 +150,18 @@ const successStories = [
               className="bg - slate - 800 border border - slate - 700 rounded - xl overflow - hidden hover:border - blue - 500 / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - blue - 500 / 25"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
             >
@@ -181,22 +180,22 @@ const successStories = [
                   </div>
                 </div>
               </div>
-              
+
               <div className="p - 6">
                 <h3 className="text - xl font - bold text - white mb - 2">
                   {story.client}
                 </h3>
-                
+
                 <div className="mb - 4">
                   <h4 className="text - sm font - semibold text - gray - 300 mb - 2">Challenge:</h4>
                   <p className="text - gray - 400 text - sm">{story.challenge}</p>
                 </div>
-                
+
                 <div className="mb - 4">
                   <h4 className="text - sm font - semibold text - gray - 300 mb - 2">Solution:</h4>
                   <p className="text - gray - 400 text - sm">{story.solution}</p>
                 </div>
-                
+
                 <div className="mb - 4">
                   <h4 className="text - sm font - semibold text - gray - 300 mb - 2">Results:</h4>
                   <ul className="space - y-1">
@@ -206,7 +205,7 @@ const successStories = [
                       </li>) ) }
                   </ul>
                 </div>
-                
+
                 <div className="border - t border - slate - 700 pt - 4">
                   <blockquote className="text - gray - 300 text - sm italic mb - 3">
                     "{story.testimonial}"
@@ -228,22 +227,22 @@ const successStories = [
         </div>
 
         {/* Success Metrics */}
-        <motion.div 
+        <motion.div
           className="mb - 16";
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
         >
@@ -251,7 +250,7 @@ const successStories = [
             <h3 className="text - 2xl font - bold text - white text - center mb - 8">
               Success by the Numbers
             </h3>
-            
+
             <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">
               <div className="text - center">
                 <div className="text - 4xl font - bold text - blue - 400 mb - 2">98%</div>
@@ -273,22 +272,22 @@ const successStories = [
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="text - center"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 }}
         >

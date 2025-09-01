@@ -69,11 +69,6 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
                 role: 'user',
                 message: messageContent,
   timestamp: new Date()
-            
-
-
-
-
 
 
 };
@@ -91,11 +86,6 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             role: 'user',
             message: guestMessage,
   timestamp: new Date()
-        
-
-
-
-
 
 
 };

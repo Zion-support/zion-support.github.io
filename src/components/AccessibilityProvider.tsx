@@ -4,7 +4,6 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
 export const useAccessibility = () => {;
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 
-
 interface AccessibilityContextType {
 
   highContrast: boolean;
@@ -140,17 +139,17 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
         {showSkipLinks && (<motion.div
             initial = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
             className="fixed top - 0 left - 0 right - 0 z - 50 bg - zion - cyan text - black p - 4 text - center"
@@ -182,12 +181,12 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
         <motion.div
           initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
           animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
           className="bg - zion - slate border border - zion - cyan / 20 rounded - lg p - 2 shadow - 2xl"

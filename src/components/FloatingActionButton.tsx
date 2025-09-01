@@ -2,7 +2,6 @@ import React, { useState, useCallback, useEffect } from 'react';
 export default FloatingActionButton;
 import {
 
-
   Plus,
   MessageCircle,
   Phone,

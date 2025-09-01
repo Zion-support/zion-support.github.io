@@ -10,7 +10,6 @@ import SEO from "@/components / SEO";
 export default function NotificationsPage () {
 import { formatDistanceToNow } from "date - fns";
 
-
 const getNotificationIcon = (type, className = "h - 5 w - 5") => {
     switch (type) {
         case 'message':
@@ -157,5 +156,5 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
           </Tabs>
         </div>
       </main>
-      
+
     </>) }

@@ -2,7 +2,6 @@ import React from 'react';
 export default Mobile;
 import SEO from "../SEO";
 
-
 const Mobile = () => {
     const mobileStats = [
         {

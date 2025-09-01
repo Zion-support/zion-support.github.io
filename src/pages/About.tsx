@@ -4,7 +4,6 @@ export default React.memo (function About () {
 import {
 import { motion } from 'framer - motion';
 
-
   Users,
   Target,
   Award,

@@ -4,7 +4,6 @@ export const useSEOOptimization = () => {;
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Search,
   TrendingUp,
   Target,
@@ -358,17 +357,17 @@ autoAnalyze:  true,;
                     key={issue.id}
                     initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                     animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                     className={`p - 4 rounded - lg border - l-4 ${
@@ -406,12 +405,12 @@ autoAnalyze:  true,;
                   key={suggestion.id}
                   initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }}
                   animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                   className="p - 4 bg - gradient - to - r from - zion - cyan / 5 to - zion - blue / 5 border border - zion - cyan / 20 rounded - lg"
@@ -440,17 +439,17 @@ autoAnalyze:  true,;
             {showAdvanced && (<motion.div
                 initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                 animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }}
                 exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                 className="border - t border - zion - slate / 20 pt - 6"

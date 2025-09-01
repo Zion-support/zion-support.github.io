@@ -16,7 +16,7 @@ const serviceIcons = {
     'Healthcare Technology': Heart,
     'Financial Technology': DollarSign,
     'Blockchain': LinkIcon,
-  
+
 
 };
 export function EnhancedServicesShowcase() {

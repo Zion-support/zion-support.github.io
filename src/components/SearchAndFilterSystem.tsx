@@ -3,7 +3,6 @@ export const SearchAndFilterSystem: React.FC < SearchAndFilterSystemProps> = ({
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Search,
   Filter,
   X,
@@ -288,22 +287,22 @@ className: {`flex items - center gap - 2 px - 4 py - 2 rounded - lg text - sm fo
         {showFilterPanel && (<motion.div
             initial = {
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
             animate = {
   { height: 'auto',
-  opacity: 1 
+  opacity: 1
 
 }}
             exit = {
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
             transition = {
   { duration: 0.3,
-  ease: 'easeOut' 
+  ease: 'easeOut'
 
 }}
             className="mb - 6 overflow - hidden"
@@ -378,12 +377,12 @@ className: {`flex items - center gap - 2 px - 4 py - 2 rounded - lg text - sm fo
             key={result.id}
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             className="p - 4 bg - zinc - 900 / 30 border border - zinc - 700 / 50 rounded - xl hover:bg - zinc - 900 / 50 transition - all duration - 300 cursor - pointer group"

@@ -77,7 +77,7 @@ try {
           <p style="color: #9ca3af; margin-bottom: 1.5rem;">
             We're sorry, but the application failed to initialize. Please try refreshing the page.
           </p>
-          <button 
+          <button
             onclick="window.location.reload()"
             style="
               background: #06b6d4;

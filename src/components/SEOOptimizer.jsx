@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 export default SEOOptimizer;
 import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOptimizer = () => {
 
-
     const [isOpen, setIsOpen] = useState (false) ;
     const [isAnalyzing, setIsAnalyzing] = useState (false) ;
     const [report, setReport] = useState (null) ;

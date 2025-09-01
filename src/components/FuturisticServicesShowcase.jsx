@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
   import { motion, AnimatePresence } from 'framer - motion';
 export const FuturisticServicesShowcase = () => {
 
-
   const ServiceCard = ({ service, index, isVisible }) => {
     const [isHovered, setIsHovered] = useState (false) ;
     return (<motion.div

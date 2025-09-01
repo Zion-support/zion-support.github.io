@@ -4,7 +4,6 @@ export function useApi < T> ({ url, method = 'GET', body, headers }: UseApiOptio
 export function useLocalStorage < T> (key: string, initialValue: T) {
 import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge const mockCodeSnippets = [;
 
-
     {
         id: '1',
         title: 'React Hook for API Calls',
@@ -64,10 +63,10 @@ interface UseApiOptions < T> {
         code: `@layer utilities {
   .animate - float {
     animation: float 3s ease - in - out infinite}
-  
+
   .animate - glow {
     animation: glow 2s ease - in - out infinite alternate}
-  
+
   .animate - shimmer {
     background: linear - gradient (90deg,
       transparent,
@@ -112,7 +111,7 @@ interface UseApiOptions < T> {
   ...options
 
 };
-    
+
     this.rules = new Map () ;
     this.errors = new Map () ;
     this.init () }

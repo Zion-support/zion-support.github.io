@@ -2,7 +2,6 @@ import { Helmet } from 'react - helmet - async';
 import React from 'react';
 export default AIAutonomousWriting;
 
-
 const AIAutonomousWriting = () => {
   return (<>
       <Helmet>
