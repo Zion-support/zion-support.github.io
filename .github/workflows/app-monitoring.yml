@@ -1,12 +1,14 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: app-monitoring
 'on':
-  workflow_dispatch: {}
   schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
-
+    - cron: 0 2 * * *
+  workflow_dispatch: null
 permissions:
   contents: write
   actions: read
+concurrency:
+  group: app-monitoring-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   monitor-performance:
       - name: Checkout code
@@ -29,15 +31,4 @@ jobs:
           name: performance-report
           path: lighthouse-report.json
           retention-days: 7
-
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-        git rebase --abort 2>/dev/null || true
-
-        rm -rf .git/rebase-merge .git/rebase-apply 2>/dev/null || true
-
-        git reset --hard HEAD
-
-        git clean -fd'
-    - name: Run automation
-      run: echo "Automation workflow placeholder - customize as needed"
+    runs_on: ubuntu-latest

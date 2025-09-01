@@ -1,9 +1,8 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: branch-cleanup
 'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '17 3 * * *'  # daily at 03:17 UTC
-
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
@@ -42,8 +41,8 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: |
-          echo "Workflow completed successfully"
-          
+          echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest
 concurrency:
   group: branch-cleanup.yml-${{ github.ref }}
   cancel-in-progress: true

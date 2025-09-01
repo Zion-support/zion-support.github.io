@@ -1,12 +1,8 @@
-name: Autonomous Cloud Runner (Fast)
+name: autonomous-cloud-runner
 'on':
   workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-autonomous-cloud-runner-fast-${{ github.ref }}
-  cancel-in-progress: true
-
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
@@ -45,5 +41,5 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: |
-          echo "Workflow completed successfully"
-          
+          echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest

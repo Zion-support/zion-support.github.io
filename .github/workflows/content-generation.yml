@@ -1,9 +1,8 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: content-generation
 'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '0 2 * * 1'  # Every Monday at 2 AM
-
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
@@ -21,33 +20,5 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: |
-          echo "Workflow completed successfully"
-          
-      - name: Install dependencies
-        run: npm ci
-        
-      - name: Run content crawler
-        run: node automation/app-content-crawler.cjs
-        
-      - name: Generate content suggestions
-        run: |
-          echo "Content analysis completed"
-          echo "Review the generated suggestions in automation/reports/"
-          
-      - name: Upload content analysis
-        uses: actions/upload-artifact@v4
-          name: content-analysis
-          path: automation/reports/
-          retention-days: 30
-
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-        git rebase --abort 2>/dev/null || true
-
-        rm -rf .git/rebase-merge .git/rebase-apply 2>/dev/null || true
-
-        git reset --hard HEAD
-
-        git clean -fd'
-    - name: Run automation
-      run: echo "Automation workflow placeholder - customize as needed"
+          echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest

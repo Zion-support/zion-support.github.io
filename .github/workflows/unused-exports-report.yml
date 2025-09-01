@@ -1,16 +1,14 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: unused-exports-report
 'on':
-  workflow_dispatch: {}
-
+  schedule:
+    - cron: 0 2 * * *
+  workflow_dispatch: null
 permissions:
-  contents: write
-
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
-permissions:
-  contents: write
+  contents: read
   actions: read
+concurrency:
+  group: unused-exports-report-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   main:
     name: Main Job
@@ -55,3 +53,4 @@ jobs:
           path: |
             .github/workflows/
           retention-days: 7
+    runs_on: ubuntu-latest

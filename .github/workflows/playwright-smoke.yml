@@ -1,19 +1,27 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: Playwright Smoke Tests
 'on':
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
   workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
-
+    - cron: 0 4 * * *
 permissions:
-  contents: write
+  contents: read
   actions: read
+concurrency:
+  group: smoke-test-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   main:
     name: Main Job
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,14 +32,53 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-
-        git rebase --abort 2>/dev/null || true
-
-        rm -rf .git/rebase-merge .git/rebase-apply 2>/dev/null || true
-
-        git reset --hard HEAD
-
-        git clean -fd'
-    - name: Run automation
-      run: echo "Automation workflow placeholder - customize as needed"
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+      - name: Build application
+        run: npm run build
+        env:
+          NODE_OPTIONS: '--max-old-space-size=4096'
+      - name: Start application
+        run: |
+          npm run start &
+          echo "Starting application for smoke tests..."
+          sleep 10
+        env:
+          NODE_OPTIONS: '--max-old-space-size=4096'
+      - name: Wait for app to be ready
+        run: |
+          echo "Waiting for application to be ready..."
+          for i in {1..60}; do
+            if curl -f http://localhost:3000 > /dev/null 2>&1; then
+              echo "Application is ready after $i attempts"
+              break
+            fi
+            if [ $i -eq 60 ]; then
+              echo "Application failed to start after 60 attempts"
+              exit 1
+            fi
+            sleep 2
+          done
+      - name: Run smoke tests
+        run: npx playwright test tests/smoke.spec.ts --project=chromium --reporter=html
+        env:
+          BASE_URL: http://localhost:3000
+        continue-on-error: false
+      - name: Stop application
+        if: always()
+        run: |
+          echo "Stopping application..."
+          pkill -f "next start" || true
+          pkill -f "node.*start" || true
+          sleep 5
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: smoke-test-results
+          path: playwright-report/
+          retention-days: 7
+    runs_on: ubuntu-latest

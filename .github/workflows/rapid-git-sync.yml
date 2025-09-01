@@ -1,15 +1,14 @@
-name: Rapid Git Sync (15m)
+name: rapid-git-sync
 'on':
-  workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-rapid-git-sync-15m-${{ github.ref }}
-  cancel-in-progress: true
-
+    - cron: 0 2 * * *
+  workflow_dispatch: null
 permissions:
-  contents: write
+  contents: read
   actions: read
+concurrency:
+  group: rapid-git-sync-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   main:
     name: Main Job
@@ -55,3 +54,4 @@ jobs:
           path: |
             .github/workflows/
           retention-days: 7
+    runs_on: ubuntu-latest

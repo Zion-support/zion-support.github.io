@@ -1,12 +1,14 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: app-automation
 'on':
-  workflow_dispatch: {}
   schedule:
-    - cron: '0 1 * * 1'  # Every Monday at 1 AM
-
+    - cron: 0 2 * * *
+  workflow_dispatch: null
 permissions:
   contents: write
   actions: read
+concurrency:
+  group: app-automation-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   run-orchestrator:
       - name: Checkout code
@@ -32,3 +34,4 @@ jobs:
           path: |
             .github/workflows/
           retention-days: 7
+    runs_on: ubuntu-latest

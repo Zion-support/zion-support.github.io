@@ -1,15 +1,14 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: pa11y
 'on':
-  workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
-
+    - cron: 0 2 * * *
+  workflow_dispatch: null
 permissions:
-  contents: write
+  contents: read
   actions: read
+concurrency:
+  group: pa11y-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   main:
     name: Main Job
@@ -80,3 +79,4 @@ jobs:
             .github/workflows/
             pa11y-results.json
           retention-days: 7
+    runs_on: ubuntu-latest

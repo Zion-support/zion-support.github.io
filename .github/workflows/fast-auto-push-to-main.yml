@@ -1,12 +1,8 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: Fast Auto Push to Main
 'on':
   workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
-
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
@@ -39,12 +35,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-
-        rm -rf .git/rebase-merge .git/rebase-apply 2>/dev/null || true
-
-        git reset --hard HEAD
-
-        git clean -fd'
-    - name: Run automation
-      run: echo "Automation workflow placeholder - customize as needed"
+          node-version: '20'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"
+    runs_on: ubuntu-latest
+concurrency:
+  group: fast-auto-push-to-main.yml-${{ github.ref }}
+  cancel-in-progress: true

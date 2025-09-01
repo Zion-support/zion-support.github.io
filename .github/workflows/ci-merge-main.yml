@@ -1,12 +1,8 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: ci-merge-main
 'on':
   workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
-
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
@@ -39,5 +35,5 @@ jobs:
           fetch-depth: 0
       - name: Configure git"
         run: |
-          echo "Workflow completed successfully"
-          
+          echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest

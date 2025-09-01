@@ -1,9 +1,8 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: autonomous-cloud-automations
 'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '0 * * * *'  # hourly
-
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
@@ -41,5 +40,5 @@ jobs:
       
       - name: Clean git state
         run: |
-          echo "Workflow completed successfully"
-          
+          echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest

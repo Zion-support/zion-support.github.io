@@ -1,9 +1,8 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: codeql
 'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '0 2 * * 0'  # Weekly on Sunday at 2 AM UTC
-
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
@@ -26,5 +25,5 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: |
-          echo "Workflow completed successfully"
-          
+          echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest

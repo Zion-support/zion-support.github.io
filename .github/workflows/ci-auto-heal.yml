@@ -1,4 +1,4 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: ci-auto-heal
 'on':
   workflow_dispatch: {}
   schedule:
@@ -44,5 +44,5 @@ jobs:
         run: "npm ci
       - name: Run CI healers
         run: |
-          echo "Workflow completed successfully"
-          
+          echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest

@@ -1,15 +1,14 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: netlify-functions-trigger
 'on':
-  workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
-
+    - cron: 0 2 * * *
+  workflow_dispatch: null
 permissions:
-  contents: write
+  contents: read
   actions: read
+concurrency:
+  group: netlify-functions-trigger-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   main:
     name: Main Job
@@ -42,3 +41,4 @@ jobs:
             automation/logs/
             automation/netlify-local-stamp.txt
           retention-days: 7
+    runs_on: ubuntu-latest

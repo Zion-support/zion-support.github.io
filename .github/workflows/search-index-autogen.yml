@@ -1,15 +1,13 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: Search Index Autogen
 'on':
-  workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
-
+    - cron: 0 0 * * *
+  workflow_dispatch: {}
 permissions:
   contents: write
-  actions: read
+concurrency:
+  group: search-index
+  cancel-in-progress: true
 jobs:
   main:
     name: Main Job
@@ -55,3 +53,4 @@ jobs:
           else
             echo "No changes to push"
           fi
+    runs_on: ubuntu-latest

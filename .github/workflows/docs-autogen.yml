@@ -1,12 +1,8 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: docs-autogen
 'on':
   workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
-
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
@@ -37,8 +33,8 @@ jobs:
           fetch-depth: 0
       - name: Generate docs summary
         run: |
-          echo "Workflow completed successfully"
-          
+          echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest
 concurrency:
   group: docs-autogen.yml-${{ github.ref }}
   cancel-in-progress: true

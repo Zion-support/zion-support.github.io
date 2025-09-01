@@ -1,12 +1,14 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: yaml-validator
 'on':
-  workflow_dispatch: {}
   schedule:
-    - cron: '0 0 * * *'  # Daily validation
-
+    - cron: 0 2 * * *
+  workflow_dispatch: null
 permissions:
   contents: write
   actions: read
+concurrency:
+  group: yaml-validator-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   main:
     name: Main Job
@@ -34,3 +36,4 @@ jobs:
           path: |
             .github/workflows/
           retention-days: 7
+    runs_on: ubuntu-latest

@@ -1,15 +1,17 @@
 name: CI
 'on':
-  workflow_dispatch: {}
-  schedule:
-  - cron: '*/30 * * * *'
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: null
+permissions:
+  contents: read
 concurrency:
   group: workflow-ci-${{ github.ref }}
   cancel-in-progress: true
-
-permissions:
-  contents: write
-  actions: read
 jobs:
   main:
     name: Main Job
@@ -17,21 +19,26 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-
-        git rebase --abort 2>/dev/null || true
-
-        rm -rf .git/rebase-merge .git/rebase-apply 2>/dev/null || true
-
-        git reset --hard HEAD
-
-        git clean -fd'
-    - name: Run automation
-      run: echo "Automation workflow placeholder - customize as needed"
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: |
+          npm ci || npm install
+      - name: Install Playwright (Chromium only)
+        run: npx playwright install --with-deps chromium
+      - name: Type check
+        run: npm run type-check
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        env:
+          CI: true
+        run: npm run build
+      - name: Smoke tests
+        env:
+          CI: true
+        run: npm run test:smoke
+    runs_on: ubuntu-latest

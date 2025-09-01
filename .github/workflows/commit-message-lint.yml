@@ -1,12 +1,8 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: commit-message-lint
 'on':
   workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
-
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
@@ -28,4 +24,5 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run workflow
-        run: echo "Workflow completed successfully"
+        run: echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest

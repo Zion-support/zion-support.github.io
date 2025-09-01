@@ -1,13 +1,8 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: dependabot-auto-approve
 'on':
   workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
-
-  pull-requests: write
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
@@ -30,8 +25,8 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: |
-          echo "Workflow completed successfully"
-          
+          echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest
 concurrency:
   group: dependabot-auto-approve.yml-${{ github.ref }}
   cancel-in-progress: true

@@ -1,13 +1,8 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: autonomous-marketing-seo
 'on':
   workflow_dispatch: {}
-
-permissions:
-  contents: write
-
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
+  schedule:
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
@@ -40,5 +35,5 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: |
-          echo "Workflow completed successfully"
-          
+          echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest

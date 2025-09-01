@@ -1,20 +1,19 @@
-name: WORKFLOW_NAME_PLACEHOLDER
+name: Security Weekly
 'on':
-  workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
-
+    - cron: 0 2 * * 1
+  workflow_dispatch: {}
 permissions:
   contents: write
   actions: read
+concurrency:
+  group: security-weekly
+  cancel-in-progress: true
 jobs:
   main:
     name: Main Job
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -37,7 +36,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: npm
       - name: Install dependencies
         run: "npm ci
       - name: Run security scanner and audit fix (best-effort)
@@ -45,9 +44,10 @@ jobs:
           npm run security:scan || true
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
-          token: ${{ secrets.GITHUB_TOKEN }}"
-          commit-message: "chore(security): automated security scan and fixes"
-          title: "chore(security): automated security scan and fixes"
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore(security): automated security scan and fixes'
+          title: 'chore(security): automated security scan and fixes'
           body: |
             Security scan and best-effort fixes.
           branch: automation/security-weekly
@@ -56,3 +56,4 @@ jobs:
             automation
             security
             auto-merge
+    runs_on: ubuntu-latest
