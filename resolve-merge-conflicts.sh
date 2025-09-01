@@ -1,110 +1,77 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts and continue the merge process
-set -e
+echo "🔧 Starting systematic merge conflict resolution..."
 
-echo "🔧 Resolving merge conflicts..."
-echo "⏰ Started at: $(date)"
-echo "---"
-
-# Function to log messages
-log_message() {
-    local message="$1"
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - $message"
+# Function to resolve conflicts by accepting incoming changes
+resolve_conflict() {
+    local file="$1"
+    local action="$2"
+    
+    case "$action" in
+        "accept_incoming")
+            echo "✅ Accepting incoming changes for: $file"
+            git checkout --theirs "$file"
+            git add "$file"
+            ;;
+        "accept_current")
+            echo "✅ Accepting current changes for: $file"
+            git checkout --ours "$file"
+            git add "$file"
+            ;;
+        "delete")
+            echo "🗑️  Deleting file: $file"
+            git rm "$file"
+            ;;
+        "manual")
+            echo "⚠️  Manual resolution needed for: $file"
+            ;;
+    esac
 }
 
-# Resolve conflicts by accepting incoming changes
-log_message "🔄 Resolving conflicts by accepting incoming changes..."
+echo "📋 Resolving conflicts systematically..."
 
-# For modify/delete conflicts, accept the deletion (incoming change)
-git status --porcelain | grep "^DU\|^UD" | while read -r line; do
-    if [[ $line =~ ^DU ]]; then
-        # Deleted in incoming, modified in HEAD - accept deletion
-        file_path=$(echo "$line" | awk '{print $2}')
-        log_message "🗑️  Accepting deletion of: $file_path"
-        git rm "$file_path" 2>/dev/null || true
-    elif [[ $line =~ ^UD ]]; then
-        # Modified in incoming, deleted in HEAD - accept modification
-        file_path=$(echo "$line" | awk '{print $2}')
-        log_message "✅ Accepting modification of: $file_path"
-        git add "$file_path" 2>/dev/null || true
-    fi
-done
+# Accept incoming changes for most files (they're likely more up-to-date)
+resolve_conflict "ai-optimization-backups/AdvancedBusinessIntelligence.jsx.backup.1756513021233" "accept_incoming"
+resolve_conflict "ai-optimization-backups/AdvancedDataVisualization.jsx.backup.1756513021233" "accept_incoming"
+resolve_conflict "src/App.tsx" "accept_incoming"
+resolve_conflict "src/components/AIChatbotSystem.tsx.backup.1756559550332" "accept_incoming"
+resolve_conflict "src/components/AIServicesShowcase.tsx" "accept_incoming"
+resolve_conflict "src/components/Accessibility.tsx.backup.1756559550337" "accept_incoming"
+resolve_conflict "src/components/AccessibilityEnhancer.tsx" "accept_incoming"
+resolve_conflict "src/components/AccessibilityPanel.jsx.disabled" "accept_incoming"
+resolve_conflict "src/components/AdvancedCollaborationPlatform.js.jsx" "accept_incoming"
+resolve_conflict "src/components/AdvancedDataTable.jsx.disabled" "accept_incoming"
+resolve_conflict "src/components/AdvancedForm.jsx.disabled" "accept_incoming"
+resolve_conflict "src/components/AdvancedNotificationSystem.js.jsx" "accept_incoming"
+resolve_conflict "src/components/disabled/AICodeGenerator.jsx" "accept_incoming"
+resolve_conflict "src/components/disabled/AIServicesShowcase.js.jsx" "accept_incoming"
+resolve_conflict "src/components/disabled/AboutSection.jsx" "accept_incoming"
+resolve_conflict "src/components/disabled/AccessibilityProvider.tsx" "accept_incoming"
+resolve_conflict "src/components/disabled/AdvancedAIBusinessProcessAutomation.js.jsx" "accept_incoming"
+resolve_conflict "src/components/disabled/AdvancedAICodeGenerator.js.jsx" "accept_incoming"
+resolve_conflict "src/components/disabled/AdvancedAIServicesHub.tsx" "accept_incoming"
+resolve_conflict "src/components/disabled/AdvancedAnalytics.js.jsx" "accept_incoming"
+resolve_conflict "src/pages/Sitemap.tsx" "accept_incoming"
+resolve_conflict "src/pages/Support.tsx" "accept_incoming"
 
-# For content conflicts, try to resolve automatically
-log_message "🔧 Resolving content conflicts..."
+# Delete files that were removed in the incoming branch
+resolve_conflict "ai-optimization-backups/AdvancedAICodeGenerator.jsx.backup.1756513021217" "delete"
+resolve_conflict "ai-optimization-backups/AdvancedNotificationSystem.jsx.backup.1756537993405" "delete"
+resolve_conflict "src/components/AdvancedAIBusinessProcessAutomation.jsx.disabled" "delete"
+resolve_conflict "src/components/AdvancedAnalytics.tsx" "delete"
+resolve_conflict "src/components/AdvancedCollaborationPlatform.jsx.disabled" "delete"
+resolve_conflict "src/pages/AISolutions.tsx" "delete"
 
-# Resolve .gitignore conflicts
-if [ -f ".gitignore" ]; then
-    log_message "📝 Resolving .gitignore conflicts..."
-    # Keep both versions and remove conflict markers
-    git checkout --theirs .gitignore
-    git add .gitignore
-fi
+echo "🔍 Checking remaining conflicts..."
+git status --porcelain | grep "^UU" | wc -l | xargs echo "Remaining conflicts:"
 
-# Resolve package.json conflicts
-if [ -f "package.json" ]; then
-    log_message "📦 Resolving package.json conflicts..."
-    # Keep the incoming version (merged branches)
-    git checkout --theirs package.json
-    git add package.json
-fi
+echo "📝 Committing resolved conflicts..."
+git commit -m "Resolve merge conflicts with cursor/fix-project-errors-and-automate-future-fixes-020d
 
-# Resolve _app.tsx conflicts
-if [ -f "pages/_app.tsx" ]; then
-    log_message "📱 Resolving _app.tsx conflicts..."
-    git checkout --theirs pages/_app.tsx
-    git add pages/_app.tsx
-fi
+- Accept incoming changes for updated components and pages
+- Remove deleted/renamed files
+- Resolve conflicts systematically"
 
-# Resolve index.tsx conflicts
-if [ -f "pages/index.tsx" ]; then
-    log_message "🏠 Resolving index.tsx conflicts..."
-    git checkout --theirs pages/index.tsx
-    git add pages/index.tsx
-fi
-
-# Resolve globals.css conflicts
-if [ -f "styles/globals.css" ]; then
-    log_message "🎨 Resolving globals.css conflicts..."
-    git checkout --theirs styles/globals.css
-    git add styles/globals.css
-fi
-
-# Resolve tailwind.config.js conflicts
-if [ -f "tailwind.config.js" ]; then
-    log_message "🎨 Resolving tailwind.config.js conflicts..."
-    git checkout --theirs tailwind.config.js
-    git add tailwind.config.js
-fi
-
-# Add all resolved files
-log_message "📁 Adding all resolved files..."
-git add .
-
-# Commit the merge
-log_message "💾 Committing merge resolution..."
-if git commit -m "Resolve merge conflicts from multiple branch merges" 2>/dev/null; then
-    log_message "✅ Merge conflicts resolved successfully!"
-    
-    # Push the changes
-    log_message "🚀 Pushing resolved merge..."
-    git push origin main
-    
-    log_message "🎉 Merge process completed successfully!"
-else
-    log_message "❌ Failed to commit merge resolution"
-    log_message "📋 Current status:"
-    git status --porcelain | head -20
-    
-    # Try to abort and start fresh
-    log_message "🔄 Aborting merge and starting fresh..."
-    git merge --abort
-    
-    # Reset to main
-    git reset --hard origin/main
-    
-    log_message "✅ Reset to clean main branch"
-fi
-
-echo "🎯 Conflict resolution completed! Check the logs above for details."
+echo "✅ Merge conflict resolution completed!"
+echo "📊 Status:"
+git status --short
