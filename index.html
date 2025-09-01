@@ -25,8 +25,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ziontechgroup.com/" />
     <meta
-      property="og:title"
-      content="Zion Tech Group - Technology Solutions"
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline' 'unsafe-eval'"
     />
     <meta
       property="og:description"
@@ -163,14 +163,24 @@
       }
     </script>
   </head>
-  <body class="antialiased">
-    <noscript>
-      <div style="padding: 20px; text-align: center; background: #f0f0f0; color: #333;">
-        <h2>JavaScript Required</h2>
-        <p>You need to enable JavaScript to run this application. Zion Tech Group requires JavaScript for the best user experience.</p>
-      </div>
-    </noscript>
-    <div id="root"></div>
+
+  <body>
+    <div id="root">
+      <noscript>
+        <style>
+          body {
+            background: #ffffff;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            padding: 1rem;
+          }
+        </style>
+        This application requires JavaScript. Please enable JavaScript and run
+        the development server.
+      </noscript>
+    </div>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <!-- <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script> -->
     <script type="module" src="/src/main.tsx"></script>
 
     <!-- Service Worker Registration -->

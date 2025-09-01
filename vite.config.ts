@@ -33,9 +33,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
-  build: {
-    rollupOptions: {
-      external: ['lucide-react']
+  server: {
+    hmr: {
+      clientPort: 443
     }
   }
 })
