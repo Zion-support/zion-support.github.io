@@ -1,6 +1,5 @@
-import { Activity, Heart, Shield, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database } from 'lucide-react';
 
-const AIHealthcareAnalytics = () => {
+const AIHealthcareAnalytics: React.FC = ($2) => {
   const features = [
     'AI-powered patient outcome prediction',
     'Real-time health monitoring and alerts',

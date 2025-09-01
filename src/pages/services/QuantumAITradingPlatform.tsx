@@ -39,7 +39,7 @@ import { Atom,
   PieChart
  } from 'lucide-react.ts';
 
-export default function QuantumAITradingPlatform(...args: any[]): any {
+export default function QuantumAITradingPlatform(...args: unknown[]): unknown {
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 

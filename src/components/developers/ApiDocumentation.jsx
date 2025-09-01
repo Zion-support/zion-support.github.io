@@ -5,31 +5,31 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
 export function ApiDocumentation() {
-    return (<Card className="bg-zinc-900 border-zinc-800 text-white">
-      <CardHeader>
-        <CardTitle className="text-xl flex items-center">
+    return (<Card className="bg-zinc-900 border-zinc-800 text-white"></Card>
+      <CardHeader></CardHeader>
+        <CardTitle className="text-xl flex items-center"></CardTitle>
           <BookOpen className="mr-2" size={20}/> API Documentation
         </CardTitle>
-        <CardDescription className="text-zinc-400">
+        <CardDescription className="text-zinc-400"></CardDescription>
           Reference documentation for integrating with the Zion Marketplace API.
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <Alert className="bg-blue-900/30 border-blue-800 mb-6">
+      <CardContent></CardContent>
+        <Alert className="bg-blue-900/30 border-blue-800 mb-6"></Alert>
           <Terminal className="h-4 w-4"/>
-          <AlertDescription>
+          <AlertDescription></AlertDescription>
             Make sure to include your API key in all requests as a Bearer token in the Authorization header.
           </AlertDescription>
         </Alert>
-        <Tabs defaultValue="jobs" className="space-y-4">
-          <TabsList className="bg-zinc-800 border-zinc-700">
-            <TabsTrigger value="jobs">Jobs</TabsTrigger>
-            <TabsTrigger value="talent">Talent</TabsTrigger>
-            <TabsTrigger value="quotes">Quotes</TabsTrigger>
-            <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
-            <TabsTrigger value="errors">Errors</TabsTrigger>
+        <Tabs defaultValue="jobs" className="space-y-4"></Tabs>
+          <TabsList className="bg-zinc-800 border-zinc-700"></TabsList>
+            <TabsTrigger value="jobs"></TabsTrigger>Jobs</TabsTrigger>
+            <TabsTrigger value="talent"></TabsTrigger>Talent</TabsTrigger>
+            <TabsTrigger value="quotes"></TabsTrigger>Quotes</TabsTrigger>
+            <TabsTrigger value="webhooks"></TabsTrigger>Webhooks</TabsTrigger>
+            <TabsTrigger value="errors"></TabsTrigger>Errors</TabsTrigger>
           </TabsList>
-          <TabsContent value="jobs" className="space-y-6">
+          <TabsContent value="jobs" className="space-y-6"></TabsContent>
             <EndpointSection method="GET" endpoint="/api/jobs" description="List all available jobs with optional filtering." note="" params = {
   [
             { name: "page", type: "integer",
@@ -243,7 +243,7 @@ print(data)`
 }`
         }}/>
           </TabsContent>
-          <TabsContent value="talent" className="space-y-6">
+          <TabsContent value="talent" className="space-y-6"></TabsContent>
             <EndpointSection method="GET" endpoint="/api/talent" description="List talent profiles with optional filtering." note="" params = {
   [
             { name: "page", type: "integer",
@@ -364,7 +364,7 @@ print(data)`
 }`
         }}/>
           </TabsContent>
-          <TabsContent value="quotes" className="space-y-6">
+          <TabsContent value="quotes" className="space-y-6"></TabsContent>
             <EndpointSection method="POST" endpoint="/api/quotes" description="Create a quote request for a talent." note="Requires quotes:write scope" params = {
   [
             { name: "talent_id", type: "string", description: "ID of the talent to request a quote from",
@@ -515,18 +515,18 @@ print(data)`
 }`
         }}/>
           </TabsContent>
-          <TabsContent value="webhooks" className="space-y-6">
-            <div className="prose prose-invert max-w-none">
-              <h3 className="text-lg font-semibold mb-2">Webhook Events</h3>
-              <p className="text-zinc-400 mb-4">
+          <TabsContent value="webhooks" className="space-y-6"></TabsContent>
+            <div className="prose prose-invert max-w-none"></div>
+              <h3 className="text-lg font-semibold mb-2"></h3>Webhook Events</h3>
+              <p className="text-zinc-400 mb-4"></p>
                 The Zion API can send webhook notifications when certain events occur in your account.
                 You can configure webhooks in the Webhooks tab of the Developer Dashboard.
               </p>
-              <h4 className="text-md font-semibold mt-6 mb-2">Authentication</h4>
-              <p className="text-zinc-400 mb-4">
+              <h4 className="text-md font-semibold mt-6 mb-2"></h4>Authentication</h4>
+              <p className="text-zinc-400 mb-4"></p>
                 When you create a webhook, you can optionally provide a secret key.
                 If a secret is provided, each webhook request will include a signature in the
-                <code className="bg-zinc-800 px-1 py-0.5 rounded">X-Zion-Signature</code> header.
+                <code className="bg-zinc-800 px-1 py-0.5 rounded"></code>X-Zion-Signature</code> header.
                 This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.
               </p>
               <CodeBlock code = {

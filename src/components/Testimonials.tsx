@@ -19,7 +19,7 @@ interface TestimonialsProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function Testimonials(...args: any[]): any {
+export function Testimonials(...args: unknown[]): unknown {
   return (
     <section className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

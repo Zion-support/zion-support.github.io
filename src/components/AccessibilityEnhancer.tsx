@@ -32,7 +32,7 @@ interface AccessibilityEnhancerProps {
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {;
+    const handleKeyDown: React.FC = ($2) => {;
       // Skip if not in keyboard navigation mode;
       if (!settings.keyboardNavigation) return;
 
@@ -79,7 +79,7 @@ interface AccessibilityEnhancerProps {
   }, [settings.keyboardNavigation]);
 
   // Arrow key navigation helper
-  const navigateWithArrows = (container: Element, direction: string) => {
+  const navigateWithArrows: React.FC = ($2) => {
     const focusableElements = Array.from(container.querySelectorAll(;
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     )).filter(el => !(el as HTMLElement).hidden);
@@ -230,7 +230,7 @@ interactiveElements.forEach(element:  > {;
   }, []);
 
   // Apply accessibility settings to the document
-  const applySettings = (newSettings: AccessibilitySettings) => {
+  const applySettings: React.FC = ($2) => {
     const root = document.documentElement;
     
     // High contrast
@@ -275,7 +275,7 @@ interactiveElements.forEach(element:  > {;
   };
 
   // Save settings to localStorage
-  const saveSettings = (newSettings: AccessibilitySettings) => {
+  const saveSettings: React.FC = ($2) => {
     localStorage.setItem('zion-accessibility-settings', JSON.stringify(newSettings));
     setSettings(newSettings);
     applySettings(newSettings);
@@ -298,7 +298,7 @@ interactiveElements.forEach(element:  > {;
   };
 
   // Reset to default settings
-  const resetSettings = () => {
+  const resetSettings: React.FC = ($2) => {
     const defaultSettings: AccessibilitySettings = {
       highContrast: false,
       largeText: false,
@@ -667,7 +667,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, []);
 
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: unknown) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);

@@ -76,14 +76,14 @@ import {
   Users as UsersIcon,
   X
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from '@/src/src/components/SEO';
 
 interface Service {
   id: string;
   name: string;
   description: string;
   category: string;
-  icon: any;
+  icon: unknown;
   features: string[];
   pricing: {
     starter: string;
@@ -448,11 +448,11 @@ export default function ComprehensiveServicesShowcase2025() {
     return matchesCategory && matchesSearch;
   });
 
-  const handleServiceClick = (service: Service) => {
+  const handleServiceClick: React.FC = ($2) => {
     setSelectedService(service);
   };
 
-  const closeModal = () => {
+  const closeModal: React.FC = ($2) => {
     setSelectedService(null);
   };
 

@@ -195,7 +195,7 @@ export function SecurityMonitoringSystem({
   }, [showRealTime, isOpen, scanComplete, generateSecurityThreats, generateVulnerabilities, generateComplianceStatus]);
 
   // Get threat color
-  const getThreatColor = (type: string) => {
+  const getThreatColor: React.FC = ($2) => {
     const colors = {
       critical: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
       high: 'text-orange-600 bg-orange-100 dark:bg-orange-900/30 dark:text-orange-400',
@@ -206,7 +206,7 @@ export function SecurityMonitoringSystem({
   };
 
   // Get status icon
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon: React.FC = ($2) => {
     const icons = {
       active: <AlertTriangle className="w-4 h-4 text-red-500" />,
       investigating: <Eye className="w-4 h-4 text-yellow-500" />,
@@ -216,7 +216,7 @@ export function SecurityMonitoringSystem({
   };
 
   // Get compliance color
-  const getComplianceColor = (status: string) => {
+  const getComplianceColor: React.FC = ($2) => {
     const colors = {
       compliant: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400',
       partial: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',

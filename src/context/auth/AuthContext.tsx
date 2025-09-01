@@ -35,7 +35,7 @@ login: (email: string, password: string)  => Promise<any>;
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
-export const useAuth = () => {;
+export const useAuth: React.FC = ($2) => {;
   const context = useContext(AuthContext);
   if (context = == null) {;
     throw new Error('useAuth must be used within an AuthProvider');

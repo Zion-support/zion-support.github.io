@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -26,7 +25,7 @@ import {
   Zap as ZapIcon
 } from 'lucide-react';
 export const FuturisticFooter: React.FC = () => {;
-  const scrollToTop = () => {;
+  const scrollToTop: React.FC = ($2) => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   const currentYear = new Date().getFullYear();

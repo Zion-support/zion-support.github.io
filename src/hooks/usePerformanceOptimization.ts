@@ -15,7 +15,7 @@ interface UsePerformanceOptimizationOptions {
   enableFPSMonitoring?: boolean;
   threshold?: number}
 
-export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {;
+export const usePerformanceOptimization: React.FC = ($2) => {;
   const {;
     enableLazyLoading = true,;
     enableIntersectionObserver = true,;
@@ -57,7 +57,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
     let animationFrameId: number;
 
-    const measureFPS = () => {;
+    const measureFPS: React.FC = ($2) => {;
       const currentTime = performance.now();
       frameCountRef.current++;
 
@@ -88,7 +88,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   useEffect(() => {
     if (!enableMemoryManagement) return;
 
-    const checkMemoryUsage = () => {;
+    const checkMemoryUsage: React.FC = ($2) => {;
       if ('memory' in performance) {;
         const memory = (performance as any).memory;
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB

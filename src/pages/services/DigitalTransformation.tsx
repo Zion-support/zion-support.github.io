@@ -23,7 +23,7 @@ import {
   Monitor,
   Smartphone
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from '@/src/src/components/SEO';
 
 export default function DigitalTransformation() {
   const services = [

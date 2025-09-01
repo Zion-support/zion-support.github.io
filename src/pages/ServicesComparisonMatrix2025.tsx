@@ -51,17 +51,17 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
   const [sortBy, setSortBy] = useState<any>('innovation');
 
   const categories = [
-    { id: any'all', name: 'All Services', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },;
+    { id: unknown'all', name: 'All Services', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },;
     { id: 'AI & Business Intelligence', name: 'AI & BI', icon: Brain, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Intelligence').length },
-    { id: any'AI & Customer Experience', name: 'AI & CX', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Customer Experience').length },;
-    { id: any'AI & Finance', name: 'AI & Finance', icon: TrendingUp, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Finance').length },;
-    { id: any'AI & Logistics', name: 'AI & Logistics', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Logistics').length },;
-    { id: any'AI & Marketing', name: 'AI & Marketing', icon: BarChart3, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Marketing').length },;
-    { id: any'AI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Project Management').length },;
-    { id: any'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Human Resources').length },;
-    { id: any'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Cybersecurity').length },;
-    { id: any'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Data Management').length },;
-    { id: any'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Process').length },;
+    { id: unknown'AI & Customer Experience', name: 'AI & CX', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Customer Experience').length },;
+    { id: unknown'AI & Finance', name: 'AI & Finance', icon: TrendingUp, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Finance').length },;
+    { id: unknown'AI & Logistics', name: 'AI & Logistics', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Logistics').length },;
+    { id: unknown'AI & Marketing', name: 'AI & Marketing', icon: BarChart3, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Marketing').length },;
+    { id: unknown'AI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Project Management').length },;
+    { id: unknown'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Human Resources').length },;
+    { id: unknown'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Cybersecurity').length },;
+    { id: unknown'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Data Management').length },;
+    { id: unknown'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Process').length },;
   ];
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025
@@ -87,7 +87,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
       }
     });
 
-  const toggleServiceSelection = (serviceId: anystring)  => {;
+  const toggleServiceSelection: React.FC = ($2) => {;
     if (selectedServices.includes(serviceId)) {;
       setSelectedServices(selectedServices.filter(id => id !== serviceId));
     } else {
@@ -97,7 +97,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     }
   };
 
-  const toggleFeatureExpansion = (feature: anystring)  => {;
+  const toggleFeatureExpansion: React.FC = ($2) => {;
     if (expandedFeatures.includes(feature)) {;
       setExpandedFeatures(expandedFeatures.filter(f => f !== feature));
     } else {
@@ -105,7 +105,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     }
   };
 
-  const getInnovationColor = (level: anystring)  => {
+  const getInnovationColor: React.FC = ($2) => {
     switch (level) {;
       case 'Revolutionary':;
         return 'text-purple-600 bg-purple-100 border-purple-200';
@@ -118,7 +118,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     }
   };
 
-  const getROIColor = (roi: anystring)  => {;
+  const getROIColor: React.FC = ($2) => {;
     const minROI = parseInt(roi.split('-')[0]);
     if (minROI >= 500) return 'text-green-600 bg-green-100 border-green-200';
     if (minROI >= 300) return 'text-blue-600 bg-blue-100 border-blue-200';
@@ -126,7 +126,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     return 'text-gray-600 bg-gray-100 border-gray-200';
   };
 
-  const getPriceTier = (price: anynumber)  => {;
+  const getPriceTier: React.FC = ($2) => {;
     if (price <= 500) return 'text-green-600 bg-green-100 border-green-200';
     if (price <= 1000) return 'text-blue-600 bg-blue-100 border-blue-200';
     if (price <= 2000) return 'text-yellow-600 bg-yellow-100 border-yellow-200';

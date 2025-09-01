@@ -43,7 +43,7 @@ import { HelpCircle,
   DollarSign
  } from 'lucide-react.ts';
 
-export default function Helpdesk(...args: any[]): any {
+export default function Helpdesk(...args: unknown[]): unknown {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedTicket, setExpandedTicket] = useState<any>(null);
@@ -216,7 +216,7 @@ export default function Helpdesk(...args: any[]): any {
   const filteredIssues = selectedCategory === 'all' 
     ? commonIssues: anycommonIssues.filter(issue  => issue.category === selectedCategory);
 
-  const handleSearch = (e: anyReact.FormEvent)  => {
+  const handleSearch: React.FC = ($2) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality
@@ -224,7 +224,7 @@ export default function Helpdesk(...args: any[]): any {
     }
   };
 
-  const getPriorityColor = (priority: anystring)  => {
+  const getPriorityColor: React.FC = ($2) => {
     switch (priority) {
       case 'high': return 'text-red-400 bg-red-400/20 border-red-400/30';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20 border-yellow-400/30';
@@ -233,7 +233,7 @@ export default function Helpdesk(...args: any[]): any {
     }
   };
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor: React.FC = ($2) => {
     switch (status) {
       case 'resolved': return 'text-green-400 bg-green-400/20 border-green-400/30';
       case 'investigating': return 'text-yellow-400 bg-yellow-400/20 border-yellow-400/30';

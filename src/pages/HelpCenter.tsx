@@ -38,7 +38,7 @@ import {
 interface HelpSection {
   id: string;
   title: string;
-  icon: any;
+  icon: unknown;
   description: string;
   articles: Array<{
     title: string;
@@ -312,7 +312,7 @@ export function HelpCenter() {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const handleSearch = (query: string) => {
+  const handleSearch: React.FC = ($2) => {
     setSearchQuery(query);
     if (query.trim() === '') {
       setFilteredFAQs(faqData);

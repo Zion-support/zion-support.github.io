@@ -195,7 +195,7 @@ className:  '',;
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {;
+    const handleScroll: React.FC = ($2) => {;
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -208,7 +208,7 @@ className:  '',;
     setActiveDropdown(null);
   }, [location]);
 
-  const handleThemeChange = useCallback((newTheme: any'light' | 'dark' | 'system')  => {;
+  const handleThemeChange = useCallback((newTheme: unknown'light' | 'dark' | 'system')  => {;
     setTheme(newTheme);
     onThemeChange?.(newTheme);
     
@@ -225,11 +225,11 @@ className:  '',;
     localStorage.setItem('zion-theme', newTheme);
   }, [onThemeChange]);
 
-  const toggleDropdown = (label: anystring)  => {
+  const toggleDropdown: React.FC = ($2) => {
     setActiveDropdown(activeDropdown === label ? null : label);
   };
 
-  const closeDropdown = () => {
+  const closeDropdown: React.FC = ($2) => {
     setActiveDropdown(null);
   };
 

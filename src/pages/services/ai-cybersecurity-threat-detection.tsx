@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 import { Shield, 
   Eye, 
   AlertTriangle, 

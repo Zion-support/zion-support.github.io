@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from '@/src/src/types/listings';
 
 export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
   "AI Development": {

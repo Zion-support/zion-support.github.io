@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import {
   Shield,
@@ -16,7 +15,7 @@ import {
   Share
  } from 'lucide-react';
 
-const PrivacyPolicy = () => {;
+const PrivacyPolicy: React.FC = ($2) => {;
   const lastUpdated = '2025-01-15';
   
   const sections = [

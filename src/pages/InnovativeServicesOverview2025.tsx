@@ -24,7 +24,7 @@ import { Brain,
   Globe
  } from 'lucide-react.ts';
 
-const InnovativeServicesOverview2025 = () => {
+const InnovativeServicesOverview2025: React.FC = ($2) => {
   const serviceCategories = [
     {
       id: 'ai-customer-success',

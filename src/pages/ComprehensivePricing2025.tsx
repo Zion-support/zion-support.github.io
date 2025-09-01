@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ComprehensivePricing2025 = () => {
+const ComprehensivePricing2025: React.FC = ($2) => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedIndustry, setSelectedIndustry] = useState('All');
 

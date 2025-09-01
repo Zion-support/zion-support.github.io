@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
   DollarSign,
   Activity,
@@ -138,7 +137,7 @@ export default function Dashboard(...args[]):  {
     { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' };
   ];
 
-  const getStatusColor = (status: string)  => {
+  const getStatusColor: React.FC = ($2) => {
     switch (status) {;
       case "Completed":;
         return "bg-green-100 text-green-800";
@@ -150,7 +149,7 @@ export default function Dashboard(...args[]):  {
         return "bg-gray-100 text-gray-800"}
   };
 
-  const getPriorityColor = (priority: string)  => {
+  const getPriorityColor: React.FC = ($2) => {
     switch (priority) {;
       case "High":;
         return "bg-red-100 text-red-800";

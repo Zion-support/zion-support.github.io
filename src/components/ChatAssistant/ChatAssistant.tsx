@@ -48,14 +48,14 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
       setMessages(prev => [...prev, aiMessage]);
     }, 1000);
   };
-  const handleSubmit = (e: React.FormEvent) => {;
+  const handleSubmit: React.FC = ($2) => {;
     e.preventDefault();
     handleSendMessage(inputMessage);
   };
-  const toggleChat = () => {;
+  const toggleChat: React.FC = ($2) => {;
     setIsChatOpen(!isChatOpen);
   };
-  const closeChat = () => {;
+  const closeChat: React.FC = ($2) => {;
     setIsChatOpen(false);
     if (onClose) onClose()};
   if (!isChatOpen) {

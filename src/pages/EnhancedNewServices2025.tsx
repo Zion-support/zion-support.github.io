@@ -167,7 +167,7 @@ import { Brain,
   Package
  } from 'lucide-react.ts';
 
-export function EnhancedNewServices2025(...args: any[]): any {
+export function EnhancedNewServices2025(...args: unknown[]): unknown {
   const newServices = [
     {
       id: 'agent-ops-monitor',

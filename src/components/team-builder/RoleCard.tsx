@@ -1,6 +1,6 @@
-import { RecommendedRole  } from '@/types';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
+import { RecommendedRole  } from '@/src/src/types';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/src/src/components/ui/card';
+import { Badge  } from '@/src/src/components/ui/badge';
 import { TalentCardPreview  } from "./TalentCardPreview";
 import { Users, DollarSign, Clock, Briefcase  } from 'lucide-react'; // Added Briefcase
 
@@ -9,7 +9,7 @@ interface RoleCardProps extends React.PropsWithChildren<{}> {
   role: RecommendedRole;
   onInviteTalent: (talentId: string, roleTitle: string)  => void}
 
-export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
+export const RoleCard: React.FC = ($2) => {
   return (
     <Card className="mb-6 shadow-lg">
       <CardHeader className="pb-3">

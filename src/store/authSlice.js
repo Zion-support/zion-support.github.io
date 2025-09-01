@@ -19,7 +19,7 @@ export const loginUser = createAsyncThunk(
               token: 'mock-jwt-token'
             });
           } else {
-            reject(new Error('Invalid credentials'));
+            Promise.reject(new Error('Invalid credentials'));
           }
         }, 1000);
       });
@@ -54,7 +54,7 @@ export const signupUser = createAsyncThunk(
               token: 'mock-jwt-token'
             });
           } else {
-            reject(new Error('Invalid user data'));
+            Promise.reject(new Error('Invalid user data'));
           }
         }, 1000);
       });

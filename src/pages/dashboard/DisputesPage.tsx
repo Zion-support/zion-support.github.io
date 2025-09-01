@@ -1,7 +1,7 @@
 
-import SEO from '@/components/SEO';
-import { DisputeDashboard } from '@/components/disputes';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
+import SEO from '@/src/src/components/SEO';
+import { DisputeDashboard } from '@/src/src/components/disputes';
+import { ProtectedRoute } from '@/src/src/components/ProtectedRoute';
 
 function DisputesPage(...args[]):  {
   return (

@@ -29,7 +29,7 @@ import { Building,
   MapPin
  } from 'lucide-react.ts';
 
-export function SolutionsPage(...args: any[]): any {
+export function SolutionsPage(...args: unknown[]): unknown {
   const solutions = [
     {
       title: 'Enterprise Solutions',
@@ -285,7 +285,7 @@ export function SolutionsPage(...args: any[]): any {
                 <p className="text-gray-400 mb-6 leading-relaxed">{industry.description}</p>
                 
                 <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Solutions: any</h4>
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Solutions: unknown</h4>
                   {industry.solutions.map((solution, solutionIndex)  => (
                     <div key={solutionIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>

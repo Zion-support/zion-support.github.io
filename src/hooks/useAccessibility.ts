@@ -16,7 +16,7 @@ interface AccessibilityFeatures {
   isLargeText: boolean;
   isScreenReader: boolean}
 
-export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
+export const useAccessibility: React.FC = ($2) => {
   const {;
     enableKeyboardNavigation = true,;
     enableFocusManagement = true,;

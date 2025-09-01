@@ -25,7 +25,7 @@ import { Users,
   Instagram
  } from 'lucide-react.ts';
 
-export function AboutPage(...args: any[]): any {
+export function AboutPage(...args: unknown[]): unknown {
   const values = [
     {
       title: 'Innovation First',
@@ -247,7 +247,7 @@ export function AboutPage(...args: any[]): any {
                 <p className="text-gray-400 mb-6 leading-relaxed">{member.bio}</p>
                 
                 <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Expertise: any</h4>
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Expertise: unknown</h4>
                   {member.expertise.map((skill, skillIndex)  => (
                     <div key={skillIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-cyan-400" />

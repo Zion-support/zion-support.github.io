@@ -321,7 +321,7 @@ import { Shield,
   CloudSleet10
  } from 'lucide-react.ts';
 
-const AIFinancialCompliancePlatform = () => {
+const AIFinancialCompliancePlatform: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,

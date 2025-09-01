@@ -91,7 +91,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     if (!settings.keyboardNavigation) return;
 
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown: React.FC = ($2) => {
       const focusableElements = document.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
       );
@@ -129,7 +129,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
 
   // Enhanced focus management
   useEffect(() => {
-    const handleFocusChange = (event: FocusEvent) => {
+    const handleFocusChange: React.FC = ($2) => {
       const target = event.target as HTMLElement;
       setCurrentFocus(target);
 
@@ -139,7 +139,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
       }
     };
 
-    const handleFocusOut = (event: FocusEvent) => {
+    const handleFocusOut: React.FC = ($2) => {
       const target = event.target as HTMLElement;
       if (settings.focusIndicator) {
         target.style.outline = '';

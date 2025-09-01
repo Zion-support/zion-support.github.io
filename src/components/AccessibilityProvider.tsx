@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react';
 
 interface AccessibilityContextType {
 
@@ -19,7 +18,7 @@ interface AccessibilityContextType {
 
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 
-export const useAccessibility = () => {;
+export const useAccessibility: React.FC = ($2) => {;
   const context = useContext(AccessibilityContext);
   if (!context) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider')}
@@ -84,31 +83,31 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
-  const toggleHighContrast = () => {;
+  const toggleHighContrast: React.FC = ($2) => {;
     const newValue = !highContrast;
     setHighContrast(newValue);
     localStorage.setItem('zion-high-contrast', newValue.toString())};
 
-  const toggleReducedMotion = () => {;
+  const toggleReducedMotion: React.FC = ($2) => {;
     const newValue = !reducedMotion;
     setReducedMotion(newValue);
     localStorage.setItem('zion-reduced-motion', newValue.toString())};
 
-  const increaseFontSize = () => {;
+  const increaseFontSize: React.FC = ($2) => {;
     const newSize = Math.min(fontSize + 2, 24);
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString())};
 
-  const decreaseFontSize = () => {;
+  const decreaseFontSize: React.FC = ($2) => {;
     const newSize = Math.max(fontSize - 2, 12);
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString())};
 
-  const resetFontSize = () => {;
+  const resetFontSize: React.FC = ($2) => {;
     setFontSize(16);
     localStorage.setItem('zion-font-size', '16')};
 
-  const toggleVoiceNavigation = () => {;
+  const toggleVoiceNavigation: React.FC = ($2) => {;
     const newValue = !voiceNavigation;
     setVoiceNavigation(newValue);
     localStorage.setItem('zion-voice-navigation', newValue.toString())};

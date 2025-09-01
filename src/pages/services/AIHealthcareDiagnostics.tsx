@@ -31,7 +31,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
 
-export default function AIHealthcareDiagnostics(...args: any[]): any {
+export default function AIHealthcareDiagnostics(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,

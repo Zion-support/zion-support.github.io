@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Logo } from '@/components/header/Logo';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { UserMenu } from '@/components/header/UserMenu';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { ModeToggle } from '@/components/ModeToggle';
-import { useAuth } from '@/hooks/useAuth';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { useMessaging } from '@/context/MessagingContext';
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-import { slugify } from '@/lib/slugify';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { Logo } from '@/src/src/components/header/Logo';
+import { PointsBadge } from '@/src/src/components/loyalty/PointsBadge';
+import { UserMenu } from '@/src/src/components/header/UserMenu';
+import { LanguageSelector } from '@/src/src/components/header/LanguageSelector';
+import { ModeToggle } from '@/src/src/components/ModeToggle';
+import { useAuth } from '@/src/src/hooks/useAuth';
+import { useIsMobile } from '@/src/src/hooks/use-mobile';
+import { useMessaging } from '@/src/src/context/MessagingContext';
+import { EnhancedSearchInput } from '@/src/src/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/src/src/data/marketplaceData';
+import { slugify } from '@/src/src/lib/slugify';
+import { ResponsiveNavigation } from '@/src/src/components/navigation/ResponsiveNavigation';
+import { MobileMenu } from '@/src/src/components/header/MobileMenu';
+import { MobileBottomNav } from '@/src/src/components/header/MobileBottomNav';
 import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import type { RootState } from '@/store';
+import type { RootState } from '@/src/src/store';
 
       // // // // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
@@ -26,10 +26,10 @@ import type { RootState } from '@/store';
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
 // Theme toggle component
-const ModeToggle = () => {;
+const ModeToggle: React.FC = ($2) => {;
   const [isDark, setIsDark] = useState(false);
 
-  const toggleTheme = () => {;
+  const toggleTheme: React.FC = ($2) => {;
     setIsDark(!isDark);
     // Add theme switching logic here
   };

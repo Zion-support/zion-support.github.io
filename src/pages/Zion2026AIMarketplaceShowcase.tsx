@@ -35,7 +35,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
     });
   }, [searchTerm, selectedCategory]);
 
-  const getCategoryIcon = (category: anystring)  => {;
+  const getCategoryIcon: React.FC = ($2) => {;
     switch (category) {;
       case 'AI Marketplace': return Globe;
       case 'AI Integration': return Zap;
@@ -46,7 +46,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
     }
   };
 
-  const getCategoryColor = (category: anystring)  => {;
+  const getCategoryColor: React.FC = ($2) => {;
     switch (category) {;
       case 'AI Marketplace': return 'from-blue-500 to-cyan-500';
       case 'AI Integration': return 'from-purple-500 to-pink-500';

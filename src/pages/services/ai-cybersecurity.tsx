@@ -1,72 +1,71 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
+import SEO from '../../components/SEO&apos;;
+import { motion } from 'framer-motion&apos;;
 import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Threat Detection',
-      description: 'Advanced machine learning algorithms detect threats in real-time'
+      title: 'AI-Powered Threat Detection&apos;,
+      description: 'Advanced machine learning algorithms detect threats in real-time&apos;
     },
     {
       icon: Shield,
-      title: 'Zero-Day Attack Prevention',
-      description: 'Identify and block unknown threats before they can cause damage'
+      title: 'Zero-Day Attack Prevention&apos;,
+      description: 'Identify and block unknown threats before they can cause damage&apos;
     },
     {
       icon: Lock,
-      title: 'Intelligent Access Control',
-      description: 'AI-driven authentication and authorization systems';
+      title: 'Intelligent Access Control&apos;,
+      description: 'AI-driven authentication and authorization systems&apos;;
     },;
     {;
       icon: Eye,;
-      title: 'Behavioral Analytics',;
-      description: 'Monitor and analyze user behavior for suspicious activity';
+      title: 'Behavioral Analytics&apos;,;
+      description: 'Monitor and analyze user behavior for suspicious activity&apos;;
     };
   ];
 
   const services = [
     {
-      title: 'Threat Intelligence',
-      description: 'Real-time threat intelligence and analysis',
+      title: 'Threat Intelligence&apos;,
+      description: 'Real-time threat intelligence and analysis&apos;,
       icon: '🔍'
     },
     {
-      title: 'Incident Response',
-      description: 'Automated incident detection and response',
+      title: 'Incident Response&apos;,
+      description: 'Automated incident detection and response&apos;,
       icon: '🚨'
     },
     {
-      title: 'Vulnerability Assessment',
-      description: 'AI-powered vulnerability scanning and assessment',
+      title: 'Vulnerability Assessment&apos;,
+      description: 'AI-powered vulnerability scanning and assessment&apos;,
       icon: '🛡️';
     },;
     {;
-      title: 'Security Automation',;
-      description: 'Automate security operations and responses',;
+      title: 'Security Automation&apos;,;
+      description: 'Automate security operations and responses&apos;,;
       icon: '⚡';
     };
   ];
 
   const benefits = [;
-    'Real-time threat detection and response',;
-    'Reduced false positives with AI accuracy',;
-    '24/7 automated security monitoring',;
-    'Predictive threat intelligence',;
-    'Cost-effective security operations',;
-    'Compliance and regulatory support';
+    'Real-time threat detection and response&apos;,;
+    'Reduced false positives with AI accuracy&apos;,;
+    '24/7 automated security monitoring&apos;,;
+    'Predictive threat intelligence&apos;,;
+    'Cost-effective security operations&apos;,;
+    'Compliance and regulatory support&apos;;
   ];
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
       <SEO 
-        title="AI Cybersecurity Services - Zion Tech Group"
+        title="AI Cybersecurity Services - Zion Tech Group&quot;
         description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
       />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="pt-20 pb-16 px-4&quot;>
+        <div className="max-w-7xl mx-auto&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -89,30 +88,30 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center&quot;
 
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 mb-6">
-              <Shield className="w-5 h-5 text-red-400 mr-2" />
-              <span className="text-red-300 font-medium">AI Cybersecurity</span>
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 mb-6&quot;>
+              <Shield className="w-5 h-5 text-red-400 mr-2&quot; />
+              <span className="text-red-300 font-medium&quot;>AI Cybersecurity</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6&quot;>
               AI-Powered
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400&quot;>
                 Cybersecurity
               </span>
             </h1>
 
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8&quot;>
               Protect your business with intelligent cybersecurity that learns, adapts, and evolves.
               Our AI-powered security solutions detect and prevent threats before they can cause harm.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20&quot;>
                 Secure Your Business
               </button>
-              <button className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hover:bg-red-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hover:bg-red-400/10 transition-all duration-200&quot;>
                 Security Assessment
               </button>
             </div>
@@ -121,8 +120,8 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       </section>;
 
       {/* Features Section */}
-      <section className="py-16 px-4">;
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4&quot;>;
+        <div className="max-w-7xl mx-auto&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -145,17 +144,17 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-16&quot;
 
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Advanced Security Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto&quot;>
               Experience next-generation cybersecurity powered by artificial intelligence
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -189,13 +188,13 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 
 
 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 hover:scale-105"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 hover:scale-105&quot;
 
-                <div className="w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-red-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-lg flex items-center justify-center mb-4&quot;>
+                  <feature.icon className="w-6 h-6 text-red-400&quot; />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2&quot;>{feature.title}</h3>
+                <p className="text-gray-300&quot;>{feature.description}</p>
               </motion.div>;
             ))}
           </div>
@@ -203,8 +202,8 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-4 bg-slate-800/30">;
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4 bg-slate-800/30&quot;>;
+        <div className="max-w-7xl mx-auto&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -227,17 +226,17 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-16&quot;
 
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Comprehensive Security Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto&quot;>
               End-to-end cybersecurity protection for your business
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8&quot;>
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -271,13 +270,13 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 
 
 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200&quot;
 
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{service.icon}</div>
+                <div className="flex items-start space-x-4&quot;>
+                  <div className="text-4xl&quot;>{service.icon}</div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
-                    <p className="text-gray-300">{service.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2&quot;>{service.title}</h3>
+                    <p className="text-gray-300&quot;>{service.description}</p>
                   </div>
                 </div>
               </motion.div>;
@@ -287,8 +286,8 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4">;
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4&quot;>;
+        <div className="max-w-7xl mx-auto&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -311,17 +310,17 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-16&quot;
 
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Why Choose AI Cybersecurity?
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto&quot;>
               Stay ahead of evolving threats with intelligent security
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8&quot;>
             <motion.div
               initial = {
   { opacity: 0,
@@ -344,14 +343,14 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 
 }}
               transition={{ duration: 0.6 }}
-              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
+              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8&quot;
 
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
-              <ul className="space-y-4">
+              <h3 className="text-2xl font-semibold text-white mb-6&quot;>Key Benefits</h3>
+              <ul className="space-y-4&quot;>
                 {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
+                  <li key={index} className="flex items-center space-x-3&quot;>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0&quot; />
+                    <span className="text-gray-300&quot;>{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -379,14 +378,14 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 
 }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-8"
+              className="bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-8&quot;
 
-              <h3 className="text-2xl font-semibold text-white mb-6">Get Protected Today</h3>
-              <p className="text-gray-300 mb-6">
-                Don't wait for a security breach. Our AI cybersecurity experts can assess your current
+              <h3 className="text-2xl font-semibold text-white mb-6&quot;>Get Protected Today</h3>
+              <p className="text-gray-300 mb-6&quot;>
+                Don&apos;t wait for a security breach. Our AI cybersecurity experts can assess your current
                 security posture and implement advanced protection measures.
               </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20">
+              <button className="w-full px-6 py-3 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20&quot;>
                 Security Assessment
               </button>
             </motion.div>
@@ -395,8 +394,8 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">;
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-16 px-4&quot;>;
+        <div className="max-w-4xl mx-auto text-center&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -420,17 +419,17 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 }}
             transition={{ duration: 0.6 }}
 
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Ready to Secure Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8&quot;>
               Protect your digital assets with AI-powered cybersecurity that never sleeps
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20&quot;>
                 Start Security Assessment
               </button>
-              <button className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hover:bg-red-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hover:bg-red-400/10 transition-all duration-200&quot;>
                 Contact Security Team;
               </button>;
             </div>;

@@ -82,8 +82,8 @@ import {
   Network as NetworkIcon,
   Leaf as LeafIcon
 } from 'lucide-react';
-import SEO from "@/components/SEO";
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
+import SEO from '@/src/src/components/SEO';
+import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '@/src/src/data/ultimateInnovativeServices2026';
 
 export default function ComprehensiveServicesOverview2026(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -214,7 +214,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
     ? serviceCategories
     : serviceCategories.filter(cat => cat.id === selectedCategory);
 
-  const toggleCategoryExpansion = (categoryId: string) => {;
+  const toggleCategoryExpansion: React.FC = ($2) => {;
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
 

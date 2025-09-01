@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Heart, 
@@ -322,7 +321,7 @@ import {
   CloudSleet10
 } from 'lucide-react';
 
-const AIHealthcareAnalyticsPlatform = () => {
+const AIHealthcareAnalyticsPlatform: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,

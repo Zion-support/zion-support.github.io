@@ -11,7 +11,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     if (!ctx) return;
 
     // Set canvas size
-    const resizeCanvas = () => {;
+    const resizeCanvas: React.FC = ($2) => {;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -61,7 +61,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     }> = [];
 
     // Create particles
-    const createParticle = () => {;
+    const createParticle: React.FC = ($2) => {;
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
       const angle = Math.random() * Math.PI * 2;
@@ -80,7 +80,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     };
 
     // Update and draw particles
-    const animate = () => {;
+    const animate: React.FC = ($2) => {;
       time += 0.01;
 
       // Clear canvas with fade effect

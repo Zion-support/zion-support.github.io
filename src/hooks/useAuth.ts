@@ -25,7 +25,7 @@ export function useAuth() {
 
   useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-    const checkAuth = () => {
+    const checkAuth: React.FC = ($2) => {
       const storedUser = localStorage.getItem('zion_user');
       const token = localStorage.getItem('authToken');
 
@@ -80,7 +80,7 @@ export function useAuth() {
     return { success: true, user: mockUser };
   };
 
-  const logout = () => {
+  const logout: React.FC = ($2) => {
     setAuthState({
       user: null,
       isAuthenticated: false,
@@ -115,7 +115,7 @@ export function useAuth() {
     return { success: true, user: mockUser };
   };
 
-  const updateProfile = (updates: Partial<User>) => {
+  const updateProfile: React.FC = ($2) => {
     if (authState.user) {
       const updatedUser = { ...authState.user, ...updates };
       setAuthState(prev => ({

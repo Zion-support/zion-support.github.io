@@ -1,5 +1,4 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '@/src/src/lib/utils';
 
 interface GradientHeadingProps {
   children: React.ReactNode;

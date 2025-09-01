@@ -12,7 +12,7 @@ import { FileText,
   Eye
  } from 'lucide-react';
 
-export function BlogPage(...args: any[]): any {
+export function BlogPage(...args: unknown[]): unknown {
   const blogPosts = [
     {
       id: 1,

@@ -36,7 +36,7 @@ import { Shield,
   ShieldCheck
  } from 'lucide-react.ts';
 
-export default function AIAutonomousThreatIntelligence(...args: any[]): any {
+export default function AIAutonomousThreatIntelligence(...args: unknown[]): unknown {
   const features = [
     {
       icon: Eye,

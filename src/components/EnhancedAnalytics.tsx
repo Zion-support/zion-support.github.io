@@ -86,7 +86,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       document.head.appendChild(script);
 
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
+      function gtag(...args: unknown[]) {
         window.dataLayer.push(args);
       }
       gtag('js', new Date());
@@ -129,7 +129,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   useEffect(() => {
     if (!enabled) return;
 
-    const handleRouteChange = () => {
+    const handleRouteChange: React.FC = ($2) => {
       const newPage = window.location.pathname;
       if (newPage !== currentPage) {
         // Track page view
@@ -166,7 +166,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   useEffect(() => {
     if (!enabled) return;
 
-    const trackInteraction = () => {
+    const trackInteraction: React.FC = ($2) => {
       setUserInteractions(prev => prev + 1);
       trackEvent('user_interaction', {
         interaction_type: 'click',
@@ -175,7 +175,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       });
     };
 
-    const trackScroll = () => {
+    const trackScroll: React.FC = ($2) => {
       const scrollTop = window.pageYOffset;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = Math.round((scrollTop / docHeight) * 100);
@@ -196,7 +196,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       }
     };
 
-    const trackTimeOnPage = () => {
+    const trackTimeOnPage: React.FC = ($2) => {
       setTimeOnPage(prev => prev + 1);
     };
 
@@ -220,7 +220,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   useEffect(() => {
     if (!enabled) return;
 
-    const trackPerformance = () => {
+    const trackPerformance: React.FC = ($2) => {
       if ('performance' in window) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paint = performance.getEntriesByType('paint');
@@ -251,7 +251,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   useEffect(() => {
     if (!enabled) return;
 
-    const handleBeforeUnload = () => {
+    const handleBeforeUnload: React.FC = ($2) => {
       const sessionDuration = Date.now() - sessionStart;
       
       trackEvent('session_end', {

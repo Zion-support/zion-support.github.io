@@ -30,7 +30,7 @@ export default function Layout(...args[]):  {
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
   const location = useLocation();
   const isActive = (href: string) => location.pathname === href;
-  const toggleSidebarDropdown = (label: string) => {;
+  const toggleSidebarDropdown: React.FC = ($2) => {;
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
 

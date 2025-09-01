@@ -1,4 +1,4 @@
-import { ProductListing  } from '@/types/listings';
+import { ProductListing  } from '@/src/src/types/listings';
 
 // Cutting Edge IT Infrastructure Services 2030 - Zion Tech Group
 // Advanced infrastructure solutions for modern enterprises

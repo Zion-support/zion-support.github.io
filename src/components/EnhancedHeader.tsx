@@ -74,7 +74,7 @@ export function EnhancedHeader() {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll: React.FC = ($2) => {
       setScrolled(window.scrollY > 10);
     };
 

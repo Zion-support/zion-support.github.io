@@ -149,12 +149,12 @@ showHeader:  true,;
   };
 
   // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {;
+  const handleSuggestionClick: React.FC = ($2) => {;
     setInputValue(suggestion);
   };
 
   // Rate response
-  const rateResponse = (messageId: string, rating: 'positive' | 'negative') => {
+  const rateResponse: React.FC = ($2) => {
     setMessages(prev => prev.map(msg =>
       msg.id === messageId
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
@@ -163,7 +163,7 @@ showHeader:  true,;
   };
 
   // Clear chat
-  const clearChat = () => {;
+  const clearChat: React.FC = ($2) => {;
     setMessages([]);
     setChatHistory([])};
 

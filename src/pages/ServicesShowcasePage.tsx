@@ -126,23 +126,23 @@ export function ServicesShowcasePage() {
     }
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon: React.FC = ($2) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor: React.FC = ($2) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
   };
 
-  const getPriceRange = (price: number) => {
+  const getPriceRange: React.FC = ($2) => {
     if (price < 1000) return 'low';
     if (price <= 3000) return 'medium';
     return 'high';
   };
 
-  const getPriceColor = (price: number) => {
+  const getPriceColor: React.FC = ($2) => {
     const range = getPriceRange(price);
     switch (range) {
       case 'low': return 'text-green-400';
@@ -152,7 +152,7 @@ export function ServicesShowcasePage() {
     }
   };
 
-  const getInnovationColor = (level: string) => {
+  const getInnovationColor: React.FC = ($2) => {
     switch (level) {
       case 'Revolutionary': return 'text-purple-400';
       case 'Cutting-edge': return 'text-blue-400';

@@ -9,8 +9,8 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const getFilteredServices = () => {;
-    let services: any[] = [];
+  const getFilteredServices: React.FC = ($2) => {;
+    let services: unknown[] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -36,8 +36,8 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
 ;
     return services};
 
-  const getCategories = () => {;
-    let services: any[] = [];
+  const getCategories: React.FC = ($2) => {;
+    let services: unknown[] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -53,7 +53,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
     const categories = [...new Set(services.map(service => service.category))];
     return categories};
 
-  const renderServiceCard = (service)  => {
+  const renderServiceCard: React.FC = ($2) => {
     if (activeTab === 'microsaas') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">

@@ -142,14 +142,14 @@ const Search: React.FC = () => {
     setLoading(false);
   };
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch: React.FC = ($2) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       performSearch();
     }
   };
 
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon: React.FC = ($2) => {
     switch (type) {
       case 'services':
         return <Server className="w-5 h-5 text-blue-400" />;
@@ -162,7 +162,7 @@ const Search: React.FC = () => {
     }
   };
 
-  const getTypeLabel = (type: string) => {
+  const getTypeLabel: React.FC = ($2) => {
     switch (type) {
       case 'services':
         return 'Service';

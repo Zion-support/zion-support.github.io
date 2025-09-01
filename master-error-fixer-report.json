@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-09-01T06:31:07.242Z",
+  "totalFixes": 0,
+  "individualResults": {
+    "comprehensive": {
+      "fixes": 0,
+      "status": "failed",
+      "error": "Command failed: node \"/workspace/scripts/automation/temp-error-fixer.js\"\nScript error: require is not defined\n"
+    },
+    "typescript": {
+      "fixes": 0,
+      "status": "failed",
+      "error": "Command failed: node \"/workspace/scripts/automation/temp-error-fixer.js\"\nScript error: require is not defined\n"
+    },
+    "jsx": {
+      "fixes": 0,
+      "status": "failed",
+      "error": "Command failed: node \"/workspace/scripts/automation/temp-error-fixer.js\"\nScript error: require is not defined\n"
+    },
+    "console": {
+      "fixes": 0,
+      "status": "failed",
+      "error": "Command failed: node \"/workspace/scripts/automation/temp-error-fixer.js\"\nScript error: require is not defined\n"
+    },
+    "validation": {
+      "linting": {
+        "status": "failed",
+        "errors": 0,
+        "warnings": 0
+      },
+      "typescript": {
+        "status": "failed",
+        "errors": 0
+      },
+      "build": {
+        "status": "failed",
+        "success": false
+      }
+    }
+  },
+  "summary": "Master error fixer completed",
+  "status": "completed"
+}

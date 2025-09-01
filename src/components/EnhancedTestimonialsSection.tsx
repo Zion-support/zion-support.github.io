@@ -100,11 +100,11 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
     return () => clearInterval(interval)}, [isAutoPlaying, testimonials.length]);
 
-  const nextTestimonial = () => {;
+  const nextTestimonial: React.FC = ($2) => {;
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     setIsAutoPlaying(false)};
 
-  const prevTestimonial = () => {;
+  const prevTestimonial: React.FC = ($2) => {;
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
     setIsAutoPlaying(false)};
 

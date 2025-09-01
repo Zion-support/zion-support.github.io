@@ -24,7 +24,7 @@ interface NotificationContextType {
 
 const NotificationContext = createContext<NotificationContextType | null>(null);
 
-export const useNotifications = () => {;
+export const useNotifications: React.FC = ($2) => {;
   const context = useContext(NotificationContext);
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')}
@@ -40,11 +40,11 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
         removeNotification(id)}, notification.duration || 5000)}
   };
 
-  const removeNotification = (id: string) => {;
+  const removeNotification: React.FC = ($2) => {;
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
 
-  const clearAll = () => {;
+  const clearAll: React.FC = ($2) => {;
     setNotifications([]);
   };
 
@@ -122,7 +122,7 @@ const NotificationContainer: React.FC = () => {;
 
 }}
           onClick={clearAll}
-          className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover:bg-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2"
+          className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover: bg-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2"
         >
           <Bell className="w-4 h-4" />;
           <span>Clear All</span>;
@@ -166,7 +166,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
           {notification.action && (
             <button
               onClick={notification.action.onClick}
-              className="mt-2 text-xs font-medium text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-200"
+              className="mt-2 text-xs font-medium text-zion-cyan hover: text-zion-cyan/80 transition-colors duration-200"
 
               {notification.action.label}
             </button>
@@ -175,7 +175,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 
         <button
           onClick={() => onRemove(notification.id)}
-          className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200"
+          className="flex-shrink-0 text-gray-400 hover: text-white transition-colors duration-200"
         >;
           <X className="w-4 h-4" />;
         </button>;

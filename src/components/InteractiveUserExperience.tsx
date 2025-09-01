@@ -177,7 +177,7 @@ const InteractiveUserExperience: React.FC = () => {
     );
   }, []);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon: React.FC = ($2) => {
     switch (category) {
       case 'appearance': return <Palette className="w-4 h-4" />;
       case 'accessibility': return <Accessibility className="w-4 h-4" />;
@@ -187,7 +187,7 @@ const InteractiveUserExperience: React.FC = () => {
     }
   };
 
-  const getActivityIcon = (category: string) => {
+  const getActivityIcon: React.FC = ($2) => {
     switch (category) {
       case 'navigation': return <MousePointer className="w-4 h-4" />;
       case 'interaction': return <User className="w-4 h-4" />;
@@ -197,7 +197,7 @@ const InteractiveUserExperience: React.FC = () => {
     }
   };
 
-  const getImpactColor = (impact: string) => {
+  const getImpactColor: React.FC = ($2) => {
     switch (impact) {
       case 'high': return 'bg-red-500';
       case 'medium': return 'bg-yellow-500';
@@ -240,7 +240,7 @@ const InteractiveUserExperience: React.FC = () => {
 
         {/* Preferences Tab */}
         <TabsContent value="preferences" className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             {preferences.map((pref) => (
               <Card key={pref.id}>
                 <CardHeader>
@@ -331,7 +331,7 @@ const InteractiveUserExperience: React.FC = () => {
 
         {/* Accessibility Tab */}
         <TabsContent value="accessibility" className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             {accessibilityFeatures.map((feature) => (
               <Card key={feature.id}>
                 <CardHeader>

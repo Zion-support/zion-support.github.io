@@ -18,7 +18,7 @@ export function Accordion({
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
   );
 
-  const handleToggle = (value: string)  => {
+  const handleToggle: React.FC = ($2) => {
     if (type === 'single') {
       setOpenItems(openItems.includes(value) ? [] : [value]);
     } else {
@@ -48,7 +48,7 @@ export function Accordion({
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];
   );
 
-  const handleToggle = (value: string) => {;
+  const handleToggle: React.FC = ($2) => {;
     if (type === 'single') {;
       setOpenItems(openItems.includes(value) ? [] : [value]);
     } else {

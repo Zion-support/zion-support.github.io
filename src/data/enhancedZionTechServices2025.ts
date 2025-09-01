@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from '@/src/src/types/listings';
 
 // Enhanced Zion Tech Group Services 2025 - Real Micro SAAS, IT & AI Solutions
 export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
@@ -784,28 +784,28 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
 ];
 
 // Helper functions
-export const getEnhancedServiceById = (id: string) => {;
+export const getEnhancedServiceById: React.FC = ($2) => {;
   return ENHANCED_ZION_TECH_SERVICES_2025.find(service => service.id === id);
 };
 
-export const getEnhancedServicesByCategory = (category: string) => {;
+export const getEnhancedServicesByCategory: React.FC = ($2) => {;
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.category === category);
 };
 
-export const getEnhancedServiceCategories = () => {;
+export const getEnhancedServiceCategories: React.FC = ($2) => {;
   return [...new Set(ENHANCED_ZION_TECH_SERVICES_2025.map(service => service.category))];
 };
 
-export const getFeaturedEnhancedServices = () => {;
+export const getFeaturedEnhancedServices: React.FC = ($2) => {;
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.featured);
 };
 
-export const getEnhancedServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
+export const getEnhancedServicesByPriceRange: React.FC = ($2) => {;
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => ;
     service.price >= minPrice && service.price <= maxPrice;
   );
 };
 
-export const getEnhancedServicesByAIScore = (minScore: number) => {;
+export const getEnhancedServicesByAIScore: React.FC = ($2) => {;
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.aiScore >= minScore);
 };}}}}}}}}}}}}}}}}

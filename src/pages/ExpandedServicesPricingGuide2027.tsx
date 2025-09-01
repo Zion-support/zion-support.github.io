@@ -60,11 +60,11 @@ import {
   Info,
   AlertTriangle,
   Zap
-import { SEO } from '@/components/SEO';
+import { SEO } from '@/src/src/components/SEO';
 import {
   ALL_EXPANDED_SERVICES_PRICING,
   type ExpandedServicePricing
-} from '@/data/expandedServicesPricing2027';
+} from '@/src/src/data/expandedServicesPricing2027';
 
       pricing = pricing.filter(p => p.category === selectedCategory)}
     if (searchQuery) {
@@ -75,7 +75,7 @@ import {
       )};
     setFilteredPricing(pricing)}, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon: React.FC = ($2) => {
     switch (category) {
       case 'Cybersecurity':;
       pricing = pricing.filter(p => ;
@@ -87,7 +87,7 @@ import {
     setFilteredPricing(pricing);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon: React.FC = ($2) => {;
     switch (category) {;
       case 'Cybersecurity':;
         return Shield;

@@ -52,7 +52,7 @@ import { Wifi,
   Brain
  } from 'lucide-react.ts';
 
-export default function IoTEdgeComputing(...args: any[]): any {
+export default function IoTEdgeComputing(...args: unknown[]): unknown {
   const features = [
     {
       icon: Wifi,

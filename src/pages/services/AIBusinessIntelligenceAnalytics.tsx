@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 import { Brain, 
   BarChart3, 
   TrendingUp, 
@@ -33,7 +33,7 @@ import { Brain,
   Percent
  } from 'lucide-react.ts';
 
-const AIBusinessIntelligenceAnalytics = () => {
+const AIBusinessIntelligenceAnalytics: React.FC = ($2) => {
   const features = [
     "AI-Powered Predictive Analytics",
     "Real-time Data Visualization",

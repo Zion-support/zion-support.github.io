@@ -98,7 +98,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 		}, 5000);
 		return () => clearInterval(interval);
 	}, [isPlaying]);
-	const getStatusColor = (status: string) => {;
+	const getStatusColor: React.FC = ($2) => {;
 		switch (status) {;
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';

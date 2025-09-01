@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/src/src/components/ui/card';
+import { Badge } from '@/src/src/components/ui/badge';
+import { Button } from '@/src/src/components/ui/button';
 import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";
 import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
 import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap } from "lucide-react";
@@ -237,7 +237,7 @@ export default function ComprehensivePricing() {
 
                   {/* Key Features */}
                   <div className="space-y-2 mb-4">
-                    <h4 className="font-semibold text-zion-slate-dark text-sm">Key Features: any</h4>
+                    <h4 className="font-semibold text-zion-slate-dark text-sm">Key Features: unknown</h4>
                     {service.features.slice(0, 3).map((feature, index)  => (
                       <div key={index} className="flex items-center text-sm text-zion-slate-dark">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"/>

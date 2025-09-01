@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import {
   Server,
@@ -14,7 +13,7 @@ import {
   Check
 } from 'lucide-react';
 
-const ITInfrastructure = () => {
+const ITInfrastructure: React.FC = ($2) => {
   const services = [
     {
       icon: <Server className="w-8 h-8" />,

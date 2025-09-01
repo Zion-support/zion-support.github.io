@@ -220,7 +220,7 @@ import {
   Omega
  } from 'lucide-react';
 
-    const handleScroll = () => {;
+    const handleScroll: React.FC = ($2) => {;
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
@@ -233,7 +233,7 @@ import {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
   };
 
-  const toggleDropdown = (dropdown: string) => {;
+  const toggleDropdown: React.FC = ($2) => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 

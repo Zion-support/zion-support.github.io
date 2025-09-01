@@ -369,14 +369,14 @@ export default function MarketplaceProducts() {
     }
   });
 
-  const formatPrice = (price: number, currency: string) => {
+  const formatPrice: React.FC = ($2) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: currency
     }).format(price);
   };
 
-  const renderStars = (rating: number) => {
+  const renderStars: React.FC = ($2) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}

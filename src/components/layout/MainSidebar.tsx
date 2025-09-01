@@ -60,7 +60,7 @@ export function MainSidebar() {
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
   const location = useLocation();
 
-  const toggleSection = (section: string) => {
+  const toggleSection: React.FC = ($2) => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -278,7 +278,7 @@ export function MainSidebar() {
     }
   ];
 
-  const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
+  const renderSidebarItem: React.FC = ($2) => {
     const isActive = location.pathname === item.href;
     const hasChildren = item.children && item.children.length > 0;
     const isExpanded = expandedSections.includes(item.name.toLowerCase());

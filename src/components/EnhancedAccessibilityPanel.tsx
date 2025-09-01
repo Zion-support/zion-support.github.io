@@ -135,7 +135,7 @@ export function EnhancedAccessibilityPanel() {
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown: React.FC = ($2) => {
       // Tab key navigation
       if (event.key === 'Tab') {
         setKeyboardMode(true);
@@ -150,18 +150,16 @@ export function EnhancedAccessibilityPanel() {
       // Arrow keys for navigation
       if (keyboardMode) {
         const focusableElements = document.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          'button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])'
         );
         const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
 
         switch (event.key) {
-          case 'ArrowDown':
-            event.preventDefault();
+          case 'ArrowDown': event.preventDefault();
             const nextIndex = (currentIndex + 1) % focusableElements.length;
             (focusableElements[nextIndex] as HTMLElement)?.focus();
             break;
-          case 'ArrowUp':
-            event.preventDefault();
+          case 'ArrowUp': event.preventDefault();
             const prevIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
             (focusableElements[prevIndex] as HTMLElement)?.focus();
             break;
@@ -169,7 +167,7 @@ export function EnhancedAccessibilityPanel() {
       }
     };
 
-    const handleMouseDown = () => {
+    const handleMouseDown: React.FC = ($2) => {
       setKeyboardMode(false);
       document.body.classList.remove('keyboard-navigation');
     };
@@ -304,7 +302,7 @@ export function EnhancedAccessibilityPanel() {
   }, []);
 
   // Get issue icon
-  const getIssueIcon = (type: string) => {
+  const getIssueIcon: React.FC = ($2) => {
     switch (type) {
       case 'error': return <XCircle className="w-4 h-4 text-red-500" />;
       case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
@@ -314,12 +312,12 @@ export function EnhancedAccessibilityPanel() {
   };
 
   // Get severity color
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor: React.FC = ($2) => {
     switch (severity) {
-      case 'high': return 'border-red-500 bg-red-50 dark:bg-red-900/20';
-      case 'medium': return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
-      case 'low': return 'border-blue-500 bg-blue-50 dark:bg-blue-900/20';
-      default: return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20';
+      case 'high': return 'border-red-500 bg-red-50 dark: bg-red-900/20';
+      case 'medium': return 'border-yellow-500 bg-yellow-50 dark: bg-yellow-900/20';
+      case 'low': return 'border-blue-500 bg-blue-50 dark: bg-blue-900/20';
+      default: return 'border-gray-500 bg-gray-50 dark: bg-gray-900/20';
     }
   };
 
@@ -327,7 +325,7 @@ export function EnhancedAccessibilityPanel() {
     <>
       {/* Floating Action Button */}
       <motion.button
-        className="fixed bottom-6 left-6 z-50 bg-zion-blue hover:bg-zion-blue-dark text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        className="fixed bottom-6 left-6 z-50 bg-zion-blue hover: bg-zion-blue-dark text-white p-3 rounded-full shadow-lg hover: shadow-xl transition-all duration-300"
         onClick={() => setIsVisible(!isVisible)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -344,7 +342,7 @@ export function EnhancedAccessibilityPanel() {
             initial={{ opacity: 0, x: -300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -300 }}
-            className="fixed top-0 left-0 h-full w-96 bg-white dark:bg-gray-900 shadow-2xl z-40 overflow-y-auto"
+            className="fixed top-0 left-0 h-full w-96 bg-white dark: bg-gray-900 shadow-2xl z-40 overflow-y-auto"
             role="dialog"
             aria-label="Accessibility settings and tools"
           >
@@ -353,21 +351,21 @@ export function EnhancedAccessibilityPanel() {
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-2">
                   <Accessibility className="w-6 h-6 text-zion-blue" />
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <h2 className="text-xl font-bold text-gray-900 dark: text-white">
                     Accessibility
                   </h2>
                 </div>
                 <div className="flex items-center space-x-2">
                   <button
                     onClick={() => setIsExpanded(!isExpanded)}
-                    className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                    className="p-1 text-gray-500 hover: text-gray-700 dark: text-gray-400 dark: hover: text-gray-200"
                     aria-label={isExpanded ? 'Collapse panel' : 'Expand panel'}
                   >
                     {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                   </button>
                   <button
                     onClick={() => setIsVisible(false)}
-                    className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                    className="p-1 text-gray-500 hover: text-gray-700 dark: text-gray-400 dark: hover: text-gray-200"
                     aria-label="Close accessibility panel"
                   >
                     <X className="w-5 h-5" />
@@ -377,7 +375,7 @@ export function EnhancedAccessibilityPanel() {
 
               {/* Quick Actions */}
               <div className="mb-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: text-white">
                   Quick Actions
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
@@ -386,7 +384,7 @@ export function EnhancedAccessibilityPanel() {
                     className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${
                       settings.highContrast 
                         ? 'border-zion-blue bg-zion-blue text-white' 
-                        : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'
+                        : 'border-gray-300 dark: border-gray-600 text-gray-700 dark: text-gray-300'
                     }`}
                     aria-pressed={settings.highContrast}
                   >
@@ -399,7 +397,7 @@ export function EnhancedAccessibilityPanel() {
                     className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${
                       settings.largeText 
                         ? 'border-zion-blue bg-zion-blue text-white' 
-                        : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'
+                        : 'border-gray-300 dark: border-gray-600 text-gray-700 dark: text-gray-300'
                     }`}
                     aria-pressed={settings.largeText}
                   >
@@ -412,7 +410,7 @@ export function EnhancedAccessibilityPanel() {
                     className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${
                       settings.reducedMotion 
                         ? 'border-zion-blue bg-zion-blue text-white' 
-                        : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'
+                        : 'border-gray-300 dark: border-gray-600 text-gray-700 dark: text-gray-300'
                     }`}
                     aria-pressed={settings.reducedMotion}
                   >
@@ -425,7 +423,7 @@ export function EnhancedAccessibilityPanel() {
                     className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${
                       settings.focusIndicator 
                         ? 'border-zion-blue bg-zion-blue text-white' 
-                        : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'
+                        : 'border-gray-300 dark: border-gray-600 text-gray-700 dark: text-gray-300'
                     }`}
                     aria-pressed={settings.focusIndicator}
                   >
@@ -437,12 +435,12 @@ export function EnhancedAccessibilityPanel() {
 
               {/* Typography Controls */}
               <div className="mb-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: text-white">
                   Typography
                 </h3>
                 <div className="space-y-3">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    <label className="block text-sm font-medium text-gray-700 dark: text-gray-300 mb-1">
                       Font Size: {settings.fontSize}px
                     </label>
                     <input
@@ -456,7 +454,7 @@ export function EnhancedAccessibilityPanel() {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    <label className="block text-sm font-medium text-gray-700 dark: text-gray-300 mb-1">
                       Line Height: {settings.lineHeight}
                     </label>
                     <input
@@ -474,7 +472,7 @@ export function EnhancedAccessibilityPanel() {
 
               {/* Color Blindness Simulation */}
               <div className="mb-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: text-white">
                   Color Vision
                 </h3>
                 <div className="space-y-2">
@@ -491,9 +489,9 @@ export function EnhancedAccessibilityPanel() {
                         value={option.value}
                         checked={settings.colorBlindness === option.value}
                         onChange={(e) => applySettings({ colorBlindness: e.target.value as any })}
-                        className="text-zion-blue focus:ring-zion-blue"
+                        className="text-zion-blue focus: ring-zion-blue"
                       />
-                      <span className="text-sm text-gray-700 dark:text-gray-300">{option.label}</span>
+                      <span className="text-sm text-gray-700 dark: text-gray-300">{option.label}</span>
                     </label>
                   ))}
                 </div>
@@ -502,13 +500,13 @@ export function EnhancedAccessibilityPanel() {
               {/* Accessibility Audit */}
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  <h3 className="text-lg font-semibold text-gray-900 dark: text-white">
                     Accessibility Audit
                   </h3>
                   <button
                     onClick={runAccessibilityAudit}
                     disabled={isScanning}
-                    className="flex items-center space-x-2 px-3 py-1 bg-zion-blue hover:bg-zion-blue-dark text-white text-sm rounded-lg transition-colors disabled:opacity-50"
+                    className="flex items-center space-x-2 px-3 py-1 bg-zion-blue hover: bg-zion-blue-dark text-white text-sm rounded-lg transition-colors disabled: opacity-50"
                   >
                     {isScanning ? (
                       <>
@@ -534,14 +532,14 @@ export function EnhancedAccessibilityPanel() {
                         <div className="flex items-start space-x-2">
                           {getIssueIcon(issue.type)}
                           <div className="flex-1 min-w-0">
-                            <p className="text-sm font-medium text-gray-900 dark:text-white">
+                            <p className="text-sm font-medium text-gray-900 dark: text-white">
                               {issue.message}
                             </p>
-                            <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                            <p className="text-xs text-gray-600 dark: text-gray-400 mt-1">
                               {issue.recommendation}
                             </p>
                             {issue.element && (
-                              <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                              <p className="text-xs text-gray-500 dark: text-gray-500 mt-1">
                                 Element: {issue.element}
                               </p>
                             )}
@@ -555,10 +553,10 @@ export function EnhancedAccessibilityPanel() {
 
               {/* Keyboard Navigation Info */}
               <div className="mb-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: text-white">
                   Keyboard Navigation
                 </h3>
-                <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <div className="space-y-2 text-sm text-gray-600 dark: text-gray-400">
                   <p>• Use Tab to navigate between interactive elements</p>
                   <p>• Use Arrow keys to navigate within components</p>
                   <p>• Press Enter or Space to activate buttons</p>
@@ -584,7 +582,7 @@ export function EnhancedAccessibilityPanel() {
                   setSettings(defaultSettings);
                   applySettings(defaultSettings);
                 }}
-                className="w-full flex items-center justify-center space-x-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors"
+                className="w-full flex items-center justify-center space-x-2 bg-gray-100 hover: bg-gray-200 dark: bg-gray-800 dark: hover: bg-gray-700 text-gray-700 dark: text-gray-300 px-4 py-2 rounded-lg transition-colors"
               >
                 <RotateCcw className="w-4 h-4" />
                 <span>Reset to Defaults</span>

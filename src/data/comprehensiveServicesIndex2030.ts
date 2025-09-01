@@ -1,4 +1,4 @@
-import { ProductListing  } from '@/types/listings';
+import { ProductListing  } from '@/src/src/types/listings';
 import { REVOLUTIONARY_SERVICES_2030  } from "./revolutionaryServices2030";
 
 // Comprehensive Services Index 2030 - Zion Tech Group

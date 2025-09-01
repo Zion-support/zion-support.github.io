@@ -185,7 +185,7 @@ export const FuturisticNavigation: React.FC = () => {;
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   useEffect(() => {
-    const handleScroll = () => {;
+    const handleScroll: React.FC = ($2) => {;
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
@@ -193,16 +193,16 @@ export const FuturisticNavigation: React.FC = () => {;
   useEffect(() => {
     setActiveDropdown(null);
   }, [location.pathname]);
-  const handleSearch = (e: React.FormEvent) => {;
+  const handleSearch: React.FC = ($2) => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
 
   };
-  const toggleDropdown = (dropdown: string) => {;
+  const toggleDropdown: React.FC = ($2) => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
-  const toggleDropdown = (dropdown: string)  => {;
+  const toggleDropdown: React.FC = ($2) => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
   // Enhanced service categories with better organization
   const serviceCategories = [

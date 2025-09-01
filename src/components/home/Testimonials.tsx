@@ -13,15 +13,15 @@ interface Testimonial {
   avatar: string;
   industry: string}
 
-  const nextTestimonial = () => {;
+  const nextTestimonial: React.FC = ($2) => {;
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {;
+  const prevTestimonial: React.FC = ($2) => {;
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: number) => {;
+  const goToTestimonial: React.FC = ($2) => {;
     setCurrentIndex(index);
   };
 

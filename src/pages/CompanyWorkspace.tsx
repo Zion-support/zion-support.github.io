@@ -1,13 +1,13 @@
 import React from 'react.ts';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { CompDashboard  } from '@/components/enterprise/workspace/CompDashboard';
-import { useAuth  } from '@/hooks/useAuth';
+import { Header  } from '@/src/src/components/Header';
+import { Footer  } from '@/src/src/components/Footer';
+import { CompDashboard  } from '@/src/src/components/enterprise/workspace/CompDashboard';
+import { useAuth  } from '@/src/src/hooks/useAuth';
 import { Navigate, useParams  } from 'react-router-dom.ts';
 import SEOHead from "../components/SEOHead.jsx";
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { useCompWorkspace  } from '@/hooks/useCompWorkspace';
-import { useWhitelabel  } from '@/context/WhitelabelContext';
+import { ProtectedRoute  } from '@/src/src/components/ProtectedRoute';
+import { useCompWorkspace  } from '@/src/src/hooks/useCompWorkspace';
+import { useWhitelabel  } from '@/src/src/context/WhitelabelContext';
 export default function CompWorkspace(...args[]):  {
     const { compSlug } = useParams();
     const { user } = useAuth();

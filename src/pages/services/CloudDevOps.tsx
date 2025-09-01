@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Cloud, 
@@ -41,7 +40,7 @@ import {
   Lock
 } from 'lucide-react';
 
-const CloudDevOps = () => {
+const CloudDevOps: React.FC = ($2) => {
   const features = [
     {
       icon: Cloud,

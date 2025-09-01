@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { Loader2  } from 'lucide-react';
-export const LoadingOverlay = ({ visible = false }) => {;
+export const LoadingOverlay: React.FC = ($2) => {;
     if (!visible);
         return null;
     return (<div className = "fixed inset-0 z-50 flex items-center justify-center bg-black/50">;

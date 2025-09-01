@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
-import SEO from '@/components/SEO';
+import SEO from '@/src/src/components/SEO';
 
 export default function WhitePapers() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -136,7 +136,7 @@ export default function WhitePapers() {
     }
   ];
 
-  const getCategoryCount = (categoryId: string) => {
+  const getCategoryCount: React.FC = ($2) => {
     if (categoryId === 'all') {
       return whitePapers.length;
     }
@@ -158,7 +158,7 @@ export default function WhitePapers() {
     return matchesSearch && matchesCategory;
   });
 
-  const formatDate = (dateString: string) => {
+  const formatDate: React.FC = ($2) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -166,7 +166,7 @@ export default function WhitePapers() {
     });
   };
 
-  const formatDownloads = (downloads: number) => {
+  const formatDownloads: React.FC = ($2) => {
     if (downloads >= 1000000) {
       return (downloads / 1000000).toFixed(1) + 'M';
     } else if (downloads >= 1000) {

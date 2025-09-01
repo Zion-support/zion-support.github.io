@@ -1,30 +1,30 @@
 
 import { Route, Routes  } from 'react-router-dom.ts';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import Dashboard from "@/pages/Dashboard";
-import ClientDashboard from "@/pages/ClientDashboard";
-import TalentDashboard from "@/pages/TalentDashboard";
-import CreatorDashboard from "@/pages/CreatorDashboard";
-import Analytics from "@/pages/Analytics";
-import ProjectMilestones from "@/pages/ProjectMilestones";
-import ProjectDetails from "@/pages/ProjectDetails";
-import ProjectRoom from "@/pages/ProjectRoom";
+import { ProtectedRoute  } from '@/src/src/components/ProtectedRoute';
+import Dashboard from '@/src/src/pages/Dashboard';
+import ClientDashboard from '@/src/src/pages/ClientDashboard';
+import TalentDashboard from '@/src/src/pages/TalentDashboard';
+import CreatorDashboard from '@/src/src/pages/CreatorDashboard';
+import Analytics from '@/src/src/pages/Analytics';
+import ProjectMilestones from '@/src/src/pages/ProjectMilestones';
+import ProjectDetails from '@/src/src/pages/ProjectDetails';
+import ProjectRoom from '@/src/src/pages/ProjectRoom';
 // MessagingInbox import removed - page not found
-import Payments from "@/pages/Payments";
-import Interviews from "@/pages/Interviews";
-import Notifications from "@/pages/Notifications";
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
-import HiringTracker from "@/pages/HiringTracker";
-import PortfolioBuilder from "@/pages/PortfolioBuilder";
+import Payments from '@/src/src/pages/Payments';
+import Interviews from '@/src/src/pages/Interviews';
+import Notifications from '@/src/src/pages/Notifications';
+import ApplicationStatusTracker from '@/src/src/pages/ApplicationStatusTracker';
+import HiringTracker from '@/src/src/pages/HiringTracker';
+import PortfolioBuilder from '@/src/src/pages/PortfolioBuilder';
 // Referrals import removed - page not found
-import DeveloperPortal from "@/pages/DeveloperPortal";
+import DeveloperPortal from '@/src/src/pages/DeveloperPortal';
 // WalletPage import removed - page not found
-import OrdersPage from "@/pages/Orders";
-import OrderDetailPage from "@/pages/OrderDetail";
-import ContractBuilder from "@/pages/ContractBuilder";
-import Projects from "@/pages/Projects";
+import OrdersPage from '@/src/src/pages/Orders';
+import OrderDetailPage from '@/src/src/pages/OrderDetail';
+import ContractBuilder from '@/src/src/pages/ContractBuilder';
+import Projects from '@/src/src/pages/Projects';
 
-const DashboardRoutes = () => {
+const DashboardRoutes: React.FC = ($2) => {
   return (
     <Routes>
       {/* Dashboard Routes */}

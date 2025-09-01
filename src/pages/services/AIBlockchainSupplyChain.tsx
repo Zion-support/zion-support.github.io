@@ -18,7 +18,7 @@ import { Brain,
   } from 'lucide-react.ts';
 import { SEO   } from '../../components/SEO';
 
-const AIBlockchainSupplyChain = () => {
+const AIBlockchainSupplyChain: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,

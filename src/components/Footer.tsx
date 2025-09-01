@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Twitter, 
@@ -72,7 +71,7 @@ export function Footer() {
 <<<<<<< HEAD
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll: React.FC = ($2) => {
       setShowScrollTop(window.scrollY > 400);
     };
 
@@ -155,7 +154,7 @@ export function Footer() {
   }, []);
 
   // Toggle section expansion (for mobile)
-  const toggleSection = (title: string) => {
+  const toggleSection: React.FC = ($2) => {
     setExpandedSections(prev => {
       const newSet = new Set(prev);
       if (newSet.has(title)) {
@@ -168,7 +167,7 @@ export function Footer() {
   };
 
   // Scroll to top function
-  const scrollToTop = () => {
+  const scrollToTop: React.FC = ($2) => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'

@@ -30,7 +30,7 @@ import {
   Mailbox
 } from 'lucide-react';
 
-const Support = () => {
+const Support: React.FC = ($2) => {
   const [selectedCategory, setSelectedCategory] = useState('general');
   const [contactMethod, setContactMethod] = useState('email');
 
@@ -119,7 +119,7 @@ const Support = () => {
     }
   ];
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch: React.FC = ($2) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality

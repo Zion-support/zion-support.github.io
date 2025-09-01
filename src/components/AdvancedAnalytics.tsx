@@ -147,7 +147,7 @@ export function AdvancedAnalytics({
   }, [enabled, userSession]);
 
   // Track user interactions
-  const trackInteraction = useCallback((type: 'click' | 'scroll' | 'form' | 'error', data?: any) => {
+  const trackInteraction = useCallback((type: 'click' | 'scroll' | 'form' | 'error', data?: unknown) => {
     if (!enabled) return;
 
     const interactionData = {
@@ -237,7 +237,7 @@ export function AdvancedAnalytics({
     trackPerformance();
 
     // Setup click tracking
-    const handleClick = (e: MouseEvent) => {
+    const handleClick: React.FC = ($2) => {
       const target = e.target as HTMLElement;
       const position = { x: e.clientX, y: e.clientY };
       
@@ -251,7 +251,7 @@ export function AdvancedAnalytics({
 
     // Setup scroll tracking
     let scrollTimeout: NodeJS.Timeout;
-    const handleScroll = () => {
+    const handleScroll: React.FC = ($2) => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         trackInteraction('scroll', { 
@@ -262,7 +262,7 @@ export function AdvancedAnalytics({
     };
 
     // Setup form submission tracking
-    const handleFormSubmit = (e: Event) => {
+    const handleFormSubmit: React.FC = ($2) => {
       const form = e.target as HTMLFormElement;
       trackInteraction('form', { 
         formId: form.id || form.className,
@@ -272,7 +272,7 @@ export function AdvancedAnalytics({
     };
 
     // Setup error tracking
-    const handleError = (e: ErrorEvent) => {
+    const handleError: React.FC = ($2) => {
       trackInteraction('error', {
         message: e.message,
         filename: e.filename,
@@ -283,7 +283,7 @@ export function AdvancedAnalytics({
     };
 
     // Setup unhandled promise rejection tracking
-    const handleUnhandledRejection = (e: PromiseRejectionEvent) => {
+    const handleUnhandledRejection: React.FC = ($2) => {
       trackInteraction('error', {
         message: e.reason?.message || 'Unhandled Promise Rejection',
         reason: e.reason
@@ -298,7 +298,7 @@ export function AdvancedAnalytics({
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
     // Track page visibility changes
-    const handleVisibilityChange = () => {
+    const handleVisibilityChange: React.FC = ($2) => {
       if (document.hidden) {
         // Page hidden - track session end
         const sessionDuration = Date.now() - sessionStart;
@@ -354,7 +354,7 @@ export function AdvancedAnalytics({
   }, [enabled]);
 
   // Send analytics data to service
-  const sendAnalyticsData = useCallback(async (eventType: string, data: any) => {
+  const sendAnalyticsData = useCallback(async (eventType: string, data: unknown) => {
     if (!trackingId) return;
 
     try {

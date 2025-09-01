@@ -18,7 +18,7 @@ import { Phone,
   Instagram
  } from 'lucide-react.ts';
 
-export function ContactPage(...args: any[]): any {
+export function ContactPage(...args: unknown[]): unknown {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -32,7 +32,7 @@ export function ContactPage(...args: any[]): any {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
+  const handleInputChange: React.FC = ($2) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value

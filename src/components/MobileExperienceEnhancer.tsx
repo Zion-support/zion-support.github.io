@@ -53,7 +53,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
   // Detect device type and orientation
   useEffect(() => {
-    const checkDevice = () => {
+    const checkDevice: React.FC = ($2) => {
       const userAgent = navigator.userAgent;
       const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
       const isTabletDevice = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(userAgent);
@@ -69,11 +69,11 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       }
     };
 
-    const handleResize = () => {
+    const handleResize: React.FC = ($2) => {
       checkDevice();
     };
 
-    const handleOrientationChange = () => {
+    const handleOrientationChange: React.FC = ($2) => {
       setTimeout(() => {
         if (window.innerHeight > window.innerWidth) {
           setDeviceOrientation('portrait');
@@ -99,7 +99,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
     if (!enabled || !enableSwipeNavigation) return;
 
-    const handleTouchStart = (e: TouchEvent) => {
+    const handleTouchStart: React.FC = ($2) => {
       const touch = e.touches[0];
       setTouchStart({
         x: touch.clientX,
@@ -108,11 +108,11 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       });
     };
 
-    const handleTouchMove = (e: TouchEvent) => {
+    const handleTouchMove: React.FC = ($2) => {
       e.preventDefault();
     };
 
-    const handleTouchEnd = (e: TouchEvent) => {
+    const handleTouchEnd: React.FC = ($2) => {
       if (!touchStart) return;
 
       const touch = e.changedTouches[0];

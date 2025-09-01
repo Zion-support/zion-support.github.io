@@ -24,7 +24,7 @@ import { Bot,
   Rocket,
   Star
   } from 'lucide-react.ts';
-import { SEO   } from '@/components/SEO';
+import { SEO   } from '@/src/src/components/SEO';
 
 const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
   const features = [

@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { Navigate, useLocation  } from 'react-router-dom.ts';
-import { useAuth  } from '@/hooks/useAuth';
+import { useAuth  } from '@/src/src/hooks/useAuth';
 
 interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
 
@@ -10,7 +10,7 @@ interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function ProtectedRoute(...args: any[]): any {;
+export function ProtectedRoute(...args: unknown[]): unknown {;
   const { user, isAuthenticated, isLoading } = useAuth();
   const location = useLocation();
 

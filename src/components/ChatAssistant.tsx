@@ -106,7 +106,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
       
-      const handleChange = (e: MediaQueryListEvent) => {
+      const handleChange: React.FC = ($2) => {
         setCurrentTheme(e.matches ? 'dark' : 'light');
       };
       
@@ -172,25 +172,25 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     }, 1500);
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyPress: React.FC = ($2) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage(inputValue);
     }
   };
 
-  const toggleChat = () => {
+  const toggleChat: React.FC = ($2) => {
     setIsOpen(!isOpen);
     if (!isOpen) {
       inputRef.current?.focus();
     }
   };
 
-  const toggleMinimize = () => {
+  const toggleMinimize: React.FC = ($2) => {
     setIsMinimized(!isMinimized);
   };
 
-  const getPositionClasses = () => {
+  const getPositionClasses: React.FC = ($2) => {
     switch (position) {
       case 'bottom-left':
         return 'bottom-4 left-4';
@@ -203,7 +203,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     }
   };
 
-  const getThemeClasses = () => {
+  const getThemeClasses: React.FC = ($2) => {
     return currentTheme === 'dark' 
       ? 'bg-gray-900 text-white border-gray-700' 
       : 'bg-white text-gray-900 border-gray-200 shadow-lg';

@@ -27,7 +27,7 @@ import { BarChart3,
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
 
-const AIBusinessIntelligenceDashboard = () => {
+const AIBusinessIntelligenceDashboard: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,

@@ -184,7 +184,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     return filtered;
   }, [allServices, searchTerm, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon: React.FC = ($2) => {
     switch (category) {
       case 'Artificial Intelligence':
         return <Brain className="w-6 h-6" />;
@@ -211,7 +211,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor: React.FC = ($2) => {
     switch (status.toLowerCase()) {
       case 'live':
         return 'bg-green-100 text-green-800';

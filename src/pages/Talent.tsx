@@ -605,7 +605,7 @@ export default function Talent() {
     }
   ];
 
-  const toggleTalentExpansion = (talentId: string) => {
+  const toggleTalentExpansion: React.FC = ($2) => {
     setExpandedTalent(expandedTalent === talentId ? null : talentId);
   };
 
@@ -620,7 +620,7 @@ export default function Talent() {
     return true;
   });
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor: React.FC = ($2) => {
     switch (category) {
       case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
       case 'cloud': return 'bg-blue-500/20 text-blue-400';
@@ -631,7 +631,7 @@ export default function Talent() {
     }
   };
 
-  const getExperienceColor = (experience: string) => {
+  const getExperienceColor: React.FC = ($2) => {
     switch (experience) {
       case 'junior': return 'bg-green-500/20 text-green-400';
       case 'mid': return 'bg-blue-500/20 text-blue-400';
@@ -641,11 +641,11 @@ export default function Talent() {
     }
   };
 
-  const getAvailabilityColor = (availability: string) => {
+  const getAvailabilityColor: React.FC = ($2) => {
     return availability === 'Available' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
   };
 
-  const renderStars = (rating: number) => {
+  const renderStars: React.FC = ($2) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}

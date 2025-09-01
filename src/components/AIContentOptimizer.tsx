@@ -179,7 +179,7 @@ export function AIContentOptimizer({
   }, [showRealTime, isOpen, analysisComplete, generateContentAnalysis]);
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
+  const getPriorityColor: React.FC = ($2) => {
     const colors = {
       high: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
       medium: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
@@ -189,7 +189,7 @@ export function AIContentOptimizer({
   };
 
   // Get category icon
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon: React.FC = ($2) => {
     const icons: { [key: string]: React.ReactNode } = {
       seo: <Search className="w-5 h-5" />,
       performance: <Zap className="w-5 h-5" />,

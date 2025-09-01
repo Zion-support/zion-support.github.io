@@ -1061,7 +1061,7 @@ export const getRevolutionaryServicesByTechnology = (technology: string): Revolu
   );
 };
 
-export const getRevolutionaryServicesStats = () => {;
+export const getRevolutionaryServicesStats: React.FC = ($2) => {;
   const totalRevenue = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.pricing.monthly, 0);
   const averageRating = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.rating, 0) / totalServices;
   const featuredCount = REVOLUTIONARY_SERVICES_2030.filter(service => service.featured).length;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -41,7 +40,7 @@ const AIServices = [
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
-const AIServicesPage = () => {
+const AIServicesPage: React.FC = ($2) => {
   const aiServices = [
     {
       id: 'ai-consciousness-simulator',

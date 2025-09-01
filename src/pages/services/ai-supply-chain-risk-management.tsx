@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import { SEO } from '@/src/src/components/SEO';
 import { 
   Shield, 
   AlertTriangle, 
@@ -37,7 +36,7 @@ import {
   Server
 } from 'lucide-react';
 
-const AISupplyChainRiskManagement = () => {
+const AISupplyChainRiskManagement: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,

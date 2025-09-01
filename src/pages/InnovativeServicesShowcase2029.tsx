@@ -47,7 +47,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { innovativeMicroSAASServices2029  } from '../../data/innovative-micro-saas-2029';
 
-export default function InnovativeServicesShowcase2029(...args: any[]): any {
+export default function InnovativeServicesShowcase2029(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');

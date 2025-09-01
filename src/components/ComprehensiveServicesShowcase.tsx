@@ -86,7 +86,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon: React.FC = ($2) => {
     switch (category) {
       case 'AI & Analytics':;
       case 'AI & Customer Experience':;

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Download, Wifi, WifiOff, CheckCircle, AlertCircle  } from 'lucide-react.ts';
 
 interface ServiceWorkerState {
 
@@ -11,7 +10,7 @@ interface ServiceWorkerState {
 
 }
 
-export function ServiceWorker(...args: any[]): any {
+export function ServiceWorker(...args: unknown[]): unknown {
   const [swState, setSwState] = useState<any>({
     isInstalled: anyfalse,
     isOnline: navigator.onLine,
@@ -26,7 +25,7 @@ export function ServiceWorker(...args: any[]): any {
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {
-          console.log('SW registered: any', registration);
+          console.log('SW registered: unknown', registration);
           setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
 
           // Check for updates
@@ -69,7 +68,7 @@ setSwState(prev: > ({ ;
     };
   }, []);
 
-  const handleUpdate = () => {;
+  const handleUpdate: React.FC = ($2) => {;
     if ('serviceWorker' in navigator) {;
       navigator.serviceWorker.ready.then((registration) => {;
         registration.waiting?.postMessage({ type: 'SKIP_WAITING' });

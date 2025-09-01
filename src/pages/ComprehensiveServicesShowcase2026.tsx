@@ -48,7 +48,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
     return filtered;
   }, [searchTerm, selectedCategory, selectedInnovationLevel]);
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon: React.FC = ($2) => {;
     switch (category) {;
       case 'Quantum Computing': return <Cpu className="w-5 h-5" />;
       case 'Neural Networks': return <Brain className="w-5 h-5" />;
@@ -60,7 +60,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
       default: return <Zap className="w-5 h-5" />;
 
   };
-  const getInnovationLevelColor = (level: string) => {;
+  const getInnovationLevelColor: React.FC = ($2) => {;
     switch (level) {;
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';

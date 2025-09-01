@@ -1,6 +1,5 @@
-import { BarChart3, Target, Users, Check, ExternalLink, Phone, Mail, Zap, Brain, TrendingUp, MessageSquare, Mail as MailIcon  } from 'lucide-react.ts';
 
-export default function AIMarketingAutomationSuite(...args: any[]): any {
+export default function AIMarketingAutomationSuite(...args: unknown[]): unknown {
   const features = [
     'AI-powered audience segmentation and targeting',
     'Predictive customer behavior modeling',

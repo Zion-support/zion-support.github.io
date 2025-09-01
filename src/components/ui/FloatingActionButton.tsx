@@ -33,7 +33,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
     };
   ];
 
-  const scrollToTop = () => {;
+  const scrollToTop: React.FC = ($2) => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

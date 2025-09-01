@@ -1,7 +1,5 @@
 
-import React from 'react';
-
-const Partners = () => {
+const Partners: React.FC = ($2) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24">
       <div className="container mx-auto px-4 py-16">

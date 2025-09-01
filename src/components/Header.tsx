@@ -65,7 +65,7 @@ import {
   Cloud
 } from 'lucide-react';
 import { MainNavigation } from './header/MainNavigation';
-import { cn } from '@/lib/utils';
+import { cn } from '@/src/src/lib/utils';
 
 interface HeaderProps {
   className?: string;
@@ -148,7 +148,7 @@ export function Header({ className }: HeaderProps) {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll: React.FC = ($2) => {
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -156,20 +156,20 @@ export function Header({ className }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleTheme = () => {
+  const toggleTheme: React.FC = ($2) => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
     // You can add theme switching logic here
   };
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu: React.FC = ($2) => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const closeMobileMenu = () => {
+  const closeMobileMenu: React.FC = ($2) => {
     setIsMobileMenuOpen(false);
   };
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch: React.FC = ($2) => {
     e.preventDefault();
     // Add search logic here
     console.log('Searching for:', searchQuery);

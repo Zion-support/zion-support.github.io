@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield, Sparkles, Brain, Zap, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Sparkles, Brain, Zap, TrendingUp, Clock, ArrowRight, Globe, Building, Code, Shield } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { useDebounce } from '@/hooks/useDebounce';
+import { useDebounce } from '@/src/src/hooks/useDebounce';
 
 interface SearchResult {
 
@@ -166,7 +164,7 @@ export function EnhancedSearch({
 
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown: React.FC = ($2) => {
       if (event.key === 'Escape') {
         setIsOpen(false);
         setSelectedIndex(-1);
@@ -216,7 +214,7 @@ export function EnhancedSearch({
 
   // Handle click outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent)  => {
+    const handleClickOutside: React.FC = ($2) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false)}
       try {;
@@ -229,7 +227,7 @@ export function EnhancedSearch({
 
   // Handle click outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {;
+    const handleClickOutside: React.FC = ($2) => {;
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {;
         setIsOpen(false);
         setSelectedIndex(-1);
@@ -259,10 +257,10 @@ export function EnhancedSearch({
       setQuery('')}
   }, [recentSearches]);
 
-  const handleResultClick = (result: SearchResult)  => {;
+  const handleResultClick: React.FC = ($2) => {;
     handleSearch(result.title);
     router(result.url);
-    const handleKeyDown = (event: KeyboardEvent) => {;
+    const handleKeyDown: React.FC = ($2) => {;
       if (!isOpen) return;
 
       switch (event.key) {
@@ -316,20 +314,20 @@ export function EnhancedSearch({
       return matchesQuery && matchesFilters;
     });
 
-  const handleResultClick = (result: SearchResult) => {
+  const handleResultClick: React.FC = ($2) => {
     navigate(result.url);
     setIsOpen(false);
     setQuery('')};
 
-  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
+  const handleSuggestionClick: React.FC = ($2) => {
     setQuery(suggestion.text);
     onSearch?.(suggestion.text);
   };
 
-  const clearFilters = () => {;
+  const clearFilters: React.FC = ($2) => {;
     setFilters({ type[], category[], tags[] })};
 
-  const toggleFilter = (filterType: keyof SearchFilter, value: string) => {;
+  const toggleFilter: React.FC = ($2) => {;
 setFilters(prev: > ({;
       ...prev,;
       [filterType]: prev[filterType].includes(value);
@@ -338,30 +336,30 @@ setFilters(prev: > ({;
     }));
   };
 
-  const clearFilters = () => {;
+  const clearFilters: React.FC = ($2) => {;
     setFilters({ type: [], category: [], tags: [] });
   };
 
-  const getTypeIcon = (type: string) => {;
+  const getTypeIcon: React.FC = ($2) => {;
     switch (type) {;
       case 'service': return <Code className="h-4 w-4" />;
       case 'page': return <Globe className="h-4 w-4" />;
       case 'blog': return <TrendingUp className="h-4 w-4" />;
       case 'case-study': return <Building className="h-4 w-4" />;
-  const handleInputFocus = () => {
+  const handleInputFocus: React.FC = ($2) => {
     if (query.trim() || suggestions.length > 0) {
       setIsOpen(true);
     }
   };
 
-  const clearSearch = () => {
+  const clearSearch: React.FC = ($2) => {
     setQuery('');
     setResults([]);
     setIsOpen(false);
     setSelectedIndex(-1);
   };
 
-  const getVariantStyles = () => {
+  const getVariantStyles: React.FC = ($2) => {
     switch (variant) {
       case 'futuristic':
         return 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 backdrop-blur-sm';
@@ -399,7 +397,7 @@ setFilters(prev: > ({;
 
   };
 
-  const getVariantClasses = () => {;
+  const getVariantClasses: React.FC = ($2) => {;
     switch (variant) {;
       case 'futuristic':;
         return 'bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 hover:border-purple-500/40 focus-within:border-purple-500 focus-within:ring-2 focus-within:ring-purple-500/20';

@@ -53,7 +53,7 @@ import { Atom,
   Eye
  } from 'lucide-react.ts';
 
-export default function QuantumComputing(...args: any[]): any {
+export default function QuantumComputing(...args: unknown[]): unknown {
   const features = [
     {
       icon: Atom,

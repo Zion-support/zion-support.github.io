@@ -159,7 +159,7 @@ const ApiPlayground: React.FC = () => {
     }
   ];
 
-  const getMethodColor = (method: string) => {
+  const getMethodColor: React.FC = ($2) => {
     switch (method) {
       case 'GET': return 'text-green-400';
       case 'POST': return 'text-blue-400';
@@ -169,7 +169,7 @@ const ApiPlayground: React.FC = () => {
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor: React.FC = ($2) => {
     switch (status) {
       case 'stable': return 'bg-green-500/20 text-green-400';
       case 'beta': return 'bg-yellow-500/20 text-yellow-400';
@@ -178,7 +178,7 @@ const ApiPlayground: React.FC = () => {
     }
   };
 
-  const handleApiSelect = (api: any) => {
+  const handleApiSelect: React.FC = ($2) => {
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
@@ -197,7 +197,7 @@ const ApiPlayground: React.FC = () => {
     }, 2000);
   };
 
-  const copyToClipboard = (text: string) => {
+  const copyToClipboard: React.FC = ($2) => {
     navigator.clipboard.writeText(text);
   };
 
@@ -416,7 +416,7 @@ const ApiPlayground: React.FC = () => {
                               <div className="bg-slate-700/50 rounded-lg p-4 mb-4">
                                 <h4 className="text-white font-medium mb-2">Parameters</h4>
                                 <div className="space-y-2">
-                                  {selectedApi.parameters.map((param: any, idx: number) => (
+                                  {selectedApi.parameters.map((param: unknown, idx: number) => (
                                     <div key={idx} className="flex items-center justify-between text-sm">
                                       <div>
                                         <span className="text-white font-medium">{param.name}</span>

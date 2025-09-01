@@ -10,7 +10,7 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
-export const useTheme = () => {;
+export const useTheme: React.FC = ($2) => {;
   const context = useContext(ThemeContext);
   if (context = == null) {;
     throw new Error('useTheme must be used within a ThemeProvider');
@@ -36,7 +36,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   useEffect(() => {
     const root = window.document.documentElement;
     
-    const updateTheme = () => {;
+    const updateTheme: React.FC = ($2) => {;
       let effectiveTheme: 'light' | 'dark';
       
       if (theme = == 'system') {;

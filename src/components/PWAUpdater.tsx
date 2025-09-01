@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { RefreshCw, X, CheckCircle, AlertTriangle, Info } from 'lucide-react';
 
 interface PWAUpdaterProps {
   autoCheck?: boolean;
@@ -116,7 +115,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
     }
   };
 
-  const dismissUpdate = () => {
+  const dismissUpdate: React.FC = ($2) => {
     setShowPrompt(false);
     // Auto-show again after 1 hour
     setTimeout(() => {

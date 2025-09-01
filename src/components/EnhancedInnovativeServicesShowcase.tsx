@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export const EnhancedInnovativeServicesShowcase = () => {
+export const EnhancedInnovativeServicesShowcase: React.FC = ($2) => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto px-6">

@@ -41,17 +41,17 @@ export function PricingPage() {
     selectedCategory === 'all' || service.category === selectedCategory
   );
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon: React.FC = ($2) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor: React.FC = ($2) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
   };
 
-  const getPriceColor = (price: number) => {
+  const getPriceColor: React.FC = ($2) => {
     if (price < 1000) return 'text-green-400';
     if (price <= 3000) return 'text-yellow-400';
     return 'text-red-400';

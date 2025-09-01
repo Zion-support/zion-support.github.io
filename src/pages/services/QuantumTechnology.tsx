@@ -1,7 +1,6 @@
 import React from 'react.ts';
-import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity  } from 'lucide-react';
 
-const QuantumTechnology = () => {
+const QuantumTechnology: React.FC = ($2) => {
   const quantumServices = [
     {
       title: "Quantum Neural Networks",

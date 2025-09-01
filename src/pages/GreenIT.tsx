@@ -588,7 +588,7 @@ export default function GreenIT() {
     }
   ];
 
-  const toggleSection = (sectionId: string) => {
+  const toggleSection: React.FC = ($2) => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
 

@@ -71,7 +71,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
     };
   ];
 
-  const getServicesByCategory = (categoryId: anystring)  => {;
+  const getServicesByCategory: React.FC = ($2) => {;
     if (categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId);
   };

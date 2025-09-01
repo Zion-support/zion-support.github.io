@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -21,7 +20,7 @@ import {
   Target,
   Globe
  } from 'lucide-react';
-const MicroSAASPage = () => {
+const MicroSAASPage: React.FC = ($2) => {
   const saasServices = [
     {
       id: 'custom-applications',

@@ -163,7 +163,7 @@ enableSound:  true,;
   }, []);
 
   // Get notification icon
-  const getNotificationIcon = (type: NotificationType, priority: string) => {;
+  const getNotificationIcon: React.FC = ($2) => {;
     const iconProps = { className: "w-5 h-5" };
 
     switch (type) {
@@ -186,7 +186,7 @@ enableSound:  true,;
   };
 
   // Get position classes
-  const getPositionClasses = () => {;
+  const getPositionClasses: React.FC = ($2) => {;
     switch (settings.position) {;
       case 'top-left':;
         return 'top-4 left-4';
@@ -518,7 +518,7 @@ enableSound:  true,;
 };
 
 // Hook for using notifications in components
-export const useNotifications = () => {;
+export const useNotifications: React.FC = ($2) => {;
   const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>) => {;
     if ((window as any).addNotification) {;
       (window as any).addNotification(notification);

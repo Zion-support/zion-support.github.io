@@ -59,7 +59,7 @@ interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
   maxProjects?: number}
 
 export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
-showFilters:  true,;
+showFilters: true,;
   showStats = true,;
   maxProjects = 10;
 }) => {;

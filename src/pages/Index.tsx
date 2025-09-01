@@ -1,23 +1,23 @@
 import React from 'react';
 
-import { Footer } from "@/components/Footer";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { TestimonialCarousel } from "@/components/TestimonialCarousel";
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { HeroSection } from "@/components/HeroSection";
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { WaitlistSection } from "@/components/WaitlistSection";
-import { BlogSection } from "@/components/BlogSection";
-import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
+import { Footer } from '@/src/src/components/Footer';
+import { TrustedBySection } from '@/src/src/components/TrustedBySection';
+import { TestimonialCarousel } from '@/src/src/components/TestimonialCarousel';
+import { FloatingCTA } from '@/src/src/components/FloatingCTA';
+import { HeroSection } from '@/src/src/components/HeroSection';
+import { CategoriesSection } from '@/src/src/components/CategoriesSection';
+import { BenefitsSection } from '@/src/src/components/BenefitsSection';
+import { HowItWorksSection } from '@/src/src/components/HowItWorksSection';
+import { WaitlistSection } from '@/src/src/components/WaitlistSection';
+import { BlogSection } from '@/src/src/components/BlogSection';
+import SEO from '@/src/src/components/SEO';
+import { Button } from '@/src/src/components/ui/button';
 import { Link } from "react-router-dom";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
-import { SocialShareSection } from "@/components/SocialShareSection";
+import { FeaturedListingsSection } from '@/src/src/components/FeaturedListingsSection';
+import { FeaturesGuideSection } from '@/src/src/components/FeaturesGuideSection';
+import { SocialShareSection } from '@/src/src/components/SocialShareSection';
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "@/context/LanguageContext";
+import { useLanguage } from '@/src/src/context/LanguageContext';
 import {
   ArrowRight,
   Users,

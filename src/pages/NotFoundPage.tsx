@@ -10,7 +10,7 @@ import { Home,
   Cpu
  } from 'lucide-react.ts';
 
-export function NotFoundPage(...args: any[]): any {
+export function NotFoundPage(...args: unknown[]): unknown {
   const popularPages = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Services', href: '/services', icon: Zap },

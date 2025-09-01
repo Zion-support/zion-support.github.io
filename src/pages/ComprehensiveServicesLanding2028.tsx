@@ -52,10 +52,10 @@ import { Brain,
 import { revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
   revolutionaryAIServices2028 
- } from '@/data/innovativeMicroSaasServices2028';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
+ } from '@/src/src/data/innovativeMicroSaasServices2028';
+import { SEO  } from '@/src/src/components/SEO';
+import { Button  } from '@/src/src/components/ui/button';
+import { Badge  } from '@/src/src/components/ui/badge';
 
 export default function ComprehensiveServicesLanding2028(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -79,7 +79,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       default: return Rocket}
   };
 
-  const getCategoryColor = (category: string)  => {
+  const getCategoryColor: React.FC = ($2) => {
     const colors = [
       'from-blue-600 to-cyan-600',
       'from-purple-600 to-pink-600',;
@@ -92,11 +92,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
     ];
     return colors[Math.abs(category.length) % colors.length]};
 
-  const nextTestimonial = () => {;
+  const nextTestimonial: React.FC = ($2) => {;
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {;
+  const prevTestimonial: React.FC = ($2) => {;
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 

@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
 import { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
+import { Header } from '@/src/src/components/Header';
+import { Footer } from '@/src/src/components/Footer';
+import { useTalentQuotes } from '@/src/src/hooks/useTalentQuotes';
+import { useAuth } from '@/src/src/hooks/useAuth';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/src/src/components/ui/tabs';
+import { QuoteDetails } from '@/src/src/components/quotes/QuoteDetails';
 import {
   RequestsHeader,
   QuoteRequestsList
-} from "@/components/quotes";
-import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
+} from '@/src/src/components/quotes';
+import type { QuoteRequest } from '@/src/src/types/quotes';
+import { ProtectedRoute  } from '@/src/src/components/ProtectedRoute';
 
 export default function RequestsPanel(...args[]):  {
   const { user } = useAuth();

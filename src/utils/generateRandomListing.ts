@@ -1,4 +1,4 @@
-import { MarketplaceItem   } from '@/data/marketplaceData';
+import { MarketplaceItem   } from '@/src/src/data/marketplaceData';
 
 const sampleTitles = [
   'AI-Powered Analytics Platform',

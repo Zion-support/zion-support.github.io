@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Home, 
@@ -41,7 +40,7 @@ import {
 
 interface SitemapSection {
   title: string;
-  icon: any;
+  icon: unknown;
   color: string;
   pages: SitemapPage[];
 }

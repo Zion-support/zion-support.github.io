@@ -38,7 +38,7 @@ import { Brain,
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
 import { COMPREHENSIVE_PRICING_GUIDE_2025  } from '../data/comprehensivePricingGuide2025';
 
-export function ComprehensiveServicesPage(...args: any[]): any {
+export function ComprehensiveServicesPage(...args: unknown[]): unknown {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -82,18 +82,18 @@ export function ComprehensiveServicesPage(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon: React.FC = ($2) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getPriceRange = (price: anynumber)  => {
+  const getPriceRange: React.FC = ($2) => {
     if (price < 1000) return 'low';
     if (price <= 3000) return 'medium';
     return 'high';
   };
 
-  const getPriceColor = (price: anynumber)  => {
+  const getPriceColor: React.FC = ($2) => {
     const range = getPriceRange(price);
     switch (range) {
       case 'low': return 'text-green-400';

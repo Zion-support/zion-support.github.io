@@ -29,7 +29,7 @@ import { Search,
   Cpu
  } from 'lucide-react.ts';
 
-export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
+export function ComprehensiveNewServicesShowcase2025(...args: unknown[]): unknown {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
@@ -62,12 +62,12 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
       return 0;
     });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon: React.FC = ($2) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor: React.FC = ($2) => {
     const colors: { [key: string]: string } = {
       'ai-services': 'from-purple-500 to-pink-600',
       'quantum-computing': 'from-indigo-500 to-purple-600',

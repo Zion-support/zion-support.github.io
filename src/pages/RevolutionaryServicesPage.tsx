@@ -134,7 +134,7 @@ import { Brain,
 import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025  } from '../data/revolutionaryMicroSaasServices2025';
 import { COMPREHENSIVE_PRICING_GUIDE_2025  } from '../data/comprehensivePricingGuide2025';
 
-export function RevolutionaryServicesPage(...args: any[]): any {
+export function RevolutionaryServicesPage(...args: unknown[]): unknown {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -209,23 +209,23 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon: React.FC = ($2) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor: React.FC = ($2) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
   };
 
-  const getPriceRange = (price: anynumber)  => {
+  const getPriceRange: React.FC = ($2) => {
     if (price < 1500) return 'low';
     if (price <= 3000) return 'medium';
     return 'high';
   };
 
-  const getPriceColor = (price: anynumber)  => {
+  const getPriceColor: React.FC = ($2) => {
     const range = getPriceRange(price);
     switch (range) {
       case 'low': return 'text-green-400';
@@ -235,7 +235,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     }
   };
 
-  const getPriceRangeColor = (price: anynumber)  => {
+  const getPriceRangeColor: React.FC = ($2) => {
     const range = getPriceRange(price);
     switch (range) {
       case 'low': return 'bg-green-500/20 text-green-400';
@@ -245,7 +245,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     }
   };
 
-  const getInnovationColor = (level: anystring)  => {
+  const getInnovationColor: React.FC = ($2) => {
     switch (level) {
       case 'Revolutionary': return 'text-purple-400';
       case 'Advanced': return 'text-blue-400';
@@ -254,7 +254,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     }
   };
 
-  const getInnovationBgColor = (level: anystring)  => {
+  const getInnovationBgColor: React.FC = ($2) => {
     switch (level) {
       case 'Revolutionary': return 'bg-purple-500/20';
       case 'Advanced': return 'bg-blue-500/20';

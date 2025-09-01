@@ -65,7 +65,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
     ? innovativeServices2027
     : getServicesByCategory(selectedCategory);
 
-  const toggleServiceExpansion = (serviceId: string) => {;
+  const toggleServiceExpansion: React.FC = ($2) => {;
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 

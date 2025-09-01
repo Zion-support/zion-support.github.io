@@ -235,7 +235,7 @@ export default function Careers() {
     return matchesSearch && matchesDepartment && matchesLocation;
   });
 
-  const toggleJob = (jobId: string) => {
+  const toggleJob: React.FC = ($2) => {
     setExpandedJob(expandedJob === jobId ? null : jobId);
   };
 

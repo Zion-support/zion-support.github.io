@@ -72,7 +72,7 @@ export const SitemapGenerator: React.FC = (): JSX.Element => {
     generateSitemap();
   }, []);
 
-  const generateSitemap = () => {
+  const generateSitemap: React.FC = ($2) => {
     const sitemap: SitemapSection[] = [
       {
         title: 'Main Pages',
@@ -243,9 +243,9 @@ export const SitemapGenerator: React.FC = (): JSX.Element => {
     section.routes.map(route => route.category)
   )))];
 
-  const exportSitemap = () => {
+  const exportSitemap: React.FC = ($2) => {
     const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: any//www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http: unknown//www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapData.flatMap(section  => 
   section.routes.map(route => 
     `  <url>
@@ -269,7 +269,7 @@ ${sitemapData.flatMap(section  =>
     URL.revokeObjectURL(url);
   };
 
-  const exportCSV = () => {
+  const exportCSV: React.FC = ($2) => {
     const csvContent = [
       ['Path', 'Name', 'Description', 'Category', 'Featured'],
       ...sitemapData.flatMap(section => 

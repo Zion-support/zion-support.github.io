@@ -113,7 +113,7 @@ const Blog: React.FC = () => {
     });
   }, [searchTerm, selectedCategory]);
 
-  const formatDate = (dateString: string) => {
+  const formatDate: React.FC = ($2) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',

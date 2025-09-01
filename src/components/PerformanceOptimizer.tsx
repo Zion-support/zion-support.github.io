@@ -126,24 +126,24 @@ const PerformanceOptimizer: React.FC = () => {
     }
   }, [isMonitoring, measurePerformance]);
 
-  const getScoreColor = (score: number) => {
+  const getScoreColor: React.FC = ($2) => {
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
     return 'text-red-500';
   };
 
-  const getScoreIcon = (score: number) => {
+  const getScoreIcon: React.FC = ($2) => {
     if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-500" />;
     if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
     return <AlertTriangle className="w-5 h-5 text-red-500" />;
   };
 
-  const getMetricStatus = (value: number, threshold: number, lowerIsBetter = true) => {
+  const getMetricStatus: React.FC = ($2) => {
     const isGood = lowerIsBetter ? value <= threshold : value >= threshold;
     return isGood ? 'text-green-500' : 'text-red-500';
   };
 
-  const toggleSuggestion = (id: string) => {
+  const toggleSuggestion: React.FC = ($2) => {
     setSuggestions(prev => 
       prev.map(suggestion => 
         suggestion.id === id 

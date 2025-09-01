@@ -1,4 +1,3 @@
-import React from 'react';
 import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = () => {

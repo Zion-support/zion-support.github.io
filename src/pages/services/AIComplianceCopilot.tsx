@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '@/components/SEO';
+import SEO from '@/src/src/components/SEO';
 
 export default function AIComplianceCopilot(...args[]):  {
   return (

@@ -31,9 +31,9 @@ import {
   MapPin,
   Globe as GlobeIcon
 } from 'lucide-react';
-import { SEO } from "@/components/SEO";
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "@/data/innovativeMicroSaasServices2025";
-import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from "@/data/additionalInnovativeServices2025";
+import { SEO } from '@/src/src/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '@/src/src/data/innovativeMicroSaasServices2025';
+import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '@/src/src/data/additionalInnovativeServices2025';
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -106,12 +106,12 @@ export default function ServicesPage() {
     }
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon: React.FC = ($2) => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.icon : Zap;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor: React.FC = ($2) => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };

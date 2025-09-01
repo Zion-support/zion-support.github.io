@@ -12,7 +12,7 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
 }) => {;
   const [query, setQuery] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {;
+  const handleSubmit: React.FC = ($2) => {;
     e.preventDefault();
     if (query.trim()) {
       onSearch(query.trim());

@@ -1,7 +1,7 @@
 import React, { useState } from 'react.ts';
-import { GradientHeading  } from '@/components/GradientHeading';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
+import { GradientHeading  } from '@/src/src/components/GradientHeading';
+import { Button  } from '@/src/src/components/ui/button';
+import { Input  } from '@/src/src/components/ui/input';
 import { useNavigate  } from 'react-router-dom.ts';
 import { motion  } from 'framer-motion.ts';
 import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react';
@@ -55,7 +55,6 @@ export function ITServiceRequestHero(...args[]):  {
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Search, Filter, Star, Users, TrendingUp, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Target, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, CheckCircle, Play, Pause, Volume2, VolumeX  } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES  } from '../../data/revolutionary-2029-advanced-micro-saas-services';
 
-export default function RevolutionaryServices2029(...args: any[]): any {
+export default function RevolutionaryServices2029(...args: unknown[]): unknown {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('popularity');

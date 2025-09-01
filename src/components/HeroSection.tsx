@@ -104,7 +104,7 @@ const slideVariants = {
 };
 
 const swipeConfidenceThreshold = 10000;
-const swipePower = (offset: number, velocity: number) => {
+const swipePower: React.FC = ($2) => {
   return Math.abs(offset) * velocity;
 };
 
@@ -150,7 +150,7 @@ export default function HeroSection() {
 
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown: React.FC = ($2) => {
       if (e.key === 'ArrowLeft') prevSlide();
       if (e.key === 'ArrowRight') nextSlide();
       if (e.key === ' ') {

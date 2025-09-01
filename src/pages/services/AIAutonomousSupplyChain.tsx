@@ -31,7 +31,7 @@ import { Truck,
   Leaf
  } from 'lucide-react.ts';
 
-const AIAutonomousSupplyChain = () => {
+const AIAutonomousSupplyChain: React.FC = ($2) => {
   const features = [
     {
       title: "AI Demand Forecasting",

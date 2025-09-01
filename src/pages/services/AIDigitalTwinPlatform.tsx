@@ -1,4 +1,3 @@
-import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud } from 'lucide-react';
 
 export default function AIDigitalTwinPlatform() {
   const features = [

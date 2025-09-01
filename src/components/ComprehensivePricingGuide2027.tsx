@@ -112,7 +112,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 };
 
-  const getPriceRange = (price: string) => {;
+  const getPriceRange: React.FC = ($2) => {;
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
@@ -121,7 +121,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
       default: return 'text-white'}
   };
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon: React.FC = ($2) => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       'AI Solutions': Brain,
       'Micro SaaS': Zap,

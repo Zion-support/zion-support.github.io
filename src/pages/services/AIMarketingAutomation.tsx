@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Target, 
@@ -24,7 +23,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-const AIMarketingAutomation = () => {
+const AIMarketingAutomation: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,

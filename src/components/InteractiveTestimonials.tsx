@@ -82,13 +82,13 @@ export function InteractiveTestimonials() {
 
   const currentTestimonial = filteredTestimonials[selectedTestimonial];
 
-  const nextTestimonial = () => {;
+  const nextTestimonial: React.FC = ($2) => {;
     setSelectedTestimonial((prev) => ;
       prev === filteredTestimonials.length - 1 ? 0 : prev + 1;
     );
   };
 
-  const prevTestimonial = () => {;
+  const prevTestimonial: React.FC = ($2) => {;
     setSelectedTestimonial((prev) => ;
       prev === 0 ? filteredTestimonials.length - 1 : prev - 1;
     );

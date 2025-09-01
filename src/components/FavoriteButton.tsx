@@ -10,7 +10,7 @@ interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
 export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
   const [isFavorited, setIsFavorited] = useState(false);
 
-  const handleToggleFavorite = (e: React.MouseEvent) => {;
+  const handleToggleFavorite: React.FC = ($2) => {;
     e.stopPropagation();
     setIsFavorited(!isFavorited);
 

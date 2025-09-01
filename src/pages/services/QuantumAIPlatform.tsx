@@ -21,9 +21,9 @@ import { Atom,
   Users,
   Shield
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 
-const QuantumAIPlatform = () => {
+const QuantumAIPlatform: React.FC = ($2) => {
   const features = [
     {
       icon: Atom,

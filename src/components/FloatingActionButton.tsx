@@ -52,7 +52,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
       
-      const handleChange = (e: MediaQueryListEvent) => {
+      const handleChange: React.FC = ($2) => {
         setCurrentTheme(e.matches ? 'dark' : 'light');
       };
       
@@ -65,7 +65,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
   // Show scroll to top button when scrolled down
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll: React.FC = ($2) => {
       setShowScrollButton(window.scrollY > 300);
     };
 
@@ -242,7 +242,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   }, []);
 
   // Get position classes
-  const getPositionClasses = () => {
+  const getPositionClasses: React.FC = ($2) => {
     switch (position) {
       case 'bottom-left':
         return 'bottom-6 left-6';
@@ -256,7 +256,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   };
 
   // Get theme classes
-  const getThemeClasses = () => {
+  const getThemeClasses: React.FC = ($2) => {
     return currentTheme === 'dark' 
       ? 'bg-zion-slate-dark text-zion-slate-light border-zion-slate/20' 
       : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20';

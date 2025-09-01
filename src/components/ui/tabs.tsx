@@ -18,7 +18,7 @@ interface TabsProps extends React.PropsWithChildren<{}> {
 export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {;
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
-  const handleTabChange = (tab: string) => {;
+  const handleTabChange: React.FC = ($2) => {;
     setActiveTab(tab);
     if (onValueChange) {
       onValueChange(tab)}

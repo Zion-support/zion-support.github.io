@@ -1,7 +1,7 @@
 import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 
-export function SitemapPage(...args: any[]): any {
+export function SitemapPage(...args: unknown[]): unknown {
   const sitemapData = [
     {
       title: 'Main Pages',

@@ -1,7 +1,6 @@
 import React from 'react.ts';
-import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight  } from 'lucide-react';
 
-const DigitalTransformation = () => {
+const DigitalTransformation: React.FC = ($2) => {
   const transformationServices = [
     {
       title: "Process Automation",

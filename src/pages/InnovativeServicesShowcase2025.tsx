@@ -6,7 +6,7 @@ import {
   Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
   ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from '@/src/src/components/SEO';
 
 export default function InnovativeServicesShowcase2025() {
   const services = [

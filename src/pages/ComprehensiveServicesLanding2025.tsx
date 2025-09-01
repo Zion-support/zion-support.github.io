@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -43,7 +42,7 @@ import SEO from '../components/SEO';
 import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
 
 const ComprehensiveServicesLanding2025: React.FC = () => {;
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon: React.FC = ($2) => {;
     switch (category) {;
       case 'AI & Automation':;
         return <Brain className="w-8 h-8" />;
@@ -70,7 +69,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 
   };
 
-  const getCategoryColor = (category: string) => {;
+  const getCategoryColor: React.FC = ($2) => {;
     switch (category) {;
       case 'AI & Automation':;
         return 'from-purple-500 to-pink-500';

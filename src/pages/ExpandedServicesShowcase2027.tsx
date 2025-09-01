@@ -56,14 +56,14 @@ import {
   Server as Edge,
   Monitor as Healthcare,
   Cpu as FinTech
-import { SEO } from '@/components/SEO';
+import { SEO } from '@/src/src/components/SEO';
 import {
   ALL_EXPANDED_SERVICES_2027,
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
   searchExpandedServices,
   type ExpandedService2027
-} from '@/data/expandedInnovativeServices2027';
+} from '@/src/src/data/expandedInnovativeServices2027';
 
       services = searchExpandedServices(searchQuery)};
     setFilteredServices(services)}, [selectedCategory, searchQuery]);
@@ -74,14 +74,14 @@ import {
         return 'from-gray-500 to-slate-600'}
   };
 
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
+  const formatPrice: React.FC = ($2) => {;
     if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
 
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
 
-  const renderServiceCard = (service: ExpandedService2027) => {;
+  const renderServiceCard: React.FC = ($2) => {;
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
@@ -305,7 +305,7 @@ import {
     );
   };
 
-  const renderServiceList = (service: ExpandedService2027) => {;
+  const renderServiceList: React.FC = ($2) => {;
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Rocket, 
@@ -76,7 +75,7 @@ import {
   Sun
 } from 'lucide-react';
 
-const SpaceTech = () => {
+const SpaceTech: React.FC = ($2) => {
   const features = [
     {
       icon: Satellite,

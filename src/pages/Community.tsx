@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -254,7 +253,7 @@ interface CommunityCategory {
   id: string;
   name: string;
   description: string;
-  icon: any;
+  icon: unknown;
   color: string;
   postCount: number;
   topics: string[];
@@ -443,12 +442,12 @@ const Community: React.FC = () => {
     }
   });
 
-  const getCategoryColor = (categoryId: string) => {
+  const getCategoryColor: React.FC = ($2) => {
     const category = communityCategories.find(cat => cat.id === categoryId);
     return category ? category.color : 'from-gray-500 to-gray-600';
   };
 
-  const getCategoryName = (categoryId: string) => {
+  const getCategoryName: React.FC = ($2) => {
     const category = communityCategories.find(cat => cat.id === categoryId);
     return category ? category.name : 'Unknown';
   };

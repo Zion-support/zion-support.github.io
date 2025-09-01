@@ -24,7 +24,7 @@ import { Workflow,
   ShoppingCart
  } from 'lucide-react.ts';
 
-const AIWorkflowOrchestrator = () => {
+const AIWorkflowOrchestrator: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,

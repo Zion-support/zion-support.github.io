@@ -108,7 +108,7 @@ export const SUPPORT_LEVELS = [;
 ];
 
 // Calculate counts for each category
-export const calculateServiceStats = () => {
+export const calculateServiceStats: React.FC = ($2) => {
   const stats = {
   totalServices: COMPREHENSIVE_SERVICES_CATALOG_2025.length,
     categories: SERVICE_CATEGORIES.length,
@@ -147,35 +147,35 @@ export const calculateServiceStats = () => {
 };
 
 // Get services by category
-export const getServicesByCategory = (category: string) => {
+export const getServicesByCategory: React.FC = ($2) => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.category.toLowerCase().includes(category.toLowerCase().replace('-', ' '))
   );
 };
 
 // Get services by price range
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+export const getServicesByPriceRange: React.FC = ($2) => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   );
 };
 
 // Get services by innovation level
-export const getServicesByInnovationLevel = (level: string) => {
+export const getServicesByInnovationLevel: React.FC = ($2) => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.innovationLevel.toLowerCase() === level.toLowerCase()
   );
 };
 
 // Get services by support level
-export const getServicesBySupportLevel = (level: string) => {
+export const getServicesBySupportLevel: React.FC = ($2) => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.supportLevel.toLowerCase() === level.toLowerCase()
   );
 };
 
 // Search services
-export const searchServices = (query: string) => {
+export const searchServices: React.FC = ($2) => {
   const searchTerm = query.toLowerCase();
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.title.toLowerCase().includes(searchTerm) ||
@@ -187,7 +187,7 @@ export const searchServices = (query: string) => {
 };
 
 // Get featured services (high ROI and innovation)
-export const getFeaturedServices = (limit: number = 10) => {;
+export const getFeaturedServices: React.FC = ($2) => {;
   return COMPREHENSIVE_SERVICES_CATALOG_2025;
     .sort((a, b) => {;
       const aScore = parseInt(a.roi.replace(/\D/g, '')) + (a.innovationLevel === 'Cutting-edge' ? 100 : 0);
@@ -196,7 +196,7 @@ export const getFeaturedServices = (limit: number = 10) => {;
     .slice(0, limit)};
 
 // Get trending services (recent and popular)
-export const getTrendingServices = (limit: number = 10) => {;
+export const getTrendingServices: React.FC = ($2) => {;
   return COMPREHENSIVE_SERVICES_CATALOG_2025;
     .filter(service => service.betaAccess || service.launchDate?.includes('2025'));
     .sort((a, b) => b.price - a.price) // Higher price often indicates more demand;
@@ -204,7 +204,7 @@ export const getTrendingServices = (limit: number = 10) => {;
 };
 
 // Get services by industry
-export const getServicesByIndustry = (industry: string)  => {
+export const getServicesByIndustry: React.FC = ($2) => {
   const industryMap: { [key: string]: string[] } = {
     'healthcare': ['AI & Healthcare', 'Medical Diagnostics', 'Healthcare AI'],
     'finance': ['AI & FinTech', 'Quantum Finance', 'Financial Planning'],
@@ -231,11 +231,7 @@ export const getServicesByIndustry = (industry: string)  => {
 };
 
 // Get service recommendations based on user preferences
-export const getServiceRecommendations = (preferences: {;
-  industry?: string;
-  budget?: number;
-  innovationLevel?: string;
-  supportLevel?: string})  => {
+export const getServiceRecommendations: React.FC = ($2) => {
   let recommendations = COMPREHENSIVE_SERVICES_CATALOG_2025;
 
   if (preferences.industry) {

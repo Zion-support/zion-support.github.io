@@ -195,7 +195,7 @@ const Research: React.FC = () => {
     }
   ];
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor: React.FC = ($2) => {
     switch (status) {
       case 'active': return 'bg-green-500/20 text-green-400';
       case 'completed': return 'bg-blue-500/20 text-blue-400';
@@ -205,7 +205,7 @@ const Research: React.FC = () => {
     }
   };
 
-  const getImpactColor = (impact: string) => {
+  const getImpactColor: React.FC = ($2) => {
     switch (impact) {
       case 'very-high': return 'bg-red-500/20 text-red-400';
       case 'high': return 'bg-orange-500/20 text-orange-400';
@@ -215,7 +215,7 @@ const Research: React.FC = () => {
     }
   };
 
-  const getProgressColor = (progress: number) => {
+  const getProgressColor: React.FC = ($2) => {
     if (progress >= 80) return 'bg-green-500';
     if (progress >= 60) return 'bg-blue-500';
     if (progress >= 40) return 'bg-yellow-500';

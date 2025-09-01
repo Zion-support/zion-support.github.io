@@ -22,7 +22,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
   const [activeNav, setActiveNav] = useState<any>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll: React.FC = ($2) => {
       setScrolled(window.scrollY > 10);
     };
 
@@ -396,7 +396,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     { name: 'Community', href: '/community', description: 'User community', icon: Users }
   ];
 
-  const handleNavClick = (nav: any) => {
+  const handleNavClick: React.FC = ($2) => {
     if (nav.hasDropdown) {
       setActiveNav(nav);
       // Close other dropdowns
@@ -436,7 +436,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     }
   };
 
-  const closeAllDropdowns = () => {
+  const closeAllDropdowns: React.FC = ($2) => {
     setServicesDropdownOpen(false);
     setSolutionsDropdownOpen(false);
     setCompanyDropdownOpen(false);

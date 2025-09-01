@@ -64,7 +64,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
   }, [autoPlay, filteredServices.length]);
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon: React.FC = ($2) => {;
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe};
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SEO from "../components/SEOHead";
-import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
+import { INNOVATIVE_SERVICES_2027 } from '@/src/src/data/innovativeServices2027';
 import {
   Brain,
   Shield,
@@ -42,7 +42,7 @@ const AllServices2027: React.FC = () => {;
     selectedCategory === 'All' || service.category === selectedCategory
   );
 
-  const getCategoryStats = (categoryId: string)  => {
+  const getCategoryStats: React.FC = ($2) => {
     if (categoryId === 'All') {
       return {
               count: innovativeServices2027.length,
@@ -59,7 +59,7 @@ const AllServices2027: React.FC = () => {;
     selectedCategory === 'All' || service.category === selectedCategory;
   );
 
-  const getCategoryStats = (categoryId: string) => {;
+  const getCategoryStats: React.FC = ($2) => {;
     if (categoryId === 'All') {;
       return {;
         count: INNOVATIVE_SERVICES_2027.length,;
@@ -456,7 +456,7 @@ const AllServices2027: React.FC = () => {;
 
 // Service Card Component
 const ServiceCard: React.FC<{ service}> = ({ service }) => {
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon: React.FC = ($2) => {
     switch (category) {
       case 'AI Services':;
             </a>;
@@ -468,8 +468,8 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
 };
 
 // Service Card Component
-const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
-  const getCategoryIcon = (category: string) => {;
+const ServiceCard: React.FC<{ service: unknown }> = ({ service }) => {
+  const getCategoryIcon: React.FC = ($2) => {;
     switch (category) {;
       case 'AI Services':;
         return <Brain className="w-5 h-5" />;

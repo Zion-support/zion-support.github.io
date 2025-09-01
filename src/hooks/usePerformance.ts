@@ -207,7 +207,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     let firstInputTime: number | null = null;
     let firstInputDelay: number | null = null;
 
-    const firstInputHandler = (event: Event) => {
+    const firstInputHandler: React.FC = ($2) => {
       if (firstInputTime !== null) return;
 
       firstInputTime = performance.now();

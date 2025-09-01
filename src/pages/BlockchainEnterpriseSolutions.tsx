@@ -675,7 +675,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
 
                 <div className="space-y-2">
-                  <h4 className="text-zion-cyan font-semibold mb-3">Examples: any</h4>
+                  <h4 className="text-zion-cyan font-semibold mb-3">Examples: unknown</h4>
                   {benefit.examples.map((example, exampleIndex)  => (
                     <div key={exampleIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />

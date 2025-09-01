@@ -47,7 +47,7 @@ import { innovativeMicroSAASServices2029  } from '../../data/innovative-micro-sa
 import { revolutionaryAIServices2029  } from '../../data/revolutionary-ai-services-2029';
 import { revolutionaryITServices2029  } from '../../data/revolutionary-it-services-2029';
 
-export default function ComprehensivePricing2029(...args: any[]): any {
+export default function ComprehensivePricing2029(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
@@ -84,8 +84,8 @@ export default function ComprehensivePricing2029(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: anystring)  => {
-    const iconMap: { [key: string]: any } = {
+  const getCategoryIcon: React.FC = ($2) => {
+    const iconMap: { [key: string]: unknown } = {
       'AI & Analytics': Brain,
       'Cybersecurity': Shield,
       'AI & Operations': Workflow,

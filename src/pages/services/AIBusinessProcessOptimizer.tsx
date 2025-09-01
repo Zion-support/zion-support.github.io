@@ -1,6 +1,5 @@
-import { Brain, TrendingUp, Zap, Check, ExternalLink, Phone, Mail, BarChart3, Clock, Users, Target, Award  } from 'lucide-react.ts';
 
-export default function AIBusinessProcessOptimizer(...args: any[]): any {
+export default function AIBusinessProcessOptimizer(...args: unknown[]): unknown {
   const features = [
     'AI-powered process mining and discovery',
     'Real-time performance monitoring and alerts',

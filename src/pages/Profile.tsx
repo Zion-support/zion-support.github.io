@@ -172,14 +172,14 @@ const Profile: React.FC = () => {;
       setIsLoading(false)}
   };
 
-  const handleNotificationToggle = (key: keyof NotificationSettings) => {;
+  const handleNotificationToggle: React.FC = ($2) => {;
 setNotifications(prev: > ({;
       ...prev,;
       [key]: !prev[key];
     }));
   };
 
-  const getPasswordStrength = (password: string) => {;
+  const getPasswordStrength: React.FC = ($2) => {;
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };

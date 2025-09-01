@@ -17,10 +17,10 @@ import { Sparkles,
   Target,
   Rocket
  } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 import { NEW_INNOVATIVE_SERVICES_2025  } from '../data/newInnovativeServices2025';
 
-export default function NewInnovativeServicesShowcase(...args: any[]): any {
+export default function NewInnovativeServicesShowcase(...args: unknown[]): unknown {
   const serviceCategories = [
     {
       title: "AI & Legal Tech",

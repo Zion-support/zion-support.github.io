@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { cn  } from '@/lib/utils';
+import { cn  } from '@/src/src/lib/utils';
 
 interface SkeletonProps extends React.PropsWithChildren<{}> {
 

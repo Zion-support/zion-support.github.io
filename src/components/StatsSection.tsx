@@ -1,6 +1,5 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { LucideIcon  } from 'lucide-react.ts';
 
 interface Stat {
 
@@ -17,7 +16,7 @@ interface StatsSectionProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function StatsSection(...args: any[]): any {
+export function StatsSection(...args: unknown[]): unknown {
   return (
     <section className="py-16 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

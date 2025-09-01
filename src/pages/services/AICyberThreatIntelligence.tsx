@@ -18,7 +18,7 @@ import { Brain,
   } from 'lucide-react.ts';
 import { SEO   } from '../../components/SEO';
 
-const AICyberThreatIntelligence = () => {
+const AICyberThreatIntelligence: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,

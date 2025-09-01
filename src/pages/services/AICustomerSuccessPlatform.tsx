@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Users, 
@@ -223,7 +222,7 @@ import {
   UserSearchOff
 } from 'lucide-react';
 
-const AICustomerSuccessPlatform = () => {
+const AICustomerSuccessPlatform: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,

@@ -69,7 +69,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         }
       },
       {
-        rootMargin: any'50px',;
+        rootMargin: unknown'50px',;
         threshold: 0.1
       }
     );
@@ -84,14 +84,14 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, [priority, lazy]);
 
   // Handle image load
-  const handleImageLoad = () => {
+  const handleImageLoad: React.FC = ($2) => {
     setIsLoading(false);
     setIsLoaded(true);
     onLoad?.();
   };
 
   // Handle image error
-  const handleImageError = () => {
+  const handleImageError: React.FC = ($2) => {
     if (imageSrc !== fallbackSrc) {
       setImageSrc(fallbackSrc);
       setHasError(false);
@@ -99,7 +99,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     } else {
       setHasError(true);
       setIsLoading(false);
-      onError?.(new Error(`Failed to load image: any${src}`));
+      onError?.(new Error(`Failed to load image: unknown${src}`));
     }
   };
 
@@ -113,7 +113,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, []);
 
   // Generate optimized src with quality parameter
-  const getOptimizedSrc = (src: anystring)  => {
+  const getOptimizedSrc: React.FC = ($2) => {
     if (src.startsWith('data:') || src.startsWith('blob:')) {
       return src;
     }

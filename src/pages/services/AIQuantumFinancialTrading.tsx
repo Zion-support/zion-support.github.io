@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
@@ -22,7 +21,7 @@ import {
   MapPin
 } from 'lucide-react';
 
-const AIQuantumFinancialTrading = () => {
+const AIQuantumFinancialTrading: React.FC = ($2) => {
   const features = [
     {
       title: "Quantum-AI Algorithm Trading",

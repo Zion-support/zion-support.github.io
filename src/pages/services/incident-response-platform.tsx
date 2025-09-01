@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Shield, 
   AlertTriangle, 
@@ -23,7 +23,7 @@ import { Shield,
   MapPin
  } from 'lucide-react.ts';
 
-export default function IncidentResponsePlatform(...args: any[]): any {
+export default function IncidentResponsePlatform(...args: unknown[]): unknown {
   const features = [
     {
       icon: AlertTriangle,

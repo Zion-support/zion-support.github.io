@@ -104,7 +104,7 @@ const SystemStatus: React.FC = () => {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
-  const refreshData = () => {
+  const refreshData: React.FC = ($2) => {
     setIsRefreshing(true);
     setTimeout(() => {
       setLastUpdated(new Date());
@@ -112,7 +112,7 @@ const SystemStatus: React.FC = () => {
     }, 1000);
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor: React.FC = ($2) => {
     switch (status) {
       case 'operational':
         return 'text-green-400 bg-green-500/20';
@@ -127,7 +127,7 @@ const SystemStatus: React.FC = () => {
     }
   };
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon: React.FC = ($2) => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5" />;
@@ -142,7 +142,7 @@ const SystemStatus: React.FC = () => {
     }
   };
 
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor: React.FC = ($2) => {
     switch (severity) {
       case 'critical':
         return 'text-red-400 bg-red-500/20';

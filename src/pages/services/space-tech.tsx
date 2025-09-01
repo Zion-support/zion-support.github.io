@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Rocket, 
   Satellite, 
@@ -26,7 +26,7 @@ import { Rocket,
   MapPin
  } from 'lucide-react.ts';
 
-export default function SpaceTechnology(...args: any[]): any {
+export default function SpaceTechnology(...args: unknown[]): unknown {
   const features = [
     {
       icon: Satellite,

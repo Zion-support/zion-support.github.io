@@ -119,7 +119,7 @@ export default function FAQ() {
     return matchesCategory && matchesSearch;
   });
 
-  const toggleItem = (id: string) => {
+  const toggleItem: React.FC = ($2) => {
     setActiveItem(activeItem === id ? null : id);
   };
 

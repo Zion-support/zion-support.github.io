@@ -97,10 +97,10 @@ export default function RevolutionaryServices2030() {
   });
 
 // Service Card Component
-const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itService' | 'aiService' }) => {
+const ServiceCard: React.FC = ($2) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const getIcon = (category: string) => {
+  const getIcon: React.FC = ($2) => {
     if (category.includes('AI') || category.includes('Neural')) return Brain;
     if (category.includes('Quantum')) return Atom;
     if (category.includes('Space')) return Satellite;
@@ -286,7 +286,7 @@ export default function RevolutionaryServices2030() {
     { id: 'aiServices', label: 'AI Services', count: allRevolutionaryServices2030.aiServices.length },
   ];
 
-  const getFilteredServices = () => {
+  const getFilteredServices: React.FC = ($2) => {
     switch (activeTab) {
       case 'microSaas':
         return allRevolutionaryServices2030.microSaas.map(service => ({ service, type: 'microSaas' as const }));

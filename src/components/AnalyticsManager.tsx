@@ -37,7 +37,7 @@ interface UserSession {
   startTime: number;
   lastActivity: number;
   pageViews: string[];
-  events: Array<{ name: string; timestamp: number; data?: any }>;
+  events: Array<{ name: string; timestamp: number; data?: unknown }>;
   userAgent: string;
   referrer: string;
 }
@@ -108,7 +108,7 @@ export function AnalyticsManager() {
     }
   }, [currentSession]);
 
-  const generateSessionId = () => {
+  const generateSessionId: React.FC = ($2) => {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
 
@@ -245,7 +245,7 @@ export function AnalyticsManager() {
     }
   }, [currentSession]);
 
-  const trackEvent = useCallback((name: string, data?: any) => {
+  const trackEvent = useCallback((name: string, data?: unknown) => {
     if (currentSession) {
       const event = { name, timestamp: Date.now(), data };
       
@@ -272,7 +272,7 @@ export function AnalyticsManager() {
     trackEvent('performance_metric', { metric, value });
   }, []);
 
-  const sendAnalyticsData = useCallback(async (type: string, data: any) => {
+  const sendAnalyticsData = useCallback(async (type: string, data: unknown) => {
     try {
       // In production, send to your analytics endpoint
       // await fetch('/api/analytics', {
@@ -332,7 +332,7 @@ export function AnalyticsManager() {
     };
   }, [currentSession]);
 
-  const getDeviceType = (userAgent: string) => {
+  const getDeviceType: React.FC = ($2) => {
     if (/Mobile|Android|iPhone|iPad/.test(userAgent)) {
       return 'Mobile';
     } else if (/Tablet|iPad/.test(userAgent)) {

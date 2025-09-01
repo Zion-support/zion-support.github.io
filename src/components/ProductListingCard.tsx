@@ -1,14 +1,14 @@
 import React, { useState } from 'react.ts';
 import { useNavigate, Link  } from 'react-router-dom.ts';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { ProductListing  } from '@/types/listings';
+import { Badge  } from '@/src/src/components/ui/badge';
+import { Button  } from '@/src/src/components/ui/button';
+import { ProductListing  } from '@/src/src/types/listings';
 import { DollarSign  } from 'lucide-react';
-import { RatingStars  } from '@/components/RatingStars';
-import { FavoriteButton  } from '@/components/FavoriteButton';
+import { RatingStars  } from '@/src/src/components/RatingStars';
+import { FavoriteButton  } from '@/src/src/components/FavoriteButton';
 import { useDispatch  } from 'react-redux.ts';
-import type { AppDispatch } from '@/store';
-import { addItem } from '@/store/cartSlice';
+import type { AppDispatch } from '@/src/src/store';
+import { addItem } from '@/src/src/store/cartSlice';
 // Regular img tag will be used instead of next/image
 
   listing: ProductListing;
@@ -20,11 +20,11 @@ import { addItem } from '@/store/cartSlice';
    */
   detailBasePath?: string}
 
-  const handleViewListing = () => {
+  const handleViewListing: React.FC = ($2) => {
     navigate(`${detailBasePath}/${listing.id}`);
   };
 
-  const handleRequestQuote = (e: React.MouseEvent) => {
+  const handleRequestQuote: React.FC = ($2) => {
     e.preventDefault();
     e.stopPropagation();
 

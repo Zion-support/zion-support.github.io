@@ -556,7 +556,7 @@ autoAnalyze:  true,;
 };
 
 // Hook for using SEO optimization
-export const useSEOOptimization = () => {;
+export const useSEOOptimization: React.FC = ($2) => {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
   const [isOptimizing, setIsOptimizing] = useState(false);
 

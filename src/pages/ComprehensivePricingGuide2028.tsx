@@ -170,7 +170,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
     { id: 'high', name: 'Over $10K', range: 'Over $10K' };
   ];
 
-  const getAllServices = () => {;
+  const getAllServices: React.FC = ($2) => {;
     return [;
       ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),;
       ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),;
@@ -191,7 +191,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
     return matchesCategory && matchesPrice;
   });
 
-  const calculateROI = (roi: string) => {;
+  const calculateROI: React.FC = ($2) => {;
     return parseInt(roi.replace('%', ''));
   };
 

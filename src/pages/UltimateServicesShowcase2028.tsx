@@ -65,7 +65,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
       }
     });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon: React.FC = ($2) => {
     const icons: Record<string, any> = {
       'AI & Enterprise': <Brain className="w-5 h-5" />,
       'Quantum Computing': <Zap className="w-5 h-5" />,
@@ -81,7 +81,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
     return icons[category] || <Sparkles className="w-5 h-5" />;
   };
 
-  const getInnovationLevelColor = (level: anystring)  => {
+  const getInnovationLevelColor: React.FC = ($2) => {
     switch (level) {
       case 'revolutionary':
         return 'from-purple-500 to-pink-500';

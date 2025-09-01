@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Code, 
@@ -43,7 +42,7 @@ import {
   Bitbucket
 } from 'lucide-react';
 
-const AIAutonomousCodeReviewer = () => {
+const AIAutonomousCodeReviewer: React.FC = ($2) => {
   const features = [
     {
       icon: Code,

@@ -69,7 +69,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
     { id: 'Emerging Tech', name: 'Emerging Tech', icon: Lightbulb, color: 'bg-indigo-500' };
   ];
 
-  const getCategoryIcon = (category: anystring)  => {;
+  const getCategoryIcon: React.FC = ($2) => {;
     const categoryData = categories.find(cat => cat.id === category);
     if (categoryData) {
       const IconComponent = categoryData.icon;
@@ -78,7 +78,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
     return <Globe className="w-5 h-5" />;
   };
 
-  const getCategoryColor = (category: anystring)  => {;
+  const getCategoryColor: React.FC = ($2) => {;
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.color || 'bg-gray-500';
   };

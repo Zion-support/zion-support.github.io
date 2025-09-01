@@ -36,7 +36,7 @@ import { BarChart3,
   Info
  } from 'lucide-react.ts';
 
-export default function DataAnalytics(...args: any[]): any {
+export default function DataAnalytics(...args: unknown[]): unknown {
   const features = [
     {
       icon: BarChart3,

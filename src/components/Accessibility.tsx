@@ -39,7 +39,7 @@ export function Accessibility() {
       applySettings(parsed);
 
     // Add keyboard shortcuts
-    const handleKeyDown = (e: KeyboardEvent) => {;
+    const handleKeyDown: React.FC = ($2) => {;
       if (e.ctrlKey) {;
         switch (e.key) {;
           case '=':;
@@ -63,7 +63,7 @@ export function Accessibility() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const applySettings = (newSettings: AccessibilitySettings) => {;
+  const applySettings: React.FC = ($2) => {;
     const root = document.documentElement;
 
     // Apply font size
@@ -93,7 +93,7 @@ export function Accessibility() {
 
   };
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting: React.FC = ($2) => {
     const newSettings = {
   ...settings,;
   ;
@@ -114,19 +114,19 @@ export function Accessibility() {
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
 
-  const increaseFontSize = () => {;
+  const increaseFontSize: React.FC = ($2) => {;
     if (settings.fontSize < 24) {;
       updateSetting('fontSize', settings.fontSize + 2);
 
   };
 
-  const decreaseFontSize = () => {;
+  const decreaseFontSize: React.FC = ($2) => {;
     if (settings.fontSize > 12) {;
       updateSetting('fontSize', settings.fontSize - 2);
 
   };
 
-  const resetSettings = () => {
+  const resetSettings: React.FC = ($2) => {
     const defaultSettings: AccessibilitySettings = {
   fontSize: 16,
       highContrast: false,

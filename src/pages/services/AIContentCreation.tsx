@@ -22,9 +22,9 @@ import { PenTool,
   Lightbulb,
   BarChart3
  } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 
-export default function AIContentCreation(...args: any[]): any {
+export default function AIContentCreation(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,

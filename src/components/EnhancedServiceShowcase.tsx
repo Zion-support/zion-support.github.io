@@ -171,7 +171,7 @@ const categories = [
     ? services
     : services.filter(service => service.category === selectedCategory);
 
-  const renderStars = (rating: number)  => {
+  const renderStars: React.FC = ($2) => {
     return Array.from({ length: 5 }, (_, i)  => (
       <Star
         key={i}

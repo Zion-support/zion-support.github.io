@@ -1,4 +1,4 @@
-import { ProductListing  } from '@/types/listings';
+import { ProductListing  } from '@/src/src/types/listings';
 import { COMPREHENSIVE_SERVICES_INDEX_2030  } from "./comprehensiveServicesIndex2030";
 
 // Comprehensive Pricing Guide 2030 - Zion Tech Group

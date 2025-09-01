@@ -6,8 +6,8 @@ import {
   Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
   ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign
  } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/src/src/data/innovativeMicroSaasServices2027';
+import { EMERGING_TECH_SERVICES_2027  } from '@/src/src/data/emergingTechServices2027';
 
 export default function ComprehensivePricing2027(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');

@@ -1,5 +1,4 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import { SEO } from '@/src/src/components/SEO';
 import { Link } from 'react-router-dom';
 
 const Solutions: React.FC = () => {

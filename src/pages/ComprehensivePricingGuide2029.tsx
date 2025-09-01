@@ -1,11 +1,11 @@
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Check, Star, Users, Zap, Shield, Brain, Rocket, Globe, Cpu, TrendingUp, Target, BarChart3, Code, Truck, Car, Plane, Dna, Atom, Link, Box, Crown, Sparkles  } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES  } from '../../data/revolutionary-2029-cutting-edge-services';
 import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data/revolutionary-2029-emerging-tech-services';
 
-export default function ComprehensivePricingGuide2029(...args: any[]): any {
+export default function ComprehensivePricingGuide2029(...args: unknown[]): unknown {
   const [selectedPlan, setSelectedPlan] = useState('enterprise');
   const [billingCycle, setBillingCycle] = useState('monthly');
 
@@ -393,7 +393,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
         <div className="space-y-6">
           {[
             {
-              question: any"Can I mix and match services from different categories?",;
+              question: unknown"Can I mix and match services from different categories?",;
               answer: "Yes! Our flexible pricing allows you to choose services from any category based on your specific business needs. You can start with a few services and add more as you grow."
             },
             {

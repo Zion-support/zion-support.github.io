@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -430,7 +429,7 @@ export function ComprehensiveSitemap() {
     ]
   };
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon: React.FC = ($2) => {
     switch (status) {
       case 'exists':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -441,7 +440,7 @@ export function ComprehensiveSitemap() {
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor: React.FC = ($2) => {
     switch (status) {
       case 'exists':
         return 'text-green-500';
@@ -452,7 +451,7 @@ export function ComprehensiveSitemap() {
     }
   };
 
-  const renderSection = (title: string, items: any[], icon: any) => (
+  const renderSection = (title: string, items: unknown[], icon: unknown) => (
     <motion.div
       key={title}
       initial={{ opacity: 0, y: 20 }}

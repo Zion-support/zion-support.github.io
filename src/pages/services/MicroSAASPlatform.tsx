@@ -36,7 +36,7 @@ import { Rocket,
   RefreshCw
  } from 'lucide-react.ts';
 
-export default function MicroSAASPlatform(...args: any[]): any {
+export default function MicroSAASPlatform(...args: unknown[]): unknown {
   const features = [
     {
       icon: Rocket,

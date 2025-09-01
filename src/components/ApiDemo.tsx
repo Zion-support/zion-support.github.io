@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { api, ApiResponse  } from '@/services/api';
+import { api, ApiResponse  } from '@/src/src/services/api';
 
 interface User {
 

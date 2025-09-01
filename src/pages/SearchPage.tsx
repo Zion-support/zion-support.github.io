@@ -48,7 +48,7 @@ interface SearchResult {
   tags: string[];
   relevance: number;
   lastUpdated: string;
-  icon: any;
+  icon: unknown;
   featured?: boolean;
 }
 
@@ -261,7 +261,7 @@ export default function SearchPage() {
     setIsSearching(false);
   };
 
-  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
+  const toggleFilter: React.FC = ($2) => {
     setActiveFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -270,7 +270,7 @@ export default function SearchPage() {
     }));
   };
 
-  const clearAllFilters = () => {
+  const clearAllFilters: React.FC = ($2) => {
     setActiveFilters({
       type: [],
       category: [],
@@ -281,7 +281,7 @@ export default function SearchPage() {
   };
 
   // Handle search
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch: React.FC = ($2) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() });
@@ -290,7 +290,7 @@ export default function SearchPage() {
     }
   };
 
-  const toggleFilter = (filterId: string) => {
+  const toggleFilter: React.FC = ($2) => {
     const newFilters = new Set(selectedFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId);
@@ -301,14 +301,14 @@ export default function SearchPage() {
   };
 
   // Clear all filters
-  const clearFilters = () => {
+  const clearFilters: React.FC = ($2) => {
     setSelectedCategory('all');
     setSelectedTags([]);
     setSearchQuery('');
     setSearchParams({});
   };
 
-  const getResultIcon = (type: string) => {
+  const getResultIcon: React.FC = ($2) => {
     switch (type) {
       case 'service': return Zap;
       case 'page': return FileText;
@@ -319,7 +319,7 @@ export default function SearchPage() {
     }
   };
 
-  const getResultColor = (type: string) => {
+  const getResultColor: React.FC = ($2) => {
     switch (type) {
       case 'service': return 'from-blue-500 to-indigo-500';
       case 'blog': return 'from-green-500 to-emerald-500';

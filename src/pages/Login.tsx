@@ -57,7 +57,7 @@ export default function Login() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange: React.FC = ($2) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -93,7 +93,7 @@ export default function Login() {
     }, 5000);
   };
 
-  const toggleForm = () => {
+  const toggleForm: React.FC = ($2) => {
     setIsLogin(!isLogin);
     setFormData({
       email: '',
@@ -108,7 +108,7 @@ export default function Login() {
     });
   };
 
-  const isFormValid = () => {
+  const isFormValid: React.FC = ($2) => {
     if (isLogin) {
       return formData.email && formData.password;
     } else {

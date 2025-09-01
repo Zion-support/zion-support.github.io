@@ -104,15 +104,15 @@ export const TestimonialsSection: React.FC = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const nextTestimonial = () => {
+  const nextTestimonial: React.FC = ($2) => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {
+  const prevTestimonial: React.FC = ($2) => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: number) => {
+  const goToTestimonial: React.FC = ($2) => {
     setCurrentTestimonial(index);
   };
 

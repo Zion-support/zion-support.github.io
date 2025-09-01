@@ -18,7 +18,7 @@ import { Brain,
   } from 'lucide-react.ts';
 import { SEO   } from '../../components/SEO';
 
-const AIEnterpriseResourcePlanning = () => {
+const AIEnterpriseResourcePlanning: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,

@@ -17,9 +17,9 @@ import {
   Users,
   ArrowRight
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { SEO } from '@/src/src/components/SEO';
+import { Button } from '@/src/src/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/src/src/components/ui/card';
 
 const Marketplace: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -324,7 +324,7 @@ const Marketplace: React.FC = () => {
     }
   });
 
-  const getTypeColor = (type: string) => {
+  const getTypeColor: React.FC = ($2) => {
     switch (type) {
       case 'software': return 'bg-blue-500/20 text-blue-400';
       case 'service': return 'bg-green-500/20 text-green-400';
@@ -333,7 +333,7 @@ const Marketplace: React.FC = () => {
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor: React.FC = ($2) => {
     switch (status) {
       case 'featured': return 'bg-yellow-500/20 text-yellow-400';
       case 'popular': return 'bg-blue-500/20 text-blue-400';
@@ -342,7 +342,7 @@ const Marketplace: React.FC = () => {
     }
   };
 
-  const renderStars = (rating: number) => {
+  const renderStars: React.FC = ($2) => {
     const stars = [];
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
@@ -363,17 +363,17 @@ const Marketplace: React.FC = () => {
     return stars;
   };
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon: React.FC = ($2) => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.icon : Globe;
   };
 
-  const getCategoryName = (categoryId: string) => {
+  const getCategoryName: React.FC = ($2) => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.name : 'General';
   };
 
-  const getBadgeColor = (badge: string) => {
+  const getBadgeColor: React.FC = ($2) => {
     switch (badge) {
       case 'Most Popular':
         return 'bg-gradient-to-r from-yellow-500 to-orange-500';

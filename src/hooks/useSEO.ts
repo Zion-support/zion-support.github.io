@@ -19,7 +19,7 @@ interface UseSEOOptions {
   enablePerformanceTracking?: boolean;
   enableAnalytics?: boolean}
 
-export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
+export const useSEO: React.FC = ($2) => {;
   const {;
     enableAutoTitle = true,;
     enableStructuredData = true,;

@@ -105,7 +105,7 @@ interface TableSkeletonProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function TableSkeleton(...args: any[]): any {
+export function TableSkeleton(...args: unknown[]): unknown {
   return (
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header */}
@@ -144,7 +144,7 @@ interface ListSkeletonProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function ListSkeleton(...args: any[]): any {
+export function ListSkeleton(...args: unknown[]): unknown {
   return (
     <div className={`space-y-4 ${className}`}>
       {Array.from({ length: anyitems }).map((_, index)  => (
@@ -171,7 +171,7 @@ interface GridSkeletonProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function GridSkeleton(...args: any[]): any {
+export function GridSkeleton(...args: unknown[]): unknown {
   return (
     <div className={`grid grid-cols-1 sm: anygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
       {Array.from({ length: items }).map((_, index)  => (

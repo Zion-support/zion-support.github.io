@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 import { Link  } from 'react-router-dom.ts';
 import { Brain, 
   Zap, 
@@ -33,7 +33,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { innovativeServices2029, serviceCategories, pricingTiers, Service  } from '../data/innovativeServices2029';
 
-export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
+export default function ComprehensiveServicesShowcase2029(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 

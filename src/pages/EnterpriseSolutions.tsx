@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 
 const EnterpriseSolutions: React.FC = (): JSX.Element => {
   return (

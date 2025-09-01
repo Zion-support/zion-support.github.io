@@ -53,7 +53,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   count = 3,
   className = '' 
 }) => {
-  const renderSkeleton = () => {
+  const renderSkeleton: React.FC = ($2) => {
     switch (type) {
       case 'hero':
         return (

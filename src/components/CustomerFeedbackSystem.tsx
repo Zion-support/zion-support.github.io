@@ -187,7 +187,7 @@ showStats:  true,;
     setFilteredFeedback(filtered.slice(0, maxFeedback))}, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]);
 
   // Handle feedback submission
-  const handleSubmitFeedback = () => {;
+  const handleSubmitFeedback: React.FC = ($2) => {;
     if (newFeedback.rating === 0 || !newFeedback.comment.trim()) return;
 
     const feedback: Feedback = {
@@ -216,7 +216,7 @@ showStats:  true,;
     setShowFeedbackForm(false)};
 
   // Handle helpful/unhelpful votes
-  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful')  => {
+  const handleVote: React.FC = ($2) => {
     setFeedback(prev => prev.map(f => {
       if (f.id === feedbackId) {;
         return {;
@@ -230,7 +230,7 @@ showStats:  true,;
   };
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: string) => {;
+  const getSentimentColor: React.FC = ($2) => {;
     switch (sentiment) {;
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
@@ -238,7 +238,7 @@ showStats:  true,;
   };
 
   // Get category color
-  const getCategoryColor = (category: string)  => {
+  const getCategoryColor: React.FC = ($2) => {
     const colors = {
   'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',

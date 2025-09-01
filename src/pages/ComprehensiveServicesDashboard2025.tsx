@@ -64,7 +64,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
         return filtered;
     }, [searchTerm, selectedCategory, selectedSource]);
 
-    const getCategoryColor = (category: anystring)  => {
+    const getCategoryColor: React.FC = ($2) => {
         const colors: { [key: string]: string } = {
             'fintech': 'from-green-500 to-emerald-600',
             'healthtech': 'from-red-500 to-pink-600',
@@ -85,7 +85,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
         return colors[category] || 'from-gray-500 to-gray-600';
     };
 
-    const getCategoryIcon = (category: anystring)  => {
+    const getCategoryIcon: React.FC = ($2) => {
         const icons: { [key: string]: React.ReactNode } = {
             'fintech': <DollarSign className="w-5 h-5" />,
             'healthtech': <Heart className="w-5 h-5" />,
@@ -106,7 +106,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
         return icons[category] || <Globe className="w-5 h-5" />;
     };
 
-    const getSourceBadge = (source: anystring)  => {
+    const getSourceBadge: React.FC = ($2) => {
         const badges = {
             'existing': { color: 'bg-blue-100 text-blue-800', text: 'Existing' },
             'new': { color: 'bg-green-100 text-green-800', text: 'New' },

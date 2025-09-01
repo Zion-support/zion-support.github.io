@@ -63,7 +63,7 @@ interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
   maxResources?: number}
 
 export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
-showStats:  true,;
+showStats: true,;
   showFilters = true,;
   showCharts = true,;
   maxResources = 20;

@@ -28,7 +28,7 @@ import {
   CheckCircle,
   Clock
  } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/src/src/data/innovativeMicroSaasServices2025';
 
 export function ServicesOverview(...args[]):  {
   const serviceCategories = [
@@ -178,7 +178,7 @@ export function ServicesOverview(...args[]):  {
         </motion.div>
 
         {/* Service Categories Grid */}
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg: grid-cols-3 xl: grid-cols-4 gap-6 mb-16">
           {serviceCategories.map((category, index)  => (
             <motion.div
               key={category.id}
@@ -216,14 +216,14 @@ export function ServicesOverview(...args[]):  {
               whileHover={{ y: -10 }}
 
               <Link to={`/services/${category.id}`} className="block">
-                <div className="card-futuristic h-full hover:border-zion-cyan/50 transition-all duration-300">
+                <div className="card-futuristic h-full hover: border-zion-cyan/50 transition-all duration-300">
                   {/* Category Icon */}
-                  <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300`}>
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
 
                   {/* Category Info */}
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300 text-center">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover: text-zion-cyan transition-colors duration-300 text-center">
                     {category.name}
                   </h3>
 
@@ -242,7 +242,7 @@ export function ServicesOverview(...args[]):  {
                   </div>
 
                   {/* Hover Arrow */}
-                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-4 right-4 opacity-0 group-hover: opacity-100 transition-opacity duration-300">
                     <ArrowRight className="w-5 h-5 text-zion-cyan" />
                   </div>
                 </div>
@@ -280,7 +280,7 @@ export function ServicesOverview(...args[]):  {
             <span className="text-gradient neon-text-purple">Featured Services</span>
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
               <motion.div
                 key={service.id}
@@ -319,7 +319,7 @@ export function ServicesOverview(...args[]):  {
 
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover: text-zion-cyan transition-colors duration-300">
                       {service.title}
                     </h3>
                     <p className="text-zion-slate-light leading-relaxed mb-3">
@@ -414,7 +414,7 @@ export function ServicesOverview(...args[]):  {
               how our innovative solutions can drive your business forward.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
@@ -433,7 +433,7 @@ export function ServicesOverview(...args[]):  {
             </div>
 
             {/* Contact Info Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">;
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6 max-w-4xl mx-auto">;
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-cyan/20">
                 <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
                 <p className="font-medium text-white mb-1">Address</p>
@@ -444,7 +444,7 @@ export function ServicesOverview(...args[]):  {
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-purple/20">
                 <Mail className="w-8 h-8 text-zion-purple mx-auto mb-2" />
                 <p className="font-medium text-white mb-1">Email</p>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors duration-300 text-sm">
+                <a href="mailto: kleber@ziontechgroup.com" className="text-zion-cyan hover: text-zion-purple transition-colors duration-300 text-sm">
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -452,7 +452,7 @@ export function ServicesOverview(...args[]):  {
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-blue/20">
                 <Globe className="w-8 h-8 text-zion-blue mx-auto mb-2" />
                 <p className="font-medium text-white mb-1">Website</p>
-                <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-blue transition-colors duration-300 text-sm">
+                <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover: text-zion-blue transition-colors duration-300 text-sm">
                   ziontechgroup.com
                 </a>
               </div>

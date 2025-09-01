@@ -1,6 +1,6 @@
-import { toast } from '@/hooks/use-toast';
+import { toast } from '@/src/src/hooks/use-toast';
 
-export const showApiError = (error: any, fallbackMessage?: string) => {
+export const showApiError: React.FC = ($2) => {
   const message = error?.message || fallbackMessage || 'An unexpected error occurred';
   toast({
     variant: "destructive",
@@ -15,7 +15,7 @@ export const showApiError = (error: any, fallbackMessage?: string) => {
   }
 };
 
-export const handleApiError = (error: any, fallbackMessage?: string) => {
+export const handleApiError: React.FC = ($2) => {
   showApiError(error, fallbackMessage);
   return { error: error?.message || fallbackMessage || 'An unexpected error occurred' };
 };

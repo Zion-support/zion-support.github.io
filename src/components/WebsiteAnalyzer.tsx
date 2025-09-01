@@ -129,7 +129,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     }
   };
 
-  const exportReport = () => {
+  const exportReport: React.FC = ($2) => {
     if (!analysisResult) return;
 
     const report = {
@@ -151,7 +151,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     URL.revokeObjectURL(url);
   };
 
-  const getStatusIcon = (status: anystring)  => {
+  const getStatusIcon: React.FC = ($2) => {
     switch (status) {
       case 'working':
         return <CheckCircle className="w-4 h-4 text-green-500" />;
@@ -166,7 +166,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     }
   };
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor: React.FC = ($2) => {
     switch (status) {
       case 'working':
         return 'text-green-600 bg-green-100';

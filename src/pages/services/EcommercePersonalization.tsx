@@ -1,7 +1,7 @@
 // removed duplicate old section
 
 import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 import { ShoppingCart, Sparkles, CheckCircle, BarChart3  } from 'lucide-react';
 
 const EcommercePersonalization: React.FC = (): JSX.Element => {

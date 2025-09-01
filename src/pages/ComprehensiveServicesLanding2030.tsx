@@ -51,7 +51,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
         return 0}
   });
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon: React.FC = ($2) => {
     const icons: { [key: string]: React.ReactNode } = {
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
       'AI & Healthcare': <Heart className="w-6 h-6" />,
@@ -75,7 +75,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
     };
     return icons[category] || <Rocket className="w-6 h-6" />};
 
-  const getCategoryColor = (category: string)  => {
+  const getCategoryColor: React.FC = ($2) => {
     const colors: { [key: string]: string } = {
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
       'AI & Healthcare': 'from-pink-500 to-red-500',
@@ -99,7 +99,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
     };
     return colors[category] || 'from-gray-500 to-slate-500'};
 
-  const resetFilters = () => {;
+  const resetFilters: React.FC = ($2) => {;
     setActiveCategory('all');
     setSearchTerm('');
     setSortBy('rating');

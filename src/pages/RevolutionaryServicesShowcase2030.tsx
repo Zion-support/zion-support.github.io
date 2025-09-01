@@ -100,15 +100,15 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const endIndex = startIndex + itemsPerPage;
   const currentServices = sortedServices.slice(startIndex, endIndex);
 
-  const handleServiceSelect = (service: any) => {;
+  const handleServiceSelect: React.FC = ($2) => {;
     setSelectedService(service);
   };
 
-  const closeModal = () => {;
+  const closeModal: React.FC = ($2) => {;
     setSelectedService(null);
   };
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon: React.FC = ($2) => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Autonomous Systems': <Rocket className="w-6 h-6" />,
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
@@ -142,7 +142,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
     };
     return iconMap[category] || <Rocket className="w-6 h-6" />};
 
-  const getCategoryColor = (category: string)  => {
+  const getCategoryColor: React.FC = ($2) => {
     const colorMap: { [key: string]: string } = {
       'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',

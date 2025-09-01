@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
@@ -9,7 +8,7 @@ import { ErrorBoundary } from './components/ErrorBoundary'
 
 
 // Performance monitoring
-const reportWebVitals = (metric: any) => {
+const reportWebVitals: React.FC = ($2) => {
   if (process.env.NODE_ENV === 'development') {
     console.log('Web Vitals:', metric);
   }
@@ -17,7 +16,7 @@ const reportWebVitals = (metric: any) => {
 };
 
 // Main render function
-const renderApp = () => {
+const renderApp: React.FC = ($2) => {
   const root = ReactDOM.createRoot(document.getElementById('root')!);
   
   root.render(

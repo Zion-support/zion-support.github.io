@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { 
@@ -132,11 +131,11 @@ export default function Cookies() {
     }
   ];
 
-  const toggleSection = (sectionId: string) => {
+  const toggleSection: React.FC = ($2) => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
 
-  const updateCookiePreference = (type: string, enabled: boolean) => {
+  const updateCookiePreference: React.FC = ($2) => {
     if (type === 'essential') return; // Essential cookies cannot be disabled
     
     setCookiePreferences(prev => ({
@@ -145,14 +144,14 @@ export default function Cookies() {
     }));
   };
 
-  const savePreferences = () => {
+  const savePreferences: React.FC = ($2) => {
     // In a real app, this would save preferences and update cookies
     console.log('Cookie preferences saved:', cookiePreferences);
     // Show success message
     alert('Cookie preferences saved successfully!');
   };
 
-  const acceptAll = () => {
+  const acceptAll: React.FC = ($2) => {
     setCookiePreferences({
       essential: true,
       analytics: true,
@@ -162,7 +161,7 @@ export default function Cookies() {
     savePreferences();
   };
 
-  const rejectAll = () => {
+  const rejectAll: React.FC = ($2) => {
     setCookiePreferences({
       essential: true,
       analytics: false,

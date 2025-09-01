@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/src/src/components/ui/card';
+import { Badge } from '@/src/src/components/ui/badge';
+import { Button } from '@/src/src/components/ui/button';
 import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";
 import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const categoryColors: { [key: string]: string } = {
@@ -273,7 +272,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
 
                   {/* Key Features */}
                   <div className="space-y-2 mb-4">
-                    <h4 className="font-semibold text-white text-sm">Key Features: any</h4>
+                    <h4 className="font-semibold text-white text-sm">Key Features: unknown</h4>
                     {service.features.slice(0, 3).map((feature, index)  => (
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">
                         <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>

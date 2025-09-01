@@ -2,9 +2,9 @@
 import React, { useState } from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { SEOHead  } from '../components/seo/SEOHead';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/src/src/components/ui/card';
+import { Button  } from '@/src/src/components/ui/button';
+import { Badge  } from '@/src/src/components/ui/badge';
 import { Shield,
 
   Lock,
@@ -28,7 +28,7 @@ import { Shield,
   TrendingUp
 
  } from 'lucide-react.ts';
-import { ENHANCED_SERVICES  } from '@/data/enhancedServices';
+import { ENHANCED_SERVICES  } from '@/src/src/data/enhancedServices';
 
 // Filter cybersecurity services
 const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
@@ -55,22 +55,22 @@ const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
   Key
 } from 'lucide-react';
 
-import { COMPREHENSIVE_SERVICES  } from '@/data/comprehensiveServices';
-import { TrustedBySection  } from '@/components/TrustedBySection';
+import { COMPREHENSIVE_SERVICES  } from '@/src/src/data/comprehensiveServices';
+import { TrustedBySection  } from '@/src/src/components/TrustedBySection';
 
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   service.category === 'Cybersecurity'
 );
 const SECURITY_SERVICE_CATEGORIES = [
   {
-    id: any'threat-detection',;
+    id: unknown'threat-detection',;
     name: 'Threat Detection & Response',
     description: 'AI-powered security monitoring and incident response',
     icon: Eye,
     services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('Threat Detection'))
   },
   {
-    id: any'zero-trust',;
+    id: unknown'zero-trust',;
     name: 'Zero Trust Security',
     description: 'Identity verification and access management',
     icon: Lock,
@@ -78,13 +78,13 @@ const SECURITY_SERVICE_CATEGORIES = [
   }
 ];
 
-export default function CybersecurityServicesPage(...args: any[]): any {
+export default function CybersecurityServicesPage(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon: React.FC = ($2) => {
     const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category);
     return categoryData?.icon || Shield;
   };
-  const getPricingModelLabel = (model: anystring)  => {
+  const getPricingModelLabel: React.FC = ($2) => {
 
     switch (model) {
       case 'one-time': return 'One-time';
@@ -412,9 +412,9 @@ export default function CybersecurityServicesPage(...args: any[]): any {
 }
 // Security Service Card Component
 
-function SecurityServiceCard(...args: any[]): any {
-import { Input  } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
+function SecurityServiceCard(...args: unknown[]): unknown {
+import { Input  } from '@/src/src/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/src/src/components/ui/select';
 import { Search,
 
   Star,
@@ -441,7 +441,7 @@ import { Search,
   ShieldCheck
 
  } from 'lucide-react.ts';
-import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedServices';
+import { EXPANDED_SERVICES, type ExpandedService  } from '@/src/src/data/expandedServices';
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSubcategory, setSelectedSubcategory] = useState<any>('all');
   const [priceRange, setPriceRange] = useState<any>('all');
@@ -462,7 +462,7 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
     return matchesSearch && matchesSubcategory && matchesPrice;
   });
 
-  const getPricingModelIcon = (model: anystring)  => {
+  const getPricingModelIcon: React.FC = ($2) => {
 
     switch (model) {
       case 'monthly': return <Clock className="w-4 h-4" />;
@@ -472,8 +472,8 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
     }
   };
 
-  const getPricingModelText = (model: anystring)  => {
-  const getPricingModelLabel = (model: anystring)  => {
+  const getPricingModelText: React.FC = ($2) => {
+  const getPricingModelLabel: React.FC = ($2) => {
 
     switch (model) {
       case 'one-time': return 'One-time';
@@ -599,9 +599,9 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
   Monitor
 } from "lucide-react";
 
-import { CYBERSECURITY_SERVICES  } from '@/data/expandedServices';
+import { CYBERSECURITY_SERVICES  } from '@/src/src/data/expandedServices';
 
-const CybersecurityServicesPage = () => {
+const CybersecurityServicesPage: React.FC = ($2) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
       {/* Hero Section */}

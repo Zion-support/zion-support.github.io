@@ -285,14 +285,14 @@ export default function RequestQuote() {
     }
   ];
 
-  const handleInputChange = (field: string, value: string | string[]) => {
+  const handleInputChange: React.FC = ($2) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
   };
 
-  const toggleService = (serviceId: string) => {
+  const toggleService: React.FC = ($2) => {
     setFormData(prev => ({
       ...prev,
       services: prev.services.includes(serviceId)
@@ -301,17 +301,17 @@ export default function RequestQuote() {
     }));
   };
 
-  const toggleServiceExpansion = (serviceId: string) => {
+  const toggleServiceExpansion: React.FC = ($2) => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
-  const nextStep = () => {
+  const nextStep: React.FC = ($2) => {
     if (formStep < 3) {
       setFormStep(formStep + 1);
     }
   };
 
-  const prevStep = () => {
+  const prevStep: React.FC = ($2) => {
     if (formStep > 1) {
       setFormStep(formStep - 1);
     }
@@ -328,7 +328,7 @@ export default function RequestQuote() {
     setSubmitted(true);
   };
 
-  const resetForm = () => {
+  const resetForm: React.FC = ($2) => {
     setFormData({
       companyName: '',
       contactName: '',

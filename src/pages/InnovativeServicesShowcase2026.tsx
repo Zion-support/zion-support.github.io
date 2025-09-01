@@ -70,7 +70,7 @@ export default function InnovativeServicesShowcase2026() {
     return filtered;
   }, [searchQuery, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon: React.FC = ($2) => {;
     switch (category) {;
       case 'AI & Automation':;
         return <Cpu className="w-5 h-5" />;
@@ -103,7 +103,7 @@ export default function InnovativeServicesShowcase2026() {
     };
   };
 
-  const getInnovationBadge = (level: string) => {
+  const getInnovationBadge: React.FC = ($2) => {
     const colors = {
   'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600',
       'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;

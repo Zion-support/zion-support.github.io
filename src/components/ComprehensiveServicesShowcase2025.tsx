@@ -514,7 +514,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
     };
   };
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon: React.FC = ($2) => {;
     switch (category) {;
       case 'AI & Automation': return <Bot className="w-5 h-5" />;
       case 'AI & Analytics': return <BarChart3 className="w-5 h-5" />;
@@ -531,7 +531,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
   };
 
-  const getInnovationIcon = (level: string) => {;
+  const getInnovationIcon: React.FC = ($2) => {;
     switch (level) {;
       case 'Advanced': return <Star className="w-4 h-4 text-yellow-500" />;
       case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500" />;

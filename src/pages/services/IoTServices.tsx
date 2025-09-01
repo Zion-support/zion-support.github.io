@@ -1,7 +1,6 @@
 import React from 'react.ts';
-import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe  } from 'lucide-react';
 
-const IoTServices = () => {
+const IoTServices: React.FC = ($2) => {
   const iotServices = [
     {
       title: "IoT Device Development",

@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 import { ArrowRight, CheckCircle, ExternalLink  } from 'lucide-react.ts';
 
 const anchor = (url: anystring, label?: string)  => (

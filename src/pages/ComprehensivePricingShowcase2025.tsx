@@ -33,14 +33,14 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
     const [selectedService, setSelectedService] = useState<any>(null);
 
     const categories = [
-        { id: any'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length },;
+        { id: unknown'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length },;
         { id: 'Fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Fintech').length },
-        { id: any'Healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Healthtech').length },;
-        { id: any'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Edutech').length },;
-        { id: any'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Martech').length },;
-        { id: any'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Micro SaaS').length },;
-        { id: any'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'AI Services').length },;
-        { id: any'IT Services', name: 'IT Services', icon: Shield, count: comprehensivePricingGuide2025.filter(s  => s.category === 'IT Services').length }
+        { id: unknown'Healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Healthtech').length },;
+        { id: unknown'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Edutech').length },;
+        { id: unknown'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Martech').length },;
+        { id: unknown'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Micro SaaS').length },;
+        { id: unknown'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'AI Services').length },;
+        { id: unknown'IT Services', name: 'IT Services', icon: Shield, count: comprehensivePricingGuide2025.filter(s  => s.category === 'IT Services').length }
     ];
 
     const filteredServices = useMemo(() => {
@@ -61,7 +61,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
         return filtered;
     }, [searchTerm, selectedCategory]);
 
-    const getCategoryColor = (category: anystring)  => {
+    const getCategoryColor: React.FC = ($2) => {
         const colors: { [key: string]: string } = {
             'Fintech': 'from-green-500 to-emerald-600',
             'Healthtech': 'from-red-500 to-pink-600',
@@ -74,7 +74,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
         return colors[category] || 'from-gray-500 to-gray-600';
     };
 
-    const getCategoryIcon = (category: anystring)  => {
+    const getCategoryIcon: React.FC = ($2) => {
         const icons: { [key: string]: React.ReactNode } = {
             'Fintech': <DollarSign className="w-5 h-5" />,
             'Healthtech': <Heart className="w-5 h-5" />,

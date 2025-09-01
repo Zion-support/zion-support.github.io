@@ -99,7 +99,7 @@ const FloatingActionButton = React.memo(() => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
+    const toggleVisibility: React.FC = ($2) => {
       if (window.pageYOffset > 300) {
         setIsVisible(true);
       } else {
@@ -111,7 +111,7 @@ const FloatingActionButton = React.memo(() => {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  const scrollToTop = () => {
+  const scrollToTop: React.FC = ($2) => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -383,7 +383,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
 
 // Features Section Component
-const FeaturesSection = () => {
+const FeaturesSection: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,
@@ -489,7 +489,7 @@ const FeaturesSection = () => {
 };
 
 // Stats Section Component
-const StatsSection = () => {
+const StatsSection: React.FC = ($2) => {
   const stats = [
     { number: "500+", label: "Projects Completed", icon: CheckCircle },
     { number: "50+", label: "Team Members", icon: Users },
@@ -524,7 +524,7 @@ const StatsSection = () => {
 };
 
 // CTA Section Component
-const CTASection = () => {
+const CTASection: React.FC = ($2) => {
   return (
     <section className="py-24 bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900">
       <div className="container mx-auto px-4 text-center">

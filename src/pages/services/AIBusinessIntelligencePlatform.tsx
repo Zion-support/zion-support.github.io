@@ -21,9 +21,9 @@ import { Brain,
   LineChart,
   Activity
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
+import { SEO  } from '@/src/src/components/SEO';
+import { Button  } from '@/src/src/components/ui/button';
+import { Badge  } from '@/src/src/components/ui/badge';
 
 export default function AIBusinessIntelligencePlatform(...args[]):  {
   const features = [

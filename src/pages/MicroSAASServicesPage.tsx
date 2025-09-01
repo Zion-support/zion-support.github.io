@@ -1,7 +1,6 @@
-import React from 'react';
-import SEO from '@/components/SEO';
+import SEO from '@/src/src/components/SEO';
 
-const MicroSAASServicesPage = () => {
+const MicroSAASServicesPage: React.FC = ($2) => {
   return (
     <>
       <SEO

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Users, 
@@ -28,9 +27,9 @@ import {
   DollarSign,
   Heart
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from '@/src/src/components/SEO';
 
-const AISalesCopilot = () => {
+const AISalesCopilot: React.FC = ($2) => {
   const features = [
     {
       icon: Users,

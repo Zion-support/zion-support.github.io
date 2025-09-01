@@ -143,7 +143,7 @@ export const EnhancedAccessibility: React.FC = () => {
       setSettings(JSON.parse(saved))}
   }, []);
 
-  const toggleSetting = (key: keyof AccessibilitySettings)  => {
+  const toggleSetting: React.FC = ($2) => {
     setSettings(prev => ({
       ...prev,;
       [key]: !prev[key];
@@ -170,7 +170,7 @@ export const EnhancedAccessibility: React.FC = () => {
   useEffect(() => {
     if (!settings.keyboardNavigation) return;
 
-    const handleKeyDown = (e: KeyboardEvent) => {;
+    const handleKeyDown: React.FC = ($2) => {;
       const target = e.target as HTMLElement;
 
       // Skip if in input/textarea
@@ -212,7 +212,7 @@ modals.forEach(modal:  > {;
   useEffect(() => {
     if (!settings.keyboardNavigation) return;
 
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown: React.FC = ($2) => {
       // Skip to main content
       if (e.key === 'Tab' && e.altKey) {
         e.preventDefault();
@@ -243,7 +243,7 @@ modals.forEach(modal:  > {;
 
     };
 
-    const handleFocusOut = (e: FocusEvent) => {;
+    const handleFocusOut: React.FC = ($2) => {;
       const target = e.target as HTMLElement;
       target.style.outline = '';
       target.style.outlineOffset = '';
@@ -359,7 +359,7 @@ modals.forEach(modal:  > {;
 
   if (!enabled) return null;
   // Screen reader announcements
-  const announceToScreenReader = (message: string) => {
+  const announceToScreenReader: React.FC = ($2) => {
     if (settings.screenReader) {
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
@@ -374,7 +374,7 @@ modals.forEach(modal:  > {;
     }
   };
 
-  const toggleSetting = (key: keyof AccessibilitySettings, value?: any) => {
+  const toggleSetting: React.FC = ($2) => {
     const newValue = value !== undefined ? value : !settings[key];
     setSettings(prev => ({ ...prev, [key]: newValue }));
     

@@ -138,7 +138,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   }, [filteredResults, onResultsChange]);
 
   // Toggle filter
-  const toggleFilter = (filterId: string) => {
+  const toggleFilter: React.FC = ($2) => {
     const newFilters = new Set(activeFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId);
@@ -149,14 +149,14 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Clear all filters
-  const clearAllFilters = () => {
+  const clearAllFilters: React.FC = ($2) => {
     setActiveFilters(new Set());
     setSelectedCategory('all');
     setSortBy('relevance');
   };
 
   // Get icon for type
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon: React.FC = ($2) => {
     switch (type) {
       case 'service': return <Zap className="w-4 h-4" />;
       case 'article': return <Tag className="w-4 h-4" />;
@@ -167,7 +167,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Get category color
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor: React.FC = ($2) => {
     const colors = {
       'ai': 'text-purple-400',
       'cloud': 'text-blue-400',

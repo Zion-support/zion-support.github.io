@@ -56,8 +56,8 @@ import {
   Globe2,
   Leaf
 } from 'lucide-react';
-import SEO from "@/components/SEO";
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
+import SEO from '@/src/src/components/SEO';
+import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '@/src/src/data/ultimateInnovativeServices2026';
 
 export default function UltimateInnovativeServices2026(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
@@ -99,7 +99,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
         return 0}
   });
 
-  const toggleServiceExpansion = (serviceId: string) => {;
+  const toggleServiceExpansion: React.FC = ($2) => {;
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
@@ -229,7 +229,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
           {/* Sort Options */}
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <span className="text-zion-slate-300">Sort by: any</span>
+            <span className="text-zion-slate-300">Sort by: unknown</span>
             {sortOptions.map(option  => (
               <button
                 key={option.id}

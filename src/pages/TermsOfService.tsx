@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import {
   FileText,
@@ -17,7 +16,7 @@ import {
   Database
  } from 'lucide-react';
 
-const TermsOfService = () => {;
+const TermsOfService: React.FC = ($2) => {;
   const lastUpdated = '2025-01-15';
   
   const sections = [

@@ -259,7 +259,7 @@ interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
   // TODO: Define props based on prompt: ${prompt}
 
 export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {
-  const [state, setState] = useState<any>(null);
+  const [state, setState] = useState<any></any>(null);
 
   useEffect(() => {
     // TODO: Implement initialization logic
@@ -276,8 +276,8 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
       className="generated-component"
 
       {/* TODO: Implement component based on prompt: ${prompt} */}
-      <h1>Generated Component</h1>
-      <p>This component was generated based on your prompt.</p>
+      <h1></motion>Generated Component</h1>
+      <p></p>This component was generated based on your prompt.</p>
     </motion.div>
   )};
 
@@ -442,11 +442,11 @@ console.log("Language:", "${options.language}");`};
     // Helper functions for code optimization
     const optimizeForAccessibility = (code) => {
         return code
-            .replace(/<div>/g, '<div role="main">')
-            .replace(/<button>/g, '<button aria-label="Action button">')
+            .replace(/<div></div>/g, '<div role="main"></div>')
+            .replace(/<button></button>/g, '<button aria-label="Action button"></button>')
             .replace(/<img/g, '<img alt="Description"')};
     // Helper functions for test generation
-    const generateJestTests = (_code) => {
+    const generateJestTests = (_code) =></img> {
         return `import { render, screen, fireEvent } from '@testing-library/react';
 import GeneratedComponent from "./GeneratedComponent";
 
