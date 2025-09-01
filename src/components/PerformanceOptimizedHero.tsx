@@ -1,1 +1,1 @@
-useEffect ( () => { setIsVisible (true) ; setCurrentFeature ( (prev) => (prev + 1) % features.length) }, 3000) ; return () => clearInterval(interval)}, [features.length]); // // // // // // // // console.log("Hero CTA clicked");" " // Analytics tracking could be added here; // console.log("Hero CTA clicked")}, []);" const containerVariants = {; hidden: { opacity: 0, y: 50 },; visible: { opacity: 1,; y: 0,; transition: {; 
+useEffect ( () => { setIsVisible (true) ; setCurrentFeature ( (prev) => (prev + 1) % features.length) }, 3000) ; 

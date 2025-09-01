@@ -1,1 +1,1 @@
-import {; Calendar, Clock, CheckCircle, Circle, AlertCircle, Play, Pause, StopCircle, Users, Target, TrendingUp, FileText, MessageSquare, Link, Download, Share2, Filter, Search, Plus, Edit, Trash2, Eye, Settings" } from "lucide-react";"interface Project { id: string; name: string; description: string; status: "planning" | "active" | "on-hold" | "completed" | "cancelled";" priority: "low" | "medium" | "high" | "critical";" startDate: string;" endDate: string; 
+import { 

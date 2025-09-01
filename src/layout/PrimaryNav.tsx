@@ -1,1 +1,1 @@
-// // // // // // // // console.log("PrimaryNav search submit: ", query);" router.push(`/search/${slugify(query)}`);" setQuery(");" // // // // // console.log("PrimaryNav search submit: ", query);`" router.push(`/search/${slugify(query)}`);" setQuery(")}"// Theme toggle component;"` const [isDark, setIsDark] = useState<typeof false>(false); 
+// // // // // // // // // // // console.log("PrimaryNav search submit:", query); router.push(`/search/${slugify(query)}`);" setQuery("); " 

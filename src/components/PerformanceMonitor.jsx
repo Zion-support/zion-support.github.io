@@ -1,1 +1,1 @@
-"export const PerformanceMonitor = () => {; const [metrics, setMetrics] = useState({ fcp: null, lcp: null,; fid: null, cls: null,; ttfb: null 
+export const PerformanceMonitor = () => { const [metrics, setMetrics] = useState({ 

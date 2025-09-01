@@ -1,1 +1,1 @@
-const Skeleton: React.FC<SkeletonProps> = ({ className = ", height = "h-4"," width = "w-full", rounded = true," animated = true}) => {" const baseClasses = `${height} ${width} bg-gray-200 dark: bg-gray-700 ${rounded ? "rounded" : "}`;`" " if (!animated) {` return <div className={classes} />} return(); <motion.div 
+const Skeleton: React.FC<SkeletonProps> = ({ 

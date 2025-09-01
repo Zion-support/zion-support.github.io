@@ -1,1 +1,1 @@
-: src/store/wishlistSlice.tsx interface WishlistState { items: WishlistItem[]; : src/store/wishlistSlice.tsx, 
+:src/store/wishlistSlice.tsx 

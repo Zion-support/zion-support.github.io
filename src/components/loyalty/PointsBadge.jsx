@@ -1,1 +1,0 @@
-"export function PointsBadge() {" const { user, signOut, logout } = useAuth(); 

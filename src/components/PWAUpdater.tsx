@@ -1,1 +1,1 @@
-const PWAUpdater: React.FC<PWAUpdaterProps> = ({ autoCheck = true, checkInterval = 300000, // 5 minutes showUpdatePrompt = true}) => { 
+const PWAUpdater: React.FC<PWAUpdaterProps> = ({ 

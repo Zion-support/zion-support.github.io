@@ -1,1 +1,1 @@
-import React from 'react'; export const FuturisticAnimatedBackground: React.FC = () => {; export default FuturisticAnimatedBackground; useEffect ( () => { 
+import React from 'react'; export const FuturisticAnimatedBackground: React.FC = () => {; export default FuturisticAnimatedBackground; 

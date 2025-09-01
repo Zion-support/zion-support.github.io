@@ -1,1 +1,1 @@
-type FloatingActionButtonProps = { 
+type FloatingActionButtonProps = { enabled?: boolean; 

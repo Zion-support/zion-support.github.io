@@ -1,1 +1,1 @@
-export sessionStorage.removeItem("auth")}" } catch (error) {" // console.error("Error cleaning up auth state: ", error)}"};" export return !!auth} return false} catch (error) { // console.error("Error checking authentication status: ", error);" return false}"}; 
+export const cleanupAuthState = () => { // Clean up stored authentication state try { ; if (typeof window !== "null") {; // Clear any stored tokens or user data; 

@@ -1,1 +1,1 @@
-" min = parseFloat(budgetString.replace(/[>$, \soverk]/g, "));" if (budgetString.includes("k")) min = kTo1000(budgetString);" max = Infinity; // No explicit maximum" } else { // Assuming a single number or "approx X" min = parseFloat(budgetString.replace(/[$, \sapproxk]/g,));" if (budgetString.includes("k")) min = kTo1000(budgetString);" max = min; // If single number, min and max are the same" } 
+" min = parseFloat(budgetString.replace(/[>$,\soverk]/g, "));" 

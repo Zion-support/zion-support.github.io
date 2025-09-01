@@ -1,1 +1,1 @@
-"import {;" Mail, Send, CheckCircle, Star, Zap, Shield, Users, TrendingUp} from "lucide-react";"export function NewsletterSection() { const [email, setEmail] = useState(");" const [isSubscribed, setIsSubscribed] = useState(false);" const [isLoading, setIsLoading] = useState(false); const handleSubmit = async e => {; 
+import { 

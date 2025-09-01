@@ -1,1 +1,1 @@
-"export function EnhancedNewsletterForm() {" const [email, setEmail] = useState(");" const [isSubmitting, setIsSubmitting] = useState(false);" const [isSubmitted, setIsSubmitted] = useState(false); const { toast } = useToast(); const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; const lastSubmit = useRef (0) ; const handleSubmit = async (e) => {; 
+" " " export function EnhancedNewsletterForm() { " const [email, setEmail] = useState("); const [isSubmitting, setIsSubmitting] = useState(false); const [isSubmitted, setIsSubmitted] = useState(false); const { toast } = useToast(); 

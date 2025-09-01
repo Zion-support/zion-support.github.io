@@ -1,1 +1,1 @@
-: src/hooks/use-toast.tsx interface Toast { id: string; title?: string; description?: string; variant?: "default" | "destructive" | "success";" duration?: number"} ; export function useToast(...args[]): { :src/hooks/use-toast.tsx 
+:src/hooks/use-toast.tsx 

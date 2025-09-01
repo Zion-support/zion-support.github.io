@@ -1,1 +1,1 @@
-import {; Smartphone, Tablet, Monitor, Smartphone, Tablet, Monitor, Touch, Gesture, Swipe, Pinch, Rotate, X, CheckCircle, AlertTriangle, Info, Settings, ArrowUp, ArrowDown, ArrowLeft, ArrowRight"} from "lucide-react";"interface TouchGesture { type: "swipe" | "pinch" | "rotate" | "tap" | "longpress";" direction?: "up" | "down" | "left" | "right";" distance?: number;" duration?: number} 
+import { Smartphone, Tablet, Monitor, 

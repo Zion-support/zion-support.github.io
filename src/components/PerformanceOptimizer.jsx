@@ -1,1 +1,1 @@
-"export const PerformanceOptimizer = ({ children }) => {; const location = useLocation(); // Preload critical resources useEffect(() => { const preloadCriticalResources = () => {; // Note: CSS is already handled by Vite build process // Fonts are loaded via Google Fonts CDN in index.html 
+export const PerformanceOptimizer = ({ children }) => { const location = useLocation(); 

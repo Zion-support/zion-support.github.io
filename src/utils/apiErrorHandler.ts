@@ -1,1 +1,1 @@
-export toast({ variant: "destructive", if (process.env.NODE_ENV === "development") {" // console.error("API Error: ", error)}"};" export return { error: error?.message || fallbackMessage || "An unexpected error occurred"}};" 
+export const showApiError = (error: , fallbackMessage?: string) => {; const message = error?.message || fallbackMessage || "An unexpected error occurred"; 

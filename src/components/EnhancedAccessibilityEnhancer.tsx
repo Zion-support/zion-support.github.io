@@ -1,1 +1,1 @@
-import {; Eye, EyeOff, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Accessibility, Keyboard, MousePointer, Smartphone} from "lucide-react";"interface AccessibilitySettings { 
+import { 

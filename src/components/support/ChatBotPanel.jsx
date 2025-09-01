@@ -1,1 +1,1 @@
-"// Define suggested quick replies"const QUICK_REPLIES = [" { id: "hire", text: "How do I hire?" }," { id: "match", text: "How do I get matched?" }," { id: "billing", text: "Billing help" },"];"export function ChatBotPanel() { const [messages, setMessages] = useState([ { " id: "welcome", " content: "Hi! How can I help you?"," sender: "bot", timestamp: new Date()}, ]);" const [inputValue, setInputValue] = useState(");" const [isLoading, setIsLoading] = useState(false);" const [failedAttempts, setFailedAttempts] = useState(0); 
+" " " " " " " " " 

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 interface Stat {}
+=======
+import React from 'react.ts';
+
+interface Stat {
+
+>>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
   label: string;
   value: string;
   description: string;
 
+<<<<<<< HEAD
 interface InteractiveStatsProps {}
   // Add your props here;
   stats: Stat[];
@@ -18,10 +26,37 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
         >;""""
           <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>;""""
           <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>;""""
+=======
+interface InteractiveStatsProps extends React.PropsWithChildren<{
+
+}> {
+
+  stats: Stat[];
+  className?: string;
+
+const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "";
+}) => {
+
+  return (
+    <div className={`grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 ${className}`}>
+      {stats.map((stat, index)               => (
+        <div
+          key={index}
+          className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"
+        >;
+          <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>;
+          <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>;
+>>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
           <div className="text-gray-300 text-sm">{stat.description}</div>;
         </div>;
       ))};
     </div>;
+<<<<<<< HEAD
   )};
 "`
 export default InteractiveStats}}'"`'"`
+=======
+  );
+};
+export default InteractiveStats;}}
+>>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

@@ -1,1 +1,1 @@
-export function cn(...args: any[]): any { 
+export function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs)); } 

@@ -1,1 +1,1 @@
-"// Lazy load heavy components"const LazyExpensiveComponent = lazy(() => import("./ExpensiveComponent"));"// Memoized component for expensive calculations"const MemoizedDataGrid = memo(({ data, onItemClick }) => {; const processedData = useMemo(() => {; return data.map(item => ({ ...item, processed: item.value * 2,; timestamp: new Date().toISOString()})); }, [data]); const handleClick = useCallback(); item => { 
+// Lazy load heavy components" const LazyExpensiveComponent = lazy(() => import("./ExpensiveComponent")); 

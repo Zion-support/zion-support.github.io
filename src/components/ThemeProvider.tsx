@@ -1,1 +1,1 @@
-"type Theme = "light" | "dark" | "system";"interface ThemeContextType { 
+"type Theme = "light" | "dark" | "system"; 

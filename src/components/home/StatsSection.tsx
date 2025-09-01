@@ -1,1 +1,0 @@
-useEffect(() => { if (isInView) { let current = 0; const countTimer = setInterval(: unknown {; current += increment; if (current >= targetNumber) { current = targetNumber; clearInterval(countTimer)} setCounts(prev => ({ ...prev, [stat.label]: Math.floor(current); 

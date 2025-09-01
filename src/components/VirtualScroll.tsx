@@ -1,1 +1,1 @@
-export function VirtualScroll<T>({ items, height, itemHeight, renderItem, overscan = 5,; className = ",;" onScroll}: VirtualScrollProps < T>) {;" const [scrollTop, setScrollTop] = useState (0) ; // Calculate visible range return { start: Math.max(0, start - overscan), end: Math.min(items.length, end); 
+export function VirtualScroll<T>({ 

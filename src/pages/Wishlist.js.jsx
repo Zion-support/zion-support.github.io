@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useFavorites } from '@/hooks/useFavorites';'''
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';'''
 import { TALENT_PROFILES } from '@/data/talentData';'''
@@ -9,10 +10,25 @@ import { useAuth } from '@/hooks/useAuth';'''
 import { getCartKey } from '@/utils/cartUtils';'''
 import { useNavigate } from 'react-router-dom';
 export default function WishlistPage() {}
+=======
+import { useFavorites } from '@/hooks/useFavorites';
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { TalentCard } from '@/components/talent/TalentCard';
+import { Button } from '@/components/ui/button';
+import { useCart } from '@/context/CartContext';
+import { useAuth } from '@/hooks/useAuth';
+import { getCartKey } from '@/utils/cartUtils';
+import { useNavigate } from 'react-router-dom';
+export default function WishlistPage() {
+
+>>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
     const { favorites, loading } = useFavorites();
     const { user } = useAuth();
     const { dispatch } = useCart();
     const navigate = useNavigate();
+<<<<<<< HEAD
     useEffect(() => {}
         // Redirect if not authenticated and auth loading is complete;
         if (!isAuthLoading && !user) {}
@@ -49,9 +65,54 @@ export default function WishlistPage() {}
                 return item ? (<div key={fav.item_id} className="relative">"""
                 <ProductListingCard listing={item}/>""""
                 <Button size="sm" className="absolute bottom-2 right-2" onClick={() => addToCart(item)} disabled={items.some(i => i.id === item.id)}>'
+=======
+    useEffect(() => {
+
+        // Redirect if not authenticated and auth loading is complete
+        if (!isAuthLoading && !user) {
+
+            router.push('/login')}
+    }, [user, isAuthLoading, router]);
+    if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
+        return null; // Or a loading spinner
+    }
+    const { items, dispatch } = useCart();
+    const addToCart = (item) => {
+
+        const stored = safeStorage.getItem(getCartKey(user?.id));
+        const cart = stored ? JSON.parse(stored) [];
+        cart.push({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });
+        safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
+        dispatch({ type: 'SET_ITEMS', payload: cart })};
+    const productMap = MARKETPLACE_LISTINGS.reduce((acc, p) => {
+
+        acc[p.id] = p;
+        return acc}, {});
+    const talentMap = TALENT_PROFILES.reduce((acc, t) => {
+
+        acc[t.id] = t;
+        return acc}, {});
+    return (<div className="container py-8">
+      <h1 className="text-3xl font-bold mb-6">Wishlist</h1>
+      {loading ? (<p>Loading...</p>) : favorites.length === 0 ? (<p>No items saved.</p>) : (<div className="responsive-grid">
+          {favorites.map(fav => {
+
+                if (fav.item_type === 'talent') {
+
+                    const talent = talentMap[fav.item_id];
+                    return talent ? (<TalentCard key={fav.item_id} talent={talent} onMessage={() => { }} onBook={() => { }} isAuthenticated={true}/>) : null}
+                const item = productMap[fav.item_id];
+                return item ? (<div key={fav.item_id} className="relative">
+                <ProductListingCard listing={item}/>
+                <Button size="sm" className="absolute bottom-2 right-2" onClick={() => addToCart(item)} disabled={items.some(i => i.id === item.id)}>
+>>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
                   {items.some(i => i.id === item.id) ? 'In Cart' : 'Add to Cart'}
                 </Button>
               </div>) : null})}
         </div>)}
+<<<<<<< HEAD
     </div>)}'"""
 '"'"""
+=======
+    </div>)}
+>>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

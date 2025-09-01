@@ -1,1 +1,0 @@
-// Interface for the existing service structure; export interface Service { 

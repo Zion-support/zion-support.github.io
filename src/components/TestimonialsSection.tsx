@@ -1,1 +1,1 @@
-import {; Star, Quote, ChevronLeft, ChevronRight, CheckCircle, Award, TrendingUp, Users"} from "lucide-react";"interface Testimonial { 
+import { Star, Quote, ChevronLeft, ChevronRight, 

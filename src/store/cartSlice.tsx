@@ -1,1 +1,1 @@
-: src/store/cartSlice.tsx interface CartState { items: CartItem[]; total: number; : src/store/cartSlice.tsx, 
+:src/store/cartSlice.tsx 

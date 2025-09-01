@@ -1,1 +1,1 @@
-export function UserExperienceOptimizer ({ interface UXMetric { 
+export function UserExperienceOptimizer ({ 

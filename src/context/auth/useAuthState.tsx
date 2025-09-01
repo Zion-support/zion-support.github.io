@@ -1,1 +1,1 @@
-: src/context/auth/useAuthState.tsx interface User { 
+:src/context/auth/useAuthState.tsx 

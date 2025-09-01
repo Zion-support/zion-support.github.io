@@ -1,1 +1,1 @@
-export interface CartItem {} id: string; name: string; price: number; quantity: number; type: "equipment" | "service" | "talent"}"export const calculateCartTotal = (items: CartItem[]): number => {; 
+export interface CartItem { id: string; name: string; price: number; quantity: number; type: "equipment" | "service" | "talent"; } 

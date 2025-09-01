@@ -1,1 +1,1 @@
-; interface CategoriesSectionProps { // Add your props here 
+; 

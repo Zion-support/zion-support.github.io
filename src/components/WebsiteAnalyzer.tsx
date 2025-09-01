@@ -1,1 +1,0 @@
-totalLinks: number; brokenLinks: number; missingPages: number; 
