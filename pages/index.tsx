@@ -9,7 +9,8 @@ import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import ContentCard from '../components/ContentCard';
 
-const HomePage = memo(function HomePage() {
+export default function HomePage() {
+  const repoBaseUrl = 'https://github.com/Zion-Holdings/zion.app/blob/main';
   return (
     <div>
       <Head>
@@ -1761,13 +1762,21 @@ const HomePage = memo(function HomePage() {
                 <p className="text-white/70 text-sm">Get in touch</p>
               </Link>
 
-              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-rose-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">📜</span>
+              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-teal-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🔐</span>
                 </div>
-                <h3 className="text-lg font-semibold text-rose-400 mb-2">Privacy Policy</h3>
-                <p className="text-white/70 text-sm">Security & compliance</p>
+                <h3 className="text-lg font-semibold text-teal-300 mb-2">Privacy</h3>
+                <p className="text-white/70 text-sm">Our privacy commitment</p>
               </Link>
+
+              <a href="https://github.com/Zion-Holdings/zion.app" target="_blank" rel="noopener noreferrer" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-slate-200 to-white rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🌐</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">GitHub</h3>
+                <p className="text-white/70 text-sm">View the repository</p>
+              </a>
             </div>
           </section>
 
@@ -1784,17 +1793,9 @@ const HomePage = memo(function HomePage() {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <div className="space-y-2">
-                  <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="block text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                    Ultimate Redundancy V2 →
-                  </Link>
-                  <Link href="/README_COMPREHENSIVE_REDUNDANCY.md" className="block text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                    Comprehensive Redundancy →
-                  </Link>
-                  <Link href="/README_PM2_REDUNDANCY_COMPLETE.md" className="block text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                    PM2 Redundancy →
-                  </Link>
-                </div>
+                <Link href="/services" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Explore Redundancy Systems →
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -1806,17 +1807,9 @@ const HomePage = memo(function HomePage() {
                   <li>• Autonomous Agents</li>
                   <li>• Innovation Systems</li>
                 </ul>
-                <div className="space-y-2">
-                  <Link href="/AUTOMATION_COMPLETION_REPORT.md" className="block text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                    Automation Report →
-                  </Link>
-                  <Link href="/AUTOMATION_EXECUTION_SUMMARY.md" className="block text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                    Execution Summary →
-                  </Link>
-                  <Link href="/EXPONENTIAL_GROWTH_AUTOMATION.md" className="block text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                    Growth Automation →
-                  </Link>
-                </div>
+                <Link href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Explore AI Systems →
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -1828,17 +1821,9 @@ const HomePage = memo(function HomePage() {
                   <li>• Performance Optimization</li>
                   <li>• Quality Assurance</li>
                 </ul>
-                <div className="space-y-2">
-                  <Link href="/README_GITHUB_ACTIONS.md" className="block text-green-400 hover:text-green-300 text-sm font-semibold">
-                    GitHub Actions →
-                  </Link>
-                  <Link href="/README_CONTINUOUS_OPERATION.md" className="block text-green-400 hover:text-green-300 text-sm font-semibold">
-                    Continuous Operation →
-                  </Link>
-                  <Link href="/PERFORMANCE.md" className="block text-green-400 hover:text-green-300 text-sm font-semibold">
-                    Performance Guide →
-                  </Link>
-                </div>
+                <Link href="/services" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Explore Build Systems →
+                </Link>
               </div>
             </div>
           </section>
@@ -2237,11 +2222,11 @@ const HomePage = memo(function HomePage() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">📖 Core Documentation</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app#readme" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Main README</a> - Project overview</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Architecture Guide</a> - System design</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/API.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">API Documentation</a> - Integration guide</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/DEPLOYMENT.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Deployment Guide</a> - Setup instructions</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Contributing Guide</a> - Development workflow</li>
+                  <li>• <a href={`${repoBaseUrl}/README.md`} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Main README</a> - Project overview</li>
+                  <li>• <a href={`${repoBaseUrl}/ARCHITECTURE.md`} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Architecture Guide</a> - System design</li>
+                  <li>• <a href={`${repoBaseUrl}/API.md`} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">API Documentation</a> - Integration guide</li>
+                  <li>• <a href={`${repoBaseUrl}/DEPLOYMENT.md`} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Deployment Guide</a> - Setup instructions</li>
+                  <li>• <a href={`${repoBaseUrl}/CONTRIBUTING.md`} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Contributing Guide</a> - Development workflow</li>
                 </ul>
                 <Link href="/automation" className="text-blue-400 hover:text-blue-300 text-xs font-semibold">
                   Explore Build Tools →
@@ -2251,11 +2236,11 @@ const HomePage = memo(function HomePage() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">🔧 Automation Guides</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Ultimate Redundancy</a> - System overview</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/COMPREHENSIVE_REDUNDANCY_README.md" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Comprehensive Redundancy</a> - Advanced features</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_REDUNDANCY_AUTOMATION.md" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Redundancy Automation</a> - Process management</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/tree/main/.github/workflows" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">GitHub Actions</a> - CI/CD automation</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY_AUTOMATION.md" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Continuous Operation</a> - Zero-downtime</li>
+                  <li>• <a href={`${repoBaseUrl}/README_ULTIMATE_REDUNDANCY.md`} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Ultimate Redundancy</a> - System overview</li>
+                  <li>• <a href={`${repoBaseUrl}/README_COMPREHENSIVE_REDUNDANCY.md`} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Comprehensive Redundancy</a> - Advanced features</li>
+                  <li>• <a href={`${repoBaseUrl}/README_PM2_REDUNDANCY_COMPLETE.md`} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">PM2 Redundancy</a> - Process management</li>
+                  <li>• <a href={`${repoBaseUrl}/README_GITHUB_ACTIONS.md`} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">GitHub Actions</a> - CI/CD automation</li>
+                  <li>• <a href={`${repoBaseUrl}/README_CONTINUOUS_OPERATION.md`} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Continuous Operation</a> - Zero-downtime</li>
                 </ul>
                 <Link href="/automation" className="text-green-400 hover:text-green-300 text-xs font-semibold">
                   Explore Monitoring →
@@ -2323,11 +2308,11 @@ const HomePage = memo(function HomePage() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🚀 Build & Deployment</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Security Guide</a> - Protection measures</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Testing Guide</a> - Quality assurance</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SERVICE_GENERATION_README.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Service Generation</a> - Auto-creation</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY_AUTOMATION.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Automation README</a> - System details</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Growth Automation</a> - Scaling systems</li>
+                  <li>• <a href={`${repoBaseUrl}/SECURITY.md`} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Security Guide</a> - Protection measures</li>
+                  <li>• <a href={`${repoBaseUrl}/TESTING.md`} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Testing Guide</a> - Quality assurance</li>
+                  <li>• <a href={`${repoBaseUrl}/SERVICE_GENERATION_README.md`} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Service Generation</a> - Auto-creation</li>
+                  <li>• <a href={`${repoBaseUrl}/README_ULTIMATE_REDUNDANCY_AUTOMATION.md`} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Automation README</a> - System details</li>
+                  <li>• <a href={`${repoBaseUrl}/EXPONENTIAL_GROWTH_AUTOMATION.md`} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Growth Automation</a> - Scaling systems</li>
                 </ul>
               </div>
             </div>
