@@ -1,1 +1,9 @@
-export default function TalentIndexPage() { return <div className="p-6">Talent</div>; }
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+
+export default function Talent() {
+  return (
+    <EnhancedLayout>
+      <h1 className="text-2xl font-semibold">Talent</h1>
+    </EnhancedLayout>
+  );
+}

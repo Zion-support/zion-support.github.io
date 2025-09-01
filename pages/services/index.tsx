@@ -34,24 +34,11 @@ const Index: NextPage = () => {
         <title>Services - Zion Tech Solutions</title>
         <meta name="description" content="Services" />
       </Head>
-
-      <main className="space-y-4 p-4">
-        <h1 className="text-xl font-semibold">Services</h1>
-        <div className="text-sm text-gray-600">Detected: {geo?.country || geo?.countryCode || 'Unknown'}</div>
-
-        <GeoFilter
-          mode={mode}
-          countryCode={countryCode}
-          onChange={(u) => {
-            setMode(u.mode);
-            if (u.countryCode !== undefined) setCountryCode(u.countryCode);
-          }}
-          countries={countries}
-        />
-
-        <div className="text-sm text-gray-600">Mode: {mode} {mode === 'country' ? `(${countryCode || 'none'})` : ''}</div>
-
-        <p className="text-sm text-gray-700">(Demo) Listings would be prioritized by your region using this filter.</p>
+      
+      <main>
+        <h1>Index</h1>
+        <p>Service details coming soon...</p>
+        <Link href="/services"><a>Back to Services</a></Link>
       </main>
     </div>
   );

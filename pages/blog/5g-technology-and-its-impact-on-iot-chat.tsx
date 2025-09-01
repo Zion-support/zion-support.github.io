@@ -21,7 +21,6 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
       <main>
         <h1>5gTechnologyAndItsImpactOnIotChat</h1>
         <p>Blog content coming soon...</p>
-        <ShareBar title="5gTechnologyAndItsImpactOnIotChat" summary={desc} imageUrl={ogImage} />
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>

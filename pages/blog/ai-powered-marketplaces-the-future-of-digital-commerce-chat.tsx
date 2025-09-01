@@ -16,8 +16,7 @@ const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat: NextPage = () => {
       <main>
         <h1>AiPoweredMarketplacesTheFutureOfDigitalCommerceChat</h1>
         <p>Blog content coming soon...</p>
-        <FeedbackWidget />
-        <Link href="/blog">Back to Blog</Link>
+        <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
   );

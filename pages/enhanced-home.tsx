@@ -1,1 +1,9 @@
-export default function EnhancedHomePage() { return <div className="p-6">Enhanced Home</div>; }
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+
+export default function EnhancedHome() {
+  return (
+    <EnhancedLayout>
+      <h1 className="text-2xl font-semibold">Enhanced Home</h1>
+    </EnhancedLayout>
+  );
+}

@@ -1,1 +1,9 @@
-export default function ForgotPasswordPage() { return <div className="p-6">Forgot Password</div>; }
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+
+export default function ForgotPassword() {
+  return (
+    <EnhancedLayout>
+      <h1 className="text-2xl font-semibold">Forgot Password</h1>
+    </EnhancedLayout>
+  );
+}

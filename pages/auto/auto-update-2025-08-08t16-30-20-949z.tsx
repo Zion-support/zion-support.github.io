@@ -1,1 +1,1 @@
-export default function Page() { return <div className="p-6">Auto Update</div>; }
+export default function AutoPage(){return null;}

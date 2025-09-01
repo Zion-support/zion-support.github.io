@@ -1,1 +1,9 @@
-export default function AutomationStatusPage() { return <div className="p-6">Automation Status</div>; }
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+
+export default function AutomationStatus() {
+  return (
+    <EnhancedLayout>
+      <h1 className="text-2xl font-semibold">Automation Status</h1>
+    </EnhancedLayout>
+  );
+}

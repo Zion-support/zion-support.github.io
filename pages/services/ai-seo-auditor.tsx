@@ -16,8 +16,7 @@ const AiSeoAuditor: NextPage = () => {
       <main className="space-y-4">
         <h1>AiSeoAuditor</h1>
         <p>Service details coming soon...</p>
-        <UseTokensButton serviceId="ai-seo-auditor" />
-        <Link href="/services">Back to Services</Link>
+        <Link href="/services"><a>Back to Services</a></Link>
       </main>
     </div>
   );

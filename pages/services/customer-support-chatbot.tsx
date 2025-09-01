@@ -14,8 +14,7 @@ const CustomerSupportChatbot: NextPage = () => {
       <main className="space-y-4">
         <h1>CustomerSupportChatbot</h1>
         <p>Service details coming soon...</p>
-        <UseTokensButton serviceId="customer-support-chatbot" defaultType="premium_support" />
-        <Link href="/services">Back to Services</Link>
+        <Link href="/services"><a>Back to Services</a></Link>
       </main>
     </div>
   );

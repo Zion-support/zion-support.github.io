@@ -33,23 +33,11 @@ const BlogIndex: NextPage = () => {
       <Head>
         <title>Blog</title>
       </Head>
-      <main className="space-y-4 p-4">
-        <div className="flex items-center justify-between">
-          <h1 className="text-xl font-semibold">Blog</h1>
-          <div className="flex items-center gap-3 text-xs text-gray-600">
-            <span>Detected: {geo?.country || geo?.countryCode || 'Unknown'}</span>
-            <GeoFilter
-              mode={mode}
-              countryCode={countryCode}
-              onChange={(u) => {
-                setMode(u.mode);
-                if (u.countryCode !== undefined) setCountryCode(u.countryCode);
-              }}
-              countries={countries}
-            />
-          </div>
-        </div>
-        <p className="text-sm text-gray-700">(Demo) Content could be prioritized by your region.</p>
+      
+      <main>
+        <h1>Index</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
   );

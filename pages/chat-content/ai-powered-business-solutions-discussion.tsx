@@ -1,1 +1,1 @@
-export default function Page() { return <div className="p-6">AI-powered Business Solutions Discussion</div>; }
+export default function ChatContent(){return null;}

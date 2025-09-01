@@ -1,13 +1,11 @@
-import Link from 'next/link';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-semibold">Welcome to Zion</h1>
-      <p className="opacity-80">Explore our AI marketplace and tools.</p>
-      <div>
-        <Link href="/tokenomics"><a className="px-4 py-2 rounded-md bg-indigo-600 text-white">Open Whitepaper Generator</a></Link>
+    <EnhancedLayout>
+      <div className="py-10">
+        <h1 className="text-3xl font-semibold">Zion AI Marketplace</h1>
       </div>
-    </div>
+    </EnhancedLayout>
   );
 }

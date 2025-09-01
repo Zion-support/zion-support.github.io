@@ -21,7 +21,6 @@ const ApiFirstDevelopmentBuildingScalableSystemsChat: NextPage = () => {
       <main>
         <h1>ApiFirstDevelopmentBuildingScalableSystemsChat</h1>
         <p>Blog content coming soon...</p>
-        <ShareBar title="ApiFirstDevelopmentBuildingScalableSystemsChat" summary={desc} imageUrl={ogImage} />
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>

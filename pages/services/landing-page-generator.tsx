@@ -14,8 +14,7 @@ const LandingPageGenerator: NextPage = () => {
       <main className="space-y-4">
         <h1>LandingPageGenerator</h1>
         <p>Service details coming soon...</p>
-        <UseTokensButton serviceId="landing-page-generator" />
-        <Link href="/services">Back to Services</Link>
+        <Link href="/services"><a>Back to Services</a></Link>
       </main>
     </div>
   );
