@@ -47,7 +47,12 @@ export function QuoteWizard() {
         )}
 
         {error && (
-          <div className="text-center text-red-500">Service temporarily unavailable</div>
+          <Alert variant="destructive" data-testid="service-fetch-error-alert">
+            <AlertTitle>Network Error</AlertTitle>
+            <AlertDescription>
+              There was a problem fetching the services. Please check your internet connection and try again.
+            </AlertDescription>
+          </Alert>
         )}
 
         {services.length > 0 && (
