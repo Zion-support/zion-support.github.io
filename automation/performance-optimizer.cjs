@@ -13,13 +13,13 @@ class PerformanceOptimizer {
     try {
       // Analyze bundle size
       const bundleAnalysis = execSync('npm run build', { encoding: 'utf8' });
-      
+
       // Optimize images
       this.optimizeImages();
-      
+
       // Optimize CSS
       this.optimizeCSS();
-      
+
       console.log('Performance optimization completed');
       return this.optimizations;
     } catch (error) {

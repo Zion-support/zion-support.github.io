@@ -1,0 +1,15 @@
+import React from 'react';
+
+export default function Empty({ message }: { message: string }) {
+<<<<<<< HEAD
+  return (<div className="text-center py-16 text-muted-foreground" data-testid="empty">
+=======
+
+  return()
+    <div className="text-center py-16 text-muted-foreground" data-testid="empty">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+      {message}
+    </div>
+  );
+}
+'"

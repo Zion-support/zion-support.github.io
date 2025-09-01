@@ -1,0 +1,157 @@
+import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
+<<<<<<< HEAD
+=======
+import plugin from 'tailwindcss/plugin';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+
+const config: Config = {
+  darkMode: 'class',
+  content: [
+<<<<<<< HEAD
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx,js,jsx}'
+  ],
+  theme: {
+    extend: {
+      colors: {
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))'
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))'
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))'
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))'
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))'
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))'
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))'
+        },
+        'zion-blue': {
+          DEFAULT: '#2e73ea',
+          light: '#8ab1f3',
+          dark: '#172d67'
+        },
+        'zion-purple': {
+          DEFAULT: '#a855f7',
+          light: '#c084fc',
+          dark: '#6b21a8'
+        },
+        'zion-cyan': {
+          DEFAULT: '#0d9488',
+          light: '#7aeae4',
+          dark: '#0f766e'
+        },
+        'zion-slate': {
+          DEFAULT: '#17072b',
+          light: '#451582',
+          dark: '#000000'
+        }
+      },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)'
+      },
+      fontFamily: {
+        sans: [
+          'var(--font-inter), Inter',
+          ...defaultTheme.fontFamily.sans
+        ],
+        heading: [
+          'var(--font-poppins), Poppins',
+          ...defaultTheme.fontFamily.sans
+        ]
+=======
+    './index.html',
+    './src/**/*.{ts,tsx}',
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+  ],
+  theme: {
+    extend: {
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
+      },
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        heading: ['Poppins', ...defaultTheme.fontFamily.sans],
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+<<<<<<< HEAD
+          to: { height: 'var(--radix-accordion-content-height)' }
+=======
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' }
+        }
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+<<<<<<< HEAD
+        'accordion-up': 'accordion-up 0.2s ease-out'
+      }
+    }
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio')
+  ]
+};
+
+export default config;
+=======
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+    },
+  },
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+        '.rtl': { direction: 'rtl', textAlign: 'right' },
+        '.ltr': { direction: 'ltr', textAlign: 'left' },
+      };
+      addUtilities(newUtilities);
+    }),
+  ],
+};
+
+export default config;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f

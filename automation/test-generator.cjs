@@ -8,7 +8,7 @@ class TestGenerator {
     this.testTemplates = {
       component: this.getComponentTestTemplate(),
       page: this.getPageTestTemplate(),
-      utility: this.getUtilityTestTemplate()
+      utility: this.getUtilityTestTemplate(),
     };
   }
 
@@ -83,7 +83,7 @@ describe('utility', () => {
     const fileName = path.basename(filePath, path.extname(filePath));
     const testFileName = `${fileName}.test.tsx`;
     const testPath = filePath.replace(path.extname(filePath), '.test.tsx');
-    
+
     const testContent = template
       .replace(/Component/g, fileName)
       .replace(/Page/g, fileName)
@@ -95,12 +95,12 @@ describe('utility', () => {
 
   generateTestsForDirectory(dir) {
     if (!fs.existsSync(dir)) return;
-    
+
     const files = fs.readdirSync(dir);
     for (const file of files) {
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
-      
+
       if (stat.isDirectory()) {
         this.generateTestsForDirectory(filePath);
       } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
