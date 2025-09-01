@@ -8,14 +8,16 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /multiverse/
+Disallow: /private/
 
 # Allow important pages
-Allow: /services/
-Allow: /about/
+Allow: /
+Allow: /docs/
 Allow: /contact/
-Allow: /news/
-Allow: /careers/
+Allow: /privacy/
+Allow: /terms/
+Allow: /community/
+Allow: /multiverse/
 
 # Crawl delay
 Crawl-delay: 1
