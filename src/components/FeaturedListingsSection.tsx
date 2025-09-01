@@ -7,12 +7,11 @@ export /**
 import { motion  } from 'framer-motion';
 import { motion, AnimatePresence  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
- */
-function FeaturedListingsSection () {
-=======
->>>>>>> main
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const featuredListings = [{
 
@@ -221,10 +220,10 @@ export function FeaturedListingsSection() {
             to="/services"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
           >
-            View All Services"
-            <span className="text-xl">→</span>;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-'"
+            <Link href="/marketplace">View All Listings</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}

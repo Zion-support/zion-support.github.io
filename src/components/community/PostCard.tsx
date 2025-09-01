@@ -1,5 +1,15 @@
 
-interface PostCardProps extends React.PropsWithChildren<{}> {
+import React from 'react';
+import { formatDistanceToNow } from "date-fns";
+import Link from "next/link";
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { ForumPost } from "@/types/community";
+import { ProfileBadge } from "@/components/profile/ProfileBadge";
 
 post: {
 
@@ -26,7 +36,7 @@ author: {
         </Avatar>
         <div className="flex-1">
           <div className="flex items-center">
-            <Link to={`/community/post/${post.id}`} className="font-semibold text-lg hover:text-zion-purple transition-colors">
+            <Link href={`/community/post/${post.id}`} className="font-semibold text-lg hover:text-zion-purple transition-colors">
               {post.title}
             </Link>
             {post.isAnswered && (

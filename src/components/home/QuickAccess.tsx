@@ -1,13 +1,62 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-export default function Page() {
-,"
-    { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
-    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },;"
-    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+
+import React from "react";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
+import { 
+  ArrowRight, 
+  Search, 
+  Users, 
+  Briefcase, 
+  Settings, 
+  MessageSquare, 
+  Smartphone 
+} from "lucide-react";
+
+interface QuickAccessProps {
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+export function QuickAccess({ className, style }: QuickAccessProps) {
+  const { t } = useTranslation();
+  const quickLinks = [
+    {
+      title: t('home.tool_ai_matcher'),
+      description: t('home.tool_ai_matcher_desc'),
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+      link: "/marketplace"
+    },
+    {
+      title: t('home.tool_talent'),
+      description: t('home.tool_talent_desc'),
+      icon: <Users className="h-6 w-6 text-zion-purple" />,
+      link: "/talent"
+    },
+    {
+      title: t('home.tool_services'),
+      description: t('home.tool_services_desc'),
+      icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,
+      link: "/services"
+    },
+    {
+      title: t('home.tool_equipment'),
+      description: t('home.tool_equipment_desc'),
+      icon: <Settings className="h-6 w-6 text-zion-purple" />,
+      link: "/equipment"
+    },
+    {
+      title: t('nav.community'),
+      description: t('home.tool_chat_desc'),
+      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,
+      link: "/community"
+    },
+    {
+      title: "Mobile App",
+      description: "Zion on the go",
+      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
+      link: "/mobile-launch"
+    }
   ];
 
   return ("
@@ -36,8 +85,8 @@ export default function Page() {
           {quickLinks.map((link, index) => (
             <Link 
               key={index} 
-              to={link.link} 
-              className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/70 rounded-lg p-4 transition-all duration-300 flex flex-col items-center text-center hover:scale-[1.03] focus:scale-[1.03] hover:shadow-[0_0_20px_0px_rgba(112,0,255,0.4)] focus:shadow-[0_0_20px_0px_rgba(112,0,255,0.4)]"
+              href={link.link}
+              className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-4 transition-all duration-300 flex flex-col items-center text-center"
             >
               {/* Icon and Header */}"
               <div className="flex items-start justify-between mb-4">

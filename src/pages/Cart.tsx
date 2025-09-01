@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
+import Link from 'next/link';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { getStripe } from '@/utils/getStripe';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 import { useCart } from '@/context/CartContext';
@@ -66,7 +69,11 @@ export default function CartPage() {
   if (items.length === 0) {
     return (
       <div className="container py-10 text-center">
-        <p>Your cart is empty.</p>
+        <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" />
+        <p>Your cart is empty</p>
+        <Button asChild className="mt-4">
+          <Link href="/marketplace">Browse Marketplace</Link>
+        </Button>
       </div>
     );
   }

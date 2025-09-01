@@ -1,5 +1,6 @@
 
-import { useParams, Link } from "react-router-dom";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -8,7 +9,7 @@ import { useState, useEffect, useRef } from "react";
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react";
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { ProductListing } from "@/types/listings";
-import { useNavigate } from "react-router-dom";
+// useNavigate will be replaced by useRouter
 import { toast } from "@/hooks/use-toast";
 
 const AUTO_SERVICE_TITLES = [
@@ -50,10 +51,28 @@ function generateInnovationListing(index: number): ProductListing {
   };
 }
 
-export default function CategoryDetail() {
-  // Cast to specify the expected route param type since useParams may be untyped
-  const { slug } = useParams() as { slug?: string };
-  const navigate = useNavigate();
+interface CategoryDetailProps {
+  slug?: string;
+}
+
+export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps = {}) {
+  const router = useRouter();
+  // Use router.query for slug in Next.js. Ensure the page is named [slug].tsx or similar.
+  // If slugProp is provided, it takes precedence.
+  const slug = slugProp ?? (router.query.slug as string | undefined);
+  // navigate will be replaced by router.push or router.replace
+
+  // Redirect to categories list if slug is missing
+  // This check should ideally happen earlier or be handled by Next.js routing if possible
+  useEffect(() => {
+    if (!slug && router.isReady) { // Ensure router.query is populated
+      router.push('/categories');
+    }
+  }, [slug, router]);
+
+  if (!slug && !slugProp) { // If no slug and not yet redirected, render nothing or a loader
+    return null; // Or a loading spinner, or handle redirection more gracefully
+  }
   const [isLoading, setIsLoading] = useState(true);
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
@@ -196,16 +215,18 @@ export default function CategoryDetail() {
       });
       
       // Navigate to the quote request page with the listing information
-      navigate("/request-quote", {
-        state: { 
-          serviceType: listing.category,
-          specificItem: {
+      const navigationState = {
+        serviceType: listing.category,
+        specificItem: {
             id: listing.id,
             title: listing.title,
             category: listing.category,
-            image: listing.images?.[0]
+            image: listing.images?.[0] // Removed comma
           }
-        }
+      }; // navigationState correctly defined
+      router.push({
+        pathname: "/request-quote",
+        query: { state: JSON.stringify(navigationState) },
       });
     }
   };
@@ -216,7 +237,7 @@ export default function CategoryDetail() {
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-12">
           <div className="mb-4">
-            <Link to="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
+            <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
               ← Back to Categories
             </Link>
           </div>

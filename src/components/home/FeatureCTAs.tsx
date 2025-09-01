@@ -1,4 +1,24 @@
 
+import React from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import { 
+  ArrowRight, 
+  Users, 
+  Zap, 
+  Settings, 
+  Search, 
+  MessageSquare, 
+  Smartphone, 
+  Calendar,
+  BookOpen,
+  Code,
+  Building,
+  Clock
+} from "lucide-react";
+import { cn } from "@/lib/utils";
 
   return ("
     <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">"
@@ -35,13 +55,17 @@
                   {feature.details}
                 </p>
               </CardContent>
-
-              <CardFooter>"
-                <Link to={feature.link} className="w-full">"
-                  <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white">
-                    Learn More"
-                    <ArrowRight className="w-4 h-4 ml-2"  />                  </Button>
-                </Link>
+              <CardFooter>
+                <Button asChild className="w-full gap-1">
+                  <Link
+                    href={feature.link}
+                    aria-label={`Explore ${feature.title}`}
+                    className="cursor-pointer"
+                  >
+                    <span>Explore {feature.title}</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
               </CardFooter>
             </Card>
           ))}

@@ -1,7 +1,7 @@
 
 import { GradientHeading } from "./GradientHeading";
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
+import Link from "next/link";
+import { Briefcase, HardDrive, Lightbulb, Users, HelpCircle } from "lucide-react"; // Added HelpCircle for default icon
 import { cn } from "@/lib/utils";
 
 const categories = [{
@@ -93,28 +93,18 @@ export function CategoriesSection({
           variants={containerVariants}
 =======
         
-        <motion.div "
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-          variants={containerVariants}"
->>>>>>> main
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {categories.map((category, index) => (<motion.div
-              key={category.title}
-              variants={itemVariants}"
-              className="group block"
-            >"
-              <Link to={category.link} className="block">"
-                <div className="rounded-lg overflow-hidden h-full border border-blue-600 bg-slate-800 p-6 transition-all duration-300 hover:border-purple-500/50 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-blue-500/25">`
-                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
-                    <div className="text-white text-2xl">
-                      {category.icon}
-                    </div>
-                  </div>"
-                  <h3 className="text-xl font-bold text-white mb-3">{category.title}</h3>"
-                  <p className="text-gray-300 text-sm">{category.description}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {displayCategories.map((category) => (
+            <Link
+              key={category.id}
+              href={category.link || '#'}
+              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+            >
+              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="text-white">
+                    {category.icon}
+                  </div>
                 </div>
               </Link>
             </motion.div>) ) }

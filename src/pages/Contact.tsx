@@ -12,8 +12,8 @@ import { apiClient } from "@/utils/apiClient";
 import z from "zod";
 import { ChatAssistant } from "@/components/ChatAssistant";
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
-import { AppLayout } from "@/layout/AppLayout";
-import api from '@/lib/api';
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -327,128 +327,14 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="grid md:grid - cols - 2 gap-4">
-                <div>
-                  <label
-                    htmlFor="company"
-                    className="block text-white font - medium mb-2"
-                  >
-                    <Building className="w-4 h-4 inline mr-2" />
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border-transparent"
-                    placeholder="Enter company name"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-white font - medium mb-2"
-                  >
-                    <Phone className="w-4 h-4 inline mr-2" />
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border-transparent"
-                    placeholder="Enter phone number"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="service"
-                  className="block text-white font - medium mb-2"
-                >
-                  Service of Interest
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border-transparent"
-                >
-                  {serviceOptions.map (option => (<option
-                      key={option.value}
-                      value={option.value}
-                      className="bg-gray - 800 text-white"
-                    >
-                      {option.label}
-                    </option>) ) }
-                </select>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-white font - medium mb-2"
-                >
-                  <MessageSquare className="w-4 h-4 inline mr-2" />
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border-transparent resize -none"
-                  placeholder="Tell us about your project or inquiry..."
-                />
-              </div>
-
-              {/* Submit Status */}
-              {submitStatus === 'success' && (<motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="bg-green - 500 / 20 border border-green - 500 / 50 rounded-lg p - 4 flex items - center space - x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-green -400" />
-                  <span className="text-green -400">
-                    Message sent successfully ! We'll get back to you soon.</span>
-                </motion.div>) }
-
-              {submitStatus === 'error' && (<motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="bg-red - 500 / 20 border border-red - 500 / 50 rounded-lg p - 4 flex items - center space - x-3"
-                >
-                  <AlertCircle className="w-6 h-6 text-red -400" />
-                  <span className="text-red -400">
-                    Failed to send message.Please try again.</span>
-                </motion.div>) }
-
-              <button     type="submit"
-                disabled={!isFormValid || isSubmitting}
-                className={`w-full py-4 px-6 rounded-lg font - semibold text-lg transition - all duration - 200 flex items - center justify - center space - x-2 ${isFormValid && !isSubmitting
-                    ? 'bg-gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 text-white transform hover:-translate - y-1 shadow-lg hover:shadow-xl'
-                    : 'bg-gray - 600 text-gray - 400 cursor - not - allowed'
-                }`}
-              >
-                {isSubmitting ? (<>
-                    <div className="animate - spin rounded-full h-6 w-6 border-b-2 border-white"></div>
-                    <span > Sending...</span>
-                  </>) : (<>
-                    <Send className="w-6 h-6" />
-                    <span > Send Message</span>
-                  </>) }
-              </button>
-            </form>
-          </motion.div>
+          <div className="mt-12 text-center">
+            <p className="text-zion-slate-light text-lg">
+              Looking for more details about our platform? Visit our{' '}
+              <Link href="/services" className="text-zion-cyan underline">services page</Link>{' '}
+              or explore the{' '}
+              <Link href="/blog" className="text-zion-cyan underline">Zion blog</Link> for additional insights.
+            </p>
+          </div>
         </div>
 
         {/* Additional Contact Information */}
