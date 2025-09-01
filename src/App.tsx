@@ -24,21 +24,21 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.ServicesPage })));
+const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
 const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
 const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
 const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
 const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
-const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
-const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));
+const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.Sitemap || module.default })));
+const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap || module.default })));
 const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
 const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
 const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
-const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
-const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 })));
+const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025').then(m => ({ default: m.default })));
+const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025'));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
 // Service Pages
@@ -73,7 +73,7 @@ const Pricing = createLazyComponent(() => import('./pages/Pricing'));
 const Help = createLazyComponent(() => import('./pages/Help'));
 const News = createLazyComponent(() => import('./pages/News'));
 const Careers = createLazyComponent(() => import('./pages/Careers'));
-const Support = createLazyComponent(() => import('./pages/Support'));
+// removed duplicate Support alias to avoid redeclare; using top-level lazy import
 const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
 
@@ -97,7 +97,7 @@ function App() {
                 <Route path="/services/cybersecurity" element={<Cybersecurity />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
                 <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
-                <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
+                <Route path="/new-services-2025" element={<NewInnovativeServices2025 />} />
                 <Route path="/enhanced-new-services-2025" element={<EnhancedNewServices2025 />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/solutions" element={<SolutionsPage />} />
