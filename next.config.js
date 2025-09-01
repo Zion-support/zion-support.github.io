@@ -666,9 +666,8 @@ const nextConfig = {
       };
     }
 
-    // Ensure webpack cache does not enable cacheUnaffected
-    config.experiments = { ...(config.experiments || {}) };
-    if (config.cache && 'cacheUnaffected' in config.cache) {
+    // Ensure cacheUnaffected is removed to avoid usedExports conflicts
+    if (config.cache && config.cache.cacheUnaffected !== undefined) {
       delete config.cache.cacheUnaffected;
     }
 
