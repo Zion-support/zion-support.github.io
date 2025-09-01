@@ -1,34 +1,7 @@
-import Link from 'next/link';
-import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
-import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import { useEffect, useState } from 'react';
-import InteractiveSearch from '../../components/ui/InteractiveSearch';
-
-export default function TalentListPage() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => { const t = setTimeout(() => setLoading(false), 500); return () => clearTimeout(t); }, []);
-
-  const talents = [
-    { slug: 'alex-ai', title: 'Alex Johnson', subtitle: 'AI Engineer', description: 'GenAI • LLM Ops • RAG Systems' },
-    { slug: 'sara-ml', title: 'Sara Williams', subtitle: 'ML Scientist', description: 'Time-series • NLP • Computer Vision' },
-  ];
-
+export default function Talent() {
   return (
-    <div className="space-y-4">
-      <InteractiveSearch />
-      {loading ? (
-        <EnhancedLoading lines={4} />
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {talents.map((t) => (
-            <Link key={t.slug} href={`/talent/${t.slug}`}>
-              <a>
-                <EnhancedMarketplaceCard title={t.title} subtitle={t.subtitle} description={t.description} footer={<span className="text-blue-600">View Profile →</span>} />
-              </a>
-            </Link>
-          ))}
-        </div>
-      )}
+    <div className="py-10">
+      <h1 className="text-2xl font-semibold">Talent</h1>
     </div>
   );
 }

@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
-import i18n, { isRtl } from '../../utils/i18n';
-import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
+import dynamic from 'next/dynamic';
+
+const MobileTabBar = dynamic(() => import('./MobileTabBar'), { ssr: false });
 
 const EnhancedLayout: React.FC = ({ children }) => {
   return <>{children}</>;
@@ -21,11 +22,11 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
         <EnhancedNavigation />
         <LanguageSwitchPrompt />
       </header>
-      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
-      <footer>
+      <main className="flex-1 container mx-auto px-4 py-6 pb-20 md:pb-6">{children}</main>
+      <footer className="hidden md:block">
         <EnhancedFooter />
       </footer>
-      <OnboardingWizard />
+      <MobileTabBar />
     </div>
   );
 }
