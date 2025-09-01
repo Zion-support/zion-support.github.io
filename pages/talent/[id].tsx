@@ -11,6 +11,7 @@ main
 import type { TalentProfile } from '@/types/talent';
 import TalentDetails from '@/components/talent/TalentDetails';
 import NotFound from '@/components/NotFound';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 
 l3xoyh-codex/load-talent-profile-data
 const TalentPage: React.FC = () => {
