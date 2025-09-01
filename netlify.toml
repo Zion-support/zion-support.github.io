@@ -95,13 +95,21 @@
   schedule = "*/1 * * * *" # every minute
 
 [[scheduled.functions]]
-  name = "dependencies-guardian"
+  name = "ultrafast-repo-healer"
+  schedule = "*/2 * * * *" # every 2 minutes
+
+[[scheduled.functions]]
+  name = "knowledge-graph-orchestrator"
   schedule = "0 * * * *" # hourly
 
 [[scheduled.functions]]
-  name = "ai-innovator"
-  schedule = "17 */6 * * *" # every 6 hours, offset minutes
+  name = "newsroom-orchestrator"
+  schedule = "*/30 * * * *" # every 30 minutes
 
 [[scheduled.functions]]
-  name = "self-healing-guardian"
-  schedule = "*/30 * * * *" # every 30 minutes
+  name = "image-optimizer-scheduler"
+  schedule = "0 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "repo-radar-scheduler"
+  schedule = "10 */4 * * *" # every 4 hours
