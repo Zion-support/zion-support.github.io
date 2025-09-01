@@ -21,23 +21,22 @@ const createLazyComponent = (
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
 const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
 const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
-const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
-const ComprehensiveServicesShowcase2026 = lazy(() => import('./pages/ComprehensiveServicesShowcase2026').then(module => ({ default: module.default })));
-const ComprehensiveMarketingPage2026 = lazy(() => import('./pages/ComprehensiveMarketingPage2026').then(module => ({ default: module.default })));
-const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
-const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));
-const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
-const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
-const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
-const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
+const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
+const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap'));
+const Support = lazy(() => import('./pages/Support'));
+const Training = lazy(() => import('./pages/Training'));
+const Helpdesk = lazy(() => import('./pages/Helpdesk'));
+const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
+const PricingPage = lazy(() => import('./pages/PricingPage'));
 
-// Service Pages - Updated to use backup-pages location
+// Service Pages
 const AIThreatIntelligence = lazy(() => import('../backup-pages/src-pages/services/ai-threat-intelligence-platform').then(module => ({ default: module.AIThreatIntelligencePlatform })));
 const BlockchainSupplyChain = lazy(() => import('../backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
 const AdvancedServicesShowcase = lazy(() => import('../backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
@@ -71,8 +70,7 @@ function App() {
                 <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
                 <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
-                <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
-                <Route path="/comprehensive-marketing-2026" element={<ComprehensiveMarketingPage2026 />} />
+                <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/solutions" element={<SolutionsPage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />
