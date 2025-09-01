@@ -1,271 +1,310 @@
-import Link from "next/link";
-
-export const metadata = {
-  title: "About Us - Zion Tech Group | Leading Technology Innovation",
-  description: "Learn about Zion Tech Group's mission to transform businesses through cutting-edge AI, quantum computing, and enterprise technology solutions.",
-  keywords: "about Zion Tech Group, company history, mission, vision, technology innovation, AI company",
-};
+"use client";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            About <span className="gradient-text">Zion Tech Group</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Pioneering the future of technology with innovative solutions that 
-            transform businesses and accelerate human progress.
-          </p>
-        </div>
-      </section>
+    <div className="space-y-8">
+      {/* Header */}
+      <div className="text-center space-y-4">
+        <h1 className="text-4xl font-bold">About Zion Tech Group</h1>
+        <p className="text-xl opacity-80 max-w-3xl mx-auto">
+          Pioneering the future of digital transformation through innovative technology solutions, 
+          artificial intelligence, and cutting-edge software development.
+        </p>
+      </div>
 
-      {/* Mission & Vision */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Our Mission
-              </h2>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                To democratize access to cutting-edge technology and empower organizations 
-                worldwide to achieve their full potential through innovative AI, quantum computing, 
-                and enterprise solutions.
-              </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                We believe that technology should be a force for good, driving sustainable growth, 
-                fostering innovation, and creating opportunities for all.
-              </p>
-            </div>
-            <div className="card bg-gradient-to-br from-blue-600/20 to-purple-600/20 border-blue-500/30 p-8">
-              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-              <p className="text-gray-300 leading-relaxed">
-                To be the global leader in transformative technology solutions, 
-                shaping the future of business and society through continuous innovation 
-                and unwavering commitment to excellence.
-              </p>
-            </div>
+      {/* Company Overview */}
+      <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-8 border border-white/10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
+            <p className="text-lg opacity-90 mb-4">
+              To democratize access to enterprise-grade technology solutions, enabling businesses of all sizes 
+              to leverage the power of AI, blockchain, and modern software architecture.
+            </p>
+            <p className="opacity-80">
+              We believe that every organization deserves access to cutting-edge technology that can transform 
+              their operations, enhance customer experiences, and drive sustainable growth.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="text-6xl mb-4">🚀</div>
+            <div className="text-2xl font-semibold text-blue-400">Innovation First</div>
+            <div className="text-sm opacity-80">Since 2015</div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Company Story */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our Story
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From humble beginnings to global technology leadership
+      {/* Key Statistics */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="text-center p-6 bg-zinc-900/50 border border-white/10 rounded-lg">
+          <div className="text-3xl font-bold text-blue-400 mb-2">200+</div>
+          <div className="text-sm opacity-80">Projects Delivered</div>
+        </div>
+        <div className="text-center p-6 bg-zinc-900/50 border border-white/10 rounded-lg">
+          <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
+          <div className="text-sm opacity-80">Happy Clients</div>
+        </div>
+        <div className="text-center p-6 bg-zinc-900/50 border border-white/10 rounded-lg">
+          <div className="text-3xl font-bold text-purple-400 mb-2">10+</div>
+          <div className="text-sm opacity-80">Years Experience</div>
+        </div>
+        <div className="text-center p-6 bg-zinc-900/50 border border-white/10 rounded-lg">
+          <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
+          <div className="text-sm opacity-80">Support Available</div>
+        </div>
+      </div>
+
+      {/* Core Values */}
+      <div className="space-y-6">
+        <h2 className="text-3xl font-semibold text-center">Our Core Values</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="p-6 bg-zinc-900/50 border border-white/10 rounded-lg text-center">
+            <div className="text-4xl mb-4">💡</div>
+            <h3 className="text-xl font-semibold mb-3">Innovation</h3>
+            <p className="opacity-80 text-sm">
+              We constantly push the boundaries of what's possible, exploring emerging technologies 
+              and finding creative solutions to complex challenges.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-400">2018</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Foundation</h3>
-              <p className="text-gray-400">
-                Founded with a vision to revolutionize how businesses leverage 
-                artificial intelligence and emerging technologies.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-400">2021</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Expansion</h3>
-              <p className="text-gray-400">
-                Expanded into quantum computing and cybersecurity, serving 
-                Fortune 500 companies across multiple industries.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-green-400">2024</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Global Leadership</h3>
-              <p className="text-gray-400">
-                Established as a global technology leader with offices in 
-                15 countries and serving 500+ enterprise clients worldwide.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our Values
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              The principles that guide everything we do
+          <div className="p-6 bg-zinc-900/50 border border-white/10 rounded-lg text-center">
+            <div className="text-4xl mb-4">🤝</div>
+            <h3 className="text-xl font-semibold mb-3">Partnership</h3>
+            <p className="opacity-80 text-sm">
+              We believe in building long-term relationships with our clients, working collaboratively 
+              to achieve shared success and mutual growth.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Innovation</h3>
-              <p className="text-gray-400">
-                We constantly push the boundaries of what's possible, 
-                exploring new technologies and approaches to solve complex challenges.
-              </p>
-            </div>
-            
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Excellence</h3>
-              <p className="text-gray-400">
-                We maintain the highest standards in everything we do, 
-                from product development to customer service and support.
-              </p>
-            </div>
-            
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Collaboration</h3>
-              <p className="text-gray-400">
-                We believe in the power of partnerships and teamwork, 
-                working closely with clients and partners to achieve shared success.
-              </p>
-            </div>
-            
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Impact</h3>
-              <p className="text-gray-400">
-                We measure success not just by profit, but by the positive 
-                impact our solutions have on businesses and society.
-              </p>
-            </div>
-            
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Integrity</h3>
-              <p className="text-gray-400">
-                We conduct business with honesty, transparency, and ethical 
-                practices, building trust with our clients and partners.
-              </p>
-            </div>
-            
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-indigo-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Learning</h3>
-              <p className="text-gray-400">
-                We foster a culture of continuous learning and development, 
-                encouraging our team to stay ahead of emerging technologies.
-              </p>
-            </div>
+          <div className="p-6 bg-zinc-900/50 border border-white/10 rounded-lg text-center">
+            <div className="text-4xl mb-4">🎯</div>
+            <h3 className="text-xl font-semibold mb-3">Excellence</h3>
+            <p className="opacity-80 text-sm">
+              We maintain the highest standards of quality in everything we do, from code development 
+              to client communication and project delivery.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Team */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our Team
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              World-class experts in AI, quantum computing, cybersecurity, and enterprise technology
+      {/* Technology Expertise */}
+      <div className="space-y-6">
+        <h2 className="text-3xl font-semibold text-center">Technology Expertise</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="p-4 bg-zinc-900/50 border border-white/10 rounded-lg text-center">
+            <div className="text-2xl mb-2">🤖</div>
+            <div className="font-semibold">AI & ML</div>
+            <div className="text-xs opacity-80 mt-1">TensorFlow, PyTorch, NLP</div>
+          </div>
+          
+          <div className="p-4 bg-zinc-900/50 border border-white/10 rounded-lg text-center">
+            <div className="text-2xl mb-2">☁️</div>
+            <div className="font-semibold">Cloud & DevOps</div>
+            <div className="text-xs opacity-80 mt-1">AWS, Azure, Kubernetes</div>
+          </div>
+          
+          <div className="p-4 bg-zinc-900/50 border border-white/10 rounded-lg text-center">
+            <div className="text-2xl mb-2">🔗</div>
+            <div className="font-semibold">Blockchain</div>
+            <div className="text-xs opacity-80 mt-1">Ethereum, Solana, DeFi</div>
+          </div>
+          
+          <div className="p-4 bg-zinc-900/50 border border-white/10 rounded-lg text-center">
+            <div className="text-2xl mb-2">📊</div>
+            <div className="font-semibold">Data & Analytics</div>
+            <div className="text-xs opacity-80 mt-1">BigQuery, Snowflake, Spark</div>
+          </div>
+          
+          <div className="p-4 bg-zinc-900/50 border border-white/10 rounded-lg text-center">
+            <div className="text-2xl mb-2">🌐</div>
+            <div className="font-semibold">Web Development</div>
+            <div className="text-xs opacity-80 mt-1">React, Node.js, Python</div>
+          </div>
+          
+          <div className="p-4 bg-zinc-900/50 border border-white/10 rounded-lg text-center">
+            <div className="text-2xl mb-2">🔌</div>
+            <div className="font-semibold">API & Integration</div>
+            <div className="text-xs opacity-80 mt-1">REST, GraphQL, Microservices</div>
+          </div>
+          
+          <div className="p-4 bg-zinc-900/50 border border-white/10 rounded-lg text-center">
+            <div className="text-2xl mb-2">🔒</div>
+            <div className="font-semibold">Cybersecurity</div>
+            <div className="text-xs opacity-80 mt-1">SIEM, EDR, Compliance</div>
+          </div>
+          
+          <div className="p-4 bg-zinc-900/50 border border-white/10 rounded-lg text-center">
+            <div className="text-2xl mb-2">📱</div>
+            <div className="font-semibold">Mobile & IoT</div>
+            <div className="text-xs opacity-80 mt-1">React Native, Flutter, IoT</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Industries We Serve */}
+      <div className="space-y-6">
+        <h2 className="text-3xl font-semibold text-center">Industries We Serve</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="p-6 bg-zinc-900/50 border border-white/10 rounded-lg">
+            <div className="text-3xl mb-3">🏥</div>
+            <h3 className="text-xl font-semibold mb-2">Healthcare</h3>
+            <p className="text-sm opacity-80">
+              HIPAA-compliant solutions, telemedicine platforms, patient management systems, 
+              and AI-powered diagnostic tools.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="card text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">KL</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Kleber Lima</h3>
-              <p className="text-blue-400 mb-3">CEO & Founder</p>
-              <p className="text-gray-400 text-sm">
-                Visionary leader with 15+ years in technology innovation and business transformation.
-              </p>
-            </div>
-            
-            <div className="card text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">AI</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">AI Research Team</h3>
-              <p className="text-green-400 mb-3">Research & Development</p>
-              <p className="text-gray-400 text-sm">
-                Leading researchers pushing the boundaries of artificial intelligence and machine learning.
-              </p>
-            </div>
-            
-            <div className="card text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">QC</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Quantum Team</h3>
-              <p className="text-purple-400 mb-3">Quantum Computing</p>
-              <p className="text-gray-400 text-sm">
-                Experts in quantum algorithms, infrastructure, and applications development.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Join Our Mission
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Ready to transform your business with cutting-edge technology solutions? 
-              Let's work together to build the future.
+          <div className="p-6 bg-zinc-900/50 border border-white/10 rounded-lg">
+            <div className="text-3xl mb-3">🏦</div>
+            <h3 className="text-xl font-semibold mb-2">Financial Services</h3>
+            <p className="text-sm opacity-80">
+              Fintech platforms, blockchain solutions, compliance systems, and AI-powered 
+              risk assessment tools.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-                Get Started
-              </Link>
-              <Link href="/careers" className="btn-secondary text-lg px-8 py-4">
-                Join Our Team
-              </Link>
+          </div>
+          
+          <div className="p-6 bg-zinc-900/50 border border-white/10 rounded-lg">
+            <div className="text-3xl mb-3">🏭</div>
+            <h3 className="text-xl font-semibold mb-2">Manufacturing</h3>
+            <p className="text-sm opacity-80">
+              IoT monitoring systems, predictive maintenance platforms, supply chain optimization, 
+              and quality control automation.
+            </p>
+          </div>
+          
+          <div className="p-6 bg-zinc-900/50 border border-white/10 rounded-lg">
+            <div className="text-3xl mb-3">🛒</div>
+            <h3 className="text-xl font-semibold mb-2">Retail & E-commerce</h3>
+            <p className="text-sm opacity-80">
+              Omnichannel platforms, inventory management systems, customer analytics, 
+              and AI-powered recommendation engines.
+            </p>
+          </div>
+          
+          <div className="p-6 bg-zinc-900/50 border border-white/10 rounded-lg">
+            <div className="text-3xl mb-3">🎓</div>
+            <h3 className="text-xl font-semibold mb-2">Education</h3>
+            <p className="text-sm opacity-80">
+              Learning management systems, virtual classrooms, student analytics, 
+              and AI-powered tutoring platforms.
+            </p>
+          </div>
+          
+          <div className="p-6 bg-zinc-900/50 border border-white/10 rounded-lg">
+            <div className="text-3xl mb-3">🏛️</div>
+            <h3 className="text-xl font-semibold mb-2">Government</h3>
+            <p className="text-sm opacity-80">
+              Digital transformation initiatives, citizen portals, data analytics platforms, 
+              and compliance management systems.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Our Process */}
+      <div className="space-y-6">
+        <h2 className="text-3xl font-semibold text-center">Our Development Process</h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+            <h3 className="text-lg font-semibold mb-2">Discovery</h3>
+            <p className="text-sm opacity-80">
+              We analyze your requirements, understand your business goals, and design 
+              the optimal solution architecture.
+            </p>
+          </div>
+          
+          <div className="text-center">
+            <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+            <h3 className="text-lg font-semibold mb-2">Design</h3>
+            <p className="text-sm opacity-80">
+              Our team creates detailed technical specifications, UI/UX designs, and 
+              project roadmaps for your approval.
+            </p>
+          </div>
+          
+          <div className="text-center">
+            <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+            <h3 className="text-lg font-semibold mb-2">Development</h3>
+            <p className="text-sm opacity-80">
+              We build your solution using agile methodologies with regular updates 
+              and milestone deliveries.
+            </p>
+          </div>
+          
+          <div className="text-center">
+            <div className="w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+            <h3 className="text-lg font-semibold mb-2">Deployment</h3>
+            <p className="text-sm opacity-80">
+              We deploy your solution, provide training, and offer ongoing support 
+              to ensure long-term success.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Team Section */}
+      <div className="space-y-6">
+        <h2 className="text-3xl font-semibold text-center">Our Leadership Team</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="text-center p-6 bg-zinc-900/50 border border-white/10 rounded-lg">
+            <div className="w-24 h-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
+              K
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Kleber</h3>
+            <div className="text-blue-400 mb-2">Founder & CEO</div>
+            <p className="text-sm opacity-80">
+              Technology visionary with over 10 years of experience in digital transformation, 
+              AI, and enterprise software development. Passionate about democratizing access 
+              to cutting-edge technology solutions.
+            </p>
+            <div className="mt-4">
+              <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 text-sm">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+          </div>
+          
+          <div className="text-center p-6 bg-zinc-900/50 border border-white/10 rounded-lg">
+            <div className="w-24 h-24 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
+              T
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Tech Team</h3>
+            <div className="text-green-400 mb-2">Engineering & Development</div>
+            <p className="text-sm opacity-80">
+              Our talented team of engineers, developers, and designers bring diverse 
+              expertise in modern technologies, ensuring delivery of high-quality, 
+              scalable solutions.
+            </p>
+            <div className="mt-4">
+              <span className="text-sm opacity-60">Available for project discussions</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Call to Action */}
+      <div className="text-center space-y-6 bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-lg p-8 border border-white/10">
+        <h2 className="text-3xl font-semibold">Ready to Work Together?</h2>
+        <p className="text-lg opacity-80 max-w-2xl mx-auto">
+          Let's discuss how our expertise can help transform your business and drive 
+          innovation in your industry.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+          >
+            Get Started
+          </a>
+          <a
+            href="/services"
+            className="px-8 py-3 border border-white/20 hover:border-white/40 rounded-lg font-semibold transition-colors"
+          >
+            Explore Services
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
