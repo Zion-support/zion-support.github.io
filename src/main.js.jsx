@@ -15,7 +15,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // import { WhitelabelProvider } from '@/context/WhitelabelContext';
 // import { AppLayout } from '@/layout/AppLayout';
 // Import auth and notification providers
-// import { AuthProvider } from "./context/auth/AuthProvider";
+// import { AuthProvider } from "./src/context/auth/AuthProvider.jsx";
 // import { NotificationProvider } from "./context/notifications/NotificationContext";
 // Import analytics provider
 // import { AnalyticsProvider } from "./context/AnalyticsContext";

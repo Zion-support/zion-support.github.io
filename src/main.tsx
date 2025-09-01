@@ -2,10 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
-import App from './App'
+import App from './src/App.tsx'
 import './index.css'
-import { registerServiceWorker } from './utils/serviceWorker'
-import { ErrorBoundary } from './components/ErrorBoundary'
+import { registerServiceWorker } from './src/utils/serviceWorker.ts'
+import { ErrorBoundary } from './src/components/ErrorBoundary.tsx'
 
 
 // Performance monitoring

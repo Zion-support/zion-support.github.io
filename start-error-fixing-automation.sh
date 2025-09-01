@@ -1,83 +1,268 @@
 #!/bin/bash
 
-# Error Fixing Automation Startup Script
-# This script starts all PM2 error fixing automations
+# Error Fixing Automation PM2 Management Script
+# This script manages the PM2 error fixing automation system
 
 set -e
 
-echo "🚀 Starting Error Fixing Automation System..."
-echo "=============================================="
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
 
-# Check if PM2 is installed
-if ! command -v pm2 &> /dev/null; then
-    echo "❌ PM2 is not installed. Installing PM2..."
-    npm install -g pm2
-fi
+# Configuration
+ECOSYSTEM_FILE="ecosystem-error-fixing-automation.config.cjs"
+LOG_DIR="./automation/logs"
+REPORTS_DIR="./error-reports"
 
-# Check if we're in the right directory
-if [ ! -f "ecosystem-error-fixing.config.cjs" ]; then
-    echo "❌ ecosystem-error-fixing.config.cjs not found. Please run this script from the project root."
-    exit 1
-fi
+# Function to print colored output
+print_status() {
+    echo -e "${GREEN}[INFO]${NC} $1"
+}
 
-# Create necessary directories
-echo "📁 Creating necessary directories..."
-mkdir -p logs
-mkdir -p automation-reports
-mkdir -p error-reports
+print_warning() {
+    echo -e "${YELLOW}[WARNING]${NC} $1"
+}
 
-# Stop any existing PM2 processes
-echo "🛑 Stopping existing PM2 processes..."
-pm2 stop all 2>/dev/null || true
-pm2 delete all 2>/dev/null || true
+print_error() {
+    echo -e "${RED}[ERROR]${NC} $1"
+}
 
-# Start the error fixing automation ecosystem
-echo "🚀 Starting Error Fixing Automation Ecosystem..."
-pm2 start ecosystem-error-fixing.config.cjs
+print_header() {
+    echo -e "${CYAN}================================${NC}"
+    echo -e "${CYAN}$1${NC}"
+    echo -e "${CYAN}================================${NC}"
+}
 
-# Wait a moment for processes to start
-sleep 3
+# Function to check if PM2 is installed
+check_pm2() {
+    if ! command -v pm2 &> /dev/null; then
+        print_error "PM2 is not installed. Please install it first:"
+        echo "npm install -g pm2"
+        exit 1
+    fi
+}
 
-# Show status
-echo "📊 PM2 Status:"
-pm2 status
+# Function to create necessary directories
+create_directories() {
+    print_status "Creating necessary directories..."
+    
+    mkdir -p "$LOG_DIR"
+    mkdir -p "$REPORTS_DIR"
+    mkdir -p "./automation"
+    
+    print_status "Directories created successfully"
+}
 
-echo ""
-echo "🎉 Error Fixing Automation System Started!"
-echo "=============================================="
-echo "📋 Available PM2 Applications:"
-echo "  • comprehensive-error-fixer"
-echo "  • typescript-error-monitor"
-echo "  • eslint-error-cleaner"
-echo "  • build-error-detector"
-echo "  • dependency-error-resolver"
-echo "  • config-error-fixer"
-echo "  • error-prevention-monitor"
-echo "  • error-analytics-dashboard"
-echo "  • auto-recovery-manager"
-echo "  • critical-error-alert-system"
-echo ""
-echo "📖 Useful Commands:"
-echo "  • pm2 logs                    - View all logs"
-echo "  • pm2 logs [app-name]         - View specific app logs"
-echo "  • pm2 restart [app-name]      - Restart specific app"
-echo "  • pm2 stop [app-name]         - Stop specific app"
-echo "  • pm2 delete [app-name]       - Delete specific app"
-echo "  • pm2 monit                   - Monitor all processes"
-echo "  • pm2 status                  - Show status"
-echo ""
-echo "📁 Reports and Logs:"
-echo "  • automation-reports/         - Automation reports"
-echo "  • error-reports/              - Error reports"
-echo "  • logs/                       - Process logs"
-echo ""
-echo "🔄 The system will automatically:"
-echo "  • Fix TypeScript errors"
-echo "  • Clean ESLint issues"
-echo "  • Resolve build problems"
-echo "  • Fix dependency conflicts"
-echo "  • Monitor for critical errors"
-echo "  • Generate analytics reports"
-echo "  • Auto-recover from issues"
-echo ""
-echo "✅ Automation system is now running and monitoring your project!"
+# Function to install PM2 logrotate
+install_pm2_logrotate() {
+    print_status "Installing PM2 logrotate..."
+    
+    pm2 install pm2-logrotate || true
+    pm2 set pm2-logrotate:max_size 10M
+    pm2 set pm2-logrotate:retain 30
+    pm2 set pm2-logrotate:compress true
+    pm2 set pm2-logrotate:workerInterval 60
+    pm2 set pm2-logrotate:rotateInterval '0 0 * * *'
+    
+    print_status "PM2 logrotate configured successfully"
+}
+
+# Function to start the automation
+start_automation() {
+    print_header "Starting Error Fixing Automation"
+    
+    check_pm2
+    create_directories
+    install_pm2_logrotate
+    
+    print_status "Starting PM2 processes..."
+    
+    # Start the automation
+    pm2 start "$ECOSYSTEM_FILE" --update-env
+    
+    print_status "Automation started successfully"
+    print_status "Use 'pm2 status' to check status"
+    print_status "Use 'pm2 logs' to view logs"
+}
+
+# Function to stop the automation
+stop_automation() {
+    print_header "Stopping Error Fixing Automation"
+    
+    check_pm2
+    
+    print_status "Stopping PM2 processes..."
+    
+    pm2 stop "$ECOSYSTEM_FILE" || true
+    pm2 delete "$ECOSYSTEM_FILE" || true
+    
+    print_status "Automation stopped successfully"
+}
+
+# Function to restart the automation
+restart_automation() {
+    print_header "Restarting Error Fixing Automation"
+    
+    check_pm2
+    create_directories
+    
+    print_status "Restarting PM2 processes..."
+    
+    pm2 restart "$ECOSYSTEM_FILE" || pm2 start "$ECOSYSTEM_FILE" --update-env
+    
+    print_status "Automation restarted successfully"
+}
+
+# Function to show status
+show_status() {
+    print_header "Error Fixing Automation Status"
+    
+    check_pm2
+    
+    echo ""
+    print_status "PM2 Status:"
+    pm2 status
+    
+    echo ""
+    print_status "Recent Logs:"
+    pm2 logs --lines 20
+    
+    echo ""
+    print_status "Recent Error Reports:"
+    if [ -d "$REPORTS_DIR" ]; then
+        ls -la "$REPORTS_DIR" | head -10
+    else
+        print_warning "No error reports directory found"
+    fi
+}
+
+# Function to show logs
+show_logs() {
+    print_header "Error Fixing Automation Logs"
+    
+    check_pm2
+    
+    local lines=${1:-50}
+    
+    print_status "Showing last $lines lines of logs:"
+    pm2 logs --lines "$lines"
+}
+
+# Function to run a single error fix
+run_single_fix() {
+    print_header "Running Single Error Fix"
+    
+    print_status "Running error fixer automation..."
+    
+    node automation/error-fixer-automation.js
+    
+    print_status "Single error fix completed"
+}
+
+# Function to run a single health check
+run_health_check() {
+    print_header "Running Health Check"
+    
+    print_status "Running error monitor..."
+    
+    node automation/error-monitor.js &
+    local monitor_pid=$!
+    
+    # Wait for initial health check
+    sleep 10
+    
+    # Stop the monitor
+    kill $monitor_pid 2>/dev/null || true
+    
+    print_status "Health check completed"
+}
+
+# Function to clean up old reports and logs
+cleanup() {
+    print_header "Cleaning Up Old Reports and Logs"
+    
+    print_status "Cleaning up old error reports..."
+    if [ -d "$REPORTS_DIR" ]; then
+        find "$REPORTS_DIR" -name "*.json" -mtime +7 -delete
+        print_status "Old error reports cleaned up"
+    fi
+    
+    print_status "Cleaning up old logs..."
+    if [ -d "$LOG_DIR" ]; then
+        find "$LOG_DIR" -name "*.log" -mtime +7 -delete
+        print_status "Old logs cleaned up"
+    fi
+    
+    print_status "Cleanup completed"
+}
+
+# Function to show help
+show_help() {
+    print_header "Error Fixing Automation Help"
+    
+    echo "Usage: $0 [COMMAND]"
+    echo ""
+    echo "Commands:"
+    echo "  start           Start the error fixing automation"
+    echo "  stop            Stop the error fixing automation"
+    echo "  restart         Restart the error fixing automation"
+    echo "  status          Show status of automation processes"
+    echo "  logs [lines]    Show logs (default: 50 lines)"
+    echo "  fix             Run a single error fix"
+    echo "  health          Run a single health check"
+    echo "  cleanup         Clean up old reports and logs"
+    echo "  help            Show this help message"
+    echo ""
+    echo "Examples:"
+    echo "  $0 start        # Start the automation"
+    echo "  $0 logs 100     # Show last 100 lines of logs"
+    echo "  $0 fix          # Run a single error fix"
+    echo ""
+    echo "PM2 Commands:"
+    echo "  pm2 status      # Check PM2 process status"
+    echo "  pm2 logs        # View all PM2 logs"
+    echo "  pm2 monit       # Monitor PM2 processes"
+    echo "  pm2 reload all  # Reload all processes"
+}
+
+# Main script logic
+case "${1:-help}" in
+    start)
+        start_automation
+        ;;
+    stop)
+        stop_automation
+        ;;
+    restart)
+        restart_automation
+        ;;
+    status)
+        show_status
+        ;;
+    logs)
+        show_logs "$2"
+        ;;
+    fix)
+        run_single_fix
+        ;;
+    health)
+        run_health_check
+        ;;
+    cleanup)
+        cleanup
+        ;;
+    help|--help|-h)
+        show_help
+        ;;
+    *)
+        print_error "Unknown command: $1"
+        echo ""
+        show_help
+        exit 1
+        ;;
+esac
