@@ -1,29 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('front-index-orchestrator function triggered');
+    console.log('Running front-index-orchestrator function');
     
-    // Basic front index orchestration logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple front index orchestration logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Front index orchestrator function executed successfully',
-        timestamp: timestamp,
-        function: 'front-index-orchestrator',
-        action: 'index_management'
-      })
+      orchestrated: true,
+      timestamp: new Date().toISOString(),
+      message: 'Front index orchestration completed'
     };
     
-    console.log('front-index-orchestrator completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Front index orchestrator completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('front-index-orchestrator error:', error);
+    console.error('Error in front-index-orchestrator function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

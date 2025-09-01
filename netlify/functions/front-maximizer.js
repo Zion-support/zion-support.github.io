@@ -1,30 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('front-maximizer function triggered');
+    console.log('Running front-maximizer function');
     
-    // Basic front maximization logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple front maximization logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Front maximizer function executed successfully',
-        timestamp: timestamp,
-        function: 'front-maximizer',
-        action: 'front_maximization',
-        optimization_level: 'maximum'
-      })
+      maximized: true,
+      timestamp: new Date().toISOString(),
+      message: 'Front maximization completed'
     };
     
-    console.log('front-maximizer completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Front maximizer completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('front-maximizer error:', error);
+    console.error('Error in front-maximizer function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

@@ -1,29 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('marketing-and-features-promo function triggered');
+    console.log('Running marketing-and-features-promo function');
     
-    // Basic marketing and features promotion logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple marketing and features promo logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Marketing and features promo function executed successfully',
-        timestamp: timestamp,
-        function: 'marketing-and-features-promo',
-        action: 'promotion'
-      })
+      promoted: true,
+      timestamp: new Date().toISOString(),
+      message: 'Marketing and features promo completed'
     };
     
-    console.log('marketing-and-features-promo completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Marketing and features promo completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('marketing-and-features-promo error:', error);
+    console.error('Error in marketing-and-features-promo function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

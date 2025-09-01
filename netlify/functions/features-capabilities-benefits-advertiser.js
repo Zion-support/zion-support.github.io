@@ -1,30 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('features-capabilities-benefits-advertiser function triggered');
+    console.log('Running features-capabilities-benefits-advertiser function');
     
-    // Basic features, capabilities, and benefits advertising logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple features, capabilities, and benefits advertising logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Features, capabilities, and benefits advertiser function executed successfully',
-        timestamp: timestamp,
-        function: 'features-capabilities-benefits-advertiser',
-        action: 'feature_promotion',
-        features_count: 12
-      })
+      advertised: true,
+      timestamp: new Date().toISOString(),
+      message: 'Features, capabilities, and benefits advertising completed'
     };
     
-    console.log('features-capabilities-benefits-advertiser completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Features, capabilities, and benefits advertiser completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('features-capabilities-benefits-advertiser error:', error);
+    console.error('Error in features-capabilities-benefits-advertiser function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

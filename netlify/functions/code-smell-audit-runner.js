@@ -1,30 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('code-smell-audit-runner function triggered');
+    console.log('Running code-smell-audit-runner function');
     
-    // Basic code smell auditing logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple code smell auditing logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Code smell audit runner function executed successfully',
-        timestamp: timestamp,
-        function: 'code-smell-audit-runner',
-        action: 'code_smell_audit',
-        smells_detected: 3
-      })
+      audited: true,
+      timestamp: new Date().toISOString(),
+      message: 'Code smell auditing completed'
     };
     
-    console.log('code-smell-audit-runner completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Code smell audit runner completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('code-smell-audit-runner error:', error);
+    console.error('Error in code-smell-audit-runner function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

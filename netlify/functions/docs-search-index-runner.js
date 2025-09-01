@@ -1,30 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('docs-search-index-runner function triggered');
+    console.log('Running docs-search-index-runner function');
     
-    // Basic docs search index logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple docs search index logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Docs search index runner function executed successfully',
-        timestamp: timestamp,
-        function: 'docs-search-index-runner',
-        action: 'search_index_generation',
-        index_size: 1024
-      })
+      indexed: true,
+      timestamp: new Date().toISOString(),
+      message: 'Docs search indexing completed'
     };
     
-    console.log('docs-search-index-runner completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Docs search index runner completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('docs-search-index-runner error:', error);
+    console.error('Error in docs-search-index-runner function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

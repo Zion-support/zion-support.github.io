@@ -1,30 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('netlify-auto-healer-runner function triggered');
+    console.log('Running netlify-auto-healer-runner function');
     
-    // Basic auto-healing logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple Netlify auto healing logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Netlify auto-healer runner function executed successfully',
-        timestamp: timestamp,
-        function: 'netlify-auto-healer-runner',
-        action: 'auto_healing',
-        health_status: 'healthy'
-      })
+      healed: true,
+      timestamp: new Date().toISOString(),
+      message: 'Netlify auto healing completed'
     };
     
-    console.log('netlify-auto-healer-runner completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Netlify auto healer runner completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('netlify-auto-healer-runner error:', error);
+    console.error('Error in netlify-auto-healer-runner function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

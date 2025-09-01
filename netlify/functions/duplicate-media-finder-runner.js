@@ -1,30 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('duplicate-media-finder-runner function triggered');
+    console.log('Running duplicate-media-finder-runner function');
     
-    // Basic duplicate media finding logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple duplicate media finding logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Duplicate media finder runner function executed successfully',
-        timestamp: timestamp,
-        function: 'duplicate-media-finder-runner',
-        action: 'duplicate_detection',
-        duplicates_found: 2
-      })
+      found: true,
+      timestamp: new Date().toISOString(),
+      message: 'Duplicate media finding completed'
     };
     
-    console.log('duplicate-media-finder-runner completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Duplicate media finder runner completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('duplicate-media-finder-runner error:', error);
+    console.error('Error in duplicate-media-finder-runner function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

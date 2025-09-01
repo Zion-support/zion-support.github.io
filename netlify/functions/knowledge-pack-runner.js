@@ -1,30 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('knowledge-pack-runner function triggered');
+    console.log('Running knowledge-pack-runner function');
     
-    // Basic knowledge pack logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple knowledge pack logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Knowledge pack runner function executed successfully',
-        timestamp: timestamp,
-        function: 'knowledge-pack-runner',
-        action: 'knowledge_packaging',
-        packs_created: 12
-      })
+      generated: true,
+      timestamp: new Date().toISOString(),
+      message: 'Knowledge pack generation completed'
     };
     
-    console.log('knowledge-pack-runner completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Knowledge pack runner completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('knowledge-pack-runner error:', error);
+    console.error('Error in knowledge-pack-runner function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

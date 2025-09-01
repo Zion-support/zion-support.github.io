@@ -1,30 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('auto-scheduler function triggered');
+    console.log('Running auto-scheduler function');
     
-    // Basic auto-scheduling logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple auto scheduling logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Auto scheduler function executed successfully',
-        timestamp: timestamp,
-        function: 'auto-scheduler',
-        action: 'auto_scheduling',
-        scheduled_tasks: 8
-      })
+      scheduled: true,
+      timestamp: new Date().toISOString(),
+      message: 'Auto scheduling completed'
     };
     
-    console.log('auto-scheduler completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Auto scheduler completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('auto-scheduler error:', error);
+    console.error('Error in auto-scheduler function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

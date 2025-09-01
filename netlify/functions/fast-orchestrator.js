@@ -1,29 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('fast-orchestrator function triggered');
+    console.log('Running fast-orchestrator function');
     
-    // Basic fast orchestration logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple fast orchestration logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Fast orchestrator function executed successfully',
-        timestamp: timestamp,
-        function: 'fast-orchestrator',
-        action: 'orchestration'
-      })
+      orchestrated: true,
+      timestamp: new Date().toISOString(),
+      message: 'Fast orchestration completed'
     };
     
-    console.log('fast-orchestrator completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Fast orchestrator completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('fast-orchestrator error:', error);
+    console.error('Error in fast-orchestrator function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

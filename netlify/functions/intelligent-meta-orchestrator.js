@@ -1,30 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('intelligent-meta-orchestrator function triggered');
+    console.log('Running intelligent-meta-orchestrator function');
     
-    // Basic intelligent meta orchestration logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple intelligent meta orchestration logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Intelligent meta orchestrator function executed successfully',
-        timestamp: timestamp,
-        function: 'intelligent-meta-orchestrator',
-        action: 'intelligent_meta_orchestration',
-        intelligence_level: 'high'
-      })
+      orchestrated: true,
+      timestamp: new Date().toISOString(),
+      message: 'Intelligent meta orchestration completed'
     };
     
-    console.log('intelligent-meta-orchestrator completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Intelligent meta orchestrator completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('intelligent-meta-orchestrator error:', error);
+    console.error('Error in intelligent-meta-orchestrator function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

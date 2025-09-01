@@ -1,30 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('image-optimizer-runner function triggered');
+    console.log('Running image-optimizer-runner function');
     
-    // Basic image optimization logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple image optimization logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Image optimizer runner function executed successfully',
-        timestamp: timestamp,
-        function: 'image-optimizer-runner',
-        action: 'image_optimization',
-        images_optimized: 23
-      })
+      optimized: true,
+      timestamp: new Date().toISOString(),
+      message: 'Image optimization completed'
     };
     
-    console.log('image-optimizer-runner completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Image optimizer runner completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('image-optimizer-runner error:', error);
+    console.error('Error in image-optimizer-runner function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

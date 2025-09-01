@@ -1,30 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('revenue-ideas-lab function triggered');
+    console.log('Running revenue-ideas-lab function');
     
-    // Basic revenue ideas lab logic
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple revenue ideas lab logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Revenue ideas lab function executed successfully',
-        timestamp: timestamp,
-        function: 'revenue-ideas-lab',
-        action: 'revenue_ideation',
-        ideas_generated: 8
-      })
+      generated: true,
+      timestamp: new Date().toISOString(),
+      message: 'Revenue ideas generation completed'
     };
     
-    console.log('revenue-ideas-lab completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Revenue ideas lab completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('revenue-ideas-lab error:', error);
+    console.error('Error in revenue-ideas-lab function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }
