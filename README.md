@@ -155,7 +155,10 @@ npm run build
 # Upload dist/ folder to your hosting provider
 ```
 
-## 🔧 Configuration
+If you don't have network connectivity, run `./offline-dev.sh` to start a
+minimal offline server until you can reinstall the packages. This script
+provides a basic interface so you can continue working in a limited mode
+until dependencies can be installed.
 
 For pnpm errors showing "This project is configured to use npm", use `./setup.sh npm` instead as the project may have npm-specific configurations.
 

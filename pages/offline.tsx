@@ -255,6 +255,10 @@ export default function OfflinePage() {
                     <span className="text-blue-600 font-semibold">•</span>
                     <span>Check your internet connection and try refreshing the page</span>
                   </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-blue-600 font-semibold">•</span>
+                    <span>If you still see a blank screen when back online, run <code>./setup.sh npm</code> to reinstall dependencies. If you can't access the network, use <code>./offline-dev.sh</code> for a limited offline mode.</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
