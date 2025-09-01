@@ -77,7 +77,10 @@ class BrowserErrorFixer {
       // console.log(`⚠️  No fix strategy identified for this error`);
     }
   }
+<<<<<<<< HEAD:automation_backup/browser-error-fixer.jsx
 
+========
+>>>>>>>> cursor/add-new-services-and-advertise-them-660b:automation_backup/browser-error-fixer.js
 
   identifyFixStrategy(error) {
     const message = error.message || '';
@@ -116,7 +119,10 @@ class BrowserErrorFixer {
       console.error(`❌ Error applying fix strategy:`, error);
     }
   }
+<<<<<<<< HEAD:automation_backup/browser-error-fixer.jsx
 
+========
+>>>>>>>> cursor/add-new-services-and-advertise-them-660b:automation_backup/browser-error-fixer.js
 
   async findRelevantSourceFiles(error) {
     const sourceFiles = [];
@@ -151,7 +157,10 @@ class BrowserErrorFixer {
       return [];
     }
   }
+<<<<<<<< HEAD:automation_backup/browser-error-fixer.jsx
 
+========
+>>>>>>>> cursor/add-new-services-and-advertise-them-660b:automation_backup/browser-error-fixer.js
 
   async findFilesRecursively(dir, extensions, maxDepth = 3) {
     const files = [];
