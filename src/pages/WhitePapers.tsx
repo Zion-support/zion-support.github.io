@@ -1,515 +1,452 @@
 import React, { useState } from 'react';
-import SEO from '@/components / SEO';
-export default React.memo (function WhitePapers () {
-import {
-
-
-  FileText,
-  Download,
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  FileText, 
+  Download, 
+  Eye, 
+  Calendar, 
+  User, 
+  Tag,
+  ArrowRight,
   Search,
   Filter,
-  Calendar,
-  Clock,
-  Users,
-  Star,
-  Eye,
-  ArrowRight,
-  BookOpen,
   Brain,
   Cloud,
   Shield,
-  Database,
+  Sparkles,
   Zap,
   Globe,
   Target,
   TrendingUp,
-  Award,
-} from 'lucide - react';
-
-  const [searchQuery, setSearchQuery] = useState ('') ;
-  const [activeCategory, setActiveCategory] = useState ('all') ;
-  const [sortBy, setSortBy] = useState ('newest') ;
-
-  const categories = [
-    {
-      id: 'all',
-      name: 'All Categories',
-      icon: <FileText className="w - 5 h - 5" />,
-      count: 0,
-    },
-    {
-      id: 'ai - ml',
-      name: 'AI & Machine Learning',
-      icon: <Brain className="w - 5 h - 5" />,
-      count: 8,
-    },
-    {
-      id: 'cloud',
-      name: 'Cloud & Infrastructure',
-      icon: <Cloud className="w - 5 h - 5" />,
-      count: 6,
-    },
-    {
-      id: 'security',
-      name: 'Cybersecurity',
-      icon: <Shield className="w - 5 h - 5" />,
-      count: 5,
-    },
-    {
-      id: 'data',
-      name: 'Data & Analytics',
-      icon: <Database className="w - 5 h - 5" />,
-      count: 7,
-    },
-    {
-      id: 'emerging',
-      name: 'Emerging Technologies',
-      icon: <Zap className="w - 5 h - 5" />,
-      count: 4,
-    },
-    {
-      id: 'strategy',
-      name: 'Digital Strategy',
-      icon: <Target className="w - 5 h - 5" />,
-      count: 6,
-    },
-  ];
-
-  const sortOptions = [
-    { value: 'newest', label: 'Newest First' },
-    { value: 'popular', label: 'Most Popular' },
-    { value: 'alphabetical', label: 'Alphabetical' },
-    { value: 'downloads', label: 'Most Downloaded' },
-  ];
-
-  const whitePapers = [
-    {
-      id: 1,
-      title: 'The Future of AI in Enterprise: 2025 and Beyond',
-      description:
-        'Comprehensive analysis of AI adoption trends, challenges, and opportunities in enterprise environments. Learn how organizations can leverage AI for competitive advantage.',
-      category: 'ai - ml',
-      author: 'Dr. Sarah Chen, AI Research Director',
-      publishDate: '2025 - 01 - 25',
-      readTime: '35 min',
-      downloads: 18750,
-      rating: 4.9,
-      featured: true,
-      tags: [
-        'AI Research',
-        'Autonomous Systems',
-        'Business Intelligence',
-        'Innovation',
-      ],
-      coverImage: '/images / whitepapers / ai - autonomous - research.jpg',
-      fileSize: '3.2 MB',
-      language: 'English',
-    },
-    {
-      id: 2,
-      title: 'AI Supply Chain Optimization: Reducing Costs by Up to 30%',
-      description:
-        'Strategic guide on implementing AI - powered supply chain optimization solutions that predict demand, optimize inventory, and significantly reduce operational costs.',
-      category: 'ai - ml',
-      author: 'Michael Rodriguez, Supply Chain AI Specialist',
-      publishDate: '2025 - 01 - 23',
-      readTime: '28 min',
-      downloads: 16230,
-      rating: 4.8,
-      featured: true,
-      tags: [
-        'Supply Chain',
-        'AI Optimization',
-        'Cost Reduction',
-        'Predictive Analytics',
-      ],
-      coverImage: '/images / whitepapers / ai - supply - chain - optimization.jpg',
-      fileSize: '2.8 MB',
-      language: 'English',
-    },
-    {
-      id: 4,
-      title: 'Data - Driven Decision Making: Analytics for the Modern Enterprise',
-      description:
-        'Explore how organizations can leverage data analytics to drive strategic decisions and improve business outcomes.',
-      category: 'data',
-      author: 'Dr. Robert Kim, Data Science Director',
-      publishDate: '2025 - 01 - 12',
-      readTime: '28 min',
-      downloads: 11230,
-      rating: 4.6,
-      featured: false,
-      tags: [
-        'Data Analytics',
-        'Business Intelligence',
-        'Decision Making',
-        'Strategy',
-      ],
-      coverImage: '/images / whitepapers / data - driven - decisions.jpg',
-      fileSize: '2.6 MB',
-      language: 'English',
-    },
-    {
-      id: 5,
-      title: 'Quantum Computing: Preparing for the Next Computing Revolution',
-      description:
-        'Understanding quantum computing fundamentals and preparing organizations for quantum advantage.',
-      category: 'emerging',
-      author: 'Dr. Elena Vasquez, Quantum Research Lead',
-      publishDate: '2025 - 01 - 10',
-      readTime: '40 min',
-      downloads: 7560,
-      rating: 4.9,
-      featured: true,
-      tags: [
-        'Quantum Computing',
-        'Emerging Tech',
-        'Future Computing',
-        'Innovation',
-      ],
-      coverImage: '/images / whitepapers / quantum - computing.jpg',
-      fileSize: '3.5 MB',
-      language: 'English',
-    },
-    {
-      id: 6,
-      title: 'Digital Transformation ROI: Measuring Success in the Digital Age',
-      description:
-        'Framework for measuring and maximizing return on investment in digital transformation initiatives.',
-      category: 'strategy',
-      author: 'David Thompson, Digital Strategy Director',
-      publishDate: '2025 - 01 - 08',
-      readTime: '22 min',
-      downloads: 8930,
-      rating: 4.5,
-      featured: false,
-      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],
-      coverImage: '/images / whitepapers / digital - transformation - roi.jpg',
-      fileSize: '2.2 MB',
-      language: 'English',
-      rating: 4.5,
-      featured: false,
-      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],
-      coverImage: '/images / whitepapers / digital - transformation - roi.jpg',
-      fileSize: '2.2 MB',
-      language: 'English',
-    },
-  ];
-
-  const featuredInsights = [
-    {
-      title: 'AI Adoption Trends 2025',
-      description:
-        'Key insights from our latest research on enterprise AI adoption',
-      icon: <TrendingUp className="w - 6 h - 6" />,
-      link: '/insights / ai - adoption - 2025',
-    },
-    {
-      title: 'Cybersecurity Landscape Report',
-      description: 'Current threats and emerging security challenges',
-      icon: <Shield className="w - 6 h - 6" />,
-      link: '/insights / cybersecurity - 2025',
-    },
-    {
-      title: 'Cloud Migration Success Stories',
-      description: 'Real - world examples of successful cloud transformations',
-      icon: <Cloud className="w - 6 h - 6" />,
-      link: '/insights / cloud - success - stories',
-    },
-  ];
-
-  const getCategoryCount = (...args: unknown[]): unknown => {
-    if (categoryId === 'all') {
-      return whitePapers.length;
-    }
-    return whitePapers.filter (paper => paper.category === categoryId) .length;
-  };
-
-  // Update counts
-  categories.forEach (cat => {
-    cat.count = getCategoryCount (cat.id) ;
-  }) ;
-
-  const filteredPapers = whitePapers.filter (paper => {
-    const matchesSearch = paper.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
-      paper.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
-      paper.tags.some (tag =>
-        tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ;
-
-    const matchesCategory = activeCategory === 'all' || paper.category === activeCategory;
-
-    return matchesSearch && matchesCategory;
-  }) ;
-
-  const formatDate = (dateString: string) => {
-    return new Date (dateString) .toLocaleDateString ('en - US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    }) ;
-  };
-
-  const formatDownloads = (...args: unknown[]): unknown => {
-    if (downloads >= 1000000) {
-      return (downloads / 1000000) .toFixed (1) + 'M';
-    } else if (downloads >= 1000) {
-      return (downloads / 1000) .toFixed (1) + 'K';
-    }
-    return downloads.toString () ;
-  };
-
-  return (<div role="button" className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light">
+  BookOpen,
+  BarChart3,
+  Lightbulb,
+  Award
+} from 'lucide-react';
+const whitePapers = [
+  {
+    id: 1,
+    title: 'AI-Powered Business Transformation: A Comprehensive Framework',
+    description: 'This white paper presents a detailed framework for implementing AI solutions that drive measurable business value and competitive advantage.',
+    author: 'Dr. Sarah Chen',
+    authorTitle: 'AI Research Director',
+    date: '2024-01-15',
+    category: 'AI & ML',
+    icon: Brain,
+    downloads: 1250,
+    views: 3200,
+    featured: true,
+    tags: ['AI Strategy', 'Business Transformation', 'ROI Measurement', 'Implementation'],
+    abstract: 'This comprehensive study examines how organizations can successfully implement AI solutions to transform their business operations. We present a proven framework that addresses common challenges and provides actionable strategies for achieving measurable results.',
+    keyInsights: [
+      'AI implementation success factors',
+      'ROI measurement methodologies',
+      'Change management strategies',
+      'Risk mitigation approaches'
+    ]
+  },
+  {
+    id: 2,
+    title: 'Quantum Computing in Financial Services: Opportunities and Challenges',
+    description: 'Explore the potential of quantum computing to revolutionize financial modeling, risk assessment, and portfolio optimization.',
+    author: 'Prof. Michael Rodriguez',
+    authorTitle: 'Quantum Computing Expert',
+    date: '2024-01-10',
+    category: 'Emerging Tech',
+    icon: Sparkles,
+    downloads: 890,
+    views: 2100,
+    featured: true,
+    tags: ['Quantum Computing', 'Financial Services', 'Risk Management', 'Portfolio Optimization'],
+    abstract: 'This research paper analyzes the current state of quantum computing and its potential applications in financial services. We examine both the opportunities for innovation and the challenges that must be addressed for widespread adoption.',
+    keyInsights: [
+      'Quantum algorithms for financial modeling',
+      'Risk assessment applications',
+      'Implementation challenges',
+      'Future development roadmap'
+    ]
+  },
+  {
+    id: 3,
+    title: 'Cybersecurity in the Age of AI: Threat Landscape and Defense Strategies',
+    description: 'Understand emerging cybersecurity threats and learn about AI-powered defense mechanisms that can protect your organization.',
+    author: 'Alex Thompson',
+    authorTitle: 'Cybersecurity Specialist',
+    date: '2024-01-05',
+    category: 'Security',
+    icon: Shield,
+    downloads: 1100,
+    views: 2800,
+    featured: false,
+    tags: ['Cybersecurity', 'AI Threats', 'Defense Strategies', 'Threat Intelligence'],
+    abstract: 'This white paper examines the evolving cybersecurity landscape in the age of AI. We analyze emerging threats and present comprehensive defense strategies that leverage both traditional security practices and cutting-edge AI technologies.',
+    keyInsights: [
+      'AI-powered attack vectors',
+      'Advanced defense mechanisms',
+      'Threat intelligence frameworks',
+      'Incident response strategies'
+    ]
+  },
+  {
+    id: 4,
+    title: 'Cloud-Native Architecture: Building Scalable and Resilient Systems',
+    description: 'Master the principles of cloud-native design and learn how to build systems that scale automatically and recover from failures gracefully.',
+    author: 'Jennifer Lee',
+    authorTitle: 'Cloud Architect',
+    date: '2023-12-20',
+    category: 'Cloud & DevOps',
+    icon: Cloud,
+    downloads: 750,
+    views: 1800,
+    featured: false,
+    tags: ['Cloud Architecture', 'Microservices', 'Scalability', 'Resilience'],
+    abstract: 'This technical paper provides a comprehensive guide to designing and implementing cloud-native architectures. We cover essential principles, design patterns, and best practices for building systems that can scale automatically and maintain high availability.',
+    keyInsights: [
+      'Microservices design principles',
+      'Auto-scaling strategies',
+      'Fault tolerance patterns',
+      'Monitoring and observability'
+    ]
+  },
+  {
+    id: 5,
+    title: 'IoT Security: Protecting Connected Devices in Enterprise Environments',
+    description: 'Learn about the unique security challenges of IoT deployments and discover effective strategies for protecting connected devices.',
+    author: 'Dr. Robert Kim',
+    authorTitle: 'IoT Security Researcher',
+    date: '2023-12-15',
+    category: 'Security',
+    icon: Shield,
+    downloads: 680,
+    views: 1600,
+    featured: false,
+    tags: ['IoT Security', 'Device Protection', 'Network Security', 'Enterprise IoT'],
+    abstract: 'This research paper examines the security challenges specific to IoT deployments in enterprise environments. We present a comprehensive security framework that addresses device-level, network-level, and application-level security concerns.',
+    keyInsights: [
+      'IoT device vulnerabilities',
+      'Network security protocols',
+      'Device authentication methods',
+      'Security monitoring strategies'
+    ]
+  },
+  {
+    id: 6,
+    title: 'Machine Learning for Predictive Analytics: A Practical Guide',
+    description: 'Discover how to implement machine learning solutions for predictive analytics and gain actionable insights from your data.',
+    author: 'Maria Santos',
+    authorTitle: 'Data Science Lead',
+    date: '2023-12-10',
+    category: 'AI & ML',
+    icon: Brain,
+    downloads: 920,
+    views: 2200,
+    featured: false,
+    tags: ['Machine Learning', 'Predictive Analytics', 'Data Science', 'Business Intelligence'],
+    abstract: 'This practical guide demonstrates how organizations can implement machine learning solutions for predictive analytics. We provide step-by-step approaches for building, deploying, and maintaining ML models that deliver real business value.',
+    keyInsights: [
+      'ML model development process',
+      'Feature engineering techniques',
+      'Model evaluation methods',
+      'Production deployment strategies'
+    ]
+  }
+];
+const categories = [
+  { name: 'All', icon: Globe, count: whitePapers.length },
+  { name: 'AI & ML', icon: Brain, count: whitePapers.filter(w => w.category === 'AI & ML').length },
+  { name: 'Cloud & DevOps', icon: Cloud, count: whitePapers.filter(w => w.category === 'Cloud & DevOps').length },
+  { name: 'Security', icon: Shield, count: whitePapers.filter(w => w.category === 'Security').length },
+  { name: 'Emerging Tech', icon: Sparkles, count: whitePapers.filter(w => w.category === 'Emerging Tech').length }
+];
+export default function WhitePapers() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedPaper, setSelectedPaper] = useState(null);
+  const filteredPapers = whitePapers.filter(paper => {
+    const matchesCategory = selectedCategory === 'All' || paper.category === selectedCategory;
+    const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
+  const featuredWhitePapers = whitePapers.filter(paper => paper.featured);
+  const regularWhitePapers = filteredWhitePapers.filter(paper => !paper.featured);
+  return (
+    <div className="min-h-screen bg-zion-slate-dark">
       {/* Hero Section */}
-      <div role="button" className="bg - gradient - to - r from - zion - blue - dark to - zion - purple py - 20">
-        <div role="button" className="container mx - auto px - 4 text - center">
-          <div role="button" className="flex justify - center mb - 6">
-            <div role="button" className="p - 4 bg - zion - cyan / 20 rounded - full">
-              <FileText className="w - 16 h - 16 text - zion - cyan" />
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,221,210,0.1),transparent_50%)]" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Research & Insights
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue">
+                White Papers
+              </span>
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+              Access our comprehensive research papers and technical documents covering AI, 
+              cybersecurity, cloud computing, and emerging technologies. Gain deep insights 
+              from industry experts.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="#papers"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 transform hover:scale-105"
+              >
+                Browse Papers
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact?type=white-paper-request"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-zion-slate-dark transition-all duration-300"
+              >
+                Request Custom Research
+              </Link>
             </div>
-          </div>
-          <h1 className="text - 5xl font - bold text - white mb - 6">
-            White Papers & Research
-          </h1>
-          <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">
-            Access our latest research, insights, and thought leadership content
-            on emerging technologies, digital transformation, and industry
-            trends.
-          </p>
+          </motion.div>
         </div>
-      </div>
-
-      {/* Search and Filters */}
-      <div role="button" className="py - 12">
-        <div role="button" className="container mx - auto px - 4">
-          <div role="button" className="max - w-6xl mx - auto">
-            {/* Search Bar */}
-            <div role="button" className="relative mb - 8">
-              <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 text - zion - slate - light w - 5 h - 5" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={e => setSearchQuery (e.target.value) }
-                placeholder="Search white papers..."
-                className="w - full pl - 12 pr - 4 py - 4 bg - zion - slate border border - zion - slate - light rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:ring - 2 focus:ring - zion - cyan focus:border - transparent"
-              />
-            </div>
-
-            {/* Categories and Sort */}
-            <div role="button" className="flex flex - col lg:flex - row gap - 6 mb - 8">
-              {/* Categories */}
-              <div role="button" className="flex flex - wrap gap - 2">
-                {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
-                    onClick={ () => setActiveCategory (category.id) }
-                    className={`flex items - center gap - 2 px - 4 py - 2 rounded - lg font - medium transition - colors ${
-                      activeCategory === category.id
-                        ? 'bg - zion - cyan text - zion - slate - dark'
-                        : 'bg - zion - slate text - zion - slate - light hover:bg - zion - slate - light hover:text - white'
-                    }`}
-                  >
-                    {category.icon}
-                    {category.name}
-                    <span className="text - xs bg - white / 20 px - 2 py - 1 rounded - full">
-                      {category.count}
-                    </span>
-                  </button>) ) }
-              </div>
-
-              {/* Sort Options */}
-              <div role="button" className="flex items - center gap - 2">
-                <span className="text - zion - slate - light">Sort by:</span>
-                <select
-                  value={sortBy}
-                  onChange={e => setSortBy (e.target.value) }
-                  className="bg - zion - slate border border - zion - slate - light rounded - lg px - 3 py - 2 text - white focus:outline - none focus:ring - 2 focus:ring - zion - cyan"
-                >
-                  {sortOptions.map (option => (<option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>) ) }
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Filters and Search */}
-      <section className="py - 12 px - 4 bg - slate - 800 / 30">
-        <div role="button" className="container mx - auto">
-          <div role="button" className="flex flex - col lg:flex - row gap - 6 items - center justify - between">
+      </section>
+      {/* Search and Filter Section */}
+      <section className="py-12 bg-zion-slate">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
-            <div role="button" className="relative w - full lg:w - 96">
-              <Search className="absolute left - 3 top - 1/2 - translate - y-1 / 2 h - 4 w - 4 text - slate - 400" />
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search white papers..."
                 value={searchQuery}
-                onChange={e => setSearchQuery (e.target.value) }
-                className="w - full pl - 10 pr - 4 py - 3 rounded - lg bg - slate - 800 border border - slate - 600 focus:border - cyan - 400 focus:ring - 2 focus:ring - cyan - 400 / 20 outline - none text - white placeholder - slate - 400"
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors"
               />
             </div>
-
             {/* Category Filter */}
-            <div role="button" className="flex flex - wrap gap - 3">
-              {categories.map (category => (<motion.button
-                  key={category.id}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={ () => setSelectedCategory (category.id) }
-                  className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
-                    selectedCategory === category.id
-                      ? 'bg - cyan - 400 text - slate - 900 shadow - lg shadow - cyan - 400 / 30'
-                      : 'bg - slate - 800 text - slate - 300 hover:bg - slate - 700 border border - slate - 600'
+            <div className="flex flex-wrap gap-3">
+              {categories.map((category) => (
+                <button
+                  key={category.name}
+                  onClick={() => setSelectedCategory(category.name)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 ${
+                    selectedCategory === category.name
+                      ? 'border-zion-cyan bg-zion-cyan text-zion-slate-dark'
+                      : 'border-zion-cyan/20 text-zion-cyan hover:border-zion-cyan/40'
                   }`}
                 >
-                  <category.icon className="w - 4 h - 4" />
+                  <category.icon className="w-4 h-4" />
                   {category.name}
-                  <span className="ml - 1 px - 2 py - 1 bg - slate - 600 rounded - full text - xs">
+                  <span className="text-xs bg-zion-slate-dark px-2 py-1 rounded-full">
                     {category.count}
                   </span>
-                </motion.button>) ) }
+                </button>
+              ))}
             </div>
           </div>
         </div>
       </section>
-
-      {/* Featured Insights */}
-      <div role="button" className="py - 12 bg - zion - slate - dark">
-        <div role="button" className="container mx - auto px - 4">
-          <h2 className="text - 3xl font - bold text - center text - white mb - 12">
-            Featured Insights
-          </h2>
-          <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 max - w-4xl mx - auto">
-            {featuredInsights.map ( (insight, index) => (<div role="button" key={index}
-                className="bg - zion - slate border border - zion - slate - light rounded - lg p - 6 hover:shadow - lg transition - shadow"
-              >
-                <div role="button" className="text - zion - cyan mb - 4">{insight.icon}</div>
-                <h3 className="text - lg font - semibold text - white mb - 2">
-                  {insight.title}
-                </h3>
-                <p className="text - zion - slate - light text - sm mb - 4">
-                  {insight.description}
-                </p>
-                <a
-                  href={insight.link}
-                  className="inline - flex items - center gap - 2 text - zion - cyan hover:text - zion - cyan - light transition - colors font - medium text - sm"
-                >
-                  Read More < ArrowRight className="w - 4 h - 4" />
-                </a>
-              </div>) ) }
-          </div>
-        </div>
-      </div>
-
       {/* White Papers Grid */}
-      <div role="button" className="py - 16">
-        <div role="button" className="container mx - auto px - 4">
-          <h2 className="text - 3xl font - bold text - center text - white mb - 12">
-            White Papers Library
-          </h2>
-
-          {filteredPapers.length > 0 ? (<div role="button" className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8 max - w-6xl mx - auto">
-              {filteredPapers.map (paper => (<div role="button" key={paper.id}
-                  className={`bg - zion - slate border border - zion - slate - light rounded - lg p - 6 hover:shadow - lg transition - shadow ${
-                    paper.featured ? 'ring - 2 ring - zion - cyan' : ''
+      <section id="papers" className="py-20 bg-zion-slate-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Featured Research Papers
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Discover insights from our latest research and technical analysis.
+            </p>
+          </motion.div>
+          {filteredPapers.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-zion-slate-light text-lg">No white papers match your criteria.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {filteredPapers.map((paper, index) => (
+                <motion.div
+                  key={paper.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`bg-zion-slate border rounded-xl p-8 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer ${
+                    paper.featured 
+                      ? 'border-zion-cyan/40 shadow-lg shadow-zion-cyan/10' 
+                      : 'border-zion-cyan/20 hover:border-zion-cyan/40'
                   }`}
+                  onClick={() => setSelectedPaper(paper)}
                 >
-                  <div role="button" className="flex items - start justify - between mb - 4">
-                    <div role="button" className="flex items - center gap - 2">
-                      <span className="text - sm text - zion - slate - light bg - zion - slate - light / 20 px - 2 py - 1 rounded - full">
-                        {categories.find (c => c.id === paper.category) ?.name}
-                      </span>
-                      {paper.featured && (<span className="px - 2 py - 1 bg - zion - cyan text - zion - slate - dark rounded - full text - xs font - medium">
-                          Featured
-                        </span>) }
+                  {paper.featured && (
+                    <div className="flex items-center gap-2 mb-4">
+                      <Award className="w-5 h-5 text-zion-cyan fill-current" />
+                      <span className="text-zion-cyan font-semibold text-sm">Featured Paper</span>
                     </div>
-                    <div role="button" className="flex items - center gap - 2 text - zion - slate - light text - sm">
-                      <Calendar className="w - 4 h - 4" />
-                      {formatDate (paper.publishDate) }
+                  )}
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">
+                      <paper.icon className="w-8 h-8 text-white" />
                     </div>
-                  </div>
-
-                  <h3 className="text - xl font - semibold text - white mb - 3">
-                    {paper.title}
-                  </h3>
-                  <p className="text - zion - slate - light mb - 4">
-                    {paper.description}
-                  </p>
-
-                  <div role="button" className="flex flex - wrap gap - 2 mb - 4">
-                    {paper.tags.map ( (tag, index) => (<span
-                        key={index}
-                        className="px - 2 py - 1 bg - zion - slate - light / 20 text - zion - slate - light text - xs rounded - full"
-                      >
-                        {tag}
-                      </span>) ) }
-                  </div>
-
-                  <div role="button" className="flex items - center justify - between mb - 4 text - sm text - zion - slate - light">
-                    <div role="button" className="flex items - center gap - 4">
-                      <div role="button" className="flex items - center gap - 1">
-                        <Users className="w - 4 h - 4" />
-                        {paper.author}
-                      </div>
-                      <div role="button" className="flex items - center gap - 1">
-                        <Clock className="w - 4 h - 4" />
-                        {paper.readTime}
-                      </div>
-                    </div>
-                    <div role="button" className="flex items - center gap - 2">
-                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />
-                      {paper.rating}
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-white mb-2">{paper.title}</h3>
+                      <p className="text-zion-slate-light mb-4">{paper.description}</p>
                     </div>
                   </div>
-
-                  <div role="button" className="flex items - center justify - between">
-                    <div role="button" className="flex items - center gap - 4 text - sm text - zion - slate - light">
-                      <div role="button" className="flex items - center gap - 1">
-                        <Download className="w - 4 h - 4" />
-                        {formatDownloads (paper.downloads) } downloads
-                      </div>
-                      <div role="button" className="flex items - center gap - 1">
-                        <FileText className="w - 4 h - 4" />
-                        {paper.fileSize}
-                      </div>
+                  <div className="grid grid-cols-2 gap-4 mb-6 text-sm text-zion-slate-light">
+                    <div className="flex items-center">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {new Date(paper.date).toLocaleDateString()}
                     </div>
-
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - zion - cyan text - zion - slate - dark px - 6 py - 2 rounded - lg font - semibold hover:bg - zion - cyan - light transition - colors inline - flex items - center gap - 2">
-                      <Download className="w - 4 h - 4" />
-                      Download
+                    <div className="flex items-center">
+                      <User className="w-4 h-4 mr-2" />
+                      {paper.author}
+                    </div>
+                    <div className="flex items-center">
+                      <Download className="w-4 h-4 mr-2" />
+                      {paper.downloads} downloads
+                    </div>
+                    <div className="flex items-center">
+                      <Eye className="w-4 h-4 mr-2" />
+                      {paper.views} views
+                    </div>
+                  </div>
+                  <div className="mb-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-zion-cyan font-semibold">Author:</span>
+                      <span className="text-white">{paper.author}</span>
+                      <span className="text-zion-slate-light">({paper.authorTitle})</span>
+                    </div>
+                  </div>
+                  <div className="mb-6">
+                    <h4 className="text-white font-semibold mb-3">Tags:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {paper.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm border border-zion-cyan/30"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <button className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300">
+                      <Download className="mr-2 w-4 h-4" />
+                      Download PDF
+                    </button>
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedPaper(paper);
+                      }}
+                      className="px-4 py-3 border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-zion-slate-dark transition-all duration-300"
+                    >
+                      <Eye className="w-5 h-5" />
                     </button>
                   </div>
-                </div>) ) }
-            </div>) : (<div role="button" className="text - center py - 12">
-              <FileText className="w - 16 h - 16 text - zion - slate - light mx - auto mb - 4" />
-              <h3 className="text - xl font - semibold text - white mb - 2">
-                No white papers found
-              </h3>
-              <p className="text - zion - slate - light">
-                Try adjusting your search terms or browse all categories
-              </p>
-            </div>) }
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
-      </div>
-
-      {/* Subscribe to Updates */}
-      <div role="button" className="py - 16 bg - gradient - to - r from - zion - blue - dark to - zion - purple">
-        <div role="button" className="container mx - auto px - 4 text - center">
-          <h2 className="text - 3xl font - bold text - white mb - 6">Stay Updated</h2>
-          <p className="text - xl text - zion - slate - light mb - 8 max - w-2xl mx - auto">
-            Subscribe to receive notifications about new white papers, research
-            updates, and industry insights.
-          </p>
-          <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center max - w-md mx - auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex - 1 px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:ring - 2 focus:ring - zion - cyan"
-            />
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - zion - cyan text - zion - slate - dark px - 6 py - 3 rounded - lg font - semibold hover:bg - zion - cyan - light transition - colors">
-              Subscribe
-            </button>
-          </div>
+      </section>
+      {/* Paper Detail Modal */}
+      {selectedPaper && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            className="bg-zion-slate-dark border border-zion-cyan/20 rounded-xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+          >
+            <div className="flex justify-between items-start mb-6">
+              <h2 className="text-3xl font-bold text-white">{selectedPaper.title}</h2>
+              <button
+                onClick={() => setSelectedPaper(null)}
+                className="text-zion-slate-light hover:text-white transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-2">Abstract</h3>
+                <p className="text-zion-slate-light">{selectedPaper.abstract}</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-2">Key Insights</h3>
+                <ul className="space-y-2">
+                  {selectedPaper.keyInsights.map((insight, index) => (
+                    <li key={index} className="flex items-start">
+                      <Lightbulb className="w-5 h-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-zion-slate-light">{insight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex gap-3 pt-6">
+                <button className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300">
+                  <Download className="mr-2 w-4 h-4" />
+                  Download Full Paper
+                </button>
+                <button
+                  onClick={() => setSelectedPaper(null)}
+                  className="px-6 py-3 border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-zion-slate-dark transition-all duration-300"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </div>
-    </div>) ;
+      )}
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-blue">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Stay Informed with Our Research
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Get notified about new white papers and research publications from our team of experts.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact?type=white-paper-subscription"
+                className="inline-flex items-center px-8 py-4 bg-white text-zion-blue font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300 transform hover:scale-105"
+              >
+                Subscribe to Updates
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact?type=custom-research"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue transition-all duration-300"
+              >
+                Request Custom Research
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
 }

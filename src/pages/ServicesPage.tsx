@@ -1,4 +1,3 @@
-import { Link } from 'react - router - dom';
 import React, { useState, useEffect } from 'react';
 import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '@/data / additionalInnovativeServices2025';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '@/data / innovativeMicroSaasServices2025';
@@ -350,13 +349,10 @@ import { motion, AnimatePresence } from 'framer - motion';
                     whileHover={{ y: -10 }}
                   >
                     {/* Service Header */}
-                    <div role="button" className="mb - 6">
-                      <div role="button" className="flex items - center justify - between mb - 4">
-                        <div role="button" className={`w - 12 h - 12 bg - gradient - to - r ${getCategoryColor (service.category) } rounded - xl flex items - center justify - center`}
-                        >
-                          {getCategoryIcon (service.category) &&
-                            React.createElement (getCategoryIcon (service.category) ,
-                              { className: 'w - 6 h - 6 text - white' }) }
+                    <div className="mb-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
+                          {getCategoryIcon(service.category) && React.createElement(getCategoryIcon(service.category), { className: "w-6 h-6 text-white" })}
                         </div>
                         <div role="button" className="text - right">
                           <div role="button" className="text - 2xl font - bold text - zion - cyan">
