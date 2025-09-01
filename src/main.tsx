@@ -16,9 +16,26 @@ import { AppLayout } from '@/layout/AppLayout';
 const rootElement = document.getElementById('root');
 if (!rootElement) throw new Error('Failed to find the root element');
 
-const root = ReactDOM.createRoot(rootElement);
+// Import analytics provider
+import { AnalyticsProvider } from './context/AnalyticsContext';
+import { initGA } from './lib/gtag';
+import ErrorBoundary from './components/ErrorBoundary';
 
-root.render(
+// Initialize a React Query client with global error handling
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      onError: (error) => showApiError(error),
+    },
+    mutations: {
+      onError: (error) => showApiError(error),
+    },
+  },
+});
+
+initGA();
+// Render the app with proper provider structure
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
@@ -28,10 +45,10 @@ root.render(
               <NotificationProvider>
                 <AnalyticsProvider>
                   <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                    <AppLayout>
+                    <ErrorBoundary>
                       <App />
-                    </AppLayout>
-                    <LanguageDetectionPopup />
+                      <LanguageDetectionPopup />
+                    </ErrorBoundary>
                   </LanguageProvider>
                 </AnalyticsProvider>
               </NotificationProvider>

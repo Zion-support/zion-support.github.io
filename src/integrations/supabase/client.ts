@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import api from '@/lib/api';
+import { captureException } from '@/lib/sentry';
 
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -87,29 +87,6 @@ export const safeFetch: typeof fetch = async (input, init) => {
     }
   }
 
-  // If all retries failed, throw a user-friendly error
-  throw new Error(
-    lastError?.message === 'Failed to fetch'
-      ? 'Unable to connect to Supabase. Please check your internet connection.'
-      : lastError?.message || 'An unexpected error occurred'
-  );
-};
-
-// Create Supabase client with enhanced fetch
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  global: { 
-    fetch: safeFetch,
-    headers: {
-      'X-Client-Info': 'supabase-js-web',
-    }
-  },
-  auth: {
-    persistSession: true,
-    detectSessionInUrl: true,
-    autoRefreshToken: true,
-    storage: window.localStorage,
-  }
-});
-
-// Helper function to get profiles table
-export const getFromProfiles = () => supabase.from('profiles');
+  captureException(lastError);
+  throw new Error('Failed to connect to Supabase');
+}
