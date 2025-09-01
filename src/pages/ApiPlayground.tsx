@@ -1,110 +1,145 @@
-import {
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Code, Play, Copy, Check } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
-  Code,
-  Brain,
-  Cloud,
-  Shield,
-  Database,
-  Network,
-  Play,
-  Copy,
-  Download,
-  BookOpen,
-  Settings,
-  Search,
-  Filter,  ArrowRight,
-  CheckCircle,
-  AlertCircle,
-  Clock,
-  Zap,
-  Globe,
-  Key,
-  FileText,
-  ExternalLink} from 'lucide-react';
 const ApiPlayground: React.FC = () => {
-  const [selectedApi, setSelectedApi] = useState<any>(null);
+  const [selectedApi, setSelectedApi] = useState<string>('ai-chat');
   const [requestBody, setRequestBody] = useState('');
   const [responseData, setResponseData] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [activeTab, setActiveTab] = useState('playground');
+  const [copied, setCopied] = useState(false);
 
-  
-  
-  
-  
-      case 'POST':'
+  const apis = [
+    {
+      id: 'ai-chat',
+      name: 'AI Chat API',
+      description: 'Natural language processing and chat capabilities',
+      method: 'POST',
+      endpoint: '/api/v1/chat',
+      status: 'stable'
+    },
+    {
+      id: 'image-generation',
+      name: 'Image Generation API',
+      description: 'AI-powered image creation and manipulation',
+      method: 'POST',
+      endpoint: '/api/v1/images/generate',
+      status: 'beta'
+    },
+    {
+      id: 'data-analytics',
+      name: 'Data Analytics API',
+      description: 'Real-time data processing and insights',
+      method: 'GET',
+      endpoint: '/api/v1/analytics',
+      status: 'stable'
+    }
+  ];
+
+  const getMethodColor = (method: string) => {
+    switch (method) {
+      case 'GET':
+        return 'text-green-400';
+      case 'POST':
         return 'text-blue-400';
-      case 'PUT':'
+      case 'PUT':
         return 'text-yellow-400';
-      case 'DELETE':'
+      case 'DELETE':
         return 'text-red-400';
-      default:'
-        return 'text-gray-400'}
+      default:
+        return 'text-gray-400';
+    }
   };
 
-  
-      case 'beta':'
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'stable':
+        return 'bg-green-500/20 text-green-400';
+      case 'beta':
         return 'bg-yellow-500/20 text-yellow-400';
-      case 'deprecated':'
+      case 'deprecated':
         return 'bg-red-500/20 text-red-400';
-      default:'
-        return 'bg-gray-500/20 text-gray-400'}
+      default:
+        return 'bg-gray-500/20 text-gray-400';
+    }
   };
 
-  
-    setRequestBody(JSON.stringify(api.requestExample, null, 2));
-    setResponseData('')};
+  const handleApiSelect = (apiId: string) => {
+    setSelectedApi(apiId);
+    setRequestBody('');
+    setResponseData('');
+  };
 
-  
-    setIsLoading(true);'    setResponseData('');
+  const handleTestApi = () => {
+    setIsLoading(true);
+    setResponseData('');
 
     // Simulate API call
-    setTimeout ( () => {
-      setResponseData (JSON.stringify (selectedApi.responseExample, null, 2) ) ;
-      setIsLoading (false) }, 2000) }};
-  return()
+    setTimeout(() => {
+      setResponseData(JSON.stringify({
+        success: true,
+        data: {
+          message: 'API call successful',
+          timestamp: new Date().toISOString(),
+          requestId: Math.random().toString(36).substr(2, 9)
+        }
+      }, null, 2));
+      setIsLoading(false);
+    }, 2000);
+  };
+
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  const selectedApiData = apis.find(api => api.id === selectedApi);
+
+  return (
     <>
-      <SEO"
-        title="API Playground - Zion Tech Group"'"
+      <SEO
+        title="API Playground - Zion Tech Group"
         description="Interactive API playground for testing and exploring Zion Tech Group's APIs. Try our AI, cloud, security, and data analytics APIs."
         keywords="API playground, API testing, REST API, AI API, cloud API, security API, Zion Tech Group"
       />
-"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-        {/* Header */}"
-        <section className="pt-32 pb-16 px-4">"
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        {/* Header */}
+        <section className="pt-32 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-            >"
-              <div className="flex items-center justify-center space-x-3 mb-6">"
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">"
-                  <Code className="w-8 h-8 text-white"  />                </div>
-              </div>"
+            >
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
+                  <Code className="w-8 h-8 text-white" />
+                </div>
+              </div>
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 API Playground
-              </h1>"
+              </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Interactive playground for testing and exploring Zion Tech'
-                Group's APIs. Try our AI, cloud, security, and data analytics
-                APIs.
+                Interactive playground for testing and exploring Zion Tech Group's APIs. 
+                Try our AI, cloud, security, and data analytics APIs.
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Main Content */}"
-        <section className="py-16 px-4">"
-          <div className="max-w-7xl mx-auto">"
+        {/* Main Content */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* API List */}"
-              <div className="lg:col-span-1">"
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">"
+              {/* API List */}
+              <div className="lg:col-span-1">
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
                   <h2 className="text-2xl font-bold text-white mb-6">
                     Available APIs
                   </h2>
-"
+                  
                   <div className="space-y-4">
                     {apis.map((api, index) => (
                       <motion.div
@@ -113,261 +148,90 @@ const ApiPlayground: React.FC = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
                         className={`p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
-
-                          selectedApi?.id === api.id'
-                            ? 'border-blue-500 bg-blue-500/10''
-                            : 'border-slate-700/50 bg-slate-700/30 hover:border-slate-600/50'`
+                          selectedApi === api.id
+                            ? 'border-blue-500 bg-blue-500/10'
+                            : 'border-slate-700/50 bg-slate-700/30 hover:border-slate-600/50'
                         }`}
-                        onClick={() => handleApiSelect(api)}
-                      >"
-                        <div className="flex items-start justify-between mb-2">"
+                        onClick={() => handleApiSelect(api.id)}
+                      >
+                        <div className="flex items-start justify-between mb-2">
                           <h3 className="text-white font-semibold">
                             {api.name}
-                          </h3>"
+                          </h3>
                           <div className="flex items-center gap-2">
-                            <span`
+                            <span
                               className={`px-2 py-1 rounded text-xs font-medium ${getMethodColor(api.method)}`}
                             >
                               {api.method}
                             </span>
-                            <span`
+                            <span
                               className={`px-2 py-1 rounded text-xs font-medium ${getStatusColor(api.status)}`}
                             >
                               {api.status}
                             </span>
                           </div>
                         </div>
-"
-                        <p className="text-gray-300 text-sm mb-3">
+                        <p className="text-gray-300 text-sm">
                           {api.description}
                         </p>
-"
-                        <div className="flex items-center justify-between text-xs text-gray-400">
-                          <span>{api.endpoint}</span>
-                          {api.featured && ("
-                            <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded text-xs">
-                              Featured
-                            </span>) }
-                        </div>
-                      </motion.div>) ) }
+                        <p className="text-gray-400 text-xs mt-2 font-mono">
+                          {api.endpoint}
+                        </p>
+                      </motion.div>
+                    ))}
                   </div>
                 </div>
               </div>
 
-              {/* Playground */}"
-              <div className="lg:col-span-2">"
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50">
-                  {/* Tabs */}"
-                  <div className="flex border-b border-slate-700/50">
-                    <button'
-                      onClick={() => setActiveTab('playground')}`
-                      className={`px-6 py-3 text-sm font-medium transition-colors ${
+              {/* API Testing Area */}
+              <div className="lg:col-span-2">
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+                  <h2 className="text-2xl font-bold text-white mb-6">
+                    Test API: {selectedApiData?.name}
+                  </h2>
+                  
+                  <div className="space-y-6">
+                    {/* Request Body */}
+                    <div>
+                      <label className="block text-sm font-medium text-white mb-2">
+                        Request Body (JSON)
+                      </label>
+                      <textarea
+                        value={requestBody}
+                        onChange={(e) => setRequestBody(e.target.value)}
+                        placeholder="Enter JSON request body..."
+                        className="w-full h-32 px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 font-mono text-sm"
+                      />
+                    </div>
 
-                        activeTab === 'playground''
-                          ? 'text-blue-400 border-b-2 border-blue-400''
-                          : 'text-gray-400 hover:text-gray-300'`
-                      }`}
+                    {/* Test Button */}
+                    <button
+                      onClick={handleTestApi}
+                      disabled={isLoading}
+                      className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Playground
+                      <Play className="w-5 h-5" />
+                      <span>{isLoading ? 'Testing...' : 'Test API'}</span>
                     </button>
-                    <button'
-                      onClick={() => setActiveTab('documentation')}`
-                      className={`px-6 py-3 text-sm font-medium transition-colors ${
 
-                        activeTab === 'documentation''
-                          ? 'text-blue-400 border-b-2 border-blue-400''
-                          : 'text-gray-400 hover:text-gray-300'`
-                      }`}
-                    >
-                      Documentation
-                    </button>
-                  </div>
-
-                  {/* Tab Content */}"
-                  <div className="p-6">
-                    {activeTab === 'playground' ? (
+                    {/* Response */}
+                    {responseData && (
                       <div>
-                        {selectedApi ? ("
-                          <div className="space-y-6">
-                            {/* API Info */}"
-                            <div className="bg-slate-700/50 rounded-lg p-4">"
-                              <div className="flex items-center justify-between mb-3">"
-                                <h3 className="text-white font-semibold text-lg">
-                                  {selectedApi.name}
-                                </h3>"
-                                <div className="flex items-center gap-2">
-                                  <span`
-                                    className={`px-2 py-1 rounded text-xs font-medium ${getMethodColor(selectedApi.method)}`}
-                                  >
-                                    {selectedApi.method}
-                                  </span>"
-                                  <span className="text-gray-400 text-sm">
-                                    {selectedApi.endpoint}
-                                  </span>
-                                </div>
-                              </div>"
-                              <p className="text-gray-300 text-sm mb-3">
-                                {selectedApi.description}
-                              </p>"
-                              <div className="flex items-center gap-4 text-xs text-gray-400">
-                                <span>Rate Limit: {selectedApi.rateLimit}</span>
-                                <span>Auth: {selectedApi.authentication}</span>
-                                <span>Version: {selectedApi.version}</span>
-                              </div>
-                            </div>
-
-                            {/* Request */}
-                            <div>"
-                              <div className="flex items-center justify-between mb-3">"
-                                <h4 className="text-white font-medium">
-                                  Request Body
-                                </h4>
-                                <button
-                                  onClick={() => copyToClipboard(requestBody)}"
-                                  className="flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm"
-                                >"
-                                  <Copy className="w-4 h-4"  />                                  Copy
-                                </button>
-                              </div>
-                              <textarea
-                                value={requestBody}
-                                onChange={e => setRequestBody(e.target.value)}"
-                                className="w-full h-32 bg-slate-900 border border-slate-600 rounded-lg p-3 text-gray-300 font-mono text-sm resize-none"
-                                placeholder="Enter request body..."
-                              />
-                            </div>
-
-                            {/* Test Button */}
-                            <button
-                              onClick={handleTestApi}
-                              disabled={isLoading}"
-                              className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2"
-                            >
-                              {isLoading ? (
-                                <>"
-                                  <Clock className="w-5 h-5 animate-spin"  />
-                                  Testing API...
-                                </>
-                              ) : (
-                                <>"
-                                  <Play className="w-5 h-5"  />                                  Test API
-                                </>) }
-                            </button>
-
-                            {/* Response */}
-                            {responseData && (
-                              <div>"
-                                <div className="flex items-center justify-between mb-3">"
-                                  <h4 className="text-white font-medium">
-                                    Response
-                                  </h4>
-                                  <button
-                                    onClick={() =>
-                                      copyToClipboard(responseData)
-                                    }"
-                                    className="flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm"
-                                  >"
-                                    <Copy className="w-4 h-4"  />                                    Copy
-                                  </button>
-                                </div>"
-                                <pre className="w-full bg-slate-900 border border-slate-600 rounded-lg p-4 text-green-400 font-mono text-sm overflow-x-auto">
-                                  {responseData}
-                                </pre>
-                              </div>
-                            )}
-                          </div>
-                        ) : ("
-                          <div className="text-center py-12">"
-                            <Code className="w-16 h-16 text-gray-400 mx-auto mb-4"  />"
-                            <h3 className="text-white text-xl font-semibold mb-2">
-                              Select an API
-                            </h3>"
-                            <p className="text-gray-400">
-                              Choose an API from the list to start testing
-                            </p>                          </div>
-                        )}
-                      </div>
-                    ) : (
-                      <div>
-                        {selectedApi ? ("
-                          <div className="space-y-6">
-                            <div>"
-                              <h3 className="text-white font-semibold text-lg mb-4">
-                                API Documentation
-                              </h3>"
-                              <div className="bg-slate-700/50 rounded-lg p-4 mb-4">"
-                                <h4 className="text-white font-medium mb-2">
-                                  Endpoint
-                                </h4>"
-                                <code className="text-blue-400 font-mono">
-                                  {selectedApi.baseUrl}
-                                  {selectedApi.endpoint}
-                                </code>
-                              </div>
-"
-                              <div className="bg-slate-700/50 rounded-lg p-4 mb-4">"
-                                <h4 className="text-white font-medium mb-2">
-                                  Parameters
-                                </h4>"
-                                <div className="space-y-2">
-                                  {selectedApi.parameters.map()
-                                    (param: any, idx: number) => (
-                                      <div
-                                        key={idx}"
-                                        className="flex items-center justify-between text-sm"
-                                      >
-                                        <div>"
-                                          <span className="text-white font-medium">
-                                            {param.name}
-                                          </span>"
-                                          <span className="text-gray-400 ml-2">
-                                            ({param.type})
-                                          </span>
-                                          {param.required && ("
-                                            <span className="text-red-400 ml-2">
-                                              *
-                                            </span>
-                                          )}
-                                        </div>"
-                                        <span className="text-gray-400 text-xs">
-                                          {param.description}
-                                        </span>
-                                      </div>
-                                    )
-                                  )}
-                                </div>
-                              </div>
-"
-                              <div className="flex gap-2">
-                                <a
-                                  href={selectedApi.documentation}"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
-                                >"
-                                  <BookOpen className="w-4 h-4"  />                                  Full Documentation
-                                </a>
-                                <a
-                                  href={selectedApi.sdk}"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="flex items-center gap-2 bg-slate-700 text-white px-4 py-2 rounded-lg hover:bg-slate-600 transition-colors"
-                                >"
-                                  <Download className="w-4 h-4"  />                                  Download SDK
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        ) : ("
-                          <div className="text-center py-12">"
-                            <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4"  />"
-                            <h3 className="text-white text-xl font-semibold mb-2">
-                              Select an API
-                            </h3>"
-                            <p className="text-gray-400">
-                              Choose an API from the list to view documentation
-                            </p>                          </div>
-                        )}
+                        <div className="flex items-center justify-between mb-2">
+                          <label className="block text-sm font-medium text-white">
+                            Response
+                          </label>
+                          <button
+                            onClick={() => copyToClipboard(responseData)}
+                            className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+                          >
+                            {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                            <span className="text-sm">{copied ? 'Copied!' : 'Copy'}</span>
+                          </button>
+                        </div>
+                        <pre className="w-full p-4 bg-slate-700/50 border border-slate-600/50 rounded-lg text-green-400 font-mono text-sm overflow-x-auto">
+                          {responseData}
+                        </pre>
                       </div>
                     )}
                   </div>
@@ -377,6 +241,8 @@ const ApiPlayground: React.FC = () => {
           </div>
         </section>
       </div>
-    </>) };
+    </>
+  );
+};
+
 export default ApiPlayground;
-'"`

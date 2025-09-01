@@ -20,6 +20,7 @@ class MasterErrorFixer {
       'jsx-error-fixer',
       'comprehensive-error-fixer'
     ];
+    this.pm2Path = process.env.PM2_PATH || 'npx pm2';
   }
 
   log(message) {
@@ -38,7 +39,7 @@ class MasterErrorFixer {
   async checkPM2Status() {
     try {
       this.log('🔍 Checking PM2 status...');
-      const result = execSync('pm2 status', { 
+      const result = execSync(`${this.pm2Path} status`, { 
         encoding: 'utf8',
         stdio: 'pipe'
       });
@@ -59,7 +60,7 @@ class MasterErrorFixer {
   async restartFixer(fixerName) {
     try {
       this.log(`🔄 Restarting ${fixerName}...`);
-      execSync(`pm2 restart ${fixerName}`, { 
+      execSync(`${this.pm2Path} restart ${fixerName}`, { 
         encoding: 'utf8',
         stdio: 'pipe'
       });
@@ -74,7 +75,7 @@ class MasterErrorFixer {
   async startFixer(fixerName) {
     try {
       this.log(`🚀 Starting ${fixerName}...`);
-      execSync(`pm2 start ecosystem.config.cjs --only ${fixerName}`, { 
+      execSync(`${this.pm2Path} start ecosystem-enhanced.config.cjs --only ${fixerName}`, { 
         encoding: 'utf8',
         cwd: path.join(__dirname, '../..'),
         stdio: 'pipe'
@@ -117,11 +118,11 @@ class MasterErrorFixer {
       
       // Check if PM2 is running
       try {
-        execSync('pm2 ping', { stdio: 'pipe' });
+        execSync(`${this.pm2Path} ping`, { stdio: 'pipe' });
         this.log('✅ PM2 is running');
       } catch (error) {
         this.log('❌ PM2 is not responding, attempting to restart...');
-        execSync('pm2 kill && pm2 start ecosystem.config.cjs', { 
+        execSync(`${this.pm2Path} kill && ${this.pm2Path} start ecosystem-enhanced.config.cjs`, { 
           cwd: path.join(__dirname, '../..'),
           stdio: 'pipe'
         });

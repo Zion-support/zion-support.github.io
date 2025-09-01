@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import { SEO  } from '@/components/SEO';
-import { Search, 
-  BookOpen, 
-  Code, 
-  FileText, 
-  Video, 
-  Download, 
-  ExternalLink, 
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import {
+  Search,
+  BookOpen,
+  Code,
+  FileText,
+  Video,
+  Download,
+  ExternalLink,
   ArrowRight,
   CheckCircle,
   Clock,
@@ -18,9 +19,9 @@ import { Search,
   Cloud,
   Shield,
   Rocket
- } from 'lucide-react';
+} from 'lucide-react';
 
-export default function Documentation() {
+const Documentation: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -71,8 +72,8 @@ export default function Documentation() {
         { title: 'Security Audit Process', readTime: '25 min', difficulty: 'Intermediate' },
         { title: 'Compliance Requirements', readTime: '20 min', difficulty: 'Intermediate' },
         { title: 'Incident Response Guide', readTime: '30 min', difficulty: 'Advanced' }
-      ];
-    };
+      ]
+    }
   ];
 
   const apiDocs = [
@@ -102,8 +103,8 @@ export default function Documentation() {
       description: 'Client libraries for popular programming languages',
       version: 'v2.0.0',
       status: 'Stable',
-      languages: 8;
-    };
+      languages: 8
+    }
   ];
 
   const popularGuides = [
@@ -143,7 +144,7 @@ export default function Documentation() {
 
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'api': return <Api className="w-4 h-4" />;
+      case 'api': return <Code className="w-4 h-4" />;
       case 'guide': return <BookOpen className="w-4 h-4" />;
       case 'tutorial': return <Code className="w-4 h-4" />;
       case 'reference': return <FileText className="w-4 h-4" />;
@@ -170,53 +171,6 @@ export default function Documentation() {
         keywords="documentation, API docs, user guides, tutorials, Zion Tech Group"
         canonical="https://ziontechgroup.com/documentation"
       />
-
-  const getDifficultyText = (difficulty: string) => {;
-    switch (difficulty) {;
-      case 'beginner': return 'Beginner';
-      case 'intermediate': return 'Intermediate';
-      case 'advanced': return 'Advanced';
-      default: return 'Unknown';
-    }
-  };
-
-  const filteredItems = documentationItems.filter(item => {;
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-    
-    return matchesSearch && matchesCategory;
-  });
-
-  // Update counts
-  categories.forEach(cat = > {;
-    if (cat.id === 'all') {;
-      cat.count = documentationItems.length;
-    } else {
-      cat.count = documentationItems.filter(item => item.category === cat.id).length;
-    }
-  });
-
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-zion-cyan/20 rounded-full">
-              <BookOpen className="w-16 h-16 text-zion-cyan" />
-            </div>
-          </div>
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Documentation & Resources
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Comprehensive documentation, tutorials, and resources to help you succeed with Zion Tech Group's innovative solutions.
-          </p>
-        </div>
-      </div>
 
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
@@ -360,16 +314,14 @@ export default function Documentation() {
             ) : (
               <motion.div 
                 className="text-center py-16"
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
+                initial={{
+                  opacity: 0,
+                  y: 20
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0
+                }}
                 transition={{ duration: 0.8 }}
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -393,16 +345,14 @@ export default function Documentation() {
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-16"
-              initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+              initial={{
+                opacity: 0,
+                y: 30
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0
+              }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
@@ -414,26 +364,23 @@ export default function Documentation() {
               </p>
             </motion.div>
             
-            <div className="grid md: grid-cols-2 gap-8">
-              {filteredCategories.map((category, index)  => (
+            <div className="grid md:grid-cols-2 gap-8">
+              {filteredCategories.map((category, index) => (
                 <motion.div
                   key={category.id}
-                  initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-                  whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+                  initial={{
+                    opacity: 0,
+                    y: 30
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0
+                  }}
                   viewport={{ once: true }}
-                  transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
+                  transition={{
+                    duration: 0.8,
+                    delay: index * 0.1
+                  }}
                   className="group"
                 >
                   <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 h-full">
@@ -481,16 +428,14 @@ export default function Documentation() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+            initial={{
+              opacity: 0,
+              y: 30
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0
+            }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -502,26 +447,23 @@ export default function Documentation() {
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 gap-8">
-            {apiDocs.map((api, index)  => (
+          <div className="grid md:grid-cols-2 gap-8">
+            {apiDocs.map((api, index) => (
               <motion.div
                 key={api.name}
-                initial = {
-  { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  x: 0 
-
-}}
+                initial={{
+                  opacity: 0,
+                  x: index % 2 === 0 ? -30 : 30
+                }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0
+                }}
                 viewport={{ once: true }}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.1
+                }}
                 className="group"
               >
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300">
@@ -584,8 +526,8 @@ export default function Documentation() {
           </motion.div>
           
           <div className="max-w-6xl mx-auto">
-            <div className="grid md: grid-cols-2 gap-8">
-              {popularGuides.map((guide, index)  => (
+            <div className="grid md:grid-cols-2 gap-8">
+              {popularGuides.map((guide, index) => (
                 <motion.div
                   key={index}
                   initial={{
@@ -644,16 +586,14 @@ export default function Documentation() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+            initial={{
+              opacity: 0,
+              y: 30
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0
+            }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -742,7 +682,6 @@ export default function Documentation() {
               opacity: 1,
               y: 0
             }}
-}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -799,3 +738,6 @@ export default function Documentation() {
       </section>
     </div>
   );
+};
+
+export default Documentation;
