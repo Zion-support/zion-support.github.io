@@ -6,9 +6,9 @@ export default function CaseStudyPage() {
   return (
     <>
       <Head>
-        <title>Scaling Content Generation 10x - Case Study | Zion Tech Group</title>
-        <meta name="description" content="Discover how a Digital Marketing Agency achieved 10x increase in content output with autonomous content generation systems. Read our detailed case study." />
-        <meta name="keywords" content="content generation, AI automation, marketing automation, content scaling, digital marketing" />
+        <title>Data Analytics Transformation - Case Study | Zion Tech Group</title>
+        <meta name="description" content="Discover how a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform. Read our detailed case study." />
+        <meta name="keywords" content="data analytics, healthcare analytics, predictive modeling, big data, machine learning" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
@@ -23,19 +23,19 @@ export default function CaseStudyPage() {
               Case Studies
             </Link>
             <span className="text-white/60 mx-2">→</span>
-            <span className="text-white">Scaling Content Generation 10x</span>
+            <span className="text-white">Data Analytics Transformation</span>
           </nav>
 
           {/* Header */}
           <header className="text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30 mb-6">
-              Marketing Industry
+            <div className="inline-block px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30 mb-6">
+              Healthcare Industry
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Scaling Content Generation 10x
+              Data Analytics Transformation
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              How a Digital Marketing Agency achieved 10x increase in content output with autonomous content generation systems
+              How a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform
             </p>
           </header>
 
@@ -45,23 +45,23 @@ export default function CaseStudyPage() {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-semibold text-fuchsia-400 mb-4">Digital Marketing Agency</h3>
+                <h3 className="text-2xl font-semibold text-purple-400 mb-4">Healthcare Provider</h3>
                 <p className="text-white/90 text-lg mb-4">
-                  A mid-sized digital marketing agency serving clients across multiple industries. 
-                  The company struggled to meet growing client demand for high-quality content at scale.
+                  A large healthcare network serving multiple communities with hospitals, 
+                  clinics, and specialized medical services. The organization struggled to leverage data for patient care improvements.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-fuchsia-400">25+</div>
-                    <div className="text-white/70">Clients</div>
+                    <div className="text-3xl font-bold text-purple-400">5+</div>
+                    <div className="text-white/70">Hospitals</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-fuchsia-400">15</div>
-                    <div className="text-white/70">Team Members</div>
+                    <div className="text-3xl font-bold text-purple-400">50+</div>
+                    <div className="text-white/70">Clinics</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-fuchsia-400">$2M+</div>
-                    <div className="text-white/70">Annual Revenue</div>
+                    <div className="text-3xl font-bold text-purple-400">$200M+</div>
+                    <div className="text-white/70">Annual Budget</div>
                   </div>
                 </div>
               </div>
@@ -75,19 +75,19 @@ export default function CaseStudyPage() {
                 <ul className="space-y-3 text-white/90 text-lg">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <span>Unable to meet client demand for high-quality content at scale</span>
+                    <span>Inability to leverage data for patient care improvements</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <span>Content creation bottlenecks limiting business growth</span>
+                    <span>Operational inefficiencies due to lack of data insights</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <span>High costs associated with manual content creation</span>
+                    <span>Manual data collection and analysis processes</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <span>Inconsistent content quality across different writers</span>
+                    <span>No predictive capabilities for patient care planning</span>
                   </li>
                 </ul>
               </div>
@@ -97,42 +97,42 @@ export default function CaseStudyPage() {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-semibold text-green-400 mb-4">Autonomous Content Generation Systems</h3>
+                <h3 className="text-2xl font-semibold text-green-400 mb-4">Comprehensive Data Analytics Platform</h3>
                 <p className="text-white/90 text-lg mb-6">
-                  We implemented a comprehensive autonomous content generation platform with human oversight 
-                  and quality control mechanisms to ensure consistent, high-quality output.
+                  We built a comprehensive data analytics platform that provides real-time insights, 
+                  predictive modeling, and automated reporting for improved patient care and operational efficiency.
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <h4 className="text-xl font-semibold text-fuchsia-400 mb-3">Natural Language Processing</h4>
+                    <h4 className="text-xl font-semibold text-purple-400 mb-3">Big Data Processing</h4>
                     <p className="text-white/80">
-                      Advanced NLP models generate human-like content based on client requirements 
-                      and brand guidelines.
+                      Advanced big data infrastructure processes millions of patient records, 
+                      lab results, and operational data points in real-time.
                     </p>
                   </div>
                   
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <h4 className="text-xl font-semibold text-fuchsia-400 mb-3">Content Optimization</h4>
+                    <h4 className="text-xl font-semibold text-purple-400 mb-3">Machine Learning</h4>
                     <p className="text-white/80">
-                      AI-powered tools automatically optimize content for SEO, readability, 
-                      and engagement metrics.
+                      ML algorithms identify patterns, predict outcomes, and provide 
+                      personalized treatment recommendations.
                     </p>
                   </div>
                   
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <h4 className="text-xl font-semibold text-fuchsia-400 mb-3">SEO Automation</h4>
+                    <h4 className="text-xl font-semibold text-purple-400 mb-3">Real-time Analytics</h4>
                     <p className="text-white/80">
-                      Automated keyword research, content optimization, and performance tracking 
-                      for maximum visibility.
+                      Live dashboards provide instant insights into patient conditions, 
+                      resource utilization, and operational metrics.
                     </p>
                   </div>
                   
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <h4 className="text-xl font-semibold text-fuchsia-400 mb-3">Analytics & Insights</h4>
+                    <h4 className="text-xl font-semibold text-purple-400 mb-3">Predictive Modeling</h4>
                     <p className="text-white/80">
-                      Comprehensive analytics dashboard providing real-time insights into 
-                      content performance and audience engagement.
+                      Advanced predictive models forecast patient outcomes, readmission risks, 
+                      and resource requirements.
                     </p>
                   </div>
                 </div>
@@ -148,20 +148,20 @@ export default function CaseStudyPage() {
                     <h3 className="text-2xl font-semibold text-green-400 mb-6">Quantifiable Results</h3>
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
-                        <span className="text-white/90">Content Output</span>
-                        <span className="text-2xl font-bold text-green-400">+1000%</span>
+                        <span className="text-white/90">Patient Outcomes</span>
+                        <span className="text-2xl font-bold text-green-400">+30%</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-white/90">Engagement Metrics</span>
-                        <span className="text-2xl font-bold text-green-400">+85%</span>
+                        <span className="text-white/90">Operational Costs</span>
+                        <span className="text-2xl font-bold text-green-400">-40%</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-white/90">Creation Time</span>
-                        <span className="text-2xl font-bold text-green-400">-70%</span>
+                        <span className="text-white/90">Data Processing</span>
+                        <span className="text-2xl font-bold text-green-400">Real-time</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-white/90">Client Satisfaction</span>
-                        <span className="text-2xl font-bold text-green-400">95%</span>
+                        <span className="text-white/90">Predictive Accuracy</span>
+                        <span className="text-2xl font-bold text-green-400">85%</span>
                       </div>
                     </div>
                   </div>
@@ -171,19 +171,19 @@ export default function CaseStudyPage() {
                     <ul className="space-y-3 text-white/80">
                       <li className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0"></div>
-                        <span>Scalable content production without quality degradation</span>
+                        <span>Improved clinical decision-making with data-driven insights</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0"></div>
-                        <span>Consistent brand voice across all content</span>
+                        <span>Reduced readmission rates through predictive interventions</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0"></div>
-                        <span>Reduced dependency on individual writers</span>
+                        <span>Optimized resource allocation and staffing</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0"></div>
-                        <span>Faster time-to-market for content campaigns</span>
+                        <span>Enhanced patient engagement and satisfaction</span>
                       </li>
                     </ul>
                   </div>
@@ -196,9 +196,9 @@ export default function CaseStudyPage() {
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {['Natural Language Processing', 'Content Optimization', 'SEO Automation', 'Analytics'].map((tech) => (
+                  {['Big Data', 'Machine Learning', 'Real-time Analytics', 'Predictive Modeling'].map((tech) => (
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
-                      <span className="text-fuchsia-400 font-semibold">{tech}</span>
+                      <span className="text-purple-400 font-semibold">{tech}</span>
                     </div>
                   ))}
                 </div>
@@ -211,26 +211,34 @@ export default function CaseStudyPage() {
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-fuchsia-400 rounded-full flex items-center justify-center text-white font-bold">1</div>
+                    <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold">1</div>
                     <div>
-                      <h4 className="text-lg font-semibold text-white">System Design & Planning (Month 1)</h4>
-                      <p className="text-white/70">Content strategy analysis and system architecture design</p>
+                      <h4 className="text-lg font-semibold text-white">Data Assessment & Planning (Months 1-2)</h4>
+                      <p className="text-white/70">Comprehensive data audit and system architecture design</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-fuchsia-400 rounded-full flex items-center justify-center text-white font-bold">2</div>
+                    <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold">2</div>
                     <div>
-                      <h4 className="text-lg font-semibold text-white">AI Model Training (Months 2-3)</h4>
-                      <p className="text-white/70">Training content generation models on client-specific data</p>
+                      <h4 className="text-lg font-semibold text-white">Infrastructure Development (Months 3-6)</h4>
+                      <p className="text-white/70">Building big data infrastructure and ML model development</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-fuchsia-400 rounded-full flex items-center justify-center text-white font-bold">3</div>
+                    <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold">3</div>
                     <div>
-                      <h4 className="text-lg font-semibold text-white">Integration & Testing (Month 4)</h4>
-                      <p className="text-white/70">System integration and comprehensive testing with real content</p>
+                      <h4 className="text-lg font-semibold text-white">Integration & Testing (Months 7-9)</h4>
+                      <p className="text-white/70">System integration and comprehensive testing with real data</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold">4</div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-white">Deployment & Training (Month 10)</h4>
+                      <p className="text-white/70">Full deployment and staff training on new analytics platform</p>
                     </div>
                   </div>
                 </div>
@@ -239,22 +247,22 @@ export default function CaseStudyPage() {
 
             {/* Call to Action */}
             <section className="text-center">
-              <div className="bg-gradient-to-r from-fuchsia-500/10 to-cyan-500/10 rounded-2xl p-8 border border-fuchsia-500/20">
-                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Scale Your Content Production?</h2>
+              <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
+                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Data Analytics?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-                  This case study demonstrates the real impact of AI automation in content generation. 
+                  This case study demonstrates the real impact of data analytics transformation. 
                   Let&apos;s discuss how we can help you achieve similar results.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     href="/contact"
-                    className="bg-gradient-to-r from-fuchsia-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-fuchsia-500 hover:to-cyan-500 transition-all duration-300"
+                    className="bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300"
                   >
                     Get Started
                   </Link>
                   <Link 
                     href="/case-studies"
-                    className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-fuchsia-400/50 transition-all duration-300"
+                    className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-purple-400/50 transition-all duration-300"
                   >
                     View All Case Studies
                   </Link>
