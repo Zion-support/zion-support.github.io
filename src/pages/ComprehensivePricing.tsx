@@ -378,10 +378,10 @@ export default function ComprehensivePricing() {
               <p>📞 Call us: {contactInfo.mobile}</p>
               <p>📧 Email: {contactInfo.email}</p>
               <p>📍 Address: {contactInfo.address}</p>
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
