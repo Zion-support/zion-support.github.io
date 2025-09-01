@@ -1,8 +1,8 @@
-export default function IotPlatforms() {
+export default function IoTPlatforms() {
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-2xl font-semibold">IoT Platforms</h1>
-      <p className="text-gray-600">Coming soon.</p>
+    <div className="py-10">
+      <h1 className="text-2xl font-semibold mb-2">IoT Platforms</h1>
+      <p className="text-gray-600 dark:text-gray-300">Coming soon.</p>
     </div>
   );
 }

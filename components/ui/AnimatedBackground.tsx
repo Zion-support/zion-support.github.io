@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
-export default function AnimatedBackground() {
-  return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0c1022] via-[#0a0f1f] to-[#060b18]" />
-      <div className="absolute -top-32 -left-32 h-[40rem] w-[40rem] rounded-full bg-cyan-500/20 blur-[100px] animate-pulse-slow" />
-      <div className="absolute -bottom-32 -right-32 h-[40rem] w-[40rem] rounded-full bg-blue-500/20 blur-[100px] animate-pulse-slower" />
-      <div className="absolute inset-0 neon-grid opacity-20" />
-      <div className="absolute inset-0 stars" />
-    </div>
-  );
+export default function AnimatedBackground({ className = '' }: { className?: string }) {
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    let t = 0;
+    let raf = 0;
+    const animate = () => {
+      t += 0.0025;
+      const x = Math.sin(t) * 50 + 50;
+      const y = Math.cos(t * 1.2) * 50 + 50;
+      el.style.background = `radial-gradient(1200px 1200px at ${x}% ${y}%, rgba(59,130,246,0.12), transparent), radial-gradient(900px 900px at ${100-x}% ${100-y}%, rgba(168,85,247,0.12), transparent), radial-gradient(1000px 1000px at ${y}% ${x}%, rgba(16,185,129,0.10), transparent)`;
+      raf = requestAnimationFrame(animate);
+    };
+    raf = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
+  return <div ref={ref} className={`pointer-events-none absolute inset-0 -z-10 transition-colors duration-500 ${className}`} />;
 }

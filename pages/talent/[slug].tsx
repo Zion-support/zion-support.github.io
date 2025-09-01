@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router';
 
-export default function TalentDetails() {
+export default function TalentProfile() {
   const { query } = useRouter();
-  const { slug } = query as { slug?: string };
+  const slug = String(query.slug || '');
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-2xl font-semibold">Talent: {slug}</h1>
-      <p className="text-gray-600">Profile coming soon.</p>
+    <div className="py-10">
+      <h1 className="text-2xl font-semibold mb-2">Talent: {slug}</h1>
+      <p className="text-gray-600 dark:text-gray-300">Profile coming soon.</p>
     </div>
   );
 }

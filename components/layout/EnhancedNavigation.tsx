@@ -18,6 +18,7 @@ export default function EnhancedNavigation() {
       <div className="container mx-auto px-4 h-14 flex items-center justify-between">
         <Link href="/"><a className="font-semibold">Zion</a></Link>
         <div className="flex items-center gap-4 text-sm">
+          <Link href="/academy"><a>Academy</a></Link>
           <Link href="/about"><a>About</a></Link>
           <Link href="/dashboard/client"><a>Client</a></Link>
           <Link href="/dashboard/talent"><a>Talent</a></Link>
