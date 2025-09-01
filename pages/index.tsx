@@ -3,33 +3,17 @@ import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 import type { GetStaticProps } from 'next';
-import fs from 'fs';
-import path from 'path';
 
-type HomeProps = {
-  latestUpdates: Array<{ slug: string }>
+type PageLink = {
+  href: string;
+  label: string;
 };
 
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const updatesDir = path.join(process.cwd(), 'pages', 'reports', 'updates');
-  let latestUpdates: Array<{ slug: string }> = [];
-
-  try {
-    const files = fs.readdirSync(updatesDir)
-      .filter((f) => f.endsWith('.tsx'))
-      .map((f) => f.replace(/\.tsx$/, ''))
-      .sort((a, b) => (a < b ? 1 : -1))
-      .slice(0, 6)
-      .map((slug) => ({ slug }));
-    latestUpdates = files;
-  } catch {
-    latestUpdates = [];
-  }
-
-  return { props: { latestUpdates } };
+type HomePageProps = {
+  pageLinks: PageLink[];
 };
 
-export default function HomePage({ latestUpdates }: HomeProps) {
+export default function HomePage({ pageLinks }: HomePageProps) {
   return (
     <div>
       <Head>
@@ -696,9 +680,9 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Security Guide →
-                </a>
+                <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Security & Privacy →
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -798,9 +782,9 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Testing Guide →
-                </a>
+                <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Explore Testing Resources →
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -813,9 +797,9 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Predictive maintenance</li>
                   <li>• Automated QA</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Performance Guide →
-                </a>
+                <Link href="/case-studies" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  See Performance Case Studies →
+                </Link>
               </div>
             </div>
           </section>
@@ -924,25 +908,17 @@ export default function HomePage({ latestUpdates }: HomeProps) {
             </div>
           </section>
 
-          {/* Featured Articles */}
-          <section className="mx-auto max-w-7xl px-6 pb-14">
-            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Featured Articles</h2>
-            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <Link href="/blog/ai-automation-trends-2025" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">
-                <h3 className="text-lg font-semibold">AI Automation Trends 2025</h3>
-                <p className="mt-1 text-sm text-white/75">What’s next in autonomous systems.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-fuchsia-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-              <Link href="/blog/cloud-native-automation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                <h3 className="text-lg font-semibold">Cloud-Native Automation</h3>
-                <p className="mt-1 text-sm text-white/75">Scaling with reliability and speed.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-              <Link href="/blog/performance-optimization" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-yellow-400/30">
-                <h3 className="text-lg font-semibold">Performance Optimization</h3>
-                <p className="mt-1 text-sm text-white/75">Techniques for blazing-fast apps.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-yellow-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
+          {/* All Pages & Content Directory */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-3xl font-bold tracking-wide text-white/90 mb-8">🗂️ All Pages & Content</h2>
+            <p className="text-center text-white/70 mb-6">Explore everything available on our site.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {pageLinks.map((link) => (
+                <Link key={link.href} href={link.href} className="group rounded-lg border border-white/10 bg-white/5 p-4 text-white/90 hover:border-cyan-400/30 hover:bg-white/10 transition-colors">
+                  <span className="font-semibold text-cyan-300 group-hover:text-cyan-200">{link.label}</span>
+                  <span className="ml-2 text-xs text-white/60">{link.href}</span>
+                </Link>
+              ))}
             </div>
           </section>
 
@@ -1035,3 +1011,85 @@ export default function HomePage({ latestUpdates }: HomeProps) {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
+  const path = await import('path');
+  const fs = await import('fs');
+  const pagesDir = path.default.join(process.cwd(), 'pages');
+
+  const isPageFile = (filePath: string) => filePath.endsWith('.tsx') || filePath.endsWith('.ts') || filePath.endsWith('.jsx') || filePath.endsWith('.js');
+  const shouldExclude = (relativePath: string) => {
+    if (relativePath.startsWith('_')) return true; // _app, _document
+    if (relativePath.startsWith('api')) return true;
+    if (relativePath === 'index.tsx' || relativePath === 'index.jsx' || relativePath === 'index.js' || relativePath === 'index.ts') return false;
+    return false;
+  };
+
+  const humanize = (slug: string) => {
+    const cleaned = slug
+      .replace(/[\/_-]+/g, ' ')
+      .replace(/\b\w/g, (c) => c.toUpperCase())
+      .trim();
+    return cleaned;
+  };
+
+  const collected: PageLink[] = [];
+
+  const walk = (dir: string, baseRoute: string = '') => {
+    const entries = fs.readdirSync(dir, { withFileTypes: true }) as unknown as Array<import('fs').Dirent>;
+    for (const entry of entries) {
+      // Skip Next.js special files and hidden/system files
+      if (entry.name.startsWith('.')) continue;
+      if (entry.name === '_app.tsx' || entry.name === '_document.tsx') continue;
+
+      const full = path.default.join(dir, entry.name);
+      const rel = path.default.relative(pagesDir, full).replace(/\\/g, '/');
+
+      if (entry.isDirectory()) {
+        if (entry.name === 'api') continue;
+        walk(full, path.default.join(baseRoute, entry.name));
+        continue;
+      }
+
+      if (!isPageFile(full)) continue;
+      if (shouldExclude(rel)) {
+        if (rel.startsWith('index.')) {
+          // Root index
+          collected.push({ href: '/', label: 'Home' });
+        }
+        continue;
+      }
+
+      // Derive route path
+      const routePath = (() => {
+        const noExt = rel.replace(/\.(tsx|ts|jsx|js)$/i, '');
+        if (noExt.endsWith('/index')) return `/${noExt.replace(/\/index$/, '')}`;
+        return `/${noExt}`;
+      })();
+
+      // Filter out dynamic and bracketed routes for simplicity
+      if (routePath.includes('[')) continue;
+
+      // Prefer concise labels
+      const label = humanize(routePath.replace(/^\//, '')) || 'Home';
+      collected.push({ href: routePath, label });
+    }
+  };
+
+  try {
+    walk(pagesDir);
+  } catch {
+    // ignore
+  }
+
+  // De-duplicate and sort
+  const map = new Map<string, PageLink>();
+  for (const link of collected) {
+    map.set(link.href, link);
+  }
+  const pageLinks = Array.from(map.values()).sort((a, b) => a.href.localeCompare(b.href));
+
+  return {
+    props: { pageLinks },
+  };
+};
