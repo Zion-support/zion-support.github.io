@@ -49,21 +49,28 @@ export default function ServicesPage() {
             </div>
           </section>
 
-            <section className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 mb-12 border border-white/10">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-300">Core Services</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-xl p-6 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300">
-                  <div className="text-4xl mb-4">🤖</div>
-                  <h3 className="text-xl font-semibold text-blue-300 mb-3">AI Automation</h3>
-                  <p className="text-white/80 text-sm mb-4">
-                    Intelligent automation systems that learn, adapt, and optimize your business processes
-                  </p>
-                  <ul className="text-white/70 text-sm space-y-1">
-                    <li>• Process automation</li>
-                    <li>• Machine learning integration</li>
-                    <li>• Predictive analytics</li>
-                  </ul>
-                </div>
+          <section className="mx-auto max-w-6xl">
+            {/* Navigation */}
+            <nav className="mb-8">
+              <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                ← Back to Home
+              </a>
+            </nav>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-2xl font-bold mb-4 text-cyan-400">AI Development</h3>
+                <p className="text-white/70 mb-6">
+                  Custom AI solutions including machine learning models, natural language processing, and computer vision systems.
+                </p>
+                <ul className="space-y-2 text-sm text-white/60">
+                  <li>• Machine Learning Models</li>
+                  <li>• Natural Language Processing</li>
+                  <li>• Computer Vision</li>
+                  <li>• Predictive Analytics</li>
+                </ul>
+              </div>
 
                 <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-500/30 hover:border-green-400/50 transition-all duration-300">
                   <div className="text-4xl mb-4">☁️</div>
@@ -222,6 +229,36 @@ export default function ServicesPage() {
                   </a>
                 </div>
               </div>
+            </div>
+          </section>
+
+          {/* Related Pages */}
+          <section className="mx-auto max-w-6xl mt-16">
+            <h2 className="text-2xl font-bold mb-8 text-center text-white">Explore More</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <a href="/case-studies" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">📊</span>
+                </div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2">Case Studies</h3>
+                <p className="text-white/80 text-sm">See our services in action with real results</p>
+              </a>
+              
+              <a href="/resources" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">📚</span>
+                </div>
+                <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Resources</h3>
+                <p className="text-white/80 text-sm">Download guides and tools to get started</p>
+              </a>
+              
+              <a href="/contact" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">💬</span>
+                </div>
+                <h3 className="text-lg font-semibold text-purple-400 mb-2">Get in Touch</h3>
+                <p className="text-white/80 text-sm">Discuss your automation needs with us</p>
+              </a>
             </div>
           </section>
         </main>

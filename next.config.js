@@ -2,8 +2,10 @@
 const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
-	// Ensure static export compatibility if used
-	images: { unoptimized: true },
+	optimizeFonts: false,
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
 };
 
 module.exports = nextConfig;

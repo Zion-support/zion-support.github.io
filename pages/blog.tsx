@@ -129,22 +129,37 @@ export default function BlogPage() {
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <section className="text-center mb-16">
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              AI & Technology Blog
-            </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Insights, tutorials, and thought leadership on autonomous AI systems, cloud automation, and the future of technology
-            </p>
-          </section>
-
-          <section className="mx-auto max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (
-                <article key={post.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-                  <div className="text-6xl mb-4 text-center">{post.image}</div>
-                  <div className="mb-4">
-                    <span className="inline-block px-3 py-1 bg-cyan-400/20 text-cyan-300 text-sm rounded-full border border-cyan-400/30">
+          <div className="max-w-6xl mx-auto">
+            <nav className="mb-8">
+              <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                ← Back to Home
+              </a>
+              <span className="mx-2 text-white/40">|</span>
+              <a href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">
+                Resources
+              </a>
+              <span className="mx-2 text-white/40">|</span>
+              <a href="/case-studies" className="text-purple-400 hover:text-purple-300 transition-colors">
+                Case Studies
+              </a>
+            </nav>
+            
+            <header className="text-center mb-16">
+              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+                Zion Tech Group Blog
+              </h1>
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                Insights, trends, and innovations in AI automation and autonomous technology
+              </p>
+            </header>
+            
+            {/* Featured Post */}
+            <section className="mb-16">
+              <h2 className="text-2xl font-bold mb-8 text-white">Featured Article</h2>
+              {blogPosts.filter(post => post.featured).map(post => (
+                <div key={post.id} className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
                       {post.category}
                     </span>
                   </div>

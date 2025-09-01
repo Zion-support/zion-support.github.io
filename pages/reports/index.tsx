@@ -15,9 +15,19 @@ export default function ReportsIndex() {
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-6xl mx-auto">
-            <Link href="/" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-8">
-              ← Back to Home
-            </Link>
+            <nav className="mb-8">
+              <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                ← Back to Home
+              </a>
+              <span className="mx-2 text-white/40">|</span>
+              <a href="/blog" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">
+                Blog
+              </a>
+              <span className="mx-2 text-white/40">|</span>
+              <a href="/resources" className="text-purple-400 hover:text-purple-300 transition-colors">
+                Resources
+              </a>
+            </nav>
             
             <header className="text-center mb-16">
               <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
