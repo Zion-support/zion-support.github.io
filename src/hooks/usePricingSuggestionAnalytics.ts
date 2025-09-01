@@ -17,15 +17,17 @@ import { supabase } from '@/integrations/supabase/client';
 }
 
 export function usePricingSuggestionAnalytics(days = 30) {
-  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
+  const initialState: PricingSuggestionAnalytics = {
     totalSuggestions: 0,
     acceptanceRate: 0,
     averagePriceGap: 0,
     suggestionsByCategory: [],
     recentSuggestions: [],
     isLoading: true,
-    error: null
-  });
+    error: null,
+  };
+
+  const [analytics, setAnalytics] = useState(initialState);
 
   const fetchAnalytics = useCallback(async () => {
     setAnalytics(prev => ({ ...prev, isLoading: true, error: null }));
