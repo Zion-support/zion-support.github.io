@@ -343,12 +343,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '0 */4 * * *', // Every 4 hours
       log_file: './automation/logs/ai-code-review-automation.log',
       error_file: './automation/logs/ai-code-review-automation-error.log',
-      out_file: './automation/logs/ai-code-review-automation-out.log'
+      out_file: './automation/logs/ai-code-review-automation-out.log',
     },
 
     {
@@ -359,12 +359,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '0 */3 * * *', // Every 3 hours
       log_file: './automation/logs/predictive-issue-detection.log',
       error_file: './automation/logs/predictive-issue-detection-error.log',
-      out_file: './automation/logs/predictive-issue-detection-out.log'
+      out_file: './automation/logs/predictive-issue-detection-out.log',
     },
 
     {
@@ -375,12 +375,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '0 */8 * * *', // Every 8 hours
       log_file: './automation/logs/intelligent-build-pipeline.log',
       error_file: './automation/logs/intelligent-build-pipeline-error.log',
-      out_file: './automation/logs/intelligent-build-pipeline-out.log'
+      out_file: './automation/logs/intelligent-build-pipeline-out.log',
     },
 
     // MONITORING AND DASHBOARDS
@@ -431,12 +431,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
+        AUTOMATION_INTERVAL: '300000', // 5 minutes
       },
       cron_restart: '*/5 * * * *', // Every 5 minutes
       log_file: './automation/logs/unified-automation-dashboard.log',
       error_file: './automation/logs/unified-automation-dashboard-error.log',
-      out_file: './automation/logs/unified-automation-dashboard-out.log'
+      out_file: './automation/logs/unified-automation-dashboard-out.log',
     },
 
     // RECOVERY AND MAINTENANCE

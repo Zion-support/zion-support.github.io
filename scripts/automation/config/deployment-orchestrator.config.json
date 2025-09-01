@@ -1,0 +1,71 @@
+{
+  "autoDeployEnabled": true,
+  "healthCheckEnabled": true,
+  "autoRollbackEnabled": true,
+  "canaryDeploymentEnabled": true,
+  "blueGreenDeploymentEnabled": true,
+  "deploymentTimeout": 300000,
+  "healthCheckInterval": 30000,
+  "maxDeploymentRetries": 3,
+  "healthThreshold": 0.95,
+  "rollbackThreshold": 0.8,
+  "environments": ["development", "staging", "production"],
+  "deploymentStrategies": ["rolling", "blue-green", "canary", "recreate"],
+  "healthCheckEndpoints": {
+    "development": ["http://localhost:3000/api/health", "http://localhost:3000/"],
+    "staging": ["https://staging.zion.app/api/health", "https://staging.zion.app/"],
+    "production": ["https://zion.app/api/health", "https://zion.app/"]
+  },
+  "deploymentStages": {
+    "preDeployment": {
+      "enabled": true,
+      "timeout": 60000,
+      "checks": ["environment_health", "dependencies", "configuration"]
+    },
+    "buildTest": {
+      "enabled": true,
+      "timeout": 300000,
+      "steps": ["install_dependencies", "run_tests", "build_application"]
+    },
+    "deploy": {
+      "enabled": true,
+      "timeout": 120000,
+      "steps": ["stop_old", "deploy_new", "start_new"]
+    },
+    "healthCheck": {
+      "enabled": true,
+      "timeout": 300000,
+      "maxChecks": 10,
+      "checkInterval": 10000
+    },
+    "postDeployment": {
+      "enabled": true,
+      "timeout": 60000,
+      "steps": ["clear_caches", "update_monitoring", "send_notifications"]
+    }
+  },
+  "rollback": {
+    "enabled": true,
+    "automatic": true,
+    "maxRollbacks": 3,
+    "rollbackTimeout": 120000
+  },
+  "notifications": {
+    "enabled": true,
+    "channels": ["slack", "email", "webhook"],
+    "events": ["deployment_start", "deployment_success", "deployment_failure", "rollback"]
+  },
+  "monitoring": {
+    "enabled": true,
+    "metrics": ["response_time", "error_rate", "throughput", "resource_usage"],
+    "alerting": {
+      "enabled": true,
+      "thresholds": {
+        "response_time": 2000,
+        "error_rate": 0.05,
+        "cpu_usage": 0.8,
+        "memory_usage": 0.8
+      }
+    }
+  }
+}

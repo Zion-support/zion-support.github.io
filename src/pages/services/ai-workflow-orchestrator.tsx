@@ -1,406 +1,390 @@
-import { Workflow, 
-  Brain, 
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Settings, 
   Zap, 
-  Shield, 
-  Cloud, 
-  BarChart3, 
-  Users, 
-  Clock,
-  CheckCircle,
-  ArrowRight,
+  Workflow, 
+  CheckCircle, 
+  ArrowRight, 
   Play,
-  Pause,
-  Settings,
-  Monitor,
-  AlertTriangle,
+  Clock,
   TrendingUp,
-  Database,
-  Network,
+  Shield,
+  Globe,
+  Users,
   Cpu,
-  Server,
-  ShoppingCart'
- } from 'lucide-react.ts';
-},;
-    {;
-      icon: Users,;""""
-      title: "Team Collaboration",;""""
-      description: "Seamless team coordination with real-time updates and communication tools"};
-  ];
+  Database,
+  BarChart3,
+  Headphones
+} from 'lucide-react';
 
-  const benefits: any = [;""""
-    "Reduce manual workflow processing by up to 80%",;""""
-    "Improve decision accuracy with AI-powered insights",;""""
-    "Scale operations without proportional cost increases",;""""
-    "Ensure compliance and audit trail maintenance",;""""
-    "Real-time monitoring and alerting capabilities",;""""
-    "Seamless integration with existing systems";
-  ]},;
-    {;""""
-      title: "Retail",;""""
-      description: "Automate inventory management and customer service workflows",;
-      icon: ShoppingCart};
-  ];
-
-  const pricing: any = []
-    {}
-""""
-      name: "Starter",""""
-      price: "$2,500",""""
-      period: "/month",""""
-      description: "Perfect for small teams getting started with workflow automation",
-      features: [""""
-        "Up to 100 workflow executions/month",""""
-        "Basic AI decision making",""""
-        "Standard security features",""""
-        "Email support",""""
-        "Basic analytics dashboard""""
-      ]
-    },
-    {}
-""""
-      name: "Professional",""""
-      price: "$7,500",""""
-      period: "/month",""""
-      description: "Ideal for growing businesses with complex workflow needs",
-      features: [""""
-        "Up to 1,000 workflow executions/month",""""
-        "Advanced AI capabilities",""""
-        "Enhanced security & compliance",""""
-        "Priority support",""""
-        "Advanced analytics & reporting",""""
-        "Custom integrations""""
-      ],
-      popular: true;
-    },
-    {}
-""""
-      name: "Enterprise",""""
-      price: "Custom",""""
-      period: "",""""
-      description: "Tailored solutions for large organizations with specific requirements",
-      features: [""""
-        "Unlimited workflow executions",""""
-        "Custom AI model training",;""""
-        "Dedicated security team",;""""
-        "24/7 phone support",;""""
-        "Custom development",;"        "On-premise deployment options";
-      ]};
-  ];
-
-  return()
+export default function AIWorkflowOrchestrator() {
+  return (
     <>
       <Helmet>
-        <title>AI Workflow Orchestrator - Zion Tech Group | Intelligent Process Automation</title>'""""
-        <meta name = "description" content="Transform your business processes with Zion Tech's AI Workflow Orchestrator. Automate complex workflows with intelligent decision-making and real-time optimization." />""""
-        <meta name="keywords" content="AI workflow, process automation, workflow orchestration, business process automation, Zion Tech Group" />
+        <title>AI Workflow Orchestrator - Intelligent Process Automation | Zion Tech Group</title>
+        <meta name="description" content="Automate complex business processes with AI-powered workflow orchestration. Streamline operations, reduce errors, and boost productivity with intelligent automation." />
+        <meta name="keywords" content="AI workflow automation, process orchestration, business process automation, workflow management, intelligent automation" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-workflow-orchestrator" />
       </Helmet>
-""""
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
-        {/* Hero Section */}""""
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">""""
+
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-darker">
+        {/* Hero Section */}
+        <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div;
-              initial = {}
-  { opacity: 0,
-  y: 20;
-}}
-              animate = {}
-  { opacity: 1,
-  y: 0;
-}}
-              transition={{ duration: 0.6 }}""""
-              className="text-center""""
-            >""""
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">""""
-                <Workflow className="w-10 h-10 text-white"  />              </div>
-              """"
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">
-                AI Workflow Orchestrator;
+            <div className="text-center">
+              <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-8">
+                <Settings className="w-4 h-4 mr-2" />
+                AI-Powered Process Automation
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                AI Workflow Orchestrator
+                <span className="block text-zion-cyan">Intelligent Process Automation</span>
               </h1>
-              """"
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                Transform your business processes with intelligent workflow automation. Our AI-powered orchestrator learns, adapts, and optimizes your workflows in real-time.
+              
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+                Automate complex business processes with AI-powered orchestration. Streamline operations, 
+                reduce errors, and boost productivity with intelligent workflow management.
               </p>
-              """"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
-                <button className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
-                  Start Free Trial""""
-                  <ArrowRight className="w-5 h-5"  />
-                </button>"                <button className="px-8 py-4 border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
-                  Schedule Demo;
-                </button>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="https://ziontechgroup.com/contact" 
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </a>
+                <a 
+                  href="#demo" 
+                  className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  Watch Demo
+                </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
-        {/* Features Section */}""""
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">""""
+        {/* Key Benefits */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div;
-              initial = {}
-  { opacity: 0,
-  y: 20;
-}}
-              animate = {}
-  { opacity: 1,
-  y: 0;
-}}
-              transition = {}
-  { duration: 0.6,
-  delay: 0.2;
-}}
-            >""""
-              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Powerful Features for Modern Workflows;
-              </h2>
-              """"
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index (
-                  <motion.div;
-                    key={feature.title}
-                    initial = {}
-  { opacity: 0,
-  y: 20;
-}}
-                    animate = {}
-  { opacity: 1,
-  y: 0;
-}}
-                    transition = {}
-  { duration: 0.6,
-  delay: 0.1 * index;
-}}""""
-                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200""""
-                  >""""
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">""""
-                      <feature.icon className="w-6 h-6 text-blue-600" />
-                    </div>""""
-                    <h3 className="text-xl font-semibold text-slate-900 mb-3">{feature.title}</h3>""""
-                    <p className="text-slate-600">{feature.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}""""
-        <section className="py-16 px-4 sm:px-6 lg:px-8">""""
-          <div className="max-w-7xl mx-auto">
-            <motion.div;
-              initial = {}
-  { opacity: 0,
-  y: 20;
-}}
-              animate = {}
-  { opacity: 1,
-  y: 0;
-}}
-              transition = {}
-  { duration: 0.6,
-  delay: 0.4;
-}}
-            >""""
-              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose AI Workflow Orchestrator?
               </h2>
-              """"
-              <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
-                {benefits.map(benefit: unknown, index: unknown (
-                  <motion.div;
-                    key={benefit}
-                    initial = {}
-  { opacity: 0,
-  x: -20;
-}}
-                    animate = {}
-  { opacity: 1,
-  x: 0;
-}}
-                    transition = {}
-  { duration: 0.6,
-  delay: 0.05 * index;
-}}""""
-                    className="flex items-center gap-3""""
-                  >""""
-                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0"  />"                    <span className="text-slate-700">{benefit}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Use Cases Section */}""""
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">""""
-          <div className="max-w-7xl mx-auto">
-            <motion.div;
-              initial = {}
-  { opacity: 0,
-  y: 20;
-}}
-              animate = {}
-  { opacity: 1,
-  y: 0;
-}}
-              transition = {}
-  { duration: 0.6,
-  delay: 0.6;
-}}
-            >""""
-              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Industry Applications;
-              </h2>
-              """"
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-                {useCases.map(useCase: unknown, index: unknown (
-                  <motion.div;
-                    key={useCase.title}
-                    initial = {}
-  { opacity: 0,
-  y: 20;
-}}
-                    animate = {}
-  { opacity: 1,
-  y: 0;
-}}
-                    transition = {}
-  { duration: 0.6,
-  delay: 0.1 * index;
-}}""""
-                    className="text-center""""
-                  >""""
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                      <useCase.icon className="w-8 h-8 text-blue-600" />
-                    </div>""""
-                    <h3 className="text-lg font-semibold text-slate-900 mb-2">{useCase.title}</h3>""""
-                    <p className="text-slate-600 text-sm">{useCase.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}""""
-        <section className="py-16 px-4 sm:px-6 lg:px-8">""""
-          <div className="max-w-7xl mx-auto">
-            <motion.div;
-              initial = {}
-  { opacity: 0,
-  y: 20;
-}}
-              animate = {}
-  { opacity: 1,
-  y: 0;
-}}
-              transition = {}
-  { duration: 0.6,
-  delay: 0.8;
-}}
-            >""""
-              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Simple, Transparent Pricing;
-              </h2>
-              """"
-              <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-                {pricing.map(plan: unknown, index: unknown (
-                  <motion.div;
-                    key={plan.name}
-                    initial = {}
-  { opacity: 0,
-  y: 20;
-}}
-                    animate = {}
-  { opacity: 1,
-  y: 0;
-}}
-                    transition = {}
-  { duration: 0.6,
-  delay: 0.1 * index;
-}}
-                    className={`relative bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border ${}
-                      plan.popular '
-                        ? 'border-blue-500 ring-2 ring-blue-500/20' '
-                        : 'border-slate-100 hover:border-blue-200'`
-                    }`}
-                  >
-                    {plan.popular && (""""
-                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">""""
-                        <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                          Most Popular;
-                        </span>
-                      </div>
-                    )}
-                    """"
-                    <div className="text-center mb-6">""""
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">{plan.name}</h3>""""
-                      <div className="flex items-baseline justify-center gap-1">""""
-                        <span className="text-3xl font-bold text-slate-900">{plan.price}</span>""""
-                        <span className="text-slate-500">{plan.period}</span>
-                      </div>""""
-                      <p className="text-slate-600 mt-2">{plan.description}</p>
-                    </div>
-                    """"
-                    <ul className="space-y-3 mb-6">
-                      {plan.features.map((feature, idx) => (""""
-                        <li key={idx} className="flex items-center gap-2">""""
-                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0"  />"                          <span className="text-slate-700 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    `
-                    <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors ${}
-                      plan.popular'
-                        ? 'bg-blue-600 text-white hover:bg-blue-700''
-                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'`
-                    }`}>
-                      {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                    </button>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* CTA Section */}""""
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700">""""
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div;
-              initial = {}
-  { opacity: 0,
-  y: 20;
-}}
-              animate = {}
-  { opacity: 1,
-  y: 0;
-}}
-              transition = {}
-  { duration: 0.6,
-  delay: 1.0;
-}}
-            >""""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your Workflows?
-              </h2>""""
-              <p className="text-xl text-blue-100 mb-8">
-                Join hundreds of companies already using AI Workflow Orchestrator to streamline their operations.
+              <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+                Transform your business processes with intelligent automation
               </p>
-              """"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
-                <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
-                  Start Free Trial;
-                </button>""""
-                <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
-                  Schedule Demo;
-                </button>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Process Automation</h3>
+                <p className="text-zion-slate-light">
+                  Automate repetitive tasks and complex workflows with AI-powered decision making.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                  <TrendingUp className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Efficiency Boost</h3>
+                <p className="text-zion-slate-light">
+                  Increase productivity by 40-60% through streamlined and automated processes.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Error Reduction</h3>
+                <p className="text-zion-slate-light">
+                  Minimize human errors with intelligent validation and automated quality checks.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                  <Globe className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Scalable Operations</h3>
+                <p className="text-zion-slate-light">
+                  Handle increased workloads without proportional increases in staffing.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                  <Clock className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">24/7 Operations</h3>
+                <p className="text-zion-slate-light">
+                  Run workflows continuously without human intervention or time constraints.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                  <Users className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Team Collaboration</h3>
+                <p className="text-zion-slate-light">
+                  Enable seamless collaboration across teams with shared workflow visibility.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Workflow Features
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+                Everything you need to orchestrate complex business processes
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Visual Workflow Designer</h3>
+                      <p className="text-zion-slate-light">
+                        Drag-and-drop interface for creating complex workflows without coding.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">AI Decision Engine</h3>
+                      <p className="text-zion-slate-light">
+                        Intelligent routing and decision making based on data and business rules.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Integration Hub</h3>
+                      <p className="text-zion-slate-light">
+                        Connect with 500+ applications and services through pre-built connectors.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Real-time Monitoring</h3>
+                      <p className="text-zion-slate-light">
+                        Live dashboard for tracking workflow execution and performance metrics.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-xl p-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Workflow className="w-8 h-8 text-zion-cyan" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Workflow Dashboard</h3>
+                  <p className="text-zion-slate-light mb-6">
+                    Real-time monitoring and analytics for all your automated processes.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-zion-cyan">50%</div>
+                      <div className="text-sm text-zion-slate-light">Faster Processing</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-zion-cyan">99.9%</div>
+                      <div className="text-sm text-zion-slate-light">Uptime</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Simple, Transparent Pricing
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+                Choose the plan that fits your automation needs. All plans include a 14-day free trial.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Starter Plan */}
+              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
+                  <div className="text-4xl font-bold text-zion-cyan mb-2">$299</div>
+                  <div className="text-zion-slate-light">per month</div>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Up to 10 workflows
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Basic automation
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    20 integrations
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Standard support
+                  </li>
+                </ul>
+                
+                <a 
+                  href="https://ziontechgroup.com/contact" 
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+                >
+                  Start Free Trial
+                </a>
+              </div>
+              
+              {/* Professional Plan */}
+              <div className="bg-zion-blue-dark/50 border-2 border-zion-cyan rounded-xl p-8 relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </span>
+                </div>
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
+                  <div className="text-4xl font-bold text-zion-cyan mb-2">$699</div>
+                  <div className="text-zion-slate-light">per month</div>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Up to 100 workflows
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Advanced AI automation
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Unlimited integrations
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Priority support
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Advanced analytics
+                  </li>
+                </ul>
+                
+                <a 
+                  href="https://ziontechgroup.com/contact" 
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+                >
+                  Start Free Trial
+                </a>
+              </div>
+              
+              {/* Enterprise Plan */}
+              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
+                  <div className="text-4xl font-bold text-zion-cyan mb-2">Custom</div>
+                  <div className="text-zion-slate-light">contact us</div>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Unlimited workflows
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Custom AI models
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    White-label solutions
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Dedicated support
+                  </li>
+                </ul>
+                
+                <a 
+                  href="https://ziontechgroup.com/contact" 
+                  className="w-full inline-flex items-center justify-center px-6 py-3 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-colors"
+                >
+                  Contact Sales
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Automate Your Workflows?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Join thousands of organizations who have already transformed their operations with AI workflow automation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="https://ziontechgroup.com/contact" 
+                className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+              <a 
+                href="tel:+13024640950" 
+                className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-colors"
+              >
+                <Headphones className="w-5 h-5 mr-2" />
+                Call +1 (302) 464-0950
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
-  )};
-export default AIWorkflowOrchestrator;'"`
+  );
+}
