@@ -27,7 +27,8 @@ import { toast } from "sonner";
 import { FileText } from "lucide-react";
 
 const formSchema = z.object({
-  reason_code: z.string()
+  reason_code: z
+    .string()
     .nonempty({ message: "Please select a reason for the dispute" }),
   description: z
     .string()
