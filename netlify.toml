@@ -278,6 +278,10 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
+  name = "freshness-audit-runner"
+  schedule = "0 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
   name = "branch-cleanup-runner"
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
