@@ -157,3 +157,5 @@ export { ProductCard };
 export { ProductCard };
 
 export { ProductCard };
+
+export { ProductCard };

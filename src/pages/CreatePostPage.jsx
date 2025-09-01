@@ -73,3 +73,5 @@ export { CreatePostPage };
 export { CreatePostPage };
 
 export { CreatePostPage };
+
+export { CreatePostPage };

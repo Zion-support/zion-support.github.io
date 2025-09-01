@@ -316,3 +316,5 @@ export { QuantumNeuralNetwork };
 export { QuantumNeuralNetwork };
 
 export { QuantumNeuralNetwork };
+
+export { QuantumNeuralNetwork };

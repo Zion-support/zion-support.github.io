@@ -501,3 +501,5 @@ export { Testimonials };
 export { Testimonials };
 
 export { Testimonials };
+
+export { Testimonials };

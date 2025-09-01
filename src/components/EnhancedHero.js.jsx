@@ -228,3 +228,5 @@ export { EnhancedHero };
 export { EnhancedHero };
 
 export { EnhancedHero };
+
+export { EnhancedHero };

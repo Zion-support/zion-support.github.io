@@ -60,3 +60,5 @@ export { Badge, Badge };
 export { Badge, Badge };
 
 export { Badge, Badge };
+
+export { Badge, Badge };

@@ -26,3 +26,5 @@ export { Textarea };
 export { Textarea };
 
 export { Textarea };
+
+export { Textarea };

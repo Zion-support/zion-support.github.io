@@ -106,3 +106,5 @@ export { FloatingActionButton };
 export { FloatingActionButton };
 
 export { FloatingActionButton };
+
+export { FloatingActionButton };

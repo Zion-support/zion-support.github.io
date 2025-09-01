@@ -53,7 +53,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     metaDescription: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business.',
 import React, { useState, useEffect, useCallback } from 'react';'
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
-import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer";'
+import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";'
 const ContentQualityDashboard = ({ className = '' }) => {}
     const [isOpen, setIsOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);'
@@ -418,3 +418,5 @@ export { ContentQualityDashboard };
 export { ContentQualityDashboard };
 
 export { ContentQualityDashboard };
+
+export { ContentQualityDashboard, ContentQualityDashboard };

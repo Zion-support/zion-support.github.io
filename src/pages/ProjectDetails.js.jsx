@@ -539,3 +539,5 @@ export { ProjectDetailsContent, ProjectDetails };
 export { ProjectDetailsContent, ProjectDetails };
 
 export { ProjectDetailsContent, ProjectDetails };
+
+export { ProjectDetailsContent };

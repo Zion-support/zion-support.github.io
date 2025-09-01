@@ -329,3 +329,5 @@ export { Soc2ComplianceAutomation };
 export { Soc2ComplianceAutomation };
 
 export { Soc2ComplianceAutomation };
+
+export { Soc2ComplianceAutomation };

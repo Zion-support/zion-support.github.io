@@ -795,7 +795,7 @@ export const innovativeAIServices2031: AIService[] = []
 ];
 
 // Export all services;
-export const allInnovativeServices2031: any = {}
+export const allInnovativeServices2031: unknown = {}
   microSaas: innovativeMicroSaasServices2031,
   itInfrastructure: innovativeITInfrastructureServices2031,;  ;
   ;

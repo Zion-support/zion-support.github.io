@@ -576,3 +576,5 @@ export { IoTEdge };
 export { IoTEdge };
 
 export { IoTEdge };
+
+export { IoTEdge };

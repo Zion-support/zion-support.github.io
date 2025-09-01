@@ -22,7 +22,7 @@ import {}
 
   '
 ''
-  const savings: any = billingCycle === 'annual' ? 20 : 0;interface PricingTier {}
+  const savings: unknown = billingCycle === 'annual' ? 20 : 0;interface PricingTier {}
   name: string;
   description: string;
   price: string;

@@ -174,3 +174,5 @@ export { QuantumNeuralNetworkPlatform };
 export { QuantumNeuralNetworkPlatform };
 
 export { QuantumNeuralNetworkPlatform };
+
+export { QuantumNeuralNetworkPlatform };

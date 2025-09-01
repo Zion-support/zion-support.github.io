@@ -289,3 +289,5 @@ export { TranslationManager };
 export { TranslationManager };
 
 export { TranslationManager };
+
+export { TranslationManager };

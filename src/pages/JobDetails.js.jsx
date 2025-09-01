@@ -192,3 +192,5 @@ export { JobDetails };
 export { JobDetails };
 
 export { JobDetails };
+
+export { JobDetails };

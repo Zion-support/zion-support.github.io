@@ -172,3 +172,5 @@ export { AIResearchAssistant };
 export { AIResearchAssistant };
 
 export { AIResearchAssistant };
+
+export { AIResearchAssistant };

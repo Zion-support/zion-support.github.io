@@ -579,3 +579,5 @@ export { AIIoTEdgeComputingPlatform };
 export { AIIoTEdgeComputingPlatform };
 
 export { AIIoTEdgeComputingPlatform };
+
+export { AIIoTEdgeComputingPlatform };

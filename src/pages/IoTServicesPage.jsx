@@ -219,3 +219,5 @@ export { IoTServicesPage };
 export { IoTServicesPage };
 
 export { IoTServicesPage };
+
+export { IoTServicesPage };

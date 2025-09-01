@@ -186,3 +186,5 @@ export { Sitemap };
 export { Sitemap };
 
 export { Sitemap };
+
+export { Page, Sitemap };

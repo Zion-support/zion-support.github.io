@@ -65,3 +65,5 @@ export { ForumCategories };
 export { ForumCategories };
 
 export { ForumCategories };
+
+export { ForumCategories };

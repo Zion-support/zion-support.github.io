@@ -45,3 +45,5 @@ export { AccordionItem, AccordionTrigger, AccordionContent };
 export { AccordionItem, AccordionTrigger, AccordionContent };
 
 export { AccordionItem, AccordionTrigger, AccordionContent };
+
+export { AccordionItem, AccordionTrigger, AccordionContent };

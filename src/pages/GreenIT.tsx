@@ -185,7 +185,7 @@ export default function GreenIT(...args: unknown[]): unknown {
     { id: 'data', name: 'Data Centers', count: 2 }
   ];
 
-  const greenSolutions: any = [{}
+  const greenSolutions: unknown = [{}
       id: 'energy - monitoring',
       name: 'Smart Energy Monitoring',
       category: 'energy',
@@ -464,7 +464,7 @@ export default function GreenIT(...args: unknown[]): unknown {
     }
   ];
 
-export default function GreenIT(function GreenIT(function GreenIT() {): any {): any {}
+export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')};
 
@@ -883,3 +883,5 @@ export { GreenIT };
 export { GreenIT };
 
 export { GreenIT };
+
+export { GreenIT, GreenIT };

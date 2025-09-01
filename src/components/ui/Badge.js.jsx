@@ -55,3 +55,5 @@ export { Badge };
 export { Badge };
 
 export { Badge };
+
+export { Badge };

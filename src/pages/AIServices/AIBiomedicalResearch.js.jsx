@@ -213,3 +213,5 @@ export { AIBiomedicalResearch, IconComponent };
 export { AIBiomedicalResearch, IconComponent };
 
 export { AIBiomedicalResearch, IconComponent };
+
+export { AIBiomedicalResearch, IconComponent };

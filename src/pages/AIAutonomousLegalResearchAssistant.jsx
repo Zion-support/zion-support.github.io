@@ -338,3 +338,5 @@ export { AIAutonomousLegalResearchAssistant };
 export { AIAutonomousLegalResearchAssistant };
 
 export { AIAutonomousLegalResearchAssistant };
+
+export { AIAutonomousLegalResearchAssistant };

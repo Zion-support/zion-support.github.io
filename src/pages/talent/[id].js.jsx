@@ -90,3 +90,5 @@ export { TalentProfilePage };
 export { TalentProfilePage };
 
 export { TalentProfilePage };
+
+export { TalentProfilePage };

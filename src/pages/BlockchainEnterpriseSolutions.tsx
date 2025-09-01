@@ -75,7 +75,7 @@ id: 2,""""
     technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]};
 ];
 ;
-const blockchainTechnologies: any = []
+const blockchainTechnologies: unknown = []
   {}
 """
 """"
@@ -111,7 +111,7 @@ const blockchainTechnologies: any = []
     reliability: "High"};
 ];
 ;
-const successStories: any = []
+const successStories: unknown = []
   {}
 """
     id: 1,""""
@@ -172,7 +172,7 @@ const successStories: any = []
     icon: TrendingUp,;""""
     examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]};];
 
-const blockchainBenefits: any = [{}
+const blockchainBenefits: unknown = [{}
     title: "Transparency & Trust",
     description: "Blockchain provides immutable, transparent records that build trust",
     icon: Eye,

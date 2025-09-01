@@ -86,3 +86,5 @@ export { ResearchDevelopment };
 export { ResearchDevelopment };
 
 export { ResearchDevelopment };
+
+export { ResearchDevelopment };

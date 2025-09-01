@@ -610,3 +610,5 @@ export { ITOnsiteServices };
 export { ITOnsiteServices };
 
 export { ITOnsiteServices };
+
+export { Page, ITOnsiteServices };

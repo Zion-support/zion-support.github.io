@@ -194,3 +194,5 @@ export { TalentDashboardContent, TalentDashboard };
 export { TalentDashboardContent, TalentDashboard };
 
 export { TalentDashboardContent, TalentDashboard };
+
+export { TalentDashboardContent };

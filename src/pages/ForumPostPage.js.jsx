@@ -423,3 +423,5 @@ export { ForumPostPage };
 export { ForumPostPage };
 
 export { ForumPostPage };
+
+export { ForumPostPage };

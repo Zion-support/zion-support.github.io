@@ -1,3 +1,4 @@
+import React from 'react';
 ''''
       name: 'Quantum Consciousness AI',''''
       price: '$25,999',''''
@@ -527,6 +528,8 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
 export default ComprehensivePricingGuide2028;
 export default ComprehensivePricingGuide2028;
 
+
+export { ComprehensivePricingGuide2028, ComprehensivePricingGuide2028 };
 
 export { ComprehensivePricingGuide2028, ComprehensivePricingGuide2028 };
 

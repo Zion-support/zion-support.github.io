@@ -1,3 +1,4 @@
+import React from 'react';
 export default function UltimateInnovativeServices2026(...args[]):  {}
   const [searchQuery, setSearchQuery] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState('all');'
@@ -21,7 +22,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
     { id: 'over-20k', name: 'Over $20K', range: 'Over $20,000' };
   ];
 '
-  const sortOptions: any = [;''
+  const sortOptions: unknown = [;''
     { id: 'featured', name: 'Featured' },;''
     { id: 'price-low', name: 'Price: Low to High' },;''
     { id: 'price-high', name: 'Price: High to Low' },;''
@@ -404,6 +405,8 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
   );
 }
 
+
+export { UltimateInnovativeServices2026 };
 
 export { UltimateInnovativeServices2026 };
 

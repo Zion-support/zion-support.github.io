@@ -34,14 +34,14 @@ import {}
   MapPin;
 } from 'lucide-react';
 
-export default function Services(function Services(function Services() {): any {): any {}
+export default function Services(...args: any[]): any {): unknown {): unknown {}
   const [activeCategory, setActiveCategory] = useState(0);'
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredServices: any = allServices.filter(service => {}
-    const matchesSearch: any = service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
+  const filteredServices: unknown = allServices.filter(service => {}
+    const matchesSearch: unknown = service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
                          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
-    const matchesCategory: any = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory: unknown = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
   }) ;
 
@@ -236,3 +236,5 @@ export default function Services(function Services(function Services() {): any {
   )};
 export default Services;'"""
 '"'"""
+
+export { Services };

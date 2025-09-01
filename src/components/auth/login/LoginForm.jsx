@@ -194,3 +194,5 @@ export { LoginForm };
 export { LoginForm };
 
 export { LoginForm };
+
+export { Page, LoginForm };

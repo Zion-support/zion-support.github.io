@@ -70,7 +70,7 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
     { id: 'enterprise', name: 'Enterprise', range: '$25,000+' };
   ];
 '
-  const sortOptions: any = [;''
+  const sortOptions: unknown = [;''
     { id: 'featured', name: 'Featured' },;''
     { id: 'price-low', name: 'Price: Low to High' },;''
     { id: 'price-high', name: 'Price: High to Low' },;''
@@ -78,7 +78,7 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
   ];
 
   // Combine all revolutionary services;
-  const allServices: any = [;
+  const allServices: unknown = [;
     ...REVOLUTIONARY_SERVICES_2030,;
     ...EMERGING_TECH_SERVICES_2030;
   ];
@@ -109,7 +109,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
     if (category.includes('Autonomous')) return Bot;
     return Zap};
 
-  const IconComponent: any = getIcon(service.category) ;
+  const IconComponent: unknown = getIcon(service.category) ;
 
   return (<motion.div;
       initial={{ opacity: 0, y: 50 }}
@@ -381,8 +381,8 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
               {sortedServices.map((service, index) => {;
-                const IconComponent: any = getServiceIcon(service.category) ;
-                const colorClass: any = getServiceColor(service.category) ;
+                const IconComponent: unknown = getServiceIcon(service.category) ;
+                const colorClass: unknown = getServiceColor(service.category) ;
 
                 return (<motion.div;
                     key = {service.id}
@@ -688,6 +688,8 @@ export default RevolutionaryServices2030;"""
   );
 }
 
+
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
 
 export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
 

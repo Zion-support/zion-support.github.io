@@ -2,7 +2,7 @@ import React from 'react';'
 export default InnovativeServicesOverview2025;''
 import { motion  } from 'framer-motion';
 
-export default function Page(function Page(function Page() {): any {): any {}
+export default function Page(...args: any[]): any {): unknown {): unknown {}
 ,
     {}
       id: 'ai - healthcare - analytics',
@@ -23,7 +23,7 @@ export default function Page(function Page(function Page() {): any {): any {}
     }
   ];
 
-  const additionalServices: any = [{}
+  const additionalServices: unknown = [{}
       name: 'AI - Powered SEO Platform',
       description: 'Advanced SEO optimization with machine learning',
       price: '$1,500 / month',
@@ -288,3 +288,5 @@ export { InnovativeServicesOverview2025 };
 export { InnovativeServicesOverview2025 };
 
 export { InnovativeServicesOverview2025 };
+
+export { Page };

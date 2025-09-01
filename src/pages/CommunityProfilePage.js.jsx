@@ -299,3 +299,5 @@ export { CommunityProfilePage };
 export { CommunityProfilePage };
 
 export { CommunityProfilePage };
+
+export { CommunityProfilePage };

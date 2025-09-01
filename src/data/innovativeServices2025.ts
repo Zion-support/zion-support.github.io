@@ -3,7 +3,7 @@ export interface InnovativeService {}
   name: string;
   tagline: string;
   description: string;
-  category: any;
+  category: unknown;
     | 'AI & Machine Learning'''
     | 'Micro SaaS'''
     | 'IT Services'''

@@ -148,3 +148,5 @@ export { QuoteManager };
 export { QuoteManager };
 
 export { QuoteManager };
+
+export { QuoteManager };

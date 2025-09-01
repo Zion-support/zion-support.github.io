@@ -21,3 +21,5 @@ export { OrderConfirmation };
 export { OrderConfirmation };
 
 export { OrderConfirmation };
+
+export { OrderConfirmation };

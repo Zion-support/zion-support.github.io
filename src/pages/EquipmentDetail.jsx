@@ -249,3 +249,5 @@ export { EquipmentDetail };
 export { EquipmentDetail };
 
 export { EquipmentDetail };
+
+export { EquipmentDetail };

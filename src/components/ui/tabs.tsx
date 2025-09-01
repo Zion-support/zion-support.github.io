@@ -1,7 +1,0 @@
-interface TabsContextType {}
-  activeTab: string;
-  setActiveTab: (tab: string)  => void}
-  activeTab: string;
-  setActiveTab: tab: string void;
-}
-;

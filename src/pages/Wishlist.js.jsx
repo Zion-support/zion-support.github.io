@@ -63,3 +63,5 @@ export { WishlistPage };
 export { WishlistPage };
 
 export { WishlistPage };
+
+export { WishlistPage };

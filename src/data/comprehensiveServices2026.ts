@@ -849,7 +849,7 @@ export const revolutionaryAIServices2026: AIService[] = []
 ];
 
 // Export all services;
-export const ALL_REVOLUTIONARY_SERVICES_2026: any = [;  ...revolutionaryMicroSaasServices2026,;
+export const ALL_REVOLUTIONARY_SERVICES_2026: unknown = [;  ...revolutionaryMicroSaasServices2026,;
   ...revolutionaryITInfrastructureServices2026,;
   ...revolutionaryAIServices2026;
 ];"""

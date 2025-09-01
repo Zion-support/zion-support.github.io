@@ -53,3 +53,5 @@ export { PublishProduct };
 export { PublishProduct };
 
 export { PublishProduct };
+
+export { PublishProduct };

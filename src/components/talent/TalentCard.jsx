@@ -162,3 +162,5 @@ export { TalentCardComponent };
 export { TalentCardComponent };
 
 export { TalentCardComponent };
+
+export { Page };

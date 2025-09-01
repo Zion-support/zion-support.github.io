@@ -310,3 +310,5 @@ export { ComprehensivePricing };
 export { ComprehensivePricing };
 
 export { ComprehensivePricing };
+
+export { ComprehensivePricing };

@@ -44,3 +44,5 @@ export { ProductPage };
 export { ProductPage };
 
 export { ProductPage };
+
+export { ProductPage };

@@ -216,3 +216,5 @@ export { AIAutonomousScientificResearcher, IconComponent };
 export { AIAutonomousScientificResearcher, IconComponent };
 
 export { AIAutonomousScientificResearcher, IconComponent };
+
+export { AIAutonomousScientificResearcher, IconComponent };

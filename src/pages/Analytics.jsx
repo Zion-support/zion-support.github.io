@@ -14,3 +14,5 @@ export { Analytics };
 export { Analytics };
 
 export { Analytics };
+
+export { Analytics };

@@ -30,3 +30,5 @@ export default function Category() {}
   );
 }
 '"""
+
+export { Category };

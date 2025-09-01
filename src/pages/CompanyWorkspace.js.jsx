@@ -71,3 +71,5 @@ export { CompWorkspace };
 export { CompWorkspace };
 
 export { CompWorkspace };
+
+export { CompWorkspace };

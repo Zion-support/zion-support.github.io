@@ -1,3 +1,4 @@
+import React from 'react';
 const Match: React.FC = () => {;''''
   const [selectedCategory, setSelectedCategory] = useState('all');''''
   const [searchQuery, setSearchQuery] = useState('');'
@@ -11,7 +12,7 @@ const Match: React.FC = () => {;''''
     { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 };
   ];
 
-  const matchedServices: any = [{}
+  const matchedServices: unknown = [{}
       id: 1,
       name: "AI Business Intelligence",""""
       category: "ai",""""
@@ -457,6 +458,8 @@ const Match: React.FC = () => {;''''
 };
 
 export default Match;}}}
+
+export { Match };
 
 export { Match };
 

@@ -141,3 +141,5 @@ export { ForgotPassword };
 export { ForgotPassword };
 
 export { ForgotPassword };
+
+export { ForgotPassword };

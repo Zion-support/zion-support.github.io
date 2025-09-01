@@ -36,3 +36,5 @@ export { LazyWrapper };
 export { LazyWrapper };
 
 export { LazyWrapper };
+
+export { LazyWrapper, Page };

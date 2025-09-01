@@ -156,3 +156,5 @@ export { CategoryContent, ForumCategoryPage, IconComponent };
 export { CategoryContent, ForumCategoryPage, IconComponent };
 
 export { CategoryContent, ForumCategoryPage, IconComponent };
+
+export { CategoryContent, IconComponent };

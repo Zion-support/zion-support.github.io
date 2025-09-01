@@ -90,3 +90,5 @@ export { TalentMarketplace };
 export { TalentMarketplace };
 
 export { TalentMarketplace };
+
+export { TalentMarketplace };

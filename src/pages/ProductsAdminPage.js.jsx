@@ -86,3 +86,5 @@ export { ProductsAdminPage };
 export { ProductsAdminPage };
 
 export { ProductsAdminPage };
+
+export { ProductsAdminPage };

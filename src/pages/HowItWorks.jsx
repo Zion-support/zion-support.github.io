@@ -271,3 +271,5 @@ export { HowItWorks };
 export { HowItWorks };
 
 export { HowItWorks };
+
+export { HowItWorks };

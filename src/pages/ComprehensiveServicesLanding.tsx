@@ -1,7 +1,8 @@
+import React from 'react';
 import { Link  } from 'react-router-dom';
 
 const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
-  const serviceCategories: any = []
+  const serviceCategories: unknown = []
     {}
       name: "AI-Powered Micro SAAS Services",""""
       description: "Cutting-edge AI solutions that transform business operations",
@@ -447,6 +448,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
   )};
 
 export default ComprehensiveServicesLanding;
+
+export { ComprehensiveServicesLanding };
 
 export { ComprehensiveServicesLanding };
 

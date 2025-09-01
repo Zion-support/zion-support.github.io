@@ -926,7 +926,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = []
 ];
 
 // Export all expanded services;
-export const ALL_EXPANDED_SERVICES_2027: any = [;  ...advancedCybersecurityServices,;
+export const ALL_EXPANDED_SERVICES_2027: unknown = [;  ...advancedCybersecurityServices,;
   ...advancedDataAnalyticsServices,;
   ...advancedCloudDevOpsServices,;
   ...advancedIoTServices,;
@@ -962,7 +962,7 @@ export '''
 ];
 
 // Helper function to get services by category'
-export const getExpandedServicesByCategory: any = (category: string): ExpandedService2027[] => {;'  if (category === 'All') {;
+export const getExpandedServicesByCategory: unknown = (category: string): ExpandedService2027[] => {;'  if (category === 'All') {;
 
     return ALL_EXPANDED_SERVICES_2027;
 
@@ -974,7 +974,7 @@ export;
 
 // Helper function to search services;
 export;
-  const lowercaseQuery: any = query.toLowerCase();  return ALL_EXPANDED_SERVICES_2027.filter(service =>
+  const lowercaseQuery: unknown = query.toLowerCase();  return ALL_EXPANDED_SERVICES_2027.filter(service =>
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery) ||

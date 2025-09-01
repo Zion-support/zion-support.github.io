@@ -41,3 +41,5 @@ export { EnhancedScrollToTop };
 export { EnhancedScrollToTop };
 
 export { EnhancedScrollToTop };
+
+export { EnhancedScrollToTop };

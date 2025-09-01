@@ -22,3 +22,5 @@ export { DisputeDetailPage };
 export { DisputeDetailPage };
 
 export { DisputeDetailPage };
+
+export { DisputeDetailPage };

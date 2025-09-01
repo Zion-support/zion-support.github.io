@@ -72,3 +72,5 @@ export { ServiceDescriptionGenerator };
 export { ServiceDescriptionGenerator };
 
 export { ServiceDescriptionGenerator };
+
+export { ServiceDescriptionGenerator };

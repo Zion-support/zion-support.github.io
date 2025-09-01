@@ -45,3 +45,5 @@ export { Tabs };
 export { Tabs };
 
 export { Tabs };
+
+export { Tabs };

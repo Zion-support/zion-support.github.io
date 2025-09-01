@@ -90,3 +90,5 @@ export { InstantMessaging };
 export { InstantMessaging };
 
 export { InstantMessaging };
+
+export { InstantMessaging };

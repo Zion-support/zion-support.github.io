@@ -674,3 +674,5 @@ export { IncidentResponsePlatform };
 export { IncidentResponsePlatform };
 
 export { IncidentResponsePlatform };
+
+export { IncidentResponsePlatform };

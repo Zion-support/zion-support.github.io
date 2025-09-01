@@ -36,3 +36,5 @@ export { PostCard };
 export { PostCard };
 
 export { PostCard };
+
+export { PostCard };

@@ -69,3 +69,5 @@ export { DigitalTransformation };
 export { DigitalTransformation };
 
 export { DigitalTransformation };
+
+export { DigitalTransformation };

@@ -212,3 +212,5 @@ export { HeroStats, PerformanceOptimizedHero };
 export { HeroStats, PerformanceOptimizedHero };
 
 export { HeroStats, PerformanceOptimizedHero };
+
+export { HeroStats, PerformanceOptimizedHero };

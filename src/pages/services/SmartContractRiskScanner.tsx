@@ -834,3 +834,5 @@ export { SmartContractRiskScanner };
 export { SmartContractRiskScanner };
 
 export { SmartContractRiskScanner };
+
+export { SmartContractRiskScanner };

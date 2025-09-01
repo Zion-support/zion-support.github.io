@@ -32,3 +32,5 @@ export { Featured };
 export { Featured };
 
 export { Featured };
+
+export { Featured };

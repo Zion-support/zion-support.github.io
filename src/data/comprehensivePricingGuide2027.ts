@@ -684,12 +684,12 @@
 export;
 export;
 export '
-export const pricingCategories2027: any = [;''
+export const pricingCategories2027: unknown = [;''
   'Metaverse Solutions',;''
   'Web3 Solutions',;''
   'Sustainable Tech',;''
   'NeuroTech Solutions',;'  'Fusion Energy Solutions';
 ];
-export const pricingSubcategories2027: any = {}
+export const pricingSubcategories2027: unknown = {}
 '"""
 '"'"""

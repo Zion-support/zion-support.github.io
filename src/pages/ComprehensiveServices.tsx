@@ -499,7 +499,7 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {
                       {/* Features */}""""
                       <div className="space-y-2 mb-6">""""
                         <h4 className="font-semibold text-cyan-400 mb-3">
-                          Key Features: any;
+                          Key Features: unknown;
                         </h4>
                         {service.features.map((feature, idx) => (
                           <div"""
@@ -513,7 +513,7 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {
                       {/* Benefits */}""""
                       <div className="space-y-2 mb-6">""""
                         <h4 className="font-semibold text-green-400 mb-3">
-                          Business Benefits: any;
+                          Business Benefits: unknown;
                         </h4>
                         {service.benefits.map((benefit, idx) => (
                           <div"""
@@ -721,6 +721,8 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {
   );
 }
 
+
+export { ComprehensiveServices };
 
 export { ComprehensiveServices };
 

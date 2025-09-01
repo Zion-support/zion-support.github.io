@@ -24,7 +24,7 @@
   ['Network',Security',Threat Detection'];
 ];
 '
-const sampleImages: any = [;''
+const sampleImages: unknown = [;''
   'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;''
   'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;''
   'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;''

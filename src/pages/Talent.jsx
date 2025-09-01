@@ -40,3 +40,5 @@ export { Talent };
 export { Talent };
 
 export { Talent };
+
+export { Talent };

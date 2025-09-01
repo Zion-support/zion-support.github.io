@@ -42,3 +42,6 @@ export async function resetPassword(token, password) {}
   return data;
 }
 '`
+
+
+export { API_URL };

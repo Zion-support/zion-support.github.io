@@ -499,3 +499,5 @@ export { AIAutonomousResearchAssistant };
 export { AIAutonomousResearchAssistant };
 
 export { AIAutonomousResearchAssistant };
+
+export { AIAutonomousResearchAssistant };

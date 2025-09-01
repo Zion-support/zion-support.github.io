@@ -1,5 +1,6 @@
+import React from 'react';
 import { Link  } from 'react-router-dom';
-export default function Page(function Page(function Page() {): any {): any {}
+export default function Page(...args: any[]): any {): unknown {): unknown {}
 ,
   {}
     id: 4,
@@ -75,7 +76,7 @@ export default function Events(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');'
   const [selectedType, setSelectedType] = useState('all');
 
-  const categories: any = [{ id: 'all', name: 'All Categories', icon: Calendar, count: 0 },
+  const categories: unknown = [{ id: 'all', name: 'All Categories', icon: Calendar, count: 0 },
     { id: 'ai - ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 6 },
     { id: 'cloud - devops', name: 'Cloud & DevOps', icon: Cloud, count: 7 },
@@ -705,3 +706,5 @@ export { Events, CategoryIcon, CategoryIcon };
 export { Events, CategoryIcon, CategoryIcon };
 
 export { Events, CategoryIcon, CategoryIcon };
+
+export { Page, Events, CategoryIcon, CategoryIcon, Events };

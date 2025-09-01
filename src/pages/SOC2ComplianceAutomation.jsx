@@ -1184,3 +1184,5 @@ export { SOC2ComplianceAutomation };
 export { SOC2ComplianceAutomation };
 
 export { SOC2ComplianceAutomation };
+
+export { SOC2ComplianceAutomation };

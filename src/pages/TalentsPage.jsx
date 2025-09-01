@@ -14,3 +14,5 @@ export { TalentsPage };
 export { TalentsPage };
 
 export { TalentsPage };
+
+export { TalentsPage };

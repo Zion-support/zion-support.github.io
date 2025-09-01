@@ -138,7 +138,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
     {}
       id: 'ai - financial - analytics',
       name: 'AI Financial Analytics',
-      description: any;
+      description: unknown;
         'Intelligent financial analysis and forecasting platform powered by advanced AI algorithms',
       icon: TrendingUp,
       color: 'from - yellow-500 to - orange - 500',
@@ -154,7 +154,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
     {}
       id: 'ai - marketing - automation',
       name: 'AI Marketing Automation',
-      description: any;
+      description: unknown;
         'Intelligent marketing automation platform that personalizes campaigns and optimizes ROI',
       icon: Target,
       color: 'from - pink - 500 to - purple - 500',
@@ -169,7 +169,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
     }
   ];
 
-  const serviceCategories: any = [{}
+  const serviceCategories: unknown = [{}
       title: 'AI & Machine Learning',
       icon: Brain,
       color: 'from - purple - 500 to - cyan - 500',
@@ -592,6 +592,8 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
     </div>
   );
 }
+
+export { ComprehensiveServicesShowcase2031 };
 
 export { ComprehensiveServicesShowcase2031 };
 

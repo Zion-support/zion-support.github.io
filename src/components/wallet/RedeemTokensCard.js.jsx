@@ -64,3 +64,5 @@ export { RedeemTokensCard };
 export { RedeemTokensCard };
 
 export { RedeemTokensCard };
+
+export { RedeemTokensCard };

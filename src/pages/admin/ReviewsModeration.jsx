@@ -96,3 +96,5 @@ export { ReviewsModerationContent, ReviewsModeration };
 export { ReviewsModerationContent, ReviewsModeration };
 
 export { ReviewsModerationContent, ReviewsModeration };
+
+export { ReviewsModerationContent, ReviewsModeration };

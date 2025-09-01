@@ -127,3 +127,5 @@ export { InterviewsContent, Interviews };
 export { InterviewsContent, Interviews };
 
 export { InterviewsContent, Interviews };
+
+export { InterviewsContent };

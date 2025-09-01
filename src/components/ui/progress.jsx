@@ -34,3 +34,5 @@ export { Progress };
 export { Progress };
 
 export { Progress };
+
+export { Progress };

@@ -28,3 +28,5 @@ export { PricingGuide };
 export { PricingGuide };
 
 export { PricingGuide };
+
+export { PricingGuide };

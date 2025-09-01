@@ -175,3 +175,5 @@ export { CHAINS, TokenIntegrations };
 export { CHAINS, TokenIntegrations };
 
 export { CHAINS, TokenIntegrations };
+
+export { CHAINS, TokenIntegrations };

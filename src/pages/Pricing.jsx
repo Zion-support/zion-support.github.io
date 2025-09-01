@@ -184,3 +184,5 @@ export { Pricing };
 export { Pricing };
 
 export { Pricing };
+
+export { Pricing };

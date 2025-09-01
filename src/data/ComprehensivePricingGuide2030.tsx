@@ -1,3 +1,4 @@
+import React from 'react';
 let services: unknown[] = [];
 
 const ComprehensivePricingGuide2030: React.FC = () => {;
@@ -11,10 +12,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     switch (activeTab) {
       case 'microsaas':        services = innovativeMicroSaasServices2030;
         break;'
-      case 'it': any;
+      case 'it': unknown;
         services = comprehensiveITServices2030;
         break;'
-      case 'ai': any;
+      case 'ai': unknown;
         services = comprehensiveAIServices2030;
         break}
 
@@ -36,10 +37,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     switch (activeTab) {
       case 'microsaas':        services = innovativeMicroSaasServices2030;
         break;'
-      case 'it': any;
+      case 'it': unknown;
         services = comprehensiveITServices2030;
         break;'
-      case 'ai': any;
+      case 'ai': unknown;
         services = comprehensiveAIServices2030;
         break}
 
@@ -51,10 +52,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     switch (activeTab) {
       case 'microsaas':        services = innovativeMicroSaasServices2030;
         break;'
-      case 'it': any;
+      case 'it': unknown;
         services = comprehensiveITServices2030;
         break;'
-      case 'ai': any;
+      case 'ai': unknown;
         services = comprehensiveAIServices2030;
         break}
 '
@@ -63,7 +64,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       return [min, max]}
   };
 
-  const renderPricingCard: any = (service)  => {}
+  const renderPricingCard: unknown = (service)  => {}
 '
     if (activeTab === 'microsaas') {}
       return (""""
@@ -623,6 +624,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 };
 
 export default ComprehensivePricingGuide2030;}}}}}}}
+
+export { ComprehensivePricingGuide2030 };
 
 export { ComprehensivePricingGuide2030 };
 

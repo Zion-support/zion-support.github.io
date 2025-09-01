@@ -58,3 +58,5 @@ export { MockIndex, MockAbout, MockContact };
 export { MockIndex, MockAbout, MockContact };
 
 export { MockIndex, MockAbout, MockContact };
+
+export { MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact };

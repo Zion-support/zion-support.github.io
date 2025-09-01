@@ -15,3 +15,5 @@ export { CheckoutProgress };
 export { CheckoutProgress };
 
 export { CheckoutProgress };
+
+export { CheckoutProgress };

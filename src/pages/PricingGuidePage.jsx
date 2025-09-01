@@ -478,3 +478,5 @@ export { PricingGuidePage };
 export { PricingGuidePage };
 
 export { PricingGuidePage };
+
+export { PricingGuidePage };

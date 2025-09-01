@@ -279,3 +279,5 @@ export { AIAutonomousScientificResearcher };
 export { AIAutonomousScientificResearcher };
 
 export { AIAutonomousScientificResearcher };
+
+export { AIAutonomousScientificResearcher };

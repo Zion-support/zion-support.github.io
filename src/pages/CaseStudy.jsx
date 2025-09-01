@@ -56,3 +56,5 @@ export { CaseStudy };
 export { CaseStudy };
 
 export { CaseStudy };
+
+export { CaseStudy };

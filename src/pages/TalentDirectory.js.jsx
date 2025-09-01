@@ -252,3 +252,5 @@ export { TalentDirectory };
 export { TalentDirectory };
 
 export { TalentDirectory };
+
+export { TalentDirectory };

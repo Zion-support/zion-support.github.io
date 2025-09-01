@@ -92,3 +92,5 @@ export { SearchFeature };
 export { SearchFeature };
 
 export { SearchFeature };
+
+export { SearchFeature };

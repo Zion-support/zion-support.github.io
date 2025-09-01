@@ -230,3 +230,5 @@ export { AccessibilityAuditor };
 export { AccessibilityAuditor };
 
 export { AccessibilityAuditor };
+
+export { AccessibilityAuditor };

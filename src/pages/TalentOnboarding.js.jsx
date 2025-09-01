@@ -37,3 +37,5 @@ export { TalentOnboarding };
 export { TalentOnboarding };
 
 export { TalentOnboarding };
+
+export { TalentOnboarding };

@@ -71,3 +71,5 @@ export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
 
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter };

@@ -226,3 +226,5 @@ export { FuturisticHero };
 export { FuturisticHero };
 
 export { FuturisticHero };
+
+export { FuturisticHero };

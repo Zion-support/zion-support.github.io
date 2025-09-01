@@ -183,3 +183,5 @@ export { LinkHealthChecker };
 export { LinkHealthChecker };
 
 export { LinkHealthChecker };
+
+export { LinkHealthChecker };

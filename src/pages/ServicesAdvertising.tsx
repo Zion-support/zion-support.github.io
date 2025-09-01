@@ -1,3 +1,4 @@
+import React from 'react';
 import { ArrowRight, CheckCircle, ExternalLink  } from 'lucide-react';
 
 const anchor = (url: unknownstring, label?: string)  => (
@@ -226,3 +227,5 @@ export { ServicesAdvertising };
 export { ServicesAdvertising };
 
 export { ServicesAdvertising };
+
+export { ServicesAdvertising, ServicesAdvertising };

@@ -44,3 +44,5 @@ export { SearchPage };
 export { SearchPage };
 
 export { SearchPage };
+
+export { SearchPage };

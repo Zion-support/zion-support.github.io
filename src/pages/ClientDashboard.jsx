@@ -167,3 +167,5 @@ export { ClientDashboardContent, ClientDashboard };
 export { ClientDashboardContent, ClientDashboard };
 
 export { ClientDashboardContent, ClientDashboard };
+
+export { ClientDashboardContent };

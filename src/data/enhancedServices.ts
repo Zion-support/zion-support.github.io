@@ -1461,7 +1461,7 @@ export;
   premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" }};
 
 // Contact information;
-export const CONTACT_INFO: any = {}
+export const CONTACT_INFO: unknown = {}
 """
 """"
   mobile: "+1 302 464 0950",""""

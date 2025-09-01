@@ -356,3 +356,5 @@ export { CloudCostOptimizer };
 export { CloudCostOptimizer };
 
 export { CloudCostOptimizer };
+
+export { CloudCostOptimizer };

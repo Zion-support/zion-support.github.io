@@ -213,3 +213,5 @@ export { AIBiotechDrugDiscovery, IconComponent };
 export { AIBiotechDrugDiscovery, IconComponent };
 
 export { AIBiotechDrugDiscovery, IconComponent };
+
+export { AIBiotechDrugDiscovery, IconComponent };

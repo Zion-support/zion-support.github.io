@@ -2,7 +2,7 @@ export type ServiceItem = {}
   id: string;
   title: string;
   description: string;
-  category: any;
+  category: unknown;
     | 'Micro SaaS'''
     | 'IT Services'''
     | 'AI Solutions'''

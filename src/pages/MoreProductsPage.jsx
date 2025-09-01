@@ -24,3 +24,5 @@ export { CATEGORY_FILTERS, MoreProductsPage };
 export { CATEGORY_FILTERS, MoreProductsPage };
 
 export { CATEGORY_FILTERS, MoreProductsPage };
+
+export { CATEGORY_FILTERS, MoreProductsPage };

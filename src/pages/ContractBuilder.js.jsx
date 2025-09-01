@@ -22,3 +22,5 @@ export { ContractBuilderPage };
 export { ContractBuilderPage };
 
 export { ContractBuilderPage };
+
+export { ContractBuilderPage };

@@ -42,3 +42,5 @@ export { SignUp };
 export { SignUp };
 
 export { SignUp };
+
+export { SignUp };

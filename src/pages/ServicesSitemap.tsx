@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link  } from 'react-router-dom';
 
 const ServicesSitemap: React.FC = (): JSX.Element => {}
@@ -159,7 +160,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
       ]};
   ];
 """
-  const quickAccessLinks: any = [""""
+  const quickAccessLinks: unknown = [""""
     { title: "AI Services Showcase", url: "/ai-services-showcase", description: "Explore our AI solutions" },""""
     { title: "Comprehensive Services", url: "/comprehensive-services", description: "View all services" },""""
     { title: "Pricing Guide", url: "/pricing", description: "Transparent pricing information" },""""
@@ -437,6 +438,8 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
   )};
 
 export default ServicesSitemap;
+
+export { ServicesSitemap };
 
 export { ServicesSitemap };
 

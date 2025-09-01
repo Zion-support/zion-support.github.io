@@ -24,3 +24,5 @@ export { IntegrationsPage };
 export { IntegrationsPage };
 
 export { IntegrationsPage };
+
+export { IntegrationsPage };

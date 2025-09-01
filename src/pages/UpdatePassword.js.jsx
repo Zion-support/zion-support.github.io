@@ -201,3 +201,5 @@ export { UpdatePassword };
 export { UpdatePassword };
 
 export { UpdatePassword };
+
+export { UpdatePassword };

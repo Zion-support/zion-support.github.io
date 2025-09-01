@@ -286,3 +286,5 @@ export { LinkHealthMonitor };
 export { LinkHealthMonitor };
 
 export { LinkHealthMonitor };
+
+export { LinkHealthMonitor };

@@ -285,3 +285,5 @@ export { AgenticRagHelpdesk };
 export { AgenticRagHelpdesk };
 
 export { AgenticRagHelpdesk };
+
+export { AgenticRagHelpdesk };

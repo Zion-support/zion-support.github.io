@@ -413,3 +413,5 @@ export { PricingPage, IconComponent };
 export { PricingPage, IconComponent };
 
 export { PricingPage, IconComponent };
+
+export { PricingPage, IconComponent };

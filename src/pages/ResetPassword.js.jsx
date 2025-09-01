@@ -104,3 +104,5 @@ export { ResetPasswordPage };
 export { ResetPasswordPage };
 
 export { ResetPasswordPage };
+
+export { ResetPasswordPage };

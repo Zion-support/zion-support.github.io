@@ -59,7 +59,7 @@
     };
   ];
 
-  const servicePricing: any = []
+  const servicePricing: unknown = []
     {}
 """
 """"

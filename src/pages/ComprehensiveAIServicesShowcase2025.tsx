@@ -53,7 +53,7 @@
       icon: Zap};
   ];
 """
-  const advancedTechnologies: any = [""""
+  const advancedTechnologies: unknown = [""""
     "Machine Learning & Deep Neural Networks",""""
     "Natural Language Processing (NLP)",;""""
     "Computer Vision & Image Recognition",;""""

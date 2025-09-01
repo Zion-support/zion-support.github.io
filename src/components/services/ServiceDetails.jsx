@@ -6,3 +6,5 @@ export default function Page() {}
         const dataCenters = {}
 """
 """"
+
+export { Page };

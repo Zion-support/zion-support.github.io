@@ -210,3 +210,5 @@ export { SavedTalentsPage };
 export { SavedTalentsPage };
 
 export { SavedTalentsPage };
+
+export { SavedTalentsPage, Page };

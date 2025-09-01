@@ -119,3 +119,5 @@ export { HeroStats, PerformanceOptimizedHero };
 export { HeroStats, PerformanceOptimizedHero };
 
 export { HeroStats, PerformanceOptimizedHero };
+
+export { Page, HeroStats, PerformanceOptimizedHero };

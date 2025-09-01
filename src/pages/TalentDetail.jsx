@@ -22,3 +22,6 @@ export default function TalentDetail() {}
   return <TalentProfile {...data} />;'`
 }'`'`
 '`'`'`
+
+
+export { TalentDetail };

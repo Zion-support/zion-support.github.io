@@ -1,3 +1,4 @@
+import React from 'react';
 const AIServicesShowcase: React.FC = (): JSX.Element => {}
       pricing: '$49 - $799/month','
       url: '/services/ai-code-review-security','
@@ -345,6 +346,8 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
   )};
 
 export default AIServicesShowcase;
+
+export { AIServicesShowcase };
 
 export { AIServicesShowcase };
 

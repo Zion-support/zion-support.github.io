@@ -134,3 +134,5 @@ export { CartPage };
 export { CartPage };
 
 export { CartPage };
+
+export { CartPage };

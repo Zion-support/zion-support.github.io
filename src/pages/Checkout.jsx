@@ -116,3 +116,5 @@ export { CheckoutPage };
 export { CheckoutPage };
 
 export { CheckoutPage };
+
+export { CheckoutPage };

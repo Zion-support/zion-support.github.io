@@ -181,3 +181,5 @@ export { IndustrySolutions };
 export { IndustrySolutions };
 
 export { IndustrySolutions };
+
+export { IndustrySolutions };

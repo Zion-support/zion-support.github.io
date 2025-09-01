@@ -126,3 +126,5 @@ export { EditPostPage };
 export { EditPostPage };
 
 export { EditPostPage };
+
+export { EditPostPage };

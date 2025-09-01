@@ -216,3 +216,5 @@ export { AIBusinessIntelligenceSuite, IconComponent };
 export { AIBusinessIntelligenceSuite, IconComponent };
 
 export { AIBusinessIntelligenceSuite, IconComponent };
+
+export { AIBusinessIntelligenceSuite, IconComponent };

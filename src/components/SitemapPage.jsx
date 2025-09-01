@@ -138,3 +138,5 @@ export { SitemapPage };
 export { SitemapPage };
 
 export { SitemapPage };
+
+export { SitemapPage };

@@ -115,3 +115,5 @@ export { WhitelabelManager };
 export { WhitelabelManager };
 
 export { WhitelabelManager };
+
+export { WhitelabelManager };

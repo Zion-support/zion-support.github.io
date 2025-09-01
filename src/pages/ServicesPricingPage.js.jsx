@@ -340,3 +340,5 @@ export { ServicesPricingPage };
 export { ServicesPricingPage };
 
 export { ServicesPricingPage };
+
+export { ServicesPricingPage };

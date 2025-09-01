@@ -285,7 +285,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     },
     {
       id: 'llm-prompt-safety-scanner',      title: 'LLM Prompt Safety Scanner',
-      description: any;
+      description: unknown;
         'Scan prompts, tools and context windows for injection vectors.Generate red - team prompts and propose mitigations with policy diffs.',
       icon: Lock,
       color: 'from - purple - 600 to - pink - 700',
@@ -321,7 +321,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'rfp - auto - responder',
       title: 'RFP Auto - Responder',
-      description: any;
+      description: unknown;
         'Upload RFP PDFs, map to knowledge base, and generate answers with citations and policy references.Export clean DOCX / Google Docs.',
       icon: FileText,
       color: 'from - blue - 600 to - indigo - 700',
@@ -357,7 +357,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'ai - red - team - simulator',
       title: 'AI Red Team Simulator',
-      description: any;
+      description: unknown;
         'Continuously attack your AI stack with curated jailbreak prompts and tool abuse scenarios.Track regressions, export reports for auditors.',
       icon: Shield,
       color: 'from - amber - 600 to - red - 700',
@@ -393,7 +393,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'speech-analytics - center',
       title: 'Contact Center Speech Analytics',
-      description: any;
+      description: unknown;
         'Ingest call recordings or live streams, transcribe, detect topics and sentiment, and score QA with dashboards.Coach agents with snippets.',
       icon: Mic,
       color: 'from - indigo - 600 to - violet - 700',
@@ -429,7 +429,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'synthetic - data - studio',
       title: 'Synthetic Data Studio',
-      description: any;
+      description: unknown;
         'Create class - balanced datasets with differentially private generators.Export to parquet / CSV and seed sandboxes for testing.',
       icon: TestTube,
       color: 'from - teal - 600 to - emerald - 700',
@@ -465,7 +465,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'feature - store - starter',
       title: 'Feature Store Starter',
-      description: any;
+      description: unknown;
         'Bootstrap an offline + online feature store with transformations, point - in - time joins and approvals.Ship faster with templates.',
       icon: Database,
       color: 'from - amber - 600 to - yellow-700',
@@ -501,7 +501,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'model - registry - lite',
       title: 'Model Registry Lite',
-      description: any;
+      description: unknown;
         'Lightweight model registry with artifacts, metrics and stage transitions.Webhooks to CI for canary rollouts.',
       icon: Package,
       color: 'from - sky - 600 to - cyan - 700',
@@ -537,7 +537,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'data - quality - monitoring',
       title: 'Data Quality Monitoring',
-      description: any;
+      description: unknown;
         'Monitor tables, streams and ML features for freshness, volume and validity.Alert owners and auto - create issues with owners preset.',
       icon: Activity,
       color: 'from - lime - 600 to - green - 700',
@@ -573,7 +573,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'privacy - request - automation',
       title: 'Privacy Request Automation',
-      description: any;
+      description: unknown;
         'Automate data subject access requests across SaaS and data stores.Identity verification, redact / export, and audit - ready logs.',
       icon: FileText,
       color: 'from - fuchsia - 600 to - pink - 700',
@@ -609,7 +609,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'customer - 360 - cdp - starter',
       title: 'Customer 360 CDP Starter',
-      description: any;
+      description: unknown;
         'Ingest web / app events, stitch identities, and build segments for activation with basic RT engagement dashboards.',
       icon: Users,
       color: 'from - cyan - 600 to - sky - 700',
@@ -645,7 +645,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'ab - testing - lab',
       title: 'A / B Testing Lab',
-      description: any;
+      description: unknown;
         'Run experiments with CUPED / Sequential testing, guardrail metrics and sample ratio checks.SDKs for web and backend.',
       icon: TestTube,
       color: 'from - pink - 600 to - rose - 700',
@@ -680,9 +680,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     }
   ];
 
-  const categories: any = [...new Set(newServices.map (service => service.category) ) ];
+  const categories: unknown = [...new Set(newServices.map (service => service.category) ) ];
 
-export function EnhancedNewServices2025(...args: any[]): any {}
+export function EnhancedNewServices2025(...args: unknown[]): unknown {}
   return()
     <div className="min-h-screen py-8">"      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"""
         {/* Page Header */}""""

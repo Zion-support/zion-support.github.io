@@ -433,7 +433,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
                   {/* Features */}""""
                   <div className="space-y-2 mb-6">""""
                     <h4 className="font-semibold text-cyan-400 mb-3">
-                      Key Features: any;
+                      Key Features: unknown;
                     </h4>
                     {service.features.map((feature, idx) => (
                       <div"""
@@ -447,7 +447,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
                   {/* Benefits */}""""
                   <div className="space-y-2 mb-6">""""
                     <h4 className="font-semibold text-green-400 mb-3">
-                      Business Benefits: any;
+                      Business Benefits: unknown;
                     </h4>
                     {service.benefits.map((benefit, idx) => (
                       <div"""
@@ -700,6 +700,8 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
   );
 }
 
+
+export { InnovativeServicesShowcase2028 };
 
 export { InnovativeServicesShowcase2028 };
 

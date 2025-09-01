@@ -129,3 +129,5 @@ export { SEOHead };
 export { SEOHead };
 
 export { SEOHead };
+
+export { SEOHead };

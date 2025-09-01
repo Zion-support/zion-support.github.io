@@ -216,3 +216,5 @@ export { AIAutonomousVentureCapitalist, IconComponent };
 export { AIAutonomousVentureCapitalist, IconComponent };
 
 export { AIAutonomousVentureCapitalist, IconComponent };
+
+export { AIAutonomousVentureCapitalist, IconComponent };

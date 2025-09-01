@@ -247,3 +247,5 @@ export { HelpCenterPage };
 export { HelpCenterPage };
 
 export { HelpCenterPage };
+
+export { HelpCenterPage };
