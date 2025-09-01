@@ -1,6 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-09-01T05:30:20.978Z",
+  "timestamp": "2025-09-01T07:21:36.591Z",
   "summary": {
     "totalErrors": 0,
     "fixesApplied": 0,
@@ -13,11 +12,6 @@
     "failed": [],
     "skipped": []
   },
-  "recommendations": []
-=======
-  "timestamp": "2025-09-01T07:21:36.591Z",
-  "fixesApplied": 0,
-  "summary": "TypeScript error fixer completed",
+  "recommendations": [],
   "status": "completed"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
 }
