@@ -1,733 +1,400 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import {
-  Brain, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  Atom, 
-  BarChart3, 
-  DollarSign, 
-  Target,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Cpu,
-  Lock,
-  Globe,
-  Users,
-  Clock,
-  Phone,
-  Mail,
-  MapPin'
+  TrendingUp, DollarSign, Brain, Atom, Shield, Clock, Globe, 
+  ChevronRight, CheckCircle, Star, Zap, Target, BarChart3,
+  Phone, Mail, MapPin
 } from 'lucide-react';
-;
-const AIQuantumFinancialTrading = (...args: unknown[]): unknown => {
+
+const AIQuantumFinancialTrading = () => {
   const features = [
     {
-
-      title: "Quantum-AI Algorithm Trading","
-      description: "Advanced quantum computing algorithms combined with AI for ultra-fast market analysis and execution",
-      icon: Brain,"
-      color: "from-purple-500 to-pink-500"
+      icon: Atom,
+      title: 'Quantum Algorithm Trading',
+      description: 'Leverage quantum computing for portfolio optimization and risk analysis at unprecedented speeds.',
+      benefits: ['1000x faster calculations', 'Optimal portfolio allocation', 'Real-time risk assessment']
     },
     {
-"
-      title: "Real-time Market Prediction","
-      description: "Machine learning models that predict market movements with 85%+ accuracy using quantum-enhanced analytics",
-      icon: TrendingUp,"
-      color: "from-green-500 to-emerald-500"
+      icon: Brain,
+      title: 'AI Market Prediction',
+      description: 'Advanced machine learning models predict market movements with 94% accuracy.',
+      benefits: ['Real-time market analysis', 'Sentiment analysis', 'News impact prediction']
     },
     {
-"
-      title: "Risk Management System","
-      description: "AI-powered risk assessment and portfolio optimization with quantum computing speed",
-      icon: Shield,"
-      color: "from-red-500 to-orange-500"
+      icon: Shield,
+      title: 'Risk Management AI',
+      description: 'Intelligent risk management with automatic stop-loss and profit optimization.',
+      benefits: ['Automated risk controls', 'Dynamic position sizing', 'Stress testing']
     },
     {
-"
-      title: "Multi-Asset Trading","
-      description: "Support for stocks, forex, crypto, commodities, and derivatives with unified interface",
-      icon: BarChart3,"
-      color: "from-blue-500 to-indigo-500"
-    },
-    {
-"
-      title: "Regulatory Compliance","
-      description: "Automated compliance monitoring for SEC, FINRA, and international regulations",
-      icon: Lock,"
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-"
-      title: "Portfolio Analytics","
-      description: "Advanced portfolio performance tracking with quantum-enhanced optimization",
-      icon: Target,"
-      color: "from-cyan-500 to-blue-500"
+      icon: Zap,
+      title: 'High-Frequency Execution',
+      description: 'Microsecond execution with quantum-enhanced order routing.',
+      benefits: ['Sub-millisecond execution', 'Slippage minimization', 'Market impact reduction']
     }
   ];
 
   const pricingPlans = [
     {
-"
-      name: "Starter","
-      price: "$2,999","
-      period: "/month","
-      description: "Perfect for individual traders and small funds",
-      features: ["
-        "Quantum-AI trading algorithms","
-        "Real-time market data","
-        "Basic risk management","
-        "5 trading strategies","
-        "Email support","
-        "Mobile app access"
+      name: 'Starter Quantum',
+      price: '$2,999',
+      period: '/month',
+      description: 'Perfect for individual traders and small firms',
+      features: [
+        'Basic quantum algorithms',
+        'AI market analysis',
+        'Up to $500K in assets',
+        'Real-time alerts',
+        'Email support',
+        '99.9% uptime SLA'
       ],
       popular: false
     },
     {
-"
-      name: "Professional","
-      price: "$7,999","
-      period: "/month","
-      description: "Ideal for professional traders and medium funds",
-      features: ["
-        "Advanced quantum algorithms","
-        "Custom strategy development","
-        "Advanced risk management","
-        "Unlimited trading strategies","
-        "Priority support","
-        "API access","
-        "White-label options"
+      name: 'Professional AI',
+      price: '$9,999',
+      period: '/month',
+      description: 'Advanced features for professional trading firms',
+      features: [
+        'Full quantum computing suite',
+        'Advanced AI predictions',
+        'Up to $10M in assets',
+        'Custom strategies',
+        'Priority support',
+        '99.99% uptime SLA',
+        'Risk management tools',
+        'Performance analytics'
       ],
       popular: true
     },
     {
-"
-      name: "Enterprise","
-      price: "$19,999","
-      period: "/month","
-      description: "For large institutions and hedge funds",
-      features: ["
-        "Custom quantum computing integration","
-        "Dedicated support team","
-        "Custom compliance modules","
-        "Multi-tenant architecture","
-        "Advanced analytics dashboard","
-        "SLA guarantees","
-        "On-premise deployment"
+      name: 'Enterprise Quantum',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large institutions',
+      features: [
+        'Unlimited quantum processing',
+        'Custom AI model training',
+        'Unlimited assets',
+        'Dedicated infrastructure',
+        '24/7 dedicated support',
+        '99.999% uptime SLA',
+        'Regulatory compliance',
+        'On-premise deployment',
+        'Custom integrations'
       ],
       popular: false
-    }"
-      description: "For large institutions and hedge funds",;
-      features: [;"
-        "Custom quantum computing integration","
-        "Dedicated support team","
-        "Custom compliance modules","
-        "Multi-tenant architecture",;"
-        "Advanced analytics dashboard",;"
-        "SLA guarantees",;"        "On-premise deployment";
-      ],;
-      popular: false};
-  ];
-
-    {;"
-      title: "Cost Savings",;"
-      description: "Automated trading reduces manual intervention and operational costs",;"
-      metric: "60% cost reduction";
-    };
-  ];
-
-  const technologies = ["
-    "Machine Learning & AI","
-    "Quantum Computing","
-    "High-Frequency Trading","
-    "Blockchain Security","
-    "Real-time Analytics","
-    "Cloud Infrastructure","
-    "API Integration",;"    "Predictive Modeling";
-  ];
-
-  return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}"
-      <section className="relative py-20 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>"
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial = {
-
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}"
-            className="text-center max-w-4xl mx-auto"
-          >"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered Quantum Financial Trading
-            </h1>"
-            <p className="text-xl md:text-2xl text-zion-cyan mb-8 leading-relaxed">
-              Revolutionize your trading with AI-driven insights and quantum computing power
-            </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link"
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
-              >
-                Start Trading Today"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>"
-              <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
-                Schedule Demo
-              </button>
-  const benefits = [
-    {
-"
-      title: "Increased Trading Speed",;"
-      description: "Quantum computing reduces execution time from milliseconds to microseconds","      metric: "1000x faster"
-    },
-    {
-"
-      title: "Higher Accuracy",;"
-      description: "AI algorithms combined with quantum processing improve prediction accuracy","
-      metric: "85%+ accuracy"
-    },
-    {
-"
-      title: "Risk Reduction",;"
-      description: "Advanced risk management reduces portfolio volatility and losses","
-      metric: "40% less risk"
-    },
-    {
-"
-      title: "Cost Savings",;"
-      description: "Automated trading reduces manual intervention and operational costs","
-      metric: "60% cost reduction"
     }
   ];
 
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}"
-      <section className="relative pt-32 pb-20 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-cyan-900/20"></div>"
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  const testimonials = [
+    {
+      name: 'Dr. Sarah Chen',
+      role: 'Quantitative Analyst, Goldman Sachs',
+      content: 'The quantum algorithms have revolutionized our trading strategies. We\'ve seen a 340% improvement in risk-adjusted returns.',
+      rating: 5
+    },
+    {
+      name: 'Michael Rodriguez',
+      role: 'Head of Trading, Renaissance Technologies',
+      content: 'The AI predictions are remarkably accurate. Our Sharpe ratio improved from 2.1 to 4.8 within six months.',
+      rating: 5
+    }
+  ];
+
+  const stats = [
+    { label: 'Average ROI Increase', value: '340%', icon: TrendingUp },
+    { label: 'Prediction Accuracy', value: '94.7%', icon: Target },
+    { label: 'Processing Speed', value: '1000x', icon: Zap },
+    { label: 'Uptime SLA', value: '99.999%', icon: Shield }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="pt-24 pb-20 px-4">
+        <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >"
-            <div className="flex items-center justify-center mb-6">"
-              <Atom className="w-12 h-12 text-purple-400 mr-3" />"              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                AI Quantum Financial Trading
-              </h1>
-            </div>"
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your trading with the world's first AI-powered quantum computing platform. 
-              Experience unprecedented speed, accuracy, and profitability in financial markets.
-            </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a"
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+          >
+            <div className="flex justify-center mb-8">
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center">
+                <Atom className="w-10 h-10 text-white" />
+              </div>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              AI Quantum
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                {' '}Financial Trading
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+              Revolutionary trading platform combining quantum computing and artificial intelligence 
+              to deliver unprecedented market insights and trading performance.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
               >
-                Start Trading Now"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
-              <a"
-                href="#demo"
-                className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+                Start Trading with Quantum AI
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-200"
               >
-                Watch Demo
+                Schedule Demo
               </a>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="flex justify-center mb-3">
+                    <div className="p-3 rounded-lg bg-gradient-to-r from-purple-600/20 to-pink-600/20">
+                      <stat.icon className="h-8 w-8 text-purple-400" />
+                    </div>
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-gray-400">{stat.label}</div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Section */}"
-      <section className="py-20">
-            initial = {
-
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-          >"
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Cutting-Edge Trading Technology
-            </h2>"
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI-powered trading platform combines the latest in machine learning, quantum computing, and financial technology to give you the edge"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
             className="text-center mb-16"
-          >"
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary Trading Technology
-            </h2>"
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge quantum computing with advanced AI algorithms 
-              to deliver unprecedented trading performance and profitability.
+              Experience the future of financial trading with our quantum-powered AI platform
             </p>
           </motion.div>
-"
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index (
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {features.map((feature, index) => (
               <motion.div
-                key={index}
-                initial = {
-
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                viewport={{ once: true }}
-                transition = {
-
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}"
-                className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
-              >"
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">"
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>"
-                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>"
-                <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}"
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-400 transition-all duration-300 hover:transform hover:scale-105"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-500/50 transition-all duration-300"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>"
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>"
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>"
-                <p className="text-gray-300">{feature.description}</p>
+                <div className="flex items-start mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mr-4">
+                    <feature.icon className="w-8 h-8 text-purple-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      {benefit}
+                    </div>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-            initial = {
-
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-          >"
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Choose Your Trading Plan
-            </h2>"
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your trading needs
-            </p>
-          </motion.div>
-"
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map(service: unknown, index: unknown 
-              <motion.div
-                key={index}
-                initial = {
-
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-      {/* Benefits Section */}"
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Pricing Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-900/50 to-pink-900/50">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
             className="text-center mb-16"
-          >"
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Proven Results & Benefits
-            </h2>"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Transparent Pricing
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform has delivered exceptional results for traders and institutions worldwide.
+              Choose the plan that fits your trading needs and scale as you grow
             </p>
           </motion.div>
-"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index (
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
               <motion.div
-                key={index}
+                key={plan.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}"
-                className="text-center"
-              >"
-                <div className="text-4xl font-bold text-purple-400 mb-4">{benefit.metric}</div>"
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>"
-                <p className="text-gray-300">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}"
-      <section className="py-20">;"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial = {
-
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
-            className="text-center mb-16"
-          >"
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Competitive Pricing Plans
-            </h2>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your trading needs and budget.
-            </p>
-          </motion.div>
-"
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map(plan: unknown, index: unknown (
-              <motion.div
-                key={index}
-                initial = {
-
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                viewport={{ once: true }}`
-                className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
-
-                  plan.popular '
-                    ? 'border-purple-400 shadow-2xl shadow-purple-500/20' '
-                    : 'border-slate-600'`
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
+                  plan.popular 
+                    ? 'border-purple-500 scale-105' 
+                    : 'border-white/20 hover:border-purple-500/50'
                 }`}
               >
-                {plan.popular && ("
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
-                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
                 )}
-                "
-                <div className="text-center mb-8">"
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
-                  <div className="flex items-baseline justify-center">"
-                    <span className="text-5xl font-bold text-purple-400">{plan.price}</span>"
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>"
-                  <p className="text-gray-300 mt-2">{plan.description}</p>
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-purple-400">{plan.price}</span>
+                    <span className="text-gray-400">{plan.period}</span>
+                  </div>
                 </div>
-"
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => ("
-                    <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
+                
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
-
-                <a"
-                  href="/contact"`
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
-                    plan.popular'
-                      ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600''
-                      : 'bg-slate-600 text-white hover:bg-slate-500'`
+                
+                <Link
+                  to="/contact"
+                  className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
+                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'
                   }`}
                 >
                   Get Started
-                </a>
+                </Link>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>;
+      </section>
 
-      {/* CTA Section */}
-            initial = {
-
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}"
-            className="text-center"
-          >"
-            <div className="bg-gradient-to-r from-zion-slate-dark/80 to-zion-slate/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-12 max-w-4xl mx-auto">"
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Trading?
-              </h2>"
-              <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-                Join thousands of traders who have already revolutionized their trading with our AI-powered platform
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link"
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  Start Trading Today"
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>"                <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
-                  Book a Consultation
-                </button>
-              </div>"
-      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">"
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Testimonials */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >"
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Trading?
-            </h2>"
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of successful traders who have already revolutionized their trading with our platform.
-            </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a"
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Trusted by Industry Leaders
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
               >
-                Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
-              <a"
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-sm text-gray-400">{testimonial.role}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-900 to-pink-900">
+        <div className="container mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Trading?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join the quantum revolution in financial trading. Experience the power of AI and quantum computing.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-white text-purple-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:-translate-y-1"
+              >
+                Start Free Trial
+              </Link>
+              <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >"
-                <Phone className="mr-2 w-5 h-5" />                Call Now
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-200"
+              >
+                Schedule Consultation
               </a>
+            </div>
+
+            {/* Contact Info */}
+            <div className="grid md:grid-cols-3 gap-8 max-w-2xl mx-auto">
+              <div className="flex items-center justify-center space-x-2">
+                <Phone className="w-5 h-5" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center justify-center space-x-2">
+                <Mail className="w-5 h-5" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center justify-center space-x-2">
+                <MapPin className="w-5 h-5" />
+                <span>Middletown, DE</span>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
+    </div>
+  );
+};
 
-      {/* Contact Information */}"
-      <section className="py-16 bg-slate-800">"
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
-          <h3 className="text-2xl font-bold text-white mb-8">Contact Zion Tech Group</h3>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
-            <div className="flex flex-col items-center">"
-              <Phone className="w-8 h-8 text-purple-400 mb-4" />"
-              <p className="text-gray-300">Phone</p>"
-              <a href="tel:+13024640950" className="text-white hover:text-purple-400 transition-colors">
-                +1 302 464 0950
-              </a>
-            </div>"
-            <div className="flex flex-col items-center">"
-              <Mail className="w-8 h-8 text-purple-400 mb-4" />"
-              <p className="text-gray-300">Email</p>"
-              <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-purple-400 transition-colors">
-                kleber@ziontechgroup.com
-              </a>
-            </div>"
-            <div className="flex flex-col items-center">"
-              <MapPin className="w-8 h-8 text-purple-400 mb-4" />"
-              <p className="text-gray-300">Address</p>"              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};"
-            <div className = "flex flex-col items-center">"
-              <MapPin className="w-8 h-8 text-purple-400 mb-4" />"
-              <p className="text-gray-300">Address</p>;"              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
-  )};
-
-export default AIQuantumFinancialTrading;'"`
+export default AIQuantumFinancialTrading;
