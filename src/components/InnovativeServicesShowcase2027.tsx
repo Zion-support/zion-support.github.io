@@ -1,28 +1,11 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
+import {  import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
 
 export default function Page() {
       },
       { threshold: 0.1 }
     );
 
-    if(element) {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
-      observer.observe(element)}
-
-    return () => observer.disconnect()}, []);
-
-    setExpandedService(expandedService === serviceId ? null : serviceId) };
-
-  ;
-=======
-'
-  phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  ;
+    if(element) {  ;
   ;
   ;
   address: '364 E Main St STE 1008 Middletown DE 19709';

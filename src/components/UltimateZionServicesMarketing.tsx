@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -60,13 +58,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
     },
     {
       id: 'it - services',
-      name: 'Enterprise IT Services', ;
-=======
-const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
->>>>>>> main
-      icon: '🖥️', ;
+      name: 'Enterprise IT Services', ;      icon: '🖥️', ;
       color: 'from-gray-600 to-slate-600',;
       description: 'Advanced infrastructure and DevOps solutions',;
       marketSize: '$25.2 billion by 2027',;
@@ -76,7 +68,6 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
     if(categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId) };
 
-<<<<<<< HEAD
   const selectedServices = getServicesByCategory(selectedCategory) ;
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
@@ -84,19 +75,11 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div  className="max - w-7xl mx - auto text-center">
           <motion.h1
-            className="text-4xl md:text-6xl font - bold mb-6"
-=======
-  
-  return ()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      {/* Hero Section */}"
+            className="text-4xl md:text-6xl font - bold mb-6"      {/* Hero Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 "
             className="text-4xl md:text-6xl font-bold mb-6" 
->>>>>>> main
             initial = {
 
   { opacity: 0,
@@ -117,16 +100,9 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
               Ultimate Services Portfolio 2025
             </span>
           </motion.h1>
-<<<<<<< HEAD
 
           <motion.p
-            className="text-xl text-gray - 300 mb-8 max - w-4xl mx -auto"
-=======
-          
-          <motion.p "
-            className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" 
->>>>>>> main
-            initial = {
+            className="text-xl text-gray - 300 mb-8 max - w-4xl mx -auto"            initial = {
 
   { opacity: 0,
   y: 20
@@ -149,14 +125,8 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
             and cutting - edge technology services that transform industries and create unprecedented value.</motion.p>
 
           {/* Comp Highlights */}
-<<<<<<< HEAD
           <motion.div
-            className="grid grid - cols - 1 md:grid - cols - 4 gap-6 mb-12"
-=======
-          <motion.div "
-            className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12" 
->>>>>>> main
-            initial = {
+            className="grid grid - cols - 1 md:grid - cols - 4 gap-6 mb-12"            initial = {
 
   { opacity: 0,
   y: 20
@@ -198,14 +168,8 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
           </motion.div>
 
           {/* Contact Information */}
-<<<<<<< HEAD
           <motion.div
-            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx - auto border border-purple -400 / 30"
-=======
-          <motion.div "
-            className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-4xl mx-auto border border-purple-400/30" 
->>>>>>> main
-            initial = {
+            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx - auto border border-purple -400 / 30"            initial = {
 
   { opacity: 0,
   y: 20
@@ -226,7 +190,6 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
           >"
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               🚀 Ready to Transform Your Business?
-<<<<<<< HEAD
             </h3>
             <div  className="grid grid - cols - 1 md:grid - cols - 3 gap-6 text-sm">
               <div  className="text-center">
@@ -243,27 +206,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
                 <div  className="text-purple - 400 font - semibold text-lg mb-2">🌐 Website</div>
                 <div  className="text-gray -300">
                   <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer"
-                     className="text-blue - 400 hover:text-blue - 300 transition -colors">
-=======
-            </h3>"
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">"
-              <div className="text-center">"
-                <div className="text-purple-400 font-semibold text-lg mb-2">📱 Contact Us</div>"
-                <div className="text-gray-300">+1 302 464 0950</div>"
-                <div className="text-gray-400 text-xs">Available 24/7</div>
-              </div>"
-              <div className="text-center">"
-                <div className="text-purple-400 font-semibold text-lg mb-2">✉️ Email</div>"
-                <div className="text-gray-300">kleber@ziontechgroup.com</div>"
-                <div className="text-gray-400 text-xs">Response within 2 hours</div>
-              </div>"
-              <div className="text-center">"
-                <div className="text-purple-400 font-semibold text-lg mb-2">🌐 Website</div>"
-                <div className="text-gray-300">"
-                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer"
-                     className="text-blue-400 hover:text-blue-300 transition-colors">
->>>>>>> main
-                    ziontechgroup.com
+                     className="text-blue - 400 hover:text-blue - 300 transition -colors">                    ziontechgroup.com
                   </a>
                 </div>"
                 <div className="text-gray-400 text-xs">Live demo available</div>
@@ -278,20 +221,11 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Category Navigation */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div  className="max - w-7xl mx -auto">
           <motion.div
-            className="flex flex - wrap gap-4 justify -center"
-=======
-      {/* Category Navigation */}"
-      <section className="py-12 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto">
-          <motion.div "
-            className="flex flex-wrap gap-4 justify-center" 
->>>>>>> main
-            initial = {
+            className="flex flex - wrap gap-4 justify -center"            initial = {
 
   { opacity: 0,
   y: 20
@@ -305,22 +239,11 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
 }}
             transition={{ duration: any0.6 }}
           >
-<<<<<<< HEAD
             {categories.map((category) => (<button     key={category.id}
                 onClick={ () => setSelectedCategory(category.id) }
                 className={`px-6 py-3 rounded-xl border transition - all duration - 300 ${selectedCategory === category.id
                     ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white shadow-lg'
-                    : 'bg-white / 10 border-white / 20 text-gray - 300 hover:bg-white / 20 hover:border-white / 40'
-=======
-            {categories.map((category)  => (
-              <button 
-                key={category.id} 
-                onClick={() => setSelectedCategory(category.id)} 
-                className={`px-6 py-3 rounded-xl border transition-all duration-300 ${selectedCategory === category.id'
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 border-purple-400 text-white shadow-lg''
-                    : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'`
->>>>>>> main
-                }`}
+                    : 'bg-white / 10 border-white / 20 text-gray - 300 hover:bg-white / 20 hover:border-white / 40'                }`}
               >"
                 <span className="mr-2 text-lg">{category.icon}</span>
                 {category.name}
@@ -336,17 +259,9 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
             {(() => {;
               
               if(!category) return null;
-<<<<<<< HEAD
 
               return (<motion.div
-                  className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"
-=======
-              
-              return ()
-                <motion.div "
-                  className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
->>>>>>> main
-                  initial = {
+                  className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"                  initial = {
 
   { opacity: 0,
   y: 20
@@ -382,20 +297,11 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
                 </motion.div>;) }) () }          </div>
         </section>) }
 
-<<<<<<< HEAD
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div  className="max - w-7xl mx -auto">
           <motion.h2
-            className="text-3xl md:text-4xl font - bold text-center mb-12 text-transparent bg-clip - text bg-gradient - to - r from - purple - 400 to - pink -400"
-=======
-      {/* Services Grid */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto">
-          <motion.h2 "
-            className="text-3xl md:text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
->>>>>>> main
-            initial = {
+            className="text-3xl md:text-4xl font - bold text-center mb-12 text-transparent bg-clip - text bg-gradient - to - r from - purple - 400 to - pink -400"            initial = {
 
   { opacity: 0,
   y: 20
@@ -411,16 +317,9 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
           >'`
             {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}
           </motion.h2>
-<<<<<<< HEAD
 
           <motion.div
-            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8"
-=======
-          
-          <motion.div "
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" 
->>>>>>> main
-            variants={{
+            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8"            variants={{
 
               hidden: { opacity: 0 },
               visible: {
@@ -432,16 +331,9 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
                   delayChildren: 0.2
                 }
               }
-<<<<<<< HEAD
             }}
             initial="hidden"
-            whileInView="visible"
-=======
-            }} "
-            initial="hidden"
-            whileInView="visible" 
->>>>>>> main
-            viewport={{ once: anytrue }}
+            whileInView="visible"            viewport={{ once: anytrue }}
           >
             {selectedServices.map((service, index) => (<motion.div
                 key={service.id}
@@ -573,14 +465,8 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
                   <div className="text-xs text-gray-400">"
                     📞 <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">
                       +1 302 464 0950
-<<<<<<< HEAD
                     </a> |
-                    ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue - 400 hover:text-blue -300">
-=======
-                    </a> | "
-                    ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
->>>>>>> main
-                      kleber@ziontechgroup.com
+                    ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue - 400 hover:text-blue -300">                      kleber@ziontechgroup.com
                     </a>
                   </div>
                 </div>
@@ -589,20 +475,11 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Bottom CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div  className="max - w-4xl mx - auto text-center">
           <motion.div
-            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"
-=======
-      {/* Bottom CTA Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div "
-            className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
->>>>>>> main
-            initial = {
+            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"            initial = {
 
   { opacity: 0,
   y: 20
@@ -618,20 +495,11 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
           >"
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Ready to Lead the Future?
-<<<<<<< HEAD
             </h2>
             <p className="text-xl text-gray - 300 mb-8">
               Join the revolution and transform your business with cutting - edge technology solutions.Our team of experts is ready to help you implement these game - changing services.</p>
             <div  className="flex flex - col md:flex - row gap-4 justify -center">
-              <button     className="bg-gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text-white font - semibold py-4 px-8 rounded-lg transition - all duration - 300 transform hover:scale -105">
-=======
-            </h2>"
-            <p className="text-xl text-gray-300 mb-8">
-              Join the revolution and transform your business with cutting-edge technology solutions.Our team of experts is ready to help you implement these game-changing services.</p>"
-            <div className="flex flex-col md:flex-row gap-4 justify-center">"
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
->>>>>>> main
-                🚀 Schedule a Consultation
+              <button     className="bg-gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text-white font - semibold py-4 px-8 rounded-lg transition - all duration - 300 transform hover:scale -105">                🚀 Schedule a Consultation
               </button>"
               <button className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
                 📋 View Full Portfolio

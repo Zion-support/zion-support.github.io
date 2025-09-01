@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
@@ -10,7 +9,6 @@ import { useLocalStorage } from '@/hooks';"
 import { Input } from '@/components/ui/input';"
 import { Textarea } from '@/components/ui/textarea';"
 import { Button } from '@/components/ui/button';"
->>>>>>> main
 import CodeBlock from "./CodeBlock";
 export function ApiPlayground({ method, path, params = [] }) {
 "
@@ -44,18 +42,10 @@ export function ApiPlayground({ method, path, params = [] }) {
 `
                 Authorization: `Bearer ${apiKey
 
-<<<<<<< HEAD
 }`,
                 "Content-Type": "application/json",
             },
-        };
-=======
-
-`
-}`,"
-                "Content-Type": "application/json"}};"
->>>>>>> main
-        if(method !== "GET" && method !== "DELETE") {
+        };        if(method !== "GET" && method !== "DELETE") {
 
             try {
                 options.body = JSON.stringify(JSON.parse(body))}
@@ -82,13 +72,7 @@ export function ApiPlayground({ method, path, params = [] }) {
   (e) => handleParamChange(p.name,
   e.target.value)
 
-<<<<<<< HEAD
-} placeholder={p.name}/>))}
-=======
-
-} placeholder={p.name}/>))}"
->>>>>>> main
-      {method !== "GET" && method !== "DELETE" && (<Textarea value={body} onChange={(e) => setBody(e.target.value)} className="font-mono"/>)}
+} placeholder={p.name}/>))}      {method !== "GET" && method !== "DELETE" && (<Textarea value={body} onChange={(e) => setBody(e.target.value)} className="font-mono"/>)}
       <Button onClick={sendRequest} disabled={loading}>"
         {loading ? "Sending..." : "Send Request"}
       </Button>"

@@ -1,9 +1,36 @@
 import React from 'react';
-import { motion  } from 'framer-motion';
+import { motion } from 'framer-motion';
 
-export default function Page() {
-) => {
-  return (<div className={`flex flex-col items-center justify-center ${className}`} role="status" >
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'cyan' | 'white' | 'blue';
+  text?: string;
+  showText?: boolean;
+  className?: string;
+}
+
+const sizeClasses = {
+  sm: 'w-4 h-4',
+  md: 'w-6 h-6',
+  lg: 'w-8 h-8',
+  xl: 'w-12 h-12'
+};
+
+const colorClasses = {
+  cyan: 'border-cyan-400',
+  white: 'border-white',
+  blue: 'border-blue-400'
+};
+
+export default function LoadingSpinner({
+  size = 'md',
+  color = 'cyan',
+  text = 'Loading...',
+  showText = true,
+  className = ''
+}: LoadingSpinnerProps) {
+  return (
+    <div className={`flex flex-col items-center justify-center ${className}`} role="status">
       <div className="relative">
         {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full opacity-20`}></div>
@@ -42,14 +69,14 @@ export default function Page() {
       )}
     </div>
   );
-};
+}
 
 // Optimized spinner for inline use
 export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
   size = 'sm',
   className = ''
 }) => (
-  <div className={`inline-flex items-center ${className}`} role="status" >
+  <div className={`inline-flex items-center ${className}`} role="status">
     <motion.div
       className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-400 rounded-full`}
       animate={{ rotate: 360 }}
@@ -67,7 +94,8 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
 export const FullScreenLoader: React.FC<{
   text?: string;
   showLogo?: boolean;
-  className?: string}> = ({
+  className?: string;
+}> = ({
   text = 'Loading amazing experiences...',
   showLogo = true,
   className = ''
@@ -88,20 +116,21 @@ export const FullScreenLoader: React.FC<{
   </div>
 );
 
-// Skeleton loading component;
+// Skeleton loading component
 export const SkeletonLoader: React.FC<{
   className?: string;
-  lines?: number}> = ({
+  lines?: number;
+}> = ({
   className = '',
-  lines = 3}) => (
+  lines = 3
+}) => (
   <div className={`animate-pulse ${className}`}>
-    {Array.from({ length: lines }).map((_: unknown, index: unknown) => (
+    {Array.from({ length: lines }).map((_, index) => (
       <div
         key={index}
-        className={`h-4 bg-gray-300 rounded mb-2 ${index === lines - 1 ? 'w-3/4' : 'w-full'}`}
+        className="h-4 bg-gray-200 rounded mb-2"
+        style={{ width: `${Math.random() * 40 + 60}%` }}
       />
     ))}
   </div>
 );
-
-export default LoadingSpinner;

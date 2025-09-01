@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
 interface EnhancedAccessibilityProps {
@@ -62,13 +61,8 @@ export const EnhancedAccessibility: React.FC = () => {
     if(settings.reducedMotion) {
 
       root.style.setProperty('--reduced-motion',reduce')} else {
-<<<<<<< HEAD
 
       root.style.removeProperty('--reduced-motion');
-=======
-'      root.style.removeProperty('--reduced-motion');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
     // Focus indicator
     if(settings.focusIndicator) {
 
@@ -106,17 +100,10 @@ export const EnhancedAccessibility: React.FC = () => {
       [key]: !prev[key]}) ) };
 
   // Screen reader announcements'
-<<<<<<< HEAD
   
     announcement.setAttribute('aria-live',polite');
     announcement.setAttribute('aria-atomic',true');
-    announcement.className="sr-only";
-=======
-  const announcement = document.createElement('div');'
-    announcement.setAttribute('aria-live', 'polite');'
-    announcement.setAttribute('aria-atomic', 'true');'    announcement.className="sr-only";
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    announcement.textContent = message;
+    announcement.className="sr-only";    announcement.textContent = message;
 
     document.body.appendChild(announcement) ;
 
@@ -143,14 +130,8 @@ export const EnhancedAccessibility: React.FC = () => {
 
             target.style.outline = '';
             target.style.outlineOffset = '';
-<<<<<<< HEAD
           }, 2000) ;
           break;
-
-=======
-          }, 2000) ;          break;
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         case 'Enter':'
         case ' ':'
           if(target.tagName = == 'BUTTON' || target.getAttribute('role') === 'button') {;
@@ -206,18 +187,10 @@ modals.forEach(modal:  > {;
 
   // Skip to main content link
   useEffect(() => {
-<<<<<<< HEAD
 
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
     skipLink.className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";
-=======
-'
-    const skipLink = document.createElement('a');'
-    skipLink.href = '#main-content';'
-    skipLink.textContent = 'Skip to main content';'    skipLink.className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
     document.body.insertBefore(skipLink, document.body.firstChild) ;
 
     return : unknown {
@@ -295,12 +268,10 @@ modals.forEach(modal:  > {;
       announcement.setAttribute('aria-live',polite');
       announcement.setAttribute('aria-atomic',true');
       announcement.className="sr-only";
-=======
 '
       const announcement = document.createElement('div');'
       announcement.setAttribute('aria-live', 'polite');'
       announcement.setAttribute('aria-atomic', 'true');'      announcement.className="sr-only";
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       announcement.textContent = message;
       document.body.appendChild(announcement) ;
 
@@ -311,7 +282,6 @@ modals.forEach(modal:  > {;
     setSettings(prev => ({ ...prev, [key]: newValue }) ) ;
 
     // Announce changes to screen readers
-<<<<<<< HEAD
     const settingNames = {
       highContrast: 'High contrast',
       largeText: 'Large text',
@@ -326,15 +296,7 @@ modals.forEach(modal:  > {;
     announceToScreenReader(`${settingNames[key]} ${newValue ? 'enabled' : 'disabled'}`) ;
   };
 
-  return (<>
-=======
-    
-    '`
-    announceToScreenReader(`${settingNames[key]} ${newValue ? 'enabled' : 'disabled'}`)};
-  return ()
-    <>
->>>>>>> main
-      {/* Accessibility Toggle Button */}
+  return (<>      {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}"
         className="fixed top-4 right-4 z-50 bg-zion-cyan text-zion-slate-dark p-3 rounded-full shadow-lg hover:bg-zion-cyan/80 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
@@ -419,16 +381,9 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <h3 className="font-semibold text-zion-cyan flex items-center">"
                   <Eye className="w-4 h-4 mr-2"  />                  Visual
                 </h3>
-<<<<<<< HEAD
 
                 <label className="flex items - center space - x-3 cursor -pointer">
-                  <input
-=======
-                "
-                <label className="flex items-center space-x-3 cursor-pointer">
-                  <input"
->>>>>>> main
-                    type="checkbox"
+                  <input                    type="checkbox"
                     checked={settings.highContrast}
                     onChange={() => toggleSetting('highContrast')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
@@ -480,16 +435,9 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <h3 className="font-semibold text-zion-cyan flex items-center">"
                   <MousePointer className="w-4 h-4 mr-2"  />                  Motion
                 </h3>
-<<<<<<< HEAD
 
                 <label className="flex items - center space - x-3 cursor -pointer">
-                  <input
-=======
-                "
-                <label className="flex items-center space-x-3 cursor-pointer">
-                  <input"
->>>>>>> main
-                    type="checkbox"
+                  <input                    type="checkbox"
                     checked={settings.reducedMotion}
                     onChange={() => toggleSetting('reducedMotion')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
@@ -503,16 +451,9 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <h3 className="font-semibold text-zion-cyan flex items-center">"
                   <Keyboard className="w-4 h-4 mr-2"  />                  Navigation
                 </h3>
-<<<<<<< HEAD
 
                 <label className="flex items - center space - x-3 cursor -pointer">
-                  <input
-=======
-                "
-                <label className="flex items-center space-x-3 cursor-pointer">
-                  <input"
->>>>>>> main
-                    type="checkbox"
+                  <input                    type="checkbox"
                     checked={settings.keyboardNavigation}
                     onChange={() => toggleSetting('keyboardNavigation')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
@@ -537,16 +478,9 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                   <Volume2 className="w-4 h-4 mr-2" />
                   Screen Reader
                 </h3>
-<<<<<<< HEAD
 
                 <label className="flex items - center space - x-3 cursor -pointer">
-                  <input
-=======
-                "
-                <label className="flex items-center space-x-3 cursor-pointer">
-                  <input"
->>>>>>> main
-                    type="checkbox"
+                  <input                    type="checkbox"
                     checked={settings.screenReader}
                     onChange={() => toggleSetting('screenReader')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"

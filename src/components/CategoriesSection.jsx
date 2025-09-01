@@ -1,8 +1,7 @@
 import { GradientHeading } from './GradientHeading';
  from 'framer-motion';
  from 'react-router-dom';
-import { >>>>>>> main Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket  } from 'lucide-react';
-import { motion  } from 'framer-motion';
+import { import { motion  } from 'framer-motion';
 
 ,
   {

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 export default EnhancedServicesShowcase;
 import { enhancedServices2025 } from '../data/enhanced - services -2025';
 export default function Page() {
@@ -255,15 +254,8 @@ export default function Page() {
 }}>
             Let's discuss how our innovative services can help drive your success and competitive advantage
           </motion.p>
-<<<<<<< HEAD
 
-          <motion.div className="flex flex - col sm:flex - row gap-4 justify - center mb-8" initial = {
-=======
-          "
-          <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
-
->>>>>>> main
-  { opacity: 0,
+          <motion.div className="flex flex - col sm:flex - row gap-4 justify - center mb-8" initial = {  { opacity: 0,
   y: 20
 
 }} whileInView = {

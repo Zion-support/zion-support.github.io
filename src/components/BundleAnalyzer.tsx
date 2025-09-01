@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useCallback, useState } from 'react';
 export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({
 
@@ -17,11 +16,7 @@ largestChunk: {;
     name: string;
     size: number;
 
-};
-=======
-export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({ 
->>>>>>> main
-  averageChunkSize: number;
+};  averageChunkSize: number;
   gzipSavings: number}
 
 export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
@@ -39,39 +34,22 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
   }) ;
 
     try {
-<<<<<<< HEAD
       // Get performance entries
       const navigationEntries = performance.getEntriesByType('navigation') ;
       const resourceEntries = performance.getEntriesByType('resource') ;
-
-=======
-      // Get performance entries'
-
->>>>>>> main
       // Calculate bundle metrics
       let totalSize = 0;
-<<<<<<< HEAD
       let chunkCount = 0;
-<<<<<<< HEAD
       let largestChunk = { name: any'', size: 0 };
 
       resourceEntries.forEach((entry:) => {
         if(entry.name.includes ('.js') || entry.name.includes('.css') ) {
           const size = entry.transferSize || entry.encodedBodySize || 0;
-          totalSize += size;
-=======
-      let largestChunk = { name: any', size: 0 };
-      
-=======
-      let chunkCount = 0;'
-      let largestChunk = { name: any', size: 0 };      
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      resourceEntries.forEach((entry: )  => {
+          totalSize += size;      resourceEntries.forEach((entry: )  => {
 
         if(entry.name.includes('.js') || entry.name.includes('.css')) {
 
           const size = entry.transferSize || entry.encodedBodySize || 0;          totalSize += size;
->>>>>>> main
           chunkCount++;
 
           if(size > largestChunk.size) {
@@ -90,7 +68,6 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
         gzipSavings
       }) ;
 
-<<<<<<< HEAD
       // Log performance insights
       console.group('🚀 Bundle Analysis') ;
       console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024) .toFixed(2) } MB`) ;
@@ -115,32 +92,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       console.groupEnd () ;
     } catch(error) {
       console.error('Bundle analysis failed:', error) ;
-    }
-=======
-      // Log performance insights'
-      console.group('🚀 Bundle Analysis');
-      // console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);`
-      // console.log(`Chunk Count: ${chunkCount}`);`
-      // console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024).toFixed(2)} MB)`);`
-      // console.log(`Average Chunk Size: ${(averageChunkSize / 1024 / 1024).toFixed(2)} MB`);`
-      // console.log(`Estimated Gzip Savings: ${(gzipSavings / 1024 / 1024).toFixed(2)} MB`);
-      
-      // Performance recommendations
-      if(totalSize > 5 * 1024 * 1024) { // 5MB'
-        // console.warn('⚠️ Bundle size is large.Consider code splitting and lazy loading.')}
-      
-      if(chunkCount > 20) {
-
-        // console.warn('⚠️ Too many chunks.Consider consolidating small chunks.')}
-      
-      if(largestChunk.size > 2 * 1024 * 1024) { // 2MB'
-        // console.warn('⚠️ Largest chunk is too big.Consider splitting it further.')}
-      
-      console.groupEnd () } catch(error) {
-
-      // console.error('Bundle analysis failed:', error)}
->>>>>>> main
-  }, [enabled]) ;
+    }  }, [enabled]) ;
 
     // Implement bundle optimization strategies
     const optimizations: string[] = [];
@@ -171,37 +123,20 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     if(!enabled) return;
 
     // Analyze bundle after page load
-<<<<<<< HEAD
     const timer = setTimeout(analyzeBundle, 2000) ;
 
     return () => clearTimeout(timer) ;
   }, [enabled, analyzeBundle]) ;
-=======
-    
-    return () => clearTimeout(timer) }, [enabled, analyzeBundle]) ;
->>>>>>> main
-
   useEffect(() => {
     if(!enabled) return;
 
     // Run optimization analysis
-<<<<<<< HEAD
     const optimizations = optimizeBundle () ;
-
-=======
-    
->>>>>>> main
     if(optimizations && optimizations.length > 0) {
 
       // console.log('📊 Bundle optimization recommendations:', optimizations);
-<<<<<<< HEAD
     }
   }, [enabled, optimizeBundle]);
-
-=======
-    }  }, [enabled, optimizeBundle]);
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   // Don't render UI unless explicitly requested
   if(!showUI) {
 

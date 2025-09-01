@@ -4,9 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Link  } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 ,
-=======
         description: 'We\'re loading our marketplace products.If this persists, there might be a connection issue.Try refreshing the page or check back soon for exciting new offerings!'},
->>>>>>> main
     categories: {
 "
         icon: <Lightbulb className="w-16 h-16 text-gray-500"/>,

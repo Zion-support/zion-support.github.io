@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 export default ServiceCard;
 import { motion  } from 'framer-motion';
 
@@ -106,15 +105,8 @@ export default function Page() {
   0]
 
 }} transition = {
-<<<<<<< HEAD
   { duration: 3, repeat: Infinity,
   ease: "easeInOut"
-=======
-
-  { duration: 3, repeat: Infinity,"
-  ease: "easeInOut" 
->>>>>>> main
-
 }}>
           {icon}
         </motion.div>

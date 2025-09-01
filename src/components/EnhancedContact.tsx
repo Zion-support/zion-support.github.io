@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
 interface ContactFormData {
@@ -38,41 +37,7 @@ export function EnhancedContact(...args[]):  {
     { value: 'green-it', label: 'Green IT Solutions' };
   ];
 
-    const newErrors: ContactFormErrors = {};
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
-    if(!formData.name.trim()) {
-
-      newErrors.name = 'Name is required'}
-
-    if(!formData.email.trim()) {
-
-      newErrors.email = 'Email is required'} else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-
-      newErrors.email = 'Please enter a valid email address'}
-
-    if(!formData.message.trim()) {
-
-      newErrors.message = 'Message is required'} else if(formData.message.length < 10) {
-
-      newErrors.message = 'Message must be at least 10 characters long'};
-;
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0};
-
-      // // // // // // // // console.error('Error submitting form:', error)} finally {
-
-      setIsSubmitting(false);
-<<<<<<< HEAD
-    }
-      })} catch(error) {
-
-=======
-    }      })} catch(error) {
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      // console.error('Error submitting form:', error)} finally {
+    const newErrors: ContactFormErrors = {};      // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false)}
   };
@@ -106,15 +71,8 @@ export function EnhancedContact(...args[]):  {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition = {
-<<<<<<< HEAD
   { delay: 0.2,
   type: "spring"
-=======
-
-  { delay: 0.2,"
-  type: "spring" 
->>>>>>> main
-
 }}"
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
           >"
@@ -357,13 +315,8 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-<<<<<<< HEAD
                       <AlertCircle className="w-4 h-4 mr-1"  />
-                      {errors['name']}
-=======
-                      <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['name']}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-                    </motion.p>) }
+                      {errors['name']}                    </motion.p>) }
                 </AnimatePresence>
               </div>
 
@@ -411,13 +364,8 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-<<<<<<< HEAD
                       <AlertCircle className="w-4 h-4 mr-1"  />
-                      {errors['email']}
-=======
-                      <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['email']}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-                    </motion.p>) }
+                      {errors['email']}                    </motion.p>) }
                 </AnimatePresence>
               </div>
 
@@ -526,13 +474,8 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-<<<<<<< HEAD
                       <AlertCircle className="w-4 h-4 mr-1"  />
-                      {errors['message']}
-=======
-                      <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['message']}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-                    </motion.p>) }
+                      {errors['message']}                    </motion.p>) }
                 </AnimatePresence>
               </div>
 

@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
       description: "Get exclusive access to tech trends and analysis";
-    },;
-=======
-      description: "Get exclusive access to tech trends and analysis"},;
->>>>>>> main
-    {;
+    },;    {;
       icon: Zap,;"
       title: "Early Access",;"
       description: "Be the first to know about beta programs and launches"};
   ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   if(isSubscribed) {
 
@@ -39,13 +31,8 @@
               <CheckCircle className="w-10 h-10 text-white"  />
             </div>"
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>"
-<<<<<<< HEAD
             <p className="text-gray-300 text-lg mb-6">
-              You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,
-=======
-            <p className="text-gray-300 text-lg mb-6">'              You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-              service announcements, and exclusive content.</p>
+              You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,              service announcements, and exclusive content.</p>
             <button
               onClick={() => setIsSubscribed(false)}"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"

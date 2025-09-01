@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
 
   error: Error;
@@ -13,8 +12,6 @@ export default function LoginErrorFallback(...args[]):  {
           <AlertTriangle className="w-8 h-8 text-red-400"  />
         </div>"
         <h2 className="text-2xl font-bold text-white mb-4">
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           Something went wrong
         </h2>"
         <p className="text-zion-slate-light mb-6">

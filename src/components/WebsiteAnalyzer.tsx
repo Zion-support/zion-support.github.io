@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
 export default WebsiteAnalyzer;
@@ -27,13 +26,8 @@ export default function Page() {
       setCurrentPage('')}
   };
 
-<<<<<<< HEAD
     a.href = url;
-    a.download = 'zion-website-analysis.json';
-=======
-    a.href = url;'    a.download = 'zion-website-analysis.json';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    document.body.appendChild(a);
+    a.download = 'zion-website-analysis.json';    document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url)};
@@ -77,13 +71,8 @@ export default function Page() {
                 <RefreshCw className="w-4 h-4 mr-2 animate-spin"  />
               ) : ("
                 <Search className="w-4 h-4 mr-2"  />
-<<<<<<< HEAD
               )}
-              {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}
-=======
-              )}'              {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-            </button>
+              {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}            </button>
             {analysisResult && (
               <button
                 onClick={exportReport}"
@@ -126,27 +115,17 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
 
               <div  className="bg-green - 50 p - 4 rounded-lg border border-green -200">
                 <div  className="flex items -center">
                   <CheckCircle className="w-8 h-8 text-green - 600 mr-3" />
                   <div>
-                    <p className="text-2xl font - bold text-green -900">
-=======
-              "
-              <div className="bg-green-50 p-4 rounded-lg border border-green-200">"
-                <div className="flex items-center">"
-                  <CheckCircle className="w-8 h-8 text-green-600 mr-3"  />
-                  <div>"                    <p className="text-2xl font-bold text-green-900">
->>>>>>> main
-                      {analysisResult.summary.totalLinks - analysisResult.summary.brokenLinks - analysisResult.summary.missingPages}
+                    <p className="text-2xl font - bold text-green -900">                      {analysisResult.summary.totalLinks - analysisResult.summary.brokenLinks - analysisResult.summary.missingPages}
                     </p>"
                     <p className="text-sm text-green-700">Working Links</p>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
 
               <div  className="bg-red - 50 p - 4 rounded-lg border border-red -200">
                 <div  className="flex items -center">
@@ -163,25 +142,7 @@ export default function Page() {
                   <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3" />
                   <div>
                     <p className="text-2xl font - bold text-yellow-900">{analysisResult.summary.missingPages}</p>
-                    <p className="text-sm text-yellow-700">Missing Pages</p>
-=======
-              "
-              <div className="bg-red-50 p-4 rounded-lg border border-red-200">"
-                <div className="flex items-center">"
-                  <XCircle className="w-8 h-8 text-red-600 mr-3"  />
-                  <div>"
-                    <p className="text-2xl font-bold text-red-900">{analysisResult.summary.brokenLinks}</p>"                    <p className="text-sm text-red-700">Broken Links</p>
-                  </div>
-                </div>
-              </div>
-              "
-              <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">"
-                <div className="flex items-center">"
-                  <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3"  />
-                  <div>"
-                    <p className="text-2xl font-bold text-yellow-900">{analysisResult.summary.missingPages}</p>"                    <p className="text-sm text-yellow-700">Missing Pages</p>
->>>>>>> main
-                  </div>
+                    <p className="text-sm text-yellow-700">Missing Pages</p>                  </div>
                 </div>
               </div>
             </div>

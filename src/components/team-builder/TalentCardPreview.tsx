@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 interface TalentCardPreviewProps extends React.PropsWithChildren<{}> {
 
@@ -10,7 +9,5 @@ interface TalentCardPreviewProps extends React.PropsWithChildren<{}> {
 
 export 
     </Card>;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   )};
 '"`

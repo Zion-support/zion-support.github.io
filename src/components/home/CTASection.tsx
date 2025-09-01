@@ -97,34 +97,19 @@ const CTASection: React.FC = (): JSX.Element => {
           initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
   y: 30 ;
 
-}}
-=======
-  y: 30 }}
->>>>>>> main
-          whileInView = {
+}}          whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD
   y: 0 ;
 
-}}
-=======
-  y: 0 }}
->>>>>>> main
-          transition = {
+}}          transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD
   delay: 0.6 ;
 
-}}
-=======
-  delay: 0.6 }}
->>>>>>> main
-          viewport={{ once: true }}
+}}          viewport={{ once: true }}
         >
           {features.map((feature, index (;
             <motion.div
@@ -166,34 +151,19 @@ const CTASection: React.FC = (): JSX.Element => {
           initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
   y: 30 ;
 
-}}
-=======
-  y: 30 }}
->>>>>>> main
-          whileInView = {
+}}          whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD
   y: 0 ;
 
-}}
-=======
-  y: 0 }}
->>>>>>> main
-          transition = {
+}}          transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD
   delay: 0.8 ;
 
-}}
-=======
-  delay: 0.8 }}
->>>>>>> main
-          viewport={{ once: true }}
+}}          viewport={{ once: true }}
 
           <Link"
             to="/contact"
@@ -219,14 +189,9 @@ const CTASection: React.FC = (): JSX.Element => {
           transition = {
 
   { duration: 1,
-<<<<<<< HEAD
   delay: 1 ;
 
-}}
-=======
-  delay: 1 }}
->>>>>>> main
-          viewport={{ once: true }}
+}}          viewport={{ once: true }}
 "
           <p className="text-zion-slate-light text-sm mb-4">Trusted by industry leaders worldwide</p>"
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">"

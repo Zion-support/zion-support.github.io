@@ -1,4 +1,4 @@
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
+import {  import { motion  } from 'framer-motion';
 
 export default function Page() {
 -${Math.random().toString(36).substr(2, 9)}`}}
@@ -19,17 +19,10 @@ export default function Page() {
   private async reportError(error: Error, errorInfo: ErrorInfo) {
 
     try {
-      // You can integrate with services like Sentry, LogRocket, etc.<<<<<<< HEAD
-      // Send to your error reporting endpoint'
+      // You can integrate with services like Sentry, LogRocket, etc.      // Send to your error reporting endpoint'
       await fetch('/api/error-report', {
 
-        method: 'POST',
-=======
-      // Send to your error reporting endpoint'      await fetch('/api/error-report', {
-'
-        method: 'POST','
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST',        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(errorReport)})} catch(reportError) {
 
       // console.error('Failed to report error:', reportError)}  }

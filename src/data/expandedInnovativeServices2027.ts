@@ -861,7 +861,6 @@ export
 // Helper function to get services by category
 export 
   if(category === 'All') {;
-=======
   'All',;'
   'Cybersecurity',;'
   'Data Analytics',;'
@@ -872,7 +871,6 @@ export
 
 // Helper function to get services by category
 export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {;'  if(category === 'All') {;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     return ALL_EXPANDED_SERVICES_2027;
 
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)};

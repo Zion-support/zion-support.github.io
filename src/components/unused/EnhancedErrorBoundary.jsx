@@ -87,13 +87,7 @@ export default function Page() {
 }} animate = {
 
   { opacity: 1,
-<<<<<<< HEAD
   scale: 1
-
-=======
-  scale: 1 
-"
->>>>>>> main
 }} className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
             {/* Header */}"
             <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">"
@@ -141,19 +135,10 @@ export default function Page() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
             </svg>
           </div>
-<<<<<<< HEAD
 
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
           <p className="text-gray-600 mb-6">
             We're sorry, but something unexpected happened.Please try refreshing the page.</p>
-
-=======
-          "
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>"
-          <p className="text-gray-600 mb-6">
-            We're sorry, but something unexpected happened.Please try refreshing the page.</p>
-          "
->>>>>>> main
           <div className="space-y-3">
             <button
               onClick={() => window.location.reload()}"
@@ -169,16 +154,9 @@ export default function Page() {
               Go Back
             </button>
           </div>
-<<<<<<< HEAD
 
           {process.env.NODE_ENV === 'development' && error && (
-            <details className="mt-6 text-left">
-=======
-          '
-          {process.env.NODE_ENV === 'development' && error && ("
-            <details className="mt-6 text-left">"
->>>>>>> main
-              <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
+            <details className="mt-6 text-left">              <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
                 Error Details(Development)
               </summary>"
               <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto">"

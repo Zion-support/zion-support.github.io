@@ -1,93 +1,15 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
+import {  import { motion  } from 'framer-motion';
 
  params - Function parameters
  * @returns {*} Function return value
  */
 function TechSolutionsSection () {
-=======
->>>>>>> main
-
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Globe,
-  Rocket,
-  Cpu,
-  Database,
-  Lock,
-  Network,
-  Code,
-  Server'
-} from 'lucide-react';
-
-      features['Emerging Tech',Prototype Development',Technology Consulting',Innovation Strategy'],
-      color: 'from-indigo-500 to-purple-500'};
-  ];
-const techSolutions = [{
-
-<<<<<<< HEAD
-  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
-      <div className="max - w-7xl mx - auto px-6">
-        <motion.div
-          className="text-center mb-16"
-=======
-    icon: "🤖","
-    title: "AI & Machine Learning","
-    description: "Intelligent automation, predictive analytics, and cognitive computing solutions","
-    benefits: ["Increase efficiency by 300%", "Reduce costs by 40%", "24/7 operation"],"
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-"
-    icon: "☁️","
-    title: "Cloud Infrastructure","
-    description: "Scalable, secure, and high-performance cloud solutions for modern businesses","
-    benefits: ["99.9% uptime guarantee", "Global scalability", "Advanced security"],"
-    color: "from-blue-500 to-cyan-500"
-  },
-  {
-"
-    icon: "🔒","
-    title: "Cybersecurity","
-    description: "Comprehensive security solutions protecting your digital assets and data","
-    benefits: ["Real-time threat detection", "Compliance ready", "Zero-trust architecture"],"
-    color: "from-red-500 to-orange-500"
-  },
-  {
-"
-    icon: "📱","
-    title: "Mobile Solutions","
-    description: "Cross-platform mobile applications and responsive web solutions","
-    benefits: ["Native performance", "Cross-platform", "Offline capability"],"
-    color: "from-green-500 to-emerald-500"
-  },
-  {
-"
-    icon: "🌐","
-    title: "Web Development","
-    description: "Modern, responsive web applications and e-commerce solutions","
-    benefits: ["SEO optimized", "Fast loading", "Mobile-first design"],"
-    color: "from-indigo-500 to-purple-500"
-  },
-  {;"
-    icon: "📊",;"
-    title: "Data Analytics",;"
-    description: "Business intelligence and data-driven insights for strategic decision making",;"
-    benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],;"
-    color: "from-yellow-500 to-orange-500"};
-];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
 export function TechSolutionsSection() {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -139,7 +61,6 @@ export function TechSolutionsSection() {
               <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
                 <span className="text-3xl">{solution.icon}</span>
               </div>
-<<<<<<< HEAD
 
               <h3 className="text-xl font - bold text-white mb-3 group - hover:text-blue - 400 transition - colors duration -200">
                 {solution.title}
@@ -157,30 +78,7 @@ export function TechSolutionsSection() {
               </ul>
 
               <div className="mt-6 pt - 4 border-t border-slate -700">
-                <div className="text-blue - 400 text-sm font - semibold group - hover:text-blue - 300 transition - colors duration -200">
-=======
-              "
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
-                {solution.title}
-              </h3>
-              "
-              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-                {solution.description}
-              </p>
-              "
-              <ul className="space-y-2">
-                {solution.benefits.map((benefit, benefitIndex) => ("
-                  <li key={benefitIndex} className="flex items-center gap-2 text-sm">"
-                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>"
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-              "
-              <div className="mt-6 pt-4 border-t border-slate-700">"
-                <div className="text-blue-400 text-sm font-semibold group-hover:text-blue-300 transition-colors duration-200">
->>>>>>> main
-                  Learn More →
+                <div className="text-blue - 400 text-sm font - semibold group - hover:text-blue - 300 transition - colors duration -200">                  Learn More →
                 </div>
 "
                 <p className="text-gray-600 mb-6 leading-relaxed">
@@ -204,14 +102,8 @@ export function TechSolutionsSection() {
               </motion.div>) }) }
         </div>
 
-<<<<<<< HEAD
         <motion.div
-          className="mt-16 text-center"
-=======
-        <motion.div "
-          className="mt-16 text-center"
->>>>>>> main
-          initial = {
+          className="mt-16 text-center"          initial = {
 
   { opacity: 0,
   y: 20

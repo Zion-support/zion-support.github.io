@@ -61,12 +61,9 @@ const zionContact = {
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 ;
-<<<<<<< HEAD
 
 };
 
-=======
->>>>>>> main
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
 "
     id: "quantum-resistant-encryption","

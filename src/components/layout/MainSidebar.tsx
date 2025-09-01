@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation  } from 'react-router-dom';
 export default function Page() {
@@ -237,17 +236,9 @@ export default function Page() {
           <div>
             <button
               onClick={(: unknown toggleSection(item.name.toLowerCase())}
-              className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${<<<<<<< HEAD
-                level === 0
+              className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${                level === 0
                   ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'
-                  : 'text-slate-400 hover:text-slate-300'
-=======
-
-                level === 0 '
-                  ? 'text-slate-300 hover:text-white hover:bg-slate-700/50' '
-                  : 'text-slate-400 hover:text-slate-300'`
->>>>>>> main
-              }`}
+                  : 'text-slate-400 hover:text-slate-300'              }`}
             >"
               <div className="flex items-center space-x-3">"
                 <item.icon className="w-4 h-4" />
@@ -261,14 +252,8 @@ export default function Page() {
               ) : ("
                 <ChevronRight className="w-4 h-4"  />              )}
             </button>
-<<<<<<< HEAD
 
-            {isExpanded && (
-=======
-            
-            {isExpanded && ("
->>>>>>> main
-              <div className="ml-6 mt-2 space-y-1">
+            {isExpanded && (              <div className="ml-6 mt-2 space-y-1">
                 {item.children!.map(child => renderSidebarItem(child, level + 1))}
               </div>
             )}

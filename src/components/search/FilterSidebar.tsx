@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 interface FilterOption {
   value: string;
@@ -49,59 +48,7 @@ export function FilterSidebar({
         <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/20">"
           <h3 className="text-lg font-semibold text-white flex items-center gap-2">"
             <Filter className="w-5 h-5"  />
-            Filters
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-          </h3>
-          <button
-            onClick={onClose}"
-            className="lg:hidden p-2 hover:bg-zion-blue-light/20 rounded-lg transition-colors"
-"
-            <X className="w-5 h-5 text-zion-slate-light"  />          </button>
-        </div>
-"
-        <div className="p-4 space-y-6">
-          {/* Clear all button */}"
-          <div className="flex justify-between items-center">"
-            <span className="text-sm text-zion-slate-light">Active filters</span>
-            <button
-              onClick={onClearFilters}"
-              className="text-sm text-zion-cyan hover: text-zion-cyan-light transition-colors underline"
-            >
-              Clear all
-            </button>
-          </div>
-
-          {/* Filter groups */}
-          {filters.map((group) => (;"
-            <div key={group.key} className="space-y-3">;"
-              <h4 className="font-medium text-white">{group.title}</h4>;
-              ;"
-              <div className="space-y-2">;
-                {group.options.map((option: unknown {;
-                  
-                  return ("                    <label key = {option.value} className="flex items-center gap-3 cursor-pointer">
-                      <input'
-                        type={group.type === 'radio' ? 'radio' : 'checkbox'}
-                        name={group.key}
-                        value={option.value}
-                        checked={isSelected}
-                        onChange = {
-
-  (e) => onFilterChange(group.key, option.value,
-  e.target.checked)
-
-<<<<<<< HEAD
-}
-                        className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus: ring-zion-cyan focus: ring-2"
-                      />
-=======
-
-}"
-                        className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"
-                      />"
->>>>>>> main
-                      <span className="text-sm text-zion-slate-light">
+            Filters                      <span className="text-sm text-zion-slate-light">
                         {option.label}
                         {option.count && ("
                           <span className="ml-2 text-zion-slate-light/60">

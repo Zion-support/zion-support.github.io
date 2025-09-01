@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
@@ -158,22 +157,12 @@ const stats = ["
   { opacity: 1,
   y: 0
 
-<<<<<<< HEAD
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font - bold text-white mb-6">
             Meet Our < span className="bg-gradient - to - r from - zion - cyan to - zion - purple bg-clip - text text-transparent">Expert Team</span>
           </h2>
           <p className="text-zion - slate - light text-lg md:text-xl max - w-4xl mx - auto leading - relaxed mb-8">
-            Our world - class team of technology experts brings together decades of experience
-=======
-}} viewport={{ once: true }} transition={{ duration: 0.6 }}>"
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">"
-            Meet Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Expert Team</span>
-          </h2>"
-          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
-            Our world-class team of technology experts brings together decades of experience 
->>>>>>> main
-            across all major technology domains.Get to know the minds behind our success.</p>
+            Our world - class team of technology experts brings together decades of experience            across all major technology domains.Get to know the minds behind our success.</p>
 
           {/* Stats */}"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -190,18 +179,10 @@ const stats = ["
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-<<<<<<< HEAD
   delay: index * 0.1
 
 }} className="text-center p - 4 rounded-xl bg-zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue -light / 20">
-                <div className="text-zion - cyan mb-2 flex justify -center">
-=======
-  delay: index * 0.1 
-"
-}} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">"
-                <div className="text-zion-cyan mb-2 flex justify-center">
->>>>>>> main
-                  {stat.icon}
+                <div className="text-zion - cyan mb-2 flex justify -center">                  {stat.icon}
                 </div>"
                 <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>"
                 <div className="text-zion-slate-light text-sm">{stat.label}</div>
@@ -229,17 +210,9 @@ const stats = ["
           <h3 className="text-3xl font-bold text-white text-center mb-12">"
             Areas of <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Expertise</span>
           </h3>
-<<<<<<< HEAD
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">
-            {expertiseAreas.map((area, index) => (<motion.div key={index} initial = {
-=======
-          "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {expertiseAreas.map((area, index) => (<motion.div key={index} initial = {
-
->>>>>>> main
-  { opacity: 0,
+            {expertiseAreas.map((area, index) => (<motion.div key={index} initial = {  { opacity: 0,
   y: 20
 
 }} whileInView = {
@@ -250,7 +223,6 @@ const stats = ["
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-<<<<<<< HEAD
   delay: index * 0.1
 
 }} onHoverStart={ () => setHoveredExpertise(index) } onHoverEnd={ () => setHoveredExpertise(null) } whileHover={{ y: -4 }} className="p - 6 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-zion -cyan / 20">
@@ -266,26 +238,7 @@ const stats = ["
                 <div className="grid grid - cols - 3 gap-4 text-center">
                   <div>
                     <div className="text-zion - cyan font - bold text-lg">{area.experts}</div>
-                    <div className="text-zion - slate - light text-xs">Experts</div>
-=======
-  delay: index * 0.1 
-"
-}} onHoverStart={() => setHoveredExpertise(index)} onHoverEnd={() => setHoveredExpertise(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${area.color} mb-4 shadow-lg`}>"
-                  <div className="text-white">
-                    {area.icon}
-                  </div>
-                </div>
-                "
-                <h4 className="text-xl font-bold text-white mb-3">{area.name}</h4>"
-                <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{area.description}</p>
-                "
-                <div className="grid grid-cols-3 gap-4 text-center">
-                  <div>"
-                    <div className="text-zion-cyan font-bold text-lg">{area.experts}</div>"
-                    <div className="text-zion-slate-light text-xs">Experts</div>
->>>>>>> main
-                  </div>
+                    <div className="text-zion - slate - light text-xs">Experts</div>                  </div>
                   <div>"
                     <div className="text-zion-purple font-bold text-lg">{area.projects}</div>"
                     <div className="text-zion-slate-light text-xs">Projects</div>
@@ -319,7 +272,6 @@ const stats = ["
           <h3 className="text-3xl font-bold text-white text-center mb-12">"
             Leadership <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Team</span>
           </h3>
-<<<<<<< HEAD
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
             {teamMembers.map((member, index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
@@ -336,28 +288,7 @@ const stats = ["
                       </span>
                     </div>
 
-                    <h4 className="text-xl font - bold text-white mb-2 group - hover:text-zion - cyan transition -colors">
-=======
-          "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
-"
-  { type: "spring",
-  stiffness: 300 
-"
-}} className="relative">"
-                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedMember(selectedMember === member.id ? null : member.id)}>
-                  {/* Header */}"
-                  <div className="text-center mb-6">"
-                    <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-zion-cyan to-zion-purple mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300">"
-                      <span className="text-white font-bold text-2xl">
-                        {member.name.charAt(0)}
-                      </span>
-                    </div>
-                    "
-                    <h4 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
->>>>>>> main
-                      {member.name}
+                    <h4 className="text-xl font - bold text-white mb-2 group - hover:text-zion - cyan transition -colors">                      {member.name}
                     </h4>"
                     <div className="text-zion-cyan font-medium text-sm mb-1">{member.role}</div>"
                     <div className="text-zion-slate-light text-xs">{member.expertise}</div>
@@ -413,23 +344,12 @@ const stats = ["
   { opacity: 0, height: 0,
   y: 10
 
-<<<<<<< HEAD
 }} transition={{ duration: 0.3 }}>
                         <p className="text-zion - slate - light text-sm mb-4 leading -relaxed">{member.bio}</p>
 
                         <h5 className="text-zion - cyan font - semibold text-sm mb-2">Achievements:</h5>
                         <div className="space - y-1 mb-4">
-                          {member.achievements.map((achievement, idx) => (<motion.div key={idx} className="flex items - center gap-2 text-zion - slate - light / 80 text-xs" initial = {
-=======
-}} transition={{ duration: 0.3 }}>"
-                        <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{member.bio}</p>
-                        "
-                        <h5 className="text-zion-cyan font-semibold text-sm mb-2">Achievements:</h5>"
-                        <div className="space-y-1 mb-4">"
-                          {member.achievements.map((achievement, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial = {
-
->>>>>>> main
-  { opacity: 0,
+                          {member.achievements.map((achievement, idx) => (<motion.div key={idx} className="flex items - center gap-2 text-zion - slate - light / 80 text-xs" initial = {  { opacity: 0,
   x: -10
 
 }} animate = {

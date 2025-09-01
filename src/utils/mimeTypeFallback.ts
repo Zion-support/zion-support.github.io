@@ -39,16 +39,9 @@ class MimeTypeFallback {
     return this.mimeTypes[ext] || 'application/octet-stream'}
 
   private getFileExtension(filename: string): string {
-<<<<<<< HEAD
 
     if(lastDot === -1) return '';
     return filename.substring(lastDot).toLowerCase()}
-=======
-'
-    const lastDot = filename.lastIndexOf('.');'    if(lastDot === -1) return '';
-    return filename.substring(lastDot).toLowerCase()}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
   async checkAndFixMimeType(url: string: any): Promise<any> {
 
     try {
@@ -138,7 +131,6 @@ class MimeTypeFallback {
   ): HTMLElement {
 
     if(type === 'script') {
-<<<<<<< HEAD
 
       script.src = url;
       script.async = true;
@@ -146,18 +138,7 @@ class MimeTypeFallback {
       return script} else {
 
       link.rel = 'stylesheet';
-      link.href = url;
-=======
-'
-      const script = document.createElement('script');      script.src = url;
-      script.async = true;'
-      script.type = 'text/javascript';
-      return script} else {
-'
-      const link = document.createElement('link');'      link.rel = 'stylesheet';
-      link.href = url;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      link.type = 'text/css';
+      link.href = url;      link.type = 'text/css';
       return link}
   }
 

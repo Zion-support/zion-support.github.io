@@ -1,6 +1,5 @@
 export function ContactSection(...args[]):  {
 
-<<<<<<< HEAD
   const contactInfo = [{
       icon: Phone,
       title: "Phone",
@@ -12,11 +11,7 @@ export function ContactSection(...args[]):  {
       title: "Email",
       value: "kleber@ziontechgroup.com",
       link: "mailto:kleber@ziontechgroup.com"
-    },;
-=======
-  
->>>>>>> main
-    {;
+    },;    {;
       icon: MapPin,;"
       title: "Address",;"
       value: "364 E Main St STE 1008 Middletown DE 19709",;"

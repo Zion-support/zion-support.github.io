@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useState } from 'react';
 export default function Page() {
@@ -10,7 +9,6 @@ import { Textarea } from '@/components/ui/textarea';"
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';"
 import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge';"
 import { toast } from '@/hooks/use-toast';"
->>>>>>> main
 import { HireConfirmationModal } from './HireConfirmationModal';
 export default function Page() {
 )};

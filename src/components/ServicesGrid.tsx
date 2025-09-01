@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 export default function ServicesGrid() {
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-import { LucideIcon } from 'lucide-react';
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
-
 interface Service {
   title: string;
   description: string;
@@ -20,18 +12,8 @@ interface ServicesGridProps {
   services: Service[];
 }
 
-<<<<<<< HEAD
   return (<div className="grid grid - cols - 1 md: anygrid - cols - 2 gap-8">
-      {services.map ( (service, index) => (<motion.div
-=======
-  return ()
-    <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-=======
-export function ServicesGrid({ services }: ServicesGridProps) {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
-      {services.map((service, index) => (
+      {services.map ( (service, index) => (<motion.div      {services.map((service, index) => (
         <div
           key={service.title}
           className="group bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition-all duration-300 border border-gray-700 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/10 hover:-translate-y-1"

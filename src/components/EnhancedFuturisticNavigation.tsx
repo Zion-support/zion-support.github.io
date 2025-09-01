@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page() {
 , [location.pathname]) ;
 
@@ -12,16 +11,7 @@ export default function Page() {
         { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
         { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },
         { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },
-        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
-=======
-      dropdown[;'
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },'
-        { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },'
-        { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },'
-        { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },'
-        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },'        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      ]
+        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }      ]
     },;
     {
 
@@ -221,13 +211,8 @@ export default function Page() {
               <form onSubmit={handleSearch} className="relative">;"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />
                 <input"
-<<<<<<< HEAD
                   type="text"
-                  placeholder="Search services..."
-=======
-                  type="text""                  placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-                  value={searchQuery}
+                  placeholder="Search services..."                  value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-64 pl-10 pr-4 py-2 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
                 />
@@ -306,13 +291,8 @@ export default function Page() {
                 <form onSubmit={handleSearch} className="relative mb-6">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />
                   <input"
-<<<<<<< HEAD
                     type="text"
-                    placeholder="Search services..."
-=======
-                    type="text""                    placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-                    value={searchQuery}
+                    placeholder="Search services..."                    value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
                   />

@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 export const safeStorage = {
 export default safeStorage;
 
-// In - memory storage for fallback with optimizations
-=======
-// In-memory storage for fallback with optimizations
->>>>>>> main
-const inMemoryStore = {};
+// In - memory storage for fallback with optimizationsconst inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
@@ -108,30 +103,18 @@ export const safeStorage = {
     try {
       return localStorage.key(index);
     } catch(error) {
-<<<<<<< HEAD
 
       // console.warn('Failed to get key from localStorage:', error);
-      return null;
-=======
-'
-      // console.warn('Failed to get key from localStorage:', error);      return null;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    }
+      return null;    }
   },
 
   get length() {
     try {
       return localStorage.length;
     } catch(error) {
-<<<<<<< HEAD
 
       // console.warn('Failed to get localStorage length:', error);
-      return 0;
-=======
-'
-      // console.warn('Failed to get localStorage length:', error);      return 0;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    }
+      return 0;    }
   }};
 
 export default safeStorage;

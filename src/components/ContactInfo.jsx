@@ -8,7 +8,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui
               <CardHeader>
                 <CardTitle className="text-white flex items - center gap-2">
                   <Phone className="h-5 w-5 text-zion -cyan"/>
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';"
 import { Button } from '../ui/button';"
 import { Badge } from '../ui/badge';"
@@ -19,7 +18,6 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
               <CardHeader>"
                 <CardTitle className="text-white flex items-center gap-2">"
                   <Phone className="h-5 w-5 text-zion-cyan"/>
->>>>>>> main
                   Contact Details
                 </CardTitle>"
                 <CardDescription className="text-zion-slate-light">

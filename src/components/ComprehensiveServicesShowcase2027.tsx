@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
  from 'react';
 import { Badge } from '@/components / ui / badge';
@@ -33,36 +32,7 @@ const features = ["
 ];
 ;
 
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  ;
-  ;
-  ;
-  website: 'https://ziontechgroup.com';
-;
-<<<<<<< HEAD
-
-};
-
-export function ComprehensiveServicesShowcase2027(...args[]):  {
-
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [searchQuery, setSearchQuery] = useState<any>('');
-
-  // Combine all services
-  
-  // Get unique categories
-  
-  // Filter services based on selection and search
-
-    return matchesCategory && matchesSearch}) ;
-
-  return ("
-    <div className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      <div className="container mx-auto px-4">
+  ;      <div className="container mx-auto px-4">
         {/* Header */}"
         <div className="text-center mb-16">"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

@@ -54,14 +54,9 @@ const zionContact: ServiceContact = {
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 
-<<<<<<< HEAD
 };
 
-// Innovative Micro SAAS Services 2030
-=======
-// Innovative Micro SAAS Services 2030;
->>>>>>> main
-export const innovativeMicroSaasServices2030: MicroSaasService[] = [{
+// Innovative Micro SAAS Services 2030export const innovativeMicroSaasServices2030: MicroSaasService[] = [{
 
     id: 1,"
     name: "AI-Powered Legal Document Analysis Platform","

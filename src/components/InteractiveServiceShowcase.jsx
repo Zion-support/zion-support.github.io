@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 export default InteractiveServiceShowcase;
 import { motion, AnimatePresence  } from 'framer-motion';
 

@@ -111,15 +111,9 @@ export class LinkChecker {
         if(exists) {
 
           link.status = 'working'} else {
-<<<<<<< HEAD
 
           link.status = 'missing';
-          this.missingPages.push(link.url)}
-=======
-'          link.status = 'missing';
-          this.missingPages.push(link.url)}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      } else {
+          this.missingPages.push(link.url)}      } else {
 
         link.status = 'external'}
       checkedLinks.push(link)}

@@ -1,6 +1,5 @@
 import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = () => {
 
-<<<<<<< HEAD
  * PricingSection function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -8,11 +7,7 @@ import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: Rea
 function PricingSection () {
 
       icon: Shield;
-    };
-=======
-      icon: Shield};
->>>>>>> main
-  ];
+    };  ];
 const pricingTiers = [{
 
     name: "Starter","
@@ -66,20 +61,10 @@ const pricingTiers = [{
     popular: false,;"
     color: "from-green-500 to-emerald-500"};];
 
-<<<<<<< HEAD
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <div className="max - w-7xl mx - auto px-6">
         <motion.div
-          className="text-center mb-16"
-=======
-export function PricingSection() {
-  return ("
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div "
-          className="text-center mb-16"
->>>>>>> main
-          initial = {
+          className="text-center mb-16"          initial = {
 
   { opacity: 0,
   y: 20
@@ -153,14 +138,8 @@ export function PricingSection() {
               </motion.div>;) }) }
         </div>
 
-<<<<<<< HEAD
         <motion.div
-          className="mt-16 text-center"
-=======
-        <motion.div "
-          className="mt-16 text-center"
->>>>>>> main
-          initial = {
+          className="mt-16 text-center"          initial = {
 
   { opacity: 0,
   y: 20

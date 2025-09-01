@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
   import { completeSitemap } from '../config / sitemap';
 
 export default function Page() {

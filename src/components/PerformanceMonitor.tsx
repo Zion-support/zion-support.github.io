@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({
 export default PerformanceMonitor;
@@ -71,25 +70,15 @@ export default function Page() {
           setMetrics(prev =>
             prev ? { ...prev, fcp: fcpEntry.startTime } : null
           )}
-<<<<<<< HEAD
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
-=======
-      });'      fcpObserver.observe({ entryTypes: ['paint'] });
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
         if(lcpEntry) {
 
           setMetrics(prev =>
             prev ? { ...prev, lcp: lcpEntry.startTime } : null
           )}
-<<<<<<< HEAD
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-=======
-      });'      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       // Observe FID
 
         if(fidEntry) {
@@ -99,13 +88,8 @@ export default function Page() {
               ? { ...prev, fid: fidEntry.processingStart - fidEntry.startTime }
               : null
           )}
-<<<<<<< HEAD
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
-=======
-      });'      fidObserver.observe({ entryTypes: ['first-input'] });
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
     if(tips.length === 0) {
       tips.push('Great performance! Keep monitoring for any regressions')}
 

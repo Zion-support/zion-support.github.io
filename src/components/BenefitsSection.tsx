@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 export /**
 export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}

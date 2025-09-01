@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 export default function Page() {
 ,;
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
@@ -12,55 +11,35 @@ export default function Page() {
     { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
     { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
   ];
-
-=======
-  ];
-
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
 
-<<<<<<< HEAD
     switch(sortBy) {;
       case 'price':;
-        return a.price - b.price;
-=======
-    switch(sortBy) {;'      case 'price':;
-        return a.price - b.price;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      case 'name':;
+        return a.price - b.price;      case 'name':;
         return a.title.localeCompare(b.title);
       case 'innovation':;
         
   ;
   ;
-=======
 '
   'Advanced': 1, 'Cutting-edge': 2,;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   'Revolutionary': 3 ;
 
-<<<<<<< HEAD
 };
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
-               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);
-=======
-};        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
-               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      case 'category':;
+               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case 'category':;
         return a.category.localeCompare(b.category) ;
       default:;
         return 0}) ;
 
     hidden: { opacity: 0 },;
-<<<<<<< HEAD
     visible: {;
       opacity: 1,;
       transition: {;
@@ -73,121 +52,7 @@ export default function Page() {
   hidden: { y: 20,
   opacity: 0
 
-},
-=======
->>>>>>> main
-    visible: {
-      opacity: 1,;
-      transition: {
-        staggerChildren: 0.1}}};
-
-      opacity: 1,;
-      transition: {
-        duration: 0.5,;"
-        ease: "easeOut"}}};
-
-    switch(category) {;'"
-      case 'AI & Automation': return <Bot className="w-5 h-5"  />;'"
-      case 'AI & Analytics': return <BarChart3 className="w-5 h-5" />;'"
-      case 'AI & Research': return <Search className="w-5 h-5"  />;'"
-      case 'AI & Logistics': return <Truck className="w-5 h-5"  />;'"
-      case 'AI & Marketing': return <TrendingUp className="w-5 h-5"  />;'"
-      case 'AI & Healthcare': return <Heart className="w-5 h-5"  />;'"
-      case 'Quantum Computing': return <Atom className="w-5 h-5"  />;'"
-      case 'Blockchain': return <Link className="w-5 h-5"  />;'"
-      case 'Metaverse': return <Globe2 className="w-5 h-5" />;'"
-      case 'Edge Computing': return <Network className="w-5 h-5"  />;'"
-      case 'Cybersecurity': return <Shield className="w-5 h-5"  />;"
-      default: return <Zap className="w-5 h-5"  />};
-
-    switch(level) {;'"
-      case 'Advanced': return <Star className="w-4 h-4 text-yellow-500"  />;'"
-      case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500"  />;'"
-      case 'Revolutionary': return <Crown className="w-4 h-4 text-purple-500"  />;"
-      default: return <Star className="w-4 h-4 text-gray-400"  />};
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
-      {/* Animated Background */}"
-      <div className="absolute inset-0">"
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.03)_1px,transparent_1px)] bg-[size:100px_100px] animate-pulse" />"
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-purple/5 via-transparent to-zion-cyan/5" />"
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-zion-cyan/10 via-transparent to-transparent" />
-      </div>
-
-      {/* Header Section */}"
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial = {
-
-  { opacity: 0,
-  y: 20
-
-}}
-            animate = {
-
-  { opacity: 1,
-  y: 0
-
-}}
-            transition={{ duration: 0.8 }}
-"
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent mb-6">
-              Comprehensive Services 2025
-            </h1>"
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-              Discover our revolutionary collection of AI-powered, quantum computing, blockchain, and emerging technology solutions
-            </p>"
-            <div className="flex flex-wrap justify-center gap-4 text-sm">"
-              <div className="bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-4 py-2">"
-                <span className="text-zion-cyan">🚀</span> {allServices.length}+ Services
-              </div>"
-              <div className="bg-zion-purple/20 border border-zion-purple/30 rounded-full px-4 py-2">"
-                <span className="text-zion-purple">⚡</span> Cutting-edge Tech
-              </div>"
-              <div className="bg-zion-pink/20 border border-zion-pink/30 rounded-full px-4 py-2">"
-                <span className="text-zion-pink">💎</span> Premium Quality
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>;
-
-      {/* Search and Filters */}"
-      <section className="relative px-4 sm:px-6 lg:px-8 mb-12">;"
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-
-  { opacity: 0,
-  y: 20
-
-}}
-            animate = {
-
-  { opacity: 1,
-  y: 0
-
-}}
-            transition = {
-
-  { duration: 0.8,
-  delay: 0.2
-
-}}"
-            className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6"
-
-            {/* Search Bar */}"
-            <div className="relative mb-6">"
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5"  />
-              <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search services, categories, or features..."
-=======
-                type="text""                placeholder="Search services, categories, or features..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-                value={searchTerm}
+},                value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan"
               />

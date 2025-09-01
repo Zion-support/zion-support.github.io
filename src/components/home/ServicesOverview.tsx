@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 interface Service {
   category: string;
@@ -37,8 +36,6 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
           <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">"
             <Sparkles className="w-4 h-4 text-zion-cyan mr-2"  />"
             <span className="text-zion-cyan text-sm font-medium">Innovation First</span>
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </div>
 "
           <h2 id="services-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">"

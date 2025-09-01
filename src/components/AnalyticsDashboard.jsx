@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { <<<<<<< HEAD import { useAnalytics } from '../hooks / useAnalytics';
+import {  import { useAnalytics } from '../hooks / useAnalytics';
 export default function Page() {
 , refreshInterval);
     return () => clearInterval(interval);

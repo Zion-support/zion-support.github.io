@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { <<<<<<< HEAD import { import { Button } from './ui / Button';
+import {  import { import { Button } from './ui / Button';
 export default function Page() {
 ,
     { value: 'talent-hiring', label: 'Talent Acquisition & Staffing' },

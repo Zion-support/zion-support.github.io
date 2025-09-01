@@ -24,14 +24,9 @@ declare namespace JSX {
 }
   interface IntrinsicElements {
 
-<<<<<<< HEAD
     [elemName: string]: ;
 
-}
-=======
-    [elemName: string]: }
->>>>>>> main
-}
+}}
 
 declare module 'react-dom' {
   export function reactDom: ;

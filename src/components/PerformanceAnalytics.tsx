@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
+import {  import { motion  } from 'framer-motion';
 export default function Page() {
 ,
       {
@@ -27,17 +26,10 @@ export default function Page() {
       'Error rate spike detected in last 5 minutes';
     ];
 
-<<<<<<< HEAD
     
       'Consider implementing lazy loading for images',;
       'Optimize database queries for better performance',;
-      'Enable CDN for static assets delivery';
-=======
-    const recommendations = [;'
-      'Consider implementing lazy loading for images',;'
-      'Optimize database queries for better performance',;'      'Enable CDN for static assets delivery';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    ];
+      'Enable CDN for static assets delivery';    ];
 
     return {
 
@@ -272,7 +264,6 @@ export default function Page() {
   y: 0
 
 }}
-<<<<<<< HEAD
           transition={{ delay: 0.6 }}
           className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center"
         >
@@ -280,18 +271,7 @@ export default function Page() {
           <h3 className="text-xl font - semibold text-white mb-2">Performance Trends</h3>
           <p className="text-gray -400">
             {isMonitoring
-              ? 'Real - time performance data is being collected and analyzed...'
-=======
-          transition={{ delay: 0.6 }}"
-          className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center"
-        >"
-          <BarChart3 className="w-16 h-16 text-gray-400 mx-auto mb-4" />"
-          <h3 className="text-xl font-semibold text-white mb-2">Performance Trends</h3>"
-          <p className="text-gray-400">
-            {isMonitoring '
-              ? 'Real-time performance data is being collected and analyzed...''
->>>>>>> main
-              : 'Start monitoring to view performance trends and historical data'
+              ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data'
             }
           </p>
           {isMonitoring && ("

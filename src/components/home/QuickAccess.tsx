@@ -1,104 +1,28 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 export default function Page() {
 ,"
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },;"
-    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  ];
-
-  return ("
-    <section className="py-16 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
-      <div className="max-w-7xl mx-auto px-6">"
-        <div className="text-center mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}"
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
-
-            Quick Access to Our Services
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}"
-            className="text-lg text-gray-300 max-w-2xl mx-auto"
-
-            Find the perfect solution for your business needs with our organized service categories
-          </motion.p>
-        </div>
-
-}}
-            whileInView = {
-
-  { opacity: 1,
-  y: 0 }}
-            transition={{ duration: 0.6 }}"
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
-      title: "Micro SaaS","
-      description: "Ready-to-Deploy Solutions",;
-      icon: Code,;"
-      color: "from-zion-purple to-zion-cyan",;"
-      bgColor: "bg-zion-purple/10",;"
-      borderColor: "border-zion-purple/20",;"
-      path: "/micro-saas",;"
-      features: ["AI Lead Scoring", "Customer Feedback", "Compliance Tools", "Analytics"],;"
-      stats: { solutions: "25+", deployment: "<1hr", success: "90%" }};
-  ];
-
-    visible: {
-      opacity: 1,;
-      transition: {
-        staggerChildren: 0.1}}};
-
-<<<<<<< HEAD
-  const itemVariants = {
-  hidden: { opacity: 0, y: 20,
-  scale: 0.95
-
-},
-    visible: {
-      opacity: 1,
-      y: 0, ;
-=======
-  
->>>>>>> main
-      scale: 1,;
+    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,;
       transition: {
         duration: 0.5,;"
         ease: "easeOut"}}};
 
   const hoverVariants = {
-<<<<<<< HEAD
   hover: {
-      y: -8,
-=======
-
-  hover: {
-
-      y: -8, 
->>>>>>> main
-      scale: 1.02,
+      y: -8,      scale: 1.02,
       transition: {
 
         duration: 0.3,;"  ease: "easeOut";
       ;
 }}};
 
-<<<<<<< HEAD
 };
     };
   };
 
-  return (
-=======
-  return ("
->>>>>>> main
-    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
+  return (    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
       {/* Background Elements */}"
       <div className="absolute inset-0 opacity-30">"
         <div className="absolute top-20 left-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl"></div>"
@@ -353,27 +277,16 @@ export default function Page() {
           initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
   y: 30 ;
 
-}}
-=======
-  y: 30 }}
->>>>>>> main
-          whileInView = {
+}}          whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD
   y: 0 ;
 
-}}
-=======
-  y: 0 }}
->>>>>>> main
-          transition = {
+}}          transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD
   delay: 0.4 ;
 
 }}
@@ -381,24 +294,11 @@ export default function Page() {
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>
-=======
-  delay: 0.4 }}
-          viewport={{ once: true }}"          className="text-center"
-        >"
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">'"
-            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>"
->>>>>>> main
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link
-=======
-              <Link "
->>>>>>> main
-                to="/contact"
+              <Link                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
 
                 Contact Our Team

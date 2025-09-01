@@ -446,16 +446,9 @@ const AdvancedAIAssistant: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-<<<<<<< HEAD
           viewport={{ once: true }}
         >
-          <div className="text-center mb-16">
-=======
-          viewport={{ once: true }}"
-          className="text-center mb-16"
-        >"
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <div className="text-center mb-16">          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Assistant
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -471,22 +464,12 @@ const AdvancedAIAssistant: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
           viewport={{ once: true }}
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-sm">
             <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-=======
-          viewport={{ once: true }}"
-          className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
-        >"
-          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-sm">"
-            <div className="flex items-center justify-between mb-4">"
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">"
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6
-                <Bot className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">                <Bot className="w-6 h-6 text-white" />
               </div>"
               <div className="text-right">"
                 <div className="text-green-400 text-sm font-medium">+18%</div>"
@@ -548,7 +531,6 @@ const AdvancedAIAssistant: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-<<<<<<< HEAD
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-1 mb-8 bg-gray-800/50 rounded-lg p-1 max-w-lg mx-auto">
@@ -569,59 +551,18 @@ const AdvancedAIAssistant: React.FC = () => {
               {view.charAt(0).toUpperCase() + view.slice(1)}
             </button>
           ))}
-          </div>
-=======
-          viewport={{ once: true }}"
-          className="flex items-center gap-1 mb-8 bg-gray-800/50 rounded-lg p-1 max-w-lg mx-auto"
-        >
-          {(['overview',conversations',insights',features'] as const).map()
-            view => (
-              <button
-                key={view}
-                onClick={() => setSelectedView(view)}
-                className={`flex-1 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
-
-                  selectedView === view'
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25''
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'`
-                }`}
-              >'"
-                {view === 'overview' && <Bot className="w-4 h-4 inline mr-2" />}
-                {view === 'conversations' && ("
-                  <MessageCircle className="w-4 h-4 inline mr-2" />
-                )}
-                {view === 'insights' && ("
-                  <Lightbulb className="w-4 h-4 inline mr-2" />
-                )}
-                {view === 'features' && ("
-                  <Sparkles className="w-4 h-4 inline mr-2" />
-                )}
-                {view.charAt(0).toUpperCase() + view.slice(1)}
-              </button>
-            )
-          )}
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6
-        </motion.div>
+          </div>        </motion.div>
 
         {/* Controls */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-<<<<<<< HEAD
           viewport={{ once: true }}
         >
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6 mb-12">
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <div className="relative">
-=======
-          viewport={{ once: true }}"
-          className="flex flex-col lg:flex-row items-center justify-between gap-6 mb-12"
-        >"
-          <div className="flex flex-col sm:flex-row items-center gap-4">"
-            <div className="relative">"
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className="relative">              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
                 type="text"
                 placeholder="Search conversations, insights, or features..."
@@ -647,7 +588,6 @@ const AdvancedAIAssistant: React.FC = () => {
           </div>
 "
           <div className="flex items-center gap-4">
-<<<<<<< HEAD
             <button
               className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 text-gray-300 hover:text-white rounded-lg border border-gray-700/50 hover:bg-gray-700/50 transition-all duration-300"
             >
@@ -657,24 +597,7 @@ const AdvancedAIAssistant: React.FC = () => {
             
             <button
               className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-            >
-=======
-            <motion.button"
-              className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 text-gray-300 hover:text-white rounded-lg border border-gray-700/50 hover:bg-gray-700/50 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >"
-              <Settings className="w-4 h-4" />
-              AI Settings
-            </motion.button>
-
-            <motion.button"
-              className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >"
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6
-              <Plus className="w-4 h-4" />
+            >              <Plus className="w-4 h-4" />
               New Session
             </button>
           </div>

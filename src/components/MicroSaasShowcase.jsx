@@ -4,7 +4,6 @@ export default function Page() {
 ,
         { id: 'automation', name: 'Automation', icon: <Zap className="h-5 w-5"/> },
         { id: 'cloud', name: 'Cloud', icon: <Cloud className="h-5 w-5"/> }
-=======
     const [activeCategory, setActiveCategory] = useState('all');
     const categories = ['
         { id: 'all', name: 'All Services', icon: <Sparkles className="h-5 w-5"/> },"
@@ -13,7 +12,6 @@ export default function Page() {
         { id: 'analytics', name: 'Analytics', icon: <BarChart3 className="h-5 w-5"/> },"
         { id: 'automation', name: 'Automation', icon: <Zap className="h-5 w-5"/> },"
         { id: 'cloud', name: 'Cloud', icon: <Cloud className="h-5 w-5"/> }
->>>>>>> main
     ];
     const microSaasServices = [{
 

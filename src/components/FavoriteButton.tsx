@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Heart  } from 'lucide-react';
  from 'react';
 export /**
@@ -8,10 +7,6 @@ export /**
  * @returns {*} Function return value
  */
 function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
-=======
-<<<<<<< HEAD
->>>>>>> main
-
 interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
 
   itemId: string;
@@ -24,8 +19,6 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
     e.stopPropagation () ;
     setIsFavorited(!isFavorited) ;
 
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // Here you would typically make an API call to save / remove from favorites
     if(isFavorited) {
 
@@ -49,17 +42,10 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
     >
       <Heart`
-        className={`w-4 h-4 transition-all duration-300 ${<<<<<<< HEAD
-
+        className={`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : ''`
         }`}
-      />
-=======
-'
-          isFavorited ? 'fill-current' : ''`        }`}
-       />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    </button>
+      />    </button>
   )};`
 className: {`w-4 h-4 transition-all duration-300 ${;
           isFavorited ? 'fill-current' : '';`

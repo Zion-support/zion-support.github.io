@@ -41,7 +41,6 @@ export const SERVICE_CATEGORIES_2030 = ["
 
 // Service Statistics;
 export 
-=======
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;'
 export 
   "Blockchain & Web3",;
@@ -53,7 +52,6 @@ export
 ];
 
 // Service Statistics
-<<<<<<< HEAD
 export const SERVICE_STATISTICS_2030 = {
   totalServices: COMPREHENSIVE_SERVICES_INDEX_2030.length,
   totalCategories: SERVICE_CATEGORIES_2030.length,
@@ -67,12 +65,7 @@ export const SERVICE_STATISTICS_2030 = {
   featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
   aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  =>
     service.category.includes('AI') || service.aiScore > 90
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;
-=======
-export 
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
-    service.category === 'Emerging Technology'
+  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;    service.category === 'Emerging Technology'
   ).length
   ).length,;
   ;
@@ -81,7 +74,6 @@ export
     service.category === 'Emerging Technology';
   ).length};
 
-<<<<<<< HEAD
 };
 
 // Featured Services
@@ -89,16 +81,7 @@ export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(s
 
 // High-ROI Services(ROI > 500%)
 export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
-  const roi = service.roi;
-=======
-:src/data/comprehensiveServicesIndex2030.tsx
-// Featured Services;
-export 
-// High-ROI Services (ROI > 500%);
-export 
-  
->>>>>>> main
-  if(typeof roi = == 'string') {;
+  const roi = service.roi;  if(typeof roi = == 'string') {;
     
     return roiNumber > 500}
   return false});

@@ -356,21 +356,9 @@ export default function Page() {
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
                     {page}
                   </button>) }) }
-<<<<<<< HEAD
 
               <button onClick = { () => setCurrentPage(prev => Math.min (totalPages,
-  prev + 1) ) } disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray - 300 dark:border-gray - 600 rounded hover:bg-gray - 100 dark:hover:bg-gray - 600 disabled:opacity - 50 disabled:cursor - not - allowed transition -colors">
-=======
-              
-              <button onClick = {
-
-  () => setCurrentPage(prev => Math.min(totalPages,
-  prev + 1))
-
-"
-} disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
->>>>>>> main
-                Next
+  prev + 1) ) } disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray - 300 dark:border-gray - 600 rounded hover:bg-gray - 100 dark:hover:bg-gray - 600 disabled:opacity - 50 disabled:cursor - not - allowed transition -colors">                Next
               </button>
             </div>
           </div>

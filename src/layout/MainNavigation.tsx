@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3'  } from 'lucide-react';
 
 export default function Page() {
@@ -88,8 +87,6 @@ export default function Page() {
   ];
 
               </div>;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             </motion.div>;
           )};
         </AnimatePresence>;

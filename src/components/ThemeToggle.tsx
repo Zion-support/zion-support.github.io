@@ -6,15 +6,9 @@ interface ThemeToggleProps {
   // Add your props here
 
   className?: string}
-<<<<<<< HEAD
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
-  const [theme, setTheme] = useState<Theme>('system');
-=======
-'
-export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;'  const [theme, setTheme] = useState<Theme>('system');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState<Theme>('system');  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -26,18 +20,11 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   useEffect(() => {
     if(!mounted) return;
 
-<<<<<<< HEAD
       root.classList.toggle('dark', theme === 'dark') ;
     }
 
     localStorage.setItem('theme', theme) ;
   }, [theme, mounted]) ;
-
-=======
-      root.classList.toggle('dark', theme === 'dark')}
-    '
-    localStorage.setItem('theme', theme)}, [theme, mounted]);
->>>>>>> main
   if(!mounted) {
 
     return ()
@@ -84,7 +71,6 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
               </button>) ) }
           </motion.div>) }
       </AnimatePresence>
-<<<<<<< HEAD
     </div>) ;
 };
     const root = document.documentElement;
@@ -94,20 +80,9 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     root.classList.remove('light', 'dark') ;
     root.classList.add(effectiveTheme) ;
 
-    // Update CSS custom properties for smooth transitions
-=======
-    </div>) };
-
-<<<<<<< HEAD
-
-    root.classList.remove('light',dark');
-=======
-'    root.classList.remove('light', 'dark');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    root.classList.add(effectiveTheme);
+    // Update CSS custom properties for smooth transitions    root.classList.add(effectiveTheme);
     
     // Update CSS custom properties for smooth transitions'
->>>>>>> main
     if(effectiveTheme === 'dark') {
 
       root.style.setProperty('--zion-bg-primary',#0f172a');
@@ -141,19 +116,11 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
       >
-<<<<<<< HEAD
         {themes.map((themeOption) => {
           const Icon = themeOption.icon;
           const isActive = theme === themeOption.value;
 
-          return (<motion.button
-=======
-        {themes.map((themeOption) => {
-
-          return ()
-            <motion.button
->>>>>>> main
-              key={themeOption.value}
+          return (<motion.button              key={themeOption.value}
               onClick={() => handleThemeChange(themeOption.value)}`
               className={`relative p-2 rounded-lg transition-all duration-200 ${isActive'
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg''

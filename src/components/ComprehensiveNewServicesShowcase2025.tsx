@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 export default ComprehensiveNewServicesShowcase2025;
 import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
@@ -29,13 +28,8 @@ export default function Page() {
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
               <input"
-<<<<<<< HEAD
                 type="text"
-                placeholder="Search services..."
-=======
-                type="text""                placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-                value={searchTerm}
+                placeholder="Search services..."                value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />

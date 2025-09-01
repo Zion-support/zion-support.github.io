@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 export /**
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -67,18 +66,13 @@ const stats = [;"
         staggerChildren: 0.2,;
         delayChildren: 0.1}}};
 
-<<<<<<< HEAD
   const statsVariants = {
   hidden: { opacity: 0,
   scale: 0.8
 
 },
     visible: {
-      opacity: 1,;
-=======
-  
->>>>>>> main
-      scale: 1,;
+      opacity: 1,;      scale: 1,;
       transition: {
         duration: 0.5,;"
         ease: "easeOut"}}};
@@ -101,30 +95,16 @@ const stats = [;"
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
           animate={{ rotate: 360 }}
           transition = {
-<<<<<<< HEAD
   { duration: 20, repeat: Infinity,
   ease: "linear"
-=======
-
-  { duration: 20, repeat: Infinity,"
-  ease: "linear" 
->>>>>>> main
-
 }}
         />
         <motion.div"
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
           animate={{ rotate: -360 }}
           transition = {
-<<<<<<< HEAD
   { duration: 25, repeat: Infinity,
   ease: "linear"
-=======
-
-  { duration: 25, repeat: Infinity,"
-  ease: "linear" 
->>>>>>> main
-
 }}
         />
         <motion.div"
@@ -136,15 +116,8 @@ const stats = [;"
 
 }}
           transition = {
-<<<<<<< HEAD
   { duration: 3, repeat: Infinity,
   ease: "easeInOut"
-=======
-
-  { duration: 3, repeat: Infinity,"
-  ease: "easeInOut" 
->>>>>>> main
-
 }}
         />
       </div>
@@ -182,22 +155,12 @@ const stats = [;"
           viewport={{ once: true }}
 
           {stats.map((stat, index) => (;
-<<<<<<< HEAD
             <motion.div
               key={index}
               variants={statsVariants}
               className="text-center p - 4 rounded-xl bg-zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue -light / 20"
 
-              <div className="text-zion - cyan mb-2 flex justify -center">
-=======
-            <motion.div 
-              key={index} 
-              variants={statsVariants}"
-              className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
-"
-              <div className="text-zion-cyan mb-2 flex justify-center">
->>>>>>> main
-                {stat.icon}
+              <div className="text-zion - cyan mb-2 flex justify -center">                {stat.icon}
               </div>"
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>"
               <div className="text-zion-slate-light text-sm">{stat.label}</div>
@@ -266,15 +229,8 @@ const stats = [;"
 
                   {/* Interactive details on hover */}
                   <AnimatePresence>
-<<<<<<< HEAD
                     {hoveredStep === index && (<motion.div
-                        className="mt-4 p - 4 rounded-xl bg-zion - blue - dark / 60 backdrop - blur - sm border border-zion -cyan / 30"
-=======
-                    {hoveredStep === index && (
-                      <motion.div "
-                        className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" 
->>>>>>> main
-                        initial = {
+                        className="mt-4 p - 4 rounded-xl bg-zion - blue - dark / 60 backdrop - blur - sm border border-zion -cyan / 30"                        initial = {
 
   { opacity: 0, height: 0,
   y: 10
@@ -293,23 +249,12 @@ const stats = [;"
 
 }}
                         transition={{ duration: 0.3 }}
-<<<<<<< HEAD
                       >
                         <h4 className="text-zion - cyan font - semibold text-sm mb-3">Key Features:</h4>
                         <div className="space - y-2">
                           {step.details.map((detail, idx) => (<motion.div
                               key={idx}
-                              className="flex items - center gap-2 text-zion - slate - light / 80 text-xs"
-=======
-                      >"
-                        <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Features:</h4>"
-                        <div className="space-y-2">
-                          {step.details.map((detail, idx) => (
-                            <motion.div 
-                              key={idx} "
-                              className="flex items-center gap-2 text-zion-slate-light/80 text-xs" 
->>>>>>> main
-                              initial = {
+                              className="flex items - center gap-2 text-zion - slate - light / 80 text-xs"                              initial = {
 
   { opacity: 0,
   x: -10
@@ -329,16 +274,9 @@ const stats = [;"
                         </div>
                       </motion.div>) }
                   </AnimatePresence>
-<<<<<<< HEAD
 
                   {/* Hover indicator */}
-                  <div className="mt-4 text-zion - cyan / 60 text-xs">
-=======
-                  
-                  {/* Hover indicator */}"
-                  <div className="mt-4 text-zion-cyan/60 text-xs">"
->>>>>>> main
-                    {hoveredStep === index ? "Hover to see details" : "Hover for details"}
+                  <div className="mt-4 text-zion - cyan / 60 text-xs">                    {hoveredStep === index ? "Hover to see details" : "Hover for details"}
                   </div>
                 </div>
 

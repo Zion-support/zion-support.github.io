@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {
@@ -16,11 +15,7 @@ title:  "Data Analytics Dashboard",;
   showCharts = true,;
   showActions = true}) => {;
   const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
-  const [isLoading, setIsLoading] = useState(false);
-=======
-  const [isLoading, setIsLoading] = useState(false);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  const [activeChart, setActiveChart] = useState<any>('bar');
+  const [isLoading, setIsLoading] = useState(false);  const [activeChart, setActiveChart] = useState<any>('bar');
 
   // Sample data - in a real app, this would come from an API
   const [chartData, setChartData] = useState<any>({
@@ -42,39 +37,24 @@ title:  "Data Analytics Dashboard",;
       value: '$2.4M',
       change: 12.5,
       changeType: 'increase',"
-<<<<<<< HEAD
       icon: <DollarSign className="w-5 h-5"  />,
-      color: 'text-green-400'
-=======
-      icon: <DollarSign className="w-5 h-5"  />,'      color: 'text-green-400'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    },
+      color: 'text-green-400'    },
     {
 
       title: 'Active Users',
       value: '45.2K',
       change: 8.1,
       changeType: 'increase',"
-<<<<<<< HEAD
       icon: <Users className="w-5 h-5"  />,
-      color: 'text-blue-400'
-=======
-      icon: <Users className="w-5 h-5"  />,'      color: 'text-blue-400'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    },
+      color: 'text-blue-400'    },
     {
 
       title: 'Conversion Rate',
       value: '3.24%',
       change: -2.4,
       changeType: 'decrease',"
-<<<<<<< HEAD
       icon: <Target className="w-5 h-5"  />,
-      color: 'text-yellow-400'
-=======
-      icon: <Target className="w-5 h-5"  />,'      color: 'text-yellow-400'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    },
+      color: 'text-yellow-400'    },
     {
 
       title: 'Avg Session',;

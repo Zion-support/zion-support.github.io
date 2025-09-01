@@ -37,7 +37,6 @@ export function AIChatAssistant() {
             content: inputValue,
   timestamp: new Date()
 
-<<<<<<< HEAD
     MessageCircle,
     Mic,
     MicOff,
@@ -49,10 +48,6 @@ export function AIChatAssistant() {
     Minimize2,
     Maximize2,
   } from 'lucide - react';
-=======
-
->>>>>>> main
-
 };
         setMessages(prev => [...prev, userMessage]);
         setInputValue('');

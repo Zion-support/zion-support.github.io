@@ -1,57 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { Link, useLocation  } from 'react-router-dom';
-=======
-import { Link, useLocation } from 'react-router-dom';
-import {
-  Menu,
-  X,
-  Home,
-  Settings,
-  Brain,
-  Cloud,
-  Shield,
-  Rocket,
-  Heart,
-  Globe,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  Workflow,
-  Atom,
-  Star,
-  Building,
-  ChevronRight,
-  Users,
-  Briefcase,
-  FileText,
-  Calendar,
-  TrendingUp,
-  Award,
-  Zap,
-  Lock,
-  Cpu,
-  Database,
-  Smartphone,
-  Target,
-  BarChart3,
-  Search,
-  PhoneCall,
-  Mail,
-  ExternalLink,
-  ChevronDown,
-  Plus,
-  Scale,
-  GraduationCap,
-  Package,
-  User,
-  Code
-} from 'lucide-react';
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
-
 export default function Page() {
 ) => {
   const location = useLocation();
@@ -129,22 +77,8 @@ export default function Page() {
     );
   };
 
-<<<<<<< HEAD
   return (<>
-      {/* Mobile overlay */}
-=======
-  const isActive = (href: string) => {
-    if (href === '/') {
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith(href);
-  };
-
-  return (
-    <>
-      {/* Mobile Overlay */}
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
-      {isOpen && (
+      {/* Mobile overlay */}      {isOpen && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onToggle}
@@ -152,7 +86,6 @@ export default function Page() {
       )}
 
       {/* Sidebar */}
-<<<<<<< HEAD
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
@@ -198,23 +131,7 @@ export default function Page() {
                     </Link>
                   ))}
                 </div>
-              )}
-=======
-      <div className={`
-        fixed top-16 left-0 h-full w-64 bg-gray-900 border-r border-gray-800 transform transition-transform duration-300 ease-in-out z-50
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-        lg:relative lg:top-0
-      `}>
-        <div className="flex flex-col h-full">
-          {/* Sidebar Header */}
-          <div className="p-4 border-b border-gray-800">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-lg font-semibold text-white">Navigation</span>
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
-            </div>
+              )}            </div>
           </div>
 
           {/* Navigation Sections */}

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
 ,
@@ -116,15 +115,6 @@ export default function Page() {
     );
 
     if(element) {
-=======
-]}
-      },
-      { threshold: 0.1 }
-    );
-'
-    const element = document.getElementById('service-showcase');    if(element) {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       observer.observe(element)}
 
     return () => observer.disconnect()}, []);

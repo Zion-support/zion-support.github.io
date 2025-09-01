@@ -1,89 +1,9 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
  params - Function parameters
  * @returns {*} Function return value
  */
-function InteractiveTestimonials () {
-=======
->>>>>>> main
-
-  Star,
-  Quote,
-  ChevronLeft,
-  ChevronRight,
-  Play,
-  Pause,
-  Users,
-  Award,
-  TrendingUp'
-} from 'lucide-react';
-
-const testimonials = [{
-
-    id: 1,
-    name: "Sarah Johnson","
-    position: "CTO, TechCorp Solutions","
-    company: "TechCorp Solutions","
-    avatar: "👩‍💼",
-    rating: 5,"
-    content: "Zion Tech Group transformed our entire IT infrastructure.Their AI-powered solutions reduced our operational costs by 40% and improved system reliability to 99.9%. The team's expertise in quantum computing and blockchain integration is unmatched.","
-    category: "AI & Infrastructure","
-    results: ["40% cost reduction", "99.9% uptime", "3x faster deployment"]
-  },
-  {
-
-    id: 2,"
-    name: "Michael Chen","
-    position: "VP Engineering, FinTech Pro","
-    company: "FinTech Pro","
-    avatar: "👨‍💻",
-    rating: 5,"
-    content: "The quantum neural network platform they built for us revolutionized our trading algorithms.We're seeing 25% better prediction accuracy and processing speeds that are 10x faster than traditional systems.Game-changing technology.","
-    category: "Quantum Computing","
-    results: ["25% better accuracy", "10x faster processing", "Real-time analytics"]
-  },
-  {
-
-    id: 3,"
-    name: "Dr.Emily Rodriguez","
-    position: "Research Director, BioTech Innovations","
-    company: "BioTech Innovations","
-    avatar: "👩‍🔬",
-    rating: 5,"
-    content: "Their AI-powered research assistant has accelerated our drug discovery process by 60%.The platform's ability to analyze complex biological data and generate insights has been invaluable to our breakthrough research.","
-    category: "AI Research","
-    results: ["60% faster discovery", "Advanced analytics", "Breakthrough insights"]
-  },
-  {
-
-    id: 4,"
-    name: "David Thompson","
-    position: "Operations Manager, Manufacturing Plus","
-    company: "Manufacturing Plus","
-    avatar: "👨‍🏭",
-    rating: 5,"
-    content: "The autonomous business operations platform streamlined our entire manufacturing process.We've seen a 35% increase in efficiency and 50% reduction in downtime.The IoT integration and real-time monitoring are exceptional.","
-    category: "Manufacturing IoT","
-    results: ["35% efficiency gain", "50% less downtime", "Real-time monitoring"]
-  },
-  {
-
-    id: 5,"
-    name: "Lisa Wang","
-    position: "Security Director, SecureNet","
-    company: "SecureNet",;"
-    avatar: "👩‍💻",;
-    rating: 5,;'"
-    content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof.We've achieved 100% compliance with all industry standards and zero security incidents.",;"
-    category: "Cybersecurity",;"
-    results: ["100% compliance", "Zero incidents", "Automated security"]};
-];
-"
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-export function InteractiveTestimonials() {
+function InteractiveTestimonials () {export function InteractiveTestimonials() {
 "
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
@@ -95,23 +15,13 @@ export function InteractiveTestimonials() {
       prev === filteredTestimonials.length-1 ? 0 : prev + 1;) };
 
     setSelectedTestimonial((prev) => ;
-<<<<<<< HEAD
       prev === 0 ? filteredTestimonials.length-1 : prev - 1;) ;
   };
 
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <div  className="max - w-7xl mx - auto px-6">
         <motion.div
-          className="text-center mb-16"
-=======
-      prev === 0 ? filteredTestimonials.length-1 : prev - 1;) };
-  return ("
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div "
-          className="text-center mb-16"
->>>>>>> main
-          initial = {
+          className="text-center mb-16"          initial = {
 
   { opacity: 0,
   y: 20
@@ -253,14 +163,8 @@ export function InteractiveTestimonials() {
   { opacity: 1,
   y: 0 }}
         {/* Category Filter */}
-<<<<<<< HEAD
         <motion.div
-          className="flex flex - wrap justify - center gap-3 mb-12"
-=======
-        <motion.div "
-          className="flex flex-wrap justify-center gap-3 mb-12"
->>>>>>> main
-          initial = {
+          className="flex flex - wrap justify - center gap-3 mb-12"          initial = {
 
   { opacity: 0,
   y: 20

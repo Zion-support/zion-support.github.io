@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
  from 'react';
 export default UltimateServicesShowcase;
@@ -17,61 +16,6 @@ import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - i
  from 'lucide - react';
 
 // Import the new services
-
-=======
->>>>>>> main
-interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-contactInfo: {
-
-    mobile: string;
-    email: string;
-    address: string;
-    website: string
-};
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
-  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
-  aiCapabilities: string[];
-  marketDisruption: string}
-;
-
-  ;
-=======
-'
-  mobile: '+1 302 464 0950','
-  email: 'kleber@ziontechgroup.com','
-  address: '364 E Main St STE 1008 Middletown DE 19709',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -81,7 +25,6 @@ contactInfo: {
 
     name: 'Micro SAAS Solutions',;
     description: 'Innovative software solutions for small businesses',;"
-<<<<<<< HEAD
     icon: <Code className="w-8 h-8"  />,;
     color: 'from-green-600 to-emerald-700',;
     services: innovativeMicroSaasSolutions2025};
@@ -89,19 +32,7 @@ contactInfo: {
 ;
 
   ;
-  ;
-=======
-    icon: <Code className="w-8 h-8"  />,;'    color: 'from-green-600 to-emerald-700',;
-    services: innovativeMicroSaasSolutions2025};
-];
-;
-const innovationLevelColors = {
-'
-  'Revolutionary': 'from-red-600 to-pink-700','
-  'Breakthrough': 'from-purple-600 to-violet-700','
-  'Advanced': 'from-blue-600 to-cyan-700',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  ;
+  ;  ;
   ;
   'Emerging': 'from-green-600 to-emerald-700';
 };
@@ -109,17 +40,14 @@ const innovationLevelColors = {
 
   ;
   ;
-=======
 '
   'Patented': 'from-green-600 to-emerald-700','
   'Patent Pending': 'from-yellow-600 to-orange-700','
   'Trade Secret': 'from-blue-600 to-indigo-700',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   'Open Source': 'from-purple-600 to-violet-700';
 ;
-<<<<<<< HEAD
 
 };
 
@@ -132,24 +60,6 @@ export function UltimateServicesShowcase(...args[]):  {
     ...enterpriseITInfrastructureServices2025,;
     ...innovativeMicroSaasSolutions2025;
   ];
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      transition: {
-        staggerChildren: 0.1,;
-        delayChildren: 0.2}}};
-
-<<<<<<< HEAD
-  const itemVariants = {
-  hidden: { opacity: 0,
-  y: 20
-
-},
-    visible: {
-      opacity: 1,;
-=======
-  
->>>>>>> main
       y: 0,;
       transition: {
         duration: 0.6,;"

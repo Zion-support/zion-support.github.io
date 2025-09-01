@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useState } from 'react';
 import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -10,7 +9,6 @@ import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';"
 import { Alert, AlertDescription } from '@/components/ui/alert';"
 import { Badge } from '@/components/ui/badge';"
->>>>>>> main
 import CodeBlock from "./CodeBlock";
 export function ApiDocumentation() {
 "
@@ -38,24 +36,12 @@ export function ApiDocumentation() {
           </TabsList>"
           <TabsContent value="jobs" className="space-y-6">"
             <EndpointSection method="GET" endpoint="/api/jobs" description="List all available jobs with optional filtering." note="" params = {
-<<<<<<< HEAD
   [{ name: "page", type: "integer",
   description: "Page number for pagination (default: 1)"
 },
             { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },
             { name: "category", type: "string", description: "Filter by job category" },
-            { name: "skills", type: "string[]", description: "Filter by required skills(comma-separated)" },
-=======
-
-  ["
-            { name: "page", type: "integer","
-  description: "Page number for pagination(default: 1)" 
-},"
-            { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },"
-            { name: "category", type: "string", description: "Filter by job category" },"
-            { name: "skills", type: "string[]", description: "Filter by required skills(comma-separated)" },"
->>>>>>> main
-            { name: "status", type: "string", description: "Filter by job status(new, active, closed)" }
+            { name: "skills", type: "string[]", description: "Filter by required skills(comma-separated)" },            { name: "status", type: "string", description: "Filter by job status(new, active, closed)" }
         ]} codeExamples = {
 
   {
@@ -186,7 +172,6 @@ print(data)`
 
   ["
             { name: "title", type: "string", description: "Job title",
-<<<<<<< HEAD
   required: true
 },
             { name: "description", type: "string", description: "Detailed job description", required: true },
@@ -194,18 +179,7 @@ print(data)`
             { name: "skills", type: "string[]", description: "Required skills", required: true },
             { name: "budget.min", type: "number", description: "Minimum budget" },
             { name: "budget.max", type: "number", description: "Maximum budget" },
-            { name: "budget.currency", type: "string", description: "Currency code(default: USD)" },
-=======
-  required: true 
-},"
-            { name: "description", type: "string", description: "Detailed job description", required: true },"
-            { name: "category", type: "string", description: "Job category", required: true },"
-            { name: "skills", type: "string[]", description: "Required skills", required: true },"
-            { name: "budget.min", type: "number", description: "Minimum budget" },"
-            { name: "budget.max", type: "number", description: "Maximum budget" },"
-            { name: "budget.currency", type: "string", description: "Currency code(default: USD)" },"
->>>>>>> main
-            { name: "deadline", type: "string", description: "Job deadline(ISO date string)" }
+            { name: "budget.currency", type: "string", description: "Currency code(default: USD)" },            { name: "deadline", type: "string", description: "Job deadline(ISO date string)" }
         ]} codeExamples = {
 
   {
@@ -298,22 +272,11 @@ print(data)`
           </TabsContent>"
           <TabsContent value="talent" className="space-y-6">"
             <EndpointSection method="GET" endpoint="/api/talent" description="List talent profiles with optional filtering." note="" params = {
-<<<<<<< HEAD
   [{ name: "page", type: "integer",
   description: "Page number for pagination(default: 1)"
 },
             { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },
-            { name: "skills", type: "string[]", description: "Filter by skills(comma-separated)" },
-=======
-
-  ["
-            { name: "page", type: "integer","
-  description: "Page number for pagination(default: 1)" 
-},"
-            { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },"
-            { name: "skills", type: "string[]", description: "Filter by skills(comma-separated)" },"
->>>>>>> main
-            { name: "availability", type: "string", description: "Filter by availability status" }
+            { name: "skills", type: "string[]", description: "Filter by skills(comma-separated)" },            { name: "availability", type: "string", description: "Filter by availability status" }
         ]} codeExamples = {
 
   {
@@ -447,7 +410,6 @@ print(data)`
 
   ["
             { name: "talent_id", type: "string", description: "ID of the talent to request a quote from",
-<<<<<<< HEAD
   required: true
 },
             { name: "project_name", type: "string", description: "Name of the project", required: true },
@@ -456,19 +418,7 @@ print(data)`
             { name: "timeline", type: "string", description: "Expected timeline", required: true },
             { name: "budget_min", type: "number", description: "Minimum budget" },
             { name: "budget_max", type: "number", description: "Maximum budget" },
-            { name: "requester_name", type: "string", description: "Name of the requester", required: true },
-=======
-  required: true 
-},"
-            { name: "project_name", type: "string", description: "Name of the project", required: true },"
-            { name: "project_summary", type: "string", description: "Brief summary of the project", required: true },"
-            { name: "project_description", type: "string", description: "Detailed project description" },"
-            { name: "timeline", type: "string", description: "Expected timeline", required: true },"
-            { name: "budget_min", type: "number", description: "Minimum budget" },"
-            { name: "budget_max", type: "number", description: "Maximum budget" },"
-            { name: "requester_name", type: "string", description: "Name of the requester", required: true },"
->>>>>>> main
-            { name: "requester_email", type: "string", description: "Email of the requester", required: true }
+            { name: "requester_name", type: "string", description: "Name of the requester", required: true },            { name: "requester_email", type: "string", description: "Email of the requester", required: true }
         ]} codeExamples = {
 
   {
@@ -553,20 +503,10 @@ print(data)`
 }`
         }}/>'"
             <EndpointSection method="GET" endpoint="/api/quotes" description="List quote requests that you've created." note="" params = {
-<<<<<<< HEAD
   [{ name: "page", type: "integer",
   description: "Page number for pagination(default: 1)"
 },
-            { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },
-=======
-
-  ["
-            { name: "page", type: "integer","
-  description: "Page number for pagination(default: 1)" 
-},"
-            { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },"
->>>>>>> main
-            { name: "status", type: "string", description: "Filter by status(new, viewed, replied, archived)" }
+            { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },            { name: "status", type: "string", description: "Filter by status(new, viewed, replied, archived)" }
         ]} codeExamples = {
 
   {

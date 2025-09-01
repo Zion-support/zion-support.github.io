@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> main
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
   size?: 'sm' | 'md' | 'lg';
@@ -11,102 +7,6 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   text?: string;
   showProgress?: boolean;
   progress?: number}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-interface EnhancedLoadingSpinnerProps {
-  // Add your props here
-
-  enabled?: boolean;
-  showProgress?: boolean;
-  showEstimatedTime?: boolean;
-  size?: 'small' | 'medium' | 'large';
-  variant?: 'default' | 'futuristic' | 'minimal' | 'themed';
-  onComplete?: : unknown void;
-  autoComplete?: boolean;
-  autoCompleteDelay?: number;
-export function EnhancedLoadingSpinner({
-
-  enabled = true,
-  showProgress = true,
-  showEstimatedTime = true,
-  size = 'medium',
-  variant = 'futuristic',
-  onComplete,
-  autoComplete = false,
-  autoCompleteDelay = 3000}: EnhancedLoadingSpinnerProps) {
-
-  const [loadingState, setLoadingState] = useState<LoadingState>({
-
-    type: 'loading',
-    message: 'Loading...',
-    progress: 0,
-    estimatedTime: 3
-  }) ;
-
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentStep, setCurrentStep] = useState(0);
-
-  // Size configurations
-
-  // Loading steps for themed variant
-  
-  // Progress simulation
-  useEffect(() => {
-    if(!enabled || !showProgress) return;
-
-    const interval = setInterval(() => {
-      setLoadingState(prev => {
-
-        if (prev.progress! >= 100) {
-
-          clearInterval(interval);          if(autoComplete) {
-
-            setTimeout(() => {
-              setLoadingState({
-
-                type: 'success',
-                message: 'Ready!',
-                progress: 100,
-                estimatedTime: 0
-              }) ;
-              setTimeout(() => {
-                setIsVisible(false) ;
-                onComplete?.() }, 1000) }, autoCompleteDelay) }
-          return prev}
-
-        return {
-
-          ...prev,
-          progress: newProgress,
-          estimatedTime: newEstimatedTime
-        }}) }, 200) ;
-
-    return () => clearInterval(interval) }, [enabled, showProgress, autoComplete, autoCompleteDelay, onComplete]) ;
-  // Step progression for themed variant
-  useEffect(() => {
-
-    if(variant !== 'themed') return;
-
-          return prev}
-        return prev + 1}) }, 1000) ;
-
-    return () => clearInterval(stepInterval) }, [variant]) ;
-  // Auto - complete effect
-  useEffect(() => {
-    if(autoComplete && enabled) {
-<<<<<<< HEAD
-      const timer = setTimeout(() => {
-        setLoadingState({
-          type: 'success',
-          message: 'Loading complete!',
-          progress: 100,
-          estimatedTime: 0
-        }) ;
-
-=======
-
->>>>>>> main
         setTimeout(() => {
           setIsVisible(false) ;
           onComplete?.() }, 1000) }, autoCompleteDelay) ;
@@ -116,7 +16,6 @@ export function EnhancedLoadingSpinner({
 
   if(!enabled || !isVisible) return null;
 
-<<<<<<< HEAD
   const renderSpinner = () => {
     switch(variant) {
       case 'futuristic':
@@ -165,15 +64,8 @@ export function EnhancedLoadingSpinner({
                 }}
               />) ) }
           </div>) ;
-=======
-  
-<<<<<<< HEAD
->>>>>>> main
-
       case 'minimal':
-=======
 '      case 'minimal':
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         return ()
           <motion.div"
             className="w-full h-full border-2 border-zion-cyan border-t-transparent rounded-full"
@@ -250,22 +142,18 @@ export function EnhancedLoadingSpinner({
 export default function EnhancedLoadingSpinner() {
 
   ;
-=======
 '
   sm: 'w-8 h-8','
     md: 'w-12 h-12',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   lg: 'w-16 h-16'}};
 
   ;
-=======
 '
   sm: 'text-sm','
     md: 'text-base',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;

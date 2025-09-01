@@ -1,5 +1,4 @@
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
-<<<<<<< HEAD
 import { LoadingSpinner } from './ui / loading -spinner';
 
  from './ui/loading-spinner';
@@ -42,7 +41,6 @@ import { LoadingSpinner } from './ui / loading -spinner';
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists;
 const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
-<<<<<<< HEAD
     const [scrollTop, setScrollTop] = React.useState(0);
     const visibleItems = useMemo(() => {
         const startIndex = Math.floor(scrollTop / itemHeight) ;
@@ -68,18 +66,6 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
       <div style = {
   { height: items.length * itemHeight,
   position: 'relative'
-=======
-
-  const [scrollTop, setScrollTop] = React.useState(0);
-  const visibleItems = useMemo(() => {
-    const startIndex = Math.floor(scrollTop / itemHeight);
-    const endIndex = Math.min()
-      startIndex + Math.ceil(containerHeight / itemHeight) + 1,
-      items.length
-    );
-    return items.slice(startIndex, endIndex).map((item, index) => ({
->>>>>>> main
-
       ...item,
       index: startIndex + index,
       style: {

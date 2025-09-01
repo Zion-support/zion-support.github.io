@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 export default AdvancedServiceRecommendation;
 import { Badge } from './ui / badge';
 export default function Page() {
@@ -151,17 +150,11 @@ export default function Page() {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
             <select value={clientProfile.industry} onChange = {
 
-<<<<<<< HEAD
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">
           <div>
             <label className="block text-sm font - medium text-zion - slate - dark mb-2">Industry</label>
             <select value={clientProfile.industry} onChange = { (e) => setClientProfile(prev => ({ ...prev,
   industry: e.target.value
-=======
-  (e) => setClientProfile(prev => ({ ...prev,
-  industry: e.target.value 
->>>>>>> main
-
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
               <option value="">Select Industry</option>
@@ -169,20 +162,10 @@ export default function Page() {
             </select>
           </div>
 
-<<<<<<< HEAD
           <div>
             <label className="block text-sm font - medium text-zion - slate - dark mb-2">Company Size</label>
             <select value={clientProfile.companySize} onChange = { (e) => setClientProfile(prev => ({ ...prev,
   companySize: e.target.value
-=======
-          <div>"
-            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>
-            <select value={clientProfile.companySize} onChange = {
-
-  (e) => setClientProfile(prev => ({ ...prev,
-  companySize: e.target.value 
->>>>>>> main
-
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
               <option value="">Select Company Size</option>
@@ -190,20 +173,10 @@ export default function Page() {
             </select>
           </div>
 
-<<<<<<< HEAD
           <div>
             <label className="block text-sm font - medium text-zion - slate - dark mb-2">Budget Range</label>
             <select value={clientProfile.budget} onChange = { (e) => setClientProfile(prev => ({ ...prev,
   budget: e.target.value
-=======
-          <div>"
-            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>
-            <select value={clientProfile.budget} onChange = {
-
-  (e) => setClientProfile(prev => ({ ...prev,
-  budget: e.target.value 
->>>>>>> main
-
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
               <option value="">Select Budget Range</option>
@@ -211,20 +184,10 @@ export default function Page() {
             </select>
           </div>
 
-<<<<<<< HEAD
           <div>
             <label className="block text-sm font - medium text-zion - slate - dark mb-2">Implementation Timeline</label>
             <select value={clientProfile.timeline} onChange = { (e) => setClientProfile(prev => ({ ...prev,
   timeline: e.target.value
-=======
-          <div>"
-            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>
-            <select value={clientProfile.timeline} onChange = {
-
-  (e) => setClientProfile(prev => ({ ...prev,
-  timeline: e.target.value 
->>>>>>> main
-
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
               <option value="">Select Timeline</option>
@@ -232,20 +195,10 @@ export default function Page() {
             </select>
           </div>
 
-<<<<<<< HEAD
           <div>
             <label className="block text-sm font - medium text-zion - slate - dark mb-2">Technology Maturity Level</label>
             <select value={clientProfile.technologyMaturity} onChange = { (e) => setClientProfile(prev => ({ ...prev,
   technologyMaturity: e.target.value
-=======
-          <div>"
-            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>
-            <select value={clientProfile.technologyMaturity} onChange = {
-
-  (e) => setClientProfile(prev => ({ ...prev,
-  technologyMaturity: e.target.value 
->>>>>>> main
-
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
               <option value="">Select Technology Maturity</option>
@@ -263,15 +216,8 @@ export default function Page() {
   (e) => {
 
                 if(e.target.checked) {
-<<<<<<< HEAD
                     setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
   goal]
-=======
-
-                    setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
-  goal] 
->>>>>>> main
-
 }) ) ;
                 }
                 else {
@@ -292,15 +238,8 @@ export default function Page() {
   (e) => {
 
                 if(e.target.checked) {
-<<<<<<< HEAD
                     setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,
   challenge]
-=======
-
-                    setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,
-  challenge] 
->>>>>>> main
-
 }) ) ;
                 }
                 else {
