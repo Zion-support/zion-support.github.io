@@ -9,279 +9,32 @@ export default function Page() {
     { id: 'healthcare', name: 'Healthcare Tech', count: 9, icon: Brain },
   ];
 
-  const types = [{ id: 'all', name: 'All Types', count: 48 },
-    { id: 'software', name: 'Software', count: 25 },
-    { id: 'service', name: 'Services', count: 15 },
-    { id: 'hardware', name: 'Hardware', count: 8 },
-  ];
+import React, { useState, useEffect, useMemo } from "react";
+import { Button } from "@/components/ui/button";
+import { Grid3X3, ListFilter, Loader2 } from "lucide-react";
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { FilterSidebar } from "@/components/search/FilterSidebar";
+import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
+import { generateRandomListing } from "@/utils/generateRandomListing";
+import { toast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
+import { SearchSuggestion } from "@/types/search";
+import { ListingView } from "@/types/listings";
 
-  const marketplaceItems = [// AI & Machine Learning
-    {
-      id: 1,
-      name: 'Quantum AI Optimization Platform',
-      category: 'quantum',
-      description:
-        'Revolutionary quantum - classical hybrid algorithms for real - time optimization solving.1000x faster than classical computers.',
-      price: '$15,000 / month',
-      rating: 4.9,
-      reviews: 127,
-      users: 45,
-      features: [
-        'Quantum algorithms',
-        'Real - time optimization',
-        'Hybrid computing',
-        'Enterprise scaling',
-      ],
-      image: '🔮',
-      badge: 'Most Popular',
-      vendor: 'QuantumTech Solutions',
-      deployment: 'Cloud & On - Premise',
-      support: '24 / 7 Enterprise Support',
-    },
-    {
-      id: 2,
-      name: 'AI Cybersecurity Suite',
-      category: 'cybersecurity',
-      description:
-        'Advanced AI - powered threat detection and response system with 99.9% accuracy and real - time protection.',
-      price: '$8,500 / month',
-      rating: 4.8,
-      reviews: 89,
-      users: 67,
-      features: ['AI threat detection',
-        'Real - time response',
-        'Zero - day protection',
-        'Compliance ready',
-      ],
-      image: '🛡️',
-      badge: 'Best Seller',
-      vendor: 'SecureAI Systems',
-      deployment: 'Cloud & Hybrid',
-      support: '24 / 7 Security Support',
-    },
-    {
-      id: 3,
-      name: 'Edge Computing Platform',
-      category: 'iot',
-      description:
-        'Ultra - low latency edge computing solution with 90% latency reduction and real - time data processing.',
-      price: '$9,500 / month',
-      rating: 4.7,
-      reviews: 156,
-      users: 89,
-      features: ['Edge processing',
-        'Low latency',
-        'Real - time analytics',
-        'Scalable infrastructure',
-      ],
-      image: '⚡',
-      badge: 'Trending',
-      vendor: 'EdgeFlow Technologies',
-      deployment: 'Edge & Cloud',
-      support: 'Business Hours Support',
-    },
-    {
-      id: 'ml-pipeline',
-      name: 'ML Pipeline Automation',
-      category: 'ai - ml',
-      type: 'software',
-      icon: BarChart3,
-      description: 'Automated machine learning pipeline for data scientists',
-      features: ['AutoML capabilities',
-        'Model versioning',
-        'A / B testing',
-        'Performance monitoring',
-        'Scalable infrastructure',
-        'Cloud deployment',
-      ],
-      pricing: '$499 / month',
-      rating: 4.9,
-      reviews: 89,
-      downloads: 567,
-      status: 'popular',
-      tags: ['Machine Learning', 'Automation', 'Data Science', 'MLOps'],
-      image: '/api / placeholder / 400 / 300',
-      demo: 'https://demo.ziontechgroup.com / ml-pipeline',
-      documentation: 'https://docs.ziontechgroup.com / ml-pipeline',
-    },
-    {
-      id: 'computer - vision',
-      name: 'Computer Vision API',
-      category: 'ai - ml',
-      type: 'service',
-      icon: Eye,
-      description:
-        'Advanced computer vision services for image and video analysis',
-      features: ['Object detection',
-        'Face recognition',
-        'Image classification',
-        'Video analysis',
-        'Real - time processing',
-        'Custom model training',
-      ],
-      pricing: '$0.01 per image',
-      rating: 4.7,
-      reviews: 203,
-      users: 34,
-      image: '🏥',
-      badge: 'New',
-      vendor: 'HealthAI Innovations',
-      deployment: 'Cloud & On - Premise',
-      support: '24 / 7 Healthcare Support',
-    },
-    {
-      id: 'kubernetes - manager',
-      name: 'Kubernetes Management Platform',
-      category: 'cloud',
-      type: 'software',
-      icon: Server,
-      description: 'Enterprise - grade Kubernetes cluster management solution',
-      features: ['Multi - cluster management',
-        'Auto - scaling',
-        'Monitoring & alerting',
-        'Security policies',
-        'Backup & recovery',
-        'Cost optimization',
-      ],
-      pricing: '$199 / month',
-      rating: 4.8,
-      reviews: 134,
-      downloads: 456,
-      status: 'popular',
-      tags: ['Kubernetes', 'Container Orchestration', 'DevOps', 'Cloud Native'],
-      image: '/api / placeholder / 400 / 300',
-      demo: 'https://demo.ziontechgroup.com / kubernetes - manager',
-      documentation: 'https://docs.ziontechgroup.com / kubernetes - manager',
-    },
-    // Security & Compliance
-    {
-      id: 'threat - detection',
-      name: 'Advanced Threat Detection',
-      category: 'security',
-      type: 'software',
-      icon: Shield,
-      description: 'AI - powered threat detection and response system',
-      features: ['Real - time monitoring',
-        'Behavioral analysis',
-        'Threat intelligence',
-        'Automated response',
-        'Compliance reporting',
-        '24 / 7 SOC support',
-      ],
-      pricing: '$399 / month',
-      rating: 4.9,
-      reviews: 178,
-      downloads: 678,
-      status: 'featured',
-      tags: ['Cybersecurity', 'Threat Detection', 'AI Security', 'SOC'],
-      image: '/api / placeholder / 400 / 300',
-      demo: 'https://demo.ziontechgroup.com / threat - detection',
-      documentation: 'https://docs.ziontechgroup.com / threat - detection',
-    },
-    {
-      id: 'compliance - audit',
-      name: 'Compliance Audit Service',
-      category: 'security',
-      type: 'service',
-      icon: CheckCircle,
-      description:
-        'Comprehensive compliance auditing and certification services',
-      features: ['SOC 2 Type II',
-        'ISO 27001',
-        'GDPR compliance',
-        'HIPAA assessment',
-        'PCI DSS validation',
-        'Ongoing monitoring',
-      ],
-      pricing: 'Starting from $25,000',
-      rating: 4.8,
-      reviews: 45,
-      downloads: 123,
-      status: 'popular',
-      tags: ['Compliance', 'Security', 'Audit', 'Certification'],
-      image: '/api / placeholder / 400 / 300',
-      demo: 'https://demo.ziontechgroup.com / compliance - audit',
-      documentation: 'https://docs.ziontechgroup.com / compliance - audit',
-    },
-    // Data & Analytics
-    {
-      id: 'data - warehouse',
-      name: 'Data Warehouse Solution',
-      category: 'data',
-      type: 'software',
-      icon: Database,
-      description: 'Scalable data warehouse with advanced analytics',
-      features: ['Multi - cloud support',
-        'Real - time processing',
-        'Advanced analytics',
-        'Data governance',
-        'Security & encryption',
-        'Auto - scaling',
-      ],
-      pricing: '$599 / month',
-      rating: 4.7,
-      reviews: 92,
-      downloads: 345,
-      status: 'trending',
-      tags: ['Data Warehouse',
-        'Big Data',
-        'Analytics',
-        'Business Intelligence',
-      ],
-      image: '/api / placeholder / 400 / 300',
-      demo: 'https://demo.ziontechgroup.com / data - warehouse',
-      documentation: 'https://docs.ziontechgroup.com / data - warehouse',
-    },
-    {
-      id: 'bi - dashboard',
-      name: 'Business Intelligence Dashboard',
-      category: 'data',
-      type: 'software',
-      icon: BarChart3,
-      description: 'Interactive BI dashboard for data visualization',
-      features: ['Drag & drop interface',
-        'Real - time data',
-        'Custom widgets',
-        'Mobile responsive',
-        'Export capabilities',
-        'Collaboration tools',
-      ],
-      pricing: '$149 / month',
-      rating: 4.6,
-      reviews: 78,
-      users: 23,
-      image: '🔗',
-      badge: 'Innovative',
-      vendor: 'ChainAI Solutions',
-      deployment: 'Cloud & Hybrid',
-      support: 'Business Hours Support',
-    },
-    // Development Tools
-    {
-      id: 'code - generator',
-      name: 'AI Code Generator',
-      category: 'development',
-      type: 'software',
-      icon: Code,
-      description: 'AI - powered code generation and assistance tool',
-      features: ['Multi - language support',
-        'Code completion',
-        'Bug detection',
-        'Documentation generation',
-        'Code review',
-        'Integration with IDEs',
-      ],
-      pricing: '$99 / month',
-      rating: 4.8,
-      reviews: 234,
-      users: 156,
-      image: '☁️',
-      badge: 'Cost Effective',
-      vendor: 'CloudOpt Solutions',
-      deployment: 'Multi - Cloud',
-      support: '24 / 7 Cloud Support',
-    },
-  ];
+export default function Marketplace() {
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+  const [isLoading, setIsLoading] = useState(false);
+  const [view, setView] = useState<ListingView>(() =>
+    (localStorage.getItem('marketplaceView') as ListingView) || 'grid'
+  );
 
   const filteredSolutions = solutions.filter(solution => {
     const matchesCategory = selectedCategory === 'all' || solution.category === selectedCategory;
@@ -291,47 +44,147 @@ export default function Page() {
     return matchesCategory && matchesSearch;
   }) ;
 
-  const sortedSolutions = [...filteredSolutions].sort((a, b) => {
-    switch(sortBy) {
-      case 'rating':
-        return b.rating - a.rating;
-      case 'price':
-        return (parseFloat (a.price.replace (/[^0 - 9.]/g, '') ) -
-          parseFloat(b.price.replace (/[^0 - 9.]/g, '') ) ) ;
-      case 'reviews':
-        return b.reviews - a.reviews;
-      case 'users':
-        return b.users - a.users;
-      default:
-        return b.reviews - a.reviews; // popularity
-    }
-  }) ;
+  useEffect(() => {
+    setIsLoading(true);
+    const timeout = setTimeout(() => setIsLoading(false), 300);
+    return () => clearTimeout(timeout);
+  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
 
-  const getTypeColor = (type: string) => {
-    switch(type) {
-      case 'software':
-        return 'bg-blue - 500 / 20 text-blue - 400';
-      case 'service':
-        return 'bg-green - 500 / 20 text-green - 400';
-      case 'hardware':
-        return 'bg-orange - 500 / 20 text-orange - 400';
-      default:
-        return 'bg-slate - 500 / 20 text-slate - 400';
+  useEffect(() => {
+    localStorage.setItem('marketplaceView', view);
+  }, [view]);
+  
+  // Filter listings based on selected filters
+  const filteredListings = listings.filter(listing => {
+    // Search filter
+    if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) && 
+        !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
+      return false;
+    }
+    
+    // Product type filter
+    if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
+      return false;
+    }
+    
+    // Location filter
+    if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
+      return false;
+    }
+    
+    // Availability filter
+    if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
+      return false;
+    }
+    
+    // Rating filter
+    if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
+      return false;
+    }
+    
+    return true;
+  });
+  
+  const handleFilterChange = (filterType: string, value: string) => {
+    switch (filterType) {
+      case 'productTypes':
+        setSelectedProductTypes(prev =>
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+        );
+        break;
+      case 'locations':
+        setSelectedLocations(prev =>
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+        );
+        break;
+      case 'availability':
+        setSelectedAvailability(prev =>
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+        );
+        break;
+    }
+  };
+  
+  const clearAllFilters = () => {
+    setSearchQuery("");
+    setSelectedProductTypes([]);
+    setSelectedLocations([]);
+    setSelectedAvailability([]);
+    setSelectedRating(null);
+  };
+  
+  // Handle requesting a quote
+  const handleRequestQuote = (listingId: string) => {
+    const listing = listings.find(item => item.id === listingId);
+    
+    if (listing) {
+      toast({
+        title: "Quote Requested",
+        description: `Your quote request for ${listing.title} has been sent.`
+      });
+      
+      // Navigate to the quote request page with the listing information
+      navigate("/request-quote", {
+        state: { 
+          serviceType: listing.category,
+          specificItem: {
+            id: listing.id,
+            title: listing.title,
+            category: listing.category,
+            image: listing.images?.[0]
+          }
+        }
+      });
     }
   };
 
-  const getStatusColor = (status: string) => {
-    switch(status) {
-      case 'featured':
-        return 'bg-yellow-500 / 20 text-yellow-400';
-      case 'popular':
-        return 'bg-blue - 500 / 20 text-blue - 400';
-      case 'trending':
-        return 'bg-green - 500 / 20 text-green - 400';
-      default:
-        return 'bg-slate - 500 / 20 text-slate - 400';
-    }
-  };
+  return (
+    <main className="flex-grow container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto mb-8">
+          <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>
+          <p className="text-zion-slate-light">
+            Discover professional services and products for your AI and tech projects.
+            Browse our curated collection of solutions from verified providers.
+          </p>
+        </div>
+        
+        {/* Search and filter bar */}
+        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="relative flex-1">
+              <EnhancedSearchInput
+                value={searchQuery}
+                onChange={setSearchQuery}
+                onSelectSuggestion={setSearchQuery}
+                placeholder="Search the marketplace..."
+                searchSuggestions={searchSuggestions}
+              />
+            </div>
+            <div className="flex gap-2">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setView('grid')}
+                aria-pressed={view === 'grid'}
+                aria-label="Grid view"
+                className={view === 'grid' ? 'text-zion-purple' : 'text-zion-slate-light'}
+              >
+                <Grid3X3 className="h-4 w-4" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setView('list')}
+                aria-pressed={view === 'list'}
+                aria-label="List view"
+                className={view === 'list' ? 'text-zion-purple' : 'text-zion-slate-light'}
+              >
+                <ListFilter className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
 
   const renderStars = (rating: number) => {
     const stars = [];
@@ -406,27 +259,29 @@ export default function Page() {
                   Technology Marketplace
                 </span>
               </div>
-
-              <h1 className="text-4xl md:text-6xl font - bold text-white mb-6">
-                Technology Solutions Marketplace
-              </h1>
-
-              <p className="text-xl md:text-2xl text-zion - cyan - light max - w-4xl mx - auto leading - relaxed mb-8">
-                Discover cutting - edge AI, quantum computing, cybersecurity, and
-                cloud solutions from leading technology vendors.All solutions
-                are vetted and enterprise - ready.</p>
-
-              {/* Search Bar */}
-              <div  className="max - w-2xl mx - auto mb-8">
-                <div  className="relative">
-                  <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 w-5 h-5 text-zion - cyan -light" />
-                  <input
-                    type="text"
-                    placeholder="Search solutions, vendors, or technologies..."
-                    value={searchTerm}
-                    onChange={e => setSearchTerm (e.target.value) }
-                    className="w-full pl - 12 pr - 4 py-4 bg-white / 10 backdrop - blur - sm border border-white / 20 rounded-xl text-white placeholder - zion - cyan - light focus:outline - none focus:ring - 2 focus:ring - zion - purple focus:border-transparent"
-                  />
+            ) : (
+              <div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'flex flex-col gap-6'}>
+                {filteredListings.length > 0 ? (
+                  filteredListings.map((listing) => (
+                    <ProductListingCard
+                      key={listing.id}
+                      listing={listing}
+                      view={view}
+                      onRequestQuote={handleRequestQuote}
+                    />
+                  ))
+                ) : (
+                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">
+                    We couldn't find any listings matching your filters. Try adjusting your search criteria.
+                  </p>
+                  <Button 
+                    onClick={clearAllFilters}
+                    className="bg-zion-purple hover:bg-zion-purple-dark"
+                  >
+                    Clear Filters
+                  </Button>
                 </div>
               </div>
             </motion.div>
