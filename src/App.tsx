@@ -81,6 +81,21 @@ const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServices
 // Comprehensive Services Showcase 2025
 const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
+// New pages we created
+const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
+const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolutions'));
+const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
+const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
+const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
+
+// Solution pages
+const EnterpriseSolutions = createLazyComponent(() => import('./pages/solutions/Enterprise'));
+const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
+const FinancialSolutions = createLazyComponent(() => import('./pages/solutions/FinancialSolutions'));
+const ManufacturingSolutions = createLazyComponent(() => import('./pages/solutions/ManufacturingSolutions'));
+const GovernmentSolutions = createLazyComponent(() => import('./pages/solutions/GovernmentSolutions'));
+const RetailSolutions = createLazyComponent(() => import('./pages/solutions/RetailSolutions'));
+
 // Comprehensive Pricing Guide 2025
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
@@ -477,6 +492,23 @@ function App() {
                   <Route path="/webinars" element={<Webinars />} />
                   <Route path="/white-papers" element={<WhitePapers />} />
                   <Route path="/faq" element={<FAQ />} />
+
+                  {/* New pages we created */}
+                  <Route path="/enterprise" element={<Enterprise />} />
+                  <Route path="/industry-solutions" element={<IndustrySolutions />} />
+                  <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                  <Route path="/cloud-solutions" element={<CloudSolutions />} />
+                  <Route path="/emerging-tech" element={<EmergingTech />} />
+                  <Route path="/leadership" element={<Leadership />} />
+                  <Route path="/careers" element={<Careers />} />
+
+                  {/* Solution Routes */}
+                  <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />
+                  <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
+                  <Route path="/solutions/financial-solutions" element={<FinancialSolutions />} />
+                  <Route path="/solutions/manufacturing-solutions" element={<ManufacturingSolutions />} />
+                  <Route path="/solutions/government-solutions" element={<GovernmentSolutions />} />
+                  <Route path="/solutions/retail-solutions" element={<RetailSolutions />} />
 
                   {/* 404 Page */}
                   <Route
