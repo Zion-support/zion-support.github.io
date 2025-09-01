@@ -200,14 +200,16 @@ const navigationItems: NavigationItem[] = [
     icon: <BookOpen className="w-5 h-5" />,
     description: 'Guides, reports and tools',
     children: [
-      { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
-      { name: 'API Reference', href: '/api-documentation', description: 'API documentation' },
-      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-      { name: 'Blog & News', href: '/blog', description: 'Latest insights' },
-      { name: 'Support Center', href: '/support', description: 'Help and support' },
-      { name: 'Training', href: '/training', description: 'Learning resources' },
-      { name: 'Community', href: '/community', description: 'User community' },
-      { name: 'Sitemap', href: '/sitemap.xml', description: 'All site URLs' }
+      { name: 'Blog', href: '/blog', description: 'Insights and updates' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Proven results' },
+      { name: 'Resources Hub', href: '/resources', description: 'Docs, SDKs, guides' },
+      { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' },
+      { name: 'Serverless Lakehouse Starter', href: '/services/serverless-lakehouse-starter', description: 'ELT + dbt + dashboards' },
+      { name: 'Data Contracts Hub', href: '/services/data-contracts-hub', description: 'Schema diffs & CI gates' },
+      { name: 'Events', href: '/events', description: 'Conferences and appearances' },
+      { name: 'Webinars', href: '/webinars', description: 'On-demand and upcoming sessions' },
+      { name: 'Press', href: '/press', description: 'Press releases and media' },
+      { name: 'Legal', href: '/legal', description: 'Policies and terms' }
     ]
   }
 ];
