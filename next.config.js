@@ -3,6 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     esmExternals: false,
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
   images: {
     domains: ['ziontechgroup.com'],
@@ -10,10 +12,6 @@ const nextConfig = {
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
-  },
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
@@ -30,6 +28,8 @@ const nextConfig = {
         /automation\/backups/,
         /automation_backup/,
         /broken_files_backup/,
+        /contracts/,
+        /cypress/,
       ],
     });
     

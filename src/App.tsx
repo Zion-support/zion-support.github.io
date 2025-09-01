@@ -99,6 +99,13 @@ const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeSe
 const AIContentCreationStudioPro = lazy(() => import('./pages/services/AI-Content-Creation-Studio-Pro'));
 const QuantumAITradingPlatform = lazy(() => import('./pages/services/Quantum-AI-Trading-Platform'));
 
+// New Services 2025
+const AICustomerInsightsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-insights-platform'));
+const AIWorkflowAutomationStudio = createLazyComponent(() => import('./pages/services/ai-workflow-automation-studio'));
+const EnterpriseCloudMigration = createLazyComponent(() => import('./pages/services/enterprise-cloud-migration'));
+const AIPredictiveAnalyticsEngine = createLazyComponent(() => import('./pages/services/ai-predictive-analytics-engine'));
+const NewServicesShowcase2025 = createLazyComponent(() => import('./pages/NewServicesShowcase2025'));
+
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
@@ -438,6 +445,13 @@ function App() {
                   {/* New Innovative Services */}
                   <Route path="/services/AI-Content-Creation-Studio-Pro" element={<AIContentCreationStudioPro />} />
                   <Route path="/services/Quantum-AI-Trading-Platform" element={<QuantumAITradingPlatform />} />
+
+                  {/* New Services 2025 */}
+                  <Route path="/services/ai-customer-insights-platform" element={<AICustomerInsightsPlatform />} />
+                  <Route path="/services/ai-workflow-automation-studio" element={<AIWorkflowAutomationStudio />} />
+                  <Route path="/services/enterprise-cloud-migration" element={<EnterpriseCloudMigration />} />
+                  <Route path="/services/ai-predictive-analytics-engine" element={<AIPredictiveAnalyticsEngine />} />
+                  <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
 
                   {/* 404 Page */}
                   <Route

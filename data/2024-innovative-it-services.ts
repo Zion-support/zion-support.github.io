@@ -3,10 +3,40 @@ export interface InnovativeITService2024 {
   name: string;
   tagline: string;
   price: string;
-  variant: string;
+  period: string;
+  description: string;
   features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
   rating: number;
   customers: string;
+  reviews: number;
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
 }
 export const innovativeITServices2024: InnovativeITService2024[] = [
   {
@@ -64,7 +94,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     implementationDetails:
       'Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.',
     launchDate: '2024-01-15',
-    customers: 950,
+    customers: '950',
     rating: 4.8,
     reviews: 520,
   },
@@ -126,7 +156,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     implementationDetails:
       'Production-ready zero trust platform with comprehensive security features, compliance tools, and enterprise-grade monitoring.',
     launchDate: '2024-02-01',
-    customers: 650,
+    customers: '650',
     rating: 4.9,
     reviews: 380,
   },
@@ -188,7 +218,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     implementationDetails:
       'Production-ready edge computing platform with global node distribution, real-time processing, and comprehensive orchestration tools.',
     launchDate: '2024-01-20',
-    customers: 750,
+    customers: '750',
     rating: 4.7,
     reviews: 420,
   },
@@ -250,7 +280,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     implementationDetails:
       'Production-ready IT operations platform with AI-powered monitoring, predictive analytics, and comprehensive automation tools.',
     launchDate: '2024-02-10',
-    customers: 850,
+    customers: '850',
     rating: 4.8,
     reviews: 480,
   },
@@ -314,7 +344,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     implementationDetails:
       'Production-ready database platform with quantum-resistant encryption, distributed architecture, and comprehensive security features.',
     launchDate: '2024-01-05',
-    customers: 450,
+    customers: '450',
     rating: 4.9,
     reviews: 280,
   },
@@ -378,7 +408,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     implementationDetails:
       'Production-ready API management platform with AI-powered optimization, comprehensive security, and developer-friendly tools.',
     launchDate: '2024-02-15',
-    customers: 1100,
+    customers: '1100',
     rating: 4.7,
     reviews: 620,
   },
@@ -442,7 +472,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     implementationDetails:
       'Production-ready cost optimization platform with AI-powered analysis, automated optimization, and comprehensive cost management tools.',
     launchDate: '2024-01-25',
-    customers: 1800,
+    customers: '1800',
     rating: 4.8,
     reviews: 950,
   },
@@ -506,7 +536,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     implementationDetails:
       'Production-ready network security platform with AI-powered threat detection, automated response, and comprehensive security features.',
     launchDate: '2024-02-01',
-    customers: 720,
+    customers: '720',
     rating: 4.8,
     reviews: 410,
   },

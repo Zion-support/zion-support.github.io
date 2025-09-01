@@ -112,6 +112,8 @@
     "automation_backup",
     "broken_files_backup",
     "components",
+    "contracts",
+    "cypress",
     "**/*.backup",
     "**/*.disabled"
   ]
