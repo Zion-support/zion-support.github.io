@@ -4,16 +4,14 @@ import { RoleProvider } from '../components/context/RoleContext';
 import { ToastProvider } from '../components/ui/ToastProvider';
 import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
-import '../styles/globals.css';
+import '../styles/futuristic-landing.css';
+import 'flag-icons/css/flag-icons.min.css';
+import '../utils/i18n';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <RoleProvider>
-      <ToastProvider>
-        <EnhancedLayout>
-          <Component {...pageProps} />
-        </EnhancedLayout>
-      </ToastProvider>
-    </RoleProvider>
+    <EnhancedLayout>
+      <Component {...pageProps} />
+    </EnhancedLayout>
   );
 }

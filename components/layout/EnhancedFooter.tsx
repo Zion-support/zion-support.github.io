@@ -1,13 +1,13 @@
-import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 export default function EnhancedFooter() {
+  const { t } = useTranslation();
+  const year = new Date().getFullYear();
   return (
-    <>
-      <div className="border-t border-gray-200 dark:border-gray-800 text-sm py-6 hidden md:block">
-        <div className="container mx-auto px-4 flex items-center justify-between">
-          <p>© {new Date().getFullYear()} Zion Tech Solutions</p>
-          <div className="opacity-70">All rights reserved.</div>
-        </div>
+    <div className="border-t border-gray-200 dark:border-gray-800 text-sm py-6">
+      <div className="container mx-auto px-4 flex items-center justify-between">
+        <p>{t('footer.copyright', { year })}</p>
+        <div className="opacity-70">{t('footer.rights')}</div>
       </div>
       {/* Sticky mobile action bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 md:hidden">
