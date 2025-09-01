@@ -1,5 +1,4 @@
 import React from 'react.ts';
-import { Users, Database, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, BarChart3, Shield, Zap, Globe, Cpu, Lock, Eye, Network, Server, Cloud, Smartphone, Building  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
 
 export default function MicroCRM(...args: unknown[]): any {}

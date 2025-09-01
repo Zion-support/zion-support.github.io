@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-export function logErrorToProduction(message: string, error?: Error: any): void {
+export function logErrorToProduction(message: string, error?: Error: unknown): void {
   // In production, we might want to send errors to a logging service
 
   // For now, just console.error in development

@@ -19,14 +19,14 @@ export interface Notification {
 
 
 
-  id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
+  id: anyanyanyanystring;
   type: NotificationType;
   title: string;
   message: string;
   duration?: number;
 action?: {;
     label: string;
-    onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void}}
+    onClick: anyanyanyany()                => void}}
 
 interface NotificationContextType {
 
@@ -44,10 +44,10 @@ interface NotificationContextType {
 
 
 
-  notifications: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotification[];
-  addNotification: anyanyanyanyanyanyanyanyanyanyanyanyanyany(notification: Omit<Notification, 'id'>)                => void;
-  removeNotification: anyanyanyanyanyanyanyanyanyanyanyanyanyany(id: string)                => void;
-clearAll: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void;
+  notifications: anyanyanyanyNotification[];
+  addNotification: anyanyanyany(notification: Omit<Notification, 'id'>)                => void;
+  removeNotification: anyanyanyany(id: string)                => void;
+clearAll: anyanyanyany()                => void;
 
 
 
@@ -78,7 +78,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
         removeNotification(id)}, notification.duration || 5000)}
   };
 
-  const removeNotification = (id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+  const removeNotification = (id: anyanyanyanystring)               => {;
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
   const clearAll = () => {;
@@ -132,7 +132,7 @@ const NotificationContainer: React.FC = (): JSX.Element => {;
   y: 0 
 }}
           onClick={clearAll}
-          className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover:bg-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2"
+          className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover: bg-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2"
         >
           <Bell className="w-4 h-4" />;
           <span>Clear All</span>;
@@ -142,8 +142,8 @@ const NotificationContainer: React.FC = (): JSX.Element => {;
   );
 };
 
-  notification: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotification;
-  onRemove: anyanyanyanyanyanyanyanyanyanyanyanyanyany(id: string)                => void}
+  notification: anyanyanyanyNotification;
+  onRemove: anyanyanyany(id: string)                => void}
 
 const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
         return <Info className = "w-5 h-5 text-blue-400" />};
@@ -173,14 +173,14 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
           {notification.action && (
             <button
               onClick={notification.action.onClick}
-              className="mt-2 text-xs font-medium text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-200"
+              className="mt-2 text-xs font-medium text-zion-cyan hover: text-zion-cyan/80 transition-colors duration-200"
               {notification.action.label}
             </button>
           )}
         </div>
         <button
           onClick={() => onRemove(notification.id)}
-          className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200"
+          className="flex-shrink-0 text-gray-400 hover: text-white transition-colors duration-200"
         >;
           <X className="w-4 h-4" />;
         </button>;
@@ -190,19 +190,19 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 };
 // Utility functions for easy notification creation
 export const notify = {
-  success: anyanyanyanyanyanyanyanyanyanyanyanyanyany(title: string, message: string, options?: Partial<Notification>)                => {
+  success: anyanyanyany(title: string, message: string, options?: Partial<Notification>)                => {
     // This would be used with the context
-    console.log('Success notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message,
+    console.log('Success notification: anyanyanyany', { title, message,
   ...options 
 })},
   error: (title: string, message: string, options?: Partial<Notification>)                => {
-    console.log('Error notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options })},
+    console.log('Error notification: anyanyanyany', { title, message, ...options })},
   warning: (title: string, message: string, options?: Partial<Notification>)                => {
-    console.log('Warning notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options })},
+    console.log('Warning notification: anyanyanyany', { title, message, ...options })},
   info: (title: string, message: string, options?: Partial<Notification>)                => {
     console.log('Info notification:', { title, message, ...options })};
 =======;
-    console.log('Success notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message,;
+    console.log('Success notification: anyanyanyany', { title, message,;
   ;
   ;
   ;
@@ -210,22 +210,22 @@ export const notify = {
 });
   },
   error: (title: string, message: string, options?: Partial<Notification>)               => {
-    // // // console.log('Error notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options });
+    // // // console.log('Error notification: anyanyanyany', { title, message, ...options });
   },
   warning: (title: string, message: string, options?: Partial<Notification>)               => {
-    // // // console.log('Warning notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options });
+    // // // console.log('Warning notification: anyanyanyany', { title, message, ...options });
   },
   info: (title: string, message: string, options?: Partial<Notification>)               => {
     // // // console.log('Info notification:', { title, message, ...options });
 };}}}}}}}}}}}
 =======
-    // // // // // // // console.log('Success notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options });
+    // // // // // // // console.log('Success notification: anyanyanyany', { title, message, ...options });
   },
   error: (title: string, message: string, options?: Partial<Notification>)               => {
-    // // // // // // // console.log('Error notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options });
+    // // // // // // // console.log('Error notification: anyanyanyany', { title, message, ...options });
   },
   warning: (title: string, message: string, options?: Partial<Notification>)               => {
-    // // // // // // // console.log('Warning notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options });
+    // // // // // // // console.log('Warning notification: anyanyanyany', { title, message, ...options });
   },
   info: (title: string, message: string, options?: Partial<Notification>)               => {
     // // // // // // // console.log('Info notification:', { title, message, ...options });

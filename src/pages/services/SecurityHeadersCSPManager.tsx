@@ -1,5 +1,4 @@
 import React from 'react.ts';
-import { Shield, Globe, ExternalLink, CheckCircle, Wrench, Mail, Phone  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
 export default function SecurityHeadersCSPManager(...args: unknown[]): any {}
