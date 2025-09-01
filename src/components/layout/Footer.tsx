@@ -68,12 +68,22 @@ export function Footer() {
   const footerSections = [
     {
 
+      title: "Pricing & Plans",
+      icon: DollarSign,
+      links: [
+        { name: "Comprehensive Pricing 2025", href: "/comprehensive-pricing-guide-2025", icon: DollarSign },
+        { name: "Pricing Overview", href: "/pricing", icon: BarChart3 },
+        { name: "Get Custom Quote", href: "/contact", icon: MessageCircle },
+      ]
+    },
+    {
       title: "AI & Automation Services",
       icon: Brain,
       links: [
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },
         { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },
         { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },
+        { name: "Enhanced Services 2025", href: "/enhanced-services-showcase-2025", icon: Star },
         { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-platform", icon: TrendingUp },
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform", icon: Building2 },
         { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator", icon: Workflow },
