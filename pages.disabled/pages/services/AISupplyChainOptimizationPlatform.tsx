@@ -1,0 +1,1 @@
+; const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {} }; ]; const pricingPlans: any = [] {} 

@@ -1,0 +1,1 @@
+import React from 'react'; = export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnalyticsPlatform() {): any {} return() <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light"> 

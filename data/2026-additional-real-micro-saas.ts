@@ -4,7 +4,7 @@ export const additionalRealMicroSaas2026 = [
 		name: 'AI SEO Content Optimizer',
 		description: 'Optimize pages and articles with AI-driven keyword, structure, and internal link recommendations.',
 		category: 'AI & Data',
-		features: [
+		features[
 			'On-page SEO grade and content gap analysis',
 			'Outline and brief generation by topic',
 			'Entity and FAQ extraction with schema hints',
@@ -21,7 +21,7 @@ export const additionalRealMicroSaas2026 = [
 		name: 'Low-Competition Keyword Finder',
 		description: 'Discover long-tail, intent-aligned keywords with low difficulty for quick wins.',
 		category: 'Marketing Intelligence',
-		features: [
+		features[
 			'Opportunity score and traffic potential',
 			'SERP volatility and seasonality hints',
 			'Question keywords and People Also Ask',
@@ -38,7 +38,7 @@ export const additionalRealMicroSaas2026 = [
 		name: 'AI Internal Linking Assistant',
 		description: 'Automate internal links with AI anchor selection, thresholds, and nofollow rules.',
 		category: 'SEO Automation',
-		features: [
+		features[
 			'Context-aware anchor suggestions',
 			'Per-page link caps and distribution rules',
 			'Broken link detection and fix proposals',
@@ -55,7 +55,7 @@ export const additionalRealMicroSaas2026 = [
 		name: 'Social Proof Hub',
 		description: 'Aggregate and embed testimonials, reviews, and badges to boost conversions.',
 		category: 'Conversion Optimization',
-		features: [
+		features[
 			'Import from G2, Capterra, Google, Trustpilot',
 			'Widgets: carousels, grids, popups, banners',
 			'Moderation, tagging, and UGC rights',
@@ -72,16 +72,27 @@ export const additionalRealMicroSaas2026 = [
 		name: 'ChatGPT Integration Plugin Starter',
 		description: 'Turn your APIs into a ChatGPT plugin or GPT action with auth, quota, and logging.',
 		category: 'Developer Tools',
-		features: [
+		features[
 			'OpenAPI spec scaffolding and validator',
 			'OAuth/API key auth middleware',
 			'Quota, rate limits, and usage logs',
 			'Staging and production environments',
+<<<<<<< HEAD
 			'Examples for Node/Next.js, Python'
 		],
 		pricing: { starter: '$129/month' },
 		link: 'https://ziontechgroup.com/services/chatgpt-integration-plugin-starter',
 		rating: 4.6,
 		launchDate: '2025-11-10'
-	}
+
+];}
+=======
+			'Examples for Node/Next.js, Python';
+		],;
+		pricing: { starter: '$129/month' },;
+		link: 'https://ziontechgroup.com/services/chatgpt-integration-plugin-starter',;
+		rating: 4.6,;
+		launchDate: '2025-11-10';
+	};
 ];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

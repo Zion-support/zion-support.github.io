@@ -1,0 +1,1 @@
+ {; icon: GitBranch,; title: "Git Integration & Workflow",;" description: "Seamless integration with Git workflows, pull request reviews, and automated security checks.",;" benefits: ["Pull request scanning",Branch protection",Automated reviews",Workflow integration"]}; ];" "Custom workflows",;" "On-premise deployment"; ],;" 

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { 
-  Home, 
+import React, { useState              } from 'react.ts';
+import Link from 'next/link.ts';
+import { useRouter               } from 'next/router.ts';
+import { Home, 
   Briefcase, 
   Users, 
   Phone, 
@@ -65,28 +64,31 @@ import {
   Leaf,
   Sun,
   Wind
-} from 'lucide-react';
+  
+} from 'lucide-react.ts';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
+interface SidebarProps extends React.PropsWithChildren<{}> {
+
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  onClose: ()               => void}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const router = useNavigate();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
+  const router = useRouter();
+  const [expandedSections, setExpandedSections] = useState<any>([]);
+
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    setExpandedSections(prev => ;
+      prev.includes(section) ;
+        ? prev.filter(s => s !== section);
+        : [...prev, section];
     );
   };
 
-  const isActive = (path: string) => router.pathname === path;
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
 
   const navigation = {
+
     main: [
       { name: 'Home', href: '/', icon: Home },
       { name: 'About', href: '/about', icon: Building },
@@ -135,7 +137,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-500 to-blue-600' },
     { name: 'Get Support', href: '/contact', icon: HelpCircle, color: 'from-green-500 to-emerald-600' },
     { name: 'View Status', href: '/status', icon: CheckCircle, color: 'from-yellow-500 to-orange-600' },
-    { name: 'Documentation', href: '/docs', icon: BookOpen, color: 'from-purple-500 to-pink-600' },
+    { name: 'Documentation', href: '/docs', icon: FileText, color: 'from-purple-500 to-pink-600' },
   ];
 
   const contactInfo = [
@@ -150,7 +152,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
   ];
 
-  const renderNavSection = (title: string, items: any[], sectionKey: string) => (
+  const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}
@@ -163,7 +165,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <ChevronRight className="w-4 h-4" />
         )}
       </button>
-      
+
       {expandedSections.includes(sectionKey) && (
         <div className="mt-2 space-y-1">
           {items.map((item) => (
@@ -172,6 +174,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               href={item.href}
               onClick={onClose}
               className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+
                 isActive(item.href)
                   ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'
                   : 'text-gray-400 hover:text-white hover:bg-white/5'
@@ -196,16 +199,17 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Backdrop */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className = "fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
 
       {/* Sidebar */}
       <div className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-dark border-r border-zion-blue-light z-50 transform transition-transform duration-300 ease-in-out ${
+
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0 lg:relative lg:z-auto`}>
-        
+
         {/* Header */}
         <div className="p-6 border-b border-zion-blue-light">
           <div className="flex items-center gap-3 mb-4">
@@ -219,7 +223,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <div className="text-xs text-zion-slate-light">Tech Group</div>
             </div>
           </div>
-          
+
           {/* Search */}
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
@@ -261,6 +265,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 href={item.href}
                 onClick={onClose}
                 className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+
                   isActive(item.href)
                     ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'
                     : 'text-gray-300 hover:text-white hover:bg-white/5'
@@ -281,8 +286,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           {/* Resources Section */}
           {renderNavSection('Resources', navigation.resources, 'resources')}
 
-          {/* Company Section */}
-          {renderNavSection('Company', navigation.company, 'company')}
+          {/* Comp Section */}
+          {renderNavSection('Comp', navigation.company, 'company')}
         </div>
 
         {/* Footer */}
@@ -321,7 +326,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
           {/* Copyright */}
           <div className="text-xs text-zion-slate-light text-center">
-            © {new Date().getFullYear()} Zion Tech Group
+            © {new Date().getFullYear()} Zion Tech Group;
           </div>
         </div>
       </div>

@@ -1,14 +1,31 @@
+<<<<<<< HEAD;
+let stripePromise: Promise<Stripe | null>;
+;
+export function getStripe(): Promise<Stripe | null> {;
+  if (!stripePromise) {;
+    stripePromise = loadStripe(key, { advancedFraudSignals: false })};
+  return stripePromise};
+=======;
 import { loadStripe, Stripe } from '@stripe/stripe-js';
-
-let stripePromise: Promise<any>;
-
-export function getStripe() {
-  if (!stripePromise) {
-    const key =
-      import.meta.env.PROD
-        ? (import.meta.env['VITE_STRIPE_PUBLISHABLE_KEY'] as string)
+;
+let stripePromise: Promise<Stripe | null>;
+;
+export function getStripe() {;
+  if (!stripePromise) {;
+<<<<<<< HEAD;
+    const key =;
+      import.meta.env.PROD;
+        ? (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY as string);
+        : (import.meta.env.VITE_STRIPE_TEST_KEY as string);
+    stripePromise = loadStripe(key, { advancedFraudSignals: false });
+;
+=======;
+    const key = import.meta.env.PROD;
+        ? (import.meta.env['VITE_STRIPE_PUBLISHABLE_KEY'] as string);
         : (import.meta.env['VITE_STRIPE_TEST_KEY'] as string);
-    stripePromise = loadStripe(key, { advancedFraudSignals: false     });
-  }
+    stripePromise = loadStripe(key);
+  };
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5
   return stripePromise;
-}
+}};
+>>>>>>> cursor/add-new-services-and-advertise-them-971c;

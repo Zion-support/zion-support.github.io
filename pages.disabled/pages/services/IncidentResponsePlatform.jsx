@@ -1,0 +1,1 @@
+" " " import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity const IncidentResponsePlatform = () => {} const features = [] {} 

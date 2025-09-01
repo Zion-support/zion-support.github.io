@@ -1,26 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-export const Logo = () => {
-    return (<Link to="/" className="flex items-center group">
-      <div className="flex items-center space-x-2">
-        {/* Icon */}
+import { Zap } from 'lucide-react';
+
+export function Logo({ customLogo, customColor, className = '' }) {
+  if (customLogo) {
+    return (
+      <Link to="/" className={`flex-shrink-0 group ${className}`}>
+        <img
+          src={customLogo}
+          alt="Logo"
+          className="h-8 w-auto"
+        />
+      </Link>
+    );
+  }
+
+  const logoColor = customColor || '#3b82f6'; // Default blue color
+
+  return (
+    <Link to="/" className={`flex-shrink-0 group ${className}`}>
+      <div className="flex items-center space-x-3">
         <div className="relative">
-          <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan via-zion-purple-light to-zion-purple rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-            <span className="text-white font-bold text-sm">Z</span>
+          <div
+            className="w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+            style={{ backgroundColor: logoColor }}
+          >
+            <Zap className="w-6 h-6 text-white" />
           </div>
-          <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
+          <div
+            className="absolute inset-0 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"
+            style={{ backgroundColor: logoColor }}
+          ></div>
         </div>
-        
-        {/* Text */}
-        <div className="flex flex-col">
-          <div className="text-xl font-bold text-white leading-tight">
-            {isWhitelabel ? brandName : 'ZION'}
-          </div>
-          <div className="text-xs text-zion-cyan font-medium leading-tight">
-            TECH GROUP
-          </div>
-        </div>
+        <h1
+          className="text-2xl font-bold group-hover:scale-105 transition-transform duration-300"
+          style={{ color: logoColor }}
+        >
+          Zion Tech Group
+        </h1>
       </div>
-      <div className="text-xs lg:text-sm text-gray-300 font-medium">Group</div>
-    </Link>);
-};
+    </Link>
+  );
+}

@@ -1,503 +1,336 @@
-import React from 'react.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
-import { cn  } from '@/lib/utils';
-import { Home, 
-  Briefcase, 
-  Users, 
-  Settings, 
-  BarChart3, 
-  FileText, 
-  MessageSquare, 
-  HelpCircle,
-  Code,
-  Smartphone,
-  Globe,
-  Building,
-  Mail,
-  Phone,
-  MapPin,
-  Brain,
-  Cpu,
-  Shield,
-  Rocket,
-  Zap,
-  Database,
-  Network,
-  Cloud,
-  Lock,
-  Target,
-  Award,
-  Star,
-  TrendingUp,
-  Lightbulb,
-  Palette,
-  Layers,
-  Command,
-  Terminal,
-  Server,
-  Chip,
-  Wifi,
-  Smartphone as Mobile,
-  Monitor,
-  Laptop,
-  Tablet,
-  Watch,
-  Headphones,
-  Camera,
-  Printer,
-  Scanner,
-  Router,
-  Switch,
-  Hub,
-  Modem,
-  Antenna,
-  Satellite,
-  Radar,
-  Telescope,
-  Microscope,
-  Beaker,
-  Flask,
-  TestTube,
-  Atom,
-  Dna,
-  Virus,
-  Syringe,
-  Stethoscope,
-  Heart,
-  Brain as BrainIcon,
-  Eye,
-  Ear,
-  Nose,
-  Mouth,
-  Hand,
-  Foot,
-  Bone,
-  Muscle,
-  Nerve,
-  Cell,
-  Molecule,
-  Particle,
-  Wave,
-  Pulse,
-  Signal,
-  Frequency,
-  Amplitude,
-  Phase,
-  Wavelength,
-  Velocity,
-  Acceleration,
-  Force,
-  Energy,
-  Power,
-  Voltage,
-  Current,
-  Resistance,
-  Capacitance,
-  Inductance,
-  Impedance,
-  Admittance,
-  Conductance,
-  Susceptance,
-  Reactance,
-  Resonance,
-  Bandwidth,
-  Gain,
-  Loss,
-  Noise,
-  Distortion,
-  Interference,
-  Crosstalk,
-  Echo,
-  Reverb,
-  Delay,
-  Phase,
-  Amplitude,
-  Frequency,
-  Modulation,
-  Demodulation,
-  Encoding,
-  Decoding,
-  Compression,
-  Decompression,
-  Encryption,
-  Decryption,
-  Hashing,
-  Signing,
-  Verification,
-  Authentication,
-  Authorization,
-  Validation,
-  Sanitization,
-  Normalization,
-  Standardization,
-  Calibration,
-  Calibration as CalibrationIcon,
-  Synchronization,
-  Coordination,
-  Orchestration,
-  Choreography,
-  Composition,
-  Aggregation,
-  Integration,
-  Interoperability,
-  Compatibility,
-  Portability,
-  Scalability,
-  Reliability,
-  Availability,
-  Durability,
-  Maintainability,
-  Testability,
-  Usability,
-  Accessibility,
-  Security,
-  Privacy,
-  Compliance,
-  Governance,
-  Risk,
-  Audit,
-  Monitoring,
-  Logging,
-  Alerting,
-  Reporting,
-  Analytics,
-  Metrics,
-  KPIs,
-  Dashboards,
-  Visualization,
-  Chart,
-  Graph,
-  Table,
-  Form,
-  Input,
-  Output,
-  Button,
-  Link as LinkIcon,
-  Image,
-  Video,
-  Audio,
-  Document,
-  Folder,
-  File,
-  Archive,
-  Backup,
-  Restore,
-  Sync,
-  Share,
-  Export,
-  Import,
-  Download,
-  Upload,
-  Copy,
-  Paste,
-  Cut,
-  Delete,
-  Undo,
-  Redo,
-  Save,
-  Load,
-  Open,
-  Close,
-  Minimize,
-  Maximize,
-  Restore as RestoreIcon,
-  Move,
-  Resize,
-  Rotate,
-  Scale,
-  Transform,
-  Animate,
-  Transition,
-  Effect,
-  Filter,
-  Blend,
-  Mask,
-  Clip,
-  Crop,
-  Resize as ResizeIcon,
-  Rotate as RotateIcon,
-  Scale as ScaleIcon,
-  Transform as TransformIcon,
-  Animate as AnimateIcon,
-  Transition as TransitionIcon,
-  Effect as EffectIcon,
-  Filter as FilterIcon,
-  Blend as BlendIcon,
-  Mask as MaskIcon,
-  Clip as ClipIcon,
-  Crop as CropIcon,
-  Clock,
-  Handshake,
-  Leaf,
-  HardDrive,
-  RefreshCw
- } from 'lucide-react.ts';
-
-interface MainSidebarProps extends React.PropsWithChildren<{}> { isOpen: boolean;
-  onClose: () => void;
-
-    }
-
-export function MainSidebar() { 
-  const location = useLocation()
-
-  const navigationItems = [
-    { title: 'Main',
-      items: [
-        { name: 'Home', href: '/', icon: Home },
-        { name: 'About', href: '/about', icon: Building },
-        { name: 'Services', href: '/services', icon: Briefcase },
-        { name: 'Solutions', href: '/solutions', icon: Target },
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'Research', href: '/research-development', icon: TestTube },
-        { name: 'Events', href: '/events', icon: Video },
-        { name: 'News', href: '/news', icon: Newspaper },
-        { name: 'Contact', href: '/contact', icon: Mail },
-        { name: 'Blog', href: '/blog', icon: FileText },
-      ]
-    },
-    { title: 'AI & Innovation Services',
-      items: [
-        { name: 'AI & Automation', href: '/services/ai-automation', icon: Brain },
-        { name: 'AI & Healthcare', href: '/services/ai-healthcare', icon: BrainIcon },
-        { name: 'AI & Content', href: '/services/ai-content', icon: FileText },
-        { name: 'AI & HR', href: '/services/ai-hr', icon: Users },
-        { name: 'Machine Learning', href: '/services/machine-learning', icon: Cpu },
-        { name: 'Natural Language Processing', href: '/services/nlp', icon: MessageSquare },
-      ]
-    },
-    { title: 'Quantum & Advanced Computing',
-      items: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'Edge Computing', href: '/services/edge-computing', icon: Server },
-        { name: 'High Performance Computing', href: '/services/hpc', icon: Chip },
-        { name: 'Distributed Systems', href: '/services/distributed-systems', icon: Network },
-        { name: 'Parallel Processing', href: '/services/parallel-processing', icon: Layers },
-      ]
-    },
-    { title: 'Blockchain & Security',
-      items: [
-        { name: 'Blockchain Solutions', href: '/services/blockchain', icon: LinkIcon },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-        { name: 'Zero Trust Security', href: '/services/zero-trust', icon: Lock },
-        { name: 'Penetration Testing', href: '/services/penetration-testing', icon: Target },
-        { name: 'Security Audits', href: '/services/security-audits', icon: FileText },
-        { name: 'Compliance Management', href: '/services/compliance', icon: Award },
-      ]
-    },
-    { title: 'Emerging Technologies',
-      items: [
-        { name: 'Metaverse Solutions', href: '/services/metaverse', icon: Globe },
-        { name: 'IoT Platforms', href: '/services/iot', icon: Wifi },
-        { name: 'AR/VR Applications', href: '/services/ar-vr', icon: Eye },
-        { name: '5G & Connectivity', href: '/services/5g', icon: Antenna },
-        { name: 'Green Technology', href: '/services/green-tech', icon: Leaf },
-        { name: 'Space Technology', href: '/services/space-tech', icon: Satellite },
-      ]
-    },
-    { title: 'Enterprise Solutions',
-      items: [
-        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
-        { name: 'Cloud Infrastructure', href: '/services/cloud', icon: Cloud },
-        { name: 'DevOps & CI/CD', href: '/services/devops', icon: Code },
-        { name: 'Data Analytics & BI', href: '/services/data-analytics', icon: BarChart3 },
-        { name: 'System Integration', href: '/services/system-integration', icon: Database },
-        { name: 'Legacy Modernization', href: '/services/legacy-modernization', icon: RefreshCw },
-      ]
-    },
-    { title: 'Hardware & Equipment',
-      items: [
-        { name: 'Computers & Laptops', href: '/equipment/computers', icon: Laptop },
-        { name: 'Mobile Devices', href: '/equipment/mobile', icon: Smartphone },
-        { name: 'Networking Equipment', href: '/equipment/networking', icon: Router },
-        { name: 'Security Hardware', href: '/equipment/security', icon: Shield },
-        { name: 'Storage Solutions', href: '/equipment/storage', icon: HardDrive },
-        { name: 'Peripherals', href: '/equipment/peripherals', icon: Printer },
-      ]
-    },
-    { title: 'Talent & Community',
-      items: [
-        { name: 'Find Talent', href: '/talent', icon: Users },
-        { name: 'AI Hiring Platform', href: '/zion-hire-ai', icon: Brain },
-        { name: 'Community Forum', href: '/community', icon: MessageSquare },
-        { name: 'Partnerships', href: '/partners', icon: Handshake },
-        { name: 'Training Programs', href: '/training', icon: GraduationCap },
-        { name: 'Certifications', href: '/certifications', icon: Award },
-      ]
-    },
-    { title: 'Resources & Support',
-      items: [
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
-        { name: 'Developer Portal', href: '/developers', icon: Code },
-        { name: 'API Documentation', href: '/api-docs', icon: FileText },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'White Papers', href: '/white-papers', icon: FileText },
-        { name: 'Video Tutorials', href: '/tutorials', icon: Video },
-      ]
-    }
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { ; Menu,; X,; ChevronDown,; ChevronRight,; Home,; Zap,; Brain,; Shield,; Cloud,; Cpu,; Users,; ShoppingCart,; BookOpen,; MessageCircle,; HelpCircle,; DollarSign,; Star,; Target,; TrendingUp,; Award,; Settings,; Globe,; Rocket,; Heart,; Lock,; Database,; Network,; Palette,; Video,; PenTool,; Atom,; Server,; Smartphone,; BarChart3,; Search,; FileText,; Calendar,; Briefcase,; Info,; Phone,; Mail,; MapPin,; Building,; TestTube,; Newspaper,; Mail as MailIcon,; Phone as PhoneIcon,; MapPin as MapPinIcon; } from 'lucide-react';
+;
+interface SidebarItem {;
+  name: string;
+  href: string;
+  icon: React.ComponentType<any>;
+  children?: SidebarItem[];
+  featured?: boolean;
+  description?: string;
+};
+export function MainSidebar() {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
+  const location = useLocation();
+;
+  const navigation: SidebarItem[] = [;
+    {;
+      title: 'Main',;
+      items: [;
+        { name: 'Home', href: '/', icon: Home },;
+        { name: 'About', href: '/about', icon: Building },;
+        { name: 'Services', href: '/services', icon: Briefcase },;
+        { name: 'Solutions', href: '/solutions', icon: Target },;
+        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },;
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },;
+        { name: 'Research', href: '/research-development', icon: TestTube },;
+        { name: 'Events', href: '/events', icon: Video },;
+        { name: 'News', href: '/news', icon: Newspaper },;
+        { name: 'Contact', href: '/contact', icon: Mail },;
+        { name: 'Blog', href: '/blog', icon: FileText };
+      ];
+    },;
+    {;
+      title: 'Core Services',;
+      items: [;
+        {;
+          name: 'Cloud & DevOps',;
+          href: '/services/cloud-devops',;
+          icon: Cloud,;
+          description: 'Infrastructure & Automation';
+        },;
+        {;
+          name: 'Digital Twin',;
+          href: '/services/digital-twin',;
+          icon: Globe,;
+          description: 'Digital Simulation';
+        },;
+        {;
+          name: 'IoT Edge Computing',;
+          href: '/services/iot-edge',;
+          icon: Smartphone,;
+          description: 'Connected Devices';
+        },;
+        {;
+          name: 'Data Analytics',;
+          href: '/services/data-analytics',;
+          icon: BarChart3,;
+          description: 'Business Intelligence';
+        },;
+        {;
+          name: 'IT Infrastructure',;
+          href: '/services/it-infrastructure',;
+          icon: Server,;
+          description: 'System Management';
+        };
+      ];
+    },;
+    {;
+      title: 'Specialized Services',;
+      items: [;
+        {;
+          name: 'AI & Machine Learning',;
+          href: '/services/ai',;
+          icon: Brain,;
+          description: 'Intelligent Solutions';
+        },;
+        {;
+          name: 'Cybersecurity',;
+          href: '/services/cybersecurity',;
+          icon: Shield,;
+          description: 'Security & Protection';
+        },;
+        {;
+          name: 'Blockchain Solutions',;
+          href: '/services/blockchain',;
+          icon: Lock,;
+          description: 'Distributed Technology';
+        },;
+        {;
+          name: 'Quantum Computing',;
+          href: '/services/quantum',;
+          icon: Atom,;
+          description: 'Next-Gen Computing';
+        },;
+        {;
+          name: 'Space Technology',;
+          href: '/services/space-tech',;
+          icon: Rocket,;
+          description: 'Aerospace Solutions';
+        };
+      ];
+    },;
+    {;
+      title: 'Solutions',;
+      items: [;
+        {;
+          name: 'Enterprise',;
+          href: '/solutions/enterprise',;
+          icon: Building,;
+          description: 'Large Scale Solutions';
+        },;
+        {;
+          name: 'Healthcare',;
+          href: '/solutions/healthcare',;
+          icon: Heart,;
+          description: 'Medical Technology';
+        },;
+        {;
+          name: 'Financial',;
+          href: '/solutions/financial',;
+          icon: DollarSign,;
+          description: 'FinTech Solutions';
+        },;
+        {;
+          name: 'Manufacturing',;
+          href: '/solutions/manufacturing',;
+          icon: Cpu,;
+          description: 'Industrial Tech';
+        },;
+        {;
+          name: 'Retail',;
+          href: '/solutions/retail',;
+          icon: ShoppingCart,;
+          description: 'E-commerce Solutions';
+        };
+      ];
+    },;
+    {;
+      title: 'Resources',;
+      items: [;
+        {;
+          name: 'Blog',;
+          href: '/blog',;
+          icon: FileText,;
+          description: 'Latest Insights';
+        },;
+        {;
+          name: 'Webinars',;
+          href: '/webinars',;
+          icon: Video,;
+          description: 'Educational Content';
+        },;
+        {;
+          name: 'Training',;
+          href: '/training',;
+          icon: BookOpen,;
+          description: 'Learning Resources';
+        },;
+        {;
+          name: 'White Papers',;
+          href: '/white-papers',;
+          icon: FileText,;
+          description: 'Research Papers';
+        },;
+        {;
+          name: 'Case Studies',;
+          href: '/case-studies',;
+          icon: Award,;
+          description: 'Success Stories';
+        };
+      ];
+    },;
+    {;
+      title: 'Support',;
+      items: [;
+        {;
+          name: 'Help Center',;
+          href: '/help',;
+          icon: HelpCircle,;
+          description: 'Get Support';
+        },;
+        {;
+          name: 'Documentation',;
+          href: '/docs',;
+          icon: FileText,;
+          description: 'Technical Docs';
+        },;
+        {;
+          name: 'FAQ',;
+          href: '/faq',;
+          icon: HelpCircle,;
+          description: 'Common Questions';
+        },;
+        {;
+          name: 'Contact Support',;
+          href: '/support',;
+          icon: MessageCircle,;
+          description: 'Get Help';
+        };
+      ];
+    };
   ];
-
-  const contactInfo = [
-    { icon: Phone, 
-      text: '+1 302 464 0950', 
-      href: 'tel:+13024640950',
-      description: 'Call us time'
-    },
-    { icon: Mail, 
-      text: 'kleber@ziontechgroup.com', 
-      href: 'mailto:kleber@ziontechgroup.com',
-      description: 'Email us for support'
-    },
-    { icon: MapPin, 
-      text: '364 E Main St STE 1008 Middletown DE 19709', 
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
-      description: 'Headquarters location'
-    },
-  ];
-
-  const quickStats = [
-    { value: '500+', label: 'Projects Delivered', icon: Award },
-    { value: '15+', label: 'Years Experience', icon: Star },
-    { value: '99.9%', label: 'Client Satisfaction', icon: TrendingUp },
-    { value: '24/7', label: 'Support Available', icon: Clock },
-  ];
-
-  return (
-    <>
-      {/* Overlay */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden backdrop-blur-sm"
-          onClick={onClose}
-        />
-      )}
-      
-      {/* Sidebar */}
-      <div className={cn(
-        "fixed left-0 top-0 z-50 h-full w-80 bg-gradient-to-b from-zion-slate-dark via-zion-slate to-zion-slate-light border-r border-white/20 transform transition-all duration-300 ease-in-out lg:translate-x-0 shadow-2xl",
-        isOpen ? "translate-x-0" : "-translate-x-full"
-      )}>
-        <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-white/20 bg-white/5">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
-                <span className="text-xl font-bold text-white">Z</span>
-              </div>
-              <div>
-                <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-                  ZION TECH
-                </span>
-                <p className="text-xs text-gray-400">Innovation Group</p>
-              </div>
-            </div>
-            <button
-              onClick={onClose}
-              className="lg:hidden p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Quick Stats */}
-          <div className="p-4 bg-white/5 border-b border-white/20">
-            <div className="grid grid-cols-2 gap-3">
-              {quickStats.map((stat, index) => (
-                <div key={stat.label} className="text-center p-3 glass rounded-lg border border-white/20">
-                  <div className="text-lg font-bold text-zion-cyan">{stat.value}</div>
-                  <div className="text-xs text-gray-400">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <nav className="flex-1 overflow-y-auto p-4 space-y-6">
-            {navigationItems.map((section) => (
-              <div key={section.title}>
-                <h3 className="text-zion-cyan text-xs font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                  {section.title}
-                </h3>
-                <ul className="space-y-1">
-                  {section.items.map((item) => {
-                    const IconComponent = item.icon;
-                    const isActive = location.pathname === item.href;
-                    
-                    return (
-                      <li key={item.name}>
-                        <Link
-                          to={item.href}
-                          onClick={onClose}
-                          className={cn(
-                            "flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 group",
-                            isActive
-                              ? "bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 text-zion-cyan border border-zion-cyan/30 shadow-lg shadow-zion-cyan/10"
-                              : "text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/20 border border-transparent"
-                          )}
-                        >
-                          <IconComponent className={cn(
-                            "w-4 h-4 mr-3 transition-colors duration-200",
-                            isActive ? "text-zion-cyan" : "text-gray-400 group-hover:text-zion-cyan"
-                          )} />
-                          {item.name}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            ))}
-          </nav>
-
-          {/* Contact Info */}
-          <div className="p-4 border-t border-white/20 bg-white/5">
-            <h3 className="text-zion-cyan text-xs font-semibold uppercase tracking-wider mb-4 flex items-center gap-2">
-              <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-              Contact Information
-            </h3>
-            <div className="space-y-3">
-              {contactInfo.map((contact) => {
-                const IconComponent = contact.icon;
-                return (
-                  <a
-                    key={contact.text}
-                    href={contact.href}
-                    target={contact.href.startsWith('http') ? '_blank' : undefined}
-                    rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="flex items-start gap-3 p-3 glass rounded-lg border border-white/20 hover:border-zion-cyan/30 hover:bg-white/10 transition-all duration-200 group">
-                    <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
-                      <IconComponent className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-sm font-medium text-white group-hover:text-zion-cyan transition-colors duration-200">
-                        {contact.text}
-                      </div>
-                      <div className="text-xs text-gray-400 mt-1">
-                        {contact.description}
-                      </div>
-                    </div>
-                  </a>
-                );
-              })}
-            </div>
-            
-            {/* Website Link */}
-            <div className="mt-4 pt-4 border-t border-white/20">
-              <a
-                href="https://ziontechgroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-200 transform hover:scale-105">
-                <Globe className="w-4 h-4" />
-                Visit Website
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+;
+  const toggleSection = (sectionTitle: string) => {;
+    setExpandedSections(prev =>;
+      prev.includes(sectionTitle);
+        ? prev.filter(title => title !== sectionTitle);
+        : [...prev, sectionTitle];
+    );
+  };
+;
+  const isActive = (href: string) => {;
+    return location.pathname === href || location.pathname.startsWith(href + '/');
+  };
+;
+  return (;
+    <>;
+      {/* Mobile Toggle Button */};
+      <button;
+        onClick={() => setIsOpen(!isOpen)};
+        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-zion-cyan hover:bg-zion-purple/10 transition-colors";"
+      >";"
+        {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />};
+      </button>;
+      {/* Sidebar */};
+      <div;
+        className={`fixed inset-y-0 left-0 z-40 w-64 bg-zion-blue-dark border-r border-zion-purple/30 transform transition-transform duration-300 ease-in-out lg:translate-x-0 ${;
+          isOpen ? 'translate-x-0' : '-translate-x-full';
+        }`};"
+      >";"
+        <div className="flex flex-col h-full">;"
+          {/* Header */}";"
+          <div className="p-6 border-b border-zion-purple/20">";"
+            <div className="flex items-center space-x-3">";"
+              <div className="w-8 h-8 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center">";"
+                <Zap className="w-5 h-5 text-white" />;"
+              </div>";"
+              <span className="text-xl font-bold text-white">Zion Tech</span>;
+            </div>;
+          </div>;"
+          {/* Navigation */}";"
+          <nav className="flex-1 overflow-y-auto p-6">";"
+            <div className="space-y-6">;"
+              {navigation.map((section) => (";"
+                <div key={section.title} className="space-y-3">;
+                  <button;"
+                    onClick={() => toggleSection(section.title)}";"
+                    className="w-full flex items-center justify-between text-sm font-semibold text-zion-cyan hover:text-zion-cyan-light transition-colors";
+                  >;
+                    <span>{section.title}</span>;
+                    <ChevronDown;
+                      className={`w-4 h-4 transition-transform ${;
+                        expandedSections.includes(section.title) ? 'rotate-180' : '';
+                      }`};
+                    />;
+                  </button>;"
+                  {expandedSections.includes(section.title) && (";"
+                    <div className="ml-4 space-y-2">;
+                      {section.items.map((item) => (;
+                        <Link;
+                          key={item.href};
+                          to={item.href};
+                          className={`block p-3 rounded-lg transition-all duration-200 group ${;
+                            isActive(item.href);
+                              ? 'bg-zion-cyan/20 border border-zion-cyan/30 text-zion-cyan';
+                              : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10';
+                          }`};"
+                        >";"
+                          <div className="flex items-center space-x-3">";"
+                            <item.icon className="w-4 h-4" />";"
+                            <div className="flex-1 min-w-0">";"
+                              <div className="font-medium">{item.name}</div>;"
+                              {item.description && (";"
+                                <div className="text-xs text-zion-slate-light group-hover:text-zion-cyan/70">;
+                                  {item.description};
+                                </div>;
+                              )};
+                            </div>;"
+                            {isActive(item.href) && (";"
+                              <ChevronRight className="w-4 h-4 text-zion-cyan" />;
+                            )};
+                          </div>;
+                        </Link>;
+                      ))};
+                    </div>;
+                  )};
+                </div>;
+              ))};
+            </div>;
+          </nav>;"
+          {/* Footer */}";"
+          <div className="p-6 border-t border-zion-purple/20">";"
+            <div className="space-y-4">;"
+              {/* Quick Actions */}";"
+              <div className="space-y-2">;"
+                <Link";"
+                  to="/request-quote";"
+                  className="block w-full p-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-center rounded-lg hover:from-zion-purple-light hover:to-zion-cyan-light transition-all duration-300 font-medium";
+                >;
+                  Get Quote;
+                </Link>;"
+                <Link";"
+                  to="/contact";"
+                  className="block w-full p-3 border border-zion-purple/30 text-zion-cyan text-center rounded-lg hover:bg-zion-purple/10 transition-colors";
+                >;
+                  Contact Us;
+                </Link>;
+              </div>;"
+              {/* Contact Info */}";"
+              <div className="space-y-2 text-xs text-zion-slate-light">";"
+                <div className="flex items-center space-x-2">";"
+                  <MailIcon className="w-3 h-3" />;
+                  <span>info@ziontechgroup.com</span>;"
+                </div>";"
+                <div className="flex items-center space-x-2">";"
+                  <PhoneIcon className="w-3 h-3" />;
+                  <span>+1 (555) 123-4567</span>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      {/* Overlay for mobile */};
+      {isOpen && (;"
+        <div";"
+          className="lg:hidden fixed inset-0 bg-black/50 z-30";
+          onClick={() => setIsOpen(false)};
+        />;
+      )};
+    </>;
   );
-}
+};"
+";"

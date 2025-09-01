@@ -1,0 +1,1 @@
+" " export type ProductWithReviewStats = Product & { averageRating: number | null; reviewCount: number; 

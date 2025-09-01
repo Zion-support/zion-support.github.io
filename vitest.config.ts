@@ -1,5 +1,10 @@
 import { defineConfig } from 'vitest/config';
 import path from 'node:path';
+<<<<<<< HEAD
+export { defineConfig };
+=======
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
 export default defineConfig({
   resolve: {
     alias: {

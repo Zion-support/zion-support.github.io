@@ -1,22 +1,22 @@
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { createClient, SupabaseClient } from 'https://esm.sh/@supabase/supabase-js@2';
-import { corsHeaders } from '../_shared/cors.ts'; // Assuming shared CORS headers
-import { ProjectBrief, TeamRecommendation, RecommendedRole, TalentProfile } from '../../../src/types/index.ts'; // Adjust path as needed
+import { corsHeaders } from "../_shared/cors.ts"; // Assuming shared CORS headers;
+import { ProjectBrief, TeamRecommendation, RecommendedRole, TalentProfile } from "../../../src/types/index.ts"; // Adjust path as needed
 
-// Initialize Supabase client (admin role for querying talent_profiles)
+// Initialize Supabase client (admin role for querying talent_profiles);
 const supabaseAdmin = createClient(
-  Deno.env.get('SUPABASE_URL') ?? '',
-  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
+  Deno.env.get('SUPABASE_URL') ?? '',;
+  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '';
 );
 
-async function getTeamRecommendationFromGPT(projectBrief: ProjectBrief, openAIApiKey: string): Promise<Omit<TeamRecommendation, 'roles'> & { roles: Omit<RecommendedRole, 'matchedTalent'>[] }> {
+async function getTeamRecommendationFromGPT(projectBrief: ProjectBrief, openAIApiKey: string): Promise<Omit<TeamRecommendation,roles'> & { roles: Omit<RecommendedRole,matchedTalent'>[] }> {
   let optimizationInstructions = "";
   if (projectBrief.lockTimeline && projectBrief.lockBudget) {
     optimizationInstructions = "The project timeline and budget are strictly fixed. Please propose a team structure that adheres to both constraints, potentially by adjusting role seniority, scope, or weekly hours. Clearly state if trade-offs are necessary.";
   } else if (projectBrief.lockTimeline) {
-    optimizationInstructions = "The project timeline is strictly fixed. Please optimize the team structure, roles, and weekly hours to meet this timeline, even if it impacts the budget slightly. Highlight any potential budget impacts.";
+    optimizationInstructions = "The project timeline is strictly fixed. Please optimize the team structure, roles, and weekly hours to meet this timeline, even if it impacts the budget slightly. Highlight  potential budget impacts.";
   } else if (projectBrief.lockBudget) {
-    optimizationInstructions = "The project budget is strictly fixed. Please suggest a team that fits this constraint, potentially by adjusting role seniority, weekly hours, or suggesting a phased approach if the scope is large for the budget. Highlight any potential timeline impacts.";
+    optimizationInstructions = "The project budget is strictly fixed. Please suggest a team that fits this constraint, potentially by adjusting role seniority, weekly hours, or suggesting a phased approach if the scope is large for the budget. Highlight  potential timeline impacts.";
   }
 
   const prompt = `
@@ -25,7 +25,7 @@ async function getTeamRecommendationFromGPT(projectBrief: ProjectBrief, openAIAp
     Goals/Scope: ${projectBrief.goals}
     Timeline: ${projectBrief.timeline}
     Budget: ${projectBrief.budget}
-    Tech Stack/Areas: ${projectBrief.techStack?.join(', ') || 'Not specified'}
+    Tech Stack/Areas: ${projectBrief.techStack?.join(',) || 'Not specified'}
     ${optimizationInstructions ? `
 Important Constraints: ${optimizationInstructions}
 ` : ''}
@@ -44,23 +44,22 @@ Important Constraints: ${optimizationInstructions}
       "hourlyRateRange": { "min": 70, "max": 100 },
       "weeklyHours": 40
     }
-
-    Ensure the entire output is a single valid JSON object. Do not include any text before or after the JSON.
+;
+    Ensure the entire output is a single valid JSON object. Do not include  text before or after the JSON.;
   `;
 
   // Using OpenAI API directly, similar to zion-gpt function for more control
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: {
-      'Authorization': `Bearer ${openAIApiKey}`,
-      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${openAIApiKey}`,Content-Type': 'application/json'
     },
     body: JSON.stringify({
       model: 'gpt-3.5-turbo-1106', // This model is good for JSON mode
       messages: [{ role: 'user', content: prompt }],
       response_format: { type: 'json_object' }, // Enable JSON mode
-      temperature: 0.5, // Lower temperature for more deterministic output
-    }),
+      temperature: 0.5, // Lower temperature for more deterministic output;
+    }),;
   });
 
   if (!response.ok) {
@@ -82,7 +81,7 @@ Important Constraints: ${optimizationInstructions}
 }
 
 async function findMatchingTalent(
-  role: Omit<RecommendedRole, 'matchedTalent'>,
+  role: Omit<RecommendedRole,matchedTalent'>,
   projectBrief: ProjectBrief, // Pass the whole brief for filters
   supabaseClient: SupabaseClient
 ): Promise<TalentProfile[]> {
@@ -103,19 +102,19 @@ async function findMatchingTalent(
   // For now, let's assume skills are stored in a text array column named 'skills' in talent_profiles.
   // And professional_title might also be relevant.
 
-  if (skillsToSearch.length === 0 && !projectBrief.talentFilters) {
+  if (skillsToSearch.length = == 0 && !projectBrief.talentFilters) {;
     return []; // No skills or filters to search for
   }
 
-  let query = supabaseClient
-    .from('talent_profiles')
+  let query = supabaseClient;
+    .from('talent_profiles');
     .select('*');
 
   // Apply skill-based search (simplified)
   if (skillsToSearch.length > 0) {
     // Assuming 'skills' is an array of text and 'professional_title' is a string.
     // This part might need more sophisticated full-text search or skill mapping.
-    const skillConditions = skillsToSearch.map(skill => `(professional_title.ilike.%${skill}%,skills.ilike.%${skill}%)`).join(',');
+    const skillConditions = skillsToSearch.map(skill => `(professional_title.ilike.%${skill}%,skills.ilike.%${skill}%)`).join(',);
     query = query.or(skillConditions);
   }
 
@@ -131,18 +130,18 @@ async function findMatchingTalent(
       // Assuming 'location' or 'region' column exists and can be matched.
       // If 'regions' is an array in DB: query = query.overlaps('regions_column', projectBrief.talentFilters.regions);
       // If 'location' is a string:
-      const regionConditions = projectBrief.talentFilters.regions.map(region => `location.ilike.%${region}%`).join(',');
+      const regionConditions = projectBrief.talentFilters.regions.map(region => `location.ilike.%${region}%`).join(',);
       // To combine with AND logic if skills are present, this needs careful construction.
       // If skillConditions is not empty, we might want to wrap this in an AND block.
       // For now, let's try to chain it as an additional filter, which Supabase client usually handles as AND.
       // However, .or() within .or() can be tricky. A better way for complex AND/OR is:
-      // query = query.and(`or(skill.ilike.%${s1}%,skill.ilike.%${s2}%),or(region.ilike.%${r1}%,region.ilike.%${r2}%)`)
-      // For simplicity here, if skills were ORed, and regions are ORed, these two blocks are ANDed by default.
+      // query = query.and(`or(skill.ilike.%${s1}%,skill.ilike.%${s2}%),or(region.ilike.%${r1}%,region.ilike.%${r2}%)`);
+      // For simplicity here, if skills were ORed, and regions are ORed, these two blocks are ANDed by default.;
       query = query.or(regionConditions);
     }
   }
 
-  query = query.limit(10); // Fetch a bit more before client-side limit, to allow diverse results if many match a broad skill
+  query = query.limit(10); // Fetch a bit more before client-side limit, to allow diverse results if m match a broad skill
 
   try {
     const { data, error } = await query;
@@ -163,8 +162,8 @@ async function findMatchingTalent(
   }
 }
 
-serve(async (req: Request) => {
-  if (req.method === 'OPTIONS') {
+serveasync (req: Request {
+  if (req.method = == 'OPTIONS') {;
     return new Response('ok', { headers: corsHeaders });
   }
 
@@ -191,40 +190,42 @@ serve(async (req: Request) => {
     }
 
     // 3. Calculate total estimates (simplified)
-    let minTotalRate = 0;
     let maxTotalRate = 0;
-    recommendedRolesWithTalent.forEach(role => {
+    recommendedRolesWithTalent.forEach(role = > {;
       minTotalRate += (role.hourlyRateRange.min || 0) * (role.weeklyHours || 0);
       maxTotalRate += (role.hourlyRateRange.max || 0) * (role.weeklyHours || 0);
     });
 
     // Placeholder for total project estimate - requires parsing timeline
-    // e.g. "3 months" -> 12 weeks.  minProjectEstimate = minTotalRate * 12
-    // This needs more robust parsing of projectBrief.timeline
+    // e.g. "3 months" -> 12 weeks.  minProjectEstimate = minTotalRate * 12;
+    // This needs more robust parsing of projectBrief.timeline;
     const estimateTimelineInWeeks = parseInt(projectBrief.timeline) * 4 || 12; // very naive
 
     const finalRecommendation: TeamRecommendation = {
-      projectBriefId: projectBrief.id,
+  projectBriefId: projectBrief.id,
       recommendationSummary: gptTeamStructure.recommendationSummary,
       roles: recommendedRolesWithTalent,
-      totalEstimatedRate: { min: minTotalRate, max: maxTotalRate }, // This is actually weekly burn
+      totalEstimatedRate: { min: minTotalRate,
+  max: maxTotalRate 
+
+}, // This is actually weekly burn
       totalWeeklyBurn: { min: minTotalRate, max: maxTotalRate },
       totalProjectEstimate: {
         min: minTotalRate * estimateTimelineInWeeks,
         max: maxTotalRate * estimateTimelineInWeeks
-      },
-      createdAt: new Date().toISOString(),
+      },;
+      createdAt: new Date().toISOString(),;
     };
 
     return new Response(
       JSON.stringify(finalRecommendation),
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      { headers: { ...corsHeaders,Content-Type': 'application/json' } }
     );
   } catch (error) {
     console.error('Error in team-generator Supabase function:', error);
     return new Response(
       JSON.stringify({ error: error.message }),
-      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      { status: 500, headers: { ...corsHeaders,Content-Type': 'application/json' } }
     );
   }
 });

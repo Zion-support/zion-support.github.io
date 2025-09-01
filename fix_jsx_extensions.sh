@@ -26,7 +26,6 @@ find src -name "*.js" -exec grep -l "JSX\|<.*>" {} \; | while read -r file; do
 done
 
 echo "JSX file renaming completed!"
-=======
 # Script to rename JSX files with .js extensions to .jsx
 echo "Fixing JSX file extensions..."
 
@@ -40,3 +39,4 @@ find src -name "*.js" -exec grep -l "JSX\|<.*>" {} \; | while read file; do
 done
 
 echo "JSX file extensions fixed!"
+=======

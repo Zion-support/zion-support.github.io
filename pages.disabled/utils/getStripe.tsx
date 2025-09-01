@@ -1,0 +1,1 @@
+export function getStripe(): Promise<Stripe | null> { let stripePromise: Promise<Stripe | null>; 

@@ -1,0 +1,1 @@
+import React from 'react'; ; export { function }; export default function SOC2ComplianceTracker(...args: []): {} 
