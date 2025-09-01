@@ -1,55 +1,86 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Users, Award, CheckCircle, Play, Sparkles, Phone, Mail, ChevronRight, ChevronUp, Shield, Globe, MapPin, Zap, TrendingUp, Target, Rocket, Plus, Building2 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import ServiceShowcase from '../components/ServiceShowcase';
-import { contactInfo } from '../data/services';
+import {
+  ArrowRight,
+  Star,
+  Users,
+  Award,
+  CheckCircle,
+  Play,
+  Sparkles,
+  Zap,
+  Brain,
+  Shield,
+  HardDrive,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Clock,
+  Target,
+  Rocket,
+  Lightbulb,
+  Code,
+  Server,
+  Database,
+  Network,
+  Smartphone,
+  Lock,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Bot,
+  Workflow,
+  Eye,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  MessageCircle,
+  Search,
+  BarChart,
+  Users2,
+  Settings,
+  Palette,
+  ChevronDown,
+  Menu,
+  X,
+} from 'lucide-react';
 
-// Optimized futuristic animated background component with reduced re-renders
-const FuturisticBackground: React.FC = React.memo(() => {
-  const particles = React.useMemo(() =>
-    Array.from({ length: 15 }, (_, i) => ({
-      id: i,
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
-      duration: 3 + Math.random() * 4,
-      delay: Math.random() * 2
-    })), []
-  );
+// Optimized futuristic animated background component
+const FuturisticBackground: React.FC = () => {
+  const particles = Array.from({ length: 20 }, (_, i) => ({
+    id: i,
+    left: `${Math.random() * 100}%`,
+    top: `${Math.random() * 100}%`,
+    duration: 3 + Math.random() * 4,
+    delay: Math.random() * 2,
+  }));
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+
       {/* Optimized floating particles */}
       {particles.map((particle) => (
-        <motion.div
+        <div
           key={particle.id}
           className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
           style={{
             left: particle.left,
-            top: particle.top
-          }}
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.8, 0.4, 0.8]
-          }}
-          transition={{
-            duration: particle.duration,
-            delay: particle.delay,
-            repeat: Infinity,
-            ease: "easeInOut"
+            top: particle.top,
           }}
         />
       ))}
     </div>
   );
-});
+};
 
-FuturisticBackground.displayName = 'FuturisticBackground';
-
-// Enhanced Floating Action Button Component with better UX
-const FloatingActionButton: React.FC = React.memo(() => {
+// Floating Action Button Component
+const FloatingActionButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -66,327 +97,243 @@ const FloatingActionButton: React.FC = React.memo(() => {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  const handleContactClick = (type: 'phone' | 'email') => {
-    if (type === 'phone') {
-      window.location.href = `tel:${contactInfo.mobile}`;
-    } else {
-      window.location.href = `mailto:${contactInfo.email}`;
-    }
-  };
-
   return (
-    <AnimatePresence>
+    <>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.8, y: 20 }}
-          className="fixed bottom-6 right-6 z-50"
-        >
+        <div className="fixed bottom-8 right-8 z-50">
           <div className="relative">
+            {/* Quick Actions */}
+            {isExpanded && (
+              <div className="absolute bottom-16 right-0 space-y-3">
+                <a
+                  href="tel:+15551234567"
+                  className="block w-12 h-12 bg-green-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+                >
+                  <Phone className="w-5 h-5" />
+                </a>
+                <a
+                  href="mailto:info@ziontechgroup.com"
+                  className="block w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+                >
+                  <Mail className="w-5 h-5" />
+                </a>
+                <Link
+                  to="/contact"
+                  className="block w-12 h-12 bg-purple-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                </Link>
+              </div>
+            )}
+            
             {/* Main FAB */}
-            <motion.button
+            <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all duration-200"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center text-white"
             >
-              <motion.div
-                animate={{ rotate: isExpanded ? 45 : 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Plus className="w-8 h-8" />
-              </motion.div>
-            </motion.button>
-            {/* Expanded Actions */}
-            <AnimatePresence>
-              {isExpanded && (
-                <div className="absolute bottom-20 right-0 space-y-3">
-                  {/* Phone Action */}
-                  <motion.button
-                    initial={{ opacity: 0, x: 20, scale: 0.8 }}
-                    animate={{ opacity: 1, x: 0, scale: 1 }}
-                    exit={{ opacity: 0, x: 20, scale: 0.8 }}
-                    transition={{ delay: 0.1 }}
-                    onClick={() => handleContactClick('phone')}
-                    className="w-14 h-14 bg-green-500 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all duration-200 group"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <Phone className="w-6 h-6" />
-                    <div className="absolute right-16 bg-green-500 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                      Call Us
-                    </div>
-                  </motion.button>
-                  {/* Email Action */}
-                  <motion.button
-                    initial={{ opacity: 0, x: 20, scale: 0.8 }}
-                    animate={{ opacity: 1, x: 0, scale: 1 }}
-                    exit={{ opacity: 0, x: 20, scale: 0.8 }}
-                    transition={{ delay: 0.2 }}
-                    onClick={() => handleContactClick('email')}
-                    className="w-14 h-14 bg-blue-500 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all duration-200 group"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <Mail className="w-6 h-6" />
-                    <div className="absolute right-16 bg-blue-500 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                      Email Us
-                    </div>
-                  </motion.button>
-                  {/* Scroll to Top */}
-                  <motion.button
-                    initial={{ opacity: 0, x: 20, scale: 0.8 }}
-                    animate={{ opacity: 1, x: 0, scale: 1 }}
-                    exit={{ opacity: 0, x: 20, scale: 0.8 }}
-                    transition={{ delay: 0.3 }}
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className="w-14 h-14 bg-purple-500 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all duration-200 group"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <ChevronUp className="w-6 h-6" />
-                    <div className="absolute right-16 bg-purple-500 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                      Back to Top
-                    </div>
-                  </motion.button>
-                </div>
-              )}
-            </AnimatePresence>
+              {isExpanded ? <X className="w-6 h-6" /> : <Sparkles className="w-6 h-6" />}
+            </button>
           </div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
-  );
-});
-
-FloatingActionButton.displayName = 'FloatingActionButton';
-
-// Enhanced Stats Section with better animations and data
-const StatsSection: React.FC = React.memo(() => {
-  const stats = React.useMemo(() => [
-    { number: '500+', label: 'Projects Delivered', icon: Award, color: 'from-yellow-500 to-orange-500' },
-    { number: '50+', label: 'Enterprise Clients', icon: Building2, color: 'from-blue-500 to-indigo-500' },
-    { number: '99.9%', label: 'Uptime SLA', icon: Shield, color: 'from-green-500 to-emerald-500' },
-    { number: '24/7', label: 'Support Available', icon: Users, color: 'from-purple-500 to-pink-500' }
-  ], []);
-
-  return (
-    <section className="py-20 bg-slate-800 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Trusted by Industry Leaders
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our track record speaks for itself with proven results across diverse industries
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              className="text-center group"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-            >
-              <div className={`w-20 h-20 bg-gradient-to-r ${stat.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                <stat.icon className="w-10 h-10 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-              <div className="text-gray-400">{stat.label}</div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-});
-
-StatsSection.displayName = 'StatsSection';
-
-// Enhanced Hero Section with better content and CTAs
-const HeroSection: React.FC = React.memo(() => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <FuturisticBackground />
-      
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight"
-          >
-            Welcome to{' '}
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Zion Tech Group
-            </span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
-          >
-            Pioneering the future with cutting-edge AI, cybersecurity, and space technology solutions.
-            Transform your business with our innovative services and expert guidance.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-          >
-            <Link
-              to="/services"
-              className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              Explore Our Services
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 hover:shadow-lg"
-            >
-              Get Started Today
-            </Link>
-          </motion.div>
-          {/* Trust Indicators */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-16 flex flex-wrap justify-center items-center gap-8 text-gray-400"
-          >
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-green-400" />
-              <span>ISO 27001 Certified</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-green-400" />
-              <span>SOC2 Type II Compliant</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-green-400" />
-              <span>24/7 Support</span>
-            </div>
-          </motion.div>
-        </motion.div>
-      </div>
-    </section>
-  );
-});
-
-HeroSection.displayName = 'HeroSection';
-
-// New Features Section Component
-const FeaturesSection: React.FC = React.memo(() => {
-  const features = [
-    {
-      icon: Zap,
-      title: "Lightning Fast",
-      description: "Optimized performance with cutting-edge technologies"
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-grade security with SOC2 compliance"
-    },
-    {
-      icon: TrendingUp,
-      title: "Scalable Solutions",
-      description: "Grow with confidence using our scalable architecture"
-    },
-    {
-      icon: Target,
-      title: "Results Driven",
-      description: "Focused on delivering measurable business outcomes"
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-slate-800">
-      <div className="container mx-auto px-4">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Why Choose Zion Tech Group?
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We combine innovation with reliability to deliver exceptional results
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              className="text-center group"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <feature.icon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-});
-
-FeaturesSection.displayName = 'FeaturesSection';
-
-// Main Home Component with Suspense for better performance
-const HomePage: React.FC = () => {
-  return (
-    <div className="min-h-screen">
-      <HeroSection />
-      <FeaturesSection />
-      <Suspense fallback={
-        <div className="py-20 bg-slate-900">
-          <div className="container mx-auto px-4 text-center">
-            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-            <p className="text-gray-400">Loading services...</p>
-          </div>
-        </div>
-      }>
-        <ServiceShowcase />
-      </Suspense>
-      <StatsSection />
-      <FloatingActionButton />
-    </div>
+    </>
   );
 };
 
-export default HomePage;
+// Hero Section
+const HeroSection: React.FC = () => (
+  <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <FuturisticBackground />
+    
+    <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      {/* Main Heading */}
+      <div className="mb-8">
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
+            Transform Your Business
+          </span>
+          <br />
+          <span className="text-white">With AI-Powered</span>
+          <br />
+          <span className="text-white">Technology Solutions</span>
+        </h1>
+        
+        <p className="text-xl sm:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+          Empowering enterprises with cutting-edge AI automation, cybersecurity, cloud infrastructure, 
+          and digital transformation services that drive innovation and growth.
+        </p>
+      </div>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+        <Link
+          to="/services"
+          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/90 hover:to-zion-cyan/90 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+        >
+          Explore Services
+          <ArrowRight className="ml-2 w-5 h-5" />
+        </Link>
+        
+        <Link
+          to="/contact"
+          className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-200"
+        >
+          Get Started
+        </Link>
+      </div>
+
+      {/* Trust Indicators */}
+      <div className="flex flex-wrap justify-center items-center gap-8 text-zion-slate-light">
+        <div className="flex items-center space-x-2">
+          <CheckCircle className="w-5 h-5 text-zion-cyan" />
+          <span>500+ Clients Worldwide</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <CheckCircle className="w-5 h-5 text-zion-cyan" />
+          <span>99.9% Uptime Guarantee</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <CheckCircle className="w-5 h-5 text-zion-cyan" />
+          <span>24/7 Expert Support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+// Services Overview Section
+const ServicesOverview: React.FC = () => (
+  <section className="py-20 bg-zion-blue-dark/50">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+          Comprehensive Technology Solutions
+        </h2>
+        <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+          From AI automation to cybersecurity, we provide end-to-end solutions that transform 
+          businesses and drive digital innovation.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* AI & Automation */}
+        <div className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 group">
+          <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <Brain className="w-6 h-6 text-white" />
+          </div>
+          <h3 className="text-xl font-semibold text-white mb-3">AI & Automation</h3>
+          <p className="text-zion-slate-light mb-4">
+            Intelligent automation solutions that streamline operations and enhance decision-making.
+          </p>
+          <Link
+            to="/services/ai-automation"
+            className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors"
+          >
+            Learn More <ArrowRight className="ml-2 w-4 h-4" />
+          </Link>
+        </div>
+
+        {/* Cloud & DevOps */}
+        <div className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 group">
+          <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <HardDrive className="w-6 h-6 text-white" />
+          </div>
+          <h3 className="text-xl font-semibold text-white mb-3">Cloud & DevOps</h3>
+          <p className="text-zion-slate-light mb-4">
+            Scalable cloud infrastructure and DevOps automation for modern applications.
+          </p>
+          <Link
+            to="/services/cloud-devops"
+            className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors"
+          >
+            Learn More <ArrowRight className="ml-2 w-4 h-4" />
+          </Link>
+        </div>
+
+        {/* Cybersecurity */}
+        <div className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 group">
+          <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <Shield className="w-6 h-6 text-white" />
+          </div>
+          <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
+          <p className="text-zion-slate-light mb-4">
+            Advanced security solutions and compliance automation for enterprise protection.
+          </p>
+          <Link
+            to="/services/cybersecurity"
+            className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors"
+          >
+            Learn More <ArrowRight className="ml-2 w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+// Stats Section
+const StatsSection: React.FC = () => (
+  <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-blue-darker">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">500+</div>
+          <div className="text-zion-slate-light">Happy Clients</div>
+        </div>
+        <div>
+          <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">1000+</div>
+          <div className="text-zion-slate-light">Projects Completed</div>
+        </div>
+        <div>
+          <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">99.9%</div>
+          <div className="text-zion-slate-light">Uptime Guarantee</div>
+        </div>
+        <div>
+          <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">24/7</div>
+          <div className="text-zion-slate-light">Expert Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+// CTA Section
+const CTASection: React.FC = () => (
+  <section className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
+    <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+        Ready to Transform Your Business?
+      </h2>
+      <p className="text-xl text-zion-slate-light mb-8">
+        Let's discuss how our technology solutions can drive innovation and growth for your organization.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Link
+          to="/contact"
+          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/90 hover:to-zion-cyan/90 transition-all duration-200"
+        >
+          Get Started Today
+          <ArrowRight className="ml-2 w-5 h-5" />
+        </Link>
+        <Link
+          to="/services"
+          className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-200"
+        >
+          Explore Services
+        </Link>
+      </div>
+    </div>
+  </section>
+);
+
+export function HomePage() {
+  return (
+    <div className="min-h-screen bg-zion-blue-dark">
+      <HeroSection />
+      <ServicesOverview />
+      <StatsSection />
+      <CTASection />
+      <FloatingActionButton />
+    </div>
+  );
+}
