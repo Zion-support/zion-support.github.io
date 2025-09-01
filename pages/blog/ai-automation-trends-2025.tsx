@@ -150,7 +150,7 @@ export default function AIAutomationTrends2025() {
                 <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://bolt.new.zion.app/blog/ai-automation-trends-2025" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-blue-800 hover:bg-blue-900 rounded-lg text-white transition-colors">
                   LinkedIn
                 </a>
-                <a href="mailto:?subject=AI%20Automation%20Trends%202025&body=Check%20out%20this%20article%20about%20AI%20automation%20trends%3A%20https://bolt.new.zion.app/blog/ai-automation-trends-2025" className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white transition-colors">
+                <a href="mailto:?subject=AI%20Automation%20Trends%202025%20-%20Zion%20Tech%20Group&body=Check%20out%20this%20article:%20https://bolt.new.zion.app/blog/ai-automation-trends-2025" className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white transition-colors">
                   Email
                 </Link>
               </div>
