@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useState } from "react";
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -8,6 +8,9 @@ import { Search } from "lucide-react";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { SAMPLE_SERVICES } from "@/data/sampleServices";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useQuery } from "@tanstack/react-query";
+import { fetchServices } from "@/api/services";
 
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
@@ -15,30 +18,24 @@ interface ServiceTypeStepProps {
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [listings, setListings] = useState<ListingItem[]>([]);
-  const [loading, setLoading] = useState(false);
+  const debouncedQuery = useDebounce(searchQuery, 300);
+  const {
+    data: listings = [],
+    isPending: loading,
+    error,
+  } = useQuery({
+    queryKey: ['services', formData.serviceType, debouncedQuery],
+    queryFn: () =>
+      fetchServices(formData.serviceType, debouncedQuery),
+    enabled: !!formData.serviceType,
+    retry: 2,
+  });
 
-  const fetchServices = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const response = await fetch('/api/services');
-      if (!response.ok) throw new Error('Failed to fetch');
-      const data = await response.json();
-      setListings(data as ListingItem[]);
-    } catch (err) {
-      console.error('Failed to fetch services', err);
-      setError('Failed to load services');
-      setListings(SAMPLE_SERVICES);
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  // Fetch services once on mount
-  useEffect(() => {
-    fetchServices();
-  }, [fetchServices]);
+  const fallbackListings = SAMPLE_SERVICES.filter(
+    (item) =>
+      item.category === formData.serviceType &&
+      item.title.toLowerCase().includes(debouncedQuery.toLowerCase())
+  );
   
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
@@ -52,7 +49,9 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     });
   };
   
-  const filteredListings = (listings.length ? listings : SAMPLE_SERVICES).filter(item => {
+  const sourceListings = error ? fallbackListings : listings.length > 0 ? listings : SAMPLE_SERVICES;
+
+  const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
       const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
@@ -117,14 +116,9 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </div>
 
           {error && (
-            <Alert variant="destructive" className="text-center">
-              <AlertDescription>
-                {error}
-                <Button size="sm" className="ml-2" onClick={fetchServices}>
-                  Retry
-                </Button>
-              </AlertDescription>
-            </Alert>
+            <div className="text-center text-red-400 text-sm">
+              {(error as Error).message || 'Failed to load services'}. Showing sample data.
+            </div>
           )}
           
           <div className="grid grid-cols-1 gap-4 mt-4">

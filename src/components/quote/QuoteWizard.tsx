@@ -1,22 +1,14 @@
 import { useState } from 'react';
 import type { WizardStep } from '@/context/RequestQuoteWizard';
-import useSWR from 'swr';
+import { useQuery } from '@tanstack/react-query';
 import { Loader2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { useRequestQuoteWizard } from '@/context';
+import { fetchServices, ServiceItem } from '@/api/services';
 
 const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
-
-const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
-
-const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
-
-const fetcher = (url: string) => fetch(url).then(res => {
-  if (!res.ok) throw new Error('Failed');
-  return res.json();
-});
 
 function StepIndicator({ step }: { step: WizardStep }) {
   const index = WIZARD_STEPS.indexOf(step);
@@ -30,16 +22,25 @@ function StepIndicator({ step }: { step: WizardStep }) {
 export function QuoteWizard() {
   const { step, selectService, submitQuote } = useRequestQuoteWizard();
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
-  const { data, error } = useSWR<ServiceItem[]>('/api/services', fetcher, {
-    onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
-      if (retryCount >= 5) return;
-      const timeout = Math.min(1000 * 2 ** retryCount, 30000);
-      setTimeout(() => revalidate({ retryCount: retryCount + 1 }), timeout);
-    },
+  const [message, setMessage] = useState('');
+  const query = useQuery({
+    queryKey: ['services'],
+    queryFn: () => fetchServices(),
+    retry: 2,
   });
 
+  const {
+    data = [],
+    isPending,
+    error,
+  } = query as {
+    data: ServiceItem[] | undefined;
+    isPending: boolean;
+    error: unknown;
+  };
+
   if (step === 'Services') {
-    const loading = !data && !error;
+    const loading = isPending;
 
     return (
       <div className="space-y-6">
