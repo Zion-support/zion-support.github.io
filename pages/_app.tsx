@@ -2,6 +2,6 @@ import type { AppProps } from 'next/app';
 import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function ZionApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
