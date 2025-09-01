@@ -149,52 +149,15 @@ const Index: NextPage = () => {
             <p className="text-white/70">Finds broken images, optimizes assets, and syncs fixes.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/broken-image-scanner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
- 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Automation Guardian</h2>
-            <p className="text-white/70">Runs targeted repairs, orchestrators, and syncs changes.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/automation-guardian-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
- 
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Auto Discovery Runner</h2>
-            <p className="text-white/70">Discovers and runs high‑value orchestrators autonomously.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/auto-discovery-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
- 
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Cloud Autonomous Orchestrator</h2>
-            <p className="text-white/70">Runs cloud orchestrations; fixes, builds, and syncs.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/cloud-autonomous-orchestrator-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
- 
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Branch Cleanup Runner</h2>
-            <p className="text-white/70">Deletes merged or stale ephemeral branches via GitHub API.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/branch-cleanup-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">SEO Audit Runner</h2>
+            <p className="text-white/70">Audits titles and descriptions; writes reports and JSON.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/seo-audit-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Terminology Consistency</h2>
-            <p className="text-white/70">Audits and normalizes product terminology across docs and README.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/terminology-consistency-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Routes Map</h2>
-            <p className="text-white/70">Generates an index of all site routes and public reports.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/routes-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Component Props Docs</h2>
-            <p className="text-white/70">Scans components/ and publishes basic props docs.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/component-props-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Static Asset Inventory</h2>
-            <p className="text-white/70">Indexes public/ assets and publishes a size report.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/asset-inventory-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Dependency Auto‑Upgrade</h2>
+            <p className="text-white/70">Daily minor/patch upgrades with build verification.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/deps-auto-upgrade-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
         </ul>
 </main>
