@@ -18,7 +18,7 @@ exports.handler = async () => {
     return status;
   }
 
-  logStep('orphan-pages:scan', () => runNode('automation/orphan-pages-auditor.cjs'));
+  logStep('assets:report', () => runNode('automation/asset-size-report.cjs'));
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, body: logs.join('\n') };

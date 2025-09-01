@@ -285,21 +285,9 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
 [[scheduled.functions]]
-  name = "dependency-health-runner"
-  schedule = "0 2 * * *" # daily at 02:00 UTC
+  name = "orphan-pages-runner"
+  schedule = "13 */6 * * *" # every 6 hours at minute 13
 
 [[scheduled.functions]]
-  name = "changelog-publisher"
-  schedule = "17 */12 * * *" # twice per day
-
-[[scheduled.functions]]
-  name = "innovation-generator"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "redirect-healer"
-  schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-  name = "sitemap-prioritizer"
-  schedule = "17 */6 * * *"
+  name = "asset-size-report"
+  schedule = "17 */6 * * *" # every 6 hours at minute 17
