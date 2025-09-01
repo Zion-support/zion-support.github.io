@@ -27,6 +27,8 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({
 const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
 const ComprehensiveServicesShowcase2026 = lazy(() => import('./pages/ComprehensiveServicesShowcase2026').then(module => ({ default: module.default })));
 const ComprehensiveMarketingPage2026 = lazy(() => import('./pages/ComprehensiveMarketingPage2026').then(module => ({ default: module.default })));
+const EnhancedServicesShowcase2025 = lazy(() => import('./pages/enhanced-services-showcase-2025').then(module => ({ default: module.default })));
+const ComprehensivePricingGuide2025 = lazy(() => import('./pages/comprehensive-pricing-guide-2025').then(module => ({ default: module.default })));
 const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
 const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));
 const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
@@ -70,6 +72,8 @@ function App() {
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
                 <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
                 <Route path="/comprehensive-marketing-2026" element={<ComprehensiveMarketingPage2026 />} />
+                <Route path="/enhanced-services-showcase-2025" element={<EnhancedServicesShowcase2025 />} />
+                <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/solutions" element={<SolutionsPage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />
