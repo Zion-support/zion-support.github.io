@@ -14,15 +14,15 @@ Object.defineProperty(window, 'matchMedia', {
       media: query,
       onchange: null,
       addListener:
-        global.global.global.global.global.global.global.global.global.global.global.global.global.global.jest.fn(), // deprecated
+        global.global.global.global.global.global.global.global.global.global.global.global.global.global.global.jest.fn(), // deprecated
       removeListener:
-        global.global.global.global.global.global.global.global.global.global.global.global.global.global.jest.fn(), // deprecated
+        global.global.global.global.global.global.global.global.global.global.global.global.global.global.global.jest.fn(), // deprecated
       addEventListener:
-        global.global.global.global.global.global.global.global.global.global.global.global.global.global.jest.fn(),
+        global.global.global.global.global.global.global.global.global.global.global.global.global.global.global.jest.fn(),
       removeEventListener:
-        global.global.global.global.global.global.global.global.global.global.global.global.global.global.jest.fn(),
+        global.global.global.global.global.global.global.global.global.global.global.global.global.global.global.jest.fn(),
       dispatchEvent:
-        global.global.global.global.global.global.global.global.global.global.global.global.global.global.jest.fn(),
+        global.global.global.global.global.global.global.global.global.global.global.global.global.global.global.jest.fn(),
     })),
 });
 

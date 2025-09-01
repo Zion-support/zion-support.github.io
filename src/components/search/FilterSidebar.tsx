@@ -23,7 +23,7 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {;
   isOpen: boolean;
   onClose: ()  => void};
 ;
-export function FilterSidebar(...args: []):  {;
+export function FilterSidebar(...args: any[]):  {;
   return (;
     <>;
       {/* Mobile overlay */};

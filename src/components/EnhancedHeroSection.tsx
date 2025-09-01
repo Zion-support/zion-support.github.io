@@ -34,7 +34,7 @@ interface HeroSlide {;
   stats: { label: string; value: string; icon: React.ComponentType < any> ;
 }[]};
 ;
-const EnhancedHeroSection = memo (function EnhancedHeroSection (...args: []) :  {;
+const EnhancedHeroSection = memo (function EnhancedHeroSection (...args: any[]) :  {;
   const [currentSlide, setCurrentSlide] = useState (0) ;
   const [isAutoPlaying, setIsAutoPlaying] = useState (true) ;
 ;

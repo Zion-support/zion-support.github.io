@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  * @param {*} params - Function parameters;
  * @returns {*} Function return value;
  */;
-function EnhancedAccessibilityPanel(...args: []):  {;
+function EnhancedAccessibilityPanel(...args: any[]):  {;
 ;
   Accessibility,;
   Eye,;

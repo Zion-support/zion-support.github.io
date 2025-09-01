@@ -1,3 +1,4 @@
+import React from 'react';
 // Minimal type declarations for offline development;
 ;
 // React stubs;
