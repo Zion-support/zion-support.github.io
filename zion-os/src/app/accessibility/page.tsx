@@ -1,313 +1,370 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Accessibility Statement - Zion Tech Group",
+  description: "Zion Tech Group's commitment to digital accessibility and ensuring our website is usable by people with disabilities.",
+  keywords: "accessibility, digital accessibility, WCAG, disability access, Zion Tech Group",
+};
+
 export default function AccessibilityPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Accessibility
+            <span className="gradient-text">Accessibility Statement</span>
           </h1>
-          <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">
-            We are committed to making our website and services accessible to everyone, including people with disabilities.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Zion Tech Group is committed to ensuring digital accessibility for people with disabilities. 
+            We are continually improving the user experience for everyone and applying the relevant 
+            accessibility standards.
           </p>
+          <div className="text-sm text-gray-400 mt-4">
+            Last updated: December 15, 2024
+          </div>
         </div>
-      </section>
 
-      {/* Accessibility Commitment */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Accessibility Commitment
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Zion Tech Group is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.
-              </p>
-              <p className="text-lg text-gray-600 mb-6">
-                We believe that technology should be inclusive and accessible to all users, regardless of their abilities or disabilities. Our commitment to accessibility reflects our broader mission to create technology solutions that benefit everyone.
-              </p>
-              <p className="text-lg text-gray-600">
-                We strive to maintain compliance with the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards and are working towards Level AAA compliance.
-              </p>
-            </div>
-            <div className="bg-green-50 p-8 rounded-xl">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">WCAG 2.1 AA Compliant</h3>
-                    <p className="text-gray-600">Meeting international accessibility standards</p>
-                  </div>
+        {/* Statement Content */}
+        <div className="space-y-12">
+          {/* Commitment */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Our Commitment</h2>
+            <p className="text-gray-300 mb-4">
+              Zion Tech Group believes that digital accessibility is a fundamental human right. 
+              We are committed to making our website and digital services accessible to people 
+              with disabilities, including those who use assistive technologies.
+            </p>
+            <p className="text-gray-300">
+              We strive to ensure that our website meets or exceeds the Web Content Accessibility 
+              Guidelines (WCAG) 2.1 Level AA standards, which are widely recognized as the 
+              international standard for web accessibility.
+            </p>
+          </section>
+
+          {/* Standards */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Accessibility Standards</h2>
+            <p className="text-gray-300 mb-4">
+              Our website is designed and developed to meet the following accessibility standards:
+            </p>
+            <div className="card p-6">
+              <h3 className="text-xl font-semibold mb-4">WCAG 2.1 Level AA Compliance</h3>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <span className="text-green-400 font-semibold mr-3 mt-1">✓</span>
+                  <span className="text-gray-300">Perceivable: Content is presented in ways that users can perceive</span>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Mobile Accessible</h3>
-                    <p className="text-gray-600">Optimized for all devices and screen sizes</p>
-                  </div>
+                <div className="flex items-start">
+                  <span className="text-green-400 font-semibold mr-3 mt-1">✓</span>
+                  <span className="text-gray-300">Operable: Interface components and navigation are operable</span>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Screen Reader Compatible</h3>
-                    <p className="text-gray-600">Full compatibility with assistive technologies</p>
-                  </div>
+                <div className="flex items-start">
+                  <span className="text-green-400 font-semibold mr-3 mt-1">✓</span>
+                  <span className="text-gray-300">Understandable: Content and interface are understandable</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-green-400 font-semibold mr-3 mt-1">✓</span>
+                  <span className="text-gray-300">Robust: Content can be interpreted reliably by assistive technologies</span>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Accessibility Features */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Accessibility Features
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Our website includes various accessibility features to ensure an inclusive user experience
+          {/* Features */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Accessibility Features</h2>
+            <p className="text-gray-300 mb-6">
+              Our website includes the following accessibility features:
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                </svg>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="card p-4">
+                <h3 className="font-semibold text-gray-200 mb-3">Keyboard Navigation</h3>
+                <ul className="text-sm text-gray-300 space-y-2">
+                  <li>• Full keyboard navigation support</li>
+                  <li>• Visible focus indicators</li>
+                  <li>• Logical tab order</li>
+                  <li>• Skip navigation links</li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Keyboard Navigation</h3>
-              <p className="text-gray-600">
-                Full keyboard navigation support for users who cannot use a mouse. All interactive elements can be accessed and operated using keyboard controls.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
+              
+              <div className="card p-4">
+                <h3 className="font-semibold text-gray-200 mb-3">Screen Reader Support</h3>
+                <ul className="text-sm text-gray-300 space-y-2">
+                  <li>• Semantic HTML structure</li>
+                  <li>• ARIA labels and landmarks</li>
+                  <li>• Alternative text for images</li>
+                  <li>• Descriptive link text</li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Screen Reader Support</h3>
-              <p className="text-gray-600">
-                Compatible with popular screen readers including JAWS, NVDA, VoiceOver, and TalkBack. Proper heading structure and ARIA labels for enhanced navigation.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485-7.071-7.071a2 2 0 010-2.829z" />
-                </svg>
+              
+              <div className="card p-4">
+                <h3 className="font-semibold text-gray-200 mb-3">Visual Accessibility</h3>
+                <ul className="text-sm text-gray-300 space-y-2">
+                  <li>• High contrast color schemes</li>
+                  <li>• Resizable text support</li>
+                  <li>• Clear typography</li>
+                  <li>• Consistent visual hierarchy</li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">High Contrast Mode</h3>
-              <p className="text-gray-600">
-                High contrast color schemes and sufficient color contrast ratios to ensure text and interactive elements are easily distinguishable for users with visual impairments.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
+              
+              <div className="card p-4">
+                <h3 className="font-semibold text-gray-200 mb-3">Content Accessibility</h3>
+                <ul className="text-sm text-gray-300 space-y-2">
+                  <li>• Plain language writing</li>
+                  <li>• Clear headings and structure</li>
+                  <li>• Descriptive form labels</li>
+                  <li>• Error message clarity</li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Alternative Text</h3>
-              <p className="text-gray-600">
-                Descriptive alternative text for all images, ensuring that users with visual impairments can understand the content and context of visual elements.
-              </p>
             </div>
+          </section>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Responsive Design</h3>
-              <p className="text-gray-600">
-                Mobile-responsive design that adapts to different screen sizes and orientations, ensuring accessibility across all devices and platforms.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Text Resizing</h3>
-              <p className="text-gray-600">
-                Text can be resized up to 200% without loss of functionality or layout issues, accommodating users who need larger text for better readability.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* WCAG Compliance */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              WCAG 2.1 Compliance
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We follow the Web Content Accessibility Guidelines to ensure our website meets accessibility standards
+          {/* Assistive Technologies */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Assistive Technology Support</h2>
+            <p className="text-gray-300 mb-4">
+              Our website is designed to work with the following assistive technologies:
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Level AA Compliance</h3>
-              <p className="text-gray-600 mb-6">
-                Our website meets WCAG 2.1 Level AA standards, which includes:
-              </p>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Perceivable: Content is presented in ways users can perceive
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Operable: Interface components are operable by all users
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Understandable: Information and operation are understandable
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Robust: Content can be interpreted reliably by assistive technologies
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Ongoing Improvements</h3>
-              <p className="text-gray-600 mb-6">
-                We are continuously working to improve accessibility and working towards Level AAA compliance:
-              </p>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Regular accessibility audits and testing
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  User feedback integration
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Technology updates and improvements
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Staff training and awareness
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Report Accessibility Issues
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We welcome feedback on accessibility issues and suggestions for improvement
-            </p>
-          </div>
-
-          <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-sm">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Contact Our Accessibility Team</h3>
-                <p className="text-gray-600">
-                  If you encounter accessibility issues or have suggestions for improvement, please contact us:
-                </p>
-              </div>
-
+            <div className="card p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-medium text-gray-900 mb-2">Email</h4>
-                  <a href="mailto:accessibility@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">
+                  <h3 className="font-semibold text-gray-200 mb-3">Screen Readers</h3>
+                  <ul className="text-sm text-gray-300 space-y-1">
+                    <li>• JAWS (Windows)</li>
+                    <li>• NVDA (Windows)</li>
+                    <li>• VoiceOver (macOS/iOS)</li>
+                    <li>• TalkBack (Android)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-200 mb-3">Other Technologies</h3>
+                  <ul className="text-sm text-gray-300 space-y-1">
+                    <li>• Speech recognition software</li>
+                    <li>• Switch navigation devices</li>
+                    <li>• Magnification software</li>
+                    <li>• High contrast mode</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Known Issues */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Known Accessibility Issues</h2>
+            <p className="text-gray-300 mb-4">
+              We are aware of some accessibility issues and are working to resolve them:
+            </p>
+            <div className="card p-6">
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-gray-200 mb-2">PDF Documents</h3>
+                  <p className="text-sm text-gray-300">
+                    Some PDF documents may not be fully accessible to screen readers. 
+                    We are working to ensure all PDFs meet accessibility standards.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-200 mb-2">Third-Party Content</h3>
+                  <p className="text-sm text-gray-300">
+                    Some third-party content, such as embedded videos or forms, may not 
+                    meet our accessibility standards. We are working with providers to improve this.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-200 mb-2">Complex Interactive Elements</h3>
+                  <p className="text-sm text-gray-300">
+                    Some advanced interactive features may require additional accessibility improvements. 
+                    We are continuously enhancing these elements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Testing */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Accessibility Testing</h2>
+            <p className="text-gray-300 mb-4">
+              We regularly test our website for accessibility using a combination of methods:
+            </p>
+            <ul className="list-disc list-inside text-gray-300 space-y-2 mb-6 ml-4">
+              <li>Automated accessibility testing tools</li>
+              <li>Manual testing with assistive technologies</li>
+              <li>User testing with people with disabilities</li>
+              <li>Expert accessibility audits</li>
+              <li>Regular accessibility reviews and updates</li>
+            </ul>
+            <p className="text-gray-300">
+              Our accessibility testing is ongoing, and we continuously work to identify 
+              and resolve any accessibility barriers.
+            </p>
+          </section>
+
+          {/* Feedback */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Feedback and Support</h2>
+            <p className="text-gray-300 mb-4">
+              We welcome feedback on the accessibility of our website. If you experience 
+              accessibility barriers or have suggestions for improvement, please contact us:
+            </p>
+            <div className="card p-6">
+              <div className="space-y-3">
+                <div>
+                  <span className="font-semibold text-gray-200">Accessibility Email:</span>
+                  <a href="mailto:accessibility@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 ml-2">
                     accessibility@ziontechgroup.com
                   </a>
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-900 mb-2">Phone</h4>
-                  <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">
-                    +1 (302) 464-0950
+                  <span className="font-semibold text-gray-200">General Contact:</span>
+                  <a href="mailto:info@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 ml-2">
+                    info@ziontechgroup.com
                   </a>
                 </div>
-              </div>
-
-              <div>
-                <h4 className="font-medium text-gray-900 mb-2">Response Time</h4>
-                <p className="text-gray-600">
-                  We aim to respond to accessibility feedback within 2 business days and will work to resolve issues promptly.
-                </p>
+                <div>
+                  <span className="font-semibold text-gray-200">Phone:</span>
+                  <a href="tel:+1-555-123-4567" className="text-blue-400 hover:text-blue-300 ml-2">
+                    +1 (555) 123-4567
+                  </a>
+                </div>
+                <div>
+                  <span className="font-semibold text-gray-200">Address:</span>
+                  <span className="text-gray-300 ml-2">
+                    Zion Tech Group<br />
+                    123 Innovation Drive<br />
+                    San Francisco, CA 94105<br />
+                    United States
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-green-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Help Us Improve Accessibility
-          </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Your feedback helps us create a more inclusive and accessible experience for all users.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-white text-green-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
-              Contact Us
-            </a>
-            <a href="/privacy" className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-              Privacy Policy
-            </a>
-          </div>
+          {/* Timeline */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Accessibility Improvement Timeline</h2>
+            <p className="text-gray-300 mb-4">
+              We are committed to continuous improvement of our website's accessibility. 
+              Here's our current timeline for addressing known issues:
+            </p>
+            <div className="card p-6">
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-gray-200 mb-2">Immediate (Within 30 days)</h3>
+                  <p className="text-sm text-gray-300">
+                    Fix critical accessibility barriers and ensure basic navigation works with all assistive technologies.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-200 mb-2">Short-term (Within 90 days)</h3>
+                  <p className="text-sm text-gray-300">
+                    Resolve known accessibility issues and improve form accessibility and error handling.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-200 mb-2">Long-term (Within 6 months)</h3>
+                  <p className="text-sm text-gray-300">
+                    Achieve full WCAG 2.1 Level AA compliance and implement advanced accessibility features.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Compliance */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Compliance Status</h2>
+            <p className="text-gray-300 mb-4">
+              Our current accessibility compliance status:
+            </p>
+            <div className="card p-6">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="font-semibold text-gray-200">WCAG 2.1 Level A:</span>
+                  <span className="text-green-400 font-semibold">✓ Compliant</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="font-semibold text-gray-200">WCAG 2.1 Level AA:</span>
+                  <span className="text-yellow-400 font-semibold">⚠ Partially Compliant</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="font-semibold text-gray-200">WCAG 2.1 Level AAA:</span>
+                  <span className="text-red-400 font-semibold">✗ Not Compliant</span>
+                </div>
+              </div>
+              <p className="text-sm text-gray-300 mt-4">
+                We are actively working to achieve full Level AA compliance and continuously 
+                improve our accessibility standards.
+              </p>
+            </div>
+          </section>
+
+          {/* Additional Resources */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Additional Resources</h2>
+            <p className="text-gray-300 mb-4">
+              For more information about digital accessibility, please visit:
+            </p>
+            <div className="card p-6">
+              <ul className="space-y-3">
+                <li>
+                  <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
+                    WCAG 2.1 Quick Reference Guide
+                  </a>
+                  <span className="text-gray-400 text-sm ml-2">- Official accessibility guidelines</span>
+                </li>
+                <li>
+                  <a href="https://www.w3.org/WAI/standards-guidelines/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
+                    W3C Web Accessibility Initiative
+                  </a>
+                  <span className="text-gray-400 text-sm ml-2">- International accessibility standards</span>
+                </li>
+                <li>
+                  <a href="https://www.ada.gov/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
+                    Americans with Disabilities Act (ADA)
+                  </a>
+                  <span className="text-gray-400 text-sm ml-2">- U.S. disability rights information</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Updates */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Updates to This Statement</h2>
+            <p className="text-gray-300 mb-4">
+              We may update this Accessibility Statement from time to time to reflect changes 
+              in our accessibility practices or compliance status.
+            </p>
+            <p className="text-gray-300">
+              We will notify users of any material changes by updating the "Last updated" 
+              date at the top of this page.
+            </p>
+          </section>
         </div>
-      </section>
+
+        {/* CTA Section */}
+        <section className="text-center mt-16">
+          <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
+            <h2 className="text-2xl font-bold mb-4">Help Us Improve Accessibility</h2>
+            <p className="text-gray-300 mb-6">
+              Your feedback helps us make our website more accessible for everyone. 
+              Contact us with your suggestions or to report accessibility issues.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-primary">
+                Contact Us
+              </Link>
+              <a href="mailto:accessibility@ziontechgroup.com" className="btn-secondary">
+                Accessibility Feedback
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
