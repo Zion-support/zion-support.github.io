@@ -137,6 +137,7 @@ export const AccessibilityEnhancer: React.FC = () => {
     } else {
       root.classList.remove('color-blind-friendly');
     }
+
     // Font size
     root.style.setProperty('--text-scale', `${settings.fontSize / 100}`);
     
