@@ -96,8 +96,6 @@ export default function ComprehensivePricing() {
 
     return matchesCategory && matchesPrice;
   });
-
-      default: return 'All Prices'}
   };
 
   return (
