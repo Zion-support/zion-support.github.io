@@ -1,46 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 const Sitemap = () => {
     const sitemapSections = [
         {
             title: "Main Pages",
             links: [
                 { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
-                { name: "About Us", path: "/about", description: "Our story and mission" },
+                { name: "About", path: "/about", description: "Learn about our company" },
                 { name: "Contact", path: "/contact", description: "Get in touch with us" },
-                { name: "Pricing", path: "/pricing", description: "Our service pricing" },
-                { name: "Careers", path: "/careers", description: "Join our team" },
-                { name: "Partners", path: "/partners", description: "Strategic partnerships" }
+                { name: "Partners", path: "/partners", description: "Our business partners" },
+                { name: "Careers", path: "/careers", description: "Job opportunities" }
             ]
         },
         {
             title: "Services",
             links: [
-                { name: "All Services", path: "/services", description: "Complete service overview" },
-                { name: "AI Services", path: "/ai-services", description: "Artificial Intelligence services" },
-                { name: "IT Services", path: "/it-services", description: "Information Technology solutions" },
-                { name: "Cybersecurity", path: "/cybersecurity", description: "Security and threat protection" },
-                { name: "Green IT", path: "/green-it", description: "Sustainable technology solutions" },
-                { name: "Micro SaaS Services", path: "/micro-saas-services", description: "Scalable software solutions" },
-                { name: "Enhanced Services", path: "/enhanced-services", description: "Advanced technology solutions" },
-                { name: "Innovative Services 2027", path: "/innovative-services-2027", description: "Cutting-edge solutions" },
-                { name: "Comprehensive Services", path: "/comprehensive-services", description: "Enterprise solutions" },
-                { name: "Emerging Tech Services", path: "/emerging-tech-services-2027", description: "Next-generation technology" }
+                { name: "All Services", path: "/services", description: "Complete service catalog" },
+                { name: "AI Solutions", path: "/services/ai", description: "Artificial intelligence services" },
+                { name: "Cybersecurity", path: "/services/cybersecurity", description: "Security and compliance" },
+                { name: "Cloud & DevOps", path: "/services/cloud-devops", description: "Cloud infrastructure" },
+                { name: "Digital Transformation", path: "/services/digital-transformation", description: "Business transformation" }
             ]
         },
         {
-            title: "Marketplace & Solutions",
+            title: "Marketplace",
             links: [
-                { name: "Marketplace", path: "/marketplace", description: "Technology marketplace" },
-                { name: "AI Business Solutions", path: "/ai-business-solutions", description: "AI-powered business tools" },
-                { name: "Digital Marketing", path: "/digital-marketing-services", description: "Marketing technology solutions" },
-                { name: "Financial Solutions", path: "/financial-solutions", description: "Fintech and financial services" },
-                { name: "Manufacturing Solutions", path: "/manufacturing-solutions", description: "Industry 4.0 solutions" },
-                { name: "5G Enterprise Solutions", path: "/5g-enterprise-solutions", description: "Next-generation connectivity" }
+                { name: "Marketplace", path: "/marketplace", description: "Browse our marketplace" },
+                { name: "Products", path: "/marketplace/products", description: "Available products" },
+                { name: "Services", path: "/marketplace/services", description: "Marketplace services" },
+                { name: "Talent", path: "/marketplace/talent", description: "Find talent" }
             ]
         },
         {
-            title: "Comp & Resources",
+            title: "Support & Resources",
             links: [
                 { name: "Blog", path: "/blog", description: "Latest insights and news" },
                 { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
@@ -67,8 +60,9 @@ const Sitemap = () => {
                 { name: "Dashboard", path: "/dashboard", description: "User dashboard" },
                 { name: "Forgot Password", path: "/forgot-password", description: "Password recovery" }
             ]
-
+        }
     ];
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24">
             <div className="container mx-auto px-4 py-16">
@@ -97,7 +91,7 @@ const Sitemap = () => {
                                         <Link
                                             to={link.path}
                                             className="block text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 group"
-
+                                        >
                                             <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">
                                                 {link.name}
                                             </div>
@@ -118,25 +112,26 @@ const Sitemap = () => {
                         <Link
                             to="/contact"
                             className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-medium hover:scale-105 transition-transform"
-
+                        >
                             Get Started
                         </Link>
                         <Link
                             to="/services"
                             className="px-6 py-3 border-2 border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-colors"
-
+                        >
                             View Services
                         </Link>
                         <Link
                             to="/help"
                             className="px-6 py-3 border-2 border-zion-purple text-zion-purple rounded-lg font-medium hover:bg-zion-purple hover:text-white transition-colors"
-
+                        >
                             Get Help
                         </Link>
                     </div>
                 </div>
             </div>
         </div>
-    )};
+    );
+};
+
 export default Sitemap;
-}

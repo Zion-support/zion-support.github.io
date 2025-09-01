@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
 import { FileText,
   Calendar,
   User,
@@ -10,7 +10,7 @@ import { FileText,
   Tag,
   Clock,
   Eye
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export function BlogPage(...args: any[]): any {
   const blogPosts = [

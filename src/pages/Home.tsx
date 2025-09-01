@@ -158,7 +158,7 @@ const HeroSection = () => {
             className="max-w-5xl mx-auto"
           >
             <div className={`w-24 h-24 bg-gradient-to-r ${heroSlides[currentSlide].color} rounded-3xl flex items-center justify-center mx-auto mb-8`}>
-              <heroSlides[currentSlide].icon className="w-12 h-12 text-white" />
+              {React.createElement(heroSlides[currentSlide].icon, { className: "w-12 h-12 text-white" })}
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
