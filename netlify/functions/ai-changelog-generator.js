@@ -18,7 +18,7 @@ exports.handler = async () => {
     return status;
   };
 
-  step('repo-knowledge-graph', () => runNode('automation/repo-knowledge-graph.cjs'));
+  step('ai-changelog-generator', () => runNode('automation/ai-changelog-generator.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
