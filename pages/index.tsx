@@ -108,10 +108,10 @@ const Index: NextPage = () => {
               <a href="/blog" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
                 Blog
               </a>
-              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-yellow-400/50">
-                Case Studies
+              <a href="/automation-health" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+                System Health
               </a>
-              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
                 Contact
               </a>
             </div>
@@ -161,87 +161,52 @@ const Index: NextPage = () => {
           </section>
           {/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
 
-          {/* Blog Section */}
-          <section className="mx-auto max-w-7xl px-6 pb-14">
-            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Latest Insights & Guides</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <a href="/blog/ai-automation-future" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-purple-400/30 transition-all duration-300">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-purple-500/0 via-cyan-400/10 to-purple-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <div className="mb-3">
-                  <span className="inline-block px-3 py-1 bg-purple-400/20 text-purple-400 text-xs font-medium rounded-full">
-                    AI & Automation
-                  </span>
+          {/* Footer Section */}
+          <footer className="mt-20 border-t border-white/20">
+            <div className="container mx-auto px-6 py-12">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                  <h3 className="text-lg font-semibold mb-4 text-cyan-400">Zion Tech Group</h3>
+                  <p className="text-white/70 text-sm">
+                    Leading-edge technology solutions and autonomous innovation systems.
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">The Future of AI Automation</h3>
-                <p className="text-sm text-white/75 mb-3">How autonomous systems are revolutionizing industries and reshaping the future of work</p>
-                <div className="flex items-center justify-between text-xs text-white/50">
-                  <span>January 17, 2025</span>
-                  <span>8 min read</span>
+                <div>
+                  <h4 className="text-md font-semibold mb-4 text-white">Services</h4>
+                  <ul className="space-y-2 text-sm text-white/70">
+                    <li><a href="/services" className="hover:text-cyan-400 transition-colors">AI Development</a></li>
+                    <li><a href="/services" className="hover:text-cyan-400 transition-colors">Automation Systems</a></li>
+                    <li><a href="/services" className="hover:text-cyan-400 transition-colors">Cloud Infrastructure</a></li>
+                    <li><a href="/services" className="hover:text-cyan-400 transition-colors">DevOps & CI/CD</a></li>
+                  </ul>
                 </div>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-purple-300/90">Read More <span aria-hidden>→</span></div>
-              </a>
-              
-              <a href="/blog/autonomous-systems-guide" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-cyan-500/0 via-purple-400/10 to-cyan-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <div className="mb-3">
-                  <span className="inline-block px-3 py-1 bg-cyan-400/20 text-cyan-400 text-xs font-medium rounded-full">
-                    Technical Guide
-                  </span>
+                <div>
+                  <h4 className="text-md font-semibold mb-4 text-white">Resources</h4>
+                  <ul className="space-y-2 text-sm text-white/70">
+                    <li><a href="/blog" className="hover:text-fuchsia-400 transition-colors">Blog</a></li>
+                    <li><a href="/api-documentation" className="hover:text-fuchsia-400 transition-colors">API Docs</a></li>
+                    <li><a href="/automation-health" className="hover:text-fuchsia-400 transition-colors">System Health</a></li>
+                    <li><a href="/privacy" className="hover:text-fuchsia-400 transition-colors">Privacy Policy</a></li>
+                  </ul>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Complete Guide to Autonomous Systems</h3>
-                <p className="text-sm text-white/75 mb-3">Everything you need to know about building, deploying, and managing intelligent autonomous systems</p>
-                <div className="flex items-center justify-between text-xs text-white/50">
-                  <span>January 17, 2025</span>
-                  <span>12 min read</span>
-                </div>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read More <span aria-hidden>→</span></div>
-              </a>
-            </div>
-            <div className="text-center mt-8">
-              <a href="/blog" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
-                View All Blog Posts
-              </a>
-            </div>
-          </section>
-
-          {/* Case Studies Preview */}
-          <section className="mx-auto max-w-7xl px-6 pb-14">
-            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Success Stories</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
-                <div className="mb-3">
-                  <span className="inline-block px-3 py-1 bg-cyan-400/20 text-cyan-400 text-xs font-medium rounded-full">
-                    E-commerce
-                  </span>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">E-commerce Automation Revolution</h3>
-                <p className="text-sm text-white/75 mb-3">TechRetail Inc. achieved 85% reduction in manual work and 60% improvement in order fulfillment speed.</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-white/50">TechRetail Inc.</span>
-                  <a href="/case-studies" className="text-xs text-cyan-400 hover:text-cyan-300">View Case Study →</a>
+                <div>
+                  <h4 className="text-md font-semibold mb-4 text-white">Connect</h4>
+                  <ul className="space-y-2 text-sm text-white/70">
+                    <li><a href="/about" className="hover:text-green-400 transition-colors">About Us</a></li>
+                    <li><a href="/contact" className="hover:text-green-400 transition-colors">Contact</a></li>
+                    <li><a href="/automation-health" className="hover:text-green-400 transition-colors">Status</a></li>
+                    <li><a href="/api-documentation" className="hover:text-green-400 transition-colors">Developers</a></li>
+                  </ul>
                 </div>
               </div>
-              
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
-                <div className="mb-3">
-                  <span className="inline-block px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-xs font-medium rounded-full">
-                    Manufacturing
-                  </span>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Manufacturing Process Optimization</h3>
-                <p className="text-sm text-white/75 mb-3">GlobalManufacturing Co. reduced unplanned downtime by 70% and achieved $350K annual cost savings.</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-white/50">GlobalManufacturing Co.</span>
-                  <a href="/case-studies" className="text-xs text-fuchsia-400 hover:text-fuchsia-300">View Case Study →</a>
-                </div>
+              <div className="mt-8 pt-8 border-t border-white/20 text-center">
+                <p className="text-white/60 text-sm">
+                  © 2025 Zion Tech Group. All rights reserved. | 
+                  <a href="/privacy" className="ml-2 hover:text-cyan-400 transition-colors">Privacy Policy</a>
+                </p>
               </div>
             </div>
-            <div className="text-center mt-8">
-              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-yellow-400/50">
-                View All Case Studies
-              </a>
-            </div>
-          </section>
+          </footer>
         </main>
 
         {/* Footer */}
