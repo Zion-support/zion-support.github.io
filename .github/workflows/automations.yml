@@ -5,7 +5,13 @@ name: automations
     - cron: 0 */2 * * *
 permissions:
   contents: write
-  actions: read
+
+permissions:
+  contents: write
+
+permissions:
+  contents: write
+
 jobs:
   main:
     name: Main Job

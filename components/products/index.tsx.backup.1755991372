@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+export default function Products() { return <div className="p-8">Products</div>; }
+=======
 import React from 'react';
 
 export default function ProductsIndexPage() {
@@ -8,4 +9,3 @@ export default function ProductsIndexPage() {
 export default function Products(){
   return <div style={{padding:20}}>Products</div>
 }
->>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6

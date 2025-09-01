@@ -1,42 +1,9 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://ziontechgroup.com/sitemap.xml
+# Sitemaps
+Sitemap: https://zion.app/sitemap.xml
+Sitemap: https://zion.app/sitemap.txt
 
-# Disallow admin areas for search engines
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /temp_*/
-Disallow: /zion-os/.next/
-Disallow: /scripts/
-Disallow: /src_backup/
-
-# Allow important pages
-Allow: /services
-Allow: /solutions
-Allow: /about
-Allow: /contact
-Allow: /multiverse/launch
-Allow: /docs
-Allow: /community
-
-# Crawl delay
+# Crawl-delay
 Crawl-delay: 1
-
-# Disallow admin and automation areas
-Disallow: /automation/
-Disallow: /scripts/
-Disallow: /reports/
-Disallow: /.git/
-Disallow: /node_modules/
-
-# Allow important pages
-Allow: /about
-Allow: /services
-Allow: /resources
-Allow: /case-studies
-Allow: /blog
-Allow: /contact
-Allow: /privacy

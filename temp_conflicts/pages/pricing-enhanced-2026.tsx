@@ -239,7 +239,7 @@ export default function PricingEnhanced2026Page() {
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
           
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />

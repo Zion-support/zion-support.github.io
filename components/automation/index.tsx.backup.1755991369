@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-export default function AutomationIndex() {
+export default function AutomationIndex(){return <div className="prose dark:prose-invert"><h1>Automation</h1><p>Tools coming soon.</p></div>}
+=======
   return (
     <div className="py-8">
       <h1 className="text-xl font-semibold">Automation</h1>
@@ -13,4 +13,3 @@ import React from 'react';
 export default function AutomationIndexPage() {
   return <div>Automation Overview</div>;
 }
->>>>>>> origin/cursor/deploy-ai-podcast-host-with-ziongpt-9517

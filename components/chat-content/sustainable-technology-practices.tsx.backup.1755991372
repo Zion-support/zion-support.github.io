@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+export default function Page() { return <div className="p-8">Sustainable Technology Practices</div>; }
+=======
 import React from 'react';
 
 export default function SustainableTechnologyPracticesPage() {
@@ -8,4 +9,3 @@ export default function SustainableTechnologyPracticesPage() {
 export default function Page(){
   return <div style={{padding:20}}>Content</div>
 }
->>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6

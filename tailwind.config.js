@@ -20,7 +20,27 @@ module.exports = {
     extend: {
       // Custom colors for Zion Tech Group brand
       colors: {
-        // Primary brand colors
+        'fade-in': 'fadeIn 0.6s ease-out forwards',
+        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+        'fade-in-down': 'fadeInDown 0.6s ease-out forwards',
+        'slide-in-left': 'slideInLeft 0.6s ease-out forwards',
+        'slide-in-right': 'slideInRight 0.6s ease-out forwards',
+        'scale-in': 'scaleIn 0.6s ease-out forwards',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'bounce-slow': 'bounce 2s infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'shimmer': 'shimmer 2.5s linear infinite',
+        'matrix': 'matrix 20s linear infinite',
+        'neon-pulse': 'neonPulse 1.5s ease-in-out infinite',
+        'cyber-float': 'cyberFloat 8s ease-in-out infinite',
+        'hologram': 'hologram 3s ease-in-out infinite',
+        'energy-wave': 'energyWave 4s ease-in-out infinite',
+        'quantum-spin': 'quantumSpin 6s linear infinite',
+        'neural-network': 'neuralNetwork 10s linear infinite',
+        'plasma-flow': 'plasmaFlow 5s ease-in-out infinite',
+        'cyber-grid': 'cyberGrid 15s linear infinite',
+=======
         primary: {
           50: '#f0f9ff',
           100: '#e0f2fe',
@@ -213,12 +233,13 @@ module.exports = {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
         'spin-slow': 'spin 3s linear infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'shimmer': 'shimmer 2.5s linear infinite',
-        'gradient': 'gradient 3s ease infinite',
-        'matrix': 'matrix 20s linear infinite',
-        'cyber': 'cyber 4s ease-in-out infinite',
+        'bounce-slow': 'bounce 2s infinite',
+        'grid-flow': 'gridFlow 20s linear infinite',
+        'particle': 'particle 7s linear infinite',
+        'scan-line': 'scanLine 3s ease-in-out infinite',
+        'gradient-x': 'gradientX 3s ease-in-out infinite',
+        'bounce-x': 'bounceX 2s ease-in-out infinite',
+        'count-up': 'countUp 2s ease-out forwards',
       },
       
       // Custom keyframes
@@ -279,9 +300,9 @@ module.exports = {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' },
         },
-        glow: {
-          '0%': { boxShadow: '0 0 20px rgba(6, 182, 212, 0.3)' },
-          '100%': { boxShadow: '0 0 40px rgba(6, 182, 212, 0.6)' },
+        gridFlow: {
+          '0%': { transform: 'translateX(0) translateY(0)' },
+          '100%': { transform: 'translateX(60px) translateY(60px)' },
         },
         shimmer: {
           '0%': { backgroundPosition: '-200% 0' },
@@ -295,13 +316,9 @@ module.exports = {
           '0%': { transform: 'matrix(1, 0, 0, 1, 0, 0)' },
           '100%': { transform: 'matrix(1, 0, 0, 1, 100, 100)' },
         },
-        cyber: {
-          '0%, 100%': { 
-            textShadow: '0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.3), 0 0 30px rgba(6, 182, 212, 0.1)' 
-          },
-          '50%': { 
-            textShadow: '0 0 20px rgba(6, 182, 212, 0.8), 0 0 30px rgba(6, 182, 212, 0.6), 0 0 40px rgba(6, 182, 212, 0.4)' 
-          },
+        countUp: {
+          '0%': { transform: 'scale(0.8)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
         },
       },
       

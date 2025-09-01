@@ -8,6 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 
+// Base URL for the site
 const BASE_URL = 'https://zion.app';
 const PAGES_DIR = path.join(__dirname, '..', 'pages');
 
@@ -58,12 +59,9 @@ ${BLOG_POSTS.map(post => `  <url>
     fs.mkdirSync(publicDir, { recursive: true });
   }
 
-  fs.writeFileSync(outputPath, sitemap);
-  console.log(`✅ Sitemap generated at: ${outputPath}`);
-}
-
+// Run if called directly
 if (require.main === module) {
-  generateSitemap();
+  main();
 }
 
-module.exports = { generateSitemap };
+module.exports = { generateSitemapXML, generateSitemapTXT, pages };

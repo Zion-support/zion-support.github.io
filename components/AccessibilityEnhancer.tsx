@@ -49,7 +49,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const settingsRef = useRef<HTMLDivElement>(null);
 
   // Apply accessibility settings to the document
-  const applySettings = (newSettings: AccessibilitySettings) => {
+  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
     // High contrast
@@ -94,11 +94,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     } else {
       root.style.filter = 'none';
     }
-  };
+  }, []);
 
+  // Apply accessibility settings to the document
   useEffect(() => {
     applySettings(settings);
-  }, [settings]);
+  }, [settings, applySettings]);
 
   // Handle click outside to close settings
   useEffect(() => {

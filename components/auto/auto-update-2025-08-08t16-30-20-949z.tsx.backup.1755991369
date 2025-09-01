@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+export default function AutoUpdate(){return <div className="prose dark:prose-invert"><h1>Auto Update</h1><p>2025-08-08T16:30:20.949Z</p></div>}
+=======
 export default function AutoUpdatePage() { return <div className="py-8">Auto update 16-30-20</div>; }
 =======
 import React from 'react';
@@ -6,4 +7,3 @@ import React from 'react';
 export default function AutoUpdatePage_163020949z() {
   return <div>Auto Update 2025-08-08T16:30:20.949Z</div>;
 }
->>>>>>> origin/cursor/deploy-ai-podcast-host-with-ziongpt-9517

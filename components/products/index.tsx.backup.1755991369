@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-export default function ProductsIndex() {
+export default function Products(){return <div className="prose dark:prose-invert"><h1>Products</h1><p>Coming soon.</p></div>}
+=======
   return (
     <div className="py-8">
       <h1 className="text-xl font-semibold">Products</h1>
@@ -13,4 +13,3 @@ import React from 'react';
 export default function ProductsIndexPage() {
   return <div>Products</div>;
 }
->>>>>>> origin/cursor/deploy-ai-podcast-host-with-ziongpt-9517

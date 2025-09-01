@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-import React from "react";
-<<<<<<< HEAD
-
-export default function AutoUpdate_2025_08_08T16_38_19_257Z() {
-  return (
-    <main className="p-6">
-      <h1 className="text-xl font-semibold">Auto Update (16:38:19)</h1>
-      <p className="text-gray-600">Generated content placeholder.</p>
-    </main>
-  );
-}
+export default function Page(){return <div className="py-8 text-slate-300">auto update 2025 08 08t16 38 19 257z</div>}
 =======
+import React from "react";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -31,7 +21,6 @@ const AutoUpdate20250808t163819257z: NextPage = () => {
 };
 
 export default AutoUpdate20250808t163819257z;
->>>>>>> origin/cursor/create-responsive-talent-onboarding-form-e178
 =======
 import Head from "next/head";
 
@@ -52,5 +41,3 @@ const Page: React.FC = () => {
 export default Page;
 =======
 export default function Page() { return null; }
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

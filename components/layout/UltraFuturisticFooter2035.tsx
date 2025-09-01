@@ -2,12 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
-  Brain, Atom, Shield, Rocket, Target, BookOpen, Users,
-  Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb,
-  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare,
-  ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2,
-  Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Sparkles,
+  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen,
+  Building, Cpu, Database, Cloud, Lock, Users, Heart,
+  Twitter, Linkedin, Facebook, Instagram, Youtube, Github
 } from 'lucide-react';
 
 const contactInfo = {
@@ -30,7 +28,11 @@ const footerSections = [
       { name: 'HR Analytics Platform', href: '/ai-hr-analytics-platform' },
       { name: 'AI Decision Engine', href: '/ai-powered-decision-engine' },
       { name: 'Content Automation', href: '/intelligent-content-automation-platform' },
-      { name: 'CRM Intelligence Suite', href: '/smart-crm-intelligence-suite' }
+      { name: 'CRM Intelligence Suite', href: '/smart-crm-intelligence-suite' },
+      { name: 'AI Evaluation Orchestrator', href: '/services/ai-evaluation-orchestrator', featured: true },
+             { name: 'SEO Automation Suite', href: '/seo-automation-suite' },
+               { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent' },
+        { name: 'Managed Postgres HA', href: '/managed-postgres-ha' }
     ]
   },
   {
@@ -38,7 +40,7 @@ const footerSections = [
     description: 'Revolutionary AI platforms and solutions',
     icon: <Brain className="w-5 h-5 text-cyan-400" />,
     links: [
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025' },
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
       { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network' },
       { name: 'AI Autonomous Business Operations', href: '/ai-autonomous-business-operations' },
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant' },
@@ -58,7 +60,7 @@ const footerSections = [
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
       { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure' },
       { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading' },
-      { name: 'AI-Powered Space Technology', href: '/ai-powered-space-technology' },
+      { name: 'AI-Powered Space Technology', href: '/space-technology-ai-platform' },
       { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform' },
       { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform' },
       { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform' },
@@ -72,20 +74,17 @@ const footerSections = [
     description: 'Advanced enterprise infrastructure solutions',
     icon: <Shield className="w-5 h-5 text-purple-400" />,
     links: [
-      { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure' },
-      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center' },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-platform' },
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
-      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform' },
-      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform' },
-      { name: 'Zero Trust Security', href: '/zero-trust-security-platform' },
-      { name: 'AI-Powered Cybersecurity', href: '/ai-powered-cybersecurity' }
+      { name: 'Quantum Predictive Analytics', href: '/services/quantum-predictive-analytics-engine' },
+      { name: 'Autonomous Innovation AI', href: '/services/autonomous-innovation-ai' },
+      { name: 'Quantum Emotional Healing AI', href: '/services/quantum-emotional-healing-ai' },
+      { name: 'AI Consciousness Collaboration', href: '/services/ai-consciousness-collaboration-platform' },
+      { name: 'View All Advanced Solutions', href: '/advanced-solutions' }
     ]
   },
   {
-    title: 'Micro SAAS',
-    description: 'Innovative business solutions for modern enterprises',
-    icon: <Rocket className="w-5 h-5 text-emerald-400" />,
+    title: 'Company',
+    description: 'About Zion Tech Group',
+    icon: <Building className="w-5 h-5 text-gray-400" />,
     links: [
       { name: 'AI Content Generator', href: '/ai-content-generator' },
       { name: 'AI Code Review', href: '/ai-code-review' },
@@ -117,8 +116,7 @@ const footerSections = [
     description: 'Documentation, support, and learning',
     icon: <BookOpen className="w-5 h-5 text-cyan-400" />,
     links: [
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api-documentation' },
+      { name: 'Blog', href: '/blog' },
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'Blog & News', href: '/blog' },
       { name: 'Support Center', href: '/support' },
@@ -126,15 +124,22 @@ const footerSections = [
       { name: 'Training & Certification', href: '/training' },
       { name: 'Community Forum', href: '/community' },
       { name: 'Market Pricing', href: '/market-pricing' },
-      { name: 'Services Advertising', href: '/services-advertising' }
+      { name: 'Services Advertising', href: '/services-advertising' },
+      { name: 'RAG Evaluation Lab', href: '/rag-evaluation-lab' },
+      { name: 'SOC 2 Compliance Automation', href: '/soc2-compliance-automation' },
+      { name: 'Browser Automation Cloud', href: '/browser-automation-cloud' },
+      { name: 'Secrets Rotation Automation', href: '/secrets-rotation-automation' },
+      { name: 'API Performance Testing', href: '/api-performance-testing' },
+      { name: 'Events', href: '/events' },
+      { name: 'Webinars', href: '/webinars' }
     ]
   }
 ];
 
 const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: <Linkedin className="w-5 h-5" /> },
+  { name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup/', icon: <Facebook className="w-5 h-5" /> },
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
