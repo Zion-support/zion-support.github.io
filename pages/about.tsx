@@ -1,3 +1,2 @@
-export default function About() {
-  return <div className="py-8">About Zion</div>;
-}
+import React from 'react';
+export default function AboutPage(){return <div className="p-6 text-high-contrast">About</div>;}

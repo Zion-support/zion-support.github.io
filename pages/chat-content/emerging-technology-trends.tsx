@@ -1,1 +1,2 @@
-export default function Page() { return <div className="py-8">emerging-technology-trends</div>; }
+import React from 'react';
+export default function EmergingTrends(){return <div className="p-6 text-high-contrast">Emerging Technology Trends</div>;}

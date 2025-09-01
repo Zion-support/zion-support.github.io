@@ -1,3 +1,2 @@
-export default function BlockchainSolutions() {
-  return <div className="py-8">Blockchain Solutions</div>;
-}
+import React from 'react';
+export default function BlockchainSolutions(){return <div className="p-6 text-high-contrast">Blockchain Solutions</div>;}

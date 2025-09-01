@@ -1,1 +1,2 @@
-export default function Page() { return <div className="py-8">digital-transformation-insights</div>; }
+import React from 'react';
+export default function DigitalTransformation(){return <div className="p-6 text-high-contrast">Digital Transformation Insights</div>;}
