@@ -180,4 +180,49 @@ If you see a warning about `rimraf@3.0.2` being deprecated, run:
 npm install rimraf@latest --save-dev
 ```
 
-This updates the dependency to a supported version.
+This updates the dependency to a supported v5 release.
+
+To prevent memory leaks from the deprecated `inflight` package, the project pins
+`glob` to version `10.4.5` via the `resolutions` field in `package.json`. Run
+`npm install` to ensure this version is installed.
+
+### Whitelabel Tenant Errors
+
+If the app logs **"Error loading tenant"** during startup, the request to the
+Supabase edge function that provides whitelabel settings failed. Confirm that
+`VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are set in your environment and
+that you have network connectivity. The tenant hook will retry a few times
+before giving up.
+
+## Testing
+
+Run unit tests with:
+
+```sh
+npm run test
+```
+
+To watch tests during development:
+
+```sh
+npm run test:watch
+```
+
+### End-to-End Tests
+
+Open Cypress for interactive debugging:
+
+```sh
+npm run cypress:open
+```
+
+Run the Cypress suite headlessly:
+
+```sh
+npm run cypress:run
+```
+
+### Coverage Report
+
+After running `npm run test`, open `coverage/lcov-report/index.html` in your
+browser to view detailed coverage information.
