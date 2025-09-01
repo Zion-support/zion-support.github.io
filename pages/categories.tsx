@@ -13,6 +13,7 @@ import type { GetStaticProps } from 'next'; // Added import
 //   }
 // };
 
+export const dynamic = 'force-static';
 export const getStaticProps: GetStaticProps<CategoriesProps> = async () => {
   // You can fetch data here if needed for static generation
   // For now, returning empty props as a placeholder
