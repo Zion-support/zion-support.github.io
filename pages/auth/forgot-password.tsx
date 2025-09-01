@@ -1,9 +1,20 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-export default function ForgotPassword() {
+const ForgotPassword: NextPage = () => {
   return (
-    <EnhancedLayout>
-      <h1 className="text-2xl font-semibold">Forgot Password</h1>
-    </EnhancedLayout>
+    <div>
+      <Head>
+        <title>ForgotPassword - Zion Tech Solutions</title>
+        <meta name="description" content="ForgotPassword page" />
+      </Head>
+      
+      <main>
+        <h1>ForgotPassword</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
   );
-}
+};
+
+export default ForgotPassword;

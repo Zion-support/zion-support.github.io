@@ -1,11 +1,20 @@
-import EnhancedLayout from '../components/layout/EnhancedLayout';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-export default function Home() {
+const Index: NextPage = () => {
   return (
-    <EnhancedLayout>
-      <div className="py-10">
-        <h1 className="text-3xl font-semibold">Zion AI Marketplace</h1>
-      </div>
-    </EnhancedLayout>
+    <div>
+      <Head>
+        <title>Index - Zion Tech Solutions</title>
+        <meta name="description" content="Index page" />
+      </Head>
+      
+      <main>
+        <h1>Index</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
   );
-}
+};
+
+export default Index;

@@ -1,9 +1,20 @@
-import EnhancedLayout from '../components/layout/EnhancedLayout';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-export default function EnhancedHome() {
+const EnhancedHome: NextPage = () => {
   return (
-    <EnhancedLayout>
-      <h1 className="text-2xl font-semibold">Enhanced Home</h1>
-    </EnhancedLayout>
+    <div>
+      <Head>
+        <title>EnhancedHome - Zion Tech Solutions</title>
+        <meta name="description" content="EnhancedHome page" />
+      </Head>
+      
+      <main>
+        <h1>EnhancedHome</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
   );
-}
+};
+
+export default EnhancedHome;

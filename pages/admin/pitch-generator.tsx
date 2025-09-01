@@ -1,498 +1,314 @@
-import AdminLayout from '@/components/admin/AdminLayout';
-import InputFields from '@/components/admin/pitch-generator/InputFields';
-import DataSync from '@/components/admin/pitch-generator/DataSync';
-import SlideEditor from '@/components/admin/pitch-generator/SlideEditor';
-import { useAuth } from '@/hooks/useAuth';
-import { NextPage } from 'next';
-import { NextSeo } from '@/components/NextSeo';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
+import React, { useCallback, useMemo, useState } from 'react';
+import Head from 'next/head';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { GetServerSideProps } from 'next';
+import { requireAdminRole } from '../../utils/auth';
 
-interface Slide {
+export type Slide = {
   id: string;
   title: string;
   content: string;
-  type: string;
-  chartType?: 'bar' | 'funnel' | 'timeline';
-}
-
-// Define InputData interface
-interface InputData {
-  companyMission: string;
-  currentFundingStage: string;
-  visionGoals: string;
-  roundType: string;
-  targetRaiseAmount: string;
-  logos: File | null;
-  photos: File | null;
-}
-
-// Define SyncedData interface
-interface SyncedData {
-  activeUsers30d: string;
-  gmv: string;
-  mrr: string;
-  yoyGrowth: string;
-  totalCompletedProjects: string;
-  globalReach: string;
-  marketplaceConversionFunnel: {
-    visitors: number;
-    signups: number;
-    activeListings: number;
-    completedTransactions: number;
+  chart?: {
+    type: 'bar' | 'funnel' | 'timeline';
+    data: Array<{ label: string; value: number }>;
   };
-  notableClients: { name: string; caseStudyUrl: string }[];
-}
-
-// Define VersionHistoryItem interface
-interface VersionHistoryItem {
-  version: number;
-  savedAt: string; // ISO date string
-  slideCount: number;
-  notes: string;
-}
-
-const PitchGeneratorPage: NextPage = () => {
-  const { user, isLoading: loading } = useAuth();
-  const router = useRouter();
-
-  const [currentStep, setCurrentStep] = useState<'inputs' | 'data' | 'editor'>('inputs');
-  const [inputData, setInputData] = useState<InputData | null>(null);
-  const [syncedData, setSyncedData] = useState<SyncedData | null>(null);
-  const [generatedSlides, setGeneratedSlides] = useState<Slide[]>([]);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [isExporting, setIsExporting] = useState(false);
-  const [deckVersion, setDeckVersion] = useState<number>(1);
-  const [versionHistory, setVersionHistory] = useState<VersionHistoryItem[]>([]);
-  const [isSavingVersion, setIsSavingVersion] = useState(false);
-
-  useEffect(() => {
-    if (!loading && !user) {
-      router.push('/login');
-    } else if (!loading && user && !['founder', 'admin', 'finance'].includes(user.role as string)) {
-      router.push('/admin');
-    }
-  }, [user, loading, router]);
-
-  useEffect(() => {
-    if (user && !syncedData) {
-      const placeholderSyncedData: SyncedData = {
-        activeUsers30d: '12,000+',
-        gmv: '$1.5M',
-        mrr: '$120K',
-        yoyGrowth: '160%',
-        totalCompletedProjects: '550+',
-        globalReach: '80+ Countries',
-        marketplaceConversionFunnel: {
-          visitors: 120000,
-          signups: 6000,
-          activeListings: 1200,
-          completedTransactions: 250,
-        },
-        notableClients: [
-          { name: 'Tech Corp', caseStudyUrl: '#' },
-          { name: 'Innovate Ltd', caseStudyUrl: '#' },
-        ],
-      };
-      setSyncedData(placeholderSyncedData);
-    }
-  }, [user, syncedData]);
-
-  const handleSaveVersion = async () => {
-    if (generatedSlides.length === 0) {
-      alert("No deck to save!");
-      return;
-    }
-    setIsSavingVersion(true);
-    setError(null);
-    try {
-      const sessionResult = await supabase.auth.getSession();
-      const token = sessionResult?.data?.session?.access_token;
-      if (!token) throw new Error("Authentication token not found.");
-
-      console.log('Simulating API call to /api/admin/pitch-decks/save with token and slides data.');
-      // const response = await fetch('/api/admin/pitch-decks/save', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
-      //   body: JSON.stringify({ slides: generatedSlides, parentVersion: deckVersion }),
-      // });
-      // if (!response.ok) {
-      //   const errorData = await response.json();
-      //   throw new Error(errorData.message || 'Failed to save version');
-      // }
-      // const savedVersionData = await response.json();
-
-      await new Promise(resolve => setTimeout(resolve, 700));
-      const newVersionNumber = deckVersion; // Current version is saved, next one will be +1
-      const newVersionEntry = {
-        version: newVersionNumber,
-        savedAt: new Date().toISOString(),
-        slideCount: generatedSlides.length,
-        notes: `Saved version ${newVersionNumber}` // Example note
-      };
-
-      setDeckVersion(newVersionNumber + 1); // Increment for the *next* working version
-      setVersionHistory(prev => [newVersionEntry, ...prev].sort((a,b) => b.version - a.version));
-      alert(`Version ${newVersionNumber} saved successfully (mocked). Now working on v${newVersionNumber + 1}.`);
-
-    } catch (e: any) {
-      console.error('Failed to save version:', e);
-      setError(e.message || 'Failed to save version.');
-    } finally {
-      setIsSavingVersion(false);
-    }
-  };
-
-  const fetchVersionHistory = async () => {
-    if (versionHistory.length > 0 && deckVersion > 1) return; // Avoid refetching if already populated unless it's initial load
-
-    setError(null);
-    try {
-        // Simulate API Call
-        // const session = await supabase.auth.getSession();
-        // const token = session?.data?.session?.access_token;
-        // if (!token) throw new Error("Authentication token not found.");
-        // const response = await fetch('/api/admin/pitch-decks/history', {
-        //   headers: { 'Authorization': `Bearer ${token}` },
-        // });
-        // if (!response.ok) throw new Error('Failed to fetch version history');
-        // const historyData = await response.json();
-        // setVersionHistory(historyData);
-
-        await new Promise(resolve => setTimeout(resolve, 500));
-        const mockHistory: VersionHistoryItem[] = [
-            { version: 1, savedAt: new Date(Date.now() - 100000000).toISOString(), slideCount: 10, notes: "Initial AI draft" },
-        ];
-        // Sort history descending by version
-        const sortedHistory = mockHistory.sort((a,b) => b.version - a.version);
-        setVersionHistory(sortedHistory);
-
-        if (sortedHistory.length > 0) {
-            setDeckVersion(sortedHistory[0].version + 1);
-        } else {
-            setDeckVersion(1); // Start with v1 if no history
-        }
-    } catch (e:any) {
-        console.error('Failed to fetch version history:', e);
-        setError(e.message || 'Failed to fetch version history.');
-    }
-  };
-
-  useEffect(() => {
-    if (user) {
-        fetchVersionHistory();
-    }
-  }, [user]);
-
-
-  const handleInputSubmit = (data: InputData) => {
-    setInputData(data);
-    setCurrentStep('data');
-  };
-
-  const handleDataConfirm = () => {
-    setCurrentStep('editor');
-    if (generatedSlides.length === 0) {
-        handleGenerateDeck();
-    }
-  };
-
-  const handleGenerateDeck = async () => {
-    if (!inputData || !syncedData) {
-      setError('Input data or synced data is missing.');
-      return;
-    }
-    setIsGenerating(true);
-    setError(null);
-
-    try {
-      const sessionResult = await supabase.auth.getSession();
-      const token = sessionResult?.data?.session?.access_token;
-
-      if (!token) {
-        setError('Authentication token not found. Please log in again.');
-        setIsGenerating(false);
-        router.push('/login');
-        return;
-      }
-
-      const response = await fetch('/api/admin/generate-pitch-deck', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          prompt: "Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.",
-          inputData,
-          syncedData,
-        }),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || `API Error: ${response.status}`);
-      }
-
-      const data = await response.json();
-      setGeneratedSlides(data.slides || []);
-       // When a new deck is generated, it's based on the current deckVersion being edited.
-      // alert(`New deck generated for Version ${deckVersion}. Save if you want to keep it.`);
-
-    } catch (e: any) {
-      console.error('Failed to generate pitch deck:', e);
-      setError(e.message || 'Failed to generate pitch deck. Check console for details.');
-      setGeneratedSlides([]);
-    } finally {
-      setIsGenerating(false);
-    }
-  };
-
-  const handleSlidesUpdate = (updatedSlides: Slide[]) => {
-    setGeneratedSlides(updatedSlides);
-  };
-
-  const handleExportToPDF = async () => {
-    if (generatedSlides.length === 0) {
-      alert("No slides to export!");
-      return;
-    }
-    setIsExporting(true);
-    setError(null);
-
-    try {
-      const pdf = new jsPDF('landscape', 'pt', 'a4');
-      for (let i = 0; i < generatedSlides.length; i++) {
-        const slide = generatedSlides[i];
-        const slideElement = document.createElement('div');
-        slideElement.style.width = '1024px';
-        slideElement.style.height = '576px';
-        slideElement.style.backgroundColor = 'white';
-        slideElement.style.padding = '40px';
-        slideElement.style.border = '1px solid #ccc';
-        slideElement.style.boxSizing = 'border-box';
-        slideElement.style.display = 'flex';
-        slideElement.style.flexDirection = 'column';
-        slideElement.style.justifyContent = 'center';
-        slideElement.style.alignItems = 'center';
-        slideElement.style.fontFamily = 'Arial, sans-serif';
-
-        const titleElement = document.createElement('h2');
-        titleElement.innerText = slide.title;
-        titleElement.style.fontSize = '32px';
-        titleElement.style.marginBottom = '30px';
-        titleElement.style.textAlign = 'center';
-        slideElement.appendChild(titleElement);
-
-        const contentElement = document.createElement('p');
-        contentElement.innerText = slide.content;
-        contentElement.style.fontSize = '18px';
-        contentElement.style.textAlign = 'center';
-        contentElement.style.whiteSpace = 'pre-wrap';
-        slideElement.appendChild(contentElement);
-
-        slideElement.style.position = 'absolute';
-        slideElement.style.left = '-9999px';
-        document.body.appendChild(slideElement);
-
-        const canvas = await html2canvas(slideElement, {
-          scale: 2, useCORS: true, logging: false,
-        });
-        const imgData = canvas.toDataURL('image/png');
-        document.body.removeChild(slideElement);
-
-        const pdfWidth = pdf.internal.pageSize.getWidth();
-        const pdfHeight = pdf.internal.pageSize.getHeight();
-        const imgProps = pdf.getImageProperties(imgData);
-        const aspectRatio = imgProps.width / imgProps.height;
-        let newImgWidth = pdfWidth;
-        let newImgHeight = newImgWidth / aspectRatio;
-        if (newImgHeight > pdfHeight) {
-            newImgHeight = pdfHeight;
-            newImgWidth = newImgHeight * aspectRatio;
-        }
-        const xOffset = (pdfWidth - newImgWidth) / 2;
-        const yOffset = (pdfHeight - newImgHeight) / 2;
-
-        if (i > 0) pdf.addPage();
-        pdf.addImage(imgData, 'PNG', xOffset, yOffset, newImgWidth, newImgHeight);
-      }
-      pdf.save(`pitch-deck-v${deckVersion -1}.pdf`); // Save with the version number that was just saved
-    } catch (e: any) {
-      console.error('Failed to export PDF:', e);
-      setError(e.message || 'Failed to export PDF.');
-    } finally {
-      setIsExporting(false);
-    }
-  };
-
-  const handleExportToGoogleSlides = () => {
-    alert('Export to Google Slides - Not implemented yet. This would require Google API integration.');
-  };
-
-  if (loading || !user ) {
-     return (
-      <AdminLayout>
-        <div className="flex justify-center items-center h-screen">
-          <p className="text-lg">Loading user information...</p>
-        </div>
-      </AdminLayout>
-    );
-  }
-
-  if (user && !['founder', 'admin', 'finance'].includes(user.role as string)) {
-    return (
-      <AdminLayout>
-        <div className="flex flex-col justify-center items-center h-screen text-center">
-          <h1 className="text-2xl font-bold text-red-600 mb-4">Access Denied</h1>
-          <p className="text-lg">You do not have permission to view this page.</p>
-          <button onClick={() => router.push('/admin')} className="mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">
-            Go to Admin Dashboard
-          </button>
-        </div>
-      </AdminLayout>
-    );
-  }
-
-  return (
-    <AdminLayout>
-      <NextSeo
-        title="Pitch Deck Generator"
-        description="AI-powered tool to create data-driven pitch decks"
-        openGraph={{ title: 'Pitch Deck Generator', description: 'AI-powered tool to create data-driven pitch decks' }}
-      />
-      <div className="container mx-auto p-4 md:p-8">
-        <header className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-800">AI-Powered Pitch Deck Generator</h1>
-          <p className="text-gray-600">Create a data-driven pitch deck in minutes.</p>
-        </header>
-
-        {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
-            <strong className="font-bold">Error: </strong>
-            <span className="block sm:inline">{error}</span>
-          </div>
-        )}
-
-        {currentStep === 'inputs' && (
-          <section id="input-fields" className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-700">Step 1: Provide Company Details</h2>
-            <InputFields onSubmit={handleInputSubmit} />
-          </section>
-        )}
-
-        {currentStep === 'data' && inputData && (
-          <section id="data-sync" className="bg-white p-6 rounded-lg shadow-lg mt-8">
-             <h2 className="text-2xl font-semibold mb-4 text-gray-700">Step 2: Confirm Marketplace Data</h2>
-            {syncedData ? <DataSync /> : <p>Loading synced data...</p>}
-            <div className="mt-6 flex justify-end space-x-3">
-                <button
-                    onClick={() => setCurrentStep('inputs')}
-                    className="py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                    Back to Inputs
-                </button>
-                <button
-                    onClick={handleDataConfirm}
-                    disabled={isGenerating}
-                    className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
-                >
-                    {isGenerating ? 'Generating...' : (generatedSlides.length > 0 ? 'Proceed to Editor / Regenerate' : 'Generate Pitch Deck & Edit')}
-                </button>
-            </div>
-          </section>
-        )}
-
-        {currentStep === 'editor' && inputData && syncedData && (
-          <section id="slide-editor" className="mt-8">
-            <div className="flex flex-wrap justify-between items-center mb-6 pb-4 border-b border-gray-200">
-                <div className="mb-2 md:mb-0">
-                  <h2 className="text-2xl font-semibold text-gray-700">Step 3: Edit Your Pitch Deck</h2>
-                  <p className="text-sm text-gray-500">Current working on: <span className="font-semibold text-indigo-600">v{deckVersion}</span></p>
-                </div>
-                <div className="flex items-center space-x-2 flex-wrap">
-                    <button
-                        onClick={() => setCurrentStep('data')}
-                        disabled={isGenerating || isExporting || isSavingVersion}
-                        className="py-2 px-3 border border-gray-300 rounded-md shadow-sm text-xs font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
-                    >
-                        Back to Data
-                    </button>
-                    <button
-                        onClick={handleGenerateDeck}
-                        disabled={isGenerating || isExporting || isSavingVersion}
-                        className="inline-flex items-center py-2 px-3 border border-transparent shadow-sm text-xs font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 disabled:opacity-50"
-                    >
-                        {isGenerating ? 'Regenerating\'...' : 'Regenerate AI Deck'}
-                    </button>
-                    <button
-                      onClick={handleSaveVersion}
-                      disabled={isSavingVersion || generatedSlides.length === 0 || isGenerating || isExporting}
-                      className="inline-flex items-center py-2 px-3 border border-transparent shadow-sm text-xs font-medium rounded-md text-white bg-teal-500 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-400 disabled:opacity-50"
-                    >
-                      {isSavingVersion ? 'Saving...' : `Save v${deckVersion}`}
-                    </button>
-                    <button
-                      onClick={handleExportToPDF}
-                      disabled={isExporting || generatedSlides.length === 0 || isGenerating || isSavingVersion}
-                      className="inline-flex items-center py-2 px-3 border border-transparent shadow-sm text-xs font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50"
-                    >
-                      {isExporting ? 'Exporting PDF...' : 'Export PDF'}
-                    </button>
-                    <button
-                      onClick={handleExportToGoogleSlides}
-                      disabled={generatedSlides.length === 0 || isGenerating || isExporting || isSavingVersion}
-                      className="inline-flex items-center py-2 px-3 border border-transparent shadow-sm text-xs font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400 disabled:opacity-50"
-                    >
-                      Google Slides
-                    </button>
-                </div>
-            </div>
-
-            {isGenerating && <p className="text-center py-4">Generating slides, please wait...</p>}
-            {isExporting && <p className="text-center py-4 text-green-700">Exporting PDF, please wait...</p>}
-            {isSavingVersion && <p className="text-center py-4 text-teal-700">Saving version, please wait...</p>}
-
-            {!isGenerating && !isExporting && !isSavingVersion && generatedSlides.length > 0 && (
-              <SlideEditor initialSlides={generatedSlides} onSlidesChange={handleSlidesUpdate} />
-            )}
-            {!isGenerating && !isExporting && !isSavingVersion && generatedSlides.length === 0 && !error && (
-              <p className="text-center text-gray-500 py-8">Your generated slides will appear here. Click "Regenerate" if they don't load.</p>
-            )}
-
-            {versionHistory.length > 0 && (
-              <div className="mt-10 pt-6 border-t border-gray-200">
-                <h3 className="text-xl font-semibold text-gray-700 mb-3">Version History</h3>
-                <ul className="space-y-3 max-h-60 overflow-y-auto"> {/* Added max-h and overflow for scroll */}
-                  {versionHistory.map((versionItem, index) => (
-                    <li key={index} className="p-3 bg-gray-50 rounded-md shadow-sm flex justify-between items-center">
-                      <div>
-                        <span className="font-semibold text-indigo-600">Version {versionItem.version}</span>
-                        <span className="text-xs text-gray-500 ml-2">({new Date(versionItem.savedAt).toLocaleString()})</span>
-                        <p className="text-sm text-gray-600 mt-1">Slides: {versionItem.slideCount}{versionItem.notes ? ` - Notes: ${versionItem.notes}` : ''}</p>
-                      </div>
-                      <button
-                          // onClick={() => handleLoadVersion(versionItem.version)}
-                          className="text-xs py-1 px-2 border border-indigo-500 text-indigo-600 rounded hover:bg-indigo-50 disabled:opacity-50"
-                          title="Load this version - Not implemented"
-                          disabled
-                      >
-                          Load Version
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </section>
-        )}
-      </div>
-    </AdminLayout>
-  );
 };
 
-export default PitchGeneratorPage;
+type BuilderState = {
+  mission: string;
+  fundingStage: string;
+  vision: string;
+  roundType: 'Seed' | 'Series A' | 'Token Sale' | '';
+  targetRaise: string;
+  assets: File[];
+};
+
+function uid() {
+  return Math.random().toString(36).slice(2);
+}
+
+function SlidePreview({ slide, isActive, onClick }: { slide: Slide; isActive: boolean; onClick: () => void }) {
+  return (
+    <button onClick={onClick} className={`w-56 shrink-0 border rounded-md p-3 text-left bg-white/70 dark:bg-gray-900 ${isActive ? 'ring-2 ring-blue-500' : 'border-gray-200 dark:border-gray-800'}`}>
+      <div className="font-semibold text-sm line-clamp-2">{slide.title || 'Untitled'}</div>
+      <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap">{slide.content || '—'}</div>
+    </button>
+  );
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const result = await requireAdminRole(ctx);
+  // @ts-ignore
+  if ('redirect' in result) return result;
+  return result;
+};
+
+export default function PitchGenerator() {
+  const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] });
+  const [slides, setSlides] = useState<Slide[]>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [versionTag, setVersionTag] = useState<string | null>(null);
+  const [history, setHistory] = useState<{ id: string; createdAt: string; version: string }[]>([]);
+
+  const activeSlide = slides[activeIndex];
+
+  const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    const files = Array.from(e.dataTransfer.files || []);
+    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }));
+  }, []);
+
+  const prevent = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
+
+  const autoFetchMetrics = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/metrics');
+      const data = await res.json();
+      return data;
+    } catch (e) {
+      return {};
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const buildDeck = useCallback(async () => {
+    setLoading(true);
+    try {
+      const metrics = await autoFetchMetrics();
+      const res = await fetch('/api/admin/pitch/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          operatorPrompt,
+          inputs: builder,
+          metrics,
+        }),
+      });
+      const json = await res.json();
+      const newSlides: Slide[] = json.slides || [];
+      setSlides(newSlides);
+      setActiveIndex(0);
+      const v = json.version || `v${new Date().toISOString()}`;
+      setVersionTag(v);
+      setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h]);
+    } catch (e) {
+      // noop
+    } finally {
+      setLoading(false);
+    }
+  }, [autoFetchMetrics, builder, operatorPrompt]);
+
+  const rephraseSlide = useCallback(async (idx: number) => {
+    if (!slides[idx]) return;
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/rewrite', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slide: slides[idx] }),
+      });
+      const json = await res.json();
+      setSlides((arr) => arr.map((s, i) => (i === idx ? { ...s, title: json.title || s.title, content: json.content || s.content } : s)));
+    } catch (e) {
+    } finally {
+      setLoading(false);
+    }
+  }, [slides]);
+
+  const addSlide = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
+      const json = await res.json();
+      setSlides((arr) => [...arr, { id: uid(), title: json.title || 'New Slide', content: json.content || '' }]);
+      setActiveIndex(slides.length);
+    } catch (e) {
+    } finally {
+      setLoading(false);
+    }
+  }, [slides.length]);
+
+  const exportPdf = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) });
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `pitch-deck-${versionTag || 'draft'}.pdf`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (e) {
+    } finally {
+      setLoading(false);
+    }
+  }, [slides, versionTag]);
+
+  const exportGoogleSlides = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) });
+      const json = await res.json();
+      if (json && json.url) {
+        window.open(json.url, '_blank');
+      }
+    } catch (e) {
+    } finally {
+      setLoading(false);
+    }
+  }, [slides, versionTag]);
+
+  const updateActiveSlide = (updates: Partial<Slide>) => {
+    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)));
+  };
+
+  const renderChartPreview = (slide: Slide) => {
+    if (!slide.chart) return null;
+    const { type, data } = slide.chart;
+    return (
+      <div className="mt-3">
+        <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
+        <div className="flex gap-2 items-end h-24 mt-2">
+          {type === 'bar' && data.map((d) => (
+            <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
+          ))}
+          {type === 'funnel' && (
+            <div className="w-full">
+              <div className="flex flex-col gap-1">
+                {data.map((d, idx) => (
+                  <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
+                ))}
+              </div>
+            </div>
+          )}
+          {type === 'timeline' && (
+            <div className="text-xs grid grid-cols-4 gap-2 w-full">
+              {data.map((d) => (
+                <div key={d.label} className="border p-1 rounded">
+                  <div className="font-medium">{d.label}</div>
+                  <div>{d.value}</div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <EnhancedLayout>
+      <Head>
+        <title>Pitch Generator - Admin</title>
+      </Head>
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-semibold">Pitch Generator</h1>
+          <div className="flex gap-2">
+            <button onClick={buildDeck} disabled={loading} className="px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50">Generate Deck</button>
+            <button onClick={exportPdf} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50">Download PDF</button>
+            <button onClick={exportGoogleSlides} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50">Export to Google Slides</button>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-1 space-y-4">
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+              <div className="font-medium mb-2">Inputs</div>
+              <label className="block text-sm mb-1">Company mission</label>
+              <input value={builder.mission} onChange={(e) => setBuilder({ ...builder, mission: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+              <label className="block text-sm mt-3 mb-1">Current funding stage</label>
+              <input value={builder.fundingStage} onChange={(e) => setBuilder({ ...builder, fundingStage: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+              <label className="block text-sm mt-3 mb-1">Vision/goals</label>
+              <textarea value={builder.vision} onChange={(e) => setBuilder({ ...builder, vision: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" rows={3} />
+              <label className="block text-sm mt-3 mb-1">Round type</label>
+              <select value={builder.roundType} onChange={(e) => setBuilder({ ...builder, roundType: e.target.value as any })} className="w-full border rounded px-2 py-1 bg-transparent">
+                <option value="">Select</option>
+                <option>Seed</option>
+                <option>Series A</option>
+                <option>Token Sale</option>
+              </select>
+              <label className="block text-sm mt-3 mb-1">Target raise amount</label>
+              <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+
+              <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className="mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400">
+                Drag & drop logos, photos here
+                <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
+              </div>
+            </div>
+
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+              <div className="font-medium mb-2">Auto Data</div>
+              <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
+              <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
+                <li>Active users (30d)</li>
+                <li>GMV, MRR, YoY growth</li>
+                <li>Total completed projects</li>
+                <li>Global reach</li>
+                <li>Conversion funnel</li>
+                <li>Notable clients or case studies</li>
+              </ul>
+            </div>
+
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+              <div className="font-medium mb-2">History</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
+              <ul className="mt-2 space-y-1 text-sm">
+                {history.map((h) => (
+                  <li key={h.id} className="flex justify-between border rounded px-2 py-1">
+                    <span>{h.version}</span>
+                    <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="lg:col-span-2 space-y-4">
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+              <div className="flex items-center justify-between">
+                <div className="font-medium">Slides</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
+              </div>
+              <div className="mt-3 flex gap-3 overflow-x-auto py-2">
+                {slides.map((s, i) => (
+                  <SlidePreview key={s.id} slide={s} isActive={i === activeIndex} onClick={() => setActiveIndex(i)} />
+                ))}
+                <button onClick={addSlide} className="w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500">+ Add Slide</button>
+              </div>
+            </div>
+
+            {activeSlide && (
+              <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+                <div className="flex items-center justify-between">
+                  <input value={activeSlide.title} onChange={(e) => updateActiveSlide({ title: e.target.value })} className="font-semibold text-lg bg-transparent border-b focus:outline-none" />
+                  <div className="flex gap-2">
+                    <button onClick={() => rephraseSlide(activeIndex)} disabled={loading} className="px-2 py-1 rounded bg-blue-600 text-white text-sm disabled:opacity-50">Rephrase</button>
+                  </div>
+                </div>
+                <textarea value={activeSlide.content} onChange={(e) => updateActiveSlide({ content: e.target.value })} className="w-full mt-3 border rounded px-2 py-1 bg-transparent" rows={10} />
+
+                <div className="mt-4 grid grid-cols-3 gap-2 text-sm">
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'bar', data: [{ label: 'Q1', value: 20 }, { label: 'Q2', value: 40 }, { label: 'Q3', value: 60 }, { label: 'Q4', value: 80 }] } })} className="border rounded px-2 py-1">Bar Chart</button>
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'funnel', data: [{ label: 'Visitors', value: 100 }, { label: 'Signups', value: 40 }, { label: 'Projects', value: 15 }] } })} className="border rounded px-2 py-1">Funnel</button>
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'timeline', data: [{ label: 'MVP', value: 2023 }, { label: 'Seed', value: 2024 }, { label: 'Series A', value: 2025 }] } })} className="border rounded px-2 py-1">Timeline</button>
+                </div>
+
+                {renderChartPreview(activeSlide)}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </EnhancedLayout>
+  );
+}

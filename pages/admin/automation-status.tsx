@@ -1,9 +1,20 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-export default function AutomationStatus() {
+const AutomationStatus: NextPage = () => {
   return (
-    <EnhancedLayout>
-      <h1 className="text-2xl font-semibold">Automation Status</h1>
-    </EnhancedLayout>
+    <div>
+      <Head>
+        <title>AutomationStatus - Zion Tech Solutions</title>
+        <meta name="description" content="AutomationStatus page" />
+      </Head>
+      
+      <main>
+        <h1>AutomationStatus</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
   );
-}
+};
+
+export default AutomationStatus;

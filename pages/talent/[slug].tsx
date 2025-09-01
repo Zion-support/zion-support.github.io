@@ -1,9 +1,20 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-export default function TalentDetail() {
+const TalentSlugPage: NextPage = () => {
   return (
-    <EnhancedLayout>
-      <h1 className="text-2xl font-semibold">Talent Detail</h1>
-    </EnhancedLayout>
+    <div>
+      <Head>
+        <title>Talent - Zion Tech Solutions</title>
+        <meta name="description" content="Talent page" />
+      </Head>
+      
+      <main>
+        <h1>Talent</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
   );
-}
+};
+
+export default TalentSlugPage;
