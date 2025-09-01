@@ -1,208 +1,184 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-  DollarSign, TrendingUp, Globe, Target, Star, ArrowRight,
-  CheckCircle, Play, BookOpen, MessageCircle, Phone,
-  Building, Award, Zap, Shield, Brain, Rocket, BarChart3, Users
+  Brain, Rocket, Shield, Atom, Globe, Users, Award, 
+  Target, Lightbulb, Zap, Star, Building, MapPin, Phone, Mail,
+  TrendingUp, DollarSign, BarChart3, PieChart, LineChart, 
+  ArrowUpRight, CheckCircle, ExternalLink, ArrowRight
 } from 'lucide-react';
-import Link from 'next/link';
 
-const Investors: React.FC = () => {
+export default function InvestorsPage() {
+  const companyMetrics = [
+    {
+      metric: 'Market Cap',
+      value: '$2.5B+',
+      change: '+45%',
+      changeType: 'positive',
+      description: 'Valuation based on latest funding round'
+    },
+    {
+      metric: 'Revenue Growth',
+      value: '300%+',
+      change: '+150%',
+      changeType: 'positive',
+      description: 'Year-over-year revenue increase'
+    },
+    {
+      metric: 'Customer Base',
+      value: '500+',
+      change: '+200%',
+      changeType: 'positive',
+      description: 'Enterprise customers worldwide'
+    },
+    {
+      metric: 'ARR',
+      value: '$150M+',
+      change: '+400%',
+      changeType: 'positive',
+      description: 'Annual recurring revenue'
+    }
+  ];
+
   const investmentHighlights = [
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: 'Rapid Growth',
-      description: 'Consistent 300%+ year-over-year revenue growth across all business segments.',
-      metric: '300%+ YoY'
+      title: 'Revolutionary AI Technology',
+      description: 'Breakthrough AI consciousness and emotional intelligence systems with no direct competitors.',
+      icon: <Brain className="w-12 h-12 text-cyan-400" />
     },
     {
-      icon: <Globe className="w-6 h-6" />,
-      title: 'Global Market',
-      description: 'Expanding presence in 25+ countries with $50B+ addressable market.',
-      metric: '$50B+ TAM'
+      title: 'Quantum Computing Leadership',
+      description: 'First-mover advantage in quantum-secure cloud infrastructure and quantum-enhanced solutions.',
+      icon: <Atom className="w-12 h-12 text-purple-400" />
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: 'Technology Leadership',
-      description: '200+ patents and cutting-edge innovations in AI, quantum, and space tech.',
-      metric: '200+ Patents'
+      title: 'Massive Market Opportunity',
+      description: 'Addressing $500B+ AI market and $100B+ quantum computing market with exponential growth.',
+      icon: <TrendingUp className="w-12 h-12 text-green-400" />
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: 'Customer Base',
-      description: '500+ enterprise clients including Fortune 100 companies.',
-      metric: '500+ Clients'
+      title: 'Proven Revenue Model',
+      description: 'Recurring SaaS revenue with 95%+ customer retention and expanding enterprise contracts.',
+      icon: <DollarSign className="w-12 h-12 text-yellow-400" />
+    }
+  ];
+
+  const financialHighlights = [
+    {
+      year: '2023',
+      revenue: '$25M',
+      growth: '200%',
+      customers: '200+',
+      highlights: ['Series A funding', 'Product market fit achieved', 'Enterprise sales acceleration']
+    },
+    {
+      year: '2024',
+      revenue: '$75M',
+      growth: '200%',
+      customers: '350+',
+      highlights: ['Series B funding', 'International expansion', 'AI consciousness breakthrough']
+    },
+    {
+      year: '2025',
+      revenue: '$150M+',
+      growth: '100%+',
+      customers: '500+',
+      highlights: ['Series C preparation', 'Quantum computing launch', 'IPO preparation']
     }
   ];
 
   const investmentOpportunities = [
     {
-      type: 'Series B',
-      amount: '$50M',
-      use: 'Product Development & Market Expansion',
-      timeline: 'Q4 2024',
-      status: 'Open'
+      type: 'Series C Funding',
+      amount: '$200M - $300M',
+      use: 'Scale AI consciousness platform, quantum computing expansion, international growth',
+      timeline: 'Q4 2025',
+      status: 'Open for discussion'
     },
     {
       type: 'Strategic Investment',
-      amount: '$25M',
-      use: 'Quantum Computing R&D',
-      timeline: 'Q1 2025',
-      status: 'Open'
+      amount: '$50M - $100M',
+      use: 'Joint ventures, technology partnerships, market expansion',
+      timeline: 'Ongoing',
+      status: 'Available'
     },
     {
-      type: 'Series C',
-      amount: '$100M',
-      use: 'Global Expansion & Acquisitions',
-      timeline: 'Q2 2025',
-      status: 'Planning'
-    }
-  ];
-
-  const financialMetrics = [
-    {
-      label: 'Annual Recurring Revenue',
-      value: '$25M+',
-      growth: '+300%',
-      period: 'YoY'
-    },
-    {
-      label: 'Gross Margin',
-      value: '85%',
-      growth: '+5%',
-      period: 'YoY'
-    },
-    {
-      label: 'Customer Acquisition Cost',
-      value: '$15K',
-      growth: '-25%',
-      period: 'YoY'
-    },
-    {
-      label: 'Customer Lifetime Value',
-      value: '$150K',
-      growth: '+200%',
-      period: 'YoY'
+      type: 'IPO Preparation',
+      amount: 'TBD',
+      use: 'Public market preparation, regulatory compliance, investor relations',
+      timeline: '2026-2027',
+      status: 'Planning phase'
     }
   ];
 
   const competitiveAdvantages = [
     {
       title: 'First-Mover Advantage',
-      description: 'Pioneering AI consciousness and quantum computing technologies',
-      icon: <Star className="w-6 h-6" />
+      description: 'Pioneering AI consciousness technology with 3+ year lead over potential competitors.',
+      icon: <Rocket className="w-8 h-8 text-cyan-400" />
     },
     {
       title: 'Proprietary Technology',
-      description: '25+ patents and trade secrets in core technologies',
-      icon: <Award className="w-6 h-6" />
+      description: '50+ patents pending in AI consciousness, quantum computing, and automation.',
+      icon: <Shield className="w-8 h-8 text-purple-400" />
     },
     {
-      title: 'Expert Team',
-      description: 'World-class scientists and engineers from leading institutions',
-      icon: <Users className="w-6 h-6" />
+      title: 'Enterprise Relationships',
+      description: 'Long-term contracts with Fortune 500 companies and government agencies.',
+      icon: <Building className="w-8 h-8 text-green-400" />
     },
     {
-      title: 'Strategic Partnerships',
-      description: 'Alliances with major technology companies and research institutions',
-      icon: <Globe className="w-6 h-6" />
-    }
-  ];
-
-  const investmentUse = [
-    {
-      category: 'Research & Development',
-      percentage: '40%',
-      description: 'Accelerate AI consciousness and quantum computing breakthroughs',
-      color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      category: 'Market Expansion',
-      percentage: '30%',
-      description: 'Enter new markets and expand global presence',
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      category: 'Talent Acquisition',
-      percentage: '20%',
-      description: 'Recruit top scientists and engineers',
-      color: 'from-green-500 to-emerald-600'
-    },
-    {
-      category: 'Infrastructure',
-      percentage: '10%',
-      description: 'Scale cloud infrastructure and security systems',
-      color: 'from-orange-500 to-red-600'
-    }
-  ];
-
-  const teamHighlights = [
-    {
-      name: 'Dr. Kleber M. Santos',
-      role: 'CEO & Chief Scientist',
-      background: 'PhD in AI Consciousness, 20+ years in quantum computing',
-      expertise: 'AI, Quantum Computing, Consciousness Theory'
-    },
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'CTO & Head of Research',
-      background: 'PhD in Computer Science, Former Google AI researcher',
-      expertise: 'Machine Learning, Neural Networks, Quantum Algorithms'
-    },
-    {
-      name: 'Dr. Marcus Rodriguez',
-      role: 'Chief Security Officer',
-      background: 'PhD in Cybersecurity, Former NSA technical director',
-      expertise: 'Cybersecurity, Compliance, Threat Intelligence'
+      title: 'Talent Network',
+      description: 'World-class team of AI researchers, quantum physicists, and enterprise experts.',
+      icon: <Users className="w-8 h-8 text-blue-400" />
     }
   ];
 
   return (
-    <Layout
-      title="Investors - Zion Tech Group"
-      description="Investment opportunities in cutting-edge AI, quantum computing, and space technology. Join us in shaping the future."
-      keywords="investors, investment, funding, Zion Tech Group, AI, quantum computing, technology investment"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+    <Layout>
+      <SEO 
+        title="Investors - Zion Tech Group"
+        description="Invest in Zion Tech Group's revolutionary AI consciousness and quantum computing technology. Join us in shaping the future of technology and achieving exceptional returns."
+      />
+      
+      <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="relative py-20 lg:py-32 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
+          <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 text-sm font-medium mb-6">
-                <DollarSign className="w-4 h-4 mr-2" />
-                Investment Opportunities
-              </div>
-              
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Invest in the Future of Technology
+              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+                Investor Relations
               </h1>
-              
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Join Zion Tech Group's mission to revolutionize AI, quantum computing, space technology, 
-                and beyond. Exceptional returns await forward-thinking investors.
+              <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+                Invest in the future of AI consciousness, quantum computing, and revolutionary technology solutions. Join us in building the next generation of intelligent systems.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
-                  Request Investor Package
-                </button>
-                <button className="px-8 py-4 border border-cyan-400/20 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-200">
-                  <Play className="w-5 h-5 inline mr-2" />
-                  Watch Investor Presentation
-                </button>
+              <div className="flex flex-wrap justify-center gap-4 text-gray-400">
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="w-5 h-5" />
+                  <span>300%+ Revenue Growth</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <DollarSign className="w-5 h-5" />
+                  <span>$150M+ ARR</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Star className="w-5 h-5" />
+                  <span>Market Leader</span>
+                </div>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Investment Highlights Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        {/* Company Metrics */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -210,78 +186,37 @@ const Investors: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Invest in Zion Tech Group?
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Company Performance
               </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Exceptional growth, market leadership, and breakthrough innovations
+              <p className="text-xl text-gray-400">
+                Exceptional growth and market leadership metrics
               </p>
             </motion.div>
-
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {investmentHighlights.map((highlight, index) => (
+              {companyMetrics.map((metric, index) => (
                 <motion.div
-                  key={index}
+                  key={metric.metric}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gray-900/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300"
+                  className="text-center p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-cyan-400/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    {highlight.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {highlight.title}
-                  </h3>
-                  <p className="text-gray-400 mb-4">
-                    {highlight.description}
-                  </p>
-                  <div className="text-2xl font-bold text-cyan-400">
-                    {highlight.metric}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Financial Metrics Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Financial Performance
-              </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Strong fundamentals and exceptional growth metrics
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {financialMetrics.map((metric, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gray-900/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 text-center"
-                >
-                  <h3 className="text-lg font-medium text-gray-300 mb-4">
-                    {metric.label}
-                  </h3>
                   <div className="text-3xl font-bold text-white mb-2">
                     {metric.value}
                   </div>
-                  <div className="text-sm text-cyan-400">
-                    {metric.growth} {metric.period}
+                  <div className="text-lg text-gray-400 mb-3">
+                    {metric.metric}
+                  </div>
+                  <div className={`text-sm font-medium mb-3 ${
+                    metric.changeType === 'positive' ? 'text-green-400' : 'text-red-400'
+                  }`}>
+                    {metric.change}
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    {metric.description}
                   </div>
                 </motion.div>
               ))}
@@ -289,9 +224,9 @@ const Investors: React.FC = () => {
           </div>
         </section>
 
-        {/* Investment Opportunities Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        {/* Investment Highlights */}
+        <section className="py-20 bg-black/50">
+          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -299,56 +234,159 @@ const Investors: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Current Investment Opportunities
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Investment Highlights
               </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Join our next funding rounds and accelerate our growth trajectory
+              <p className="text-xl text-gray-400">
+                Why Zion Tech Group represents an exceptional investment opportunity
               </p>
             </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {investmentOpportunities.map((opportunity, index) => (
+            
+            <div className="grid lg:grid-cols-2 gap-8">
+              {investmentHighlights.map((highlight, index) => (
                 <motion.div
-                  key={index}
+                  key={highlight.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="bg-gray-900/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8"
+                  className="flex gap-6 p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
-                  <div className="flex justify-between items-start mb-6">
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">
-                        {opportunity.type}
-                      </h3>
-                      <div className="text-3xl font-bold text-cyan-400 mb-2">
-                        {opportunity.amount}
-                      </div>
+                  <div className="flex-shrink-0">
+                    {highlight.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-3">
+                      {highlight.title}
+                    </h3>
+                    <p className="text-gray-300">
+                      {highlight.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Financial Performance */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Financial Performance
+              </h2>
+              <p className="text-xl text-gray-400">
+                Consistent exponential growth and strong financial fundamentals
+              </p>
+            </motion.div>
+            
+            <div className="grid lg:grid-cols-3 gap-8">
+              {financialHighlights.map((year, index) => (
+                <motion.div
+                  key={year.year}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50"
+                >
+                  <div className="text-center mb-6">
+                    <div className="text-4xl font-bold text-white mb-2">
+                      {year.year}
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                      opportunity.status === 'Open' 
-                        ? 'bg-green-500/20 text-green-400' 
-                        : 'bg-yellow-500/20 text-yellow-400'
-                    }`}>
-                      {opportunity.status}
-                    </span>
+                    <div className="text-2xl font-bold text-cyan-400 mb-1">
+                      {year.revenue}
+                    </div>
+                    <div className="text-green-400 font-medium">
+                      {year.growth} Growth
+                    </div>
+                    <div className="text-gray-400 text-sm mt-2">
+                      {year.customers} Customers
+                    </div>
                   </div>
                   
-                  <div className="space-y-4 mb-6">
-                    <div>
-                      <p className="text-gray-400 text-sm">Use of Funds</p>
-                      <p className="text-white">{opportunity.use}</p>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-3">Key Highlights:</h4>
+                    <ul className="space-y-2">
+                      {year.highlights.map((highlight, highlightIndex) => (
+                        <li key={highlightIndex} className="flex items-center gap-3 text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Investment Opportunities */}
+        <section className="py-20 bg-black/50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Investment Opportunities
+              </h2>
+              <p className="text-xl text-gray-400">
+                Current and upcoming investment opportunities
+              </p>
+            </motion.div>
+            
+            <div className="grid lg:grid-cols-3 gap-8">
+              {investmentOpportunities.map((opportunity, index) => (
+                <motion.div
+                  key={opportunity.type}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
+                >
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-3">
+                      {opportunity.type}
+                    </h3>
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">
+                      {opportunity.amount}
                     </div>
-                    <div>
-                      <p className="text-gray-400 text-sm">Timeline</p>
-                      <p className="text-white">{opportunity.timeline}</p>
+                    <div className="text-green-400 font-medium mb-2">
+                      {opportunity.status}
+                    </div>
+                    <div className="text-gray-400 text-sm">
+                      Timeline: {opportunity.timeline}
                     </div>
                   </div>
-
-                  <button className="w-full py-3 px-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
-                    Express Interest
-                  </button>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Use of Funds:</h4>
+                    <p className="text-gray-300">
+                      {opportunity.use}
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <a
+                      href="/contact"
+                      className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 inline-block"
+                    >
+                      Learn More
+                    </a>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -356,122 +394,44 @@ const Investors: React.FC = () => {
         </section>
 
         {/* Competitive Advantages */}
-        <section className="py-20 bg-black/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20">
+          <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              <h2 className="text-4xl font-bold text-white mb-4">
                 Competitive Advantages
               </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                What sets Zion Tech Group apart from the competition
+              <p className="text-xl text-gray-400">
+                Sustainable competitive moats and market positioning
               </p>
             </motion.div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-2 gap-8">
               {competitiveAdvantages.map((advantage, index) => (
                 <motion.div
                   key={advantage.title}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300"
+                  className="flex gap-6 p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
-                  <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center mr-3">
-                      {advantage.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-white">{advantage.title}</h3>
+                  <div className="flex-shrink-0">
+                    {advantage.icon}
                   </div>
-                  <p className="text-gray-300">{advantage.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Investment Use */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Investment Use of Funds
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Strategic allocation to accelerate growth and market leadership
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {investmentUse.map((use, index) => (
-                <motion.div
-                  key={use.category}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-orange-500/50 transition-all duration-300"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-bold text-white">{use.category}</h3>
-                    <div className={`w-16 h-8 bg-gradient-to-br ${use.color} rounded-xl flex items-center justify-center text-white font-bold`}>
-                      {use.percentage}
-                    </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-3">
+                      {advantage.title}
+                    </h3>
+                    <p className="text-gray-300">
+                      {advantage.description}
+                    </p>
                   </div>
-                  <p className="text-gray-300">{use.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Team Highlights */}
-        <section className="py-20 bg-black/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Leadership Team
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                World-class expertise driving innovation and growth
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {teamHighlights.map((member, index) => (
-                <motion.div
-                  key={member.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300 text-center"
-                >
-                  <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold text-xl">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                  <div className="text-purple-400 font-semibold mb-3">{member.role}</div>
-                  <p className="text-gray-300 text-sm mb-3">{member.background}</p>
-                  <div className="text-xs text-cyan-400">{member.expertise}</div>
                 </motion.div>
               ))}
             </div>
@@ -479,29 +439,32 @@ const Investors: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-600/10">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
+          <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Invest in the Future?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join our mission to revolutionize technology and achieve exceptional returns
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Join us in revolutionizing technology and achieving exceptional returns. Contact our investor relations team to learn more about investment opportunities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
-                  Request Investor Package
-                </button>
                 <a
                   href="/contact"
-                  className="px-8 py-4 border border-cyan-400/20 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-200"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
                 >
-                  Contact Investment Team
+                  Contact Investor Relations
+                </a>
+                <a
+                  href="/about"
+                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                >
+                  Learn More About Us
                 </a>
               </div>
             </motion.div>
