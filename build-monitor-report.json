@@ -1,8 +1,8 @@
 {
-  "timestamp": "2025-09-01T12:28:58.199Z",
+  "timestamp": "2025-09-01T12:38:07.614Z",
   "summary": {
     "buildSuccess": false,
-    "buildDuration": 8,
+    "buildDuration": 5,
     "lintErrors": 0,
     "lintWarnings": 0,
     "typeErrors": 0,
@@ -25,10 +25,10 @@
     },
     "build": {
       "success": false,
-      "duration": 8,
-      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 4.3s\n   Collecting page data ...\n",
-      "error": "\n> Build optimization failed: found page without a React Component as default export in \npages/\n\nSee https://nextjs.org/docs/messages/page-without-valid-component for more info.\n\n",
-      "errorMessage": "Command failed: npm run build\n\n> Build optimization failed: found page without a React Component as default export in \npages/\n\nSee https://nextjs.org/docs/messages/page-without-valid-component for more info.\n\n"
+      "duration": 5,
+      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 2.6s\n   Collecting page data ...\n",
+      "error": "\n> Build error occurred\n[Error: ENOENT: no such file or directory, open '/workspace/.next/server/pages-manifest.json'] {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: '/workspace/.next/server/pages-manifest.json'\n}\n",
+      "errorMessage": "Command failed: npm run build\n\n> Build error occurred\n[Error: ENOENT: no such file or directory, open '/workspace/.next/server/pages-manifest.json'] {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: '/workspace/.next/server/pages-manifest.json'\n}\n"
     },
     "buildSize": {
       "size": 0,
@@ -43,7 +43,7 @@
         "severity": "critical",
         "type": "build_failure",
         "message": "Build is failing",
-        "details": "Command failed: npm run build\n\n> Build optimization failed: found page without a React Component as default export in \npages/\n\nSee https://nextjs.org/docs/messages/page-without-valid-component for more info.\n\n"
+        "details": "Command failed: npm run build\n\n> Build error occurred\n[Error: ENOENT: no such file or directory, open '/workspace/.next/server/pages-manifest.json'] {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: '/workspace/.next/server/pages-manifest.json'\n}\n"
       }
     ],
     "recommendations": [

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Enhanced PM2 Automation System Startup Script
-# This script starts the complete intelligent PM2 automation ecosystem
+# PM2 Automation System Startup Script
+# This script starts the complete error monitoring and fixing automation system
 
 set -e
 
@@ -15,7 +15,7 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 # Project configuration
-PROJECT_ROOT="$(pwd)"
+PROJECT_ROOT="/workspace"
 ECOSYSTEM_CONFIG="$PROJECT_ROOT/ecosystem.config.cjs"
 LOGS_DIR="$PROJECT_ROOT/logs"
 
@@ -40,23 +40,6 @@ info() {
     echo -e "${CYAN}ℹ️  $1${NC}"
 }
 
-# Function to print colored output
-print_status() {
-    echo -e "${GREEN}[INFO]${NC} $1"
-}
-
-print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
-}
-
-print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
-}
-
-print_header() {
-    echo -e "${BLUE}$1${NC}"
-}
-
 # Check if PM2 is installed
 check_pm2() {
     if ! command -v pm2 &> /dev/null; then
@@ -78,26 +61,6 @@ setup_directories() {
     mkdir -p "$PROJECT_ROOT/scripts/automation"
     
     success "Directories created"
-}
-
-# Install dependencies if not already installed
-install_dependencies() {
-    if [ ! -d "node_modules" ]; then
-        print_status "Installing dependencies..."
-        npm install --legacy-peer-deps
-    else
-        print_status "Dependencies already installed"
-    fi
-}
-
-# Build the project
-build_project() {
-    print_status "Building the project..."
-    if npm run build; then
-        print_status "Build completed successfully"
-    else
-        print_warning "Build failed, but continuing with automation setup"
-    fi
 }
 
 # Install PM2 modules if needed
@@ -199,39 +162,6 @@ setup_pm2_persistence() {
     success "PM2 persistence configured"
 }
 
-# Create health endpoint if it doesn't exist
-create_health_endpoint() {
-    print_status "Creating health endpoint..."
-    cat > health-endpoint.js << 'EOF'
-const http = require('http');
-const port = process.env.PORT || 3000;
-
-const server = http.createServer((req, res) => {
-  if (req.url === '/health') {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({
-      status: 'healthy',
-      timestamp: new Date().toISOString(),
-      uptime: process.uptime(),
-      memory: process.memoryUsage(),
-      pid: process.pid
-    }));
-  } else {
-    res.writeHead(404, { 'Content-Type': 'text/plain' });
-    res.end('Not Found');
-  }
-});
-
-server.listen(port, () => {
-  console.log(`Health endpoint server running on port ${port}`);
-});
-EOF
-
-    # Start health endpoint server
-    print_status "Starting health endpoint server..."
-    pm2 start health-endpoint.js --name health-endpoint
-}
-
 # Display system status
 display_status() {
     log "PM2 Automation System Status:"
@@ -265,7 +195,6 @@ display_status() {
     echo "  - dependency-manager: Manages dependencies and vulnerabilities"
     echo "  - build-monitor: Monitors build health and performance"
     echo "  - zion-website: Main application server"
-    echo "  - health-endpoint: Provides health check endpoint"
     
     echo
     info "Log Files:"
@@ -324,39 +253,6 @@ EOF
     success "Management commands created"
 }
 
-# Test automation system
-test_automation_system() {
-    print_header "🧪 Testing Automation System..."
-
-    # Test error monitor
-    print_status "Testing error monitor..."
-    node scripts/error-monitor.js &
-    ERROR_MONITOR_PID=$!
-    sleep 5
-    kill $ERROR_MONITOR_PID 2>/dev/null || true
-    print_status "Error monitor test completed"
-
-    # Test health checker
-    print_status "Testing health checker..."
-    node scripts/health-checker.js &
-    HEALTH_CHECKER_PID=$!
-    sleep 5
-    kill $HEALTH_CHECKER_PID 2>/dev/null || true
-    print_status "Health checker test completed"
-
-    # Show recent logs
-    print_header "📋 Recent Logs:"
-    if [ -f "logs/error-monitor.log" ]; then
-        echo -e "${GREEN}Error Monitor Logs:${NC}"
-        tail -5 logs/error-monitor.log 2>/dev/null || echo "No error monitor logs yet"
-    fi
-
-    if [ -f "logs/health-checker.log" ]; then
-        echo -e "${GREEN}Health Checker Logs:${NC}"
-        tail -5 logs/health-checker.log 2>/dev/null || echo "No health checker logs yet"
-    fi
-}
-
 # Main execution
 main() {
     echo -e "${PURPLE}🚀 Starting PM2 Automation System${NC}"
@@ -368,8 +264,6 @@ main() {
     
     # Setup environment
     setup_directories
-    install_dependencies
-    build_project
     install_pm2_modules
     
     # Stop existing processes
@@ -379,9 +273,6 @@ main() {
     if start_pm2_ecosystem; then
         success "PM2 automation system started successfully"
         
-        # Create health endpoint
-        create_health_endpoint
-        
         # Run initial fixes
         run_initial_fixes
         
@@ -390,9 +281,6 @@ main() {
         
         # Create management commands
         create_management_commands
-        
-        # Test automation system
-        test_automation_system
         
         # Display status
         display_status
