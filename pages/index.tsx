@@ -1022,7 +1022,7 @@ export default function HomePage() {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/services" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Explore Redundancy Systems →
                 </Link>
               </div>
@@ -1036,7 +1036,7 @@ export default function HomePage() {
                   <li>• Autonomous Agents</li>
                   <li>• Innovation Systems</li>
                 </ul>
-                <Link href="/blog" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Explore AI Systems →
                 </Link>
               </div>
@@ -1050,7 +1050,7 @@ export default function HomePage() {
                   <li>• Performance Optimization</li>
                   <li>• Quality Assurance</li>
                 </ul>
-                <Link href="/case-studies" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/services" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Explore Build Systems →
                 </Link>
               </div>
@@ -2125,30 +2125,25 @@ export default function HomePage() {
 
           {/* Latest Autonomous Content */}
           <section className="mx-auto max-w-7xl px-6 pb-14">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📰 Latest Autonomous Content & Updates</h2>
-            <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <Link href="/reports/updates/update-2025-08-15-0406" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300">
+            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <Link href="/reports/updates/update-2025-08-15-0406" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <h3 className="text-lg font-semibold text-cyan-400">Autonomous Update — 2025: 08: 15: 0406</h3>
                 <p className="mt-2 text-sm text-white/75">Latest system updates and autonomous agent activities.</p>
                 <div className="mt-4 inline-flex items-center gap-1 text-xs text-cyan-300/90 font-semibold">Read Full Update <span aria-hidden>→</span></div>
               </Link>
-              <Link href="/reports/updates/update-2025-08-15-0405" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30 transition-all duration-300">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-fuchsia-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold text-fuchsia-400">Autonomous Update — 2025: 08: 15: 0405</h3>
-                <p className="mt-2 text-sm text-white/75">AI automation improvements and system optimizations.</p>
-                <div className="mt-4 inline-flex items-center gap-1 text-xs text-fuchsia-300/90 font-semibold">Read Full Update <span aria-hidden>→</span></div>
+              <Link href="/reports/updates/update-2025-08-15-0405" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0405</h3>
+                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
               </Link>
-              <Link href="/reports/updates/update-2025-08-15-0404" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-green-400/30 transition-all duration-300">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-green-500/0 via-green-400/10 to-green-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold text-green-400">Autonomous Update — 2025: 08: 15: 0404</h3>
-                <p className="mt-2 text-sm text-white/75">Performance enhancements and redundancy system updates.</p>
-                <div className="mt-4 inline-flex items-center gap-1 text-xs text-green-300/90 font-semibold">Read Full Update <span aria-hidden>→</span></div>
-              </Link>
-            </div>
-            <div className="mt-6 text-center">
-              <Link href="/reports/updates" className="inline-block px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all duration-300 hover:border-cyan-400/50">
-                View All Updates
+              <Link href="/reports/updates/update-2025-08-15-0404" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0404</h3>
+                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
               </Link>
             </div>
           </section>
@@ -2440,9 +2435,7 @@ export default function HomePage() {
                   <li>• Threat detection & response</li>
                   <li>• Data protection</li>
                 </ul>
-                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Security Guide →
-                </a>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">View Security Guide →</a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -2454,9 +2447,7 @@ export default function HomePage() {
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Testing Guide →
-                </a>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">View Testing Guide →</a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -2468,9 +2459,7 @@ export default function HomePage() {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Performance Guide →
-                </a>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">View Performance Guide →</a>
               </div>
             </div>
           </section>
@@ -2752,6 +2741,43 @@ export default function HomePage() {
           </div>
         </footer>
       </div>
+      {/* Quick Links Footer */}
+      <footer className="border-t border-white/10 bg-black/20">
+        <div className="mx-auto max-w-7xl px-6 py-8 text-white/80 text-sm grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div>
+            <div className="text-white font-semibold mb-2">Company</div>
+            <ul className="space-y-1">
+              <li><Link href="/about" className="hover:text-white">About</Link></li>
+              <li><Link href="/services" className="hover:text-white">Services</Link></li>
+              <li><Link href="/case-studies" className="hover:text-white">Case Studies</Link></li>
+              <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+            </ul>
+          </div>
+          <div>
+            <div className="text-white font-semibold mb-2">Content</div>
+            <ul className="space-y-1">
+              <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+              <li><Link href="/resources" className="hover:text-white">Resources</Link></li>
+              <li><Link href="/privacy" className="hover:text-white">Privacy</Link></li>
+            </ul>
+          </div>
+          <div>
+            <div className="text-white font-semibold mb-2">Docs</div>
+            <ul className="space-y-1">
+              <li><a href="https://github.com/Zion-Holdings/zion.app/blob/main/README.md" target="_blank" rel="noopener noreferrer" className="hover:text-white">README</a></li>
+              <li><a href="https://github.com/Zion-Holdings/zion.app/blob/main/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer" className="hover:text-white">Architecture</a></li>
+              <li><a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="hover:text-white">Security</a></li>
+            </ul>
+          </div>
+          <div>
+            <div className="text-white font-semibold mb-2">Get Started</div>
+            <ul className="space-y-1">
+              <li><Link href="/contact" className="hover:text-white">Request a Demo</Link></li>
+              <li><Link href="/services" className="hover:text-white">See Pricing</Link></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
