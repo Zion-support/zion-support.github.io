@@ -870,50 +870,69 @@ const HomePage = memo(function HomePage() {
             </div>
           </section>
 
-          {/* Advanced Platform Features */}
+          {/* Advanced Automation Infrastructure */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🌟 Advanced Platform Features & Capabilities</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🔐 Security & Compliance</h3>
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">⚙️ Advanced Automation Infrastructure</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
+              {/* Ultimate Redundancy Systems */}
+              <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl">🔄</span>
+                </div>
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">Ultimate Redundancy Systems</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Automated security scanning</li>
-                  <li>• Vulnerability assessment</li>
-                  <li>• Compliance monitoring</li>
-                  <li>• Threat detection & response</li>
-                  <li>• Zero-trust architecture</li>
+                  <li>• Ultimate Redundancy V2</li>
+                  <li>• Comprehensive Redundancy V3</li>
+                  <li>• Enhanced Redundancy Systems</li>
+                  <li>• PM2 Auto-Sync</li>
+                  <li>• GitHub Actions Redundancy</li>
                 </ul>
-                <Link href="/security" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  Security Details →
-                </Link>
+                <div className="text-center">
+                  <Link href="/automation" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                    Explore Redundancy →
+                  </Link>
+                </div>
               </div>
 
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">📈 Performance & Analytics</h3>
+              {/* AI-Powered Orchestration */}
+              <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl">🧠</span>
+                </div>
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">AI-Powered Orchestration</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Real-time performance metrics</li>
-                  <li>• Automated health checks</li>
-                  <li>• Predictive failure detection</li>
-                  <li>• Comprehensive logging</li>
-                  <li>• AI-driven insights</li>
+                  <li>• Master Automation Orchestrator</li>
+                  <li>• Intelligent Build Orchestrator</li>
+                  <li>• AI Content Factory</li>
+                  <li>• Autonomous Innovation Systems</li>
+                  <li>• Smart Workflow Management</li>
                 </ul>
-                <Link href="/performance" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  Performance Details →
-                </Link>
+                <div className="text-center">
+                  <Link href="/automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                    Explore AI Systems →
+                  </Link>
+                </div>
               </div>
 
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🌐 Global Infrastructure</h3>
+              {/* Continuous Operations */}
+              <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-green-400/30 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl">⚡</span>
+                </div>
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">Continuous Operations</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Multi-region deployment</li>
-                  <li>• Edge computing optimization</li>
-                  <li>• Global CDN integration</li>
-                  <li>• Geographic redundancy</li>
-                  <li>• Low-latency routing</li>
+                  <li>• Continuous Build Monitoring</li>
+                  <li>• Self-Healing Infrastructure</li>
+                  <li>• Automated Recovery Systems</li>
+                  <li>• Performance Optimization</li>
+                  <li>• Quality Assurance Automation</li>
                 </ul>
-                <Link href="/infrastructure" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  Infrastructure Details →
-                </Link>
+                <div className="text-center">
+                  <Link href="/automation" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                    Explore Operations →
+                  </Link>
+                </div>
               </div>
             </div>
           </section>
