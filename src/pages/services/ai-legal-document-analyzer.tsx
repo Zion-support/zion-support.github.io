@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
 import { 
   FileText, 
   Search, 
@@ -28,121 +25,16 @@ import {
   MapPin
 } from 'lucide-react';
 
-const AILegalDocumentAnalyzer = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Analysis",
-      description: "Advanced machine learning algorithms analyze legal documents for key insights, risks, and opportunities"
-    },
-    {
-      icon: Search,
-      title: "Smart Search & Discovery",
-      description: "Find relevant clauses, precedents, and legal references across your entire document library"
-    },
-    {
-      icon: Shield,
-      title: "Risk Assessment",
-      description: "Automated identification of potential legal risks, compliance issues, and contract vulnerabilities"
-    },
-    {
-      icon: FileCheck,
-      title: "Document Comparison",
-      description: "Compare multiple versions of documents to track changes and identify discrepancies"
-    },
-    {
-      icon: AlertTriangle,
-      title: "Compliance Monitoring",
-      description: "Real-time monitoring of regulatory changes and their impact on your legal documents"
-    },
-    {
-      icon: BarChart3,
-      title: "Analytics Dashboard",
-      description: "Comprehensive insights into document performance, risk trends, and compliance metrics"
-    }
-  ];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$99",
-      period: "/month",
-      description: "Perfect for small law firms and solo practitioners",
-      features: [
-        "Up to 100 documents/month",
-        "Basic AI analysis",
-        "Risk assessment",
-        "Email support",
-        "Standard compliance checks"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Ideal for growing legal practices",
-      features: [
-        "Up to 1,000 documents/month",
-        "Advanced AI analysis",
-        "Custom risk scoring",
-        "Priority support",
-        "Advanced compliance monitoring",
-        "Document comparison tools",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$799",
-      period: "/month",
-      description: "For large law firms and corporate legal departments",
-      features: [
-        "Unlimited documents",
-        "Custom AI models",
-        "White-label solution",
-        "Dedicated support",
-        "Advanced analytics",
-        "Custom integrations",
-        "On-premise deployment",
-        "SLA guarantees"
-      ],
-      popular: false
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Contract Review",
-      description: "Automate contract analysis for faster deal closure and risk mitigation",
-      icon: FileText
-    },
-    {
-      title: "Compliance Audits",
-      description: "Streamline regulatory compliance with automated document monitoring",
-      icon: Shield
-    },
-    {
-      title: "Due Diligence",
-      description: "Accelerate M&A due diligence with AI-powered document analysis",
-      icon: Search
-    },
-    {
-      title: "Litigation Support",
-      description: "Quick discovery and analysis of relevant documents for legal cases",
-      icon: Gavel
-    }
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Legal Document Analyzer - Zion Tech Group"
+      <SEO title="AI Legal Document Analyzer - Zion Tech Group"
         description="Transform legal document analysis with AI-powered insights, risk assessment, and compliance monitoring. Streamline your legal practice with cutting-edge technology."
         keywords="AI legal document analysis, legal tech, contract review, compliance monitoring, risk assessment, legal automation"
         canonical="https://ziontechgroup.com/services/ai-legal-document-analyzer"
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -155,7 +47,7 @@ const AILegalDocumentAnalyzer = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
+              <Brain className="w-4 h-4 mr-2"  />
               AI-Powered Legal Technology
             </div>
             
@@ -177,7 +69,7 @@ const AILegalDocumentAnalyzer = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 View Pricing
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com" 
@@ -320,7 +212,7 @@ const AILegalDocumentAnalyzer = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
@@ -369,7 +261,7 @@ const AILegalDocumentAnalyzer = () => {
               viewport={{ once: true }}
             >
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-white" />
+                <Phone className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
               <p className="text-slate-300">+1 302 464 0950</p>
@@ -383,7 +275,7 @@ const AILegalDocumentAnalyzer = () => {
               viewport={{ once: true }}
             >
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-white" />
+                <Mail className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
               <p className="text-slate-300">kleber@ziontechgroup.com</p>
@@ -397,7 +289,7 @@ const AILegalDocumentAnalyzer = () => {
               viewport={{ once: true }}
             >
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-white" />
+                <MapPin className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -416,13 +308,12 @@ const AILegalDocumentAnalyzer = () => {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Request Demo
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5"  />
             </a>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AILegalDocumentAnalyzer;

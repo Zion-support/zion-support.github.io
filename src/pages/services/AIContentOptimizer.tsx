@@ -1,153 +1,15 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { CheckCircle, TrendingUp, Target, Zap, BarChart3, Globe, Smartphone, Users, Shield, Brain, Search, PenTool  } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
 
 export default function AIContentOptimizer(...args: any[]): any {
-  const features = [
-    {
-      title: "AI-Powered SEO Optimization",
-      description: "Advanced algorithms analyze search trends and automatically optimize your content for maximum visibility",
-      icon: Search,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Content Performance Analytics",
-      description: "Real-time insights into how your content performs across different platforms and audiences",
-      icon: BarChart3,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Multi-Platform Optimization",
-      description: "Automatically adapts content for different platforms including web, social media, and mobile",
-      icon: Globe,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Intelligent Content Suggestions",
-      description: "AI generates topic ideas, headlines, and content structures based on trending topics and audience interests",
-      icon: Brain,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Automated A/B Testing",
-      description: "Test different content variations automatically to find what resonates best with your audience",
-      icon: Target,
-      color: "from-indigo-500 to-blue-500"
-    },
-    {
-      title: "Content Repurposing Engine",
-      description: "Transform one piece of content into multiple formats for different channels and audiences",
-      icon: PenTool,
-      color: "from-teal-500 to-cyan-500"
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Creator",
-      price: "$19",
-      period: "/month",
-      description: "Perfect for individual content creators",
-      features: [
-        "Up to 10 content pieces/month",
-        "Basic SEO optimization",
-        "Content performance tracking",
-        "Email support",
-        "Mobile app access"
-      ],
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$49",
-      period: "/month",
-      description: "Ideal for growing content teams",
-      features: [
-        "Up to 100 content pieces/month",
-        "Advanced AI optimization",
-        "Multi-platform analytics",
-        "Priority support",
-        "API access",
-        "Custom templates"
-      ],
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$149",
-      period: "/month",
-      description: "For large content operations",
-      features: [
-        "Unlimited content pieces",
-        "Custom AI models",
-        "White-label solution",
-        "Dedicated support",
-        "Advanced security",
-        "Custom integrations"
-      ],
-      cta: "Contact Sales",
-      popular: false
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "300% Increase in Organic Traffic",
-      description: "AI-optimized content drives significantly more search traffic",
-      icon: TrendingUp,
-      metric: "300%"
-    },
-    {
-      title: "50% Higher Engagement Rates",
-      description: "Optimized content resonates better with target audiences",
-      icon: Users,
-      metric: "50%"
-    },
-    {
-      title: "80% Time Savings",
-      description: "Automated optimization reduces manual content work",
-      icon: Zap,
-      metric: "80%"
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Blog Content",
-      description: "Optimize blog posts for search engines and social sharing",
-      icon: PenTool,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Social Media",
-      description: "Create engaging social media content that drives engagement",
-      icon: Smartphone,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Email Marketing",
-      description: "Optimize email subject lines and content for better open rates",
-      icon: PenTool, // Changed from Mail to PenTool for consistency with other icons
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Landing Pages",
-      description: "Create high-converting landing pages with AI optimization",
-      icon: Target,
-      color: "from-green-500 to-emerald-500"
-    }
-  ];
-
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group"
+      <SEO title="AI Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group"
         description="Transform your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today."
         keywords="AI content optimization, content SEO, content analytics, content performance, AI content creation"
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -349,7 +211,7 @@ export default function AIContentOptimizer(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       <span className="text-white">{feature}</span>
                     </li>
                   ))}
@@ -395,5 +257,4 @@ export default function AIContentOptimizer(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -1,84 +1,19 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";
-import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
-import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
 
-const pricingTiers = [
-  {
-    name: 'Starter',
-    price: '$999',
-    period: '/month',
-    description: 'Perfect for small businesses and startups',
-    features: [
-      'Basic AI automation',
-      'Standard support',
-      'Core integrations',
-      'Basic analytics',
-      'Email support'
-    ],
-    popular: false
-  },
-  {
-    name: 'Professional',
-    price: '$2,999',
-    period: '/month',
-    description: 'Ideal for growing businesses',
-    features: [
-      'Advanced AI features',
-      'Priority support',
-      'Custom integrations',
-      'Advanced analytics',
-      'Phone & email support',
-      'Training sessions'
-    ],
-    popular: true
-  },
-  {
-    name: 'Enterprise',
-    price: '$7,999',
-    period: '/month',
-    description: 'For large organizations',
-    features: [
-      'Full AI suite',
-      '24/7 dedicated support',
-      'Custom development',
-      'Enterprise analytics',
-      'Dedicated account manager',
-      'Custom training programs',
-      'SLA guarantees'
-    ],
-    popular: false
-  }
-];
 
 export default function ComprehensivePricing() {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
 
   // Combine all services
-  const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027];
-
+  
   // Get unique categories
-  const categories = Array.from(new Set(allServices.map(service => service.category)));
-
+  
   // Filter services based on selection
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-
+  
     let matchesPrice = true;
     if (selectedPriceRange !== 'all') {
-      const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+      
       switch (selectedPriceRange) {
         case 'under-1000':
           matchesPrice = price < 1000;
@@ -94,8 +29,7 @@ export default function ComprehensivePricing() {
           break}
     }
 
-    return matchesCategory && matchesPrice;
-  });
+    return matchesCategory && matchesPrice});
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -114,17 +48,17 @@ export default function ComprehensivePricing() {
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="flex flex-col items-center">
-                <Phone className="h-8 w-8 text-zion-cyan mb-2"/>
+                <Phone className="h-8 w-8 text-zion-cyan mb-2" />
                 <h3 className="text-lg font-semibold text-white mb-1">Call Us</h3>
                 <p className="text-zion-slate-light">{contactInfo.mobile}</p>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="h-8 w-8 text-zion-cyan mb-2"/>
+                <Mail className="h-8 w-8 text-zion-cyan mb-2" />
                 <h3 className="text-lg font-semibold text-white mb-1">Email Us</h3>
                 <p className="text-zion-slate-light">{contactInfo.email}</p>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="h-8 w-8 text-zion-cyan mb-2"/>
+                <MapPin className="h-8 w-8 text-zion-cyan mb-2" />
                 <h3 className="text-lg font-semibold text-white mb-1">Visit Us</h3>
                 <p className="text-zion-slate-light text-sm">{contactInfo.address}</p>
               </div>
@@ -157,7 +91,7 @@ export default function ComprehensivePricing() {
                   <ul className="space-y-3 mb-6">
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0"/>
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
                         <span className="text-zion-slate-dark">{feature}</span>
                       </li>
                     ))}
@@ -165,7 +99,7 @@ export default function ComprehensivePricing() {
                   <Link to="/contact" className="w-full">
                     <Button className={`w-full ${tier.popular ? 'bg-zion-cyan text-white hover:bg-zion-cyan-dark' : 'bg-zion-blue text-white hover:bg-zion-blue-dark'}`}>
                       Get Started
-                      <ArrowRight className="h-4 w-4 ml-2"/>
+                      <ArrowRight className="h-4 w-4 ml-2" />
                     </Button>
                   </Link>
                 </CardContent>
@@ -240,7 +174,7 @@ export default function ComprehensivePricing() {
                     <h4 className="font-semibold text-zion-slate-dark text-sm">Key Features: any</h4>
                     {service.features.slice(0, 3).map((feature, index)  => (
                       <div key={index} className="flex items-center text-sm text-zion-slate-dark">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"/>
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </div>
                     ))}
@@ -265,7 +199,7 @@ export default function ComprehensivePricing() {
                   {/* Service Stats */}
                   <div className="flex items-center justify-between text-sm mb-4">
                     <div className="flex items-center">
-                      <Star className="h-4 w-4 text-yellow-400 mr-1"/>
+                      <Star className="h-4 w-4 text-yellow-400 mr-1" />
                       <span className="font-semibold">{service.rating}</span>
                       <span className="text-zion-slate-light ml-1">({service.reviews})</span>
                     </div>
@@ -279,12 +213,12 @@ export default function ComprehensivePricing() {
                     <Link to={service.link} className="w-full">
                       <Button className="w-full bg-zion-cyan text-white hover:bg-zion-cyan-dark">
                         Learn More
-                        <ArrowRight className="h-4 w-4 ml-2"/>
+                        <ArrowRight className="h-4 w-4 ml-2" />
                       </Button>
                     </Link>
                     <Link to="/contact" className="w-full">
                       <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white">
-                        <Phone className="h-4 w-4 mr-2"/>
+                        <Phone className="h-4 w-4 mr-2" />
                         Get Quote
                       </Button>
                     </Link>
@@ -300,8 +234,7 @@ export default function ComprehensivePricing() {
               <Button
                 onClick={() => {
                   setSelectedCategory('all');
-                  setSelectedPriceRange('all');
-                }}
+                  setSelectedPriceRange('all')}}
                 className = "mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
               >
                 Clear Filters
@@ -318,28 +251,28 @@ export default function ComprehensivePricing() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
               <div className="mx-auto w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
-                <TrendingUp className="h-8 w-8 text-zion-cyan"/>
+                <TrendingUp className="h-8 w-8 text-zion-cyan" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Proven ROI</h3>
               <p className="text-zion-slate-light">Average 300% ROI within 6 months</p>
             </div>
             <div className="text-center">
               <div className="mx-auto w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
-                <Users className="h-8 w-8 text-zion-cyan"/>
+                <Users className="h-8 w-8 text-zion-cyan" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Expert Support</h3>
               <p className="text-zion-slate-light">24/7 technical support and consultation</p>
             </div>
             <div className="text-center">
               <div className="mx-auto w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
-                <Shield className="h-8 w-8 text-zion-cyan"/>
+                <Shield className="h-8 w-8 text-zion-cyan" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
               <p className="text-zion-slate-light">SOC 2 compliant with bank-level security</p>
             </div>
             <div className="text-center">
               <div className="mx-auto w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
-                <Zap className="h-8 w-8 text-zion-cyan"/>
+                <Zap className="h-8 w-8 text-zion-cyan" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Fast Implementation</h3>
               <p className="text-zion-slate-light">Ready for immediate deployment</p>
@@ -362,13 +295,13 @@ export default function ComprehensivePricing() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link to="/contact">
                 <Button size="lg" className="bg-white text-zion-blue hover:bg-gray-100 px-8 py-3">
-                  <Phone className="h-5 w-5 mr-2"/>
+                  <Phone className="h-5 w-5 mr-2" />
                   Get Free Consultation
                 </Button>
               </Link>
               <Link to="/contact">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue px-8 py-3">
-                  <Mail className="h-5 w-5 mr-2"/>
+                  <Mail className="h-5 w-5 mr-2" />
                   Request Demo
                 </Button>
               </Link>
@@ -382,5 +315,4 @@ export default function ComprehensivePricing() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

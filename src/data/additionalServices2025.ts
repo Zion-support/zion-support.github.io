@@ -18,8 +18,7 @@ export interface AdditionalService {
   contactInfo?: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
 
 export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [;
   {
@@ -46,6 +45,4 @@ export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [;
     price: 999,
     marketPrice: "$1,000 - $3,000/month"
 
-];
-
-}}}}}}}}
+]}}}}}}}}

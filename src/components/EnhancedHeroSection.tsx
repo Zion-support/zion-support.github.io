@@ -1,6 +1,3 @@
-import React, { useState, useEffect, memo } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
 import { ArrowRight, 
   Play, 
   Star, 
@@ -14,8 +11,7 @@ import { ArrowRight,
   Rocket,
   Target,
   TrendingUp
- } from 'lucide-react';
-} from 'lucide-react';
+ } from 'lucide-react'} from 'lucide-react';
 
 interface HeroSlide {
 
@@ -31,8 +27,7 @@ interface HeroSlide {
   stats: { label: string; value: string; icon: React.ComponentType<any> 
 }[]}
 
-const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
-  const [currentSlide, setCurrentSlide] = useState(0);
+
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const heroSlides: HeroSlide[] = [
@@ -86,20 +81,19 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 
   ];
 
-  useEffect(()  => {
+  useEffect(() => {
     if (!isAutoPlaying) return;
 
-    const interval = setInterval(() => {;
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 6000);
+    
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}, 6000);
 
     return () => clearInterval(interval)}, [isAutoPlaying, heroSlides.length]);
 
-  const nextSlide = () => {;
+  
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     setIsAutoPlaying(false)};
 
-  const prevSlide = () => {;
+  
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     setIsAutoPlaying(false)};
 
@@ -253,7 +247,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                       transition={{ delay: index * 0.1 }}
                       className="flex items-center text-sm text-gray-300 bg-white/5 px-3 py-2 rounded-lg border border-white/10"
 
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />
                       {feature}
                     </motion.div>;
                   ))}
@@ -265,15 +259,14 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                   whileTap={{ scale: 0.95 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
 
-                  <Link
-                    to={currentSlideData.path}
+                  <Link to={currentSlideData.path}
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1 border border-zion-cyan/30"
 
                     {currentSlideData.cta}
-                    <ArrowRight className="ml-2 w-5 h-5" />
+                    <ArrowRight className="ml-2 w-5 h-5"  />
                   </Link>
                   <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan/10 transition-all duration-300 backdrop-blur-sm">
-                    <Play className="mr-2 w-5 h-5" />
+                    <Play className="mr-2 w-5 h-5"  />
                     Watch Demo
                   </button>
                 </motion.div>
@@ -285,34 +278,13 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
           <motion.div
             initial = {
   { opacity: 0,
-  x: 50 ;
-
-
-
-
-
-
-}}
+  x: 50 }}
             animate = {
   { opacity: 1,
-  x: 0 ;
-
-
-
-
-
-
-}}
+  x: 0 }}
             transition = {
   { duration: 0.8,
-  delay: 0.2 ;
-
-
-
-
-
-
-}}
+  delay: 0.2 }}
             className="relative"
 
             {/* Main image */}
@@ -401,30 +373,16 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 ;
-
-
-
-
-
-
-}}
+  y: 20 }}
               animate = {
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
               transition={{ delay: 0.8 }}
               className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl"
 
               <div className="flex items-center space-x-4">;
                 <div className="p-3 bg-zion-cyan/20 rounded-xl">
-                  <Star className="w-6 h-6 text-zion-cyan" />
+                  <Star className="w-6 h-6 text-zion-cyan"  />
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-white">4.9/5</p>
@@ -443,7 +401,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
 
-            <ChevronLeft className="w-6 h-6 text-white" />
+            <ChevronLeft className="w-6 h-6 text-white"  />
           </motion.button>
 
           <div className="flex space-x-2">
@@ -467,7 +425,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
 
-            <ChevronRight className="w-6 h-6 text-white" />
+            <ChevronRight className="w-6 h-6 text-white"  />
           </motion.button>
         </div>
       </div>
@@ -492,14 +450,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 }}
           transition = {
   { duration: 2,
-  repeat: Infinity ;
-
-
-
-
-
-
-}}
+  repeat: Infinity }}
           className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center cursor-pointer hover:border-zion-cyan transition-colors duration-300"
         >
           <motion.div
@@ -529,8 +480,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
         <p className="text-xs text-zion-cyan/70 text-center mt-2">Scroll to explore</p>;
       </motion.div>;
     </section>;
-  );
-}
+  )}
 });
 
 export default EnhancedHeroSection;

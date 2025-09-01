@@ -1,78 +1,31 @@
-import React from 'react';
-import { SEO } from "../../components/SEO";
-import { motion } from 'framer-motion';
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle } from 'lucide-react';
 
 export default function BlockchainEnterpriseSolutions(...args[]):  {
-  const features = [
-    {
-      icon: Lock,
-      title: 'Enhanced Security',
-      description: 'Immutable ledger technology with cryptographic security and audit trails',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      icon: Database,
-      title: 'Transparent Records',
-      description: 'Real-time visibility into all transactions and data modifications',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Zap,
-      title: 'Smart Contracts',
-      description: 'Automated execution of business logic and agreements',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Network,
-      title: 'Decentralized Architecture',
-      description: 'Distributed network that eliminates single points of failure',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Shield,
-      title: 'Compliance Ready',
-      description: 'Built-in regulatory compliance and governance frameworks',
-      color: 'from-purple-500 to-pink-500'
-    },;
+  
     {;
       icon: TrendingUp,;
       title: 'Cost Efficiency',;
       description: 'Reduce intermediaries and streamline business processes',;
-      color: 'from-indigo-500 to-purple-500';
-    };
-  ];
-
-  const services = [
-    {
-      title: 'Blockchain Strategy',
-      description: 'Comprehensive blockchain roadmap and implementation strategy',
-      price: 'From $5,000',
-      features['Technology assessment', 'Use case identification', 'ROI analysis', 'Implementation plan'];
-    },;
+      color: 'from-indigo-500 to-purple-500'};
+  ]},;
     {
       title: 'Smart Contract Development',
       description: 'Custom smart contracts for business automation and compliance',
       price: 'From $8,000',
-      features['Contract design', 'Security auditing', 'Testing & deployment', 'Maintenance'];
-    },;
+      features['Contract design', 'Security auditing', 'Testing & deployment', 'Maintenance']},;
     {
       title: 'Private Blockchain Networks',
       description: 'Enterprise-grade private blockchain infrastructure',
       price: 'From $15,000',
-      features['Network setup', 'Node configuration', 'Security implementation', 'Monitoring'];
-    },;
+      features['Network setup', 'Node configuration', 'Security implementation', 'Monitoring']},;
     {
-      features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration'];
-    };
+      features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']};
       title: 'DeFi Solutions',;
       description: 'Decentralized finance applications and protocols',;
       price: 'From $20,000',;
-      features: ['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration'];
-    };
+      features: ['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']};
   ];
 
-  const useCases = [;
+  
     { name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },;
     { name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },;
     { name: 'Healthcare', icon: Shield, description: 'Patient data security and interoperability' },;
@@ -83,10 +36,9 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Blockchain Enterprise Solutions - Zion Tech Group"
+      <SEO title="Blockchain Enterprise Solutions - Zion Tech Group"
         description="Transform your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology."
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
@@ -118,7 +70,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
-                <Lock className="w-10 h-10 text-white" />
+                <Lock className="w-10 h-10 text-white"  />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -465,5 +417,4 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

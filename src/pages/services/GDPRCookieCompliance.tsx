@@ -1,9 +1,7 @@
-import React from 'react.ts';
-import { SEO   } from '@/components/SEO';
 
 const GDPRCookieCompliance: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">
-    <SEO title="GDPR & Cookie Compliance - Zion Tech Group" description="Automated cookie consent banners, policy generation, and compliance audits for GDPR/CCPA/CPRA." />
+    <SEO title="GDPR & Cookie Compliance - Zion Tech Group" description="Automated cookie consent banners, policy generation, and compliance audits for GDPR/CCPA/CPRA."  />
     <section className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold mb-4">GDPR & Cookie Compliance</h1>
       <p className="text-slate-300 max-w-3xl">Detect trackers, auto-categorize cookies, and display geo-aware consent banners. Generate audit-ready logs and policy versions across your properties.</p>

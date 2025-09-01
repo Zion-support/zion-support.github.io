@@ -1,5 +1,3 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Loader2,
   CheckCircle,
@@ -24,9 +22,7 @@ export function LoadingSpinner({
   text = 'Loading...',
   fullScreen = false
 }: LoadingSpinnerProps) {
-  const sizeClasses = {
-  sm: 'w-8 h-8',
-    md: 'w-16 h-16',;
+  
   ;
   ;
   ;
@@ -34,10 +30,7 @@ export function LoadingSpinner({
   lg: 'w-32 h-32';
   ;
 
-  const containerClasses = fullScreen
-    ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50'
-    : 'flex items-center justify-center p-8';
-
+  
   return (
     <div className = {containerClasses}>
       <div className="text-center">
@@ -169,15 +162,13 @@ export function LoadingSpinner({
 
 
 
-;
 }};
             />;
           ))};
         </div>;
       </div>;
     </div>;
-  );
-}
+  )}
 
 interface PageLoaderProps extends React.PropsWithChildren<{}> {
 
@@ -364,8 +355,7 @@ export function PageLoader(...args[]):  {
         </motion.div>;
       </div>;
     </div>;
-  );
-}
+  )}
 
   lines?: number;
   className?: string}

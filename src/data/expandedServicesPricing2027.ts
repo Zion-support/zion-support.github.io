@@ -1141,7 +1141,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
 ];
 
 // Export all pricing data
-export const ALL_EXPANDED_SERVICES_PRICING = [;
+export 
   ...cybersecurityPricing,;
   ...dataAnalyticsPricing,;
   ...cloudDevOpsPricing,;
@@ -1151,23 +1151,19 @@ export const ALL_EXPANDED_SERVICES_PRICING = [;
 ];
 
 // Helper functions
-export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | null => {;
-  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
-};
+export 
+  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)};
 
-export const getPricingByCategory = (category: string): ExpandedServicePricing[] => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category);
-};
+export 
+  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)};
 
-export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory);
-};
+export 
+  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)};
 
-export const searchPricing = (query: string): ExpandedServicePricing[] => {;
-  const lowercaseQuery = query.toLowerCase();
+export 
+  
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||
     pricing.category.toLowerCase().includes(lowercaseQuery) ||
     pricing.subcategory.toLowerCase().includes(lowercaseQuery)
-  );
-};
+  )};

@@ -1,80 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight } from 'lucide-react';
 
-const categories = [
-  {
-    title: "AI Services",
-    description: "Cutting-edge AI solutions, chatbots, and machine learning",
-    icon: "🤖",
-    link: "/ai-services",
-    color: "from-purple-500 to-indigo-600",
-  },
-  {
-    title: "Micro SAAS",
-    description: "Cloud-based software solutions for modern businesses",
-    icon: "☁️",
-    link: "/micro-saas",
-    color: "from-cyan-500 to-blue-600",
-  },
-  {
-    title: "IT Services",
-    description: "Infrastructure, security, and technical consulting",
-    icon: "⚡",
-    link: "/all-services",
-    color: "from-amber-500 to-orange-600",
-  },
-  {
-    title: "Digital Transformation",
-    description: "Business modernization and digital strategy",
-    icon: "📈",
-    link: "/all-services",
-    color: "from-emerald-500 to-green-600",
-  },
-];
 
-const specialServices = [
-  {
-    title: "IT Onsite Services",
-    link: "/it-onsite-services"
-  },
-  {
-    title: "Comprehensive Services",
-    link: "/comprehensive-services"
-  },
-  {
-    title: "Services Comparison",
-    link: "/services-comparison"
-  }
-];
 
 interface CategoriesSectionProps {
-  showTitle?: boolean;
-}
+  showTitle?: boolean}
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
-  }
-};
 
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut"
-    }
-  }
-};
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
@@ -155,12 +85,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </div>
         </motion.div>
         >
-          <Link
-            to="/services"
+          <Link to="/services"
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"
 
             View All Services
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />
         
         <motion.div 
           className="mt-12 flex justify-center"
@@ -179,5 +108,4 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>
       </div>
     </section>;
-  );
-}}}}}}}}}}
+  )}}}}}}}}}}

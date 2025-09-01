@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
   Brain,
   Zap,
@@ -93,134 +90,10 @@ import {
 } from 'lucide-react';
 
 export function QuantumAITradingPlatform() {
-  const features = [
-    {
-      icon: Atom,
-      title: 'Quantum Computing Power',
-      description: 'Leverage quantum algorithms for superior market analysis and prediction',
-      benefits: ['Quantum speed advantage', 'Complex pattern recognition', 'Quantum machine learning']
-    },
-    {
-      icon: Brain,
-      title: 'Advanced AI Algorithms',
-      description: 'State-of-the-art machine learning models for market prediction',
-      benefits: ['Neural networks', 'Deep learning', 'Predictive analytics']
-    },
-    {
-      icon: Shield,
-      title: 'Bank-Grade Security',
-      description: 'Military-grade encryption and zero-trust security architecture',
-      benefits: ['End-to-end encryption', 'Multi-factor authentication', 'Regular security audits']
-    },
-    {
-      icon: BarChart3,
-      title: 'Real-Time Analytics',
-      description: 'Live market data and instant trading signals',
-      benefits: ['Live market feeds', 'Instant notifications', 'Performance tracking']
-    },
-    {
-      icon: Rocket,
-      title: 'High-Frequency Trading',
-      description: 'Ultra-low latency execution for maximum profit potential',
-      benefits: ['Microsecond execution', 'Co-location services', 'Direct market access']
-    },
-    {
-      icon: Cloud,
-      title: 'Global Infrastructure',
-      description: 'Worldwide data centers for optimal performance',
-      benefits: ['99.99% uptime', 'Global CDN', 'Auto-scaling']
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for individual traders and small portfolios',
-      features: [
-        'Basic quantum algorithms',
-        'Real-time market data',
-        'Standard security',
-        'Email support',
-        'Basic analytics',
-        'Up to 100 trades/month'
-      ],
-      cta: 'Start Free Trial',
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$499',
-      period: '/month',
-      description: 'Ideal for active traders and growing portfolios',
-      features: [
-        'Advanced quantum algorithms',
-        'Premium market data',
-        'Enhanced security',
-        'Priority support',
-        'Advanced analytics',
-        'Unlimited trades',
-        'Custom strategies',
-        'API access'
-      ],
-      cta: 'Start Free Trial',
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'For institutional traders and hedge funds',
-      features: [
-        'Full quantum capabilities',
-        'Institutional data feeds',
-        'Enterprise security',
-        '24/7 dedicated support',
-        'Custom algorithms',
-        'White-label solutions',
-        'On-premise options',
-        'SLA guarantees'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-    }
-  ];
-
-  const tradingFeatures = [
-    {
-      title: 'Quantum Portfolio Optimization',
-      description: 'Use quantum algorithms to find optimal portfolio allocations',
-      icon: Target,
-      benefits: ['Risk minimization', 'Return maximization', 'Portfolio rebalancing']
-    },
-    {
-      title: 'AI Market Prediction',
-      description: 'Advanced machine learning for market trend forecasting',
-      icon: TrendingUp,
-      benefits: ['Pattern recognition', 'Sentiment analysis', 'Risk assessment']
-    },
-    {
-      title: 'High-Frequency Trading',
-      description: 'Ultra-fast execution for arbitrage and market making',
-      icon: Zap,
-      benefits: ['Microsecond latency', 'Direct market access', 'Co-location services']
-    },
-    {
-      title: 'Risk Management',
-      description: 'Comprehensive risk controls and monitoring',
-      icon: Shield,
-      benefits: ['Stop-loss automation', 'Position sizing', 'Risk alerts']
-    }
-  ];
-
-  const performanceMetrics = [
-    { metric: '99.99%', label: 'Uptime' },
-    { metric: '<1ms', label: 'Latency' },
-    { metric: '1000x', label: 'Speed Improvement' },
-    { metric: '24/7', label: 'Monitoring' }
-  ];
-
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
@@ -233,7 +106,7 @@ export function QuantumAITradingPlatform() {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 mr-2" />
+              <Sparkles className="w-4 h-4 mr-2"  />
               Revolutionary Quantum AI Trading
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -249,7 +122,7 @@ export function QuantumAITradingPlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Trading Today
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/pricing"
@@ -319,7 +192,7 @@ export function QuantumAITradingPlatform() {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"  />
                       {benefit}
                     </li>
                   ))}
@@ -367,7 +240,7 @@ export function QuantumAITradingPlatform() {
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"  />
                           {benefit}
                         </li>
                       ))}
@@ -431,7 +304,7 @@ export function QuantumAITradingPlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -474,7 +347,7 @@ export function QuantumAITradingPlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/pricing"
@@ -498,17 +371,17 @@ export function QuantumAITradingPlatform() {
             <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-cyan-400 mb-4" />
+                <Phone className="w-8 h-8 text-cyan-400 mb-4"  />
                 <h3 className="font-semibold mb-2">Phone</h3>
                 <p className="text-gray-400">+1 302 464 0950</p>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-cyan-400 mb-4" />
+                <Mail className="w-8 h-8 text-cyan-400 mb-4"  />
                 <h3 className="font-semibold mb-2">Email</h3>
                 <p className="text-gray-400">kleber@ziontechgroup.com</p>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 text-cyan-400 mb-4" />
+                <MapPin className="w-8 h-8 text-cyan-400 mb-4"  />
                 <h3 className="font-semibold mb-2">Address</h3>
                 <p className="text-gray-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
@@ -517,5 +390,4 @@ export function QuantumAITradingPlatform() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

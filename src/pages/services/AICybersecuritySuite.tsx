@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
 import { Shield, 
   Brain, 
   Eye, 
@@ -26,265 +23,75 @@ import { Shield,
  } from 'lucide-react';
 
 export default function AICybersecuritySuite(...args[]):  {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms that identify and respond to threats in real-time',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: "Zero-Trust Architecture",
-      description: "Implement comprehensive zero-trust security with AI-driven access control",
-      icon: Shield,
-      benefits: [
-        "Continuous authentication",
-        "Micro-segmentation",
-        "Least privilege access",
-        "Real-time risk assessment"
-      ]
-    },
-    {
-      title: "Automated Incident Response",
-      description: "AI-driven security orchestration with automated threat containment and remediation",
-      icon: Zap,
-      benefits: [
-        "Instant threat containment",
-        "Automated remediation",
-        "Incident timeline analysis",
-        "Forensic investigation"
-      ]
-    },
-    {
-      title: "Compliance Automation",
-      description: "Automated compliance monitoring and reporting for all major regulatory frameworks",
-      icon: CheckCircle,
-      benefits: [;
+  
         "GDPR compliance",;
         "SOC 2 automation",;
         "HIPAA compliance",;
         "Real-time audit trails";
-      ];
-    };
+      ]};
   ];
 
-  const pricingPlans = [
-    {
-      name: "Security Starter",
-      price: "$8,500",
-      period: "/month",
-      description: "Perfect for small to medium businesses",
-      features: [
-        "Basic AI threat detection",
-        "Up to 100 endpoints",
-        "Standard security features",
-        "Email support",
-        "Basic compliance reporting",
-        "Security dashboard"
-      ],
-      cta: "Get Started",
-      popular: false
-    },
-    {
-      name: "Security Professional",
-      price: "$18,500",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Advanced AI threat detection",
-        "Up to 500 endpoints",
-        "Enhanced security suite",
-        "Priority support",
-        "Advanced compliance",
-        "Custom integrations",
-        "Performance optimization",
-        "Security consulting"
-      ],
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-      name: "Security Enterprise",
-      price: "$45,000",
-      period: "/month",
-      description: "For large-scale operations",
-      features: [
-        "Full security suite access",
-        "Unlimited endpoints",
-        "Enterprise security",
-        "24/7 dedicated support",
-        "Custom security models",
-        "White-label solutions",;
+  
         "On-premise deployment",;
         "SLA guarantees";
       ],;
       cta: "Contact Sales",;
-      popular: false;
-    };
+      popular: false};
   ];
 
-  const useCases = [
-    {
-      industry: "Financial Services",
-      applications: [
-        "Fraud detection and prevention",
-        "Regulatory compliance",
-        "Secure transactions",
-        "Risk assessment"
-      ]
-    },
-    {
-      industry: "Healthcare",
-      applications: [
-        "HIPAA compliance",
-        "Patient data protection",
-        "Medical device security",
-        "Compliance monitoring"
-      ]
-    },
-    {
-      industry: "Manufacturing",
-      applications: [
-        "OT security",
-        "Supply chain protection",
-        "Intellectual property",
-        "Industrial espionage prevention"
-      ]
-    },
-    {
-      industry: "Government",
-      applications: [;
+  
         "Classified data protection",;
         "National security",;
         "Compliance automation",;
         "Threat intelligence";
-      ];
-    };
+      ]};
   ];
 
-  const securityMetrics = [
-    {
-      title: "Threat Detection Rate",
-      description: "AI-powered detection with machine learning",
-      icon: Eye,
-      title: 'Behavioral Analytics',
-      description: 'Monitor user and system behavior patterns to detect anomalies and potential threats',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Shield,
-      title: 'Zero-Day Protection',
-      description: 'Protect against unknown threats using AI-powered predictive security models',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Zap,
-      title: 'Automated Response',
-      description: 'Instant automated threat response and incident containment without human intervention',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Network,
-      title: 'Network Security',
-      description: 'Comprehensive network monitoring and protection with AI-driven threat intelligence',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      title: "Compliance Coverage",;
+  
       description: "Automated compliance for all major frameworks",;
       icon: CheckCircle,;
-      metric: "100%";
-    };
-  ];
-
-  const services = [
-    {
-      title: 'Threat Intelligence Platform',
-      description: 'Real-time threat intelligence and analysis powered by AI',
-      price: 'From $2,500/month',
-      features['Global threat monitoring', 'AI-powered analysis', 'Custom threat feeds', '24/7 monitoring'];
-    },;
+      metric: "100%"};
+  ]},;
     {
       title: 'Security Operations Center (SOC)',
       description: 'AI-enhanced SOC services with automated threat detection and response',
       price: 'From $8,000/month',
-      features['AI threat detection', 'Automated response', 'Security analysts', 'Incident management'];
-    },;
+      features['AI threat detection', 'Automated response', 'Security analysts', 'Incident management']},;
     {
       title: 'Vulnerability Assessment',
       description: 'Comprehensive security assessment using AI-powered scanning and analysis',
       price: 'From $5,000',
-      features['AI vulnerability scanning', 'Penetration testing', 'Security audit', 'Remediation plan'];
-    },;
+      features['AI vulnerability scanning', 'Penetration testing', 'Security audit', 'Remediation plan']},;
     {
       title: 'Compliance & Governance',
       description: 'AI-powered compliance monitoring and reporting for regulatory requirements',
       price: 'From $3,500/month',
-      features['GDPR compliance', 'SOC 2 monitoring', 'HIPAA compliance', 'Automated reporting'];
-    };
-  ];
-
-  const securityModules = [
-    {
-      title: 'Endpoint Protection',
-      description: 'AI-powered endpoint security with behavioral analysis and threat prevention',
-      features['Malware detection', 'Ransomware protection', 'Device control', 'Data encryption'];
-    },;
+      features['GDPR compliance', 'SOC 2 monitoring', 'HIPAA compliance', 'Automated reporting']};
+  ]},;
     {
       title: 'Cloud Security',
       description: 'Comprehensive cloud security monitoring and threat detection',
-      features['Multi-cloud protection', 'API security', 'Data encryption', 'Access control'];
-    },;
+      features['Multi-cloud protection', 'API security', 'Data encryption', 'Access control']},;
     {
       title: 'Identity & Access Management',
       description: 'AI-enhanced identity verification and access control systems',
-      features['Multi-factor authentication', 'Behavioral biometrics', 'Privileged access management', 'Single sign-on'];
-    },;
+      features['Multi-factor authentication', 'Behavioral biometrics', 'Privileged access management', 'Single sign-on']},;
     {
       title: 'Incident Response',
       description: 'Automated incident response with AI-powered threat containment',
-      features['Automated containment', 'Forensic analysis', 'Recovery procedures', 'Post-incident review'];
-    };
+      features['Automated containment', 'Forensic analysis', 'Recovery procedures', 'Post-incident review']};
+  ]};
   ];
 
-  const benefits = [
-    {
-      title: 'Proactive Threat Prevention',
-      description: 'Stop threats before they impact your business with AI-powered predictive security',
-      icon: Shield
-    },
-    {
-      title: 'Reduced False Positives',
-      description: 'AI algorithms reduce false alarms by 90%, allowing security teams to focus on real threats',
-      icon: CheckCircle
-    },
-    {
-      title: '24/7 Automated Protection',
-      description: 'Continuous security monitoring and automated response, even when your team is offline',
-      icon: Monitor
-    },
-    {
-      title: 'Cost Optimization',
-      description: 'Reduce security costs by 40% while improving protection through intelligent automation',
-      icon: TrendingUp;
-    };
-  ];
-
-  const technologies = [
-    { name: 'Machine Learning', description: 'Advanced ML algorithms for threat detection and analysis' },
-    { name: 'Natural Language Processing', description: 'AI-powered analysis of security logs and reports' },
-    { name: 'Behavioral Analytics', description: 'User and system behavior monitoring for anomaly detection' },
-    { name: 'Threat Intelligence', description: 'Real-time threat feeds and global security intelligence' },
-    { name: 'Automated Response', description: 'Intelligent automation for threat containment and response' },;
+  
     { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' };
   ];
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Cybersecurity Suite - Zion Tech Group"
+      <SEO title="AI Cybersecurity Suite - Zion Tech Group"
         description="Advanced AI-powered cybersecurity solutions that protect your business from evolving threats. Real-time threat detection, automated response, and comprehensive security monitoring."
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
@@ -316,7 +123,7 @@ export default function AICybersecuritySuite(...args[]):  {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
-                <Shield className="w-10 h-10 text-white" />
+                <Shield className="w-10 h-10 text-white"  />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -331,13 +138,13 @@ export default function AICybersecuritySuite(...args[]):  {
                 className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Get Protected
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </a>
               <a 
                 href="tel:+13024640950" 
                 className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 Security Consultation
               </a>
             </div>
@@ -597,7 +404,7 @@ export default function AICybersecuritySuite(...args[]):  {
                 <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -684,7 +491,7 @@ export default function AICybersecuritySuite(...args[]):  {
                 <ul className="space-y-3">
                   {module.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -844,7 +651,7 @@ export default function AICybersecuritySuite(...args[]):  {
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Start Security Assessment
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </a>
               <a 
                 href="tel:+13024640950" 
@@ -857,5 +664,4 @@ export default function AICybersecuritySuite(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

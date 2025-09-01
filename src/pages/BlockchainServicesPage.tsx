@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
   Link,
   Coins,
@@ -31,55 +29,10 @@ import {
       icon: Globe,;
       category: "Interoperability",;
       badge: "Advanced",;
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500";
-    };
+      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"};
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Services', count: blockchainServices.length },
-              }
-            ].map((feature, index)  => (
-              <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-
-                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
-              </motion.div>;
+  
             ))}
           </div>
         </div>
@@ -107,8 +60,6 @@ import {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
-export default BlockchainServicesPage;
-}}}
+export default BlockchainServicesPage}}}

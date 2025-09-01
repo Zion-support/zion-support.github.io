@@ -1,4 +1,3 @@
-import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
 
 interface UseAccessibilityOptions {
 
@@ -16,48 +15,32 @@ interface AccessibilityFeatures {
   isLargeText: boolean;
   isScreenReader: boolean}
 
-export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
-  const {;
+export 
     enableKeyboardNavigation = true,;
     enableFocusManagement = true,;
     enableScreenReaderSupport = true,;
     enableHighContrast = true,;
     enableReducedMotion = true,;
-    enableLargeText = true;
-  } = options;
+    enableLargeText = true} = options;
 
-  const focusableElementsRef = useRef<HTMLElement[]>([]);
-  const lastFocusedElementRef = useRef<HTMLElement | null>(null);
-  const focusTrapRef = useRef<HTMLElement | null>(null);
-
+  
+  
+  
   // Detect accessibility preferences
-  const accessibilityFeatures = useMemo((): AccessibilityFeatures => {
-    if (typeof window === 'null') {;
+  
       return {;
         isHighContrast: false,;
         isReducedMotion: false,;
         isLargeText: false,;
-        isScreenReader: false;
-      };
-    }
+        isScreenReader: false}}
 
-    const mediaQueries = {
-  highContrast: window.matchMedia('(prefers-contrast: high)'),
-      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),
-      largeText: window.matchMedia('(prefers-reduced-motion: reduce)'),;
+    
   ;
   ;
   ;
   ;
   // Placeholder;
-    ;
-
-
-
-
-
-
-};
+    };
 
     return {
       isHighContrast: mediaQueries.highContrast.matches,
@@ -116,17 +99,14 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     focusableElementsRef.current = focusableElements}, [enableFocusManagement]);
 
   // Remove focus trap
-  const removeFocusTrap = useCallback(() => {;
+  
     if (focusTrapRef.current && lastFocusedElementRef.current) {;
       lastFocusedElementRef.current.focus();
       focusTrapRef.current = null;
-      focusableElementsRef.current = []};
-  }, []);
+      focusableElementsRef.current = []}}, []);
 
   // Get all focusable elements
-  const getFocusableElements = useCallback((container: HTMLElement): HTMLElement[]  => {
-    const selector = [
-      'button:not([disabled])',;
+  
       'input:not([disabled])',;
       'select:not([disabled])',;
       'textarea:not([disabled])',;
@@ -139,53 +119,46 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
   // Navigate focus
     if (direction = == 'forward') {;
-      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
-    } else {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
-    }
+      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
 
     manageFocus(focusableElements[nextIndex])}, [getFocusableElements, manageFocus]);
 
   // Vertical navigation
     if (direction = == 'up') {;
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
-    } else {
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
-    }
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
+      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 
-    const nextElement = items[nextIndex] as HTMLElement;
+    
     if (nextElement) {
       manageFocus(nextElement)}
   }, [manageFocus]);
 
   // Horizontal navigation
     if (direction = == 'left') {;
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
-    } else {
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
-    }
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
+      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 
-    const nextElement = items[nextIndex] as HTMLElement;
+    
     if (nextElement) {
       manageFocus(nextElement)}
   }, [manageFocus]);
 
   // Close active elements
-  const closeActiveElements = useCallback(() => {;
+  
     // Close modals, dropdowns, etc.;
-    const activeElements = document.querySelectorAll('.modal.active, .dropdown.active, .popup.active');
+    
 activeElements.forEach(element:  > {;
-      element.classList.remove('active');
-    });
+      element.classList.remove('active')});
 
     // Remove focus trap
     removeFocusTrap()}, [removeFocusTrap]);
 
   // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {;
+  
     if (!enableScreenReaderSupport) return;
 
-    const announcement = document.createElement('div');
+    
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -198,12 +171,11 @@ activeElements.forEach(element:  > {;
       document.body.removeChild(announcement)}, 1000)}, [enableScreenReaderSupport]);
 
   // High contrast mode
-  const toggleHighContrast = useCallback(() => {;
+  
     if (!enableHighContrast) return;
 
     document.documentElement.classList.toggle('high-contrast');
-    const isEnabled = document.documentElement.classList.contains('high-contrast');
-
+    
     // Announce change to screen reader
     announceToScreenReader(`High contrast mode ${isEnabled ? 'enabled' : 'disabled'}`);
 
@@ -211,12 +183,11 @@ activeElements.forEach(element:  > {;
     localStorage.setItem('highContrast', isEnabled.toString())}, [enableHighContrast, announceToScreenReader]);
 
   // Reduced motion mode
-  const toggleReducedMotion = useCallback(() => {;
+  
     if (!enableReducedMotion) return;
 
     document.documentElement.classList.toggle('reduced-motion');
-    const isEnabled = document.documentElement.classList.contains('reduced-motion');
-
+    
     // Announce change to screen reader
     announceToScreenReader(`Reduced motion mode ${isEnabled ? 'enabled' : 'disabled'}`);
 
@@ -224,12 +195,11 @@ activeElements.forEach(element:  > {;
     localStorage.setItem('reducedMotion', isEnabled.toString())}, [enableReducedMotion, announceToScreenReader]);
 
   // Large text mode
-  const toggleLargeText = useCallback(() => {;
+  
     if (!enableLargeText) return;
 
     document.documentElement.classList.toggle('large-text');
-    const isEnabled = document.documentElement.classList.contains('large-text');
-
+    
     // Announce change to screen reader
     announceToScreenReader(`Large text mode ${isEnabled ? 'enabled' : 'disabled'}`);
 
@@ -239,10 +209,9 @@ activeElements.forEach(element:  > {;
   // Initialize accessibility features
   useEffect(() => {
     // Load saved preferences
-    const highContrast = localStorage.getItem('highContrast') === 'true';
-    const reducedMotion = localStorage.getItem('reducedMotion') === 'true';
-    const largeText = localStorage.getItem('largeText') === 'true';
-
+    
+    
+    
     if (highContrast) document.documentElement.classList.add('high-contrast');
     if (reducedMotion) document.documentElement.classList.add('reduced-motion');
     if (largeText) document.documentElement.classList.add('large-text');

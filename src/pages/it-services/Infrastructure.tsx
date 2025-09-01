@@ -1,52 +1,16 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe  } from 'lucide-react';
 
 export default function Infrastructure(...args[]):  {
-  const features = [
-    {
-      icon: Server,
-      title: 'Scalable Infrastructure',
-      description: 'Build robust systems that grow with your business'
-    },
-    {
-      icon: Network,
-      title: 'Network Management',
-      description: 'Optimize connectivity and performance'
-    },
-    {
-      icon: Shield,
-      title: 'Security First',
-      description: 'Protect your infrastructure with enterprise-grade security';
+  
     },;
     {;
       icon: Zap,;
       title: 'High Performance',;
-      description: 'Lightning-fast systems and applications';
-    };
-  ];
-
-  const services = [
-    {
-      title: 'Server Management',
-      description: 'Comprehensive server administration and optimization',
-      icon: Server
-    },
-    {
-      title: 'Network Design',
-      description: 'Custom network architecture and implementation',
-      icon: Network
-    },
-    {
-      title: 'Cloud Migration',
-      description: 'Seamless transition to cloud infrastructure',
-      icon: Cloud;
-    },;
+      description: 'Lightning-fast systems and applications'};
+  ]},;
     {;
       title: 'Disaster Recovery',;
       description: 'Business continuity and backup solutions',;
-      icon: Shield;
-    };
+      icon: Shield};
   ];
 
   return (
@@ -80,7 +44,7 @@ export default function Infrastructure(...args[]):  {
             className="text-center max-w-4xl mx-auto"
 
             <div className="inline-flex items-center space-x-2 bg-orange-500/10 border border-orange-500/20 rounded-full px-4 py-2 mb-6">
-              <Server className="w-5 h-5 text-orange-400" />
+              <Server className="w-5 h-5 text-orange-400"  />
               <span className="text-orange-400 font-medium">IT Infrastructure</span>
             </div>
 
@@ -97,7 +61,7 @@ export default function Infrastructure(...args[]):  {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Get Infrastructure Assessment
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </button>
               <button className="btn-outline px-8 py-4 text-lg">
                 Learn More
@@ -328,5 +292,4 @@ export default function Infrastructure(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

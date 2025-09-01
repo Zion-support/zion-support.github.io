@@ -9,21 +9,18 @@ export interface Listing {
   subcategory?: string;
   tags: string[];
   images: string[];
-seller: {;
+seller: {
     id: string;
     name: string;
     rating: number;
-    reviews: number;
-  
-};
+    reviews: number};
   location: string;
   createdAt: string;
   updatedAt: string;
   status: 'active' | 'inactive' | 'sold' | 'pending';
   views: number;
   likes: number;
-  shares: number;
-}
+  shares: number}
 
 export interface ProductListing extends Listing {
   brand?: string;
@@ -33,9 +30,7 @@ export interface ProductListing extends Listing {
   shipping: {
     cost: number;
     method: string;
-    estimatedDays: number;
-  };
-}
+    estimatedDays: number}}
 
 export interface ServiceListing extends Listing {
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
@@ -43,8 +38,7 @@ export interface ServiceListing extends Listing {
   availability: string[];
   experience: number;
   certifications: string[];
-  portfolio?: string[];
-}
+  portfolio?: string[]}
 
 export interface TalentListing extends Listing {
   skills: string[];
@@ -55,8 +49,7 @@ export interface TalentListing extends Listing {
   availability: string[];
   hourlyRate: number;
   portfolio?: string[];
-  references?: string[];
-}
+  references?: string[]}
 
 export interface CartItem {
 
@@ -65,9 +58,7 @@ export interface CartItem {
   price: number;
   quantity: number;
   type: 'product' | 'service' | 'talent';
-  image?: string;
-
-}
+  image?: string}
 
 export interface WishlistItem {
 
@@ -75,6 +66,4 @@ export interface WishlistItem {
   userId: string;
   listingId: string;
   type: 'product' | 'service' | 'talent';
-  addedAt: string;
-
-}
+  addedAt: string}

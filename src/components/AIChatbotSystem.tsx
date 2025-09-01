@@ -1,5 +1,3 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   MessageCircle,
   Send,
@@ -54,8 +52,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 showHeader:  true,;
   showSettings = true,;
   maxMessages = 50,;
-  autoScroll = true;
-}) => {;
+  autoScroll = true}) => {;
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -70,8 +67,7 @@ showHeader:  true,;
   });
   const [isListening, setIsListening] = useState(false);
   const [chatHistory, setChatHistory] = useState<any>([]);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-
+  
   // Sample welcome message
   useEffect(() => {
     if (isOpen && messages.length = == 0) {
@@ -88,17 +84,12 @@ showHeader:  true,;
           relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],;
   estimatedResponseTime: 2;
         ;
-;
-
-
-
-};
-      };
+}};
       setMessages([welcomeMessage])}
   }, [isOpen, messages.length]);
 
   // Auto-scroll to bottom
-  useEffect(()  => {
+  useEffect(() => {
     if (autoScroll && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })}
   }, [messages, autoScroll]);
@@ -110,12 +101,10 @@ showHeader:  true,;
       {;
         content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",;
         suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],;
-        relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management'];
-      };
+        relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management']};
     ];
 
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-
+    
     const botMessage: ChatMessage = {
   id: Date.now().toString(),
       content: randomResponse.content,
@@ -131,39 +120,24 @@ showHeader:  true,;
   ;
   estimatedResponseTime: 1 + Math.random() * 2;
       ;
-;
-
-
-
-
-
-};
-    };
+}};
 
     setMessages(prev => [...prev, botMessage]);
-    setIsTyping(false);
-  };
+    setIsTyping(false)};
 
   // Handle message submission
-      setMessages(prev = > [...prev, fileMessage])};
-  };
+      setMessages(prev = > [...prev, fileMessage])}};
 
   // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {;
-    setInputValue(suggestion);
-  };
+  
+    setInputValue(suggestion)};
 
   // Rate response
-  const rateResponse = (messageId: string, rating: 'positive' | 'negative') => {
-    setMessages(prev => prev.map(msg =>
-      msg.id === messageId
-        ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
-        : msg
-    ));
+  
   };
 
   // Clear chat
-  const clearChat = () => {;
+  
     setMessages([]);
     setChatHistory([])};
 
@@ -177,7 +151,7 @@ showHeader:  true,;
         whileTap={{ scale: 0.95 }}
         aria-label="Toggle AI chatbot"
 
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+        {isOpen ? <X className="w-6 h-6"  /> : <MessageCircle className="w-6 h-6"  />}
       </motion.button>
 
       {/* Chat Window */}
@@ -232,7 +206,7 @@ showHeader:  true,;
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
-                      <Bot className="w-5 h-5 text-white" />
+                      <Bot className="w-5 h-5 text-white"  />
                     </div>
                     <div>
                       <h3 className="font-semibold text-white">Zion AI Assistant</h3>
@@ -250,7 +224,7 @@ showHeader:  true,;
                         className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                         aria-label="Chat settings"
 
-                        <Settings className="w-4 h-4" />
+                        <Settings className="w-4 h-4"  />
                       </button>;
                     )}
                     <button
@@ -258,7 +232,7 @@ showHeader:  true,;
                       className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                       aria-label="Clear chat"
 
-                      <RefreshCw className="w-4 h-4" />
+                      <RefreshCw className="w-4 h-4"  />
                     </button>
                   </div>
                 </div>;
@@ -322,7 +296,7 @@ showHeader:  true,;
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                         }`}
 
-                        {settings.voiceEnabled ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
+                        {settings.voiceEnabled ? <Mic className="w-4 h-4"  /> : <MicOff className="w-4 h-4"  />}
                       </button>
                     </div>
 
@@ -345,7 +319,7 @@ showHeader:  true,;
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                         }`}
 
-                        <CheckCircle className="w-4 h-4" />
+                        <CheckCircle className="w-4 h-4"  />
                       </button>
                     </div>;
                   </div>
@@ -449,7 +423,7 @@ showHeader:  true,;
                             className="p-1 text-zinc-400 hover:text-green-400 transition-colors"
                             aria-label="Rate response positively"
 
-                            <ThumbsUp className="w-3 h-3" />
+                            <ThumbsUp className="w-3 h-3"  />
                           </button>
                           <button
                             onClick = {
@@ -465,7 +439,7 @@ showHeader:  true,;
                             className="p-1 text-zinc-400 hover:text-red-400 transition-colors"
                             aria-label="Rate response negatively"
 
-                            <ThumbsDown className="w-3 h-3" />
+                            <ThumbsDown className="w-3 h-3"  />
                           </button>;
                         </div>
                       )}
@@ -478,11 +452,11 @@ showHeader:  true,;
                   }`}>
                     {message.sender === 'user' ? (;
                       <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
-                        <User className="w-4 h-4 text-zinc-300" />
+                        <User className="w-4 h-4 text-zinc-300"  />
                       </div>
                     ) : (
                       <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
-                        <Bot className="w-4 h-4 text-white" />
+                        <Bot className="w-4 h-4 text-white"  />
                       </div>
                     )}
                   </div>
@@ -531,7 +505,7 @@ showHeader:  true,;
                       className="hidden"
                       accept="image/*,.pdf,.doc,.docx,.txt"
                     />
-                    <Paperclip className="w-4 h-4 text-zinc-400 hover:text-zinc-300 transition-colors" />
+                    <Paperclip className="w-4 h-4 text-zinc-400 hover:text-zinc-300 transition-colors"  />
                   </label>
                 </div>
 
@@ -547,7 +521,7 @@ showHeader:  true,;
                     }`}
                     aria-label="Voice input"
 
-                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+                    {isListening ? <MicOff className="w-4 h-4"  /> : <Mic className="w-4 h-4"  />}
                   </button>
                 )}
 
@@ -558,18 +532,18 @@ showHeader:  true,;
                   className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   aria-label="Send message"
 
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4"  />
                 </button>
               </form>
 
               {/* Quick Actions */}
               <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">;
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-3 h-3" />
+                  <Sparkles className="w-3 h-3"  />
                   <span>Powered by Zion AI</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Clock className="w-3 h-3" />
+                  <Clock className="w-3 h-3"  />
                   <span>24/7 Available</span>
                 </div>
               </div>
@@ -578,5 +552,4 @@ showHeader:  true,;
         )};
       </AnimatePresence>;
     </>;
-  );
-};
+  )};

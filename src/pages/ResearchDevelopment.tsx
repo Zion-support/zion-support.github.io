@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function ResearchDevelopment() {
   return (
@@ -8,5 +7,4 @@ export default function ResearchDevelopment() {
         <p className="text-slate-300">Discover our R&D initiatives across AI, quantum computing, and emerging tech.</p>
       </div>
     </div>
-  );
-}
+  )}

@@ -18,8 +18,7 @@ export interface InnovativeService {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
+    address: string};
   link: string;
   icon: string;
   color: string;
@@ -28,8 +27,7 @@ export interface InnovativeService {
   featured?: boolean;
   roi?: string;
   useCases: string[];
-  technicalSpecs: string[];
-}
+  technicalSpecs: string[]}
 
 export const innovativeServices2025: InnovativeService[] = [
   // AI & Machine Learning Services

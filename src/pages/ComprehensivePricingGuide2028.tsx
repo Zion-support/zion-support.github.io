@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
   Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
@@ -15,8 +13,7 @@ import {
   Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp
  } from 'lucide-react';
 
-const pricingData2028 = {
-  aiServices[;
+
     {
       name: 'Quantum Consciousness AI',
       price: '$25,999',
@@ -29,13 +26,7 @@ const pricingData2028 = {
       trialDays: 30,
       features: ['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
       targetAudience: 'AI research institutions, Government agencies,
-  Ethics committees';
-    
-
-
-
-
-},;
+  Ethics committees'},;
     {
       name: 'Quantum Financial Trading AI',
       price: '$35,999',
@@ -141,62 +132,52 @@ const pricingData2028 = {
       roi: '600%',
       setupTime: '4-5 weeks',
     };
-  ];
-};
+  ]};
 
 const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
       trialDays: 21,;
       features: ['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],;
-      targetAudience: 'Development teams, DevOps engineers, Technology companies';
-    };
-  ];
-};
+      targetAudience: 'Development teams, DevOps engineers, Technology companies'};
+  ]};
 
 const ComprehensivePricingGuide2028: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
 
-  const categories = [;
+  
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },;
     { id: 'ai', name: 'AI Services', icon: Brain, color: 'from-zion-blue to-zion-cyan' },;
     { id: 'saas', name: 'Micro SAAS', icon: Zap, color: 'from-zion-purple to-zion-pink' },;
     { id: 'it', name: 'IT Services', icon: Server, color: 'from-zion-green to-zion-emerald' };
   ];
 
-  const priceRanges = [;
+  
     { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'low', name: 'Under $500', range: 'Under $500' },;
     { id: 'medium', name: '$500 - $10K', range: '$500 - $10K' },;
     { id: 'high', name: 'Over $10K', range: 'Over $10K' };
   ];
 
-  const getAllServices = () => {;
+  
     return [;
       ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),;
       ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),;
       ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }));
-    ];
-  };
+    ]};
 
-  const filteredServices = getAllServices().filter(service => {
-    const matchesCategory = selectedCategory === 'all' ||
-      service.type.toLowerCase().includes(selectedCategory.replace('-', ' '));
-
-    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+  
+    
     let matchesPrice = true;
     if (priceRange === 'low') matchesPrice = price < 500;
     else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000;
     else if (priceRange === 'high') matchesPrice = price > 10000;
 
-    return matchesCategory && matchesPrice;
-  });
+    return matchesCategory && matchesPrice});
 
-  const calculateROI = (roi: string) => {;
-    return parseInt(roi.replace('%', ''));
-  };
+  
+    return parseInt(roi.replace('%', ''))};
 
-  const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi));
-
+  
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -257,7 +238,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
               className="text-center"
 
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-10 h-10 text-white" />
+                <TrendingUp className="w-10 h-10 text-white"  />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Total Market Size</h3>
               <p className="text-4xl font-bold text-zion-cyan mb-2">$89.2B</p>
@@ -270,7 +251,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
               className="text-center"
 
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                <Rocket className="w-10 h-10 text-white" />
+                <Rocket className="w-10 h-10 text-white"  />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Average Growth Rate</h3>
               <p className="text-4xl font-bold text-zion-purple mb-2">320%</p>
@@ -283,7 +264,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
               className="text-center"
 
               <div className="w-20 h-20 bg-gradient-to-br from-zion-green to-zion-emerald rounded-full flex items-center justify-center mx-auto mb-4">
-                <DollarSign className="w-10 h-10 text-white" />
+                <DollarSign className="w-10 h-10 text-white"  />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Average ROI</h3>
               <p className="text-4xl font-bold text-zion-green mb-2">550%</p>
@@ -427,7 +408,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
                   <div className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan" />
+                        <CheckCircle className="w-4 h-4 text-zion-cyan"  />
                         {feature}
                       </div>
                     ))}
@@ -444,7 +425,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
                 <div className="text-center">
                   <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">
                     Get Started
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />
                   </button>
                 </div>
               </motion.div>
@@ -550,22 +531,21 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
               href="tel:+13024640950"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5"  />
               +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5"  />
               kleber@ziontechgroup.com
             </a>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default ComprehensivePricingGuide2028;
 export default ComprehensivePricingGuide2028;

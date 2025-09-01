@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Users, 
   TrendingUp, 
@@ -28,147 +26,16 @@ import {
   DollarSign,
   Heart
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
 
-const AISalesCopilot = () => {
-  const features = [
-    {
-      icon: Users,
-      title: "Lead Scoring & Qualification",
-      description: "AI-powered lead analysis and prioritization to focus on high-value prospects."
-    },
-    {
-      icon: MessageCircle,
-      title: "Intelligent Conversation AI",
-      description: "Natural language processing for personalized customer interactions and support."
-    },
-    {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "Forecast sales outcomes and identify high-probability opportunities with AI insights."
-    },
-    {
-      icon: Target,
-      title: "Automated Follow-ups",
-      description: "Smart email sequences and follow-up scheduling based on prospect behavior patterns."
-    },
-    {
-      icon: BarChart3,
-      title: "Performance Insights",
-      description: "Real-time sales metrics and performance optimization recommendations."
-    },
-    {
-      icon: Zap,
-      title: "Revenue Optimization",
-      description: "Data-driven strategies to maximize deal size and improve win rates."
-    }
-  ];
 
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: "Increased Sales Productivity",
-      description: "Automate repetitive tasks and focus on high-value sales activities."
-    },
-    {
-      icon: Target,
-      title: "Better Lead Conversion",
-      description: "Improve conversion rates with AI-powered lead scoring and qualification."
-    },
-    {
-      icon: Users,
-      title: "Enhanced Customer Experience",
-      description: "Provide personalized interactions and faster response times to prospects."
-    },
-    {
-      icon: BarChart3,
-      title: "Data-Driven Decisions",
-      description: "Make informed sales decisions based on AI analytics and insights."
-    },
-    {
-      icon: Clock,
-      title: "Time Optimization",
-      description: "Reduce manual work and focus on building relationships and closing deals."
-    },
-    {
-      icon: Award,
-      title: "Competitive Advantage",
-      description: "Stay ahead of competitors with AI-powered sales intelligence and automation."
-    }
-  ];
-
-  const salesProcess = [
-    {
-      stage: "Lead Generation",
-      description: "AI-powered prospecting and lead identification from multiple sources",
-      icon: Search
-    },
-    {
-      stage: "Qualification",
-      description: "Automated lead scoring and prioritization using machine learning",
-      icon: Target
-    },
-    {
-      stage: "Engagement",
-      description: "Intelligent conversation AI and personalized communication",
-      icon: MessageCircle
-    },
-    {
-      stage: "Opportunity Management",
-      description: "Track and manage sales opportunities with predictive analytics",
-      icon: TrendingUp
-    },
-    {
-      stage: "Closing",
-      description: "AI-assisted deal closing with optimized pricing and negotiation",
-      icon: CheckCircle
-    },
-    {
-      stage: "Retention",
-      description: "Customer success monitoring and expansion opportunity identification",
-      icon: Users
-    }
-  ];
-
-  const useCases = [
-    {
-      industry: "B2B Sales",
-      description: "Enterprise sales teams and complex deal management",
-      icon: Users
-    },
-    {
-      industry: "E-commerce",
-      description: "Online retail sales and customer relationship management",
-      icon: ShoppingCart
-    },
-    {
-      industry: "SaaS",
-      description: "Software subscription sales and customer lifecycle management",
-      icon: Cpu
-    },
-    {
-      industry: "Real Estate",
-      description: "Property sales and client relationship management",
-      icon: Home
-    },
-    {
-      industry: "Financial Services",
-      description: "Investment and insurance sales with compliance support",
-      icon: DollarSign
-    },
-    {
-      industry: "Healthcare",
-      description: "Medical device and service sales with regulatory compliance",
-      icon: Heart
-    }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="AI Sales Copilot - Zion Tech Group"
+      <SEO title="AI Sales Copilot - Zion Tech Group"
         description="Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth."
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
@@ -181,7 +48,7 @@ const AISalesCopilot = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
-              <Users className="w-4 h-4 mr-2" />
+              <Users className="w-4 h-4 mr-2"  />
               AI-Powered Sales
             </div>
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
@@ -196,11 +63,11 @@ const AISalesCopilot = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 text-lg flex items-center justify-center">
-                <TrendingUp className="w-5 h-5 mr-2" />
+                <TrendingUp className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </button>
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
-                <Download className="w-5 h-5 mr-2 inline" />
+                <Download className="w-5 h-5 mr-2 inline"  />
                 Download Brochure
               </button>
             </div>
@@ -446,7 +313,7 @@ const AISalesCopilot = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 text-lg flex items-center justify-center">
-                <Star className="w-5 h-5 mr-2" />
+                <Star className="w-5 h-5 mr-2"  />
                 Get Started Today
               </button>
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
@@ -458,8 +325,7 @@ const AISalesCopilot = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AISalesCopilot;
 

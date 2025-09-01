@@ -1,6 +1,3 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
 import { 
   Menu, 
   X, 
@@ -40,8 +37,7 @@ interface NavigationItem {
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
-}>;
-} from 'lucide-react';
+}>} from 'lucide-react';
 
 interface NavigationItem {
   label: string;
@@ -104,8 +100,7 @@ const navigationItems: NavigationItem[] = [
         icon: Users,
         description: 'Strategic IT consulting'
 
-    ];
-  },;
+    ]},;
   {
     label: 'Solutions',
     path: '/solutions',
@@ -120,41 +115,25 @@ const navigationItems: NavigationItem[] = [
 
 ];
 
-const quickActions = [
-  {
-    label: 'Get Quote',
-    path: '/request-quote',
-    icon: MessageCircle,
-    color: 'bg-zion-cyan'
-  },
-  {
-    label: 'Support',
-    path: '/help',
-    icon: HelpCircle,
-    color: 'bg-zion-purple'
-  },;
+
   {;
     label: 'Documentation',;
     path: '/docs',;
     icon: FileText,;
-    color: 'bg-zion-blue';
-  };
+    color: 'bg-zion-blue'};
 ];
 
 export const EnhancedMobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [activePath, setActivePath] = useState('/');
-  const location = useLocation();
-  const menuRef = useRef<HTMLDivElement>(null);
-
+  
+  
   useEffect(() => {
     setActivePath(location.pathname)}, [location]);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
+    
       }
     };
 
@@ -166,46 +145,31 @@ export const EnhancedMobileNavigation: React.FC = () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
-  const toggleExpanded = (label: string) => {
-    setExpandedItems(prev => {
-      const newSet = new Set(prev);
+  
       if (newSet.has(label)) {
         newSet.delete(label)} else {
         newSet.add(label)}
       return newSet})};
 
-  const handleNavigation = (path: string) => {
-    setIsOpen(false);
+  
     setExpandedItems(new Set())};
 
-  const isActive = (path: string) => {;
+  
     if (path === '/') {;
-  const isActive = (path: string) => {
-    if (path === '/') {
-      return activePath === '/';
+  
+    return activePath.startsWith(path)};
 
-    return activePath.startsWith(path);
-  };
-
-  const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {;
-    const isExpanded = expandedItems.has(item.label);
-    const hasChildren = item.children && item.children.length > 0;
-    const isItemActive = isActive(item.path);
-
+  
+    
+    
+    
     return (
       <div key = {item.label} className="w-full">
         <motion.div
           initial={false}
           animate = {
   { backgroundColor: isItemActive ? 'rgba(34, 221, 210,
-  0.1)' : 'transparent' ;
-
-
-
-
-
-
-}}
+  0.1)' : 'transparent' }}
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
 
           <Link
@@ -230,12 +194,11 @@ export const EnhancedMobileNavigation: React.FC = () => {
               </div>
             </div>
             {hasChildren && (
-              <ChevronDown
-                size={16}
+              <ChevronDown size={16}
                 className={`transition-transform duration-200 ${
                   isExpanded ? 'rotate-180' : ''
                 }`}
-              />
+               />
             )}
           </Link>
 
@@ -245,12 +208,11 @@ export const EnhancedMobileNavigation: React.FC = () => {
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
 
-              <ChevronDown
-                size={16}
+              <ChevronDown size={16}
                 className={`transition-transform duration-200 ${
                   isExpanded ? 'rotate-180' : ''
                 }`}
-              />
+               />
             </button>;
           )}
         </motion.div>
@@ -309,8 +271,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
           </AnimatePresence>;
         )};
       </div>;
-    );
-  };
+    )};
 
   return (
     <>
@@ -320,7 +281,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
         className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
         aria-label="Open mobile navigation menu"
 
-        <Menu size={24} />
+        <Menu size={24}  />
       </button>
 
       {/* Mobile Navigation Overlay */}
@@ -354,7 +315,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
               <div className="flex items-center justify-between p-6 border-b border-zion-slate-light/20">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                    <Zap size={20} className="text-white" />
+                    <Zap size={20} className="text-white"  />
                   </div>
                   <div>
                     <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
@@ -366,7 +327,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                   className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10"
                   aria-label="Close mobile navigation menu"
 
-                  <X size={24} />
+                  <X size={24}  />
                 </button>
               </div>;
 
@@ -409,19 +370,19 @@ export const EnhancedMobileNavigation: React.FC = () => {
                   </h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-3 text-zion-slate-light">
-                      <Mail size={16} />
+                      <Mail size={16}  />
                       <span>info@ziontechgroup.com</span>
                     </div>
                     <div className="flex items-center gap-3 text-zion-slate-light">
-                      <Phone size={16} />
+                      <Phone size={16}  />
                       <span>+1 (555) 123-4567</span>
                     </div>
                     <div className="flex items-center gap-3 text-zion-slate-light">
-                      <MapPin size={16} />
+                      <MapPin size={16}  />
                       <span>123 Tech Street, Innovation City</span>
                     </div>
                     <div className="flex items-center gap-3 text-zion-slate-light">
-                      <Clock size={16} />
+                      <Clock size={16}  />
                       <span>Mon-Fri 9AM-6PM EST</span>
                     </div>
                   </div>
@@ -447,6 +408,4 @@ export const EnhancedMobileNavigation: React.FC = () => {
         )};
       </AnimatePresence>;
     </>;
-  );
-};
-};
+  )}};

@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
 import { Brain, 
   Rocket, 
   Zap, 
@@ -28,68 +25,35 @@ import { Brain,
   Heart,
   Zap as Lightning
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
-import { emergingTechServices2030 } from "../data/emergingTechServices2030";
 
 export default function EmergingTech2030(...args[]):  {
-  const containerVariants = {
-    hidden: { opacity: 0 },;
-    visible: {;
+  
+    visible: {
       opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
+      transition: {
+        staggerChildren: 0.1}}};
 
-  const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
-
-},
-    visible: {;
+  
       y: 0,;
       opacity: 1,;
-      transition: {;
-        duration: 0.5;
-      };
-    };
-  };
+      transition: {
+        duration: 0.5}}};
 
-  const serviceIcons = {
-  'Quantum Computing': Brain,
-    'Artificial Intelligence': Cpu,
-    'Neuromorphic Computing': Brain,
-    'Synthetic Biology': Heart,
-    'Space Technology': Rocket,
-    'Brain-Computer Interface': Brain,;
+  
   ;
   ;
   ;
   ;
   'Fusion Energy': Zap;
-  ;
-
-
-
-
-
-
-};
+  };
 
   return (
     <>
-      <SEO 
-        title = "Emerging Technology Services 2030 - Zion Tech Group"
+      <SEO title = "Emerging Technology Services 2030 - Zion Tech Group"
         description="Discover cutting-edge emerging technology services for 2030 including quantum computing, neuromorphic computing, synthetic biology, and more. Future-ready solutions for forward-thinking businesses."
         canonical="/emerging-tech-2030"
         url="https://ziontechgroup.com/emerging-tech-2030"
-      />
+       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         {/* Hero Section */}
@@ -111,19 +75,19 @@ export default function EmergingTech2030(...args[]):  {
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center gap-2 bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full">
-                  <Star className="w-5 h-5" />
+                  <Star className="w-5 h-5"  />
                   <span>Quantum Computing</span>
                 </div>
                 <div className="flex items-center gap-2 bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full">
-                  <Brain className="w-5 h-5" />
+                  <Brain className="w-5 h-5"  />
                   <span>Neuromorphic AI</span>
                 </div>
                 <div className="flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full">
-                  <Heart className="w-5 h-5" />
+                  <Heart className="w-5 h-5"  />
                   <span>Synthetic Biology</span>
                 </div>
                 <div className="flex items-center gap-2 bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full">
-                  <Rocket className="w-5 h-5" />
+                  <Rocket className="w-5 h-5"  />
                   <span>Space Technology</span>
                 </div>
               </div>
@@ -171,8 +135,7 @@ export default function EmergingTech2030(...args[]):  {
 ;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {emergingTechServices2030.map((service, index) => {;
-                const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu;
-
+                
                 return (
                   <motion.div
                     key = {service.id}
@@ -181,7 +144,7 @@ export default function EmergingTech2030(...args[]):  {
 
                     <div className="flex items-center gap-4 mb-6">
                       <div className={`p-3 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-300`}>
-                        <IconComponent className="w-6 h-6 text-white" />
+                        <IconComponent className="w-6 h-6 text-white"  />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white">{service.title}</h3>
@@ -233,11 +196,10 @@ export default function EmergingTech2030(...args[]):  {
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors group"
                     >;
                       Learn More;
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />;
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"  />;
                     </Link>;
                   </motion.div>;
-                );
-              })}
+                )})}
             </div>
           </motion.div>
         </section>
@@ -335,15 +297,15 @@ export default function EmergingTech2030(...args[]):  {
 
             <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center gap-3 text-gray-300">
-                <Phone className="w-5 h-5 text-cyan-400" />
+                <Phone className="w-5 h-5 text-cyan-400"  />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center gap-3 text-gray-300">
-                <Mail className="w-5 h-5 text-cyan-400" />
+                <Mail className="w-5 h-5 text-cyan-400"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center gap-3 text-gray-300">
-                <MapPin className="w-5 h-5 text-cyan-400" />
+                <MapPin className="w-5 h-5 text-cyan-400"  />
                 <span>Middletown, DE</span>
               </div>
             </motion.div>
@@ -366,5 +328,4 @@ export default function EmergingTech2030(...args[]):  {
         </section>;
       </div>;
     </>;
-  );
-}
+  )}

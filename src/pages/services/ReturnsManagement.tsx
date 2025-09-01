@@ -1,13 +1,10 @@
-import React from 'react';
-import SEO from '@/components/SEO';
 
 function ReturnsManagement() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
-      <SEO
-        title="E‑commerce Returns Management SaaS"
+      <SEO title="E‑commerce Returns Management SaaS"
         description="Automate return labels, RMA approvals, and refunds with branded portals and carrier integrations."
-      />
+       />
       <section className="container-responsive section-padding">
         <h1 className="heading-responsive text-gradient">E‑commerce Returns Management</h1>
         <p className="mt-4 max-w-3xl text-zion-slate-light text-responsive">

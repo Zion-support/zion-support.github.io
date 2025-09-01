@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { Shield, 
   Eye, 
   AlertTriangle, 
@@ -37,106 +35,9 @@ import { Shield,
  } from 'lucide-react.ts';
 
 export default function AIAutonomousThreatIntelligence(...args: any[]): any {
-  const features = [
-    {
-      icon: Eye,
-      title: 'Real-time Threat Detection',
-      description: 'AI-powered monitoring that identifies threats before they become attacks',
-      benefits: ['24/7 surveillance', 'Zero-day threat detection', 'Behavioral analysis']
-    },
-    {
-      icon: Shield,
-      title: 'Autonomous Response',
-      description: 'AI that automatically blocks and mitigates threats without human intervention',
-      benefits: ['Instant threat neutralization', 'Adaptive defense strategies', 'Self-learning protection']
-    },
-    {
-      icon: Target,
-      title: 'Predictive Intelligence',
-      description: 'Machine learning models that predict and prevent future attacks',
-      benefits: ['Attack pattern recognition', 'Risk assessment', 'Proactive defense']
-    },
-    {
-      icon: Network,
-      title: 'Global Threat Intelligence',
-      description: 'Real-time threat data from worldwide sources and dark web monitoring',
-      benefits: ['Global threat visibility', 'Dark web intelligence', 'Cross-platform correlation']
-    }
-  ];
-
-  const threatTypes = [
-    {
-      title: 'Ransomware Protection',
-      description: 'Advanced ransomware detection and prevention',
-      icon: Lock,
-      price: '$15,000/month',
-      features: ['Behavioral analysis', 'File encryption detection', 'Backup protection']
-    },
-    {
-      title: 'Phishing Defense',
-      description: 'AI-powered email and web phishing detection',
-      icon: Mail,
-      price: '$12,000/month',
-      features: ['URL analysis', 'Content filtering', 'Social engineering detection']
-    },
-    {
-      title: 'DDoS Mitigation',
-      description: 'Intelligent DDoS attack prevention and mitigation',
-      icon: Network,
-      price: '$18,000/month',
-      features: ['Traffic analysis', 'Rate limiting', 'Geographic blocking']
-    },
-    {
-      title: 'Insider Threat Detection',
-      description: 'Monitor and detect malicious insider activities',
-      icon: Users,
-      price: '$20,000/month',
-      features: ['User behavior analysis', 'Access monitoring', 'Anomaly detection']
-    }
-  ];
-
-  const pricing = [
-    {
-      name: 'Threat Shield Basic',
-      price: '$8,000',
-      period: '/month',
-      description: 'Essential threat intelligence for small organizations',
-      features: [
-        'Basic threat detection',
-        'Email security',
-        'Standard support',
-        'Basic reporting'
-      ]
-    },
-    {
-      name: 'Threat Shield Pro',
-      price: '$25,000',
-      period: '/month',
-      description: 'Advanced threat intelligence for growing organizations',
-      features: [
-        'Advanced threat detection',
-        'Autonomous response',
-        'Priority support',
-        'Real-time monitoring',
-        'Predictive analytics'
-      ],
-      popular: true
-    },
-    {
-      name: 'Threat Shield Enterprise',
-      price: '$75,000',
-      period: '/month',
-      description: 'Complete threat intelligence for large enterprises',
-      features: [
-        'Everything in Pro',
-        'Custom AI models',
-        'Dedicated security analyst',
-        '24/7 support',
-        'White-label solutions'
-      ]
-    }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 text-white">
       {/* Hero Section */}
@@ -154,7 +55,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-full">
-                <Shield className="h-8 w-8 text-white" />
+                <Shield className="h-8 w-8 text-white"  />
               </div>
             </div>
             
@@ -227,7 +128,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-gray-200">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0"  />
                       {benefit}
                     </li>
                   ))}
@@ -282,7 +183,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 <ul className="space-y-2">
                   {threat.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-200 text-sm">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -343,7 +244,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-200">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -406,17 +307,17 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
         <div className="max-w-4xl mx-auto text-center">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
-              <Phone className="h-8 w-8 text-red-400 mb-4" />
+              <Phone className="h-8 w-8 text-red-400 mb-4"  />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
               <p className="text-gray-300">+1 302 464 0950</p>
             </div>
             <div className="flex flex-col items-center">
-              <Mail className="h-8 w-8 text-red-400 mb-4" />
+              <Mail className="h-8 w-8 text-red-400 mb-4"  />
               <h3 className="text-lg font-semibold mb-2">Email</h3>
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </div>
             <div className="flex flex-col items-center">
-              <MapPin className="h-8 w-8 text-red-400 mb-4" />
+              <MapPin className="h-8 w-8 text-red-400 mb-4"  />
               <h3 className="text-lg font-semibold mb-2">Address</h3>
               <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
@@ -424,5 +325,4 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}

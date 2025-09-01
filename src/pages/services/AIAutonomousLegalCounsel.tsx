@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { Scale, 
   Brain, 
   Target, 
@@ -25,48 +23,8 @@ import { Scale,
  } from 'lucide-react.ts';
 
 const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Legal Counsel',
-      description: 'Advanced machine learning for autonomous legal advice and consultation'
-    },
-    {
-      icon: Scale,
-      title: 'Legal Analysis',
-      description: 'Intelligent legal document analysis and case evaluation with AI-driven insights'
-    },
-    {
-      icon: Target,
-      title: 'Contract Review',
-      description: 'AI-powered contract review and risk assessment'
-    },
-    {
-      icon: BarChart3,
-      title: 'Legal Analytics',
-      description: 'Real-time analytics and insights into legal performance and trends'
-    },
-    {
-      icon: BookOpen,
-      title: 'Legal Research',
-      description: 'AI-driven legal research and precedent analysis'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Compliance Monitoring',
-      description: 'Continuous monitoring and optimization of legal compliance'
-    }
-  ];
-
-  const benefits = [
-    'Improve legal efficiency by 70%',
-    'Reduce legal costs by 60%',
-    'Enhance legal accuracy by 85%',
-    'Automate legal processes',
-    '24/7 autonomous operation',
-    'Real-time legal insights'
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -78,7 +36,7 @@ const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 text-amber-400 text-sm font-medium mb-6">
-              <Scale className="w-4 h-4 mr-2" />
+              <Scale className="w-4 h-4 mr-2"  />
               AI-Powered Autonomous Legal Counsel
             </div>
             
@@ -172,7 +130,7 @@ const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-amber-400 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-amber-400 flex-shrink-0"  />
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -225,7 +183,6 @@ const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIAutonomousLegalCounsel;

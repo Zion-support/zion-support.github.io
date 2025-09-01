@@ -1,74 +1,17 @@
-import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud, Wifi } from 'lucide-react';
 
 export default function AIEdgeComputingPlatform() {
-  const features = [
-    'AI-powered edge device management and optimization',
-    'Real-time data processing at the edge',
-    'Distributed AI model deployment and inference',
-    'Edge-to-cloud synchronization and analytics',
-    'Automatic load balancing and failover',
-    'Edge security and threat detection',
-    'IoT device integration and management',
-    'Custom edge computing workflows',
-    'Edge analytics and reporting tools',
-    'Scalable edge infrastructure management'
-  ];
-
-  const benefits = [
-    'Reduce latency by 80-90%',
-    'Cut bandwidth costs by 60-70%',
-    'Improve data privacy and security',
-    'Real-time edge processing',
-    'Enhanced offline capabilities',
-    'Scalable edge infrastructure'
-  ];
-
-  const pricing = [
-    {
-      name: 'Starter',
-      price: '$499/mo',
-      features: ['Up to 50 edge devices', 'Basic edge processing', 'Standard monitoring', 'Email support', 'Monthly reports'],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$1,199/mo',
-      features: ['Up to 200 edge devices', 'Advanced AI analytics', 'Real-time processing', 'Priority support', 'Custom workflows', 'API access'],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$3,499/mo',
-      features: ['Unlimited edge devices', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
-      popular: false
-    }
-  ];
-
-  const useCases = [
-    'Smart city infrastructure',
-    'Industrial IoT monitoring',
-    'Autonomous vehicle systems',
-    'Healthcare edge computing',
-    'Retail edge analytics',
-    'Energy grid optimization'
-  ];
-
-  const industries = [
-    'Smart Cities & Infrastructure',
-    'Manufacturing & Industry 4.0',
-    'Transportation & Logistics',
-    'Healthcare & Medical Devices',
-    'Retail & E-commerce',
-    'Energy & Utilities'
-  ];
-
+  
+  
+  
+  
+  
   return (
     <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Wifi className="w-4 h-4 mr-2" /> AI-Powered Edge Computing Platform
+            <Wifi className="w-4 h-4 mr-2"  /> AI-Powered Edge Computing Platform
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Edge Computing Platform</h1>
           <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
@@ -99,7 +42,7 @@ export default function AIEdgeComputingPlatform() {
             <ul className="space-y-4">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-teal-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-teal-500 mr-3 mt-0.5 flex-shrink-0"  />
                   <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
@@ -111,7 +54,7 @@ export default function AIEdgeComputingPlatform() {
             <div className="grid grid-cols-1 gap-3">
               {industries.map((industry, index) => (
                 <div key={index} className="flex items-center p-3 bg-gray-50 rounded-lg">
-                  <Network className="w-4 h-4 text-teal-500 mr-3" />
+                  <Network className="w-4 h-4 text-teal-500 mr-3"  />
                   <span className="text-gray-700">{industry}</span>
                 </div>
               ))}
@@ -132,7 +75,7 @@ export default function AIEdgeComputingPlatform() {
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingUp className="w-6 h-6 text-teal-600" />
+                  <TrendingUp className="w-6 h-6 text-teal-600"  />
                 </div>
                 <p className="text-gray-700 font-medium">{benefit}</p>
               </div>
@@ -152,7 +95,7 @@ export default function AIEdgeComputingPlatform() {
           {useCases.map((useCase, index) => (
             <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
               <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <Monitor className="w-5 h-5 text-teal-600" />
+                <Monitor className="w-5 h-5 text-teal-600"  />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
             </div>
@@ -190,7 +133,7 @@ export default function AIEdgeComputingPlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-teal-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-teal-500 mr-3 mt-0.5 flex-shrink-0"  />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -260,7 +203,7 @@ export default function AIEdgeComputingPlatform() {
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Questions? We're Here to Help</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <Phone className="w-8 h-8 text-teal-500 mx-auto mb-4" />
+            <Phone className="w-8 h-8 text-teal-500 mx-auto mb-4"  />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
             <p className="text-gray-600 mb-4">Speak with our edge computing experts</p>
             <a href="tel:+13024640950" className="text-teal-600 hover:text-teal-700 font-semibold">
@@ -269,7 +212,7 @@ export default function AIEdgeComputingPlatform() {
           </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <Mail className="w-8 h-8 text-teal-500 mx-auto mb-4" />
+            <Mail className="w-8 h-8 text-teal-500 mx-auto mb-4"  />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
             <p className="text-gray-600 mb-4">Get detailed information and pricing</p>
             <a href="mailto:kleber@ziontechgroup.com" className="text-teal-600 hover:text-teal-700 font-semibold">
@@ -289,10 +232,9 @@ export default function AIEdgeComputingPlatform() {
             rel="noreferrer"
             className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold"
           >
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2"  />
           </a>
         </div>
       </section>
     </div>
-  );
-}
+  )}

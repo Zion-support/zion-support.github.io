@@ -1,14 +1,10 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 
 export default function GenericPage() {
   const { '*': slug } = useParams();
-  const slugParts = slug ? slug.split('/').filter(Boolean) : [];
-  const path = '/' + slugParts.join('/');
-  const title = slugParts.length === 0 ? 'Page' : slugParts.map(s => s.replace(/-/g, ' ')).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' / ');
-  const canonical = `https://ziontechgroup.com${path.endsWith('/') ? path : path + '/'}`;
-
+  
+  
+  
+  
   return (
     <main style={{
       padding: 20,
@@ -50,5 +46,4 @@ export default function GenericPage() {
       </section>
     </main>
 
-  );
-}
+  )}

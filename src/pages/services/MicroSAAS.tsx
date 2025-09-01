@@ -1,53 +1,13 @@
-import React from 'react.ts';
-import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings  } from 'lucide-react';
 
-const MicroSAAS = () => {
-  const microsaasServices = [
-    {
-      icon: Package,
-      title: "SAAS Development",
-      description: "End-to-end development of scalable software-as-a-service applications",
-      price: "From $25,000/project",
-      features: ["Custom SAAS platforms", "Multi-tenant architecture", "Subscription management", "API development"]
-    },
-    {
-      icon: Zap,
-      title: "Rapid Prototyping",
-      description: "Quick development of MVPs and prototypes to validate business ideas",
-      price: "From $15,000/project",
-      features: ["MVP development", "Proof of concept", "User testing", "Iterative design"]
-    },
-    {
-      icon: Users,
-      title: "User Management",
-      description: "Comprehensive user authentication, authorization, and management systems",
-      price: "From $8,500/month",
-      features: ["User registration", "Role-based access", "Single sign-on", "User analytics"]
-    },
-    {
-      icon: Database,
-      title: "Data Management",
-      description: "Scalable database design and data processing solutions",
-      price: "From $12,000/month",
-      features: ["Database architecture", "Data migration", "Backup strategies", "Performance optimization"]
-    },
-    {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security and compliance for SAAS applications",
-      price: "From $18,000/month",
-      features: ["Data encryption", "GDPR compliance", "SOC 2 certification", "Security auditing"]
-    },
-    {;
+
       icon: Globe,;
       title: "Cloud Deployment",;
       description: "Scalable cloud infrastructure and deployment solutions",;
       price: "From $15,000/month",;
-      features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"];
-    };
+      features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"]};
   ];
 
-  const benefits = [;
+  
     "Lower development costs and faster time to market",;
     "Scalable architecture that grows with your business",;
     "Reduced infrastructure management overhead",;
@@ -56,48 +16,17 @@ const MicroSAAS = () => {
     "Continuous updates and feature improvements";
   ];
 
-  const technologies = [
-    {
-      name: "Frontend",
-      description: "React, Vue.js, Angular with modern UI frameworks",
-      icon: Cpu,
-      features: ["Modern frameworks", "Responsive design", "Component architecture", "State management"]
-    },
-    {
-      name: "Backend",
-      description: "Node.js, Python, Java with microservices architecture",
-      icon: Database,
-      features: ["Microservices", "API development", "Scalable architecture", "Performance optimization"]
-    },;
+  
     {;
       name: "Cloud",;
       description: "AWS, Azure, GCP with containerization and orchestration",;
       icon: Globe,;
-      features: ["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"];
-    };
-  ];
-
-  const industries = [
-    {
-      title: "Healthcare",
-      description: "HIPAA-compliant patient management and telemedicine platforms",
-      icon: Shield
-    },
-    {
-      title: "Finance",
-      description: "Secure financial planning and investment management tools",
-      icon: TrendingUp
-    },
-    {
-      title: "Education",
-      description: "Learning management systems and educational technology platforms",
-      icon: Users;
-    },;
+      features: ["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"]};
+  ]},;
     {;
       title: "E-commerce",;
       description: "Online marketplace and retail management solutions",;
-      icon: Package;
-    };
+      icon: Package};
   ];
 
   return (
@@ -107,7 +36,7 @@ const MicroSAAS = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 text-indigo-400 rounded-full text-sm font-medium mb-6">
-              <Package className="w-4 h-4 mr-2"/>
+              <Package className="w-4 h-4 mr-2" />
               MicroSAAS
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -250,7 +179,7 @@ const MicroSAAS = () => {
             </div>
             <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30">
               <div className="text-center">
-                <Rocket className="w-24 h-24 text-indigo-400 mx-auto mb-4"/>
+                <Rocket className="w-24 h-24 text-indigo-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">SAAS Success</h3>
                 <p className="text-gray-300 mb-6">
                   We've helped numerous entrepreneurs build successful SAAS businesses
@@ -288,7 +217,6 @@ const MicroSAAS = () => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
-export default MicroSAAS;}}}}
+export default MicroSAAS}}}}

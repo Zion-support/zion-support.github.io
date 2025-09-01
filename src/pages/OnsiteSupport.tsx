@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from "../components/SEO";
 import { Wrench, 
   Clock, 
   Shield, 
@@ -26,28 +23,20 @@ import { Wrench,
   ArrowRight,
   Globe
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
 
 export default function OnsiteSupport(...args[]):  {
-  const services = [
-    {
-      icon: Server,
-      title: 'Server Maintenance',
-      description: 'Proactive server monitoring, updates, and optimization',
-      features['Hardware diagnostics', 'Performance tuning', 'Security patches', 'Backup verification'];
+  
     },;
     {
       icon: Network,
       title: 'Network Infrastructure',
       description: 'Complete network setup, troubleshooting, and optimization',
-      features['WiFi optimization', 'Cable management', 'Switch configuration', 'Network security'];
-    },;
+      features['WiFi optimization', 'Cable management', 'Switch configuration', 'Network security']},;
     {
       icon: Database,
       title: 'Database Management',
       description: 'Database optimization, backup, and recovery services',
-      features['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening'];
-    },;
+      features['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening']},;
     {
       title: 'Training & Consultation',
       description: 'Staff training and strategic consultation',
@@ -58,141 +47,46 @@ export default function OnsiteSupport(...args[]):  {
         'Best practices guidance',;
         'Technology consulting',;
         'Process optimization';
-      ];
-    };
+      ]};
   ];
 
-  const benefits = [
-    {
-      icon: Clock,
-      title: '24/7 Response',
-      description: 'Emergency support available around the clock'
-    },
-    {
-      title: 'Extended Coverage',
-      description: 'Northeast and Mid-Atlantic regions',
-      icon: Globe,
-      color: 'from-green-500 to-emerald-500',
-      areas: [
-        'New York Metro Area',
-        'Washington DC Metro',
-        'Philadelphia Metro',
-        'Baltimore Metro'
-      ],
-      responseTime: '4-8 hours'
-    },
-    {
-      title: 'National Coverage',
-      description: 'Available nationwide for enterprise clients',
-      icon: Building,
-      color: 'from-purple-500 to-pink-500',
-      areas: [
-        'Major metropolitan areas',;
+  
         'Enterprise client locations',;
         'Strategic partnerships',;
         'Emergency response';
       ],;
-      responseTime: '8-24 hours';
-    };
+      responseTime: '8-24 hours'};
   ];
 
-  const supportTiers = [
-    {
-      title: 'Basic Support',
-      description: 'Essential onsite support for small businesses',
-      icon: Shield,
-      title: 'Certified Technicians',
-      description: 'Microsoft, Cisco, and CompTIA certified experts'
-    },
-    {
-      title: 'Professional Support',
-      description: 'Comprehensive support for growing businesses',
-      icon: Star,
-      color: 'from-green-500 to-emerald-500',
-      features: [
-        '2-hour response time',
-        'Extended hours support',
-        'Advanced troubleshooting',
-        'Priority scheduling',
-        'Monthly maintenance visits'
-      ],
-      pricing: 'Starting at $200/hour'
-    },
-    {
-      title: 'Enterprise Support',
-      description: 'Premium support for large organizations',
-      icon: Award,
-      color: 'from-purple-500 to-pink-500',
-      features: [
-        '1-hour response time',
-        '24/7 availability',;
+  
         'Dedicated support team',;
         'Custom maintenance plans',;
         'Strategic consultation';
       ],;
-      pricing: 'Custom pricing';
-    };
+      pricing: 'Custom pricing'};
   ];
 
-  const responseProcess = [
-    {
-      step: '1',
-      title: 'Issue Reporting',
-      description: 'Report your issue through our support channels',
-      icon: Phone,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      step: '2',
-      title: 'Assessment',
-      description: 'Our team assesses the issue and determines response',
-      icon: Eye,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      step: '3',
-      title: 'Dispatch',
-      description: 'Technician is dispatched to your location',
-      icon: Users,
-      title: 'Dedicated Team',
-      description: 'Assigned technicians familiar with your infrastructure'
-    },
-    {
-      icon: CheckCircle,
-      color: 'from-orange-500 to-red-500'
-    },
-    {;
+  
       step: '5',;
       title: 'Follow-up',;
       description: 'Post-resolution support and documentation',;
       icon: Mail,;
-      color: 'from-yellow-500 to-orange-500';
-    };
+      color: 'from-yellow-500 to-orange-500'};
   ];
 
-  const contactInfo = [
-    {
-      title: 'Onsite Support Team',
-      description: 'For immediate onsite support requests',
-      email: 'onsite@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
-    },
-    {;
+  
       title: 'Emergency Support',;
       description: '24/7 emergency response hotline',;
       email: 'emergency@ziontechgroup.com',;
       phone: '+1 302 464 0950',;
-      address: 'Available 24/7 for critical issues';
-    };
+      address: 'Available 24/7 for critical issues'};
   ];
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Onsite IT Support Services - Zion Tech Group"
+      <SEO title="Onsite IT Support Services - Zion Tech Group"
         description="Professional onsite IT support services with certified technicians. 24/7 emergency response, preventive maintenance, and comprehensive infrastructure support."
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -222,7 +116,7 @@ export default function OnsiteSupport(...args[]):  {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                <Wrench className="w-10 h-10 text-white" />
+                <Wrench className="w-10 h-10 text-white"  />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -385,7 +279,7 @@ export default function OnsiteSupport(...args[]):  {
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-slate-400">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -483,7 +377,7 @@ export default function OnsiteSupport(...args[]):  {
                   <h4 className="text-slate-300 font-medium">Coverage:</h4>
                   {area.areas.map((location, idx) => (
                     <div key={idx} className="flex items-center space-x-3">
-                      <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0"  />
                       <span className="text-slate-300 text-sm">{location}</span>
                     </div>
                   ))}
@@ -746,7 +640,7 @@ export default function OnsiteSupport(...args[]):  {
                   item.priority === 'High' ? 'bg-orange-500' :
                   item.priority === 'Medium' ? 'bg-yellow-500' : 'bg-green-500'
                 }`}>
-                  <AlertTriangle className="w-8 h-8 text-white" />
+                  <AlertTriangle className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{item.priority}</h3>
                 <div className="text-2xl font-bold text-cyan-400 mb-2">{item.time}</div>
@@ -911,10 +805,9 @@ export default function OnsiteSupport(...args[]):  {
           </p>
           <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center space-x-2 mx-auto">;
             <span>Schedule Onsite Support</span>;
-            <ArrowRight className="w-4 h-4" />;
+            <ArrowRight className="w-4 h-4"  />;
           </button>;
         </motion.div>;
       </div>;
     </div>;
-  );
-}
+  )}

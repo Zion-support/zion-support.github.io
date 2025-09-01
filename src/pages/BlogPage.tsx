@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
-import { motion  } from 'framer-motion';
 import { FileText,
   Calendar,
   User,
@@ -13,85 +10,8 @@ import { FileText,
  } from 'lucide-react';
 
 export function BlogPage(...args: any[]): any {
-  const blogPosts = [
-    {
-      id: 1,
-      title: 'The Future of AI in Business: 2025 Trends and Predictions',
-      excerpt: 'Discover how artificial intelligence is reshaping business operations and what to expect in the coming year.',
-      author: 'Dr. Sarah Chen',
-      date: '2025-01-15',
-      readTime: '8 min read',
-      category: 'AI & Technology',
-      tags: ['AI', 'Business', 'Trends', '2025'],
-      image: '🤖'
-    },
-    {
-      id: 2,
-      title: 'Quantum Computing: Breaking Down the Barriers',
-      excerpt: 'An in-depth look at how quantum computing is solving previously impossible problems.',
-      author: 'Michael Rodriguez',
-      date: '2025-01-10',
-      readTime: '12 min read',
-      category: 'Quantum Computing',
-      tags: ['Quantum', 'Computing', 'Innovation'],
-      image: '⚛️'
-    },
-    {
-      id: 3,
-      title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
-      excerpt: 'How AI is both creating new security challenges and providing innovative solutions.',
-      author: 'Dr. Emily Watson',
-      date: '2025-01-05',
-      readTime: '10 min read',
-      category: 'Cybersecurity',
-      tags: ['Security', 'AI', 'Threats', 'Solutions'],
-      image: '🔒'
-    },
-    {
-      id: 4,
-      title: 'Digital Transformation: A Complete Guide for Enterprises',
-      excerpt: 'Step-by-step strategies for successful digital transformation in large organizations.',
-      author: 'David Kim',
-      date: '2024-12-28',
-      readTime: '15 min read',
-      category: 'Digital Transformation',
-      tags: ['Digital', 'Transformation', 'Enterprise', 'Strategy'],
-      image: '🚀'
-    },
-    {
-      id: 5,
-      title: 'The Rise of Edge Computing: Processing Data Where It Matters',
-      excerpt: 'Understanding edge computing and its impact on IoT and real-time applications.',
-      author: 'Dr. Sarah Chen',
-      date: '2024-12-20',
-      readTime: '9 min read',
-      category: 'Edge Computing',
-      tags: ['Edge Computing', 'IoT', 'Real-time', 'Data'],
-      image: '🌐'
-    },
-    {
-      id: 6,
-      title: 'Machine Learning in Healthcare: Saving Lives with Data',
-      excerpt: 'Real-world applications of ML in healthcare and the future of medical AI.',
-      author: 'Dr. Emily Watson',
-      date: '2024-12-15',
-      readTime: '11 min read',
-      category: 'Healthcare AI',
-      tags: ['Healthcare', 'Machine Learning', 'Medical AI', 'Data'],
-      image: '🏥'
-    }
-  ];
-
-  const categories = [
-    'All Posts',
-    'AI & Technology',
-    'Quantum Computing',
-    'Cybersecurity',
-    'Digital Transformation',
-    'Edge Computing',
-    'Healthcare AI'
-  ];
-
+  
+  
   return (
     <div className="min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,7 +35,7 @@ export function BlogPage(...args: any[]): any {
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             {/* Search */}
             <div className="relative w-full md:w-96">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"  />
               <input
                 type="text"
                 placeholder="Search articles..."
@@ -125,7 +45,7 @@ export function BlogPage(...args: any[]): any {
 
             {/* Category Filter */}
             <div className="flex items-center space-x-2">
-              <Filter className="w-5 h-5 text-gray-400" />
+              <Filter className="w-5 h-5 text-gray-400"  />
               <select className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                 {categories.map((category)  => (
                   <option key={category} value={category}>{category}</option>
@@ -158,7 +78,7 @@ export function BlogPage(...args: any[]): any {
                     {post.category}
                   </span>
                   <div className="flex items-center space-x-2 text-gray-400 text-sm">
-                    <Calendar className="w-4 h-4" />
+                    <Calendar className="w-4 h-4"  />
                     <span>{new Date(post.date).toLocaleDateString()}</span>
                   </div>
                 </div>
@@ -176,11 +96,11 @@ export function BlogPage(...args: any[]): any {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2 text-gray-400 text-sm">
-                    <User className="w-4 h-4" />
+                    <User className="w-4 h-4"  />
                     <span>{post.author}</span>
                   </div>
                   <div className="flex items-center space-x-2 text-gray-400 text-sm">
-                    <Clock className="w-4 h-4" />
+                    <Clock className="w-4 h-4"  />
                     <span>{post.readTime}</span>
                   </div>
                 </div>
@@ -200,7 +120,7 @@ export function BlogPage(...args: any[]): any {
                   className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium group-hover:translate-x-1 transition-transform"
                 >
                   <span>Read More</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4"  />
                 </Link>
               </div>
             </motion.article>
@@ -211,7 +131,7 @@ export function BlogPage(...args: any[]): any {
         <div className="text-center mt-12">
           <button className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold">
             <span>Load More Articles</span>
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5"  />
           </button>
         </div>
 
@@ -244,5 +164,4 @@ export function BlogPage(...args: any[]): any {
         </div>
       </div>
     </div>
-  );
-}
+  )}

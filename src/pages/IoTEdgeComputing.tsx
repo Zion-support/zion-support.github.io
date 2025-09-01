@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
 import { Wifi, 
   Cpu, 
   Zap, 
@@ -53,77 +50,9 @@ import { Wifi,
  } from 'lucide-react.ts';
 
 export default function IoTEdgeComputing(...args: any[]): any {
-  const features = [
-    {
-      icon: Wifi,
-      title: "IoT Connectivity",
-      description: "Seamless connection of devices and sensors across networks",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Cpu,
-      title: "Edge Processing",
-      description: "Local data processing for faster response times",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Zap,
-      title: "Real-time Analytics",
-      description: "Instant insights from connected devices and sensors",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      icon: Network,
-      title: "Distributed Computing",
-      description: "Efficient resource utilization across edge nodes",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Shield,
-      title: "Security & Privacy",
-      description: "Enterprise-grade security for IoT ecosystems",
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      icon: Target,
-      title: "Scalable Architecture",
-      description: "Flexible deployment across diverse environments",
-      color: "from-indigo-500 to-blue-500"
-    }
-  ];
-
-  const applications = [
-    {
-      title: "Smart Cities",
-      description: "Urban infrastructure monitoring and management",
-      icon: Building,
-      benefits: ["Traffic optimization", "Energy management", "Public safety"]
-    },
-    {
-      title: "Industrial IoT",
-      description: "Manufacturing process optimization and monitoring",
-      icon: Factory,
-      benefits: ["Predictive maintenance", "Quality control", "Efficiency gains"]
-    },
-    {
-      title: "Healthcare",
-      description: "Patient monitoring and medical device management",
-      icon: Activity,
-      benefits: ["Remote monitoring", "Device integration", "Data analytics"]
-    },
-    {
-      title: "Agriculture",
-      description: "Precision farming and crop monitoring",
-      icon: Globe,
-      benefits: ["Soil monitoring", "Irrigation control", "Crop optimization"]
-    }
-  ];
-
-  const technologies = [
-    "5G Networks", "LPWAN", "Edge Computing", "Machine Learning", "Blockchain", 
-    "Cloud Platforms", "IoT Protocols", "Sensor Networks", "Data Analytics", "Security Frameworks"
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -148,14 +77,14 @@ export default function IoTEdgeComputing(...args: any[]): any {
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 flex items-center space-x-2"
               >
                 <span>Get Started</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-green-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-green-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
             </div>
           </motion.div>
@@ -240,7 +169,7 @@ export default function IoTEdgeComputing(...args: any[]): any {
                 <ul className="space-y-2">
                   {application.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       {benefit}
                     </li>
                   ))}
@@ -308,19 +237,18 @@ export default function IoTEdgeComputing(...args: any[]): any {
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 flex items-center space-x-2"
               >
                 <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-green-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-green-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-}
+  )}

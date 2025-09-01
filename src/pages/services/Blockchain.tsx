@@ -1,135 +1,32 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone } from 'lucide-react';
-import SEO from '@/components/SEO';
-import { Link as RouterLink } from 'react-router-dom';
 
 export default function Blockchain(...args[]):  {
-  const features = [
-    {
-      icon: Link,
-      title: "Smart Contracts",
-      description: "Self-executing contracts with automated enforcement and transparency"
-    },
-    {
-      icon: Shield,
-      title: "DeFi Solutions",
-      description: "Decentralized finance applications for lending, trading, and yield farming"
-    },
-    {
-      icon: Zap,
-      title: "NFT Development",
-      description: "Create, mint, and manage non-fungible tokens for digital assets"
-    },
-    {
-      icon: BarChart3,
-      title: "Supply Chain Tracking",
-      description: "End-to-end transparency and traceability for global supply chains"
-    },
-    {
-      icon: Target,
-      title: "Identity Management",
-      description: "Self-sovereign identity solutions with privacy and security";
+  
     },;
     {;
       icon: Network,;
       title: "Cross-Chain Interoperability",;
-      description: "Seamless communication between different blockchain networks";
-    };
+      description: "Seamless communication between different blockchain networks"};
   ];
 
-  const pricing = [
-    {
-      name: "Starter",
-      price: "$3,999",
-      period: "/month",
-      description: "For small businesses exploring blockchain",
-      features: [
-        "Basic smart contracts",
-        "Single blockchain deployment",
-        "Email support",
-        "Monthly maintenance",
-        "Security audit"
-      ],
-      cta: "Get Started",
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$9,999",
-      period: "/month",
-      description: "For growing businesses with blockchain needs",
-      features: [
-        "Advanced smart contracts",
-        "Multi-chain deployment",
-        "Priority support",
-        "Weekly maintenance",
-        "Security monitoring",
-        "API access"
-      ],
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$24,999",
-      period: "/month",
-      description: "For large-scale blockchain operations",
-      features: [
-        "Custom blockchain solutions",
-        "Private blockchain networks",
-        "24/7 support",
-        "Real-time monitoring",;
+  
         "White-label solutions",;
         "Dedicated blockchain engineer";
       ],;
       cta: "Contact Sales",;
-      popular: false;
-    };
-  ];
-
-  const benefits = [
-    {
-      icon: Shield,
-      title: "Enhanced Security",
-      description: "Immutable records and cryptographic protection for your data"
-    },
-    {
-      icon: Target,
-      title: "Transparency",
-      description: "Complete visibility into transactions and data flow"
-    },
-    {
-      icon: BarChart3,
-      title: "Cost Reduction",
-      description: "Eliminate intermediaries and reduce transaction costs";
-    },;
+      popular: false};
+  ]},;
     {;
       icon: Users,;
       title: "Trust & Compliance",;
-      description: "Build trust through verifiable and auditable processes";
-    };
+      description: "Build trust through verifiable and auditable processes"};
   ];
 
-  const useCases = [
-    {
-      icon: Globe,
-      title: "Financial Services",
-      description: "Cryptocurrency, payments, and decentralized finance applications",
-      examples: ["Digital payments", "Asset tokenization", "DeFi protocols"]
-    },
-    {
-      icon: Network,
-      title: "Supply Chain",
-      description: "Track products from origin to destination with full transparency",
-      examples: ["Product tracking", "Quality assurance", "Compliance reporting"]
-    },;
+  
     {;
       icon: Shield,;
       title: "Healthcare",;
       description: "Secure patient records and pharmaceutical supply chain management",;
-      examples: ["Patient data", "Drug tracking", "Clinical trials"];
-    };
+      examples: ["Patient data", "Drug tracking", "Clinical trials"]};
   ];
 
   return (
@@ -145,7 +42,7 @@ export default function Blockchain(...args[]):  {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
-              <Lock className="w-5 h-5 text-green-400" />
+              <Lock className="w-5 h-5 text-green-400"  />
               <span className="text-green-400 font-medium">Blockchain Solutions</span>
             </div>
 
@@ -162,7 +59,7 @@ export default function Blockchain(...args[]):  {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Blockchain Project
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </button>
               <button className="btn-outline px-8 py-4 text-lg">
                 Learn More
@@ -260,7 +157,7 @@ export default function Blockchain(...args[]):  {
               transition={{ duration: 0.8 }}
 
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
-                <Link className="w-4 h-4 mr-2" />
+                <Link className="w-4 h-4 mr-2"  />
                 Blockchain Innovation
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -271,12 +168,11 @@ export default function Blockchain(...args[]):  {
                 business processes. From smart contracts to DeFi, we're building the decentralized future.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <RouterLink
-                  to="/contact"
+                <RouterLink to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
 
                   Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2"  />
                 </RouterLink>
                 <RouterLink
                   to="/request-quote"
@@ -370,7 +266,7 @@ export default function Blockchain(...args[]):  {
                   <ul className="space-y-2">
                     {useCase.examples.map((example, exampleIndex) => (
                       <li key={exampleIndex} className="flex items-center text-zinc-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0"  />
                         {example}
                       </li>
                     ))}
@@ -562,7 +458,7 @@ export default function Blockchain(...args[]):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-zinc-300">
-                        <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -704,12 +600,11 @@ export default function Blockchain(...args[]):  {
                 Join the blockchain revolution with Zion Tech Group's cutting-edge decentralized solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <RouterLink
-                  to="/contact"
+                <RouterLink to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
 
                   Start Your Journey
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2"  />
                 </RouterLink>
                 <RouterLink
                   to="/request-quote"
@@ -723,5 +618,4 @@ export default function Blockchain(...args[]):  {
         </section>;
       </div>;
     </div>;
-  );
-}
+  )}

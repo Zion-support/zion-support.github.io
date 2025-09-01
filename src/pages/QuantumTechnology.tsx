@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
   Atom,
   Cpu,
@@ -30,12 +28,7 @@ export default function QuantumTechnology(...args[]):  {
   const [selectedApplication, setSelectedApplication] = useState('all');
   const [activeTab, setActiveTab] = useState('overview');
 
-  const quantumServices = [
-    {
-      icon: Atom,
-      title: "Quantum Computing",
-      description: "Leverage quantum algorithms for complex computational problems",
-      features["Quantum Algorithms", "Optimization Problems", "Cryptography", "Machine Learning"],;
+  
       color: "from-zion-cyan to-zion-blue"
     },
     {
@@ -72,11 +65,10 @@ export default function QuantumTechnology(...args[]):  {
       title: "Quantum Sensors",;
       description: "Ultra-sensitive detection using quantum phenomena",;
       features: ["Magnetic Sensing", "Gravitational Detection", "Precision Measurement", "Environmental Monitoring"],;
-      color: "from-zion-indigo to-zion-purple";
-    };
+      color: "from-zion-indigo to-zion-purple"};
   ];
 
-  const applications = [;
+  
     { id: 'all', name: 'All Applications', icon: Globe },;
     { id: 'finance', name: 'Financial Services', icon: BarChart3 },;
     { id: 'healthcare', name: 'Healthcare', icon: Monitor },;
@@ -85,12 +77,7 @@ export default function QuantumTechnology(...args[]):  {
     { id: 'research', name: 'Research', icon: Lightbulb };
   ];
 
-  const quantumApplications = [
-    {
-      title: "Portfolio Optimization",
-      description: "Quantum algorithms for optimal investment portfolio management",
-      category: "finance",
-      benefits["Risk Reduction", "Return Maximization", "Real-time Optimization", "Multi-Asset Management"],;
+  
       icon: BarChart3
     },
     {
@@ -127,15 +114,10 @@ export default function QuantumTechnology(...args[]):  {
       description: "Quantum-enhanced machine learning and neural networks",;
       category: "research",;
       benefits: ["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"],;
-      icon: Brain;
-    };
+      icon: Brain};
   ];
 
-  const quantumTechnologies = [
-    {
-      name: "Superconducting Qubits",
-      description: "Quantum bits using superconducting circuits for computation",
-      advantages["Scalability", "Fast Operations", "Error Correction", "Commercial Viability"],;
+  
       icon: Cpu
     },
     {
@@ -167,48 +149,27 @@ export default function QuantumTechnology(...args[]):  {
       name: "Neutral Atoms",;
       description: "Quantum bits using neutral atoms for computation",;
       advantages: ["Scalability", "Parallel Operations", "High Fidelity", "Flexible Architecture"],;
-      icon: Atom;
-    };
+      icon: Atom};
   ];
 
-  const quantumAdvantages = [;
+  
     { metric: "1000x", label: "Faster Processing", description: "Exponential speedup for specific problems" },;
     { metric: "∞", label: "Parallel Processing", description: "Simultaneous computation of multiple states" },;
     { metric: "100%", label: "Security", description: "Unbreakable quantum cryptography" },;
     { metric: "24/7", label: "Availability", description: "Continuous quantum computing access" };
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },;
-    visible: {;
+  
+    visible: {
       opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
-
-  const itemVariants = {
-  hidden: { opacity: 0,
-  y: 20 
-
-
-
-
-
-;
-},;
-    visible: {;
+      transition: {
+        staggerChildren: 0.1}}}},;
+    visible: {
       opacity: 1,;
       y: 0,;
-      transition: { duration: 0.6 };
-    };
-  };
+      transition: { duration: 0.6 }}};
 
-  const filteredApplications = selectedApplication === 'all'
-    ? quantumApplications
-    : quantumApplications.filter(app => app.category === selectedApplication);
-
+  
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -244,7 +205,7 @@ export default function QuantumTechnology(...args[]):  {
 
             <div className="flex justify-center mb-8">
               <div className="w-24 h-24 bg-gradient-to-r from-zion-purple to-zion-pink rounded-2xl flex items-center justify-center">
-                <Atom className="w-12 h-12 text-white" />
+                <Atom className="w-12 h-12 text-white"  />
               </div>
             </div>
 
@@ -345,7 +306,7 @@ export default function QuantumTechnology(...args[]):  {
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -400,14 +361,7 @@ export default function QuantumTechnology(...args[]):  {
             {applications.map((app)  => {
             initial = {
   { opacity: 0,
-  y: 20 ;
-
-
-
-
-
-
-}}
+  y: 20 }}
             whileInView = {
   { opacity: 1,
   y: 0 
@@ -415,14 +369,12 @@ export default function QuantumTechnology(...args[]):  {
 
 
 ;
-;
-
 }};
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
           >;
             {applications.map((app) => {;
-              const Icon = app.icon;
+              
               return (
                 <button
                   key = {app.id}
@@ -433,11 +385,10 @@ export default function QuantumTechnology(...args[]):  {
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-purple/20'
                   }`};
                 >;
-                  <Icon className="w-5 h-5" />;
+                  <Icon className="w-5 h-5"  />;
                   {app.name};
                 </button>;
-              );
-            })}
+              )})}
           </motion.div>
 
           {/* Applications Grid */}
@@ -721,7 +672,7 @@ export default function QuantumTechnology(...args[]):  {
 
                 {index < 3 && (;
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <ArrowRight className="w-8 h-8 text-zion-purple" />
+                    <ArrowRight className="w-8 h-8 text-zion-purple"  />
                   </div>
                 )}
               </motion.div>;
@@ -781,5 +732,4 @@ export default function QuantumTechnology(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

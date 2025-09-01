@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   Brain, 
   GitFork, 
@@ -118,118 +115,25 @@ import {
 } from 'lucide-react';
 
 export default function NewInnovativeServices2025() {
-  const featuredServices = [
-    {
-      title: "AI Workflow Orchestrator",
-      description: "Transform business processes with AI-powered workflow automation and intelligent orchestration",
-      icon: WorkflowIcon,
-      category: "AI & Automation",
-      price: "From $299/month",
-      features: ["AI-powered process optimization", "Visual workflow designer", "Automated execution", "Performance analytics"],
-      link: "/services/ai-workflow-orchestrator",
-      color: "from-zion-cyan to-zion-purple",
-      popular: true
-    },
-    {
-      title: "AI Data Governance Platform",
-      description: "Secure, govern, and manage data with AI-powered compliance automation and intelligent protection",
-      icon: Shield,
-      category: "Data & Security",
-      price: "From $499/month",
-      features: ["AI-powered data discovery", "Advanced access control", "Data lineage tracking", "Compliance automation"],
-      link: "/services/ai-data-governance-platform",
-      color: "from-zion-purple to-zion-cyan",
-      popular: false
-    },
-    {
-      title: "AI Customer Experience Analytics",
-      description: "Transform customer insights into actionable intelligence with AI-powered analytics and personalization",
-      icon: Brain,
-      category: "Customer Experience",;
+  
       price: "From $399/month",;
       features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine"],;
       link: "/services/ai-customer-experience-analytics",;
       color: "from-zion-cyan to-zion-purple",;
-      popular: false;
-    };
+      popular: false};
   ];
 
-  const serviceCategories = [
-    {
-      name: "AI & Machine Learning",
-      icon: Brain,
-      description: "Cutting-edge AI solutions for business transformation",
-      services: [
-        "AI Workflow Orchestrator",
-        "AI Data Governance Platform",
-        "AI Customer Experience Analytics",
-        "AI Project Management",
-        "AI Financial Analytics"
-      ],
-      color: "from-zion-cyan to-zion-purple"
-    },
-    {
-      name: "Data & Analytics",
-      icon: BarChart3,
-      description: "Advanced data solutions for informed decision-making",
-      services: [
-        "Data Governance Platform",
-        "Customer Experience Analytics",
-        "Business Intelligence",
-        "Predictive Analytics",
-        "Data Quality Management"
-      ],
-      color: "from-zion-purple to-zion-cyan"
-    },
-    {
-      name: "Security & Compliance",
-      icon: Shield,
-      description: "Enterprise-grade security and compliance solutions",
-      services: [
-        "Data Governance Platform",
-        "Zero Trust Network Access",
-        "Security Headers & CSP",
-        "DSR Privacy Portal",
-        "AI Cybersecurity Platform"
-      ],
-      color: "from-zion-cyan to-zion-green"
-    },
-    {
-      name: "Business Process Automation",
-      icon: WorkflowIcon,
-      description: "Streamline operations with intelligent automation",
-      services: [
-        "AI Workflow Orchestrator",
-        "AI Project Management",;
+  
         "Customer Support Automation",;
         "Email Automation",;
         "Process Optimization";
       ],;
-      color: "from-zion-purple to-zion-orange";
-    };
-  ];
-
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: "Increased Efficiency",
-      description: "Automate repetitive tasks and optimize workflows for 30-90% efficiency gains"
-    },
-    {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      description: "Reduce operational costs through intelligent automation and process optimization"
-    },
-    {
-      icon: Users,
-      title: "Enhanced Customer Experience",
-      description: "Deliver personalized, responsive experiences that increase customer satisfaction and loyalty";
-    },;
+      color: "from-zion-purple to-zion-orange"};
+  ]},;
     {;
       icon: Shield,;
       title: "Improved Security",;
-      description: "Advanced security measures and compliance automation protect your business and data";
-    };
+      description: "Advanced security measures and compliance automation protect your business and data"};
   ];
 
   return (
@@ -268,7 +172,7 @@ export default function NewInnovativeServices2025() {
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8">
-                <Sparkles className="w-4 h-4 mr-2" />
+                <Sparkles className="w-4 h-4 mr-2"  />
                 2025 Innovative Services Showcase
               </div>
               
@@ -287,7 +191,7 @@ export default function NewInnovativeServices2025() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
                 >
-                  <Play className="w-5 h-5 mr-2" />
+                  <Play className="w-5 h-5 mr-2"  />
                   Explore Services
                 </motion.button>
                 <motion.button
@@ -295,7 +199,7 @@ export default function NewInnovativeServices2025() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
                 >
-                  <MessageCircle className="w-5 h-5 mr-2" />
+                  <MessageCircle className="w-5 h-5 mr-2"  />
                   Contact Sales
                 </motion.button>
               </div>
@@ -401,7 +305,7 @@ export default function NewInnovativeServices2025() {
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-zion-slate-300">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -511,7 +415,7 @@ export default function NewInnovativeServices2025() {
                     <ul className="space-y-2">
                       {category.services.map((service, idx) => (
                         <li key={idx} className="flex items-center text-zion-slate-300">
-                          <ArrowRight className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                          <ArrowRight className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />
                           {service}
                         </li>
                       ))}
@@ -648,7 +552,7 @@ export default function NewInnovativeServices2025() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
                 >
-                  <Rocket className="w-5 h-5 mr-2" />
+                  <Rocket className="w-5 h-5 mr-2"  />
                   Start Free Trial
                 </motion.button>
                 <motion.button
@@ -656,7 +560,7 @@ export default function NewInnovativeServices2025() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
                 >
-                  <MessageCircle className="w-5 h-5 mr-2" />
+                  <MessageCircle className="w-5 h-5 mr-2"  />
                   Schedule Consultation
                 </motion.button>
               </div>
@@ -670,15 +574,15 @@ export default function NewInnovativeServices2025() {
             <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-zion-cyan mb-4" />
+                <Phone className="w-8 h-8 text-zion-cyan mb-4"  />
                 <p className="text-zion-slate-300">+1 302 464 0950</p>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-zion-cyan mb-4" />
+                <Mail className="w-8 h-8 text-zion-cyan mb-4"  />
                 <p className="text-zion-slate-300">kleber@ziontechgroup.com</p>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 text-zion-cyan mb-4" />
+                <MapPin className="w-8 h-8 text-zion-cyan mb-4"  />
                 <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>;
               </div>;
             </div>;
@@ -686,5 +590,4 @@ export default function NewInnovativeServices2025() {
         </section>;
       </div>;
     </div>;
-  );
-}
+  )}

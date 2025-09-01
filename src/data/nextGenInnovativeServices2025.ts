@@ -93,8 +93,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       integrations["AWS Braket", "Azure Quantum", "Google Quantum", "IBM Quantum", "D-Wave"],;
       apiEndpoints: 500,
       uptime: "99.95%",
-      security["Quantum-resistant encryption", "Zero-trust architecture", "SOC 2 Type II", "ISO 27001"];
-    },;
+      security["Quantum-resistant encryption", "Zero-trust architecture", "SOC 2 Type II", "ISO 27001"]},;
     competitors["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "D-Wave"],;
     marketSize: "$1.7 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/quantum-ai-orchestrator",
@@ -160,8 +159,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       integrations["Salesforce", "HubSpot", "Zapier", "Slack", "Microsoft Teams", "Slack"],;
       apiEndpoints: 200,
       uptime: "99.9%",
-      security["End-to-end encryption", "Role-based access", "Audit logging", "GDPR compliance"];
-    },;
+      security["End-to-end encryption", "Role-based access", "Audit logging", "GDPR compliance"]},;
     competitors["OpenAI", "Anthropic", "Microsoft", "Google"],;
     marketSize: "$15.7 billion by 2028",
     demoUrl: "https://ziontechgroup.com/demo/autonomous-ai-agents",
@@ -227,8 +225,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Cisco IoT"],;
       apiEndpoints: 300,
       uptime: "99.95%",
-      security["Zero-trust security", "Device authentication", "Data encryption", "Secure boot"];
-    },;
+      security["Zero-trust security", "Device authentication", "Data encryption", "Secure boot"]},;
     competitors["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],;
     marketSize: "$12.3 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/edge-ai-platform",
@@ -294,8 +291,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       integrations["MetaMask", "WalletConnect", "Uniswap", "OpenSea", "Chainlink"],;
       apiEndpoints: 400,
       uptime: "99.9%",
-      security["Multi-signature wallets", "Smart contract audits", "Zero-knowledge proofs", "Hardware security modules"];
-    },;
+      security["Multi-signature wallets", "Smart contract audits", "Zero-knowledge proofs", "Hardware security modules"]},;
     competitors["Chainlink", "Ocean Protocol", "Fetch.ai", "SingularityNET"],;
     marketSize: "$8.9 billion by 2028",
     demoUrl: "https://ziontechgroup.com/demo/blockchain-ai-platform",
@@ -361,8 +357,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       integrations["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],;
       apiEndpoints: 250,
       uptime: "99.99%",
-      security["Zero-trust architecture", "Encryption at rest", "Multi-factor authentication", "SOC 2 compliance"];
-    },;
+      security["Zero-trust architecture", "Encryption at rest", "Multi-factor authentication", "SOC 2 compliance"]},;
     competitors["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],;
     marketSize: "$45.8 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/cybersecurity-ai",
@@ -428,8 +423,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       integrations["PACS systems", "EHR platforms", "Medical devices", "Telemedicine platforms", "Lab systems"],;
       apiEndpoints: 300,
       uptime: "99.99%",
-      security["HIPAA compliance", "SOC 2", "End-to-end encryption", "Audit logging", "Access controls"];
-    },;
+      security["HIPAA compliance", "SOC 2", "End-to-end encryption", "Audit logging", "Access controls"]},;
     competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare"],;
     marketSize: "$67.4 billion by 2028",
     demoUrl: "https://ziontechgroup.com/demo/healthcare-ai",
@@ -495,8 +489,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       integrations["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],;
       apiEndpoints: 500,
       uptime: "99.99%",
-      security["SOC 2", "PCI DSS", "Encryption", "Multi-factor authentication", "Audit logging"];
-    },;
+      security["SOC 2", "PCI DSS", "Encryption", "Multi-factor authentication", "Audit logging"]},;
     competitors["Bloomberg", "Thomson Reuters", "FactSet", "Refinitiv"],;
     marketSize: "$23.4 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/financial-ai-trading",
@@ -562,8 +555,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       integrations["SAP", "Oracle", "Siemens", "Rockwell", "ABB", "Schneider Electric"],;
       apiEndpoints: 400,
       uptime: "99.95%",
-      security["Industrial security", "Network segmentation", "Access controls", "Audit logging"];
-    },;
+      security["Industrial security", "Network segmentation", "Access controls", "Audit logging"]},;
     competitors["Siemens", "GE Digital", "Rockwell Automation", "ABB Ability"],;
     marketSize: "$16.7 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/manufacturing-ai",
@@ -629,8 +621,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       integrations["Shopify", "WooCommerce", "Magento", "Salesforce", "HubSpot", "Google Analytics"],;
       apiEndpoints: 300,
       uptime: "99.9%",
-      security["PCI DSS", "GDPR", "Data encryption", "Access controls", "Audit logging"];
-    },;
+      security["PCI DSS", "GDPR", "Data encryption", "Access controls", "Audit logging"]},;
     competitors["Salesforce Commerce Cloud", "Adobe Commerce", "Shopify Plus", "Oracle Commerce"],;
     marketSize: "$19.9 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/retail-ai",
@@ -638,4 +629,4 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
 
 ];
 
-export default NEXT_GEN_INNOVATIVE_SERVICES_2025;}}
+export default NEXT_GEN_INNOVATIVE_SERVICES_2025}}

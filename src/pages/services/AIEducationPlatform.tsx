@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
 import { Brain, 
   GraduationCap, 
   TrendingUp, 
@@ -35,13 +32,7 @@ import { Brain,
  } from 'lucide-react';
 
 export default function AIEducationPlatform(...args[]):  {
-  const features = [
-    "AI-powered personalized learning paths",
-    "Intelligent content recommendation",
-    "Automated assessment and grading",
-    "Real-time student progress tracking",
-    "Adaptive learning algorithms",
-    "Interactive virtual classrooms",;
+  
     "AI tutoring and homework help",;
     "Content creation and curation",;
     "Student engagement analytics",;
@@ -50,7 +41,7 @@ export default function AIEducationPlatform(...args[]):  {
     "Accessibility and inclusion tools";
   ];
 
-  const benefits = [;
+  
     "Improve learning outcomes by 40%",;
     "Reduce teacher workload by 50%",;
     "Increase student engagement by 60%",;
@@ -58,9 +49,7 @@ export default function AIEducationPlatform(...args[]):  {
     "Scale quality education globally";
   ];
 
-  const useCases = [
-    "K-12 schools and districts",
-    "Higher education institutions",;
+  
     "Corporate training programs",;
     "Online learning platforms",;
     "Special education programs",;
@@ -69,13 +58,7 @@ export default function AIEducationPlatform(...args[]):  {
     "Skills development programs";
   ];
 
-  const pricing = [
-    {
-      name: "School",
-      price: "$299",
-      period: "/month",
-      description: "Perfect for individual schools and small districts",
-      features[;
+  
         "AI learning paths (up to 500 students)",
         "Basic content recommendation",
         "Assessment tools",
@@ -118,16 +101,14 @@ export default function AIEducationPlatform(...args[]):  {
         "Unlimited users";
       ],;
       cta: "Contact Sales",;
-      popular: false;
-    };
+      popular: false};
   ];
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Education Platform - Zion Tech Group"
+      <SEO title="AI Education Platform - Zion Tech Group"
         description="Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student."
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -156,7 +137,7 @@ export default function AIEducationPlatform(...args[]):  {
             transition={{ duration: 0.8 }}
 
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal-600 to-cyan-600 text-white text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
+              <Brain className="w-4 h-4 mr-2"  />
               AI-Powered Education
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -261,7 +242,7 @@ export default function AIEducationPlatform(...args[]):  {
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all duration-300"
 
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-white" />
+                  <CheckCircle className="w-6 h-6 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>;
@@ -342,7 +323,7 @@ export default function AIEducationPlatform(...args[]):  {
                 className="text-center"
 
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-10 h-10 text-white" />
+                  <TrendingUp className="w-10 h-10 text-white"  />
                 </div>
                 <p className="text-lg text-white font-medium">{benefit}</p>
               </motion.div>;
@@ -423,7 +404,7 @@ export default function AIEducationPlatform(...args[]):  {
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-teal-500 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="w-8 h-8 text-white" />
+                  <GraduationCap className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{useCase}</h3>
               </motion.div>;
@@ -527,7 +508,7 @@ export default function AIEducationPlatform(...args[]):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"  />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -619,5 +600,4 @@ export default function AIEducationPlatform(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

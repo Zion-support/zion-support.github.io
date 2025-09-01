@@ -1,9 +1,7 @@
-import React from 'react.ts';
-import { SEO   } from '@/components/SEO';
 
 const SaaSChurnPredictor: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">
-    <SEO title="SaaS Churn Predictor - Zion Tech Group" description="Predict churn risk, explain drivers, and trigger retention plays across your lifecycle stack." />
+    <SEO title="SaaS Churn Predictor - Zion Tech Group" description="Predict churn risk, explain drivers, and trigger retention plays across your lifecycle stack."  />
     <section className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold mb-3">SaaS Churn Predictor</h1>
       <p className="text-slate-300 max-w-3xl">ML models score user churn risk from product telemetry, billing history, and support signals. Explainable insights point to drivers and prescribe actions via playbooks.</p>

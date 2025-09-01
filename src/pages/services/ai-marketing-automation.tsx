@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '../../components/SEO';
 import { TrendingUp, 
   Brain, 
   Target, 
@@ -29,113 +26,16 @@ import { TrendingUp,
  } from 'lucide-react.ts';
 
 export default function AIMarketingAutomation(...args: any[]): any {
-  const features = [
-    {
-      icon: Brain,
-      title: "Intelligent Audience Segmentation",
-      description: "AI-powered customer segmentation based on behavior, preferences, and engagement patterns."
-    },
-    {
-      icon: Target,
-      title: "Personalized Campaigns",
-      description: "Dynamic content and messaging that adapts to individual customer preferences and behavior."
-    },
-    {
-      icon: Zap,
-      title: "Automated Workflows",
-      description: "Set up complex marketing workflows that trigger automatically based on customer actions."
-    },
-    {
-      icon: BarChart3,
-      title: "Predictive Analytics",
-      description: "Forecast customer behavior and optimize campaigns for maximum ROI and engagement."
-    },
-    {
-      icon: Shield,
-      title: "Compliance & Privacy",
-      description: "Built-in GDPR, CCPA, and other privacy compliance features for secure marketing operations."
-    },
-    {
-      icon: Cloud,
-      title: "Multi-Channel Integration",
-      description: "Seamlessly integrate with email, social media, SMS, and other marketing channels."
-    }
-  ];
-
-  const marketingChannels = [
-    {
-      icon: Mail,
-      title: "Email Marketing",
-      description: "Automated email campaigns with intelligent timing, personalization, and A/B testing."
-    },
-    {
-      icon: MessageCircle,
-      title: "Social Media",
-      description: "Automated social media posting, engagement monitoring, and audience interaction."
-    },
-    {
-      icon: Globe,
-      title: "Web Personalization",
-      description: "Dynamic website content that adapts to visitor behavior and preferences."
-    },
-    {
-      icon: ShoppingCart,
-      title: "E-commerce Automation",
-      description: "Abandoned cart recovery, product recommendations, and purchase follow-ups."
-    },
-    {
-      icon: Calendar,
-      title: "Event Marketing",
-      description: "Automated event promotion, registration, and follow-up communications."
-    },
-    {
-      icon: Monitor,
-      title: "Retargeting Campaigns",
-      description: "Intelligent retargeting based on user behavior and engagement patterns."
-    }
-  ];
-
-  const benefits = [
-    "Increase conversion rates by up to 50%",
-    "Reduce marketing costs by 30%",
-    "Improve customer engagement and retention",
-    "Personalize customer experiences at scale",
-    "Automate repetitive marketing tasks",
-    "Optimize campaigns in real-time",
-    "Gain deeper customer insights",
-    "Scale marketing operations efficiently"
-  ];
-
-  const useCases = [
-    {
-      icon: Users,
-      title: "Lead Nurturing",
-      description: "Automated lead scoring and nurturing campaigns based on engagement behavior."
-    },
-    {
-      icon: Heart,
-      title: "Customer Retention",
-      description: "Personalized retention campaigns and loyalty programs for existing customers."
-    },
-    {
-      icon: TrendingUp,
-      title: "Revenue Optimization",
-      description: "Cross-selling and upselling automation based on customer purchase history."
-    },
-    {
-      icon: Target,
-      title: "Market Expansion",
-      description: "Automated campaigns for new market segments and geographic expansion."
-    }
-  ];
-
+  
+  
+  
+  
   return (
     <>
-      <SEO 
-        title="AI Marketing Automation - Zion Tech Group"
+      <SEO title="AI Marketing Automation - Zion Tech Group"
         description="Transform your marketing with AI-powered automation. Personalize campaigns, optimize ROI, and scale your marketing operations with intelligent automation."
         keywords="AI marketing automation, marketing automation, personalized marketing, customer segmentation, marketing ROI, AI campaigns"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -149,7 +49,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
               className="text-center max-w-4xl mx-auto"
             >
               <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6">
-                <Brain className="w-4 h-4 text-cyan-400 mr-2" />
+                <Brain className="w-4 h-4 text-cyan-400 mr-2"  />
                 <span className="text-cyan-400 text-sm font-medium">AI-Powered Marketing Automation</span>
               </div>
               
@@ -324,7 +224,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     className="flex items-center space-x-3"
                   >
-                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"  />
                     <span className="text-gray-300">{benefit}</span>
                   </motion.div>
                 ))}
@@ -338,7 +238,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     className="flex items-center space-x-3"
                   >
-                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"  />
                     <span className="text-gray-300">{benefit}</span>
                   </motion.div>
                 ))}
@@ -384,5 +284,4 @@ export default function AIMarketingAutomation(...args: any[]): any {
         </section>
       </div>
     </>
-  );
-}
+  )}

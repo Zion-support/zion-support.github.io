@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import { 
   Cloud, 
   Code, 
@@ -41,91 +39,10 @@ import {
   Lock
 } from 'lucide-react';
 
-const CloudDevOps = () => {
-  const features = [
-    {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Design and implement scalable cloud architectures on AWS, Azure, and GCP'
-    },
-    {
-      icon: Code,
-      title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment pipelines for rapid delivery'
-    },
-    {
-      icon: Docker,
-      title: 'Containerization',
-      description: 'Docker and Kubernetes implementation for scalable application deployment'
-    },
-    {
-      icon: GitBranch,
-      title: 'GitOps Workflows',
-      description: 'Infrastructure as code and automated deployment management'
-    },
-    {
-      icon: Monitor,
-      title: 'Monitoring & Logging',
-      description: 'Comprehensive monitoring, alerting, and centralized logging solutions'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'DevSecOps practices and compliance automation for cloud environments'
-    }
-  ];
 
-  const benefits = [
-    'Deploy 10x faster with automated pipelines',
-    'Reduce infrastructure costs by 40%',
-    'Achieve 99.9% uptime with monitoring',
-    'Scale applications automatically',
-    'Improve team productivity by 60%',
-    'Ensure security and compliance'
-  ];
-
-  const services = [
-    {
-      icon: Server,
-      title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and ARM templates for automated infrastructure'
-    },
-    {
-      icon: Workflow,
-      title: 'CI/CD Automation',
-      description: 'Jenkins, GitHub Actions, and GitLab CI for seamless deployments'
-    },
-    {
-      icon: Kubernetes,
-      title: 'Container Orchestration',
-      description: 'Kubernetes clusters with Helm charts and automated scaling'
-    },
-    {
-      icon: Database,
-      title: 'Database Management',
-      description: 'Automated database provisioning, backups, and scaling'
-    }
-  ];
-
-  const useCases = [
-    {
-      industry: 'E-commerce',
-      description: 'Scalable infrastructure for high-traffic online stores'
-    },
-    {
-      industry: 'SaaS Platforms',
-      description: 'Multi-tenant applications with automated scaling'
-    },
-    {
-      industry: 'Financial Services',
-      description: 'Secure, compliant cloud infrastructure for banking applications'
-    },
-    {
-      industry: 'Healthcare',
-      description: 'HIPAA-compliant cloud solutions for medical applications'
-    }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -139,7 +56,7 @@ const CloudDevOps = () => {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
-              <Cloud className="w-4 h-4 mr-2" />
+              <Cloud className="w-4 h-4 mr-2"  />
               Cloud & DevOps Solutions
             </div>
             
@@ -155,11 +72,11 @@ const CloudDevOps = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </button>
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200 flex items-center justify-center">
-                <Settings className="w-5 h-5 mr-2" />
+                <Settings className="w-5 h-5 mr-2"  />
                 Schedule Demo
               </button>
             </div>
@@ -274,7 +191,7 @@ const CloudDevOps = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
                 >
-                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0"  />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
               ))}
@@ -288,7 +205,7 @@ const CloudDevOps = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
                 >
-                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0"  />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
               ))}
@@ -325,7 +242,7 @@ const CloudDevOps = () => {
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
+                  <Target className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -353,7 +270,7 @@ const CloudDevOps = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </button>
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
                 Contact Sales
@@ -363,8 +280,7 @@ const CloudDevOps = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default CloudDevOps;
 

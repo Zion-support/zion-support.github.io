@@ -1,6 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Brain, Zap, BarChart3, TrendingUp, RefreshCw } from 'lucide-react';
 
 interface ServiceStatus {
   id: string;
@@ -10,8 +7,7 @@ interface ServiceStatus {
   responseTime: number;
   lastUpdated: string;
   description: string;
-  icon: React.ComponentType<any>;
-}
+  icon: React.ComponentType<any>}
 
 interface Incident {
   id: string;
@@ -21,8 +17,7 @@ interface Incident {
   severity: 'low' | 'medium' | 'high' | 'critical';
   startTime: string;
   endTime?: string;
-  affectedServices: string[];
-}
+  affectedServices: string[]}
 
 const services: ServiceStatus[] = [
   {
@@ -104,18 +99,12 @@ const SystemStatus: React.FC = () => {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
-  const refreshData = () => {
-    setIsRefreshing(true);
+  
     setTimeout(() => {
       setLastUpdated(new Date());
-      setIsRefreshing(false);
-    }, 1000);
-  };
+      setIsRefreshing(false)}, 1000)};
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'operational':
-        return 'text-green-400 bg-green-500/20';
+  
       case 'degraded':
         return 'text-yellow-400 bg-yellow-500/20';
       case 'outage':
@@ -123,29 +112,21 @@ const SystemStatus: React.FC = () => {
       case 'maintenance':
         return 'text-blue-400 bg-blue-500/20';
       default:
-        return 'text-gray-400 bg-gray-500/20';
-    }
+        return 'text-gray-400 bg-gray-500/20'}
   };
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'operational':
-        return <CheckCircle className="w-5 h-5" />;
+  
       case 'degraded':
-        return <AlertTriangle className="w-5 h-5" />;
+        return <AlertTriangle className="w-5 h-5"  />;
       case 'outage':
-        return <XCircle className="w-5 h-5" />;
+        return <XCircle className="w-5 h-5"  />;
       case 'maintenance':
-        return <Clock className="w-5 h-5" />;
+        return <Clock className="w-5 h-5"  />;
       default:
-        return <Activity className="w-5 h-5" />;
-    }
+        return <Activity className="w-5 h-5"  />}
   };
 
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'critical':
-        return 'text-red-400 bg-red-500/20';
+  
       case 'high':
         return 'text-orange-400 bg-orange-500/20';
       case 'medium':
@@ -153,16 +134,10 @@ const SystemStatus: React.FC = () => {
       case 'low':
         return 'text-blue-400 bg-blue-500/20';
       default:
-        return 'text-gray-400 bg-gray-500/20';
-    }
+        return 'text-gray-400 bg-gray-500/20'}
   };
 
-  const overallStatus = services.every(service => service.status === 'operational') 
-    ? 'operational' 
-    : services.some(service => service.status === 'outage') 
-    ? 'outage' 
-    : 'degraded';
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -171,7 +146,7 @@ const SystemStatus: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-full border border-blue-400/30 mb-6">
-              <Activity className="w-5 h-5 text-blue-400 mr-2" />
+              <Activity className="w-5 h-5 text-blue-400 mr-2"  />
               <span className="text-blue-300 font-medium">System Status</span>
             </div>
             
@@ -199,14 +174,14 @@ const SystemStatus: React.FC = () => {
 
             {/* Last Updated */}
             <div className="flex items-center justify-center text-gray-400 text-sm">
-              <Clock className="w-4 h-4 mr-2" />
+              <Clock className="w-4 h-4 mr-2"  />
               Last updated: {lastUpdated.toLocaleString()}
               <button
                 onClick={refreshData}
                 disabled={isRefreshing}
                 className="ml-4 p-2 hover:bg-slate-700/50 rounded-lg transition-colors disabled:opacity-50"
               >
-                <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
+                <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}  />
               </button>
             </div>
           </div>
@@ -291,7 +266,7 @@ const SystemStatus: React.FC = () => {
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-300"
             >
               <div className="w-12 h-12 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-green-400" />
+                <TrendingUp className="w-6 h-6 text-green-400"  />
               </div>
               <div className="text-3xl font-bold text-white mb-2">99.97%</div>
               <h3 className="text-lg font-semibold text-white mb-1">Average Uptime</h3>
@@ -305,7 +280,7 @@ const SystemStatus: React.FC = () => {
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-300"
             >
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-blue-400" />
+                <Zap className="w-6 h-6 text-blue-400"  />
               </div>
               <div className="text-3xl font-bold text-white mb-2">127ms</div>
               <h3 className="text-lg font-semibold text-white mb-1">Average Response</h3>
@@ -333,7 +308,7 @@ const SystemStatus: React.FC = () => {
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-300"
             >
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4">
-                <AlertTriangle className="w-6 h-6 text-orange-400" />
+                <AlertTriangle className="w-6 h-6 text-orange-400"  />
               </div>
               <div className="text-3xl font-bold text-white mb-2">0</div>
               <h3 className="text-lg font-semibold text-white mb-1">Active Incidents</h3>
@@ -375,7 +350,7 @@ const SystemStatus: React.FC = () => {
                       </div>
                       <p className="text-gray-300 text-sm mb-3">{incident.description}</p>
                       <div className="flex items-center text-gray-400 text-sm">
-                        <Clock className="w-4 h-4 mr-1" />
+                        <Clock className="w-4 h-4 mr-1"  />
                         Started: {new Date(incident.startTime).toLocaleString()}
                         {incident.endTime && (
                           <>
@@ -396,7 +371,7 @@ const SystemStatus: React.FC = () => {
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Affected Services:</h4>
                       <div className="flex flex-wrap gap-2">
                         {incident.affectedServices.map((serviceId) => {
-                          const service = services.find(s => s.id === serviceId);
+                          
                           return service ? (
                             <span
                               key={serviceId}
@@ -405,8 +380,7 @@ const SystemStatus: React.FC = () => {
                               <service.icon className="w-3 h-3 mr-1" />
                               {service.name}
                             </span>
-                          ) : null;
-                        })}
+                          ) : null})}
                       </div>
                     </div>
                   )}
@@ -432,7 +406,7 @@ const SystemStatus: React.FC = () => {
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/30 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <Activity className="w-8 h-8 text-blue-400" />
+                <Activity className="w-8 h-8 text-blue-400"  />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Technical Support</h3>
               <p className="text-gray-300 mb-6">
@@ -449,7 +423,6 @@ const SystemStatus: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default SystemStatus;

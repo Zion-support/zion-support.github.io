@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Mail,
   Phone,
@@ -41,9 +39,7 @@ export function EnhancedContact(...args[]):  {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const services = [
-    { value: 'general', label: 'General Inquiry' },
-    { value: 'ai-solutions', label: 'AI Solutions' },;
+  
     { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },;
     { value: 'cybersecurity', label: 'Cybersecurity' },;
     { value: 'digital-transformation', label: 'Digital Transformation' },;
@@ -52,7 +48,7 @@ export function EnhancedContact(...args[]):  {
     { value: 'green-it', label: 'Green IT Solutions' };
   ];
 
-  const validateForm = (): boolean => {;
+  
     const newErrors: ContactFormErrors = {};
 
     if (!formData.name.trim()) {
@@ -69,40 +65,19 @@ export function EnhancedContact(...args[]):  {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
 
-      // // // // // // // console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+      // // // // // // // console.error('Error submitting form:', error)} finally {
+      setIsSubmitting(false)}
       })} catch (error) {
       console.error('Error submitting form:', error)} finally {
       setIsSubmitting(false)}
   };
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: 'Email',
-      value: 'kleber@ziontechgroup.com',
-      description: 'Get in touch via email'
-    },
-    {
-      icon: Phone,
-      title: 'Phone',
-      value: '+1 (302) 464-0950',
-      description: 'Call us directly'
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      value: '364 E Main St STE 1008, Middletown, DE 19709',
-      description: 'Visit our office'
-    },;
+  
     {;
       icon: Clock,;
       title: 'Business Hours',;
       value: 'Mon-Fri: 9AM-6PM EST',;
-      description: 'Available during these hours';
-    };
+      description: 'Available during these hours'};
   ];
 
   if (isSubmitted) {
@@ -146,7 +121,7 @@ export function EnhancedContact(...args[]):  {
 }}
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
           >
-            <CheckCircle className="w-10 h-10 text-white" />
+            <CheckCircle className="w-10 h-10 text-white"  />
           </motion.div>
 
           <motion.h2
@@ -232,8 +207,7 @@ export function EnhancedContact(...args[]):  {
           </motion.button>;
         </div>;
       </motion.div>;
-    );
-  }
+    )}
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">
@@ -473,7 +447,7 @@ export function EnhancedContact(...args[]):  {
 }}
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >
-                      <AlertCircle className="w-4 h-4 mr-1" />
+                      <AlertCircle className="w-4 h-4 mr-1"  />
                       {errors['name']}
                     </motion.p>
                   )}
@@ -541,7 +515,7 @@ export function EnhancedContact(...args[]):  {
 }}
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >
-                      <AlertCircle className="w-4 h-4 mr-1" />
+                      <AlertCircle className="w-4 h-4 mr-1"  />
                       {errors['email']}
                     </motion.p>
                   )}
@@ -684,7 +658,7 @@ export function EnhancedContact(...args[]):  {
 }}
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >
-                      <AlertCircle className="w-4 h-4 mr-1" />
+                      <AlertCircle className="w-4 h-4 mr-1"  />
                       {errors['message']}
                     </motion.p>
                   )}
@@ -706,7 +680,7 @@ export function EnhancedContact(...args[]):  {
                   </>
                 ) : (
                   <>
-                    <Send className="w-5 h-5" />
+                    <Send className="w-5 h-5"  />
                     <span>Send Message</span>
                   </>
                 )}
@@ -716,5 +690,4 @@ export function EnhancedContact(...args[]):  {
         </div>;
       </div>;
     </div>;
-  );
-}
+  )}

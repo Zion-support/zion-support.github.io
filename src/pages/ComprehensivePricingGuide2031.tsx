@@ -1,5 +1,3 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
 import { 
   CheckCircle,
   X,
@@ -43,7 +41,6 @@ import {
   BookOpen,
   Truck
 } from 'lucide-react';
-import { COMPREHENSIVE_PRICING_GUIDE_2031 } from '../data/comprehensivePricingGuide2031';
 
 const ComprehensivePricingGuide2031: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -51,70 +48,30 @@ const ComprehensivePricingGuide2031: React.FC = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null);
   const [selectedTier, setSelectedTier] = useState<string>('Professional');
 
-  const categories = useMemo(() => {
-    const cats = ['All', ...Array.from(new Set(COMPREHENSIVE_PRICING_GUIDE_2031.map(service => service.category)))];
-    return cats;
-  }, []);
+  
+    return cats}, []);
 
-  const filteredServices = useMemo(() => {
-    let filtered = COMPREHENSIVE_PRICING_GUIDE_2031;
-
+  
     if (searchQuery) {
       filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.category.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
+      )}
 
     if (selectedCategory !== 'All') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
 
-    return filtered;
-  }, [searchQuery, selectedCategory]);
+    return filtered}, [searchQuery, selectedCategory]);
 
-  const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ComponentType<any> } = {
-      'FinTech & Trading': Coins,
-      'Healthcare & AI': Heart,
-      'Blockchain & Security': Lock,
-      'Supply Chain & Logistics': Truck,
-      'Content Creation & AI': BookOpen,
-      'Cybersecurity & AI': Shield,
-      'IoT & Predictive Analytics': Network,
-      'Customer Experience & AI': Users,
-      'Research & AI': Code,
-      'Business Intelligence & AI': BarChart3
-    };
-    return iconMap[category] || Globe;
-  };
+  
+    return iconMap[category] || Globe};
 
-  const getInnovationColor = (level: string) => {
-    const colorMap: { [key: string]: string } = {
-      'Revolutionary': 'from-purple-500 to-pink-500',
-      'Cutting-edge': 'from-blue-500 to-indigo-500',
-      'Advanced': 'from-green-500 to-teal-500',
-      'Breakthrough': 'from-red-500 to-orange-500'
-    };
-    return colorMap[level] || 'from-gray-500 to-slate-500';
-  };
+  
+    return colorMap[level] || 'from-gray-500 to-slate-500'}};
 
-  const toggleServiceExpansion = (id: string) => {
-    setExpandedService(expandedService === id ? null : id);
-  };
-
-  const getTierColor = (tierName: string) => {
-    const colorMap: { [key: string]: string } = {
-      'Starter': 'from-gray-500 to-slate-500',
-      'Basic': 'from-blue-500 to-cyan-500',
-      'Creator': 'from-green-500 to-emerald-500',
-      'Student': 'from-purple-500 to-pink-500',
-      'Professional': 'from-cyan-500 to-blue-500',
-      'Enterprise': 'from-orange-500 to-red-500'
-    };
-    return colorMap[tierName] || 'from-gray-500 to-slate-500';
-  };
+  
+    return colorMap[tierName] || 'from-gray-500 to-slate-500'};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -138,15 +95,15 @@ const ComprehensivePricingGuide2031: React.FC = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
               <div className="flex items-center gap-2">
-                <Star className="w-5 h-5 text-yellow-400" />
+                <Star className="w-5 h-5 text-yellow-400"  />
                 <span>12+ Revolutionary Services</span>
               </div>
               <div className="flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-green-400" />
+                <TrendingUp className="w-5 h-5 text-green-400"  />
                 <span>40%+ Annual Growth</span>
               </div>
               <div className="flex items-center gap-2">
-                <DollarSign className="w-5 h-5 text-blue-400" />
+                <DollarSign className="w-5 h-5 text-blue-400"  />
                 <span>Competitive Pricing</span>
               </div>
             </div>
@@ -160,15 +117,15 @@ const ComprehensivePricingGuide2031: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-6 text-white">
               <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-cyan-400" />
+                <Phone className="w-5 h-5 text-cyan-400"  />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-5 h-5 text-cyan-400" />
+                <Mail className="w-5 h-5 text-cyan-400"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-cyan-400" />
+                <MapPin className="w-5 h-5 text-cyan-400"  />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
@@ -179,7 +136,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
               className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <span>Visit Website</span>
-              <Globe className="w-4 h-4" />
+              <Globe className="w-4 h-4"  />
             </a>
           </div>
         </div>
@@ -191,7 +148,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
           <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
             {/* Search */}
             <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
               <input
                 type="text"
                 placeholder="Search services..."
@@ -243,8 +200,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredServices.map((service) => {
-              const CategoryIcon = getCategoryIcon(service.category);
-              const selectedPricingTier = service.pricingTiers.find(tier => tier.name === selectedTier) || service.pricingTiers[1];
+              
               
               return (
                 <motion.div
@@ -259,7 +215,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
                         <div className={`p-2 rounded-lg bg-gradient-to-r ${getInnovationColor(service.innovationLevel)}`}>
-                          <CategoryIcon className="w-6 h-6 text-white" />
+                          <CategoryIcon className="w-6 h-6 text-white"  />
                         </div>
                         <div>
                           <span className="inline-block px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full mb-2">
@@ -273,9 +229,9 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                         className="text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         {expandedService === service.id ? (
-                          <ChevronUp className="w-5 h-5" />
+                          <ChevronUp className="w-5 h-5"  />
                         ) : (
-                          <ChevronDown className="w-5 h-5" />
+                          <ChevronDown className="w-5 h-5"  />
                         )}
                       </button>
                     </div>
@@ -343,7 +299,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                         {/* Features */}
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                            <CheckCircle className="w-5 h-5 text-green-400" />
+                            <CheckCircle className="w-5 h-5 text-green-400"  />
                             Features - {selectedPricingTier.name} Tier
                           </h4>
                           <div className="grid grid-cols-1 gap-2">
@@ -359,7 +315,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                         {/* Limitations */}
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                            <X className="w-5 h-5 text-red-400" />
+                            <X className="w-5 h-5 text-red-400"  />
                             Limitations - {selectedPricingTier.name} Tier
                           </h4>
                           <div className="grid grid-cols-1 gap-2">
@@ -397,7 +353,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                         {/* Competitors */}
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                            <Target className="w-5 h-5 text-purple-400" />
+                            <Target className="w-5 h-5 text-purple-400"  />
                             Market Competitors
                           </h4>
                           <div className="flex flex-wrap gap-2">
@@ -419,15 +375,14 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                             className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group"
                           >
                             <span>Get Started - {selectedPricingTier.name} Tier</span>
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />
                           </a>
                         </div>
                       </div>
                     </motion.div>
                   )}
                 </motion.div>
-              );
-            })}
+              )})}
           </div>
 
           {filteredServices.length === 0 && (
@@ -460,15 +415,15 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                 href="mailto:kleber@ziontechgroup.com?subject=Inquiry about Zion Tech Group Services - Pricing Guide 2031"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-4 px-8 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 <span>Get Custom Quote</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />
               </a>
               <a
                 href="tel:+13024640950"
                 className="bg-white/10 border border-cyan-400/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 <span>Call Now</span>
               </a>
             </div>
@@ -476,7 +431,6 @@ const ComprehensivePricingGuide2031: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ComprehensivePricingGuide2031;

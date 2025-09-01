@@ -1,25 +1,10 @@
-import React, { useState } from 'react.ts';
-import { SEO   } from '../components/SEO';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
 
 const AllServicesIndex: React.FC = (): JSX.Element => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const allServices = [
-    // AI-Powered Micro SAAS Services
-    {
-      id: 'ai-code-review-security',
-      title: 'AI Code Review & Security Analysis',
-      description: 'Advanced vulnerability detection with 85% accuracy improvement',
-      category: 'AI-Powered Micro SAAS',
-      pricing: '$49 - $799/month',
-      url: '/services/ai-code-review-security',
-      icon: '🔒',
-      features['85% vulnerability reduction', '50+ programming languages', 'Real-time analysis'],;
-      benefits['Reduce security incidents by 60%', 'Faster code review process'];
-    },;
+  
+      benefits['Reduce security incidents by 60%', 'Faster code review process']},;
     {
       id: 'ai-customer-experience-analytics',
       title: 'AI Customer Experience Analytics',
@@ -29,8 +14,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       url: '/services/ai-customer-experience-analytics',
       icon: '📊',
       features['Real-time sentiment analysis', 'Customer journey tracking', 'Predictive analytics'],;
-      benefits['Increase satisfaction by 35%', 'Reduce churn by 25%'];
-    },;
+      benefits['Increase satisfaction by 35%', 'Reduce churn by 25%']},;
     {
       id: 'ai-devops-automation-platform',
       title: 'AI DevOps Automation Platform',
@@ -40,8 +24,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       url: '/services/ai-devops-automation-platform',
       icon: '🚀',
       features['AI pipeline optimization', 'Intelligent deployment', 'GitOps workflows'],;
-      benefits['Reduce deployment time by 80%', 'Decrease failures by 90%'];
-    },;
+      benefits['Reduce deployment time by 80%', 'Decrease failures by 90%']},;
     {
       id: 'ai-iot-edge-computing-platform',
       title: 'AI IoT Edge Computing Platform',
@@ -51,8 +34,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       url: '/services/ai-iot-edge-computing-platform',
       icon: '🌐',
       features['Sub-millisecond processing', 'Edge AI intelligence', 'Distributed computing'],;
-      benefits['Reduce latency by 90%', 'Lower bandwidth costs by 70%'];
-    },;
+      benefits['Reduce latency by 90%', 'Lower bandwidth costs by 70%']},;
     
     // Cloud & Infrastructure Services
     {
@@ -64,8 +46,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       url: '/services/cloud-devops',
       icon: '☁️',
       features['Multi-cloud deployment', 'Infrastructure as Code', 'Automated scaling'],;
-      benefits['Faster deployments', 'Cost optimization'];
-    },;
+      benefits['Faster deployments', 'Cost optimization']},;
     {
       id: 'it-infrastructure',
       title: 'IT Infrastructure',
@@ -75,8 +56,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       url: '/services/it-infrastructure',
       icon: '🏗️',
       features['Network design', 'Server management', 'Storage solutions'],;
-      benefits['Reliable infrastructure', 'Scalable solutions'];
-    },;
+      benefits['Reliable infrastructure', 'Scalable solutions']},;
     {
       id: 'digital-twin',
       title: 'Digital Twin',
@@ -86,8 +66,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       url: '/services/digital-twin',
       icon: '🔄',
       features['Real-time monitoring', 'Predictive maintenance', 'Simulation modeling'],;
-      benefits['Improved efficiency', 'Reduced downtime'];
-    },;
+      benefits['Improved efficiency', 'Reduced downtime']},;
     
     // Data & Analytics Services
     {
@@ -99,8 +78,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       url: '/services/data-analytics',
       icon: '📈',
       features['Data visualization', 'Statistical analysis', 'Trend identification'],;
-      benefits['Better insights', 'Data-driven decisions'];
-    },;
+      benefits['Better insights', 'Data-driven decisions']},;
     {
       id: 'ai-business-intelligence',
       title: 'AI Business Intelligence',
@@ -110,8 +88,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       url: '/services/ai-business-intelligence',
       icon: '🧠',
       features['Predictive analytics', 'Natural language queries', 'Automated insights'],;
-      benefits['Faster insights', 'Predictive capabilities'];
-    },;
+      benefits['Faster insights', 'Predictive capabilities']},;
     {
       id: 'iot-edge',
       title: 'IoT Edge Computing',
@@ -121,8 +98,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       url: '/services/iot-edge',
       icon: '⚡',
       features['Edge processing', 'Real-time analytics', 'Data filtering'],;
-      benefits['Low latency', 'Real-time decisions'];
-    },;
+      benefits['Low latency', 'Real-time decisions']},;
     
     // Security & Compliance Services
     {
@@ -134,8 +110,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       url: '/services/zero-trust-network-architecture',
       icon: '🛡️',
       features['Identity verification', 'Micro-segmentation', 'Continuous monitoring'],;
-      benefits['Enhanced security', 'Compliance ready'];
-    },;
+      benefits['Enhanced security', 'Compliance ready']},;
     {
       id: 'ai-cybersecurity-suite',
       title: 'AI Cybersecurity Suite',
@@ -145,8 +120,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       url: '/services/ai-cybersecurity-suite',
       icon: '🔐',
       features['Threat detection', 'Vulnerability assessment', 'Incident response'],;
-      benefits['Proactive security', 'Faster response'];
-    },;
+      benefits['Proactive security', 'Faster response']},;
     {
       id: 'ai-compliance-assistant',
       title: 'AI Compliance Assistant',
@@ -156,27 +130,23 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       url: '/services/ai-compliance-assistant',
       icon: '📋',
       features['Regulatory monitoring', 'Compliance reporting', 'Risk assessment'],;
-      benefits['Automated compliance', 'Reduced risk'];
-    };
+      benefits['Automated compliance', 'Reduced risk']};
   ];
 
-  const categories = ['all', 'AI-Powered Micro SAAS', 'Cloud & Infrastructure', 'Data & Analytics', 'Security & Compliance'];
-
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  
+  
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    
     return matchesSearch && matchesCategory});
 
   return (
     <>
-      <SEO
-        title = "All Services Index | Zion Tech Group - Complete Service Directory"
+      <SEO title = "All Services Index | Zion Tech Group - Complete Service Directory"
         description="Browse our complete portfolio of AI-powered micro SAAS, cloud infrastructure, data analytics, and security services. Find the perfect solution for your business needs."
         keywords="Zion Tech Group services, AI services, cloud services, data analytics, cybersecurity, micro SAAS, business solutions, service directory"
         canonical="https://ziontechgroup.com/all-services"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

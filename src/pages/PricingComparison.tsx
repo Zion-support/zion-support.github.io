@@ -1,15 +1,8 @@
-import React, { useState } from 'react.ts';
-import { SEO   } from '../components/SEO';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
 
 const PricingComparison: React.FC = (): JSX.Element => {;
   const [selectedPlan, setSelectedPlan] = useState('monthly');
 
-  const pricingData = [
-    {
-      category: "AI-Powered Micro SAAS Services",
-      services[;
+  
         {
           name: "AI Code Review & Security",
           description: "Advanced vulnerability detection with AI-powered analysis",
@@ -325,24 +318,22 @@ const PricingComparison: React.FC = (): JSX.Element => {;
             }
           ]
         }
-      ];
-    };
+      ]};
   ];
 
-  const calculateSavings = (monthlyPrice: anynumber, yearlyPrice: number)   => {;
-    const monthlyTotal = monthlyPrice * 12;
-    const yearlyTotal = yearlyPrice * 12;
-    const savingsPercent = Math.round((savings / monthlyTotal) * 100);
+  
+    
+    
+    
     return { savings, savingsPercent }};
 
   return (
     <>
-      <SEO
-        title = "Pricing Comparison | Zion Tech Group - Transparent Service Pricing"
+      <SEO title = "Pricing Comparison | Zion Tech Group - Transparent Service Pricing"
         description="Compare pricing for all our AI-powered micro SAAS, cloud infrastructure, data analytics, and security services. Find the perfect plan for your business needs."
         keywords="Zion Tech Group pricing, AI services pricing, cloud services pricing, data analytics pricing, cybersecurity pricing, micro SAAS pricing, business solutions pricing"
         canonical="https://ziontechgroup.com/pricing"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -459,7 +450,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;
 
                       <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">;
                         {service.plans.map((plan, planIndex)   => {;
-                          const savings = calculateSavings(plan.price.monthly, plan.price.yearly);
+                          
                           return (
                             <motion.div
                               key = {plan.name}

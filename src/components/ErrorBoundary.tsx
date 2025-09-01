@@ -1,4 +1,3 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 
 import { 
@@ -14,9 +13,7 @@ import {
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
-
-}
+  fallback?: ReactNode}
 
 interface State {
   hasError: boolean;
@@ -24,8 +21,7 @@ interface State {
   errorInfo: ErrorInfo | null;
 
   errorId: string;
-  showDetails: boolean;
-}
+  showDetails: boolean}
 
 class ErrorBoundary extends Component<Props, State> {
 
@@ -39,8 +35,7 @@ class ErrorBoundary extends Component<Props, State> {
       errorId: '',
       showDetails: false
 
-    };
-  }
+    }}
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
@@ -49,8 +44,7 @@ class ErrorBoundary extends Component<Props, State> {
 
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
 
-    };
-  }
+    }}
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -60,12 +54,10 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+      console.error('Error caught by boundary:', error, errorInfo)}
 
     // In production, you would send this to your error reporting service
-    // Example: Sentry.captureException(error, { extra: errorInfo });
-  }
+    // Example: Sentry.captureException(error, { extra: errorInfo })}
 
   handleRetry = () => {
 
@@ -76,36 +68,23 @@ class ErrorBoundary extends Component<Props, State> {
 
       errorId: '',
       showDetails: false
-    });
-  };
+    })};
 
   handleGoHome = () => {
-    window.location.href = '/';
-  };
+    window.location.href = '/'};
 
   handleReportError = () => {
     const { error, errorInfo, errorId } = this.state;
-    const errorReport = {
-      errorId,
-      message: error?.message,
-      stack: error?.stack,
-      componentStack: errorInfo?.componentStack,
-      url: window.location.href,
-      userAgent: navigator.userAgent,
-      timestamp: new Date().toISOString()
-    };
-
+    
     // In production, send to your error reporting service
     console.log('Error Report:', errorReport);
     
     // For now, just copy to clipboard
     navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));
-    alert('Error report copied to clipboard. Please send this to support.');
-  };
+    alert('Error report copied to clipboard. Please send this to support.')};
 
   toggleDetails = () => {
-    this.setState(prev => ({ showDetails: !prev.showDetails }));
-  };
+    this.setState(prev => ({ showDetails: !prev.showDetails }))};
 
   render() {
     if (this.state.hasError) {
@@ -118,7 +97,7 @@ class ErrorBoundary extends Component<Props, State> {
               {/* Error Icon */}
               <div className="text-center mb-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-red-500/20 rounded-full mb-4">
-                  <AlertTriangle className="w-8 h-8 text-red-400" />
+                  <AlertTriangle className="w-8 h-8 text-red-400"  />
                 </div>
                 <h1 className="text-2xl font-bold text-white mb-2">
                   Oops! Something went wrong
@@ -151,7 +130,7 @@ class ErrorBoundary extends Component<Props, State> {
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-cyan hover:bg-zion-cyan-dark text-white rounded-lg font-medium transition-colors"
 
                 >
-                  <RefreshCw className="w-4 h-4" />
+                  <RefreshCw className="w-4 h-4"  />
                   Try Again
                 </button>
 
@@ -160,7 +139,7 @@ class ErrorBoundary extends Component<Props, State> {
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors"
 
                 >
-                  <Home className="w-4 h-4" />
+                  <Home className="w-4 h-4"  />
                   Go Home
                 </button>
 
@@ -168,7 +147,7 @@ class ErrorBoundary extends Component<Props, State> {
                   onClick={this.handleReportError}
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors"
                 >
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-4 h-4"  />
                   Report Error
                 </button>
               </div>
@@ -179,7 +158,7 @@ class ErrorBoundary extends Component<Props, State> {
                   onClick={this.toggleDetails}
                   className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
                 >
-                  <Bug className="w-4 h-4" />
+                  <Bug className="w-4 h-4"  />
                   {showDetails ? 'Hide' : 'Show'} Technical Details
                 </button>
               </div>
@@ -211,7 +190,7 @@ class ErrorBoundary extends Component<Props, State> {
               {/* Help Section */}
               <div className="mt-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
                 <div className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-blue-400 mt-0.5" />
+                  <Shield className="w-5 h-5 text-blue-400 mt-0.5"  />
                   <div>
                     <h4 className="text-sm font-medium text-blue-300 mb-1">
                       Need Help?
@@ -227,11 +206,9 @@ class ErrorBoundary extends Component<Props, State> {
           </div>
         </div>
 
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 

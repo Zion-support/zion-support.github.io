@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { Brain, 
   Zap, 
   Shield, 
@@ -40,7 +38,6 @@ import { Brain,
   Shield as ShieldIcon,
   Zap as ZapIcon
  } from 'lucide-react.ts';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
 
 const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
   const [selectedServices, setSelectedServices] = useState<any>([]);
@@ -50,28 +47,24 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
   const [expandedFeatures, setExpandedFeatures] = useState<any>([]);
   const [sortBy, setSortBy] = useState<any>('innovation');
 
-  const categories = [
-    { id: any'all', name: 'All Services', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },;
+  
     { id: 'AI & Business Intelligence', name: 'AI & BI', icon: Brain, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Intelligence').length },
-    { id: any'AI & Customer Experience', name: 'AI & CX', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Customer Experience').length },;
-    { id: any'AI & Finance', name: 'AI & Finance', icon: TrendingUp, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Finance').length },;
-    { id: any'AI & Logistics', name: 'AI & Logistics', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Logistics').length },;
-    { id: any'AI & Marketing', name: 'AI & Marketing', icon: BarChart3, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Marketing').length },;
-    { id: any'AI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Project Management').length },;
-    { id: any'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Human Resources').length },;
-    { id: any'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Cybersecurity').length },;
-    { id: any'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Data Management').length },;
-    { id: any'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Process').length },;
+    { id: anyAI & Customer Experience', name: 'AI & CX', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Customer Experience').length },;
+    { id: anyAI & Finance', name: 'AI & Finance', icon: TrendingUp, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Finance').length },;
+    { id: anyAI & Logistics', name: 'AI & Logistics', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Logistics').length },;
+    { id: anyAI & Marketing', name: 'AI & Marketing', icon: BarChart3, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Marketing').length },;
+    { id: anyAI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Project Management').length },;
+    { id: anyAI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Human Resources').length },;
+    { id: anyAI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Cybersecurity').length },;
+    { id: anyAI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Data Management').length },;
+    { id: anyAI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Process').length },;
   ];
 
-  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025
-    .filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    })
+      
+      return matchesSearch && matchesCategory})
     .sort((a, b) => {
       switch (sortBy) {
         case 'name':
@@ -83,30 +76,24 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
         case 'roi':
           return parseInt(a.roi.split('-')[0]) - parseInt(b.roi.split('-')[0]);
         default:
-          return 0;
-      }
+          return 0}
     });
 
-  const toggleServiceSelection = (serviceId: anystring)  => {;
+  
     if (selectedServices.includes(serviceId)) {;
-      setSelectedServices(selectedServices.filter(id => id !== serviceId));
-    } else {
+      setSelectedServices(selectedServices.filter(id => id !== serviceId))} else {
       if (selectedServices.length < 5) {
-        setSelectedServices([...selectedServices, serviceId]);
-      }
+        setSelectedServices([...selectedServices, serviceId])}
     }
   };
 
-  const toggleFeatureExpansion = (feature: anystring)  => {;
+  
     if (expandedFeatures.includes(feature)) {;
-      setExpandedFeatures(expandedFeatures.filter(f => f !== feature));
-    } else {
-      setExpandedFeatures([...expandedFeatures, feature]);
-    }
+      setExpandedFeatures(expandedFeatures.filter(f => f !== feature))} else {
+      setExpandedFeatures([...expandedFeatures, feature])}
   };
 
-  const getInnovationColor = (level: anystring)  => {
-    switch (level) {;
+  
       case 'Revolutionary':;
         return 'text-purple-600 bg-purple-100 border-purple-200';
       case 'Advanced':;
@@ -114,32 +101,27 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
       case 'Cutting-edge':;
         return 'text-green-600 bg-green-100 border-green-200';
       default:;
-        return 'text-gray-600 bg-gray-100 border-gray-200';
-    }
+        return 'text-gray-600 bg-gray-100 border-gray-200'}
   };
 
-  const getROIColor = (roi: anystring)  => {;
-    const minROI = parseInt(roi.split('-')[0]);
+  
+    
     if (minROI >= 500) return 'text-green-600 bg-green-100 border-green-200';
     if (minROI >= 300) return 'text-blue-600 bg-blue-100 border-blue-200';
     if (minROI >= 200) return 'text-yellow-600 bg-yellow-100 border-yellow-200';
-    return 'text-gray-600 bg-gray-100 border-gray-200';
-  };
+    return 'text-gray-600 bg-gray-100 border-gray-200'};
 
-  const getPriceTier = (price: anynumber)  => {;
+  
     if (price <= 500) return 'text-green-600 bg-green-100 border-green-200';
     if (price <= 1000) return 'text-blue-600 bg-blue-100 border-blue-200';
     if (price <= 2000) return 'text-yellow-600 bg-yellow-100 border-yellow-200';
-    return 'text-purple-600 bg-purple-100 border-purple-200';
-  };
+    return 'text-purple-600 bg-purple-100 border-purple-200'};
 
-  const selectedServicesData = selectedServices.map(id => ;
+  
     INNOVATIVE_MICRO_SAAS_SERVICES_2025.find(service => service.id === id);
   ).filter(Boolean);
 
-  const allFeatures = Array.from(new Set(
-    selectedServicesData.flatMap(service => 
-      service ? [...service.features, ...service.benefits] : [];
+  
     );
   ));
 
@@ -176,11 +158,11 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                 <span>Side-by-Side Comparison</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-                <Target className="w-5 h-5 text-green-400" />
+                <Target className="w-5 h-5 text-green-400"  />
                 <span>Feature Analysis</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-                <Award className="w-5 h-5 text-yellow-400" />
+                <Award className="w-5 h-5 text-yellow-400"  />
                 <span>Informed Decisions</span>
               </div>
             </div>
@@ -190,14 +172,14 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 Start Comparing
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </a>
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-gray-100 hover:text-blue-900 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 Contact Sales
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
               </a>
             </div>
           </motion.div>
@@ -209,21 +191,21 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center gap-3">
-              <Phone className="w-6 h-6 text-blue-600" />
+              <Phone className="w-6 h-6 text-blue-600"  />
               <div>
                 <p className="text-sm text-gray-600">Phone</p>
                 <p className="font-semibold text-gray-900">+1 302 464 0950</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <Mail className="w-6 h-6 text-blue-600" />
+              <Mail className="w-6 h-6 text-blue-600"  />
               <div>
                 <p className="text-sm text-gray-600">Email</p>
                 <p className="font-semibold text-gray-900">kleber@ziontechgroup.com</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin className="w-6 h-6 text-blue-600" />
+              <MapPin className="w-6 h-6 text-blue-600"  />
               <div>
                 <p className="text-sm text-gray-600">Address</p>
                 <p className="font-semibold text-gray-900">364 E Main St STE 1008, Middletown DE 19709</p>
@@ -239,7 +221,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             <div className="flex-1 max-w-md">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search services..."
@@ -293,7 +275,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
-                  <List className="w-5 h-5" />
+                  <List className="w-5 h-5"  />
                 </button>
               </div>
             </div>
@@ -327,7 +309,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                       onClick={() => toggleServiceSelection(service?.id || '')}
                       className="text-blue-600 hover:text-blue-800"
                     >
-                      <X className="w-4 h-4" />
+                      <X className="w-4 h-4"  />
                     </button>
                   </div>
                 ))}
@@ -368,9 +350,9 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                   </div>
                   <div className="ml-2">
                     {selectedServices.includes(service.id) ? (
-                      <Minus className="w-4 h-4 text-blue-600" />
+                      <Minus className="w-4 h-4 text-blue-600"  />
                     ) : (
-                      <Plus className="w-4 h-4 text-gray-400" />
+                      <Plus className="w-4 h-4 text-gray-400"  />
                     )}
                   </div>
                 </div>
@@ -467,7 +449,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                       <div className="space-y-2">
                         {service?.features.slice(0, 5).map((feature, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-xs">
-                            <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
+                            <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0"  />
                             <span className="text-gray-700">{feature}</span>
                           </div>
                         ))}
@@ -486,7 +468,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                       <div className="space-y-2">
                         {service?.benefits.map((benefit, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-xs">
-                            <Star className="w-3 h-3 text-yellow-500 flex-shrink-0" />
+                            <Star className="w-3 h-3 text-yellow-500 flex-shrink-0"  />
                             <span className="text-gray-700">{benefit}</span>
                           </div>
                         ))}
@@ -553,14 +535,14 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                           className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-xs font-medium transition-colors duration-200"
                         >
                           Get Started
-                          <ExternalLink className="w-3 h-3" />
+                          <ExternalLink className="w-3 h-3"  />
                         </a>
                         <a
                           href="tel:+13024640950"
                           className="w-full inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-xs font-medium transition-colors duration-200"
                         >
                           Call Sales
-                          <Phone className="w-3 h-3" />
+                          <Phone className="w-3 h-3"  />
                         </a>
                       </div>
                     </div>
@@ -618,7 +600,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                         <ul className="space-y-2">
                           {service?.features.map((feature, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0"  />
                               <span>{feature}</span>
                             </li>
                           ))}
@@ -629,7 +611,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                         <ul className="space-y-2">
                           {service?.benefits.map((benefit, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500 flex-shrink-0" />
+                              <Star className="w-4 h-4 text-yellow-500 flex-shrink-0"  />
                               <span>{benefit}</span>
                             </li>
                           ))}
@@ -668,14 +650,14 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                         className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
                       >
                         Get Started
-                        <ExternalLink className="w-4 h-4" />
+                        <ExternalLink className="w-4 h-4"  />
                       </a>
                       <a
                         href="tel:+13024640950"
                         className="flex-1 inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
                       >
                         Call Sales: +1 302 464 0950
-                        <Phone className="w-4 h-4" />
+                        <Phone className="w-4 h-4"  />
                       </a>
                     </div>
                   </div>
@@ -718,14 +700,14 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                 className="inline-flex items-center gap-2 bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 Get Expert Advice
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
               </a>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 Call Now: +1 302 464 0950
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
               </a>
             </div>
           </motion.div>
@@ -750,7 +732,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                   className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
                 >
                   Visit Website
-                  <ExternalLink className="w-4 h-4 inline ml-1" />
+                  <ExternalLink className="w-4 h-4 inline ml-1"  />
                 </a>
               </div>
             </div>
@@ -802,7 +784,6 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
         </div>
       </footer>
     </div>
-  );
-};
+  )};
 
 export default ServicesComparisonMatrix2025;

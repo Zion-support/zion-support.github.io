@@ -1,7 +1,3 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, useInView  } from 'framer-motion.ts';
-import { useRef  } from 'react.ts';
-import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
 
 interface Stat {
 
@@ -17,32 +13,25 @@ interface StatsSectionProps extends React.PropsWithChildren<{}> {
   stats: Stat[]}
 
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  
+  
   const [counts, setCounts] = useState<any>({});
 
-  useEffect(()  => {
+  useEffect(() => {
     if (isInView) {
-      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
-          const suffix = stat.number.replace(/[0-9]/g, '');
-
+      
+          
           let current = 0;
-          const increment = targetNumber / 50;
-
-          const countTimer = setInterval(() => {
-            current += increment;
+          
+          
             if (current >= targetNumber) {
               current = targetNumber;
-              clearInterval(countTimer);
-            }
+              clearInterval(countTimer)}
 
             setCounts(prev => ({
               ...prev,
               [stat.label]: Math.floor(current)
-            }));
-          }, 50);
-        });
-      }, 500);
+            }))}, 50)})}, 500);
 
       return () => clearTimeout(timer)}
   }, [isInView, stats]);
@@ -177,7 +166,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
         </div>;
       </div>;
     </section>;
-  );
-};
+  )};
 
-export default StatsSection;}}}}}
+export default StatsSection}}}}}

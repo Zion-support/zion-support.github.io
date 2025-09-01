@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -58,8 +56,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 showMetrics:  true,;
   showFilters = true,;
   showCharts = true,;
-  maxReports = 15;
-}) => {;
+  maxReports = 15}) => {;
   const [reports, setReports] = useState<ReportData[]>([]);
   const [filteredReports, setFilteredReports] = useState<ReportData[]>([]);
   const [selectedType, setSelectedType] = useState<string>('all');
@@ -86,8 +83,7 @@ showMetrics:  true,;
           expenses: 1800000,
           profit: 700000,
           growth: 15.5,
-          keyMetrics['Revenue Growth', 'Profit Margin', 'Cost Efficiency'];
-        },;
+          keyMetrics['Revenue Growth', 'Profit Margin', 'Cost Efficiency']},;
         lastUpdated: '2024-01-15',
         status: 'active',
         priority: 'high',
@@ -108,8 +104,7 @@ showMetrics:  true,;
           responseTime: 1.8,
           uptime: 99.9,
           userSatisfaction: 4.6,
-          keyMetrics['Accuracy', 'Response Time', 'Uptime', 'User Satisfaction'];
-        },;
+          keyMetrics['Accuracy', 'Response Time', 'Uptime', 'User Satisfaction']},;
         lastUpdated: '2024-01-14',
         status: 'active',
         priority: 'critical',
@@ -130,8 +125,7 @@ showMetrics:  true,;
           incidentsResolved: 154,
           responseTime: 2.3,
           riskLevel: 'Medium',
-          keyMetrics['Threats Detected', 'Incidents Resolved', 'Response Time', 'Risk Level'];
-        },;
+          keyMetrics['Threats Detected', 'Incidents Resolved', 'Response Time', 'Risk Level']},;
         lastUpdated: '2024-01-13',
         status: 'active',
         priority: 'high',
@@ -152,8 +146,7 @@ showMetrics:  true,;
           memoryUsage: 82.3,
           storageUsage: 65.8,
           networkTraffic: 45.2,
-          keyMetrics['CPU Utilization', 'Memory Usage', 'Storage Usage', 'Network Traffic'];
-        },;
+          keyMetrics['CPU Utilization', 'Memory Usage', 'Storage Usage', 'Network Traffic']},;
         lastUpdated: '2024-01-12',
         status: 'active',
         priority: 'medium',
@@ -174,8 +167,7 @@ showMetrics:  true,;
           netPromoterScore: 72,
           responseRate: 89.5,
           topConcerns['Response Time', 'Documentation', 'Support Quality'],;
-          keyMetrics['Overall Satisfaction', 'NPS', 'Response Rate', 'Top Concerns'];
-        },;
+          keyMetrics['Overall Satisfaction', 'NPS', 'Response Rate', 'Top Concerns']},;
         lastUpdated: '2024-01-11',
         status: 'active',
         priority: 'medium',
@@ -192,7 +184,7 @@ showMetrics:  true,;
     setFilteredReports(sampleReports)}, []);
 
   // Filter and sort reports
-  useEffect(()  => {
+  useEffect(() => {
     let filtered = reports;
 
     if (selectedType !== 'all') {
@@ -214,8 +206,7 @@ showMetrics:  true,;
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      );
-    }
+      )}
 
     // Sort reports
     filtered.sort((a, b) => {
@@ -235,21 +226,13 @@ showMetrics:  true,;
           bValue = b.rating;
           break;
         case 'priority':
-          const priorityOrder = {
-  low: 1, medium: 2, high: 3,;
+          
   ;
   ;
   ;
   ;
   ;
-  critical: 4 ;
-
-
-
-
-
-
-};
+  critical: 4 };
           aValue = priorityOrder[a.priority as keyof typeof priorityOrder];
           bValue = priorityOrder[b.priority as keyof typeof priorityOrder];
           break;
@@ -262,10 +245,8 @@ showMetrics:  true,;
           bValue = 0}
 
       if (sortOrder = == 'asc') {;
-        return aValue > bValue ? 1 : -1;
-      } else {
-        return aValue < bValue ? 1 : -1;
-      }
+        return aValue > bValue ? 1 : -1} else {
+        return aValue < bValue ? 1 : -1}
     });
 
     setFilteredReports(filtered.slice(0, maxReports))}, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]);

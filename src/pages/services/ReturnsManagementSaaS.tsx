@@ -1,20 +1,16 @@
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon  } from 'lucide-react';
 
 const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO
-        title="E-commerce Returns Management SaaS - Zion Tech Group"
+      <SEO title="E-commerce Returns Management SaaS - Zion Tech Group"
         description="Automate returns labels, RMA approvals, tracking, refunds, and analytics. Integrates with Shopify, WooCommerce, BigCommerce, and custom stores."
         keywords="returns management, RMA, e-commerce, Shopify, automation, logistics"
         canonical="/services/returns-management"
-      />
+       />
 
       <section className="mx-auto max-w-6xl px-6 py-16">
         <div className="flex items-center gap-3 mb-6 text-cyan-300">
-          <Package className="h-5 w-5" />
+          <Package className="h-5 w-5"  />
           <span className="text-sm font-semibold">RETURNS MANAGEMENT</span>
         </div>
         <h1 className="text-4xl font-bold">Reduce returns friction and costs</h1>
@@ -27,19 +23,19 @@ const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="mb-2 font-semibold">Capabilities</div>
             <ul className="space-y-2 text-sm text-slate-300">
-              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Branded self-serve returns portal</li>
-              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Rules-based approvals & RMAs</li>
-              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Auto label creation, QR codes</li>
-              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Refunds, exchanges, store credit</li>
-              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> SLA tracking & fraud controls</li>
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Branded self-serve returns portal</li>
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Rules-based approvals & RMAs</li>
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Auto label creation, QR codes</li>
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Refunds, exchanges, store credit</li>
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> SLA tracking & fraud controls</li>
             </ul>
           </div>
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="mb-2 font-semibold">Integrations</div>
             <ul className="space-y-2 text-sm text-slate-300">
-              <li className="flex items-center gap-2"><Truck className="h-4 w-4 text-cyan-300"/> Shopify, WooCommerce, BigCommerce, Magento</li>
-              <li className="flex items-center gap-2"><Truck className="h-4 w-4 text-cyan-300"/> UPS, USPS, FedEx, DHL</li>
-              <li className="flex items-center gap-2"><Truck className="h-4 w-4 text-cyan-300"/> ERP/WMS via REST or webhooks</li>
+              <li className="flex items-center gap-2"><Truck className="h-4 w-4 text-cyan-300" /> Shopify, WooCommerce, BigCommerce, Magento</li>
+              <li className="flex items-center gap-2"><Truck className="h-4 w-4 text-cyan-300" /> UPS, USPS, FedEx, DHL</li>
+              <li className="flex items-center gap-2"><Truck className="h-4 w-4 text-cyan-300" /> ERP/WMS via REST or webhooks</li>
             </ul>
             <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $49–$299/month typical</div>
           </div>
@@ -69,21 +65,18 @@ const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
         </div>
 
         <div className="mt-8 flex items-center gap-3 text-slate-300 text-sm">
-          <DollarSign className="w-4 h-4 text-cyan-300" />
+          <DollarSign className="w-4 h-4 text-cyan-300"  />
           <span>ROI: reduce reverse logistics cost and increase retention via seamless exchanges.</span>
         </div>
 
         <div className="mt-8">
           <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">;
             Book a demo;
-            <LinkIcon className="w-4 h-4" />;
+            <LinkIcon className="w-4 h-4"  />;
           </a>;
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
-export default ReturnsManagementSaaS;
-
-}
+export default ReturnsManagementSaaS}

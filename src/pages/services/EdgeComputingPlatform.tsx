@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
 import { Cpu, 
   Zap, 
   Globe, 
@@ -64,192 +61,51 @@ import { Cpu,
  } from 'lucide-react';
 
 const EdgeComputingPlatform: React.FC = (): JSX.Element => {
-  const features = [
-    {
-      icon: Cpu,
-      title: "Distributed Edge Nodes",
-      description: "Deploy computing resources closer to data sources for ultra-low latency processing",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Zap,
-      title: "Real-time Processing",
-      description: "Sub-millisecond response times for critical applications and IoT devices",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Globe,
-      title: "Global Edge Network",
-      description: "Worldwide infrastructure with automatic failover and load balancing",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Server,
-      title: "Edge AI Inference",
-      description: "Run machine learning models at the edge for instant decision making",
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      icon: Network,
-      title: "5G & IoT Integration",
-      description: "Seamless connectivity with 5G networks and IoT device ecosystems",
-      color: "from-indigo-500 to-purple-500"
-    },;
+  
     {;
       icon: Shield,;
       title: "Edge Security",;
       description: "Advanced security protocols and encryption for edge computing environments",;
-      color: "from-yellow-500 to-orange-500";
-    };
+      color: "from-yellow-500 to-orange-500"};
   ];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$399",
-      period: "/month",
-      description: "Perfect for small IoT deployments and edge computing experiments",
-      features: [
-        "Up to 10 edge nodes",
-        "Basic edge processing",
-        "Standard security",
-        "Email support",
-        "Basic monitoring",
-        "5GB data transfer",
-        "Community support"
-      ],
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$1,199",
-      period: "/month",
-      description: "Ideal for growing businesses with significant edge computing needs",
-      features: [
-        "Up to 100 edge nodes",
-        "Advanced edge AI",
-        "Custom security policies",
-        "Priority support",
-        "Advanced analytics",
-        "100GB data transfer",
-        "API access",
-        "Custom integrations"
-      ],
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$3,999",
-      period: "/month",
-      description: "For large organizations requiring enterprise-grade edge computing",
-      features: [
-        "Unlimited edge nodes",
-        "Custom AI models",
-        "Advanced security features",
-        "Multi-tenant support",
-        "Dedicated support team",
-        "Custom development",;
+  
         "SLA guarantees",;
         "On-premise option";
       ],;
       cta: "Contact Sales",;
-      popular: false;
-    };
+      popular: false};
   ];
 
-  const benefits = [
-    {
-      icon: Zap,
-      title: "10x Faster Response",
-      description: "Reduce latency from 100ms to under 10ms with edge processing",
-      metric: "10x"
-    },
-    {
-      icon: TrendingUp,
-      title: "50% Cost Reduction",
-      description: "Lower bandwidth costs and reduce cloud computing expenses",
-      metric: "50%"
-    },
-    {
-      icon: Clock,
-      title: "99.9% Uptime",
-      description: "Distributed architecture ensures high availability and reliability",
-      metric: "99.9%"
-    },;
+  
     {;
       icon: Users,;
       title: "Global Scale",;
       description: "Deploy edge nodes worldwide for optimal user experience",;
-      metric: "200+";
-    };
+      metric: "200+"};
   ];
 
-  const useCases = [
-    {
-      industry: "Autonomous Vehicles",
-      title: "Real-time Decision Making",
-      description: "Process sensor data and make driving decisions in milliseconds",
-      icon: Car,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      industry: "Smart Cities",
-      title: "IoT Infrastructure",
-      description: "Manage traffic lights, utilities, and public services in real-time",
-      icon: Building,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      industry: "Manufacturing",
-      title: "Predictive Maintenance",
-      description: "Monitor equipment health and prevent failures before they occur",
-      icon: Factory,
-      color: "from-purple-500 to-pink-500"
-    },
-    {;
+  
       industry: "Healthcare",;
       title: "Remote Monitoring",;
       description: "Real-time patient monitoring and emergency response systems",;
       icon: Heart,;
-      color: "from-orange-500 to-red-500";
-    };
+      color: "from-orange-500 to-red-500"};
   ];
 
-  const edgeLocations = [
-    {
-      region: "North America",
-      cities: ["New York", "Los Angeles", "Chicago", "Toronto", "Vancouver"],
-      icon: Building,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      region: "Europe",
-      cities: ["London", "Paris", "Berlin", "Amsterdam", "Frankfurt"],
-      icon: Globe,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      region: "Asia Pacific",
-      cities: ["Tokyo", "Singapore", "Sydney", "Seoul", "Hong Kong"],
-      icon: Satellite,
-      color: "from-purple-500 to-pink-500"
-    },;
+  
     {;
       region: "Latin America",;
       cities: ["São Paulo", "Mexico City", "Buenos Aires", "Lima", "Bogotá"],;
       icon: MapPin,;
-      color: "from-orange-500 to-red-500";
-    };
+      color: "from-orange-500 to-red-500"};
   ];
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Edge Computing Platform - Zion Tech Group"
+      <SEO title="Edge Computing Platform - Zion Tech Group"
         description="Deploy computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications."
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
@@ -280,7 +136,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               transition={{ duration: 0.8 }}
 
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
-                <Cpu className="w-4 h-4 mr-2" />
+                <Cpu className="w-4 h-4 mr-2"  />
                 Next-Generation Edge Computing
               </div>
 
@@ -633,7 +489,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -696,7 +552,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
-export default EdgeComputingPlatform;}}}}}}
+export default EdgeComputingPlatform}}}}}}

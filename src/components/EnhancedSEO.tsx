@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
   title?: string;
@@ -14,8 +12,7 @@ interface SEOProps {
   section?: string;
   tags?: string[];
   noindex?: boolean;
-  canonical?: string;
-}
+  canonical?: string}
 
 export const EnhancedSEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Leading AI Solutions & Technology Services',
@@ -32,7 +29,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   author = 'Zion Tech Group',
   section,
   tags = [],
-  const defaultKeywords = [;
+  
     'AI solutions',
     'cloud computing',
     'cybersecurity',
@@ -46,77 +43,11 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     'Zion Tech Group'
   ];
 
-  const generateStructuredData = useCallback(() => {
-    const baseData = {
-      '@context': 'https://schema.org',
-      '@type': type === 'article' ? 'Article' : 'Organization',
-      name: 'Zion Tech Group',
-      description: description,
-      url: currentUrl,
-      logo: '/images/zion-tech-group-logo.png',
-      sameAs: [
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/zion-tech-group',
-        'https://facebook.com/ziontechgroup'
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-0123',
-        contactType: 'customer service',
-        areaServed: 'US',
-        availableLanguage: 'English'
-      }
-    };
-
-  const defaultStructuredData = {
-  "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/images/zion-logo.png",
-    "description": "Leading provider of AI-powered technology solutions, cloud computing, and cybersecurity services.",
-  noindex = false,
-  canonical,
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = canonical || `${url}${window.location.pathname}`;
+  
+  
   
   // Structured data for better SEO
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": type === 'website' ? "Organization" : "Article",
-    "name": "Zion Tech Group",
-    "url": url,
-    "logo": `${url}/images/zion-tech-group-logo.png`,
-    "description": description,
-    "foundingDate": "2020",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Digital City",
-      "addressRegion": "Tech State",
-      "postalCode": "12345",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
-      "contactType": "customer service",
-      "url": `${url}/contact`
-    },
-    "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/ziontechgroup"
-    ],
-    "serviceType": [
-      "AI Solutions",
-      "Quantum Computing",
-      "Micro SAAS Services",
-      "Digital Transformation",
-      "Technology Consulting"
-    ]
-    "sameAs": [;
+  
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
       "https://facebook.com/ziontechgroup"
@@ -158,27 +89,19 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 
     // Preload critical images
     if (ogImage) {
-      const imageLink = document.createElement('link');
+      
       imageLink.rel = 'preload';
       imageLink.as = 'image';
       imageLink.href = ogImage;
-      document.head.appendChild(imageLink);
-    }
+      document.head.appendChild(imageLink)}
 
     // DNS prefetch for external domains
-    const dnsPrefetchDomains = [
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com',
-      'https://www.google-analytics.com'
-    ];
-
+    
     dnsPrefetchDomains.forEach(domain => {
-      const link = document.createElement('link');
+      
       link.rel = 'dns-prefetch';
       link.href = domain;
-      document.head.appendChild(link);
-    });
-  }, [ogImage]);
+      document.head.appendChild(link)})}, [ogImage]);
   if (type === 'article') {
     Object.assign(structuredData, {
       "@type": "Article",
@@ -201,8 +124,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         "@type": "WebPage",
         "@id": fullUrl
       }
-    });
-  }
+    })}
 
   return (
     <Helmet>
@@ -276,8 +198,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         <meta key={index} property="article:tag" content={tag} />
       ))}
     </Helmet>
-  );
-};}}}}
+  )}}}}}
       
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -308,5 +229,4 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
     </Helmet>
-  );
-};
+  )};

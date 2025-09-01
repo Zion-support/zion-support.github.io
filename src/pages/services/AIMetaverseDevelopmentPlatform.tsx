@@ -1,9 +1,6 @@
-import React from 'react';
-import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, Star, Eye, Sparkles } from 'lucide-react';
-import { SEO } from "../../components/SEO";
 
 export default function AIMetaverseDevelopmentPlatform() {
-  const features = [;
+  
     'AI-powered 3D world generation and design',;
     'Intelligent avatar creation and customization',;
     'Real-time virtual environment optimization',;
@@ -12,51 +9,15 @@ export default function AIMetaverseDevelopmentPlatform() {
     'Metaverse economy and NFT marketplace tools';
   ];
 
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$1,799/mo',
-      description: 'Perfect for indie developers and small studios',
-      details: [
-        'Up to 3 virtual worlds',
-        'Basic AI avatar system',
-        'Standard support (8/5)',
-        'API access and documentation',
-        'Community forum access',
-        'Basic 3D asset library'
-      ]
-    },
-    {
-      name: 'Business',
-      price: '$4,499/mo',
-      description: 'Ideal for growing metaverse companies',
-      details: [
-        'Up to 15 virtual worlds',
-        'Advanced AI avatar system',
-        'Priority support (12/7)',
-        'Custom 3D world generation',
-        'Dedicated account manager',
-        'Metaverse analytics dashboard',
-        'Multi-user collaboration tools'
-      ]
-    },
-    {
-      name: 'Enterprise',
-      price: '$11,999/mo',
-      description: 'Full-scale metaverse development platform',
-      details: [
-        'Unlimited virtual worlds',
-        'Custom AI algorithms',
-        '24/7 dedicated support',;
+  
         'On-premise deployment options',;
         'Custom integrations and APIs',;
         'White-label solutions available',;
         'Enterprise security features';
-      ];
-    };
+      ]};
   ];
 
-  const useCases = [;
+  
     'Virtual events and conferences',;
     'Gaming and entertainment platforms',;
     'Virtual real estate and architecture',;
@@ -65,7 +26,7 @@ export default function AIMetaverseDevelopmentPlatform() {
     'Social networking and communities';
   ];
 
-  const benefits = [;
+  
     'Reduce development time by 50-70% with AI automation',;
     'Create immersive experiences that increase user engagement',;
     'Scale virtual worlds efficiently with intelligent optimization',;
@@ -73,7 +34,7 @@ export default function AIMetaverseDevelopmentPlatform() {
     'Build sustainable metaverse economies and ecosystems';
   ];
 
-  const industries = [;
+  
     'Gaming and Entertainment',;
     'Real Estate and Architecture',;
     'Education and Training',;
@@ -84,11 +45,10 @@ export default function AIMetaverseDevelopmentPlatform() {
 
   return (
     <>
-      <SEO 
-        title = "AI Metaverse Development Platform | Zion Tech Group"
+      <SEO title = "AI Metaverse Development Platform | Zion Tech Group"
         description="Revolutionary AI-powered metaverse development platform for creating immersive virtual worlds. AI-driven 3D generation, avatar systems, and spatial computing."
         keywords="AI metaverse, virtual reality, 3D world generation, avatar creation, spatial computing, VR development, AR development"
-      />
+       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */}
@@ -96,7 +56,7 @@ export default function AIMetaverseDevelopmentPlatform() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full">
-                <Globe className="w-8 h-8 text-white" />
+                <Globe className="w-8 h-8 text-white"  />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -112,7 +72,7 @@ export default function AIMetaverseDevelopmentPlatform() {
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
 
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </a>
               <a
                 href="#pricing"
@@ -139,7 +99,7 @@ export default function AIMetaverseDevelopmentPlatform() {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-indigo-400/50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
-                    <Brain className="w-6 h-6 text-white" />
+                    <Brain className="w-6 h-6 text-white"  />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature}</h3>
                 </div>
@@ -175,7 +135,7 @@ export default function AIMetaverseDevelopmentPlatform() {
                   <ul className="space-y-3 mb-8">
                     {tier.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                         {detail}
                       </li>
                     ))}
@@ -207,7 +167,7 @@ export default function AIMetaverseDevelopmentPlatform() {
               {useCases.map((useCase, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-indigo-400/50 transition-all duration-300">
                   <div className="w-10 h-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
-                    <TrendingUp className="w-5 h-5 text-white" />
+                    <TrendingUp className="w-5 h-5 text-white"  />
                   </div>
                   <h3 className="text-lg font-semibold text-white">{useCase}</h3>
                 </div>
@@ -231,7 +191,7 @@ export default function AIMetaverseDevelopmentPlatform() {
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Star className="w-4 h-4 text-white" />
+                    <Star className="w-4 h-4 text-white"  />
                   </div>
                   <p className="text-lg text-gray-300">{benefit}</p>
                 </div>
@@ -255,7 +215,7 @@ export default function AIMetaverseDevelopmentPlatform() {
               {industries.map((industry, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Eye className="w-8 h-8 text-white" />
+                    <Eye className="w-8 h-8 text-white"  />
                   </div>
                   <p className="text-sm text-gray-300">{industry}</p>
                 </div>
@@ -276,7 +236,7 @@ export default function AIMetaverseDevelopmentPlatform() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-6 h-6 text-white" />
+                  <Users className="w-6 h-6 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Contact Us</h3>
                 <p className="text-gray-300">Mobile: +1 302 464 0950</p>
@@ -284,14 +244,14 @@ export default function AIMetaverseDevelopmentPlatform() {
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-6 h-6 text-white" />
+                  <Globe className="w-6 h-6 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Our Site</h3>
                 <p className="text-gray-300">https://ziontechgroup.com</p>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-6 h-6 text-white" />
+                  <Shield className="w-6 h-6 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
                 <p className="text-gray-300">364 E Main St STE 1008</p>
@@ -303,11 +263,10 @@ export default function AIMetaverseDevelopmentPlatform() {
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
             >
               Get Started Today;
-              <ArrowRight className="ml-2 w-5 h-5" />;
+              <ArrowRight className="ml-2 w-5 h-5"  />;
             </a>;
           </div>;
         </section>;
       </div>;
     </>;
-  );
-}}}
+  )}}}

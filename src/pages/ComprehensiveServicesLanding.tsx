@@ -1,14 +1,6 @@
-import React from 'react.ts';
-import { SEO   } from '../components/SEO';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
 
 const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
-  const serviceCategories = [
-    {
-      name: "AI-Powered Micro SAAS Services",
-      description: "Cutting-edge AI solutions that transform business operations",
-      services[;
+  
         {
           title: "AI Code Review & Security",
           description: "Advanced vulnerability detection with 85% accuracy improvement",
@@ -118,18 +110,16 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
           pricing: "Custom pricing",
           icon: "📋"
         }
-      ];
-    };
+      ]};
   ];
 
   return (
     <>
-      <SEO
-        title = "Comprehensive Services | Zion Tech Group"
+      <SEO title = "Comprehensive Services | Zion Tech Group"
         description="Discover our complete range of services: AI-powered micro SAAS, cloud infrastructure, data analytics, security, and more. Transform your business with Zion Tech Group."
         keywords="Zion Tech Group services, AI services, cloud infrastructure, data analytics, cybersecurity, micro SAAS, business solutions"
         canonical="https://ziontechgroup.com/services"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

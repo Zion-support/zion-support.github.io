@@ -1,5 +1,3 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
 import {
   Brain,
   Zap,
@@ -23,19 +21,16 @@ import {
   MapPin,
   ExternalLink
 } from 'lucide-react';
-import { ADVANCED_INNOVATIVE_SERVICES_2026 } from "../data/advancedInnovativeServices2026";
 
 const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('innovation');
 
-  const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category));
-    return ['all', ...Array.from(cats)];
-  }, []);
+  
+    return ['all', ...Array.from(cats)]}, []);
 
-  const filtered = ADVANCED_INNOVATIVE_SERVICES_2026;
-
+  
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)}
@@ -46,8 +41,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      );
-    }
+      )}
 
     // Sort services
     filtered.sort((a, b) => {
@@ -66,34 +60,17 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
     return filtered}, [searchTerm, selectedCategory, sortBy]);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },;
-    visible: {;
+  
+    visible: {
       opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
+      transition: {
+        staggerChildren: 0.1}}};
 
-  const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
-
-},
-    visible: {;
+  
       y: 0,;
       opacity: 1,;
-      transition: {;
-        duration: 0.5;
-      };
-    };
-  };
+      transition: {
+        duration: 0.5}}};
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -263,7 +240,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
           <div className="flex flex-col lg:flex-row gap-4 items-center">
             {/* Search */}
             <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
               <input
                 type="text"
                 placeholder="Search innovative services..."
@@ -275,7 +252,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
             {/* Category Filter */}
             <div className="flex items-center gap-2">
-              <Filter className="text-slate-400 w-5 h-5" />
+              <Filter className="text-slate-400 w-5 h-5"  />
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
@@ -291,7 +268,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
             {/* Sort */}
             <div className="flex items-center gap-2">
-              <TrendingUp className="text-slate-400 w-5 h-5" />
+              <TrendingUp className="text-slate-400 w-5 h-5"  />
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
@@ -411,7 +388,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium group-hover:gap-3 transition-all duration-300"
 
-                  Learn More <ExternalLink className="w-4 h-4" />
+                  Learn More <ExternalLink className="w-4 h-4"  />
                 </a>
               </div>
             </motion.div>;
@@ -436,34 +413,13 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
         className="bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-indigo-900/20 border-t border-slate-700/50"
         initial = {
   { opacity: 0,
-  y: 50 ;
-
-
-
-
-
-
-}}
+  y: 50 }}
         animate = {
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
         transition = {
   { duration: 0.8,
-  delay: 1 ;
-
-
-
-
-
-
-}}
+  delay: 1 }}
       >
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-12">
@@ -478,7 +434,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">
-              <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4"  />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-slate-300 mb-3">Speak directly with our experts</p>
               <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 font-medium">
@@ -487,7 +443,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
             </div>
 
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">
-              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4"  />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-slate-300 mb-3">Send us a detailed message</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 font-medium">
@@ -496,7 +452,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
             </div>
 
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">
-              <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />
+              <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4"  />
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-slate-300 mb-3">Come see our innovation center</p>
               <p className="text-green-400 font-medium">
@@ -514,13 +470,12 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
 
               Visit Our Website
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5"  />
             </a>;
           </div>;
         </div>;
       </motion.div>;
     </div>;
-  );
-};
+  )};
 
-export default AdvancedInnovativeServicesShowcase2026;}}}}}}}}
+export default AdvancedInnovativeServicesShowcase2026}}}}}}}}

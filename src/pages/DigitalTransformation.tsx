@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
   Rocket,
   Zap,
@@ -25,23 +23,14 @@ import {
   Lock,
   Eye,
   Heart
- } from 'lucide-react';
-
-    };
+ } from 'lucide-react'};
       description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",;
       icon: Shield,;
       features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],;
-      color: "from-yellow-500 to-orange-500";
-    };
+      color: "from-yellow-500 to-orange-500"};
   ];
 
-  const transformationPhases = [
-    {
-      phase: "01",
-      title: "Discovery & Assessment",
-      description: "Evaluate current state, identify opportunities, and assess digital maturity",
-      duration: "2-4 weeks",
-      activities[;
+  
         "Current state analysis",
         "Digital maturity assessment",
         "Stakeholder interviews",
@@ -86,33 +75,17 @@ import {
         "Performance monitoring",;
         "Continuous optimization",;
         "Training and support";
-      ];
-    };
+      ]};
   ];
 
-  const testimonials = [
-    {
-      content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",
-      name: "Carlos Rodriguez",
-      role: "CEO, InnovateCorp",
-      rating: 5
-    },
-    {
-      content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",
-      name: "Lisa Chang",
-      role: "COO, TechFlow Solutions",
-      rating: 5
-    },
-    {
-    };
+  
       content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",;
       name: "Marcus Johnson",;
       role: "CTO, DigitalFirst Inc",;
-      rating: 5;
-    };
+      rating: 5};
   ];
 
-  const stats = [;
+  
     { number: "85%", label: "Average efficiency improvement" },;
     { number: "3.2x", label: "Faster time to market" },;
     { number: "40%", label: "Cost reduction achieved" },;
@@ -131,7 +104,7 @@ import {
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="flex justify-center mb-8">
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-              <Rocket className="w-12 h-12 text-white" />
+              <Rocket className="w-12 h-12 text-white"  />
             </div>
           </div>
 
@@ -263,7 +236,7 @@ import {
                 <div className="space-y-3">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <Check className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <Check className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -339,7 +312,7 @@ import {
                     <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{phase.description}</p>
 
                     <div className="flex items-center gap-2 text-zion-cyan text-sm mb-4">
-                      <Clock className="w-4 h-4" />
+                      <Clock className="w-4 h-4"  />
                       {phase.duration}
                     </div>
 
@@ -372,7 +345,7 @@ import {
                         <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: any</div>
                         {phase.activities.map((activity, activityIndex)  => (
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
-                            <Check className="w-3 h-3 text-zion-cyan" />
+                            <Check className="w-3 h-3 text-zion-cyan"  />
                             {activity}
                           </div>
                         ))}
@@ -436,7 +409,7 @@ import {
 
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-zion-cyan fill-current" />
+                    <Star key={i} className="w-5 h-5 text-zion-cyan fill-current"  />
                   ))}
                 </div>
 
@@ -474,7 +447,6 @@ import {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
-export default DigitalTransformation;}}}}
+export default DigitalTransformation}}}}

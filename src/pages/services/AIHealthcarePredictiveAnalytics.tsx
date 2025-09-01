@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { Heart, 
   Brain, 
   TrendingUp, 
@@ -42,61 +40,20 @@ import { Heart,
   Clipboard,
   TestTube
 } from 'lucide-react';
-import { SEO } from "../../components/SEO";
 
-export default function AIHealthcarePredictiveAnalytics(...args[]):  {
-  const contactInfo = {
-  phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-  ;
+export default function AIHealthcarePredictiveAnalytics(...args[]): {
   ;
   ;
   ;
   website: 'https://ziontechgroup.com';
-  ;
-
-
-
-
-
-
-};
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Disease Prediction',
-      description: 'Predict disease onset with 94% accuracy using advanced machine learning on patient data'
-    },
-    {
-      icon: Heart,
-      title: 'Early Risk Detection',
-      description: 'Identify high-risk patients before symptoms appear with predictive risk scoring'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Treatment Outcome Prediction',
-      description: 'Forecast treatment effectiveness and patient response with 89% accuracy'
-    },
-    {
-      icon: Users,
-      title: 'Population Health Analytics',
-      description: 'Analyze population health trends and identify at-risk demographics'
-    },
-    {
-      icon: Database,
-      title: 'Real-time Patient Monitoring',
-      description: 'Continuous monitoring and alerting for critical health indicators';
-    },;
+  }},;
     {;
       icon: BarChart3,;
       title: 'Advanced Clinical Insights',;
-      description: 'Generate actionable insights from complex medical data and research';
-    };
+      description: 'Generate actionable insights from complex medical data and research'};
   ];
 
-  const benefits = [;
+  
     'Reduce readmission rates by 35%',;
     'Improve early detection by 60%',;
     'Cut healthcare costs by 25%',;
@@ -105,13 +62,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
     'Enable proactive care delivery';
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$899',
-      period: '/month',
-      description: 'Perfect for small clinics and practices',
-      features[;
+  
         'Up to 1,000 patients',
         'Basic predictive analytics',
         'Standard risk scoring',
@@ -163,67 +114,20 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
         'Multi-tenant architecture';
       ],;
       cta: 'Contact Sales',;
-      popular: false;
-    };
-  ];
-
-  const clinicalApplications = [
-    {
-      title: 'Cardiology',
-      description: 'Predict heart disease risk and optimize cardiac care pathways',
-      icon: Heart
-    },
-    {
-      title: 'Oncology',
-      description: 'Early cancer detection and treatment response prediction',
-      icon: Microscope
-    },
-    {
-      title: 'Neurology',
-      description: 'Predict neurological disorders and cognitive decline',
-      icon: Brain
-    },
-    {
-      title: 'Emergency Medicine',
-      description: 'Triage optimization and critical care outcome prediction',
-      icon: AlertTriangle
-    },
-    {
-      title: 'Pediatrics',
-      description: 'Childhood disease prediction and growth monitoring',
-      icon: Users;
-    },;
+      popular: false};
+  ]},;
     {;
       title: 'Geriatrics',;
       description: 'Aging-related health decline prediction and prevention',;
-      icon: UserCheck;
-    };
-  ];
-
-  const useCases = [
-    {
-      title: 'Hospitals & Health Systems',
-      description: 'Comprehensive predictive analytics for large healthcare networks',
-      icon: Building
-    },
-    {
-      title: 'Specialty Clinics',
-      description: 'Focused predictive insights for specialized medical practices',
-      icon: Stethoscope
-    },
-    {
-      title: 'Research Institutions',
-      description: 'Advanced analytics for clinical research and drug development',
-      icon: TestTube;
-    },;
+      icon: UserCheck};
+  ]},;
     {;
       title: 'Insurance Companies',;
       description: 'Risk assessment and claims prediction for health insurers',;
-      icon: Shield;
-    };
+      icon: Shield};
   ];
 
-  const complianceFeatures = [;
+  
     'HIPAA Compliance',;
     'HITECH Act Support',;
     'SOC 2 Type II Certified',;
@@ -234,11 +138,10 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-      <SEO 
-        title="AI Healthcare Predictive Analytics Platform | Zion Tech Group"
+      <SEO title="AI Healthcare Predictive Analytics Platform | Zion Tech Group"
         description="Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy."
         keywords="AI healthcare analytics, predictive medicine, disease prediction, patient risk assessment, clinical analytics, healthcare AI"
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -267,7 +170,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
             transition={{ duration: 0.8 }}
 
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-100/10 border border-red-200/20 text-red-200 text-sm font-medium mb-6">
-              <Heart className="w-4 h-4 mr-2" />
+              <Heart className="w-4 h-4 mr-2"  />
               AI-Powered Healthcare Analytics
             </div>
 
@@ -536,7 +439,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
 
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <span className="text-slate-300 text-lg">{benefit}</span>
               </motion.div>;
             ))}
@@ -617,7 +520,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
                 viewport={{ once: true }}
                 className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-700/50 hover:border-red-500/50 transition-all duration-300"
 
-                <Shield className="w-8 h-8 text-red-400 mx-auto mb-2" />
+                <Shield className="w-8 h-8 text-red-400 mx-auto mb-2"  />
                 <span className="text-slate-300 font-medium text-sm">{feature}</span>
               </motion.div>;
             ))}
@@ -806,7 +709,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
@@ -911,17 +814,17 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-red-400 mb-3" />
+                <Phone className="w-8 h-8 text-red-400 mb-3"  />
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-slate-300">{contactInfo.phone}</p>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-red-400 mb-3" />
+                <Mail className="w-8 h-8 text-red-400 mb-3"  />
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-slate-300">{contactInfo.email}</p>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 text-red-400 mb-3" />
+                <MapPin className="w-8 h-8 text-red-400 mb-3"  />
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-slate-300">{contactInfo.address}</p>
               </div>
@@ -932,11 +835,10 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300"
 
               Get in Touch
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2"  />
             </a>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

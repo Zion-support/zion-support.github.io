@@ -1,16 +1,12 @@
-import React from 'react';
-import { SEO } from "../components/SEO";
-import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025 } from "../data/ultimateZionServices2025";
 
 const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
   return (
     <>
-      <SEO
-        title="Ultimate Zion Services 2025 - Revolutionary Micro SAAS, IT & AI Solutions"
+      <SEO title="Ultimate Zion Services 2025 - Revolutionary Micro SAAS, IT & AI Solutions"
         description="Discover Zion Tech Group's cutting-edge micro SAAS services, IT infrastructure solutions, and AI platforms. Transform your business with revolutionary technology solutions."
         keywords="micro SAAS, IT services, AI solutions, quantum computing, cybersecurity, data analytics, Zion Tech Group"
         canonical="https://ziontechgroup.com/ultimate-zion-services-2025"
-      />
+       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -447,7 +443,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
         </section>;
       </div>;
     </>;
-  );
-};
+  )};
 
 export default UltimateZionServicesShowcase2025;

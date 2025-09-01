@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
 import { Shield, 
   Eye, 
   AlertTriangle, 
@@ -24,139 +21,33 @@ import { Shield,
  } from 'lucide-react';
 
 export default function AICybersecurityThreatDetection(...args: []):  {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Threat Detection',
-      description: 'Advanced machine learning algorithms detect and analyze threats in real-time with 99.9% accuracy'
-    },
-    {
-      icon: Eye,
-      title: '24/7 Network Monitoring',
-      description: 'Continuous surveillance of your entire network infrastructure with instant alert systems'
-    },
-    {
-      icon: Shield,
-      title: 'Zero-Day Attack Prevention',
-      description: 'Predictive AI models identify and block unknown threats before they can cause damage'
-    },
-    {
-      icon: Activity,
-      title: 'Behavioral Analysis',
-      description: 'AI learns normal user patterns and flags suspicious activities automatically'
-    },
-    {
-      icon: Lock,
-      title: 'Automated Response',
-      description: 'Instant threat containment and remediation without human intervention';
+  
     },;
     {;
       icon: Zap,;
       title: 'Real-Time Intelligence',;
-      description: 'Live threat intelligence feeds and global attack pattern recognition';
-    };
+      description: 'Live threat intelligence feeds and global attack pattern recognition'};
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Essential',
-      price: '$499',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Up to 100 endpoints',
-        'Basic AI threat detection',
-        '24/7 monitoring',
-        'Email alerts',
-        'Basic reporting',
-        'Phone support',
-        'Standard integrations'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$1,299',
-      period: '/month',
-      description: 'Ideal for growing organizations',
-      features: [
-        'Up to 500 endpoints',
-        'Advanced AI algorithms',
-        'Behavioral analysis',
-        'Automated response',
-        'Custom dashboards',
-        'Priority support',
-        'Advanced integrations',
-        'Compliance reporting'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$2,999',
-      period: '/month',
-      description: 'For large enterprises',
-      features: [
-        'Unlimited endpoints',
-        'Full AI suite',
-        'Custom AI models',
-        'Dedicated security team',
-        'Advanced compliance',;
+  
         'On-premise options',;
         'SLA guarantees',;
         'Custom integrations';
       ],;
-      popular: false;
-    };
-  ];
-
-  const benefits = [
-    {
-      icon: Shield,
-      title: '99.9% Threat Detection Rate',
-      description: 'AI algorithms catch threats that traditional security tools miss'
-    },
-    {
-      icon: Clock,
-      title: 'Real-Time Response',
-      description: 'Threats are neutralized within seconds, not hours or days'
-    },
-    {
-      icon: Target,
-      title: 'Zero False Positives',
-      description: 'Advanced AI reduces alert fatigue with intelligent filtering';
-    },;
+      popular: false};
+  ]},;
     {;
       icon: BarChart3,;
       title: '60% Cost Reduction',;
-      description: 'Automated security reduces manual intervention and operational costs';
-    };
-  ];
-
-  const threatTypes = [
-    {
-      title: 'Ransomware Attacks',
-      description: 'AI detects encryption patterns and blocks ransomware before it can encrypt files',
-      icon: Lock
-    },
-    {
-      title: 'Phishing Attempts',
-      description: 'Machine learning identifies suspicious emails and URLs in real-time',
-      icon: Eye
-    },
-    {
-      title: 'DDoS Attacks',
-      description: 'Predictive AI blocks distributed attacks before they impact services',
-      icon: Network;
-    },;
+      description: 'Automated security reduces manual intervention and operational costs'};
+  ]},;
     {;
       title: 'Insider Threats',;
       description: 'Behavioral analysis detects unusual user activities and data access patterns',;
-      icon: Users;
-    };
+      icon: Users};
   ];
 
-  const complianceFrameworks = [;
+  
     'SOC 2 Type II',;
     'ISO 27001',;
     'GDPR',;
@@ -167,10 +58,9 @@ export default function AICybersecurityThreatDetection(...args: []):  {
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Cybersecurity Threat Detection - Zion Tech Group"
+      <SEO title="AI Cybersecurity Threat Detection - Zion Tech Group"
         description="Advanced AI-powered cybersecurity platform with 99.9% threat detection rate. Real-time monitoring, automated response, and zero-day attack prevention. Start from $499/month."
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -199,7 +89,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             transition={{ duration: 0.8 }}
 
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-600 to-orange-600 text-white text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
+              <Shield className="w-4 h-4 mr-2"  />
               AI-Powered Cybersecurity
             </div>
 
@@ -550,7 +440,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-red-500 transition-all duration-300"
 
-                <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
+                <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3"  />
                 <p className="text-white font-medium text-sm">{framework}</p>
               </motion.div>;
             ))}
@@ -655,7 +545,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"  />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -724,5 +614,4 @@ export default function AICybersecurityThreatDetection(...args: []):  {
         </div>;
       </section>;
     </div>;
-  );
-}}}}}}
+  )}}}}}}

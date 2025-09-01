@@ -1,4 +1,3 @@
-import React from 'react.ts';
 
 export default function Demo(...args: any[]): any {
   return (
@@ -8,5 +7,4 @@ export default function Demo(...args: any[]): any {
         <p className="text-slate-300">Schedule a live demonstration of our solutions.</p>
       </div>
     </div>
-  );
-}
+  )}

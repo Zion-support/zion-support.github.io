@@ -1,6 +1,3 @@
-import React from 'react.ts'
-import { SEO  } from '../../components/SEO'
-import { Bot, MessageSquare, Headphones, Zap, PieChart, CheckCircle2  } from 'lucide-react.ts'
 
 export default function AIAgentHelpdesk(...args: any[]): any {
   const features = [
@@ -18,11 +15,10 @@ export default function AIAgentHelpdesk(...args: any[]): any {
 
   return (
     <div className="min-h-screen bg-futuristic">
-      <SEO
-        title="AI Agent Helpdesk - Zion Tech Group"
+      <SEO title="AI Agent Helpdesk - Zion Tech Group"
         description="AI-powered customer support with autonomous triage, agent assist, and omnichannel messaging."
         canonical="https://ziontechgroup.com/services/customer-support-chatbot"
-      />
+       />
 
       <section className="relative pt-28 pb-16">
         <div className="container-responsive">

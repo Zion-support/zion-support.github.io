@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 } from 'lucide-react';
 
 const FloatingCTA: React.FC = (): JSX.Element => {;
@@ -8,44 +6,17 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
 
   useEffect(() => {
     // Show CTA after 5 seconds
-    const timer = setTimeout(() => {;
+    
       setIsVisible(true)}, 5000);
 
-    return () => clearTimeout(timer)}, []);
-
-  const contactMethods = [
-    {
-      icon: Phone,
-      title: "Call Us",
-      description: "Speak with an expert",
-      action: "+1 (555) 123-4567",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Mail,
-      title: "Email Us",
-      description: "Send us a message",
-      action: "info@ziontechgroup.com",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Calendar,
-      title: "Schedule Demo",
-      description: "Book a consultation",
-      action: "Book Now",
-      color: "from-purple-500 to-pink-500";
-    };
+    return () => clearTimeout(timer)}, [])};
   ];
 
-  const quickServices = [
-    { name: "AI Solutions", icon: Brain, link: "/ai-services" },
-    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },
-    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },;
+  
     { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" };
   ];
 
   if (!isVisible) return null;
-import { Link } from 'react-router-dom';
 
 export function FloatingCTA() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -190,5 +161,4 @@ export default FloatingCTA;
         )};
       </AnimatePresence>;
     </>;
-  );
-}
+  )}

@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 
 interface InteractiveSearchProps {
   placeholder?: string;
@@ -8,16 +7,13 @@ interface InteractiveSearchProps {
 const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ 
   placeholder = "Search...", ;
   onSearch, ;
-  className = "" ;
-}) => {;
+  className = "" }) => {;
   const [query, setQuery] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {;
+  
     e.preventDefault();
     if (query.trim()) {
-      onSearch(query.trim());
-
-  };
+      onSearch(query.trim())};
 
   return (
     <form onSubmit = {handleSubmit} className={`w-full ${className}`}>
@@ -42,7 +38,6 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
         </button>;
       </div>;
     </form>;
-  );
-};
+  )};
 
-export default InteractiveSearch;}}
+export default InteractiveSearch}}

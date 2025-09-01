@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
 import { Home,
   Search,
   ArrowLeft,
@@ -11,14 +8,7 @@ import { Home,
  } from 'lucide-react.ts';
 
 export function NotFoundPage(...args: any[]): any {
-  const popularPages = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'Services', href: '/services', icon: Zap },
-    { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-    { name: 'Contact', href: '/contact', icon: Cpu }
-  ];
-
+  
   return (
     <div className="min-h-screen py-8 flex items-center justify-center">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -45,7 +35,7 @@ export function NotFoundPage(...args: any[]): any {
           {/* Search Bar */}
           <div className="max-w-md mx-auto mb-12">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"  />
               <input
                 type="text"
                 placeholder="Search our website..."
@@ -89,7 +79,7 @@ export function NotFoundPage(...args: any[]): any {
               to="/"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              <Home className="w-5 h-5" />
+              <Home className="w-5 h-5"  />
               <span>Go Home</span>
             </Link>
             
@@ -97,7 +87,7 @@ export function NotFoundPage(...args: any[]): any {
               onClick={() => window.history.back()}
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-all duration-200 font-semibold text-lg border border-gray-700"
             >
-              <ArrowLeft className="w-5 h-5" />
+              <ArrowLeft className="w-5 h-5"  />
               <span>Go Back</span>
             </button>
           </div>
@@ -128,5 +118,4 @@ export function NotFoundPage(...args: any[]): any {
         </motion.div>
       </div>
     </div>
-  );
-}
+  )}

@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   DollarSign, 
   CheckCircle, 
@@ -58,149 +55,10 @@ import {
 } from 'lucide-react';
 
 export default function ComprehensivePricingGuide2025() {
-  const pricingTiers = [
-    {
-      name: 'Starter',
-      price: '$99',
-      period: 'month',
-      description: 'Perfect for small businesses and startups',
-      color: 'from-blue-500 to-cyan-500',
-      features: [
-        'AI Content Creation (5 articles/month)',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        'Standard Security',
-        '5GB Storage',
-        'Basic API Access'
-      ],
-      popular: false,
-      cta: 'Get Started',
-      href: '/request-quote'
-    },
-    {
-      name: 'Professional',
-      price: '$299',
-      period: 'month',
-      description: 'Ideal for growing businesses',
-      color: 'from-purple-500 to-pink-500',
-      features: [
-        'AI Content Creation (25 articles/month)',
-        'Advanced Analytics & Reporting',
-        'Priority Support',
-        'Enhanced Security',
-        '25GB Storage',
-        'Full API Access',
-        'Custom Integrations',
-        'Training Sessions'
-      ],
-      popular: true,
-      cta: 'Get Professional',
-      href: '/request-quote'
-    },
-    {
-      name: 'Enterprise',
-      price: '$999',
-      period: 'month',
-      description: 'For large organizations',
-      color: 'from-emerald-500 to-green-500',
-      features: [
-        'Unlimited AI Content Creation',
-        'Custom Analytics Platform',
-        '24/7 Dedicated Support',
-        'Enterprise Security',
-        'Unlimited Storage',
-        'Custom API Development',
-        'White-label Solutions',
-        'Dedicated Account Manager',
-        'Custom Training Programs',
-        'SLA Guarantees'
-      ],
-      popular: false,
-      cta: 'Contact Sales',
-      href: '/contact'
-    }
-  ];
-
-  const serviceCategories = [
-    {
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      services: [
-        { name: 'AI Content Creation', price: '$50-500', description: 'Per article or monthly package' },
-        { name: 'AI Business Intelligence', price: '$200-2000', description: 'Monthly subscription' },
-        { name: 'Machine Learning Models', price: '$500-5000', description: 'Custom development' },
-        { name: 'AI Automation', price: '$100-1000', description: 'Per workflow/month' }
-      ]
-    },
-    {
-      title: 'Cloud & Infrastructure',
-      icon: Cloud,
-      color: 'from-blue-500 to-cyan-500',
-      services: [
-        { name: 'Cloud Migration', price: '$1000-10000', description: 'One-time project' },
-        { name: 'DevOps Automation', price: '$200-2000', description: 'Monthly service' },
-        { name: 'Infrastructure Management', price: '$500-5000', description: 'Monthly service' },
-        { name: 'Security Audits', price: '$500-3000', description: 'Per audit' }
-      ]
-    },
-    {
-      title: 'Cybersecurity',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      services: [
-        { name: 'Security Assessment', price: '$1000-5000', description: 'Per assessment' },
-        { name: 'Penetration Testing', price: '$2000-10000', description: 'Per test' },
-        { name: 'Security Monitoring', price: '$200-2000', description: 'Monthly service' },
-        { name: 'Incident Response', price: '$500-5000', description: 'Per incident' }
-      ]
-    },
-    {
-      title: 'Data & Analytics',
-      icon: BarChart3,
-      color: 'from-green-500 to-emerald-500',
-      services: [
-        { name: 'Data Analytics Platform', price: '$300-3000', description: 'Monthly subscription' },
-        { name: 'Business Intelligence', price: '$500-5000', description: 'Monthly service' },
-        { name: 'Data Migration', price: '$1000-10000', description: 'One-time project' },
-        { name: 'Custom Dashboards', price: '$200-2000', description: 'Per dashboard' }
-      ]
-    }
-  ];
-
-  const industrySolutions = [
-    {
-      title: 'Healthcare',
-      icon: Heart,
-      color: 'from-red-500 to-pink-500',
-      pricing: 'Custom pricing based on patient volume and requirements'
-    },
-    {
-      title: 'Financial Services',
-      icon: TrendingUp,
-      color: 'from-green-500 to-blue-500',
-      pricing: 'Enterprise pricing with compliance requirements'
-    },
-    {
-      title: 'Manufacturing',
-      icon: Factory,
-      color: 'from-orange-500 to-red-500',
-      pricing: 'Volume-based pricing for production scale'
-    },
-    {
-      title: 'Retail & E-commerce',
-      icon: ShoppingCart,
-      color: 'from-purple-500 to-indigo-500',
-      pricing: 'Revenue-based pricing model'
-    }
-  ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
-
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -276,7 +134,7 @@ export default function ComprehensivePricingGuide2025() {
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
-                      <Star className="w-4 h-4" />
+                      <Star className="w-4 h-4"  />
                       Most Popular
                     </div>
                   </div>
@@ -296,7 +154,7 @@ export default function ComprehensivePricingGuide2025() {
                   <ul className="space-y-4 mb-8">
                     {tier.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />
                         <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
@@ -412,7 +270,7 @@ export default function ComprehensivePricingGuide2025() {
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm mt-4"
                 >
                   Get Custom Quote
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4"  />
                 </Link>
               </motion.div>
             ))}
@@ -432,7 +290,7 @@ export default function ComprehensivePricingGuide2025() {
           >
             <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-3xl p-12 border border-slate-600/50">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Calculator className="w-10 h-10 text-white" />
+                <Calculator className="w-10 h-10 text-white"  />
               </div>
               
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -460,7 +318,7 @@ export default function ComprehensivePricingGuide2025() {
                   to="/demo"
                   className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300"
                 >
-                  <Play className="w-5 h-5 inline mr-2" />
+                  <Play className="w-5 h-5 inline mr-2"  />
                   Schedule Demo
                 </Link>
               </div>
@@ -490,7 +348,7 @@ export default function ComprehensivePricingGuide2025() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-6 h-6 text-white" />
+                  <Phone className="w-6 h-6 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                 <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -500,7 +358,7 @@ export default function ComprehensivePricingGuide2025() {
               
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-6 h-6 text-white" />
+                  <Mail className="w-6 h-6 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                 <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -510,7 +368,7 @@ export default function ComprehensivePricingGuide2025() {
               
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-6 h-6 text-white" />
+                  <MapPin className="w-6 h-6 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-slate-300 text-sm">
@@ -522,5 +380,4 @@ export default function ComprehensivePricingGuide2025() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

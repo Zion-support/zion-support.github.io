@@ -1,5 +1,3 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
 import {
   Brain,
   Cpu,
@@ -27,9 +25,6 @@ import {
   ExternalLink,
   Search
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025";
-import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 interface Service {
 
   id: string;
@@ -59,9 +54,7 @@ contactInfo: {
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
-}
+    security: string[]}}
 const ComprehensiveServicesShowcase: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
@@ -72,60 +65,56 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
     ...EMERGING_TECH_SERVICES_2025
   ];
   // Get unique categories
-  const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-    return cats;
-  }, [allServices]);
+  
+    return cats}, [allServices]);
   // Get unique innovation levels
-  const innovationLevels = useMemo(() => {;
-    const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))];
+  
+    
     return levels}, [allServices]);
   // Filter services
-  const filteredServices = useMemo(() => {;
+  
     return allServices.filter(service => {;
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+      
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  const getCategoryIcon = (category: string)  => {
-    switch (category) {
-      case 'AI & Analytics':;
+  
       case 'AI & Customer Experience':;
       case 'AI & Supply Chain':;
       case 'AI & Legal Tech':;
       case 'AI & Healthcare':;
       case 'AI & Financial Services':;
       case 'AI & Content Marketing':;
-        return <Brain className="h-6 w-6" />;
+        return <Brain className="h-6 w-6"  />;
       case 'Cybersecurity & AI':
       case 'Cybersecurity & Quantum':
-        return <Shield className="h-6 w-6" />;
+        return <Shield className="h-6 w-6"  />;
       case 'Blockchain & Supply Chain':
-        return <Database className="h-6 w-6" />;
+        return <Database className="h-6 w-6"  />;
       case 'IoT & Edge Computing':
-        return <Network className="h-6 w-6" />;
+        return <Network className="h-6 w-6"  />;
       case 'Quantum Computing':
-        return <Cpu className="h-6 w-6" />;
+        return <Cpu className="h-6 w-6"  />;
       case 'AR/VR & Immersive Tech':
-        return <Eye className="h-6 w-6" />;
+        return <Eye className="h-6 w-6"  />;
       case '5G & Telecommunications':
-        return <Globe className="h-6 w-6" />;
+        return <Globe className="h-6 w-6"  />;
       case 'Space Technology':
-        return <Rocket className="h-6 w-6" />;
+        return <Rocket className="h-6 w-6"  />;
       case 'Neuromorphic Computing':
-        return <Brain className="h-6 w-6" />;
+        return <Brain className="h-6 w-6"  />;
       case 'Digital Twin & Simulation':
-        return <Settings className="h-6 w-6" />;
+        return <Settings className="h-6 w-6"  />;
       case 'Synthetic Biology':
-        return <Target className="h-6 w-6" />;
+        return <Target className="h-6 w-6"  />;
       case 'Brain-Computer Interface':
-        return <Brain className="h-6 w-6" />;
+        return <Brain className="h-6 w-6"  />;
       case 'Sustainability & Energy':
-        return <Zap className="h-6 w-6" />;
+        return <Zap className="h-6 w-6"  />;
       case 'Autonomous Vehicles & Fleet Management':
-        return <Rocket className="h-6 w-6" />;
+        return <Rocket className="h-6 w-6"  />;
       default:
-        return <Star className = "h-6 w-6" />};
-  };
+        return <Star className = "h-6 w-6"  />}};
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}
   };
   return (
@@ -142,12 +131,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               AI solutions, and emerging technology platforms designed to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
 
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <Link
                 to="/request-quote"
@@ -164,15 +152,15 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-wrap items-center justify-center gap-8 text-gray-700">
             <div className="flex items-center gap-2">
-              <Phone className="h-5 w-5 text-zion-cyan" />
+              <Phone className="h-5 w-5 text-zion-cyan"  />
               <span className="font-medium">+1 302 464 0950</span>
             </div>
             <div className="flex items-center gap-2">
-              <Mail className="h-5 w-5 text-zion-cyan" />
+              <Mail className="h-5 w-5 text-zion-cyan"  />
               <span className="font-medium">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center gap-2">
-              <Globe className="h-5 w-5 text-zion-cyan" />
+              <Globe className="h-5 w-5 text-zion-cyan"  />
               <a
                 href="https://ziontechgroup.com"
                 target="_blank"
@@ -183,7 +171,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               </a>
             </div>
             <div className="flex items-center gap-2">
-              <Target className="h-5 w-5 text-zion-cyan" />
+              <Target className="h-5 w-5 text-zion-cyan"  />
               <span className="font-medium">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
@@ -203,7 +191,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
-                <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
+                <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400"  />
               </div>
             </div>
             {/* Category Filter */}
@@ -302,11 +290,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
                   <div className="flex items-center gap-4 mt-4 text-sm text-gray-500">
                     <div className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
+                      <Clock className="h-4 w-4"  />
                       <span>{service.estimatedDelivery}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Users className="h-4 w-4" />
+                      <Users className="h-4 w-4"  />
                       <span>{service.supportLevel}</span>
                     </div>
                   </div>
@@ -327,7 +315,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   {/* Features */}
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-green-500" />
+                      <CheckCircle className="h-5 w-5 text-green-500"  />
                       Key Features
                     </h4>
                     <div className="grid grid-cols-1 gap-2">
@@ -347,7 +335,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   {/* Benefits */}
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                      <TrendingUp className="h-5 w-5 text-blue-500" />
+                      <TrendingUp className="h-5 w-5 text-blue-500"  />
                       Benefits
                     </h4>
                     <div className="space-y-2">
@@ -397,8 +385,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                 onClick={() => {;
                   setSelectedCategory('all');
                   setSelectedInnovationLevel('all');
-                  setSearchTerm('');
-                }}
+                  setSearchTerm('')}}
                 className = "text-zion-cyan hover:text-zion-cyan-light font-medium"
               >
                 Clear all filters
@@ -418,25 +405,22 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             Contact us today to discuss how we can help you achieve your goals.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
+            <Link to="/contact"
               className="inline-flex items-center px-8 py-3 bg-white text-zion-blue font-semibold rounded-lg hover:bg-gray-100 transition-colors"
 
               Contact Us
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5"  />
             </Link>
             <a
               href="tel:+13024640950"
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue transition-colors"
 
-              <Phone className="mr-2 h-5 w-5" />
+              <Phone className="mr-2 h-5 w-5"  />
               Call Now
             </a>;
           </div>;
         </div>;
       </section>;
     </div>;
-  );
-};
-export default ComprehensiveServicesShowcase;
-}}}}
+  )};
+export default ComprehensiveServicesShowcase}}}}

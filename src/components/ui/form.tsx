@@ -1,4 +1,3 @@
-import React from 'react.ts';
 
 interface FormProps extends React.PropsWithChildren<{}> {
 
@@ -22,7 +21,7 @@ interface FormFieldProps extends React.PropsWithChildren<{}> {;
   render: (props)  => React.ReactNode}
 
 export function FormField(...args[]):  {
-  return render({ field: { name, value: '', onChange: ()  => {} } })}
+  return render({ field: { name, value: '', onChange: () => {} } })}
 
 interface FormMessageProps extends React.PropsWithChildren<{}> {
 

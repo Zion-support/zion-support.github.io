@@ -1,14 +1,12 @@
 
-import React from 'react.ts';
 
 export default function AiSolutions(...args: any[]): any {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO 
-        title="AI Solutions - Zion Tech Group" 
+      <SEO title="AI Solutions - Zion Tech Group" 
         description="Explore our AI solutions including analytics, automation, and intelligent platforms."
-      />
+       />
       
       {/* Hero Section */}
       <section className="py-20">
@@ -79,7 +77,7 @@ export default function AiSolutions(...args: any[]): any {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -146,7 +144,7 @@ export default function AiSolutions(...args: any[]): any {
                 <ul className="space-y-2">
                   {solution.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />
                       {benefit}
                     </li>
                   ))}
@@ -319,7 +317,7 @@ export default function AiSolutions(...args: any[]): any {
 
                 {index < 3 && (
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <ArrowRight className="w-8 h-8 text-cyan-400" />
+                    <ArrowRight className="w-8 h-8 text-cyan-400"  />
                   </div>
                 )}
               </motion.div>
@@ -360,5 +358,4 @@ export default function AiSolutions(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}

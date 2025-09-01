@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Star, Users  } from 'lucide-react.ts';
 
 interface Testimonial {
 
@@ -9,15 +6,11 @@ interface Testimonial {
   role: string;
   company: string;
   rating: number;
-  avatar: string;
-
-}
+  avatar: string}
 
 interface TestimonialsProps extends React.PropsWithChildren<{}> {
 
-  testimonials: Testimonial[];
-
-}
+  testimonials: Testimonial[]}
 
 export function Testimonials(...args: any[]): any {
   return (
@@ -60,7 +53,7 @@ export function Testimonials(...args: any[]): any {
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.3, delay: i * 0.1 }}
                   >
-                    <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star className="w-5 h-5 text-yellow-400 fill-current"  />
                   </motion.div>
                 ))}
               </div>
@@ -80,7 +73,7 @@ export function Testimonials(...args: any[]): any {
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <Users className="w-6 h-6 text-white" />
+                  <Users className="w-6 h-6 text-white"  />
                 </motion.div>
                 <div>
                   <div className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
@@ -95,7 +88,6 @@ export function Testimonials(...args: any[]): any {
         </div>
       </div>
     </section>
-  );
-}
+  )}
 
 export default Testimonials;

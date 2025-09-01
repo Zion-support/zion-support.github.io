@@ -1,9 +1,3 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Progress } from './ui/progress';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import {
   User,
   Settings,
@@ -30,8 +24,7 @@ interface UserPreference {
   type: 'boolean' | 'string' | 'number' | 'select';
   options?: string[];
   category: 'appearance' | 'accessibility' | 'performance' | 'language';
-  description: string;
-}
+  description: string}
 
 interface UserActivity {
   id: string;
@@ -39,16 +32,14 @@ interface UserActivity {
   timestamp: Date;
   duration?: number;
   success: boolean;
-  category: 'navigation' | 'interaction' | 'search' | 'purchase';
-}
+  category: 'navigation' | 'interaction' | 'search' | 'purchase'}
 
 interface AccessibilityFeature {
   id: string;
   name: string;
   enabled: boolean;
   description: string;
-  impact: 'high' | 'medium' | 'low';
-}
+  impact: 'high' | 'medium' | 'low'}
 
 const InteractiveUserExperience: React.FC = () => {
   const [preferences, setPreferences] = useState<UserPreference[]>([]);
@@ -158,52 +149,26 @@ const InteractiveUserExperience: React.FC = () => {
     setPreferences(samplePreferences);
     setUserActivities(sampleActivities);
     setAccessibilityFeatures(sampleAccessibility);
-    setIsLoading(false);
-  }, []);
+    setIsLoading(false)}, [])}, [])}, []);
 
-  const updatePreference = useCallback((id: string, value: string | boolean | number) => {
-    setPreferences(prev => 
-      prev.map(pref => 
-        pref.id === id ? { ...pref, value } : pref
-      )
-    );
-  }, []);
-
-  const toggleAccessibilityFeature = useCallback((id: string) => {
-    setAccessibilityFeatures(prev => 
-      prev.map(feature => 
-        feature.id === id ? { ...feature, enabled: !feature.enabled } : feature
-      )
-    );
-  }, []);
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'appearance': return <Palette className="w-4 h-4" />;
-      case 'accessibility': return <Accessibility className="w-4 h-4" />;
-      case 'performance': return <Zap className="w-4 h-4" />;
-      case 'language': return <Languages className="w-4 h-4" />;
-      default: return <Settings className="w-4 h-4" />;
-    }
+  
+      case 'accessibility': return <Accessibility className="w-4 h-4"  />;
+      case 'performance': return <Zap className="w-4 h-4"  />;
+      case 'language': return <Languages className="w-4 h-4"  />;
+      default: return <Settings className="w-4 h-4"  />}
   };
 
-  const getActivityIcon = (category: string) => {
-    switch (category) {
-      case 'navigation': return <MousePointer className="w-4 h-4" />;
-      case 'interaction': return <User className="w-4 h-4" />;
-      case 'search': return <Eye className="w-4 h-4" />;
-      case 'purchase': return <ShoppingCart className="w-4 h-4" />;
-      default: return <Activity className="w-4 h-4" />;
-    }
+  
+      case 'interaction': return <User className="w-4 h-4"  />;
+      case 'search': return <Eye className="w-4 h-4"  />;
+      case 'purchase': return <ShoppingCart className="w-4 h-4"  />;
+      default: return <Activity className="w-4 h-4"  />}
   };
 
-  const getImpactColor = (impact: string) => {
-    switch (impact) {
-      case 'high': return 'bg-red-500';
+  
       case 'medium': return 'bg-yellow-500';
       case 'low': return 'bg-blue-500';
-      default: return 'bg-gray-500';
-    }
+      default: return 'bg-gray-500'}
   };
 
   if (isLoading) {
@@ -214,15 +179,14 @@ const InteractiveUserExperience: React.FC = () => {
           <p className="text-gray-600">Loading user experience settings...</p>
         </div>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-          <User className="w-6 h-6 text-white" />
+          <User className="w-6 h-6 text-white"  />
         </div>
         <div>
           <h2 className="text-2xl font-bold">Interactive User Experience</h2>
@@ -295,7 +259,7 @@ const InteractiveUserExperience: React.FC = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <TrendingUp className="w-5 h-5" />
+                <TrendingUp className="w-5 h-5"  />
                 Recent User Activities
               </CardTitle>
             </CardHeader>
@@ -336,7 +300,7 @@ const InteractiveUserExperience: React.FC = () => {
               <Card key={feature.id}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Accessibility className="w-5 h-5" />
+                    <Accessibility className="w-5 h-5"  />
                     {feature.name}
                   </CardTitle>
                 </CardHeader>
@@ -367,7 +331,6 @@ const InteractiveUserExperience: React.FC = () => {
         </TabsContent>
       </Tabs>
     </div>
-  );
-};
+  )};
 
 export { InteractiveUserExperience };

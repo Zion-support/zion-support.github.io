@@ -1,11 +1,6 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { MessageCircle, Heart, Headphones, CheckCircle, Zap, Sparkles, ArrowRight, Bot, Users, Star, Clock, TrendingUp  } from 'lucide-react.ts';
 
 export default function AICustomerExperienceSupport(...args: any[]): any {
-  const features = [
-    'AI-powered chatbot with 95% accuracy and natural language processing',
-    'Intelligent ticket routing and priority classification',;
+  
     'Automated customer sentiment analysis and satisfaction tracking',;
     'Multi-channel support integration (email, chat, phone, social media)',;
     'Predictive customer behavior analysis and proactive support',;
@@ -14,7 +9,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
     'Integration with CRM, helpdesk, and e-commerce platforms',;
   ];
 
-  const benefits = [;
+  
     'Increase customer satisfaction scores by 35-50%',;
     'Reduce support response time by 80% with AI automation',;
     'Cut support costs by 40-60% through intelligent automation',;
@@ -23,11 +18,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
     'Achieve 99.9% support ticket resolution rate',;
   ];
 
-  const supportChannels = [
-    'Live Chat & Messaging',
-    'Email Support Automation',
-    'Phone Support Integration',
-    'Social Media Monitoring',;
+  
     'Self-Service Knowledge Base',;
     'Video Call Support',;
     'Mobile App Support',;
@@ -36,11 +27,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
     'SMS Support Automation',;
   ];
 
-  const aiCapabilities = [
-    'Natural Language Processing',
-    'Sentiment Analysis',
-    'Intent Recognition',
-    'Automated Responses',;
+  
     'Smart Escalation',;
     'Predictive Analytics',;
     'Customer Segmentation',;
@@ -49,11 +36,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
     'Performance Optimization',;
   ];
 
-  const integrations = [
-    'Salesforce Service Cloud',
-    'Zendesk Support',
-    'HubSpot Service Hub',
-    'Intercom',;
+  
     'Freshdesk',;
     'Shopify',;
     'WooCommerce',;
@@ -62,9 +45,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
     'Microsoft Teams',;
   ];
 
-  const stack = [
-    { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },
-    { name: 'Dialogflow', url: 'https://cloud.google.com/dialogflow' },;
+  
     { name: 'Twilio', url: 'https://www.twilio.com/' },;
     { name: 'Intercom', url: 'https://www.intercom.com/' },;
     { name: 'Zendesk', url: 'https://www.zendesk.com/' },;
@@ -88,7 +69,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
                 Get Support Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Visit Site
@@ -108,14 +89,14 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
             <div className="flex items-center mb-4">
               <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
-                <Bot className="h-8 w-8 text-white" />
+                <Bot className="h-8 w-8 text-white"  />
               </div>
               <h3 className="ml-3 text-xl font-semibold text-white">AI Features</h3>
             </div>
             <ul className="space-y-3">
               {features.slice(0, 4).map((item) => (
                 <li key={item} className="flex items-center text-slate-300">
-                  <CheckCircle className="h-5 w-5 text-cyan-400 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-cyan-400 mr-3"  />
                   {item}
                 </li>
               ))}
@@ -125,14 +106,14 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
             <div className="flex items-center mb-4">
               <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg">
-                <Headphones className="h-8 w-8 text-white" />
+                <Headphones className="h-8 w-8 text-white"  />
               </div>
               <h3 className="ml-3 text-xl font-semibold text-white">Support Channels</h3>
             </div>
             <ul className="space-y-3">
               {supportChannels.slice(0, 5).map((item) => (
                 <li key={item} className="flex items-center text-slate-300">
-                  <CheckCircle className="h-5 w-5 text-purple-400 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-purple-400 mr-3"  />
                   {item}
                 </li>
               ))}
@@ -142,7 +123,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
             <div className="flex items-center mb-4">
               <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg">
-                <Zap className="h-8 w-8 text-white" />
+                <Zap className="h-8 w-8 text-white"  />
               </div>
               <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
             </div>
@@ -165,7 +146,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">
               <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center">
-                <Bot className="h-6 w-6 text-white" />
+                <Bot className="h-6 w-6 text-white"  />
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">AI Chatbot</h4>
               <p className="text-slate-300 text-sm">
@@ -174,7 +155,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
             </div>
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">
               <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center">
-                <Heart className="h-6 w-6 text-white" />
+                <Heart className="h-6 w-6 text-white"  />
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Sentiment Analysis</h4>
               <p className="text-slate-300 text-sm">
@@ -183,7 +164,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
             </div>
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">
               <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center">
-                <TrendingUp className="h-6 w-6 text-white" />
+                <TrendingUp className="h-6 w-6 text-white"  />
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Analytics</h4>
               <p className="text-slate-300 text-sm">
@@ -192,7 +173,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
             </div>
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">
               <div className="p-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center">
-                <Users className="h-6 w-6 text-white" />
+                <Users className="h-6 w-6 text-white"  />
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Multi-Channel</h4>
               <p className="text-slate-300 text-sm">
@@ -248,7 +229,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
               Start Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5"  />
             </Link>
             <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
               Call +1 302 464 0950
@@ -260,5 +241,4 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

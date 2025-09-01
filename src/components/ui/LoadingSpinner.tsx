@@ -1,12 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { cn } from '../../utils/cn';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: string;
-  text?: string;
-}
+  text?: string}
 
 export default function LoadingSpinner({
   size = 'md',
@@ -14,8 +10,7 @@ export default function LoadingSpinner({
   className = '',
   showText = false,
   text = 'Loading...'
-  className?: string;
-}
+  className?: string}
 
 export function LoadingSpinner({ 
   size = 'md', 
@@ -23,20 +18,8 @@ export function LoadingSpinner({
   text,
   className = '' 
 }: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-12 h-12',
-    lg: 'w-16 h-16',
-    xl: 'w-20 h-20'
-  };
-
-  const textSizes = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg',
-    xl: 'text-xl'
-  };
-
+  
+  
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <motion.div
@@ -73,20 +56,8 @@ export function LoadingDots({
   text,
   className = ''
 }: LoadingSpinnerProps) {
-  const dotSizes = {
-    sm: 'w-2 h-2',
-    md: 'w-3 h-3',
-    lg: 'w-4 h-4',
-    xl: 'w-5 h-5'
-  };
-
-  const textSizes = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg',
-    xl: 'text-xl'
-  };
-
+  
+  
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <div className="flex space-x-2">
@@ -121,8 +92,7 @@ export function LoadingDots({
       
       <span className="sr-only">Loading...</span>
     </div>
-  );
-}
+  )}
 
 // Skeleton loading component
 export function LoadingSkeleton({ 
@@ -130,8 +100,7 @@ export function LoadingSkeleton({
   className = ''
 }: { 
   lines?: number;
-  className?: string;
-}) {
+  className?: string}) {
   return (
     <div className={`space-y-3 ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
@@ -155,11 +124,10 @@ export function ButtonLoader({
   className = '' 
 }: { 
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  className?: string;
-}) {
+  className?: string}) {
   return (
     <div className={cn('inline-flex items-center', className)}>
-      <LoadingSpinner size={size} color="white" />
+      <LoadingSpinner size={size} color="white"  />
       <span className="ml-2">Loading...</span>
     </div>
   );
@@ -170,16 +138,14 @@ export function PageLoaderOverlay({
   className = '' 
 }: { 
   text?: string;
-  className?: string;
-}) {
+  className?: string}) {
   return (
     <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 ${className}`}>
       <div className="bg-white rounded-lg p-6 shadow-xl">
-        <LoadingSpinner size="lg" text={text} />
+        <LoadingSpinner size="lg" text={text}  />
       </div>
     </div>
-  );
-}
+  )}
 
 // Full page loading component
 export function FullPageLoader({ 
@@ -187,8 +153,7 @@ export function FullPageLoader({
   className = ''
 }: {
   text?: string;
-  className?: string;
-}) {
+  className?: string}) {
   return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center ${className}`}>
       <div className="text-center text-white">
@@ -227,15 +192,8 @@ export function ContentPlaceholder({
   variant = 'default'
 }: {
   className?: string;
-  variant?: 'default' | 'card' | 'list' | 'grid';
-}) {
-  const variants = {
-    default: 'space-y-4',
-    card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
-    list: 'space-y-3',
-    grid: 'grid grid-cols-2 md:grid-cols-4 gap-4'
-  };
-
+  variant?: 'default' | 'card' | 'list' | 'grid'}) {
+  
   return (
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
@@ -298,8 +256,7 @@ export function ContentPlaceholder({
 
 // Enhanced app loading spinner for main app loading
 export function AppLoadingSpinner() {
-  const icons = ['🤖', '☁️', '🔒', '💡'];
-
+  
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="relative">
@@ -374,5 +331,4 @@ export function AppLoadingSpinner() {
         ))}
       </div>
     </div>
-  );
-}
+  )}

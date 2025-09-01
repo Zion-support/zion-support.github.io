@@ -1,4 +1,3 @@
-import React from 'react.ts';
 
 interface CheckboxProps extends React.PropsWithChildren<{}> {
 
@@ -20,5 +19,4 @@ export function Checkbox(...args[]):  {
       />;
       {label && <span className="text-sm text-gray-700">{label}</span>};
     </label>;
-  );
-}
+  )}

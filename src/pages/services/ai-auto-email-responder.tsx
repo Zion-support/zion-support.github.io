@@ -1,7 +1,3 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
 
 export default function AIAutoEmailResponder(...args: []):  {
   return (
@@ -19,7 +15,7 @@ export default function AIAutoEmailResponder(...args: []):  {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-8">
-                <Mail className="w-4 h-4 mr-2" />
+                <Mail className="w-4 h-4 mr-2"  />
                 AI-Powered Email Automation
               </div>
 
@@ -34,15 +30,14 @@ export default function AIAutoEmailResponder(...args: []):  {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
+                <Link to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl"
 
                   Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
-                  <Play className="mr-2 w-5 h-5" />
+                  <Play className="mr-2 w-5 h-5"  />
                   Watch Demo
                 </button>
               </div>
@@ -168,7 +163,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                   <ul className="space-y-1">
                     {useCase.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-blue-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
+                        <CheckCircle className="w-3 h-3 mr-2"  />
                         {benefit}
                       </li>
                     ))}
@@ -250,7 +245,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                     "Provide 24/7 customer support and communication"
                   ].map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{benefit}</span>
                     </div>
                   ))}
@@ -337,7 +332,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                   <ul className="space-y-1">
                     {integration.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-sm text-blue-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
+                        <CheckCircle className="w-3 h-3 mr-2"  />
                         {feature}
                       </li>
                     ))}
@@ -358,12 +353,11 @@ export default function AIAutoEmailResponder(...args: []):  {
               Transform your email communication with AI-powered automation and intelligent responses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200"
 
                 Schedule a Demo
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
@@ -376,5 +370,4 @@ export default function AIAutoEmailResponder(...args: []):  {
         </section>;
       </div>;
     </>;
-  );
-}}}}}}
+  )}}}}}}

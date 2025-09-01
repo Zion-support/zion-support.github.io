@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Rocket,
   Brain,
@@ -35,15 +33,7 @@ import {
  } from 'lucide-react';
 
 const InnovativeServicesHub: React.FC = (): JSX.Element => {
-  const serviceCategories = [
-    {
-      id: 'ultimate-2025',
-      title: 'Ultimate Innovative Services 2025',
-      description: 'Revolutionary micro SAAS, IT, and AI services that push the boundaries of technology',
-      icon: Rocket,
-      color: 'from-blue-600 to-purple-600',
-      route: '/ultimate-services-2025',
-      features['AI-Powered Solutions', 'Quantum Computing', 'Blockchain Innovation', 'Edge Computing'],;
+  
       stats: { services: 10, avgROI: '500%', innovation: 'Revolutionary' }
     },
     {
@@ -75,65 +65,28 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       color: 'from-emerald-600 to-green-600',;
       route: '/green-it',;
       features: ['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],;
-      stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' };
-    };
+      stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' }};
   ];
 
-  const featuredServices = [
-    {
-      title: 'Quantum AI Neural Networks',
-      description: 'Revolutionary AI powered by quantum computing principles',
-      category: 'AI & Quantum',
-      price: '$50,000',
-      roi: '800%',
-      delivery: '6 months'
-    },
-    {
-      title: 'Brain-Computer Interface Platform',
-      description: 'Direct neural interface for human-computer interaction',
-      category: 'Neurotech',
-      price: '$100,000',
-      roi: '1200%',
-      delivery: '12 months'
-    },
-    {
-      title: 'Autonomous Space Mining System',;
+  
       description: 'AI-powered space exploration and resource extraction',;
       category: 'Space Tech',;
       price: '$500,000',;
       roi: '2000%',;
-      delivery: '18 months';
-    };
+      delivery: '18 months'};
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },;
-    visible: {;
+  
+    visible: {
       opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
+      transition: {
+        staggerChildren: 0.1}}};
 
-  const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
-
-},
-    visible: {;
+  
       y: 0,;
       opacity: 1,;
-      transition: {;
-        duration: 0.5;
-      };
-    };
-  };
+      transition: {
+        duration: 0.5}}};
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -337,7 +290,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
           {serviceCategories.map((category) => {;
-            const IconComponent = category.icon;
+            
             return (
               <motion.div
                 key = {category.id}
@@ -356,7 +309,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color}`}>
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-white"  />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors mb-2">
@@ -402,11 +355,10 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
                   className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3"
                 >;
                   Explore {category.title};
-                  <ArrowRight className="w-5 h-5" />;
+                  <ArrowRight className="w-5 h-5"  />;
                 </a>;
               </motion.div>;
-            );
-          })}
+            )})}
         </div>
       </motion.div>
 
@@ -473,7 +425,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 }}
             >
               <div className="flex items-center gap-2 mb-3">
-                <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                <Star className="w-5 h-5 text-yellow-400 fill-current"  />
                 <span className="text-sm text-yellow-400 font-medium">Featured</span>
               </div>
 
@@ -512,34 +464,13 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
         className="bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20 border-t border-slate-700/50"
         initial = {
   { opacity: 0,
-  y: 50 ;
-
-
-
-
-
-
-}}
+  y: 50 }}
         animate = {
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
         transition = {
   { duration: 0.8,
-  delay: 1.6 ;
-
-
-
-
-
-
-}}
+  delay: 1.6 }}
       >
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-12">
@@ -554,7 +485,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">
-              <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4"  />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-slate-300 mb-3">Speak directly with our experts</p>
               <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 font-medium">
@@ -563,7 +494,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
             </div>
 
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">
-              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4"  />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-slate-300 mb-3">Send us a detailed message</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 font-medium">
@@ -572,7 +503,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
             </div>
 
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">
-              <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />
+              <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4"  />
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-slate-300 mb-3">Come see our innovation center</p>
               <p className="text-green-400 font-medium">
@@ -590,13 +521,12 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25"
 
               Visit Our Website
-              <ExternalLink className="w-5 h-5" />
+              <ExternalLink className="w-5 h-5"  />
             </a>;
           </div>;
         </div>;
       </motion.div>;
     </div>;
-  );
-};
+  )};
 
-export default InnovativeServicesHub;}}}}}}}
+export default InnovativeServicesHub}}}}}}}

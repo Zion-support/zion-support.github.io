@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { X  } from 'lucide-react';
 
 interface Filter {
 
@@ -18,5 +16,4 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
         Clear all;
       </button>;
     </div>;
-  );
-}
+  )}

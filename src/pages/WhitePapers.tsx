@@ -1,179 +1,21 @@
 
 
-import React, { useState } from 'react';
-import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
-import SEO from '@/components/SEO';
 
 export default function WhitePapers() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('newest');
-
-  const categories = [
-    { id: 'all', name: 'All Categories', icon: <FileText className="w-5 h-5" />, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },
-    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 6 }
-  ];
-
-  const sortOptions = [
-    { value: 'newest', label: 'Newest First' },
-    { value: 'popular', label: 'Most Popular' },
-    { value: 'alphabetical', label: 'Alphabetical' },
-    { value: 'downloads', label: 'Most Downloaded' }
-  ];
-
-  const whitePapers = [
-    {
-      id: 1,
-      title: 'The Future of AI in Enterprise: 2025 and Beyond',
-      description: 'Comprehensive analysis of AI adoption trends, challenges, and opportunities in enterprise environments. Learn how organizations can leverage AI for competitive advantage.',
-      category: 'ai-ml',
-      author: 'Dr. Sarah Chen, AI Research Director',
-      publishDate: '2025-01-25',
-      readTime: '35 min',
-      downloads: 18750,
-      rating: 4.9,
-      featured: true,
-      tags: ['AI Research', 'Autonomous Systems', 'Business Intelligence', 'Innovation'],
-      coverImage: '/images/whitepapers/ai-autonomous-research.jpg',
-      fileSize: '3.2 MB',
-      language: 'English'
-    },
-    {
-      id: 2,
-      title: 'AI Supply Chain Optimization: Reducing Costs by Up to 30%',
-      description: 'Strategic guide on implementing AI-powered supply chain optimization solutions that predict demand, optimize inventory, and significantly reduce operational costs.',
-      category: 'ai-ml',
-      author: 'Michael Rodriguez, Supply Chain AI Specialist',
-      publishDate: '2025-01-23',
-      readTime: '28 min',
-      downloads: 16230,
-      rating: 4.8,
-      featured: true,
-      tags: ['Supply Chain', 'AI Optimization', 'Cost Reduction', 'Predictive Analytics'],
-      coverImage: '/images/whitepapers/ai-supply-chain-optimization.jpg',
-      fileSize: '2.8 MB',
-      language: 'English'
-    },
-    {
-      id: 4,
-      title: 'Data-Driven Decision Making: Analytics for the Modern Enterprise',
-      description: 'Explore how organizations can leverage data analytics to drive strategic decisions and improve business outcomes.',
-      category: 'data',
-      author: 'Dr. Robert Kim, Data Science Director',
-      publishDate: '2025-01-12',
-      readTime: '28 min',
-      downloads: 11230,
-      rating: 4.6,
-      featured: false,
-      tags: ['Data Analytics', 'Business Intelligence', 'Decision Making', 'Strategy'],
-      coverImage: '/images/whitepapers/data-driven-decisions.jpg',
-      fileSize: '2.6 MB',
-      language: 'English'
-    },
-    {
-      id: 5,
-      title: 'Quantum Computing: Preparing for the Next Computing Revolution',
-      description: 'Understanding quantum computing fundamentals and preparing organizations for quantum advantage.',
-      category: 'emerging',
-      author: 'Dr. Elena Vasquez, Quantum Research Lead',
-      publishDate: '2025-01-10',
-      readTime: '40 min',
-      downloads: 7560,
-      rating: 4.9,
-      featured: true,
-      tags: ['Quantum Computing', 'Emerging Tech', 'Future Computing', 'Innovation'],
-      coverImage: '/images/whitepapers/quantum-computing.jpg',
-      fileSize: '3.5 MB',
-      language: 'English'
-    },
-    {
-      id: 6,
-      title: 'Digital Transformation ROI: Measuring Success in the Digital Age',
-      description: 'Framework for measuring and maximizing return on investment in digital transformation initiatives.',
-      category: 'strategy',
-      author: 'David Thompson, Digital Strategy Director',
-      publishDate: '2025-01-08',
-      readTime: '22 min',
-      downloads: 8930,
-      rating: 4.5,
-      featured: false,
-      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],
-      coverImage: '/images/whitepapers/digital-transformation-roi.jpg',
-      fileSize: '2.2 MB',
-      language: 'English',
-      rating: 4.5,
-      featured: false,
-      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],
-      coverImage: '/images/whitepapers/digital-transformation-roi.jpg',
-      fileSize: '2.2 MB',
-      language: 'English'
-    }
-  ];
-
-  const featuredInsights = [
-    {
-      title: 'AI Adoption Trends 2025',
-      description: 'Key insights from our latest research on enterprise AI adoption',
-      icon: <TrendingUp className="w-6 h-6" />,
-      link: '/insights/ai-adoption-2025'
-    },
-    {
-      title: 'Cybersecurity Landscape Report',
-      description: 'Current threats and emerging security challenges',
-      icon: <Shield className="w-6 h-6" />,
-      link: '/insights/cybersecurity-2025'
-    },
-    {
-      title: 'Cloud Migration Success Stories',
-      description: 'Real-world examples of successful cloud transformations',
-      icon: <Cloud className="w-6 h-6" />,
-      link: '/insights/cloud-success-stories'
-    }
-  ];
-
-  const getCategoryCount = (categoryId: string) => {
-    if (categoryId === 'all') {
-      return whitePapers.length;
-    }
-    return whitePapers.filter(paper => paper.category === categoryId).length;
-  };
+  const [sortBy, setSortBy] = useState('newest')}
+    return whitePapers.filter(paper => paper.category === categoryId).length};
 
   // Update counts
   categories.forEach(cat => {
-    cat.count = getCategoryCount(cat.id);
-  });
+    cat.count = getCategoryCount(cat.id)});
 
-  const filteredPapers = whitePapers.filter(paper => {
-    const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+  
     
-    const matchesCategory = activeCategory === 'all' || paper.category === activeCategory;
-    
-    return matchesSearch && matchesCategory;
-  });
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
-  const formatDownloads = (downloads: number) => {
-    if (downloads >= 1000000) {
-      return (downloads / 1000000).toFixed(1) + 'M';
-    } else if (downloads >= 1000) {
-      return (downloads / 1000).toFixed(1) + 'K';
-    }
-    return downloads.toString();
-  };
+    return matchesSearch && matchesCategory})}} else if (downloads >= 1000) {
+      return (downloads / 1000).toFixed(1) + 'K'}
+    return downloads.toString()};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -182,7 +24,7 @@ export default function WhitePapers() {
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-6">
             <div className="p-4 bg-zion-cyan/20 rounded-full">
-              <FileText className="w-16 h-16 text-zion-cyan" />
+              <FileText className="w-16 h-16 text-zion-cyan"  />
             </div>
           </div>
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -200,7 +42,7 @@ export default function WhitePapers() {
           <div className="max-w-6xl mx-auto">
             {/* Search Bar */}
             <div className="relative mb-8">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"  />
               <input
                 type="text"
                 value={searchQuery}
@@ -259,7 +101,7 @@ export default function WhitePapers() {
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
             <div className="relative w-full lg:w-96">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400"  />
               <input
                 type="text"
                 placeholder="Search white papers..."
@@ -315,7 +157,7 @@ export default function WhitePapers() {
                   className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium text-sm"
                 >
                   Read More
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4"  />
                 </a>
               </div>
             ))}
@@ -351,7 +193,7 @@ export default function WhitePapers() {
                       )}
                     </div>
                     <div className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <Calendar className="w-4 h-4" />
+                      <Calendar className="w-4 h-4"  />
                       {formatDate(paper.publishDate)}
                     </div>
                   </div>
@@ -373,16 +215,16 @@ export default function WhitePapers() {
                   <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
+                        <Users className="w-4 h-4"  />
                         {paper.author}
                       </div>
                       <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
+                        <Clock className="w-4 h-4"  />
                         {paper.readTime}
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-400 fill-current"  />
                       {paper.rating}
                     </div>
                   </div>
@@ -390,17 +232,17 @@ export default function WhitePapers() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                       <div className="flex items-center gap-1">
-                        <Download className="w-4 h-4" />
+                        <Download className="w-4 h-4"  />
                         {formatDownloads(paper.downloads)} downloads
                       </div>
                       <div className="flex items-center gap-1">
-                        <FileText className="w-4 h-4" />
+                        <FileText className="w-4 h-4"  />
                         {paper.fileSize}
                       </div>
                     </div>
 
                     <button className="bg-zion-cyan text-zion-slate-dark px-6 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors inline-flex items-center gap-2">
-                      <Download className="w-4 h-4" />
+                      <Download className="w-4 h-4"  />
                       Download
                     </button>
                   </div>
@@ -409,7 +251,7 @@ export default function WhitePapers() {
             </div>
           ) : (
             <div className="text-center py-12">
-              <FileText className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
+              <FileText className="w-16 h-16 text-zion-slate-light mx-auto mb-4"  />
               <h3 className="text-xl font-semibold text-white mb-2">No white papers found</h3>
               <p className="text-zion-slate-light">
                 Try adjusting your search terms or browse all categories
@@ -441,5 +283,4 @@ export default function WhitePapers() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

@@ -66,25 +66,14 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
         mobile: string;
         email: string;
         address: string;
-        website: string;
-    };
+        website: string};
 
-const CONTACT = {
-  mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
+
   ;
   ;
   ;
   ;
   website: 'https://ziontechgroup.com';
-;
-
-
-
-
-
-
 };
 
 export const enhancedServices2025: EnhancedService[] = [
@@ -452,8 +441,7 @@ export const enhancedServices2025: EnhancedService[] = [
       monthly: '$199/month',
       yearly: '$1,999/year',;
       enterprise: 'Custom pricing',;
-      setup: '$299 one-time';
-    },
+      setup: '$299 one-time'},
     features[
       'Automated security vulnerability detection',
       'Code quality scoring and metrics',
@@ -498,8 +486,7 @@ export const enhancedServices2025: EnhancedService[] = [
       monthly: '$299/month',
       yearly: '$2,999/year',;
       enterprise: 'Custom pricing',;
-      setup: '$499 one-time';
-    },
+      setup: '$499 one-time'},
     features[
       'AI-powered threat detection',
       'Automated incident response workflows',
@@ -522,8 +509,7 @@ export const enhancedServices2025: EnhancedService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";
-    }
+      website: "https://ziontechgroup.com"}
   },
   // Edge Computing & IoT Services
   {
@@ -537,8 +523,7 @@ export const enhancedServices2025: EnhancedService[] = [
     author: {
       name: "Zion Edge Computing",
       id: "zion-edge-computing",;
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",;
-    },
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",},
     images["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-01-26T08:45:00.000Z",;
     aiScore: 94,;
@@ -576,8 +561,7 @@ export const enhancedServices2025: EnhancedService[] = [
       monthly: '$79/month',
       yearly: '$799/year',;
       enterprise: 'Custom pricing',;
-      setup: '$199 one-time';
-    },
+      setup: '$199 one-time'},
     features[
       'OCR invoice processing',
       'Automated approval workflows',
@@ -622,8 +606,7 @@ export const enhancedServices2025: EnhancedService[] = [
       monthly: '$149/month',
       yearly: '$1,499/year',;
       enterprise: 'Custom pricing',;
-      setup: '$299 one-time';
-    },
+      setup: '$299 one-time'},
     features[
       'Automated onboarding workflows',
       'Predictive churn analysis',
@@ -646,8 +629,7 @@ export const enhancedServices2025: EnhancedService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";
-    }
+      website: "https://ziontechgroup.com"}
   },
   // Legal AI Services
   {
@@ -661,8 +643,7 @@ export const enhancedServices2025: EnhancedService[] = [
     author: {
       name: "Zion Legal Tech",
       id: "zion-legal-tech",;
-      avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=100&h=100",;
-    },
+      avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=100&h=100",},
     images["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-01-19T12:15:00.000Z",;
     aiScore: 93,;
@@ -700,8 +681,7 @@ export const enhancedServices2025: EnhancedService[] = [
       monthly: '$199/month',
       yearly: '$1,999/year',;
       enterprise: 'Custom pricing',;
-      setup: '$399 one-time';
-    },
+      setup: '$399 one-time'},
     features[
       'Real-time data visualization',
       'Custom dashboard builder',
@@ -746,8 +726,7 @@ export const enhancedServices2025: EnhancedService[] = [
       monthly: '$1,500/month',
       yearly: '$15,000/year',;
       enterprise: 'Custom pricing',;
-      setup: '$2,000 one-time';
-    },
+      setup: '$2,000 one-time'},
     features[
       '24/7 network monitoring',
       'Real-time threat detection',
@@ -792,8 +771,7 @@ export const enhancedServices2025: EnhancedService[] = [
       monthly: '$800/month',
       yearly: '$8,000/year',;
       enterprise: 'Custom pricing',;
-      setup: '$1,500 one-time';
-    },
+      setup: '$1,500 one-time'},
     features[
       'Automated backup scheduling',
       'Cloud storage integration',
@@ -837,8 +815,7 @@ export const enhancedServices2025: EnhancedService[] = [
       monthly: '$500/month',
       yearly: '$5,000/year',;
       enterprise: 'Custom pricing',;
-      setup: '$1,000 one-time';
-    },
+      setup: '$1,000 one-time'},
     features[
       'Asset discovery and tracking',
       'License management',
@@ -883,8 +860,7 @@ export const enhancedServices2025: EnhancedService[] = [
       monthly: '$2,000/month',
       yearly: '$20,000/year',;
       enterprise: 'Custom pricing',;
-      setup: '$5,000 one-time';
-    },
+      setup: '$5,000 one-time'},
     features[
       'Natural language processing',
       'Multi-language support',
@@ -928,8 +904,7 @@ export const enhancedServices2025: EnhancedService[] = [
       monthly: '$3,500/month',
       yearly: '$35,000/year',;
       enterprise: 'Custom pricing',;
-      setup: '$8,000 one-time';
-    },
+      setup: '$8,000 one-time'},
     features[
       'Data modeling and analysis',
       'Forecasting algorithms',
@@ -973,8 +948,7 @@ export const enhancedServices2025: EnhancedService[] = [
       monthly: '$4,000/month',
       yearly: '$40,000/year',;
       enterprise: 'Custom pricing',;
-      setup: '$10,000 one-time';
-    },
+      setup: '$10,000 one-time'},
     features[
       'Object detection and recognition',
       'Image classification',
@@ -1019,8 +993,7 @@ export const enhancedServices2025: EnhancedService[] = [
       monthly: '$10,000/month',
       yearly: '$100,000/year',;
       enterprise: 'Custom pricing',;
-      setup: '$25,000 one-time';
-    },
+      setup: '$25,000 one-time'},
     features[
       'Quantum algorithm development',
       'Optimization problem solving',
@@ -1064,8 +1037,7 @@ export const enhancedServices2025: EnhancedService[] = [
       monthly: '$5,000/month',
       yearly: '$50,000/year',;
       enterprise: 'Custom pricing',;
-      setup: '$15,000 one-time';
-    },
+      setup: '$15,000 one-time'},
     features[
       'Smart contract development',
       'DeFi application building',
@@ -1101,4 +1073,4 @@ export const enhancedServices2025: EnhancedService[] = [
   }
 ];
 
-export default enhancedServices2025;}}
+export default enhancedServices2025}}

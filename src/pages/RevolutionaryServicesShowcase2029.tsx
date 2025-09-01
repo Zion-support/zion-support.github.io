@@ -1,53 +1,16 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Search, Filter, Star, Users, TrendingUp, Zap, Shield, Brain, Rocket, Globe, Cpu, Database, Cloud, Lock, Target, BarChart3, Code, Palette, Truck, Car, Plane, Dna, Atom, Link, Box  } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
-import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES  } from '../../data/revolutionary-2029-cutting-edge-services';
-import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data/revolutionary-2029-emerging-tech-services';
 
 export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
 
-  const allServices = [...REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES, ...REVOLUTIONARY_2029_EMERGING_TECH_SERVICES];
+  
+  
+  
+    
+    return matchesSearch && matchesCategory});
 
-  const categories = [
-    'all',
-    'AI & Analytics',
-    'AI & Automation',
-    'AI & Cybersecurity',
-    'AI & Marketing',
-    'AI & Healthcare',
-    'AI & Development',
-    'AI & Supply Chain',
-    'AI & FinTech',
-    'AI & Legal Tech',
-    'AI & Customer Success',
-    'Space Technology & AI',
-    'Quantum Technology & Security',
-    'Neurotechnology & AI',
-    'AI & Autonomous Systems',
-    'AI & Biotechnology',
-    'Quantum Computing & AI',
-    'AI & Autonomous Vehicles',
-    'AI & Digital Twins',
-    'AI & Blockchain',
-    'AI & Metaverse'
-  ];
-
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+  
       case 'price-high':
         return parseFloat(b.price.replace('$', '').replace(',', '')) - parseFloat(a.price.replace('$', '').replace(',', ''));
       case 'rating':
@@ -55,42 +18,17 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
       case 'customers':
         return b.customers - a.customers;
       default:
-        return b.popular ? 1 : -1;
-    }
+        return b.popular ? 1 : -1}
   });
 
-  const getCategoryIcon = (category: anystring)  => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-      'AI & Analytics': <BarChart3 className="w-5 h-5" />,
-      'AI & Automation': <Zap className="w-5 h-5" />,
-      'AI & Cybersecurity': <Shield className="w-5 h-5" />,
-      'AI & Marketing': <Target className="w-5 h-5" />,
-      'AI & Healthcare': <Brain className="w-5 h-5" />,
-      'AI & Development': <Code className="w-5 h-5" />,
-      'AI & Supply Chain': <Truck className="w-5 h-5" />,
-      'AI & FinTech': <TrendingUp className="w-5 h-5" />,
-      'AI & Legal Tech': <Shield className="w-5 h-5" />,
-      'AI & Customer Success': <Users className="w-5 h-5" />,
-      'Space Technology & AI': <Rocket className="w-5 h-5" />,
-      'Quantum Technology & Security': <Atom className="w-5 h-5" />,
-      'Neurotechnology & AI': <Brain className="w-5 h-5" />,
-      'AI & Autonomous Systems': <Plane className="w-5 h-5" />,
-      'AI & Biotechnology': <Dna className="w-5 h-5" />,
-      'Quantum Computing & AI': <Atom className="w-5 h-5" />,
-      'AI & Autonomous Vehicles': <Car className="w-5 h-5" />,
-      'AI & Digital Twins': <Box className="w-5 h-5" />,
-      'AI & Blockchain': <Link className="w-5 h-5" />,
-      'AI & Metaverse': <Globe className="w-5 h-5" />
-    };
-    return iconMap[category] || <Cpu className="w-5 h-5" />;
-  };
+  
+    return iconMap[category] || <Cpu className="w-5 h-5"  />};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Revolutionary 2029 Services Showcase - Zion Tech Group"
+      <SEO title="Revolutionary 2029 Services Showcase - Zion Tech Group"
         description="Discover our cutting-edge AI, quantum computing, space technology, and emerging tech services that are revolutionizing industries worldwide."
-      />
+       />
       
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -178,7 +116,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
             {/* Search */}
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search revolutionary services..."
@@ -288,12 +226,12 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
                 {/* Stats */}
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current"  />
                     <span>{service.rating}</span>
                     <span>({service.reviews})</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
+                    <Users className="w-4 h-4"  />
                     <span>{service.customers} customers</span>
                   </div>
                 </div>
@@ -334,7 +272,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
                     Learn More
                   </a>
                   <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300">
-                    <Star className="w-4 h-4" />
+                    <Star className="w-4 h-4"  />
                   </button>
                 </div>
               </div>
@@ -375,5 +313,4 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
         </div>
       </div>
     </div>
-  );
-}
+  )}

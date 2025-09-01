@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { Brain, 
   Heart, 
   Eye, 
@@ -29,124 +27,18 @@ import { Brain,
   Thermometer,
   BrainCircuit
  } from 'lucide-react.ts';
-import { SEO  } from '../../components/SEO';
 
 export default function AIHealthcareDiagnostics(...args: any[]): any {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Diagnosis",
-      description: "Advanced machine learning algorithms for accurate disease detection and diagnosis"
-    },
-    {
-      icon: Eye,
-      title: "Medical Imaging AI",
-      description: "Computer vision for X-rays, MRIs, CT scans, and ultrasound analysis"
-    },
-    {
-      icon: Heart,
-      title: "Predictive Analytics",
-      description: "Early disease prediction and risk assessment using patient data"
-    },
-    {
-      icon: Stethoscope,
-      title: "Clinical Decision Support",
-      description: "AI-powered recommendations for treatment plans and medication"
-    }
-  ];
-
-  const diagnosticCapabilities = [
-    {
-      category: "Radiology",
-      services: ["X-ray Analysis", "MRI Interpretation", "CT Scan Review", "Ultrasound Assessment"],
-      accuracy: "98.5%",
-      icon: Eye
-    },
-    {
-      category: "Cardiology",
-      services: ["ECG Analysis", "Heart Disease Detection", "Arrhythmia Detection", "Risk Assessment"],
-      accuracy: "97.8%",
-      icon: Heart
-    },
-    {
-      category: "Oncology",
-      services: ["Tumor Detection", "Cancer Screening", "Treatment Response", "Prognosis Analysis"],
-      accuracy: "96.9%",
-      icon: Microscope
-    },
-    {
-      category: "Neurology",
-      services: ["Brain Scan Analysis", "Stroke Detection", "Alzheimer's Screening", "Seizure Detection"],
-      accuracy: "97.2%",
-      icon: BrainCircuit
-    }
-  ];
-
-  const benefits = [
-    "Reduce diagnostic errors by up to 85%",
-    "Improve early detection rates by 60%",
-    "Cut diagnosis time by 70%",
-    "Enhance treatment accuracy by 75%",
-    "Reduce healthcare costs by 40%",
-    "Enable remote diagnostics and telemedicine"
-  ];
-
-  const pricing = [
-    {
-      name: "Basic",
-      price: "$3,500",
-      period: "/month",
-      features: [
-        "Up to 1,000 scans/month",
-        "Basic AI diagnosis",
-        "Standard reporting",
-        "Email support",
-        "Basic integrations"
-      ]
-    },
-    {
-      name: "Professional",
-      price: "$7,500",
-      period: "/month",
-      features: [
-        "Up to 10,000 scans/month",
-        "Advanced AI algorithms",
-        "Custom reporting",
-        "Priority support",
-        "API access",
-        "Custom integrations"
-      ]
-    },
-    {
-      name: "Enterprise",
-      price: "$18,000",
-      period: "/month",
-      features: [
-        "Unlimited scans",
-        "Custom AI models",
-        "White-label solution",
-        "24/7 dedicated support",
-        "On-premise deployment",
-        "Custom development"
-      ]
-    }
-  ];
-
-  const complianceFeatures = [
-    "HIPAA Compliant",
-    "FDA Approved Algorithms",
-    "SOC 2 Type II Certified",
-    "GDPR Compliant",
-    "ISO 27001 Certified",
-    "End-to-end Encryption"
-  ];
-
+  
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Healthcare Diagnostics - Zion Tech Group"
+      <SEO title="AI Healthcare Diagnostics - Zion Tech Group"
         description="Revolutionary AI-powered healthcare diagnostics platform for accurate disease detection, medical imaging analysis, and clinical decision support."
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -158,7 +50,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-center mb-6">
-              <Stethoscope className="w-12 h-12 text-green-400 mr-3" />
+              <Stethoscope className="w-12 h-12 text-green-400 mr-3"  />
               <h1 className="text-4xl md:text-6xl font-bold text-white">
                 AI Healthcare Diagnostics
               </h1>
@@ -268,7 +160,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                 <ul className="space-y-3">
                   {capability.services.map((service, serviceIndex) => (
                     <li key={serviceIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       <span className="text-gray-300">{service}</span>
                     </li>
                   ))}
@@ -306,7 +198,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="flex items-start space-x-3"
               >
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <span className="text-gray-300 text-lg">{benefit}</span>
               </motion.div>
             ))}
@@ -341,7 +233,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 text-center"
               >
-                <Shield className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                <Shield className="w-12 h-12 text-green-400 mx-auto mb-4"  />
                 <span className="text-white font-semibold text-lg">{feature}</span>
               </motion.div>
             ))}
@@ -399,7 +291,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -457,5 +349,4 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}

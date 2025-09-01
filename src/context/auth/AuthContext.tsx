@@ -1,4 +1,3 @@
-import React, { createContext, useContext } from 'react.ts';
 
 interface User {
 
@@ -33,15 +32,13 @@ login: (email: string, password: string)  => Promise<any>;
   loginWithTwitter: ()  => Promise<any>;
   loginWithWeb3: ()  => Promise<any>}
 
-const AuthContext = createContext<AuthContextType | null>(null);
 
-export const useAuth = () => {;
-  const context = useContext(AuthContext);
+export 
+  
   if (context = == null) {;
     throw new Error('useAuth must be used within an AuthProvider');
 
-  return context;
-};
+  return context};
 
 export { AuthContext };
-export type { User, AuthTokens, AuthContextType };}}}}
+export type { User, AuthTokens, AuthContextType }}}}}

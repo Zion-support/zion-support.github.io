@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
 import { MessageCircle, 
   Users, 
   Ticket, 
@@ -45,77 +42,9 @@ import { MessageCircle,
  } from 'lucide-react.ts';
 
 export default function HelpdeskPlatform(...args: any[]): any {
-  const features = [
-    {
-      icon: Ticket,
-      title: "Ticket Management",
-      description: "Comprehensive ticket tracking and resolution workflow",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Multi-agent support with role-based access control",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Clock,
-      title: "Response Time Tracking",
-      description: "Monitor and optimize support response times",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      icon: BarChart3,
-      title: "Analytics & Reporting",
-      description: "Comprehensive performance metrics and insights",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security and data protection",
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Platform",
-      description: "Scalable cloud infrastructure for global support",
-      color: "from-indigo-500 to-blue-500"
-    }
-  ];
-
-  const services = [
-    {
-      title: "Customer Support",
-      description: "Multi-channel customer support and ticket management",
-      icon: MessageCircle,
-      benefits: ["Email support", "Live chat", "Phone support", "Social media integration"]
-    },
-    {
-      title: "Internal IT Support",
-      description: "Employee IT support and technical assistance",
-      icon: Cpu,
-      benefits: ["Hardware support", "Software assistance", "Network issues", "Access management"]
-    },
-    {
-      title: "Knowledge Base",
-      description: "Self-service knowledge base and documentation",
-      icon: FileText,
-      benefits: ["FAQ management", "Documentation", "Video tutorials", "Search functionality"]
-    },
-    {
-      title: "Automation & AI",
-      description: "AI-powered automation and intelligent routing",
-      icon: Brain,
-      benefits: ["Auto-routing", "Chatbots", "Predictive analytics", "Smart suggestions"]
-    }
-  ];
-
-  const integrations = [
-    "CRM Systems", "Email Platforms", "Chat Tools", "Social Media", 
-    "Project Management", "Analytics Tools", "Cloud Services", "Mobile Apps", "API Access", "Webhooks"
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -140,14 +69,14 @@ export default function HelpdeskPlatform(...args: any[]): any {
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 flex items-center space-x-2"
               >
                 <span>Get Started</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-green-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-green-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
             </div>
           </motion.div>
@@ -232,7 +161,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
                 <ul className="space-y-2">
                   {service.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       {benefit}
                     </li>
                   ))}
@@ -300,19 +229,18 @@ export default function HelpdeskPlatform(...args: any[]): any {
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 flex items-center space-x-2"
               >
                 <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-green-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-green-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-}
+  )}

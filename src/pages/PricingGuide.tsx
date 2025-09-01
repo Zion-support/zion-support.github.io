@@ -1,5 +1,3 @@
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
 import { Calculator, 
   Check, 
   X, 
@@ -26,33 +24,19 @@ import { Calculator,
   Atom,
   Satellite
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
 
 export default function PricingGuide(...args[]):  {
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
 
-  const currencyRates = {
-  USD: { symbol: '$',
-  rate: 1 ;
+  
 ;
 ;
-;
-
-
-
 },;
     EUR: { symbol: '€', rate: 0.85 },;
-    GBP: { symbol: '£', rate: 0.73 };
-  };
+    GBP: { symbol: '£', rate: 0.73 }};
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      icon: Zap,
-      description: "Perfect for small businesses getting started with AI",
-      price: { monthly: 299, yearly: 2990 },
-      features[;
+  
         "AI Business Intelligence Basic",
         "Cloud Infrastructure (10GB)",
         "Basic Support (Email)",
@@ -111,15 +95,10 @@ export default function PricingGuide(...args[]):  {
       ],;
       notIncluded: [],;
       cta: "Contact Sales",;
-      popular: false;
-    };
+      popular: false};
   ];
 
-  const servicePricing = [
-    {
-      category: "AI & Machine Learning",
-      icon: Brain,
-      services[;
+  
         { name: "AI Business Intelligence", price: "From $299/month", description: "Advanced analytics and insights" },
         { name: "AI Sales Copilot", price: "From $199/month", description: "Intelligent sales automation" },
         { name: "AI Compliance Assistant", price: "From $399/month", description: "Automated compliance management" },
@@ -152,22 +131,20 @@ export default function PricingGuide(...args[]):  {
         { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },;
         { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },;
         { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" };
-      ];
-    };
+      ]};
   ];
 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Pricing Guide - Zion Tech Group"
+      <SEO title="Pricing Guide - Zion Tech Group"
         description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">
-              <Calculator className="h-10 w-10 text-white" />
+              <Calculator className="h-10 w-10 text-white"  />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Pricing Guide
@@ -289,7 +266,7 @@ export default function PricingGuide(...args[]):  {
                   <h4 className="text-lg font-semibold text-white mb-4">What's Included: any</h4>
                   {plan.features.map((feature, featureIndex)  => (
                     <div key={featureIndex} className="flex items-center text-slate-300">
-                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       <span className="text-sm">{feature}</span>
                     </div>
                   ))}
@@ -299,7 +276,7 @@ export default function PricingGuide(...args[]):  {
                       <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: any</h4>
                       {plan.notIncluded.map((feature, featureIndex)  => (
                         <div key={featureIndex} className="flex items-center text-slate-500">
-                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
+                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0"  />
                           <span className="text-sm">{feature}</span>
                         </div>
                       ))}
@@ -358,18 +335,16 @@ export default function PricingGuide(...args[]):  {
               Our team can create a tailored package that perfectly fits your business requirements and budget.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
 
-                <MessageCircle className="w-5 h-5 mr-2" />
+                <MessageCircle className="w-5 h-5 mr-2"  />
                 Get Custom Quote
               </Link>
-              <Link
-                to="/services-overview"
+              <Link to="/services-overview"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
 
-                <BarChart3 className="w-5 h-5 mr-2" />
+                <BarChart3 className="w-5 h-5 mr-2"  />
                 View All Services
               </Link>
             </div>;
@@ -377,5 +352,4 @@ export default function PricingGuide(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

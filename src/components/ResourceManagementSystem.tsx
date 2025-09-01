@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Users,
   Calendar,
@@ -66,8 +64,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 showStats:  true,;
   showFilters = true,;
   showCharts = true,;
-  maxResources = 20;
-}) => {;
+  maxResources = 20}) => {;
   const [resources, setResources] = useState<Resource[]>([]);
   const [filteredResources, setFilteredResources] = useState<Resource[]>([]);
   const [selectedType, setSelectedType] = useState<string>('all');
@@ -177,7 +174,7 @@ showStats:  true,;
     setFilteredResources(sampleResources)}, []);
 
   // Filter resources
-  useEffect(()  => {
+  useEffect(() => {
     let filtered = resources;
 
     if (selectedType !== 'all') {
@@ -201,8 +198,7 @@ showStats:  true,;
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      );
-    }
+      )}
 
     setFilteredResources(filtered.slice(0, maxResources))}, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]);
 

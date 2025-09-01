@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { 
   User, 
   Mail, 
@@ -35,11 +32,10 @@ interface SignupForm {
   password: string;
   confirmPassword: string;
   agreeToTerms: boolean;
-  agreeToMarketing: boolean;
-}
+  agreeToMarketing: boolean}
 
 const Signup: React.FC = () => {
-  const navigate = useNavigate();
+  
   const [formData, setFormData] = useState<SignupForm>({
     firstName: '',
     lastName: '',
@@ -60,61 +56,28 @@ const Signup: React.FC = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  const industries = [
-    'Technology',
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Government',
-    'Non-profit',
-    'Other'
-  ];
+  
+  
+  
+    setError('')};
 
-  const companySizes = [
-    '1-10 employees',
-    '11-50 employees',
-    '51-200 employees',
-    '201-500 employees',
-    '501-1000 employees',
-    '1000+ employees'
-  ];
-
-  const handleInputChange = (field: keyof SignupForm, value: string | boolean) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: value
-    }));
-    setError('');
-  };
-
-  const validateForm = () => {
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.company || !formData.password || !formData.confirmPassword) {
-      setError('Please fill in all required fields');
-      return false;
-    }
+  
+      return false}
     if (!/\S+@\S+\.\S+/.test(formData.email)) {
       setError('Please enter a valid email address');
-      return false;
-    }
+      return false}
     if (formData.password.length < 8) {
       setError('Password must be at least 8 characters long');
-      return false;
-    }
+      return false}
     if (formData.password !== formData.confirmPassword) {
       setError('Passwords do not match');
-      return false;
-    }
+      return false}
     if (!formData.agreeToTerms) {
       setError('Please agree to the terms and conditions');
-      return false;
-    }
-    return true;
-  };
+      return false}
+    return true};
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  
     if (!validateForm()) return;
 
     setIsLoading(true);
@@ -127,55 +90,20 @@ const Signup: React.FC = () => {
       // Mock successful signup
       setSuccess('Account created successfully! Welcome to Zion Tech Group.');
       setTimeout(() => {
-        navigate('/dashboard');
-      }, 2000);
-    } catch (err) {
-      setError('Failed to create account. Please try again.');
-    } finally {
-      setIsLoading(false);
-    }
+        navigate('/dashboard')}, 2000)} catch (err) {
+      setError('Failed to create account. Please try again.')} finally {
+      setIsLoading(false)}
   };
 
-  const getPasswordStrength = (password: string) => {
-    if (password.length === 0) return { score: 0, label: '', color: '' };
+  
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
     if (password.length < 16) return { score: 3, label: 'Good', color: 'text-blue-400' };
-    return { score: 4, label: 'Strong', color: 'text-green-400' };
-  };
+    return { score: 4, label: 'Strong', color: 'text-green-400' }};
 
-  const passwordStrength = getPasswordStrength(formData.password);
-
-  const benefits = [
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: 'AI-Powered Solutions',
-      description: 'Access cutting-edge AI and machine learning technologies'
-    },
-    {
-      icon: <Cloud className="w-6 h-6" />,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions for your business needs'
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security and compliance standards'
-    },
-    {
-      icon: <Rocket className="w-6 h-6" />,
-      title: 'Digital Transformation',
-      description: 'Transform your business with modern technology'
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime' },
-    { number: '24/7', label: 'Support' },
-    { number: '50+', label: 'Services' }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex">
       {/* Left Side - Form */}
@@ -190,7 +118,7 @@ const Signup: React.FC = () => {
           >
             <Link to="/" className="inline-block mb-6">
               <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mx-auto">
-                <Zap className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white"  />
               </div>
             </Link>
             <h1 className="text-4xl font-bold text-white mb-4">
@@ -208,7 +136,7 @@ const Signup: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3 text-red-400"
             >
-              <AlertCircle className="w-5 h-5" />
+              <AlertCircle className="w-5 h-5"  />
               {error}
             </motion.div>
           )}
@@ -219,7 +147,7 @@ const Signup: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 text-green-400"
             >
-              <CheckCircle className="w-5 h-5" />
+              <CheckCircle className="w-5 h-5"  />
               {success}
             </motion.div>
           )}
@@ -238,7 +166,7 @@ const Signup: React.FC = () => {
                   First Name <span className="text-red-400">*</span>
                 </label>
                 <div className="relative">
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
                   <input
                     type="text"
                     value={formData.firstName}
@@ -255,7 +183,7 @@ const Signup: React.FC = () => {
                   Last Name <span className="text-red-400">*</span>
                 </label>
                 <div className="relative">
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
                   <input
                     type="text"
                     value={formData.lastName}
@@ -274,7 +202,7 @@ const Signup: React.FC = () => {
                   Email Address <span className="text-red-400">*</span>
                 </label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
                   <input
                     type="email"
                     value={formData.email}
@@ -291,7 +219,7 @@ const Signup: React.FC = () => {
                   Phone Number
                 </label>
                 <div className="relative">
-                  <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
                   <input
                     type="tel"
                     value={formData.phone}
@@ -309,7 +237,7 @@ const Signup: React.FC = () => {
                   Company Name <span className="text-red-400">*</span>
                 </label>
                 <div className="relative">
-                  <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
                   <input
                     type="text"
                     value={formData.company}
@@ -326,7 +254,7 @@ const Signup: React.FC = () => {
                   Industry
                 </label>
                 <div className="relative">
-                  <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
                   <select
                     value={formData.industry}
                     onChange={(e) => handleInputChange('industry', e.target.value)}
@@ -346,7 +274,7 @@ const Signup: React.FC = () => {
                 Company Size
               </label>
               <div className="relative">
-                <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
                 <select
                   value={formData.companySize}
                   onChange={(e) => handleInputChange('companySize', e.target.value)}
@@ -366,7 +294,7 @@ const Signup: React.FC = () => {
                   Password <span className="text-red-400">*</span>
                 </label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
                   <input
                     type={showPassword ? 'text' : 'password'}
                     value={formData.password}
@@ -380,7 +308,7 @@ const Signup: React.FC = () => {
                     onClick={() => setShowPassword(!showPassword)}
                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
                   >
-                    {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                    {showPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
                   </button>
                 </div>
                 {formData.password && (
@@ -409,7 +337,7 @@ const Signup: React.FC = () => {
                   Confirm Password <span className="text-red-400">*</span>
                 </label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
                   <input
                     type={showConfirmPassword ? 'text' : 'password'}
                     value={formData.confirmPassword}
@@ -423,7 +351,7 @@ const Signup: React.FC = () => {
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
                   >
-                    {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                    {showConfirmPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
                   </button>
                 </div>
               </div>
@@ -477,7 +405,7 @@ const Signup: React.FC = () => {
               ) : (
                 <>
                   Create Account
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5"  />
                 </>
               )}
             </button>
@@ -508,13 +436,13 @@ const Signup: React.FC = () => {
             >
               <div className="flex justify-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center">
-                  <Brain className="w-8 h-8 text-white" />
+                  <Brain className="w-8 h-8 text-white"  />
                 </div>
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                  <Cloud className="w-8 h-8 text-white" />
+                  <Cloud className="w-8 h-8 text-white"  />
                 </div>
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center">
-                  <Rocket className="w-8 h-8 text-white" />
+                  <Rocket className="w-8 h-8 text-white"  />
                 </div>
               </div>
             </motion.div>
@@ -588,7 +516,7 @@ const Signup: React.FC = () => {
               className="mt-8 p-6 bg-white/10 border border-slate-600/30 rounded-xl backdrop-blur-md"
             >
               <div className="flex items-center gap-3 mb-3">
-                <Award className="w-6 h-6 text-yellow-400" />
+                <Award className="w-6 h-6 text-yellow-400"  />
                 <h3 className="text-lg font-semibold text-white">
                   Trusted by Industry Leaders
                 </h3>
@@ -601,7 +529,6 @@ const Signup: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default Signup;

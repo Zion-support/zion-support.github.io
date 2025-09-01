@@ -1,5 +1,3 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { User, 
   Mail, 
   Phone, 
@@ -118,10 +116,7 @@ const Profile: React.FC = () => {;
     confirm: false
   });
 
-  const industries = [
-    'Technology',
-    'Healthcare',
-    'Finance',;
+  
     'Manufacturing',;
     'Retail',;
     'Education',;
@@ -130,7 +125,7 @@ const Profile: React.FC = () => {;
     'Other';
   ];
 
-  const handleProfileUpdate = async () => {;
+  
     setIsLoading(true);
     setError('');
     setSuccess('');
@@ -145,7 +140,7 @@ const Profile: React.FC = () => {;
       setIsLoading(false)}
   };
 
-  const handlePasswordChange = async () => {;
+  
     if (!currentPassword || !newPassword || !confirmPassword) {;
       setError('Please fill in all password fields');
       return}
@@ -172,134 +167,35 @@ const Profile: React.FC = () => {;
       setIsLoading(false)}
   };
 
-  const handleNotificationToggle = (key: keyof NotificationSettings) => {;
+  
 setNotifications(prev: > ({;
       ...prev,;
-      [key]: !prev[key];
-    }));
-  };
+      [key]: !prev[key]}))};
 
-  const getPasswordStrength = (password: string) => {;
+  
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
     if (password.length < 16) return { score: 3, label: 'Good', color: 'text-blue-400' };
     return { score: 4, label: 'Strong', color: 'text-green-400' }};
 
-  const passwordStrength = getPasswordStrength(newPassword);
-
-  const stats = [;
+  
+  
     { label: 'Projects Completed', value: '24', icon: <BarChart3 className="w-5 h-5" /> },;
-    { label: 'Active Projects', value: '3', icon: <Activity className="w-5 h-5" /> },;
-    { label: 'Days Active', value: '156', icon: <Calendar className="w-5 h-5" /> },;
-    { label: 'Rating', value: '4.9', icon: <Star className="w-5 h-5" /> };
+    { label: 'Active Projects', value: '3', icon: <Activity className="w-5 h-5"  /> },;
+    { label: 'Days Active', value: '156', icon: <Calendar className="w-5 h-5"  /> },;
+    { label: 'Rating', value: '4.9', icon: <Star className="w-5 h-5"  /> };
   ];
 
-  const achievements = [;
-    { title: 'First Project', description: 'Completed your first project', icon: <Award className="w-6 h-6" />, earned: true },;
-    { title: 'Team Player', description: 'Collaborated on 5+ projects', icon: <UserCheck className="w-6 h-6" />, earned: true },;
-    { title: 'Innovator', description: 'Implemented AI solutions', icon: <Brain className="w-6 h-6" />, earned: true },;
-    { title: 'Cloud Master', description: 'Deployed 10+ cloud solutions', icon: <Cloud className="w-6 h-6" />, earned: false },;
-    { title: 'Speed Demon', description: 'Completed project ahead of schedule', icon: <Zap className="w-6 h-6" />, earned: false };
+  
+    { title: 'First Project', description: 'Completed your first project', icon: <Award className="w-6 h-6"  />, earned: true },;
+    { title: 'Team Player', description: 'Collaborated on 5+ projects', icon: <UserCheck className="w-6 h-6"  />, earned: true },;
+    { title: 'Innovator', description: 'Implemented AI solutions', icon: <Brain className="w-6 h-6"  />, earned: true },;
+    { title: 'Cloud Master', description: 'Deployed 10+ cloud solutions', icon: <Cloud className="w-6 h-6"  />, earned: false },;
+    { title: 'Speed Demon', description: 'Completed project ahead of schedule', icon: <Zap className="w-6 h-6"  />, earned: false };
   ];
 
-  const renderProfileTab = () => (
-    <motion.div
-      initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-      animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-      transition={{ duration: 0.6 }}
-      className="space-y-8"
-
-      {/* Profile Header */}
-      <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
-        <div className="flex items-center gap-6 mb-8">
-          <div className="relative">
-            <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-              {profile.firstName.charAt(0)}{profile.lastName.charAt(0)}
-            </div>
-            <button className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-              <Camera className="w-4 h-4" />
-            </button>
-          </div>
-          <div className="flex-1">
-            <h2 className="text-3xl font-bold text-white mb-2">
-              {profile.firstName} {profile.lastName}
-            </h2>
-            <p className="text-slate-300 text-lg mb-1">{profile.position}</p>
-            <p className="text-slate-400">{profile.comp}</p>
-          </div>
-          <button
-            onClick={() => setIsEditing(!isEditing)}
-            className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center gap-2"
-
-            {isEditing ? <X className="w-5 h-5" /> : <Edit className="w-5 h-5" />}
-            {isEditing ? 'Cancel' : 'Edit Profile'}
-          </button>
-        </div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-4">
-          {stats.map((stat, index)  => (
-            <motion.div
-              key={stat.label}
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.6,
-  delay: 0.1 + index * 0.1 
-
-
-
-
-
-
-}}
-              className="text-center p-4 bg-white/5 rounded-xl border border-slate-600/30"
-
-              <div className="flex justify-center mb-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-white">
-                  {stat.icon}
-                </div>
-              </div>
-              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-slate-400 text-sm">{stat.label}</div>
-            </motion.div>;
+  
           ))}
         </div>
       </div>
@@ -312,7 +208,7 @@ setNotifications(prev: > ({;
           <div>
             <label className="block text-white font-medium mb-2">First Name</label>
             <div className="relative">
-              <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+              <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
               <input
                 type="text"
                 value={profile.firstName}
@@ -335,7 +231,7 @@ setNotifications(prev: > ({;
           <div>
             <label className="block text-white font-medium mb-2">Last Name</label>
             <div className="relative">
-              <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+              <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
               <input
                 type="text"
                 value={profile.lastName}
@@ -360,7 +256,7 @@ setNotifications(prev: > ({;
           <div>
             <label className="block text-white font-medium mb-2">Email Address</label>
             <div className="relative">
-              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
               <input
                 type="email"
                 value={profile.email}
@@ -383,7 +279,7 @@ setNotifications(prev: > ({;
           <div>
             <label className="block text-white font-medium mb-2">Phone Number</label>
             <div className="relative">
-              <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+              <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
               <input
                 type="tel"
                 value={profile.phone}
@@ -408,7 +304,7 @@ setNotifications(prev: > ({;
           <div>
             <label className="block text-white font-medium mb-2">Company</label>
             <div className="relative">
-              <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+              <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
               <input
                 type="text"
                 value={profile.company}
@@ -453,7 +349,7 @@ setNotifications(prev: > ({;
           <div>
             <label className="block text-white font-medium mb-2">Industry</label>
             <div className="relative">
-              <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+              <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
               <select
                 value={profile.industry}
                 onChange = {
@@ -479,7 +375,7 @@ setNotifications(prev: > ({;
           <div>
             <label className="block text-white font-medium mb-2">Location</label>
             <div className="relative">
-              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
               <input
                 type="text"
                 value={profile.location}
@@ -503,7 +399,7 @@ setNotifications(prev: > ({;
         <div className="mb-6">
           <label className="block text-white font-medium mb-2">Website</label>
           <div className="relative">
-            <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+            <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
             <input
               type="url"
               value={profile.website}
@@ -557,7 +453,7 @@ setNotifications(prev: > ({;
                 </>
               ) : (
                 <>
-                  <Save className="w-5 h-5" />
+                  <Save className="w-5 h-5"  />
                   Save Changes
                 </>
               )}
@@ -622,7 +518,7 @@ setNotifications(prev: > ({;
               </p>
               {achievement.earned && (;
                 <div className="mt-3 flex items-center gap-2 text-yellow-400 text-sm">
-                  <CheckCircle className="w-4 h-4" />
+                  <CheckCircle className="w-4 h-4"  />
                   Earned
                 </div>;
               )};
@@ -633,154 +529,7 @@ setNotifications(prev: > ({;
     </motion.div>;
   );
 
-  const renderSecurityTab = () => (
-    <motion.div
-      initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-      animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-      transition={{ duration: 0.6 }}
-      className="space-y-8"
-
-      {/* Password Change */}
-      <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
-        <h3 className="text-xl font-semibold text-white mb-6">Change Password</h3>
-
-        <div className="space-y-6">
-          <div>
-            <label className="block text-white font-medium mb-2">Current Password</label>
-            <div className="relative">
-              <Key className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <input
-                type={showPasswords.current ? 'text' : 'password'}
-                value={currentPassword}
-                onChange={(e) => setCurrentPassword(e.target.value)}
-                className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                placeholder="Enter current password"
-              />
-              <button
-                type="button"
-                onClick = {
-  () => setShowPasswords(prev => ({ ...prev,
-  current: !prev.current 
-
-
-
-
-
-
-}))}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-
-                {showPasswords.current ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-              </button>
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-white font-medium mb-2">New Password</label>
-            <div className="relative">
-              <Key className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <input
-                type={showPasswords.new ? 'text' : 'password'}
-                value={newPassword}
-                onChange={(e) => setNewPassword(e.target.value)}
-                className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                placeholder="Enter new password"
-              />
-              <button
-                type="button"
-                onClick = {
-  () => setShowPasswords(prev => ({ ...prev,
-  new: !prev.new 
-
-
-
-
-
-
-}))}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-
-                {showPasswords.new ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-              </button>
-            </div>
-            {newPassword && (
-              <div className="mt-2">
-                <div className="flex gap-1 mb-1">
-                  {[1, 2, 3, 4].map((level) => (
-                    <div
-                      key={level}
-                      className = {
-  `h-1 flex-1 rounded-full transition-all duration-300 ${
-                        level <= passwordStrength.score
-                          ? passwordStrength.color.replace('text-',
-  'bg-')
-                          : 'bg-slate-600/30'
-                      
-
-
-
-
-
-
-}`}
-                    />
-                  ))}
-                </div>
-                <p className={`text-xs ${passwordStrength.color}`}>
-                  {passwordStrength.label}
-                </p>
-              </div>
-            )}
-          </div>
-
-          <div>
-            <label className="block text-white font-medium mb-2">Confirm New Password</label>
-            <div className="relative">
-              <Key className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <input
-                type={showPasswords.confirm ? 'text' : 'password'}
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                placeholder="Confirm new password"
-              />
-              <button
-                type="button"
-                onClick = {
-  () => setShowPasswords(prev => ({ ...prev,
-  confirm: !prev.confirm 
-
-
-
-
-
-
-}))}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-
-                {showPasswords.confirm ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-              </button>
-            </div>
-          </div>;
-
+  
           <button
             onClick={handlePasswordChange}
             disabled={isLoading}
@@ -793,7 +542,7 @@ setNotifications(prev: > ({;
               </>
             ) : (
               <>
-                <Key className="w-5 h-5" />
+                <Key className="w-5 h-5"  />
                 Change Password
               </>
             )}
@@ -889,58 +638,7 @@ setNotifications(prev: > ({;
     </motion.div>;
   );
 
-  const renderNotificationsTab = () => (
-    <motion.div
-      initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-      animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-      transition={{ duration: 0.6 }}
-      className="space-y-8"
-
-      <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
-        <h3 className="text-xl font-semibold text-white mb-6">Notification Preferences</h3>
-
-        <div className="space-y-6">
-          {Object.entries(notifications).map(([key, value]) => (
-            <div key={key} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
-              <div>
-                <h4 className="font-medium text-white mb-1">
-                  {key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
-                </h4>
-                <p className="text-slate-400 text-sm">
-                  {key === 'emailNotifications' && 'Receive notifications via email'}
-                  {key === 'pushNotifications' && 'Receive push notifications in your browser'}
-                  {key === 'marketingEmails' && 'Receive marketing and promotional emails'}
-                  {key === 'securityAlerts' && 'Get notified about security-related events'}
-                  {key === 'projectUpdates' && 'Receive updates about your projects'}
-                  {key === 'weeklyReports' && 'Get weekly summary reports'}
-                </p>
-              </div>
-              <label className="relative inline-flex items-center cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={value}
-                  onChange={() => handleNotificationToggle(key as keyof NotificationSettings)}
-                  className="sr-only peer"
-                />
-                <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500"></div>;
+  
               </label>;
             </div>;
           ))};
@@ -949,99 +647,7 @@ setNotifications(prev: > ({;
     </motion.div>;
   );
 
-  const renderPreferencesTab = () => (
-    <motion.div
-      initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-      animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-      transition={{ duration: 0.6 }}
-      className="space-y-8"
-
-      <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
-        <h3 className="text-xl font-semibold text-white mb-6">Account Preferences</h3>
-
-        <div className="space-y-6">
-          <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
-            <div>
-              <h4 className="font-medium text-white mb-1">Theme</h4>
-              <p className="text-slate-400 text-sm">Choose your preferred color scheme</p>
-            </div>
-            <select className="px-3 py-2 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
-              <option value="dark">Dark</option>
-              <option value="light">Light</option>
-              <option value="auto">Auto</option>
-            </select>
-          </div>
-
-          <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
-            <div>
-              <h4 className="font-medium text-white mb-1">Language</h4>
-              <p className="text-slate-400 text-sm">Select your preferred language</p>
-            </div>
-            <select className="px-3 py-2 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
-              <option value="en">English</option>
-              <option value="es">Spanish</option>
-              <option value="fr">French</option>
-              <option value="de">German</option>
-            </select>
-          </div>
-
-          <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
-            <div>
-              <h4 className="font-medium text-white mb-1">Time Zone</h4>
-              <p className="text-slate-400 text-sm">Set your local time zone</p>
-            </div>
-            <select className="px-3 py-2 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
-              <option value="UTC-8">Pacific Time (UTC-8)</option>
-              <option value="UTC-5">Eastern Time (UTC-5)</option>
-              <option value="UTC+0">UTC</option>
-              <option value="UTC+1">Central European Time (UTC+1)</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
-        <h3 className="text-xl font-semibold text-white mb-6">Data Management</h3>
-
-        <div className="space-y-4">
-          <button className="w-full flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30 hover:bg-white/10 transition-all duration-300 text-left">
-            <div>
-              <h4 className="font-medium text-white mb-1">Export Data</h4>
-              <p className="text-slate-400 text-sm">Download all your data in JSON format</p>
-            </div>
-            <Download className="w-5 h-5 text-cyan-400" />
-          </button>
-
-          <button className="w-full flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30 hover:bg-white/10 transition-all duration-300 text-left">
-            <div>
-              <h4 className="font-medium text-white mb-1">Import Data</h4>
-              <p className="text-slate-400 text-sm">Upload data from a backup file</p>
-            </div>
-            <Upload className="w-5 h-5 text-cyan-400" />
-          </button>
-
-          <button className="w-full flex items-center justify-between p-4 bg-red-500/20 rounded-lg border border-red-500/30 hover:bg-red-500/30 transition-all duration-300 text-left">
-            <div>
-              <h4 className="font-medium text-red-400 mb-1">Delete Account</h4>
-              <p className="text-red-400/70 text-sm">Permanently delete your account and all data</p>;
+  
             </div>;
             <Trash2 className="w-5 h-5 text-red-400" />;
           </button>;
@@ -1107,7 +713,7 @@ setNotifications(prev: > ({;
 }}
             className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3 text-red-400"
 
-            <AlertCircle className="w-5 h-5" />
+            <AlertCircle className="w-5 h-5"  />
             {error}
           </motion.div>
         )}
@@ -1136,7 +742,7 @@ setNotifications(prev: > ({;
 }}
             className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 text-green-400"
 
-            <CheckCircle className="w-5 h-5" />
+            <CheckCircle className="w-5 h-5"  />
             {success}
           </motion.div>
         )}
@@ -1144,10 +750,10 @@ setNotifications(prev: > ({;
         {/* Navigation Tabs */}
         <div className="flex flex-wrap gap-2 mb-8">
           {[
-            { key: 'profile', label: 'Profile', icon: <User className="w-5 h-5" /> },
-            { key: 'security', label: 'Security', icon: <Shield className="w-5 h-5" /> },
-            { key: 'notifications', label: 'Notifications', icon: <Bell className="w-5 h-5" /> },
-            { key: 'preferences', label: 'Preferences', icon: <Settings className="w-5 h-5" /> }
+            { key: 'profile', label: 'Profile', icon: <User className="w-5 h-5"  /> },
+            { key: 'security', label: 'Security', icon: <Shield className="w-5 h-5"  /> },
+            { key: 'notifications', label: 'Notifications', icon: <Bell className="w-5 h-5"  /> },
+            { key: 'preferences', label: 'Preferences', icon: <Settings className="w-5 h-5"  /> }
           ].map((tab) => (
             <button
               key={tab.key}
@@ -1171,7 +777,6 @@ setNotifications(prev: > ({;
         {activeTab === 'preferences' && renderPreferencesTab()};
       </div>;
     </div>;
-  );
-};
+  )};
 
-export default Profile;}}}}}}}}}
+export default Profile}}}}}}}}}

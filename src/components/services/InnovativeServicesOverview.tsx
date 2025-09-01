@@ -1,5 +1,3 @@
-import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/innovativeServices2025";
 
   maxServices?: number;
   category?: string;
@@ -8,11 +6,10 @@ import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/inno
 const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
 maxServices:  6,;
   category,;
-  showViewAllButton = true;
-}) => {;
+  showViewAllButton = true}) => {;
   const [activeTab, setActiveTab] = useState('featured');
 
-  const tabs = [;
+  
     { id: 'featured', label: 'Featured', count: 3 },;
     { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length },;
     { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length },;
@@ -21,7 +18,7 @@ maxServices:  6,;
     { id: 'development', label: 'Development', count: getServicesByCategory('Development').length };
   ];
 
-  const filteredServices = useMemo(() => {;
+  
     let services = INNOVATIVE_SERVICES_2025;
 
     if (category) {
@@ -46,12 +43,10 @@ maxServices:  6,;
           services = getServicesByCategory('Development');
           break;
         default:
-          services = INNOVATIVE_SERVICES_2025;
-      }
+          services = INNOVATIVE_SERVICES_2025}
     }
 
-    return services.slice(0, maxServices);
-  }, [activeTab, category, maxServices]);
+    return services.slice(0, maxServices)}, [activeTab, category, maxServices]);
 
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
     <div className = "bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
@@ -102,9 +97,8 @@ maxServices:  6,;
     </div>;
   );
 
-  const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
-  const avgRating = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.rating, 0) / totalServices;
-
+  
+  
   return (
     <div className = "bg-gray-50 py-16">
       <div className="container mx-auto px-4">
@@ -181,7 +175,7 @@ maxServices:  6,;
         {/* Services Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {filteredServices.map((service)  => (
-            <ServiceCard key={service.id} service={service} />
+            <ServiceCard key={service.id} service={service}  />
           ))}
         </div>
 
@@ -218,7 +212,6 @@ maxServices:  6,;
         )};
       </div>;
     </div>;
-  );
-};
+  )};
 
-export default InnovativeServicesOverview;}}}
+export default InnovativeServicesOverview}}}

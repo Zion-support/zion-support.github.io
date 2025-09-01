@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import {
   Zap,
   Code,
@@ -21,14 +18,7 @@ import {
   Target,
   Globe
  } from 'lucide-react';
-const MicroSAASPage = () => {
-  const saasServices = [
-    {
-      id: 'custom-applications',
-      title: 'Custom Applications',
-      description: 'Tailored software solutions designed for your specific business needs',
-      icon: <Code className="w-8 h-8" />,
-      features['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],;
+
       useCases['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],;
       pricing: 'Starting from $2,500/month'
     },
@@ -36,7 +26,7 @@ const MicroSAASPage = () => {
       id: 'api-development',
       title: 'API Development',
       description: 'Robust and scalable APIs to connect your applications and services',
-      icon: <Database className="w-8 h-8" />,
+      icon: <Database className="w-8 h-8"  />,
       features['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],;
       useCases['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],;
       pricing: 'Starting from $1,800/month'
@@ -45,7 +35,7 @@ const MicroSAASPage = () => {
       id: 'scalable-architecture',
       title: 'Scalable Architecture',
       description: 'Cloud-native architectures that grow with your business',
-      icon: <Globe className="w-8 h-8" />,
+      icon: <Globe className="w-8 h-8"  />,
       features['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],;
       useCases['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],;
       pricing: 'Starting from $3,200/month'
@@ -55,42 +45,24 @@ const MicroSAASPage = () => {
       title: 'User Management',
       description: 'Comprehensive user authentication and authorization systems',
     };
-      icon: <Users className="w-8 h-8" />,;
+      icon: <Users className="w-8 h-8"  />,;
       features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],;
       useCases: ['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],;
-      pricing: 'Starting from $1,500/month';
-    };
+      pricing: 'Starting from $1,500/month'};
   ];
-  const saasBenefits = [;
+  
     'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration';
   ];
-  const containerVariants = {
-    hidden: { opacity: 0 },;
-    visible: {;
+  
+    visible: {
       opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
-  const itemVariants = {
-  hidden: { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-},
-    visible: {;
+      transition: {
+        staggerChildren: 0.1}}};
+  
       opacity: 1,;
       y: 0,;
-      transition: {;
-        duration: 0.5;
-      };
-    };
-  };
+      transition: {
+        duration: 0.5}}};
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
       <div className="container mx-auto px-4 py-12">
@@ -120,7 +92,7 @@ const MicroSAASPage = () => {
           className="text-center mb-16"
 
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
-            <Zap className="w-10 h-10 text-white" />
+            <Zap className="w-10 h-10 text-white"  />
           </div>
           <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -181,7 +153,7 @@ const MicroSAASPage = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -202,12 +174,11 @@ const MicroSAASPage = () => {
                 </div>
               </div>
               {/* CTA Button */}
-              <Link
-to: {`/micro-saas/${service.id}`}
+              <Link to: {`/micro-saas/${service.id}`}
                 className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
 
                 Learn More
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />;
+                <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1"  />;
               </Link>
             </motion.div>
           ))}
@@ -216,34 +187,13 @@ to: {`/micro-saas/${service.id}`}
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 ;
-
-
-
-
-
-
-}}
+  y: 30 }}
           animate = {
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
           transition = {
   { duration: 0.8,
-  delay: 0.3 ;
-
-
-
-
-
-
-}}
+  delay: 0.3 }}
           className="mb-16"
 
           <div className="text-center mb-8">;
@@ -300,34 +250,13 @@ to: {`/micro-saas/${service.id}`}
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 ;
-
-
-
-
-
-
-}}
+  y: 30 }}
           animate = {
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
           transition = {
   { duration: 0.8,
-  delay: 0.4 ;
-
-
-
-
-
-
-}}
+  delay: 0.4 }}
           className="mb-16"
 
           <div className="text-center mb-8">;
@@ -338,7 +267,7 @@ to: {`/micro-saas/${service.id}`}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Rocket className="w-8 h-8 text-white" />
+                <Rocket className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Rapid Development</h3>
               <p className="text-zion-slate-light">
@@ -347,7 +276,7 @@ to: {`/micro-saas/${service.id}`}
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
               <p className="text-zion-slate-light">
@@ -356,7 +285,7 @@ to: {`/micro-saas/${service.id}`}
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
+                <TrendingUp className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Scalable Growth</h3>
               <p className="text-zion-slate-light">
@@ -369,34 +298,13 @@ to: {`/micro-saas/${service.id}`}
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 ;
-
-
-
-
-
-
-}}
+  y: 30 }}
           animate = {
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
           transition = {
   { duration: 0.8,
-  delay: 0.5 ;
-
-
-
-
-
-
-}}
+  delay: 0.5 }}
           className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8"
 
           <h2 className="text-3xl font-bold text-white mb-4">;
@@ -423,7 +331,5 @@ to: {`/micro-saas/${service.id}`}
         </motion.div>;
       </div>;
     </div>;
-  );
-};
-export default MicroSAASPage;
-}}}}}}
+  )};
+export default MicroSAASPage}}}}}}

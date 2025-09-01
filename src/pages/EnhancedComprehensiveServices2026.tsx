@@ -1,5 +1,3 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Brain,
   Cloud,
   Shield,
@@ -58,8 +56,6 @@ import { Brain,
  } from 'lucide-react';
 
 // Import our existing service data
-import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
-import { zion2026ComprehensiveServices } from "../data/zion2026ComprehensiveServices";
 
 interface Service {
 
@@ -95,9 +91,7 @@ pricing: {
         marketPrice: service.marketPrice,;
         estimatedDelivery: service.estimatedDelivery,;
         website: service.website,;
-        contactInfo: service.contactInfo;
-      });
-    });
+        contactInfo: service.contactInfo})});
 
     // Add services from zion2026ComprehensiveServices
     zion2026ComprehensiveServices.forEach(service = > {
@@ -122,21 +116,18 @@ pricing: {
         marketPrice: service.marketPrice,;
         estimatedDelivery: service.estimatedDelivery,;
         website: service.website,;
-        contactInfo: service.contactInfo;
-      });
-    });
+        contactInfo: service.contactInfo})});
 
     return services}, []);
 
-  const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
-    return cats.sort();
-  }, [allServices]);
+  
+    return cats.sort()}, [allServices]);
 
-  const filtered = allServices.filter(service => {;
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  
+      
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+      
       return matchesSearch && matchesCategory});
 
     // Sort services
@@ -160,20 +151,17 @@ pricing: {
 
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
 
-        return <Lightbulb className = "w-6 h-6" />};
-  };
+        return <Lightbulb className = "w-6 h-6"  />}};
 
         return 'bg-gray-100 text-gray-800'}
   };
 
-  const getInnovationBadge = (service: Service) => {;
+  
     if (service.innovationLevel === 'Revolutionary') {;
-      return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;
-    } else if (service.innovationLevel = == 'Cutting-Edge') {;
-      return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>;
+      return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3"  /> Revolutionary</span>} else if (service.innovationLevel = == 'Cutting-Edge') {;
+      return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3"  /> Cutting-Edge</span>;
 
-    return null;
-  };
+    return null};
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -218,7 +206,7 @@ pricing: {
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
 
-                <Play className="w-5 h-5" />
+                <Play className="w-5 h-5"  />
                 Watch Demo
               </motion.button>
               <motion.button
@@ -226,7 +214,7 @@ pricing: {
                 whileTap={{ scale: 0.95 }}
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
 
-                <BookOpen className="w-5 h-5" />
+                <BookOpen className="w-5 h-5"  />
                 View Documentation
               </motion.button>
             </div>
@@ -241,7 +229,7 @@ pricing: {
             {/* Search */}
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search revolutionary services..."
@@ -289,7 +277,7 @@ pricing: {
                     viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white'
                   }`}
 
-                  <Grid className="w-4 h-4" />
+                  <Grid className="w-4 h-4"  />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -297,7 +285,7 @@ pricing: {
                     viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white'
                   }`}
 
-                  <List className="w-4 h-4" />
+                  <List className="w-4 h-4"  />
                 </button>
               </div>
             </div>
@@ -362,7 +350,7 @@ pricing: {
                       </div>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-400 fill-current"  />
                       <span className="text-sm text-gray-300">{service.rating}</span>
                       <span className="text-xs text-gray-400">({service.reviewCount})</span>
                     </div>
@@ -374,7 +362,7 @@ pricing: {
                   {/* Pricing */}
                   <div className="mb-4">
                     <div className="flex items-center gap-2 mb-2">
-                      <DollarSign className="w-4 h-4 text-green-400" />
+                      <DollarSign className="w-4 h-4 text-green-400"  />
                       <span className="text-sm text-gray-300">Starting from</span>
                       <span className="text-lg font-bold text-green-400">
                         {service.pricing.currency}{service.pricing.starter.toLocaleString()}
@@ -411,7 +399,7 @@ pricing: {
                       Get Started
                     </button>
                     <button className="px-4 py-2 border border-white/20 text-white rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-200">
-                      <Eye className="w-4 h-4" />
+                      <Eye className="w-4 h-4"  />
                     </button>
                   </div>
                 </motion.div>
@@ -473,7 +461,7 @@ pricing: {
                           </div>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                          <Star className="w-4 h-4 text-yellow-400 fill-current"  />
                           <span className="text-sm text-gray-300">{service.rating}</span>
                           <span className="text-xs text-gray-400">({service.reviewCount})</span>
                         </div>
@@ -505,7 +493,7 @@ pricing: {
             animate={{ opacity: 1 }}
             className="text-center py-16"
 
-            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4"  />
             <h3 className="text-xl font-semibold text-gray-300 mb-2">No services found</h3>
             <p className="text-gray-400">Try adjusting your search or filter criteria</p>
           </motion.div>;
@@ -574,7 +562,7 @@ pricing: {
                     onClick={() => setSelectedService(null)}
                     className="p-2 hover:bg-white/10 rounded-lg transition-colors"
 
-                    <X className="w-6 h-6 text-gray-400" />
+                    <X className="w-6 h-6 text-gray-400"  />
                   </button>
                 </div>
 
@@ -588,7 +576,7 @@ pricing: {
                     <ul className="space-y-2 mb-6">
                       {selectedService.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />
                           {feature}
                         </li>
                       ))}
@@ -598,7 +586,7 @@ pricing: {
                     <ul className="space-y-2 mb-6">
                       {selectedService.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-300">
-                          <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+                          <Star className="w-4 h-4 text-yellow-400 flex-shrink-0"  />
                           {benefit}
                         </li>
                       ))}
@@ -669,15 +657,15 @@ pricing: {
                         <h4 className="text-white font-semibold mb-3">Contact Information</h4>
                         <div className="space-y-2 text-sm">
                           <div className="flex items-center gap-2 text-gray-300">
-                            <Phone className="w-4 h-4" />
+                            <Phone className="w-4 h-4"  />
                             {selectedService.contactInfo.phone}
                           </div>
                           <div className="flex items-center gap-2 text-gray-300">
-                            <Mail className="w-4 h-4" />
+                            <Mail className="w-4 h-4"  />
                             {selectedService.contactInfo.email}
                           </div>
                           <div className="flex items-center gap-2 text-gray-300">
-                            <MapPin className="w-4 h-4" />
+                            <MapPin className="w-4 h-4"  />
                             {selectedService.contactInfo.address}
                           </div>
                         </div>
@@ -717,7 +705,7 @@ pricing: {
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
 
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5"  />
               Call +1 302 464 0950
             </motion.button>
             <motion.button
@@ -725,7 +713,7 @@ pricing: {
               whileTap={{ scale: 0.95 }}
               className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
 
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5"  />
               Email kleber@ziontechgroup.com
             </motion.button>
           </div>
@@ -736,7 +724,6 @@ pricing: {
         </div>;
       </div>;
     </div>;
-  );
-};
+  )};
 
-export default EnhancedComprehensiveServices2026;}}}}}}
+export default EnhancedComprehensiveServices2026}}}}}}

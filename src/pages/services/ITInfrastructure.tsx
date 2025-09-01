@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Server,
   Shield,
@@ -14,55 +12,8 @@ import {
   Check
 } from 'lucide-react';
 
-const ITInfrastructure = () => {
-  const services = [
-    {
-      icon: <Server className="w-8 h-8" />,
-      title: "Server Infrastructure",
-      description: "Enterprise-grade server solutions with high availability and performance optimization.",
-      features: ["Load balancing", "Auto-scaling", "High availability", "Performance monitoring"]
-    },
-    {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "Cloud Infrastructure",
-      description: "Multi-cloud infrastructure management and optimization services.",
-      features: ["Multi-cloud strategy", "Cost optimization", "Security compliance", "Migration support"]
-    },
-    {
-      icon: <Database className="w-8 h-8" />,
-      title: "Database Management",
-      description: "Comprehensive database infrastructure and management solutions.",
-      features: ["Performance tuning", "Backup & recovery", "Security hardening", "Monitoring"]
-    },
-    {
-      icon: <Network className="w-8 h-8" />,
-      title: "Network Infrastructure",
-      description: "Robust network design and implementation for enterprise environments.",
-      features: ["Network design", "Security implementation", "Performance optimization", "24/7 monitoring"]
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Security Infrastructure",
-      description: "Advanced security infrastructure and threat protection systems.",
-      features: ["Firewall management", "Intrusion detection", "Vulnerability assessment", "Incident response"]
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Performance Optimization",
-      description: "Infrastructure performance tuning and optimization services.",
-      features: ["Performance analysis", "Capacity planning", "Optimization strategies", "Continuous monitoring"]
-    }
-  ];
 
-  const benefits = [
-    "99.9% uptime guarantee",
-    "24/7 monitoring and support",
-    "Scalable architecture",
-    "Security-first approach",
-    "Cost optimization",
-    "Compliance ready"
-  ];
-
+  
   return (
     <div className="min-h-screen bg-zion-slate-dark">
       {/* Hero Section */}
@@ -75,7 +26,7 @@ const ITInfrastructure = () => {
             className="max-w-4xl mx-auto"
           >
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-8">
-              <Server className="w-12 h-12 text-white" />
+              <Server className="w-12 h-12 text-white"  />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               IT Infrastructure
@@ -171,7 +122,7 @@ const ITInfrastructure = () => {
                   className="flex items-center gap-4 p-4 bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg"
                 >
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white"  />
                   </div>
                   <span className="text-white font-medium">{benefit}</span>
                 </motion.div>
@@ -210,7 +161,6 @@ const ITInfrastructure = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ITInfrastructure;

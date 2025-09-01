@@ -1,11 +1,9 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react.ts';
 
 interface TabsContextType {
 
   activeTab: string;
   setActiveTab: (tab: string)  => void}
 
-const TabsContext = createContext<TabsContextType | null>(null);
 
 interface TabsProps extends React.PropsWithChildren<{}> {
 
@@ -18,7 +16,7 @@ interface TabsProps extends React.PropsWithChildren<{}> {
 export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {;
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
-  const handleTabChange = (tab: string) => {;
+  
     setActiveTab(tab);
     if (onValueChange) {
       onValueChange(tab)}
@@ -32,15 +30,12 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
 
 
 ;
-;
-
 }}>;
       <div className={className}>;
         {children};
       </div>;
     </TabsContext.Provider>;
-  );
-}
+  )}
 
   children: ReactNode;
   className?: string}
@@ -56,8 +51,7 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
     >;
       {children};
     </button>;
-  );
-}
+  )}
 
   children: ReactNode;
   value: string;
@@ -69,5 +63,4 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
     <div className = {`mt-4 ${className}`}>;
       {children};
     </div>;
-  );
-}
+  )}

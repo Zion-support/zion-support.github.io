@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
 import { Atom, 
   Cpu, 
   Zap, 
@@ -54,77 +51,9 @@ import { Atom,
  } from 'lucide-react.ts';
 
 export default function QuantumComputing(...args: any[]): any {
-  const features = [
-    {
-      icon: Atom,
-      title: "Quantum Supremacy",
-      description: "Achieve computational power beyond classical computing limits",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Cpu,
-      title: "Quantum Algorithms",
-      description: "Optimized algorithms for complex problem-solving",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Zap,
-      title: "Quantum Speedup",
-      description: "Exponential performance improvements for specific tasks",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      icon: Brain,
-      title: "AI Enhancement",
-      description: "Quantum machine learning and neural networks",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Shield,
-      title: "Quantum Security",
-      description: "Unbreakable encryption and secure communications",
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      icon: Target,
-      title: "Precision Computing",
-      description: "Ultra-accurate simulations and calculations",
-      color: "from-indigo-500 to-blue-500"
-    }
-  ];
-
-  const applications = [
-    {
-      title: "Cryptography",
-      description: "Quantum-resistant encryption and secure communications",
-      icon: Lock,
-      benefits: ["Post-quantum cryptography", "Quantum key distribution", "Secure protocols"]
-    },
-    {
-      title: "Drug Discovery",
-      description: "Molecular modeling and pharmaceutical research",
-      icon: Activity,
-      benefits: ["Molecular simulation", "Drug optimization", "Protein folding"]
-    },
-    {
-      title: "Financial Modeling",
-      description: "Portfolio optimization and risk assessment",
-      icon: TrendingUp,
-      benefits: ["Risk analysis", "Portfolio optimization", "Market simulation"]
-    },
-    {
-      title: "Climate Science",
-      description: "Climate modeling and environmental prediction",
-      icon: Globe,
-      benefits: ["Weather forecasting", "Climate modeling", "Environmental analysis"]
-    }
-  ];
-
-  const technologies = [
-    "Superconducting Qubits", "Trapped Ions", "Topological Qubits", "Quantum Error Correction", 
-    "Quantum Gates", "Quantum Circuits", "Quantum Memory", "Quantum Networks", "Quantum Sensors", "Quantum Metrology"
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -149,14 +78,14 @@ export default function QuantumComputing(...args: any[]): any {
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center space-x-2"
               >
                 <span>Get Started</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-purple-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-purple-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
             </div>
           </motion.div>
@@ -240,7 +169,7 @@ export default function QuantumComputing(...args: any[]): any {
                 <ul className="space-y-2">
                   {application.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0"  />
                       {benefit}
                     </li>
                   ))}
@@ -308,19 +237,18 @@ export default function QuantumComputing(...args: any[]): any {
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center space-x-2"
               >
                 <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-purple-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-purple-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-}
+  )}

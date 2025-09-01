@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import {
   Search,
   Filter,
@@ -18,8 +16,6 @@ import {
   Clock,
   CheckCircle,
   ArrowRight
-import { SEO } from '../components/SEO';
-import {
   revolutionaryMicroSaasServices2026,
   revolutionaryITInfrastructureServices2026,
   revolutionaryAIServices2026,
@@ -29,11 +25,11 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
-  const categories = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.category)))];
-  const innovationLevels = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.innovationLevel)))];
-  const filtered = ALL_REVOLUTIONARY_SERVICES_2026;
+  
+  
+  
     if (searchTerm) {
-      const lowerQuery = searchTerm.toLowerCase();
+      
       filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(lowerQuery) ||
         service.description.toLowerCase().includes(lowerQuery) ||
@@ -46,37 +42,31 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
     if (selectedInnovationLevel !== 'all') {
       filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel);
 
-    return filtered;
-  }, [searchTerm, selectedCategory, selectedInnovationLevel]);
-  const getCategoryIcon = (category: string) => {;
+    return filtered}, [searchTerm, selectedCategory, selectedInnovationLevel]);
+  
     switch (category) {;
-      case 'Quantum Computing': return <Cpu className="w-5 h-5" />;
-      case 'Neural Networks': return <Brain className="w-5 h-5" />;
-      case 'Blockchain Development': return <Shield className="w-5 h-5" />;
-      case 'Quantum Computing Infrastructure': return <Cpu className="w-5 h-5" />;
-      case 'Edge Computing': return <Network className="w-5 h-5" />;
-      case 'Autonomous Systems': return <Brain className="w-5 h-5" />;
-      case 'Quantum AI': return <Zap className="w-5 h-5" />;
-      default: return <Zap className="w-5 h-5" />;
-
-  };
-  const getInnovationLevelColor = (level: string) => {;
+      case 'Quantum Computing': return <Cpu className="w-5 h-5"  />;
+      case 'Neural Networks': return <Brain className="w-5 h-5"  />;
+      case 'Blockchain Development': return <Shield className="w-5 h-5"  />;
+      case 'Quantum Computing Infrastructure': return <Cpu className="w-5 h-5"  />;
+      case 'Edge Computing': return <Network className="w-5 h-5"  />;
+      case 'Autonomous Systems': return <Brain className="w-5 h-5"  />;
+      case 'Quantum AI': return <Zap className="w-5 h-5"  />;
+      default: return <Zap className="w-5 h-5"  />};
+  
     switch (level) {;
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
-      default: return 'bg-gray-600';
-    }
-    return `$${price.toLocaleString()}`;
-  };
+      default: return 'bg-gray-600'}
+    return `$${price.toLocaleString()}`};
 
   return (
     <>
-      <SEO
-        title="Revolutionary Services 2026 - Zion Tech Group"
+      <SEO title="Revolutionary Services 2026 - Zion Tech Group"
         description="Discover Zion Tech Group's revolutionary 2026 micro SAAS, IT infrastructure, and AI services. Quantum computing, edge AI, autonomous agents, and more."
         keywords="quantum computing, edge AI, autonomous AI, blockchain, micro SAAS, IT services, AI services, 2026, Zion Tech Group"
-      />
+       />
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20">
@@ -109,15 +99,15 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
               className="flex flex-wrap justify-center gap-4 text-sm text-zinc-400"
 
               <span className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
+                <CheckCircle className="w-4 h-4 text-green-400"  />
                 {ALL_REVOLUTIONARY_SERVICES_2026.length} Revolutionary Services
               </span>
               <span className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-blue-400" />
+                <TrendingUp className="w-4 h-4 text-blue-400"  />
                 Up to 1000x Performance Improvement
               </span>
               <span className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-yellow-400" />
+                <Star className="w-4 h-4 text-yellow-400"  />
                 Market Leading Innovation
               </span>
             </motion.div>
@@ -130,7 +120,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Search */}
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-5 h-5" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-5 h-5"  />
                   <input
                     type="text"
                     placeholder="Search services..."
@@ -221,8 +211,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                   onClick={() => {;
                     setSearchTerm('');
                     setSelectedCategory('all');
-                    setSelectedInnovationLevel('all');
-                  }}
+                    setSelectedInnovationLevel('all')}}
                   className = "mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                 >
                   Clear Filters
@@ -252,14 +241,14 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                   href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors"
 
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5"  />
                   Call +1 302 464 0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors"
 
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-5 h-5"  />
                   Email kleber@ziontechgroup.com
                 </a>
               </div>
@@ -272,8 +261,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
         </section>;
       </div>;
     </>;
-  );
-};
+  )};
 
 // Icon components
 const PhoneIcon: React.FC<{ className?: string }> = ({ className }) => (

@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
 import { Users, 
   Brain, 
   MessageSquare, 
@@ -29,38 +26,26 @@ import { Users,
  } from 'lucide-react';
 
 export default function AICustomerExperiencePlatform(...args[]):  {
-  const features = [
-    'AI-powered sentiment analysis and emotion detection',
-    'Real-time customer journey mapping and optimization',;
+  
     'Intelligent chatbot with natural language processing',;
     'Personalized recommendation engine',;
     'Omnichannel customer interaction tracking',;
     'Predictive customer behavior analytics',;
     'Automated customer feedback analysis',;
     'Integration with major CRM and marketing platforms';
-  ];
-
-  const services = [
-    {
-      title: 'Customer Experience Assessment',
-      description: 'Comprehensive analysis of current customer journey and experience optimization opportunities',
-      price: 'From $4,500',
-      features['Journey mapping', 'Pain point identification', 'Optimization strategy', 'ROI analysis'];
-    },;
+  ]},;
     {
       title: 'AI Platform Implementation',
       description: 'Full implementation of AI-powered customer experience platform',
       price: 'From $12,000',
-      features['Platform setup', 'AI model training', 'Integration configuration', 'Team training'];
-    },;
+      features['Platform setup', 'AI model training', 'Integration configuration', 'Team training']},;
     { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
-      details: ['Unlimited interactions', 'Unlimited team members', 'Custom AI models', '24/7 dedicated support'] ;
-    },;
+      details: ['Unlimited interactions', 'Unlimited team members', 'Custom AI models', '24/7 dedicated support'] },;
   ];
 
-  const useCases = [;
+  
     'E-commerce customer experience optimization',;
     'SaaS product user engagement tracking',;
     'Financial services customer journey mapping',;
@@ -69,7 +54,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     'B2B customer relationship management';
   ];
 
-  const benefits = [;
+  
     'Increase customer satisfaction scores by 25-40%',;
     'Improve customer retention rates by 30-50%',;
     'Reduce customer service costs by 35-45%',;
@@ -78,7 +63,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     'Gain actionable insights for product development';
   ];
 
-  const metrics = [;
+  
     'Customer Satisfaction Score (CSAT)',;
     'Net Promoter Score (NPS)',;
     'Customer Effort Score (CES)',;
@@ -92,7 +77,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       <section className="bg-gradient-to-br from-pink-600 via-rose-600 to-red-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Heart className="w-4 h-4 mr-2" /> AI-Powered Customer Experience
+            <Heart className="w-4 h-4 mr-2"  /> AI-Powered Customer Experience
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Customer Experience Platform</h1>
           <p className="text-rose-100 text-xl">Revolutionize your customer experience with AI-powered insights, personalization, and automation that delights customers and drives business growth.</p>
@@ -106,7 +91,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-start">
-                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                   <span className="text-gray-700">{f}</span>
                 </li>
               ))}
@@ -130,10 +115,10 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="/pricing" className="px-5 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors inline-flex items-center">
-                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2"  />
               </a>
               <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-gray-300 rounded-lg hover:border-pink-400 transition-colors inline-flex items-center">
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />
+                Learn More <ExternalLink className="w-4 h-4 ml-2"  />
               </a>
             </div>
           </div>
@@ -142,7 +127,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {['25-40% CSAT improvement', 'Real-time insights', 'AI personalization'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <Brain className="w-6 h-6 text-pink-600 mb-3" />
+              <Brain className="w-6 h-6 text-pink-600 mb-3"  />
               <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
@@ -153,7 +138,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map((useCase) => (
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">
-                <MessageCircle className="w-5 h-5 text-pink-600 mr-3" />
+                <MessageCircle className="w-5 h-5 text-pink-600 mr-3"  />
                 <span className="text-gray-700">{useCase}</span>
               </div>
             </div>;
@@ -169,13 +154,13 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Transform CX
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </a>
               <a 
                 href="tel:+13024640950" 
                 className="border border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 CX Consultation
               </a>
             </div>
@@ -291,7 +276,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -352,7 +337,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 <div className="space-y-3">
                   {useCase.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center gap-3 text-green-400">
-                      <TrendingUp className="w-5 h-5 flex-shrink-0" />
+                      <TrendingUp className="w-5 h-5 flex-shrink-0"  />
                       {benefit}
                     </div>
                   ))}
@@ -422,5 +407,4 @@ export default function AICustomerExperiencePlatform(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

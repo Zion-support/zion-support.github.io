@@ -97,8 +97,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       integrations["AWS", "Azure", "Google Cloud", "VMware", "Kubernetes"],;
       apiEndpoints: 400,
       uptime: "99.99%",
-      security["SOC 2", "ISO 27001", "Encryption", "Access controls"];
-    },;
+      security["SOC 2", "ISO 27001", "Encryption", "Access controls"]},;
     competitors["ServiceNow", "BMC Software", "BMC Helix", "Ivanti"],;
     marketSize: "$152.4 billion by 2025",
     growthRate: "180% annual growth",
@@ -167,8 +166,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       integrations["AWS", "Azure", "Google Cloud", "Quantum simulators", "AI platforms"],;
       apiEndpoints: 800,
       uptime: "99.99%",
-      security["Quantum encryption", "SOC 2", "FedRAMP", "Zero-trust"];
-    },;
+      security["Quantum encryption", "SOC 2", "FedRAMP", "Zero-trust"]},;
     competitors["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],;
     marketSize: "$832.1 billion by 2025",
     growthRate: "300% annual growth",
@@ -237,8 +235,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       integrations["IoT devices", "Cloud platforms", "Analytics tools", "Security systems"],;
       apiEndpoints: 300,
       uptime: "99.9%",
-      security["Edge security", "Device authentication", "Data encryption"];
-    },;
+      security["Edge security", "Device authentication", "Data encryption"]},;
     competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],;
     marketSize: "$43.4 billion by 2025",
     growthRate: "200% annual growth",
@@ -307,8 +304,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       integrations["SIEM", "IAM", "Firewalls", "EDR", "Cloud platforms"],;
       apiEndpoints: 500,
       uptime: "99.99%",
-      security["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"];
-    },;
+      security["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"]},;
     competitors["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],;
     marketSize: "$67.8 billion by 2025",
     growthRate: "250% annual growth",
@@ -377,8 +373,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       integrations["GitHub", "Jenkins", "Docker Hub", "AWS", "Azure"],;
       apiEndpoints: 350,
       uptime: "99.9%",
-      security["Code scanning", "Vulnerability assessment", "Access controls"];
-    },;
+      security["Code scanning", "Vulnerability assessment", "Access controls"]},;
     competitors["GitLab", "Jenkins", "CircleCI", "GitHub Actions"],;
     marketSize: "$25.2 billion by 2025",
     growthRate: "180% annual growth",
@@ -447,8 +442,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       integrations["SSO systems", "CRM platforms", "Banking systems", "Government databases"],;
       apiEndpoints: 250,
       uptime: "99.9%",
-      security["Blockchain security", "Encryption", "Multi-factor authentication"];
-    },;
+      security["Blockchain security", "Encryption", "Multi-factor authentication"]},;
     competitors["Microsoft Identity", "Okta", "Auth0", "OneLogin"],;
     marketSize: "$28.6 billion by 2025",
     growthRate: "220% annual growth",
@@ -517,8 +511,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       integrations["Data warehouses", "Cloud platforms", "BI tools", "AI platforms"],;
       apiEndpoints: 600,
       uptime: "99.99%",
-      security["Quantum encryption", "SOC 2", "Data protection", "Access controls"];
-    },;
+      security["Quantum encryption", "SOC 2", "Data protection", "Access controls"]},;
     competitors["Tableau", "Power BI", "Qlik", "Looker"],;
     marketSize: "$29.9 billion by 2025",
     growthRate: "250% annual growth",
@@ -528,4 +521,4 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
 
 ];
 
-export default ADVANCED_IT_SERVICES_2025;}}
+export default ADVANCED_IT_SERVICES_2025}}

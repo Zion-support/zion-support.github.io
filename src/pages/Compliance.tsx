@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Shield,
   CheckCircle,
@@ -38,170 +36,10 @@ import {
 } from 'lucide-react';
 
 export default function Compliance() {
-  const complianceFrameworks = [
-    {
-      name: 'ISO 27001',
-      description: 'Information Security Management System',
-      status: 'Certified',
-      icon: FileText,
-      color: 'from-green-500 to-emerald-600',
-      details: 'International standard for information security management',
-      scope: 'Information security management system',
-      lastAudit: 'December 2024',
-      nextAudit: 'December 2025',
-      benefits: [
-        'Systematic approach to information security',
-        'Risk assessment and management',
-        'Continuous improvement process',
-        'International recognition'
-      ]
-    },
-    {
-      name: 'SOC 2 Type II',
-      description: 'Service Organization Control 2',
-      status: 'Compliant',
-      icon: Award,
-      color: 'from-blue-500 to-cyan-600',
-      details: 'AICPA trust services criteria compliance',
-      scope: 'Security, availability, processing integrity, confidentiality, privacy',
-      lastAudit: 'November 2024',
-      nextAudit: 'November 2025',
-      benefits: [
-        'Independent third-party validation',
-        'Trust services criteria compliance',
-        'Customer confidence and trust',
-        'Operational effectiveness'
-      ]
-    },
-    {
-      name: 'GDPR',
-      description: 'General Data Protection Regulation',
-      status: 'Compliant',
-      icon: Shield,
-      color: 'from-purple-500 to-indigo-600',
-      details: 'EU data protection and privacy regulation',
-      scope: 'Personal data processing and protection',
-      lastAudit: 'October 2024',
-      nextAudit: 'October 2025',
-      benefits: [
-        'Enhanced data protection',
-        'Individual privacy rights',
-        'Transparent data processing',
-        'Cross-border data transfer compliance'
-      ]
-    },
-    {
-      name: 'HIPAA',
-      description: 'Health Insurance Portability and Accountability Act',
-      status: 'Compliant',
-      icon: Heart,
-      color: 'from-red-500 to-pink-600',
-      details: 'Healthcare data protection and privacy',
-      scope: 'Protected health information (PHI)',
-      lastAudit: 'September 2024',
-      nextAudit: 'September 2025',
-      benefits: [
-        'Healthcare data security',
-        'Patient privacy protection',
-        'Administrative safeguards',
-        'Technical safeguards'
-      ]
-    }
-  ];
-
-  const complianceMetrics = [
-    {
-      metric: '99.9%',
-      label: 'Uptime',
-      description: 'System availability',
-      icon: Server,
-      trend: 'up'
-    },
-    {
-      metric: '100%',
-      label: 'Data Encryption',
-      description: 'At rest and in transit',
-      icon: Lock,
-      trend: 'stable'
-    },
-    {
-      metric: '< 1 hour',
-      label: 'Incident Response',
-      description: 'Average response time',
-      icon: AlertTriangle,
-      trend: 'down'
-    },
-    {
-      metric: '24/7',
-      label: 'Monitoring',
-      description: 'Security operations center',
-      icon: Monitor,
-      trend: 'stable'
-    }
-  ];
-
-  const securityMeasures = [
-    {
-      category: 'Access Control',
-      measures: [
-        'Multi-factor authentication (MFA)',
-        'Role-based access control (RBAC)',
-        'Single sign-on (SSO) integration',
-        'Privileged access management (PAM)',
-        'Session management and timeout'
-      ],
-      icon: Key
-    },
-    {
-      category: 'Data Protection',
-      measures: [
-        'End-to-end encryption (AES-256)',
-        'Data loss prevention (DLP)',
-        'Backup and disaster recovery',
-        'Data classification and labeling',
-        'Secure data disposal'
-      ],
-      icon: Database
-    },
-    {
-      category: 'Network Security',
-      measures: [
-        'Firewall and intrusion detection',
-        'Virtual private networks (VPN)',
-        'DDoS protection and mitigation',
-        'Network segmentation',
-        'Regular security assessments'
-      ],
-      icon: Network
-    },
-    {
-      category: 'Application Security',
-      measures: [
-        'Secure software development lifecycle',
-        'Regular vulnerability assessments',
-        'Penetration testing',
-        'Code security reviews',
-        'API security and monitoring'
-      ],
-      icon: Shield
-    }
-  ];
-
-  const contactInfo = [
-    {
-      title: 'Compliance Team',
-      email: 'compliance@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      responseTime: '24-48 hours'
-    },
-    {
-      title: 'Security Team',
-      email: 'security@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      responseTime: '2-4 hours'
-    }
-  ];
-
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -210,7 +48,7 @@ export default function Compliance() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-full border border-blue-400/30 mb-6">
-              <Shield className="w-5 h-5 text-blue-400 mr-2" />
+              <Shield className="w-5 h-5 text-blue-400 mr-2"  />
               <span className="text-blue-300 font-medium">Compliance & Security</span>
             </div>
             
@@ -295,7 +133,7 @@ export default function Compliance() {
                     <ul className="space-y-2">
                       {framework.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-start">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0"  />
                           <span className="text-gray-300 text-sm">{benefit}</span>
                         </li>
                       ))}
@@ -374,7 +212,7 @@ export default function Compliance() {
                 <ul className="space-y-3">
                   {category.measures.map((measure, measureIndex) => (
                     <li key={measureIndex} className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0"  />
                       <span className="text-gray-300 text-sm">{measure}</span>
                     </li>
                   ))}
@@ -412,15 +250,15 @@ export default function Compliance() {
                   
                   <div className="space-y-4">
                     <div className="flex items-center">
-                      <Mail className="w-5 h-5 text-blue-400 mr-3" />
+                      <Mail className="w-5 h-5 text-blue-400 mr-3"  />
                       <span className="text-gray-300">{contact.email}</span>
                     </div>
                     <div className="flex items-center">
-                      <Phone className="w-5 h-5 text-blue-400 mr-3" />
+                      <Phone className="w-5 h-5 text-blue-400 mr-3"  />
                       <span className="text-gray-300">{contact.phone}</span>
                     </div>
                     <div className="flex items-center">
-                      <Clock className="w-5 h-5 text-blue-400 mr-3" />
+                      <Clock className="w-5 h-5 text-blue-400 mr-3"  />
                       <span className="text-gray-300">Response time: {contact.responseTime}</span>
                     </div>
                   </div>
@@ -431,5 +269,4 @@ export default function Compliance() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

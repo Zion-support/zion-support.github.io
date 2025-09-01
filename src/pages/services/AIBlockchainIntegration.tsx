@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { Brain, 
   Shield, 
   Zap, 
@@ -21,86 +19,16 @@ import { Brain,
   Target,
   Rocket
  } from 'lucide-react.ts';
-import { SEO  } from '../../components/SEO';
 
 export default function AIBlockchainIntegration(...args: any[]): any {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Smart Contracts",
-      description: "Intelligent contracts that automatically execute based on AI analysis and market conditions"
-    },
-    {
-      icon: Shield,
-      title: "Enhanced Security",
-      description: "Multi-layered security with AI threat detection and blockchain immutability"
-    },
-    {
-      icon: Zap,
-      title: "Real-time Processing",
-      description: "Lightning-fast transaction processing with AI optimization"
-    },
-    {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "AI-driven insights for blockchain performance and market trends"
-    }
-  ];
-
-  const benefits = [
-    "Reduce transaction costs by up to 60%",
-    "Improve security with AI threat detection",
-    "Automate complex blockchain operations",
-    "Real-time fraud prevention and detection",
-    "Scalable infrastructure for enterprise needs",
-    "Compliance automation for regulatory requirements"
-  ];
-
-  const pricing = [
-    {
-      name: "Starter",
-      price: "$2,500",
-      period: "/month",
-      features: [
-        "AI Smart Contract Templates",
-        "Basic Security Monitoring",
-        "Standard Support",
-        "Up to 10,000 transactions/month"
-      ]
-    },
-    {
-      name: "Professional",
-      price: "$5,000",
-      period: "/month",
-      features: [
-        "Custom AI Smart Contracts",
-        "Advanced Security Suite",
-        "Priority Support",
-        "Up to 100,000 transactions/month",
-        "Custom Integrations"
-      ]
-    },
-    {
-      name: "Enterprise",
-      price: "$12,000",
-      period: "/month",
-      features: [
-        "Full AI Blockchain Platform",
-        "Enterprise Security",
-        "24/7 Dedicated Support",
-        "Unlimited transactions",
-        "Custom Development",
-        "On-premise Deployment"
-      ]
-    }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Blockchain Integration - Zion Tech Group"
+      <SEO title="AI Blockchain Integration - Zion Tech Group"
         description="Revolutionary AI-powered blockchain integration platform for secure, intelligent, and automated blockchain operations."
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -112,7 +40,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-center mb-6">
-              <Brain className="w-12 h-12 text-cyan-400 mr-3" />
+              <Brain className="w-12 h-12 text-cyan-400 mr-3"  />
               <h1 className="text-4xl md:text-6xl font-bold text-white">
                 AI Blockchain Integration
               </h1>
@@ -205,7 +133,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="flex items-start space-x-3"
               >
-                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"  />
                 <span className="text-gray-300 text-lg">{benefit}</span>
               </motion.div>
             ))}
@@ -262,7 +190,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -319,5 +247,4 @@ export default function AIBlockchainIntegration(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}

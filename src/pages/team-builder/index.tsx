@@ -1,36 +1,8 @@
 // import { NextPage   } from 'next.ts'; // Removed
-import React from 'react.ts'; // Ensure React is imported if not already for FC type
-import { AppLayout   } from '@/layout/AppLayout'; // Assuming a general AppLayout exists
-import { Button   } from '@/components/ui/button';
-import { Input   } from '@/components/ui/input';
-import { Textarea   } from '@/components/ui/textarea';
-import { Label   } from '@/components/ui/label';
-import { Switch   } from '@/components/ui/switch'; // Added for new fields
-import { useForm, Controller, type SubmitHandler   } from 'react-hook-form.ts';
-import { zodResolver   } from '@hookform/resolvers/zod';
-import * as z from 'zod.ts';
-import { Steps, Step   } from '@/components/ui/steps'; // Assuming this is how steps are imported
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter   } from '@/components/ui/card';
-import { useState   } from 'react.ts';
-import { ProjectBrief, TeamRecommendation   } from '@/types'; // Import from barrel file
-import { toast   } from 'sonner.ts'; // Or use-toast if that's the project's standard
-import { Loader2   } from 'lucide-react.ts';
-import { TeamRecommendationDisplay   } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
 
 // Define Zod schema for form validation
-const projectBriefSchema = z.object({
-  projectName: z.string().min(3, 'Project name must be at least 3 characters'),
-  goals: z.string().min(10, 'Goals/scope must be at least 10 characters'),
-  timeline: z.string().min(2, 'Timeline is required'),
-  budget: z.string().min(2, 'Budget is required'),
-  techStack: z.string().optional(), // Comma-separated for now
-  lockTimeline: z.boolean().optional(),
-  lockBudget: z.boolean().optional(),
-  talentFilters: z.object({ // New
-    verifiedOnly: z.boolean().optional(),
-    regions: z.string().optional(), // Comma-separated string for now;
-  }).optional(),;
-});
+
+  }).optional(),});
 
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
@@ -58,30 +30,26 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     },
   });
 
-  const steps = [
-    { name: 'Project Basics', fields: ['projectName', 'goals'] },
-    { name: 'Details', fields: ['timeline', 'budget', 'techStack'] },;
+  
     { name: 'Review & Submit', fields: [] }, // No fields, just review;
   ];
 
-  const handleNextStep = async () => {;
-    const currentStepFields = steps[currentStep].fields as (keyof ProjectBriefFormData)[];
-    const isValid = await trigger(currentStepFields);
+  
+    
+    
     if (isValid) {
-      setCurrentStep((prev) => prev + 1);
-    }
+      setCurrentStep((prev) => prev + 1)}
   };
 
-  const handlePreviousStep = () => {;
-    setCurrentStep((prev) => prev - 1);
-  };
+  
+    setCurrentStep((prev) => prev - 1)};
 
   const onSubmit: SubmitHandler<ProjectBriefFormData> = async (data) => {
     setIsLoading(true);
     setTeamRecommendation(null);
 
     const projectBriefData: ProjectBrief = {
-  userId: any'current-user-id',;
+  userId: anycurrent-user-id',;
       createdAt: new Date().toISOString(),
       ...data,
       techStack: data.techStack?.split(',').map(s   => s.trim()).filter(s => s) || [],
@@ -89,87 +57,63 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
         verifiedOnly: data.talentFilters?.verifiedOnly,;
         regions: data.talentFilters?.regions?.split(',').map(r   => r.trim()).filter(r => r) || [],;
   
-;
-};
-    };
+}};
     setProjectBriefSubmitted(projectBriefData);
 
     try {
-      const response = await fetch('/api/team-builder/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify(projectBriefData),;
-      });
+      
+        body: JSON.stringify(projectBriefData),});
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Failed to generate team recommendation');
-      }
+        
+        throw new Error(errorData.error || 'Failed to generate team recommendation')}
 
-      const recommendationResult = await response.json();
+      
       setTeamRecommendation(recommendationResult);
       toast.success('Team recommendation generated successfully!');
       // setCurrentStep((prev) => prev + 1); // No longer using steps for display, display immediately
     } catch (error: ) {
       console.error('Error submitting project brief:', error);
-      toast.error(error.message || 'An error occurred while generating the team.');
-    } finally {
-      setIsLoading(false);
-    }
+      toast.error(error.message || 'An error occurred while generating the team.')} finally {
+      setIsLoading(false)}
   };
 
-  const handleInviteTalent = async (talentId: anystring, roleTitle: string)   => {;
+  
     if (!projectBriefSubmitted) {;
       toast.error("Cannot send invite without a project context.");
-      return;
-    }
+      return}
 
     // Assuming projectBriefSubmitted has an 'id' if it's saved, or we generate one
     // For now, let's assume projectBriefSubmitted.id might be null if not saved.
     // The API and DB table are designed to handle nullable project_brief_id.
 
-    const invitePayload = {
-  talentId: talentId,
-      roleTitle: roleTitle,
-      projectBriefId: projectBriefSubmitted.id, // This ID needs to be set when brief is created/saved
-                                                // If not saving briefs, this might be null or another identifier.
-      // teamRecommendationId: teamRecommendation?.id,
-  // If recommendations are saved and have an ID;
-    ;
-
-};
+    
+    };
 
     try {
-      const response = await fetch('/api/team-builder/invite', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify(invitePayload),;
-      });
+      
+        body: JSON.stringify(invitePayload),});
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Failed to send invite');
-      }
+        
+        throw new Error(errorData.error || 'Failed to send invite')}
 
-      const inviteResult = await response.json();
+      
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card
     } catch (error: ) {
       console.error('Error sending invite:', error);
-      toast.error(`Failed to send invite: ${error.message}`);
-    }
+      toast.error(`Failed to send invite: ${error.message}`)}
   };
 
-  const renderRecommendation = () => {;
+  
     if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available
     return (
-      <TeamRecommendationDisplay
-        recommendation = {teamRecommendation}
+      <TeamRecommendationDisplay recommendation = {teamRecommendation}
         projectBrief={projectBriefSubmitted}
         onInviteTalent={handleInviteTalent};
-      />;
-    );
-  };
+       />;
+    )};
 
   // In the main return of TeamBuilderPage:
   // Remove the step-based rendering for the last step (results view)
@@ -199,7 +143,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
             <CardHeader>
                <Steps currentStep={currentStep} className="mb-6">
                 {steps.map((step, index) => (
-                  <Step key={index} label={step.name} />
+                  <Step key={index} label={step.name}  />
                 ))}
               </Steps>
             </CardHeader>
@@ -212,7 +156,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                       <Controller
                         name="projectName"
                         control={control}
-                        render={({ field }) => <Input id="projectName" {...field} placeholder="e.g., Acme Corp Website Redesign" />}
+                        render={({ field }) => <Input id="projectName" {...field} placeholder="e.g., Acme Corp Website Redesign"  />}
                       />
                       {errors.projectName && <p className="text-sm text-red-600 mt-1">{errors.projectName.message}</p>}
                     </div>
@@ -221,7 +165,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                       <Controller
                         name="goals"
                         control={control}
-                        render={({ field }) => <Textarea id="goals" {...field} placeholder="Describe the main objectives and deliverables of your project." rows={4} />}
+                        render={({ field }) => <Textarea id="goals" {...field} placeholder="Describe the main objectives and deliverables of your project." rows={4}  />}
                       />
                       {errors.goals && <p className="text-sm text-red-600 mt-1">{errors.goals.message}</p>}
                     </div>
@@ -234,7 +178,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                       <Controller
                         name="timeline"
                         control={control}
-                        render={({ field }) => <Input id="timeline" {...field} placeholder="e.g., 3 months, Q4 2024" />}
+                        render={({ field }) => <Input id="timeline" {...field} placeholder="e.g., 3 months, Q4 2024"  />}
                       />
                       {errors.timeline && <p className="text-sm text-red-600 mt-1">{errors.timeline.message}</p>}
                     </div>
@@ -243,7 +187,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                       <Controller
                         name="budget"
                         control={control}
-                        render={({ field }) => <Input id="budget" {...field} placeholder="e.g., $10,000 - $20,000, < $50k" />}
+                        render={({ field }) => <Input id="budget" {...field} placeholder="e.g., $10,000 - $20,000, < $50k"  />}
                       />
                       {errors.budget && <p className="text-sm text-red-600 mt-1">{errors.budget.message}</p>}
                     </div>
@@ -252,7 +196,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                       <Controller
                         name="techStack"
                         control={control}
-                        render={({ field }) => <Textarea id="techStack" {...field} placeholder="e.g., React, Node.js, Python, AWS, Machine Learning" rows={3} />}
+                        render={({ field }) => <Textarea id="techStack" {...field} placeholder="e.g., React, Node.js, Python, AWS, Machine Learning" rows={3}  />}
                       />
                       {errors.techStack && <p className="text-sm text-red-600 mt-1">{errors.techStack.message}</p>}
                     </div>
@@ -261,12 +205,11 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                         name="lockTimeline"
                         control={control}
                         render={({ field }) => (
-                          <Switch
-                            id="lockTimeline"
+                          <Switch id="lockTimeline"
                             checked={field.value}
                             onCheckedChange={field.onChange}
                             aria-label="Lock Timeline"
-                          />
+                           />
                         )}
                       />
                       <Label htmlFor="lockTimeline" className="cursor-pointer text-sm font-medium">
@@ -280,12 +223,11 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                         name="lockBudget"
                         control={control}
                         render={({ field }) => (
-                          <Switch
-                            id="lockBudget"
+                          <Switch id="lockBudget"
                             checked={field.value}
                             onCheckedChange={field.onChange}
                             aria-label="Lock Budget"
-                          />
+                           />
                         )}
                       />
                       <Label htmlFor="lockBudget" className="cursor-pointer text-sm font-medium">
@@ -301,12 +243,11 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                           name="talentFilters.verifiedOnly"
                           control={control}
                           render={({ field }) => (
-                            <Switch
-                              id="verifiedOnly"
+                            <Switch id="verifiedOnly"
                               checked={field.value || false} // Ensure value is boolean
                               onCheckedChange={field.onChange}
                               aria-label="Verified Talent Only"
-                            />
+                             />
                           )}
                         />
                         <Label htmlFor="verifiedOnly" className="cursor-pointer text-sm font-medium">
@@ -323,13 +264,12 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                           name="talentFilters.regions"
                           control={control}
                           render={({ field }) => (
-                            <Input
-                              id="talentRegions"
+                            <Input id="talentRegions"
                               {...field}
                               value={field.value || ''} // Ensure value is string
                               placeholder="e.g., North America, LATAM, Global"
                               className="mt-1"
-                            />
+                             />
                           )}
                         />
                          {errors.talentFilters?.regions && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.regions.message}</p>}
@@ -368,7 +308,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
         )}
       </div>;
     </AppLayout>;
-  );
-};
+  )};
 
 export default TeamBuilderPage;

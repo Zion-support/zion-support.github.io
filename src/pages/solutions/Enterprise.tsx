@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function EnterpriseSolutions() {
   return (
@@ -8,5 +7,4 @@ export default function EnterpriseSolutions() {
         <p className="text-slate-300">Enterprise-focused offerings to scale securely and efficiently.</p>
       </div>
     </div>
-  );
-}
+  )}

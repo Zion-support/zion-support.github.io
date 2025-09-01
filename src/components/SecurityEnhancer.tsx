@@ -1,5 +1,3 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Shield, 
   Lock, 
@@ -42,8 +40,7 @@ interface SecurityStatus {
   frameOptions: boolean;
   contentType: boolean;
   referrerPolicy: boolean;
-  permissionsPolicy: boolean;
-}
+  permissionsPolicy: boolean}
 
 interface SecurityEvent {
   id: string;
@@ -52,8 +49,7 @@ interface SecurityEvent {
   timestamp: Date;
   source: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
-  details?: string;
-}
+  details?: string}
 
 interface SecurityMetrics {
   totalRequests: number;
@@ -61,8 +57,7 @@ interface SecurityMetrics {
   suspiciousActivity: number;
   lastScan: Date;
   vulnerabilities: number;
-  complianceScore: number;
-}
+  complianceScore: number}
 
 export function SecurityEnhancer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -78,30 +73,22 @@ export function SecurityEnhancer() {
   useEffect(() => {
     if (isVisible) {
       initializeSecurityMonitoring();
-      runSecurityScan();
-    }
+      runSecurityScan()}
   }, [isVisible]);
 
   // Initialize security monitoring
-  const initializeSecurityMonitoring = useCallback(() => {
-    // Set up security headers
-    setSecurityHeaders();
-    
+  
     // Initialize event listeners for security monitoring
     setupSecurityEventListeners();
     
     // Start periodic security checks
-    const interval = setInterval(() => {
-      checkSecurityStatus();
+    
     }, 30000); // Check every 30 seconds
     
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)}, []);
 
   // Set security headers
-  const setSecurityHeaders = useCallback(() => {
-    // Content Security Policy
-    const cspMeta = document.createElement('meta');
+  
     cspMeta.httpEquiv = 'Content-Security-Policy';
     cspMeta.content = [
       "default-src 'self'",
@@ -119,10 +106,9 @@ export function SecurityEnhancer() {
     ].join('; ');
     
     // Remove existing CSP meta tag if present
-    const existingCSP = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+    
     if (existingCSP) {
-      existingCSP.remove();
-    }
+      existingCSP.remove()}
     
     document.head.appendChild(cspMeta);
     
@@ -136,82 +122,47 @@ export function SecurityEnhancer() {
     ];
     
     securityMetaTags.forEach(tag => {
-      const metaTag = document.createElement('meta');
+      
       metaTag.name = tag.name;
       metaTag.content = tag.content;
-      document.head.appendChild(metaTag);
-    });
-  }, []);
+      document.head.appendChild(metaTag)})}, []);
 
   // Setup security event listeners
-  const setupSecurityEventListeners = useCallback(() => {
-    // Monitor for potential XSS attempts
-    const originalInnerHTML = Element.prototype.innerHTML;
+  
     Element.prototype.innerHTML = function(value: string) {
       if (typeof value === 'string' && (value.includes('<script>') || value.includes('javascript:'))) {
-        logSecurityEvent('warning', 'Potential XSS attempt detected', 'DOM Manipulation', 'medium');
-      }
-      return originalInnerHTML.call(this, value);
-    };
+        logSecurityEvent('warning', 'Potential XSS attempt detected', 'DOM Manipulation', 'medium')}
+      return originalInnerHTML.call(this, value)};
 
     // Monitor for suspicious network requests
-    const originalFetch = window.fetch;
+    
     window.fetch = function(input: RequestInfo | URL, init?: RequestInit) {
-      const url = typeof input === 'string' ? input : input.toString();
+      
       if (url.includes('javascript:') || url.includes('data:text/html')) {
         logSecurityEvent('error', 'Suspicious fetch request blocked', 'Network Request', 'high');
-        return Promise.reject(new Error('Suspicious request blocked'));
-      }
-      return originalFetch.call(this, input, init);
-    };
+        return Promise.reject(new Error('Suspicious request blocked'))}
+      return originalFetch.call(this, input, init)};
 
     // Monitor for console access attempts
-    const originalConsoleLog = console.log;
+    
     console.log = function(...args: any[]) {
       if (args.some(arg => typeof arg === 'string' && arg.includes('password'))) {
-        logSecurityEvent('warning', 'Potential sensitive data logging detected', 'Console Access', 'medium');
-      }
-      return originalConsoleLog.apply(this, args);
-    };
-  }, []);
+        logSecurityEvent('warning', 'Potential sensitive data logging detected', 'Console Access', 'medium')}
+      return originalConsoleLog.apply(this, args)}}, []);
 
   // Log security events
-  const logSecurityEvent = useCallback((type: string, message: string, source: string, severity: string) => {
-    const event: SecurityEvent = {
-      id: `event-${Date.now()}`,
-      type: type as any,
-      message,
-      timestamp: new Date(),
-      source,
-      severity: severity as any
-    };
-    
+  
     setSecurityEvents(prev => [event, ...prev.slice(0, 99)]); // Keep last 100 events
   }, []);
 
   // Check security status
-  const checkSecurityStatus = useCallback(() => {
-    try {
-      const status: SecurityStatus = {
-        csp: !!document.querySelector('meta[http-equiv="Content-Security-Policy"]'),
-        hsts: true, // Would check actual response headers in production
-        xss: !!document.querySelector('meta[name="X-XSS-Protection"]'),
-        frameOptions: !!document.querySelector('meta[name="X-Frame-Options"]'),
-        contentType: !!document.querySelector('meta[name="X-Content-Type-Options"]'),
-        referrerPolicy: !!document.querySelector('meta[name="Referrer-Policy"]'),
-        permissionsPolicy: !!document.querySelector('meta[name="Permissions-Policy"]')
-      };
-      
-      setSecurityStatus(status);
-    } catch (error) {
-      console.error('Failed to check security status:', error);
-    }
+  
+      setSecurityStatus(status)} catch (error) {
+      console.error('Failed to check security status:', error)}
   }, []);
 
   // Run security scan
-  const runSecurityScan = useCallback(async () => {
-    setIsScanning(true);
-    
+  
     try {
       // Simulate security scan
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -229,50 +180,34 @@ export function SecurityEnhancer() {
       setSecurityMetrics(metrics);
       
       // Log scan completion
-      logSecurityEvent('success', 'Security scan completed successfully', 'Security Scanner', 'low');
-      
-    } catch (error) {
-      logSecurityEvent('error', 'Security scan failed', 'Security Scanner', 'high');
-    } finally {
-      setIsScanning(false);
-    }
+      logSecurityEvent('success', 'Security scan completed successfully', 'Security Scanner', 'low')} catch (error) {
+      logSecurityEvent('error', 'Security scan failed', 'Security Scanner', 'high')} finally {
+      setIsScanning(false)}
   }, [logSecurityEvent]);
 
   // Filter events
-  const filteredEvents = securityEvents.filter(event => {
-    const matchesSearch = event.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         event.source.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesFilter = activeFilters.length === 0 || activeFilters.includes(event.type);
-    return matchesSearch && matchesFilter;
-  });
+  
+    
+    return matchesSearch && matchesFilter});
 
   // Get status icon
-  const getStatusIcon = (status: boolean) => {
-    return status ? 
-      <CheckCircle className="w-4 h-4 text-green-500" /> : 
-      <XCircle className="w-4 h-4 text-red-500" />;
+  
   };
 
   // Get event icon
-  const getEventIcon = (type: string) => {
-    switch (type) {
-      case 'info': return <Info className="w-4 h-4 text-blue-500" />;
-      case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
-      case 'error': return <XCircle className="w-4 h-4 text-red-500" />;
-      case 'success': return <CheckCircle className="w-4 h-4 text-green-500" />;
-      default: return <Info className="w-4 h-4 text-gray-500" />;
-    }
+  
+      case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-500"  />;
+      case 'error': return <XCircle className="w-4 h-4 text-red-500"  />;
+      case 'success': return <CheckCircle className="w-4 h-4 text-green-500"  />;
+      default: return <Info className="w-4 h-4 text-gray-500"  />}
   };
 
   // Get severity color
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'critical': return 'border-red-600 bg-red-50 dark:bg-red-900/20';
+  
       case 'high': return 'border-red-500 bg-red-50 dark:bg-red-900/20';
       case 'medium': return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
       case 'low': return 'border-blue-500 bg-blue-50 dark:bg-blue-900/20';
-      default: return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20';
-    }
+      default: return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20'}
   };
 
   return (
@@ -286,7 +221,7 @@ export function SecurityEnhancer() {
         title="Security Panel"
         aria-label="Open security panel"
       >
-        <Shield className="w-6 h-6" />
+        <Shield className="w-6 h-6"  />
       </motion.button>
 
       {/* Security Panel */}
@@ -304,7 +239,7 @@ export function SecurityEnhancer() {
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-2">
-                  <Shield className="w-6 h-6 text-zion-blue" />
+                  <Shield className="w-6 h-6 text-zion-blue"  />
                   <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                     Security
                   </h2>
@@ -315,14 +250,14 @@ export function SecurityEnhancer() {
                     className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                     aria-label={isExpanded ? 'Collapse panel' : 'Expand panel'}
                   >
-                    {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                    {isExpanded ? <ChevronUp className="w-4 h-4"  /> : <ChevronDown className="w-4 h-4"  />}
                   </button>
                   <button
                     onClick={() => setIsVisible(false)}
                     className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                     aria-label="Close security panel"
                   >
-                    <X className="w-5 h-5" />
+                    <X className="w-5 h-5"  />
                   </button>
                 </div>
               </div>
@@ -405,7 +340,7 @@ export function SecurityEnhancer() {
                       </>
                     ) : (
                       <>
-                        <ShieldCheck className="w-4 h-4" />
+                        <ShieldCheck className="w-4 h-4"  />
                         <span>Scan</span>
                       </>
                     )}
@@ -423,8 +358,7 @@ export function SecurityEnhancer() {
                             prev.includes(type) 
                               ? prev.filter(t => t !== type)
                               : [...prev, type]
-                          );
-                        }}
+                          )}}
                         className={`px-2 py-1 text-xs rounded ${
                           activeFilters.includes(type)
                             ? 'bg-zion-blue text-white'
@@ -492,7 +426,7 @@ export function SecurityEnhancer() {
                     onClick={() => logSecurityEvent('info', 'Manual security check initiated', 'User Action', 'low')}
                     className="flex items-center justify-center space-x-2 p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors"
                   >
-                    <Activity className="w-4 h-4" />
+                    <Activity className="w-4 h-4"  />
                     <span className="text-sm">Check Status</span>
                   </button>
                   
@@ -524,5 +458,4 @@ export function SecurityEnhancer() {
         )}
       </AnimatePresence>
     </>
-  );
-}
+  )}

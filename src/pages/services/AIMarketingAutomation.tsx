@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import { 
   Target, 
   TrendingUp, 
@@ -22,127 +20,21 @@ import {
   Heart,
   Eye
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
 
-const AIMarketingAutomation = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Audience Targeting",
-      description: "Machine learning algorithms identify and target your ideal customers with precision",
-      price: "$59/month"
-    },
-    {
-      icon: Target,
-      title: "Smart Campaign Optimization",
-      description: "AI continuously optimizes campaigns for maximum ROI and engagement",
-      price: "$79/month"
-    },
-    {
-      icon: MessageSquare,
-      title: "Personalized Content Generation",
-      description: "AI creates personalized marketing content for each customer segment",
-      price: "$69/month"
-    },
-    {
-      icon: Workflow,
-      title: "Automated Marketing Workflows",
-      description: "Intelligent automation that nurtures leads and converts prospects",
-      price: "$89/month"
-    },
-    {
-      icon: BarChart3,
-      title: "Predictive Analytics",
-      description: "AI predicts customer behavior and campaign performance",
-      price: "$99/month"
-    },
-    {
-      icon: Users,
-      title: "Multi-Channel Orchestration",
-      description: "Seamlessly coordinate campaigns across email, social, and web",
-      price: "$119/month"
-    }
-      name: 'Enterprise',;
+
       price: '$799',;
       period: '/mo',;
       contacts: 'Unlimited contacts',;
-      features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom integrations', 'Advanced reporting'];
-    };
+      features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom integrations', 'Advanced reporting']};
   ];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$59",
-      period: "/month",
-      description: "Perfect for small businesses starting with AI marketing",
-      features: [
-        "Basic audience targeting",
-        "Email automation",
-        "Social media posting",
-        "Email support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "Ideal for growing businesses with multiple marketing channels",
-      features: [
-        "All Starter features",
-        "Advanced AI targeting",
-        "Multi-channel campaigns",
-        "Priority support",
-        "Custom integrations"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$399",
-      period: "/month",
-      description: "For large organizations with complex marketing needs",
-      features: [
-        "All Professional features",
-        "Custom AI models",
-        "Advanced analytics",
-        "Dedicated support",
-        "White-label options"
-      ],
-      popular: false
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: "300% Higher ROI",
-      description: "AI-optimized campaigns deliver significantly better returns"
-    },
-    {
-      icon: Clock,
-      title: "80% Time Savings",
-      description: "Automate repetitive marketing tasks and focus on strategy"
-    },
-    {
-      icon: Target,
-      title: "5x Better Targeting",
-      description: "AI identifies and reaches your ideal customers with precision"
-    },
-    {
-      icon: Heart,
-      title: "Personalized Experience",
-      description: "Every customer receives relevant, personalized content"
-    }
-  ];
-
+  
+  
   return (
     <>
-      <SEO 
-        title="AI Marketing Automation - Zion Tech Group"
+      <SEO title="AI Marketing Automation - Zion Tech Group"
         description="Revolutionary AI-powered marketing automation platform that personalizes campaigns, optimizes performance, and delivers exceptional ROI through intelligent automation."
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -156,7 +48,7 @@ const AIMarketingAutomation = () => {
               className="text-center"
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-pink-500/20 border border-pink-400/30 text-pink-400 text-sm font-medium mb-6">
-                <Target className="w-4 h-4 mr-2" />
+                <Target className="w-4 h-4 mr-2"  />
                 AI Marketing Automation
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -176,7 +68,7 @@ const AIMarketingAutomation = () => {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
-                  <Play className="w-5 h-5 mr-2" />
+                  <Play className="w-5 h-5 mr-2"  />
                   Start Free Trial
                 </motion.button>
                 <motion.button
@@ -316,7 +208,7 @@ const AIMarketingAutomation = () => {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-pink-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-pink-400 mr-3 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -360,7 +252,7 @@ const AIMarketingAutomation = () => {
                   className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2"  />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -375,7 +267,6 @@ const AIMarketingAutomation = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default AIMarketingAutomation;

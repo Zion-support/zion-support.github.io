@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Contact: React.FC = () => {
   return (
@@ -67,9 +66,6 @@ const Contact: React.FC = () => {
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
 import { 
   Phone, 
   Mail, 

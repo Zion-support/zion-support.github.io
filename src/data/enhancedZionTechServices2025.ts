@@ -1,4 +1,3 @@
-import { ProductListing } from "@/types/listings";
 
 // Enhanced Zion Tech Group Services 2025 - Real Micro SAAS, IT & AI Solutions
 export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
@@ -775,37 +774,29 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       features: ["Autonomous research", "Data analysis", "Report generation", "Custom methodologies", "24/7 support"]
     },
     link: "https://ziontechgroup.com/ai-research-assistant",;
-    contactInfo: {;
+    contactInfo: {
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";
-    };
-  };
+      address: "364 E Main St STE 1008 Middletown DE 19709"}};
 ];
 
 // Helper functions
-export const getEnhancedServiceById = (id: string) => {;
-  return ENHANCED_ZION_TECH_SERVICES_2025.find(service => service.id === id);
-};
+export 
+  return ENHANCED_ZION_TECH_SERVICES_2025.find(service => service.id === id)};
 
-export const getEnhancedServicesByCategory = (category: string) => {;
-  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.category === category);
-};
+export 
+  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.category === category)};
 
-export const getEnhancedServiceCategories = () => {;
-  return [...new Set(ENHANCED_ZION_TECH_SERVICES_2025.map(service => service.category))];
-};
+export 
+  return [...new Set(ENHANCED_ZION_TECH_SERVICES_2025.map(service => service.category))]};
 
-export const getFeaturedEnhancedServices = () => {;
-  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.featured);
-};
+export 
+  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.featured)};
 
-export const getEnhancedServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
+export 
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => ;
     service.price >= minPrice && service.price <= maxPrice;
-  );
-};
+  )};
 
-export const getEnhancedServicesByAIScore = (minScore: number) => {;
-  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.aiScore >= minScore);
-};}}}}}}}}}}}}}}}}
+export 
+  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.aiScore >= minScore)}}}}}}}}}}}}}}}}}

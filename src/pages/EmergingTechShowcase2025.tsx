@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Brain, 
   Cpu, 
   Atom, 
@@ -27,7 +25,6 @@ import { Brain,
   Pause,
   RotateCcw
 } from 'lucide-react';
-import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 
 const EmergingTechShowcase2025: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -35,14 +32,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
   const [autoPlay, setAutoPlay] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const categories = [
-    { id: 'all', name: 'All Technologies', icon: Globe, color: 'from-blue-500 to-purple-600' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', icon: Atom, color: 'from-purple-500 to-pink-600' },
-    { id: 'Neuromorphic Computing', name: 'Neuromorphic', icon: Brain, color: 'from-green-500 to-blue-600' },
-    { id: 'Brain-Computer Interfaces', name: 'BCI', icon: Eye, color: 'from-red-500 to-orange-600' },
-    { id: 'Synthetic Biology', name: 'Synthetic Biology', icon: Dna, color: 'from-emerald-500 to-teal-600' },
-    { id: 'Fusion Energy', name: 'Fusion Energy', icon: Zap, color: 'from-yellow-500 to-orange-600' },
-    { id: 'Space Mining', name: 'Space Mining', icon: Rocket, color: 'from-indigo-500 to-purple-600' },;
+  
     { id: 'Digital Twins', name: 'Digital Twins', icon: Eye, color: 'from-cyan-500 to-blue-600' },;
     { id: 'Metaverse Infrastructure', name: 'Metaverse', icon: Globe, color: 'from-pink-500 to-rose-600' },;
     { id: 'Autonomous Systems', name: 'Autonomous', icon: Car, color: 'from-gray-500 to-slate-600' },;
@@ -51,21 +41,18 @@ const EmergingTechShowcase2025: React.FC = () => {;
     { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from-slate-500 to-gray-600' };
   ];
 
-    const filteredServices = selectedCategory === 'all';
+    
     ? EMERGING_TECH_SERVICES_2025;
     : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory);
 
   useEffect(() => {
     if (autoPlay) {
-      const interval = setInterval(() => {;
-        setCurrentSlide((prev) => (prev + 1) % filteredServices.length);
-      }, 5000);
-      return () => clearInterval(interval);
+      
+        setCurrentSlide((prev) => (prev + 1) % filteredServices.length)}, 5000);
+      return () => clearInterval(interval)}, [autoPlay, filteredServices.length]);
 
-  }, [autoPlay, filteredServices.length]);
-
-  const getCategoryIcon = (category: string) => {;
-    const categoryData = categories.find(cat => cat.id === category);
+  
+    
     return categoryData ? categoryData.icon : Globe};
 
           
@@ -128,11 +115,11 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-sm text-gray-400">
-                    <TrendingUp className="w-4 h-4" />
+                    <TrendingUp className="w-4 h-4"  />
                     <span>{service.marketSize}</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-400">
-                    <Users className="w-4 h-4" />
+                    <Users className="w-4 h-4"  />
                     <span>{service.targetAudience}</span>
                   </div>
                 </div>
@@ -161,7 +148,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div className="flex flex-col items-center gap-3">
               <div className="p-4 bg-white/10 rounded-full">
-                <Phone className="w-6 h-6 text-blue-400" />
+                <Phone className="w-6 h-6 text-blue-400"  />
               </div>
               <div>
                 <h3 className="font-semibold text-white mb-1">Phone</h3>
@@ -171,7 +158,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
             <div className="flex flex-col items-center gap-3">
               <div className="p-4 bg-white/10 rounded-full">
-                <Mail className="w-6 h-6 text-purple-400" />
+                <Mail className="w-6 h-6 text-purple-400"  />
               </div>
               <div>
                 <h3 className="font-semibold text-white mb-1">Email</h3>
@@ -181,7 +168,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
             <div className="flex flex-col items-center gap-3">
               <div className="p-4 bg-white/10 rounded-full">
-                <MapPin className="w-6 h-6 text-green-400" />
+                <MapPin className="w-6 h-6 text-green-400"  />
               </div>
               <div>
                 <h3 className="font-semibold text-white mb-1">Address</h3>
@@ -238,14 +225,12 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
 
 ;
-;
-
 }};
               className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto";
               onClick={(e) => e.stopPropagation()};
             >;
               {(() => {;
-                const service = EMERGING_TECH_SERVICES_2025.find(s => s.id === selectedService);
+                
                 if (!service) return null;
 
                 return (
@@ -265,7 +250,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
                         onClick={() => setSelectedService(null)}
                         className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all"
 
-                        <ChevronLeft className="w-6 h-6 text-white" />
+                        <ChevronLeft className="w-6 h-6 text-white"  />
                       </button>
                     </div>
 
@@ -334,8 +319,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
                       </motion.button>;
                     </div>;
                   </div>;
-                );
-              })()}
+                )})()}
             </motion.div>
           </motion.div>
         )}
@@ -343,4 +327,4 @@ const EmergingTechShowcase2025: React.FC = () => {;
     </div>
   )};
 
-export default EmergingTechShowcase2025;}}
+export default EmergingTechShowcase2025}}

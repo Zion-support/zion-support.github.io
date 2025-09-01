@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
 
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ChevronDown, 
   ChevronUp, 
@@ -15,15 +13,13 @@ import {
   Mail,
   Globe
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface FAQItem {
   id: string;
   question: string;
   answer: string;
   category: string;
-  icon: React.ComponentType<any>;
-}
+  icon: React.ComponentType<any>}
 
 const faqData: FAQItem[] = [
   {
@@ -105,23 +101,15 @@ const faqData: FAQItem[] = [
   }
 ];
 
-const categories = ['All', 'AI Services', 'Security', 'Cloud', 'Support', 'General'];
 
 export default function FAQ() {
   const [activeItem, setActiveItem] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredFAQs = faqData.filter(faq => {
-    const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory;
-    const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const toggleItem = (id: string) => {
-    setActiveItem(activeItem === id ? null : id);
-  };
+  
+    
+    return matchesCategory && matchesSearch})};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
@@ -150,7 +138,7 @@ export default function FAQ() {
         >
           {/* Search Bar */}
           <div className="relative mb-8">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
             <input
               type="text"
               placeholder="Search questions..."
@@ -211,9 +199,9 @@ export default function FAQ() {
                     </div>
                   </div>
                   {activeItem === faq.id ? (
-                    <ChevronUp className="w-6 h-6 text-cyan-400" />
+                    <ChevronUp className="w-6 h-6 text-cyan-400"  />
                   ) : (
-                    <ChevronDown className="w-6 h-6 text-gray-400" />
+                    <ChevronDown className="w-6 h-6 text-gray-400"  />
                   )}
                 </button>
 
@@ -254,15 +242,15 @@ export default function FAQ() {
             
             <div className="grid md:grid-cols-3 gap-6 mb-8 max-w-2xl mx-auto">
               <div className="flex items-center justify-center space-x-3 text-gray-300">
-                <Phone className="w-5 h-5 text-cyan-400" />
+                <Phone className="w-5 h-5 text-cyan-400"  />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-3 text-gray-300">
-                <Mail className="w-5 h-5 text-cyan-400" />
+                <Mail className="w-5 h-5 text-cyan-400"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3 text-gray-300">
-                <Globe className="w-5 h-5 text-cyan-400" />
+                <Globe className="w-5 h-5 text-cyan-400"  />
                 <span>24/7 Support</span>
               </div>
             </div>
@@ -286,5 +274,4 @@ export default function FAQ() {
 
       </div>
     </div>
-  );
-}
+  )}

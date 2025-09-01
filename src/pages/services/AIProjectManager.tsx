@@ -1,126 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone } from 'lucide-react';
-import { SEO } from '@/components/SEO';
 
 export default function AIProjectManager() {
-  const features = [
-    {
-      title: "AI-Powered Task Prioritization",
-      description: "Intelligent algorithms automatically prioritize tasks based on deadlines, dependencies, and team capacity",
-      icon: Target,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Real-time Resource Optimization",
-      description: "Dynamic resource allocation using machine learning to maximize team productivity and efficiency",
-      icon: Users,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Predictive Risk Assessment",
-      description: "AI analyzes project patterns to identify potential risks before they become issues",
-      icon: Shield,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Automated Progress Tracking",
-      description: "Smart dashboards that automatically track progress and generate insights without manual input",
-      icon: BarChart3,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Intelligent Communication",
-      description: "AI-powered notifications and updates ensure stakeholders are always informed at the right time",
-      icon: Zap,
-      color: "from-indigo-500 to-blue-500"
-    },
-    {
-      title: "Cross-Platform Integration",
-      description: "Seamlessly integrates with existing tools like Jira, Asana, Slack, and Microsoft Teams",
-      icon: Globe,
-      color: "from-teal-500 to-cyan-500"
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for small teams and startups",
-      features: [
-        "Up to 5 team members",
-        "Basic AI task prioritization",
-        "Project templates",
-        "Email support",
-        "Mobile app access"
-      ],
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 25 team members",
-        "Advanced AI analytics",
-        "Custom workflows",
-        "Priority support",
-        "API access",
-        "Advanced reporting"
-      ],
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited team members",
-        "Custom AI models",
-        "White-label solution",
-        "Dedicated support",
-        "Advanced security",
-        "Custom integrations"
-      ],
-      cta: "Contact Sales",
-      popular: false
-
-  ];
-
-  const benefits = [
-    {
-      title: "30% Faster Project Delivery",
-      description: "AI optimization reduces project timelines and improves efficiency",
-      icon: Clock,
-      metric: "30%"
-    },
-    {
-      title: "50% Better Resource Utilization",
-      description: "Smart resource allocation maximizes team productivity",
-      icon: TrendingUp,
-      metric: "50%"
-    },
-    {
-      title: "90% Risk Reduction",
-      description: "Predictive analytics prevent issues before they occur",
-      icon: Shield,
-      metric: "90%"
-    }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Project Manager - Intelligent Project Management Solution | Zion Tech Group"
+      <SEO title="AI Project Manager - Intelligent Project Management Solution | Zion Tech Group"
         description="Transform your project management with AI-powered task prioritization, resource optimization, and predictive analytics. Start free trial today."
         keywords="AI project management, project management software, AI task prioritization, resource optimization, project analytics"
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -283,7 +171,7 @@ export default function AIProjectManager() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       <span className="text-white">{feature}</span>
                     </li>
                   ))}
@@ -329,5 +217,4 @@ export default function AIProjectManager() {
         </div>
       </section>
     </div>
-  );
-}}}
+  )}}}

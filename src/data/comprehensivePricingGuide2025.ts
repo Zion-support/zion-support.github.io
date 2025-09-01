@@ -6,8 +6,7 @@ export interface PricingTier {
   billingCycle: string;
   features: string[];
   bestFor: string;
-  popular?: boolean;
-}
+  popular?: boolean}
 
 export interface ServicePricing {
   id: string;
@@ -24,9 +23,7 @@ export interface ServicePricing {
     email: string;
     address: string;
     website: string;
-    address: string;
-  };
-};
+    address: string}};
 
 export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
   {

@@ -1,5 +1,3 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion } from 'framer-motion';
 import {
   Activity,
   TrendingUp,
@@ -33,8 +31,8 @@ const PerformanceAnalytics: React.FC = () => {;
   const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
 
   // Mock performance data - in real implementation, this would come from actual monitoring
-  const generateMockData = useCallback((): PerformanceData => {;
-    const now = Date.now();
+  
+    
     const metrics: PerformanceMetric[] = [
       {
         name: 'Page Load Time',
@@ -86,13 +84,13 @@ const PerformanceAnalytics: React.FC = () => {;
 
     ];
 
-    const alerts = [;
+    
       'High memory usage detected on server-01',;
       'Network latency increased by 15%',;
       'Error rate spike detected in last 5 minutes';
     ];
 
-    const recommendations = [;
+    
       'Consider implementing lazy loading for images',;
       'Optimize database queries for better performance',;
       'Enable CDN for static assets delivery';
@@ -103,53 +101,42 @@ const PerformanceAnalytics: React.FC = () => {;
       metrics,
       alerts,
       recommendations
-    };
-  }, []);
+    }}, []);
 
   useEffect(() => {
     if (isMonitoring) {
-      const interval = setInterval(() => {;
-        setPerformanceData(generateMockData());
-      }, 5000); // Update every 5 seconds
+      
+        setPerformanceData(generateMockData())}, 5000); // Update every 5 seconds
 
-      return () => clearInterval(interval);
-    }
+      return () => clearInterval(interval)}
   }, [isMonitoring, generateMockData]);
 
-  const getStatusColor = (status: string) => {;
+  
     switch (status) {;
       case 'good': return 'text-green-400';
       case 'warning': return 'text-yellow-400';
       case 'critical': return 'text-red-400';
-      default: return 'text-gray-400';
+      default: return 'text-gray-400'};
 
-  };
-
-  const getStatusBgColor = (status: string) => {;
+  
     switch (status) {;
       case 'good': return 'bg-green-500/20';
       case 'warning': return 'bg-yellow-500/20';
       case 'critical': return 'bg-red-500/20';
-      default: return 'bg-gray-500/20';
+      default: return 'bg-gray-500/20'};
 
-  };
-
-  const getTrendIcon = (trend: string) => {;
+  
     switch (trend) {;
-      case 'up': return <TrendingUp className="w-4 h-4 text-red-400" />;
-      case 'down': return <TrendingDown className="w-4 h-4 text-green-400" />;
-      default: return <Activity className="w-4 h-4 text-blue-400" />;
+      case 'up': return <TrendingUp className="w-4 h-4 text-red-400"  />;
+      case 'down': return <TrendingDown className="w-4 h-4 text-green-400"  />;
+      default: return <Activity className="w-4 h-4 text-blue-400"  />};
 
-  };
-
-  const startMonitoring = () => {;
+  
     setIsMonitoring(true);
-    setPerformanceData(generateMockData());
-  };
+    setPerformanceData(generateMockData())};
 
-  const stopMonitoring = () => {;
-    setIsMonitoring(false);
-  };
+  
+    setIsMonitoring(false)};
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">
@@ -221,7 +208,7 @@ const PerformanceAnalytics: React.FC = () => {;
                   : 'bg-green-600 hover:bg-green-700 text-white'
               }`}
             >
-              <Activity className="w-5 h-5" />
+              <Activity className="w-5 h-5"  />
               Start Monitoring
             </button>
             <button
@@ -233,7 +220,7 @@ const PerformanceAnalytics: React.FC = () => {;
                   : 'bg-red-600 hover:bg-red-700 text-white'
               }`}
             >
-              <Monitor className="w-5 h-5" />
+              <Monitor className="w-5 h-5"  />
               Stop Monitoring
             </button>
           </div>
@@ -355,7 +342,7 @@ const PerformanceAnalytics: React.FC = () => {;
             {/* Alerts */}
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
-                <AlertTriangle className="w-6 h-6 text-yellow-400" />
+                <AlertTriangle className="w-6 h-6 text-yellow-400"  />
                 <h3 className="text-xl font-semibold text-white">Active Alerts</h3>
               </div>
               <div className="space-y-3">
@@ -371,7 +358,7 @@ const PerformanceAnalytics: React.FC = () => {;
             {/* Recommendations */}
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
-                <CheckCircle className="w-6 h-6 text-green-400" />
+                <CheckCircle className="w-6 h-6 text-green-400"  />
                 <h3 className="text-xl font-semibold text-white">Recommendations</h3>
               </div>
               <div className="space-y-3">
@@ -421,7 +408,7 @@ const PerformanceAnalytics: React.FC = () => {;
           </p>
           {isMonitoring && (
             <div className="mt-4 text-sm text-green-400">
-              <Activity className="w-4 h-4 inline mr-2 animate-pulse" />
+              <Activity className="w-4 h-4 inline mr-2 animate-pulse"  />
               Monitoring Active
             </div>
           )}
@@ -466,4 +453,4 @@ const PerformanceAnalytics: React.FC = () => {;
   );
 </div>};
 
-export default PerformanceAnalytics;}}}}}}}}
+export default PerformanceAnalytics}}}}}}}}

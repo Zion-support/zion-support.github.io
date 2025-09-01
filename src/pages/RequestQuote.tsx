@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
 import { 
   Calculator, 
   FileText, 
@@ -59,265 +56,11 @@ export default function RequestQuote() {
   const [formStep, setFormStep] = useState(1);
   const [expandedService, setExpandedService] = useState<string | null>(null);
   const [isSubmitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
-  const companySizes = [
-    '1-10 employees',
-    '11-50 employees',
-    '51-200 employees',
-    '201-500 employees',
-    '500+ employees'
-  ];
-
-  const industries = [
-    'Technology',
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Real Estate',
-    'Consulting',
-    'Non-profit',
-    'Other'
-  ];
-
-  const projectTypes = [
-    'New Development',
-    'System Upgrade',
-    'Integration',
-    'Consulting',
-    'Support & Maintenance',
-    'Training',
-    'Other'
-  ];
-
-  const budgets = [
-    'Under $10,000',
-    '$10,000 - $25,000',
-    '$25,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $250,000',
-    '$250,000+'
-  ];
-
-  const timelines = [
-    'ASAP',
-    '1-2 weeks',
-    '1-2 months',
-    '3-6 months',
-    '6+ months',
-    'Flexible'
-  ];
-
-  const urgencyLevels = [
-    { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400' },
-    { value: 'medium', label: 'Medium', description: 'Standard timeline', color: 'text-yellow-400' },
-    { value: 'high', label: 'High', description: 'Urgent deadline', color: 'text-orange-400' },
-    { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400' }
-  ];
-
-  const contactMethods = [
-    { value: 'email', label: 'Email', icon: Mail, description: 'Best for detailed responses' },
-    { value: 'phone', label: 'Phone Call', icon: Phone, description: 'Best for immediate discussion' },
-    { value: 'video', label: 'Video Call', icon: Users, description: 'Best for complex discussions' }
-  ];
-
-  const services = [
-    {
-      id: 'ai-ml',
-      name: 'AI & Machine Learning',
-      icon: Bot,
-      description: 'Custom AI solutions, ML models, and intelligent automation',
-      features: [
-        'Custom AI model development',
-        'Machine learning pipelines',
-        'Natural language processing',
-        'Computer vision solutions',
-        'Predictive analytics',
-        'AI-powered automation'
-      ],
-      pricing: 'Starting from $25,000',
-      timeline: '4-12 weeks',
-      category: 'AI Services'
-    },
-    {
-      id: 'cloud-devops',
-      name: 'Cloud & DevOps',
-      icon: Cloud,
-      description: 'Cloud infrastructure, CI/CD pipelines, and infrastructure automation',
-      features: [
-        'AWS/Azure/GCP setup',
-        'Kubernetes orchestration',
-        'CI/CD pipeline development',
-        'Infrastructure as Code',
-        'Monitoring & logging',
-        'Security & compliance'
-      ],
-      pricing: 'Starting from $15,000',
-      timeline: '2-8 weeks',
-      category: 'IT Services'
-    },
-    {
-      id: 'web-development',
-      name: 'Web Development',
-      icon: Monitor,
-      description: 'Modern web applications, e-commerce, and custom web solutions',
-      features: [
-        'React/Next.js applications',
-        'E-commerce platforms',
-        'Custom web portals',
-        'API development',
-        'Performance optimization',
-        'SEO & accessibility'
-      ],
-      pricing: 'Starting from $10,000',
-      timeline: '3-10 weeks',
-      category: 'IT Services'
-    },
-    {
-      id: 'mobile-apps',
-      name: 'Mobile Applications',
-      icon: Smartphone,
-      description: 'iOS and Android apps with cross-platform solutions',
-      features: [
-        'Native iOS development',
-        'Native Android development',
-        'React Native apps',
-        'Flutter applications',
-        'App store optimization',
-        'Push notifications'
-      ],
-      pricing: 'Starting from $20,000',
-      timeline: '6-16 weeks',
-      category: 'IT Services'
-    },
-    {
-      id: 'data-analytics',
-      name: 'Data & Analytics',
-      icon: BarChart3,
-      description: 'Data warehousing, business intelligence, and advanced analytics',
-      features: [
-        'Data warehouse design',
-        'ETL pipeline development',
-        'Business intelligence dashboards',
-        'Advanced analytics',
-        'Data visualization',
-        'Predictive modeling'
-      ],
-      pricing: 'Starting from $18,000',
-      timeline: '4-12 weeks',
-      category: 'AI Services'
-    },
-    {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      icon: Shield,
-      description: 'Security audits, compliance, and threat protection',
-      features: [
-        'Security assessments',
-        'Penetration testing',
-        'Compliance frameworks',
-        'Threat detection',
-        'Incident response',
-        'Security training'
-      ],
-      pricing: 'Starting from $12,000',
-      timeline: '2-6 weeks',
-      category: 'Security'
-    },
-    {
-      id: 'micro-saas',
-      name: 'Micro SaaS Solutions',
-      icon: Package,
-      description: 'Custom SaaS applications and business automation tools',
-      features: [
-        'Custom SaaS platforms',
-        'Business process automation',
-        'Workflow management',
-        'User management systems',
-        'Subscription billing',
-        'Analytics & reporting'
-      ],
-      pricing: 'Starting from $30,000',
-      timeline: '8-20 weeks',
-      category: 'Micro SaaS'
-    },
-    {
-      id: 'integration',
-      name: 'System Integration',
-      icon: Settings,
-      description: 'API development, third-party integrations, and data synchronization',
-      features: [
-        'API development',
-        'Third-party integrations',
-        'Data synchronization',
-        'Webhook implementation',
-        'Custom connectors',
-        'Integration testing'
-      ],
-      pricing: 'Starting from $15,000',
-      timeline: '3-8 weeks',
-      category: 'IT Services'
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: Calculator,
-      title: 'Transparent Pricing',
-      description: 'Clear, upfront pricing with no hidden fees'
-    },
-    {
-      icon: Clock,
-      title: 'Fast Response',
-      description: 'Get a detailed quote within 24-48 hours'
-    },
-    {
-      icon: FileText,
-      title: 'Detailed Proposals',
-      description: 'Comprehensive project breakdowns and timelines'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Quality Guarantee',
-      description: 'We stand behind our work with satisfaction guarantees'
-    }
-  ];
-
-  const handleInputChange = (field: string, value: string | string[]) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: value
-    }));
+  const [submitted, setSubmitted] = useState(false)}}}}
+  }}
   };
 
-  const toggleService = (serviceId: string) => {
-    setFormData(prev => ({
-      ...prev,
-      services: prev.services.includes(serviceId)
-        ? prev.services.filter(id => id !== serviceId)
-        : [...prev.services, serviceId]
-    }));
-  };
-
-  const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
-
-  const nextStep = () => {
-    if (formStep < 3) {
-      setFormStep(formStep + 1);
-    }
-  };
-
-  const prevStep = () => {
-    if (formStep > 1) {
-      setFormStep(formStep - 1);
-    }
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {;
+  
     e.preventDefault();
     setSubmitting(true);
     
@@ -325,36 +68,18 @@ export default function RequestQuote() {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setSubmitting(false);
-    setSubmitted(true);
-  };
+    setSubmitted(true)};
 
-  const resetForm = () => {
-    setFormData({
-      companyName: '',
-      contactName: '',
-      email: '',
-      phone: '',
-      companySize: '',
-      industry: '',
-      projectType: '',
-      budget: '',
-      timeline: '',
-      description: '',
-      services: [],
-      urgency: 'medium',
-      preferredContact: 'email'
-    });
+  
     setFormStep(1);
-    setSubmitted(false);
-  };
+    setSubmitted(false)};
 
   if (submitted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-        <SEO 
-          title="Quote Requested - Zion Tech Group"
+        <SEO title="Quote Requested - Zion Tech Group"
           description="Thank you for your quote request. We'll get back to you soon with a detailed proposal."
-        />
+         />
         
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -363,7 +88,7 @@ export default function RequestQuote() {
           className="text-center max-w-2xl mx-auto px-6"
         >
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full mb-8">
-            <CheckCircle className="w-10 h-10 text-green-400" />
+            <CheckCircle className="w-10 h-10 text-green-400"  />
           </div>
           
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -419,15 +144,13 @@ export default function RequestQuote() {
           </div>
         </motion.div>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Request Quote - Zion Tech Group"
+      <SEO title="Request Quote - Zion Tech Group"
         description="Get a custom quote for your technology project. Our team will provide detailed pricing and timelines for your specific needs."
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -440,7 +163,7 @@ export default function RequestQuote() {
             className="text-center"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
-              <Calculator className="w-10 h-10 text-green-400" />
+              <Calculator className="w-10 h-10 text-green-400"  />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Get Your <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Custom Quote</span>
@@ -832,9 +555,9 @@ export default function RequestQuote() {
                                 <span className="text-white font-medium text-sm">{service.name}</span>
                               </div>
                               {expandedService === service.id ? (
-                                <ChevronUp className="w-4 h-4 text-gray-400" />
+                                <ChevronUp className="w-4 h-4 text-gray-400"  />
                               ) : (
-                                <ChevronDown className="w-4 h-4 text-gray-400" />
+                                <ChevronDown className="w-4 h-4 text-gray-400"  />
                               )}
                             </div>
                           </button>
@@ -851,7 +574,7 @@ export default function RequestQuote() {
                               <div className="space-y-2">
                                 {service.features.map((feature, index) => (
                                   <div key={index} className="flex items-center text-gray-300 text-sm">
-                                    <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                                    <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />
                                     {feature}
                                   </div>
                                 ))}
@@ -877,21 +600,21 @@ export default function RequestQuote() {
                     <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
                     <div className="space-y-3">
                       <div className="flex items-start">
-                        <Award className="w-5 h-5 text-yellow-400 mr-3 mt-0.5 flex-shrink-0" />
+                        <Award className="w-5 h-5 text-yellow-400 mr-3 mt-0.5 flex-shrink-0"  />
                         <div>
                           <div className="text-white font-medium text-sm">Expert Team</div>
                           <div className="text-gray-300 text-xs">Certified professionals with years of experience</div>
                         </div>
                       </div>
                       <div className="flex items-start">
-                        <Star className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+                        <Star className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0"  />
                         <div>
                           <div className="text-white font-medium text-sm">Quality Guarantee</div>
                           <div className="text-gray-300 text-xs">We stand behind our work 100%</div>
                         </div>
                       </div>
                       <div className="flex items-start">
-                        <TrendingUp className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                        <TrendingUp className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"  />
                         <div>
                           <div className="text-white font-medium text-sm">Proven Results</div>
                           <div className="text-gray-300 text-xs">Track record of successful projects</div>
@@ -925,7 +648,7 @@ export default function RequestQuote() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl mb-4">
-                  <Mail className="w-8 h-8 text-blue-400" />
+                  <Mail className="w-8 h-8 text-blue-400"  />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">Email Us</h3>
                 <p className="text-gray-300 text-sm mb-3">Get a quick response</p>
@@ -939,7 +662,7 @@ export default function RequestQuote() {
               
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl mb-4">
-                  <Phone className="w-8 h-8 text-green-400" />
+                  <Phone className="w-8 h-8 text-green-400"  />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">Call Us</h3>
                 <p className="text-gray-300 text-sm mb-3">Speak with an expert</p>
@@ -953,7 +676,7 @@ export default function RequestQuote() {
               
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl mb-4">
-                  <Headphones className="w-8 h-8 text-purple-400" />
+                  <Headphones className="w-8 h-8 text-purple-400"  />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">Live Chat</h3>
                 <p className="text-gray-300 text-sm mb-3">Instant support</p>
@@ -972,5 +695,4 @@ export default function RequestQuote() {
         </motion.div>;
       </div>;
     </div>;
-  );
-}
+  )}

@@ -1,7 +1,3 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
-import { GradientHeading } from './ui/GradientHeading';
 
 interface Benefit {
   title: string;
@@ -16,7 +12,7 @@ const benefits: Benefit[] = [;
   {
     title: "AI-Powered Matchmaking",
     description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
-    icon: <Bot className="w-8 h-8" />,
+    icon: <Bot className="w-8 h-8"  />,
     color: "from-zion-cyan to-zion-cyan-dark",
     bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
     stats: "95% Match Rate",
@@ -30,7 +26,7 @@ const benefits: Benefit[] = [;
   {
     title: "Global Availability",
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
-    icon: <Globe className="w-8 h-8" />,
+    icon: <Globe className="w-8 h-8"  />,
     color: "from-zion-purple to-zion-purple-dark",
     bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
     stats: "150+ Countries",
@@ -44,7 +40,7 @@ const benefits: Benefit[] = [;
   {
     title: "24/7 Support",
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",
-    icon: <Clock className="w-8 h-8" />,
+    icon: <Clock className="w-8 h-8"  />,
     color: "from-zion-blue to-zion-blue-dark",
     bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
     stats: "99.9% Uptime",
@@ -58,7 +54,7 @@ const benefits: Benefit[] = [;
   {
     title: "Cost Reduction",
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",
-    icon: <TrendingDown className="w-8 h-8" />,
+    icon: <TrendingDown className="w-8 h-8"  />,
     color: "from-zion-green to-zion-green-dark",
     bgColor: "from-zion-green/20 to-zion-green-dark/20",
     stats: "40% Cost Savings",
@@ -74,32 +70,14 @@ const benefits: Benefit[] = [;
 export function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-
-
-  };
-
-  const statsVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0 }
-  };
-
-  const stats = [;
-    { value: "500+", label: "Projects Delivered", icon: <Rocket className="w-6 h-6" /> },
-    { value: "50+", label: "Expert Team Members", icon: <Users className="w-6 h-6" /> },
-    { value: "99.9%", label: "Client Satisfaction", icon: <Star className="w-6 h-6" /> },
-    { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6" /> }
+  
+  
+  
+  
+    { value: "500+", label: "Projects Delivered", icon: <Rocket className="w-6 h-6"  /> },
+    { value: "50+", label: "Expert Team Members", icon: <Users className="w-6 h-6"  /> },
+    { value: "99.9%", label: "Client Satisfaction", icon: <Star className="w-6 h-6"  /> },
+    { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6"  /> }
   ];
 
   return (
@@ -287,8 +265,7 @@ export function BenefitsSection() {
   );
 </div>};
 
-export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
+export default BenefitsSection}}}}</motion.div></motion.div></motion.div>}
       </div>
     </section>
-  );
-}
+  )}

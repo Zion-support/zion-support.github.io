@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   Rocket, 
   Cpu, 
@@ -23,86 +20,13 @@ import {
   Monitor,
   Smartphone
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
 
 export default function DigitalTransformation() {
-  const services = [
-    {
-      title: 'Process Automation',
-      description: 'Streamline operations with intelligent automation solutions that reduce manual work and improve efficiency.',
-      icon: Workflow,
-      features: ['RPA Implementation', 'Workflow Optimization', 'Business Process Mapping', 'Performance Monitoring']
-    },
-    {
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud with minimal disruption and maximum benefits.',
-      icon: Cloud,
-      features: ['Migration Strategy', 'Data Transfer', 'Application Modernization', 'Performance Optimization']
-    },
-    {
-      title: 'Data Strategy',
-      description: 'Develop a comprehensive data strategy that turns information into actionable business intelligence.',
-      icon: Database,
-      features: ['Data Architecture', 'Analytics Implementation', 'Data Governance', 'Business Intelligence']
-    },
-    {
-      icon: Users,
-      title: 'Change Management',
-      description: 'Guide organizations through digital transformation journey'
-    },
-    {
-      icon: Clock,
-      title: 'Agile Implementation',
-      description: 'Rapid deployment with iterative improvement cycles'
-    },
-    {
-      icon: Search,
-      title: 'Performance Monitoring',
-      description: 'Track transformation progress and measure ROI'
-    }
-  ];
-
-  const benefits = [
-    {
-      title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and optimize workflows to boost productivity by up to 40%.',
-      icon: TrendingUp
-    },
-    {
-      title: 'Cost Reduction',
-      description: 'Reduce operational costs through automation and cloud optimization.',
-      icon: BarChart3
-    },
-    {
-      title: 'Better Customer Experience',
-      description: 'Deliver faster, more personalized services through digital channels.',
-      icon: Star
-    },
-    {
-      title: 'Competitive Advantage',
-      description: 'Stay ahead of the competition with cutting-edge digital capabilities.',
-      icon: Target
-    }
-  ];
-
-  const industries = [
-    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Government', 'Technology', 'Energy'
-  ];
-  const contactInfo = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008, Middletown DE 19709"
-  };
-  const industries = [
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Government',
-    'Technology',
-    'Transportation'
-  ];
+  
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
@@ -115,7 +39,7 @@ export default function DigitalTransformation() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium mb-6">
-              <Zap className="w-4 h-4 mr-2" />
+              <Zap className="w-4 h-4 mr-2"  />
               Digital Transformation Solutions
             </div>
             
@@ -131,11 +55,11 @@ export default function DigitalTransformation() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Start Transformation
               </button>
               <button className="px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-200 flex items-center justify-center">
-                <Settings className="w-5 h-5 mr-2" />
+                <Settings className="w-5 h-5 mr-2"  />
                 Schedule Consultation
               </button>
             </div>
@@ -249,7 +173,7 @@ export default function DigitalTransformation() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
                 >
-                  <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0"  />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
               ))}
@@ -263,7 +187,7 @@ export default function DigitalTransformation() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
                 >
-                  <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0"  />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
               ))}
@@ -299,7 +223,7 @@ export default function DigitalTransformation() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
+                  <Target className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -327,7 +251,7 @@ export default function DigitalTransformation() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 flex items-center justify-center">
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </button>
               <button className="px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-200">
                 Contact Sales
@@ -337,7 +261,6 @@ export default function DigitalTransformation() {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default DigitalTransformation;

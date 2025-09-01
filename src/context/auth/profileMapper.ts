@@ -29,15 +29,8 @@ interface MappedUser {
   createdAt?: string;
   updatedAt?: string}
 
-export const mapProfileToUser = (supabaseUser: SupabaseUser, profile: Profile): MappedUser  => {
-  return {
-    id: supabaseUser.id,
-    email: supabaseUser.email || '',
-    displayName: profile.display_name || supabaseUser.user_metadata?.full_name,
-    avatar: profile.avatar_url || supabaseUser.user_metadata?.avatar_url,;
+export 
     role: profile.role,;
     isEmailVerified: profile.is_email_verified || false,;
     createdAt: profile.created_at || supabaseUser.created_at,;
-    updatedAt: profile.updated_at || supabaseUser.updated_at;
-  };
-};
+    updatedAt: profile.updated_at || supabaseUser.updated_at}};

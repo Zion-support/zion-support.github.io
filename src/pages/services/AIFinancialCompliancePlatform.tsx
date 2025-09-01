@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { Shield, 
   FileText, 
   TrendingUp, 
@@ -321,158 +319,13 @@ import { Shield,
   CloudSleet10
  } from 'lucide-react.ts';
 
-const AIFinancialCompliancePlatform = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Risk Assessment',
-      description: 'Advanced machine learning algorithms identify compliance risks with 98% accuracy'
-    },
-    {
-      icon: Shield,
-      title: 'Automated Compliance Monitoring',
-      description: 'Real-time monitoring of regulatory changes and automated compliance updates'
-    },
-    {
-      icon: FileText,
-      title: 'Intelligent Document Analysis',
-      description: 'AI-driven analysis of financial documents for compliance verification'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Compliance Analytics',
-      description: 'Forecast potential compliance issues before they become violations'
-    },
-    {
-      icon: Activity,
-      title: 'Real-time Audit Trails',
-      description: 'Comprehensive tracking of all compliance activities and decisions'
-    },
-    {
-      icon: AlertTriangle,
-      title: 'Proactive Risk Alerts',
-      description: 'Instant notifications of compliance risks and regulatory changes'
-    }
-  ];
 
-  const benefits = [
-    'Reduce compliance costs by 40-60%',
-    'Improve compliance accuracy by 95%',
-    'Automate 80% of routine compliance tasks',
-    'Reduce audit preparation time by 70%',
-    'Minimize regulatory fines and penalties',
-    'Ensure 24/7 regulatory compliance monitoring'
-  ];
-
-  const useCases = [
-    {
-      industry: 'Banking & Financial Services',
-      description: 'Comply with Basel III, Dodd-Frank, AML/KYC, and other financial regulations'
-    },
-    {
-      industry: 'Insurance Companies',
-      description: 'Meet Solvency II, NAIC, and state-specific insurance compliance requirements'
-    },
-    {
-      industry: 'Investment Firms',
-      description: 'Ensure SEC, FINRA, and other investment advisory compliance standards'
-    },
-    {
-      industry: 'Fintech Startups',
-      description: 'Navigate complex regulatory landscapes and maintain compliance as you scale'
-    }
-  ];
-
-  const pricing = [
-    {
-      plan: 'Starter',
-      price: '$2,200/month',
-      features: [
-        'Up to 100 users',
-        'Basic AI risk assessment',
-        'Core compliance monitoring',
-        'Document analysis',
-        'Basic reporting',
-        'Email support'
-      ]
-    },
-    {
-      plan: 'Professional',
-      price: '$4,500/month',
-      features: [
-        'Up to 500 users',
-        'Advanced AI analytics',
-        'Multi-regulation support',
-        'Custom compliance workflows',
-        'Advanced reporting',
-        'Priority support',
-        'API access'
-      ]
-    },
-    {
-      plan: 'Enterprise',
-      price: '$9,000/month',
-      features: [
-        'Unlimited users',
-        'Full AI capabilities',
-        'Custom integrations',
-        'White-label options',
-        'Dedicated compliance manager',
-        '24/7 phone support',
-        'Custom training'
-      ]
-    }
-  ];
-
-  const integrations = [
-    'SAP Financials',
-    'Oracle Financials',
-    'QuickBooks Enterprise',
-    'Xero',
-    'Sage Intacct',
-    'NetSuite',
-    'Microsoft Dynamics',
-    'Salesforce',
-    'Workday',
-    'ADP',
-    'Paychex',
-    'Webhook APIs'
-  ];
-
-  const keyMetrics = [
-    {
-      metric: '98%',
-      label: 'Compliance Accuracy'
-    },
-    {
-      metric: '60%',
-      label: 'Cost Reduction'
-    },
-    {
-      metric: '80%',
-      label: 'Task Automation'
-    },
-    {
-      metric: '70%',
-      label: 'Time Savings'
-    }
-  ];
-
-  const regulations = [
-    'Basel III',
-    'Dodd-Frank Act',
-    'Sarbanes-Oxley (SOX)',
-    'GDPR',
-    'CCPA',
-    'PCI DSS',
-    'SOC 2',
-    'ISO 27001',
-    'FINRA Rules',
-    'SEC Regulations',
-    'AML/KYC',
-    'Anti-Money Laundering'
-  ];
-
+  
+  
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -485,7 +338,7 @@ const AIFinancialCompliancePlatform = () => {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 mr-2" />
+              <Sparkles className="w-4 h-4 mr-2"  />
               AI-Powered Financial Compliance Platform
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -504,7 +357,7 @@ const AIFinancialCompliancePlatform = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200"
               >
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Watch Demo
               </motion.button>
               <motion.button
@@ -512,7 +365,7 @@ const AIFinancialCompliancePlatform = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >
-                <Settings className="w-5 h-5 mr-2" />
+                <Settings className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </motion.button>
             </div>
@@ -603,7 +456,7 @@ const AIFinancialCompliancePlatform = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-start space-x-3"
               >
-                <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0"  />
                 <span className="text-zion-slate-light text-lg">{benefit}</span>
               </motion.div>
             ))}
@@ -720,7 +573,7 @@ const AIFinancialCompliancePlatform = () => {
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"  />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
                   ))}
@@ -787,7 +640,7 @@ const AIFinancialCompliancePlatform = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200"
               >
-                <ArrowRight className="w-5 h-5 mr-2" />
+                <ArrowRight className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </motion.button>
               <motion.button
@@ -795,7 +648,7 @@ const AIFinancialCompliancePlatform = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >
-                <MessageSquare className="w-5 h-5 mr-2" />
+                <MessageSquare className="w-5 h-5 mr-2"  />
                 Schedule Demo
               </motion.button>
             </div>
@@ -819,15 +672,15 @@ const AIFinancialCompliancePlatform = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-6 h-6 text-purple-400" />
+                <Phone className="w-6 h-6 text-purple-400"  />
                 <span className="text-zion-slate-light">+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-6 h-6 text-purple-400" />
+                <Mail className="w-6 h-6 text-purple-400"  />
                 <span className="text-zion-slate-light">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-6 h-6 text-purple-400" />
+                <MapPin className="w-6 h-6 text-purple-400"  />
                 <span className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
@@ -836,14 +689,14 @@ const AIFinancialCompliancePlatform = () => {
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200"
               >
-                <ArrowRight className="w-5 h-5 mr-2" />
+                <ArrowRight className="w-5 h-5 mr-2"  />
                 Contact Us
               </a>
               <a
                 href="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >
-                <Globe className="w-5 h-5 mr-2" />
+                <Globe className="w-5 h-5 mr-2"  />
                 Visit Website
               </a>
             </div>
@@ -851,7 +704,6 @@ const AIFinancialCompliancePlatform = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIFinancialCompliancePlatform;

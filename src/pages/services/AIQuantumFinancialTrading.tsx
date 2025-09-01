@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import { 
   Brain, 
   TrendingUp, 
@@ -22,95 +20,8 @@ import {
   MapPin
 } from 'lucide-react';
 
-const AIQuantumFinancialTrading = () => {
-  const features = [
-    {
-      title: "Quantum-AI Algorithm Trading",
-      description: "Advanced quantum computing algorithms combined with AI for ultra-fast market analysis and execution",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Real-time Market Prediction",
-      description: "Machine learning models that predict market movements with 85%+ accuracy using quantum-enhanced analytics",
-      icon: TrendingUp,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Risk Management System",
-      description: "AI-powered risk assessment and portfolio optimization with quantum computing speed",
-      icon: Shield,
-      color: "from-red-500 to-orange-500"
-    },
-    {
-      title: "Multi-Asset Trading",
-      description: "Support for stocks, forex, crypto, commodities, and derivatives with unified interface",
-      icon: BarChart3,
-      color: "from-blue-500 to-indigo-500"
-    },
-    {
-      title: "Regulatory Compliance",
-      description: "Automated compliance monitoring for SEC, FINRA, and international regulations",
-      icon: Lock,
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      title: "Portfolio Analytics",
-      description: "Advanced portfolio performance tracking with quantum-enhanced optimization",
-      icon: Target,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$2,999",
-      period: "/month",
-      description: "Perfect for individual traders and small funds",
-      features: [
-        "Quantum-AI trading algorithms",
-        "Real-time market data",
-        "Basic risk management",
-        "5 trading strategies",
-        "Email support",
-        "Mobile app access"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$7,999",
-      period: "/month",
-      description: "Ideal for professional traders and medium funds",
-      features: [
-        "Advanced quantum algorithms",
-        "Custom strategy development",
-        "Advanced risk management",
-        "Unlimited trading strategies",
-        "Priority support",
-        "API access",
-        "White-label options"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$19,999",
-      period: "/month",
-      description: "For large institutions and hedge funds",
-      features: [
-        "Custom quantum computing integration",
-        "Dedicated support team",
-        "Custom compliance modules",
-        "Multi-tenant architecture",
-        "Advanced analytics dashboard",
-        "SLA guarantees",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-      description: "For large institutions and hedge funds",;
+  
       features: [;
         "Custom quantum computing integration",
         "Dedicated support team",
@@ -120,25 +31,16 @@ const AIQuantumFinancialTrading = () => {
         "SLA guarantees",;
         "On-premise deployment";
       ],;
-      popular: false;
-    };
+      popular: false};
   ];
 
     {;
       title: "Cost Savings",;
       description: "Automated trading reduces manual intervention and operational costs",;
-      metric: "60% cost reduction";
-    };
+      metric: "60% cost reduction"};
   ];
 
-  const technologies = [
-    "Machine Learning & AI",
-    "Quantum Computing",
-    "High-Frequency Trading",
-    "Blockchain Security",
-    "Real-time Analytics",
-    "Cloud Infrastructure",
-    "API Integration",;
+  
     "Predictive Modeling";
   ];
 
@@ -184,14 +86,12 @@ const AIQuantumFinancialTrading = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
               >
                 Start Trading Today
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                 Schedule Demo
               </button>
-  const benefits = [
-    {
-      title: "Increased Trading Speed",;
+  
       description: "Quantum computing reduces execution time from milliseconds to microseconds",
       metric: "1000x faster"
     },
@@ -224,7 +124,7 @@ const AIQuantumFinancialTrading = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-center mb-6">
-              <Atom className="w-12 h-12 text-purple-400 mr-3" />
+              <Atom className="w-12 h-12 text-purple-400 mr-3"  />
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 AI Quantum Financial Trading
               </h1>
@@ -239,7 +139,7 @@ const AIQuantumFinancialTrading = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Trading Now
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </a>
               <a
                 href="#demo"
@@ -566,7 +466,7 @@ const AIQuantumFinancialTrading = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -627,7 +527,7 @@ const AIQuantumFinancialTrading = () => {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Start Trading Today
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                   Book a Consultation
@@ -653,13 +553,13 @@ const AIQuantumFinancialTrading = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </a>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
-                <Phone className="mr-2 w-5 h-5" />
+                <Phone className="mr-2 w-5 h-5"  />
                 Call Now
               </a>
             </div>
@@ -673,21 +573,21 @@ const AIQuantumFinancialTrading = () => {
           <h3 className="text-2xl font-bold text-white mb-8">Contact Zion Tech Group</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-purple-400 mb-4" />
+              <Phone className="w-8 h-8 text-purple-400 mb-4"  />
               <p className="text-gray-300">Phone</p>
               <a href="tel:+13024640950" className="text-white hover:text-purple-400 transition-colors">
                 +1 302 464 0950
               </a>
             </div>
             <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-purple-400 mb-4" />
+              <Mail className="w-8 h-8 text-purple-400 mb-4"  />
               <p className="text-gray-300">Email</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-purple-400 transition-colors">
                 kleber@ziontechgroup.com
               </a>
             </div>
             <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-purple-400 mb-4" />
+              <MapPin className="w-8 h-8 text-purple-400 mb-4"  />
               <p className="text-gray-300">Address</p>
               <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
@@ -697,7 +597,7 @@ const AIQuantumFinancialTrading = () => {
     </div>;
   )};
             <div className = "flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-purple-400 mb-4" />
+              <MapPin className="w-8 h-8 text-purple-400 mb-4"  />
               <p className="text-gray-300">Address</p>;
               <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </div>;
@@ -705,7 +605,6 @@ const AIQuantumFinancialTrading = () => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default AIQuantumFinancialTrading;

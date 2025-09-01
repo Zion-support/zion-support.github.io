@@ -50,22 +50,12 @@ pricing: {
   trending: boolean}
 
 // Zion Tech Group Contact Information
-const zionContact = {
-  phone: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",;
+
   ;
   ;
   ;
   ;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-;
-
-
-
-
-
-
 };
 
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [
@@ -532,8 +522,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",;
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true;
-  };
+    trending: true};
 ];
 
-export default innovativeCybersecurityServices2030;}}
+export default innovativeCybersecurityServices2030}}

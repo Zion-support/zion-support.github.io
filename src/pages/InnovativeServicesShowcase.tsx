@@ -1,5 +1,3 @@
-import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../data/innovativeServices2025";
 
 const InnovativeServicesShowcase: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState('');
@@ -7,8 +5,8 @@ const InnovativeServicesShowcase: React.FC = () => {;
   const [priceRange, setPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('rating');
 
-  const categories = ['all', 'AI Services', 'IT Services', 'Micro SAAS', 'Business', 'Development'];
-  const priceRanges = [;
+  
+  
     { label: 'All Prices', value: 'all' },;
     { label: 'Under $100', value: '0-100' },;
     { label: '$100 - $500', value: '100-500' },;
@@ -16,23 +14,21 @@ const InnovativeServicesShowcase: React.FC = () => {;
     { label: '$1000 - $3000', value: '1000-3000' },;
     { label: 'Over $3000', value: '3000+' };
   ];
-  const sortOptions = [;
+  
     { label: 'Highest Rated', value: 'rating' },;
     { label: 'Highest AI Score', value: 'aiScore' },;
     { label: 'Lowest Price', value: 'price' },;
     { label: 'Newest Launch', value: 'launchDate' };
   ];
 
-  const filtered = INNOVATIVE_SERVICES_2025;
-
+  
     // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      );
-    }
+      )}
 
     // Filter by category
     if (selectedCategory !== 'all') {
@@ -42,10 +38,8 @@ const InnovativeServicesShowcase: React.FC = () => {;
     if (priceRange !== 'all') {;
       const [min, max] = priceRange.split('-').map(Number);
       if (priceRange = == '3000+') {;
-        filtered = filtered.filter(service => service.price >= 3000);
-      } else {
-        filtered = filtered.filter(service => service.price >= min && service.price <= max);
-      }
+        filtered = filtered.filter(service => service.price >= 3000)} else {
+        filtered = filtered.filter(service => service.price >= min && service.price <= max)}
     }
 
     // Sort services
@@ -252,7 +246,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
         {/* Services Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service)  => (
-            <ServiceCard key={service.id} service={service} />
+            <ServiceCard key={service.id} service={service}  />
           ))}
         </div>
 
@@ -283,7 +277,6 @@ const InnovativeServicesShowcase: React.FC = () => {;
         </div>;
       </div>;
     </div>;
-  );
-};
+  )};
 
-export default InnovativeServicesShowcase;}}}}}
+export default InnovativeServicesShowcase}}}}}

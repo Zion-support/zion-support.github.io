@@ -1,21 +1,17 @@
-import React, { useState } from 'react';
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data/enhancedZionTechServices2025";
 
 const EnhancedZionTechServices2025: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('name');
 
-  const categories = ['All', ...getEnhancedServiceCategories()];
   
-  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  
+    
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  
     switch (sortBy) {;
       case 'price':;
         return a.price - b.price;
@@ -24,9 +20,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
       case 'aiScore':;
         return b.aiScore - a.aiScore;
       default:;
-        return a.title.localeCompare(b.title);
-
-  });
+        return a.title.localeCompare(b.title)});
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -289,7 +283,6 @@ const EnhancedZionTechServices2025: React.FC = () => {;
         </div>;
       </div>;
     </div>;
-  );
-};
+  )};
 
-export default EnhancedZionTechServices2025;}
+export default EnhancedZionTechServices2025}

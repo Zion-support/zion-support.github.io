@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import {
   Brain,
   Cpu,
@@ -25,12 +23,7 @@ import {
  } from 'lucide-react';
 
 export default function AIServices(...args[]):  {
-  const aiServices = [
-    {
-      name: "AI Strategy & Consulting",
-      description: "Strategic guidance on implementing AI solutions across your organization",
-      icon: Target,
-      features[;
+  
         "AI readiness assessment",
         "Technology roadmap planning",
         "ROI analysis and business case development",
@@ -76,11 +69,10 @@ export default function AIServices(...args[]):  {
         "Monitoring and alerting systems";
       ],;
       price: "From $6,000",;
-      duration: "4-10 weeks";
-    };
+      duration: "4-10 weeks"};
   ];
 
-  const aiTechnologies = [;
+  
     { name: "TensorFlow", description: "Open-source ML framework", icon: Code },;
     { name: "PyTorch", description: "Deep learning research platform", icon: Brain },;
     { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },;
@@ -89,10 +81,7 @@ export default function AIServices(...args[]):  {
     { name: "AutoML", description: "Automated machine learning", icon: Zap };
   ];
 
-  const useCases = [
-    {
-      industry: "Healthcare",
-      applications["Medical image analysis", "Drug discovery", "Patient risk prediction"],;
+  
       icon: Heart
     },
     {
@@ -109,8 +98,7 @@ export default function AIServices(...args[]):  {
     {;
       industry: "Retail",;
       applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],;
-      icon: ShoppingCart;
-    };
+      icon: ShoppingCart};
   ];
 
   return (
@@ -130,15 +118,14 @@ export default function AIServices(...args[]):  {
               we deliver AI solutions that drive real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
 
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <button className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
-                <Play className="mr-2 h-5 w-5" />
+                <Play className="mr-2 h-5 w-5"  />
                 Watch Demo
               </button>
             </div>
@@ -184,7 +171,7 @@ export default function AIServices(...args[]):  {
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
-                      <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -284,12 +271,11 @@ export default function AIServices(...args[]):  {
               Let's discuss how AI can transform your business operations and drive growth
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
 
                 Schedule Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <Link
                 to="/services"
@@ -302,5 +288,4 @@ export default function AIServices(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

@@ -20,21 +20,18 @@ export interface InnovativeService2028 {
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
   aiCapabilities?: string[];
   complianceFeatures?: string[];
-  scalabilityFeatures?: string[];
-}
+  scalabilityFeatures?: string[]}
 
 export const INNOVATIVE_SERVICES_2028: InnovativeService2028[] = [
   // AI-Powered Enterprise Solutions

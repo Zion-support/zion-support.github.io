@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
 import { 
   Cookie, 
   Shield, 
@@ -19,8 +16,6 @@ import {
   BarChart3,
   Users
 } from 'lucide-react';
-import { Shield, Cookie, Settings, Eye, EyeOff, CheckCircle, XCircle, Info, ExternalLink } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 export default function Cookies() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -29,112 +24,7 @@ export default function Cookies() {
     analytics: false,
     marketing: false,
     functional: false
-  });
-
-  const cookieTypes = [
-    {
-      id: 'essential',
-      name: 'Essential Cookies',
-      description: 'These cookies are necessary for the website to function and cannot be switched off.',
-      examples: [
-        'Authentication cookies',
-        'Security cookies',
-        'Session management',
-        'Load balancing'
-      ],
-      icon: Shield,
-      color: 'from-blue-500 to-cyan-500',
-      alwaysActive: true
-    },
-    {
-      id: 'analytics',
-      name: 'Analytics Cookies',
-      description: 'These cookies help us understand how visitors interact with our website.',
-      examples: [
-        'Page views and navigation',
-        'User behavior patterns',
-        'Performance metrics',
-        'Error tracking'
-      ],
-      icon: BarChart3,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: 'marketing',
-      name: 'Marketing Cookies',
-      description: 'These cookies are used to deliver personalized advertisements.',
-      examples: [
-        'Ad targeting',
-        'Campaign performance',
-        'User preferences',
-        'Conversion tracking'
-      ],
-      icon: Users,
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      id: 'functional',
-      name: 'Functional Cookies',
-      description: 'These cookies enable enhanced functionality and personalization.',
-      examples: [
-        'Language preferences',
-        'Theme settings',
-        'Form data storage',
-        'Social media integration'
-      ],
-      icon: Settings,
-      color: 'from-green-500 to-emerald-500'
-    }
-  ];
-
-  const cookieDetails = [
-    {
-      name: '_ga',
-      purpose: 'Google Analytics - Used to distinguish unique users',
-      duration: '2 years',
-      provider: 'Google LLC',
-      type: 'analytics'
-    },
-    {
-      name: '_gid',
-      purpose: 'Google Analytics - Used to distinguish users',
-      duration: '24 hours',
-      provider: 'Google LLC',
-      type: 'analytics'
-    },
-    {
-      name: '_gat',
-      purpose: 'Google Analytics - Used to throttle request rate',
-      duration: '1 minute',
-      provider: 'Google LLC',
-      type: 'analytics'
-    },
-    {
-      name: 'session_id',
-      purpose: 'Maintains user session state',
-      duration: 'Session',
-      provider: 'Zion Tech Group',
-      type: 'essential'
-    },
-    {
-      name: 'csrf_token',
-      purpose: 'Cross-site request forgery protection',
-      duration: 'Session',
-      provider: 'Zion Tech Group',
-      type: 'essential'
-    },
-    {
-      name: 'user_preferences',
-      purpose: 'Stores user interface preferences',
-      duration: '1 year',
-      provider: 'Zion Tech Group',
-      type: 'functional'
-    }
-  ];
-
-  const toggleSection = (sectionId: string) => {
-    setExpandedSection(expandedSection === sectionId ? null : sectionId);
-  };
+  })};
 
   const updateCookiePreference = (type: string, enabled: boolean) => {
     if (type === 'essential') return; // Essential cookies cannot be disabled
@@ -142,35 +32,17 @@ export default function Cookies() {
     setCookiePreferences(prev => ({
       ...prev,
       [type]: enabled
-    }));
-  };
+    }))};
 
-  const savePreferences = () => {
-    // In a real app, this would save preferences and update cookies
-    console.log('Cookie preferences saved:', cookiePreferences);
+  
     // Show success message
-    alert('Cookie preferences saved successfully!');
-  };
+    alert('Cookie preferences saved successfully!')};
 
-  const acceptAll = () => {
-    setCookiePreferences({
-      essential: true,
-      analytics: true,
-      marketing: true,
-      functional: true
-    });
-    savePreferences();
-  };
+  
+    savePreferences()};
 
-  const rejectAll = () => {
-    setCookiePreferences({
-      essential: true,
-      analytics: false,
-      marketing: false,
-      functional: false
-    });
-    savePreferences();
-  };
+  
+    savePreferences()};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -185,7 +57,7 @@ export default function Cookies() {
             className="text-center"
           >
             <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Cookie className="w-10 h-10 text-white" />
+              <Cookie className="w-10 h-10 text-white"  />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cookie Policy
@@ -218,7 +90,7 @@ export default function Cookies() {
             </div>
             <div className="flex justify-center">
               <div className="w-32 h-32 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                <Cookie className="w-16 h-16 text-white" />
+                <Cookie className="w-16 h-16 text-white"  />
               </div>
             </div>
           </div>
@@ -235,7 +107,7 @@ export default function Cookies() {
             className="text-center"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-2xl mb-6">
-              <Cookie className="w-10 h-10 text-orange-400" />
+              <Cookie className="w-10 h-10 text-orange-400"  />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Cookie <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">Policy</span>
@@ -297,7 +169,7 @@ export default function Cookies() {
                       <ul className="space-y-1">
                         {type.examples.map((example, index) => (
                           <li key={index} className="flex items-center text-gray-300 text-sm">
-                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"  />
                             {example}
                           </li>
                         ))}
@@ -371,7 +243,7 @@ export default function Cookies() {
                     <ul className="space-y-1">
                       {type.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} className="flex items-center text-gray-300 text-xs">
-                          <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0"  />
                           {example}
                         </li>
                       ))}
@@ -463,7 +335,7 @@ export default function Cookies() {
             >
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl mb-6">
-                  <Settings className="w-8 h-8 text-blue-400" />
+                  <Settings className="w-8 h-8 text-blue-400"  />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-4">Browser Settings</h3>
                 <p className="text-gray-300 text-sm mb-4">
@@ -486,7 +358,7 @@ export default function Cookies() {
             >
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl mb-6">
-                  <Eye className="w-8 h-8 text-purple-400" />
+                  <Eye className="w-8 h-8 text-purple-400"  />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-4">Privacy Tools</h3>
                 <p className="text-gray-300 text-sm mb-4">
@@ -509,7 +381,7 @@ export default function Cookies() {
             >
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl mb-6">
-                  <Globe className="w-8 h-8 text-green-400" />
+                  <Globe className="w-8 h-8 text-green-400"  />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-4">Global Settings</h3>
                 <p className="text-gray-300 text-sm mb-4">
@@ -547,14 +419,14 @@ export default function Cookies() {
                 href="mailto:privacy@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-orange-400 to-red-500 text-white font-semibold rounded-lg hover:from-orange-500 hover:to-red-600 transition-all duration-200 hover:scale-105"
               >
-                <Info className="w-5 h-5 mr-2" />
+                <Info className="w-5 h-5 mr-2"  />
                 Contact Privacy Team
               </a>
               <a
                 href="/privacy"
                 className="inline-flex items-center px-8 py-3 border border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-white transition-all duration-200"
               >
-                <Shield className="w-5 h-5 mr-2" />
+                <Shield className="w-5 h-5 mr-2"  />
                 Privacy Policy
               </a>
             </div>
@@ -603,7 +475,7 @@ export default function Cookies() {
                 <div className="ml-6 flex items-center">
                   {category.necessary ? (
                     <div className="flex items-center text-blue-400">
-                      <CheckCircle className="w-6 h-6 mr-2" />
+                      <CheckCircle className="w-6 h-6 mr-2"  />
                       <span className="text-sm font-medium">Required</span>
                     </div>
                   ) : (
@@ -617,12 +489,12 @@ export default function Cookies() {
                     >
                       {cookiePreferences[category.id as keyof typeof cookiePreferences] ? (
                         <>
-                          <Eye className="w-4 h-4 mr-2" />
+                          <Eye className="w-4 h-4 mr-2"  />
                           Enabled
                         </>
                       ) : (
                         <>
-                          <EyeOff className="w-4 h-4 mr-2" />
+                          <EyeOff className="w-4 h-4 mr-2"  />
                           Disabled
                         </>
                       )}
@@ -645,7 +517,7 @@ export default function Cookies() {
               onClick={acceptAll}
               className="flex items-center justify-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors"
             >
-              <CheckCircle className="w-5 h-5 mr-2" />
+              <CheckCircle className="w-5 h-5 mr-2"  />
               Accept All Cookies
             </button>
             
@@ -653,7 +525,7 @@ export default function Cookies() {
               onClick={rejectAll}
               className="flex items-center justify-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl transition-colors"
             >
-              <XCircle className="w-5 h-5 mr-2" />
+              <XCircle className="w-5 h-5 mr-2"  />
               Reject Non-Essential
             </button>
             
@@ -661,7 +533,7 @@ export default function Cookies() {
               onClick={savePreferences}
               className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
             >
-              <Settings className="w-5 h-5 mr-2" />
+              <Settings className="w-5 h-5 mr-2"  />
               Save Preferences
             </button>
           </div>
@@ -683,7 +555,7 @@ export default function Cookies() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
             <div className="flex items-center mb-4">
-              <Shield className="w-8 h-8 text-blue-400 mr-3" />
+              <Shield className="w-8 h-8 text-blue-400 mr-3"  />
               <h3 className="text-xl font-semibold text-white">Data Protection</h3>
             </div>
             <p className="text-gray-300 mb-4">
@@ -695,13 +567,13 @@ export default function Cookies() {
               className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium"
             >
               Read Privacy Policy
-              <ExternalLink className="w-4 h-4 ml-1" />
+              <ExternalLink className="w-4 h-4 ml-1"  />
             </Link>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
             <div className="flex items-center mb-4">
-              <Info className="w-8 h-8 text-purple-400 mr-3" />
+              <Info className="w-8 h-8 text-purple-400 mr-3"  />
               <h3 className="text-xl font-semibold text-white">Third-Party Cookies</h3>
             </div>
             <p className="text-gray-300 mb-4">
@@ -782,19 +654,18 @@ export default function Cookies() {
               to="/contact"
               className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
             >
-              <Shield className="w-5 h-5 mr-2" />
+              <Shield className="w-5 h-5 mr-2"  />
               Contact Privacy Team
             </Link>
             <Link
               to="/privacy"
               className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
             >
-              <Info className="w-5 h-5 mr-2" />
+              <Info className="w-5 h-5 mr-2"  />
               Privacy Policy
             </Link>
           </div>
         </div>
       </div>
     </>
-  );
-}
+  )}

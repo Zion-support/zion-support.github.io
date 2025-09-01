@@ -1,39 +1,7 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { BarChart3, CheckCircle, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
 export default function ServicesComparisonPage() {
-  const services = [
-    {
-      name: 'AI Business Intelligence',
-      category: 'AI & Analytics',
-      features: ['Machine Learning', 'Data Visualization', 'Predictive Analytics', 'Real-time Insights'],
-      pricing: 'Custom',
-      rating: 4.9,
-      users: '500+',
-      icon: BarChart3
-    },
-    {
-      name: 'Digital Twin Platform',
-      category: 'IoT & Simulation',
-      features: ['Real-time Monitoring', 'Predictive Maintenance', '3D Visualization', 'API Integration'],
-      pricing: 'From $2,500/month',
-      rating: 4.8,
-      users: '200+',
-      icon: Zap
-    },
-    {
-      name: 'Cybersecurity Suite',
-      category: 'Security',
-      features: ['Threat Detection', 'Incident Response', 'Compliance Monitoring', '24/7 Support'],
-      pricing: 'From $1,800/month',
-      rating: 4.9,
-      users: '300+',
-      icon: Star
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-slate-900 text-white pt-20">
       <div className="container mx-auto px-4 py-12">
@@ -94,7 +62,7 @@ export default function ServicesComparisonPage() {
                       <div className="space-y-1">
                         {service.features.map((feature, featureIndex) => (
                           <div key={featureIndex} className="flex items-center space-x-2 text-sm">
-                            <CheckCircle className="w-4 h-4 text-green-400" />
+                            <CheckCircle className="w-4 h-4 text-green-400"  />
                             <span className="text-slate-300">{feature}</span>
                           </div>
                         ))}
@@ -103,7 +71,7 @@ export default function ServicesComparisonPage() {
                     <td className="py-4 px-4 text-slate-300">{service.pricing}</td>
                     <td className="py-4 px-4">
                       <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <Star className="w-4 h-4 text-yellow-400 fill-current"  />
                         <span className="text-slate-300">{service.rating}</span>
                       </div>
                     </td>
@@ -142,6 +110,5 @@ export default function ServicesComparisonPage() {
         </motion.div>
       </div>
     </div>
-  );
-}
+  )}
 >>>>>>> cursor/migrate-github-actions-to-pm2-automations-f391

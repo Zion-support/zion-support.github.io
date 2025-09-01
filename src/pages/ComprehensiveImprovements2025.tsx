@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   Star, 
   Zap, 
@@ -54,170 +51,35 @@ import {
   Mail as MailIcon,
   MapPin as MapPinIcon
 } from 'lucide-react';
-import EnhancedSEOManager from "../components/EnhancedSEOManager";
 
 export default function ComprehensiveImprovements2025() {
-  const improvements = [
-    {
-      category: 'AI & Machine Learning Services',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      title: 'AI-Powered Solutions',
-      items: [
-        'AI Workflow Orchestrator - Intelligent workflow automation',
-        'AI Data Governance Platform - Comprehensive data compliance',
-        'AI Customer Experience Analytics - Advanced customer insights',
-        'AI Business Intelligence Analytics - ML-powered insights',
-        'AI Compliance Assistant - Automated regulatory compliance',
-        'AI Sales Copilot - Intelligent sales optimization',
-        'AI-Powered SEO - Machine learning optimization',
-        'Interview Assessment AI - Candidate evaluation',
-        'AI Content Marketing Suite - Automated content creation',
-        'AI Customer Support Automation - Intelligent support',
-        'AI Project Management - AI-driven optimization',
-        'AI Financial Analytics - Intelligent financial insights',
-        'AI Financial Risk Management - Risk assessment',
-        'AI Code Review Security Scanner - Security analysis',
-        'AI DevOps Automation Platform - DevOps automation',
-        'AI Customer Experience Support - Enhanced experience',
-        'AI Marketing Automation Personalization - Personalization',
-        'AI Quantum Hybrid Platform - Quantum-AI integration',
-        'AI Quantum Financial Trading - Quantum trading',
-        'AI Autonomous Supply Chain - Supply chain automation',
-        'AI Cybersecurity Threat Intelligence - Threat detection'
-      ]
-    },
-    {
-      category: 'Cloud & DevOps Solutions',
-      icon: Cloud,
-      color: 'from-blue-500 to-cyan-500',
-      title: 'Infrastructure Excellence',
-      items: [
-        'Cloud DevOps - Infrastructure automation & scaling',
-        'IT Infrastructure - Enterprise infrastructure solutions',
-        'FinOps Advisor - Cloud cost optimization',
-        'Cloud FinOps Optimizer - Financial operations automation'
-      ]
-    },
-    {
-      category: 'Cybersecurity & Privacy',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      title: 'Security First',
-      items: [
-        'AI Cybersecurity Platform - Advanced AI-powered security',
-        'Security Headers & CSP - Web security hardening',
-        'DSR Privacy Portal - GDPR/CCPA compliance',
-        'Zero Trust Network Access - Modern security architecture'
-      ]
-    },
-    {
-      category: 'Digital Transformation',
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-500',
-      title: 'Future-Ready Solutions',
-      items: [
-        'Digital Twin - Virtual system replicas',
-        'Digital Transformation - Strategic technology consulting',
-        'IT Consulting - Technology strategy & planning'
-      ]
-    },
-    {
-      category: 'Emerging Technologies',
-      icon: Atom,
-      color: 'from-indigo-500 to-purple-500',
-      title: 'Next-Gen Innovation',
-      items: [;
+  
         'Quantum Computing - Next-gen computational power',;
         'IoT Edge Computing - Smart device networks',;
         'Space Tech - Space technology solutions',;
         'Green IT - Sustainable technology solutions';
-      ];
-    };
+      ]};
   ];
 
-  const features = [
-    {
-      title: 'Futuristic Design',
-      description: 'Modern neon effects, animated backgrounds, and cutting-edge UI/UX',
-      icon: Sparkles,
-      color: 'from-pink-500 to-purple-500'
-    },
-    {
-      title: 'Responsive Layout',
-      description: 'Optimized for all screen sizes with mobile-first approach',
-      icon: Smartphone,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Performance Optimized',
-      description: 'Lazy loading, code splitting, and optimized animations',
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      title: 'Accessibility Enhanced',
-      description: 'WCAG 2.1 AA compliant with advanced assistive technologies',
-      icon: Eye,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'SEO Optimized',
-      description: 'Advanced SEO with structured data and performance metrics',
-      icon: Search,
-      color: 'from-indigo-500 to-purple-500'
-    },;
+  
     {;
       title: 'Analytics Driven',;
       description: 'Comprehensive analytics and performance monitoring',;
       icon: BarChart3,;
-      color: 'from-blue-500 to-cyan-500';
-    };
+      color: 'from-blue-500 to-cyan-500'};
   ];
 
-  const benefits = [
-    {
-      title: 'Enhanced User Experience',
-      description: 'Intuitive navigation, smooth animations, and responsive design',
-      icon: Users,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Improved Performance',
-      description: 'Faster loading times, optimized assets, and efficient rendering',
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      title: 'Better Accessibility',
-      description: 'Inclusive design for users with diverse abilities',
-      icon: Eye,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Advanced Analytics',
-      description: 'Comprehensive insights into user behavior and performance',
-      icon: BarChart3,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'SEO Excellence',
-      description: 'Optimized for search engines and improved discoverability',
-      icon: Search,
-      color: 'from-indigo-500 to-purple-500'
-    },;
+  
     {;
       title: 'Security Enhanced',;
       description: 'Advanced security measures and privacy protection',;
       icon: Shield,;
-      color: 'from-red-500 to-orange-500';
-    };
+      color: 'from-red-500 to-orange-500'};
   ];
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <EnhancedSEOManager 
-        title="Comprehensive Improvements 2025 - Zion Tech Group"
+      <EnhancedSEOManager title="Comprehensive Improvements 2025 - Zion Tech Group"
         description="Discover the revolutionary platform enhancements that make Zion Tech Group the most advanced business technology solution available today."
         keywords = {
   ['platform improvements', 'AI services', 'technology enhancements', 'digital transformation',
@@ -229,7 +91,7 @@ export default function ComprehensiveImprovements2025() {
 
 
 }
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
@@ -260,7 +122,7 @@ export default function ComprehensiveImprovements2025() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">
-              <Rocket className="w-4 h-4 mr-2" />
+              <Rocket className="w-4 h-4 mr-2"  />
               Revolutionary Platform Enhancements
             </div>
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
@@ -280,7 +142,7 @@ export default function ComprehensiveImprovements2025() {
                 to="/ai-services-hub"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center"
               >
-                <Brain className="w-5 h-5 mr-2" />
+                <Brain className="w-5 h-5 mr-2"  />
                 Explore AI Services Hub
               </Link>
               <Link
@@ -387,7 +249,7 @@ export default function ComprehensiveImprovements2025() {
                   <ul className="space-y-2">
                     {improvement.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0"  />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -639,14 +501,14 @@ export default function ComprehensiveImprovements2025() {
                 to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Get Started Today
               </Link>
               <Link
                 to="/services"
                 className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg"
               >
-                <ArrowRight className="w-5 h-5 mr-2 inline" />
+                <ArrowRight className="w-5 h-5 mr-2 inline"  />
                 Explore Services;
               </Link>;
             </div>;
@@ -654,5 +516,4 @@ export default function ComprehensiveImprovements2025() {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

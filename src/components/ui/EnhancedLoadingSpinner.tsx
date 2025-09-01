@@ -1,13 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 
 interface EnhancedLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   text?: string;
   showProgress?: boolean;
   progress?: number;
-  variant?: 'default' | 'futuristic' | 'minimal';
-}
+  variant?: 'default' | 'futuristic' | 'minimal'}
 
 export function EnhancedLoadingSpinner({
   size = 'md',
@@ -16,28 +13,15 @@ export function EnhancedLoadingSpinner({
   progress = 0,
   variant = 'futuristic'
 }: EnhancedLoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-16 h-16',
-    lg: 'w-32 h-32',
-    xl: 'w-48 h-48'
-  };
-
-  const textSizes = {
-    sm: 'text-xs',
-    md: 'text-sm',
-    lg: 'text-lg',
-    xl: 'text-xl'
-  };
-
+  
+  
   if (variant === 'minimal') {
     return (
       <div className="flex items-center justify-center">
         <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`} />
         {text && <span className={`ml-3 ${textSizes[size]} text-gray-600`}>{text}</span>}
       </div>
-    );
-  }
+    )}
 
   if (variant === 'default') {
     return (
@@ -55,8 +39,7 @@ export function EnhancedLoadingSpinner({
           </div>
         )}
       </div>
-    );
-  }
+    )}
 
   // Futuristic variant (default)
   return (
@@ -145,8 +128,7 @@ export function EnhancedLoadingSpinner({
         ))}
       </div>
     </div>
-  );
-}
+  )}
 
 // Export default for backward compatibility
 export default EnhancedLoadingSpinner;

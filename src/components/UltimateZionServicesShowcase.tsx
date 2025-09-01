@@ -1,14 +1,9 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
 
 const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🌟', color: 'from-purple-600 to-pink-600' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: '⚛️', color: 'from-blue-600 to-cyan-600' },;
+  
     { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from-green-600 to-emerald-600' },;
     { id: 'space-tech', name: 'Space Technology', icon: '🛰️', color: 'from-indigo-600 to-purple-600' },;
     { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from-red-600 to-pink-600' },;
@@ -17,40 +12,21 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
     { id: 'it-services', name: 'IT Services', icon: '🖥️', color: 'from-gray-600 to-slate-600' };
   ];
 
-  const filteredServices = ultimateZionServices2025.filter(service => {;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  
+    
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {;
+  
       opacity: 1,;
-      transition: {;
+      transition: {
         staggerChildren: 0.1,;
-        delayChildren: 0.2;
-      };
-    };
-  };
-
-  const itemVariants = {
-  hidden: { opacity: 0,
-  y: 20 
-
-
-
-
-
-;
-},;
-    visible: {;
+        delayChildren: 0.2}}}},;
+    visible: {
       opacity: 1,;
       y: 0,;
-      transition: { duration: 0.5 };
-    };
-  };
+      transition: { duration: 0.5 }}};
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -448,7 +424,6 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default UltimateZionServicesShowcase;

@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
 import { 
   Users, 
   Target, 
@@ -17,63 +14,14 @@ import {
 } from 'lucide-react';
 
 export default function About() {
-  const stats = [
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
-    { number: '50+', label: 'Team Members', icon: Users },
-    { number: '25+', label: 'Countries Served', icon: Globe },
-    { number: '99%', label: 'Client Satisfaction', icon: Star }
-  ];
-
-  const values = [
-    {
-      icon: Brain,
-      title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible with cutting-edge AI and emerging technologies.'
-    },
-    {
-      icon: Shield,
-      title: 'Trust & Security',
-      description: 'Your data and business operations are protected with enterprise-grade security measures.'
-    },
-    {
-      icon: Heart,
-      title: 'Client Success',
-      description: 'We measure our success by the success of our clients and their digital transformation journey.'
-    },
-    {
-      icon: Rocket,
-      title: 'Future-Ready',
-      description: 'We build solutions that not only solve today\'s problems but prepare you for tomorrow\'s challenges.'
-    }
-  ];
-
-  const team = [
-    {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
-      image: '/team/kleber-santos.jpg'
-    },
-    {
-      name: 'AI Research Team',
-      role: 'AI & ML Specialists',
-      bio: 'Experts in machine learning, neural networks, and autonomous systems development.',
-      image: '/team/ai-team.jpg'
-    },
-    {
-      name: 'DevOps Engineers',
-      role: 'Infrastructure & Cloud',
-      bio: 'Specialists in cloud architecture, automation, and scalable infrastructure solutions.',
-      image: '/team/devops-team.jpg'
-    }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="About Us - Zion Tech Group"
+      <SEO title="About Us - Zion Tech Group"
         description="Learn about Zion Tech Group's mission to revolutionize business through AI, quantum computing, and cutting-edge technology solutions."
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -106,7 +54,7 @@ export default function About() {
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center mb-6">
-                <Target className="w-8 h-8 text-cyan-400 mr-3" />
+                <Target className="w-8 h-8 text-cyan-400 mr-3"  />
                 <h2 className="text-3xl font-bold text-white">Our Mission</h2>
               </div>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
@@ -128,7 +76,7 @@ export default function About() {
             >
               <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-400/20">
                 <div className="flex items-center mb-6">
-                  <Zap className="w-8 h-8 text-cyan-400 mr-3" />
+                  <Zap className="w-8 h-8 text-cyan-400 mr-3"  />
                   <h3 className="text-2xl font-bold text-white">Our Vision</h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed mb-6">
@@ -137,15 +85,15 @@ export default function About() {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3"  />
                     <span>AI-First Business Solutions</span>
                   </div>
                   <div className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3"  />
                     <span>Quantum Computing Innovation</span>
                   </div>
                   <div className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3"  />
                     <span>Sustainable Technology</span>
                   </div>
                 </div>
@@ -276,7 +224,7 @@ export default function About() {
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
               >
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </a>
               <a
                 href="/services"
@@ -289,7 +237,6 @@ export default function About() {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default About;

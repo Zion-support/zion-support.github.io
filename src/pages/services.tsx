@@ -1,97 +1,3 @@
-const services = [
-  {
-    category: 'Micro SaaS',
-    items: [
-      {
-        title: 'AI Website Copy Optimizer',
-        description: 'On-page SEO, A/B copy variants, tone optimization, and SERP monitoring.',
-        price: '$49–$299/mo',
-        cta: { label: 'Try Demo', href: '/request-quote' }
-      },
-      {
-        title: 'Lead Scoring & Enrichment',
-        description: 'Auto-enrich leads via public data, score intent, and route to sales.',
-        price: '$99–$499/mo',
-        cta: { label: 'Get Started', href: '/contact' }
-      },
-      {
-        title: 'Invoice OCR + Reconciliation',
-        description: 'Parse invoices, detect anomalies, sync with QuickBooks/Xero automatically.',
-        price: '$149–$799/mo',
-        cta: { label: 'Request Access', href: '/request-quote' }
-      }
-    ]
-  },
-  {
-    category: 'AI Solutions',
-    items: [
-      {
-        title: 'RAG Knowledge Assistants',
-        description: 'Enterprise chat over docs with secure vector search and audit trails.',
-        price: '$8k–$60k project + $500–$2k/mo',
-        cta: { label: 'See Use Cases', href: '/services' }
-      },
-      {
-        title: 'Autonomous Workflow Agents',
-        description: 'Multi-agent systems for ticket triage, QA automation, and ops runbooks.',
-        price: '$15k–$120k project',
-        cta: { label: 'Talk to Engineering', href: '/contact' }
-      },
-      {
-        title: 'Computer Vision Pipelines',
-        description: 'Defect detection, price tags reading, shelf analytics, and safety monitoring.',
-        price: '$20k–$150k project',
-        cta: { label: 'Book Assessment', href: '/request-quote' }
-      }
-    ]
-  },
-  {
-    category: 'Cloud & DevOps',
-    items: [
-      {
-        title: 'Kubernetes Platform Engineering',
-        description: 'GitOps, IaC, multi-cluster, golden paths, and internal developer platforms.',
-        price: '$25k–$200k project',
-        cta: { label: 'Platform Audit', href: '/services/cloud-devops' }
-      },
-      {
-        title: 'Serverless Data Platforms',
-        description: 'Event-driven pipelines, data contracts, and cost-optimized analytics.',
-        price: '$18k–$120k project',
-        cta: { label: 'Design Workshop', href: '/services/cloud-devops' }
-      },
-      {
-        title: 'Site Reliability Engineering',
-        description: 'SLOs, chaos testing, observability, incident response, and reliability reviews.',
-        price: '$8k–$40k engagement',
-        cta: { label: 'SRE Readiness', href: '/contact' }
-      }
-    ]
-  },
-  {
-    category: 'Cybersecurity',
-    items: [
-      {
-        title: 'Zero-Trust Architecture',
-        description: 'Identity-first networks, microsegmentation, and continuous verification.',
-        price: '$20k–$150k project',
-        cta: { label: 'Architecture Review', href: '/services' }
-      },
-      {
-        title: 'SOC 2 & ISO 27001 Readiness',
-        description: 'Gap analysis, policy automation, evidence collection, and auditor handoff.',
-        price: '$12k–$60k engagement',
-        cta: { label: 'Compliance Sprint', href: '/contact' }
-      },
-      {
-        title: 'Threat Detection & Response',
-        description: 'SIEM tuning, EDR rollout, playbooks, red/blue teaming, and MDR setup.',
-        price: '$10k–$90k + $1k–$5k/mo',
-        cta: { label: 'Schedule Briefing', href: '/request-quote' }
-      }
-    ]
-  }
-];
 
 const Services: React.FC = () => {
   return (
@@ -108,7 +14,6 @@ const Services: React.FC = () => {
             <a href="tel:+13024640950" className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20">Call +1 302 464 0950</a>
             <a href="mailto:kleber@ziontechgroup.com" className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20">Email kleber@ziontechgroup.com</a>
             <a href="/request-quote" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold hover:from-cyan-300 hover:to-blue-400">Request a Quote</a>
-import React from 'react';
 
 const Services: React.FC = () => {
   return (
@@ -227,7 +132,6 @@ const Services: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default Services;

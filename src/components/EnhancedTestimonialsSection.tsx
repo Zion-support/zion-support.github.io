@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Star,
   Quote,
@@ -94,17 +92,16 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   useEffect(() => {
     if (!isAutoPlaying) return;
 
-    const interval = setInterval(() => {;
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 8000);
+    
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}, 8000);
 
     return () => clearInterval(interval)}, [isAutoPlaying, testimonials.length]);
 
-  const nextTestimonial = () => {;
+  
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     setIsAutoPlaying(false)};
 
-  const prevTestimonial = () => {;
+  
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
     setIsAutoPlaying(false)};
 
@@ -120,16 +117,9 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 }}
                   transition = {
   { duration: 20,
-  repeat: Infinity ;
-
-
-
-
-
-
-}}
+  repeat: Infinity }}
                 >
-                  <Quote className="w-8 h-8 text-zion-cyan" />
+                  <Quote className="w-8 h-8 text-zion-cyan"  />
                 </motion.div>
 
                 <div className="relative z-10">
@@ -142,7 +132,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                         animate={{ scale: 1 }}
                         transition={{ delay: index * 0.1 }}
 
-                        <Star className="w-6 h-6 text-yellow-400 fill-current" />
+                        <Star className="w-6 h-6 text-yellow-400 fill-current"  />
                       </motion.div>;
                     ))}
                   </div>
@@ -198,7 +188,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                         <p className="text-zion-cyan">{currentTestimonialData.position}</p>
                         <p className="text-gray-300">{currentTestimonialData.comp}</p>
                         <div className="flex items-center space-x-2 mt-1">
-                          <Building className="w-4 h-4 text-zion-cyan" />
+                          <Building className="w-4 h-4 text-zion-cyan"  />
                           <span className="text-sm text-gray-400">{currentTestimonialData.industry}</span>
                         </div>
                       </div>
@@ -217,7 +207,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
 
-              <ChevronLeft className="w-6 h-6 text-white" />
+              <ChevronLeft className="w-6 h-6 text-white"  />
             </motion.button>
 
             <div className="flex space-x-2">
@@ -241,7 +231,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
 
-              <ChevronRight className="w-6 h-6 text-white" />
+              <ChevronRight className="w-6 h-6 text-white"  />
             </motion.button>
           </div>
         </div>
@@ -250,35 +240,14 @@ export default function EnhancedTestimonialsSection(...args[]):  {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 ;
-
-
-
-
-
-
-}}
+  y: 30 }}
           whileInView = {
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.3 ;
-
-
-
-
-
-
-}}
+  delay: 0.3 }}
           className="mt-20"
 
           <div className="text-center">;
@@ -342,35 +311,14 @@ export default function EnhancedTestimonialsSection(...args[]):  {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 ;
-
-
-
-
-
-
-}}
+  y: 30 }}
           whileInView = {
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.5 ;
-
-
-
-
-
-
-}}
+  delay: 0.5 }}
           className="text-center mt-16"
 
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 max-w-4xl mx-auto">;
@@ -398,5 +346,4 @@ export default function EnhancedTestimonialsSection(...args[]):  {
         </motion.div>;
       </div>;
     </section>;
-  );
-}
+  )}

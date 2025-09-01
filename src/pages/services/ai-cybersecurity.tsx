@@ -1,54 +1,18 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
 import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Threat Detection',
-      description: 'Advanced machine learning algorithms detect threats in real-time'
-    },
-    {
-      icon: Shield,
-      title: 'Zero-Day Attack Prevention',
-      description: 'Identify and block unknown threats before they can cause damage'
-    },
-    {
-      icon: Lock,
-      title: 'Intelligent Access Control',
-      description: 'AI-driven authentication and authorization systems';
+  
     },;
     {;
       icon: Eye,;
       title: 'Behavioral Analytics',;
-      description: 'Monitor and analyze user behavior for suspicious activity';
-    };
-  ];
-
-  const services = [
-    {
-      title: 'Threat Intelligence',
-      description: 'Real-time threat intelligence and analysis',
-      icon: '🔍'
-    },
-    {
-      title: 'Incident Response',
-      description: 'Automated incident detection and response',
-      icon: '🚨'
-    },
-    {
-      title: 'Vulnerability Assessment',
-      description: 'AI-powered vulnerability scanning and assessment',
-      icon: '🛡️';
-    },;
+      description: 'Monitor and analyze user behavior for suspicious activity'};
+  ]},;
     {;
       title: 'Security Automation',;
       description: 'Automate security operations and responses',;
-      icon: '⚡';
-    };
+      icon: '⚡'};
   ];
 
-  const benefits = [;
+  
     'Real-time threat detection and response',;
     'Reduced false positives with AI accuracy',;
     '24/7 automated security monitoring',;
@@ -59,10 +23,9 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Cybersecurity Services - Zion Tech Group"
+      <SEO title="AI Cybersecurity Services - Zion Tech Group"
         description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
-      />
+       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
@@ -92,7 +55,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             className="text-center"
 
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 mb-6">
-              <Shield className="w-5 h-5 text-red-400 mr-2" />
+              <Shield className="w-5 h-5 text-red-400 mr-2"  />
               <span className="text-red-300 font-medium">AI Cybersecurity</span>
             </div>
 
@@ -350,7 +313,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />
                     <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
@@ -438,7 +401,6 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
-export default AICybersecurity;}}}
+export default AICybersecurity}}}

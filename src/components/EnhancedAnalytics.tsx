@@ -1,5 +1,3 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -28,34 +26,27 @@ interface AnalyticsData {
   deviceTypes: {
     desktop: number;
     mobile: number;
-    tablet: number;
-  };
+    tablet: number};
   topPages: Array<{
     path: string;
     views: number;
-    title: string;
-  }>;
+    title: string}>;
   userEngagement: {
     scrollDepth: number;
     timeOnPage: number;
-    interactions: number;
-  };
+    interactions: number};
   performance: {
     loadTime: number;
     coreWebVitals: {
       fcp: number;
       lcp: number;
       fid: number;
-      cls: number;
-    };
-  };
-}
+      cls: number}}}
 
 interface EnhancedAnalyticsProps {
   enabled?: boolean;
   showDashboard?: boolean;
-  trackingId?: string;
-}
+  trackingId?: string}
 
 export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   enabled = true,
@@ -70,9 +61,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   const [scrollDepth, setScrollDepth] = useState(0);
   const [timeOnPage, setTimeOnPage] = useState(0);
   
-  const sessionRef = useRef<NodeJS.Timeout>();
-  const scrollRef = useRef<NodeJS.Timeout>();
-
+  
+  
   // Initialize analytics
   useEffect(() => {
     if (!enabled) return;
@@ -80,15 +70,14 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Initialize Google Analytics (if tracking ID provided)
     if (trackingId && trackingId !== 'G-XXXXXXXXXX') {
       // Google Analytics 4 initialization
-      const script = document.createElement('script');
+      
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document.head.appendChild(script);
 
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
-        window.dataLayer.push(args);
-      }
+        window.dataLayer.push(args)}
       gtag('js', new Date());
       gtag('config', trackingId, {
         page_title: document.title,
@@ -104,8 +93,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         page_title: document.title,
         page_location: window.location.href,
         page_referrer: document.referrer
-      });
-    }
+      })}
 
     // Initialize session tracking
     setSessionStart(Date.now());
@@ -120,17 +108,14 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
     return () => {
       if (script) {
-        document.head.removeChild(script);
-      }
-    };
-  }, [enabled, trackingId]);
+        document.head.removeChild(script)}
+    }}, [enabled, trackingId]);
 
   // Track page changes
   useEffect(() => {
     if (!enabled) return;
 
-    const handleRouteChange = () => {
-      const newPage = window.location.pathname;
+    
       if (newPage !== currentPage) {
         // Track page view
         trackEvent('page_view', {
@@ -143,8 +128,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         setCurrentPage(newPage);
         setTimeOnPage(0);
         setScrollDepth(0);
-        setUserInteractions(0);
-      }
+        setUserInteractions(0)}
     };
 
     // Listen for route changes (for SPA)
@@ -158,47 +142,33 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     });
 
     return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-  }, [enabled, currentPage, timeOnPage]);
+      window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage]);
 
   // Track user interactions
   useEffect(() => {
     if (!enabled) return;
 
-    const trackInteraction = () => {
-      setUserInteractions(prev => prev + 1);
+    
       trackEvent('user_interaction', {
         interaction_type: 'click',
         page_path: currentPage,
         timestamp: Date.now()
-      });
-    };
+      })};
 
-    const trackScroll = () => {
-      const scrollTop = window.pageYOffset;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+    
+      
       
       if (scrollPercent > scrollDepth) {
         setScrollDepth(scrollPercent);
         
         // Track scroll milestones
         if (scrollPercent >= 25 && scrollDepth < 25) {
-          trackEvent('scroll_milestone', { milestone: 25, page_path: currentPage });
-        } else if (scrollPercent >= 50 && scrollDepth < 50) {
-          trackEvent('scroll_milestone', { milestone: 50, page_path: currentPage });
-        } else if (scrollPercent >= 75 && scrollDepth < 75) {
-          trackEvent('scroll_milestone', { milestone: 75, page_path: currentPage });
-        } else if (scrollPercent >= 90 && scrollDepth < 90) {
-          trackEvent('scroll_milestone', { milestone: 90, page_path: currentPage });
-        }
+          trackEvent('scroll_milestone', { milestone: 25, page_path: currentPage })} else if (scrollPercent >= 50 && scrollDepth < 50) {
+          trackEvent('scroll_milestone', { milestone: 50, page_path: currentPage })} else if (scrollPercent >= 75 && scrollDepth < 75) {
+          trackEvent('scroll_milestone', { milestone: 75, page_path: currentPage })} else if (scrollPercent >= 90 && scrollDepth < 90) {
+          trackEvent('scroll_milestone', { milestone: 90, page_path: currentPage })}
       }
-    };
-
-    const trackTimeOnPage = () => {
-      setTimeOnPage(prev => prev + 1);
-    };
+    }};
 
     // Set up event listeners
     document.addEventListener('click', trackInteraction);
@@ -211,89 +181,63 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       document.removeEventListener('click', trackInteraction);
       window.removeEventListener('scroll', trackScroll);
       if (sessionRef.current) {
-        clearInterval(sessionRef.current);
-      }
-    };
-  }, [enabled, currentPage, scrollDepth]);
+        clearInterval(sessionRef.current)}
+    }}, [enabled, currentPage, scrollDepth]);
 
   // Track performance metrics
   useEffect(() => {
     if (!enabled) return;
 
-    const trackPerformance = () => {
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint');
+    
         
-        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-        const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-        const lcp = paint.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+        
+        
         
         trackEvent('performance_metrics', {
           load_time: loadTime,
           fcp: fcp,
           lcp: lcp,
           page_path: currentPage
-        });
-      }
+        })}
     };
 
     // Track performance after page load
     if (document.readyState === 'complete') {
-      trackPerformance();
-    } else {
+      trackPerformance()} else {
       window.addEventListener('load', trackPerformance);
-      return () => window.removeEventListener('load', trackPerformance);
-    }
+      return () => window.removeEventListener('load', trackPerformance)}
   }, [enabled, currentPage]);
 
   // Track session end
   useEffect(() => {
     if (!enabled) return;
 
-    const handleBeforeUnload = () => {
-      const sessionDuration = Date.now() - sessionStart;
-      
+    
       trackEvent('session_end', {
         session_duration: sessionDuration,
         pages_viewed: 1, // Simplified
         total_interactions: userInteractions,
         average_time_on_page: timeOnPage
-      });
-    };
+      })};
 
     window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  }, [enabled, sessionStart, userInteractions, timeOnPage]);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload)}, [enabled, sessionStart, userInteractions, timeOnPage]);
 
   // Track event function
-  const trackEvent = useCallback((eventName: string, parameters: Record<string, any> = {}) => {
-    if (!enabled) return;
-
+  
     // Google Analytics 4
     if (window.gtag) {
-      window.gtag('event', eventName, parameters);
-    }
+      window.gtag('event', eventName, parameters)}
 
     // Custom analytics tracking
-    const eventData = {
-      event: eventName,
-      timestamp: Date.now(),
-      page: currentPage,
-      url: window.location.href,
-      referrer: document.referrer,
-      user_agent: navigator.userAgent,
-      ...parameters
-    };
-
+    
     // Send to analytics endpoint (if configured)
     if (process.env.REACT_APP_ANALYTICS_ENDPOINT) {
       fetch(process.env.REACT_APP_ANALYTICS_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(eventData)
-      }).catch(console.error);
-    }
+      }).catch(console.error)}
 
     // Store locally for dashboard
     setAnalyticsData(prev => {
@@ -308,11 +252,9 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           timeOnPage: Math.max(prev.userEngagement.timeOnPage, timeOnPage),
           interactions: userInteractions
         }
-      };
-    });
+      }});
 
-    console.log('Analytics Event:', eventData);
-  }, [enabled, currentPage, scrollDepth, timeOnPage, userInteractions]);
+    console.log('Analytics Event:', eventData)}, [enabled, currentPage, scrollDepth, timeOnPage, userInteractions]);
 
   // Initialize mock data for dashboard
   useEffect(() => {
@@ -347,8 +289,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             cls: 0.05
           }
         }
-      });
-    }
+      })}
   }, [showDashboard, scrollDepth, timeOnPage, userInteractions]);
 
   if (!enabled) return null;
@@ -391,7 +332,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                 className="p-1 hover:bg-white/20 rounded transition-colors"
                 aria-label="Close analytics dashboard"
               >
-                <Eye className="w-4 h-4" />
+                <Eye className="w-4 h-4"  />
               </button>
             </div>
 
@@ -415,21 +356,21 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
-                      <Monitor className="w-4 h-4 text-blue-500" />
+                      <Monitor className="w-4 h-4 text-blue-500"  />
                       <span className="text-sm text-slate-600 dark:text-slate-400">Desktop</span>
                     </div>
                     <span className="text-sm font-medium">{analyticsData.deviceTypes.desktop}%</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
-                      <Smartphone className="w-4 h-4 text-green-500" />
+                      <Smartphone className="w-4 h-4 text-green-500"  />
                       <span className="text-sm text-slate-600 dark:text-slate-400">Mobile</span>
                     </div>
                     <span className="text-sm font-medium">{analyticsData.deviceTypes.mobile}%</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
-                      <Tablet className="w-4 h-4 text-purple-500" />
+                      <Tablet className="w-4 h-4 text-purple-500"  />
                       <span className="text-sm text-slate-600 dark:text-slate-400">Tablet</span>
                     </div>
                     <span className="text-sm font-medium">{analyticsData.deviceTypes.tablet}%</span>
@@ -503,7 +444,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )};
 
 export default EnhancedAnalytics;

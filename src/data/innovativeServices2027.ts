@@ -99,14 +99,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     status: 'active'
 
 ];
-export const serviceCategories2027 = [
-  'All',
-  'AI & Consciousness',
-  'Quantum AI',
-  'Autonomous AI',
-  'Quantum Computing',
-  'Quantum Finance',
-  'Space Technology',;
+export 
   'Quantum Space',;
   'Biotechnology',;
   'Quantum Medicine',;
@@ -114,9 +107,8 @@ export const serviceCategories2027 = [
   'Nanotechnology',;
   'Neural Technology';
 ];
-export const getServicesByCategory = (category: string): InnovativeService2027[] => {;
+export 
   if (category === 'All') {;
     return innovativeServices2027;
 
-  return innovativeServices2027.filter(service => service.category === category);
-};
+  return innovativeServices2027.filter(service => service.category === category)};

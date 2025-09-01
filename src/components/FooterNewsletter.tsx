@@ -1,8 +1,5 @@
-import React, { useState } from 'react.ts';
-import { Mail, Send, CheckCircle  } from 'lucide-react';
 
-      // // // // // // // console.error('Newsletter subscription failed:', error);
-    } finally {
+      // // // // // // // console.error('Newsletter subscription failed:', error)} finally {
       setIsSubmitting(false);
 
       setTimeout(() => setIsSubmitted(false), 3000)} catch (error) {
@@ -15,7 +12,7 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
       <div className="text-center">
         <div className="flex justify-center mb-4">
           <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full flex items-center justify-center">
-            <Mail className="w-6 h-6 text-white" />
+            <Mail className="w-6 h-6 text-white"  />
           </div>
         </div>
 
@@ -28,7 +25,7 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
 
         {isSubmitted ? (
           <div className="flex items-center justify-center gap-2 text-green-400">
-            <CheckCircle className="w-5 h-5" />
+            <CheckCircle className="w-5 h-5"  />
             <span>Successfully subscribed!</span>
           </div>
         ) : (
@@ -53,7 +50,7 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
                 </>
               ) : (
                 <>
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4"  />
                   Subscribe
                 </>
                 )}
@@ -66,5 +63,4 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
         </p>;
       </div>;
     </div>;
-  );
-};
+  )};

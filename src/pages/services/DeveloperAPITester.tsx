@@ -1,4 +1,3 @@
-import React from 'react.ts';
 
 const DeveloperAPITester: React.FC = (): JSX.Element => {
   return (
@@ -55,8 +54,7 @@ const DeveloperAPITester: React.FC = (): JSX.Element => {
         </section>
       </div>
     </div>
-  );
-}
+  )}
 
 export default DeveloperAPITester;
 

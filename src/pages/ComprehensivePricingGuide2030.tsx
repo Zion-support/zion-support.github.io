@@ -1,6 +1,3 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
 import { CheckCircle, 
   Star, 
   Zap, 
@@ -25,54 +22,43 @@ import { CheckCircle,
   ArrowRight,
   Search
 } from 'lucide-react';
-import { innovativeAIServices2030 } from "../data/innovativeAIServices2030";
-import { innovativeCybersecurityServices2030 } from "../data/innovativeCybersecurityServices2030";
-import { innovativeCloudDevOpsServices2030 } from "../data/innovativeCloudDevOpsServices2030";
 
 const ComprehensivePricingGuide2030: React.FC = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const allServices = [;
+  
     ...innovativeAIServices2030,;
     ...innovativeCybersecurityServices2030,;
     ...innovativeCloudDevOpsServices2030;
   ];
 
-  const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  
+    
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
-  const categories = [;
+  
     { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
     { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
   ];
 
-  const getCategoryIcon = (category: string) => {;
+  
     if (category.toLowerCase().includes('ai')) return Brain;
     if (category.toLowerCase().includes('cybersecurity')) return Shield;
     if (category.toLowerCase().includes('cloud')) return Cloud;
-    return Star;
-  };
+    return Star};
 
-  const getPricingTier = (price: number) => {;
+  
     if (price < 300) return { tier: 'Starter', color: 'bg-green-600/20 border-green-500/30 text-green-300' };
     if (price < 600) return { tier: 'Professional', color: 'bg-blue-600/20 border-blue-500/30 text-blue-300' };
     if (price < 1000) return { tier: 'Enterprise', color: 'bg-purple-600/20 border-purple-500/30 text-purple-300' };
-    return { tier: 'Premium', color: 'bg-orange-600/20 border-orange-500/30 text-orange-300' };
-  };
+    return { tier: 'Premium', color: 'bg-orange-600/20 border-orange-500/30 text-orange-300' }};
 
-  const pricingTiers = [
-    {
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: 299,
-      features[;
+  
         'Basic AI features',
         'Email support',
         'Up to 5 users',
@@ -122,39 +108,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       ],;
       color: 'from-indigo-500 to-purple-600',
       popular: false,
-      bestFor: 'Large enterprises, government agencies, Fortune 500 companies';
-    };
-  ];
-
-  const marketInsights = [
-    {
-      title: 'AI Services Market',
-      value: '$29.9B',
-      growth: '+32.4%',
-      description: 'Expected market size by 2025',
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      title: 'Cloud Services Market',
-      value: '$832.1B',
-      growth: '+17.5%',
-      description: 'Global cloud market value',
-      color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      title: 'IoT Market',
-      value: '$1.1T',
-      growth: '+25.7%',
-      description: 'IoT market by 2027',
-      color: 'from-green-500 to-emerald-600'
-    },
-    {
-      title: 'Quantum Computing',
-      value: '$65.0B',
-      growth: '+48.2%',
-      description: 'Quantum market by 2030',
-      color: 'from-indigo-500 to-purple-600';
-    };
+      bestFor: 'Large enterprises, government agencies, Fortune 500 companies'};
+  ]};
   ];
 
   return (
@@ -214,15 +169,15 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-white">
             <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5"  />
               <span className="font-semibold">+1 302 464 0950</span>
             </div>
             <div className="flex items-center gap-2">
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5"  />
               <span className="font-semibold">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5" />
+              <MapPin className="w-5 h-5"  />
               <span className="font-semibold">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
@@ -242,7 +197,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full px-4 py-3 pl-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 w-5 h-5" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 w-5 h-5"  />
               </div>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -335,7 +290,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 className={`${plan.color} border rounded-xl p-6 text-center`}
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${insight.color} flex items-center justify-center mx-auto mb-4`}>
-                  <TrendingUp className="w-8 h-8 text-white" />
+                  <TrendingUp className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{insight.title}</h3>
                 <div className="text-3xl font-bold text-cyan-400 mb-1">{insight.value}</div>
@@ -352,8 +307,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredServices.map((service, index) => {;
-              const CategoryIcon = getCategoryIcon(service.category);
-              const categoryColor = getCategoryColor(service.category);
+              
               
               return (
                 <motion.div
@@ -393,7 +347,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${categoryColor} flex items-center justify-center`}>
-                      <CategoryIcon className="w-6 h-6 text-white" />
+                      <CategoryIcon className="w-6 h-6 text-white"  />
                     </div>
                     <div className="text-right">
                       <div className="text-xs uppercase tracking-wide text-cyan-300/70 mb-1">
@@ -440,7 +394,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                     <div className="space-y-1">
                       {service.benefits.slice(0, 2).map((benefit, idx) => (
                         <div key={idx} className="flex items-center text-xs text-slate-300">
-                          <TrendingUp className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
+                          <TrendingUp className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0"  />
                           {benefit}
                         </div>
                       ))}
@@ -454,19 +408,18 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       Learn More
-                      <ArrowRight className="ml-1 h-4 w-4" />
+                      <ArrowRight className="ml-1 h-4 w-4"  />
                     </Link>
                     <Link
                       to="/contact"
                       className="inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium hover:opacity-90 transition-opacity"
                     >
-                      <Mail className="w-4 h-4" />;
+                      <Mail className="w-4 h-4"  />;
                       Get Quote;
                     </a>;
                   </div>;
                 </motion.div>;
-              );
-            })}
+              )})}
           </div>
 
           {filteredServices.length = == 0 && (;
@@ -475,8 +428,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               <button;
                 onClick={() => {;
                   setSearchTerm('');
-                  setActiveCategory('all');
-                }}
+                  setActiveCategory('all')}}
                 className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
               >
                 Clear all filters
@@ -608,7 +560,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
               >
                 Get Personalized ROI Analysis
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
             </motion.div>
           </div>
@@ -686,7 +638,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               className="grid md:grid-cols-3 gap-8 mb-12"
             >
               <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-cyan-400 mb-4" />
+                <Phone className="w-8 h-8 text-cyan-400 mb-4"  />
                 <div className="text-white font-semibold mb-2">Call Us</div>
                 <a 
                   href="tel:+13024640950" 
@@ -696,7 +648,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 </a>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-cyan-400 mb-4" />
+                <Mail className="w-8 h-8 text-cyan-400 mb-4"  />
                 <div className="text-white font-semibold mb-2">Email Us</div>
                 <a 
                   href="mailto:kleber@ziontechgroup.com" 
@@ -706,7 +658,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 </a>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 text-cyan-400 mb-4" />
+                <MapPin className="w-8 h-8 text-cyan-400 mb-4"  />
                 <div className="text-white font-semibold mb-2">Visit Us</div>
                 <div className="text-slate-300 text-center">
                   364 E Main St STE 1008<br />
@@ -738,7 +690,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
               >
                 Schedule a Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <Link 
                 to="/request-quote" 
@@ -795,7 +747,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
-export default ComprehensivePricingGuide2030;}}
+export default ComprehensivePricingGuide2030}}

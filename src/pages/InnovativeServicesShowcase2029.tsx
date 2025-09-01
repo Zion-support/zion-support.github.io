@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Brain, 
   Shield, 
   Cloud, 
@@ -45,7 +43,6 @@ import { Brain,
   Volume2,
   VolumeX
  } from 'lucide-react.ts';
-import { innovativeMicroSAASServices2029  } from '../../data/innovative-micro-saas-2029';
 
 export default function InnovativeServicesShowcase2029(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -54,19 +51,13 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
-  const categories = ['All', 'AI & Analytics', 'Cybersecurity', 'AI & Operations', 'Blockchain & Security', 'AI & Legal Tech', 'IoT & Edge Computing', 'AI & Healthcare', 'Quantum Computing & AI', 'AI & Fintech', 'Sustainability & Consulting'];
+  
+  
+    
+    return matchesCategory && matchesSearch});
 
-  const filteredServices = innovativeMicroSAASServices2029.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const togglePlayPause = () => setIsPlaying(!isPlaying);
-  const toggleMute = () => setIsMuted(!isMuted);
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -114,7 +105,7 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
             transition={{ duration: 1, delay: 0.2 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6"
           >
-            <Star className="w-4 h-4 mr-2 text-yellow-400" />
+            <Star className="w-4 h-4 mr-2 text-yellow-400"  />
             Revolutionary 2029 Services
           </motion.div>
           
@@ -152,13 +143,13 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
               onClick={togglePlayPause}
               className="p-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-110"
             >
-              {isPlaying ? <Pause className="w-5 h-5 text-white" /> : <Play className="w-5 h-5 text-white" />}
+              {isPlaying ? <Pause className="w-5 h-5 text-white"  /> : <Play className="w-5 h-5 text-white"  />}
             </button>
             <button
               onClick={toggleMute}
               className="p-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-110"
             >
-              {isMuted ? <VolumeX className="w-5 h-5 text-white" /> : <Volume2 className="w-5 h-5 text-white" />}
+              {isMuted ? <VolumeX className="w-5 h-5 text-white"  /> : <Volume2 className="w-5 h-5 text-white" />}
             </button>
           </motion.div>
         </motion.div>
@@ -176,7 +167,7 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
             <div className="flex flex-col lg:flex-row gap-6 items-center">
               {/* Search */}
               <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search innovative services..."
@@ -211,7 +202,7 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
                     viewMode === 'grid' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400 hover:text-white'
                   }`}
                 >
-                  <Grid className="w-5 h-5" />
+                  <Grid className="w-5 h-5"  />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -219,7 +210,7 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
                     viewMode === 'list' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400 hover:text-white'
                   }`}
                 >
-                  <List className="w-5 h-5" />
+                  <List className="w-5 h-5"  />
                 </button>
               </div>
             </div>
@@ -280,7 +271,7 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
                       
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-2">
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                          <Star className="w-4 h-4 text-yellow-400 fill-current"  />
                           <span className="text-white font-medium">{service.rating}</span>
                           <span className="text-gray-400">({service.reviews})</span>
                         </div>
@@ -300,7 +291,7 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
                       {/* Features */}
                       <div className="mb-6">
                         <h4 className="text-white font-semibold mb-3 flex items-center">
-                          <CheckCircle className="w-4 h-4 mr-2 text-cyan-400" />
+                          <CheckCircle className="w-4 h-4 mr-2 text-cyan-400"  />
                           Key Features
                         </h4>
                         <div className="grid grid-cols-1 gap-2">
@@ -338,10 +329,10 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
                           className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-medium py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
                         >
                           Learn More
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"  />
                         </a>
                         <button className="px-4 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10 transition-all duration-300">
-                          <MessageCircle className="w-5 h-5" />
+                          <MessageCircle className="w-5 h-5"  />
                         </button>
                       </div>
                     </div>
@@ -403,5 +394,4 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
         </div>
       </div>
     </div>
-  );
-}
+  )}

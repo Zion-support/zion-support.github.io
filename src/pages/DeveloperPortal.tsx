@@ -1,6 +1,3 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
 import {
   Code,
   BookOpen,
@@ -37,9 +34,7 @@ import {
 const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const apiFeatures = [
-    {
-      icon: Code,;
+  
       title: 'Code Examples',
       description: 'Ready-to-use code snippets in multiple languages',
       category: 'Development'
@@ -60,13 +55,10 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
       icon: Download,;
       title: 'SDKs & Libraries',;
       description: 'Official client libraries for all platforms',;
-      category: 'Integration';
-    };
+      category: 'Integration'};
   ];
 
-  const resources = [
-    {
-      title: 'Getting Started Guide',;
+  
       description: 'Quick start tutorial for new developers',
       icon: '🚀',
       difficulty: 'Beginner'
@@ -87,21 +79,14 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
       title: 'Code Samples',;
       description: 'Real-world implementation examples',;
       icon: '💻',;
-      difficulty: 'All Levels';
-    };
+      difficulty: 'All Levels'};
   ];
 
-  const community = [
-    {
-      language: 'JavaScript',;
-      code: `const response = await fetch('https://api.ziontechgroup.com/v1/data', {
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEY',;
-    'Content-Type': 'application/json';
-  };
-});
+  
+      code: `
+    'Content-Type': 'application/json'}});
 
-const data = await response.json();
+
 // // // // console.log(data);`,
       icon: Code
     },
@@ -121,16 +106,14 @@ const data = await response.json();
       name: 'Stack Overflow',;
       description: 'Q&A platform integration',;
       members: '5K+',;
-      icon: '📝';
-    };
+      icon: '📝'};
   ];
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Developer Portal - Zion Tech Group"
+      <SEO title="Developer Portal - Zion Tech Group"
         description="Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform."
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
@@ -142,7 +125,7 @@ const data = await response.json();
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="flex justify-center mb-8">
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-              <Code className="w-12 h-12 text-white" />
+              <Code className="w-12 h-12 text-white"  />
             </div>
           </div>
 
@@ -599,8 +582,6 @@ const data = await response.json();
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
-export default DeveloperPortal;
-}}}}
+export default DeveloperPortal}}}}

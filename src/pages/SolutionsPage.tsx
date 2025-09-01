@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
 import { Building,
   Target,
   Brain,
@@ -30,145 +27,9 @@ import { Building,
  } from 'lucide-react.ts';
 
 export function SolutionsPage(...args: any[]): any {
-  const solutions = [
-    {
-      title: 'Enterprise Solutions',
-      description: 'Comprehensive technology solutions for large enterprises',
-      icon: Building,
-      color: 'from-blue-500 to-indigo-600',
-      features: [
-        'Scalable Infrastructure',
-        'Enterprise Security',
-        'Compliance Management',
-        '24/7 Support',
-        'Custom Development',
-        'Integration Services'
-      ],
-      industries: ['Finance', 'Healthcare', 'Manufacturing', 'Retail', 'Technology']
-    },
-    {
-      title: 'AI Business Intelligence',
-      description: 'Transform data into actionable insights with AI-powered analytics',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-600',
-      features: [
-        'Predictive Analytics',
-        'Real-time Dashboards',
-        'Machine Learning Models',
-        'Data Visualization',
-        'Automated Reporting',
-        'Natural Language Querying'
-      ],
-      industries: ['Finance', 'Healthcare', 'E-commerce', 'Marketing', 'Operations']
-    },
-    {
-      title: 'Quantum AI Platform',
-      description: 'Revolutionary computing power combining quantum and AI technologies',
-      icon: Atom,
-      color: 'from-cyan-500 to-blue-600',
-      features: [
-        'Quantum Algorithms',
-        'AI Optimization',
-        'Hybrid Computing',
-        'Quantum Security',
-        'Performance Analytics',
-        'Scalable Architecture'
-      ],
-      industries: ['Research', 'Finance', 'Pharmaceuticals', 'Logistics', 'Energy']
-    },
-    {
-      title: 'Digital Twin Solutions',
-      description: 'Create virtual replicas of physical systems for optimization',
-      icon: Eye,
-      color: 'from-green-500 to-teal-600',
-      features: [
-        'Real-time Monitoring',
-        'Predictive Maintenance',
-        'Simulation & Testing',
-        'Performance Optimization',
-        'Remote Management',
-        'Data Integration'
-      ],
-      industries: ['Manufacturing', 'Healthcare', 'Smart Cities', 'Transportation', 'Energy']
-    },
-    {
-      title: 'Zero Trust Security',
-      description: 'Advanced security framework for modern digital environments',
-      icon: Shield,
-      color: 'from-red-500 to-orange-600',
-      features: [
-        'Identity Verification',
-        'Continuous Monitoring',
-        'Threat Detection',
-        'Access Control',
-        'Compliance Tools',
-        'Incident Response'
-      ],
-      industries: ['Finance', 'Healthcare', 'Government', 'Technology', 'Education']
-    },
-    {
-      title: 'Cloud Transformation',
-      description: 'Modernize your infrastructure with cloud-native solutions',
-      icon: Cloud,
-      color: 'from-indigo-500 to-purple-600',
-      features: [
-        'Cloud Migration',
-        'DevOps Automation',
-        'Microservices',
-        'Container Orchestration',
-        'Cost Optimization',
-        'Security & Compliance'
-      ],
-      industries: ['Technology', 'Finance', 'Healthcare', 'Retail', 'Manufacturing']
-    }
-  ];
-
-  const industries = [
-    {
-      name: 'Healthcare',
-      icon: Heart,
-      description: 'AI-powered diagnostics, patient care, and operational efficiency',
-      solutions: ['AI Healthcare Platform', 'Digital Twin', 'Cybersecurity', 'Data Analytics']
-    },
-    {
-      name: 'Finance',
-      icon: TrendingUp,
-      description: 'Risk management, fraud detection, and algorithmic trading',
-      solutions: ['AI Business Intelligence', 'Quantum AI Platform', 'Zero Trust Security', 'Cloud Solutions']
-    },
-    {
-      name: 'Manufacturing',
-      icon: Cpu,
-      description: 'Smart factories, predictive maintenance, and quality control',
-      solutions: ['Digital Twin', 'IoT Solutions', 'AI Analytics', 'Robotics Integration']
-    },
-    {
-      name: 'Retail',
-      icon: ShoppingCart,
-      description: 'Customer experience, inventory management, and personalization',
-      solutions: ['AI Marketing', 'Data Analytics', 'E-commerce Platform', 'Customer Insights']
-    },
-    {
-      name: 'Technology',
-      icon: Zap,
-      description: 'Software development, infrastructure, and digital transformation',
-      solutions: ['Cloud & DevOps', 'API Development', 'Cybersecurity', 'AI Solutions']
-    },
-    {
-      name: 'Government',
-      icon: Building,
-      description: 'Digital services, security, and citizen engagement',
-      solutions: ['Cybersecurity', 'Data Analytics', 'Cloud Infrastructure', 'AI Services']
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Solutions Deployed', icon: Target },
-    { number: '50+', label: 'Industries Served', icon: Building },
-    { number: '99.9%', label: 'Success Rate', icon: Star },
-    { number: '24/7', label: 'Support Available', icon: Users }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -234,7 +95,7 @@ export function SolutionsPage(...args: any[]): any {
                 <div className="space-y-3 mb-6">
                   {solution.features.slice(0, 4).map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-cyan-400" />
+                      <CheckCircle className="w-4 h-4 text-cyan-400"  />
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -256,7 +117,7 @@ export function SolutionsPage(...args: any[]): any {
                   className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium group-hover:translate-x-1 transition-transform"
                 >
                   <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4"  />
                 </Link>
               </motion.div>
             ))}
@@ -320,7 +181,7 @@ export function SolutionsPage(...args: any[]): any {
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <span>Explore New Services</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/contact"
@@ -353,7 +214,7 @@ export function SolutionsPage(...args: any[]): any {
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/request-quote"
@@ -366,15 +227,15 @@ export function SolutionsPage(...args: any[]): any {
             <div className="mt-8 text-cyan-100">
               <div className="flex items-center justify-center space-x-6 text-sm">
                 <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4"  />
                   <span>+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-4 h-4"  />
                   <span>kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4" />
+                  <MapPin className="w-4 h-4"  />
                   <span>364 E Main St STE 1008 Middletown DE 19709</span>
                 </div>
               </div>
@@ -383,5 +244,4 @@ export function SolutionsPage(...args: any[]): any {
         </div>
       </div>
     </div>
-  );
-}
+  )}

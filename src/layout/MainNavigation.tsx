@@ -1,7 +1,4 @@
 
-import React, { useState, useRef, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   ChevronDown,
   Menu,
@@ -106,19 +103,16 @@ interface NavigationLink {
       key: 'contact',;
       href: '/contact',;
       name: 'Contact',;
-      matches: (path: string) => path.startsWith('/contact');
-    };
+      matches: (path: string) => path.startsWith('/contact')};
   ];
 
-  const isActive = (link: NavigationLink)  => link.matches(location.pathname);
-
+  
               </div>;
             </motion.div>;
           )};
         </AnimatePresence>;
       </div>;
-    );
-  };
+    )};
 
   return (
     <nav className = {`${className}`}>
@@ -153,7 +147,7 @@ interface NavigationLink {
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
 
-        {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
       </button>
 
       {/* Mobile Navigation */}
@@ -200,7 +194,7 @@ interface NavigationLink {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
 
-                  <X className="w-6 h-6" />
+                  <X className="w-6 h-6"  />
                 </button>
               </div>
 
@@ -218,7 +212,7 @@ interface NavigationLink {
                           }`}
 
                           {link.name}
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`} />
+                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />
                         </button>
 
                         {activeDropdown === link.key && (;
@@ -259,5 +253,4 @@ interface NavigationLink {
         )};
       </AnimatePresence>;
     </nav>;
-  );
-}
+  )}

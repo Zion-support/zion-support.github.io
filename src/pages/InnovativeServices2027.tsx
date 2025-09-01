@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Brain,
   Shield,
@@ -33,8 +31,6 @@ import {
   Phone
 } from 'lucide-react';
 
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
-import { SEO } from '../components/SEO';
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Customer Success': Brain,
@@ -67,34 +63,24 @@ export default function InnovativeServices2027() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'>('innovation');
 
-  const categories = ['all', ...Array.from(new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2027.map(service => service.category)))];
+  
+  
+    return matchesCategory && matchesSearch});
 
-  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2027.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
-        return a.price - b.price;
+  
       case 'roi':
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
       case 'innovation':
         return a.innovationLevel === 'revolutionary' ? 1 : -1;
       default:
-        return 0;
-    }
+        return 0}
   });
 
   return (
     <div className="min-h-screen bg-futuristic">
-      <SEO
-        title="2027 Innovative Services - Zion Tech Group"
+      <SEO title="2027 Innovative Services - Zion Tech Group"
         description="Discover our revolutionary 2027 services portfolio featuring cutting-edge AI, Quantum Computing, Blockchain, and emerging technology solutions."
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
@@ -250,7 +236,7 @@ export default function InnovativeServices2027() {
                       <ul className="space-y-1">
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li key={idx} className="text-sm text-gray-400 flex items-center">
-                            <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+                            <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0"  />
                             {feature}
                           </li>
                         ))}
@@ -263,7 +249,7 @@ export default function InnovativeServices2027() {
                       <ul className="space-y-1">
                         {service.benefits.slice(0, 2).map((benefit, idx) => (
                           <li key={idx} className="text-sm text-gray-400 flex items-center">
-                            <TrendingUp className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                            <TrendingUp className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />
                             {benefit}
                           </li>
                         ))}
@@ -329,8 +315,7 @@ export default function InnovativeServices2027() {
               <button
                 onClick={() => {
                   setSelectedCategory('all');
-                  setSearchQuery('');
-                }}
+                  setSearchQuery('')}}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 View All Services
@@ -389,7 +374,7 @@ export default function InnovativeServices2027() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">+1 302 464 0950</p>
             </motion.div>
@@ -400,7 +385,7 @@ export default function InnovativeServices2027() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <MessageCircle className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <MessageCircle className="w-12 h-12 text-purple-400 mx-auto mb-4"  />
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </motion.div>
@@ -411,7 +396,7 @@ export default function InnovativeServices2027() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <Building className="w-12 h-12 text-pink-400 mx-auto mb-4" />
+              <Building className="w-12 h-12 text-pink-400 mx-auto mb-4"  />
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </motion.div>
@@ -419,5 +404,4 @@ export default function InnovativeServices2027() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

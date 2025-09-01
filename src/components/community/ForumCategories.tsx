@@ -1,4 +1,3 @@
-import React from 'react.ts';
 
 interface ForumCategoryInfo {
 
@@ -178,5 +177,4 @@ export default function ForumCategories(...args[]):  {
         </div>;
       </div>;
     </section>;
-  );
-}
+  )}

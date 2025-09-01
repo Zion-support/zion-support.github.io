@@ -1,6 +1,3 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   Play,
@@ -29,8 +26,7 @@ interface HeroSlide {
   features: string[];
   gradient: string;
   icon: React.ComponentType<any>;
-  stats: { label: string; value: string; icon: React.ComponentType<any> }[];
-}
+  stats: { label: string; value: string; icon: React.ComponentType<any> }[]}
 
 const heroSlides: HeroSlide[] = [
   {
@@ -84,29 +80,7 @@ const heroSlides: HeroSlide[] = [
       { label: "Cost Reduction", value: "40%", icon: Rocket }
     ]
   }
-];
-
-const slideVariants = {
-  enter: (direction: number) => ({
-    x: direction > 0 ? 1000 : -1000,
-    opacity: 0
-  }),
-  center: {
-    zIndex: 1,
-    x: 0,
-    opacity: 1
-  },
-  exit: (direction: number) => ({
-    zIndex: 0,
-    x: direction < 0 ? 1000 : -1000,
-    opacity: 0
-  })
-};
-
-const swipeConfidenceThreshold = 10000;
-const swipePower = (offset: number, velocity: number) => {
-  return Math.abs(offset) * velocity;
-};
+]};
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -115,75 +89,54 @@ export default function HeroSection() {
   const [isLoading, setIsLoading] = useState(true);
 
   // Memoize slides to prevent unnecessary re-renders
-  const memoizedSlides = useMemo(() => heroSlides, []);
-
+  
   // Optimized slide navigation with useCallback
-  const nextSlide = useCallback(() => {
-    setDirection(1);
+  
     setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length);
-    setIsAutoPlaying(false);
-  }, [memoizedSlides.length]);
+    setIsAutoPlaying(false)}, [memoizedSlides.length]);
 
-  const prevSlide = useCallback(() => {
-    setDirection(-1);
+  
     setCurrentSlide((prev) => (prev - 1 + memoizedSlides.length) % memoizedSlides.length);
-    setIsAutoPlaying(false);
-  }, [memoizedSlides.length]);
+    setIsAutoPlaying(false)}, [memoizedSlides.length]);
 
-  const goToSlide = useCallback((index: number) => {
-    setDirection(index > currentSlide ? 1 : -1);
+  
     setCurrentSlide(index);
-    setIsAutoPlaying(false);
-  }, [currentSlide]);
+    setIsAutoPlaying(false)}, [currentSlide]);
 
   // Auto-play functionality with pause on hover
   useEffect(() => {
     if (!isAutoPlaying) return;
 
-    const interval = setInterval(() => {
-      setDirection(1);
-      setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length);
-    }, 6000);
+    
+      setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length)}, 6000);
 
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, memoizedSlides.length]);
+    return () => clearInterval(interval)}, [isAutoPlaying, memoizedSlides.length]);
 
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft') prevSlide();
+    
       if (e.key === 'ArrowRight') nextSlide();
       if (e.key === ' ') {
         e.preventDefault();
-        setIsAutoPlaying(!isAutoPlaying);
-      }
+        setIsAutoPlaying(!isAutoPlaying)}
     };
 
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [prevSlide, nextSlide, isAutoPlaying]);
+    return () => window.removeEventListener('keydown', handleKeyDown)}, [prevSlide, nextSlide, isAutoPlaying]);
 
   // Handle image loading
   useEffect(() => {
-    const preloadImages = async () => {
-      const imagePromises = memoizedSlides.map(slide => {
-        return new Promise((resolve) => {
-          const img = new Image();
+    
           img.onload = resolve;
           img.onerror = resolve;
-          img.src = slide.image;
-        });
-      });
+          img.src = slide.image})});
 
       await Promise.all(imagePromises);
-      setIsLoading(false);
-    };
+      setIsLoading(false)};
 
-    preloadImages();
-  }, [memoizedSlides]);
+    preloadImages()}, [memoizedSlides]);
 
-  const currentSlideData = memoizedSlides[currentSlide];
-
+  
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -192,8 +145,7 @@ export default function HeroSection() {
           <p className="text-cyan-400 text-lg">Loading amazing experiences...</p>
         </div>
       </div>
-    );
-  }
+    )}
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -220,7 +172,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-300 text-sm font-medium"
               >
-                <Star className="w-4 h-4 mr-2 text-yellow-400" />
+                <Star className="w-4 h-4 mr-2 text-yellow-400"  />
                 Leading Technology Solutions
               </motion.div>
 
@@ -263,7 +215,7 @@ export default function HeroSection() {
             >
               {currentSlideData.features.map((feature, index) => (
                 <div key={feature} className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"  />
                   <span className="text-slate-300 text-sm">{feature}</span>
                 </div>
               ))}
@@ -281,7 +233,7 @@ export default function HeroSection() {
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
               >
                 {currentSlideData.cta}
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </Link>
 
               <button
@@ -289,7 +241,7 @@ export default function HeroSection() {
                 className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-cyan-400 font-medium rounded-lg transition-all duration-300"
                 aria-label={isAutoPlaying ? 'Pause slideshow' : 'Play slideshow'}
               >
-                {isAutoPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+                {isAutoPlaying ? <Pause className="w-5 h-5"  /> : <Play className="w-5 h-5"  />}
               </button>
             </motion.div>
 
@@ -354,7 +306,7 @@ export default function HeroSection() {
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-6 h-6"  />
       </button>
 
       <button
@@ -362,10 +314,9 @@ export default function HeroSection() {
         className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm"
         aria-label="Next slide"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-6 h-6"  />
       </button>
     </section>
-  );
-}
+  )}
 
 export { HeroSection };

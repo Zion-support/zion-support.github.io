@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { MessageCircle, 
   Brain, 
   Target, 
@@ -26,48 +24,8 @@ import { MessageCircle,
  } from 'lucide-react.ts';
 
 const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Customer Service',
-      description: 'Advanced machine learning for autonomous customer support and issue resolution'
-    },
-    {
-      icon: MessageCircle,
-      title: 'Intelligent Chat Support',
-      description: 'AI-driven chat support with natural language processing and context awareness'
-    },
-    {
-      icon: Target,
-      title: 'Issue Resolution',
-      description: 'Automated issue identification and resolution with intelligent routing'
-    },
-    {
-      icon: BarChart3,
-      title: 'Service Analytics',
-      description: 'Real-time analytics and insights into customer service performance'
-    },
-    {
-      icon: Headphones,
-      title: 'Voice Support',
-      description: 'AI-powered voice support with speech recognition and natural responses'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Customer Satisfaction',
-      description: 'Continuous monitoring and improvement of customer satisfaction metrics'
-    }
-  ];
-
-  const benefits = [
-    'Improve customer satisfaction by 80%',
-    'Reduce response time by 90%',
-    'Increase issue resolution by 70%',
-    'Automate customer support',
-    '24/7 autonomous operation',
-    'Real-time customer insights'
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -79,7 +37,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-6">
-              <MessageCircle className="w-4 h-4 mr-2" />
+              <MessageCircle className="w-4 h-4 mr-2"  />
               AI-Powered Autonomous Customer Service
             </div>
             
@@ -173,7 +131,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"  />
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -226,7 +184,6 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIAutonomousCustomerService;

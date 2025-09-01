@@ -1,80 +1,13 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone  } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
 
 export default function AIPoweredSEO(...args: any[]): any {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Keyword Research",
-      description: "Advanced machine learning algorithms identify high-impact keywords and search opportunities"
-    },
-    {
-      icon: Analytics,
-      title: "Predictive Analytics",
-      description: "Forecast search trends and optimize content before competitors"
-    },
-    {
-      icon: Target,
-      title: "Intent-Based Optimization",
-      description: "Understand and target user search intent with precision"
-    },
-    {
-      icon: TrendingUp,
-      title: "Real-Time Performance Tracking",
-      description: "Monitor rankings and performance with live dashboards"
-    },
-    {
-      icon: Code,
-      title: "Technical SEO Automation",
-      description: "Automated technical audits and optimization recommendations"
-    },
-    {
-      icon: Users,
-      title: "User Experience Optimization",
-      description: "AI-driven insights to improve user engagement and conversion"
-    }
-  ];
-
-  const benefits = [
-    "Increase organic traffic by 200-400%",
-    "Improve search rankings in 30-60 days",
-    "Reduce bounce rate by 25-40%",
-    "Boost conversion rates by 15-30%",
-    "Save 20+ hours per week on SEO tasks",
-    "Stay ahead of algorithm updates"
-  ];
-
-  const services = [
-    {
-      title: "AI Keyword Research & Strategy",
-      description: "Comprehensive keyword analysis using machine learning",
-      price: "From $2,500/month"
-    },
-    {
-      title: "Content Optimization & Creation",
-      description: "AI-powered content strategy and optimization",
-      price: "From $3,500/month"
-    },
-    {
-      title: "Technical SEO & Performance",
-      description: "Automated technical audits and optimization",
-      price: "From $4,000/month"
-    },
-    {
-      title: "Full-Service SEO Management",
-      description: "Complete end-to-end SEO solution",
-      price: "From $6,500/month"
-    }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI-Powered SEO Services - Zion Tech Group"
+      <SEO title="AI-Powered SEO Services - Zion Tech Group"
         description="Revolutionary AI-powered SEO services that use machine learning to boost rankings, increase traffic, and drive conversions. Get ahead of the competition with predictive analytics and automated optimization."
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
@@ -87,7 +20,7 @@ export default function AIPoweredSEO(...args: any[]): any {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6">
-              <Search className="w-5 h-5 text-cyan-400 mr-2" />
+              <Search className="w-5 h-5 text-cyan-400 mr-2"  />
               <span className="text-cyan-300 font-medium">AI-Powered SEO</span>
             </div>
             
@@ -111,7 +44,7 @@ export default function AIPoweredSEO(...args: any[]): any {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
               >
-                <Rocket className="w-5 h-5 mr-2" />
+                <Rocket className="w-5 h-5 mr-2"  />
                 Get Started Today
               </motion.button>
               <motion.button
@@ -119,7 +52,7 @@ export default function AIPoweredSEO(...args: any[]): any {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
               >
-                <Monitor className="w-5 h-5 mr-2" />
+                <Monitor className="w-5 h-5 mr-2"  />
                 View Demo
               </motion.button>
             </div>
@@ -192,7 +125,7 @@ export default function AIPoweredSEO(...args: any[]): any {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4"
               >
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0"  />
                 <span className="text-white font-medium">{benefit}</span>
               </motion.div>
             ))}
@@ -260,7 +193,7 @@ export default function AIPoweredSEO(...args: any[]): any {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
               >
-                <ArrowRight className="w-5 h-5 mr-2" />
+                <ArrowRight className="w-5 h-5 mr-2"  />
                 Start Your Free Consultation
               </motion.button>
               <motion.button
@@ -268,7 +201,7 @@ export default function AIPoweredSEO(...args: any[]): any {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call +1 302 464 0950
               </motion.button>
             </div>
@@ -276,5 +209,4 @@ export default function AIPoweredSEO(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
 import { Search, 
   TrendingUp, 
   Target, 
@@ -54,77 +51,9 @@ import { Search,
  } from 'lucide-react.ts';
 
 export default function AIPoweredSEO(...args: any[]): any {
-  const features = [
-    {
-      icon: Search,
-      title: "AI Keyword Research",
-      description: "Intelligent keyword discovery and analysis using machine learning",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: TrendingUp,
-      title: "Content Optimization",
-      description: "AI-powered content analysis and optimization recommendations",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Target,
-      title: "Ranking Predictions",
-      description: "Predictive analytics for search engine ranking improvements",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: BarChart3,
-      title: "Performance Analytics",
-      description: "Comprehensive SEO performance tracking and insights",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      icon: Zap,
-      title: "Automated Optimization",
-      description: "AI-driven SEO improvements and technical optimizations",
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      icon: Globe,
-      title: "Global SEO",
-      description: "Multi-language and international SEO optimization",
-      color: "from-indigo-500 to-blue-500"
-    }
-  ];
-
-  const services = [
-    {
-      title: "Technical SEO Audit",
-      description: "Comprehensive website technical analysis and optimization",
-      icon: Settings,
-      benefits: ["Site speed optimization", "Mobile responsiveness", "Technical issues", "Schema markup"]
-    },
-    {
-      title: "Content Strategy",
-      description: "AI-powered content planning and optimization",
-      icon: FileText,
-      benefits: ["Keyword research", "Content planning", "SEO optimization", "Performance tracking"]
-    },
-    {
-      title: "Local SEO",
-      description: "Location-based search optimization and management",
-      icon: Target,
-      benefits: ["Google My Business", "Local citations", "Review management", "Local keywords"]
-    },
-    {
-      title: "E-commerce SEO",
-      description: "Product page optimization and search visibility",
-      icon: ShoppingCart,
-      benefits: ["Product optimization", "Category pages", "Internal linking", "Conversion tracking"]
-    }
-  ];
-
-  const technologies = [
-    "Machine Learning", "Natural Language Processing", "Predictive Analytics", "Big Data Analysis", 
-    "AI Algorithms", "Search Engine APIs", "Web Crawling", "Data Mining", "Sentiment Analysis", "Competitive Intelligence"
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -149,14 +78,14 @@ export default function AIPoweredSEO(...args: any[]): any {
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 flex items-center space-x-2"
               >
                 <span>Get Started</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-blue-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
             </div>
           </motion.div>
@@ -241,7 +170,7 @@ export default function AIPoweredSEO(...args: any[]): any {
                 <ul className="space-y-2">
                   {service.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0"  />
                       {benefit}
                     </li>
                   ))}
@@ -309,19 +238,18 @@ export default function AIPoweredSEO(...args: any[]): any {
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 flex items-center space-x-2"
               >
                 <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-blue-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-}
+  )}

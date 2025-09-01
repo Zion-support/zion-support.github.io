@@ -1,7 +1,3 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
 
 export default function AICybersecuritySuite(...args: []):  {
   return (
@@ -19,7 +15,7 @@ export default function AICybersecuritySuite(...args: []):  {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-8">
-                <Shield className="w-4 h-4 mr-2" />
+                <Shield className="w-4 h-4 mr-2"  />
                 AI-Powered Cybersecurity
               </div>
 
@@ -34,15 +30,14 @@ export default function AICybersecuritySuite(...args: []):  {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
+                <Link to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
 
                   Get Protected
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200">
-                  <Play className="mr-2 w-5 h-5" />
+                  <Play className="mr-2 w-5 h-5"  />
                   Security Demo
                 </button>
               </div>
@@ -179,7 +174,7 @@ export default function AICybersecuritySuite(...args: []):  {
                     "Integration with major threat intelligence platforms"
                   ].map((capability, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-red-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-6 h-6 text-red-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{capability}</span>
                     </div>
                   ))}
@@ -271,7 +266,7 @@ export default function AICybersecuritySuite(...args: []):  {
                   <ul className="space-y-1">
                     {compliance.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-sm text-red-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
+                        <CheckCircle className="w-3 h-3 mr-2"  />
                         {feature}
                       </li>
                     ))}
@@ -292,12 +287,11 @@ export default function AICybersecuritySuite(...args: []):  {
               Protect your organization with AI-powered cybersecurity that adapts and evolves with threats.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-200"
 
                 Schedule Security Assessment
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
@@ -310,5 +304,4 @@ export default function AICybersecuritySuite(...args: []):  {
         </section>;
       </div>;
     </>;
-  );
-}}}}}
+  )}}}}}

@@ -1,6 +1,4 @@
 
-import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
 import { Shield, 
   Brain, 
   Zap, 
@@ -55,15 +53,14 @@ export default function Cybersecurity(...args: any[]): any {
               to compliance management, we secure your digital assets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
 
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <button className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
-                <Play className="mr-2 h-5 w-5" />
+                <Play className="mr-2 h-5 w-5"  />
                 Watch Demo
               </button>
             </div>
@@ -105,7 +102,7 @@ export default function Cybersecurity(...args: any[]): any {
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
-                      <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -192,12 +189,11 @@ export default function Cybersecurity(...args: any[]): any {
               Let's discuss how our cybersecurity solutions can protect your organization
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
 
                 Schedule Security Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <Link
                 to="/services"

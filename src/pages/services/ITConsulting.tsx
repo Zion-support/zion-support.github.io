@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Users,
   Cpu,
@@ -151,88 +149,33 @@ import {
  } from 'lucide-react';
 
 export default function ITConsulting(...args: []):  {
-  const services = [
-    {
-      icon: Briefcase,
-      title: 'Strategic IT Planning',
-      description: 'Comprehensive IT strategy development and roadmap planning'
-    },
-    {
-      icon: Cpu,
-      title: 'Technology Assessment',
-      description: 'Evaluate current technology stack and identify optimization opportunities'
-    },
-    {
-      icon: Server,
-      title: 'Infrastructure Planning',
-      description: 'Design scalable and secure IT infrastructure solutions'
-    },
-    {
-      icon: Network2,
-      title: 'Network Design',
-      description: 'Plan and implement robust network architectures'
-    },
-    {
-      icon: Shield,
-      title: 'Security Consulting',
-      description: 'Develop comprehensive cybersecurity strategies and policies';
+  
     },;
     {;
       icon: Cloud,;
       title: 'Cloud Strategy',;
-      description: 'Plan cloud migration and hybrid cloud solutions';
-    };
+      description: 'Plan cloud migration and hybrid cloud solutions'};
   ];
 
-  const benefits = [;
+  
     'Optimize IT infrastructure and reduce costs by 25%',;
     'Improve system performance and reliability',;
     'Enhance cybersecurity posture and compliance',;
     'Enable digital transformation initiatives',;
     'Streamline IT operations and processes',;
     'Align technology with business objectives';
-  ];
-
-  const services = [
-    {
-      icon: Strategy,
-      title: 'IT Strategy',
-      description: 'Develop comprehensive IT strategies aligned with business goals'
-    },
-    {
-      icon: Workflow,
-      title: 'Process Optimization',
-      description: 'Optimize IT processes and workflows for efficiency'
-    },
-    {
-      icon: Brain,
-      title: 'Technology Advisory',
-      description: 'Expert guidance on technology selection and implementation';
-    },;
+  ]},;
     {;
       icon: Scale,;
       title: 'Scalability Planning',;
-      description: 'Plan for future growth and technology scaling';
-    };
+      description: 'Plan for future growth and technology scaling'};
   ];
 
-  const useCases = [
-    {
-      industry: 'Enterprise',
-      description: 'Large-scale IT transformation and optimization'
-    },
-    {
-      industry: 'Healthcare',
-      description: 'HIPAA-compliant IT infrastructure and systems'
-    },
-    {
-      industry: 'Financial Services',;
-      description: 'Secure, compliant financial technology solutions';
-    },;
+  
+      description: 'Secure, compliant financial technology solutions'},;
     {;
       industry: 'Manufacturing',;
-      description: 'Industry 4.0 and smart manufacturing IT';
-    };
+      description: 'Industry 4.0 and smart manufacturing IT'};
   ];
 
   return (
@@ -249,7 +192,7 @@ export default function ITConsulting(...args: []):  {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
-              <Briefcase className="w-4 h-4 mr-2" />
+              <Briefcase className="w-4 h-4 mr-2"  />
               IT Consulting Services
             </div>
             
@@ -350,7 +293,7 @@ export default function ITConsulting(...args: []):  {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -613,7 +556,6 @@ export default function ITConsulting(...args: []):  {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ITConsulting;

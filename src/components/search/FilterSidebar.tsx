@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { Filter, X  } from 'lucide-react';
 
 interface FilterOption {
 
@@ -48,14 +46,14 @@ export function FilterSidebar({
       `}>
         <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/20">
           <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-            <Filter className="w-5 h-5" />
+            <Filter className="w-5 h-5"  />
             Filters
           </h3>
           <button
             onClick={onClose}
             className="lg:hidden p-2 hover:bg-zion-blue-light/20 rounded-lg transition-colors"
 
-            <X className="w-5 h-5 text-zion-slate-light" />
+            <X className="w-5 h-5 text-zion-slate-light"  />
           </button>
         </div>
 
@@ -78,8 +76,7 @@ export function FilterSidebar({
               ;
               <div className="space-y-2">;
                 {group.options.map((option) => {;
-                  const isSelected = selectedFilters[group.key]?.includes(option.value) || false;
-
+                  
                   return (
                     <label key = {option.value} className="flex items-center gap-3 cursor-pointer">
                       <input
@@ -108,8 +105,7 @@ export function FilterSidebar({
                         )};
                       </span>;
                     </label>;
-                  );
-                })}
+                  )})}
               </div>
             </div>
           ))}

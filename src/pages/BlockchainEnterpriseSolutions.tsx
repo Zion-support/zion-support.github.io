@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
   Brain,
   Zap,
@@ -267,13 +265,7 @@ import {
   Treap,
  } from 'lucide-react';
 
-const blockchainSolutions = [
-  {
-    id: 1,
-    title: "Enterprise Blockchain Platform",
-    description: "Custom blockchain platform designed for enterprise use cases and requirements.",
-    icon: Building,
-    features[;
+
       "Custom blockchain",
       "Smart contracts",
       "Consensus mechanisms",
@@ -282,8 +274,7 @@ const blockchainSolutions = [
     price: "From $500,000",
     timeline: "32-48 weeks",
     category: "Platform",
-    technologies["Blockchain", "Smart Contracts", "Consensus", "Scalability"];
-  },;
+    technologies["Blockchain", "Smart Contracts", "Consensus", "Scalability"]},;
   {
     id: 2,
     title: "Supply Chain Blockchain",
@@ -298,8 +289,7 @@ const blockchainSolutions = [
     price: "From $300,000",
     timeline: "24-36 weeks",
     category: "Supply Chain",
-    technologies["Blockchain", "IoT", "Supply Chain", "Compliance"];
-  },;
+    technologies["Blockchain", "IoT", "Supply Chain", "Compliance"]},;
   {
     id: 3,
     title: "Financial Blockchain Solutions",
@@ -314,8 +304,7 @@ const blockchainSolutions = [
     price: "From $400,000",
     timeline: "28-40 weeks",
     category: "Financial",
-    technologies["Blockchain", "Fintech", "Payments", "Compliance"];
-  },;
+    technologies["Blockchain", "Fintech", "Payments", "Compliance"]},;
   {
     id: 4,
     title: "Identity Management Blockchain",
@@ -330,8 +319,7 @@ const blockchainSolutions = [
     price: "From $250,000",
     timeline: "20-32 weeks",
     category: "Identity",
-    technologies["Blockchain", "Identity", "Security", "Privacy"];
-  },;
+    technologies["Blockchain", "Identity", "Security", "Privacy"]},;
   {
     id: 5,
     title: "Smart Contract Development",
@@ -346,8 +334,7 @@ const blockchainSolutions = [
     price: "From $150,000",
     timeline: "16-28 weeks",
     category: "Smart Contracts",
-    technologies["Smart Contracts", "Blockchain", "Automation", "Security"];
-  },;
+    technologies["Smart Contracts", "Blockchain", "Automation", "Security"]},;
   {
     id: 6,
     title: "Blockchain Integration Services",
@@ -359,146 +346,60 @@ const blockchainSolutions = [
       "Data migration",
       "Legacy support"
     ],;
-    technologies["Integration", "APIs", "Migration", "Legacy Systems"];
-  };
+    technologies["Integration", "APIs", "Migration", "Legacy Systems"]};
     price: "From $200,000",;
     timeline: "18-30 weeks",;
     category: "Integration",;
-    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"];
-  };
+    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]};
 ];
 
-const blockchainTechnologies = [
-  {
-    name: "Blockchain Platforms",
-    description: "Enterprise blockchain platforms and frameworks",
-    icon: Building,
-    useCase: "Platform Development",
-    reliability: "Critical"
-  },
-  {
-    name: "Smart Contracts",
-    description: "Self-executing contracts with business logic",
-    icon: Code,
-    useCase: "Business Automation",
-    reliability: "Critical"
-  },
-  {
-    name: "Consensus Mechanisms",
-    description: "Blockchain consensus and validation protocols",
-    icon: Network,
-    useCase: "Network Security",
-    reliability: "High"
-  },
-  {;
+
     name: "Cryptography",;
     description: "Advanced cryptographic security solutions",;
     icon: Lock,;
     useCase: "Security & Privacy",;
-    reliability: "High";
-  };
+    reliability: "High"};
 ];
 
-const successStories = [
-  {
-    id: 1,
-    comp: "Global Supply Chain Corp",
-    industry: "Manufacturing",
-    challenge: "Needed transparent supply chain tracking across 50+ countries",
-    solution: "Built comprehensive blockchain supply chain platform with IoT integration",
-    results: "100% supply chain transparency, 40% cost reduction, 60% efficiency improvement, better compliance",
-    logo: "GSC"
-  },
-  {
-    id: 2,
-    comp: "Digital Bank International",
-    industry: "Finance",
-    challenge: "Required blockchain-based cross-border payment system",
-    solution: "Implemented blockchain payment platform with smart contracts",
-    results: "80% faster payments, 70% cost reduction, 100% transparency, better compliance",
-    logo: "DBI"
-  },
-  {
-    id: 3,
-    comp: "Healthcare Identity Solutions",;
+
     industry: "Healthcare",;
     challenge: "Needed secure patient identity management system",;
     solution: "Built blockchain-based identity management platform",;
     results: "100% data security, 90% faster verification, better privacy, improved compliance",;
-    logo: "HIS";
-  };
+    logo: "HIS"};
 ];
 
-const processSteps = [
-  {
-    step: 1,
-    title: "Blockchain Assessment",
-    description: "Evaluate business needs and identify blockchain opportunities",
-    icon: FileText,
-    duration: "2-4 weeks"
-  },
-  {
-    step: 2,
-    title: "Blockchain Strategy",
-    description: "Develop blockchain strategy and implementation roadmap",
-    icon: Code,
-    duration: "4-8 weeks"
-  },
-  {
-    step: 3,
-    title: "Platform Development",
-    description: "Build and deploy blockchain platform and applications",
-    icon: Wrench,
-    duration: "16-48 weeks"
-  },
-  {;
+
     step: 4,;
     title: "Testing & Deployment",;
     description: "Test blockchain systems and deploy to production",;
     icon: Gauge,;
-    duration: "4-8 weeks";
-  };
-];
-
-const blockchainBenefits = [
-  {
-    title: "Transparency & Trust",
-    description: "Blockchain provides immutable, transparent records that build trust",
-    icon: Eye,
-    examples["Immutable records", "Transparent transactions", "Audit trails", "Trust building"];
-  },;
+    duration: "4-8 weeks"};
+]},;
   {
     title: "Security & Privacy",
     description: "Advanced cryptography ensures data security and privacy protection",
     icon: Shield,
-    examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"];
-  },;
+    examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"]},;
   {
     title: "Automation & Efficiency",
     description: "Smart contracts automate business processes and reduce manual effort",
     icon: Zap,
-    examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"];
-  },;
+    examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"]},;
   {
-    examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];
-  };
+    examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]};
     title: "Cost Reduction",;
     description: "Blockchain eliminates intermediaries and reduces operational costs",;
     icon: TrendingUp,;
-    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];
-  };
+    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]};
 ];
 
 export default function BlockchainEnterpriseSolutions(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
-  const categories = ['All', 'Platform', 'Supply Chain', 'Financial', 'Identity', 'Smart Contracts', 'Integration'];
-
-  const filteredSolutions = selectedCategory === 'All'
-    ? blockchainSolutions
-    : blockchainSolutions.filter(solution => solution.category === selectedCategory);
-
+  
+  
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -567,7 +468,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
-              <Building className="w-10 h-10 text-white" />
+              <Building className="w-10 h-10 text-white"  />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -582,15 +483,15 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
-                <Building className="w-4 h-4" />
+                <Building className="w-4 h-4"  />
                 <span>Blockchain Platforms</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <Code className="w-4 h-4" />
+                <Code className="w-4 h-4"  />
                 <span>Smart Contracts</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
-                <Shield className="w-4 h-4" />
+                <Shield className="w-4 h-4"  />
                 <span>Security & Privacy</span>
               </div>
             </div>
@@ -678,7 +579,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples: any</h4>
                   {benefit.examples.map((example, exampleIndex)  => (
                     <div key={exampleIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{example}</span>
                     </div>
                   ))}
@@ -967,7 +868,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -995,7 +896,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                   </span>
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>
@@ -1100,7 +1001,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -1161,5 +1062,4 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

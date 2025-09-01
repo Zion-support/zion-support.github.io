@@ -1,4 +1,3 @@
-import React from 'react.ts';
 
 const MobileFirstSurveyTool: React.FC = (): JSX.Element => {
   return (
@@ -56,8 +55,7 @@ const MobileFirstSurveyTool: React.FC = (): JSX.Element => {
         </section>
       </div>
     </div>
-  );
-}
+  )}
 
 export default MobileFirstSurveyTool;
 

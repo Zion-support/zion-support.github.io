@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { 
   Menu, 
   X, 
@@ -52,21 +50,11 @@ interface SidebarItem {
   icon: React.ComponentType<any>;
   children?: SidebarItem[];
   featured?: boolean;
-  description?: string;
-}
+  description?: string}
 
 export function MainSidebar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
-  const location = useLocation();
-
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
-    );
-  };
+  const [expandedSections, setExpandedSections] = useState<string[]>(['services'])};
 
   const navigation: SidebarItem[] = [
     {
@@ -278,12 +266,10 @@ export function MainSidebar() {
     }
   ];
 
-  const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
-    const isActive = location.pathname === item.href;
-    const hasChildren = item.children && item.children.length > 0;
-    const isExpanded = expandedSections.includes(item.name.toLowerCase());
-    const isFeatured = item.featured;
-
+  
+    
+    
+    
     return (
       <div key={item.name} className="mb-1">
         {hasChildren ? (
@@ -300,13 +286,13 @@ export function MainSidebar() {
                 <item.icon className="w-4 h-4" />
                 <span>{item.name}</span>
                 {isFeatured && (
-                  <Star className="w-3 h-3 text-yellow-400" />
+                  <Star className="w-3 h-3 text-yellow-400"  />
                 )}
               </div>
               {isExpanded ? (
-                <ChevronDown className="w-4 h-4" />
+                <ChevronDown className="w-4 h-4"  />
               ) : (
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-4 h-4"  />
               )}
             </button>
             
@@ -331,13 +317,12 @@ export function MainSidebar() {
             <item.icon className="w-4 h-4" />
             <span>{item.name}</span>
             {isFeatured && (
-              <Star className="w-3 h-3 text-yellow-400" />
+              <Star className="w-3 h-3 text-yellow-400"  />
             )}
           </Link>
         )}
       </div>
-    );
-  };
+    )};
 
   return (
     <>
@@ -346,7 +331,7 @@ export function MainSidebar() {
         onClick={() => setIsOpen(!isOpen)}
         className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
       >
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
       </button>
 
       {/* Sidebar */}
@@ -363,7 +348,7 @@ export function MainSidebar() {
               onClick={() => setIsOpen(false)}
               className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5"  />
             </button>
           </div>
 
@@ -376,15 +361,15 @@ export function MainSidebar() {
           <div className="p-4 border-t border-slate-700/50">
             <div className="text-xs text-slate-400 space-y-2">
               <div className="flex items-center space-x-2">
-                <Phone className="w-3 h-3" />
+                <Phone className="w-3 h-3"  />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="w-3 h-3" />
+                <Mail className="w-3 h-3"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin className="w-3 h-3" />
+                <MapPin className="w-3 h-3"  />
                 <span>Middletown DE 19709</span>
               </div>
             </div>
@@ -406,5 +391,4 @@ export function MainSidebar() {
         </div>;
       </div>;
     </>;
-  );
-}
+  )}

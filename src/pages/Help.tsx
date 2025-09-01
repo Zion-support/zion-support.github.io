@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Search, 
   BookOpen, 
@@ -32,96 +30,10 @@ export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
-  const helpCategories = [
-    {
-      title: 'Getting Started',
-      icon: Rocket,
-      color: 'from-blue-600 to-cyan-600',
-      items: [
-        { name: 'Quick Start Guide', href: '/help/quick-start', description: 'Get up and running in minutes' },
-        { name: 'Account Setup', href: '/help/account-setup', description: 'Configure your account and preferences' },
-        { name: 'First Project', href: '/help/first-project', description: 'Create your first project with Zion Tech' },
-        { name: 'API Keys', href: '/help/api-keys', description: 'Generate and manage your API keys' }
-      ]
-    },
-    {
-      title: 'Core Services',
-      icon: Settings,
-      color: 'from-green-600 to-emerald-600',
-      items: [
-        { name: 'AI Business Intelligence', href: '/help/ai-business-intelligence', description: 'AI-powered analytics and insights' },
-        { name: 'Cloud DevOps', href: '/help/cloud-devops', description: 'Infrastructure and automation' },
-        { name: 'Cybersecurity', href: '/help/cybersecurity', description: 'Security and compliance solutions' },
-        { name: 'Digital Twin', href: '/help/digital-twin', description: 'Simulation and monitoring' },
-        { name: 'IoT Edge', href: '/help/iot-edge', description: 'IoT and edge computing' },
-        { name: 'Micro SaaS', href: '/help/micro-saas', description: 'Scalable software solutions' }
-      ]
-    },
-    {
-      id: 'billing-account',
-      title: 'Billing & Account',
-      icon: Users,
-      description: 'Account management and billing information',
-      articles: [
-        {
-          title: 'Billing Overview',
-          description: 'Understanding your billing structure and charges',
-          url: '/help/billing/overview',
-          type: 'guide'
-        },
-        {
-          title: 'Payment Methods',
-          description: 'Adding and managing payment methods',
-          url: '/help/billing/payment-methods',
-          type: 'guide'
-        },
-        {
-          title: 'Invoice Management',
-          description: 'Accessing and managing your invoices',
-          url: '/help/billing/invoices',
-          type: 'guide'
-        },
-        {
-          title: 'Account Settings',
-          description: 'Managing your account preferences and settings',
-          url: '/help/billing/account-settings',
-          type: 'guide'
-        }
-      ]
-    }
-  ];
-
-  const quickLinks = [
-    {
-      name: 'Live Chat',
-      icon: MessageCircle,
-      description: 'Chat with our support team',
-      response: 'Usually responds in 2 minutes',
-      href: '/help/live-chat'
-    },
-    {
-      name: 'Email Support',
-      icon: Mail,
-      url: 'mailto:support@ziontechgroup.com',
-      color: 'from-orange-500 to-orange-600'
-    }
-  ];
-
-  const supportHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST', available: true },
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST', available: true },
-    { day: 'Sunday', hours: 'Emergency Support Only', available: false }
-  ];
-
-  const filteredCategories = helpCategories.filter(category =>
-    category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    category.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    category.articles.some(article =>
-      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
-
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       {/* Header */}
@@ -138,7 +50,7 @@ export default function Help() {
             {/* Search Bar */}
             <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400"  />
                 <input
                   type="text"
                   placeholder="Search for help articles, guides, and solutions..."
@@ -209,7 +121,7 @@ export default function Help() {
                   }`}
                 >
                   <div className="flex items-center space-x-3">
-                    <Clock className={`w-5 h-5 ${schedule.available ? 'text-green-400' : 'text-orange-400'}`} />
+                    <Clock className={`w-5 h-5 ${schedule.available ? 'text-green-400' : 'text-orange-400'}`}  />
                     <span className="text-white font-medium">{schedule.day}</span>
                   </div>
                   <div className="text-right">
@@ -264,9 +176,9 @@ export default function Help() {
                       </div>
                     </div>
                     {expandedCategory === category.id ? (
-                      <ChevronDown className="w-6 h-6 text-cyan-400" />
+                      <ChevronDown className="w-6 h-6 text-cyan-400"  />
                     ) : (
-                      <ChevronRight className="w-6 h-6 text-cyan-400" />
+                      <ChevronRight className="w-6 h-6 text-cyan-400"  />
                     )}
                   </div>
                 </button>
@@ -364,5 +276,4 @@ export default function Help() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

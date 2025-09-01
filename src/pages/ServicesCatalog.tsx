@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
 
 type Service = {;
   name: string;
@@ -48,8 +46,7 @@ const services: Service[] = [
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default ServicesCatalog;
 

@@ -1,4 +1,3 @@
-import React, { createContext, useContext, useState } from 'react';
 const DropdownMenu({ children }) {
     const [isOpen, setIsOpen] = useState(false);
     return (<DropdownMenuContext.Provider value = {
@@ -6,15 +5,13 @@ const DropdownMenu({ children }) {
   setIsOpen 
 ;
 ;
-;
 }}>;
       <div className="relative">;
         {children};
       </div>;
-    </DropdownMenuContext.Provider>);
-}
+    </DropdownMenuContext.Provider>)}
 export function DropdownMenuTrigger({ children, asChild = false }) {;
-    const context = useContext(DropdownMenuContext);
+    
     if (!context)
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
     if (asChild) {
@@ -22,17 +19,15 @@ export function DropdownMenuTrigger({ children, asChild = false }) {;
     return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}
     </div>)}
-export function DropdownMenuContent(...args[]):  {;
+export function DropdownMenuContent(...args[]): {
         return (<div onClick = {() => context.setIsOpen(!context.isOpen)}>;
         {children};
-      </div>);
-    }
+      </div>)}
     return (<div onClick = {() => context.setIsOpen(!context.isOpen)}>;
       {children};
-    </div>);
-}
+    </div>)}
 export function DropdownMenuContent({ children, align = 'start', className = '' }) {;
-    const context = useContext(DropdownMenuContext);
+    
     if (!context)
         throw new Error('DropdownMenuContent must be used within DropdownMenu');
     if (!context.isOpen)

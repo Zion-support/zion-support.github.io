@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
 import { Heart, 
   Brain, 
   Activity, 
@@ -24,139 +21,33 @@ import { Heart,
  } from 'lucide-react';
 
 export default function AIHealthcareAnalyticsPlatform(...args: []):  {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Diagnosis Support',
-      description: 'Advanced machine learning algorithms assist doctors with accurate diagnosis and treatment recommendations'
-    },
-    {
-      icon: Activity,
-      title: 'Predictive Health Analytics',
-      description: 'AI predicts health risks and disease progression based on patient data and medical history'
-    },
-    {
-      icon: Heart,
-      title: 'Patient Outcome Prediction',
-      description: 'Machine learning models forecast treatment outcomes and recovery probabilities'
-    },
-    {
-      icon: Shield,
-      title: 'Drug Interaction Analysis',
-      description: 'AI identifies potential drug interactions and adverse effects in real-time'
-    },
-    {
-      icon: Zap,
-      title: 'Real-Time Monitoring',
-      description: 'Continuous patient monitoring with instant alerts for critical health changes';
+  
     },;
     {;
       icon: Eye,;
       title: 'Medical Image Analysis',;
-      description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis';
-    };
+      description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis'};
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Clinic',
-      price: '$799',
-      period: '/month',
-      description: 'Perfect for small medical practices',
-      features: [
-        'Up to 50 patients',
-        'Basic AI diagnosis support',
-        'Patient analytics dashboard',
-        'Basic reporting',
-        'Email support',
-        'Mobile app access',
-        'Standard integrations'
-      ],
-      popular: false
-    },
-    {
-      name: 'Hospital',
-      price: '$2,499',
-      period: '/month',
-      description: 'Ideal for hospitals and large practices',
-      features: [
-        'Up to 500 patients',
-        'Advanced AI algorithms',
-        'Predictive analytics',
-        'Real-time monitoring',
-        'Priority support',
-        'Custom dashboards',
-        'Advanced integrations',
-        'Compliance reporting'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$5,999',
-      period: '/month',
-      description: 'For healthcare systems and networks',
-      features: [
-        'Unlimited patients',
-        'Full AI suite',
-        'Custom AI models',
-        'Dedicated support team',
-        'Advanced compliance',;
+  
         'On-premise options',;
         'SLA guarantees',;
         'Custom integrations';
       ],;
-      popular: false;
-    };
-  ];
-
-  const benefits = [
-    {
-      icon: Heart,
-      title: '30% Faster Diagnosis',
-      description: 'AI assistance reduces diagnosis time and improves accuracy'
-    },
-    {
-      icon: Target,
-      title: '95% Accuracy Rate',
-      description: 'Advanced algorithms provide highly accurate medical insights'
-    },
-    {
-      icon: Clock,
-      title: '24/7 Patient Monitoring',
-      description: 'Continuous monitoring ensures patient safety around the clock';
-    },;
+      popular: false};
+  ]},;
     {;
       icon: BarChart3,;
       title: '40% Cost Reduction',;
-      description: 'AI optimization reduces healthcare costs and improves efficiency';
-    };
-  ];
-
-  const useCases = [
-    {
-      title: 'Diagnostic Imaging',
-      description: 'AI analyzes medical images to detect abnormalities and assist radiologists',
-      icon: Eye
-    },
-    {
-      title: 'Patient Risk Assessment',
-      description: 'Predictive models identify high-risk patients for proactive care',
-      icon: AlertTriangle
-    },
-    {
-      title: 'Treatment Optimization',
-      description: 'AI recommends optimal treatment plans based on patient data and outcomes',
-      icon: Heart;
-    },;
+      description: 'AI optimization reduces healthcare costs and improves efficiency'};
+  ]},;
     {;
       title: 'Drug Safety Monitoring',;
       description: 'Real-time monitoring of drug interactions and adverse effects',;
-      icon: Shield;
-    };
+      icon: Shield};
   ];
 
-  const complianceStandards = [;
+  
     'HIPAA Compliant',;
     'FDA Approved',;
     'ISO 13485',;
@@ -167,10 +58,9 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Healthcare Analytics Platform - Zion Tech Group"
+      <SEO title="AI Healthcare Analytics Platform - Zion Tech Group"
         description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -199,7 +89,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
             transition={{ duration: 0.8 }}
 
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
-              <Heart className="w-4 h-4 mr-2" />
+              <Heart className="w-4 h-4 mr-2"  />
               AI-Powered Healthcare
             </div>
 
@@ -550,7 +440,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300"
 
-                <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
+                <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3"  />
                 <p className="text-white font-medium text-sm">{standard}</p>
               </motion.div>;
             ))}
@@ -655,7 +545,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"  />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -724,5 +614,4 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
         </div>;
       </section>;
     </div>;
-  );
-}}}}}}
+  )}}}}}}

@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Brain,
   Atom,
@@ -23,7 +21,6 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data/innovativeServices2027";
 
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-500 to-pink-500',
@@ -46,45 +43,31 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(;
+    
       ([entry]) => {;
         if (entry.isIntersecting) {;
-          setIsVisible(true);
-        }
+          setIsVisible(true)}
       },
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById('innovative-services-2027');
+    
     if (element) {
       observer.observe(element)}
 
     return () => observer.disconnect()}, []);
 
-  const filteredServices = selectedCategory === 'All'
-    ? innovativeServices2027
-    : getServicesByCategory(selectedCategory);
+  
+  
+    setExpandedService(expandedService === serviceId ? null : serviceId)};
 
-  const toggleServiceExpansion = (serviceId: string) => {;
-    setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
-
-  const contactInfo = {
-  phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',;
+  
   ;
   ;
   ;
   ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  ;
-
-
-
-
-
-
-};
+  };
 
   return (
     <section id = "innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
@@ -122,7 +105,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
           className="text-center mb-16"
 
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">
-            <Star className="w-5 h-5 text-zion-cyan mr-2" />
+            <Star className="w-5 h-5 text-zion-cyan mr-2"  />
             <span className="text-zion-cyan font-semibold">2027 Innovation Showcase</span>
           </div>
 
@@ -180,13 +163,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';
-              }`};
+                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'}`};
             >;
               All Categories;
             </button>;
             {serviceCategories2027.map((category) => {;
-              const Icon = categoryIcons[category];
+              
               return (
                 <button
                   key = {category}
@@ -197,11 +179,10 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                       : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'
                   }`};
                 >;
-                  {Icon && <Icon className="w-4 h-4" />};
+                  {Icon && <Icon className="w-4 h-4"  />};
                   {category};
                 </button>;
-              );
-            })}
+              )})}
           </div>
         </motion.div>
 
@@ -209,34 +190,13 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 ;
-
-
-
-
-
-
-}}
+  y: 30 }}
           animate = {
   isVisible ? { opacity: 1,;
-  y: 0 ;
-
-
-
-
-
-
-} : { opacity: 0, y: 30 }}
+  y: 0 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
-  delay: 0.4 ;
-
-
-
-
-
-
-}}
+  delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {filteredServices.map((service, index)  => (;
@@ -324,7 +284,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                     className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
 
                     {expandedService === service.id ? 'Less' : 'Learn More'}
-                    {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                    {expandedService === service.id ? <ChevronUp className="w-4 h-4"  /> : <ChevronDown className="w-4 h-4"  />}
                   </button>
                 </div>
 
@@ -412,8 +372,8 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                           className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
 
                           {service.ctaLabel}
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                          {service.external && <ExternalLink className="w-4 h-4" />}
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />
+                          {service.external && <ExternalLink className="w-4 h-4"  />}
                         </a>
                       </div>;
                     </motion.div>
@@ -428,34 +388,13 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 ;
-
-
-
-
-
-
-}}
+  y: 30 }}
           animate = {
   isVisible ? { opacity: 1,;
-  y: 0 ;
-
-
-
-
-
-
-} : { opacity: 0, y: 30 }}
+  y: 0 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
-  delay: 0.6 ;
-
-
-
-
-
-
-}}
+  delay: 0.6 }}
           className="text-center"
 
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;
@@ -469,15 +408,15 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center gap-3 text-zion-cyan">
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 <span className="font-semibold">{contactInfo.phone}</span>
               </div>
               <div className="flex items-center justify-center gap-3 text-zion-purple">
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 <span className="font-semibold">{contactInfo.email}</span>
               </div>
               <div className="flex items-center justify-center gap-3 text-zion-cyan">
-                <MapPin className="w-5 h-5" />
+                <MapPin className="w-5 h-5"  />
                 <span className="font-semibold text-center">{contactInfo.address}</span>
               </div>
             </div>
@@ -488,7 +427,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 
                 Schedule Consultation
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4"  />
               </a>
               <a
                 href="https://ziontechgroup.com"
@@ -497,12 +436,11 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2"
 
                 Visit Website
-                <ExternalLink className="w-4 h-4" />
+                <ExternalLink className="w-4 h-4"  />
               </a>
             </div>;
           </div>;
         </motion.div>;
       </div>;
     </section>;
-  );
-};
+  )};

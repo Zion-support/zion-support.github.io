@@ -1,130 +1,13 @@
-import React, { useState } from 'react';
 
-const ComprehensivePricing2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+
   const [selectedIndustry, setSelectedIndustry] = useState('All');
 
-  const pricingData = [
-    {
-      id: 1,
-      name: 'AI Business Process Automation',
-      description: 'Intelligent automation for complex business processes',
-      category: 'AI Services',
-      industry: 'Technology',
-      price: 1200,
-      period: 'per month',
-      annualDiscount: 20,
-      features: [
-        'Process automation',
-        'AI decision making',
-        'Integration APIs',
-        'Analytics dashboard',
-        'Custom workflows',
-        '24/7 support'
-      ],
-      icon: '🤖',
-      popular: true,
-      roi: '300%',
-      delivery: '2-4 weeks'
-    },
-    {
-      id: 2,
-      name: 'AI Customer Experience Platform',
-      description: 'Personalized customer engagement powered by artificial intelligence',
-      category: 'AI Services',
-      industry: 'Retail',
-      price: 2500,
-      period: 'per month',
-      annualDiscount: 15,
-      features: [
-        'Customer segmentation',
-        'Predictive analytics',
-        'Omnichannel support',
-        'Real-time insights',
-        'A/B testing',
-        'Performance monitoring'
-      ],
-      icon: '💝',
-      popular: false,
-      roi: '250%',
-      delivery: '3-5 weeks'
-    },
-    {
-      id: 3,
-      name: 'AI Supply Chain Optimization',
-      description: 'End-to-end supply chain management with AI-driven insights',
-      category: 'AI Services',
-      industry: 'Manufacturing',
-      price: 3800,
-      period: 'per month',
-      annualDiscount: 25,
-      features: [
-        'Demand forecasting',
-        'Inventory optimization',
-        'Route planning',
-        'Risk management',
-        'Supplier analytics',
-        'Real-time tracking'
-      ],
-      icon: '📦',
-      popular: true,
-      roi: '400%',
-      delivery: '4-6 weeks'
-    },
-    {
-      id: 4,
-      name: 'AI Cybersecurity Suite',
-      description: 'Advanced threat detection and response using machine learning',
-      category: 'Cybersecurity',
-      industry: 'Finance',
-      price: 2200,
-      period: 'per month',
-      annualDiscount: 20,
-      features: [
-        'Threat detection',
-        'Behavioral analysis',
-        'Incident response',
-        'Compliance reporting',
-        'Security monitoring',
-        'Vulnerability assessment'
-      ],
-      icon: '🔒',
-      popular: false,
-      roi: '350%',
-      delivery: '2-3 weeks'
-    },
-    {
-      id: 5,
-      name: 'Cloud & DevOps Solutions',
-      description: 'Scalable cloud infrastructure and automated deployment',
-      category: 'Cloud Services',
-      industry: 'Technology',
-      price: 1800,
-      period: 'per month',
-      annualDiscount: 15,
-      features: [
-        'Cloud migration',
-        'CI/CD pipelines',
-        'Monitoring',
-        'Auto-scaling',
-        'Security compliance',
-        'Backup & recovery'
-      ],
-      icon: '☁️',
-      popular: false,
-      roi: '280%',
-      delivery: '3-4 weeks'
-    }
-  ];
-
-  const categories = ['All', 'AI Services', 'Cybersecurity', 'Cloud Services'];
-  const industries = ['All', 'Technology', 'Retail', 'Manufacturing', 'Finance'];
-
-  const filteredData = pricingData.filter(item => {
-    const categoryMatch = selectedCategory === 'All' || item.category === selectedCategory;
-    const industryMatch = selectedIndustry === 'All' || item.industry === selectedIndustry;
-    return categoryMatch && industryMatch;
-  });
+  
+  
+  
+  
+    
+    return categoryMatch && industryMatch});
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24">
@@ -226,7 +109,6 @@ const ComprehensivePricing2025 = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ComprehensivePricing2025;

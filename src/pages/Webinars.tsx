@@ -1,6 +1,4 @@
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { 
   BookOpen, 
   Brain, 
@@ -27,135 +25,27 @@ import {
   ArrowRight,
   CheckCircle
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
 
 const Webinars: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [filterType, setFilterType] = useState('all');
 
-  const categories = [
-    { id: 'all', name: 'All Categories', icon: Video, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 6 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 4 },
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 3 },
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 5 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: Zap, count: 2 },
-    { id: 'strategy', name: 'Digital Strategy', icon: Target, count: 4 }
-  ];
-
-  const filterTypes = [
-    { id: 'all', name: 'All Webinars', count: 0 },
-    { id: 'upcoming', name: 'Upcoming', count: 0 },
-    { id: 'on-demand', name: 'On-Demand', count: 0 },
-    { id: 'live', name: 'Live Now', count: 0 }
-  ];
-
-  const upcomingWebinars = [
-    {
-      id: 1,
-      title: 'AI-Powered Business Transformation: Real-World Success Stories',
-      description: 'Join industry experts as they share real-world case studies of successful AI implementations and the lessons learned along the way.',
-      category: 'ai-ml',
-      type: 'upcoming',
-      date: '2025-02-10T14:00:00Z',
-      duration: '75 min',
-      speakers: ['Dr. Sarah Chen', 'Dr. Michael Rodriguez', 'AI Research Team'],
-      maxAttendees: 600,
-      currentAttendees: 487,
-      featured: true,
-      tags: ['AI Research', 'Autonomous Systems', 'Business Intelligence', 'Innovation'],
-      thumbnail: '/images/webinars/ai-autonomous-research-2025.jpg',
-      registrationRequired: true,
-      recordingAvailable: false
-    },
-    {
-      id: 2,
-      title: 'AI Supply Chain Optimization: Reducing Costs by Up to 30%',
-      description: 'Learn how AI-powered supply chain optimization can predict demand, optimize inventory, and reduce costs significantly for your organization.',
-      category: 'ai-ml',
-      type: 'upcoming',
-      date: '2025-02-12T15:00:00Z',
-      duration: '60 min',
-      speakers: ['Michael Rodriguez', 'Supply Chain Experts', 'AI Implementation Team'],
-      maxAttendees: 400,
-      currentAttendees: 298,
-      featured: true,
-      tags: ['Supply Chain', 'AI Optimization', 'Cost Reduction', 'Predictive Analytics'],
-      thumbnail: '/images/webinars/ai-supply-chain-2025.jpg',
-      registrationRequired: true,
-      recordingAvailable: false
-    },
-    {
-      id: 3,
-      title: 'Cloud-Native Security: Protecting Modern Applications',
-      description: 'Explore best practices for securing cloud-native applications and implementing zero-trust security models.',
-      category: 'security',
-      type: 'upcoming',
-      date: '2025-02-15T16:00:00Z',
-      duration: '90 min',
-      speakers: ['Security Experts', 'Cloud Architecture Team'],
-      maxAttendees: 350,
-      currentAttendees: 245,
-      featured: false,
-      tags: ['Cloud Security', 'Zero Trust', 'Application Security', 'DevSecOps'],
-      thumbnail: '/images/webinars/cloud-security-2025.jpg',
-      registrationRequired: true,
-      recordingAvailable: false
-    }
-  ];
-
-  const onDemandWebinars = [
-    {
-      id: 4,
-      title: 'Data-Driven Decision Making: From Insights to Action',
-      description: 'Learn how to transform raw data into actionable insights that drive business decisions and growth.',
-      category: 'data',
-      type: 'on-demand',
-      date: '2024-12-15T10:00:00Z',
-      duration: '60 min',
-      speakers: ['Data Science Team', 'Business Intelligence Experts'],
-      views: 1247,
-      featured: true,
-      tags: ['Data Analytics', 'Business Intelligence', 'Decision Making', 'Data Strategy'],
-      thumbnail: '/images/webinars/data-driven-decisions-2024.jpg',
-      recordingAvailable: true,
-      watchUrl: '/webinars/data-driven-decision-making'
-    },
-    {
-      id: 5,
-      title: 'Digital Twin Technology: Measuring ROI in Manufacturing',
-      description: 'Explore practical applications of digital twin technology and how to measure return on investment.',
-      category: 'emerging',
-      type: 'on-demand',
-      date: '2024-11-20T14:00:00Z',
-      duration: '75 min',
-      speakers: ['IoT Specialists', 'Manufacturing Experts'],
-      views: 892,
-      featured: false,
-      tags: ['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],
-      thumbnail: '/images/webinars/digital-twin-2024.jpg',
-      recordingAvailable: true,
-      watchUrl: '/webinars/digital-twin-technology-roi'
-    }
-  ];
-
-  const filteredWebinars = [...upcomingWebinars, ...onDemandWebinars].filter(webinar => {
-    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
-    const matchesType = filterType === 'all' || webinar.type === filterType;
+  
+  
+  
+  
+  
     
-    return matchesSearch && matchesCategory && matchesType;
-  });
+    
+    return matchesSearch && matchesCategory && matchesType});
 
   return (
     <>
-      <SEO 
-        title="Webinars - Zion Tech Group"
+      <SEO title="Webinars - Zion Tech Group"
         description="Join our expert-led webinars on AI, cloud computing, cybersecurity, and emerging technologies. Learn from industry leaders and stay ahead of the curve."
         keywords="webinars, AI, machine learning, cloud computing, cybersecurity, digital transformation, Zion Tech Group"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}
@@ -168,7 +58,7 @@ const Webinars: React.FC = () => {
             >
               <div className="flex items-center justify-center space-x-3 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
-                  <Video className="w-8 h-8 text-white" />
+                  <Video className="w-8 h-8 text-white"  />
                 </div>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
@@ -188,7 +78,7 @@ const Webinars: React.FC = () => {
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
               {/* Search Bar */}
               <div className="relative mb-6">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search webinars..."
@@ -262,11 +152,11 @@ const Webinars: React.FC = () => {
                   {/* Thumbnail */}
                   <div className="relative h-48 bg-gradient-to-br from-slate-700 to-slate-800">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <Play className="w-12 h-12 text-white opacity-50" />
+                      <Play className="w-12 h-12 text-white opacity-50"  />
                     </div>
                     {webinar.featured && (
                       <div className="absolute top-3 left-3">
-                        <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                        <Star className="w-5 h-5 text-yellow-400 fill-current"  />
                       </div>
                     )}
                     {webinar.type === 'live' && (
@@ -300,7 +190,7 @@ const Webinars: React.FC = () => {
 
                     {/* Speakers */}
                     <div className="flex items-center gap-2 mb-4">
-                      <Users className="w-4 h-4 text-gray-400" />
+                      <Users className="w-4 h-4 text-gray-400"  />
                       <span className="text-gray-400 text-sm">
                         {Array.isArray(webinar.speakers) ? webinar.speakers.join(', ') : webinar.speakers}
                       </span>
@@ -319,17 +209,17 @@ const Webinars: React.FC = () => {
                     <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
                       {webinar.type === 'upcoming' ? (
                         <>
-                          <Calendar className="w-4 h-4" />
+                          <Calendar className="w-4 h-4"  />
                           Register Now
                         </>
                       ) : webinar.type === 'on-demand' ? (
                         <>
-                          <Play className="w-4 h-4" />
+                          <Play className="w-4 h-4"  />
                           Watch Now
                         </>
                       ) : (
                         <>
-                          <Eye className="w-4 h-4" />
+                          <Eye className="w-4 h-4"  />
                           Join Live
                         </>
                       )}
@@ -341,7 +231,7 @@ const Webinars: React.FC = () => {
 
             {filteredWebinars.length === 0 && (
               <div className="text-center py-12">
-                <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <Search className="w-16 h-16 text-gray-400 mx-auto mb-4"  />
                 <h3 className="text-white text-xl font-semibold mb-2">No webinars found</h3>
                 <p className="text-gray-400">Try adjusting your search criteria or filters.</p>
               </div>
@@ -350,7 +240,6 @@ const Webinars: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default Webinars;

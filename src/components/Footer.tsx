@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Twitter, 
   Linkedin, 
@@ -67,37 +65,24 @@ import {
 } from 'lucide-react';
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-
+  
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400);
+    
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   // Toggle section expansion (for mobile)
-  const toggleSection = (title: string) => {
-    setExpandedSections(prev => {
-      const newSet = new Set(prev);
+  
       if (newSet.has(title)) {
-        newSet.delete(title);
-      } else {
-        newSet.add(title);
-      }
-      return newSet;
-    });
-  };
+        newSet.delete(title)} else {
+        newSet.add(title)}
+      return newSet})};
 
   // Scroll to top function
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+  
   };
 
 
@@ -112,7 +97,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+                <Zap className="w-6 h-6 text-white"  />
               </div>
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
@@ -122,22 +107,22 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5"  />
               </a>
               <a href="https://twitter.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                <Twitter className="w-5 h-5" />
+                <Twitter className="w-5 h-5"  />
               </a>
               <a href="https://facebook.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-5 h-5"  />
               </a>
               <a href="https://instagram.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5"  />
               </a>
               <a href="https://youtube.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                <Youtube className="w-5 h-5" />
+                <Youtube className="w-5 h-5"  />
               </a>
               <a href="https://github.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                <Github className="w-5 h-5" />
+                <Github className="w-5 h-5"  />
               </a>
             </div>
           </div>
@@ -145,7 +130,7 @@ export function Footer() {
           {/* Services */}
           <div className="space-y-4">
             <h3 className="text-zion-cyan font-semibold text-lg flex items-center">
-              <Zap className="w-5 h-5 mr-2" />
+              <Zap className="w-5 h-5 mr-2"  />
               Services
             </h3>
             <ul className="space-y-2 text-sm">
@@ -163,7 +148,7 @@ export function Footer() {
           {/* Solutions */}
           <div className="space-y-4">
             <h3 className="text-zion-cyan font-semibold text-lg flex items-center">
-              <Brain className="w-5 h-5 mr-2" />
+              <Brain className="w-5 h-5 mr-2"  />
               Solutions
             </h3>
             <ul className="space-y-2 text-sm">
@@ -201,7 +186,7 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">
-                <Phone className="w-5 h-5 text-zion-cyan" />
+                <Phone className="w-5 h-5 text-zion-cyan"  />
               </div>
               <div>
                 <p className="text-zion-slate-light text-sm">Phone</p>
@@ -211,7 +196,7 @@ export function Footer() {
             
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">
-                <Mail className="w-5 h-5 text-zion-cyan" />
+                <Mail className="w-5 h-5 text-zion-cyan"  />
               </div>
               <div>
                 <p className="text-zion-slate-light text-sm">Email</p>
@@ -221,7 +206,7 @@ export function Footer() {
             
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">
-                <MapPin className="w-5 h-5 text-zion-cyan" />
+                <MapPin className="w-5 h-5 text-zion-cyan"  />
               </div>
               <div>
                 <p className="text-zion-slate-light text-sm">Address</p>
@@ -302,8 +287,7 @@ export function Footer() {
         className="fixed bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center text-white"
         aria-label="Back to top"
       >
-        <ArrowUp className="w-5 h-5" />
+        <ArrowUp className="w-5 h-5"  />
       </button>
     </footer>
-  );
-}
+  )}

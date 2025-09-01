@@ -22,8 +22,7 @@ contactInfo: {
     phone: string;
     email: string;
     website: string;
-    address: string;
-  };
+    address: string};
   technicalSpecs: {
     technology: string[];
     integrations: string[];
@@ -363,8 +362,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     growthRate: "250% annual growth",;
     rating: 4.8,;
     reviews: 234,;
-    customers: 456;
-  },;
+    customers: 456},;
 
   // AI-Powered Creative Content Generation
   {
@@ -419,22 +417,19 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";
-    },
+      address: "364 E Main St STE 1008 Middletown DE 19709"},
     technicalSpecs: {
       technology: ["GANs", "Transformers", "Computer Vision", "React", "Python"],
       integrations: ["Design tools", "Music software", "Video editors", "Social media"],;
       apiEndpoints: 300,;
       uptime: "99.9%",;
-      security: ["Content protection", "Copyright management", "Access controls"];
-    },
+      security: ["Content protection", "Copyright management", "Access controls"]},
     competitors: ["OpenAI DALL-E", "Midjourney", "Stable Diffusion", "Jasper"],
     marketSize: "$18.7 billion by 2025",;
     growthRate: "220% annual growth",;
     rating: 4.6,;
     reviews: 189,;
-    customers: 345;
-  },
+    customers: 345},
 
   // AI-Powered Financial Trading
   {
@@ -489,22 +484,19 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";
-    },
+      address: "364 E Main St STE 1008 Middletown DE 19709"},
     technicalSpecs: {
       technology: ["Deep Learning", "Reinforcement Learning", "React", "Python", "PostgreSQL"],
       integrations: ["Trading platforms", "Market data feeds", "Risk systems", "Compliance tools"],;
       apiEndpoints: 800,;
       uptime: "99.99%",;
-      security: ["SOC 2", "PCI DSS", "Encryption", "Access controls"];
-    },
+      security: ["SOC 2", "PCI DSS", "Encryption", "Access controls"]},
     competitors: ["Quantopian", "Alpaca", "Interactive Brokers", "TD Ameritrade"],
     marketSize: "$67.8 billion by 2025",;
     growthRate: "280% annual growth",;
     rating: 4.8,;
     reviews: 267,;
-    customers: 489;
-  },
+    customers: 489},
 
   // AI-Powered Autonomous Vehicles
   {
@@ -559,22 +551,19 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";
-    },
+      address: "364 E Main St STE 1008 Middletown DE 19709"},
     technicalSpecs: {
       technology: ["Computer Vision", "LIDAR", "Machine Learning", "React", "Python"],
       integrations: ["Vehicle systems", "GPS", "Traffic systems", "Fleet management", "Safety systems"],;
       apiEndpoints: 1200,;
       uptime: "99.99%",;
-      security: ["Vehicle security", "Data protection", "Safety protocols", "Encryption"];
-    },
+      security: ["Vehicle security", "Data protection", "Safety protocols", "Encryption"]},
     competitors: ["Tesla", "Waymo", "Cruise", "Aurora"],
     marketSize: "$556.7 billion by 2025",;
     growthRate: "350% annual growth",;
     rating: 4.9,;
     reviews: 345,;
-    customers: 567;
-  }
+    customers: 567}
 ];
 
-export default ADVANCED_AI_SERVICES_2025;}}
+export default ADVANCED_AI_SERVICES_2025}}

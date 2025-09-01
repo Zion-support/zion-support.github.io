@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Star,
   MessageCircle,
@@ -37,8 +35,7 @@ interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
 export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 showStats:  true,;
   showFilters = true,;
-  maxFeedback = 10;
-}) => {;
+  maxFeedback = 10}) => {;
   const [feedback, setFeedback] = useState<Feedback[]>([]);
   const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
   const [stats, setStats] = useState<FeedbackStats>({
@@ -46,8 +43,7 @@ showStats:  true,;
     averageRating: 0,
     positivePercentage: 0,
     responseRate: 0,
-    topCategories[];
-  });
+    topCategories[]});
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedRating, setSelectedRating] = useState<any>(0);
   const [searchQuery, setSearchQuery] = useState('');
@@ -59,7 +55,7 @@ showStats:  true,;
   });
 
   // Sample feedback data
-  useEffect(()  => {
+  useEffect(() => {
     const sampleFeedback: Feedback[] = [
       {
         id: '1',
@@ -132,23 +128,20 @@ showStats:  true,;
     setFilteredFeedback(sampleFeedback)}, []);
 
   // Calculate stats
-  useEffect(()  => {
+  useEffect(() => {
     if (feedback.length > 0) {
-      const totalFeedback = feedback.length;
-      const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback;
-      const positivePercentage = (feedback.filter(f => f.sentiment === 'positive').length / totalFeedback) * 100;
+      
+      
+      
       const responseRate = 95; // Simulated response rate
 
-      const categoryCounts = feedback.reduce((acc, f) => {;
+      
         acc[f.category] = (acc[f.category] || 0) + 1;
         return acc}, {} as Record<string, any>);
 
-      const topCategories = Object.entries(categoryCounts)
-        .map(([category, count]) => ({
-          category: category.charAt(0).toUpperCase() + category.slice(1),;
+      
           count,;
-          percentage: (count / totalFeedback) * 100;
-        }));
+          percentage: (count / totalFeedback) * 100}));
         .sort((a, b) => b.count - a.count);
         .slice(0, 4);
 
@@ -181,13 +174,12 @@ showStats:  true,;
         f.comment.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      );
-    }
+      )}
 
     setFilteredFeedback(filtered.slice(0, maxFeedback))}, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]);
 
   // Handle feedback submission
-  const handleSubmitFeedback = () => {;
+  
     if (newFeedback.rating === 0 || !newFeedback.comment.trim()) return;
 
     const feedback: Feedback = {
@@ -204,33 +196,23 @@ showStats:  true,;
   ;
   ;
   verified: false;
-    ;
-
-
-
-
-};
+    };
 
     setFeedback(prev  => [feedback, ...prev]);
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};
 
   // Handle helpful/unhelpful votes
-  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful')  => {
-    setFeedback(prev => prev.map(f => {
-      if (f.id === feedbackId) {;
+  
         return {;
           ...f,;
           helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,;
-          unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful;
-        };
+          unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
 
-      return f;
-    }));
-  };
+      return f}))};
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: string) => {;
+  
     switch (sentiment) {;
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
@@ -238,22 +220,12 @@ showStats:  true,;
   };
 
   // Get category color
-  const getCategoryColor = (category: string)  => {
-    const colors = {
-  'service': 'text-blue-400 bg-blue-400/20',
-      'product': 'text-green-400 bg-green-400/20',
-      'support': 'text-purple-400 bg-purple-400/20',;
+  
   ;
   ;
   'overall': 'text-zion-cyan bg-zion-cyan/20';
-    ;
-
-
-
-
-};
-    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20';
-  };
+    };
+    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
 
   return (
     <div className = "w-full max-w-6xl mx-auto p-6">
@@ -321,12 +293,11 @@ showStats:  true,;
               <div className="text-3xl font-bold text-white">{stats.averageRating.toFixed(1)}</div>
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
-                    key={star}
+                  <Star key={star}
                     className={`w-5 h-5 ${
                       star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'
                     }`}
-                  />
+                   />
                 ))}
               </div>
             </div>
@@ -463,7 +434,7 @@ showStats:  true,;
 
           {/* Search */}
           <div className="relative flex-1 max-w-md">;
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4"  />
             <input
               type="text"
               value={searchQuery}
@@ -478,7 +449,7 @@ showStats:  true,;
             onClick={() => setShowFeedbackForm(!showFeedbackForm)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
 
-            <MessageCircle className="w-4 h-4" />;
+            <MessageCircle className="w-4 h-4"  />;
             Add Feedback;
           </button>
         </div>
@@ -544,11 +515,10 @@ showStats:  true,;
 }))}
                         className="p-2 hover:scale-110 transition-transform"
 
-                        <Star
-                          className={`w-8 h-8 ${
+                        <Star className={`w-8 h-8 ${
                             star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'
                           }`}
-                        />
+                         />
                       </button>;
                     ))}
                   </div>
@@ -606,7 +576,7 @@ showStats:  true,;
                     disabled={newFeedback.rating === 0 || !newFeedback.comment.trim()}
                     className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
 
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4"  />
                     Submit Feedback
                   </button>
                   <button
@@ -660,11 +630,11 @@ showStats:  true,;
                   <div className="flex items-center gap-2">
                     <h4 className="font-semibold text-white">{item.customerName}</h4>
                     {item.verified && (
-                      <Award className="w-4 h-4 text-zion-cyan" title="Verified Customer" />
+                      <Award className="w-4 h-4 text-zion-cyan" title="Verified Customer"  />
                     )}
                   </div>
                   <div className="flex items-center gap-2 text-sm text-zinc-400">
-                    <Clock className="w-3 h-3" />
+                    <Clock className="w-3 h-3"  />
                     {new Date(item.date).toLocaleDateString()}
                   </div>
                 </div>
@@ -683,12 +653,11 @@ showStats:  true,;
             {/* Rating */}
             <div className="flex items-center gap-2 mb-3">;
               {[1, 2, 3, 4, 5].map((star) => (;
-                <Star
-                  key={star}
+                <Star key={star}
                   className={`w-5 h-5 ${
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'
                   }`}
-                />
+                 />
               ))}
               <span className="text-sm text-zinc-400 ml-2">{item.rating}/5</span>;
             </div>
@@ -726,7 +695,7 @@ showStats:  true,;
 }
                   className="flex items-center gap-2 text-zinc-400 hover:text-green-400 transition-colors"
 
-                  <ThumbsUp className="w-4 h-4" />
+                  <ThumbsUp className="w-4 h-4"  />
                   <span className="text-sm">{item.helpful}</span>
                 </button>
                 <button
@@ -742,7 +711,7 @@ showStats:  true,;
 }
                   className="flex items-center gap-2 text-zinc-400 hover:text-red-400 transition-colors"
 
-                  <ThumbsDown className="w-4 h-4" />
+                  <ThumbsDown className="w-4 h-4"  />
                   <span className="text-sm">{item.unhelpful}</span>
                 </button>
                 <button className="flex items-center gap-2 text-zinc-400 hover:text-zion-cyan transition-colors">
@@ -752,7 +721,7 @@ showStats:  true,;
               </div>
 
               <button className="text-zinc-400 hover:text-red-400 transition-colors">
-                <Flag className="w-4 h-4" />
+                <Flag className="w-4 h-4"  />
               </button>
             </div>
           </motion.div>
@@ -766,7 +735,7 @@ showStats:  true,;
           animate={{ opacity: 1 }}
           className="text-center py-12"
 
-          <MessageCircle className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
+          <MessageCircle className="w-16 h-16 text-zinc-600 mx-auto mb-4"  />
           <h3 className="text-xl font-medium text-zinc-300 mb-2">No feedback found</h3>
           <p className="text-zinc-400 mb-4">
             Try adjusting your filters or be the first to share your experience!
@@ -780,5 +749,4 @@ showStats:  true,;
         </motion.div>;
       )};
     </div>;
-  );
-};
+  )};

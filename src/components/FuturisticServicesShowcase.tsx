@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
 	Rocket,
 	Brain,
@@ -93,12 +91,10 @@ export default function FuturisticServicesShowcase(...args[]):  {
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
 		if (!isPlaying) return;
-		const interval = setInterval(() => {;
-			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
-		}, 5000);
-		return () => clearInterval(interval);
-	}, [isPlaying]);
-	const getStatusColor = (status: string) => {;
+		
+			setCurrentService((prev) => (prev + 1) % futuristicServices.length)}, 5000);
+		return () => clearInterval(interval)}, [isPlaying]);
+	
 		switch (status) {;
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
@@ -141,7 +137,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 								onClick={() => setIsPlaying(!isPlaying)}
 								className="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-colors"
 
-								{isPlaying ? <Pause className="w-5 h-5 text-white" /> : <Play className="w-5 h-5 text-white" />}
+								{isPlaying ? <Pause className="w-5 h-5 text-white"  /> : <Play className="w-5 h-5 text-white"  />}
 							</button>
 							<div className="flex gap-2">
 								{futuristicServices.map((_, index) => (
@@ -243,7 +239,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 													transition={{ delay: index * 0.1 }}
 													className="flex items-center text-zion-slate-light"
 
-													<Star className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+													<Star className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"  />
 													{feature}
 												</motion.li>;
 											))}
@@ -256,7 +252,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 										className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-purple hover:to-zion-cyan text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
 
 										Get Started
-										<ArrowRight className="ml-2 w-5 h-5" />
+										<ArrowRight className="ml-2 w-5 h-5"  />
 									</a>
 								</div>
 								{/* Right Side - Visual Element */}
@@ -354,5 +350,4 @@ export default function FuturisticServicesShowcase(...args[]):  {
 				</div>;
 			</div>;
 		</div>;
-	);
-}
+	)}

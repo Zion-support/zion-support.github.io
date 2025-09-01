@@ -1,6 +1,4 @@
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { 
   Phone, 
   Mail, 
@@ -25,34 +23,14 @@ export default function Contact() {
     service: 'general'
   });
 
-  const serviceOptions = [
-    { value: 'general', label: 'General Inquiry' },
-    { value: 'ai-autonomous-research', label: 'AI Autonomous Research Assistant' },
-    { value: 'ai-supply-chain', label: 'AI Supply Chain Optimization' },
-    { value: 'ai-content-marketing', label: 'AI Content Marketing Suite' },
-    { value: 'ai-workflow-orchestrator', label: 'AI Workflow Orchestrator' },
-    { value: 'ai-customer-experience', label: 'AI Customer Experience Analytics' },
-    { value: 'ai-financial-risk', label: 'AI Financial Risk Management' },
-    { value: 'ai-cybersecurity', label: 'AI Cybersecurity Solutions' },
-    { value: 'cloud-devops', label: 'Cloud & DevOps Services' },
-    { value: 'digital-transformation', label: 'Digital Transformation' },
-    { value: 'micro-saas', label: 'Micro SaaS Solutions' },
-    { value: 'it-consulting', label: 'IT Consulting' },
-    { value: 'quantum-computing', label: 'Quantum Computing' },
-    { value: 'iot-edge', label: 'IoT & Edge Computing' },
-    { value: 'custom-development', label: 'Custom Development' }
-  ];
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+  
+    setFormData(prev => ({ ...prev, [name]: value }))};
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  
     setIsSubmitting(true);
     
     // Simulate form submission
@@ -66,16 +44,12 @@ export default function Contact() {
         phone: '',
         message: '',
         service: 'general'
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+      })} catch (error) {
+      setSubmitStatus('error')} finally {
+      setIsSubmitting(false)}
   };
 
-  const isFormValid = formData.name && formData.email && formData.message;
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <div className="container mx-auto px-4 py-24">
@@ -112,7 +86,7 @@ export default function Contact() {
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-white" />
+                  <Phone className="w-6 h-6 text-white"  />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold text-lg">Phone</h3>
@@ -123,7 +97,7 @@ export default function Contact() {
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-white" />
+                  <Mail className="w-6 h-6 text-white"  />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold text-lg">Email</h3>
@@ -134,7 +108,7 @@ export default function Contact() {
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-white" />
+                  <MapPin className="w-6 h-6 text-white"  />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold text-lg">Address</h3>
@@ -146,7 +120,7 @@ export default function Contact() {
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-6 h-6 text-white" />
+                  <Clock className="w-6 h-6 text-white"  />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold text-lg">Business Hours</h3>
@@ -162,11 +136,11 @@ export default function Contact() {
               <h3 className="text-white font-semibold text-lg mb-4">Quick Contact Options</h3>
               <div className="space-y-3">
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center space-x-2">
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5"  />
                   <span>Call Now</span>
                 </button>
                 <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center space-x-2">
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-5 h-5"  />
                   <span>Send Email</span>
                 </button>
               </div>
@@ -186,7 +160,7 @@ export default function Contact() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-white font-medium mb-2">
-                    <User className="w-4 h-4 inline mr-2" />
+                    <User className="w-4 h-4 inline mr-2"  />
                     Full Name *
                   </label>
                   <input
@@ -203,7 +177,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="email" className="block text-white font-medium mb-2">
-                    <Mail className="w-4 h-4 inline mr-2" />
+                    <Mail className="w-4 h-4 inline mr-2"  />
                     Email Address *
                   </label>
                   <input
@@ -222,7 +196,7 @@ export default function Contact() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="company" className="block text-white font-medium mb-2">
-                    <Building className="w-4 h-4 inline mr-2" />
+                    <Building className="w-4 h-4 inline mr-2"  />
                     Company
                   </label>
                   <input
@@ -238,7 +212,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="phone" className="block text-white font-medium mb-2">
-                    <Phone className="w-4 h-4 inline mr-2" />
+                    <Phone className="w-4 h-4 inline mr-2"  />
                     Phone Number
                   </label>
                   <input
@@ -274,7 +248,7 @@ export default function Contact() {
 
               <div>
                 <label htmlFor="message" className="block text-white font-medium mb-2">
-                  <MessageSquare className="w-4 h-4 inline mr-2" />
+                  <MessageSquare className="w-4 h-4 inline mr-2"  />
                   Message *
                 </label>
                 <textarea
@@ -296,7 +270,7 @@ export default function Contact() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="bg-green-500/20 border border-green-500/50 rounded-lg p-4 flex items-center space-x-3"
                 >
-                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <CheckCircle className="w-6 h-6 text-green-400"  />
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
                 </motion.div>
               )}
@@ -307,7 +281,7 @@ export default function Contact() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="bg-red-500/20 border border-red-500/50 rounded-lg p-4 flex items-center space-x-3"
                 >
-                  <AlertCircle className="w-6 h-6 text-red-400" />
+                  <AlertCircle className="w-6 h-6 text-red-400"  />
                   <span className="text-red-400">Failed to send message. Please try again.</span>
                 </motion.div>
               )}
@@ -328,7 +302,7 @@ export default function Contact() {
                   </>
                 ) : (
                   <>
-                    <Send className="w-6 h-6" />
+                    <Send className="w-6 h-6"  />
                     <span>Send Message</span>
                   </>
                 )}
@@ -348,21 +322,21 @@ export default function Contact() {
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Rocket className="w-8 h-8 text-white" />
+                <Rocket className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-white font-semibold text-xl mb-2">Innovation First</h3>
               <p className="text-gray-300">Cutting-edge AI and quantum computing solutions that drive business transformation.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-white" />
+                <CheckCircle className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-white font-semibold text-xl mb-2">Proven Results</h3>
               <p className="text-gray-300">Track record of successful implementations and measurable business outcomes.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <User className="w-8 h-8 text-white" />
+                <User className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-white font-semibold text-xl mb-2">Expert Team</h3>
               <p className="text-gray-300">Experienced professionals dedicated to your success and growth.</p>
@@ -371,6 +345,5 @@ export default function Contact() {
         </motion.div>
       </div>
     </div>
-  );
-}
+  )}
 

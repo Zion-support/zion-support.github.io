@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
   Brain,
   Zap,
@@ -267,13 +265,7 @@ import {
   Treap,
  } from 'lucide-react';
 
-const workflowSolutions = [
-  {
-    id: 1,
-    title: "AI Process Automation",
-    description: "Intelligent automation of business processes using AI and machine learning.",
-    icon: Cog,
-    features[;
+
       "Process automation",
       "AI decision making",
       "Workflow optimization",
@@ -282,8 +274,7 @@ const workflowSolutions = [
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Process Automation",
-    technologies["AI", "RPA", "Workflow Engines", "Machine Learning"];
-  },;
+    technologies["AI", "RPA", "Workflow Engines", "Machine Learning"]},;
   {
     id: 2,
     title: "Intelligent Document Processing",
@@ -298,8 +289,7 @@ const workflowSolutions = [
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "Document Processing",
-    technologies["AI", "OCR", "Document Processing", "Workflow"];
-  },;
+    technologies["AI", "OCR", "Document Processing", "Workflow"]},;
   {
     id: 3,
     title: "Smart Workflow Orchestration",
@@ -314,8 +304,7 @@ const workflowSolutions = [
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Workflow Orchestration",
-    technologies["AI", "Workflow Management", "Orchestration", "Analytics"];
-  },;
+    technologies["AI", "Workflow Management", "Orchestration", "Analytics"]},;
   {
     id: 4,
     title: "AI Decision Automation",
@@ -330,8 +319,7 @@ const workflowSolutions = [
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Decision Automation",
-    technologies["AI", "Decision Trees", "Machine Learning", "Risk Models"];
-  },;
+    technologies["AI", "Decision Trees", "Machine Learning", "Risk Models"]},;
   {
     id: 5,
     title: "Predictive Workflow Analytics",
@@ -346,8 +334,7 @@ const workflowSolutions = [
     price: "From $120,000",
     timeline: "18-30 weeks",
     category: "Analytics",
-    technologies["AI", "Predictive Analytics", "Machine Learning", "Data Science"];
-  },;
+    technologies["AI", "Predictive Analytics", "Machine Learning", "Data Science"]},;
   {
     id: 6,
     title: "Intelligent Task Management",
@@ -359,146 +346,60 @@ const workflowSolutions = [
       "Resource allocation",
       "Performance tracking"
     ],;
-    technologies["AI", "Task Management", "Optimization", "Analytics"];
-  };
+    technologies["AI", "Task Management", "Optimization", "Analytics"]};
     price: "From $100,000",;
     timeline: "16-28 weeks",;
     category: "Task Management",;
-    technologies: ["AI", "Task Management", "Optimization", "Analytics"];
-  };
+    technologies: ["AI", "Task Management", "Optimization", "Analytics"]};
 ];
 
-const workflowTechnologies = [
-  {
-    name: "AI & Machine Learning",
-    description: "Advanced AI algorithms for workflow automation",
-    icon: Brain,
-    useCase: "Workflow Automation",
-    reliability: "Critical"
-  },
-  {
-    name: "RPA & Automation",
-    description: "Robotic process automation and workflow engines",
-    icon: Cog,
-    useCase: "Process Automation",
-    reliability: "Critical"
-  },
-  {
-    name: "Workflow Management",
-    description: "Intelligent workflow management and orchestration",
-    icon: Network,
-    useCase: "Workflow Control",
-    reliability: "High"
-  },
-  {;
+
     name: "Predictive Analytics",;
     description: "AI-powered analytics for workflow optimization",;
     icon: BarChart3,;
     useCase: "Performance Optimization",;
-    reliability: "High";
-  };
+    reliability: "High"};
 ];
 
-const successStories = [
-  {
-    id: 1,
-    comp: "Global Manufacturing Corp",
-    industry: "Manufacturing",
-    challenge: "Needed AI workflow automation for production processes across 20+ facilities",
-    solution: "Built comprehensive AI workflow automation system with predictive analytics",
-    results: "45% efficiency improvement, 50% cost reduction, 60% faster processing, better quality control",
-    logo: "GMC"
-  },
-  {
-    id: 2,
-    comp: "Financial Services Group",
-    industry: "Finance",
-    challenge: "Required AI document processing and workflow automation for compliance",
-    solution: "Implemented AI-powered document processing and workflow automation",
-    results: "70% faster document processing, 80% accuracy improvement, 90% compliance, better efficiency",
-    logo: "FSG"
-  },
-  {
-    id: 3,
-    comp: "Healthcare Technology Ltd",;
+
     industry: "Healthcare",;
     challenge: "Needed AI workflow automation for patient care processes",;
     solution: "Built AI-powered workflow automation system for healthcare",;
     results: "40% faster patient care, 50% efficiency improvement, better outcomes, reduced errors",;
-    logo: "HTL";
-  };
+    logo: "HTL"};
 ];
 
-const processSteps = [
-  {
-    step: 1,
-    title: "Workflow Assessment",
-    description: "Evaluate current workflows and identify automation opportunities",
-    icon: FileText,
-    duration: "2-4 weeks"
-  },
-  {
-    step: 2,
-    title: "AI Strategy Development",
-    description: "Develop AI strategy and implementation roadmap",
-    icon: Code,
-    duration: "4-8 weeks"
-  },
-  {
-    step: 3,
-    title: "System Implementation",
-    description: "Build and deploy AI workflow automation systems",
-    icon: Wrench,
-    duration: "16-40 weeks"
-  },
-  {;
+
     step: 4,;
     title: "Testing & Optimization",;
     description: "Test systems and optimize performance",;
     icon: Gauge,;
-    duration: "4-8 weeks";
-  };
-];
-
-const workflowBenefits = [
-  {
-    title: "Increased Efficiency",
-    description: "AI automation significantly improves workflow efficiency and productivity",
-    icon: Zap,
-    examples["Faster processing", "Reduced errors", "Better accuracy", "Improved productivity"];
-  },;
+    duration: "4-8 weeks"};
+]},;
   {
     title: "Cost Reduction",
     description: "Automation reduces manual effort and operational costs",
     icon: TrendingUp,
-    examples["Reduced labor costs", "Lower error rates", "Better resource utilization", "Improved ROI"];
-  },;
+    examples["Reduced labor costs", "Lower error rates", "Better resource utilization", "Improved ROI"]},;
   {
     title: "Better Decision Making",
     description: "AI-powered insights enable better, data-driven decisions",
     icon: Brain,
-    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"];
-  },;
+    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]},;
   {
-    examples["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"];
-  };
+    examples["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]};
     title: "Scalability",;
     description: "AI workflows scale efficiently with business growth",;
     icon: Rocket,;
-    examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"];
-  };
+    examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]};
 ];
 
 export default function AIWorkflowAutomation(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
-  const categories = ['All', 'Process Automation', 'Document Processing', 'Workflow Orchestration', 'Decision Automation', 'Analytics', 'Task Management'];
-
-  const filteredSolutions = selectedCategory === 'All'
-    ? workflowSolutions
-    : workflowSolutions.filter(solution => solution.category === selectedCategory);
-
+  
+  
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -567,7 +468,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
-              <Brain className="w-10 h-10 text-white" />
+              <Brain className="w-10 h-10 text-white"  />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -582,15 +483,15 @@ export default function AIWorkflowAutomation(...args[]):  {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
-                <Brain className="w-4 h-4" />
+                <Brain className="w-4 h-4"  />
                 <span>AI Intelligence</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <Cog className="w-4 h-4" />
+                <Cog className="w-4 h-4"  />
                 <span>Process Automation</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
-                <Network className="w-4 h-4" />
+                <Network className="w-4 h-4"  />
                 <span>Workflow Management</span>
               </div>
             </div>
@@ -678,7 +579,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples: any</h4>
                   {benefit.examples.map((example, exampleIndex)  => (
                     <div key={exampleIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{example}</span>
                     </div>
                   ))}
@@ -967,7 +868,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -995,7 +896,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                   </span>
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>
@@ -1100,7 +1001,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -1161,5 +1062,4 @@ export default function AIWorkflowAutomation(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

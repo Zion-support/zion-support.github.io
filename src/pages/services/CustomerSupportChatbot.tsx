@@ -1,11 +1,8 @@
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { CheckCircle2, MessageCircle, DollarSign, ExternalLink, Phone, Mail  } from 'lucide-react.ts';
 
 const CustomerSupportChatbot: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO title="Customer Support Chatbot - Zion Tech Group" description="Automate L1/L2 support with retrieval-augmented generation and ticket deflection." />
+      <SEO title="Customer Support Chatbot - Zion Tech Group" description="Automate L1/L2 support with retrieval-augmented generation and ticket deflection."  />
       <section className="container mx-auto px-4 py-16">
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">Customer Support Chatbot</h1>
         <p className="mt-4 max-w-3xl text-slate-300">
@@ -31,7 +28,7 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {
 
         <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-6">
           <div className="flex items-center gap-2 text-slate-200 font-semibold">
-            <DollarSign className="h-4 w-4" /> Pricing
+            <DollarSign className="h-4 w-4"  /> Pricing
           </div>
           <ul className="mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm">
             <li>Starter: $99/mo up to 2k conversations</li>
@@ -40,17 +37,16 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {
             <li>Setup: $3k–$15k; fine-tuning optional</li>
           </ul>
           <a className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">
-            Learn more <ExternalLink className="ml-1 h-3 w-3" />
+            Learn more <ExternalLink className="ml-1 h-3 w-3"  />
           </a>
           <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300">
-            <a href="tel:+13024640950" className="inline-flex items-center gap-2 hover:text-cyan-200"><Phone className="h-4 w-4" /> +1 302 464 0950</a>
-            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 hover:text-cyan-200"><Mail className="h-4 w-4" /> kleber@ziontechgroup.com</a>
+            <a href="tel:+13024640950" className="inline-flex items-center gap-2 hover:text-cyan-200"><Phone className="h-4 w-4"  /> +1 302 464 0950</a>
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 hover:text-cyan-200"><Mail className="h-4 w-4"  /> kleber@ziontechgroup.com</a>
           </div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default CustomerSupportChatbot;
 

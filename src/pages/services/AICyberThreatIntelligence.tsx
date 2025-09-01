@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
 import { Brain, 
   Shield, 
   Eye, 
@@ -15,49 +12,10 @@ import { Brain,
   Activity,
   BarChart3,
   Lock
-  } from 'lucide-react.ts';
-import { SEO   } from '../../components/SEO';
-
-const AICyberThreatIntelligence = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Threat Detection",
-      description: "Advanced machine learning algorithms analyze network traffic and identify sophisticated cyber threats in real-time"
-    },
-    {
-      icon: Eye,
-      title: "24/7 Monitoring",
-      description: "Continuous surveillance of your digital infrastructure with instant alerts for  suspicious activity"
-    },
-    {
-      icon: Shield,
-      title: "Predictive Defense",
-      description: "AI-driven threat prediction that identifies potential attacks before they happen"
-    },
-    {
-      icon: Clock,
-      title: "Real-Time Response",
-      description: "Automated threat response with human-in-the-loop validation for critical decisions"
-    },
-    {
-      icon: Zap,
-      title: "Intelligent Automation",
-      description: "Smart automation of security workflows and incident response procedures"
-    },
-    {
-      icon: Globe,
-      title: "Global Threat Intelligence",
-      description: "Access to worldwide threat data and collaborative security intelligence sharing";
-    };
+  } from 'lucide-react.ts'};
   ];
 
-  const services = [
-    {
-      name: "Basic Protection",
-      price: "$4,999",
-      period: "/month",
-      features[;
+  
         "Core threat detection",
         "Basic AI analytics",
         "Standard monitoring",
@@ -92,51 +50,32 @@ const AICyberThreatIntelligence = () => {
         "Advanced threat hunting",
         "Multi-tenant architecture"
       ],;
-      popular: false;
-    };
-  ];
-
-  const useCases = [
-    {
-      industry: "Financial Services",
-      description: "Protect sensitive financial data and transactions with AI-powered threat detection and compliance monitoring",
-      benefits["99.9% threat detection", "Real-time compliance", "Reduced false positives"];
-    },;
+      popular: false};
+  ]},;
     {
       industry: "Healthcare",
       description: "Secure patient data and medical systems with HIPAA-compliant AI threat intelligence",
-      benefits["HIPAA compliance", "Patient data protection", "Medical device security"];
-    },;
+      benefits["HIPAA compliance", "Patient data protection", "Medical device security"]},;
     {
       industry: "Government",
       description: "Defend critical infrastructure and government systems against nation-state threats",
-      benefits["National security", "Infrastructure protection", "Threat intelligence sharing"];
-    },;
+      benefits["National security", "Infrastructure protection", "Threat intelligence sharing"]},;
     {
       industry: "Manufacturing",
       description: "Protect industrial control systems and intellectual property from cyber espionage",
-      benefits["OT security", "IP protection", "Supply chain security"];
-    };
+      benefits["OT security", "IP protection", "Supply chain security"]};
   ];
 
-  const technologies = [
-    "Machine Learning & AI",
-    "Behavioral Analytics",
-    "Threat Intelligence",
-    "Network Security",
-    "Endpoint Protection",
-    "Cloud Security",
-    "Real-time Analytics",;
+  
     "Predictive Modeling";
   ];
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
-      <SEO 
-        title="AI-Powered Cyber Threat Intelligence | Zion Tech Group"
+      <SEO title="AI-Powered Cyber Threat Intelligence | Zion Tech Group"
         description="Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets."
         keywords="AI Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI"
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -168,7 +107,7 @@ const AICyberThreatIntelligence = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
               >
                 Secure Your Digital Assets
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                 Schedule Demo
@@ -308,7 +247,7 @@ const AICyberThreatIntelligence = () => {
                 <ul className="space-y-4 mb-8">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -323,7 +262,7 @@ const AICyberThreatIntelligence = () => {
                   }`}
                 >
                   Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="ml-2 w-4 h-4"  />
                 </Link>
               </motion.div>
             ))}
@@ -380,14 +319,14 @@ const AICyberThreatIntelligence = () => {
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
               >
                 <div className="flex items-center mb-6">
-                  <Target className="w-8 h-8 text-zion-cyan mr-3" />
+                  <Target className="w-8 h-8 text-zion-cyan mr-3"  />
                   <h3 className="text-2xl font-bold text-white">{useCase.industry}</h3>
                 </div>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{useCase.description}</p>
                 <div className="space-y-2">
                   {useCase.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center text-zion-slate-light">
-                      <TrendingUp className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+                      <TrendingUp className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />
                       {benefit}
                     </div>
                   ))}
@@ -447,7 +386,7 @@ const AICyberThreatIntelligence = () => {
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Activity className="w-6 h-6 text-white" />
+                  <Activity className="w-6 h-6 text-white"  />
                 </div>
                 <p className="text-white font-medium">{tech}</p>
               </motion.div>
@@ -487,7 +426,7 @@ const AICyberThreatIntelligence = () => {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Start Your Security Transformation
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                   Book a Security Assessment
@@ -504,15 +443,15 @@ const AICyberThreatIntelligence = () => {
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-zion-slate-light">
             <div className="flex items-center">
-              <Globe className="w-5 h-5 text-zion-cyan mr-2" />
+              <Globe className="w-5 h-5 text-zion-cyan mr-2"  />
               <span>https://ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
-              <Clock className="w-5 h-5 text-zion-cyan mr-2" />
+              <Clock className="w-5 h-5 text-zion-cyan mr-2"  />
               <span>+1 302 464 0950</span>
             </div>
             <div className="flex items-center">
-              <Lock className="w-5 h-5 text-zion-cyan mr-2" />
+              <Lock className="w-5 h-5 text-zion-cyan mr-2"  />
               <span>kleber@ziontechgroup.com</span>
             </div>
           </div>

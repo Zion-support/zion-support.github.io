@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { Factory, 
   Cog, 
   Bot, 
@@ -13,71 +11,10 @@ import { Factory,
   Cloud,
   Star
  } from 'lucide-react.ts';
-import { Link  } from 'react-router-dom.ts';
 
 const ManufacturingSolutions: React.FC = (): JSX.Element => {
-  const solutions = [
-    {
-      title: 'Smart Factory Automation',
-      description: 'Intelligent automation systems that optimize production processes and increase efficiency.',
-      icon: Bot,
-      features: ['Process optimization', 'Real-time monitoring', 'Predictive maintenance', 'Quality control']
-    },
-    {
-      title: 'Industrial IoT Integration',
-      description: 'Seamless integration of IoT devices for comprehensive manufacturing intelligence.',
-      icon: Network,
-      features: ['Sensor networks', 'Data collection', 'Remote monitoring', 'Predictive analytics']
-    },
-    {
-      title: 'AI-Powered Quality Control',
-      description: 'Advanced AI systems for automated quality inspection and defect detection.',
-      icon: Eye,
-      features: ['Visual inspection', 'Defect detection', 'Quality assurance', 'Compliance monitoring']
-    },
-    {
-      title: 'Predictive Maintenance',
-      description: 'AI-driven maintenance systems that prevent equipment failures and reduce downtime.',
-      icon: TrendingUp,
-      features: ['Equipment monitoring', 'Failure prediction', 'Maintenance scheduling', 'Cost optimization']
-    },
-    {
-      title: 'Supply Chain Optimization',
-      description: 'Intelligent supply chain management with AI-powered forecasting and optimization.',
-      icon: Cog,
-      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier management']
-    },
-    {
-      title: 'Digital Twin Technology',
-      description: 'Virtual replicas of physical manufacturing systems for simulation and optimization.',
-      icon: Cloud,
-      features: ['System simulation', 'Performance optimization', 'Scenario testing', 'Real-time monitoring']
-    }
-  ];
-
-  const benefits = [
-    {
-      title: 'Increased Efficiency',
-      description: 'Optimize production processes and reduce waste',
-      icon: TrendingUp
-    },
-    {
-      title: 'Cost Reduction',
-      description: 'Lower operational costs through intelligent automation',
-      icon: BarChart3
-    },
-    {
-      title: 'Quality Improvement',
-      description: 'Enhanced product quality and consistency',
-      icon: Star
-    },
-    {
-      title: 'Predictive Capabilities',
-      description: 'Anticipate and prevent issues before they occur',
-      icon: Brain
-    }
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
@@ -93,7 +30,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                <Factory className="w-10 h-10 text-white" />
+                <Factory className="w-10 h-10 text-white"  />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -183,7 +120,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
                 <ul className="space-y-1">
                   {solution.features.map((feature, idx) => (
                     <li key={idx} className="text-sm text-gray-400 flex items-center space-x-2">
-                      <Star className="w-3 h-3 text-cyan-400" />
+                      <Star className="w-3 h-3 text-cyan-400"  />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -225,7 +162,6 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ManufacturingSolutions;

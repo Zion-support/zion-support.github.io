@@ -1,66 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = () => {
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Check, Star, Zap, Shield, Brain, Cloud  } from 'lucide-react';
 
-      icon: Shield;
-    };
+      icon: Shield};
   ];
-const pricingTiers = [
-  {
-    name: "Starter",
-    price: "$99",
-    period: "/month",
-    description: "Perfect for small businesses and startups",
-    features: [
-      "Basic AI Services",
-      "Email Support",
-      "5GB Storage",
-      "Basic Analytics",
-      "Mobile App Access"
-    ],
-    popular: false,
-    color: "from-blue-500 to-cyan-500"
-  },
-  {
-    name: "Professional",
-    price: "$299",
-    period: "/month",
-    description: "Ideal for growing businesses",
-    features: [
-      "Advanced AI Services",
-      "Priority Support",
-      "50GB Storage",
-      "Advanced Analytics",
-      "API Access",
-      "Custom Integrations",
-      "Team Collaboration"
-    ],
-    popular: true,
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-    name: "Enterprise",
-    price: "$999",
-    period: "/month",
-    description: "For large organizations",
-    features: [
-      "Full AI Suite",
-      "24/7 Dedicated Support",
-      "Unlimited Storage",
-      "Custom Analytics",
-      "White-label Solutions",
-      "Advanced Security",;
+
       "Custom Development",;
       "SLA Guarantee";
     ],;
     popular: false,;
-    color: "from-green-500 to-emerald-500";
-  };
+    color: "from-green-500 to-emerald-500"};
 ];
 
 export function PricingSection() {
@@ -148,7 +95,7 @@ export function PricingSection() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
+                      <Check className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"  />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -215,8 +162,7 @@ export function PricingSection() {
         </motion.div>;
       </div>;
     </section>;
-  );
-}
+  )}
 
 export default PricingSection;
 export default PricingSection;

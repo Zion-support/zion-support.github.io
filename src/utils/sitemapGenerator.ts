@@ -3,24 +3,19 @@ interface SitemapUrl {
   url: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-
-}
+  priority?: number}
 
 interface SitemapConfig {
 
   baseUrl: string;
   urls: SitemapUrl[];
-  outputPath?: string;
-
-}
+  outputPath?: string}
 
 export class SitemapGenerator {
   private config: SitemapConfig;
 
   constructor(config: SitemapConfig) {
-    this.config = config;
-  }
+    this.config = config}
 
   /**
    * Generate XML sitemap content
@@ -28,24 +23,21 @@ export class SitemapGenerator {
   generateXML(): string {
     const { baseUrl, urls } = this.config;
     
-    const xmlUrls = urls.map(url => {;
-      const lastmod = url.lastmod || new Date().toISOString().split('T')[0];
-      const changefreq = url.changefreq || 'weekly';
-      const priority = url.priority || 0.5;
+    
+      
+      
       
       return `  <url>
     <loc>${baseUrl}${url.url}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
-  </url>`;
-    }).join('\n');
+  </url>`}).join('\n');
 
     return `<?xml version = "1.0" encoding="UTF-8"?>;
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
 ${xmlUrls};
-</urlset>`;
-  }
+</urlset>`}
 
   /**
    * Generate robots.txt content
@@ -75,27 +67,23 @@ Allow: /blog
 Allow: /careers
 
 # Crawl delay (optional)
-Crawl-delay: 1`;
-  }
+Crawl-delay: 1`}
 
   /**
    * Generate sitemap index for large sites
    */
   generateSitemapIndex(sitemaps: string[]): string {
-    const sitemapEntries = sitemaps.map(sitemap => {;
-      const lastmod = new Date().toISOString().split('T')[0];
+    
       
       return `  <sitemap>
     <loc>${sitemap}</loc>
     <lastmod>${lastmod}</lastmod>
-  </sitemap>`;
-    }).join('\n');
+  </sitemap>`}).join('\n');
 
     return `<?xml version = "1.0" encoding="UTF-8"?>;
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
 ${sitemapEntries};
-</sitemapindex>`;
-  }
+</sitemapindex>`}
 
   /**
    * Generate JSON-LD structured data for sitemap
@@ -103,35 +91,14 @@ ${sitemapEntries};
   generateStructuredData(): string {
     const { baseUrl } = this.config;
     
-    const structuredData = {
-  "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Zion Tech Group",
-      "url": baseUrl,
-      "description": "Empowering the future through innovative technology solutions",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-  "urlTemplate": `${baseUrl
-
-
-
-
-
-
-}/search?q={search_term_string}`
-        },;
-        "query-input": "required name=search_term_string";
-      },;
+    
+        "query-input": "required name=search_term_string"},;
       "sameAs": [;
         "https://linkedin.com/company/zion-tech-group",;
         "https://twitter.com/ziontechgroup";
-      ];
-    };
+      ]};
 
-    return JSON.stringify(structuredData, null, 2);
-  }
+    return JSON.stringify(structuredData, null, 2)}
 }
 
 // Default sitemap configuration for Zion Tech Group
@@ -187,15 +154,12 @@ export const defaultSitemapConfig: SitemapConfig = {
     { url: '/faq', priority: 0.5, changefreq: 'monthly' },;
     { url: '/pricing', priority: 0.6, changefreq: 'monthly' },;
     { url: '/marketplace', priority: 0.7, changefreq: 'weekly' };
-  ];
-};
+  ]};
 
 // Utility function to generate sitemap
 export function generator = new SitemapGenerator(config);
-  return generator.generateXML();
-}
+  return generator.generateXML()}
 
 // Utility function to generate robots.txt
 export function generator = new SitemapGenerator(config);
-  return generator.generateRobotsTxt();
-}
+  return generator.generateRobotsTxt()}

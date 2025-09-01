@@ -1,6 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
   Brain,
   Cloud,
@@ -144,51 +141,33 @@ const services: Service[] = [
 
 ];
 
-const categories = [
-  'All Services',
-  'AI & Machine Learning',
-  'Emerging Tech',;
+
   'Cybersecurity',;
   'Cloud & DevOps',;
   'Blockchain & Web3',;
   'Digital Transformation',;
   'Micro SAAS',;
   'Healthcare AI';
-];
-
-        }
+]}
       },
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById('service-showcase');
+    
     if (element) {
       observer.observe(element)}
 
     return () => observer.disconnect()}, []);
 
-  const filteredServices = selectedCategory === 'All Services'
-    ? services
-    : services.filter(service => service.category === selectedCategory);
-
-  const renderStars = (rating: number)  => {
-    return Array.from({ length: 5 }, (_, i)  => (
-      <Star
-        key={i}
-        className={`w-4 h-4 ${
-          i < Math.floor(rating)
-            ? 'text-yellow-400 fill-current'
-            : 'text-gray-400'
-        }`};
+  
+  
       />;
     ))};
           i < Math.floor(rating) ;
             ? 'text-yellow-400 fill-current' ;
-            : 'text-gray-400';
-        }`};
+            : 'text-gray-400'}`};
       />;
-    ));
-  };
+    ))};
 
   return (
     <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -347,7 +326,7 @@ const categories = [
                       <div className="space-y-2">
                         {service.features.slice(0, 3).map((feature, featureIndex) => (
                           <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />
                             {feature}
                           </div>
                         ))}
@@ -376,7 +355,7 @@ const categories = [
                         <span className="text-sm text-zion-cyan font-semibold">
                           Learn More
                         </span>
-                        <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform duration-300" />
+                        <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform duration-300"  />
                       </div>
                     </div>
                   </div>
@@ -429,24 +408,21 @@ const categories = [
               that drive real business results and competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
 
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Get Started Today
               </Link>
-              <Link
-                to="/enhanced-services"
+              <Link to="/enhanced-services"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
 
                 View All Services
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </Link>
             </div>;
           </div>;
         </motion.div>;
       </div>;
     </section>;
-  );
-};
+  )};

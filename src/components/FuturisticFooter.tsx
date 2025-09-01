@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import {
   Phone,
   Mail,
@@ -26,14 +23,10 @@ import {
   Zap as ZapIcon
 } from 'lucide-react';
 export const FuturisticFooter: React.FC = () => {;
-  const scrollToTop = () => {;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-  const currentYear = new Date().getFullYear();
-  const footerSections = [
-    {
-      title: "Services",
-      links[;
+  
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
+  
+  
         { name: "AI & Machine Learning", href: "/ai-services" },
         { name: "Micro SAAS Solutions", href: "/micro-saas" },
         { name: "IT Infrastructure", href: "/it-services" },
@@ -81,10 +74,9 @@ export const FuturisticFooter: React.FC = () => {;
         { name: "Contact Us", href: "/contact" },;
         { name: "Case Studies", href: "/case-studies" },;
         { name: "Marketplace", href: "/marketplace" };
-      ];
-    };
+      ]};
   ];
-  const socialLinks = [;
+  
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },;
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },;
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },;
@@ -126,7 +118,7 @@ export const FuturisticFooter: React.FC = () => {;
 
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
-                    <ZapIcon className="w-6 h-6 text-white" />
+                    <ZapIcon className="w-6 h-6 text-white"  />
                   </div>
                   <span className="text-2xl font-bold text-white">ZION TECH GROUP</span>
                 </div>
@@ -137,22 +129,22 @@ export const FuturisticFooter: React.FC = () => {;
                 {/* Contact Information */}
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                    <Phone className="w-4 h-4" />
+                    <Phone className="w-4 h-4"  />
                     <a href="tel:+13024640950" className="text-sm">+1 302 464 0950</a>
                   </div>
                   <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                    <Mail className="w-4 h-4" />
+                    <Mail className="w-4 h-4"  />
                     <a href="mailto:kleber@ziontechgroup.com" className="text-sm">kleber@ziontechgroup.com</a>
                   </div>
                   <div className="flex items-start space-x-3 text-zion-slate-light">
-                    <MapPin className="w-4 h-4 mt-0.5" />
+                    <MapPin className="w-4 h-4 mt-0.5"  />
                     <address className="text-sm not-italic">
                       364 E Main St STE 1008<br />
                       Middletown DE 19709
                     </address>
                   </div>
                   <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                    <Globe className="w-4 h-4" />
+                    <Globe className="w-4 h-4"  />
                     <a href="https://ziontechgroup.com" className="text-sm">ziontechgroup.com</a>
                   </div>
                 </div>
@@ -195,10 +187,10 @@ export const FuturisticFooter: React.FC = () => {;
 }}
                 >
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
-                    {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-zion-cyan" />}
-                    {section.title === "Solutions" && <Rocket className="w-5 h-5 mr-2 text-zion-purple" />}
-                    {section.title === "Comp" && <Users className="w-5 h-5 mr-2 text-zion-blue" />}
-                    {section.title === "Resources" && <FileText className="w-5 h-5 mr-2 text-zion-cyan" />}
+                    {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-zion-cyan"  />}
+                    {section.title === "Solutions" && <Rocket className="w-5 h-5 mr-2 text-zion-purple"  />}
+                    {section.title === "Comp" && <Users className="w-5 h-5 mr-2 text-zion-blue"  />}
+                    {section.title === "Resources" && <FileText className="w-5 h-5 mr-2 text-zion-cyan"  />}
                     {section.title}
                   </h3>
                   <ul className="space-y-2">
@@ -255,7 +247,7 @@ export const FuturisticFooter: React.FC = () => {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
               <div>
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
-                  <Zap className="w-5 h-5 mr-2 text-zion-cyan" />
+                  <Zap className="w-5 h-5 mr-2 text-zion-cyan"  />
                   Quick Actions
                 </h3>
                 <ul className="space-y-2">
@@ -299,35 +291,14 @@ export const FuturisticFooter: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 ;
-
-
-
-
-
-
-}}
+  y: 20 }}
             whileInView = {
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.6,
-  delay: 0.5 ;
-
-
-
-
-
-
-}}
+  delay: 0.5 }}
             className="border-t border-zion-slate/30 mt-12 pt-8"
 
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">;
@@ -335,7 +306,7 @@ export const FuturisticFooter: React.FC = () => {;
               <div className="text-zion-slate-light text-sm">;
                 © {currentYear} ZION TECH GROUP. All rights reserved.;
                 <span className="ml-2 flex items-center">;
-                  Made with <Heart className="w-4 h-4 mx-1 text-red-400" /> for innovation;
+                  Made with <Heart className="w-4 h-4 mx-1 text-red-400"  /> for innovation;
                 </span>;
               </div>
               {/* Social Links */}
@@ -374,11 +345,10 @@ export const FuturisticFooter: React.FC = () => {;
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
 
-          <ArrowUp className="w-6 h-6 group-hover:-translate-y-0.5 transition-transform duration-300" />
+          <ArrowUp className="w-6 h-6 group-hover:-translate-y-0.5 transition-transform duration-300"  />
         </motion.button>;
       </div>;
       {/* Bottom Border Glow */};
       <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />;
     </footer>;
-  );
-};
+  )};

@@ -1,7 +1,3 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
 
 export default function DigitalTransformation(...args: []):  {
   return (
@@ -19,7 +15,7 @@ export default function DigitalTransformation(...args: []):  {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-8">
-                <RefreshCw className="w-4 h-4 mr-2" />
+                <RefreshCw className="w-4 h-4 mr-2"  />
                 Business Transformation
               </div>
 
@@ -34,15 +30,14 @@ export default function DigitalTransformation(...args: []):  {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
+                <Link to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl"
 
                   Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
-                  <Play className="mr-2 w-5 h-5" />
+                  <Play className="mr-2 w-5 h-5"  />
                   Watch Demo
                 </button>
               </div>
@@ -168,7 +163,7 @@ export default function DigitalTransformation(...args: []):  {
                   <ul className="space-y-1">
                     {area.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-purple-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
+                        <CheckCircle className="w-3 h-3 mr-2"  />
                         {benefit}
                       </li>
                     ))}
@@ -239,7 +234,7 @@ export default function DigitalTransformation(...args: []):  {
                   <ul className="space-y-1">
                     {tech.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-sm text-purple-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
+                        <CheckCircle className="w-3 h-3 mr-2"  />
                         {feature}
                       </li>
                     ))}
@@ -274,7 +269,7 @@ export default function DigitalTransformation(...args: []):  {
                     "Better employee productivity and satisfaction"
                   ].map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{benefit}</span>
                     </div>
                   ))}
@@ -359,12 +354,11 @@ export default function DigitalTransformation(...args: []):  {
               Start your digital transformation journey with comprehensive strategy and implementation services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200"
 
                 Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
@@ -377,5 +371,4 @@ export default function DigitalTransformation(...args: []):  {
         </section>;
       </div>;
     </>;
-  );
-}}}}}}
+  )}}}}}}

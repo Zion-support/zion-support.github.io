@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { 
   Check, 
   Star, 
@@ -23,151 +21,22 @@ import {
   GraduationCap,
   Truck
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
 
 const ServicesPricingPage: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState('starter');
   const [billingCycle, setBillingCycle] = useState('monthly');
 
-  const pricingPlans = [
-    {
-      id: 'starter',
-      name: 'Starter',
-      description: 'Perfect for small businesses getting started with AI',
-      price: { monthly: 299, annual: 2999 },
-      features: [
-        'AI Business Intelligence Dashboard',
-        'Basic Machine Learning Models',
-        'Email Support',
-        '5 User Licenses',
-        'Standard Security Features',
-        'Monthly Reports'
-      ],
-      popular: false,
-      icon: Brain
-    },
-    {
-      id: 'professional',
-      name: 'Professional',
-      description: 'Advanced features for growing businesses',
-      price: { monthly: 799, annual: 7999 },
-      features: [
-        'Everything in Starter',
-        'Advanced AI Analytics',
-        'Custom Machine Learning Models',
-        'Priority Support',
-        '25 User Licenses',
-        'Advanced Security Features',
-        'Weekly Reports',
-        'API Access'
-      ],
-      popular: true,
-      icon: Shield
-    },
-    {
-      id: 'enterprise',
-      name: 'Enterprise',
-      description: 'Complete solution for large organizations',
-      price: { monthly: 1999, annual: 19999 },
-      features: [
-        'Everything in Professional',
-        'Custom AI Solutions',
-        'Dedicated Support Team',
-        'Unlimited User Licenses',
-        'Enterprise Security',
-        'Real-time Analytics',
-        'Custom Integrations',
-        'On-site Training'
-      ],
-      popular: false,
-      icon: Cloud
-    }
-  ];
-
-  const serviceCategories = [
-    {
-      id: 'ai-automation',
-      name: 'AI Automation',
-      icon: Zap,
-      description: 'Intelligent automation solutions',
-      services: [
-        'Process Automation',
-        'Workflow Optimization',
-        'Intelligent Document Processing',
-        'Predictive Analytics'
-      ]
-    },
-    {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      icon: Shield,
-      description: 'Advanced security solutions',
-      services: [
-        'Threat Detection',
-        'Vulnerability Assessment',
-        'Security Monitoring',
-        'Incident Response'
-      ]
-    },
-    {
-      id: 'cloud-management',
-      name: 'Cloud Management',
-      icon: Cloud,
-      description: 'Cloud infrastructure solutions',
-      services: [
-        'Cloud Migration',
-        'Infrastructure Management',
-        'Cost Optimization',
-        'Performance Monitoring'
-      ]
-    },
-    {
-      id: 'data-analytics',
-      name: 'Data Analytics',
-      icon: Database,
-      description: 'Data-driven insights',
-      services: [
-        'Business Intelligence',
-        'Data Visualization',
-        'Predictive Modeling',
-        'Real-time Analytics'
-      ]
-    }
-  ];
-
-  const getCategoryIcon = (category: string) => {
-    const categoryIcons: { [key: string]: React.ReactNode } = {
-      'AI Automation': <Zap className="h-5 w-5" />,
-      'Customer Intelligence': <Users className="h-5 w-5" />,
-      'Content Marketing': <TrendingUp className="h-5 w-5" />,
-      'Cybersecurity': <Shield className="h-5 w-5" />,
-      'Threat Intelligence': <Shield className="h-5 w-5" />,
-      'Cloud Management': <Globe className="h-5 w-5" />,
-      'DevOps': <Zap className="h-5 w-5" />,
-      'Data Analytics': <TrendingUp className="h-5 w-5" />,
-      'IoT & Predictive Analytics': <Zap className="h-5 w-5" />,
-      'Business Intelligence': <TrendingUp className="h-5 w-5" />,
-      'Digital Transformation': <Building className="h-5 w-5" />,
-      'Edge Computing': <Globe className="h-5 w-5" />,
-      'API Management': <Zap className="h-5 w-5" />,
-      'Blockchain & Web3': <Zap className="h-5 w-5" />,
-      'Mobile Development': <Smartphone className="h-5 w-5" />,
-      'E-commerce': <ShoppingCart className="h-5 w-5" />,
-      'Healthcare Technology': <Heart className="h-5 w-5" />,
-      'FinTech': <TrendingUp className="h-5 w-5" />,
-      'Education Technology': <GraduationCap className="h-5 w-5" />,
-      'Supply Chain': <Truck className="h-5 w-5" />
-    };
-    return categoryIcons[category] || <Zap className="h-5 w-5" />;
-  };
+  
+  
+  
+    return categoryIcons[category] || <Zap className="h-5 w-5"  />};
 
   return (
     <>
-      <SEO 
-        title="Services & Pricing - Zion Tech Group"
+      <SEO title="Services & Pricing - Zion Tech Group"
         description="Comprehensive technology services and flexible pricing plans designed to accelerate your digital transformation journey."
         keywords="services, pricing, AI solutions, cybersecurity, cloud management, data analytics, Zion Tech Group"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}
@@ -180,7 +49,7 @@ const ServicesPricingPage: React.FC = () => {
             >
               <div className="flex items-center justify-center space-x-3 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
-                  <Award className="w-8 h-8 text-white" />
+                  <Award className="w-8 h-8 text-white"  />
                 </div>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
@@ -275,7 +144,7 @@ const ServicesPricingPage: React.FC = () => {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-gray-300">
-                        <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -329,7 +198,7 @@ const ServicesPricingPage: React.FC = () => {
                   <ul className="space-y-2">
                     {category.services.map((service, idx) => (
                       <li key={idx} className="flex items-center text-gray-400 text-sm">
-                        <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />
                         {service}
                       </li>
                     ))}
@@ -356,11 +225,11 @@ const ServicesPricingPage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-                  <Mail className="w-5 h-5 inline mr-2" />
+                  <Mail className="w-5 h-5 inline mr-2"  />
                   Contact Sales
                 </button>
                 <button className="px-8 py-3 border border-blue-400 text-blue-400 rounded-lg font-medium hover:bg-blue-400 hover:text-white transition-all duration-300">
-                  <Phone className="w-5 h-5 inline mr-2" />
+                  <Phone className="w-5 h-5 inline mr-2"  />
                   Schedule Demo
                 </button>
               </div>
@@ -369,7 +238,6 @@ const ServicesPricingPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default ServicesPricingPage;

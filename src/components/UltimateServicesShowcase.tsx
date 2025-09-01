@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
   Brain,
   Cloud,
@@ -23,9 +20,6 @@ import {
  } from 'lucide-react';
 
 // Import the new services
-import { ultimateInnovativeServices2025 } from "../../data/2025-ultimate-innovative-services-expansion";
-import { enterpriseITInfrastructureServices2025 } from "../../data/2025-enterprise-it-infrastructure-services";
-import { innovativeMicroSaasSolutions2025 } from "../../data/2025-innovative-micro-saas-solutions";
 
 interface Service {
 
@@ -70,131 +64,59 @@ contactInfo: {
   aiCapabilities: string[];
   marketDisruption: string}
 
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
+
   ;
   ;
   ;
   ;
   website: 'https://ziontechgroup.com';
-;
-
-
-
-
-
-
 };
 
-const categories = [
-  {
-    id: 'ai-services',
-    name: 'AI & Autonomous Systems',
-    description: 'Revolutionary AI solutions that transform business operations',
-    icon: <Brain className="w-8 h-8" />,
-    color: 'from-purple-600 to-pink-700',
-    services: ultimateInnovativeServices2025.filter(s  => s.category.includes('AI'))
-  },
-  {
-    id: 'it-infrastructure',
-    name: 'IT Infrastructure & Enterprise',
-    description: 'Cutting-edge infrastructure solutions for modern businesses',
-    icon: <Cloud className="w-8 h-8" />,
-    color: 'from-blue-600 to-cyan-700',
-    services: enterpriseITInfrastructureServices2025
-  },
-  {
-    id: 'micro-saas',;
+
     name: 'Micro SAAS Solutions',;
     description: 'Innovative software solutions for small businesses',;
-    icon: <Code className="w-8 h-8" />,;
+    icon: <Code className="w-8 h-8"  />,;
     color: 'from-green-600 to-emerald-700',;
-    services: innovativeMicroSaasSolutions2025;
-  };
+    services: innovativeMicroSaasSolutions2025};
 ];
 
-const innovationLevelColors = {
-  'Revolutionary': 'from-red-600 to-pink-700',
-  'Breakthrough': 'from-purple-600 to-violet-700',
-  'Advanced': 'from-blue-600 to-cyan-700',;
+
   ;
   ;
   ;
   ;
   'Emerging': 'from-green-600 to-emerald-700';
-;
-
-
-
-
-
-
 };
 
-const patentStatusColors = {
-  'Patented': 'from-green-600 to-emerald-700',
-  'Patent Pending': 'from-yellow-600 to-orange-700',
-  'Trade Secret': 'from-blue-600 to-indigo-700',;
+
   ;
   ;
   ;
   ;
   'Open Source': 'from-purple-600 to-violet-700';
-;
-
-
-
-
-
-
 };
 
 export function UltimateServicesShowcase(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<any>(null);
 
-  const allServices = [;
+  
     ...ultimateInnovativeServices2025,;
     ...enterpriseITInfrastructureServices2025,;
     ...innovativeMicroSaasSolutions2025;
   ];
 
-  const filteredServices = selectedCategory === 'all'
-    ? allServices
-    : categories.find(cat => cat.id === selectedCategory)?.services || [];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {;
-      opacity: 1,;
-      transition: {;
+  
+  
+      transition: {
         staggerChildren: 0.1,;
-        delayChildren: 0.2;
-      };
-    };
-  };
+        delayChildren: 0.2}}};
 
-  const itemVariants = {
-  hidden: { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-},
-    visible: {
-      opacity: 1,;
+  
       y: 0,;
-      transition: {;
+      transition: {
         duration: 0.6,;
-        ease: "easeOut";
-      };
-    };
-  };
+        ease: "easeOut"}}};
 
   return (
     <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -239,15 +161,15 @@ export function UltimateServicesShowcase(...args[]):  {
           {/* Contact Information */}
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-zion-gray-light">
             <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5 text-zion-cyan" />
+              <Phone className="w-5 h-5 text-zion-cyan"  />
               <span>{contact.mobile}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Mail className="w-5 h-5 text-zion-cyan" />
+              <Mail className="w-5 h-5 text-zion-cyan"  />
               <span>{contact.email}</span>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-zion-cyan" />
+              <MapPin className="w-5 h-5 text-zion-cyan"  />
               <span>{contact.address}</span>
             </div>
           </div>
@@ -375,7 +297,7 @@ export function UltimateServicesShowcase(...args[]):  {
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, index) => (
                       <li key={index} className="flex items-center gap-2 text-sm text-zion-gray-light">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -396,7 +318,7 @@ export function UltimateServicesShowcase(...args[]):  {
                 {/* Customer Stats */}
                 <div className="flex items-center justify-between mb-4 text-sm">
                   <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-500 fill-current"  />
                     <span className="text-white">{service.rating}</span>
                     <span className="text-zion-gray-light">({service.reviews} reviews)</span>
                   </div>
@@ -412,13 +334,12 @@ export function UltimateServicesShowcase(...args[]):  {
                     className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
 
                     Learn More
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
-                  <Link
-                    to={service.link}
+                  <Link to={service.link}
                     className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
 
-                    <Zap className="w-4 h-4" />
+                    <Zap className="w-4 h-4"  />
                   </Link>
                 </div>;
               </div>
@@ -431,34 +352,13 @@ export function UltimateServicesShowcase(...args[]):  {
           className="text-center mt-16"
           initial = {
   { opacity: 0,
-  y: 20 ;
-
-
-
-
-
-
-}}
+  y: 20 }}
           animate = {
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
           transition = {
   { duration: 0.8,
-  delay: 0.4 ;
-
-
-
-
-
-
-}}
+  delay: 0.4 }}
         >
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-2xl p-8 border border-zion-cyan">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -468,12 +368,11 @@ export function UltimateServicesShowcase(...args[]):  {
               Join hundreds of companies already using our innovative solutions to gain competitive advantages and achieve breakthrough results.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
 
                 Get Started Today
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <a
                 href={`tel:${contact.mobile}`
@@ -481,7 +380,7 @@ export function UltimateServicesShowcase(...args[]):  {
                   .replace(/[^\d+]/g, '')}
                 className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2"
 
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 Call Now
               </a>
             </div>
@@ -523,7 +422,7 @@ export function UltimateServicesShowcase(...args[]):  {
                   <ul className="space-y-2 mb-4">
                     {selectedService.features.map((feature, index) => (
                       <li key={index} className="flex items-center gap-2 text-zion-gray-light">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -597,7 +496,7 @@ export function UltimateServicesShowcase(...args[]):  {
                         .replace(/[^\d+]/g, '')}
                       className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
 
-                      <Phone className="w-5 h-5" />
+                      <Phone className="w-5 h-5"  />
                     </a>
                   </div>
                 </div>
@@ -607,8 +506,7 @@ export function UltimateServicesShowcase(...args[]):  {
         </div>;
       )};
     </section>;
-  );
-}
+  )}
 
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;

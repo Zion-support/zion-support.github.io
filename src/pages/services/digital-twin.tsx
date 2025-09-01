@@ -1,7 +1,3 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
 
 export default function DigitalTwin(...args: []):  {
   return (
@@ -19,7 +15,7 @@ export default function DigitalTwin(...args: []):  {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-8">
-                <Cpu className="w-4 h-4 mr-2" />
+                <Cpu className="w-4 h-4 mr-2"  />
                 Digital Twin Technology
               </div>
 
@@ -34,15 +30,14 @@ export default function DigitalTwin(...args: []):  {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
+                <Link to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl"
 
                   Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">
-                  <Play className="mr-2 w-5 h-5" />
+                  <Play className="mr-2 w-5 h-5"  />
                   Watch Demo
                 </button>
               </div>
@@ -168,7 +163,7 @@ export default function DigitalTwin(...args: []):  {
                   <ul className="space-y-1">
                     {application.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-emerald-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
+                        <CheckCircle className="w-3 h-3 mr-2"  />
                         {benefit}
                       </li>
                     ))}
@@ -203,7 +198,7 @@ export default function DigitalTwin(...args: []):  {
                     "Advanced security and data privacy controls"
                   ].map((technology, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-emerald-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-6 h-6 text-emerald-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{technology}</span>
                     </div>
                   ))}
@@ -257,7 +252,7 @@ export default function DigitalTwin(...args: []):  {
                     "Improve safety with real-time risk assessment and monitoring"
                   ].map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{benefit}</span>
                     </div>
                   ))}
@@ -276,7 +271,7 @@ export default function DigitalTwin(...args: []):  {
                     "Facilitate digital transformation and Industry 4.0 adoption"
                   ].map((advantage, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{advantage}</span>
                     </div>
                   ))}
@@ -296,12 +291,11 @@ export default function DigitalTwin(...args: []):  {
               Transform your physical operations with virtual intelligence and real-time optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200"
 
                 Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
@@ -314,5 +308,4 @@ export default function DigitalTwin(...args: []):  {
         </section>;
       </div>;
     </>;
-  );
-}}}}
+  )}}}}

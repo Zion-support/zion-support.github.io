@@ -1,7 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Link } from 'react-router-dom';
 import { 
   Users, 
   Search, 
@@ -470,198 +466,36 @@ export default function Talent() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedExperience, setSelectedExperience] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedTalent, setExpandedTalent] = useState<string | null>(null);
+  const [expandedTalent, setExpandedTalent] = useState<string | null>(null)};
 
-  const categories = [
-    { id: 'all', name: 'All Categories', count: 45 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', count: 12 },
-    { id: 'cloud', name: 'Cloud & DevOps', count: 8 },
-    { id: 'security', name: 'Security & Compliance', count: 6 },
-    { id: 'data', name: 'Data & Analytics', count: 7 },
-    { id: 'development', name: 'Software Development', count: 12 }
-  ];
-
-  const experienceLevels = [
-    { id: 'all', name: 'All Levels', count: 45 },
-    { id: 'junior', name: 'Junior (0-2 years)', count: 15 },
-    { id: 'mid', name: 'Mid-Level (3-5 years)', count: 18 },
-    { id: 'senior', name: 'Senior (6-10 years)', count: 8 },
-    { id: 'lead', name: 'Lead/Architect (10+ years)', count: 4 }
-  ];
-
-  const talentPool = [
-    // AI & ML
-    {
-      id: 'ai-engineer-senior',
-      name: 'Dr. Sarah Chen',
-      title: 'Senior AI Engineer',
-      category: 'ai-ml',
-      experience: 'senior',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face',
-      location: 'San Francisco, CA',
-      rate: '$120-150/hr',
-      availability: 'Available',
-      skills: ['Machine Learning', 'Deep Learning', 'Python', 'TensorFlow', 'PyTorch', 'NLP', 'Computer Vision'],
-      bio: 'PhD in Computer Science with 8+ years of experience in AI/ML. Led teams developing production ML systems for Fortune 500 companies.',
-      certifications: ['AWS Machine Learning Specialty', 'Google Cloud ML Engineer', 'Microsoft Azure AI Engineer'],
-      projects: ['Fraud Detection System', 'Recommendation Engine', 'Computer Vision Platform'],
-      rating: 4.9,
-      reviews: 23,
-      featured: true
-    },
-    {
-      id: 'ml-engineer-mid',
-      name: 'Alex Rodriguez',
-      title: 'ML Engineer',
-      category: 'ai-ml',
-      experience: 'mid',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
-      location: 'Austin, TX',
-      rate: '$80-100/hr',
-      availability: 'Available',
-      skills: ['Machine Learning', 'Python', 'Scikit-learn', 'Data Engineering', 'SQL', 'AWS', 'Docker'],
-      bio: 'Experienced ML engineer with strong background in data engineering and production ML systems.',
-      certifications: ['AWS Solutions Architect', 'Google Cloud Professional Data Engineer'],
-      projects: ['Customer Segmentation Model', 'Predictive Analytics Platform', 'Data Pipeline Optimization'],
-      rating: 4.7,
-      reviews: 18,
-      featured: false
-    },
-    // Cloud & DevOps
-    {
-      id: 'devops-architect',
-      name: 'Michael Thompson',
-      title: 'DevOps Architect',
-      category: 'cloud',
-      experience: 'lead',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-      location: 'Seattle, WA',
-      rate: '$140-180/hr',
-      availability: 'Available',
-      skills: ['AWS', 'Kubernetes', 'Docker', 'Terraform', 'Jenkins', 'GitLab CI/CD', 'Monitoring'],
-      bio: '15+ years of experience designing and implementing cloud-native architectures and CI/CD pipelines.',
-      certifications: ['AWS Solutions Architect Professional', 'Kubernetes Administrator', 'Terraform Associate'],
-      projects: ['Multi-cloud Migration', 'Microservices Architecture', 'DevOps Transformation'],
-      rating: 4.9,
-      reviews: 31,
-      featured: true
-    },
-    // Security
-    {
-      id: 'security-engineer',
-      name: 'Jennifer Park',
-      title: 'Security Engineer',
-      category: 'security',
-      experience: 'senior',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
-      location: 'New York, NY',
-      rate: '$100-130/hr',
-      availability: 'Available',
-      skills: ['Penetration Testing', 'Security Auditing', 'Compliance', 'SIEM', 'Firewall', 'VPN', 'IAM'],
-      bio: 'Certified security professional with expertise in enterprise security, compliance, and threat detection.',
-      certifications: ['CISSP', 'CEH', 'OSCP', 'CompTIA Security+'],
-      projects: ['Security Infrastructure Design', 'Compliance Framework Implementation', 'Incident Response'],
-      rating: 4.8,
-      reviews: 25,
-      featured: false
-    },
-    // Data & Analytics
-    {
-      id: 'data-scientist',
-      name: 'David Kim',
-      title: 'Data Scientist',
-      category: 'data',
-      experience: 'mid',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
-      location: 'Chicago, IL',
-      rate: '$90-110/hr',
-      availability: 'Available',
-      skills: ['Python', 'R', 'SQL', 'Statistics', 'Data Visualization', 'Tableau', 'Power BI'],
-      bio: 'Data scientist with strong statistical background and experience in business intelligence and analytics.',
-      certifications: ['Google Data Analytics', 'Microsoft Power BI Data Analyst'],
-      projects: ['Customer Analytics Dashboard', 'Predictive Modeling', 'Business Intelligence Platform'],
-      rating: 4.6,
-      reviews: 16,
-      featured: false
-    },
-    // Software Development
-    {
-      id: 'fullstack-developer',
-      name: 'Emily Watson',
-      title: 'Full Stack Developer',
-      category: 'development',
-      experience: 'mid',
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face',
-      location: 'Denver, CO',
-      rate: '$75-95/hr',
-      availability: 'Available',
-      skills: ['React', 'Node.js', 'TypeScript', 'Python', 'PostgreSQL', 'AWS', 'Docker'],
-      bio: 'Versatile full-stack developer with experience building scalable web applications and APIs.',
-      certifications: ['AWS Developer Associate', 'MongoDB Developer'],
-      projects: ['E-commerce Platform', 'API Development', 'Real-time Chat Application'],
-      rating: 4.7,
-      reviews: 19,
-      featured: false
-    }
-  ];
-
-  const toggleTalentExpansion = (talentId: string) => {
-    setExpandedTalent(expandedTalent === talentId ? null : talentId);
-  };
-
-  const filteredTalent = talentPool.filter(talent => {
-    if (selectedCategory !== 'all' && talent.category !== selectedCategory) return false;
+  
     if (selectedExperience !== 'all' && talent.experience !== selectedExperience) return false;
     if (searchQuery) {
       return talent.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
              talent.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-             talent.skills.some(skill => skill.toLowerCase().includes(searchQuery.toLowerCase()));
-    }
-    return true;
-  });
+             talent.skills.some(skill => skill.toLowerCase().includes(searchQuery.toLowerCase()))}
+    return true});
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
+  
       case 'cloud': return 'bg-blue-500/20 text-blue-400';
       case 'security': return 'bg-red-500/20 text-red-400';
       case 'data': return 'bg-green-500/20 text-green-400';
       case 'development': return 'bg-orange-500/20 text-orange-400';
-      default: return 'bg-slate-500/20 text-slate-400';
-    }
+      default: return 'bg-slate-500/20 text-slate-400'}
   };
 
-  const getExperienceColor = (experience: string) => {
-    switch (experience) {
-      case 'junior': return 'bg-green-500/20 text-green-400';
+  
       case 'mid': return 'bg-blue-500/20 text-blue-400';
       case 'senior': return 'bg-purple-500/20 text-purple-400';
       case 'lead': return 'bg-orange-500/20 text-orange-400';
-      default: return 'bg-slate-500/20 text-slate-400';
-    }
-  };
-
-  const getAvailabilityColor = (availability: string) => {
-    return availability === 'Available' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
-  };
-
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <Star
-        key={i}
-        className={`w-4 h-4 ${
-          i < Math.floor(rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'
-        }`}
-      />
-    ));
-  };
+      default: return 'bg-slate-500/20 text-slate-400'}
+  }}};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Talent Pool - Zion Tech Group"
+      <SEO title="Talent Pool - Zion Tech Group"
         description="Access our curated network of top-tier technology professionals. Find skilled developers, engineers, and specialists for your projects."
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -674,7 +508,7 @@ export default function Talent() {
             className="text-center"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl mb-6">
-              <Users className="w-10 h-10 text-blue-400" />
+              <Users className="w-10 h-10 text-blue-400"  />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Elite <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-green-600 bg-clip-text text-transparent">Talent</span> Pool
@@ -695,7 +529,7 @@ export default function Talent() {
               {/* Search */}
               <div className="flex-1">
                 <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"  />
                   <input
                     type="text"
                     placeholder="Search by name, skills, or expertise..."
@@ -746,7 +580,7 @@ export default function Talent() {
                       : 'bg-slate-800/50 text-gray-400 hover:text-white'
                   }`}
                 >
-                  <Grid className="w-5 h-5" />
+                  <Grid className="w-5 h-5"  />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -756,7 +590,7 @@ export default function Talent() {
                       : 'bg-slate-800/50 text-gray-400 hover:text-white'
                   }`}
                 >
-                  <List className="w-5 h-5" />
+                  <List className="w-5 h-5"  />
                 </button>
               </div>
             </div>
@@ -815,7 +649,7 @@ export default function Talent() {
                         </h3>
                         <p className="text-gray-300">{talent.title}</p>
                         <div className="flex items-center gap-2 mt-1">
-                          <MapPin className="w-4 h-4 text-gray-400" />
+                          <MapPin className="w-4 h-4 text-gray-400"  />
                           <span className="text-sm text-gray-400">{talent.location}</span>
                         </div>
                       </div>
@@ -881,7 +715,7 @@ export default function Talent() {
                           <ul className="space-y-1">
                             {talent.projects.map((project, projectIndex) => (
                               <li key={projectIndex} className="flex items-center text-gray-300 text-sm">
-                                <CheckCircle className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
+                                <CheckCircle className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0"  />
                                 {project}
                               </li>
                             ))}
@@ -1106,5 +940,4 @@ export default function Talent() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

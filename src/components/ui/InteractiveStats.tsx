@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface Stat {
   label: string;
@@ -23,7 +22,6 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
         </div>;
       ))};
     </div>;
-  );
-};
+  )};
 
-export default InteractiveStats;}}
+export default InteractiveStats}}

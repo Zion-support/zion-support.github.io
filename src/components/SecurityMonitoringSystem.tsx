@@ -1,5 +1,3 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Shield, AlertTriangle, CheckCircle, XCircle, Eye, Lock, 
   Activity, Zap, Target, AlertCircle, Info, Settings,
@@ -17,8 +15,7 @@ interface SecurityThreat {
   timestamp: Date;
   status: 'active' | 'resolved' | 'investigating';
   affectedSystems: string[];
-  recommendations: string[];
-}
+  recommendations: string[]}
 
 interface VulnerabilityAssessment {
   id: string;
@@ -29,8 +26,7 @@ interface VulnerabilityAssessment {
   cveId?: string;
   affectedComponents: string[];
   remediation: string;
-  estimatedTime: string;
-}
+  estimatedTime: string}
 
 interface ComplianceStatus {
   framework: string;
@@ -42,16 +38,13 @@ interface ComplianceStatus {
     total: number;
     compliant: number;
     nonCompliant: number;
-    pending: number;
-  };
-}
+    pending: number}}
 
 interface SecurityMonitoringSystemProps {
   enabled?: boolean;
   showRealTime?: boolean;
   autoScan?: boolean;
-  onThreatDetected?: (threat: SecurityThreat) => void;
-}
+  onThreatDetected?: (threat: SecurityThreat) => void}
 
 export function SecurityMonitoringSystem({
   enabled = true,
@@ -71,13 +64,10 @@ export function SecurityMonitoringSystem({
   const [securityScore, setSecurityScore] = useState(0);
   const [targetScore, setTargetScore] = useState(95);
   
-  const scanIntervalRef = useRef<NodeJS.Timeout | null>(null);
-
+  
   // Generate sample security threats
-  const generateSecurityThreats = useCallback(() => {
-    const threatTypes = ['critical', 'high', 'medium', 'low'];
-    const threatSources = ['External Attack', 'Internal Breach', 'Malware', 'Phishing', 'DDoS'];
-    const systems = ['Web Server', 'Database', 'API Gateway', 'Load Balancer', 'CDN'];
+  
+    
     
     const newThreats: SecurityThreat[] = threatTypes.map((type, index) => ({
       id: `threat-${index}`,
@@ -96,14 +86,11 @@ export function SecurityMonitoringSystem({
       ]
     }));
     
-    setThreats(newThreats);
-  }, []);
+    setThreats(newThreats)}, []);
 
   // Generate vulnerability assessments
-  const generateVulnerabilities = useCallback(() => {
-    const categories = ['network', 'application', 'infrastructure', 'data'];
-    const risks = ['critical', 'high', 'medium', 'low'];
-    const components = ['Firewall', 'Web App', 'Database', 'API', 'Load Balancer'];
+  
+    
     
     const newVulnerabilities: VulnerabilityAssessment[] = categories.map((category, index) => ({
       id: `vuln-${index}`,
@@ -117,17 +104,13 @@ export function SecurityMonitoringSystem({
       estimatedTime: `${Math.floor(Math.random() * 4) + 1} hours`
     }));
     
-    setVulnerabilities(newVulnerabilities);
-  }, []);
+    setVulnerabilities(newVulnerabilities)}, []);
 
   // Generate compliance status
-  const generateComplianceStatus = useCallback(() => {
-    const frameworks = ['SOC 2', 'ISO 27001', 'GDPR', 'HIPAA', 'PCI DSS'];
-    
+  
     const newCompliance: ComplianceStatus[] = frameworks.map((framework, index) => {
-      const score = Math.floor(Math.random() * 30) + 70;
-      const total = Math.floor(Math.random() * 50) + 100;
-      const compliant = Math.floor((score / 100) * total);
+      
+      
       
       return {
         framework,
@@ -141,15 +124,12 @@ export function SecurityMonitoringSystem({
           nonCompliant: total - compliant,
           pending: Math.floor(Math.random() * 10)
         }
-      };
-    });
+      }});
     
-    setComplianceStatus(newCompliance);
-  }, []);
+    setComplianceStatus(newCompliance)}, []);
 
   // Start security scan
-  const startSecurityScan = useCallback(() => {
-    setIsScanning(true);
+  
     setScanComplete(false);
     
     // Simulate scan process
@@ -161,20 +141,16 @@ export function SecurityMonitoringSystem({
       setScanComplete(true);
       
       // Calculate overall security score
-      const avgCompliance = complianceStatus.reduce((sum, item) => sum + item.score, 0) / complianceStatus.length;
-      const threatScore = Math.max(0, 100 - (threats.filter(t => t.status === 'active').length * 10));
-      const vulnScore = Math.max(0, 100 - (vulnerabilities.filter(v => v.risk === 'critical' || v.risk === 'high').length * 15));
       
-      const overallScore = Math.round((avgCompliance + threatScore + vulnScore) / 3);
-      setSecurityScore(overallScore);
-    }, 3000);
-  }, [generateSecurityThreats, generateVulnerabilities, generateComplianceStatus, complianceStatus, threats, vulnerabilities]);
+      
+      
+      
+      setSecurityScore(overallScore)}, 3000)}, [generateSecurityThreats, generateVulnerabilities, generateComplianceStatus, complianceStatus, threats, vulnerabilities]);
 
   // Auto-scan when component opens
   useEffect(() => {
     if (autoScan && isOpen && !scanComplete) {
-      startSecurityScan();
-    }
+      startSecurityScan()}
   }, [autoScan, isOpen, scanComplete, startSecurityScan]);
 
   // Setup real-time updates
@@ -183,47 +159,25 @@ export function SecurityMonitoringSystem({
       scanIntervalRef.current = setInterval(() => {
         generateSecurityThreats();
         generateVulnerabilities();
-        generateComplianceStatus();
-      }, 60000); // Update every minute
+        generateComplianceStatus()}, 60000); // Update every minute
       
       return () => {
         if (scanIntervalRef.current) {
-          clearInterval(scanIntervalRef.current);
-        }
-      };
-    }
+          clearInterval(scanIntervalRef.current)}
+      }}
   }, [showRealTime, isOpen, scanComplete, generateSecurityThreats, generateVulnerabilities, generateComplianceStatus]);
 
   // Get threat color
-  const getThreatColor = (type: string) => {
-    const colors = {
-      critical: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
-      high: 'text-orange-600 bg-orange-100 dark:bg-orange-900/30 dark:text-orange-400',
-      medium: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
-      low: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400'
-    };
-    return colors[type as keyof typeof colors] || colors.low;
-  };
+  
+    return colors[type as keyof typeof colors] || colors.low};
 
   // Get status icon
-  const getStatusIcon = (status: string) => {
-    const icons = {
-      active: <AlertTriangle className="w-4 h-4 text-red-500" />,
-      investigating: <Eye className="w-4 h-4 text-yellow-500" />,
-      resolved: <CheckCircle className="w-4 h-4 text-green-500" />
-    };
-    return icons[status as keyof typeof icons] || <Info className="w-4 h-4" />;
-  };
+  
+    return icons[status as keyof typeof icons] || <Info className="w-4 h-4"  />};
 
   // Get compliance color
-  const getComplianceColor = (status: string) => {
-    const colors = {
-      compliant: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400',
-      partial: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
-      'non-compliant': 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400'
-    };
-    return colors[status as keyof typeof colors] || colors.partial;
-  };
+  
+    return colors[status as keyof typeof colors] || colors.partial};
 
   if (!enabled) return null;
 
@@ -239,7 +193,7 @@ export function SecurityMonitoringSystem({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.9 }}
       >
-        <Shield className="w-6 h-6" />
+        <Shield className="w-6 h-6"  />
         <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
       </motion.button>
 
@@ -264,7 +218,7 @@ export function SecurityMonitoringSystem({
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20">
                 <div className="flex items-center space-x-3">
-                  <Shield className="w-8 h-8 text-red-600" />
+                  <Shield className="w-8 h-8 text-red-600"  />
                   <div>
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                       Security Monitoring System
@@ -281,7 +235,7 @@ export function SecurityMonitoringSystem({
                     disabled={isScanning}
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >
-                    <RefreshCw className={`w-5 h-5 ${isScanning ? 'animate-spin' : ''}`} />
+                    <RefreshCw className={`w-5 h-5 ${isScanning ? 'animate-spin' : ''}`}  />
                   </button>
                   
                   <button
@@ -295,7 +249,7 @@ export function SecurityMonitoringSystem({
                     onClick={() => setIsOpen(false)}
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >
-                    <X className="w-5 h-5" />
+                    <X className="w-5 h-5"  />
                   </button>
                 </div>
               </div>
@@ -320,7 +274,7 @@ export function SecurityMonitoringSystem({
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           Overall Security Score
                         </h3>
-                        <Shield className="w-6 h-6 text-red-600" />
+                        <Shield className="w-6 h-6 text-red-600"  />
                       </div>
                       
                       <div className="flex items-center space-x-6">
@@ -372,7 +326,7 @@ export function SecurityMonitoringSystem({
                               : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
                           }`}
                         >
-                          <Icon className="w-4 h-4" />
+                          <Icon className="w-4 h-4"  />
                           <span>{label}</span>
                           <span className="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-full text-xs">
                             {count}
@@ -436,7 +390,7 @@ export function SecurityMonitoringSystem({
                                       <ul className="space-y-1">
                                         {threat.recommendations.map((rec, idx) => (
                                           <li key={idx} className="text-sm text-gray-600 dark:text-gray-400 flex items-center space-x-2">
-                                            <CheckCircle className="w-3 h-3 text-green-500" />
+                                            <CheckCircle className="w-3 h-3 text-green-500"  />
                                             <span>{rec}</span>
                                           </li>
                                         ))}
@@ -575,12 +529,12 @@ export function SecurityMonitoringSystem({
                     {/* Action Buttons */}
                     <div className="flex items-center justify-center space-x-4 pt-6">
                       <button className="flex items-center space-x-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">
-                        <Download className="w-4 h-4" />
+                        <Download className="w-4 h-4"  />
                         <span>Export Report</span>
                       </button>
                       
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-                        <Shield className="w-4 h-4" />
+                        <Shield className="w-4 h-4"  />
                         <span>Run Full Scan</span>
                       </button>
                       
@@ -592,7 +546,7 @@ export function SecurityMonitoringSystem({
                   </div>
                 ) : (
                   <div className="text-center py-12">
-                    <Shield className="w-16 h-16 text-red-600 mx-auto mb-4" />
+                    <Shield className="w-16 h-16 text-red-600 mx-auto mb-4"  />
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                       Ready to monitor security?
                     </h3>
@@ -613,5 +567,4 @@ export function SecurityMonitoringSystem({
         )}
       </AnimatePresence>
     </>
-  );
-}
+  )}

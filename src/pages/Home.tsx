@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import {
   Brain, Shield, Cpu, Rocket, Zap, ArrowRight, CheckCircle, Star, Users, BarChart3, Heart, Eye, Atom, Activity, Code, Database, Server, Network, Lock, Cloud, Target, TrendingUp, Briefcase, Globe, Phone, Mail, MapPin, Search, Filter, DollarSign, Clock, Award, TrendingDown, Sparkles, Lightbulb, Zap as ZapIcon, Shield as ShieldIcon, Cpu as CpuIcon, Rocket as RocketIcon, Brain as BrainIcon, Atom as AtomIcon, Eye as EyeIcon, Code as CodeIcon, BarChart3 as BarChartIcon, Users as UsersIcon, Heart as HeartIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon
 } from 'lucide-react';
@@ -19,7 +16,7 @@ export default function Home() {
             className="max-w-5xl mx-auto"
           >
             <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl flex items-center justify-center mx-auto mb-8">
-              <Brain className="w-12 h-12 text-white" />
+              <Brain className="w-12 h-12 text-white"  />
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -73,14 +70,14 @@ export default function Home() {
               className="bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4">
-                <Brain className="w-8 h-8 text-white" />
+                <Brain className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">AI & Analytics</h3>
               <p className="text-gray-400 mb-4">
                 Advanced AI solutions for business intelligence, content generation, and predictive analytics.
               </p>
               <Link to="/services-showcase" className="text-cyan-400 hover:text-cyan-300 flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                Learn More <ArrowRight className="w-4 h-4 ml-2"  />
               </Link>
             </motion.div>
 
@@ -92,14 +89,14 @@ export default function Home() {
               className="bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
-                <Atom className="w-8 h-8 text-white" />
+                <Atom className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Quantum Computing</h3>
               <p className="text-gray-400 mb-4">
                 Revolutionary quantum algorithms and machine learning solutions for complex problems.
               </p>
               <Link to="/services-showcase" className="text-cyan-400 hover:text-cyan-300 flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                Learn More <ArrowRight className="w-4 h-4 ml-2"  />
               </Link>
             </motion.div>
 
@@ -111,14 +108,14 @@ export default function Home() {
               className="bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-4">
-                <Shield className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Cybersecurity</h3>
               <p className="text-gray-400 mb-4">
                 Military-grade security solutions with advanced threat detection and zero-trust architecture.
               </p>
               <Link to="/services-showcase" className="text-cyan-400 hover:text-cyan-300 flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                Learn More <ArrowRight className="w-4 h-4 ml-2"  />
               </Link>
             </motion.div>
           </div>
@@ -149,6 +146,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 

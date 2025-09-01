@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Shield,
   Lock,
@@ -13,82 +11,22 @@ import {
   Eye
 } from 'lucide-react';
 
-      benefits['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions'];
-    };
+      benefits['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions']};
   ];
-const securityFeatures = [
-  {
-    title: "SOC 2 Type II Compliance",
-    description: "Annual third-party audits ensuring data security, availability, and confidentiality",
-    icon: "🔒",
-    status: "Certified",
-    color: "from-green-500 to-emerald-600"
-  },
-  {
-    title: "ISO 27001",
-    description: "International standard for information security management systems",
-    icon: "🌐",
-    status: "Certified",
-    color: "from-blue-500 to-cyan-600"
-  },
-  {
-    title: "GDPR Compliance",
-    description: "Full compliance with European data protection regulations",
-    icon: "🇪🇺",
-    status: "Compliant",
-    color: "from-purple-500 to-pink-600"
-  },
-  {
-    title: "HIPAA Compliance",
-    description: "Healthcare data protection standards for medical information",
-    icon: "🏥",
-    status: "Compliant",
-    color: "from-orange-500 to-red-600"
-  },
-  {
-    title: "Zero Trust Architecture",
-    description: "Never trust, always verify security model implementation",
-    icon: "🛡️",
-    status: "Implemented",
-    color: "from-indigo-500 to-purple-600"
-  },
-  {;
+
     title: "End-to-End Encryption",;
     description: "256-bit AES encryption for all data in transit and at rest",;
     icon: "🔐",;
     status: "Active",;
-    color: "from-teal-500 to-green-600";
-  };
+    color: "from-teal-500 to-green-600"};
 ];
 
-const complianceFeatures = [
-  {
-    category: "Data Protection",
-    features: [
-      "Automated data classification",
-      "Real-time threat detection",
-      "Automated incident response",
-      "Data loss prevention (DLP)"
-    ]
-  },
-  {
-    category: "Access Control",
-    features: [
-      "Multi-factor authentication (MFA)",
-      "Role-based access control (RBAC)",
-      "Privileged access management",
-      "Single sign-on (SSO) integration"
-    ]
-  },
-  {
-    category: "Monitoring & Auditing",
-    features: [;
+
       "24/7 security monitoring",;
       "Comprehensive audit logs",;
       "Real-time alerts",;
       "Automated compliance reporting";
-    ];
-  };
+    ]};
 ];
 
 export function SecurityComplianceSection() {
@@ -147,12 +85,12 @@ export function SecurityComplianceSection() {
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
           {securityMetrics.map((metric, index)  => {;
-            const IconComponent = metric.icon;
+            
             return (
               <div key = {metric.label} className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="p-3 bg-blue-600 rounded-full">
-                    <IconComponent className="h-8 w-8 text-white" />
+                    <IconComponent className="h-8 w-8 text-white"  />
         {/* Security Certifications */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {securityFeatures.map((feature, index) => (
@@ -376,11 +314,11 @@ export function SecurityComplianceSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Security Assessment
-                <Shield className="ml-2 h-5 w-5" />
+                <Shield className="ml-2 h-5 w-5"  />
               </button>
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
                 Compliance Review
-                <FileText className="ml-2 h-5 w-5" />
+                <FileText className="ml-2 h-5 w-5"  />
               </button>
             </div>
           </div>
@@ -395,8 +333,7 @@ export default SecurityComplianceSection;
         </motion.div>;
       </div>;
     </section>;
-  );
-}
+  )}
 
 export default SecurityComplianceSection;
 export default SecurityComplianceSection;

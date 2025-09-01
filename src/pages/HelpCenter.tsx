@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search,
   HelpCircle,
@@ -46,15 +43,12 @@ interface HelpSection {
     path?: string;
     external?: boolean;
     difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
-    readTime: string;
-  }>;
-}
+    readTime: string}>}
 
 interface FAQItem {
   question: string;
   answer: string;
-  category: string;
-}
+  category: string}
 
 const helpSections: HelpSection[] = [
   {
@@ -312,26 +306,16 @@ export function HelpCenter() {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const handleSearch = (query: string) => {
-    setSearchQuery(query);
+  
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
       return;
 
-    const filtered = faqData.filter(faq =>
-      faq.question.toLowerCase().includes(query.toLowerCase()) ||
-      faq.answer.toLowerCase().includes(query.toLowerCase()) ||
-      faq.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
-    );
-    setFilteredFAQs(filtered);
-  };
+    
+    setFilteredFAQs(filtered)};
 
-  const filteredFAQ = selectedCategory === 'All' 
-    ? faqData 
-    : faqData.filter(item => item.category === selectedCategory);
-
-  const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
       <div className="container-responsive">
@@ -363,7 +347,7 @@ export function HelpCenter() {
               onChange={(e) => handleSearch(e.target.value)}
               className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl px-6 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 text-lg"
             />
-            <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-6 w-6" />
+            <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-6 w-6"  />
           </div>
         </motion.div>
 
@@ -394,7 +378,7 @@ export function HelpCenter() {
                   <p className="text-zion-slate-light text-sm mb-4 text-center">{category.description}</p>
                   <div className="flex items-center justify-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
                     <span className="text-sm font-medium">{category.articleCount} articles</span>
-                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"  />
                   </div>
                 </Link>;
               </motion.div>
@@ -512,9 +496,9 @@ export function HelpCenter() {
                           </div>
                         </div>
                         {expandedSections.has(section.id) ? (
-                          <ChevronDown className="w-5 h-5 text-cyan-400" />
+                          <ChevronDown className="w-5 h-5 text-cyan-400"  />
                         ) : (
-                          <ChevronRight className="w-5 h-5 text-cyan-400" />
+                          <ChevronRight className="w-5 h-5 text-cyan-400"  />
                         )}
                       </div>
                     </button>
@@ -557,12 +541,12 @@ export function HelpCenter() {
                                             {article.difficulty}
                                           </span>
                                           <span className="text-gray-500 text-sm flex items-center">
-                                            <Clock className="w-4 h-4 mr-1" />
+                                            <Clock className="w-4 h-4 mr-1"  />
                                             {article.readTime}
                                           </span>
                                         </div>
                                       </div>
-                                      <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                                      <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform"  />
                                     </div>
                                   </Link>
                                 ) : (
@@ -578,7 +562,7 @@ export function HelpCenter() {
                                         {article.difficulty}
                                       </span>
                                       <span className="text-gray-500 text-sm flex items-center">
-                                        <Clock className="w-4 h-4 mr-1" />
+                                        <Clock className="w-4 h-4 mr-1"  />
                                         {article.readTime}
                                       </span>
                                     </div>
@@ -617,7 +601,7 @@ export function HelpCenter() {
               >
                 <div className="flex items-start space-x-4">
                   <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg">
-                    <HelpCircle className="w-5 h-5 text-cyan-400" />
+                    <HelpCircle className="w-5 h-5 text-cyan-400"  />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-white mb-2">{faq.question}</h3>
@@ -633,7 +617,6 @@ export function HelpCenter() {
         </motion.div>
       </div>
     </div>
-  );
-}
+  )}
 
 export default HelpCenter;

@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search,
   Filter,
@@ -403,7 +401,6 @@ import {
   Omega,
   Crown
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
 
 interface ServiceContact {
   mobile: string;
@@ -420,15 +417,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
   const [innovationLevel, setInnovationLevel] = useState('all');
 
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
-
-  const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },
-    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s => s.category === 'AI & Automation').length, icon: '🤖' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '📊' },
-    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬' },
-    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s => s.category === 'AI & Logistics').length, icon: '🚛' },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s => s.category === 'AI & Marketing').length, icon: '📢' },;
+  
+  
     { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥' },;
     { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },;
     { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },;
@@ -437,108 +427,75 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
     { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
   ];
 
-  const innovationLevels = [;
+  
     { id: 'all', name: 'All Levels', icon: '🌟' },;
     { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
     { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
     { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
   ];
 
-  const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  
+    
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesInnovation = innovationLevel === 'all' || service.innovationLevel === innovationLevel;
+    
+    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation});
 
-    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation;
-  });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  
     switch (sortBy) {;
       case 'price':;
         return a.price - b.price;
       case 'name':;
         return a.title.localeCompare(b.title);
       case 'innovation':;
-        const innovationOrder = {
-  'Advanced': 1, 'Cutting-edge': 2,;
+        
   ;
   ;
   ;
   ;
   ;
-  'Revolutionary': 3 ;
-
-
-
-
-
-
-};
+  'Revolutionary': 3 };
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);
       case 'category':;
         return a.category.localeCompare(b.category);
       default:;
-        return 0;
-
-  });
+        return 0});
 
     hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
-
-  const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
-
-},
     visible: {
-      y: 0,;
       opacity: 1,;
-      transition: {;
+      transition: {
+        staggerChildren: 0.1}}};
+
+  
+      opacity: 1,;
+      transition: {
         duration: 0.5,;
-        ease: "easeOut";
-      };
-    };
-  };
+        ease: "easeOut"}}};
 
-  const getCategoryIcon = (category: string) => {;
+  
     switch (category) {;
-      case 'AI & Automation': return <Bot className="w-5 h-5" />;
+      case 'AI & Automation': return <Bot className="w-5 h-5"  />;
       case 'AI & Analytics': return <BarChart3 className="w-5 h-5" />;
-      case 'AI & Research': return <Search className="w-5 h-5" />;
-      case 'AI & Logistics': return <Truck className="w-5 h-5" />;
-      case 'AI & Marketing': return <TrendingUp className="w-5 h-5" />;
-      case 'AI & Healthcare': return <Heart className="w-5 h-5" />;
-      case 'Quantum Computing': return <Atom className="w-5 h-5" />;
-      case 'Blockchain': return <Link className="w-5 h-5" />;
+      case 'AI & Research': return <Search className="w-5 h-5"  />;
+      case 'AI & Logistics': return <Truck className="w-5 h-5"  />;
+      case 'AI & Marketing': return <TrendingUp className="w-5 h-5"  />;
+      case 'AI & Healthcare': return <Heart className="w-5 h-5"  />;
+      case 'Quantum Computing': return <Atom className="w-5 h-5"  />;
+      case 'Blockchain': return <Link className="w-5 h-5"  />;
       case 'Metaverse': return <Globe2 className="w-5 h-5" />;
-      case 'Edge Computing': return <Network className="w-5 h-5" />;
-      case 'Cybersecurity': return <Shield className="w-5 h-5" />;
-      default: return <Zap className="w-5 h-5" />;
+      case 'Edge Computing': return <Network className="w-5 h-5"  />;
+      case 'Cybersecurity': return <Shield className="w-5 h-5"  />;
+      default: return <Zap className="w-5 h-5"  />};
 
-  };
-
-  const getInnovationIcon = (level: string) => {;
+  
     switch (level) {;
-      case 'Advanced': return <Star className="w-4 h-4 text-yellow-500" />;
-      case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500" />;
-      case 'Revolutionary': return <Crown className="w-4 h-4 text-purple-500" />;
-      default: return <Star className="w-4 h-4 text-gray-400" />;
-
-  };
+      case 'Advanced': return <Star className="w-4 h-4 text-yellow-500"  />;
+      case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500"  />;
+      case 'Revolutionary': return <Crown className="w-4 h-4 text-purple-500"  />;
+      default: return <Star className="w-4 h-4 text-gray-400"  />};
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
@@ -634,7 +591,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
             {/* Search Bar */}
             <div className="relative mb-6">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5"  />
               <input
                 type="text"
                 placeholder="Search services, categories, or features..."
@@ -659,7 +616,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                     </option>
                   ))}
                 </select>
-                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none" />
+                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"  />
               </div>
 
               {/* Innovation Level Filter */}
@@ -675,7 +632,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                     </option>
                   ))}
                 </select>
-                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none" />
+                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"  />
               </div>
 
               {/* Sort By */}
@@ -690,7 +647,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   <option value="innovation">Sort by Innovation</option>
                   <option value="category">Sort by Category</option>
                 </select>
-                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none" />
+                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"  />
               </div>
 
               {/* View Mode Toggle */}
@@ -703,7 +660,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       : 'text-zion-slate-400 hover:text-white'
                   }`}
 
-                  <Grid className="w-4 h-4 mx-auto" />
+                  <Grid className="w-4 h-4 mx-auto"  />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -713,7 +670,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       : 'text-zion-slate-400 hover:text-white'
                   }`}
 
-                  <List className="w-4 h-4 mx-auto" />
+                  <List className="w-4 h-4 mx-auto"  />
                 </button>
               </div>
             </div>
@@ -836,12 +793,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       </div>
 
                       <div className="flex items-center gap-2 text-sm text-zion-slate-400">
-                        <Clock className="w-4 h-4" />
+                        <Clock className="w-4 h-4"  />
                         <span>{service.estimatedDelivery}</span>
                       </div>
 
                       <div className="flex items-center gap-2 text-sm text-zion-slate-400">
-                        <Shield className="w-4 h-4" />
+                        <Shield className="w-4 h-4"  />
                         <span>{service.supportLevel}</span>
                       </div>
                     </div>
@@ -849,7 +806,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                     {/* CTA Button */}
                     <button className="w-full mt-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2">
                       Learn More
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4"  />
                     </button>
                   </>
                 ) : (;
@@ -892,7 +849,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       <div className="text-sm text-zion-slate-400">/month</div>
                       <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 flex items-center gap-2">
                         Learn More
-                        <ArrowRight className="w-4 h-4" />
+                        <ArrowRight className="w-4 h-4"  />
                       </button>
                     </div>
                   </>
@@ -925,15 +882,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   setActiveCategory('all');
                   setPriceRange([0,
   10000]);
-                  setInnovationLevel('all');
-                
-
-
-
-
-
-
-}}
+                  setInnovationLevel('all')}}
                 className = "bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
               >
                 Clear All Filters;
@@ -1006,7 +955,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                     onClick={closeModal}
                     className="text-zion-slate-400 hover:text-white transition-colors"
 
-                    <X className="w-6 h-6" />
+                    <X className="w-6 h-6"  />
                   </button>
                 </div>
 
@@ -1036,7 +985,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-zion-green" />
+                      <CheckCircle className="w-5 h-5 text-zion-green"  />
                       Key Features
                     </h3>
                     <ul className="space-y-2">
@@ -1050,7 +999,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                      <TrendingUp className="w-5 h-5 text-zion-green" />
+                      <TrendingUp className="w-5 h-5 text-zion-green"  />
                       Benefits
                     </h3>
                     <ul className="space-y-2">
@@ -1068,7 +1017,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                      <Target className="w-5 h-5 text-zion-cyan" />
+                      <Target className="w-5 h-5 text-zion-cyan"  />
                       Use Cases
                     </h3>
                     <ul className="space-y-2">
@@ -1082,7 +1031,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                      <Users className="w-5 h-5 text-zion-purple" />
+                      <Users className="w-5 h-5 text-zion-purple"  />
                       Target Audience
                     </h3>
                     <ul className="space-y-2">
@@ -1100,7 +1049,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                 {selectedService.technicalSpecs && (
                   <div className="mb-8">
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                      <Code className="w-5 h-5 text-zion-cyan" />
+                      <Code className="w-5 h-5 text-zion-cyan"  />
                       Technical Specifications
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1157,4 +1106,4 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   );
 </div></div></div></div></div></div></div>};
 
-export default ComprehensiveServicesShowcase2025;}}}}}}}}}}
+export default ComprehensiveServicesShowcase2025}}}}}}}}}}

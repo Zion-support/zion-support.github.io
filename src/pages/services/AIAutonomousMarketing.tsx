@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { Target, 
   Brain, 
   BarChart3, 
@@ -26,48 +24,8 @@ import { Target,
  } from 'lucide-react.ts';
 
 const AIAutonomousMarketing: React.FC = (): JSX.Element => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Marketing',
-      description: 'Advanced machine learning for autonomous marketing strategy and execution'
-    },
-    {
-      icon: Target,
-      title: 'Audience Targeting',
-      description: 'Intelligent audience segmentation and targeting with AI-driven insights'
-    },
-    {
-      icon: BarChart3,
-      title: 'Campaign Optimization',
-      description: 'Real-time campaign optimization and performance analytics'
-    },
-    {
-      icon: Users,
-      title: 'Customer Engagement',
-      description: 'Automated customer engagement and personalized marketing experiences'
-    },
-    {
-      icon: Megaphone,
-      title: 'Content Generation',
-      description: 'AI-powered content creation and marketing copy generation'
-    },
-    {
-      icon: TrendingUp,
-      title: 'ROI Optimization',
-      description: 'Continuous optimization of marketing spend and return on investment'
-    }
-  ];
-
-  const benefits = [
-    'Increase marketing ROI by 150%',
-    'Reduce campaign setup time by 80%',
-    'Improve conversion rates by 60%',
-    'Automate marketing workflows',
-    '24/7 autonomous operation',
-    'Real-time performance optimization'
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -79,7 +37,7 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-400 text-sm font-medium mb-6">
-              <Target className="w-4 h-4 mr-2" />
+              <Target className="w-4 h-4 mr-2"  />
               AI-Powered Autonomous Marketing
             </div>
             
@@ -173,7 +131,7 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0"  />
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -226,7 +184,6 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIAutonomousMarketing;

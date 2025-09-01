@@ -1,53 +1,16 @@
-import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
-import { Cpu, Wifi, Database, Shield, Zap, Globe, Server, BarChart3, Settings, Monitor, Activity, Network, Smartphone, Tablet, Laptop, Cloud, Lock, RefreshCw, TrendingUp, AlertTriangle  } from 'lucide-react';
 
 export default function IoTEdge(...args: []):  {
-  const features = [
-    {
-      icon: Cpu,
-      title: 'Edge Computing',
-      description: 'Process data closer to the source for faster response times'
-    },
-    {
-      icon: Wifi,
-      title: 'IoT Connectivity',
-      description: 'Seamless device communication and data transmission'
-    },
-    {
-      icon: Zap,
-      title: 'Real-time Processing',
-      description: 'Instant data analysis and decision making';
+  
     },;
     {;
       icon: Database,;
       title: 'Data Management',;
-      description: 'Efficient storage and processing of IoT data streams';
-    };
-  ];
-
-  const services = [
-    {
-      title: 'IoT Device Management',
-      description: 'Centralized management and monitoring of connected devices',
-      icon: Smartphone
-    },
-    {
-      title: 'Edge Analytics',
-      description: 'Real-time data processing and analytics at the edge',
-      icon: BarChart3
-    },
-    {
-      title: '5G Integration',
-      description: 'High-speed connectivity for IoT applications',
-      icon: Wifi;
-    },;
+      description: 'Efficient storage and processing of IoT data streams'};
+  ]},;
     {;
       title: 'Security & Compliance',;
       description: 'End-to-end security for IoT ecosystems',;
-      icon: Shield;
-    };
+      icon: Shield};
   ];
 
   return (
@@ -81,7 +44,7 @@ export default function IoTEdge(...args: []):  {
             className="text-center max-w-4xl mx-auto"
 
             <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6">
-              <Cpu className="w-5 h-5 text-blue-400" />
+              <Cpu className="w-5 h-5 text-blue-400"  />
               <span className="text-blue-400 font-medium">IoT & Edge Computing</span>
             </div>
 
@@ -98,7 +61,7 @@ export default function IoTEdge(...args: []):  {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start IoT Project
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </button>
               <button className="btn-outline px-8 py-4 text-lg">
                 Learn More
@@ -394,5 +357,4 @@ export default function IoTEdge(...args: []):  {
         </div>;
       </section>;
     </div>;
-  );
-}}}}
+  )}}}}

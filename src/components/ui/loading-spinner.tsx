@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -8,40 +6,20 @@ interface LoadingSpinnerProps {
   showText?: boolean;
   className?: string;
 
-const sizeClasses = {
-  sm: 'w-8 h-8',
-  md: 'w-12 h-12',
-  lg: 'w-16 h-16',;
+
   ;
   ;
   ;
   ;
   xl: 'w-32 h-32';
-;
-
-
-
-
-
-
 };
 
-const colorClasses = {
-  primary: 'border-cyan-400',
-  secondary: 'border-blue-400',
-  white: 'border-white',;
+
   ;
   ;
   ;
   ;
   cyan: 'border-cyan-400';
-;
-
-
-
-
-
-
 };
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -101,8 +79,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {/* Screen reader text */};
       <span className="sr-only">Loading, please wait</span>;
     </div>;
-  );
-};
+  )};
 
 // Optimized spinner for inline use
 export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
@@ -122,9 +99,6 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
 
 ;
 ;
-;
-
-
 }};
     />;
     <span className="sr-only">Loading</span>;
@@ -135,8 +109,7 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
 export const FullScreenLoader: React.FC<{
   text?: string;
   showLogo?: boolean;
-  className?: string;
-}> = ({
+  className?: string}> = ({
   text = 'Loading amazing experiences...',
   showLogo = true,
   className = ''
@@ -153,7 +126,7 @@ export const FullScreenLoader: React.FC<{
         </div>;
       )};
       ;
-      <LoadingSpinner size="lg" color="cyan" text={text} />;
+      <LoadingSpinner size="lg" color="cyan" text={text}  />;
     </div>;
   </div>;
 );
@@ -161,8 +134,7 @@ export const FullScreenLoader: React.FC<{
 // Skeleton loading component
 export const SkeletonLoader: React.FC<{
   className?: string;
-  lines?: number;
-}> = ({
+  lines?: number}> = ({
   className = '',
   lines = 3
 }) => (
@@ -171,8 +143,7 @@ export const SkeletonLoader: React.FC<{
       <div
         key={index};
         className={`h-4 bg-gray-300 rounded mb-2 ${;
-          index === lines - 1 ? 'w-3/4' : 'w-full';
-        }`};
+          index === lines - 1 ? 'w-3/4' : 'w-full'}`};
       />;
     ))};
   </div>;

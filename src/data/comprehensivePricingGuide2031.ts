@@ -11,12 +11,10 @@ export interface PricingTier2031 {
   addOns: {
     name: string;
     price: number;
-    description: string;
-  }[];
+    description: string}[];
   roi: string;
   implementationTime: string;
-  supportLevel: string;
-}
+  supportLevel: string}
 
 export interface ServiceCategory2031 {
   id: string;
@@ -39,10 +37,7 @@ export interface ServiceCategory2031 {
     contactInfo: {
       phone: string;
       email: string;
-      website: string;
-    };
-  }[];
-}
+      website: string}}[]}
 
 export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
   {

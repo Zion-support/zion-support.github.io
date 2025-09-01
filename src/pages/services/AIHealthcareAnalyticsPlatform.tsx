@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import { 
   Heart, 
   Activity, 
@@ -322,158 +320,13 @@ import {
   CloudSleet10
 } from 'lucide-react';
 
-const AIHealthcareAnalyticsPlatform = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Patient Analytics',
-      description: 'Advanced machine learning algorithms analyze patient data for predictive insights'
-    },
-    {
-      icon: Heart,
-      title: 'Clinical Decision Support',
-      description: 'AI-driven recommendations for treatment plans and medication management'
-    },
-    {
-      icon: Activity,
-      title: 'Real-time Health Monitoring',
-      description: 'Continuous monitoring of patient vitals and health indicators'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Health Analytics',
-      description: 'Forecast patient outcomes and identify at-risk populations'
-    },
-    {
-      icon: Shield,
-      title: 'HIPAA-Compliant Security',
-      description: 'Enterprise-grade security with full HIPAA compliance and data encryption'
-    },
-    {
-      icon: BarChart4,
-      title: 'Population Health Insights',
-      description: 'Comprehensive analytics for population health management and public health'
-    }
-  ];
 
-  const benefits = [
-    'Improve patient outcomes by 35%',
-    'Reduce readmission rates by 40%',
-    'Lower healthcare costs by 25-30%',
-    'Enhance clinical decision-making by 50%',
-    'Streamline administrative processes by 60%',
-    'Ensure 99.9% HIPAA compliance'
-  ];
-
-  const useCases = [
-    {
-      industry: 'Hospitals & Health Systems',
-      description: 'Optimize patient care, reduce readmissions, and improve operational efficiency'
-    },
-    {
-      industry: 'Primary Care Practices',
-      description: 'Enhance preventive care, manage chronic conditions, and improve patient engagement'
-    },
-    {
-      industry: 'Specialty Clinics',
-      description: 'Streamline specialty care workflows and improve treatment outcomes'
-    },
-    {
-      industry: 'Health Insurance',
-      description: 'Risk assessment, fraud detection, and population health management'
-    }
-  ];
-
-  const pricing = [
-    {
-      plan: 'Starter',
-      price: '$2,800/month',
-      features: [
-        'Up to 50 providers',
-        'Basic AI analytics',
-        'Patient monitoring',
-        'Clinical decision support',
-        'Basic reporting',
-        'Email support'
-      ]
-    },
-    {
-      plan: 'Professional',
-      price: '$5,500/month',
-      features: [
-        'Up to 200 providers',
-        'Advanced AI analytics',
-        'Population health insights',
-        'Custom workflows',
-        'Advanced reporting',
-        'Priority support',
-        'API access'
-      ]
-    },
-    {
-      plan: 'Enterprise',
-      price: '$12,000/month',
-      features: [
-        'Unlimited providers',
-        'Full AI capabilities',
-        'Custom integrations',
-        'White-label options',
-        'Dedicated health manager',
-        '24/7 phone support',
-        'Custom training'
-      ]
-    }
-  ];
-
-  const integrations = [
-    'Epic EHR',
-    'Cerner',
-    'Allscripts',
-    'Meditech',
-    'Athenahealth',
-    'Practice Fusion',
-    'eClinicalWorks',
-    'NextGen',
-    'Greenway Health',
-    'DrChrono',
-    'Kareo',
-    'Webhook APIs'
-  ];
-
-  const keyMetrics = [
-    {
-      metric: '35%',
-      label: 'Patient Outcome Improvement'
-    },
-    {
-      metric: '40%',
-      label: 'Readmission Rate Reduction'
-    },
-    {
-      metric: '30%',
-      label: 'Cost Reduction'
-    },
-    {
-      metric: '50%',
-      label: 'Decision Enhancement'
-    }
-  ];
-
-  const complianceStandards = [
-    'HIPAA',
-    'HITECH',
-    'SOC 2 Type II',
-    'ISO 27001',
-    'HITRUST',
-    'GDPR',
-    'CCPA',
-    'FDA 21 CFR Part 11',
-    'ONC Health IT',
-    'Meaningful Use',
-    'MIPS',
-    'APMs'
-  ];
-
+  
+  
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -486,7 +339,7 @@ const AIHealthcareAnalyticsPlatform = () => {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-red-600 text-white text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 mr-2" />
+              <Sparkles className="w-4 h-4 mr-2"  />
               AI-Powered Healthcare Analytics Platform
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -505,7 +358,7 @@ const AIHealthcareAnalyticsPlatform = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Watch Demo
               </motion.button>
               <motion.button
@@ -513,7 +366,7 @@ const AIHealthcareAnalyticsPlatform = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >
-                <Settings className="w-5 h-5 mr-2" />
+                <Settings className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </motion.button>
             </div>
@@ -604,7 +457,7 @@ const AIHealthcareAnalyticsPlatform = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-start space-x-3"
               >
-                <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0"  />
                 <span className="text-zion-slate-light text-lg">{benefit}</span>
               </motion.div>
             ))}
@@ -721,7 +574,7 @@ const AIHealthcareAnalyticsPlatform = () => {
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0"  />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
                   ))}
@@ -788,7 +641,7 @@ const AIHealthcareAnalyticsPlatform = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >
-                <ArrowRight className="w-5 h-5 mr-2" />
+                <ArrowRight className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </motion.button>
               <motion.button
@@ -796,7 +649,7 @@ const AIHealthcareAnalyticsPlatform = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >
-                <MessageSquare className="w-5 h-5 mr-2" />
+                <MessageSquare className="w-5 h-5 mr-2"  />
                 Schedule Demo
               </motion.button>
             </div>
@@ -820,15 +673,15 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-6 h-6 text-pink-400" />
+                <Phone className="w-6 h-6 text-pink-400"  />
                 <span className="text-zion-slate-light">+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-6 h-6 text-pink-400" />
+                <Mail className="w-6 h-6 text-pink-400"  />
                 <span className="text-zion-slate-light">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-6 h-6 text-pink-400" />
+                <MapPin className="w-6 h-6 text-pink-400"  />
                 <span className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
@@ -837,14 +690,14 @@ const AIHealthcareAnalyticsPlatform = () => {
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >
-                <ArrowRight className="w-5 h-5 mr-2" />
+                <ArrowRight className="w-5 h-5 mr-2"  />
                 Contact Us
               </a>
               <a
                 href="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >
-                <Globe className="w-5 h-5 mr-2" />
+                <Globe className="w-5 h-5 mr-2"  />
                 Visit Website
               </a>
             </div>
@@ -852,7 +705,6 @@ const AIHealthcareAnalyticsPlatform = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
-export default AIHealthcareAnalyticsPlatform;}}}}}
+export default AIHealthcareAnalyticsPlatform}}}}}

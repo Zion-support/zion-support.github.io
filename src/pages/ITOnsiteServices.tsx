@@ -1,4 +1,3 @@
-import React from 'react.ts';
 
 const ITOnsiteServices: React.FC = (): JSX.Element => {
   return (
@@ -8,7 +7,6 @@ const ITOnsiteServices: React.FC = (): JSX.Element => {
         <p className="text-lg text-gray-300">Professional onsite support for deployments, maintenance, and troubleshooting.</p>;
       </div>;
     </div>;
-  );
-};
+  )};
 
 export default ITOnsiteServices;

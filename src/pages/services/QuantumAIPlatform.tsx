@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
 import { Atom, 
   Brain, 
   Zap, 
@@ -21,127 +19,44 @@ import { Atom,
   Users,
   Shield
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
 
-const QuantumAIPlatform = () => {
-  const features = [
-    {
-      icon: Atom,
-      benefits: [;
+
         "Molecular modeling",;
         "Chemical reaction simulation",;
         "Material property prediction",;
         "Drug discovery acceleration";
-      ];
-    };
+      ]};
   ];
 
-  const pricingPlans = [
-    {
-      name: "Quantum Starter",
-      price: "$25,000",
-      period: "/month",
-      description: "Perfect for research institutions and startups",
-      features: [
-        "Basic quantum computing access",
-        "Up to 100 qubits",
-        "Standard quantum algorithms",
-        "Email support",
-        "Basic quantum simulator",
-        "API access"
-      ],
-      cta: "Get Started",
-      popular: false
-    },
-    {
-      icon: Brain,
-      title: "Hybrid Quantum-Classical Computing",
-      description: "Seamless integration of quantum and classical computing resources for optimal performance and practical applications.",
-      benefits: ["Best of both worlds", "Practical quantum advantage", "Scalable solutions"]
-    },
-    {
-      name: "Quantum Enterprise",
-      price: "$200,000",
-      period: "/month",
-      description: "For large-scale quantum operations",
-      features: [
-        "Full quantum platform access",
-        "Unlimited qubits",
-        "Custom quantum hardware",
-        "24/7 dedicated support",
-        "White-label solutions",
-        "On-premise deployment",;
+  
         "SLA guarantees",;
         "Quantum strategy consulting";
       ],;
       cta: "Contact Sales",;
-      popular: false;
-    };
+      popular: false};
   ];
 
-  const useCases = [
-    {
-      name: "Financial Services",
-      description: "Portfolio optimization, risk assessment, and algorithmic trading with quantum advantage",
-      icon: DollarSign,
-      examples: ["Portfolio optimization", "Risk modeling", "Option pricing", "Fraud detection"]
-    },
-    {
-      name: "Pharmaceutical Research",
-      description: "Drug discovery, molecular modeling, and protein folding simulations",
-      icon: Atom,
-      examples: ["Drug discovery", "Molecular dynamics", "Protein folding", "Chemical reactions"]
-    },
-    {
-      name: "Logistics & Supply Chain",
-      description: "Route optimization, inventory management, and supply chain optimization",
-      icon: Network,
-      examples: ["Route optimization", "Inventory management", "Supply chain optimization", "Scheduling"]
-    },
-    {
-      industry: "Energy & Utilities",
-      applications: [;
+  
         "Grid optimization",;
         "Energy trading",;
         "Resource allocation",;
         "Climate modeling";
-      ];
-    };
+      ]};
   ];
 
-  const quantumAdvantages = [
-    {
-      title: "Exponential Speedup",
-      description: "Quantum algorithms provide exponential speedup for specific problems",
-      icon: Zap,
-      metric: "1000x+"
-    },
-    {
-      title: "Quantum Supremacy",
-      description: "Achieve computational tasks impossible for classical computers",
-      icon: Star,
-      metric: "Unlimited"
-    },
-    {
-      title: "Parallel Processing",
-      description: "Process multiple possibilities simultaneously using superposition",
-      icon: CpuIcon,
-      metric: "∞"
-    },;
+  
     {;
       title: "Quantum Entanglement",;
       description: "Leverage quantum correlations for secure communication",;
       icon: Network,;
-      metric: "100%";
-    };
+      metric: "100%"};
   ];
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Quantum AI Platform - Zion Tech Group"
+      <SEO title="Quantum AI Platform - Zion Tech Group"
         description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
@@ -171,7 +86,7 @@ const QuantumAIPlatform = () => {
             className="text-center"
 
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
-              <Atom className="w-4 h-4 mr-2" />
+              <Atom className="w-4 h-4 mr-2"  />
               Next-Generation Quantum Technology
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -372,7 +287,7 @@ const QuantumAIPlatform = () => {
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="text-gray-300 flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
@@ -477,7 +392,7 @@ const QuantumAIPlatform = () => {
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, idx) => (
                     <li key={idx} className="text-gray-300 flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -574,7 +489,7 @@ const QuantumAIPlatform = () => {
                 <ul className="space-y-2">
                   {useCase.applications.map((application, appIndex) => (
                     <li key={appIndex} className="text-gray-300 text-sm flex items-center">
-                      <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                      <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0"  />
                       {application}
                     </li>
                   ))}
@@ -644,7 +559,6 @@ const QuantumAIPlatform = () => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default QuantumAIPlatform;

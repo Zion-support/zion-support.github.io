@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
   Shield,
   Lock,
@@ -31,12 +29,7 @@ export default function CybersecuritySolutions(...args[]):  {
   const [selectedThreat, setSelectedThreat] = useState('all');
   const [activeService, setActiveService] = useState('overview');
 
-  const securityServices = [
-    {
-      icon: Shield,
-      title: "Threat Detection & Response",
-      description: "Advanced security monitoring and incident response to protect against cyber threats",
-      features["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],;
+  
       color: "from-zion-red to-zion-orange"
     },
     {
@@ -73,11 +66,10 @@ export default function CybersecuritySolutions(...args[]):  {
       title: "Cloud Security",;
       description: "Secure your cloud infrastructure and applications",;
       features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],;
-      color: "from-zion-indigo to-zion-purple";
-    };
+      color: "from-zion-indigo to-zion-purple"};
   ];
 
-  const threatTypes = [;
+  
     { id: 'all', name: 'All Threats', icon: Shield },;
     { id: 'malware', name: 'Malware', icon: Bug },;
     { id: 'phishing', name: 'Phishing', icon: Target },;
@@ -86,13 +78,7 @@ export default function CybersecuritySolutions(...args[]):  {
     { id: 'insider', name: 'Insider Threats', icon: Users };
   ];
 
-  const securityThreats = [
-    {
-      title: "Advanced Persistent Threats (APTs)",
-      description: "Sophisticated, long-term cyber attacks targeting specific organizations",
-      type: "malware",
-      impact: "High",
-      solutions["Advanced Threat Detection", "Behavioral Analysis", "Network Segmentation", "Incident Response"],;
+  
       icon: Target
     },
     {
@@ -134,15 +120,10 @@ export default function CybersecuritySolutions(...args[]):  {
       type: "malware",;
       impact: "Critical",;
       solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],;
-      icon: Bug;
-    };
+      icon: Bug};
   ];
 
-  const complianceFrameworks = [
-    {
-      name: "SOC 2 Type II",
-      description: "Service Organization Control 2 compliance for data security",
-      requirements["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"],;
+  
       icon: ShieldCheck
     },
     {
@@ -174,48 +155,27 @@ export default function CybersecuritySolutions(...args[]):  {
       name: "NIST Cybersecurity Framework",;
       description: "U.S. government framework for cybersecurity risk management",;
       requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],;
-      icon: BarChart3;
-    };
+      icon: BarChart3};
   ];
 
-  const securityMetrics = [;
+  
     { metric: "99.9%", label: "Uptime Protection", description: "Continuous security monitoring and protection" },;
     { metric: "<1hr", label: "Response Time", description: "Average time to detect and respond to threats" },;
     { metric: "0", label: "Data Breaches", description: "Successful breaches prevented for our clients" },;
     { metric: "24/7", label: "Security Coverage", description: "Round-the-clock security operations" };
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },;
-    visible: {;
+  
+    visible: {
       opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
-
-  const itemVariants = {
-  hidden: { opacity: 0,
-  y: 20 
-
-
-
-
-
-;
-},;
-    visible: {;
+      transition: {
+        staggerChildren: 0.1}}}},;
+    visible: {
       opacity: 1,;
       y: 0,;
-      transition: { duration: 0.6 };
-    };
-  };
+      transition: { duration: 0.6 }}};
 
-  const filteredThreats = selectedThreat === 'all'
-    ? securityThreats
-    : securityThreats.filter(threat => threat.type === selectedThreat);
-
+  
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -251,7 +211,7 @@ export default function CybersecuritySolutions(...args[]):  {
 
             <div className="flex justify-center mb-8">
               <div className="w-24 h-24 bg-gradient-to-r from-zion-red to-zion-orange rounded-2xl flex items-center justify-center">
-                <Shield className="w-12 h-12 text-white" />
+                <Shield className="w-12 h-12 text-white"  />
               </div>
             </div>
 
@@ -352,7 +312,7 @@ export default function CybersecuritySolutions(...args[]):  {
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -407,14 +367,7 @@ export default function CybersecuritySolutions(...args[]):  {
             {threatTypes.map((threat)  => {
             initial = {
   { opacity: 0,
-  y: 20 ;
-
-
-
-
-
-
-}}
+  y: 20 }}
             whileInView = {
   { opacity: 1,
   y: 0 
@@ -422,14 +375,12 @@ export default function CybersecuritySolutions(...args[]):  {
 
 
 ;
-;
-
 }};
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
           >;
             {threatTypes.map((threat) => {;
-              const Icon = threat.icon;
+              
               return (
                 <button
                   key = {threat.id}
@@ -440,11 +391,10 @@ export default function CybersecuritySolutions(...args[]):  {
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-red/20'
                   }`};
                 >;
-                  <Icon className="w-5 h-5" />;
+                  <Icon className="w-5 h-5"  />;
                   {threat.name};
                 </button>;
-              );
-            })}
+              )})}
           </motion.div>
 
           {/* Threats Grid */}
@@ -737,7 +687,7 @@ export default function CybersecuritySolutions(...args[]):  {
 
                 {index < 3 && (;
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <ArrowRight className="w-8 h-8 text-zion-red" />
+                    <ArrowRight className="w-8 h-8 text-zion-red"  />
                   </div>
                 )}
               </motion.div>;
@@ -797,5 +747,4 @@ export default function CybersecuritySolutions(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}

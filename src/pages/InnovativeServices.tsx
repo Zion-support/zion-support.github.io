@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Brain,
   Atom,
@@ -24,13 +22,7 @@ import {
  } from 'lucide-react';
 
 const InnovativeServices: React.FC = (): JSX.Element => {
-  const innovations = [
-    {
-      id: 'ai-automation',
-      title: 'AI Business Automation',
-      description: 'Revolutionary AI-powered business process automation that transforms your operations',
-      icon: Brain,
-      features[;
+  
         'Intelligent workflow automation',
         'Predictive analytics integration',
         'Real-time decision making',
@@ -136,11 +128,10 @@ const InnovativeServices: React.FC = (): JSX.Element => {
         'Green data centers';
       ],;
       benefits: ['Environmental impact', 'Cost savings', 'Regulatory compliance'],;
-      color: 'from-zion-blue to-zion-green';
-    };
+      color: 'from-zion-blue to-zion-green'};
   ];
 
-  const stats = [;
+  
     { label: 'Innovation Projects', value: '500+', icon: Rocket },;
     { label: 'AI Models Deployed', value: '1000+', icon: Brain },;
     { label: 'Quantum Breakthroughs', value: '50+', icon: Atom },;
@@ -356,7 +347,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
                     <ul className="space-y-2">
                       {innovation.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-zion-slate-light">
-                          <TrendingUp className="w-4 h-4 text-zion-green mr-3" />
+                          <TrendingUp className="w-4 h-4 text-zion-green mr-3"  />
                           {benefit}
                         </li>
                       ))}
@@ -429,7 +420,6 @@ const InnovativeServices: React.FC = (): JSX.Element => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
-export default InnovativeServices;}}
+export default InnovativeServices}}

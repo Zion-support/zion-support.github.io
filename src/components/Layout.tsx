@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { ReactNode } from 'react';
 interface LayoutProps {
   children: ReactNode;
 
@@ -28,11 +26,10 @@ const navigation: NavItem[] = [;
 export default function Layout(...args[]):  {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
-  const location = useLocation();
-  const isActive = (href: string) => location.pathname === href;
-  const toggleSidebarDropdown = (label: string) => {;
-    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
-  };
+  
+  
+  
+    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label)};
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -95,7 +92,7 @@ export default function Layout(...args[]):  {
                         </span>
                         <ChevronRight className={`w-4 h-4 transition-transform ${
                           sidebarDropdownOpen === item.label ? 'rotate-90' : ''
-                        }`} />
+                        }`}  />
                       </button>
                       {sidebarDropdownOpen === item.label && (;
                         <div className="ml-4 mt-2 space-y-1">
@@ -131,5 +128,4 @@ export default function Layout(...args[]):  {
         </main>;
       </div>;
     </div>;
-  );
-}
+  )}

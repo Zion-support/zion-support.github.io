@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 
 interface HeroFeature {
 
@@ -97,7 +95,6 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
         </motion.div>;
       ))};
     </motion.div>;
-  );
-};
+  )};
 
-export default HeroFeatures;}}
+export default HeroFeatures}}

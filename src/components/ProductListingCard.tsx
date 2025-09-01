@@ -1,14 +1,3 @@
-import React, { useState } from 'react.ts';
-import { useNavigate, Link  } from 'react-router-dom.ts';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { ProductListing  } from '@/types/listings';
-import { DollarSign  } from 'lucide-react';
-import { RatingStars  } from '@/components/RatingStars';
-import { FavoriteButton  } from '@/components/FavoriteButton';
-import { useDispatch  } from 'react-redux.ts';
-import type { AppDispatch } from '@/store';
-import { addItem } from '@/store/cartSlice';
 // Regular img tag will be used instead of next/image
 
   listing: ProductListing;
@@ -20,23 +9,18 @@ import { addItem } from '@/store/cartSlice';
    */
   detailBasePath?: string}
 
-  const handleViewListing = () => {
-    navigate(`${detailBasePath}/${listing.id}`);
+  
   };
 
-  const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault();
+  
     e.stopPropagation();
 
     if (onRequestQuote) {
-      onRequestQuote(listing.id);
-    } else {
-      router(`/request-quote?listing=${listing.id}`);
-    }
+      onRequestQuote(listing.id)} else {
+      router(`/request-quote?listing=${listing.id}`)}
   };
 
-  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
-
+  
   return (
     <div
       data-testid = "equipment-link";
@@ -74,7 +58,7 @@ import { addItem } from '@/store/cartSlice';
               Featured
             </Badge>
           )}
-          <FavoriteButton itemId={listing.id} itemType="product" />
+          <FavoriteButton itemId={listing.id} itemType="product"  />
         </div>
       </div>
 
@@ -87,7 +71,7 @@ import { addItem } from '@/store/cartSlice';
               {listing.category}
             </Badge>
             {listing.rating && (
-              <RatingStars value={listing.rating} count={listing.reviewCount} />
+              <RatingStars value={listing.rating} count={listing.reviewCount}  />
             )}
           </div>
 
@@ -121,7 +105,7 @@ import { addItem } from '@/store/cartSlice';
           <div className="text-sm font-medium">
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
-                <DollarSign className="h-4 w-4 mr-1" />
+                <DollarSign className="h-4 w-4 mr-1"  />
                 {formatPrice()}
               </div>
             ) : (
@@ -137,8 +121,7 @@ import { addItem } from '@/store/cartSlice';
               className="bg-primary hover:bg-primary/80 text-primary-foreground"
               onClick={(e) => {
                 e.stopPropagation();
-                router(`${detailBasePath}/${listing.id}`);
-              }}
+                router(`${detailBasePath}/${listing.id}`)}}
               disabled = {loading}
             >
               {loading ? (
@@ -167,8 +150,7 @@ import { addItem } from '@/store/cartSlice';
         </div>;
       </div>;
     </div>;
-  );
-}
+  )}
 
 export default React.memo(ProductListingCard);
 

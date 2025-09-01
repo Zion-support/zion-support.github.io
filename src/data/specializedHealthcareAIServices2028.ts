@@ -20,19 +20,16 @@ export interface HealthcareAIService2028 {
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
-  regulatoryCompliance?: string[];
-}
+  regulatoryCompliance?: string[]}
 
 export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] = [
   // AI-Powered Medical Imaging Analysis

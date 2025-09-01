@@ -1,34 +1,19 @@
 import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChart3, Target, Shield, Globe export default function AIEnergyOptimization() {
-  const features = [
-    'AI-powered energy consumption forecasting and optimization',
-    'Real-time monitoring of energy usage across facilities',;
+  
     'Predictive maintenance for energy infrastructure',;
     'Smart grid integration and demand response optimization',;
     'Renewable energy integration and storage optimization',;
     'Carbon footprint tracking and sustainability reporting',;
     'Custom AI models for industry-specific energy patterns',;
     'Integration with major building management systems';
-  ];
-
-  const tiers = [
-    {
-      name: 'Basic',
-      price: '$299/mo',
-      details: ['Up to 5 facilities', 'Basic energy monitoring', 'Standard reporting', 'Email support']
-    },
-    { 
-      name: 'Professional', 
-      price: '$799/mo', 
-      details: ['Up to 25 facilities', 'Advanced AI optimization', 'Custom analytics', 'Priority support'] ;
-    },;
+  ]},;
     { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
-      details: ['Unlimited facilities', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
-    },;
+      details: ['Unlimited facilities', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] },;
   ];
 
-  const useCases = [;
+  
     'Commercial building energy optimization',;
     'Manufacturing facility energy management',;
     'Data center power efficiency',;
@@ -37,7 +22,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
     'Educational campus energy systems';
   ];
 
-  const benefits = [;
+  
     'Reduce energy costs by 20-40%',;
     'Improve energy efficiency by 25-45%',;
     'Cut carbon emissions by 30-50%',;
@@ -46,7 +31,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
     'Achieve sustainability and ESG goals';
   ];
 
-  const industries = [;
+  
     'Commercial Real Estate',;
     'Manufacturing & Industrial',;
     'Data Centers & IT',;
@@ -60,7 +45,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
       <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Zap className="w-4 h-4 mr-2" /> AI-Powered Energy Intelligence
+            <Zap className="w-4 h-4 mr-2"  /> AI-Powered Energy Intelligence
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Energy Optimization Platform</h1>
           <p className="text-emerald-100 text-xl">Transform your energy management with AI-powered optimization that reduces costs, improves efficiency, and accelerates your journey to sustainability.</p>
@@ -74,7 +59,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-start">
-                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                   <span className="text-gray-700">{f}</span>
                 </li>
               ))}
@@ -98,10 +83,10 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="/pricing" className="px-5 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors inline-flex items-center">
-                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2"  />
               </a>
               <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-gray-300 rounded-lg hover:border-green-400 transition-colors inline-flex items-center">
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />
+                Learn More <ExternalLink className="w-4 h-4 ml-2"  />
               </a>
             </div>
           </div>
@@ -110,7 +95,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {['20-40% cost reduction', '25-45% efficiency gain', '30-50% emission cut'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <Brain className="w-6 h-6 text-green-600 mb-3" />
+              <Brain className="w-6 h-6 text-green-600 mb-3"  />
               <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
@@ -121,7 +106,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map((useCase) => (
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">
-                <Target className="w-5 h-5 text-green-600 mr-3" />
+                <Target className="w-5 h-5 text-green-600 mr-3"  />
                 <span className="text-gray-700">{useCase}</span>
               </div>
             ))}
@@ -133,7 +118,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit) => (
               <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-green-200">
-                <Leaf className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                <Leaf className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0"  />
                 <span className="text-gray-700">{benefit}</span>
               </div>
             ))}
@@ -145,7 +130,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry) => (
               <div key={industry} className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
-                <Globe className="w-5 h-5 text-green-600 mr-3" />
+                <Globe className="w-5 h-5 text-green-600 mr-3"  />
                 <span className="text-gray-700">{industry}</span>
               </div>
             ))}
@@ -156,10 +141,10 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
           <div className="text-sm text-gray-600 mb-2">Ready to optimize your energy consumption?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
+              <Phone className="w-4 h-4 mr-2" /> +1 302 464 0950
             </a>
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors">
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
+              <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com
             </a>
           </div>;
           <div className="mt-4 text-sm text-gray-500">;
@@ -168,5 +153,4 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
         </div>;
       </section>;
     </div>;
-  );
-}}
+  )}}

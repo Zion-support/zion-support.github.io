@@ -1,6 +1,3 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react';
 
 interface AccessibilityContextType {
 
@@ -17,10 +14,9 @@ interface AccessibilityContextType {
   voiceNavigation: boolean;
   toggleVoiceNavigation: ()  => void}
 
-const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 
-export const useAccessibility = () => {;
-  const context = useContext(AccessibilityContext);
+export 
+  
   if (!context) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider')}
   return context};
@@ -38,8 +34,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Load accessibility preferences from localStorage
   useEffect(() => {
-    const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === 'true';
-
+    
     setHighContrast(savedHighContrast);
     setReducedMotion(savedReducedMotion);
     setFontSize(savedFontSize ? parseInt(savedFontSize) : 16);
@@ -47,8 +42,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Apply accessibility settings to document
   useEffect(() => {
-    const root = document.documentElement;
-
+    
     // Apply high contrast
     if (highContrast) {
       root.classList.add('high-contrast')} else {
@@ -74,8 +68,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       // Font size controls (Alt + Plus/Minus)
       if (event.altKey && event.key = == '+') {;
         event.preventDefault();
-        increaseFontSize();
-      }
+        increaseFontSize()}
       if (event.altKey && event.key = == '-') {;
         event.preventDefault();
         decreaseFontSize()}
@@ -84,61 +77,42 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
-  const toggleHighContrast = () => {;
-    const newValue = !highContrast;
+  
+    
     setHighContrast(newValue);
     localStorage.setItem('zion-high-contrast', newValue.toString())};
 
-  const toggleReducedMotion = () => {;
-    const newValue = !reducedMotion;
+  
+    
     setReducedMotion(newValue);
     localStorage.setItem('zion-reduced-motion', newValue.toString())};
 
-  const increaseFontSize = () => {;
-    const newSize = Math.min(fontSize + 2, 24);
+  
+    
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString())};
 
-  const decreaseFontSize = () => {;
-    const newSize = Math.max(fontSize - 2, 12);
+  
+    
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString())};
 
-  const resetFontSize = () => {;
+  
     setFontSize(16);
     localStorage.setItem('zion-font-size', '16')};
 
-  const toggleVoiceNavigation = () => {;
-    const newValue = !voiceNavigation;
+  
+    
     setVoiceNavigation(newValue);
     localStorage.setItem('zion-voice-navigation', newValue.toString())};
 
-  const value = {
-  highContrast,
-    toggleHighContrast,
-    reducedMotion,
-    toggleReducedMotion,
-    fontSize,
-    increaseFontSize,
-    decreaseFontSize,
-    resetFontSize,
-    showSkipLinks,
-    setShowSkipLinks,
-    voiceNavigation,
-    toggleVoiceNavigation,;
+  
   ;
   ;
   ;
   ;
   ;
-  ;
-
-
-
-
-
-
-};
+  };
 
   return (
     <AccessibilityContext.Provider value = {value}>
@@ -236,7 +210,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               aria-label="Toggle high contrast"
               title="Toggle high contrast (Alt + H)"
 
-              <Braille className="w-4 h-4" />
+              <Braille className="w-4 h-4"  />
             </button>
 
             <button
@@ -247,7 +221,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               aria-label="Toggle reduced motion"
               title="Toggle reduced motion"
 
-              {reducedMotion ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+              {reducedMotion ? <VolumeX className="w-4 h-4"  /> : <Volume2 className="w-4 h-4" />}
             </button>
 
             <button
@@ -282,8 +256,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 ;
       {children};
     </AccessibilityContext.Provider>;
-  );
-};
+  )};
 
 // Focus trap component for modals
 export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({
@@ -295,13 +268,12 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
   useEffect(() => {
     if (!isActive) return;
 
-    const focusableElements = document.querySelectorAll(;
+    
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     );
 
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
+    
+    
           lastElement.focus()}
       } else {
         if (document.activeElement = == lastElement) {;

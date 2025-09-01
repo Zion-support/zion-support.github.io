@@ -1,8 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import SEO from "../components/SEOHead";
-import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
 import {
   Brain,
   Shield,
@@ -29,89 +24,57 @@ import {
 const AllServices2027: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const categories = [;
+  
     { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },;
     { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' },;
     { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;
     { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from-yellow-500 to-orange-600' },;
     { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' },;
     { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' };
-  ];
-
-  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service =>
-    selectedCategory === 'All' || service.category === selectedCategory
-  );
-
-  const getCategoryStats = (categoryId: string)  => {
-    if (categoryId === 'All') {
-      return {
-              count: innovativeServices2027.length,
-      avgPrice: Math.round(innovativeServices2027.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / innovativeServices2027.length),
-      avgRating: Math.round((innovativeServices2027.reduce((sum, s)  => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10;
-      }};
-    const services = innovativeServices2027.filter(s => s.category === categoryId);
+  ]}};
+    
           return {
         count: services.length,
         avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
         avgRating: Math.round((services.reduce((sum, s)  => sum + s.rating, 0) / services.length) * 10) / 10
       }};
-  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => ;
+  
     selectedCategory === 'All' || service.category === selectedCategory;
   );
 
-  const getCategoryStats = (categoryId: string) => {;
+  
     if (categoryId === 'All') {;
       return {;
         count: INNOVATIVE_SERVICES_2027.length,;
         avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),;
-        avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
-      };
+        avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10};
 
-    const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId);
+    
     return {
       count: services.length,
       avgPrice: Math.round(services.reduce((sum, s) => sum + s.price, 0) / services.length),
       avgRating: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
-    };
-  };
+    }};
 
-  const containerVariants = {
-    hidden: { opacity: 0 },;
-    visible: {;
+  
+    visible: {
       opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
+      transition: {
+        staggerChildren: 0.1}}};
 
-  const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
-
-},
-    visible: {;
+  
       y: 0,;
       opacity: 1,;
-      transition: {;
-        duration: 0.5;
-      };
-    };
-  };
+      transition: {
+        duration: 0.5}}};
 
   return (
     <>
-      <SEOHead
-        title="All Services 2027 - Zion Tech Group"
+      <SEOHead title="All Services 2027 - Zion Tech Group"
         description="Explore our complete portfolio of cutting-edge technology services. From AI and cybersecurity to quantum computing and 5G solutions, we have everything your business needs to succeed."
         canonical="/all-services-2027"
         url="https://ziontechgroup.com/all-services-2027"
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light overflow-hidden">
@@ -170,15 +133,15 @@ const AllServices2027: React.FC = () => {;
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between text-white">
             <div className="flex items-center space-x-4 mb-4 md:mb-0">
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5"  />
               <span>+1 302 464 0950</span>
             </div>
             <div className="flex items-center space-x-4 mb-4 md:mb-0">
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5"  />
               <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center space-x-4">
-              <MapPin className="w-5 h-5" />
+              <MapPin className="w-5 h-5"  />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
@@ -204,9 +167,8 @@ const AllServices2027: React.FC = () => {;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {categories.map((category) => {;
-              const stats = getCategoryStats(category.id);
-              const IconComponent = category.icon;
-
+              
+              
               return (
                 <motion.div
                   key = {category.id}
@@ -217,7 +179,7 @@ const AllServices2027: React.FC = () => {;
                   onClick={() => setSelectedCategory(category.id)}
 
                   <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${category.color} rounded-full mb-4`}>
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-white"  />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{category.name}</h3>
                   <div className="space-y-2 text-sm text-gray-300">
@@ -235,8 +197,7 @@ const AllServices2027: React.FC = () => {;
                     </div>;
                   </div>;
                 </motion.div>;
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -260,7 +221,7 @@ const AllServices2027: React.FC = () => {;
             className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredServices.map((service)  => (
-              <ServiceCard key={service.id} service={service} />
+              <ServiceCard key={service.id} service={service}  />
             ))}
           </motion.div>
 
@@ -294,7 +255,7 @@ const AllServices2027: React.FC = () => {;
 
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
-                  <Brain className="w-6 h-6 text-white" />
+                  <Brain className="w-6 h-6 text-white"  />
                 </div>
                 <h3 className="text-2xl font-bold text-white">AI Services</h3>
               </div>
@@ -305,15 +266,15 @@ const AllServices2027: React.FC = () => {;
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <CheckCircle className="w-5 h-5 text-green-400"  />
                   <span className="text-gray-300">Machine Learning Models</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <CheckCircle className="w-5 h-5 text-green-400"  />
                   <span className="text-gray-300">Natural Language Processing</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <CheckCircle className="w-5 h-5 text-green-400"  />
                   <span className="text-gray-300">Computer Vision</span>
                 </div>
               </div>
@@ -326,7 +287,7 @@ const AllServices2027: React.FC = () => {;
 
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-white" />
+                  <Shield className="w-6 h-6 text-white"  />
                 </div>
                 <h3 className="text-2xl font-bold text-white">Cybersecurity</h3>
               </div>
@@ -337,15 +298,15 @@ const AllServices2027: React.FC = () => {;
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <CheckCircle className="w-5 h-5 text-green-400"  />
                   <span className="text-gray-300">Threat Detection</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <CheckCircle className="w-5 h-5 text-green-400"  />
                   <span className="text-gray-300">Incident Response</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <CheckCircle className="w-5 h-5 text-green-400"  />
                   <span className="text-gray-300">Compliance automation</span>
                 </div>
               </div>
@@ -358,7 +319,7 @@ const AllServices2027: React.FC = () => {;
             >
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-white" />
+                  <Zap className="w-6 h-6 text-white"  />
                 </div>
                 <h3 className="text-2xl font-bold text-white">Emerging Technology</h3>
               </div>
@@ -369,15 +330,15 @@ const AllServices2027: React.FC = () => {;
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <CheckCircle className="w-5 h-5 text-green-400"  />
                   <span className="text-gray-300">Quantum computing access</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <CheckCircle className="w-5 h-5 text-green-400"  />
                   <span className="text-gray-300">Blockchain development</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <CheckCircle className="w-5 h-5 text-green-400"  />
                   <span className="text-gray-300">IoT and edge computing</span>
                 </div>
               </div>
@@ -390,7 +351,7 @@ const AllServices2027: React.FC = () => {;
             >
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
-                  <Code className="w-6 h-6 text-white" />
+                  <Code className="w-6 h-6 text-white"  />
                 </div>
                 <h3 className="text-2xl font-bold text-white">IT Services</h3>
               </div>
@@ -401,15 +362,15 @@ const AllServices2027: React.FC = () => {;
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <CheckCircle className="w-5 h-5 text-green-400"  />
                   <span className="text-gray-300">DevOps automation</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <CheckCircle className="w-5 h-5 text-green-400"  />
                   <span className="text-gray-300">Cloud infrastructure</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <CheckCircle className="w-5 h-5 text-green-400"  />
                   <span className="text-gray-300">Performance optimization</span>
                 </div>
               </div>
@@ -456,34 +417,30 @@ const AllServices2027: React.FC = () => {;
 
 // Service Card Component
 const ServiceCard: React.FC<{ service}> = ({ service }) => {
-  const getCategoryIcon = (category: string)  => {
-    switch (category) {
-      case 'AI Services':;
+  
             </a>;
           </div>;
         </div>;
       </section>;
     </>;
-  );
-};
+  )};
 
 // Service Card Component
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
-  const getCategoryIcon = (category: string) => {;
+  
     switch (category) {;
       case 'AI Services':;
-        return <Brain className="w-5 h-5" />;
+        return <Brain className="w-5 h-5"  />;
       case 'Cybersecurity':;
-        return <Shield className="w-5 h-5" />;
+        return <Shield className="w-5 h-5"  />;
       case 'Emerging Technology':;
-        return <Zap className="w-5 h-5" />;
+        return <Zap className="w-5 h-5"  />;
       case 'IT Services':;
-        return <Code className="w-5 h-5" />;
+        return <Code className="w-5 h-5"  />;
       case 'Telecommunications':;
-        return <Signal className="w-5 h-5" />;
+        return <Signal className="w-5 h-5"  />;
       default:;
-        return <Users className = "w-5 h-5" />};
-  };
+        return <Users className = "w-5 h-5"  />}};
 
   return (
     <motion.div
@@ -524,7 +481,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
                 key={index}
                 className="inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300"
 
-                <CheckCircle className="w-3 h-3" />
+                <CheckCircle className="w-3 h-3"  />
                 <span>{feature}</span>
               </span>;
             ))}
@@ -549,7 +506,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
 
             <span>Learn More</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4"  />
           </Link>
           <Link
             to="/contact"
@@ -560,6 +517,5 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
         </div>;
       </div>;
     </motion.div>;
-  );
-};
+  )};
 export default AllServices2027;

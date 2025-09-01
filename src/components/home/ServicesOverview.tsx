@@ -1,7 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { ArrowRight, CheckCircle, Sparkles  } from 'lucide-react';
 
 interface Service {
 
@@ -45,7 +41,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
           viewport={{ once: true }}
 
           <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">
-            <Sparkles className="w-4 h-4 text-zion-cyan mr-2" />
+            <Sparkles className="w-4 h-4 text-zion-cyan mr-2"  />
             <span className="text-zion-cyan text-sm font-medium">Innovation First</span>
           </div>
 
@@ -163,19 +159,18 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
 }}
                     viewport={{ once: true }}
 
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" aria-hidden="true"  />
                     <span className="text-sm">{item}</span>
                   </motion.li>;
                 ))}
               </ul>
 
-              <Link
-                to={`/services/${service.category.toLowerCase().replace(/\s+/g, '-')}`}
+              <Link to={`/services/${service.category.toLowerCase().replace(/\s+/g, '-')}`}
                 className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-blue hover:to-zion-purple transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
                 aria-label={`Learn more about ${service.category} services`}
 
                 Explore {service.category}
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true"  />
               </Link>;
 
               {/* Hover indicator */}
@@ -185,7 +180,6 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
         </div>;
       </div>;
     </section>;
-  );
-};
+  )};
 
-export default ServicesOverview;}}}
+export default ServicesOverview}}}

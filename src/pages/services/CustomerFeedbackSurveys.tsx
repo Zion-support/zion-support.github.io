@@ -1,13 +1,10 @@
-import React from 'react';
-import SEO from '@/components/SEO';
 
 export default function CustomerFeedbackSurveys(...args[]):  {
   return (
     <div className = "min-h-screen bg-futuristic text-white">;
-      <SEO
-        title="Mobile-First Customer Feedback Surveys | Zion Tech Group"
+      <SEO title="Mobile-First Customer Feedback Surveys | Zion Tech Group"
         description="Create branded, mobile-friendly surveys with AI insights, NPS, CSAT, churn predictors, and real-time dashboards."
-      />
+       />
       <section className="container-responsive py-16">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
           Mobile-First Feedback Surveys
@@ -50,6 +47,5 @@ export default function CustomerFeedbackSurveys(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 

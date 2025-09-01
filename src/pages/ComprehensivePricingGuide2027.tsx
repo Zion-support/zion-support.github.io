@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   Brain, 
   GitFork, 
@@ -116,210 +113,11 @@ import {
   Coins as CoinsIcon3,
   Satellite as SatelliteIcon3
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';
-import { INNOVATIVE_IT_INFRASTRUCTURE_2025 } from '../data/innovativeITInfrastructure2025';
-import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBlockchainWeb3Services2025';
 
 export default function ComprehensivePricingGuide2027() {
-  const serviceCategories = [
-    {
-      name: "AI & Machine Learning Services",
-      icon: Brain,
-      description: "Cutting-edge AI solutions for business transformation",
-      color: "from-zion-cyan to-zion-purple",
-      services: [
-        {
-          name: "AI Workflow Orchestrator",
-          description: "Transform business processes with AI-powered workflow automation",
-          price: "$299",
-          period: "/month",
-          features: ["AI-powered process optimization", "Visual workflow designer", "Automated execution", "Performance analytics", "Up to 50 workflows", "Standard integrations"],
-          popular: true,
-          link: "/services/ai-workflow-orchestrator"
-        },
-        {
-          name: "AI Data Governance Platform",
-          description: "Secure, govern, and manage data with AI-powered compliance automation",
-          price: "$499",
-          period: "/month",
-          features: ["AI-powered data discovery", "Advanced access control", "Data lineage tracking", "Compliance automation", "Up to 10TB data", "Standard compliance templates"],
-          popular: false,
-          link: "/services/ai-data-governance-platform"
-        },
-        {
-          name: "AI Customer Experience Analytics",
-          description: "Transform customer insights into actionable intelligence with AI-powered analytics",
-          price: "$399",
-          period: "/month",
-          features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine", "Up to 10K interactions", "Basic reporting"],
-          popular: false,
-          link: "/services/ai-customer-experience-analytics"
-        }
-      ]
-    },
-    {
-      name: "Cloud & DevOps Services",
-      icon: Network,
-      description: "Scalable cloud infrastructure and development operations",
-      color: "from-zion-blue to-zion-cyan",
-      services: [
-        {
-          name: "Cloud DevOps",
-          description: "Infrastructure automation and scaling solutions",
-          price: "$599",
-          period: "/month",
-          features: ["Infrastructure as Code", "CI/CD pipelines", "Auto-scaling", "Monitoring & alerting", "24/7 support", "Multi-cloud support"],
-          popular: false,
-          link: "/services/cloud-devops"
-        },
-        {
-          name: "IT Infrastructure",
-          description: "Enterprise-grade infrastructure solutions",
-          price: "$799",
-          period: "/month",
-          features: ["Network design", "Server management", "Security implementation", "Backup & recovery", "Performance optimization", "Compliance support"],
-          popular: false,
-          link: "/services/it-infrastructure"
-        }
-      ]
-    },
-    {
-      name: "Security & Compliance Services",
-      icon: Shield,
-      description: "Enterprise-grade security and compliance solutions",
-      color: "from-zion-red to-zion-orange",
-      services: [
-        {
-          name: "Zero Trust Network Access",
-          description: "Modern security architecture for enterprise networks",
-          price: "$899",
-          period: "/month",
-          features: ["Identity verification", "Access control", "Threat detection", "Compliance monitoring", "Real-time alerts", "Security analytics"],
-          popular: false,
-          link: "/services/zero-trust-network-access"
-        },
-        {
-          name: "Security Headers & CSP",
-          description: "Web security hardening and content security policies",
-          price: "$299",
-          period: "/month",
-          features: ["Security headers", "Content Security Policy", "XSS protection", "HTTPS enforcement", "Security monitoring", "Compliance reporting"],
-          popular: false,
-          link: "/services/security-headers-csp"
-        }
-      ]
-    },
-    {
-      name: "Business Process Automation",
-              icon: WorkflowIcon,
-      description: "Streamline operations with intelligent automation",
-      color: "from-zion-purple to-zion-pink",
-      services: [
-        {
-          name: "AI Project Management",
-          description: "AI-driven project optimization and management",
-          price: "$449",
-          period: "/month",
-          features: ["AI task prioritization", "Resource optimization", "Risk assessment", "Progress tracking", "Team collaboration", "Performance analytics"],
-          popular: false,
-          link: "/services/ai-project-management"
-        },
-        {
-          name: "AI Customer Support Automation",
-          description: "Intelligent customer support with AI automation",
-          price: "$349",
-          period: "/month",
-          features: ["Chatbot integration", "Ticket routing", "Knowledge base", "Sentiment analysis", "Performance metrics", "Multi-channel support"],
-          popular: false,
-          link: "/services/ai-customer-support-automation"
-        }
-      ]
-    }
-  };
-
-  const enterprisePackages = [
-    {
-      name: "Starter Enterprise",
-      price: "$2,999",
-      period: "/month",
-      description: "Perfect for growing enterprises with comprehensive needs",
-      features: [
-        "Up to 5 AI services",
-        "Custom integrations",
-        "Priority support",
-        "Advanced analytics",
-        "Compliance reporting",
-        "Training & onboarding"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional Enterprise",
-      price: "$5,999",
-      period: "/month",
-      description: "For established enterprises requiring advanced capabilities",
-      features: [
-        "Up to 10 AI services",
-        "Custom AI models",
-        "White-label solutions",
-        "Dedicated support team",
-        "Advanced security",
-        "SLA guarantees",
-        "Custom development"
-      ],
-      popular: true
-    },
-    {
-      name: "Ultimate Enterprise",
-      price: "$12,999",
-      period: "/month",
-      description: "For large organizations with complex requirements",
-      features: [
-        "Unlimited AI services",
-        "Custom AI development",
-        "On-premise deployment",
-        "24/7 dedicated support",
-        "Custom integrations",
-        "Advanced analytics",
-        "Compliance automation",
-        "Strategic consulting"
-      ],
-      popular: false
-    }
-  ];
-
-  const marketComparison = [
-    {
-      feature: "AI Workflow Automation",
-      zion: "$299/month",
-      competitor1: "$599/month",
-      competitor2: "$799/month",
-      savings: "50-62%"
-    },
-    {
-      feature: "Data Governance Platform",
-      zion: "$499/month",
-      competitor1: "$1,299/month",
-      competitor2: "$1,999/month",
-      savings: "61-75%"
-    },
-    {
-      feature: "Customer Experience Analytics",
-      zion: "$399/month",
-      competitor1: "$899/month",
-      competitor2: "$1,299/month",
-      savings: "56-69%"
-    },
-    {
-      feature: "Cloud DevOps",
-      zion: "$599/month",
-      competitor1: "$1,199/month",
-      competitor2: "$1,599/month",
-      savings: "50-63%"
-    }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
       {/* Futuristic Animated Background */}
@@ -338,7 +136,7 @@ export default function ComprehensivePricingGuide2027() {
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8">
-                <DollarSign className="w-4 h-4 mr-2" />
+                <DollarSign className="w-4 h-4 mr-2"  />
                 Comprehensive Pricing Guide 2027
               </div>
               
@@ -357,7 +155,7 @@ export default function ComprehensivePricingGuide2027() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
                 >
-                  <Play className="w-5 h-5 mr-2" />
+                  <Play className="w-5 h-5 mr-2"  />
                   Start Free Trial
                 </motion.button>
                 <motion.button
@@ -365,7 +163,7 @@ export default function ComprehensivePricingGuide2027() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
                 >
-                  <MessageCircle className="w-5 h-5 mr-2" />
+                  <MessageCircle className="w-5 h-5 mr-2"  />
                   Contact Sales
                 </motion.button>
               </div>
@@ -439,7 +237,7 @@ export default function ComprehensivePricingGuide2027() {
                       <ul className="space-y-3 mb-6">
                         {service.features.map((feature, idx) => (
                           <li key={idx} className="flex items-center text-zion-slate-300">
-                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />
                             {feature}
                           </li>
                         ))}
@@ -518,7 +316,7 @@ export default function ComprehensivePricingGuide2027() {
                   <ul className="space-y-4 mb-8">
                     {pkg.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-zion-slate-300">
-                        <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -611,7 +409,7 @@ export default function ComprehensivePricingGuide2027() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
                 >
-                  <Rocket className="w-5 h-5 mr-2" />
+                  <Rocket className="w-5 h-5 mr-2"  />
                   Start Free Trial
                 </motion.button>
                 <motion.button
@@ -619,7 +417,7 @@ export default function ComprehensivePricingGuide2027() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
                 >
-                  <MessageCircle className="w-5 h-5 mr-2" />
+                  <MessageCircle className="w-5 h-5 mr-2"  />
                   Schedule Consultation
                 </motion.button>
               </div>
@@ -633,15 +431,15 @@ export default function ComprehensivePricingGuide2027() {
             <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-zion-cyan mb-4" />
+                <Phone className="w-8 h-8 text-zion-cyan mb-4"  />
                 <p className="text-zion-slate-300">+1 302 464 0950</p>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-zion-cyan mb-4" />
+                <Mail className="w-8 h-8 text-zion-cyan mb-4"  />
                 <p className="text-zion-slate-300">kleber@ziontechgroup.com</p>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 text-zion-cyan mb-4" />
+                <MapPin className="w-8 h-8 text-zion-cyan mb-4"  />
                 <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
@@ -649,7 +447,6 @@ export default function ComprehensivePricingGuide2027() {
         </section>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ComprehensivePricingGuide2027;

@@ -1,11 +1,8 @@
-import React from 'react.ts';
 
 interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
 
   error: anyError;
-  resetErrorBoundary: ()  => void;
-
-}
+  resetErrorBoundary: ()  => void}
 
 export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
   return (
@@ -43,5 +40,4 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
         )};
       </div>;
     </div>;
-  );
-};
+  )};

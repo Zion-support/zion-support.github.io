@@ -24,21 +24,18 @@ export interface EmergingTechService2030 {
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors: string[];
   marketSize: string;
   aiCapabilities: string[];
   complianceFeatures: string[];
-  scalabilityFeatures: string[];
-}
+  scalabilityFeatures: string[]}
 
 export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   {
@@ -448,4 +445,4 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
 ];
 
 export default EMERGING_TECH_SERVICES_2030;
-export const ALL_EMERGING_TECH_SERVICES_2030 = EMERGING_TECH_SERVICES_2030;
+export 

@@ -1,11 +1,3 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";
-import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const categoryColors: { [key: string]: string } = {
   'AI & Autonomous Systems': 'from-purple-600 to-indigo-700',
@@ -32,60 +24,26 @@ const categoryColors: { [key: string]: string } = {
   'Entertainment & Media Technology': 'from-purple-600 to-pink-700'
 };
 
-const features = [
-  "AI-Powered Automation",
-  "Real-time Analytics",
-  "Multi-cloud Support",
-  "API-First Architecture",
-  "Scalable Infrastructure",
-  "Custom Integrations",;
+
   "White-label Solutions",;
   "Comprehensive Documentation",;
   "24/7 Technical Support",;
   "99.9% Uptime Guarantee",;
   "SOC 2 Type II Compliant",;
   "30-Day Money Back Guarantee";
-];
-
-const benefits = [
-  {
-    icon: <Zap className="h-6 w-6"/>,
-    title: "Immediate Deployment",
-    description: "All services are ready for immediate deployment with no setup delays"
-  },
-  {
-    icon: <Shield className="h-6 w-6"/>,
-    title: "Enterprise Security",
-    description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
-  },
-  {
-    icon: <TrendingUp className="h-6 w-6"/>,
-    title: "Proven ROI",
-    description: "Average 300% ROI within 6 months of implementation";
-  },;
+]},;
   {;
-    icon: <CheckCircle className="h-6 w-6"/>,;
+    icon: <CheckCircle className="h-6 w-6" />,;
     title: "Quality Guaranteed",;
-    description: "30-day money-back guarantee with free migration support";
-  };
+    description: "30-day money-back guarantee with free migration support"};
 ];
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
+
   ;
   ;
   ;
   ;
   website: 'https://ziontechgroup.com';
-;
-
-
-
-
-
-
 };
 
 export function ComprehensiveServicesShowcase2027(...args[]):  {
@@ -93,22 +51,15 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
   const [searchQuery, setSearchQuery] = useState<any>('');
 
   // Combine all services
-  const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027];
-
+  
   // Get unique categories
-  const categories = Array.from(new Set(allServices.map(service => service.category)));
-
+  
   // Filter services based on selection and search
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = searchQuery === '' ||
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchQuery.toLowerCase());
+  
+    
     return matchesCategory && matchesSearch});
 
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
-
+  
   return (
     <div className = "py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       <div className="container mx-auto px-4">
@@ -124,13 +75,13 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact">
               <Button size="lg" className="bg-white text-zion-blue hover:bg-gray-100">
-                <Phone className="h-5 w-5 mr-2"/>
+                <Phone className="h-5 w-5 mr-2" />
                 Get Free Consultation
               </Button>
             </Link>
             <Link to="/contact">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">
-                <Mail className="h-5 w-5 mr-2"/>
+                <Mail className="h-5 w-5 mr-2" />
                 Request Demo
               </Button>
             </Link>
@@ -141,17 +92,17 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-16 border border-white/20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="flex flex-col items-center">
-              <Phone className="h-8 w-8 text-zion-cyan mb-2"/>
+              <Phone className="h-8 w-8 text-zion-cyan mb-2" />
               <h3 className="text-lg font-semibold text-white mb-1">Call Us</h3>
               <p className="text-zion-slate-light">{contactInfo.mobile}</p>
             </div>
             <div className="flex flex-col items-center">
-              <Mail className="h-8 w-8 text-zion-cyan mb-2"/>
+              <Mail className="h-8 w-8 text-zion-cyan mb-2" />
               <h3 className="text-lg font-semibold text-white mb-1">Email Us</h3>
               <p className="text-zion-slate-light">{contactInfo.email}</p>
             </div>
             <div className="flex flex-col items-center">
-              <MapPin className="h-8 w-8 text-zion-cyan mb-2"/>
+              <MapPin className="h-8 w-8 text-zion-cyan mb-2" />
               <h3 className="text-lg font-semibold text-white mb-1">Visit Us</h3>
               <p className="text-zion-slate-light text-sm">{contactInfo.address}</p>
             </div>
@@ -210,14 +161,14 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                   <div className="space-y-2">
                     {service.features.slice(0, 3).map((feature, index) => (
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </div>
                     ))}
                   </div>
                   <div className="mt-4 flex items-center justify-between text-sm">
                     <div className="flex items-center">
-                      <Star className="h-4 w-4 text-yellow-400 mr-1"/>
+                      <Star className="h-4 w-4 text-yellow-400 mr-1" />
                       <span>{service.rating}</span>
                       <span className="text-zion-slate-light ml-1">({service.reviews})</span>
                     </div>
@@ -228,7 +179,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                   <Link to={service.link} className="mt-4 w-full">
                     <Button className="w-full bg-zion-cyan text-white hover:bg-zion-cyan-dark">
                       Learn More
-                      <ArrowRight className="h-4 w-4 ml-2"/>
+                      <ArrowRight className="h-4 w-4 ml-2" />
                     </Button>
                   </Link>
                 </CardContent>
@@ -276,7 +227,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                     <h4 className="font-semibold text-white text-sm">Key Features: any</h4>
                     {service.features.slice(0, 3).map((feature, index)  => (
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </div>
                     ))}
@@ -301,7 +252,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                   {/* Service Stats */}
                   <div className="flex items-center justify-between text-sm mb-4">
                     <div className="flex items-center">
-                      <Star className="h-4 w-4 text-yellow-400 mr-1"/>
+                      <Star className="h-4 w-4 text-yellow-400 mr-1" />
                       <span>{service.rating}</span>
                       <span className="text-zion-slate-light ml-1">({service.reviews})</span>
                     </div>
@@ -315,12 +266,12 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                     <Link to={service.link} className="w-full">
                       <Button className="w-full bg-zion-cyan text-white hover:bg-zion-cyan-dark">
                         Learn More
-                        <ArrowRight className="h-4 w-4 ml-2"/>
+                        <ArrowRight className="h-4 w-4 ml-2" />
                       </Button>
                     </Link>
                     <Link to="/contact" className="w-full">
                       <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white">
-                        <Phone className="h-4 w-4 mr-2"/>
+                        <Phone className="h-4 w-4 mr-2" />
                         Get Quote
                       </Button>
                     </Link>
@@ -360,13 +311,13 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-zion-cyan text-white hover:bg-zion-cyan-dark px-8 py-3">
-                  <Phone className="h-5 w-5 mr-2"/>
+                  <Phone className="h-5 w-5 mr-2" />
                   Start Free Trial
                 </Button>
               </Link>
               <Link to="/contact">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue px-8 py-3">
-                  <Mail className="h-5 w-5 mr-2"/>
+                  <Mail className="h-5 w-5 mr-2" />
                   Schedule Demo
                 </Button>
               </Link>
@@ -380,8 +331,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
         </div>;
       </div>;
     </div>;
-  );
-}
+  )}
 
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;

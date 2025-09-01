@@ -1,6 +1,3 @@
-import React, { useState, useEffect } from 'react.ts';
-import { X, CheckCircle, AlertCircle, Info, XCircle  } from 'lucide-react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
 
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 
@@ -10,48 +7,34 @@ export interface Toast {
   type: ToastType;
   title: string;
   message?: string;
-  duration?: number;
-
-}
+  duration?: number}
 
 interface ToastProps extends React.PropsWithChildren<{}> {
 
   toast: Toast;
-  onRemove: (id: string)  => void;
-
-}
+  onRemove: (id: string)  => void}
 
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-      setTimeout(() => onRemove(toast.id), 300);
-    }, toast.duration || 5000);
+    
+      setTimeout(() => onRemove(toast.id), 300)}, toast.duration || 5000);
 
-    return () => clearTimeout(timer);
-  }, [toast.id, toast.duration, onRemove]);
+    return () => clearTimeout(timer)}, [toast.id, toast.duration, onRemove]);
 
-  const getIcon = () => {
-    switch (toast.type) {
-      case 'success':
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
+  
       case 'error':
-        return <XCircle className="w-5 h-5 text-red-500" />;
+        return <XCircle className="w-5 h-5 text-red-500"  />;
       case 'warning':
-        return <AlertCircle className="w-5 h-5 text-yellow-500" />;
+        return <AlertCircle className="w-5 h-5 text-yellow-500"  />;
       case 'info':
-        return <Info className="w-5 h-5 text-blue-500" />;
+        return <Info className="w-5 h-5 text-blue-500"  />;
       default:
-        return <Info className="w-5 h-5 text-blue-500" />;
-    }
+        return <Info className="w-5 h-5 text-blue-500"  />}
   };
 
-  const getBgColor = () => {
-    switch (toast.type) {
-      case 'success':
-        return 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800';
+  
       case 'error':
         return 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800';
       case 'warning':
@@ -59,8 +42,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       case 'info':
         return 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800';
       default:
-        return 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800';
-    }
+        return 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800'}
   };
 
   return (
@@ -88,56 +70,42 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         <button
           onClick={() => {
             setIsVisible(false);
-            setTimeout(() => onRemove(toast.id), 300);
-          }}
+            setTimeout(() => onRemove(toast.id), 300)}}
           className="flex-shrink-0 ml-2 p-1 rounded-md text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
         >
-          <X className="w-4 h-4" />
+          <X className="w-4 h-4"  />
         </button>
       </div>
     </motion.div>
-  );
-};
+  )};
 
 export const ToastContainer: React.FC = (): JSX.Element => {
   const [toasts, setToasts] = useState<any>([]);
 
-  const addToast = (toast: anyOmit<Toast, 'id'>)  => {
-    const id = Math.random().toString(36).substr(2, 9);
-    const newToast = { ...toast, id };
-    setToasts(prev => [...prev, newToast]);
-  };
-
-  const removeToast = (id: anystring)  => {
-    setToasts(prev => prev.filter(toast => toast.id !== id));
-  };
+  
+    
+    setToasts(prev => [...prev, newToast])}};
 
   // Expose addToast globally for easy access
   useEffect(() => {
     (window as ).showToast = addToast;
     return () => {
-      delete (window as ).showToast;
-    };
-  }, []);
+      delete (window as ).showToast}}, []);
 
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
       <AnimatePresence>
         {toasts.map(toast => (
-          <ToastItem
-            key={toast.id}
+          <ToastItem key={toast.id}
             toast={toast}
             onRemove={removeToast}
-          />
+           />
         ))}
       </AnimatePresence>
     </div>
-  );
-};
+  )};
 
 // Utility function to show toasts
-export const showToast = (type: anyToastType, title: string, message?: string, duration?: number)  => {
-  if (typeof window !== 'undefined' && (window as ).showToast) {
-    (window as ).showToast({ type, title, message, duration });
+export 
   }
 };

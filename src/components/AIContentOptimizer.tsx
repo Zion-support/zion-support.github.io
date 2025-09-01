@@ -1,5 +1,3 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Brain, Zap, Target, TrendingUp, Search, FileText, Edit3, 
   Eye, BarChart3, Lightbulb, CheckCircle, AlertTriangle, 
@@ -14,8 +12,7 @@ interface ContentAnalysis {
   suggestions: string[];
   priority: 'high' | 'medium' | 'low';
   impact: number;
-  category: string;
-}
+  category: string}
 
 interface OptimizationSuggestion {
   id: string;
@@ -26,15 +23,13 @@ interface OptimizationSuggestion {
   effort: 'low' | 'medium' | 'high';
   impact: number;
   implementation: string;
-  estimatedTime: string;
-}
+  estimatedTime: string}
 
 interface AIContentOptimizerProps {
   enabled?: boolean;
   showRealTime?: boolean;
   autoAnalyze?: boolean;
-  onOptimizationComplete?: (suggestions: OptimizationSuggestion[]) => void;
-}
+  onOptimizationComplete?: (suggestions: OptimizationSuggestion[]) => void}
 
 export function AIContentOptimizer({
   enabled = true,
@@ -53,20 +48,13 @@ export function AIContentOptimizer({
   const [currentScore, setCurrentScore] = useState(0);
   const [targetScore, setTargetScore] = useState(95);
   
-  const analysisIntervalRef = useRef<NodeJS.Timeout | null>(null);
-
+  
   // Generate sample content analysis
-  const generateContentAnalysis = useCallback(() => {
-    const categories = ['seo', 'performance', 'accessibility', 'user-experience'];
+  
     const analysis: ContentAnalysis[] = [];
     
     categories.forEach(category => {
       const score = Math.floor(Math.random() * 40) + 60; // 60-100
-      const suggestions = [
-        `Optimize ${category} for better results`,
-        `Implement ${category} best practices`,
-        `Monitor ${category} metrics regularly`
-      ];
       
       analysis.push({
         id: category,
@@ -76,71 +64,20 @@ export function AIContentOptimizer({
         priority: score < 70 ? 'high' : score < 85 ? 'medium' : 'low',
         impact: Math.floor(Math.random() * 30) + 10,
         category
-      });
-    });
+      })});
     
     setContentAnalysis(analysis);
     
     // Calculate overall score
-    const overallScore = Math.round(analysis.reduce((sum, item) => sum + item.score, 0) / analysis.length);
-    setCurrentScore(overallScore);
-  }, []);
+    
+    setCurrentScore(overallScore)}, []);
 
   // Generate optimization suggestions
-  const generateOptimizationSuggestions = useCallback(() => {
-    const suggestions: OptimizationSuggestion[] = [
-      {
-        id: 'seo-1',
-        title: 'Optimize Meta Tags',
-        description: 'Improve meta title and description for better search engine visibility',
-        category: 'seo',
-        priority: 'high',
-        effort: 'low',
-        impact: 25,
-        implementation: 'Update meta tags with relevant keywords and compelling descriptions',
-        estimatedTime: '15 minutes'
-      },
-      {
-        id: 'performance-1',
-        title: 'Optimize Images',
-        description: 'Compress and optimize images for faster loading times',
-        category: 'performance',
-        priority: 'medium',
-        effort: 'medium',
-        impact: 20,
-        implementation: 'Use WebP format and implement lazy loading',
-        estimatedTime: '1 hour'
-      },
-      {
-        id: 'accessibility-1',
-        title: 'Improve ARIA Labels',
-        description: 'Add proper ARIA labels for better screen reader support',
-        category: 'accessibility',
-        priority: 'high',
-        effort: 'low',
-        impact: 30,
-        implementation: 'Add descriptive ARIA labels to interactive elements',
-        estimatedTime: '30 minutes'
-      },
-      {
-        id: 'ux-1',
-        title: 'Enhance Navigation',
-        description: 'Improve user navigation and reduce cognitive load',
-        category: 'ux',
-        priority: 'medium',
-        effort: 'medium',
-        impact: 18,
-        implementation: 'Simplify navigation structure and add breadcrumbs',
-        estimatedTime: '2 hours'
-      }
-    ];
-    
-    setOptimizationSuggestions(suggestions);
-  }, []);
+  
+    setOptimizationSuggestions(suggestions)}, []);
 
   // Start content analysis
-  const startAnalysis = useCallback(() => {
-    setIsAnalyzing(true);
+  
     setAnalysisComplete(false);
     
     // Simulate analysis process
@@ -151,59 +88,37 @@ export function AIContentOptimizer({
       setAnalysisComplete(true);
       
       if (onOptimizationComplete) {
-        onOptimizationComplete(optimizationSuggestions);
-      }
-    }, 3000);
-  }, [generateContentAnalysis, generateOptimizationSuggestions, onOptimizationComplete]);
+        onOptimizationComplete(optimizationSuggestions)}
+    }, 3000)}, [generateContentAnalysis, generateOptimizationSuggestions, onOptimizationComplete]);
 
   // Auto-analyze when component opens
   useEffect(() => {
     if (autoAnalyze && isOpen && !analysisComplete) {
-      startAnalysis();
-    }
+      startAnalysis()}
   }, [autoAnalyze, isOpen, analysisComplete, startAnalysis]);
 
   // Setup real-time updates
   useEffect(() => {
     if (showRealTime && isOpen && analysisComplete) {
       analysisIntervalRef.current = setInterval(() => {
-        generateContentAnalysis();
-      }, 60000); // Update every minute
+        generateContentAnalysis()}, 60000); // Update every minute
       
       return () => {
         if (analysisIntervalRef.current) {
-          clearInterval(analysisIntervalRef.current);
-        }
-      };
-    }
+          clearInterval(analysisIntervalRef.current)}
+      }}
   }, [showRealTime, isOpen, analysisComplete, generateContentAnalysis]);
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
-    const colors = {
-      high: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
-      medium: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
-      low: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400'
-    };
-    return colors[priority as keyof typeof colors] || colors.low;
-  };
+  
+    return colors[priority as keyof typeof colors] || colors.low};
 
   // Get category icon
-  const getCategoryIcon = (category: string) => {
-    const icons: { [key: string]: React.ReactNode } = {
-      seo: <Search className="w-5 h-5" />,
-      performance: <Zap className="w-5 h-5" />,
-      accessibility: <Eye className="w-5 h-5" />,
-      'user-experience': <Target className="w-5 h-5" />
-    };
-    return icons[category] || <Info className="w-5 h-5" />;
-  };
+  
+    return icons[category] || <Info className="w-5 h-5"  />};
 
   // Filter suggestions by category
-  const filteredSuggestions = selectedCategory === 'all' 
-    ? optimizationSuggestions 
-    : optimizationSuggestions.filter(s => s.category === selectedCategory);
-
+  
   if (!enabled) return null;
 
   return (
@@ -218,7 +133,7 @@ export function AIContentOptimizer({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7 }}
       >
-        <Brain className="w-6 h-6" />
+        <Brain className="w-6 h-6"  />
         <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
       </motion.button>
 
@@ -243,7 +158,7 @@ export function AIContentOptimizer({
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20">
                 <div className="flex items-center space-x-3">
-                  <Brain className="w-8 h-8 text-purple-600" />
+                  <Brain className="w-8 h-8 text-purple-600"  />
                   <div>
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                       AI Content Optimizer
@@ -260,7 +175,7 @@ export function AIContentOptimizer({
                     disabled={isAnalyzing}
                     className="p-2 text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors"
                   >
-                    <RefreshCw className={`w-5 h-5 ${isAnalyzing ? 'animate-spin' : ''}`} />
+                    <RefreshCw className={`w-5 h-5 ${isAnalyzing ? 'animate-spin' : ''}`}  />
                   </button>
                   
                   <button
@@ -274,7 +189,7 @@ export function AIContentOptimizer({
                     onClick={() => setIsOpen(false)}
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >
-                    <X className="w-5 h-5" />
+                    <X className="w-5 h-5"  />
                   </button>
                 </div>
               </div>
@@ -299,7 +214,7 @@ export function AIContentOptimizer({
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           Overall Content Score
                         </h3>
-                        <Sparkles className="w-6 h-6 text-purple-600" />
+                        <Sparkles className="w-6 h-6 text-purple-600"  />
                       </div>
                       
                       <div className="flex items-center space-x-6">
@@ -460,7 +375,7 @@ export function AIContentOptimizer({
                                   <Edit3 className="w-4 h-4" />
                                 </button>
                                 <button className="p-2 text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors">
-                                  <CheckCircle className="w-4 h-4" />
+                                  <CheckCircle className="w-4 h-4"  />
                                 </button>
                               </div>
                             </div>
@@ -472,12 +387,12 @@ export function AIContentOptimizer({
                     {/* Action Buttons */}
                     <div className="flex items-center justify-center space-x-4">
                       <button className="flex items-center space-x-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                        <Download className="w-4 h-4" />
+                        <Download className="w-4 h-4"  />
                         <span>Export Report</span>
                       </button>
                       
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-                        <Lightbulb className="w-4 h-4" />
+                        <Lightbulb className="w-4 h-4"  />
                         <span>Apply All Suggestions</span>
                       </button>
                       
@@ -489,7 +404,7 @@ export function AIContentOptimizer({
                   </div>
                 ) : (
                   <div className="text-center py-12">
-                    <Brain className="w-16 h-16 text-purple-600 mx-auto mb-4" />
+                    <Brain className="w-16 h-16 text-purple-600 mx-auto mb-4"  />
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                       Ready to optimize your content?
                     </h3>
@@ -510,5 +425,4 @@ export function AIContentOptimizer({
         )}
       </AnimatePresence>
     </>
-  );
-}
+  )}

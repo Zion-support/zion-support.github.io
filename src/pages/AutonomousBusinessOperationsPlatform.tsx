@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
 import { Bot, 
   Zap, 
   Shield, 
@@ -24,103 +21,28 @@ import { Bot,
   Rocket,
   Star
   } from 'lucide-react.ts';
-import { SEO   } from '@/components/SEO';
 
 const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
-  const features = [
-    {
-      icon: Bot,
-      title: 'Intelligent Automation',
-      description: 'AI-powered automation that learns from your business processes and continuously improves efficiency.'
-    },
-    {
-      icon: Workflow,
-      title: 'Process Orchestration',
-      description: 'Seamlessly orchestrate complex business workflows across multiple systems and departments.'
-    },
-    {
-      icon: Zap,
-      title: 'Real-time Optimization',
-      description: 'Dynamic optimization of business operations based on real-time data and market conditions.'
-    },
-    {
-      icon: Shield,
-      title: 'Secure Operations',
-      description: 'Enterprise-grade security with role-based access control and audit trails for all operations.';
+  
     };
+  ]};
   ];
 
-  const useCases = [
-    {
-      title: 'Supply Chain Management',
-      description: 'Automated inventory management, demand forecasting, and supplier coordination.',
-      icon: Workflow
-    },
-    {
-      title: 'Customer Service',
-      description: 'Intelligent chatbots, ticket routing, and automated customer support workflows.',
-      icon: Users
-    },
-    {
-      title: 'Financial Operations',
-      description: 'Automated invoicing, expense management, and financial reporting.',
-      icon: BarChart3
-    },
-    {
-      title: 'HR & Recruitment',
-      description: 'Automated candidate screening, onboarding processes, and performance management.',
-      icon: Users;
-    };
-  ];
-
-  const benefits = [
-    'Reduce operational costs by up to 40%',
-    'Improve process efficiency by 60%',
-    'Eliminate manual errors and delays',
-    '24/7 automated operations',
-    'Scalable infrastructure for growth',;
+  
     'Real-time monitoring and analytics';
   ];
 
-  const industries = [
-    'Manufacturing',
-    'Healthcare',
-    'Finance',
-    'Retail',
-    'Logistics',
-    'Technology',
-    'Energy',;
+  
     'Education';
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Chen',
-      role: 'CTO, TechFlow Industries',
-      content: 'The autonomous operations platform has transformed our business processes. We\'ve seen a 45% reduction in operational costs.',
-      rating: 5
-    },
-    {
-      name: 'Michael Rodriguez',
-      role: 'Operations Director, Global Logistics Co.',
-      content: 'Real-time optimization and automated workflows have increased our efficiency by 60%. Game-changing technology.',
-      rating: 5
-    },
-    {
-      name: 'Dr. Emily Watson',
-      role: 'CEO, HealthTech Solutions',
-      content: 'The AI-powered automation has streamlined our healthcare operations while maintaining the highest standards of care.',
-      rating: 5;
-    };
+  ]};
   ];
 
   return (
     <>
-      <SEO 
-        title = "AI Autonomous Business Operations Platform | Zion Tech Group"
+      <SEO title = "AI Autonomous Business Operations Platform | Zion Tech Group"
         description="Transform your business with AI-powered autonomous operations. Reduce costs by 40%, improve efficiency by 60%, and achieve 24/7 automated operations."
         keywords="AI autonomous operations, business automation, process optimization, intelligent workflows, enterprise automation"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -128,7 +50,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
           <div className="max-w-7xl mx-auto text-center">
             <div className="mb-8">
               <div className="inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">
-                <Bot className="w-4 h-4 mr-2"/>
+                <Bot className="w-4 h-4 mr-2" />
                 Autonomous Operations
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -144,11 +66,11 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-green-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/30 flex items-center">
-                  <Rocket className="w-5 h-5 mr-2"/>
+                  <Rocket className="w-5 h-5 mr-2" />
                   Start Free Trial
                 </button>
                 <button className="px-8 py-4 border border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/20 transition-all duration-300 flex items-center">
-                  <ArrowRight className="w-5 h-5 mr-2"/>
+                  <ArrowRight className="w-5 h-5 mr-2" />
                   Schedule Demo
                 </button>
               </div>
@@ -277,7 +199,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
 }}
                   className="flex items-start space-x-3"
                 >
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                   <span className="text-gray-300">{benefit}</span>
                 </motion.div>
               ))}
@@ -360,7 +282,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />
                     ))}
                   </div>
                   
@@ -389,11 +311,11 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-green-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/30 flex items-center">
-                  <Rocket className="w-5 h-5 mr-2"/>
+                  <Rocket className="w-5 h-5 mr-2" />
                   Start Free Trial
                 </button>
                 <button className="px-8 py-4 border border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/20 transition-all duration-300 flex items-center">
-                  <ArrowRight className="w-5 h-5 mr-2"/>
+                  <ArrowRight className="w-5 h-5 mr-2" />
                   Schedule Demo
                 </button>
               </div>

@@ -1,8 +1,3 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { cn } from "@/lib/utils";
-import { NavLink } from "react-router-dom";
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from "lucide-react";
 export function MainNavigation({ className }) {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -20,9 +15,9 @@ export function MainNavigation({ className }) {
           onMouseLeave={() => setIsServicesOpen(false)} 
           className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >
-          <Zap className="w-4 h-4"/>
+          <Zap className="w-4 h-4" />
           <span>Services</span>
-          <ChevronDown className="w-3 h-3"/>
+          <ChevronDown className="w-3 h-3" />
         </button>
         {isServicesOpen && (
           <div 
@@ -34,7 +29,7 @@ export function MainNavigation({ className }) {
               <div className="grid grid-cols-3 gap-4">
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <Zap className="w-4 h-4 mr-2"/>
+                    <Zap className="w-4 h-4 mr-2" />
                     Micro SAAS
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -48,7 +43,7 @@ export function MainNavigation({ className }) {
                 </div>
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <Shield className="w-4 h-4 mr-2"/>
+                    <Shield className="w-4 h-4 mr-2" />
                     IT Services
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -62,7 +57,7 @@ export function MainNavigation({ className }) {
                 </div>
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <Brain className="w-4 h-4 mr-2"/>
+                    <Brain className="w-4 h-4 mr-2" />
                     AI Solutions
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -81,7 +76,7 @@ export function MainNavigation({ className }) {
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
                   View All Services
-                  <TrendingUp className="w-4 h-4 ml-2"/>
+                  <TrendingUp className="w-4 h-4 ml-2" />
                 </Link>
               </div>
             </div>
@@ -96,9 +91,9 @@ export function MainNavigation({ className }) {
           onMouseLeave={() => setIsSolutionsOpen(false)} 
           className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >
-          <Brain className="w-4 h-4"/>
+          <Brain className="w-4 h-4" />
           <span>Solutions</span>
-          <ChevronDown className="w-3 h-3"/>
+          <ChevronDown className="w-3 h-3" />
         </button>
         {isSolutionsOpen && (
           <div 
@@ -110,7 +105,7 @@ export function MainNavigation({ className }) {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <Users className="w-4 h-4 mr-2"/>
+                    <Users className="w-4 h-4 mr-2" />
                     Talent
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -122,7 +117,7 @@ export function MainNavigation({ className }) {
                 </div>
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <HardDrive className="w-4 h-4 mr-2"/>
+                    <HardDrive className="w-4 h-4 mr-2" />
                     Resources
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -139,7 +134,7 @@ export function MainNavigation({ className }) {
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
                   Get Custom Quote
-                  <TrendingUp className="w-4 h-4 ml-2"/>
+                  <TrendingUp className="w-4 h-4 ml-2" />
                 </Link>
               </div>
             </div>
@@ -152,7 +147,7 @@ export function MainNavigation({ className }) {
         <button onMouseEnter={() => setIsCompanyOpen(true)} onMouseLeave={() => setIsCompanyOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
           <Building2 className="w-4 h-4" />
           <span>Company</span>
-          <ChevronDown className="w-3 h-3" />
+          <ChevronDown className="w-3 h-3"  />
         </button>
         {isCompanyOpen && (
           <div onMouseEnter={() => setIsCompanyOpen(true)} onMouseLeave={() => setIsCompanyOpen(false)} className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
@@ -174,9 +169,9 @@ export function MainNavigation({ className }) {
       {/* Resources Dropdown */}
       <div className="relative group">
         <button onMouseEnter={() => setIsResourcesOpen(true)} onMouseLeave={() => setIsResourcesOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
-          <FileText className="w-4 h-4" />
+          <FileText className="w-4 h-4"  />
           <span>Resources</span>
-          <ChevronDown className="w-3 h-3" />
+          <ChevronDown className="w-3 h-3"  />
         </button>
         {isResourcesOpen && (
           <div onMouseEnter={() => setIsResourcesOpen(true)} onMouseLeave={() => setIsResourcesOpen(false)} className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
@@ -197,7 +192,7 @@ export function MainNavigation({ className }) {
       
       {/* Support */}
       <Link to="/help" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
-        <HelpCircle className="w-4 h-4 mr-1" />
+        <HelpCircle className="w-4 h-4 mr-1"  />
         Support
       </Link>
       
@@ -220,5 +215,4 @@ export function MainNavigation({ className }) {
         Get Started
       </NavLink>
     </nav>
-  );
-}
+  )}

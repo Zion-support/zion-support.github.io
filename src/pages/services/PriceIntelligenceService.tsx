@@ -1,11 +1,8 @@
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { CheckCircle2, BarChart3, DollarSign, ExternalLink, Phone, Mail  } from 'lucide-react.ts';
 
 const PriceIntelligenceService: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO title="Price Intelligence - Zion Tech Group" description="Continuously monitor competitors and optimize pricing with AI." />
+      <SEO title="Price Intelligence - Zion Tech Group" description="Continuously monitor competitors and optimize pricing with AI."  />
       <section className="container mx-auto px-4 py-16">
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">Price Intelligence</h1>
         <p className="mt-4 max-w-3xl text-slate-300">
@@ -31,7 +28,7 @@ const PriceIntelligenceService: React.FC = (): JSX.Element => {
 
         <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-6">
           <div className="flex items-center gap-2 text-slate-200 font-semibold">
-            <DollarSign className="h-4 w-4" /> Pricing
+            <DollarSign className="h-4 w-4"  /> Pricing
           </div>
           <ul className="mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm">
             <li>Starter: $149/mo up to 1k SKUs</li>
@@ -40,17 +37,16 @@ const PriceIntelligenceService: React.FC = (): JSX.Element => {
             <li>Setup: $5k–$25k (data mapping + ML)</li>
           </ul>
           <a className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">
-            Learn more <ExternalLink className="ml-1 h-3 w-3" />
+            Learn more <ExternalLink className="ml-1 h-3 w-3"  />
           </a>
           <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300">
             <a href="tel:+13024640950" className="inline-flex items-center gap-2 hover:text-cyan-200"><BarChart3 className="h-4 w-4" /> +1 302 464 0950</a>
-            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 hover:text-cyan-200"><Mail className="h-4 w-4" /> kleber@ziontechgroup.com</a>
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 hover:text-cyan-200"><Mail className="h-4 w-4"  /> kleber@ziontechgroup.com</a>
           </div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default PriceIntelligenceService;
 

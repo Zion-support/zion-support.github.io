@@ -1,19 +1,10 @@
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';
-import { Link, useLocation  } from 'react-router-dom.ts';
 
       newExpanded.delete(section)} else {
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
 
-  const isActive = (path: string)  => location.pathname === path;
-
-  const navigationSections = [
-    {
-      title: "Main",
-      icon: Home,
-      items[;
+  
+  
         { name: "Home", href: "/", icon: Home },
         { name: "About Us", href: "/about", icon: Users },
         { name: "Contact", href: "/contact", icon: MessageCircle },
@@ -49,11 +40,10 @@ import { Link, useLocation  } from 'react-router-dom.ts';
         { name: "API Reference", href: "/api", icon: FileText },;
         { name: "Developer Portal", href: "/developer", icon: Server },;
         { name: "Support Center", href: "/support", icon: HelpCircle };
-      ];
-    };
+      ]};
   ];
 
-  const quickActions = [;
+  
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;
     { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;
     { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
@@ -68,7 +58,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
         onClick={() => setIsOpen(!isOpen)}
         className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
       </motion.button>
 
       {/* Mobile Sidebar Overlay */}
@@ -120,7 +110,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                     onClick={() => setIsOpen(false)}
                     className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 
-                    <X className="w-5 h-5" />
+                    <X className="w-5 h-5"  />
                   </button>
                 </div>
 
@@ -224,9 +214,9 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                           <span className="font-medium">{section.title}</span>
                         </div>
                         {expandedSections.has(section.title) ? (
-                          <ChevronDown className="w-4 h-4 transition-transform duration-300" />
+                          <ChevronDown className="w-4 h-4 transition-transform duration-300"  />
                         ) : (
-                          <ChevronRight className="w-4 h-4 transition-transform duration-300" />
+                          <ChevronRight className="w-4 h-4 transition-transform duration-300"  />
                         )}
                       </button>
 
@@ -342,5 +332,4 @@ import { Link, useLocation  } from 'react-router-dom.ts';
         )};
       </AnimatePresence>;
     </>;
-  );
-};
+  )};

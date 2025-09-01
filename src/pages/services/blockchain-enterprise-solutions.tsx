@@ -1,7 +1,3 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
 
 export default function BlockchainEnterpriseSolutions(...args: []):  {
   return (
@@ -19,7 +15,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-yellow-500/10 border border-yellow-500/20 rounded-full text-yellow-400 text-sm font-medium mb-8">
-                <Lock className="w-4 h-4 mr-2" />
+                <Lock className="w-4 h-4 mr-2"  />
                 Enterprise Blockchain Solutions
               </div>
 
@@ -34,15 +30,14 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
+                <Link to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-semibold rounded-lg hover:from-yellow-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
 
                   Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500/10 transition-all duration-200">
-                  <Play className="mr-2 w-5 h-5" />
+                  <Play className="mr-2 w-5 h-5"  />
                   Watch Demo
                 </button>
               </div>
@@ -168,7 +163,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                   <ul className="space-y-1">
                     {useCase.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-yellow-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
+                        <CheckCircle className="w-3 h-3 mr-2"  />
                         {benefit}
                       </li>
                     ))}
@@ -203,7 +198,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                     "Integration APIs for existing enterprise systems"
                   ].map((technology, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-yellow-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-6 h-6 text-yellow-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{technology}</span>
                     </div>
                   ))}
@@ -260,7 +255,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                     "Cross-chain bridges for multi-network operations"
                   ].map((application, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{application}</span>
                     </div>
                   ))}
@@ -279,7 +274,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                     "Enhanced security and reduced fraud through blockchain technology"
                   ].map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{benefit}</span>
                     </div>
                   ))}
@@ -346,12 +341,11 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
               Leverage the power of blockchain technology to secure, automate, and optimize your operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-semibold rounded-lg hover:from-yellow-600 hover:to-orange-700 transition-all duration-200"
 
                 Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
@@ -364,5 +358,4 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>;
       </div>;
     </>;
-  );
-}}}}}
+  )}}}}}

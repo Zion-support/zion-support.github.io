@@ -153,60 +153,21 @@ export const marketplaceItems: MarketplaceItem[] = [
     seller: {
       name: 'DataGenius Consulting',
       rating: 4.7,
-      verified: true;
-    },;
+      verified: true},;
     location: 'Remote',;
     availability: 'available',;
     deliveryTime: 'Immediate',;
-    warranty: 'N/A';
-  };
+    warranty: 'N/A'};
 ];
 
-export const marketplaceCategories = [
-  {
-    id: 'products',
-    name: 'Products',
-    description: 'Hardware and software solutions',
-    count: marketplaceItems.filter(item  => item.category === 'products').length
-  },
-  {
-    id: 'talent',
-    name: 'Talent',
-    description: 'Expert professionals and teams',
-    count: marketplaceItems.filter(item  => item.category === 'talent').length
-  },
-  {
-    id: 'equipment',
-    name: 'Equipment',
-    description: 'Computing and networking equipment',
-    count: marketplaceItems.filter(item  => item.category === 'equipment').length
-  },
-  {
-    count: marketplaceItems.filter(item  => item.category === 'services').length
-  };
+export 
     id: 'services',;
     name: 'Services',;
     description: 'Professional services and consulting',;
-    count: marketplaceItems.filter(item => item.category === 'services').length;
-  };
+    count: marketplaceItems.filter(item => item.category === 'services').length};
 ];
 
-export const marketplaceFilters = [
-  {
-    title: 'Category',
-    key: 'category',
-    type: 'checkbox' as const,
-    options: marketplaceCategories.map(cat  => ({
-      value: cat.id,
-      label: cat.name,
-      count: cat.count
-    }))
-  },
-  {
-    title: 'Price Range',
-    key: 'priceRange',
-    type: 'radio' as const,
-    options[;
+export 
       { value: '0-1000', label: 'Under $1,000' },
       { value: '1000-5000', label: '$1,000 - $5,000' },
       { value: '5000-10000', label: '$5,000 - $10,000' },
@@ -232,6 +193,5 @@ export const marketplaceFilters = [
       { value: 'available', label: 'Available' },;
       { value: 'limited', label: 'Limited' },;
       { value: 'out-of-stock', label: 'Out of Stock' };
-    ];
-  };
+    ]};
 ];

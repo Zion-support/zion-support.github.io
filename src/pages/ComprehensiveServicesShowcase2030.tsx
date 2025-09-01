@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
-import { SEO } from "../components/SEO";
-import { innovativeMicroSaasServices2030 } from "../data/innovativeMicroSaasServices2030";
-import { comprehensiveITServices2030 } from "../data/comprehensiveITServices2030";
-import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030";
 
 const ComprehensiveServicesShowcase2030: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const getFilteredServices = () => {;
+  
     let services: any[] = [];
     
     switch (activeTab) {
@@ -28,15 +23,14 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      );
-    }
+      )}
 
     if (selectedCategory !== 'all') {
       services = services.filter(service => service.category === selectedCategory)};
 ;
     return services};
 
-  const getCategories = () => {;
+  
     let services: any[] = [];
     
     switch (activeTab) {
@@ -50,116 +44,15 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         services = comprehensiveAIServices2030;
         break}
 
-    const categories = [...new Set(services.map(service => service.category))];
+    
     return categories};
 
-  const renderServiceCard = (service)  => {
-    if (activeTab === 'microsaas') {
-      return (
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
-          <div className="p-6">
-            <div className="flex items-start justify-between mb-4">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>
-              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">
-                {service.pricing}
-              </span>
-            </div>
-
-            <p className="text-gray-600 mb-4">{service.description}</p>
-
-            <div className="mb-4">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl font-bold text-gray-900">${service.price.toLocaleString()}</span>
-                <span className="text-sm text-gray-500">{service.pricingModel}</span>
-              </div>
-              <div className="text-sm text-gray-600 mb-2">
-                <strong>Market Price:</strong> {service.marketPrice}
-              </div>
-              <div className="text-sm text-gray-600 mb-2">
-                <strong>ROI:</strong> {service.roi}
-              </div>
-            </div>
-
-            <div className="mb-4">
-              <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-              <div className="grid grid-cols-2 gap-2">
-                {service.features.slice(0, 6).map((feature: string, index: number)  => (
-                  <div key={index} className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                    {feature}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mb-4">
-              <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-              <div className="space-y-1">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
-                  <div key={index} className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                    {benefit}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mb-4">
-              <h4 className="font-semibold text-gray-900 mb-2">Target Audience:</h4>
-              <div className="flex flex-wrap gap-2">
-                {service.targetAudience.slice(0, 3).map((audience: string, index: number)  => (
-                  <span key={index} className="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">
-                    {audience}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="mb-4">
-              <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-              <div className="flex flex-wrap gap-2">
-                {service.technologies.slice(0, 5).map((tech: string, index: number)  => (
-                  <span key={index} className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="border-t pt-4">
-              <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
-                <span><strong>Setup Time:</strong> {service.setupTime}</span>
-                <span><strong>Innovation Level:</strong> {service.innovationLevel}</span>
-              </div>
-              <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
-                <span><strong>Market Size:</strong> {service.marketSize}</span>
-                <span><strong>Growth Rate:</strong> {service.growthRate}</span>
-              </div>
-
-              <div className="flex items-center justify-between">
-                <div className="text-sm text-gray-600">
-                  <strong>Contact:</strong><br />
-                  <a href={`tel:${service.contactInfo.phone}`} className="text-blue-600 hover:underline">
-                    {service.contactInfo.phone}
-                  </a><br />
-                  <a href={`mailto:${service.contactInfo.email}`} className="text-blue-600 hover:underline">
-                    {service.contactInfo.email}
-                  </a>
-                </div>
-                <a
-                  href={service.contactInfo.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-
-                  Learn More
-                </a>;
+  
               </div>;
             </div>;
           </div>;
         </div>;
-      );
-    } else if (activeTab = == 'it') {
+      )} else if (activeTab = == 'it') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
           <div className="p-6">
@@ -260,8 +153,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
             </div>;
           </div>;
         </div>;
-      );
-    } else {
+      )} else {
       return (
         <div key = {service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
           <div className="p-6">
@@ -374,19 +266,17 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
             </div>;
           </div>;
         </div>;
-      );
-    }
+      )}
   };
 
   return (
     <>
-      <SEO
-        title = "Comprehensive Services Showcase 2030 - Zion Tech Group"
+      <SEO title = "Comprehensive Services Showcase 2030 - Zion Tech Group"
         description="Explore our cutting-edge micro SAAS, IT infrastructure, and AI services. Discover innovative solutions with real market data, competitive pricing, and proven ROI."
         keywords="micro SAAS, IT services, AI services, technology solutions, Zion Tech Group, 2030 services"
         ogImage="https://ziontechgroup.com/images/services-showcase-2030.jpg"
         ogUrl="https://ziontechgroup.com/comprehensive-services-showcase-2030"
-      />
+       />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
         {/* Hero Section */}
@@ -520,8 +410,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
               <button;
                 onClick={() => {;
                   setSearchTerm('');
-                  setSelectedCategory('all');
-                }}
+                  setSelectedCategory('all')}}
                 className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Clear Filters
@@ -553,7 +442,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  );
-};
+  )};
 
-export default ComprehensiveServicesShowcase2030;}}}}}
+export default ComprehensiveServicesShowcase2030}}}}}

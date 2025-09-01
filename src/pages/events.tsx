@@ -1,7 +1,4 @@
 
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
 import { Calendar,
   Clock,
   MapPin,
@@ -24,138 +21,9 @@ import { Calendar,
   CheckCircle
  } from 'lucide-react.ts';
 
-const events = [
-  {
-    id: 1,
-    title: "AI & Machine Learning Summit 2027",
-    type: "Conference",
-    date: "2027-03-15",
-    time: "9:00 AM - 6:00 PM EST",
-    location: "Virtual + New York City",
-    status: "upcoming",
-    category: "AI & ML",
-    description: "Join industry leaders for a comprehensive exploration of AI and machine learning innovations, featuring keynote speakers, workshops, and networking opportunities.",
-    speakers: ["Dr. Sarah Chen", "Prof. Michael Rodriguez", "AI Expert Lisa Wang"],
-    attendees: 500,
-    price: "$299",
-    highlights: [
-      "Keynote presentations from AI pioneers",
-      "Hands-on workshops with real datasets",
-      "Networking with industry professionals",
-      "Latest AI research and applications"
-    ],
-    image: "/images/ai-summit-2027.jpg"
-  },
-  {
-    id: 2,
-    title: "Cybersecurity Best Practices Workshop",
-    type: "Workshop",
-    date: "2027-02-28",
-    time: "2:00 PM - 5:00 PM EST",
-    location: "Virtual",
-    status: "upcoming",
-    category: "Cybersecurity",
-    description: "Learn essential cybersecurity practices for modern businesses, including threat detection, incident response, and compliance requirements.",
-    speakers: ["Security Expert John Smith", "Compliance Officer Maria Garcia"],
-    attendees: 150,
-    price: "Free",
-    highlights: [
-      "Threat detection strategies",
-      "Incident response protocols",
-      "Compliance best practices",
-      "Security tool demonstrations"
-    ],
-    image: "/images/cybersecurity-workshop.jpg"
-  },
-  {
-    id: 3,
-    title: "Cloud Computing & DevOps Conference",
-    type: "Conference",
-    date: "2027-01-20",
-    time: "8:00 AM - 7:00 PM EST",
-    location: "San Francisco, CA",
-    status: "upcoming",
-    category: "Cloud & DevOps",
-    description: "Explore the latest trends in cloud computing, containerization, and DevOps practices with hands-on demonstrations and expert insights.",
-    speakers: ["Cloud Architect David Lee", "DevOps Engineer Sarah Johnson"],
-    attendees: 300,
-    price: "$199",
-    highlights: [
-      "Cloud migration strategies",
-      "Container orchestration",
-      "CI/CD pipeline optimization",
-      "Cost optimization techniques"
-    ],
-    image: "/images/cloud-devops-conference.jpg"
-  },
-  {
-    id: 4,
-    title: "Data Analytics & Business Intelligence",
-    type: "Webinar",
-    date: "2027-01-10",
-    time: "1:00 PM - 3:00 PM EST",
-    location: "Virtual",
-    status: "upcoming",
-    category: "Data Analytics",
-    description: "Discover how data analytics can transform your business decisions with real-world case studies and practical implementation strategies.",
-    speakers: ["Data Scientist Emily Chen", "BI Consultant Robert Wilson"],
-    attendees: 200,
-    price: "Free",
-    highlights: [
-      "Data visualization techniques",
-      "Predictive analytics models",
-      "Business intelligence tools",
-      "ROI measurement strategies"
-    ],
-    image: "/images/data-analytics-webinar.jpg"
-  },
-  {
-    id: 5,
-    title: "IoT & Edge Computing Symposium",
-    type: "Symposium",
-    date: "2026-12-15",
-    time: "10:00 AM - 4:00 PM EST",
-    location: "Virtual",
-    status: "past",
-    category: "IoT & Edge",
-    description: "Explore the future of IoT and edge computing with industry experts, featuring case studies and emerging technology trends.",
-    speakers: ["IoT Specialist Dr. James Brown", "Edge Computing Expert Lisa Chen"],
-    attendees: 180,
-    price: "$149",
-    highlights: [
-      "IoT architecture design",
-      "Edge computing optimization",
-      "Security considerations",
-      "Industry applications"
-    ],
-    image: "/images/iot-symposium.jpg"
-  },
-  {
-    id: 6,
-    title: "Digital Transformation Summit",
-    type: "Conference",
-    date: "2026-11-30",
-    time: "9:00 AM - 6:00 PM EST",
-    location: "Chicago, IL",
-    status: "past",
-    category: "Digital Transformation",
-    description: "Learn from successful digital transformation stories and discover strategies to modernize your business operations and customer experience.",
-    speakers: ["Digital Strategist Mark Davis", "Transformation Expert Anna Rodriguez"],
-    attendees: 400,
-    price: "$249",
-    highlights: [
-      "Transformation roadmaps",
-      "Change management strategies",
-      "Technology selection",
-      "Success metrics"
-    ],
-    image: "/images/digital-transformation-summit.jpg"
-  }
-];
 
-const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
-const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
-const statuses = ['All', 'upcoming', 'past'];
+
+
 
 export default function Events(...args: any[]): any {
   const [selectedType, setSelectedType] = useState('All');
@@ -163,48 +31,31 @@ export default function Events(...args: any[]): any {
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredEvents = events.filter(event => {
-    const matchesType = selectedType === 'All' || event.type === selectedType;
-    const matchesCategory = selectedCategory === 'All' || event.category === selectedCategory;
-    const matchesStatus = selectedStatus === 'All' || event.status === selectedStatus;
-    const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         event.speakers.some(speaker => speaker.toLowerCase().includes(searchTerm.toLowerCase()));
+  
+    
+    
+    
+    return matchesType && matchesCategory && matchesStatus && matchesSearch});
 
-    return matchesType && matchesCategory && matchesStatus && matchesSearch;
-  });
-
-  const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');
-  const pastEvents = filteredEvents.filter(event => event.status === 'past');
-
-  const formatDate = (dateString: anystring)  => {
-    const date = new Date(dateString);
+  
+  
+  
     return date.toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    });
-  };
+    })};
 
-  const getCategoryIcon = (category: anystring)  => {
-    switch (category) {
-      case 'AI & ML': return Brain;
+  
       case 'Cybersecurity': return Shield;
       case 'Cloud & DevOps': return Cloud;
       case 'Data Analytics': return TrendingUp;
       case 'IoT & Edge': return Zap;
       case 'Digital Transformation': return Globe;
-      default: return BookOpen;
-    }
-  };
-
-  const getStatusBadge = (status: anystring)  => {
-    if (status === 'upcoming') {
-      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
-    } else {
-      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
-    }
+      default: return BookOpen}
+  }} else {
+      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>}
   };
 
   return (
@@ -219,7 +70,7 @@ export default function Events(...args: any[]): any {
             className="text-center"
           >
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
-              <Calendar className="w-5 h-5" />
+              <Calendar className="w-5 h-5"  />
               <span className="font-medium">Events & Webinars</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -241,7 +92,7 @@ export default function Events(...args: any[]): any {
               {/* Search */}
               <div className="md:col-span-2">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4"  />
                   <input
                     type="text"
                     placeholder="Search events..."
@@ -314,7 +165,7 @@ export default function Events(...args: any[]): any {
 
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {upcomingEvents.map((event, index)  => {
-                const CategoryIcon = getCategoryIcon(event.category);
+                
                 return (
                   <motion.div
                     key={event.id}
@@ -328,7 +179,7 @@ export default function Events(...args: any[]): any {
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
-                          <CategoryIcon className="w-6 h-6 text-white" />
+                          <CategoryIcon className="w-6 h-6 text-white"  />
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-white mb-1">{event.title}</h3>
@@ -347,19 +198,19 @@ export default function Events(...args: any[]): any {
                     {/* Event Details */}
                     <div className="mb-4 space-y-3">
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <Calendar className="w-4 h-4" />
+                        <Calendar className="w-4 h-4"  />
                         <span>{formatDate(event.date)}</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <Clock className="w-4 h-4" />
+                        <Clock className="w-4 h-4"  />
                         <span>{event.time}</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <MapPin className="w-4 h-4" />
+                        <MapPin className="w-4 h-4"  />
                         <span>{event.location}</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <Users className="w-4 h-4" />
+                        <Users className="w-4 h-4"  />
                         <span>{event.attendees} attendees</span>
                       </div>
                     </div>
@@ -373,7 +224,7 @@ export default function Events(...args: any[]): any {
                       <div className="grid grid-cols-1 gap-1">
                         {event.highlights.slice(0, 3).map((highlight, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                            <CheckCircle className="w-3 h-3 text-green-400" />
+                            <CheckCircle className="w-3 h-3 text-green-400"  />
                             <span>{highlight}</span>
                           </div>
                         ))}
@@ -399,7 +250,7 @@ export default function Events(...args: any[]): any {
                         className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
                       >
                         Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
+                        <ArrowRight className="ml-2 h-4 w-4"  />
                       </Link>
                       <div className="text-right">
                         <div className="text-sm text-zion-slate-light">Contact us for details</div>
@@ -407,8 +258,7 @@ export default function Events(...args: any[]): any {
                       </div>
                     </div>
                   </motion.div>
-                );
-              })}
+                )})}
             </div>
           </div>
         </section>
@@ -431,7 +281,7 @@ export default function Events(...args: any[]): any {
 
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {pastEvents.map((event, index)  => {
-                const CategoryIcon = getCategoryIcon(event.category);
+                
                 return (
                   <motion.div
                     key={event.id}
@@ -445,7 +295,7 @@ export default function Events(...args: any[]): any {
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
-                          <CategoryIcon className="w-6 h-6 text-white" />
+                          <CategoryIcon className="w-6 h-6 text-white"  />
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-white mb-1">{event.title}</h3>
@@ -460,11 +310,11 @@ export default function Events(...args: any[]): any {
                     {/* Event Details */}
                     <div className="mb-4 space-y-3">
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <Calendar className="w-4 h-4" />
+                        <Calendar className="w-4 h-4"  />
                         <span>{formatDate(event.date)}</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <MapPin className="w-4 h-4" />
+                        <MapPin className="w-4 h-4"  />
                         <span>{event.location}</span>
                       </div>
                     </div>
@@ -479,7 +329,7 @@ export default function Events(...args: any[]): any {
                         className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
                       >
                         View Event Details
-                        <ArrowRight className="ml-2 h-4 w-4" />
+                        <ArrowRight className="ml-2 h-4 w-4"  />
                       </Link>
                       <div className="text-right">
                         <div className="text-sm text-zion-slate-light">Contact us for future events</div>
@@ -487,8 +337,7 @@ export default function Events(...args: any[]): any {
                       </div>
                     </div>
                   </motion.div>
-                );
-              })}
+                )})}
             </div>
           </div>
         </section>
@@ -517,7 +366,7 @@ export default function Events(...args: any[]): any {
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
               >
                 Partner With Us
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <Link
                 href="/services"
@@ -531,5 +380,4 @@ export default function Events(...args: any[]): any {
       </section>
 
     </div>
-  );
-}
+  )}

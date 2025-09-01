@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
 import { Brain, 
   Shield, 
   Activity, 
@@ -20,16 +17,9 @@ import { Brain,
   Truck,
   Target
  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
 
 export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
-  const aiServices = [
-    {
-      icon: FileText,
-      title: "AI Legal Document Automation",
-      description: "Transform legal operations with AI-powered document automation, compliance monitoring, and intelligent legal research",
-      price: "From $199/month",
-      features["Document Generation", "Compliance Monitoring", "Legal Research", "Workflow Automation"],;
+  
       link: "/services/ai-legal-document-automation",
       category: "Legal Tech"
     },
@@ -77,46 +67,15 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
       price: "From $1,499/month",;
       features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],;
       link: "/services/ai-business-intelligence-platform",;
-      category: "Analytics";
-    };
-  ];
-
-  const industrySolutions = [
-    {
-      title: "Healthcare & Life Sciences",
-      description: "AI-powered diagnostics, drug discovery, and patient care optimization",
-      icon: Heart
-    },
-    {
-      title: "Financial Services",
-      description: "AI trading algorithms, risk management, and fraud detection",
-      icon: DollarSign
-    },
-    {
-      title: "Legal & Compliance",
-      description: "Document automation, compliance monitoring, and legal research",
-      icon: FileText
-    },
-    {
-      title: "Manufacturing & Logistics",
-      description: "Supply chain optimization, predictive maintenance, and quality control",
-      icon: Truck
-    },
-    {
-      title: "Retail & E-commerce",
-      description: "Customer analytics, inventory optimization, and personalized marketing",
-      icon: Users;
-    },;
+      category: "Analytics"};
+  ]},;
     {;
       title: "Energy & Utilities",;
       description: "Predictive maintenance, energy optimization, and grid management",;
-      icon: Zap;
-    };
+      icon: Zap};
   ];
 
-  const advancedTechnologies = [
-    "Machine Learning & Deep Neural Networks",
-    "Natural Language Processing (NLP)",;
+  
     "Computer Vision & Image Recognition",;
     "Predictive Analytics & Forecasting",;
     "Robotic Process Automation (RPA)",;
@@ -127,12 +86,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
   return (
     <>
-      <SEO 
-        title = "Comprehensive AI Services Showcase 2025 - Zion Tech Group"
+      <SEO title = "Comprehensive AI Services Showcase 2025 - Zion Tech Group"
         description="Discover our comprehensive portfolio of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions."
         canonical="/comprehensive-ai-services-showcase-2025"
         url="https://ziontechgroup.com/comprehensive-ai-services-showcase-2025"
-      />
+       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
         {/* Hero Section */}
@@ -282,7 +240,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                     <div className="grid grid-cols-2 gap-2">
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />
                           {feature}
                         </div>
                       ))}
@@ -456,7 +414,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 }}
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
 
-                  <Brain className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                  <Brain className="w-8 h-8 text-cyan-400 mx-auto mb-3"  />
                   <p className="text-white font-medium text-sm">{tech}</p>
                 </motion.div>;
               ))}
@@ -641,7 +599,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                 transition={{ duration: 0.6 }}
                 className="text-center"
 
-                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />
                 <h3 className="text-xl font-semibold mb-2 text-white">Phone</h3>
                 <p className="text-gray-300">+1 302 464 0950</p>
               </motion.div>
@@ -679,7 +637,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 }}
                 className="text-center"
 
-                <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />
                 <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </motion.div>
@@ -717,7 +675,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 }}
                 className="text-center"
 
-                <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />
                 <h3 className="text-xl font-semibold mb-2 text-white">Website</h3>
                 <p className="text-gray-300">https://ziontechgroup.com</p>
               </motion.div>
@@ -766,5 +724,4 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
         </section>;
       </div>;
     </>;
-  );
-}
+  )}

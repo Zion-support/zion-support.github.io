@@ -676,8 +676,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     support: "24/7 dedicated support",
     innovationLevel: "Revolutionary",
     marketSize: "$3.5 billion by 2026",
-    compliance["GDPR", "HIPAA", "SOX", "Quantum-safe standards"];
-  },;
+    compliance["GDPR", "HIPAA", "SOX", "Quantum-safe standards"]},;
   {
     id: 102,
     name: "Edge AI Infrastructure",
@@ -719,8 +718,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     support: "16/7 support",
     innovationLevel: "Advanced",
     marketSize: "$2.8 billion by 2026",
-    compliance["GDPR", "HIPAA", "Industry 4.0"];
-  }
+    compliance["GDPR", "HIPAA", "Industry 4.0"]}
 ];
 
 // Revolutionary AI Services 2026
@@ -767,8 +765,7 @@ export const revolutionaryAIServices2026: AIService[] = [
     useCases["Customer service", "Process automation", "Decision support", "Content generation"],;
     innovationLevel: "Revolutionary",
     marketSize: "$4.2 billion by 2026",
-    ethicalAI["Bias detection", "Transparency", "Accountability", "Fairness"];
-  },;
+    ethicalAI["Bias detection", "Transparency", "Accountability", "Fairness"]},;
   {
     id: 202,
     name: "Quantum AI Platform",
@@ -811,12 +808,11 @@ export const revolutionaryAIServices2026: AIService[] = [
     useCases["Drug discovery", "Financial modeling", "Climate prediction", "Materials science"],;
     innovationLevel: "Revolutionary",
     marketSize: "$1.8 billion by 2026",
-    ethicalAI["AI safety", "Quantum ethics", "Research integrity", "Beneficial AI"];
-  }
+    ethicalAI["AI safety", "Quantum ethics", "Research integrity", "Beneficial AI"]}
 ];
 
 // Export all services
-export const ALL_REVOLUTIONARY_SERVICES_2026 = [;
+export 
   ...revolutionaryMicroSaasServices2026,;
   ...revolutionaryITInfrastructureServices2026,;
   ...revolutionaryAIServices2026;

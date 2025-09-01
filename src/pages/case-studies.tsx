@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
   CheckCircle,
   TrendingUp,
@@ -18,115 +15,12 @@ import {
   Globe
 } from 'lucide-react';
 
-const caseStudies = [
-  {
-    id: 1,
-    title: "AI-Powered Customer Service Transformation",
-    comp: "TechCorp Solutions",
-    industry: "Technology",
-    challenge: "High customer service costs and long response times",
-    solution: "Implemented AI chatbot with natural language processing",
-    results: [
-      "40% reduction in customer service costs",
-      "85% faster response times",
-      "95% customer satisfaction rate",
-      "24/7 automated support"
-    ],
-    metrics: {
-      costReduction: "40%",
-      responseTime: "85% faster",
-      satisfaction: "95%",
-      availability: "24/7"
-    },
-    technologies: ["AI/ML", "NLP", "Cloud Computing", "API Integration"],
-    duration: "6 months",
-    roi: "300%",
-    image: "/images/case-study-1.jpg"
-  },
-  {
-    id: 2,
-    title: "Cloud Migration & DevOps Automation",
-    comp: "InnovateLab Inc",
-    industry: "Healthcare",
-    challenge: "Legacy infrastructure causing downtime and security risks",
-    solution: "Complete cloud migration with CI/CD pipeline implementation",
-    results: [
-      "99.9% uptime achieved",
-      "60% reduction in deployment time",
-      "Enhanced security compliance",
-      "Scalable infrastructure"
-    ],
-    metrics: {
-      uptime: "99.9%",
-      deploymentTime: "60% faster",
-      securityScore: "A+",
-      scalability: "10x"
-    },
-    technologies: ["AWS", "Docker", "Kubernetes", "Jenkins", "Terraform"],
-    duration: "8 months",
-    roi: "250%",
-    image: "/images/case-study-2.jpg"
-  },
-  {
-    id: 3,
-    title: "Data Analytics & Business Intelligence Platform",
-    comp: "DataFlow Analytics",
-    industry: "Finance",
-    challenge: "Scattered data sources and lack of real-time insights",
-    solution: "Centralized data warehouse with real-time analytics dashboard",
-    results: [
-      "Real-time data insights",
-      "30% improvement in decision making",
-      "Automated reporting system",
-      "Predictive analytics capabilities"
-    ],
-    metrics: {
-      dataProcessing: "Real-time",
-      decisionMaking: "30% better",
-      reporting: "Automated",
-      predictions: "90% accuracy"
-    },
-    technologies: ["Big Data", "Apache Spark", "Tableau", "Python", "SQL"],
-    duration: "10 months",
-    roi: "400%",
-    image: "/images/case-study-2.jpg"
-  },
-  {
-    id: 4,
-    title: "Cybersecurity & Compliance Implementation",
-    comp: "SecureBank Ltd",
-    industry: "Banking",
-    challenge: "Increasing cyber threats and regulatory compliance requirements",
-    solution: "Comprehensive security framework with SOC2 compliance",
-    results: [
-      "Zero security breaches",
-      "SOC2 Type II compliance achieved",
-      "Advanced threat detection",
-      "Employee security training"
-    ],
-    metrics: {
-      breaches: "0",
-      compliance: "SOC2 Type II",
-      threatDetection: "99.9%",
-      training: "100% staff"
-    },
-    technologies: ["Cybersecurity", "SOC2", "Threat Detection", "Compliance", "Training"],
-    duration: "12 months",
-    roi: "200%",
-    image: "/images/case-study-4.jpg"
-  }
-];
 
-const CaseStudies = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
+
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
 
-  const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking'];
-
-  const filteredCaseStudies = selectedIndustry === 'All'
-    ? caseStudies
-    : caseStudies.filter(study => study.industry === selectedIndustry);
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -187,7 +81,7 @@ const CaseStudies = () => {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white">
-                    <Award className="w-8 h-8" />
+                    <Award className="w-8 h-8"  />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">{study.title}</h3>
@@ -222,7 +116,7 @@ const CaseStudies = () => {
                   <span className="text-sm text-gray-400">{study.duration}</span>
                   <button className="inline-flex items-center gap-2 text-blue-400 hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">View Details</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>
@@ -264,7 +158,6 @@ const CaseStudies = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default CaseStudies;

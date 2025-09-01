@@ -1,5 +1,3 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { ArrowRight,
   ChevronLeft,
   ChevronRight,
@@ -44,8 +42,6 @@ import { ArrowRight,
   SortDesc,
   X
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
-import { REVOLUTIONARY_SERVICES_2030 } from "../data/revolutionaryServices2030";
 
 export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -58,17 +54,16 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const [viewMode, setViewMode] = useState('grid');
 
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(REVOLUTIONARY_SERVICES_2030.map(service => service.category)))];
-
+  
   // Filter and sort services
-  const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  
+    
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
     return matchesCategory && matchesSearch});
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  
     let comparison = 0;
     switch (sortBy) {
       case 'aiScore':
@@ -84,96 +79,43 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
         comparison = b.reviewCount - a.reviewCount;
         break;
       case 'roi':
-        const roiB = typeof b.roi === 'string' ? parseInt(b.roi.match(/\d+/)?.[0] || '0') : 0;
+        
         comparison = roiB - roiA;
         break;
       case 'setupTime':
-        const timeB = typeof b.setupTime === 'string' ? parseInt(b.setupTime.match(/\d+/)?.[0] || '0') : 0;
+        
         comparison = timeA - timeB;
         break;
       default:
         comparison = 0};
     return sortOrder === 'asc' ? comparison : -comparison});
 
-  const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentServices = sortedServices.slice(startIndex, endIndex);
+  
+  
+  
+  
+  
+    setSelectedService(service)};
 
-  const handleServiceSelect = (service: any) => {;
-    setSelectedService(service);
-  };
+  
+    setSelectedService(null)};
 
-  const closeModal = () => {;
-    setSelectedService(null);
-  };
+  
+      'Blockchain & Web3': <Network className="w-6 h-6"  />,;
+      'Digital Twin': <Eye className="w-6 h-6"  />,;
+      'Space Technology': <Satellite className="w-6 h-6"  />,;
+      'Sustainable Technology': <Leaf className="w-6 h-6"  />,;
+      'IT Infrastructure': <Server className="w-6 h-6"  />,;
+      'Emerging Technology': <Lightbulb className="w-6 h-6"  />};
+    return iconMap[category] || <Rocket className="w-6 h-6"  />};
 
-  const getCategoryIcon = (category: string)  => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-      'AI & Autonomous Systems': <Rocket className="w-6 h-6" />,
-      'AI & Business Intelligence': <Brain className="w-6 h-6" />,
-      'AI & Marketing': <TrendingUp className="w-6 h-6" />,
-      'AI & Healthcare': <Monitor className="w-6 h-6" />,
-      'AI & Legal Tech': <BookOpen className="w-6 h-6" />,
-      'AI & Real Estate': <Building className="w-6 h-6" />,
-      'AI & Operations': <Cpu className="w-6 h-6" />,
-      'AI & Green Tech': <Leaf className="w-6 h-6" />,
-      'AI & FinTech': <DollarSign className="w-6 h-6" />,
-      'AI & Environmental Tech': <Leaf className="w-6 h-6" />,
-      'AI & Content': <Code className="w-6 h-6" />,
-      'AI & Customer Support': <Users className="w-6 h-6" />,
-      'AI & HR': <Users className="w-6 h-6" />,
-      'AI & Research': <FlaskConical className="w-6 h-6" />,
-      'AI & Metaverse': <Globe className="w-6 h-6" />,
-      'AI & Space Tech': <Satellite className="w-6 h-6" />,
-      'AI & Development': <Code className="w-6 h-6" />,
-      'AI & Education': <BookOpen className="w-6 h-6" />,
-      'AI & Entertainment': <Palette className="w-6 h-6" />,
-      'Cybersecurity': <Shield className="w-6 h-6" />,
-      'Cloud & DevOps': <Cloud className="w-6 h-6" />,
-      'Quantum Computing': <Zap className="w-6 h-6" />,
-      'IoT & Edge Computing': <Wifi className="w-6 h-6" />,;
-      'Blockchain & Web3': <Network className="w-6 h-6" />,;
-      'Digital Twin': <Eye className="w-6 h-6" />,;
-      'Space Technology': <Satellite className="w-6 h-6" />,;
-      'Sustainable Technology': <Leaf className="w-6 h-6" />,;
-      'IT Infrastructure': <Server className="w-6 h-6" />,;
-      'Emerging Technology': <Lightbulb className="w-6 h-6" />;
-    };
-    return iconMap[category] || <Rocket className="w-6 h-6" />};
-
-  const getCategoryColor = (category: string)  => {
-    const colorMap: { [key: string]: string } = {
-      'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
-      'AI & Business Intelligence': 'from-purple-500 to-pink-500',
-      'AI & Marketing': 'from-green-500 to-emerald-500',
-      'AI & Healthcare': 'from-pink-500 to-red-500',
-      'AI & Legal Tech': 'from-blue-500 to-indigo-500',
-      'AI & Real Estate': 'from-yellow-500 to-orange-500',
-      'AI & Operations': 'from-gray-500 to-slate-500',
-      'AI & Green Tech': 'from-green-500 to-emerald-500',
-      'AI & FinTech': 'from-emerald-500 to-green-500',
-      'AI & Environmental Tech': 'from-teal-500 to-green-500',
-      'AI & Content': 'from-orange-500 to-red-500',
-      'AI & Customer Support': 'from-blue-500 to-purple-500',
-      'AI & HR': 'from-indigo-500 to-blue-500',
-      'AI & Research': 'from-purple-500 to-violet-500',
-      'AI & Metaverse': 'from-purple-500 to-indigo-500',
-      'AI & Space Tech': 'from-indigo-500 to-purple-500',
-      'AI & Development': 'from-cyan-500 to-blue-500',
-      'AI & Education': 'from-blue-500 to-indigo-500',
-      'AI & Entertainment': 'from-purple-500 to-pink-500',
-      'Cybersecurity': 'from-red-500 to-orange-500',
-      'Cloud & DevOps': 'from-blue-500 to-cyan-500',
-      'Quantum Computing': 'from-indigo-500 to-purple-500',
-      'IoT & Edge Computing': 'from-teal-500 to-cyan-500',;
+  
       'Blockchain & Web3': 'from-yellow-500 to-orange-500',;
       'Digital Twin': 'from-blue-500 to-indigo-500',;
       'Space Technology': 'from-purple-500 to-pink-500',;
       'Sustainable Technology': 'from-green-500 to-teal-500',;
       'IT Infrastructure': 'from-slate-500 to-gray-500',;
-      'Emerging Technology': 'from-violet-500 to-purple-500';
-    };
+      'Emerging Technology': 'from-violet-500 to-purple-500'};
     return colorMap[category] || 'from-gray-500 to-slate-500'};
 
       return sum + roiNumber}
@@ -181,13 +123,12 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 
   return (
     <>
-      <SEO
-        title = "Revolutionary Services Showcase 2030 - Zion Tech Group"
+      <SEO title = "Revolutionary Services Showcase 2030 - Zion Tech Group"
         description="Explore Zion Tech Group's revolutionary micro SAAS, IT, and AI services for 2030. Discover cutting-edge solutions that will transform your business."
         keywords="revolutionary services 2030, micro SAAS, AI services, IT solutions, business transformation, Zion Tech Group"
         image="https://ziontechgroup.com/images/revolutionary-services-showcase-2030.jpg"
         url="https://ziontechgroup.com/revolutionary-services-showcase-2030"
-      />
+       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -251,15 +192,15 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
               <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 <span className="font-semibold">+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <MailIcon className="w-5 h-5" />
+                <MailIcon className="w-5 h-5"  />
                 <span className="font-semibold">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-5 h-5" />
+                <MapPin className="w-5 h-5"  />
                 <span className="font-semibold">364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
@@ -274,7 +215,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
                 <div className="flex-1">
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                     <input
                       type="text"
                       placeholder="Search revolutionary services..."
@@ -301,7 +242,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 hover:bg-white/20 transition-colors"
 
-                    {sortOrder === 'asc' ? <SortAsc className="w-5 h-5" /> : <SortDesc className="w-5 h-5" />}
+                    {sortOrder === 'asc' ? <SortAsc className="w-5 h-5"  /> : <SortDesc className="w-5 h-5"  />}
                   </button>
                 </div>
                 <div className="flex gap-4">
@@ -440,7 +381,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                       <div className="flex items-center justify-between">
                         <span className="text-gray-400 text-sm">Rating:</span>
                         <div className="flex items-center space-x-1">
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                          <Star className="w-4 h-4 text-yellow-400 fill-current"  />
                           <span className="text-white">{service.rating}</span>
                           <span className="text-gray-400 text-sm">({service.reviewCount})</span>
                         </div>
@@ -462,7 +403,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                       <span className="text-purple-400 text-sm font-semibold">
                         {service.category}
                       </span>
-                      <ArrowUpRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                      <ArrowUpRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"  />
                     </div>
                   </div>;
                 </motion.div>
@@ -478,7 +419,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     disabled={currentPage === 1}
                     className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
 
-                    <ChevronLeft className="w-5 h-5" />
+                    <ChevronLeft className="w-5 h-5"  />
                   </button>
                   
                   {Array.from({ length: totalPages }, (_, i)  => i + 1).map((page) => (
@@ -500,7 +441,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     disabled={currentPage === totalPages}
                     className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
 
-                    <ChevronRight className="w-5 h-5" />
+                    <ChevronRight className="w-5 h-5"  />
                   </button>
                 </div>
               </div>
@@ -618,24 +559,10 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
               <motion.div
                 initial = {
   { opacity: 0,
-  x: 20 ;
-
-
-
-
-
-
-}}
+  x: 20 }}
                 whileInView = {
   { opacity: 1,
-  x: 0 ;
-
-
-
-
-
-
-}}
+  x: 0 }}
                 transition={{ duration: 0.8 }}
                 className="space-y-8"
 
@@ -643,21 +570,21 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
                   <div className="space-y-4">
                     <div className="flex items-center space-x-4">
-                      <Phone className="w-6 h-6 text-purple-400" />
+                      <Phone className="w-6 h-6 text-purple-400"  />
                       <div>
                         <p className="text-white font-semibold">Phone</p>
                         <p className="text-gray-300">+1 302 464 0950</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                      <MailIcon className="w-6 h-6 text-purple-400" />
+                      <MailIcon className="w-6 h-6 text-purple-400"  />
                       <div>
                         <p className="text-white font-semibold">Email</p>
                         <p className="text-gray-300">kleber@ziontechgroup.com</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                      <MapPin className="w-6 h-6 text-purple-400" />
+                      <MapPin className="w-6 h-6 text-purple-400"  />
                       <div>
                         <p className="text-white font-semibold">Address</p>
                         <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -670,23 +597,23 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-400"  />
                       <span className="text-gray-300">Cutting-edge AI and autonomous technologies</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-400"  />
                       <span className="text-gray-300">Proven ROI with documented success stories</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-400"  />
                       <span className="text-gray-300">Custom solutions tailored to your industry</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-400"  />
                       <span className="text-gray-300">24/7 expert support and maintenance</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-400"  />
                       <span className="text-gray-300">Future-ready technology stack</span>
                     </div>
                   </div>
@@ -742,7 +669,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   onClick={closeModal}
                   className="text-white/60 hover:text-white transition-colors"
 
-                  <X className="w-6 h-6" />
+                  <X className="w-6 h-6"  />
                 </button>
               </div>
 
@@ -789,7 +716,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   <div className="space-y-3">
                     {selectedService.tags.slice(0, 5).map((tag, index) => (
                       <div key={index} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        <CheckCircle className="w-4 h-4 text-green-400"  />
                         <span className="text-gray-300">{tag}</span>
                       </div>
                     ))}
@@ -849,5 +776,4 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
         </div>;
       )};
     </>;
-  );
-}
+  )}

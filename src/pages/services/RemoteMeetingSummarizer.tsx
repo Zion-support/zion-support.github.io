@@ -1,4 +1,3 @@
-import React from 'react.ts';
 
 const RemoteMeetingSummarizer: React.FC = (): JSX.Element => {
   return (
@@ -54,8 +53,7 @@ const RemoteMeetingSummarizer: React.FC = (): JSX.Element => {
         </section>
       </div>
     </div>
-  );
-}
+  )}
 
 export default RemoteMeetingSummarizer;
 

@@ -1,7 +1,5 @@
 import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {
-  const features = [
-    'AI-powered candidate screening and matching',
-    'Automated resume parsing and skill assessment',;
+  
     'Intelligent interview scheduling and feedback',;
     'Employee performance analytics and insights',;
     'Predictive turnover analysis and retention strategies',;
@@ -10,7 +8,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Compliance monitoring and reporting';
   ];
 
-  const benefits = [;
+  
     'Reduce time-to-hire by 60%',;
     'Improve candidate quality by 40%',;
     'Reduce hiring costs by 30%',;
@@ -19,28 +17,15 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Data-driven decision making';
   ];
 
-  const pricing = [
-    {
-      name: 'Starter',
-      price: '$149/mo',
-      features: ['Up to 50 employees', 'Basic AI screening', 'Standard reporting', 'Email support'],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$399/mo',
-      features: ['Up to 200 employees', 'Advanced AI analytics', 'Custom workflows', 'Priority support', 'Integration APIs'],
-      popular: true
-    },;
+  
     { ;
       name: 'Enterprise', ;
       price: '$999/mo', ;
       features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
-      popular: false;
-    };
+      popular: false};
   ];
 
-  const useCases = [;
+  
     'Recruitment and talent acquisition',;
     'Employee performance management',;
     'Learning and development',;
@@ -49,9 +34,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Employee engagement and retention';
   ];
 
-  const platformModules = [
-    'Talent Acquisition',
-    'Performance Management',;
+  
     'Learning & Development',;
     'Workforce Analytics',;
     'Employee Engagement',;
@@ -66,7 +49,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
       <section className="bg-gradient-to-br from-orange-600 via-orange-700 to-red-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Sparkles className="w-4 h-4 mr-2" /> AI-Powered HR & Talent Management
+            <Sparkles className="w-4 h-4 mr-2"  /> AI-Powered HR & Talent Management
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">AI HR & Talent Platform</h1>
           <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
@@ -97,7 +80,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <ul className="space-y-4">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                   <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
@@ -109,7 +92,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <ul className="space-y-4">
               {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start">
-                  <TrendingUp className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <TrendingUp className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0"  />
                   <span className="text-gray-700">{benefit}</span>
                 </li>
               ))}
@@ -129,7 +112,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div className="grid md:grid-cols-4 gap-6">
             {platformModules.map((module, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
-                <Briefcase className="w-8 h-8 text-orange-500 mx-auto mb-4" />
+                <Briefcase className="w-8 h-8 text-orange-500 mx-auto mb-4"  />
                 <h3 className="text-lg font-semibold text-gray-900 text-sm">{module}</h3>
               </div>
             ))}
@@ -147,7 +130,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
         <div className="grid md:grid-cols-3 gap-6">
           {useCases.map((useCase, index) => (
             <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-              <Target className="w-8 h-8 text-orange-500 mb-4" />
+              <Target className="w-8 h-8 text-orange-500 mb-4"  />
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
             </div>
           ))}
@@ -164,17 +147,17 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <Search className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+              <Search className="w-12 h-12 text-orange-500 mx-auto mb-4"  />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Candidate Matching</h3>
               <p className="text-gray-600">AI algorithms match candidates to job requirements with 90% accuracy</p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <TrendingUp className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+              <TrendingUp className="w-12 h-12 text-orange-500 mx-auto mb-4"  />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Predictive Analytics</h3>
               <p className="text-gray-600">Forecast employee turnover and identify retention risks early</p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <Award className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+              <Award className="w-12 h-12 text-orange-500 mx-auto mb-4"  />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Performance Insights</h3>
               <p className="text-gray-600">AI-driven performance analysis and development recommendations</p>
             </div>
@@ -212,7 +195,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -282,7 +265,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Questions? We're Here to Help</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <Phone className="w-8 h-8 text-orange-500 mx-auto mb-4" />
+            <Phone className="w-8 h-8 text-orange-500 mx-auto mb-4"  />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
             <p className="text-gray-600 mb-4">Speak with our HR technology experts</p>
             <a href="tel:+13024640950" className="text-orange-600 hover:text-orange-700 font-semibold">
@@ -291,7 +274,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <Mail className="w-8 h-8 text-orange-500 mx-auto mb-4" />
+            <Mail className="w-8 h-8 text-orange-500 mx-auto mb-4"  />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
             <p className="text-gray-600 mb-4">Get detailed information and pricing</p>
             <a href="mailto:kleber@ziontechgroup.com" className="text-orange-600 hover:text-orange-700 font-semibold">
@@ -311,10 +294,9 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             rel="noreferrer" 
             className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold";
           >;
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2"  />;
           </a>;
         </div>;
       </section>;
     </div>;
-  );
-}}}
+  )}}}

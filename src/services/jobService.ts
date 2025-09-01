@@ -1,5 +1,4 @@
 
-import { supabase  } from '@/integrations/supabase/client';
 
 export async function createJob(...args: any[]): any {
   const { data, error } = await supabase
@@ -9,8 +8,7 @@ export async function createJob(...args: any[]): any {
     .single();
 
   if (error) throw error;
-  return data;
-}
+  return data}
 
 export async function updateJob(...args: any[]): any {
   const { data, error } = await supabase
@@ -21,8 +19,7 @@ export async function updateJob(...args: any[]): any {
     .single();
 
   if (error) throw error;
-  return data;
-}
+  return data}
 
 export async function getJobById(...args: any[]): any {
   const { data, error } = await supabase
@@ -32,5 +29,4 @@ export async function getJobById(...args: any[]): any {
     .single();
 
   if (error) throw error;
-  return data;
-}
+  return data}

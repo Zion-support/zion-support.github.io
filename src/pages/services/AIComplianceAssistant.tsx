@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
 import { 
   Shield, 
   CheckCircle, 
@@ -25,153 +22,16 @@ import {
 } from 'lucide-react';
 
 export default function AIComplianceAssistant() {
-  const frameworks = [
-    'SOC 2',
-    'ISO 27001',
-    'HIPAA',
-    'GDPR',
-    'PCI DSS',
-    'NIST CSF',
-  ];
-
-  const features = [
-    {
-      icon: Shield,
-      title: "Automated Compliance Monitoring",
-      description: "24/7 monitoring of regulatory changes and automatic updates to compliance requirements."
-    },
-    {
-      icon: CheckCircle,
-      title: "Risk Assessment & Scoring",
-      description: "AI-powered risk analysis with real-time scoring and prioritization of compliance issues."
-    },
-    {
-      icon: FileText,
-      title: "Document Management",
-      description: "Centralized compliance document creation, storage, and version control with AI assistance."
-    },
-    {
-      icon: AlertTriangle,
-      title: "Real-time Alerts",
-      description: "Instant notifications for compliance violations, policy changes, and regulatory updates."
-    },
-    {
-      icon: Users,
-      title: "Training & Certification",
-      description: "Automated compliance training programs with progress tracking and certification management."
-    },
-    {
-      icon: Clock,
-      title: "Audit Preparation",
-      description: "Streamlined audit processes with automated documentation and compliance reporting."
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: Zap,
-      title: "Reduced Compliance Risk",
-      description: "Minimize regulatory violations and associated penalties through proactive monitoring."
-    },
-    {
-      icon: Globe,
-      title: "Multi-Regulatory Support",
-      description: "Support for GDPR, CCPA, SOX, HIPAA, and other major regulatory frameworks."
-    },
-    {
-      icon: Lock,
-      title: "Enhanced Security",
-      description: "Built-in security features to protect sensitive compliance data and ensure privacy."
-    },
-    {
-      icon: Eye,
-      title: "Transparency & Reporting",
-      description: "Comprehensive reporting and dashboards for stakeholders and regulatory bodies."
-    },
-    {
-      icon: BarChart3,
-      title: "Performance Analytics",
-      description: "Track compliance metrics and identify areas for improvement with detailed analytics."
-    },
-    {
-      icon: TrendingUp,
-      title: "Cost Optimization",
-      description: "Reduce manual compliance efforts and associated costs through automation."
-    }
-  ];
-
-  const regulations = [
-    {
-      name: "GDPR (General Data Protection Regulation)",
-      description: "EU data protection and privacy regulation",
-      icon: Shield
-    },
-    {
-      name: "CCPA (California Consumer Privacy Act)",
-      description: "California consumer privacy protection law",
-      icon: Lock
-    },
-    {
-      name: "SOX (Sarbanes-Oxley Act)",
-      description: "Financial reporting and corporate governance regulation",
-      icon: FileText
-    },
-    {
-      name: "HIPAA (Health Insurance Portability and Accountability Act)",
-      description: "Healthcare data privacy and security regulation",
-      icon: Eye
-    },
-    {
-      name: "PCI DSS (Payment Card Industry Data Security Standard)",
-      description: "Payment card data security standards",
-      icon: Cpu
-    },
-    {
-      name: "ISO 27001",
-      description: "Information security management system standard",
-      icon: Database
-    }
-  ];
-
-  const useCases = [
-    {
-      industry: "Financial Services",
-      description: "Ensure compliance with SOX, PCI DSS, and financial regulations",
-      icon: Shield
-    },
-    {
-      industry: "Healthcare",
-      description: "Maintain HIPAA compliance and patient data protection",
-      icon: Users
-    },
-    {
-      industry: "E-commerce",
-      description: "Comply with GDPR, CCPA, and payment security standards",
-      icon: Globe
-    },
-    {
-      industry: "Technology",
-      description: "Manage data privacy and security compliance requirements",
-      icon: Cpu
-    },
-    {
-      industry: "Manufacturing",
-      description: "Ensure regulatory compliance and quality standards",
-      icon: Shield
-    },
-    {
-      industry: "Education",
-      description: "Maintain student data privacy and educational compliance",
-      icon: Award
-    }
-  ];
-
+  
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="AI Compliance Assistant - Zion Tech Group"
+      <SEO title="AI Compliance Assistant - Zion Tech Group"
         description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
@@ -184,7 +44,7 @@ export default function AIComplianceAssistant() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
+              <Shield className="w-4 h-4 mr-2"  />
               AI-Powered Compliance
             </div>
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
@@ -199,11 +59,11 @@ export default function AIComplianceAssistant() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </button>
               <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">
-                <Download className="w-5 h-5 mr-2 inline" />
+                <Download className="w-5 h-5 mr-2 inline"  />
                 Download Brochure
               </button>
             </div>
@@ -445,7 +305,7 @@ export default function AIComplianceAssistant() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center">
-                <Star className="w-5 h-5 mr-2" />
+                <Star className="w-5 h-5 mr-2"  />
                 Get Started Today
               </button>
               <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">
@@ -456,7 +316,7 @@ export default function AIComplianceAssistant() {
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-center text-slate-300">
-                  <CheckCircle className="h-5 w-5 text-rose-400 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-rose-400 mr-3"  />
                   {f}
                 </li>
               ))}
@@ -466,7 +326,7 @@ export default function AIComplianceAssistant() {
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
             <div className="flex items-center mb-4">
               <div className="p-3 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg">
-                <Scale className="h-8 w-8 text-white" />
+                <Scale className="h-8 w-8 text-white"  />
               </div>
               <h3 className="ml-3 text-xl font-semibold text-white">Frameworks</h3>
             </div>
@@ -480,7 +340,7 @@ export default function AIComplianceAssistant() {
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
             <div className="flex items-center mb-4">
               <div className="p-3 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg">
-                <BookOpen className="h-8 w-8 text-white" />
+                <BookOpen className="h-8 w-8 text-white"  />
               </div>
               <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
             </div>
@@ -496,6 +356,5 @@ export default function AIComplianceAssistant() {
         </div>
       </section>;
     </div>
-  );
-}
+  )}
 

@@ -91,8 +91,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       integrations["Active Directory", "SIEM systems", "Firewalls", "VPN solutions", "Cloud platforms"],;
       apiEndpoints: 100,
       uptime: "99.9%",
-      security["SOC 2", "ISO 27001", "NIST framework", "Zero trust principles"];
-    },;
+      security["SOC 2", "ISO 27001", "NIST framework", "Zero trust principles"]},;
     competitors["Cisco", "Palo Alto Networks", "Fortinet", "VMware"],;
     marketSize: "$51.6 billion by 2025"
   },
@@ -156,8 +155,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       integrations["Existing network infrastructure", "Cloud platforms", "IoT devices", "Enterprise applications"],;
       apiEndpoints: 200,
       uptime: "99.9%",
-      security["5G security standards", "Encryption", "Authentication", "Network isolation"];
-    },;
+      security["5G security standards", "Encryption", "Authentication", "Network isolation"]},;
     competitors["Ericsson", "Nokia", "Huawei", "Cisco", "Verizon"],;
     marketSize: "$31.2 billion by 2025"
   },
@@ -221,8 +219,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       integrations["AWS", "Azure", "GCP", "GitHub", "CI/CD tools"],;
       apiEndpoints: 150,
       uptime: "99.9%",
-      security["OWASP compliance", "Data encryption", "Access controls", "Security scanning"];
-    },;
+      security["OWASP compliance", "Data encryption", "Access controls", "Security scanning"]},;
     competitors["Thoughtworks", "Slalom", "Accenture", "Deloitte Digital"],;
     marketSize: "$22.5 billion by 2025"
   },
@@ -286,8 +283,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       integrations["Existing infrastructure", "Cloud platforms", "Management tools", "Monitoring systems"],;
       apiEndpoints: 100,
       uptime: "99.9%",
-      security["Physical security", "Network security", "Data protection", "Access controls"];
-    },;
+      security["Physical security", "Network security", "Data protection", "Access controls"]},;
     competitors["Dell Technologies", "HPE", "Cisco", "IBM", "Accenture"],;
     marketSize: "$59.3 billion by 2025"
   },
@@ -351,9 +347,8 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       integrations["IoT devices", "Cloud platforms", "Enterprise systems", "Analytics tools"],;
       apiEndpoints: 300,
       uptime: "99.9%",
-      security["Device authentication", "Data encryption", "Secure communication", "Access controls"];
-    },;
+      security["Device authentication", "Data encryption", "Secure communication", "Access controls"]},;
     competitors["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "IBM Edge Application Manager"],;
     marketSize: "$15.7 billion by 2025"
 
-];}}
+]}}

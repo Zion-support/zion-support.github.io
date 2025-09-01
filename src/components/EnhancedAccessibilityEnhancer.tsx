@@ -1,6 +1,4 @@
 
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Eye, 
   EyeOff, 
@@ -25,8 +23,7 @@ interface AccessibilitySettings {
 
   keyboardNavigation: boolean;
   focusIndicator: boolean;
-  zoomLevel: number;
-}
+  zoomLevel: number}
 
 export const EnhancedAccessibilityEnhancer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,69 +42,56 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
 
   // Apply accessibility settings
-  const applySettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
-    const updatedSettings = { ...settings, ...newSettings };
+  
     setSettings(updatedSettings);
 
     // Apply high contrast
     if (updatedSettings.highContrast) {
-      document.documentElement.classList.add('high-contrast');
-    } else {
-      document.documentElement.classList.remove('high-contrast');
-    }
+      document.documentElement.classList.add('high-contrast')} else {
+      document.documentElement.classList.remove('high-contrast')}
 
     // Apply large text
     if (updatedSettings.largeText) {
-      document.documentElement.classList.add('large-text');
-    } else {
-      document.documentElement.classList.remove('large-text');
-    }
+      document.documentElement.classList.add('large-text')} else {
+      document.documentElement.classList.remove('large-text')}
 
     // Apply reduced motion
     if (updatedSettings.reducedMotion) {
-      document.documentElement.classList.add('reduced-motion');
-    } else {
-      document.documentElement.classList.remove('reduced-motion');
-    }
+      document.documentElement.classList.add('reduced-motion')} else {
+      document.documentElement.classList.remove('reduced-motion')}
 
     // Apply zoom level
     document.documentElement.style.fontSize = `${updatedSettings.zoomLevel}%`;
 
     // Store settings in localStorage
-    localStorage.setItem('accessibility-settings', JSON.stringify(updatedSettings));
-  }, [settings]);
+    localStorage.setItem('accessibility-settings', JSON.stringify(updatedSettings))}, [settings]);
 
   // Load saved settings
   useEffect(() => {
-    const savedSettings = localStorage.getItem('accessibility-settings');
+    
     if (savedSettings) {
-      const parsedSettings = JSON.parse(savedSettings);
+      
       setSettings(parsedSettings);
-      applySettings(parsedSettings);
-    }
+      applySettings(parsedSettings)}
   }, [applySettings]);
 
   // Enhanced keyboard navigation
   useEffect(() => {
     if (!settings.keyboardNavigation) return;
 
-    const handleKeyDown = (event: KeyboardEvent) => {
-      const focusableElements = document.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
-
+    
+      
       switch (event.key) {
         case 'ArrowDown':
         case 'ArrowRight':
           event.preventDefault();
-          const nextIndex = (currentIndex + 1) % focusableElements.length;
+          
           (focusableElements[nextIndex] as HTMLElement)?.focus();
           break;
         case 'ArrowUp':
         case 'ArrowLeft':
           event.preventDefault();
-          const prevIndex = currentIndex <= 0 ? focusableElements.length - 1 : currentIndex - 1;
+          
           (focusableElements[prevIndex] as HTMLElement)?.focus();
           break;
         case 'Home':
@@ -117,34 +101,26 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
         case 'End':
           event.preventDefault();
           (focusableElements[focusableElements.length - 1] as HTMLElement)?.focus();
-          break;
-
-      }
+          break}
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-
-  }, [settings.keyboardNavigation]);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
 
   // Enhanced focus management
   useEffect(() => {
-    const handleFocusChange = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
+    
       setCurrentFocus(target);
 
       if (settings.focusIndicator) {
         target.style.outline = '3px solid #3b82f6';
-        target.style.outlineOffset = '2px';
-      }
+        target.style.outlineOffset = '2px'}
     };
 
-    const handleFocusOut = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
+    
       if (settings.focusIndicator) {
         target.style.outline = '';
-        target.style.outlineOffset = '';
-      }
+        target.style.outlineOffset = ''}
     };
 
     document.addEventListener('focusin', handleFocusChange);
@@ -152,14 +128,10 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
 
     return () => {
       document.removeEventListener('focusin', handleFocusChange);
-      document.removeEventListener('focusout', handleFocusOut);
-    };
-  }, [settings.focusIndicator]);
+      document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator]);
 
   // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string) => {
-    if (settings.screenReader) {
-      const announcement = document.createElement('div');
+  
       announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');
       announcement.className = 'sr-only';
@@ -167,32 +139,22 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
       document.body.appendChild(announcement);
       
       setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
-    }
+        document.body.removeChild(announcement)}, 1000)}
   }, [settings.screenReader]);
 
   // Toggle settings
-  const toggleSetting = useCallback((key: keyof AccessibilitySettings) => {
-    const newValue = !settings[key];
+  
     applySettings({ [key]: newValue });
     
     if (key === 'highContrast') {
-      announceToScreenReader(newValue ? 'High contrast mode enabled' : 'High contrast mode disabled');
-    } else if (key === 'largeText') {
-      announceToScreenReader(newValue ? 'Large text mode enabled' : 'Large text mode disabled');
-    }
+      announceToScreenReader(newValue ? 'High contrast mode enabled' : 'High contrast mode disabled')} else if (key === 'largeText') {
+      announceToScreenReader(newValue ? 'Large text mode enabled' : 'Large text mode disabled')}
   }, [settings, applySettings, announceToScreenReader]);
 
   // Zoom controls
-  const adjustZoom = useCallback((direction: 'in' | 'out') => {
-    const newZoom = direction === 'in' 
-      ? Math.min(settings.zoomLevel + 25, 200)
-      : Math.max(settings.zoomLevel - 25, 75);
-    
+  
     applySettings({ zoomLevel: newZoom });
-    announceToScreenReader(`Zoom level ${newZoom}%`);
-  }, [settings.zoomLevel, applySettings, announceToScreenReader]);
+    announceToScreenReader(`Zoom level ${newZoom}%`)}, [settings.zoomLevel, applySettings, announceToScreenReader]);
 
   return (
     <>
@@ -207,7 +169,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
         aria-label="Toggle accessibility options"
         title="Accessibility Options"
       >
-        <Accessibility className="w-5 h-5" />
+        <Accessibility className="w-5 h-5"  />
       </motion.button>
 
       {/* Accessibility Panel */}
@@ -222,7 +184,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
             {/* Header */}
             <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
               <div className="flex items-center space-x-2">
-                <Accessibility className="w-5 h-5" />
+                <Accessibility className="w-5 h-5"  />
                 <h3 className="font-semibold">Accessibility</h3>
               </div>
               <button
@@ -230,7 +192,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                 className="p-1 hover:bg-white/20 rounded transition-colors"
                 aria-label="Close accessibility panel"
               >
-                <EyeOff className="w-4 h-4" />
+                <EyeOff className="w-4 h-4"  />
               </button>
             </div>
 
@@ -242,7 +204,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <Contrast className="w-4 h-4 text-slate-600 dark:text-slate-400" />
+                    <Contrast className="w-4 h-4 text-slate-600 dark:text-slate-400"  />
                     <span className="text-sm text-slate-700 dark:text-slate-300">High Contrast</span>
                   </div>
                   <button
@@ -260,7 +222,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <Type className="w-4 h-4 text-slate-600 dark:text-slate-400" />
+                    <Type className="w-4 h-4 text-slate-600 dark:text-slate-400"  />
                     <span className="text-sm text-slate-700 dark:text-slate-300">Large Text</span>
                   </div>
                   <button
@@ -278,7 +240,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <Eye className="w-4 h-4 text-slate-600 dark:text-slate-400" />
+                    <Eye className="w-4 h-4 text-slate-600 dark:text-slate-400"  />
                     <span className="text-sm text-slate-700 dark:text-slate-300">Focus Indicator</span>
                   </div>
                   <button
@@ -301,7 +263,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <Keyboard className="w-4 h-4 text-slate-600 dark:text-slate-400" />
+                    <Keyboard className="w-4 h-4 text-slate-600 dark:text-slate-400"  />
                     <span className="text-sm text-slate-700 dark:text-slate-300">Keyboard Navigation</span>
                   </div>
                   <button
@@ -319,7 +281,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <MousePointer className="w-4 h-4 text-slate-600 dark:text-slate-400" />
+                    <MousePointer className="w-4 h-4 text-slate-600 dark:text-slate-400"  />
                     <span className="text-sm text-slate-700 dark:text-slate-300">Reduced Motion</span>
                   </div>
                   <button
@@ -348,14 +310,14 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                       className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                       aria-label="Zoom out"
                     >
-                      <ZoomOut className="w-4 h-4" />
+                      <ZoomOut className="w-4 h-4"  />
                     </button>
                     <button
                       onClick={() => adjustZoom('in')}
                       className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                       aria-label="Zoom in"
                     >
-                      <ZoomIn className="w-4 h-4" />
+                      <ZoomIn className="w-4 h-4"  />
 
                     </button>
                   </div>
@@ -411,26 +373,21 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
           overflow: hidden;
           clip: rect(0, 0, 0, 0);
           white-space: nowrap;
-          border: 0;
-        }
+          border: 0}
         
         .high-contrast {
-          filter: contrast(1.5) brightness(1.2);
-        }
+          filter: contrast(1.5) brightness(1.2)}
         
         .large-text {
-          font-size: 1.2em;
-        }
+          font-size: 1.2em}
         
         .reduced-motion * {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
+          transition-duration: 0.01ms !important}
       `}</style>
     </>
-  );
-};
+  )};
 
 export default EnhancedAccessibilityEnhancer;
 

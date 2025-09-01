@@ -1,53 +1,21 @@
-import React from 'react.ts';
-import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3  } from 'lucide-react';
 
-const InfrastructureServices = () => {
-  const infrastructureServices = [
-    {
-      title: "Network Design & Management",
-      description: "Scalable network architecture and optimization for enterprise needs.",
-      price: "From $5,000/month",
-      features: ["Network architecture design", "Performance optimization", "Security implementation", "24/7 monitoring"],
-      icon: Network
-    },
-    {
-      title: "System Administration",
-      description: "Comprehensive system management and maintenance services.",
-      price: "From $3,500/month",
-      features: ["Server management", "Performance tuning", "Backup & recovery", "Security updates"],
-      icon: Server
-    },
-    {;
+
       title: "Data Center Solutions",;
       description: "Reliable hosting, colocation, and data center management.",;
       price: "From $8,000/month",;
       features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],;
-      icon: Database;
-    };
+      icon: Database};
   ];
 
-  const technologies = [
-    {
-      name: "Virtualization",
-      description: "VMware, Hyper-V, and container solutions",
-      icon: Cpu,
-      features: ["VMware vSphere", "Docker containers", "Kubernetes orchestration", "Resource optimization"]
-    },
-    {
-      name: "Storage Solutions",
-      description: "Enterprise storage and backup systems",
-      icon: HardDrive,
-      features: ["SAN/NAS systems", "Backup solutions", "Data replication", "Disaster recovery"]
-    },;
+  
     {;
       name: "Network Security",;
       description: "Advanced network protection and monitoring",;
       icon: Shield,;
-      features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"];
-    };
+      features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"]};
   ];
 
-  const benefits = [;
+  
     "Improved system reliability and uptime",;
     "Enhanced security and compliance",;
     "Scalable infrastructure that grows with your business",;
@@ -63,7 +31,7 @@ const InfrastructureServices = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">
-              <Server className="w-4 h-4 mr-2"/>
+              <Server className="w-4 h-4 mr-2" />
               IT Infrastructure
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -179,7 +147,7 @@ const InfrastructureServices = () => {
             </div>
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">
               <div className="text-center">
-                <Zap className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
+                <Zap className="w-24 h-24 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Infrastructure Excellence</h3>
                 <p className="text-gray-300 mb-6">
                   Our team has decades of combined experience building and
@@ -217,7 +185,6 @@ const InfrastructureServices = () => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
-export default InfrastructureServices;}}}
+export default InfrastructureServices}}}

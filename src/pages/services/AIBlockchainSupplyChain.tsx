@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
 import { Brain, 
   Link as LinkIcon, 
   Shield, 
@@ -15,49 +12,10 @@ import { Brain,
   Activity,
   BarChart3,
   Network
-  } from 'lucide-react.ts';
-import { SEO   } from '../../components/SEO';
-
-const AIBlockchainSupplyChain = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Analytics",
-      description: "Advanced machine learning algorithms analyze supply chain data for predictive insights and optimization opportunities"
-    },
-    {
-      icon: LinkIcon,
-      title: "Blockchain Transparency",
-      description: "Immutable blockchain records provide complete transparency and traceability across the entire supply chain"
-    },
-    {
-      icon: Shield,
-      title: "Smart Contracts",
-      description: "Automated smart contracts execute business logic and ensure compliance with predefined rules"
-    },
-    {
-      icon: Clock,
-      title: "Real-Time Tracking",
-      description: "Live monitoring of goods movement with instant alerts for delays, quality issues, or compliance violations"
-    },
-    {
-      icon: Zap,
-      title: "Automated Compliance",
-      description: "AI-driven compliance monitoring with automatic reporting and regulatory adherence"
-    },
-    {
-      icon: Globe,
-      title: "Global Integration",
-      description: "Seamless integration with existing ERP systems and global trading partners";
-    };
+  } from 'lucide-react.ts'};
   ];
 
-  const services = [
-    {
-      name: "Starter Plan",
-      price: "$5,999",
-      period: "/month",
-      features[;
+  
         "Basic blockchain tracking",
         "AI analytics dashboard",
         "Standard compliance",
@@ -92,51 +50,32 @@ const AIBlockchainSupplyChain = () => {
         "Advanced security",
         "Multi-tenant architecture"
       ],;
-      popular: false;
-    };
-  ];
-
-  const useCases = [
-    {
-      industry: "Manufacturing",
-      description: "Track raw materials from source to finished product with AI-powered quality control and compliance monitoring",
-      benefits["40% reduction in delays", "35% improvement in quality", "50% faster compliance"];
-    },;
+      popular: false};
+  ]},;
     {
       industry: "Retail & E-commerce",
       description: "Ensure product authenticity and optimize inventory management with real-time tracking and AI forecasting",
-      benefits["30% reduction in fraud", "25% better inventory", "Improved customer trust"];
-    },;
+      benefits["30% reduction in fraud", "25% better inventory", "Improved customer trust"]},;
     {
       industry: "Food & Beverage",
       description: "Maintain food safety standards with blockchain traceability and AI-powered quality monitoring",
-      benefits["100% traceability", "Faster recalls", "Enhanced safety"];
-    },;
+      benefits["100% traceability", "Faster recalls", "Enhanced safety"]},;
     {
       industry: "Pharmaceuticals",
       description: "Combat counterfeit drugs and ensure regulatory compliance with blockchain verification and AI monitoring",
-      benefits["Anti-counterfeit protection", "Regulatory compliance", "Patient safety"];
-    };
+      benefits["Anti-counterfeit protection", "Regulatory compliance", "Patient safety"]};
   ];
 
-  const technologies = [
-    "Machine Learning & AI",
-    "Blockchain Technology",
-    "Smart Contracts",
-    "IoT Integration",
-    "Cloud Computing",
-    "API Integration",
-    "Real-time Analytics",;
+  
     "Predictive Modeling";
   ];
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
-      <SEO 
-        title="AI-Powered Blockchain Supply Chain | Zion Tech Group"
+      <SEO title="AI-Powered Blockchain Supply Chain | Zion Tech Group"
         description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance."
         keywords="AI Supply Chain, Blockchain Supply Chain, Smart Contracts, Supply Chain Transparency, AI Analytics, Compliance Monitoring"
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -168,7 +107,7 @@ const AIBlockchainSupplyChain = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
               >
                 Transform Your Supply Chain
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                 Schedule Demo
@@ -308,7 +247,7 @@ const AIBlockchainSupplyChain = () => {
                 <ul className="space-y-4 mb-8">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -323,7 +262,7 @@ const AIBlockchainSupplyChain = () => {
                   }`}
                 >
                   Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="ml-2 w-4 h-4"  />
                 </Link>
               </motion.div>
             ))}
@@ -380,14 +319,14 @@ const AIBlockchainSupplyChain = () => {
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
               >
                 <div className="flex items-center mb-6">
-                  <Target className="w-8 h-8 text-zion-cyan mr-3" />
+                  <Target className="w-8 h-8 text-zion-cyan mr-3"  />
                   <h3 className="text-2xl font-bold text-white">{useCase.industry}</h3>
                 </div>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{useCase.description}</p>
                 <div className="space-y-2">
                   {useCase.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center text-zion-slate-light">
-                      <TrendingUp className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+                      <TrendingUp className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />
                       {benefit}
                     </div>
                   ))}
@@ -447,7 +386,7 @@ const AIBlockchainSupplyChain = () => {
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Activity className="w-6 h-6 text-white" />
+                  <Activity className="w-6 h-6 text-white"  />
                 </div>
                 <p className="text-white font-medium">{tech}</p>
               </motion.div>
@@ -487,7 +426,7 @@ const AIBlockchainSupplyChain = () => {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Start Your Transformation
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                   Book a Consultation
@@ -504,15 +443,15 @@ const AIBlockchainSupplyChain = () => {
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-zion-slate-light">
             <div className="flex items-center">
-              <Globe className="w-5 h-5 text-zion-cyan mr-2" />
+              <Globe className="w-5 h-5 text-zion-cyan mr-2"  />
               <span>https://ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
-              <Clock className="w-5 h-5 text-zion-cyan mr-2" />
+              <Clock className="w-5 h-5 text-zion-cyan mr-2"  />
               <span>+1 302 464 0950</span>
             </div>
             <div className="flex items-center">
-              <Network className="w-5 h-5 text-zion-cyan mr-2" />
+              <Network className="w-5 h-5 text-zion-cyan mr-2"  />
               <span>kleber@ziontechgroup.com</span>
             </div>
           </div>

@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
 const MicroSaasServices: React.FC = (): JSX.Element => {
 	return (
 <>
@@ -26,6 +24,5 @@ const MicroSaasServices: React.FC = (): JSX.Element => {
 				</div>;
 			</div>;
 </>;
-	);
-};
+	)};
 export default MicroSaasServices;

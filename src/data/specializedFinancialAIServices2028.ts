@@ -20,19 +20,16 @@ export interface FinancialAIService2028 {
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
-  regulatoryCompliance?: string[];
-}
+  regulatoryCompliance?: string[]}
 
 export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] = [
   // AI-Powered Algorithmic Trading Platform

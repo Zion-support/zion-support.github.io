@@ -1,53 +1,8 @@
-import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
-import { Globe, Leaf, Zap, Shield, Database, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Sun, Wind, Battery, Recycle  } from 'lucide-react';
 
 export default function Sustainability(...args: []):  {
-  const features = [
-    {
-      icon: Heart,
-      title: 'Eco-Friendly Solutions',
-      description: 'Reduce environmental impact with green technology'
-    },
-    {
-      icon: Leaf,
-      title: 'Energy Efficiency',
-      description: 'Optimize power consumption and reduce carbon footprint'
-    },
-    {
-      icon: Zap,
-      title: 'Renewable Energy',
-      description: 'Integrate solar, wind, and sustainable power sources'
-    },
-    {
-      icon: Globe,
-      title: 'Carbon Neutral',
-      description: 'Achieve net-zero emissions through smart technology';
+  
     };
-  ];
-
-  const services = [
-    {
-      title: 'Green IT Infrastructure',
-      description: 'Energy-efficient data centers and computing systems',
-      icon: Cpu
-    },
-    {
-      title: 'Sustainable Software',
-      description: 'Eco-friendly application development and optimization',
-      icon: Database
-    },
-    {
-      title: 'Energy Monitoring',
-      description: 'Real-time tracking and optimization of power usage',
-      icon: BarChart3
-    },
-    {
-      title: 'Carbon Footprint Analysis',
-      description: 'Comprehensive environmental impact assessment',
-      icon: Globe;
-    };
+  ]};
   ];
 
   return (
@@ -71,7 +26,7 @@ export default function Sustainability(...args: []):  {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-2 mb-6">
-              <Heart className="w-5 h-5 text-emerald-400" />
+              <Heart className="w-5 h-5 text-emerald-400"  />
               <span className="text-emerald-400 font-medium">Green IT & Sustainability</span>
             </div>
 
@@ -88,7 +43,7 @@ export default function Sustainability(...args: []):  {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Go Green with Tech
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </button>
               <button className="btn-outline px-8 py-4 text-lg">
                 Learn More
@@ -324,5 +279,4 @@ export default function Sustainability(...args: []):  {
         </div>
       </section>;
     </div>;
-  );
-}
+  )}
