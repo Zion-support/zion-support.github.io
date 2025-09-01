@@ -126,9 +126,6 @@ import { ArrowRight,
   Chi,
   Psi,
   Omega
-<<<<<<< HEAD
-import { SEO            } from '@/components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -178,15 +175,6 @@ const Home2026: React.FC = (): JSX.Element => {;
       color: "from-yellow-500 to-amber-600",
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s            => s.category === 'Digital Twin').length
     },
-<<<<<<< HEAD
-    {
-      title: anyanyanyanyanyanyanyanyanyanyany"Sustainability",
-      icon: Heart,
-      description: "Green technology and ESG compliance solutions",
-      color: "from-teal-500 to-cyan-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s            => s.category === 'Sustainability').length
-
-=======
     {;
       title: anyanyanyanyanyanyanyanyanyanyany"Sustainability",;
       icon: Heart,;
@@ -258,11 +246,6 @@ const Home2026: React.FC = (): JSX.Element => {;
   {
                 duration: 4,
                 repeat: Infinity,
-<<<<<<< HEAD
-                ease: "easeInOut"
-              }}
-
-=======
   ease: "easeInOut"
               
 
@@ -304,10 +287,6 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
             transition={{ duration: 1 }}
-<<<<<<< HEAD
-
-            {/* Logo and Company Name */}
-=======
           >
             {/* Logo and Comp Name */}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -387,11 +366,6 @@ const Home2026: React.FC = (): JSX.Element => {;
         {/* Scroll Indicator */}
         <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-<<<<<<< HEAD
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-
-=======
           animate = {
   { y: [0, 10,
   0] 

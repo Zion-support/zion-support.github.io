@@ -36,18 +36,6 @@ import { Leaf, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Globe, T
       price: '$299/mo',
       details: ['Up to 5 locations', 'Basic AI monitoring', 'Standard reporting', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Sustainability Professional',
-      price: '$799/mo',
-      details: ['Up to 25 locations', 'Advanced AI features', 'Custom dashboards', 'Priority support']
-    },
-    {
-      name: 'Enterprise Sustainability',
-      price: '$2,499/mo',
-      details: ['Unlimited locations', 'Full AI suite', 'White-label options', '24/7 support']
-    },
-=======
     { 
       name: 'Sustainability Professional', 
       price: '$799/mo', 

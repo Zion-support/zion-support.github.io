@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { SEO } from '../components/SEO';
-import {
-  Code,
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO               } from '../components/SEO';
-import { Code, 
-=======
 import React from 'react.ts';
 import { SEO              } from '../components/SEO';
 import { Code,
@@ -33,13 +22,6 @@ import { Code,
   Star,
   ArrowRight,
   Brain
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function MicroSAASSolutions(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function MicroSAASSolutions(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function MicroSAASSolutions(...args[]: any):  {
@@ -217,10 +199,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
                 Comprehensive solutions designed to accelerate your business growth
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index)  => (
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index)               => (
@@ -255,10 +233,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
                 Understanding the fundamental advantages that make our solutions essential
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {benefits.map((benefit, index)               => (
@@ -285,10 +259,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
                 Proven solutions across diverse industry verticals
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index)  => (
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index)               => (
@@ -315,10 +285,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
                 A proven methodology that ensures successful project delivery
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index)  => (
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index)               => (

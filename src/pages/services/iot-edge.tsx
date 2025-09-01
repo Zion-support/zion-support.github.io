@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield import { Link              } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield               } from 'lucide-react.ts';
@@ -69,9 +58,6 @@ export default function IoTEdge(...args: []):  {
                 real-time analytics, and intelligent automation capabilities.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -105,12 +91,6 @@ export default function IoTEdge(...args: []):  {
                   icon: Shield,
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with encryption and access controls."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((feature, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
@@ -136,9 +116,6 @@ export default function IoTEdge(...args: []):  {
                 Discover how IoT and edge computing can transform different industries and operations.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -178,12 +155,6 @@ export default function IoTEdge(...args: []):  {
                   description: "Inventory management, supply chain optimization, and customer experience.",
                   icon: Activity,
                   benefits: ["Inventory tracking", "Supply chain", "Customer insights"]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((application, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((application, index)  => (
@@ -265,9 +236,6 @@ export default function IoTEdge(...args: []):  {
                 Built on cutting-edge IoT and edge computing technologies for maximum performance and reliability.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -287,12 +255,6 @@ export default function IoTEdge(...args: []):  {
                 {
                   title: "Security",
                   description: "TLS encryption, device authentication, and secure communication"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((technology, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((technology, index)  => (
@@ -318,9 +280,6 @@ export default function IoTEdge(...args: []):  {
                 Our systematic approach ensures successful IoT and edge computing implementation.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -344,12 +303,6 @@ export default function IoTEdge(...args: []):  {
                   step: "04",
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize the system."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((step, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((step, index)  => (

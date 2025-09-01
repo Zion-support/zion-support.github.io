@@ -51,9 +51,6 @@ website: string;
     uptime: string;
     security: string[]};
   competitors?: string[];
-<<<<<<< HEAD
-  caseStudies?: string[];
-=======
   caseStudies?: string[]}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -236,10 +233,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       integrations['Research Platforms', 'Cloud Services', 'Scientific Instruments', 'AI Frameworks'],
       apiEndpoints: 75,
       uptime: '99.9%',
-<<<<<<< HEAD
-      security: ['Quantum Cryptography', 'Post-Quantum Security', 'Zero Trust Architecture']
-
-=======
       security['Quantum Cryptography', 'Post-Quantum Security', 'Zero Trust Architecture']
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

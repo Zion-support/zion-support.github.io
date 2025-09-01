@@ -15,8 +15,6 @@ import { CheckCircle,
   Cloud,
   Brain,
   Globe
-<<<<<<< HEAD
-=======
              } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -254,11 +252,6 @@ export default function CaseStudies(...args: any[]): any {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {industries.map(industry             => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {industries.map(industry              => (
@@ -273,11 +266,6 @@ export default function CaseStudies(...args: any[]): any {
                 <select
                   value={selectedTechnology}
                   onChange={(e) => setSelectedTechnology(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {technologies.map(tech             => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {technologies.map(tech              => (
@@ -481,8 +469,5 @@ export default function CaseStudies(...args: any[]): any {
       </section>
     </div>
   );
-<<<<<<< HEAD
-}}}
-=======
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

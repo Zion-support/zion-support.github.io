@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
-=======
 import React, { useState, useEffect          } from 'react.ts';
 import { Sun, Moon, Monitor           } from 'lucide-react.ts';
 
 type Theme = 'dark' | 'light' | 'system';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-export function ThemeToggle(...args[]: any):  {
-  const [theme, setTheme] = useState<any>('system');
-=======
 interface ThemeToggleProps extends React.PropsWithChildren<{}> {
 
   className?: string;
@@ -129,11 +121,6 @@ export function ThemeToggleDropdown(...args: any[]): any {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       root.classList.toggle('dark', systemTheme === 'dark');
     } else {
-<<<<<<< HEAD
-      root.classList.add(theme);
-
-    localStorage.setItem('zion-theme', theme);
-=======
       root.classList.toggle('dark', theme === 'dark');
     }
     
@@ -156,27 +143,6 @@ export function ThemeToggleDropdown(...args: any[]): any {
   return (
     <div className="relative">
       <button
-<<<<<<< HEAD
-        onClick={() => toggleTheme('light')}
-        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'light' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
-        aria-label="Switch to light theme"
-
-        <Sun className="h-5 w-5" />
-      </button>
-      <button
-        onClick={() => toggleTheme('dark')}
-        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'dark' ? 'bg-zion-purple text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
-        aria-label="Switch to dark theme"
-
-        <Moon className="h-5 w-5" />
-      </button>
-      <button
-        onClick={() => toggleTheme('system')}
-        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'system' ? 'bg-zion-green text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
-        aria-label="Switch to system theme"
-
-        <Monitor className="h-5 w-5" />
-=======
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
         aria-label="Select theme"
@@ -219,8 +185,5 @@ export function ThemeToggleDropdown(...args: any[]): any {
       </AnimatePresence>
     </div>
   );
-<<<<<<< HEAD
-}}}}
-=======
 };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

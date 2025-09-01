@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { Route, Routes  } from 'react-router-dom.ts';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-=======
 
 import { Route, Routes               } from 'react-router-dom.ts';
 import { ProtectedRoute               } from '@/components/ProtectedRoute';

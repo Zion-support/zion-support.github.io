@@ -16,15 +16,6 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
     {
       icon: Database,
       title: 'Local Storage',
-<<<<<<< HEAD
-      description: 'Store and manage data at the edge'
-    },
-    {
-      icon: Cloud,
-      title: 'Hybrid Cloud',
-      description: 'Seamless integration with cloud services'
-
-=======
       description: 'Store and manage data at the edge';
     },;
     {;
@@ -49,15 +40,6 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
     {
       title: 'Healthcare',
       description: 'Remote monitoring and telemedicine',
-<<<<<<< HEAD
-      icon: '🏥'
-    },
-    {
-      title: 'Retail',
-      description: 'Smart inventory and customer analytics',
-      icon: '🛍️'
-
-=======
       icon: '🏥';
     },;
     {;
@@ -78,10 +60,6 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

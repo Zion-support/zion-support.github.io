@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
-import { 
-  Shield, 
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion               } from 'framer-motion.ts';
-import { SEO               } from '../../components/SEO';
-import { Shield, 
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { SEO              } from '../../components/SEO';
-import { Shield,
-  Search,
-  AlertTriangle,
-  CheckCircle,
-=======
 import { SEO              } from '../../components/SEO';
 import { Shield, 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -51,12 +31,6 @@ import { Shield,
   Settings,
   Users,
   TrendingUp
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
-<<<<<<< HEAD
-export default function SmartContractRiskScanner(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -299,10 +273,6 @@ export default function SmartContractRiskScanner(...args: []):  {
               with AI-powered vulnerability detection and risk assessment.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {features.map((feature, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {features.map((feature, index)               => (
@@ -366,10 +336,6 @@ export default function SmartContractRiskScanner(...args: []):  {
               and provides detailed analysis and remediation guidance.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {scanningCapabilities.map((capability, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {scanningCapabilities.map((capability, index)               => (
@@ -433,10 +399,6 @@ export default function SmartContractRiskScanner(...args: []):  {
               consistent security analysis across different platforms.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportedNetworks.map((network, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {supportedNetworks.map((network, index)               => (
@@ -487,10 +449,6 @@ export default function SmartContractRiskScanner(...args: []):  {
               compliance standards for comprehensive protection.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {securityStandards.map((standard, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {securityStandards.map((standard, index)               => (
@@ -541,10 +499,6 @@ export default function SmartContractRiskScanner(...args: []):  {
               All plans include comprehensive vulnerability scanning and reporting.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)               => (

@@ -19,9 +19,6 @@ export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-=======
 address: string;
 
 
@@ -80,9 +77,6 @@ export interface AIService {
   setupTime: string;
   integrations: string[];
   freeTier: boolean;
-<<<<<<< HEAD
-  trialPeriod: string;
-=======
 trialPeriod: string;
 
 

@@ -25,21 +25,6 @@ import { Brain,
   Mail,
   ExternalLink,
   Search
-<<<<<<< HEAD
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025";
-import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
-interface Service {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-               } from 'lucide-react.ts';
-import { Link                } from 'react-router-dom.ts';
-import { EXPANDED_INNOVATIVE_SERVICES_2025                } from '../data/expandedInnovativeServices2025';
-import { EMERGING_TECH_SERVICES_2025                } from '../data/emergingTechServices2025';
-=======
 } from 'lucide-react';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { Link               } from 'react-router-dom.ts';
@@ -106,17 +91,6 @@ website: string;
     uptime: string;
     security: string[];
   };
-<<<<<<< HEAD
-}
-const ComprehensiveServicesShowcase: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-=======
-<<<<<<< HEAD
-
-const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
-=======
 }
 const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -185,23 +159,6 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
       default:
         return <Star className = "h-6 w-6" />};
   };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const getInnovationLevelColor = (level: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    switch (level) {;
-      case 'Cutting-edge':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        return 'bg-gradient-to-r from-purple-600 to-pink-600';
-      case 'Advanced':
-        return 'bg-gradient-to-r from-blue-600 to-cyan-600';
-      case 'Professional':
-        return 'bg-gradient-to-r from-green-600 to-emerald-600';
-      default:
-<<<<<<< HEAD
-        return 'bg-gradient-to-r from-gray-600 to-slate-600';
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}
   };
@@ -286,16 +243,6 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
-                {categories.map(category  => (
-=======
-<<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-zion-cyan focus:border-transparent"
-
-                {categories.map(category               => (
-=======
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {categories.map(category                => (
@@ -313,16 +260,6 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
               <select
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-<<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
-                {innovationLevels.map(level  => (
-=======
-<<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-zion-cyan focus:border-transparent"
-
-                {innovationLevels.map(level               => (
-=======
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {innovationLevels.map(level                => (

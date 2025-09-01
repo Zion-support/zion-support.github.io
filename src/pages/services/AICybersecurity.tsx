@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICybersecurity(...args: any[]): any {
-  const features = [
-    'AI-powered cybersecurity optimization',
-    'Intelligent threat detection and response',
-    'Automated security monitoring and alerting',
-    'Predictive analytics for security threats',
-    'Smart security compliance and governance',
-    'AI-driven security automation and orchestration',
-    'Real-time security analytics and insights',
-    'Custom AI models for security applications'
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$499/mo',
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,299/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$3,499/mo',
-      details: ['Unlimited storage', 'Custom AI models', 'Full security suite', '24/7 dedicated support']
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';

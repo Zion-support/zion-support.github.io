@@ -46,32 +46,8 @@ import { Search,
   Video,
   GraduationCap,
   TestTube
-<<<<<<< HEAD
-} from 'lucide-react';
-interface SearchResult {
-=======
              } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-const SearchPage: React.FC = (): JSX.Element => {
-	const [query, setQuery] = useState('')
-	return (
-		<div className="min-h-screen bg-slate-950 text-white py-16">
-			<SEO title="Search" description="Search Zion Tech Group content and services." />
-			<div className="container mx-auto max-w-3xl px-6">
-				<h1 className="text-3xl font-bold mb-6">Search</h1>
-				<input
-					value={query}
-					onChange={(e) => setQuery(e.target.value)}
-					placeholder="Search..."
-					className="w-full rounded-md bg-slate-900 border border-slate-700 px-4 py-2 outline-none focus:ring-2 focus:ring-sky-600"
-				/>
-			</div>
-		</div>
-	)
-
-export default SearchPage}
-=======
 interface SearchResult {
 
 
@@ -207,9 +183,6 @@ const filters = {
   '3.5+'];
 ;
 };
-<<<<<<< HEAD
-export default function SearchPage(...args[]):  {
-=======
 
 export default function SearchPage(...args[]: any):  {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

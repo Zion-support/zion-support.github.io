@@ -1,9 +1,4 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import { useParams, Link  } from 'react-router-dom.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-export default function GenericPage(...args[]):  {
-=======
 import { useParams, Link               } from 'react-router-dom.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 

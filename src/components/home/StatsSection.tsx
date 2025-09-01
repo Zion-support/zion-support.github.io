@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { motion, useInView  } from 'framer-motion.ts';
-import { useRef  } from 'react.ts';
-import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
-interface Stat {
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { motion, useInView               } from 'framer-motion.ts';
-import { useRef               } from 'react.ts';
-import { TrendingUp, Award, Users, Clock interface Stat {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 import React, { useState, useEffect  
  
  
@@ -66,31 +39,6 @@ interface Stat {
   label: string;
   description: string;
   avatar: string;
-<<<<<<< HEAD
-icon: React.ComponentType<{ className?: string}>;
-=======
-<<<<<<< HEAD
-icon: React.ComponentType<{ className?: string;
-
-
-
-
-
-
-
-
-
-
-
-
-
-}>;
-  color: string;
-
-interface StatsSectionProps extends React.PropsWithChildren<{}> {
-
-  stats: Stat[];
-=======
 icon: React.ComponentType<{ className?: string;
 }>;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -100,11 +48,6 @@ interface StatsSectionProps extends React.PropsWithChildren<{}> {
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const [counts, setCounts] = useState<any>({ /* empty */ });
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [counts, setCounts] = useState<any>({});
   useEffect(()  => {
@@ -150,10 +93,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             Our track record speaks for itself - delivering exceptional results across diverse industries
           </p>
         </motion.div>
-<<<<<<< HEAD
-        <div ref={ref} className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index)  => (
-=======
 
         <div ref={ref} className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index)                => (

@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { SEO           } from '@/components/SEO';
-import { Link           } from 'react-router-dom.ts';
-import { Brain,
-  Zap,
-  Shield,
-  Database,
-  Users,
-  TrendingUp,
-  Globe,
-  Lock,
-  Cloud,
-  Briefcase,
-  Scale,
-  Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Search
-import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025           } from '@/data/ultimateRealServices2025';
-=======
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence           } from 'framer-motion.ts';
 import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle           } from 'lucide-react.ts';
@@ -109,45 +83,6 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
         return 0}
   });
 
-<<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)           => {
-    if (category === 'all') return <Rocket className="w-6 h-6" />;
-    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ?
-      <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> :
-      <Rocket className="w-6 h-6" />;
-=======
-<<<<<<< HEAD
-  const handleServiceClick = (service)  => {;
-    setSelectedService(service)};
-
-  const closeModal = () => {;
-    setSelectedService(null)};
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      };
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  };
-
-  const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0 
-
-},
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    };
-=======;
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)           => {;
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
@@ -158,16 +93,6 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
 
 const UltimateServicesShowcase2025 = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO
-        title="Ultimate Innovative Services 2025 | Zion Tech Group"
-        description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
-        keywords="AI services, quantum computing, autonomous business, micro SAAS, technology solutions"
-        ogImage="/og-image.jpg"
-        canonicalUrl="https://ziontechgroup.com"
-      />
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header */}
       <div className="container mx-auto px-4 py-8">
@@ -264,18 +189,6 @@ const UltimateServicesShowcase2025 = () => {
       {/* Header Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-            Ultimate Services Showcase 2025
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover our comprehensive portfolio of cutting-edge AI, quantum computing, and emerging technology solutions designed to transform your business and drive unprecedented growth
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <div className="bg-cyan-400/20 border border-cyan-400/30 rounded-full px-6 py-3">
-              <span className="text-cyan-400 font-semibold">🚀 {filteredServices.length} Services</span>
-=======
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -381,22 +294,6 @@ const UltimateServicesShowcase2025 = () => {
               <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-zion-cyan" />
             </div>
 
-<<<<<<< HEAD
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                    selectedCategory === category
-                      ? 'bg-cyan-400 text-slate-900 shadow-lg'
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-600/50'
-                  }`}
-
-                  {getCategoryIcon(category)}
-                  <span className="ml-2 capitalize">{category === 'all' ? 'All Services' : category}</span>
-=======
             {/* Sort and View Controls */}
             <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
               <div className="flex items-center gap-2">
@@ -784,25 +681,12 @@ const UltimateServicesShowcase2025 = () => {
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 text-lg"
 
               View Pricing
-<<<<<<< HEAD
-            </Link>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-
-export default UltimateServicesShowcase2025;
-=======
             </Link>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

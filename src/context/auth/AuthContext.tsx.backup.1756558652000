@@ -18,9 +18,6 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-<<<<<<< HEAD
-  updatedAt?: string;
-=======
 updatedAt?: string;
 
 
@@ -45,9 +42,6 @@ interface AuthTokens {
 
 
   accessToken: string | null;
-<<<<<<< HEAD
-  refreshToken: string | null;
-=======
 refreshToken: anyanyanyanyanyanyanyanyanystring | null;
 
 
@@ -75,18 +69,6 @@ interface AuthContextType {
   isLoading: boolean;
   onboardingStep: number;
   tokens: AuthTokens;
-<<<<<<< HEAD
-login: (email: string, password: string)          => Promise<any>;
-  register: anyanyanyanyanyanyanyany(name: string, email: string, password: string)          => Promise<any>;
-  signup: anyanyanyanyanyanyanyany(email: string, password: string, userData: )          => Promise<any>;
-  logout: anyanyanyanyanyanyanyanyany()          => Promise<any>;
-  resetPassword: anyanyanyanyanyanyanyanyany(email: string)          => Promise<any>;
-  updateProfile: anyanyanyanyanyanyanyanyany(updates: Partial<User>)          => Promise<any>;
-  loginWithGoogle: anyanyanyanyanyanyanyanyany()          => Promise<any>;
-  loginWithFacebook: anyanyanyanyanyanyanyanyany()          => Promise<any>;
-  loginWithTwitter: anyanyanyanyanyanyanyanyany()          => Promise<any>;
-  loginWithWeb3: anyanyanyanyanyanyanyanyany()          => Promise<any>;
-=======
 login: anyanyanyanyanyanyanyanyany(email: string, password: string)           => Promise<any>;
   register: anyanyanyanyanyanyanyanyany(name: string, email: string, password: string)           => Promise<any>;
   signup: anyanyanyanyanyanyanyanyany(email: string, password: string, userData)           => Promise<any>;
@@ -111,11 +93,6 @@ const AuthContext = createContext<AuthContextType | null>(null);
 
 export const useAuth = () => {;
   const context = useContext(AuthContext);
-<<<<<<< HEAD
-  if (context = == null) {;
-    throw new Error('useAuth must be used within an AuthProvider')};
-  return context};
-=======
   if (context = == null) {;
     throw new Error('useAuth must be used within an AuthProvider');
 

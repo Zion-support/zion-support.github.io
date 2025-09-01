@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Check,
-=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { CheckCircle,
@@ -41,61 +34,6 @@ import { CheckCircle,
   GraduationCap,
   HelpCircle,
   Settings,
-<<<<<<< HEAD
-  Monitor,
-  Smartphone,
-  Watch,
-  Headphones,
-  Printer,
-  Wifi,
-  Bluetooth,
-  Satellite,
-  Telescope,
-  Microscope,
-  Flask,
-  Pill,
-  Stethoscope,
-  Calculator,
-  BookOpen,
-  CreditCard,
-  ShoppingCart,
-  Truck,
-  Warehouse,
-  Factory,
-  Home,
-  Store,
-  Bank,
-  Insurance,
-  Law,
-  Gavel,
-  Calendar,
-  Timer,
-  Stopwatch,
-  Thermometer,
-  Gauge,
-  Compass,
-  Map,
-  Navigation,
-  Search,
-  Filter,
-  Sort,
-  Download,
-  Upload,
-  Share,
-  Copy,
-  Edit,
-  Trash,
-  Save,
-  Plus,
-  Minus,
-  X,
-  AlertTriangle,
-  Info
-} from 'lucide-react';
-
-export function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-=======
   Cog,
   Wrench,
   Tool,
@@ -240,13 +178,6 @@ export function PricingPage(...args: any[]): any {
 
   const categories = ['All', 'AI & SaaS', 'Quantum & Trading', 'Security', 'Enterprise'];
 
-<<<<<<< HEAD
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const filteredServices = selectedCategory === 'All' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
-=======
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
@@ -337,23 +268,6 @@ export function PricingPage(...args: any[]): any {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Services Pricing */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="space-y-16">
-            {filteredServices.map((service, serviceIndex) => (
-              <motion.div
-                key={service.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: serviceIndex * 0.2 }}
-                className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-2xl p-8"
-              >
-                <div className="text-center mb-12">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <service.icon className="w-8 h-8 text-white" />
-=======
         {/* Services Pricing Grid */}
         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {filteredServices.map((service, index)              => (
@@ -446,11 +360,6 @@ export function PricingPage(...args: any[]): any {
                     to={service.link}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
-<<<<<<< HEAD
-                    Learn more about {service.name}
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-=======
                     Get Started
                   </a>
                   <a

@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide-react';
-interface NewsletterFormData {
-  email: string;
-  firstName: string;
-  interests: string[];
-  frequency: 'weekly' | 'monthly' | 'quarterly'}
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion               } from 'framer-motion.ts';
-import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift interface NewsletterFormData {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  email: string;
-  firstName: string;
-  interests: string[];
-  frequency: 'weekly' | 'monthly' | 'quarterly';
-=======
 import React, { useState  
  
  
@@ -99,34 +66,7 @@ const frequencies = [;
   { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
   { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
 ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
-  const [formData, setFormData] = useState<any>({;
-    email: '',;
-    firstName: '',;
-    interests: [],;
-    frequency: 'monthly';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  });
-<<<<<<< HEAD
-
-  const [status, setStatus] = useState<any>('idle');
-  const [errors, setErrors] = useState<Partial<NewsletterFormData>>({ /* empty */ });
-
-  const validateForm = (): boolean => {
-    const newErrors: Partial<NewsletterFormData> = { /* empty */ };
-
-    if (!formData.email) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-
-    if (!formData.firstName) {
-      newErrors.firstName = 'First name is required';
-=======
   
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [status, setStatus] = useState<any>('idle');
@@ -143,18 +83,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-
-    if (!validateForm()) {
-<<<<<<< HEAD
-      return;
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return}
     setStatus('loading');
@@ -163,9 +92,6 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
       await new Promise(resolve => setTimeout(resolve, 2000));
       // Here you would typically send the data to your newsletter service
       // // // // // // // console.log('Newsletter subscription:', formData);
-<<<<<<< HEAD
-      console.log('Newsletter subscription: ', formData);
-=======
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
 =======
@@ -188,38 +114,11 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
       setStatus('error');
       console.error('Newsletter subscription error:', error)}
   };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const handleInterestToggle = (interestId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    setFormData(prev => ({;
-      ...prev,;
-      interests: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprev.interests.includes(interestId);
-        ? prev.interests.filter(id               => id !== interestId);
-        : [...prev.interests, interestId];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    }));
-
-    // Clear error when user selects an interest
-    if (errors.interests) {
-<<<<<<< HEAD
-      setErrors(prev => ({ ...prev, interests: undefined }));
-
-=======
-<<<<<<< HEAD
-      setErrors(prev = > ({ ...prev, interests: null }))};
-  };
-
-  const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof NewsletterFormData, value: string | string[])                => {;
-=======;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       setErrors(prev => ({ ...prev, interests: null }));
     }
   };
-<<<<<<< HEAD
-  const handleInputChange = (field: keyof NewsletterFormData, value: string | string[]) => {;
-=======
 
   const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof NewsletterFormData, value: string | string[])               => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -365,20 +264,6 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
         </div>
         {/* Interests Selection */}
         <div>
-<<<<<<< HEAD
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">;
-            Areas of Interest * (Select all that apply);
-          </label>;
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
-            {interests.map((interest) => {;
-=======
-<<<<<<< HEAD
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
-            Areas of Interest * (Select all that apply)
-          </label>
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-3">
-            {interests.map((interest)                => {;
-=======;
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">;
             Areas of Interest * (Select all that apply);
           </label>;

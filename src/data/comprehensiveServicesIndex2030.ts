@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { ProductListing  } from '@/types/listings';
-import { REVOLUTIONARY_SERVICES_2030  } from "./revolutionaryServices2030";
-=======
 import { ProductListing               } from '@/types/listings';
 import { REVOLUTIONARY_SERVICES_2030               } from './revolutionaryServices2030';
 
@@ -48,19 +44,6 @@ export const SERVICE_STATISTICS_2030 = {
   totalServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.length,
   totalCategories: SERVICE_CATEGORIES_2030.length,
   averagePrice: Math.round(
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)              => sum + service.price, 0) /
-    COMPREHENSIVE_SERVICES_INDEX_2030.length
-  ),
-  averageRating: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.round(
-    (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)              => sum + service.rating, 0) /
-    COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
-  ) / 10,
-  featuredServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service              => service.featured).length,
-  aiServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service              =>
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.price, 0) / 
     COMPREHENSIVE_SERVICES_INDEX_2030.length
@@ -69,21 +52,10 @@ export const SERVICE_STATISTICS_2030 = {
     (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)               => sum + service.rating, 0) / 
     COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
   ) / 10,
-<<<<<<< HEAD
-  featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
-  aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
-    service.category.includes('AI') || service.aiScore > 90
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
-=======
   featuredServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service               => service.featured).length,
   aiServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service               => 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     service.category.includes('AI') || service.aiScore > 90
-<<<<<<< HEAD
-  ).length,
-<<<<<<< HEAD
-  emergingTechServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service              =>
-=======
   emergingTechServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service               => 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

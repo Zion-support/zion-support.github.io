@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-interface PostCardProps extends React.PropsWithChildren<{}> {
-=======
-<<<<<<< HEAD
-interface PostCardProps extends React.PropsWithChildren<{}> {
-
-post: {;
-=======
 import React from 'react.ts';
 
 interface PostCardProps extends React.PropsWithChildren<{
@@ -25,9 +16,6 @@ post: {
 author: {
       name: string;
       avatar: string}}}
-<<<<<<< HEAD
-export default function PostCard(...args[]):  {
-=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function PostCard(...args[]: any):  {

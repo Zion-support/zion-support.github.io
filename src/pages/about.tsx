@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Users, 
-=======
-<<<<<<< HEAD
-const About: React.FC = (): JSX.Element => {
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
@@ -23,13 +13,6 @@ import { Users,
   Shield,
   Heart,
   Star,
-<<<<<<< HEAD
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
-<<<<<<< HEAD
-export default function About() {
-=======
   TrendingUp,
   Lightbulb,
   Cpu,
@@ -187,13 +170,6 @@ function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Our Impact in Numbers</h2>
             <p className="text-xl text-gray-300">Delivering results that speak for themselves</p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-=======
           
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {stats.map((stat, index)              => (
@@ -228,10 +204,6 @@ function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
             <p className="text-xl text-gray-300">The principles that guide everything we do</p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-=======
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index)              => (
@@ -263,10 +235,6 @@ function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
             <p className="text-xl text-gray-300">The brilliant minds behind our innovative solutions</p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-=======
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index)               => (

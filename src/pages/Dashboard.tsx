@@ -17,13 +17,6 @@ import { BarChart3,
   MessageSquare,
   Star,
   ArrowRight
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function Dashboard(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function Dashboard(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function Dashboard(...args[]: any):  {
@@ -143,9 +136,6 @@ export default function Dashboard(...args[]: any):  {
     { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;
     { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' };
   ];
-<<<<<<< HEAD
-  const getStatusColor = (status: string)  => {
-=======
 
   const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -159,9 +149,6 @@ export default function Dashboard(...args[]: any):  {
       default:
         return "bg-gray-100 text-gray-800"}
   };
-<<<<<<< HEAD
-  const getPriorityColor = (priority: string)  => {
-=======
 
   const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

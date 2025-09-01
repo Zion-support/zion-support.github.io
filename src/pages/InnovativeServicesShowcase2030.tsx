@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Star,
-  CheckCircle,
-  Phone,
-  Mail,
-  MapPin,
-=======
 import React, { useState, useEffect              } from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -35,27 +18,6 @@ import { Brain,
   Clock,
   DollarSign,
   Search
-<<<<<<< HEAD
-} from 'lucide-react';
-import { innovativeAIServices2030 } from "../data/innovativeAIServices2030";
-import { innovativeCybersecurityServices2030 } from "../data/innovativeCybersecurityServices2030";
-import { innovativeCloudDevOpsServices2030 } from "../data/innovativeCloudDevOpsServices2030";
-const InnovativeServicesShowcase2030: React.FC = () => {;
-=======
-<<<<<<< HEAD
-import { innovativeAIServices2030              } from '../data/innovativeAIServices2030';
-import { innovativeCybersecurityServices2030              } from '../data/innovativeCybersecurityServices2030';
-import { innovativeCloudDevOpsServices2030              } from '../data/innovativeCloudDevOpsServices2030';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { innovativeAIServices2030               } from '../data/innovativeAIServices2030';
-import { innovativeCybersecurityServices2030               } from '../data/innovativeCybersecurityServices2030';
-import { innovativeCloudDevOpsServices2030               } from '../data/innovativeCloudDevOpsServices2030';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
-=======;
 } from 'lucide-react';
 import { innovativeAIServices2030              } from '../data/innovativeAIServices2030';
 import { innovativeCybersecurityServices2030              } from '../data/innovativeCybersecurityServices2030';
@@ -343,9 +305,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
               We deliver cutting-edge technology solutions with unmatched expertise, innovation, and customer success
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -369,12 +328,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                 icon: Users,
                 title: "24/7 Support",
                 description: "Round-the-clock technical support and consultation"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-            ].map((feature, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               }
             ].map((feature, index)  => (

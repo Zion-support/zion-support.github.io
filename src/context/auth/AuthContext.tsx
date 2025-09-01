@@ -1,7 +1,5 @@
 import React, { createContext, useContext } from 'react.ts';
 interface User {
-<<<<<<< HEAD
-=======
 
 
 
@@ -25,16 +23,6 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-<<<<<<< HEAD
-  updatedAt?: string}
-interface AuthTokens {
-  accessToken: string | null;
-  refreshToken: string | null}
-interface AuthContextType {
-=======
-<<<<<<< HEAD
-  updatedAt?: string;
-=======
 updatedAt?: string;
 
 
@@ -69,9 +57,6 @@ interface AuthTokens {
 
 
   accessToken: string | null;
-<<<<<<< HEAD
-  refreshToken: string | null;
-=======
 refreshToken: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring | null;
 
 
@@ -110,30 +95,6 @@ interface AuthContextType {
   isLoading: boolean;
   onboardingStep: number;
   tokens: AuthTokens;
-<<<<<<< HEAD
-login: (email: string, password: string)  => Promise<any>;
-  register: (name: string, email: string, password: string)  => Promise<any>;
-  signup: (email: string, password: string, userData)  => Promise<any>;
-  logout: ()  => Promise<any>;
-  resetPassword: (email: string)  => Promise<any>;
-  updateProfile: (updates: Partial<User>)  => Promise<any>;
-  loginWithGoogle: ()  => Promise<any>;
-  loginWithFacebook: ()  => Promise<any>;
-  loginWithTwitter: ()  => Promise<any>;
-  loginWithWeb3: ()  => Promise<any>}
-=======
-<<<<<<< HEAD
-login: (email: string, password: string)               => Promise<any>;
-  register: anyanyanyanyanyanyanyanyanyanyanyanyany(name: string, email: string, password: string)               => Promise<any>;
-  signup: anyanyanyanyanyanyanyanyanyanyanyanyany(email: string, password: string, userData: )               => Promise<any>;
-  logout: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => Promise<any>;
-  resetPassword: anyanyanyanyanyanyanyanyanyanyanyanyanyany(email: string)               => Promise<any>;
-  updateProfile: anyanyanyanyanyanyanyanyanyanyanyanyanyany(updates: Partial<User>)               => Promise<any>;
-  loginWithGoogle: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => Promise<any>;
-  loginWithFacebook: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => Promise<any>;
-  loginWithTwitter: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => Promise<any>;
-  loginWithWeb3: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => Promise<any>;
-=======
 login: anyanyanyanyanyanyanyanyanyanyanyanyanyany(email: string, password: string)                => Promise<any>;
   register: anyanyanyanyanyanyanyanyanyanyanyanyanyany(name: string, email: string, password: string)                => Promise<any>;
   signup: anyanyanyanyanyanyanyanyanyanyanyanyanyany(email: string, password: string, userData)                => Promise<any>;

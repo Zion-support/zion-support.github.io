@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Link              } from 'react-router-dom.ts';
-import { Calculator,
-  Check,
-  X,
-  Star,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Cpu,
-=======
 import React, { useState              } from 'react.ts';
 import { Link               } from 'react-router-dom.ts';
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -43,18 +26,6 @@ import { Calculator,
   Globe,
   Atom,
   Satellite
-<<<<<<< HEAD
-} from 'lucide-react';
-import { SEO } from "../components/SEO";
-export default function PricingGuide(...args[]):  {
-=======
-<<<<<<< HEAD
-import { SEO              } from '../components/SEO';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { SEO               } from '../components/SEO';
-=======
 } from 'lucide-react';
 import { SEO              } from '../components/SEO';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -182,24 +153,7 @@ export default function PricingGuide(...args[]: any):  {
       ];
     };
   ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const calculatePrice = (price: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const rate = currencyRates[selectedCurrency as keyof typeof currencyRates].rate;
-    const symbol = currencyRates[selectedCurrency as keyof typeof currencyRates].symbol;
-    const adjustedPrice = selectedPeriod === 'yearly' ? price * 0.9 : price;
-    return `${symbol}${Math.round(adjustedPrice * rate)}`};
-
-  const savings = selectedPeriod === 'yearly' ? 10 : 0;
-
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -278,15 +232,6 @@ export default function PricingGuide(...args[]: any):  {
             <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>
             <p className="text-xl text-slate-300">Flexible pricing options designed to scale with your business</p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
-=======
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)              => (
-=======
           
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)               => (
@@ -360,15 +305,6 @@ export default function PricingGuide(...args[]: any):  {
             <h2 className="text-3xl font-bold text-white mb-4">Service-Specific Pricing</h2>
             <p className="text-xl text-slate-300">Detailed pricing for individual services and solutions</p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {servicePricing.map((category, index)  => (
-=======
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {servicePricing.map((category, index)              => (
-=======
           
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {servicePricing.map((category, index)               => (

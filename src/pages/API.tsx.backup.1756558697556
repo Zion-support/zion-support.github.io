@@ -1,37 +1,6 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Link           } from 'react-router-dom.ts';
-import { Code, 
-  Search, 
-  Filter,
-  ArrowRight,
-  Download,
-  ExternalLink,
-  Brain,
-  Cloud,
-  Shield,
-  Sparkles,
-  Zap,
-  Globe,
-  Target,
-  TrendingUp,
-  CheckCircle,
-  Clock,
-  User,
-  Star,
-  Terminal,
-  Key,
-  Database,
-  Lock
-          } from 'lucide-react.ts';
-=======
 import React from 'react.ts';
 import SEO from '../components/SEO';
 import { motion          } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Terminal, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink const API: React.FC = (): JSX.Element => {
-=======
 import { Link          } from 'react-router-dom.ts';
 import { Code,
   Search,
@@ -77,15 +46,6 @@ const API: React.FC = (): JSX.Element => {
       path: '/api/v1/analytics',
       description: 'Get analytics data',
       auth: 'Required'
-<<<<<<< HEAD
-    },
-    {
-      method: 'PUT',
-      path: '/api/v1/user/profile',
-      description: 'Update user profile',
-      auth: 'Required'
-
-=======
     },;
     {;
       method: 'PUT',;
@@ -110,15 +70,6 @@ const API: React.FC = (): JSX.Element => {
     {
       icon: Globe,
       title: 'Global CDN',
-<<<<<<< HEAD
-      description: 'Worldwide edge locations for fast access'
-    },
-    {
-      icon: Database,
-      title: 'Real-time Data',
-      description: 'Live data synchronization across all endpoints'
-
-=======
       description: 'Worldwide edge locations for fast access';
     },;
     {;
@@ -186,10 +137,6 @@ export default function API(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -238,12 +185,6 @@ export default function API(...args: any[]): any {
                 API Reference
               </span>
             </h1>
-<<<<<<< HEAD
-
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Integrate with Zion Tech Group services using our comprehensive RESTful APIs.
-              Build powerful applications with our developer tools and SDKs.
-=======
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Integrate Zion Tech Group's cutting-edge services into your applications
               with our comprehensive RESTful APIs. Build, deploy, and scale with confidence.
@@ -569,14 +510,6 @@ export default function API(...args: any[]): any {
               <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
                 View Full Documentation
               </button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -586,8 +519,5 @@ export default function API(...args: any[]): any {
 };
 
 export default API;
-<<<<<<< HEAD
-}}}
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

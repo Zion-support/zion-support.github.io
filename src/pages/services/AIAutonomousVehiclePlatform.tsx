@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation } from 'lucide-react';
-import { SEO } from "../../components/SEO";
-export default function AIAutonomousVehiclePlatform() {
-=======
 import React from 'react.ts';
-<<<<<<< HEAD
-import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation import { SEO              } from '../../components/SEO';
-=======
 import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation              } from 'lucide-react.ts';
 import { SEO              } from '../../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

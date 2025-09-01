@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
-import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon interface AccessibilityContextType {
-
-
-
-
-
-
-
-
-
-
-=======
 import React, { createContext, useContext, useEffect, useState, ReactNode  
  
  
@@ -51,9 +36,6 @@ interface AccessibilityContextType {
   showSkipLinks: anyanyanyanyanyanyanyanyanyanyboolean;
   setShowSkipLinks: (show: boolean)            => void;
   voiceNavigation: anyanyanyanyanyanyanyanyanyanyboolean;
-<<<<<<< HEAD
-  toggleVoiceNavigation: ()           => void;
-=======
 toggleVoiceNavigation: anyanyanyanyanyanyanyanyanyany()            => void;
 
 
@@ -72,16 +54,6 @@ const AccessibilityContext = createContext<AccessibilityContextType | null>(null
 export const useAccessibility = () => {;
   const context = useContext(AccessibilityContext);
   if (!context) {
-<<<<<<< HEAD
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
-
-  return context;
-};
-
-interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
-
-  children: ReactNode;
-=======
     throw new Error('useAccessibility must be used within an AccessibilityProvider')
 }
   return context};
@@ -113,17 +85,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
     // Apply high contrast
     if (highContrast) {
-<<<<<<< HEAD
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-
-    // Apply reduced motion
-    if (reducedMotion) {
-      root.classList.add('reduce-motion');
-    } else {
-      root.classList.remove('reduce-motion');
-=======
       root.classList.add('high-contrast')} else {
       root.classList.remove('high-contrast')}
 
@@ -138,43 +99,19 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Keyboard navigation support
   useEffect(() => {
-<<<<<<< HEAD
-    const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyKeyboardEvent)           => {;
-      // Skip links (Alt + S);
-      if (event.altKey && event.key === 's') {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        event.preventDefault();
-        setShowSkipLinks(true);
-<<<<<<< HEAD
-        setTimeout(() => setShowSkipLinks(false), 5000);
-=======
         setTimeout(() => setShowSkipLinks(false), 5000)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // High contrast toggle (Alt + H)
       if (event.altKey && event.key = == 'h') {;
         event.preventDefault();
-<<<<<<< HEAD
-        toggleHighContrast();
-=======
         toggleHighContrast()}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // Font size controls (Alt + Plus/Minus)
       if (event.altKey && event.key = == '+') {;
         event.preventDefault();
-<<<<<<< HEAD
-        increaseFontSize()}
-      if (event.altKey && event.key = == '-') {;
-=======;
         increaseFontSize();
-<<<<<<< HEAD
-
-      if (event.altKey && event.key === '-') {
-        event.preventDefault();
-        decreaseFontSize();
-
-=======
       }
       if (event.altKey && event.key = == '-') {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -379,14 +316,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               A
             </button>
           </div>
-<<<<<<< HEAD
-        </motion.div>
-      </div>
-
-      {children};
-    </AccessibilityContext.Provider>;
-  )};
-=======
         </motion.div>;
       </div>;
 ;
@@ -414,28 +343,11 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-<<<<<<< HEAD
-    const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyKeyboardEvent)           => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      if (event.key !== 'Tab') return;
-
-      if (event.shiftKey) {
-        if (document.activeElement = == firstElement) {;
-          event.preventDefault();
-<<<<<<< HEAD
-          lastElement.focus();
-
-=======
           lastElement.focus()}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       } else {
         if (document.activeElement = == lastElement) {;
           event.preventDefault();
-<<<<<<< HEAD
-          firstElement.focus();
-
-
-=======
           firstElement.focus()}
       }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -444,9 +356,5 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isActive]);
 
-<<<<<<< HEAD
-  return <>{children}</>;
-};}}}}}}}}}}}}}
-=======
   return <>{children}</>};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

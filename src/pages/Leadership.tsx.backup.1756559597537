@@ -19,9 +19,6 @@ import { Users,
   Mail,
   Phone,
   MapPin
-<<<<<<< HEAD
-import { SEO           } from '../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -61,15 +58,6 @@ export default function Leadership(...args: any[]): any {
     {
       name: 'Dr. Emily Watson',
       title: 'Head of AI Research',
-<<<<<<< HEAD
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
-      bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',
-      expertise: ['Machine Learning', 'Deep Learning', 'AI Ethics', 'Research & Development'],
-      linkedin: 'https://linkedin.com/in/emilywatson',
-      email: 'emily@ziontechgroup.com',
-      phone: '+1 302 464 0953'
-
-=======
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',;
       bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',;
       expertise: ['Machine Learning', 'Deep Learning', 'AI Ethics', 'Research & Development'],;
@@ -94,15 +82,6 @@ export default function Leadership(...args: any[]): any {
     {
       icon: Shield,
       title: 'Trust & Security',
-<<<<<<< HEAD
-      description: 'We maintain the highest standards of security and ethical AI practices in everything we do.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Impact',
-      description: 'We believe technology should make the world better for everyone, everywhere.'
-
-=======
       description: 'We maintain the highest standards of security and ethical AI practices in everything we do.';
     },;
     {;
@@ -127,20 +106,6 @@ export default function Leadership(...args: any[]): any {
     {
       metric: '95%',
       label: 'Client Satisfaction',
-<<<<<<< HEAD
-      description: 'Consistently high satisfaction ratings from our clients'
-    },
-    {
-      metric: '25+',
-      label: 'Industry Awards',
-      description: 'Recognition for innovation and excellence in technology'
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
       description: 'Consistently high satisfaction ratings from our clients';
     },;
     {;

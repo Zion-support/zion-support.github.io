@@ -1,6 +1,4 @@
 export interface InnovativeMicroSaasService {
-<<<<<<< HEAD
-=======
 
 
 

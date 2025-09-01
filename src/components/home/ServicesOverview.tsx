@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { ArrowRight, CheckCircle, Sparkles  } from 'lucide-react';
-interface Service {
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion               } from 'framer-motion.ts';
-import { Link               } from 'react-router-dom.ts';
-import { ArrowRight, CheckCircle, Sparkles interface Service {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 import React from 'react.ts';
 import { motion   
  
@@ -80,16 +53,6 @@ icon: React.ComponentType<{ className?: string;
 }>;
   color: string;
   items: string[];
-<<<<<<< HEAD
-  description?: string}
-=======
-<<<<<<< HEAD
-  description?: string;
-
-interface ServicesOverviewProps extends React.PropsWithChildren<{}> {
-
-  services: Service[];
-=======
 description?: string;
 }
 
@@ -123,10 +86,6 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
             Comprehensive technology solutions designed to drive innovation and growth across all industries
           </p>
         </motion.div>
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 lg:gap-12">
-          {services.map((service, index)  => (
-=======
 
         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 lg:gap-12">
           {services.map((service, index)                => (

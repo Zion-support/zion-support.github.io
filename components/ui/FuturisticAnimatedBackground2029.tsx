@@ -1,64 +1,9 @@
 import React, { useEffect, useRef } from 'react.ts';
 
-<<<<<<< HEAD
-interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<{}> {
-
-=======
-<<<<<<< HEAD
-interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<{}> {
-
-  className?: string;
-=======
 interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<{
 }> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-  className?: string}
-
-export default function FuturisticAnimatedBackground2029(...args: any[]): any {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    // Set canvas size
-    const resizeCanvas = () => {;
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight};
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Particle system
-    class Particle {
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      life: number;
-      maxLife: number;
-      color: string;
-
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 2;
-        this.vy = (Math.random() - 0.5) * 2;
-        this.size = Math.random() * 3 + 1;
-        this.maxLife = Math.random() * 100 + 50;
-        this.life = this.maxLife;
-<<<<<<< HEAD
-        this.color = `hsl(${Math.random() * 60 + 200}, 70%, 60%)`;
-
-      update() {
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         this.color = `hsl(${Math.random() * 60 + 200}, 70%, 60%)`}
 ;

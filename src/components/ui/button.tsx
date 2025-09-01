@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-interface ButtonProps extends React.PropsWithChildren<{}> {
-  children: React.ReactNode;
-=======
-<<<<<<< HEAD
-interface ButtonProps extends React.PropsWithChildren<{}> {
-
-=======
 import React from 'react.ts';
 interface ButtonProps extends React.PropsWithChildren<{
 }> {
@@ -20,27 +11,9 @@ interface ButtonProps extends React.PropsWithChildren<{
   className?: string;
   onClick?: ()                => void;
   type?: 'button' | 'submit' | 'reset';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  disabled?: boolean}
-export function Button(...args[]: any):  {
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   disabled?: boolean;
 }
-<<<<<<< HEAD
-export function Button({
-  children,
-  variant = 'default',
-  size = 'md',
-  asChild = false,
-  className = '',
-  onClick,
-  type = 'button',
-  disabled = false
-}: ButtonProps) {
-=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function Button(...args: any[]): any {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

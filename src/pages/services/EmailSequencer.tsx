@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon } from 'lucide-react';
-export default function EmailSequencer() {
-=======
-<<<<<<< HEAD
-import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon export default function EmailSequencer(...args: any[]): any {
-	const features = [
-		'Multi-step sequences with A/B testing',
-		'AI subject line and body suggestions',
-		'CRM/webhook integrations (HubSpot, Salesforce, Slack)',
-		'Smart send windows and reply-detection',
-		'Per-recipient throttling and warmup controls',
-		'Compliance: unsubscribe, custom domains, DKIM/SPF/DMARC tips'
-=======
 import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon              } from 'lucide-react.ts';
 
 export default function EmailSequencer(...args: any[]): any {
@@ -47,10 +33,6 @@ export default function EmailSequencer(...args: any[]): any {
 						Automate multi-step outreach with AI-assisted copy, throttling, and deep CRM/webhook integrations.
 					</p>
 				</div>
-<<<<<<< HEAD
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-					{features.map((f) => (
-=======
 
 				<div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6 mb-16">
 					{features.map((f)              => (

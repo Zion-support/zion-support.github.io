@@ -38,27 +38,6 @@ const allServiceArrays: ServiceRecord[][] = [
 ];
 export function findServiceBySlug(slug: string): ServiceRecord | null {
 	for (const arr of allServiceArrays) {
-<<<<<<< HEAD
-		const hit = arr.find((s: anyanyanyanyanyanyanyanyanyanyanyanyany)             => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-			if (!s) return false;
-			if (s.id && s.id === slug) return true;
-			if (s.link && typeof s.link = == 'string') {;
-				try {;
-					const url = new URL(s.link);
-					return url.pathname.replace(/^\/+|\/+$/g, '') === slug;
-				} catch {
-					return s.link.endsWith('/' + slug);
-
-
-			return false;
-		});
-		if (hit) return hit;
-<<<<<<< HEAD
-
-	return undefined;
-
-=======
 	}
 	return null;
 }

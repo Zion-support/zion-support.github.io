@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-=======
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
-import { CheckCircle,
-  Star,
-  Zap,
-  Shield,
-  TrendingUp,
-  Brain,
-  Server,
-  Globe,
-  ArrowRight,
-  Mail,
-  Phone,
-  MapPin,
-=======
 import React, { useState, useMemo              } from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { Link               } from 'react-router-dom.ts';
@@ -57,36 +35,11 @@ import { CheckCircle,
   Lock,
   Heart,
   Sparkles
-<<<<<<< HEAD
- } from 'lucide-react.ts';
-import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025';
-import { SEO  } from '@/components/SEO';
-
-=======
-<<<<<<< HEAD
-import { INNOVATIVE_SERVICES_2025              } from '@/data/innovativeServices2025';
-import { SEO              } from '@/components/SEO';
-=======
  } from 'lucide-react.ts';
 import { INNOVATIVE_SERVICES_2025               } from '@/data/innovativeServices2025';
 import { SEO               } from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPricingModel, setSelectedPricingModel] = useState('all');
-
-  const services = INNOVATIVE_SERVICES_2025;
-
-<<<<<<< HEAD
-  const cats = services.reduce((acc, service) => {
-      if (!acc.includes(service.category)) {;
-        acc.push(service.category)};
-      return acc}, [] as string[]);
-    return ['all', ...cats]}, [services]);
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const cats = services.reduce((acc, service) => {;
       if (!acc.includes(service.category)) {;
@@ -593,16 +546,6 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
-            >
-              {categories.map(category  => (
-=======
-<<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
-
-              {categories.map(category              => (
-=======
               className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
               {categories.map(category               => (
@@ -616,16 +559,6 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
             <select
               value={selectedPricingModel}
               onChange={(e) => setSelectedPricingModel(e.target.value)}
-<<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
-            >
-              {pricingModels.map(model  => (
-=======
-<<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
-
-              {pricingModels.map(model              => (
-=======
               className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
               {pricingModels.map(model               => (
@@ -636,20 +569,6 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
                 </option>
               ))}
             </select>
-<<<<<<< HEAD
-          </div>;
-;
-          {/* Services Grid */};
-          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">;
-            {filteredServices.map((service, index) => {;
-=======
-<<<<<<< HEAD
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid gap-8 grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-            {filteredServices.map((service, index)               => {;
-=======;
           </div>;
 ;
           {/* Services Grid */};

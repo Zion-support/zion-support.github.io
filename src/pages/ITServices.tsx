@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-import { Server, Shield, Cloud, Network, Wrench, Headphones } from 'lucide-react';
-
-export default function ITServices() {
-=======
 import React from 'react.ts';
 import { SEO              } from '@/components/SEO';
 import { Link              } from 'react-router-dom.ts';
-<<<<<<< HEAD
-import { Cloud, Server, Shield, Cpu, Cable, LifeBuoy, DollarSign, ExternalLink, Wrench, Database, Building const ITServices: React.FC = (): JSX.Element => {
-=======
 import { Server, Shield, Cloud, Network, Wrench, Headphones              } from 'lucide-react.ts';
 
 export default function ITServices(...args: any[]): any {

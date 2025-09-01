@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-=======
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence              } from 'framer-motion.ts';
 import { Search, 
@@ -30,26 +23,6 @@ import { Search,
   ArrowRight,
   Rocket,
   Target,
-<<<<<<< HEAD
-  Award
-} from 'lucide-react';
-import { allExpandedServices2028 } from '../data/expandedInnovativeServices2028';
-import { allRevolutionaryServices2031 } from '../data/revolutionaryServices2031';
-
-const ComprehensiveServicesShowcase2031: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, count: 0 },
-    { id: 'micro-saas', name: 'Micro SaaS', icon: Zap, count: 0 },
-    { id: 'it-services', name: 'IT Services', icon: Cpu, count: 0 },
-    { id: 'ai-services', name: 'AI Solutions', icon: Brain, count: 0 },
-    { id: 'quantum', name: 'Quantum Tech', icon: Atom, count: 0 },
-    { id: 'blockchain', name: 'Blockchain', icon: Database, count: 0 },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 0 },
-    { id: 'sustainability', name: 'Sustainability', icon: Leaf, count: 0 }
-=======
   Lightbulb,
   BarChart,
   PieChart,
@@ -226,30 +199,6 @@ const ComprehensiveServicesShowcase2031: React.FC = (): JSX.Element => {;
     return matchesCategory && matchesSearch;
   });
 
-<<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Legal Tech': return <Shield className="w-6 h-6" />;
-      case 'Cybersecurity': return <Lock className="w-6 h-6" />;
-      case 'Supply Chain': return <Network className="w-6 h-6" />;
-      case 'Sustainability': return <Leaf className="w-6 h-6" />;
-      case 'Healthcare': return <Heart className="w-6 h-6" />;
-      case 'Quantum Computing': return <Atom className="w-6 h-6" />;
-      case 'Edge Computing': return <Zap className="w-6 h-6" />;
-      case 'Blockchain': return <Database className="w-6 h-6" />;
-      case 'Autonomous Systems': return <Car className="w-6 h-6" />;
-      case 'Quantum AI': return <Brain className="w-6 h-6" />;
-      case 'Space Technology': return <Rocket className="w-6 h-6" />;
-      case 'Metaverse & AR/VR': return <Glasses className="w-6 h-6" />;
-      case 'BioTech & Health': return <Dna className="w-6 h-6" />;
-      case 'FinTech & DeFi': return <TrendingUp className="w-6 h-6" />;
-      case 'Neuromorphic Computing': return <Cpu className="w-6 h-6" />;
-      case 'Neurotechnology': return <Brain className="w-6 h-6" />;
-      case 'Consciousness AI': return <Eye className="w-6 h-6" />;
-      case 'Predictive AI': return <TrendingUp className="w-6 h-6" />;
-      case 'Autonomous AI': return <Bot className="w-6 h-6" />;
-      default: return <Zap className="w-6 h-6" />;
-=======
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price-low':;
@@ -359,9 +308,6 @@ const ComprehensiveServicesShowcase2031: React.FC = (): JSX.Element => {;
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-6 py-4 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-<<<<<<< HEAD
-              <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-=======
             </div>
             <select
               value={activeCategory}
@@ -410,24 +356,6 @@ const ComprehensiveServicesShowcase2031: React.FC = (): JSX.Element => {;
             </div>
           </div>
 
-<<<<<<< HEAD
-          {/* Category Filters */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  activeCategory === category.id
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-gray-600'
-                }`}
-              >
-                <category.icon className="w-5 h-5 mr-2" />
-                {category.name}
-                <span className="ml-2 bg-white/20 px-2 py-1 rounded-full text-xs">
-                  {category.count}
-=======
         {/* Services Grid */}
         <motion.div 
           initial = {
@@ -513,31 +441,6 @@ const ComprehensiveServicesShowcase2031: React.FC = (): JSX.Element => {;
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105 group"
-              >
-                {/* Service Header */}
-                <div className="mb-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center">
-                      {getCategoryIcon(service.category)}
-                      <span className="ml-2 text-sm text-gray-400 bg-gray-700 px-2 py-1 rounded">
-                        {service.type.replace('-', ' ').toUpperCase()}
-                      </span>
-                    </div>
-                    {service.featured && (
-                      <Star className="w-5 h-5 text-yellow-400 fill-current" />
-=======
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && (

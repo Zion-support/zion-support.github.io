@@ -1,15 +1,5 @@
 // removed duplicate old section
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { ShoppingCart, Sparkles, CheckCircle, BarChart3  } from 'lucide-react';
-=======
 
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO              } from '@/components/SEO';
-import { ShoppingCart, Sparkles, CheckCircle, BarChart3 const EcommercePersonalization: React.FC = (): JSX.Element => {
-=======
 import React from 'react.ts';
 import { SEO               } from '@/components/SEO';
 import { ShoppingCart, Sparkles, CheckCircle, BarChart3               } from 'lucide-react.ts';

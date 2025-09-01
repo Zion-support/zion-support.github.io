@@ -26,12 +26,6 @@ import { MessageCircle,
   Clock,
   CheckCircle,
   AlertCircle
-<<<<<<< HEAD
- } from 'lucide-react';
-interface ChatMessage {
-=======
-<<<<<<< HEAD
-=======
                } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -62,26 +56,6 @@ metadata?: {;
     confidence?: number;
     suggestions?: string[];
     relatedServices?: string[];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    estimatedResponseTime?: number;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-};
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     estimatedResponseTime?: number}}
 interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
@@ -95,9 +69,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   maxMessages = 50,;
   autoScroll = true;
 }) => {;
-<<<<<<< HEAD
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-=======
   const [messages, setMessages] = useState<any>([]);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -127,26 +98,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         status: 'sent',
         metadata: {
           confidence: 0.95,
-<<<<<<< HEAD
-          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],;
-=======
-<<<<<<< HEAD
-          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
-          relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
-          estimatedResponseTime: 2
-
-      };
-      setMessages([welcomeMessage]);
-
-=======
-<<<<<<< HEAD
-          suggestions['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
-          relatedServices['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
-  estimatedResponseTime: 2
-        
-
-}
-=======;
           suggestions: anyanyanyanyanyanyanyanyanyanyanyanyanyany['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],;
@@ -163,40 +114,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })}
   }, [messages, autoScroll]);
   // Simulate AI response
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const simulateAIResponse = async (userMessage: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setIsTyping(true);
-
-    // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-
-    const responses = [
-      {
-        content: "I'd be happy to help you with that! Zion Tech Group offers comprehensive AI consulting services including machine learning implementation, data analytics, and process automation. Would you like me to provide more specific details about  particular service?",
-        suggestions['AI Consulting details', 'Machine Learning services', 'Data Analytics', 'Process Automation'],
-        relatedServices['AI Consulting', 'Machine Learning', 'Data Analytics']
-      },
-      {
-        content: "Great question! Our cloud migration services help businesses transition smoothly to cloud infrastructure. We provide assessment, planning, implementation, and ongoing support. The typical timeline is 3-6 months depending on complexity.",
-        suggestions['Cloud Migration timeline', 'Infrastructure assessment', 'Implementation process', 'Ongoing support'],
-        relatedServices['Cloud Migration', 'Infrastructure Modernization', 'DevOps Services']
-      },
-      {
-        content: "For cybersecurity services, we offer threat detection, incident response, security audits, and employee training. Our team uses advanced tools and follows industry best practices to protect your digital assets.",
-        suggestions['Threat detection', 'Incident response', 'Security audits', 'Employee training'],
-        relatedServices['Cybersecurity', 'Threat Detection', 'Security Training']
-      },
-<<<<<<< HEAD
-      {
-        content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",
-<<<<<<< HEAD
-        suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
-        relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management']
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         suggestions['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
         relatedServices['Digital Transformation', 'Process Optimization', 'Change Management']
@@ -218,14 +135,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       metadata: {
         confidence: 0.85 + Math.random() * 0.1,
         suggestions: randomResponse.suggestions,
-<<<<<<< HEAD
-        relatedServices: randomResponse.relatedServices,;
-=======
-<<<<<<< HEAD
-        relatedServices: randomResponse.relatedServices,
-        estimatedResponseTime: 1 + Math.random() * 2
-
-=======
         relatedServices: anyanyanyanyanyanyanyanyanyanyanyanyanyanyrandomResponse.relatedServices,;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
@@ -235,99 +144,16 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 ;
 };
     };
-<<<<<<< HEAD
-    setMessages(prev => [...prev, botMessage]);
-=======
 
     setMessages(prev               => [...prev, botMessage]);
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setIsTyping(false);
   };
   // Handle message submission
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-    if (!inputValue.trim() || isTyping) return;
-
-    const userMessage: ChatMessage = {
-  id: anyanyanyanyanyanyanyanyanyanyanyanyanyanyDate.now().toString(),
-      content: inputValue,
-      sender: 'user',
-      timestamp: new Date(),
-      type: 'text',;
-  ;
-  ;
-  ;
-  ;
-  status: 'sent';
-    ;
-
-
-
-
-
-
-};
-
-    setMessages(prev                => [...prev, userMessage]);
-    setInputValue('');
-
-    // Generate AI response
-    await simulateAIResponse(inputValue)};
-
-  // Handle voice input
-  const toggleVoiceInput = () => {;
-    setIsListening(!isListening);
-    // In a real implementation, this would integrate with Web Speech API
-  };
-
-  // Handle file upload
-<<<<<<< HEAD
-  const handleFileUpload = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const file = e.target.files?.[0];
-    if (file) {
-      const fileMessage: ChatMessage = {
-  id: anyanyanyanyanyanyanyanyanyanyanyanyanyanyDate.now().toString(),
-  content: `Uploaded: ${file.name
-
-
-
-;
-;
-
-}`,;
-        sender: 'user',;
-        timestamp: new Date(),;
-        type: 'file',;
-        status: 'sent';
-      };
-<<<<<<< HEAD
-      setMessages(prev               => [...prev, fileMessage]);
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       setMessages(prev = > [...prev, fileMessage])};
   };
   // Handle suggestion click
-<<<<<<< HEAD
-  const handleSuggestionClick = (suggestion: string) => {;
-=======
-<<<<<<< HEAD
-  const handleSuggestionClick = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.MouseEvent<HTMLElement>): void               => {;
-    setInputValue(suggestion)};
-
-  // Rate response
-  const rateResponse = (messageId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, rating: 'positive' | 'negative')                => {
-    setMessages(prev => prev.map(msg => 
-      msg.id === messageId 
-        ? { ...msg, metadata: { ...msg.metadata, userRating: rating } };
-        : msg;
-    ))};
-=======
   const handleSuggestionClick = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.MouseEvent<HTMLElement>): void              => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setInputValue(suggestion);

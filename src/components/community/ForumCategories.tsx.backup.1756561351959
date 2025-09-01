@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -26,22 +24,6 @@ interface ForumCategoryInfo {
 lastPost?: {;
     title: string;
     author: string;
-<<<<<<< HEAD
-    date: string;
-  
-
-
-
-
-
-
-
-
-
-
-
-};
-=======
     date: string}}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -205,23 +187,12 @@ export default function ForumCategories(...args[]: any):  {
             </p>
             <button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105">
               Start a Discussion
-<<<<<<< HEAD
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-  )};
-=======;
             </button>;
           </div>;
         </div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-}}}}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

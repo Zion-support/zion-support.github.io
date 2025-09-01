@@ -1,7 +1,4 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Heart, TrendingUp, MessageSquare, Eye, Zap, Target, Globe export default function AICustomerExperienceAnalytics(...args: any[]): any {
-=======
 import { motion            } from 'framer-motion.ts';
 import { Brain, 
   Users, 
@@ -29,32 +26,6 @@ import { Brain,
 const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
-<<<<<<< HEAD
-    {
-      icon: Brain,
-      title: 'AI-Powered Sentiment Analysis',
-      description: 'Advanced natural language processing to understand customer emotions and feedback in real-time.',
-      price: '$299/month'
-    },
-    {
-      icon: Eye,
-      title: 'Customer Journey Mapping',
-      description: 'Visualize and track customer interactions across all touchpoints with predictive analytics.',
-      price: '$199/month'
-    },
-    {
-      icon: Target,
-      title: 'Churn Prediction & Prevention',
-      description: 'Machine learning algorithms to identify at-risk customers and recommend retention strategies.',
-      price: '$249/month'
-    },
-    {
-      icon: BarChart3,
-      title: 'ROI Optimization Insights',
-      description: 'Data-driven recommendations to maximize customer lifetime value and marketing effectiveness.',
-      price: '$179/month'
-    }
-=======
     'AI-powered customer journey mapping and analysis',
     'Real-time sentiment analysis and emotion detection',
     'Predictive customer behavior modeling',
@@ -104,76 +75,6 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
       cta: 'Start Free Trial',
       popular: false
     },
-<<<<<<< HEAD
-    {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for growing companies with comprehensive customer experience needs',
-      features: [
-        'Up to 100,000 customer interactions',
-        'Advanced AI analytics',
-        'Full journey mapping',
-        'Priority support',
-        'Churn prediction',
-        'Custom dashboards'
-      ],
-      cta: 'Start Free Trial',
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$799',
-      period: '/month',
-      description: 'For large organizations requiring enterprise-grade customer analytics',
-      features: [
-        'Unlimited customer interactions',
-        'Custom AI models',
-        'White-label solution',
-        '24/7 dedicated support',
-        'Advanced security features',
-        'SLA guarantees'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-    }
-  ];
-
-  const benefits = [
-    'Increase customer satisfaction by 40%',
-    'Reduce churn rate by 35%',
-    'Improve customer lifetime value by 50%',
-    'Boost conversion rates by 25%',
-    'Reduce support costs by 30%'
-  ];
-
-<<<<<<< HEAD
-  const useCases = [
-    'E-commerce customer experience optimization',
-    'SaaS product user experience improvement',
-    'Banking and financial services CX',
-    'Healthcare patient experience enhancement',
-    'Retail customer journey optimization',
-    'Hospitality guest experience management'
-  ];
-
-  const tiers = [
-    {
-      name: 'CX Starter',
-      price: '$399/mo',
-      details: ['Up to 10K customers', 'Basic AI analytics', 'Standard reporting', 'Email support']
-    },
-    {
-      name: 'CX Professional',
-      price: '$999/mo',
-      details: ['Up to 100K customers', 'Advanced AI features', 'Custom dashboards', 'Priority support']
-    },
-    {
-      name: 'CX Enterprise',
-      price: '$2,999/mo',
-      details: ['Unlimited customers', 'Full AI suite', 'White-label options', '24/7 support']
-    },
-=======
   const analyticsCapabilities = [
     'Real-time customer sentiment tracking',
     'Multi-channel interaction analysis',
@@ -192,45 +93,6 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
         <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(16,185,129,0.1)_25%,rgba(16,185,129,0.1)_50%,transparent_50%,transparent_75%,rgba(16,185,129,0.1)_75%)] bg-[length:20px_20px] animate-pulse" />
       </div>
 
-<<<<<<< HEAD
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-10">
-          <div>
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Intelligent CX Features</h2>
-            <ul className="space-y-3">
-              {features.map((f) => (
-                <li key={f} className="flex items-start">
-                  <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
-                  <span className="text-zion-slate-dark">{f}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">Key Benefits</h3>
-              <ul className="space-y-2">
-                {benefits.map((b) => (
-                  <li key={b} className="flex items-start">
-                    <Zap className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />
-                    <span className="text-zion-slate-dark text-sm">{b}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
-            <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
-              {tiers.map((t)            => (
-                <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
-                  <div className="text-lg font-semibold mb-1">{t.name}</div>
-                  <div className="text-2xl font-bold text-zion-cyan mb-2">{t.price}</div>
-                  <ul className="text-sm text-zion-slate-dark space-y-1">
-                    {t.details.map((d) => (<li key={d}>{d}</li>))}
-                  </ul>
-                </div>
-=======
       <div className="relative z-10">
         {/* Header Section */}
         <motion.header 
@@ -334,55 +196,6 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
           </div>
         </motion.section>
 
-<<<<<<< HEAD
-      <section className="py-16 bg-zion-slate-light/10">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-zion-slate-dark text-center mb-12">Use Cases & Industries</h2>
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase)            => (
-              <div key={useCase} className="bg-white rounded-xl p-6 shadow-md border border-zion-slate-light/20">
-                <Target className="w-12 h-12 text-zion-cyan mb-4" />
-                <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">{useCase}</h3>
-                <p className="text-zion-slate-dark/70">Optimize customer experiences with AI-powered insights and predictive analytics.</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Ready to Transform Your Customer Experience?</h2>
-          <p className="text-zion-slate-dark/70 text-lg">Get started with AI-powered customer experience analytics today</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Start Free Trial</h3>
-            <p className="mb-6">Experience the power of AI-driven customer insights with our 14-day free trial</p>
-            <button className="bg-white text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-slate-light transition-colors">
-              Start Free Trial
-            </button>
-          </div>
-
-          <div className="bg-zion-slate-dark rounded-xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Schedule Demo</h3>
-            <p className="mb-6">See our platform in action with a personalized demo from our experts</p>
-            <button className="bg-zion-cyan text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan/80 transition-colors">
-              Schedule Demo
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-zion-slate-dark text-white">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-8">Contact Our Team</h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div className="flex items-center justify-center space-x-3">
-              <Phone className="h-6 w-6 text-zion-cyan" />
-              <span>+1 302 464 0950</span>
-=======
         {/* Analytics Capabilities */}
         <motion.section 
           className="py-20 px-6 bg-gradient-to-br from-emerald-900/20 via-slate-900/50 to-teal-900/20"
@@ -581,9 +394,6 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

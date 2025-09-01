@@ -1,15 +1,5 @@
 // removed duplicate old section
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { TrendingUp, CheckCircle, Database, PlugZap  } from 'lucide-react';
-=======
 
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO              } from '@/components/SEO';
-import { TrendingUp, CheckCircle, Database, PlugZap const AiLeadScoring: React.FC = (): JSX.Element => {
-=======
 import React from 'react.ts';
 import { SEO               } from '@/components/SEO';
 import { TrendingUp, CheckCircle, Database, PlugZap               } from 'lucide-react.ts';

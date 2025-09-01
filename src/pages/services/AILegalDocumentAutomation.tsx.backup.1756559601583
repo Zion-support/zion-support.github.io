@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { FileText, Shield, Clock, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Scale, Lock export default function AILegalDocumentAutomation(...args: any[]): any {
-=======
 import React from 'react.ts';
 import { motion           } from 'framer-motion.ts';
 import { FileText, 
@@ -69,19 +66,6 @@ export default function AILegalDocumentAutomation(...args[]: any):  {
       applications: ['Purchase agreements', 'Lease contracts', 'Title documents', 'Closing paperwork']
     },
     {
-<<<<<<< HEAD
-      name: 'Enterprise',
-      price: '$1,999/mo',
-      details: [
-        'Unlimited documents',
-        'Full AI legal automation',
-        'Custom legal frameworks',
-        'Dedicated legal support',
-        'API integrations',
-        'Advanced analytics & reporting'
-      ]
-
-=======
       industry: 'Healthcare',
       description: 'Compliance-focused medical practice documentation',
       icon: Heart,
@@ -506,9 +490,6 @@ export default function AILegalDocumentAutomation(...args[]: any):  {
       </section>
     </div>
   );
-<<<<<<< HEAD
-}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

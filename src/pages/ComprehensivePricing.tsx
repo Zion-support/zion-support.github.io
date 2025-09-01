@@ -1,32 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";
-import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
-import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle               } from '@/components/ui/card';
-import { Badge               } from '@/components/ui/badge';
-import { Button               } from '@/components/ui/button';
-import { cuttingEdgeComprehensiveServices2027               } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027               } from '../../data/2027-specialized-innovative-services';
-import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap               } from 'lucide-react.ts';
-import { Link               } from 'react-router-dom.ts';
-=======
 import React, { useState } from 'react.ts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
 import { Badge              } from '@/components/ui/badge';
 import { Button              } from '@/components/ui/button';
-<<<<<<< HEAD
-import { cuttingEdgeComprehensiveServices2027              } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027              } from '../../data/2027-specialized-innovative-services';
-import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap import { Link              } from 'react-router-dom.ts';
-=======
 import { cuttingEdgeComprehensiveServices2027              } from '../../data/2027-cutting-edge-comprehensive-services';
 import { specializedInnovativeServices2027              } from '../../data/2027-specialized-innovative-services';
 import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap              } from 'lucide-react.ts';
@@ -93,9 +68,6 @@ const pricingTiers = [
     popular: false;
   };
 ];
-<<<<<<< HEAD
-export default function ComprehensivePricing(...args[]):  {
-=======
 
 export default function ComprehensivePricing(...args[]: any):  {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -127,21 +99,7 @@ export default function ComprehensivePricing(...args[]: any):  {
     }
     return matchesCategory && matchesPrice;
   });
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const getPriceRangeLabel = (range: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (range) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'under-1000': return 'Under $1,000';
-      case '1000-3000': return '$1,000 - $3,000';
-      case '3000-5000': return '$3,000 - $5,000';
-      case 'over-5000': return 'Over $5,000';
-<<<<<<< HEAD
-      default: return 'All Prices';
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'All Prices'}
   };

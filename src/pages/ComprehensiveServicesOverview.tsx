@@ -27,11 +27,6 @@ import { Brain,
   Search,
   Filter,
   Sparkles
-<<<<<<< HEAD
-} from 'lucide-react';
-
-const getServicePrice = (service: any) => {
-=======
              } from 'lucide-react.ts';
   };
   const getServicePrice = (service: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {

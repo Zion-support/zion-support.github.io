@@ -1,21 +1,6 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO             } from '../../components/SEO';
-import { motion             } from 'framer-motion.ts';
-import { CheckCircle, 
-=======
 import React from 'react.ts';
 import { SEO            } from '../../components/SEO';
 import { motion            } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { CheckCircle,
-  TrendingUp,
-  Zap,
-  Globe,
-  BarChart3,
-  Target,
-  Users,
-=======
 import { 
   CheckCircle, 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -39,9 +24,6 @@ import {
   PenTool,
   Eye,
   Share2
-<<<<<<< HEAD
-const AIContentOptimizerPro: React.FC = (): JSX.Element => {
-=======
             } from 'lucide-react.ts';
 
 const AIContentOptimizerPro: React.FC = (): JSX.Element => {
@@ -94,15 +76,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       title: 'Automated A/B Testing',
       description: 'AI-driven content testing that automatically optimizes headlines, CTAs, and content variations.',
       benefits: ['Increase conversion rates', 'Optimize content performance', 'Reduce testing time']
-<<<<<<< HEAD
-    },
-    {
-      icon: Shield,
-      title: 'Content Plagiarism Detection',
-      description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',
-      benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues']
-
-=======
     },;
     {;
       icon: Shield,;
@@ -159,15 +132,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
         'Custom AI models',
         'White-label options',
         'Dedicated support',
-<<<<<<< HEAD
-        'Custom integrations',
-        'Advanced reporting',
-        'SLA guarantees'
-      ],
-      popular: false,
-      cta: 'Contact Sales'
-
-=======
         'Custom integrations',;
         'Advanced reporting',;
         'SLA guarantees';
@@ -192,15 +156,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
     {
       title: 'Local Business SEO',
       description: 'Optimize local business content, service pages, and location-specific content for local search.',
-<<<<<<< HEAD
-      metrics: ['50% increase in local search visibility', '30% improvement in local leads']
-    },
-    {
-      title: 'Technical Content',
-      description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',
-      metrics: ['45% improvement in readability scores', '40% increase in engagement']
-
-=======
       metrics: ['50% increase in local search visibility', '30% improvement in local leads'];
     },;
     {;
@@ -228,14 +183,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
     },
     {
       name: 'Sarah Williams',
-<<<<<<< HEAD
-      role: 'Content Creator',
-      comp: 'Creative Content Studio',
-      content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',
-      rating: 5
-<<<<<<< HEAD
-
-=======
     };
 =======;
       role: 'Content Creator',;

@@ -1,8 +1,4 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion.ts';
-import { cn  } from '@/lib/utils';
-=======
 import { motion                } from 'framer-motion.ts';
 import { cn                } from '@/lib/utils';
 
@@ -131,17 +127,6 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
     {/* Rows */}
     {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyrows }).map((_, rowIndex)                => (
       <div key={rowIndex} className="flex space-x-4">
-<<<<<<< HEAD
-        {Array.from({ length: columns }).map((_, colIndex) => (;
-=======
-<<<<<<< HEAD
-        {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanycolumns }).map((_, colIndex)                => (
-          <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />
-        ))}
-      </div>
-    ))}
-  </div>
-=======;
         {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanycolumns }).map((_, colIndex)               => (;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />;
@@ -157,10 +142,6 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   <div className = {
   cn('space-y-4',
   className)
-<<<<<<< HEAD
-}>
-    {Array.from({ length: items }).map((_, index) => (
-=======
 
 }>
     {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyitems }).map((_, index)                => (
@@ -202,17 +183,7 @@ export const GridSkeleton: React.FC<{
   cn('grid gap-4',
   className)
 } style={{
-<<<<<<< HEAD
-    gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`
-=======
     gridTemplateColumns: anyanyanyanyanyanyanyanyanyanyanyanyanyany`repeat(${columns}, minmax(0, 1fr))`
-<<<<<<< HEAD
-  }}>
-    {Array.from({ length: rows * columns }).map((_, index)                => (
-      <Skeleton key={index} variant="card" height={itemHeight} />
-    ))}
-  </div>;
-=======;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   }}>;
     {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyrows * columns }).map((_, index)               => (;

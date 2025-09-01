@@ -24,9 +24,6 @@ interface HeroProps extends React.PropsWithChildren<{}> {
 features?: Array<any>;
     text: string;
     color: string;
-<<<<<<< HEAD
-  }>;
-=======
   
 }>;
 

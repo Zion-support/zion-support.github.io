@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MainNavigation } from './header/MainNavigation';
-import { 
-  Menu, 
-  X, 
-  Zap, 
-  Phone, 
-  Mail, 
-=======
 import React, { useState, useEffect } from 'react.ts';
 import { Link, useLocation               } from 'react-router-dom.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
@@ -29,29 +17,11 @@ import { Menu,
   FileText,
   Phone,
   Mail,
-<<<<<<< HEAD
-  MapPin
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   MapPin,
   ChevronDown,
   Globe,
   Search,
-<<<<<<< HEAD
-  Bell
-} from 'lucide-react';
-import { ThemeToggle } from './ThemeToggle';
-
-interface HeaderProps {
-  className?: string;
-}
-
-export function Header({ className }: HeaderProps) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [showSearch, setShowSearch] = useState(false);
-=======
   Bell,
   User,
   Settings,
@@ -153,8 +123,6 @@ export function Header(...args: any[]): any {
     }
   ];
 
-<<<<<<< HEAD
-=======
   const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => location.pathname === href;
 
   const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {

@@ -13,24 +13,8 @@ import { Shield,
   AlertTriangle,
   Info,
   Share
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
-<<<<<<< HEAD
-const PrivacyPolicy: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-const PrivacyPolicy: React.FC = (): JSX.Element => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const lastUpdated = 'January 15, 2024';
-  const compName = 'Zion Tech Group';
-  const website = 'https://ziontechgroup.com';
-  const email = 'privacy@ziontechgroup.com';
-  const phone = '+1 (555) 123-4567';
-  const address = '123 Technology Drive, Innovation City, IC 12345, United States';
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const PrivacyPolicy = () => {;
   const lastUpdated = '2025-01-15';
@@ -597,15 +581,7 @@ const PrivacyPolicy = () => {;
                 <Eye className="w-8 h-8 text-zion-cyan" />
                 How We Use Your Information
               </h2>
-<<<<<<< HEAD
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {sections.map((section, index) => (
-=======
               
-<<<<<<< HEAD
-              <p className="text-zion-slate-light mb-4">
-                We use the information we collect for various purposes, including:
-=======
               <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
                 {sections.map((section, index)              => (
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -690,10 +666,6 @@ const PrivacyPolicy = () => {;
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Data Categories and Retention
               </h2>
-<<<<<<< HEAD
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {dataCategories.map((category, index) => (
-=======
               
               <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
                 {dataCategories.map((category, index)              => (
@@ -759,10 +731,6 @@ const PrivacyPolicy = () => {;
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Data Security Measures
               </h2>
-<<<<<<< HEAD
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {securityMeasures.map((measure, index) => (
-=======
               
               <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
                 {securityMeasures.map((measure, index)              => (

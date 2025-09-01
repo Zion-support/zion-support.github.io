@@ -116,10 +116,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Complete Platform Modules</h2>
             <p className="text-xl text-gray-600">From recruitment to retention, we cover all your HR needs</p>
           </div>
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-4 gap-6">
-            {platformModules.map((module, index) => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
             {platformModules.map((module, index)              => (
@@ -138,10 +134,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>
           <p className="text-xl text-gray-600">Ideal for HR teams and organizations seeking to optimize their talent management</p>
         </div>
-<<<<<<< HEAD
-        <div className="grid md:grid-cols-3 gap-6">
-          {useCases.map((useCase, index) => (
-=======
 
         <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {useCases.map((useCase, index)              => (
@@ -186,10 +178,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-600">Choose the plan that fits your organization size and needs</p>
           </div>
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (

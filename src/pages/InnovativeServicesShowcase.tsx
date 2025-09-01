@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../data/innovativeServices2025";
-const InnovativeServicesShowcase: React.FC = () => {;
-=======
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react.ts';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices               } from '../data/innovativeServices2025';
-
-const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
-=======;
 import React, { useState, useMemo } from 'react.ts';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices              } from '../data/innovativeServices2025';
 
@@ -198,16 +187,6 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                {categories.map(category  => (
-=======
-<<<<<<< HEAD
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
-
-                {categories.map(category              => (
-=======
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
               >
                 {categories.map(category               => (
@@ -224,16 +203,6 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-<<<<<<< HEAD
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                {priceRanges.map(range  => (
-=======
-<<<<<<< HEAD
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
-
-                {priceRanges.map(range              => (
-=======
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
               >
                 {priceRanges.map(range               => (
@@ -248,16 +217,6 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-<<<<<<< HEAD
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                {sortOptions.map(option  => (
-=======
-<<<<<<< HEAD
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
-
-                {sortOptions.map(option              => (
-=======
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
               >
                 {sortOptions.map(option               => (

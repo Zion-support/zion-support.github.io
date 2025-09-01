@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-interface LoadingSpinnerProps {
-=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 
@@ -24,8 +19,6 @@ md: 'w-12 h-12',;
   ;
   xl: 'w-32 h-32';
 ;
-<<<<<<< HEAD
-=======
 
 
 

@@ -31,11 +31,6 @@ export default function Layout(...args[]: any):  {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
   const location = useLocation();
-<<<<<<< HEAD
-  const isActive = (href: anyanyanyanyanyanyanyanyanystring)           => location.pathname === href;
-  const toggleSidebarDropdown = (label: anyanyanyanyanyanyanyanyanystring)           => {;
-    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label)};
-=======
   const isActive = (href: anyanyanyanyanyanyanyanyanystring)          => location.pathname === href;
   const toggleSidebarDropdown = (label: anyanyanyanyanyanyanyanyanystring)          => {;
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
@@ -134,23 +129,12 @@ export default function Layout(...args[]: any):  {
           </div>
         </aside>
         {/* Main Content Area */}
-<<<<<<< HEAD
-        <main className="flex-1 md:ml-64">
-          {children}
-        </main>
-      </div>
-    </div>
-  )};
-=======;
         <main className="flex-1 md:ml-64">;
           {children};
         </main>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

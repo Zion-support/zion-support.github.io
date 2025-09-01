@@ -8,17 +8,6 @@ import { Eye,
   Users,
   Globe,
   ArrowRight,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  Accessibility,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop
-const AccessibilityAuditor: React.FC = (): JSX.Element => {
-  const features = [
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Star,
   Heart,
@@ -29,10 +18,6 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
   Phone,
   Mail,
   MessageCircle
-<<<<<<< HEAD
-} from 'lucide-react';
-export default function AccessibilityPage() {
-=======
              } from 'lucide-react.ts';
 
 export default function AccessibilityPage(...args: any[]): any {

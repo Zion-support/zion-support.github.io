@@ -8,9 +8,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger            } from '@/component
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue            } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow            } from '@/components/ui/table';
 import { Badge            } from '@/components/ui/badge';
-<<<<<<< HEAD
-import { Search, Filter import { SEO            } from '@/components/SEO';
-=======
 import { Search, Filter            } from 'lucide-react.ts';
 import SEO from "@/components/SEO";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -87,15 +84,6 @@ const MOCK_SUPPORT_REQUESTS = [
     id: "SR-1007",
     user: "jamie.taylor@tech.org",
     userId: "user-345",
-<<<<<<< HEAD
-    issue: "Cannot upload portfolio images",
-    status: "resolved",
-    priority: "medium",
-    createdAt: "2023-12-10T15:10:00Z",
-    lastUpdated: "2023-12-13T11:25:00Z",
-    category: "profile"
-
-=======
     issue: "Cannot upload portfolio images",;
     status: "resolved",;
     priority: "medium",;
@@ -120,32 +108,24 @@ export default function SupportRequests(...args: any[]): any {
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false;
-<<<<<<< HEAD
-=======
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
       return false;
-<<<<<<< HEAD
-=======
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Apply priority filter
     if (priorityFilter && request.priority !== priorityFilter) {
       return false;
-<<<<<<< HEAD
-=======
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Apply category filter
     if (categoryFilter && request.category !== categoryFilter) {
       return false;
-<<<<<<< HEAD
-=======
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -166,9 +146,6 @@ export default function SupportRequests(...args: any[]): any {
   };
 
   return (
-<<<<<<< HEAD
-    <>
-=======
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       <SEO
@@ -377,9 +354,6 @@ export default function SupportRequests(...args: any[]): any {
           </TabsContent>
         </Tabs>
       </div>
-<<<<<<< HEAD
-    </>
-=======
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );

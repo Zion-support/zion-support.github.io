@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe const testimonials = [
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Star, 
@@ -17,9 +10,6 @@ import {
   Award,
   TrendingUp,
   Users
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
               } from 'lucide-react.ts';
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -137,9 +127,6 @@ const stats = [
   { icon: Award, value: "25+", label: "Industry Awards", description: "Recognition for excellence" },
   { icon: CheckCircle, value: "99.9%", label: "Uptime", description: "Reliable service delivery" }
 ];
-<<<<<<< HEAD
-export const TestimonialsSection: React.FC = () => {
-=======
 
 export const TestimonialsSection: React.FC = (): JSX.Element => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -151,9 +138,6 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
   const prevTestimonial = () => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
-<<<<<<< HEAD
-  const goToTestimonial = (index: number) => {
-=======
 
   const goToTestimonial = (index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

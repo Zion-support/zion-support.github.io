@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { Heart,
-  Brain,
-  TrendingUp,
-  Users,
-  Database,
-  BarChart3,
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Heart, 
@@ -52,13 +42,6 @@ import { Heart,
   UserCheck,
   Clipboard,
   TestTube
-<<<<<<< HEAD
-import { SEO             } from '../../components/SEO';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { SEO              } from '../../components/SEO';
-=======
 } from 'lucide-react';
 import { SEO             } from '../../components/SEO';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -107,15 +90,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
     {
       icon: Database,
       title: 'Real-time Patient Monitoring',
-<<<<<<< HEAD
-      description: 'Continuous monitoring and alerting for critical health indicators'
-    },
-    {
-      icon: BarChart3,
-      title: 'Advanced Clinical Insights',
-      description: 'Generate actionable insights from complex medical data and research'
-
-=======
       description: 'Continuous monitoring and alerting for critical health indicators';
     },;
     {;
@@ -188,15 +162,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
         'Advanced AI models',
         'On-premise deployment option',
         'Dedicated healthcare consultant',
-<<<<<<< HEAD
-        'Custom training programs',
-        'White-label solutions',
-        'Multi-tenant architecture'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-
-=======
         'Custom training programs',;
         'White-label solutions',;
         'Multi-tenant architecture';
@@ -231,15 +196,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
     {
       title: 'Pediatrics',
       description: 'Childhood disease prediction and growth monitoring',
-<<<<<<< HEAD
-      icon: Users
-    },
-    {
-      title: 'Geriatrics',
-      description: 'Aging-related health decline prediction and prevention',
-      icon: UserCheck
-
-=======
       icon: Users;
     },;
     {;
@@ -264,15 +220,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
     {
       title: 'Research Institutions',
       description: 'Advanced analytics for clinical research and drug development',
-<<<<<<< HEAD
-      icon: TestTube
-    },
-    {
-      title: 'Insurance Companies',
-      description: 'Risk assessment and claims prediction for health insurers',
-      icon: Shield
-
-=======
       icon: TestTube;
     },;
     {;
@@ -293,10 +240,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEO 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -395,11 +338,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
               Everything you need to predict, prevent, and optimize healthcare delivery
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)             => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)              => (
@@ -485,11 +423,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
               Specialized AI solutions for every medical specialty
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {clinicalApplications.map((application, index)             => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {clinicalApplications.map((application, index)              => (
@@ -575,11 +508,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
               Transform your healthcare delivery and unlock new levels of patient care
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)             => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)              => (
@@ -662,11 +590,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
               Built with healthcare-grade security and compliance standards
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
-            {complianceFeatures.map((feature, index)             => (
-=======
           
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
             {complianceFeatures.map((feature, index)              => (
@@ -749,11 +672,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
               From small clinics to large health systems, our platform scales with your needs
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)             => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)              => (
@@ -839,11 +757,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
               Choose the plan that fits your healthcare organization size and needs
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)             => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)              => (
@@ -1034,23 +947,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
 
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD
-            </a>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </a>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

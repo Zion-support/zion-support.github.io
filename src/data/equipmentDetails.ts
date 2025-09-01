@@ -1,6 +1,4 @@
 export interface EquipmentItem {
-<<<<<<< HEAD
-=======
 
 
 
@@ -23,12 +21,6 @@ export interface EquipmentItem {
   category: string;
   image: string;
   specs: string[];
-<<<<<<< HEAD
-  availability: boolean}
-=======
-<<<<<<< HEAD
-  availability: boolean;
-=======
 availability: boolean;
 
 

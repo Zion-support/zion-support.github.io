@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles import { Link              } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles               } from 'lucide-react.ts';
@@ -69,9 +58,6 @@ export default function LLMContentStudio(...args: []):  {
                 high-quality content across all platforms and formats.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -105,12 +91,6 @@ export default function LLMContentStudio(...args: []):  {
                   icon: Shield,
                   title: "Quality Assurance",
                   description: "Built-in plagiarism detection and content quality validation."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((feature, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
@@ -136,9 +116,6 @@ export default function LLMContentStudio(...args: []):  {
                 Generate diverse content types for all your marketing and communication needs.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -178,12 +155,6 @@ export default function LLMContentStudio(...args: []):  {
                   description: "Stories, scripts, and creative content projects.",
                   icon: PenTool,
                   benefits: ["Imaginative", "Emotionally engaging", "Original concepts"]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((contentType, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((contentType, index)  => (
@@ -270,9 +241,6 @@ export default function LLMContentStudio(...args: []):  {
                 Streamlined process from idea to published content with AI assistance at every step.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -296,12 +264,6 @@ export default function LLMContentStudio(...args: []):  {
                   step: "04",
                   title: "Publishing",
                   description: "Final content is optimized and published across platforms."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((step, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((step, index)  => (
@@ -378,9 +340,6 @@ export default function LLMContentStudio(...args: []):  {
                 Track content performance and optimize your strategy with comprehensive analytics.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -404,12 +363,6 @@ export default function LLMContentStudio(...args: []):  {
                   metric: "ROI",
                   title: "Content ROI",
                   description: "Calculate return on investment for content"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((metric, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((metric, index)  => (

@@ -1,8 +1,5 @@
 import React from 'react.ts';
 import SEO from '@/components/SEO';
-<<<<<<< HEAD
-export default function AIAutoEmailResponder(...args[]):  {
-=======
 
 export default function AIAutoEmailResponder(...args[]: any):  {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

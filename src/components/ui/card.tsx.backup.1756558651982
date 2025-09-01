@@ -3,23 +3,6 @@ import { cn           } from '@/lib/utils';
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-<<<<<<< HEAD
-const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, ...props }, ref) => (
-    <div
-      ref={ref}
-      className = {
-  cn(
-        'rounded-lg border bg-card text-card-foreground shadow-sm',
-  className
-      )
-
-<<<<<<< HEAD
-interface CardProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
-  className?: string;
-=======
 
 }
       {...props}
@@ -116,10 +99,6 @@ const CardFooter: React.FC<CardProps> = ({ children, className = '' }) => {;
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-<<<<<<< HEAD
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter </Card></Card></Card></Card></Card></Card>};
-}
-=======
 const CardDescription = React.forwardRef<HTMLParagraphElement, CardDescriptionProps>(
   ({ className, ...props }, ref) => (
     <p

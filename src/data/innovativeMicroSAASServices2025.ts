@@ -69,10 +69,6 @@ contactInfo: {;
     testimonials?: string[];
     caseStudies?: string[];
   };
-<<<<<<< HEAD
-  competitors?: string[];
-  marketSize?: string;
-=======
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -1247,11 +1243,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService2025
       security: ["Data encryption", "Access controls", "Audit logging", "SOC 2 compliance"],
       compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific standards"]
     },
-<<<<<<< HEAD
-    competitors: ["SonarQube", "CodeClimate", "DeepCode", "Snyk", "Veracode"],
-    marketSize: "$2.5 billion by 2026"
-
-=======
     competitors: ["Asana", "Monday.com", "ClickUp", "Notion"],
     marketTrend: "Growing demand for AI-powered project management tools with remote work",
     aiModel: "Custom ML models, Optimization algorithms, Predictive analytics engines",

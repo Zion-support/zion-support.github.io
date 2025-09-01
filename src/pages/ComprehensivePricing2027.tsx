@@ -4,16 +4,6 @@ import { Link              } from 'react-router-dom.ts';
 import { Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
   Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
   ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign
-<<<<<<< HEAD
- } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
-export default function ComprehensivePricing2027(...args[]):  {
-=======
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027              } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027              } from '@/data/emergingTechServices2027';
-=======
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027               } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027               } from '@/data/emergingTechServices2027';
@@ -82,78 +72,7 @@ export default function ComprehensivePricing2027(...args[]: any):  {
       };
     };
   };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const getPriceColor = (price: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (price < 1000) return 'text-green-400';
-    if (price < 2500) return 'text-yellow-400';
-    return 'text-red-400'};
-
-<<<<<<< HEAD
-  const getPriceTier = (price: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (price < 1000) return 'Starter';
-    if (price < 2500) return 'Professional';
-    return 'Enterprise'};
-
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Animated Background */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-5 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20 animate-float"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${3 + Math.random() * 2}s`
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Header Section */}
-      <motion.section
-        className="relative z-10 pt-20 pb-16 px-6"
-        initial = {
-  { opacity: 0,
-  y: -50 
-
-
-
-
-
-
-}}
-        animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-        transition={{ duration: 0.8 }}
-
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-<<<<<<< HEAD
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             initial = {
   { opacity: 0,
@@ -258,16 +177,6 @@ export default function ComprehensivePricing2027(...args[]: any):  {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-                >
-                  {categories.map(category  => (
-=======
-<<<<<<< HEAD
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-
-                  {categories.map(category              => (
-=======
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
                   {categories.map(category               => (
@@ -331,14 +240,7 @@ export default function ComprehensivePricing2027(...args[]: any):  {
   { opacity: 0,
   y: -20 
 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.3 }}
-=======
                 transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.3 }}
-<<<<<<< HEAD
-
-                {filteredServices.map((service, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               >
                 {filteredServices.map((service, index)  => (

@@ -264,11 +264,6 @@ import { Brain,
   AVLTree,
   SplayTree,
   Treap,
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
-<<<<<<< HEAD
-=======
               } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -490,9 +485,6 @@ const blockchainBenefits = [
     examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];
   };
 ];
-<<<<<<< HEAD
-export default function BlockchainEnterpriseSolutions(...args[]):  {
-=======
 
 export default function BlockchainEnterpriseSolutions(...args[]: any):  {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -500,10 +492,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
   const [selectedSolution, setSelectedSolution] = useState(null);
   const categories = ['All', 'Platform', 'Supply Chain', 'Financial', 'Identity', 'Smart Contracts', 'Integration'];
   const filteredSolutions = selectedCategory === 'All'
-<<<<<<< HEAD
-    ? blockchainSolutions
-    : blockchainSolutions.filter(solution => solution.category === selectedCategory);
-=======
     ? blockchainSolutions: anyanyanyanyanyanyanyanyanyanyanyanyanyblockchainSolutions.filter(solution              => solution.category === selectedCategory);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -589,10 +577,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
               Understanding the fundamental advantages that make blockchain essential for enterprises
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {blockchainBenefits.map((benefit, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {blockchainBenefits.map((benefit, index)               => (
@@ -650,10 +634,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
               Comprehensive support for leading blockchain enterprise technologies
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {blockchainTechnologies.map((technology, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {blockchainTechnologies.map((technology, index)               => (
@@ -712,10 +692,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
               A proven methodology that ensures successful blockchain enterprise implementation
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index)               => (
@@ -787,10 +763,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
               </button>
             ))}
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredSolutions.map((solution, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index)               => (
@@ -870,10 +842,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
               Organizations that have transformed their operations with blockchain enterprise solutions
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {successStories.map((story, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index)               => (

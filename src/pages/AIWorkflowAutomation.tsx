@@ -264,11 +264,6 @@ import { Brain,
   AVLTree,
   SplayTree,
   Treap,
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
-<<<<<<< HEAD
-=======
               } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -490,9 +485,6 @@ const workflowBenefits = [
     examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"];
   };
 ];
-<<<<<<< HEAD
-export default function AIWorkflowAutomation(...args[]):  {
-=======
 
 export default function AIWorkflowAutomation(...args[]: any):  {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -500,10 +492,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
   const [selectedSolution, setSelectedSolution] = useState(null);
   const categories = ['All', 'Process Automation', 'Document Processing', 'Workflow Orchestration', 'Decision Automation', 'Analytics', 'Task Management'];
   const filteredSolutions = selectedCategory === 'All'
-<<<<<<< HEAD
-    ? workflowSolutions
-    : workflowSolutions.filter(solution => solution.category === selectedCategory);
-=======
     ? workflowSolutions: anyanyanyanyanyanyanyanyanyanyanyanyanyworkflowSolutions.filter(solution              => solution.category === selectedCategory);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -589,10 +577,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               Understanding the fundamental advantages that make AI workflow automation essential
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {workflowBenefits.map((benefit, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {workflowBenefits.map((benefit, index)               => (
@@ -650,10 +634,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               Comprehensive support for leading AI workflow automation technologies
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {workflowTechnologies.map((technology, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {workflowTechnologies.map((technology, index)               => (
@@ -712,10 +692,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               A proven methodology that ensures successful AI workflow automation implementation
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index)               => (
@@ -787,10 +763,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               </button>
             ))}
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredSolutions.map((solution, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index)               => (
@@ -870,10 +842,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               Organizations that have transformed their operations with AI workflow automation
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {successStories.map((story, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index)               => (

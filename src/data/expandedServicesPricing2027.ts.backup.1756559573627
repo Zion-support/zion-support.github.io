@@ -85,10 +85,6 @@ contractTerm: string;
     phone: string;
     email: string;
     website: string;
-<<<<<<< HEAD
-    address: string;
-  };
-=======
     address: string}}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -1176,24 +1172,6 @@ export const ALL_EXPANDED_SERVICES_PRICING = [;
 ];
 
 // Helper functions
-<<<<<<< HEAD
-export const getPricingByServiceId = (serviceId: anyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing | null            => {;
-  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)};
-
-export const getPricingByCategory = (category: anyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]            => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)};
-
-export const getPricingBySubcategory = (subcategory: anyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]            => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)};
-
-export const searchPricing = (query: anyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]            => {;
-  const lowercaseQuery = query.toLowerCase();
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing = > 
-    pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||
-    pricing.category.toLowerCase().includes(lowercaseQuery) ||;
-    pricing.subcategory.toLowerCase().includes(lowercaseQuery);
-  )};
-=======
 export const getPricingByServiceId = (serviceId: anyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing | null           => {;
   return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
 };
@@ -1213,9 +1191,6 @@ export const searchPricing = (query: anyanyanyanyanyanyanyanyanyanystring): Expa
     pricing.category.toLowerCase().includes(lowercaseQuery) ||
     pricing.subcategory.toLowerCase().includes(lowercaseQuery)
   );
-<<<<<<< HEAD
-};}}}}}}}}}}}}}}}}}}}}}
-=======
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

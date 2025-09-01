@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React, { useEffect } from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 
@@ -28,12 +24,6 @@ interface SEOData {
   ogType?: string;
   canonicalUrl?: string;
   structuredData?: object;
-<<<<<<< HEAD
-interface EnhancedSEOManagerProps {
-  seoData: SEOData;
-  children: React.ReactNode;
-const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
-=======
 
 interface EnhancedSEOManagerProps extends React.PropsWithChildren<{
 

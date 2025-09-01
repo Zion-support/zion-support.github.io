@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight } from 'lucide-react';
-=======
 import React from 'react.ts';
 import { Link               } from 'react-router-dom.ts';
 import { motion               } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight const categories = [
-=======
 import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight               } from 'lucide-react.ts';
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -66,9 +57,6 @@ const specialServices = [
 ];
 interface CategoriesSectionProps extends React.PropsWithChildren<{}> {
   showTitle?: boolean;
-<<<<<<< HEAD
-export function CategoriesSection({ showTitle }: CategoriesSectionProps) {
-=======
 
 export function CategoriesSection(...args: any[]): any {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -134,10 +122,6 @@ export function CategoriesSection(...args: any[]): any {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-<<<<<<< HEAD
-          viewport={{ once: true }}
-          {categories.map((category, index) => (
-=======
           viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
           {categories.map((category, index)               => (

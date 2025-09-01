@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-export default function AISupportHelpdesk(...args[]):  {
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
-import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone import { SEO              } from '@/components/SEO';
-=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { Link               } from 'react-router-dom.ts';
@@ -247,15 +233,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
                 Everything you need to deliver exceptional customer support with AI assistance
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)               => (
@@ -297,15 +274,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
                 Intelligent automation that understands and helps your customers
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiCapabilities.map((capability, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {aiCapabilities.map((capability, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {aiCapabilities.map((capability, index)               => (
@@ -347,15 +315,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
                 Meet your customers where they are with comprehensive support channels
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {supportChannels.map((channel, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {supportChannels.map((channel, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {supportChannels.map((channel, index)               => (
@@ -397,15 +356,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
                 Professional support tools that transform customer service with AI
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {benefits.map((benefit, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {benefits.map((benefit, index)               => (
@@ -449,15 +399,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
                 Choose the support plan that fits your team size and requirements
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {pricingPlans.map((plan, index)               => (

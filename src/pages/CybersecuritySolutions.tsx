@@ -24,13 +24,6 @@ import { Shield,
   Clock,
   BarChart3,
   CreditCard
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function CybersecuritySolutions(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function CybersecuritySolutions(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function CybersecuritySolutions(...args[]: any):  {
@@ -208,10 +201,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
     };
   };
   const filteredThreats = selectedThreat === 'all'
-<<<<<<< HEAD
-    ? securityThreats
-    : securityThreats.filter(threat => threat.type === selectedThreat);
-=======
     ? securityThreats: anyanyanyanyanyanyanyanyanyanyanyanyanysecurityThreats.filter(threat              => threat.type === selectedThreat);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -292,10 +281,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {securityServices.map((service, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {securityServices.map((service, index)              => (
@@ -353,25 +338,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
           {/* Threat Filter */}
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
-<<<<<<< HEAD
-
-            {threatTypes.map((threat)              => {
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           >
             {threatTypes.map((threat)  => {
@@ -388,9 +354,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
             transition={{ duration: 0.6 }};
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }};
           >;
-<<<<<<< HEAD
-            {threatTypes.map((threat) => {;
-=======
             {threatTypes.map((threat)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -418,10 +381,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {filteredThreats.map((threat, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {filteredThreats.map((threat, index)              => (
@@ -495,10 +454,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {complianceFrameworks.map((framework, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {complianceFrameworks.map((framework, index)              => (
@@ -561,10 +516,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {securityMetrics.map((metric, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {securityMetrics.map((metric, index)              => (
@@ -611,9 +562,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -641,9 +589,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
                 title: "Monitoring & Maintenance",
                 description: "Continuous security monitoring and regular updates",
                 icon: Monitor
-<<<<<<< HEAD
-            ].map((phase, index) => (
-=======
 
             ].map((phase, index)              => (
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

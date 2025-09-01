@@ -1,40 +1,6 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  ArrowRight,
-=======
 import React, { useState, useEffect, useCallback, useMemo } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Link               } from 'react-router-dom.ts';
-<<<<<<< HEAD
-import { ArrowRight, Play, Star, Zap, Shield, Users, TrendingUp export function HeroSection(...args: any[]): any {
-  const [currentFeature, setCurrentFeature] = useState(0);
-
-  const features = [
-    {
-      icon: Zap,
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence for your business"
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-grade security and compliance standards"
-    },
-    {
-      icon: Users,
-      title: "Expert Team",
-      description: "50+ certified professionals at your service"
-    },
-    {
-      icon: TrendingUp,
-      title: "Proven Results",
-      description: "500+ successful projects delivered"
-
-  ];
-=======
 import { ArrowRight,
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Play,
@@ -50,9 +16,6 @@ import { ArrowRight,
   Target,
   TrendingUp,
   Pause
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
               } from 'lucide-react.ts';
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -170,9 +133,6 @@ const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber, velocity: number)               => {
   return Math.abs(offset) * velocity;
 };
-<<<<<<< HEAD
-export default function HeroSection() {
-=======
 
 export default function HeroSection(...args: any[]): any {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -193,10 +153,6 @@ export default function HeroSection(...args: any[]): any {
     setCurrentSlide((prev) => (prev - 1 + memoizedSlides.length) % memoizedSlides.length);
     setIsAutoPlaying(false);
   }, [memoizedSlides.length]);
-<<<<<<< HEAD
-  const goToSlide = useCallback((index: number) => {
-    setDirection(index > currentSlide ? 1 : -1);
-=======
 
   const goToSlide = useCallback((index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
     setDirection(index > currentSlide ? 1: anyanyanyanyanyanyanyanyanyanyanyanyanyany-1);

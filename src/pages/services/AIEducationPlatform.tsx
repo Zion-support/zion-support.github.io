@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
-import { Brain,
-  GraduationCap,
-  TrendingUp,
-  Target,
-  Users,
-  BarChart3,
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
@@ -46,13 +33,6 @@ import { Brain,
   Users as UsersIcon,
   Award,
   Lightbulb
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function AIEducationPlatform(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function AIEducationPlatform(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function AIEducationPlatform(...args[]: any):  {
@@ -212,10 +192,6 @@ export default function AIEducationPlatform(...args[]: any):  {
               Everything you need to create engaging, personalized learning experiences
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
@@ -265,10 +241,6 @@ export default function AIEducationPlatform(...args[]: any):  {
               See measurable improvements in student learning and teacher effectiveness
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)               => (
@@ -318,10 +290,6 @@ export default function AIEducationPlatform(...args[]: any):  {
               Proven solutions across diverse educational institutions and programs
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index)               => (
@@ -371,10 +339,6 @@ export default function AIEducationPlatform(...args[]: any):  {
               Scale your educational platform as your institution grows
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)               => (

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Phone, 
-=======
-<<<<<<< HEAD
-const Contact: React.FC = (): JSX.Element => {
-=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Phone, 
@@ -18,11 +8,6 @@ import { Phone,
   MessageSquare, 
   Send,
   CheckCircle,
-<<<<<<< HEAD
-  AlertCircle
-} from 'lucide-react';
-export default function Contact() {
-=======
   AlertCircle,
   User,
   MessageSquare,
@@ -43,10 +28,6 @@ export default function Contact(...args: any[]): any {
     preferredContact: 'email'
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const handleSubmit = async (e: React.FormEvent) => {
-=======
   const [submitStatus, setSubmitStatus] = useState<any>('idle');
 
   const handleInputChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)              => {
@@ -151,8 +132,6 @@ export default function Contact(...args: any[]): any {
               Get in touch with our team of experts and let's discuss your project.
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           {/* Contact Form */}
           <motion.div

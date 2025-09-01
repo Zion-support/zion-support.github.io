@@ -49,16 +49,10 @@ import { Brain,
   Gauge,
   ShieldCheck,
   X
-<<<<<<< HEAD
-=======
               } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import our existing service data
-<<<<<<< HEAD
-import { ULTIMATE_INNOVATIVE_SERVICES_2026               } from '../data/ultimateInnovativeServices2026';
-import { ALL_REVOLUTIONARY_SERVICES_2026               } from '../data/comprehensiveServices2026';
-=======
 import { ULTIMATE_INNOVATIVE_SERVICES_2026              } from '../data/ultimateInnovativeServices2026';
 import { comprehensiveServices              } from '../data/comprehensiveServices';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -113,29 +107,9 @@ billingCycle: string;
   contactInfo?: {
     phone: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-=======
     address: string}}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
-  const [sortBy, setSortBy] = useState<any>('name');
-  const [selectedService, setSelectedService] = useState<any>(null);
-
-  // Combine services from multiple sources
-  const allServices: Service[] = useMemo(() => {
-    const services: Service[] = [];
-
-<<<<<<< HEAD
-    // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
-    ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
-=======
     // Add services from ultimateInnovativeServices2026
     ultimateInnovativeServices2026.forEach(service => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -156,17 +130,6 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
         rating: service.rating,
         reviewCount: service.reviewCount,
         launchDate: service.launchDate,
-<<<<<<< HEAD
-        status: service.status,
-        marketPrice: service.marketPrice,
-        estimatedDelivery: service.estimatedDelivery,
-        website: service.website,;
-        contactInfo: service.contactInfo;
-      })});
-
-    // Add services from ALL_REVOLUTIONARY_SERVICES_2026
-    ALL_REVOLUTIONARY_SERVICES_2026.forEach(service = > {;
-=======;
         status: service.status,;
         marketPrice: service.marketPrice,;
         estimatedDelivery: service.estimatedDelivery,;
@@ -195,14 +158,6 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
         rating: service.rating,
         reviewCount: service.reviewCount,
         launchDate: service.launchDate,
-<<<<<<< HEAD
-        status: service.status,
-        marketPrice: service.marketPrice,
-        estimatedDelivery: service.estimatedDelivery,
-        website: service.website,;
-        contactInfo: service.contactInfo;
-      })});
-=======
         status: service.status,;
         marketPrice: service.marketPrice,;
         estimatedDelivery: service.estimatedDelivery,;
@@ -214,10 +169,6 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
 
     return services}, []);
 
-<<<<<<< HEAD
-  const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
-    return cats.sort()}, [allServices]);
-=======
   const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
     return cats.sort();
   }, [allServices]);
@@ -243,64 +194,15 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
         break;
       case 'newest':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
-<<<<<<< HEAD
-        break;
-=======
         break}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
 
-<<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (category) {;
-      case 'Artificial Intelligence':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        return <Brain className="w-6 h-6" />;
-      case 'Quantum Computing':
-        return <Atom className="w-6 h-6" />;
-      case 'Neuromorphic Computing':
-        return <Cpu className="w-6 h-6" />;
-      case 'Synthetic Biology':
-        return <Heart className="w-6 h-6" />;
-      case 'Blockchain':
-        return <Blockchain className="w-6 h-6" />;
-      case 'Cybersecurity':
-        return <Shield className="w-6 h-6" />;
-      case 'Internet of Things':
-        return <Network className="w-6 h-6" />;
-      case 'Metaverse':
-        return <Globe className="w-6 h-6" />;
-      case 'Robotics':
-        return <Factory className="w-6 h-6" />;
-      case 'Space Technology':
-        return <Satellite className="w-6 h-6" />;
-      default:
-<<<<<<< HEAD
-        return <Lightbulb className="w-6 h-6" />;
-
-=======
         return <Lightbulb className = "w-6 h-6" />};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-<<<<<<< HEAD
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (status.toLowerCase()) {;
-      case 'live':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        return 'bg-green-100 text-green-800';
-      case 'beta':
-        return 'bg-blue-100 text-blue-800';
-      case 'coming soon':
-        return 'bg-yellow-100 text-yellow-800';
-      case 'preview':
-        return 'bg-purple-100 text-purple-800';
-      default:
-<<<<<<< HEAD
-        return 'bg-gray-100 text-gray-800';
-
-=======
         return 'bg-gray-100 text-gray-800'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
@@ -387,11 +289,6 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
-
-                {categories.map(category              => (
-=======
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
               >
                 {categories.map(category               => (
@@ -752,23 +649,12 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
           </div>
           <div className="mt-6 text-gray-400">
             <p>364 E Main St STE 1008, Middletown DE 19709</p>
-<<<<<<< HEAD
-            <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:underline">https://ziontechgroup.com</a></p>
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:underline">https://ziontechgroup.com</a></p>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-</div>};
-=======
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

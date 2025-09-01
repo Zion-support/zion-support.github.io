@@ -21,29 +21,6 @@ import { Brain,
   Phone,
   Mail,
   MapPin
-<<<<<<< HEAD
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory             } from '../data/innovativeServices2027';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory              } from '../data/innovativeServices2027';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-  'AI & Consciousness': Brain,
-  'Quantum AI': Atom,
-  'Autonomous AI': Cpu,
-  'Quantum Computing': Atom,
-  'Quantum Finance': TrendingUp,
-  'Space Technology': Rocket,
-  'Quantum Space': Rocket,
-  'Biotechnology': Dna,
-  'Quantum Medicine': Dna,
-  'Quantum Security': Shield,
-  'Nanotechnology': Microscope,
-  'Neural Technology': Eye
-};
-=======
 } from 'lucide-react';
 import { innovativeServices2027, serviceCategories2027, getServicesByCategory             } from '../data/innovativeServices2027';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -63,18 +40,6 @@ const categoryColors: { [key: string]: string } = {
   'Neural Technology': 'from-violet-500 to-purple-500'
 };
 
-<<<<<<< HEAD
-export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
-  const [expandedService, setExpandedService] = useState<any>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)};
-=======;
 export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [expandedService, setExpandedService] = useState<any>(null);
@@ -85,9 +50,6 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
       ([entry]) => {;
         if (entry.isIntersecting) {;
           setIsVisible(true);
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -97,9 +59,6 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
 
     const element = document.getElementById('innovative-services-2027');
     if (element) {
-<<<<<<< HEAD
-      observer.observe(element);
-=======
       observer.observe(element)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -109,10 +68,6 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
     ? innovativeServices2027
     : getServicesByCategory(selectedCategory);
 
-<<<<<<< HEAD
-  const toggleServiceExpansion = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    setExpandedService(expandedService === serviceId ? null : serviceId)};
-=======
   const toggleServiceExpansion = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
@@ -229,13 +184,6 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-<<<<<<< HEAD: anyanyanyanyanyanyanyanyanyanyanyany'bg-zion-slate-light/50 text-gray-300 hover: bg-zion-slate-light/70 hover:text-white'
-              }`}
-
-              All Categories
-            </button>
-            {serviceCategories2027.map((category)              => {
-=======;
                   : 'bg-zion-slate-light/50 text-gray-300 hover: anyanyanyanyanyanyanyanyanyanyanyanybg-zion-slate-light/70 hover:text-white';
               }`};
             >;
@@ -252,14 +200,6 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
                     selectedCategory === category
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                       : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'
-<<<<<<< HEAD
-                  }`}
-
-                  {Icon && <Icon className="w-4 h-4" />}
-                  {category}
-                </button>
-              )})};
-=======;
                   }`};
                 >;
                   {Icon && <Icon className="w-4 h-4" />};
@@ -273,24 +213,6 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
 
         {/* Services Grid */}
         <motion.div
-<<<<<<< HEAD
-          initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-          animate = {
-  isVisible ? { opacity: 1,
-  y: 0 
-
-} : { opacity: 0, y: 30 }}
-          transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-}}
-          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-=======
           initial = {
   { opacity: 0,
   y: 30 
@@ -322,10 +244,6 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
 
 }}
           className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-<<<<<<< HEAD
-
-          {filteredServices.map((service, index)             => (
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >
           {filteredServices.map((service, index)  => (
@@ -589,23 +507,12 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
                 Visit Website
                 <ExternalLink className="w-4 h-4" />
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      </div>;
-    </section>;
-  )};
-=======
             </div>;
           </div>;
         </motion.div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-};}}}
-=======
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

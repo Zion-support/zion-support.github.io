@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Activity, AlertTriangle, Clock, CheckCircle, Shield, Zap, BarChart3, Globe, Smartphone, Monitor, Server, Wifi, Database, Cloud, Bell, TrendingUp, Users, Target  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
-import { Activity, AlertTriangle, Clock, CheckCircle, Shield, Zap, BarChart3, Globe, Smartphone, Monitor, Server, Wifi, Database, Cloud, Bell, TrendingUp, Users, Target import { SEO              } from '@/components/SEO';
-=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { Link               } from 'react-router-dom.ts';
@@ -214,15 +201,6 @@ export default function UptimeSLAMonitor(...args: []):  {
                 Everything you need to ensure your services are always available and performing optimally
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)               => (
@@ -264,15 +242,6 @@ export default function UptimeSLAMonitor(...args: []):  {
                 From simple website checks to complex infrastructure monitoring
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {monitoringTypes.map((type, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {monitoringTypes.map((type, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {monitoringTypes.map((type, index)               => (
@@ -314,15 +283,6 @@ export default function UptimeSLAMonitor(...args: []):  {
                 Professional monitoring that helps you maintain high availability and meet your SLA commitments
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {benefits.map((benefit, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {benefits.map((benefit, index)               => (
@@ -366,15 +326,6 @@ export default function UptimeSLAMonitor(...args: []):  {
                 Choose the monitoring plan that fits your needs and scale as you grow
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {pricingPlans.map((plan, index)               => (

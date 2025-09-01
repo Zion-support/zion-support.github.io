@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Rocket, 
-  Cpu, 
-  Database, 
-  Cloud, 
-  Shield, 
-  Users, 
-  BarChart3, 
-=======
 import React from 'react.ts';
 import { SEO              } from '@/components/SEO';
 
@@ -51,12 +38,6 @@ import {
   FileText,
   Monitor,
   Smartphone
-<<<<<<< HEAD
-} from 'lucide-react';
-
-export default function DigitalTransformation() {
-  const services = [
-=======
 export default function DigitalTransformation(...args: any[]): any {
   const features = [
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -183,11 +164,6 @@ export default function DigitalTransformation(...args: any[]): any {
               and position you for future success.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <motion.div 
-=======
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)              => (
               <motion.div
@@ -201,8 +177,6 @@ export default function DigitalTransformation(...args: any[]): any {
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-8 h-8 text-white" />
-<<<<<<< HEAD
-=======
 =======
                 initial = {
   { opacity: 0,
@@ -363,11 +337,6 @@ export default function DigitalTransformation(...args: any[]): any {
               Digital transformation delivers measurable benefits that impact every aspect of your business.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div 
-=======
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {benefits.map((benefit, index)              => (
               <motion.div
@@ -406,11 +375,6 @@ export default function DigitalTransformation(...args: any[]): any {
               each with unique challenges and opportunities.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
-              <motion.div 
-=======
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
             {industries.map((industry, index)              => (
               <motion.div
@@ -450,10 +414,6 @@ export default function DigitalTransformation(...args: any[]): any {
               { step: '02', title: 'Strategy', description: 'Develop comprehensive digital transformation roadmap' },
               { step: '03', title: 'Implementation', description: 'Execute transformation plan with expert guidance' },
               { step: '04', title: 'Optimization', description: 'Continuously improve and scale digital capabilities' }
-<<<<<<< HEAD
-            ].map((phase, index) => (
-              <motion.div 
-=======
             ].map((phase, index)              => (
               <motion.div
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

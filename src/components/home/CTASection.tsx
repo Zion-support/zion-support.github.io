@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion               } from 'framer-motion.ts';
-import { Link               } from 'react-router-dom.ts';
-import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: React.FC = (): JSX.Element => {
-=======
 import React from 'react.ts';
 import { motion                } from 'framer-motion.ts';
 import { Link                } from 'react-router-dom.ts';
@@ -117,14 +105,7 @@ const CTASection: React.FC = (): JSX.Element => {
   { duration: 0.8,
   delay: 0.6 
 }}
-<<<<<<< HEAD
-          viewport={{ once: true }}
-=======
           viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
-<<<<<<< HEAD
-
-          {features.map((feature, index)               => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         >
           {features.map((feature, index)  => (

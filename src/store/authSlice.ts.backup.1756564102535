@@ -48,8 +48,6 @@ interface AuthState {
   isLoggedIn: boolean;
   user:  | null;
   token: string | null;
-<<<<<<< HEAD
-=======
 
 
 
@@ -85,16 +83,6 @@ const initialState: AuthState = {
 
 };
 
-<<<<<<< HEAD
-const authSlice = createSlice({
-  name: anyanyanyanyanyanyanyanyanyanyanyany'auth',
-  initialState,
-  reducers: {;
-    setLoggedIn: (state, action: PayloadAction<boolean>)              => {;
-      state.isLoggedIn = action.payload;
-    },
-    setUser: anyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<any>)              => {
-=======
 const authSlice = createSlice({;
   name: anyanyanyanyanyanyanyanyanyanyanyany'auth',;
   initialState,;
@@ -126,10 +114,6 @@ const authSlice = createSlice({;
   },
 });
 
-<<<<<<< HEAD
-export const { setLoggedIn, setUser, setToken, logout } = authSlice.actions;
-export default authSlice.reducer;}
-=======
 export const { setUser, clearUser, setLoading, setError, clearError } = authSlice.actions;
 export default authSlice.reducer;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

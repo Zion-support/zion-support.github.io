@@ -1,11 +1,6 @@
 // Enhanced Innovative Services 2025 - Zion Tech Group
 // Comprehensive micro SAAS, IT, and AI services with real market data and pricing
 
-<<<<<<< HEAD
-export interface EnhancedService {
-  id: string;
-  title: string;
-=======
 
 
 
@@ -22,10 +17,6 @@ export interface EnhancedService {
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-
-=======
 address: string;
 
 
@@ -65,9 +56,6 @@ export interface MicroSaasService {
   category: 'Micro SAAS' | 'IT Services' | 'AI Solutions' | 'Emerging Tech';
   subcategory: string;
   price: number;
-<<<<<<< HEAD
-  currency: string;
-=======
   pricingModel: string;
   userLimit: string;
   features: string[];
@@ -81,10 +69,6 @@ export interface MicroSaasService {
   setupTime: string;
   integrations: string[];
   freeTier: boolean;
-<<<<<<< HEAD
-  trialPeriod: string;
-
-=======
 trialPeriod: string;
 
 
@@ -131,10 +115,6 @@ export interface ITService {
   sla: string;
   certifications: string[];
   deliveryTime: string;
-<<<<<<< HEAD
-  support: string;
-
-=======
 support: string;
 
 
@@ -205,19 +185,6 @@ export interface AIService {
   compliance?: string[];
 }
 
-<<<<<<< HEAD
-// Zion Tech Group Contact Information
-const zionContact = {
-  phone: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
-};
-
-// Enhanced Innovative Services 2025
-export const enhancedInnovativeServices2025: EnhancedService[] = [
-  // NEW MICRO SAAS SERVICES
-=======
 =======
 useCases: string[];
 

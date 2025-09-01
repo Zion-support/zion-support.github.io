@@ -20,9 +20,6 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-<<<<<<< HEAD
-  updatedAt?: string;
-=======
 updatedAt?: string;
 
 
@@ -51,9 +48,6 @@ interface AuthTokens {
 
 
   accessToken: string | null;
-<<<<<<< HEAD
-  refreshToken: string | null;
-=======
 refreshToken: anyanyanyanyanyanyanyanyanyanyanystring | null;
 
 
@@ -85,18 +79,6 @@ interface AuthContextType {
   isLoading: boolean;
   onboardingStep: number;
   tokens: AuthTokens;
-<<<<<<< HEAD
-login: (email: string, password: string)            => Promise<any>;
-  register: anyanyanyanyanyanyanyanyanyany(name: string, email: string, password: string)            => Promise<any>;
-  signup: anyanyanyanyanyanyanyanyanyany(email: string, password: string, userData: )            => Promise<any>;
-  logout: anyanyanyanyanyanyanyanyanyanyany()            => Promise<any>;
-  resetPassword: anyanyanyanyanyanyanyanyanyanyany(email: string)            => Promise<any>;
-  updateProfile: anyanyanyanyanyanyanyanyanyanyany(updates: Partial<User>)            => Promise<any>;
-  loginWithGoogle: anyanyanyanyanyanyanyanyanyanyany()            => Promise<any>;
-  loginWithFacebook: anyanyanyanyanyanyanyanyanyanyany()            => Promise<any>;
-  loginWithTwitter: anyanyanyanyanyanyanyanyanyanyany()            => Promise<any>;
-  loginWithWeb3: anyanyanyanyanyanyanyanyanyanyany()            => Promise<any>;
-=======
 login: anyanyanyanyanyanyanyanyanyanyany(email: string, password: string)             => Promise<any>;
   register: anyanyanyanyanyanyanyanyanyanyany(name: string, email: string, password: string)             => Promise<any>;
   signup: anyanyanyanyanyanyanyanyanyanyany(email: string, password: string, userData)             => Promise<any>;
@@ -123,11 +105,6 @@ const AuthContext = createContext<AuthContextType | null>(null);
 
 export const useAuth = () => {;
   const context = useContext(AuthContext);
-<<<<<<< HEAD
-  if (context = == null) {;
-    throw new Error('useAuth must be used within an AuthProvider')};
-  return context};
-=======
   if (context = == null) {;
     throw new Error('useAuth must be used within an AuthProvider');
 

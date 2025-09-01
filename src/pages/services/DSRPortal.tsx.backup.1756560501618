@@ -1,13 +1,4 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import { Link            } from 'react-router-dom.ts';
-import { Shield, FileSearch, ClipboardCheck, Lock, DollarSign, ExternalLink const DSRPortal: React.FC = (): JSX.Element => {
-	const features = [
-		{ icon: FileSearch, title: 'Intake + Verification', desc: 'Hosted forms with ID verification and secure attachments.' },
-		{ icon: ClipboardCheck, title: 'Workflow Automation', desc: 'Route to owners, track SLAs, export/delete across systems.' },
-		{ icon: Lock, title: 'Security & Audit', desc: 'Encryption, access controls, and immutable audit logs.' }
-	];
-=======
 import { motion            } from 'framer-motion.ts';
 import { SEO            } from '../../components/SEO';
 import { Shield, 
@@ -143,9 +134,6 @@ export default function DSRPortal(...args: any[]): any {
     }
   ];
 
-<<<<<<< HEAD
-export default DSRPortal;}
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 

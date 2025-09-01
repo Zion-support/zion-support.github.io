@@ -16,15 +16,6 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
     {
       icon: Video,
       title: 'AI Video Creation',
-<<<<<<< HEAD
-      description: 'Produce engaging video content automatically'
-    },
-    {
-      icon: PenTool,
-      title: 'Creative Design',
-      description: 'AI-powered design tools and templates'
-
-=======
       description: 'Produce engaging video content automatically';
     },;
     {;
@@ -49,15 +40,6 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
     {
       title: 'Marketing Materials',
       description: 'Brochures, flyers, and promotional content',
-<<<<<<< HEAD
-      icon: '📊'
-    },
-    {
-      title: 'Product Descriptions',
-      description: 'Compelling product copy and descriptions',
-      icon: '🛍️'
-
-=======
       icon: '📊';
     },;
     {;
@@ -78,10 +60,6 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

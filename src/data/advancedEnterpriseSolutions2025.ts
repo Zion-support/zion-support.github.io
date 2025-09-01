@@ -1,6 +1,4 @@
 export interface EnterpriseSolution {
-<<<<<<< HEAD
-=======
 
 
 
@@ -400,17 +398,6 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: 'Consulting success guarantee',
     support: 'Strategic advisory team'
 ];
-<<<<<<< HEAD
-export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[] => {;
-=======
-<<<<<<< HEAD
-export const getEnterpriseSolutionsByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring): EnterpriseSolution[]                => {
-  if (category === 'All') {;
-    return ADVANCED_ENTERPRISE_SOLUTIONS_2025};
-  return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category)};
-export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {;
-  return ADVANCED_ENTERPRISE_SOLUTIONS_2025};
-=======
 export const getEnterpriseSolutionsByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring): EnterpriseSolution[]               => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   if (category === 'All') {;

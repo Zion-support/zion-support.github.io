@@ -19,13 +19,6 @@ interface ResponsiveState {
   orientation: "landscape" | "portrait";
   isMobile: boolean;
   isTablet: boolean;
-<<<<<<< HEAD
-  isDesktop: boolean}
-=======
-<<<<<<< HEAD
-  isDesktop: boolean;
-
-=======
 isDesktop: boolean;
 
 

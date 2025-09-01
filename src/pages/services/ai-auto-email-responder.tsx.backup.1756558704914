@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet          } from 'react-helmet-async.ts';
-import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot import { Link          } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet           } from 'react-helmet-async.ts';
 import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot           } from 'lucide-react.ts';
@@ -100,10 +95,6 @@ export default function AIAutoEmailResponder(...args: []):  {
                   icon: Shield,
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with data encryption and privacy protection."
-<<<<<<< HEAD
-
-              ].map((feature, index)          => (
-=======
                 }
               ].map((feature, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -168,10 +159,6 @@ export default function AIAutoEmailResponder(...args: []):  {
                   description: "Automated surveys, review requests, and customer feedback gathering.",
                   icon: BarChart3,
                   benefits: ["Surveys", "Review requests", "Feedback collection"]
-<<<<<<< HEAD
-
-              ].map((useCase, index)          => (
-=======
                 }
               ].map((useCase, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -228,10 +215,6 @@ export default function AIAutoEmailResponder(...args: []):  {
                   step: "04",
                   title: "Delivery & Logging",
                   description: "Automated responses are sent and logged in CRM systems."
-<<<<<<< HEAD
-
-              ].map((step, index)          => (
-=======
                 }
               ].map((step, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -347,10 +330,6 @@ export default function AIAutoEmailResponder(...args: []):  {
                   description: "Zendesk, Freshdesk, and customer support platforms.",
                   icon: Users,
                   features: ["Zendesk", "Freshdesk", "Support Systems"]
-<<<<<<< HEAD
-
-              ].map((integration, index)          => (
-=======
                 }
               ].map((integration, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -394,16 +373,6 @@ export default function AIAutoEmailResponder(...args: []):  {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;

@@ -10,68 +10,8 @@ import { Award,
   CheckCircle,
   Globe,
   Rocket
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
-export const TeamExpertiseSection: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-export const TeamExpertiseSection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const expertise = [
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Deep expertise in neural networks, natural language processing, and predictive analytics.',
-      certifications['AWS Machine Learning', 'Google Cloud AI', 'Microsoft Azure AI'],
-      experience: '8+ years',
-      projects: '150+'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Expert security professionals with certifications in ethical hacking and compliance.',
-      certifications['CISSP', 'CEH', 'CompTIA Security+', 'ISO 27001'],
-      experience: '10+ years',
-      projects: '200+'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Architecture',
-      description: 'Certified cloud architects specializing in multi-cloud and hybrid solutions.',
-      certifications['AWS Solutions Architect', 'Azure Solutions Architect', 'Google Cloud Architect'],
-      experience: '12+ years',
-      projects: '300+'
-    },
-    {
-      icon: Zap,
-      title: 'Digital Transformation',
-      description: 'Strategic consultants with proven track records in business transformation.',
-      certifications['PMP', 'ITIL', 'Six Sigma Black Belt', 'Change Management'],
-      experience: '15+ years',
-      projects: '500+'
-    },
-    {
-      icon: Globe,
-      title: 'Web & Mobile Development',
-      description: 'Full-stack developers with expertise in modern frameworks and technologies.',
-      certifications['React', 'Node.js', 'Flutter', 'AWS Developer'],
-      experience: '6+ years',
-      projects: '100+'
-    },
-    {
-      icon: Rocket,
-      title: 'Innovation & R&D',
-      description: 'Research scientists and engineers pushing the boundaries of technology.',
-      certifications['PhD Computer Science', 'Patent Holders', 'Research Publications'],
-      experience: '20+ years',
-<<<<<<< HEAD
-      projects: '50+'
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       projects: '50+';
     };
@@ -124,9 +64,6 @@ const coreExpertise = [
   "IoT & Edge Computing",;
   "Mobile & Web Development";
 ];
-<<<<<<< HEAD
-export function TeamExpertiseSection() {
-=======
 
 export function TeamExpertiseSection(...args: any[]): any {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -154,20 +91,7 @@ export function TeamExpertiseSection(...args: any[]): any {
             in cutting-edge technologies and proven methodologies.
           </p>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-        {/* Stats Section */}
-        <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
-
-          {stats.map((stat, index)               => {
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           initial = {
   { opacity: 0,
@@ -183,9 +107,6 @@ export function TeamExpertiseSection(...args: any[]): any {
 }}
           className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
         >;
-<<<<<<< HEAD
-          {stats.map((stat, index)  => {;
-=======
           {stats.map((stat, index)                => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -201,10 +122,6 @@ export function TeamExpertiseSection(...args: any[]): any {
                   {stat.value}
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {teamExpertise.map((expertise, index) => (
-=======
 =======
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {teamExpertise.map((expertise, index)               => (

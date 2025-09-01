@@ -21,13 +21,6 @@ import { Brain,
   DollarSign,
   Factory,
   ShoppingCart
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function AIServices(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function AIServices(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function AIServices(...args[]: any):  {
@@ -166,10 +159,6 @@ export default function AIServices(...args[]: any):  {
               Comprehensive AI solutions designed to accelerate your digital transformation journey
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {aiServices.map((service, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-2 gap-8">
             {aiServices.map((service, index)              => (
@@ -221,10 +210,6 @@ export default function AIServices(...args[]: any):  {
               We leverage the latest AI frameworks and tools to deliver exceptional results
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {aiTechnologies.map((tech, index) => (
-=======
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-8">
             {aiTechnologies.map((tech, index)              => (
@@ -253,10 +238,6 @@ export default function AIServices(...args[]: any):  {
               Discover how AI is transforming various sectors and creating new opportunities
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)              => (

@@ -85,40 +85,6 @@ export const SERVICE_STATS = {
 ;
 };
 // Helper Functions
-<<<<<<< HEAD
-export const getServicesByCategory = (category: string) => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
-};
-export const getServicesByInnovationLevel = (level: string) => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
-};
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-=======
-<<<<<<< HEAD
-export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)};
-
-export const getServicesByInnovationLevel = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)};
-
-export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)               => {
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => ;
-    service.price >= minPrice && service.price <= maxPrice;
-  )};
-
-export const getServicesByTags = (tags: anyanyanyanyanyanyanyanyanyanyanyanyanystring[])               => {
-  return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
-    tags.some(tag => service.tags.includes(tag));
-  )};
-
-export const searchTerm = query.toLowerCase();
-  return ALL_COMPREHENSIVE_SERVICES.filter(service = >
-    service.title.toLowerCase().includes(searchTerm) ||
-    service.description.toLowerCase().includes(searchTerm) ||
-    service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
-    service.category.toLowerCase().includes(searchTerm);
-  )};
-=======
 export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
 };
@@ -133,9 +99,6 @@ export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyany
     service.price >= minPrice && service.price <= maxPrice
   );
 };
-<<<<<<< HEAD
-export const getServicesByTags = (tags: string[]) => {;
-=======
 
 export const getServicesByTags = (tags: anyanyanyanyanyanyanyanyanyanyanyanyanystring[])              => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

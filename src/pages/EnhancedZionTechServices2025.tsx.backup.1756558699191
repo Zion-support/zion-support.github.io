@@ -7,13 +7,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
   const [sortBy, setSortBy] = useState<any>('name');
 
   const categories = ['All', ...getEnhancedServiceCategories()];
-<<<<<<< HEAD
-
-  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-=======
   
   const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;

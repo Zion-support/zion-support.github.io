@@ -20,12 +20,6 @@ import { Brain,
   Lightbulb,
   Target,
   Award
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
-<<<<<<< HEAD
-const InnovativeServices: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -244,10 +238,6 @@ const InnovativeServices: React.FC = (): JSX.Element => {
               and creating new possibilities for the future.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {innovations.map((innovation, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {innovations.map((innovation, index)               => (

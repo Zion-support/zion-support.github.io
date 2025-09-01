@@ -10,71 +10,8 @@ import { Code,
   Server,
   Cpu,
   Network
-<<<<<<< HEAD
-export const TechnologyStackSection: React.FC = (): JSX.Element => {
-=======
           } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-export const TechnologyStackSection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const techCategories = [
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      technologies[
-        'TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenAI GPT', 'Hugging Face',
-        'Keras', 'Pandas', 'NumPy', 'Jupyter', 'MLflow'
-      ],
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Code,
-      title: 'Frontend Development',
-      technologies[
-        'React', 'Vue.js', 'Angular', 'TypeScript', 'Next.js',
-        'Tailwind CSS', 'Material-UI', 'Redux', 'GraphQL', 'Webpack'
-      ],
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Server,
-      title: 'Backend Development',
-      technologies[
-        'Node.js', 'Python', 'Java', 'Go', 'C#',
-        'Express.js', 'Django', 'Spring Boot', 'FastAPI', 'ASP.NET Core'
-      ],
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Database,
-      title: 'Databases & Storage',
-      technologies[
-        'PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Elasticsearch',
-        'AWS RDS', 'Azure SQL', 'Google Cloud SQL', 'DynamoDB', 'Cassandra'
-      ],
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud & DevOps',
-      technologies[
-        'AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes',
-        'Terraform', 'Jenkins', 'GitLab CI/CD', 'Ansible', 'Prometheus'
-      ],
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      technologies[
-        'OAuth 2.0', 'JWT', 'SAML', 'LDAP', 'MFA',
-        'SIEM', 'EDR', 'Firewall', 'VPN', 'Encryption'
-      ],
-<<<<<<< HEAD
-      color: 'from-red-500 to-pink-500'
-
-=======
       color: 'from-red-500 to-pink-500';
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -143,10 +80,6 @@ export function TechnologyStackSection(...args: any[]): any {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-<<<<<<< HEAD
-
-          <h2 className="text-4xl font-bold mb-4">
-=======
           initial = {
   { opacity: 0,
   y: 20 
@@ -181,38 +114,6 @@ export function TechnologyStackSection(...args: any[]): any {
         </motion.div>
 
         {/* Technology Categories */}
-<<<<<<< HEAD
-        <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-          {techCategories.map((category, index)            => {;
-            const IconComponent = category.icon;
-            return (
-              <motion.div
-                key = {category.title}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="bg-gray-800 rounded-2xl p-6 hover:bg-gray-700 transition-all duration-300"
-
-                <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color} mr-4`}>
-                    <IconComponent className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold">
-                    {category.title}
-                  </h3>
-=======
         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 mb-16">
           {technologyCategories.map((category, index)           => (
             <motion.div
@@ -265,12 +166,6 @@ export function TechnologyStackSection(...args: any[]): any {
                       <span className="text-xl">{tech.icon}</span>
                       <span className="text-gray-300 font-medium">{tech.name}</span>
                     </div>
-<<<<<<< HEAD
-                  ))}
-                </div>
-              </motion.div>
-            )})}
-=======
                     
                     <div className="flex items-center gap-2">
                       <div className="w-20 bg-slate-700 rounded-full h-2">
@@ -306,10 +201,6 @@ export function TechnologyStackSection(...args: any[]): any {
         {/* Emerging Technologies */}
         <motion.div 
           className="mb-16"
-<<<<<<< HEAD
-
-          <h3 className="text-2xl font-bold text-center mb-8">
-=======
           initial = {
   { opacity: 0,
   y: 30 
@@ -346,20 +237,6 @@ export function TechnologyStackSection(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Emerging Technologies
           </h3>
-<<<<<<< HEAD
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">;
-            {emergingTech.map((tech, index)            => {;
-              const IconComponent = tech.icon;
-              return (
-                <div key = {tech.name} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <div className="p-3 bg-blue-600 rounded-full">
-                      <IconComponent className="h-8 w-8 text-white" />
-                    </div>
-                  </div>
-                  <h4 className="text-lg font-semibold mb-2">{tech.name}</h4>
-                  <p className="text-sm text-gray-400">{tech.status}</p>
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {emergingTech.map((tech, index)           => (
@@ -476,9 +353,6 @@ export function TechnologyStackSection(...args: any[]): any {
 
         <motion.div 
           className="text-center"
-<<<<<<< HEAD
-
-=======
           initial = {
   { opacity: 0,
   y: 20 
@@ -537,9 +411,6 @@ export function TechnologyStackSection(...args: any[]): any {
   )};
 
 export default TechnologyStackSection;
-<<<<<<< HEAD
-}}
-=======
 =======
             <span className="text-2xl">→</span>;
           </div>;

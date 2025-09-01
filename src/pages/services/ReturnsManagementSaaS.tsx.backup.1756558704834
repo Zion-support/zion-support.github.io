@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO          } from '@/components/SEO';
-import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
-=======
 import React from 'react.ts';
 import { SEO           } from '@/components/SEO';
 import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon           } from 'lucide-react.ts';

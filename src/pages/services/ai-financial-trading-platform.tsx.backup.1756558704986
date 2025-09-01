@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { SEO          } from '@/components/SEO';
-import { TrendingUp,
-  Brain,
-  DollarSign,
-  BarChart3,
-  Shield,
-  Zap,
-  CheckCircle,
-=======
 import React from 'react.ts';
 import { motion           } from 'framer-motion.ts';
 import { SEO           } from '@/components/SEO';
@@ -34,9 +22,6 @@ import { TrendingUp,
   Lock,
   Eye,
   PieChart
-<<<<<<< HEAD
-export default function AIFinancialTradingPlatform(...args: any[]): any {
-=======
           } from 'lucide-react.ts';
 
 export default function AIFinancialTradingPlatform(...args: []):  {
@@ -65,15 +50,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
     {
       icon: Zap,
       title: 'High-Frequency Trading',
-<<<<<<< HEAD
-      description: 'Ultra-fast execution for arbitrage opportunities and market inefficiencies'
-    },
-    {
-      icon: Eye,
-      title: 'Market Sentiment Analysis',
-      description: 'AI analyzes news, social media, and market data to gauge investor sentiment'
-
-=======
       description: 'Ultra-fast execution for arbitrage opportunities and market inefficiencies';
     },;
     {;
@@ -128,15 +104,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
         'Custom AI models',
         'White-label solutions',
         'Dedicated support',
-<<<<<<< HEAD
-        'Advanced compliance',
-        'Unlimited portfolio size',
-        'On-premise options',
-        'SLA guarantees'
-      ],
-      popular: false
-
-=======
         'Advanced compliance',;
         'Unlimited portfolio size',;
         'On-premise options',;
@@ -161,15 +128,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
     {
       icon: Target,
       title: 'Risk-Adjusted Returns',
-<<<<<<< HEAD
-      description: 'AI optimizes for the best risk-reward ratio in any market condition'
-    },
-    {
-      icon: BarChart3,
-      title: 'Emotion-Free Trading',
-      description: 'Eliminate human bias and emotional decision-making from your trades'
-
-=======
       description: 'AI optimizes for the best risk-reward ratio in  market condition';
     },;
     {;
@@ -194,15 +152,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
     {
       title: 'Forex Trading',
       description: 'Real-time currency pair analysis and automated forex strategies',
-<<<<<<< HEAD
-      icon: Globe
-    },
-    {
-      title: 'Commodities',
-      description: 'AI-driven insights for gold, oil, and other commodity markets',
-      icon: BarChart3
-
-=======
       icon: Globe;
     },;
     {;
@@ -221,10 +170,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -745,14 +690,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
             </div>
 
             <p className="text-gray-400 mt-6">
-<<<<<<< HEAD
-              No credit card required • 14-day free trial • Cancel time
-            </p>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======;
               No credit card required • 14-day free trial • Cancel anytime;
             </p>;
           </motion.div>;

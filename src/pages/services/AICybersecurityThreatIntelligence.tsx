@@ -1,30 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
-import { 
-  Shield, 
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion               } from 'framer-motion.ts';
-import { SEO               } from '../../components/SEO';
-import { Shield, 
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { SEO              } from '../../components/SEO';
-import { Shield,
-  AlertTriangle,
-  Brain,
-  Zap,
-  Eye,
-  Users,
-  Globe,
-  Star,
-  CheckCircle,
-=======
 import { SEO              } from '../../components/SEO';
 import { Shield, 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -36,12 +11,6 @@ import { Shield,
   Settings,
   Target,
   Cpu,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  Fingerprint
-export default function AICybersecurityThreatIntelligence(...args: any[]): any {
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Activity,
   Sparkles,
@@ -82,10 +51,6 @@ export default function AICybersecurityThreatIntelligence(...args: any[]): any {
   MapPin,
   Calendar,
   Calculator
-<<<<<<< HEAD
-} from 'lucide-react';
-export default function AICybersecurityThreatIntelligence(...args[]):  {
-=======
              } from 'lucide-react.ts';
 
 export default function AICybersecurityThreatIntelligence(...args[]: any):  {
@@ -327,10 +292,6 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
               analysis, and response capabilities for modern organizations.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
@@ -375,39 +336,11 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
               solutions powered by artificial intelligence.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)              => (
               <motion.div
                 key={index}
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-red-400/50 transition-all duration-300"
-
-                <div className="flex items-center space-x-3 mb-4">
-                  <span className="px-3 py-1 bg-red-400/20 text-red-400 text-sm rounded-full">
-                    {useCase.industry}
-                  </span>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
-                <p className="text-slate-300 mb-6 leading-relaxed">{useCase.description}</p>
-                <div className="space-y-3">
-                  <h4 className="text-white font-semibold">Key Results: anyanyanyanyanyanyanyanyanyanyanyanyany</h4>
-                  {useCase.metrics.map((metric, idx)              => (
-                    <div key={idx} className="flex items-center space-x-2 text-sm">
-                      <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
-                      <span className="text-slate-300">{metric}</span>
-                    </div>
-                  ))}
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -450,64 +383,7 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
               Experience measurable improvements in threat detection, response time, and overall security effectiveness.
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)              => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
-
-                <div className="w-20 h-20 bg-gradient-to-br from-red-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-10 h-10 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-white mb-4">{benefit.value}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-slate-300 leading-relaxed">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Cutting-Edge
-              <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
-                {' '}Security Technologies
-              </span>
-            </h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Built on the latest AI and cybersecurity technologies to deliver superior protection and threat intelligence.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-4 gap-4">
-            {technologies.map((tech, index)              => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 text-center"
-
-                <div className="text-white font-semibold">{tech}</div>
-              </motion.div>
-            ))}
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
@@ -564,10 +440,6 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
               All plans include a 14-day free trial.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
@@ -634,10 +506,6 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
               security and compliance for your specific business needs.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index)              => (

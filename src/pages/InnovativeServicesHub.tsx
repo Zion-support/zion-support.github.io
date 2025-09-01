@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, 
-  ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, 
-  Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, 
-  Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, 
-  Database, Network, Clock, ArrowRight, Sparkles, Phone, Mail, 
-  MapPin, Satellite, FileText, Zap, Palette, Camera, Video, 
-  Music, Gamepad2, Car, Plane, Ship, Train, Leaf, Sun, Wind, 
-  Droplets, Mountain, TreePine, Recycle, Lightbulb, Battery, 
-  Wifi, Bluetooth, Radio, Telescope, Microscope, Flask, TestTube, 
-  Beaker, Pill, Stethoscope, Syringe, HeartPulse, Activity, 
-  Thermometer, Droplet, EyeOff, Key, Fingerprint, Scan, QrCode, 
-  CreditCard, Wallet, PiggyBank, TrendingDown, BarChart, PieChart, 
-  LineChart, ScatterChart, AreaChart, CandlestickChart, GanttChart, 
-  Kanban, Calendar, Timer, Stopwatch, AlertTriangle, Search,
-  Globe2, Cpu2, Database2, Network2, Server2, Smartphone2,
-  TrendingUp, ExternalLink, Lightbulb, Monitor, ShieldCheck
-} from 'lucide-react';
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Rocket,
@@ -54,9 +31,6 @@ import { Rocket,
   BarChart3,
   Globe2,
   ShieldCheck
-<<<<<<< HEAD
-const InnovativeServicesHub: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
@@ -526,23 +500,6 @@ export default function InnovativeServicesHub() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Filters and Search */}
-      <section className="py-8 bg-white/5 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Category Filters */}
-            <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-purple-600 text-white'
-                      : 'bg-slate-700 text-purple-200 hover:bg-slate-600'
-                  }`}
-=======
       {/* Service Categories */}
       <motion.div
         className="container mx-auto px-4 py-16"
@@ -556,13 +513,6 @@ export default function InnovativeServicesHub() {
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             From revolutionary AI to sustainable green technology, discover the perfect solution for your business
-<<<<<<< HEAD
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-          {serviceCategories.map((category)               => {;
-=======;
           </p>;
         </div>;
 ;
@@ -575,10 +525,6 @@ export default function InnovativeServicesHub() {
                 key = {category.id}
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
                 variants={itemVariants}
-<<<<<<< HEAD
-                whileHover={{ y: -5, scale: 1.02 }}
-
-=======
                 whileHover = {
   { y: -5,
   scale: 1.02 
@@ -637,54 +583,6 @@ export default function InnovativeServicesHub() {
                 <a
                   href={category.route}
                   className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3"
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-                >
-                  <category.icon className="w-4 h-4" />
-                  <span>{category.name}</span>
-                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
-                    {category.count}
-                  </span>
-                </button>
-              ))}
-            </div>
-
-            {/* Search and Sort */}
-            <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full sm:w-64 px-4 py-2 pl-10 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-purple-500 focus:outline-none"
-                />
-                <Search className="absolute left-3 top-2.5 w-4 h-4 text-purple-300" />
-              </div>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-purple-500 focus:outline-none"
-              >
-                <option value="popularity">Most Popular</option>
-                <option value="rating">Highest Rated</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
-      {/* Services Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <AnimatePresence mode="wait">
-=======
       {/* Featured Services */}
       <motion.div
         className="container mx-auto px-4 py-16"

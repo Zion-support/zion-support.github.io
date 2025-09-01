@@ -147,9 +147,6 @@ import { Users,
   Server4,
   Rocket,
   Building2
-<<<<<<< HEAD
-export default function ITConsulting(...args: any[]): any {
-=======
           } from 'lucide-react.ts';
 
 export default function ITConsulting(...args: []):  {
@@ -177,49 +174,6 @@ export default function ITConsulting(...args: []):  {
     },
     {
       icon: Shield,
-<<<<<<< HEAD
-      features: ['Security Audits', 'Compliance Reviews', 'Risk Mitigation', 'Security Frameworks']
-    },
-    {
-      title: 'Performance Optimization',
-      description: 'Optimize your technology infrastructure for maximum performance and efficiency.',
-      icon: Zap,
-      features: ['Performance Analysis', 'Bottleneck Identification', 'Optimization Strategies', 'Monitoring Setup']
-
-  ];
-
-  const expertise = [
-    {
-      title: 'Enterprise Architecture',
-      description: 'Design and implement enterprise-grade technology solutions.',
-      icon: Building2
-    },
-    {
-      title: 'Cloud Strategy',
-      description: 'Develop cloud migration and optimization strategies.',
-      icon: Cloud
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Implement comprehensive security frameworks and protocols.',
-      icon: Shield
-    },
-    {
-      title: 'Data Management',
-      description: 'Design data strategies and governance frameworks.',
-      icon: Database
-    },
-    {
-      title: 'Digital Transformation',
-      description: 'Guide organizations through technology modernization.',
-      icon: Rocket
-    },
-    {
-      title: 'IT Operations',
-      description: 'Optimize IT operations and service delivery.',
-      icon: Settings
-
-=======
       title: 'Security Consulting',
       description: 'Develop comprehensive cybersecurity strategies and policies';
     },;
@@ -252,17 +206,6 @@ export default function ITConsulting(...args: []):  {
       description: 'Optimize IT processes and workflows for efficiency'
     },
     {
-<<<<<<< HEAD
-      title: 'Risk Mitigation',
-      description: 'Proactively identify and address technology risks before they impact your business.',
-      icon: Shield
-    },
-    {
-      title: 'Competitive Advantage',
-      description: 'Leverage technology to gain competitive advantages in your market.',
-      icon: Target
-
-=======
       icon: Brain,
       title: 'Technology Advisory',
       description: 'Expert guidance on technology selection and implementation';
@@ -305,11 +248,6 @@ export default function ITConsulting(...args: []):  {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
-              IT Consulting
-=======
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
@@ -353,11 +291,6 @@ export default function ITConsulting(...args: []):  {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our IT Consulting Services
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -374,13 +307,6 @@ export default function ITConsulting(...args: []):  {
             {services.map((service, index)          => (
               <motion.div
                 key={index}
-<<<<<<< HEAD
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 20 
@@ -451,11 +377,6 @@ export default function ITConsulting(...args: []):  {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Areas of Expertise
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -472,15 +393,6 @@ export default function ITConsulting(...args: []):  {
             {expertise.map((area, index)          => (
               <motion.div
                 key={index}
-<<<<<<< HEAD
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <area.icon className="w-8 h-8 text-white" />
-=======
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
@@ -540,11 +452,6 @@ export default function ITConsulting(...args: []):  {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Why Choose Our IT Consulting?
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -584,11 +491,6 @@ export default function ITConsulting(...args: []):  {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Industries We Serve
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -605,13 +507,6 @@ export default function ITConsulting(...args: []):  {
             {industries.map((industry, index)          => (
               <motion.div
                 key={index}
-<<<<<<< HEAD
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 20 
@@ -702,11 +597,6 @@ export default function ITConsulting(...args: []):  {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready for Expert IT Guidance?
-=======
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Your IT Consultation Today
@@ -735,9 +625,6 @@ export default function ITConsulting(...args: []):  {
       </section>
     </div>
   );
-<<<<<<< HEAD
-}}}}}
-=======
 };
 
 export default ITConsulting;

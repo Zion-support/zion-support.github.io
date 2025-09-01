@@ -13,14 +13,6 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
   className
       )
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-interface CardProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
-  className?: string;
-=======
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }

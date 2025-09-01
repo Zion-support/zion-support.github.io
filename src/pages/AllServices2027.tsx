@@ -23,20 +23,8 @@ import { Brain,
   Lock,
   Cloud,
   Rocket
-<<<<<<< HEAD
- } from 'lucide-react';
-const AllServices2027: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-=======
-<<<<<<< HEAD
-const AllServices2027: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-const AllServices2027: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
-=======
 const AllServices2027: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
@@ -54,9 +42,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service =>
     selectedCategory === 'All' || service.category === selectedCategory
   );
-<<<<<<< HEAD
-  const getCategoryStats = (categoryId: string)  => {
-=======
 
   const getCategoryStats = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -75,9 +60,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => ;
     selectedCategory === 'All' || service.category === selectedCategory;
   );
-<<<<<<< HEAD
-  const getCategoryStats = (categoryId: string) => {;
-=======
 
   const getCategoryStats = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -190,15 +172,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
               specific business challenges and drive innovation.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.map((category)  => {;
-              specific business challenges and drive innovation.;
-            </p>;
-          </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {categories.map((category) => {;
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category)               => {;
 =======;
@@ -258,16 +231,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-<<<<<<< HEAD
-            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {filteredServices.map((service)  => (
-=======
-<<<<<<< HEAD
-            className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
-
-            {filteredServices.map((service)              => (
-=======
             className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredServices.map((service)               => (

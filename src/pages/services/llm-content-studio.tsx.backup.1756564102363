@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet             } from 'react-helmet-async.ts';
-import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles import { Link             } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet              } from 'react-helmet-async.ts';
 import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles              } from 'lucide-react.ts';
@@ -100,10 +95,6 @@ export default function LLMContentStudio(...args: []):  {
                   icon: Shield,
                   title: "Quality Assurance",
                   description: "Built-in plagiarism detection and content quality validation."
-<<<<<<< HEAD
-
-              ].map((feature, index)             => (
-=======
                 }
               ].map((feature, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -168,10 +159,6 @@ export default function LLMContentStudio(...args: []):  {
                   description: "Stories, scripts, and creative content projects.",
                   icon: PenTool,
                   benefits: ["Imaginative", "Emotionally engaging", "Original concepts"]
-<<<<<<< HEAD
-
-              ].map((contentType, index)             => (
-=======
                 }
               ].map((contentType, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -284,10 +271,6 @@ export default function LLMContentStudio(...args: []):  {
                   step: "04",
                   title: "Publishing",
                   description: "Final content is optimized and published across platforms."
-<<<<<<< HEAD
-
-              ].map((step, index)             => (
-=======
                 }
               ].map((step, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -390,10 +373,6 @@ export default function LLMContentStudio(...args: []):  {
                   metric: "ROI",
                   title: "Content ROI",
                   description: "Calculate return on investment for content"
-<<<<<<< HEAD
-
-              ].map((metric, index)             => (
-=======
                 }
               ].map((metric, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -429,16 +408,6 @@ export default function LLMContentStudio(...args: []):  {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;

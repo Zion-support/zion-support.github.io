@@ -12,11 +12,6 @@ import { Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins, PiggyBank,
   Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode,
   Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
-<<<<<<< HEAD
-=======
               } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -149,9 +144,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
     };
   ];
 };
-<<<<<<< HEAD
-const ComprehensivePricingGuide2028: React.FC = () => {;
-=======
 
 const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -170,17 +162,7 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
     { id: 'medium', name: '$500 - $10K', range: '$500 - $10K' },;
     { id: 'high', name: 'Over $10K', range: 'Over $10K' };
   ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const getAllServices = () => {
-    return [
-      ...pricingData2028.aiServices.map(service => ({ ...service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'AI Services' })),
-      ...pricingData2028.microSAAS.map(service               => ({ ...service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'Micro SAAS' })),;
-      ...pricingData2028.itServices.map(service               => ({ ...service, type: 'IT Services' }));
-    ]};
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const getAllServices = () => {;
     return [;
@@ -199,14 +181,7 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
     else if (priceRange === 'high') matchesPrice = price > 10000;
     return matchesCategory && matchesPrice;
   });
-<<<<<<< HEAD
-  const calculateROI = (roi: string) => {;
-=======
 
-<<<<<<< HEAD
-  const calculateROI = (roi: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    return parseInt(roi.replace('%', ''))};
-=======
   const calculateROI = (roi: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     return parseInt(roi.replace('%', ''));

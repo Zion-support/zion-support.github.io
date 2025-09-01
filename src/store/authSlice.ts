@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { createSlice, PayloadAction  } from '@reduxjs/toolkit';
-=======
 import { createSlice, PayloadAction               } from '@reduxjs/toolkit';
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -37,11 +34,6 @@ interface User {
 
 }
 interface AuthState {
-<<<<<<< HEAD
-  isLoggedIn: boolean;
-  user: User | null;
-  token: string | null;
-=======
 
 
 
@@ -59,8 +51,6 @@ interface AuthState {
   isLoggedIn: boolean;
   user:  | null;
   token: string | null;
-<<<<<<< HEAD
-=======
 
 
 
@@ -91,27 +81,12 @@ const initialState: AuthState = {
   ;
   ;
 };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-const authSlice = createSlice({
-  name: anyanyanyanyanyanyanyanyanyanyanyanyany'auth',
-  initialState,
-  reducers: {;
-    setLoggedIn: (state, action: PayloadAction<boolean>)               => {;
-      state.isLoggedIn = action.payload;
-    },
-    setUser: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<any>)               => {
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const authSlice = createSlice({;
   name: anyanyanyanyanyanyanyanyanyanyanyanyany'auth',;
   initialState,;
   reducers: {;
-<<<<<<< HEAD
-    setUser: (state, action: PayloadAction<User>) => {;
-=======
     setUser: (state, action: PayloadAction<User>)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -119,12 +94,6 @@ const authSlice = createSlice({;
       state.isAuthenticated = true;
       state.error = null;
     },
-<<<<<<< HEAD
-    setToken: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)               => {
-      state.token = action.payload;
-    },
-    logout: anyanyanyanyanyanyanyanyanyanyanyanyany(state)               => {
-=======
     setToken: (state, action: PayloadAction<string>) => {
       state.token = action.payload;
     },

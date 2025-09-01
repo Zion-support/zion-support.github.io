@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence          } from 'framer-motion.ts';
-import { Loader2, Zap, Brain, Rocket, Globe interface EnhancedLoadingSpinnerProps extends React.PropsWithChildren<{}> {
-
-  message?: string;
-  showProgress?: boolean;
-  progress?: number;
-  variant?: 'default' | 'ai' | 'tech' | 'global';
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  className?: string;
-=======
 import React from 'react.ts';
 import { motion  
         } from 'framer-motion.ts';
@@ -90,43 +78,6 @@ export function EnhancedLoadingSpinner({
     );
   }
 
-<<<<<<< HEAD
-  const IconComponent = iconMap[variant];
-
-  return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <motion.div
-        className={`rounded-full animate-spin ${spinnerSizeClasses[size]} ${spinnerColorClasses[variant]} border-solid border-gray-700`}
-        initial={{ rotate: 0 }}
-        animate={{ rotate: 360 }}
-        transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-
-        {variant !== 'default' && (
-          <motion.div
-            className="absolute inset-0 flex items-center justify-center text-white"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, repeat: Infinity, repeatType: 'reverse' }}
-
-            <IconComponent className={`h-3 w-3 ${size === 'xl' ? 'h-6 w-6' : ''}`} />
-          </motion.div>
-        )}
-      </motion.div>
-      {(variant === 'ai' || variant === 'tech' || variant === 'global') && (
-        <AnimatePresence mode="wait">
-          <motion.p
-            key={messageIndex}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.5 }}
-            className="mt-3 text-sm text-gray-400 text-center max-w-xs"
-
-            {loadingMessages[messageIndex]}
-          </motion.p>
-        </AnimatePresence>
-      )}
-=======
   if (variant === 'default') {
     return (
       <div className="flex flex-col items-center justify-center space-y-4">
@@ -235,47 +186,6 @@ export function EnhancedLoadingSpinner({
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export const ZionLoadingSpinner: React.FC<Omit<EnhancedLoadingSpinnerProps, 'variant'>> = (props) => (
-  <EnhancedLoadingSpinner {...props} variant="tech" />
-);
-
-export const TechLoadingSpinner: React.FC<Omit<EnhancedLoadingSpinnerProps, 'variant'>> = (props) => (
-  <EnhancedLoadingSpinner {...props} variant="tech" />
-);
-
-interface LoadingOverlayProps extends React.PropsWithChildren<{}> {
-
-  isOpen: boolean;
-  message?: string;
-  progress?: number;
-  variant?: 'default' | 'ai' | 'tech' | 'global';
-
-export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({;
-  isOpen,
-  message,
-  progress,
-  variant = 'default',
-
-}) => {
-  return (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[9999]"
-
-          <EnhancedLoadingSpinner message={message} showProgress={progress !== undefined} progress={progress} variant={variant} size="xl" />
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-};}}}}
-=======
 }
 
 // Export default for backward compatibility

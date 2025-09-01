@@ -17,9 +17,6 @@ export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-=======
 address: string;
 
 
@@ -70,9 +67,6 @@ export interface ITService {
   technologies: string[];
   useCases: string[];
   roi: string;
-<<<<<<< HEAD
-  setupTime: string;
-=======
 setupTime: string;
 
 

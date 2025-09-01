@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  AlertTriangle, 
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
-<<<<<<< HEAD
-import { motion               } from 'framer-motion.ts';
-import { AlertTriangle,
-  RefreshCw,
-  Home,
-  Bug,
-  X,
-  Info,
-  Copy,
-  ExternalLink,
-  Shield,
-  Zap
-=======
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { AlertTriangle, 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -25,19 +6,6 @@ import { AlertTriangle,
   Home, 
   ArrowLeft, 
   Bug, 
-<<<<<<< HEAD
-  Mail, 
-  Phone,
-  MessageCircle,
-  Zap,
-  Shield,
-  Activity
-} from 'lucide-react';
-import { AnimatePresence } from 'framer-motion';
-
-interface Props {
-  children: ReactNode;
-=======
   X, 
   Info,
   Download,
@@ -52,12 +20,6 @@ interface Props extends React.PropsWithChildren<{}> {
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo)               => void;
   showDetails?: boolean;
-<<<<<<< HEAD
-  enableReporting?: boolean;
-=======
-<<<<<<< HEAD
-  className?: string;
-=======
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
@@ -81,11 +43,6 @@ interface State {
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
-<<<<<<< HEAD
-  showTechnicalDetails: boolean;
-  isReporting: boolean;
-  reportSent: boolean;
-=======
 
 
 
@@ -145,11 +102,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
   private sendErrorToAnalytics = (error: Error, errorInfo: ErrorInfo) => {
     try {
-<<<<<<< HEAD
-      // Send to Google Analytics (if available)
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'exception', {
-=======
       // Example: Send to external error tracking service
       if (typeof window !== 'undefined' && (window as ).gtag) {
         (window as ).gtag('event', 'exception', {
@@ -185,28 +137,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         sessionId: this.getSessionId()
       };
 
-<<<<<<< HEAD
-      // Send to your error reporting service
-      const response = await fetch('/api/error-reporting', {
-        method: 'POST',
-=======
-<<<<<<< HEAD
-      // Example: Send to analytics service
-      if (window.gtag) {
-        window.gtag('event', 'exception', {
-          description: error.message,
-          fatal: true
-        });
-
-      // Store in localStorage for debugging
-      const errors = JSON.parse(localStorage.getItem('error-log') || '[]');
-      errors.push(errorData);
-      localStorage.setItem('error-log', JSON.stringify(errors.slice(-10))); // Keep last 10 errors
-    } catch (logError) {
-<<<<<<< HEAD
-      // // // console.error('Failed to log error:', logError);
-
-=======
       // // // // // // // console.error('Failed to log error:', logError);
 =======
       // Send to analytics endpoint
@@ -216,9 +146,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         headers: {
           'Content-Type': 'application/json',
         },
-<<<<<<< HEAD
-        body: JSON.stringify(errorReport),
-=======
         body: JSON.stringify(errorReport)
       }).catch(e               => console.warn('Failed to send error report:', e));
     } catch (e) {
@@ -228,86 +155,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
-<<<<<<< HEAD
-  private handleRetry = () => {
-    this.setState({ isRecovering: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue });
-
-    // Attempt to recover by clearing error state
-    setTimeout(()               => {
-      this.setState({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: null,
-        isRecovering: false
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      });
-
-      if (response.ok) {
-        this.setState({ reportSent: true });
-      }
-    } catch (reportError) {
-      console.warn('Failed to report error:', reportError);
-    } finally {
-      this.setState({ isReporting: false });
-    }
-  };
-
-  private getUserId = (): string => {
-    // Get user ID from localStorage, session, or other sources
-    try {
-      return localStorage.getItem('userId') || 'anonymous';
-    } catch {
-      return 'anonymous';
-    }
-  };
-
-  private getSessionId = (): string => {
-    // Get session ID from localStorage or generate one
-    try {
-      let sessionId = localStorage.getItem('sessionId');
-      if (!sessionId) {
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-        localStorage.setItem('sessionId', sessionId);
-      }
-      return sessionId;
-    } catch {
-      return `session_${Date.now()}`;
-    }
-  };
-
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: '',
-      showTechnicalDetails: false,
-      reportSent: false
-    });
-  };
-
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleGoBack = () => {
-    window.history.back();
-  };
-
-  private toggleTechnicalDetails = () => {
-    this.setState(prev => ({ 
-      showTechnicalDetails: !prev.showTechnicalDetails 
-    }));
-  };
-
-<<<<<<< HEAD
-  private copyErrorDetails = async () => {
-    if (this.state.error && this.state.errorInfo) {
-      const errorText = `
-Error Details:
-Message: ${this.state.error.message}
-=======
   handleCopyErrorDetails = async () => {
     if (!this.state.error) return;
 
@@ -321,42 +168,6 @@ URL: ${window.location.href}
 Timestamp: ${new Date().toISOString()}
       `;
 
-<<<<<<< HEAD
-      try {
-        await navigator.clipboard.writeText(errorText);
-        // Show success message
-        alert('Error details copied to clipboard');
-      } catch {
-=======
-<<<<<<< HEAD
-      navigator.clipboard.writeText(errorText).then(()               => {
-        // Show success feedback
-        const button = document.querySelector('[data-copy-button]') as HTMLButtonElement;
-        if (button) {
-          const originalText = button.textContent;
-          button.textContent = 'Copied!';
-          button.disabled = true;
-          setTimeout(() => {
-            button.textContent = originalText;
-            button.disabled = false;
-          }, 2000);
-
-      }).catch(() => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = errorText;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        alert('Error details copied to clipboard');
-      }
-    }
-  };
-
-<<<<<<< HEAD
-=======
   showToast = (message: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     // Create and show a toast notification
     const toast = document.createElement('div');
@@ -603,15 +414,6 @@ export const withErrorBoundary = <P extends object>(
 };
 
 // Hook for functional components to handle errors
-<<<<<<< HEAD
-export const useErrorHandler = () => {
-  const handleError = (error: Error, errorInfo?: any) => {
-    console.error('Error caught by useErrorHandler:', error, errorInfo);
-    
-    // Send to error reporting service
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
-=======
 export function useErrorHandler(...args: any[]): any {
   const handleError = (error: anyanyanyanyanyanyanyanyanyanyanyanyanyanyError, errorInfo?: ErrorInfo)               => {
     console.error('Error caught by hook:', error, errorInfo);
@@ -627,9 +429,6 @@ export function useErrorHandler(...args: any[]): any {
   };
 
   return { handleError };
-<<<<<<< HEAD
-};
-=======
 }
 
 // Higher-order component for error handling
@@ -646,36 +445,6 @@ export function withErrorBoundary<P extends object>(
   };
 }
 
-<<<<<<< HEAD
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  return WrappedComponent;
-};
-
-// Hook for functional components
-export const useErrorBoundary: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
-  const [error, setError] = React.useState<any>(null);
-
-  React.useEffect(() => {
-    const handleError = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyanyErrorEvent)               => {
-      setError(event.error);
-    };
-
-    const handleUnhandledRejection = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyanyPromiseRejectionEvent)               => {
-      setError(new Error(event.reason));
-    };
-
-    window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', handleUnhandledRejection);
-
-    return () => {
-      window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-    };
-  }, []);
-
-  return error;
-};}}}}}}}}}}}}}}}}}}}
-=======
 export default EnhancedErrorBoundary;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

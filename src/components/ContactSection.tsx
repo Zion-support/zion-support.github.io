@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Phone, Mail, MapPin, ArrowRight  } from 'lucide-react';
-export function ContactSection(...args[]):  {
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion               } from 'framer-motion.ts';
-import { Link               } from 'react-router-dom.ts';
-import { Phone, Mail, MapPin, ArrowRight export function ContactSection(...args: any[]): any {
-=======
 import React from 'react.ts';
 import { motion                } from 'framer-motion.ts';
 import { Link                } from 'react-router-dom.ts';

@@ -38,14 +38,6 @@ import { BarChart3,
   LineChart,
   AreaChart,
   ScatterPlot
-<<<<<<< HEAD
-} from 'lucide-react';
-import SEO from '../components/SEO';
-const Analytics: React.FC = () => {
-=======
-<<<<<<< HEAD
-import { SEO              } from '../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -229,10 +221,6 @@ const Analytics: React.FC = (): JSX.Element => {
               and make informed business decisions.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {analyticsFeatures.map((feature, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {analyticsFeatures.map((feature, index)              => (
@@ -284,10 +272,6 @@ const Analytics: React.FC = (): JSX.Element => {
               every aspect of your business intelligence needs.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {analyticsTypes.map((type, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {analyticsTypes.map((type, index)              => (
@@ -353,10 +337,6 @@ const Analytics: React.FC = (): JSX.Element => {
               and get a complete view of your business.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
-=======
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index)              => (

@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Leaf, 
-=======
-<<<<<<< HEAD
-const GreenIT: React.FC = (): JSX.Element => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">Green IT</h1>
-			<p className="text-xl text-gray-300">Sustainable technology practices.</p>
-		</div>
-	</div>
-);
-=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../components/SEO';
@@ -189,11 +172,6 @@ import { Leaf,
   BatteryLow as BatteryLow10,
   BatteryMedium as BatteryMedium10,
   BatteryEmpty as BatteryEmpty10
-<<<<<<< HEAD
-} from 'lucide-react';
-export default function GreenIT() {
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
-=======
              } from 'lucide-react.ts';
 
 export default function GreenIT(...args: any[]): any {
@@ -605,19 +583,12 @@ export default function GreenIT(...args: any[]): any {
       timeline: '4 months'
     }
   ];
-<<<<<<< HEAD
-  const toggleSection = (sectionId: string) => {
-=======
 
   const toggleSection = (sectionId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
   const filteredSolutions = selectedCategory === 'all' 
-<<<<<<< HEAD
-    ? greenSolutions 
-    : greenSolutions.filter(solution => solution.category === selectedCategory);
-=======
     ? greenSolutions: anyanyanyanyanyanyanyanyanyanyanyanyanygreenSolutions.filter(solution              => solution.category === selectedCategory);
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -672,10 +643,6 @@ export default function GreenIT(...args: any[]): any {
               Real results from implementing sustainable technology solutions
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {environmentalImpact.map((impact, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {environmentalImpact.map((impact, index)              => (
@@ -728,10 +695,6 @@ export default function GreenIT(...args: any[]): any {
               </button>
             ))}
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredSolutions.map((solution, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index)              => (
@@ -839,10 +802,6 @@ export default function GreenIT(...args: any[]): any {
               Recognized for our commitment to environmental sustainability
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {certifications.map((cert, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {certifications.map((cert, index)              => (
@@ -878,10 +837,6 @@ export default function GreenIT(...args: any[]): any {
               Real results from organizations implementing our Green IT solutions
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {caseStudies.map((study, index)              => (

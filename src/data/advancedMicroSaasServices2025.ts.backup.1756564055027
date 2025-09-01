@@ -56,14 +56,6 @@ contactInfo: {;
     uptime: string;
     security: string[];
   };
-<<<<<<< HEAD
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  rating: number;
-  reviews: number;
-  customers: number;
-=======
   competitors?: string[];
   marketSize?: string;
 }
@@ -391,18 +383,6 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
       uptime: "99.9%",
       security: ["SOC 2", "GDPR", "End-to-end encryption", "Role-based access control"]
     },
-<<<<<<< HEAD
-    competitors: ["Strivr", "Mursion", "VirtualSpeech", "Interplay Learning"],
-    marketSize: "$28.7 billion by 2025",
-    growthRate: "180% annual growth",
-    rating: 4.7,
-    reviews: 189,
-    customers: 345
-
-];
-
-export default ADVANCED_MICRO_SAAS_SERVICES_2025;}}
-=======
     competitors: ["Hired", "Pymetrics", "HireVue", "Mya Systems", "Paradox"],
     marketSize: "$18.9 billion by 2025"
   }

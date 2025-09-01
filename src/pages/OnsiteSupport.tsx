@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Users,
-  MapPin,
-  Clock,
-  CheckCircle,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Rocket,
-  Phone,
-  Mail,
-  Calendar,
-  Star,
-  Award,
-  Building,
-  Wrench,
-  Settings,
-  Database,
-  Server,
-  Network,
-  Lock,
-  Eye,
-  AlertTriangle,
-  Info,
-  ArrowRight,
-  Globe
-import { SEO              } from '../components/SEO';
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
@@ -38,24 +5,6 @@ import { SEO               } from '../components/SEO';
 import { Wrench, 
   Clock, 
   Shield, 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  Users, 
-  CheckCircle, 
-  AlertTriangle,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Server,
-  Network,
-  Database,
-  Monitor,
-  HardDrive,
-  Router
-              } from 'lucide-react.ts';
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Zap, 
   Brain, 
@@ -79,10 +28,6 @@ import { Wrench,
   ArrowRight,
   Globe
 } from 'lucide-react';
-<<<<<<< HEAD
-import { SEO } from "../components/SEO";
-export default function OnsiteSupport(...args[]):  {
-=======
 import { SEO              } from '../components/SEO';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -334,16 +279,6 @@ export default function OnsiteSupport(...args[]: any):  {
   delay: 0.3 
 }}
             className="text-3xl font-bold text-white text-center mb-12"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-            Our Onsite Support Services
-          </motion.h2>
-
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {supportServices.map((service, index)              => (
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           >
@@ -355,10 +290,6 @@ export default function OnsiteSupport(...args[]: any):  {
               handle all aspects of your IT infrastructure.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index)               => (
@@ -416,10 +347,6 @@ export default function OnsiteSupport(...args[]: any):  {
           className="text-3xl font-bold text-white text-center mb-12"
           Service Coverage Areas
         </motion.h2>
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {coverageAreas.map((area, index) => (
-=======
 
         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
           {coverageAreas.map((area, index)              => (
@@ -482,16 +409,6 @@ export default function OnsiteSupport(...args[]: any):  {
   delay: 0.7 
 }}
             className="text-3xl font-bold text-white text-center mb-12"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-            Support Tiers & Pricing
-          </motion.h2>
-
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {supportTiers.map((tier, index)              => (
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           >
@@ -503,10 +420,6 @@ export default function OnsiteSupport(...args[]: any):  {
               with our comprehensive onsite support services.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)               => (
@@ -527,34 +440,6 @@ export default function OnsiteSupport(...args[]: any):  {
   delay: 0.8 + index * 0.1 
 }}
                 className="bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-                <div className="text-center mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${tier.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                    <tier.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{tier.title}</h3>
-                  <p className="text-slate-400 text-sm">{tier.description}</p>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="space-y-3">
-                    <h4 className="text-slate-300 font-medium">Features: anyanyanyanyanyanyanyanyanyanyanyanyany</h4>
-                    {tier.features.map((feature, idx)              => (
-                      <div key={idx} className="flex items-center space-x-3">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-slate-300 text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="pt-4 border-t border-slate-700 text-center">
-                    <div className="text-slate-400 text-sm">Starting at</div>
-                    <div className="text-green-400 font-bold text-lg">{tier.pricing}</div>
-                  </div>
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               >
@@ -586,10 +471,6 @@ export default function OnsiteSupport(...args[]: any):  {
           className="text-3xl font-bold text-white text-center mb-12"
           Our Response Process
         </motion.h2>
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-          {responseProcess.map((step, index) => (
-=======
 
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-5 gap-6">
           {responseProcess.map((step, index)              => (
@@ -644,10 +525,6 @@ export default function OnsiteSupport(...args[]: any):  {
               guaranteed response times based on priority levels.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {responseTimes.map((item, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {responseTimes.map((item, index)               => (
@@ -701,10 +578,6 @@ export default function OnsiteSupport(...args[]: any):  {
           className="text-3xl font-bold text-white text-center mb-12"
           Get Onsite Support
         </motion.h2>
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {contactInfo.map((contact, index) => (
-=======
 
         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
           {contactInfo.map((contact, index)              => (

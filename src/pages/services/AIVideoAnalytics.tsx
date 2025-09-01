@@ -100,10 +100,6 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['60-80% incident reduction', 'Real-time detection', 'AI-powered insights'].map((t) => (
-=======
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['60-80% incident reduction', 'Real-time detection', 'AI-powered insights'].map((t)              => (

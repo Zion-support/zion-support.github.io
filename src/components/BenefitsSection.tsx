@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
-=======
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Bot, Clock, Globe, TrendingDown, CheckCircle import { GradientHeading               } from './GradientHeading';
-=======
 import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star               } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -34,9 +26,6 @@ interface Benefit {
   bgColor: string;
   stats: string;
   features: string[];
-<<<<<<< HEAD
-const benefits: Benefit[] = [
-=======
 
 const benefits: Benefit[] = [;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -110,10 +99,6 @@ features: [;
       "Transparent cost structure"
     ]
 ];
-<<<<<<< HEAD
-export function BenefitsSection() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-=======
 
 export function BenefitsSection(...args: any[]): any {
   const [hoveredIndex, setHoveredIndex] = useState<any>(null);
@@ -189,10 +174,6 @@ export function BenefitsSection(...args: any[]): any {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-<<<<<<< HEAD
-          viewport={{ once: true }}
-          {stats.map((stat, index) => (
-=======
           viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
           {stats.map((stat, index)               => (
@@ -270,29 +251,6 @@ export function BenefitsSection(...args: any[]): any {
                   <AnimatePresence>
                     {hoveredIndex === index && (
                       <motion.div
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                        className="space-y-2"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany0.3 }}
-
-                        {benefit.features.map((feature, idx)               => (
-                          <motion.div
-                            key={idx}
-                            className="flex items-center gap-2 text-zion-slate-light/80 text-sm"
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: idx * 0.1 }}
-
-                            <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                            <span>{feature}</span>
-                          </motion.div>
-                        ))}
-                      </motion.div>
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                         className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10 rounded-2xl"
                         initial={{ opacity: 0 }}
@@ -307,70 +265,6 @@ export function BenefitsSection(...args: any[]): any {
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-gradient-to-r from-slate-700 to-slate-600 rounded-3xl p-12 border border-slate-500"
-
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">Our Impact in Numbers</h3>
-            <p className="text-gray-300 text-lg">Real results that speak for themselves</p>
-          </div>
-
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
-            {stats.map((stat, index)               => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center group"
-
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="w-10 h-10 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-                <div className="text-gray-300 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-16"
-
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who have already experienced the Zion Tech Group difference
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
-                Get Started Today
-              </button>
-              <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300">
-                Schedule a Demo
-              </button>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-</div>};
-
-export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       </div>
     </section>

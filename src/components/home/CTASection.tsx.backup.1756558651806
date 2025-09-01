@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { Link          } from 'react-router-dom.ts';
-import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: React.FC = (): JSX.Element => {
-=======
 import React from 'react.ts';
 import { motion           } from 'framer-motion.ts';
 import { Link           } from 'react-router-dom.ts';
@@ -25,15 +19,6 @@ const CTASection: React.FC = (): JSX.Element => {
     {
       icon: Calendar,
       title: "Flexible Plans",
-<<<<<<< HEAD
-      description: "Scale up or down as your business grows"
-    },
-    {
-      icon: Star,
-      title: "Proven Results",
-      description: "Trusted by industry leaders worldwide"
-
-=======
       description: "Scale up or down as your business grows";
     },;
     {;
@@ -196,10 +181,6 @@ const CTASection: React.FC = (): JSX.Element => {
 
 }}
           viewport={{ once: anyanyanyanyanyanyanyanyanytrue }}
-<<<<<<< HEAD
-
-          {features.map((feature, index)          => (
-=======
         >
           {features.map((feature, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -322,23 +303,12 @@ const CTASection: React.FC = (): JSX.Element => {
             <div className="text-zion-cyan font-bold text-lg">Fortune 500</div>
             <div className="text-zion-blue font-bold text-lg">Startups</div>
             <div className="text-zion-purple font-bold text-lg">Enterprises</div>
-<<<<<<< HEAD
-            <div className="text-zion-cyan font-bold text-lg">Government</div>
-          </div>
-        </motion.div>
-      </div>;
-    </section>;
-  )};
-=======
             <div className="text-zion-cyan font-bold text-lg">Government</div>;
           </div>;
         </motion.div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-</div></div></div>};
-=======
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

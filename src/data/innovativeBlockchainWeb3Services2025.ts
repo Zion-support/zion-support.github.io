@@ -1,6 +1,4 @@
 export interface InnovativeBlockchainWeb3Service {
-<<<<<<< HEAD
-=======
 
 
 

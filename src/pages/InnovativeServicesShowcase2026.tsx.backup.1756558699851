@@ -1,71 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Brain, 
-  Shield, 
-  Zap, 
-  Cloud, 
-  Lock, 
-  Globe, 
-  Cpu, 
-  Database,
-  Network,
-  Smartphone,
-  BarChart3,
-  TrendingUp,
-  Users,
-  Building2,
-  Leaf,
-  Car,
-  Heart,
-  Scale,
-  Eye,
-  Search,
-  Filter,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink
-          } from 'lucide-react.ts';
-import { INNOVATIVE_SERVICES           } from '../data/servicesData';
-export default function InnovativeServicesShowcase2026(...args[]: any):  {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState('innovation');
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, color: 'from-blue-500 to-cyan-500' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
-    { id: 'DevOps & Infrastructure', name: 'DevOps & Infrastructure', icon: Cpu, color: 'from-green-500 to-emerald-500' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-rose-500 to-pink-500' },;
-    { id: 'AI & Edge Computing', name: 'AI & Edge Computing', icon: Zap, color: 'from-amber-500 to-yellow-500' };
-  ];
-  const filteredServices = INNOVATIVE_SERVICES.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch});
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {;
-      case 'price':;
-        return a.price - b.price;
-      case 'innovation':
-        return a.innovationLevel === 'Cutting-edge' ? -1 : 1;
-      case 'roi':
-        return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
-=======
 import React, { useState, useMemo } from 'react.ts';
 import { motion          } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Lock, Leaf, Phone, Mail, MapPin import { SEO          } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026          } from '../data/innovativeMicroSaasServices2026';
-
-const InnovativeServicesShowcase2026: React.FC = (): JSX.Element => {
-=======
 import { Brain,
   Shield,
   Zap,
@@ -158,10 +92,6 @@ export default function InnovativeServicesShowcase2026(...args: any[]): any {
         return <Leaf className="w-5 h-5" />;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       default:
-<<<<<<< HEAD
-        return <Star className="w-5 h-5" />;
-
-=======
         return 0}
   });
   const containerVariants = {
@@ -201,45 +131,6 @@ export default function InnovativeServicesShowcase2026(...args: any[]): any {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO
-        title="Innovative Services Showcase 2026 - Zion Tech Group"
-        description="Explore our cutting-edge 2026 innovative micro SAAS services including AI, Quantum Computing, Blockchain, and more. Transform your business with revolutionary technology solutions."
-      />
-
-      {/* Hero Section */}
-      <section className="relative py-20 sm:py-32">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-
-            <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Innovative Services
-              </span>
-              <br />
-              <span className="text-white">Showcase 2026</span>
-            </h1>
-            <p className="text-xl sm:text-2xl text-slate-300 max-w-4xl mx-auto mb-8">
-              Discover revolutionary micro SAAS solutions that combine cutting-edge AI, quantum computing, blockchain, and emerging technologies to transform your business operations.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-400">
-              <span className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-yellow-400" />
-                Revolutionary AI Solutions
-              </span>
-              <span className="flex items-center gap-2">
-                <Zap className="w-4 h-4 text-blue-400" />
-                Quantum Computing
-              </span>
-              <span className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-green-400" />
-                Advanced Security
-              </span>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -324,12 +215,6 @@ export default function InnovativeServicesShowcase2026(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                  className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus: anyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
-
-                  {categories.map(category          => (
-                    <option key={category} value={category}>{category}</option>
-=======
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   {categories.map(category           => (
@@ -400,25 +285,6 @@ export default function InnovativeServicesShowcase2026(...args: any[]): any {
 
 }}
                 className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10"
-<<<<<<< HEAD
-
-                {/* Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-cyan-400/10 rounded-lg text-cyan-400">
-                      {getCategoryIcon(service.category)}
-                    </div>
-                    <div>
-                      <div className="text-xs uppercase tracking-wide text-cyan-300/70">
-                        {service.category}
-                      </div>
-                      <div className="text-xs text-slate-400">
-                        {service.subcategory}
-                      </div>
-                    </div>
-                  </div>
-                  {getInnovationBadge(service.innovationLevel)}
-=======
               >
                 {/* Innovation Level Badge */}
                 <div className="absolute top-4 right-4">
@@ -676,14 +542,6 @@ export default function InnovativeServicesShowcase2026(...args: any[]): any {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -693,8 +551,5 @@ export default function InnovativeServicesShowcase2026(...args: any[]): any {
 };
 
 export default InnovativeServicesShowcase2026;
-<<<<<<< HEAD
-}}}}}
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

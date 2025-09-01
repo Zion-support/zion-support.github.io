@@ -1,15 +1,4 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import { Link           } from 'react-router-dom.ts';
-import { MessageSquare, BookOpen, Bot, Workflow, Bell, DollarSign, ExternalLink const HelpdeskPlatform: React.FC = (): JSX.Element => {
-	const capabilities = [
-		{ icon: MessageSquare, title: 'Omnichannel Tickets', desc: 'Email, chat, and social inbox with SLAs and macros.' },
-		{ icon: BookOpen, title: 'Knowledge Base', desc: 'SEO-friendly docs with feedback, search, and versioning.' },
-		{ icon: Bot, title: 'AI Assistant', desc: 'LLM-trained on your docs to suggest answers and draft replies.' },
-		{ icon: Workflow, title: 'Automation', desc: 'Routing, escalations, and workflows integrating Slack/Teams/Jira.' },
-		{ icon: Bell, title: 'Status & Incidents', desc: 'Public status page, maintenance windows, and postmortems.' }
-	];
-=======
 import { motion           } from 'framer-motion.ts';
 import { SEO           } from '../../components/SEO';
 import { MessageCircle, 
@@ -148,9 +137,6 @@ export default function HelpdeskPlatform(...args: any[]): any {
     }
   ];
 
-<<<<<<< HEAD
-export default HelpdeskPlatform;}
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 

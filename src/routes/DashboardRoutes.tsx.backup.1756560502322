@@ -34,9 +34,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -46,9 +43,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -66,9 +60,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -78,9 +69,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Analytics />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -90,9 +78,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -118,9 +103,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Messages Page</div>
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -130,9 +112,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Inbox Page</div>
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -142,9 +121,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Payments />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -154,9 +130,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Interviews />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -166,9 +139,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Notifications />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -178,9 +148,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ApplicationStatusTracker />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -206,9 +173,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <PortfolioBuilder />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -218,9 +182,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Referrals Page</div>
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -262,9 +223,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
@@ -274,9 +232,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />

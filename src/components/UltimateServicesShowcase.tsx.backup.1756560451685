@@ -19,17 +19,10 @@ import { Brain,
   Phone,
   Mail,
   MapPin
-<<<<<<< HEAD
-=======
             } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import the new services
-<<<<<<< HEAD
-import { ultimateInnovativeServices2025             } from '../../data/2025-ultimate-innovative-services-expansion';
-import { enterpriseITInfrastructureServices2025             } from '../../data/2025-enterprise-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025             } from '../../data/2025-innovative-micro-saas-solutions';
-=======
 import { ultimateInnovativeServices2025            } from '../../data/2025-ultimate-innovative-services-expansion';
 import { enterpriseITInfrastructureServices2025            } from '../../data/2025-enterprise-it-infrastructure-services';
 import { innovativeMicroSaasSolutions2025            } from '../../data/2025-innovative-micro-saas-solutions';
@@ -98,9 +91,6 @@ website: string;
   innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
-<<<<<<< HEAD
-  marketDisruption: string;
-=======
   marketDisruption: string}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -140,15 +130,6 @@ const categories = [
     services: enterpriseITInfrastructureServices2025
   },
   {
-<<<<<<< HEAD
-    id: 'micro-saas',
-    name: 'Micro SAAS Solutions',
-    description: 'Innovative software solutions for small businesses',
-    icon: <Code className="w-8 h-8" />,
-    color: 'from-green-600 to-emerald-700',
-    services: innovativeMicroSaasSolutions2025
-
-=======
     id: 'micro-saas',;
     name: 'Micro SAAS Solutions',;
     description: 'Innovative software solutions for small businesses',;
@@ -211,15 +192,6 @@ export function UltimateServicesShowcase(...args[]: any):  {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-<<<<<<< HEAD
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-
-
-=======
     visible: {;
       opacity: 1,;
       transition: {;
@@ -241,15 +213,6 @@ export function UltimateServicesShowcase(...args[]: any):  {
 
 },
     visible: {
-<<<<<<< HEAD
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-
-
-=======
       opacity: 1,;
       y: 0,;
       transition: {;
@@ -320,12 +283,6 @@ export function UltimateServicesShowcase(...args[]: any):  {
         {/* Category Navigation */}
         <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 20 
@@ -500,12 +457,6 @@ export function UltimateServicesShowcase(...args[]: any):  {
         {/* Call to Action */}
         <motion.div
           className="text-center mt-16"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 20 
@@ -680,24 +631,12 @@ export function UltimateServicesShowcase(...args[]: any):  {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      )}
-    </section>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       )};
     </section>;
   );
-<<<<<<< HEAD
-
-export default UltimateServicesShowcase;}}}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 

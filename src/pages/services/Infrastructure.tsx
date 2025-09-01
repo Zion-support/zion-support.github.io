@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3  } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 const InfrastructureServices = () => {
-=======
 import React from 'react.ts';
 import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3               } from 'lucide-react.ts';
 
@@ -103,10 +95,6 @@ const InfrastructureServices = () => {
               reliability and performance your business demands.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {infrastructureServices.map((service, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {infrastructureServices.map((service, index)              => (
@@ -143,10 +131,6 @@ const InfrastructureServices = () => {
               scalable infrastructure solutions.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {technologies.map((tech, index)              => (

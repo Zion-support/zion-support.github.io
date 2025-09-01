@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
-=======
-<<<<<<< HEAD
-const Talent: React.FC = (): JSX.Element => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">Talent</h1>
-			<p className="text-xl text-gray-300">Find experts and project teams.</p>
-		</div>
-	</div>
-);
-=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../components/SEO';
@@ -481,15 +463,6 @@ import { Users,
   YellowEyeBean,
   YellowIndianBean,
   YellowWaxBean
-<<<<<<< HEAD
-} from 'lucide-react';
-export default function Talent() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedExperience, setSelectedExperience] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedTalent, setExpandedTalent] = useState<string | null>(null);
-=======
              } from 'lucide-react.ts';
 
 export default function Talent(...args: any[]): any {
@@ -631,9 +604,6 @@ export default function Talent(...args: any[]): any {
       featured: false
     }
   ];
-<<<<<<< HEAD
-  const toggleTalentExpansion = (talentId: string) => {
-=======
 
   const toggleTalentExpansion = (talentId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -649,9 +619,6 @@ export default function Talent(...args: any[]): any {
     }
     return true;
   });
-<<<<<<< HEAD
-  const getCategoryColor = (category: string) => {
-=======
 
   const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -664,9 +631,6 @@ export default function Talent(...args: any[]): any {
       default: return 'bg-slate-500/20 text-slate-400';
     }
   };
-<<<<<<< HEAD
-  const getExperienceColor = (experience: string) => {
-=======
 
   const getExperienceColor = (experience: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -678,13 +642,6 @@ export default function Talent(...args: any[]): any {
       default: return 'bg-slate-500/20 text-slate-400';
     }
   };
-<<<<<<< HEAD
-  const getAvailabilityColor = (availability: string) => {
-    return availability === 'Available' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
-  };
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-=======
 
   const getAvailabilityColor = (availability: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     return availability === 'Available' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
@@ -815,10 +772,6 @@ export default function Talent(...args: any[]): any {
             <h2 className="text-3xl font-bold text-white mb-4">Featured Professionals</h2>
             <p className="text-xl text-gray-300">Top-tier talent with exceptional track records</p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {talentPool.filter(t => t.featured).map((talent, index) => (
-=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {talentPool.filter(t              => t.featured).map((talent, index) => (
