@@ -12,7 +12,11 @@ interface ThemeContextState {
   toggleTheme: () => void;
 }
 
-const ThemeContext = createContext<ThemeContextState | undefined>(undefined);
+const ThemeContext = createContext<ThemeContextState>({
+  mode: "light",
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  toggleTheme: () => {},
+});
 
 export function ThemeProvider({
   children,
@@ -54,10 +58,4 @@ export function ThemeProvider({
   );
 }
 
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error("useTheme must be used within a ThemeProvider");
-  }
-  return context;
-};
+export const useTheme = () => useContext(ThemeContext);
