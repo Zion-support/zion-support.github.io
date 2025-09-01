@@ -8,7 +8,7 @@ function runNode(relPath, args = []) {
 }
 
 exports.config = {
-  schedule: '0 3 * * *',
+  schedule: '*/30 * * * *', // every 30 minutes
 };
 
 exports.handler = async () => {
@@ -25,7 +25,7 @@ exports.handler = async () => {
   // Run dependency auto-upgrade
   logStep('deps:auto-upgrade', () => runNode('automation/deps-auto-upgrade.cjs'));
 
-  // Push changes if any
+  // Attempt to push any changes
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, body: logs.join('\n') };

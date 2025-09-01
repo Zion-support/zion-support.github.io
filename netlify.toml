@@ -334,58 +334,9 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-  name = "autonomous-invention-orchestrator"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "llm-content-curator-runner"
-  schedule = "*/20 * * * *"
-
-[[scheduled.functions]]
-  name = "front-index-advertiser"
-  schedule = "*/10 * * * *"
-
-[[scheduled.functions]]
-  name = "website-search-index-runner"
-  schedule = "29 */4 * * *"
-
-# From feature branch (keep)
-[[scheduled.functions]]
-  name = "automation-guardian-runner"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "auto-discovery-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "cloud-autonomous-orchestrator-runner"
-  schedule = "*/15 * * * *" # every 15 minutes
-
-[[scheduled.functions]]
-  name = "branch-cleanup-runner"
-  schedule = "0 3 * * *" # daily at 03:00 UTC
-
-[[scheduled.functions]]
-  name = "terminology-consistency-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "stale-content-auditor-runner"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
   name = "deps-auto-upgrade-runner"
-  schedule = "7 */12 * * *"
+  schedule = "*/30 * * * *" # every 30 minutes
 
 [[scheduled.functions]]
-  name = "cloud-automation-inventor"
-  schedule = "*/3 * * * *" # every 3 minutes
-
-[[scheduled.functions]]
-  name = "autonomous-front-advertiser"
-  schedule = "*/4 * * * *" # every 4 minutes
-
-[[scheduled.functions]]
-  name = "hyper-sync-committer"
-  schedule = "*/1 * * * *" # every minute
+  name = "sitemap-pinger"
+  schedule = "17 */2 * * *" # every 2 hours
