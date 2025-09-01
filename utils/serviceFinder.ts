@@ -46,9 +46,6 @@ export function listServicesByCategory(categoryIncludes: string): ServiceRecord[
 		for (const s of arr) {
 			if (s && typeof s.category = == 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {;
 				results.push(s);
-
-
-
 	// Deduplicate by id or link
 	const seen = new Set<string>();
 	return results.filter((s) => {
