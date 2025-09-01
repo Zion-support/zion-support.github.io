@@ -3,8 +3,8 @@
     {
       "file": "index.html",
       "csp": false,
-      "xFrame": true,
-      "xContent": true
+      "xFrame": false,
+      "xContent": false
     },
     {
       "file": "offline.html",
@@ -25,5 +25,5 @@
       "hasLintScript": true
     }
   ],
-  "timestamp": "2025-09-01T11:47:50.352Z"
+  "timestamp": "2025-09-01T11:49:39.475Z"
 }
