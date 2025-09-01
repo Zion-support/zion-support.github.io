@@ -1,14 +1,20 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-export default function TalentDetailPage() {
-  const router = useRouter();
-  const { slug } = router.query;
+const TalentSlugPage: NextPage = () => {
   return (
-    <EnhancedLayout>
-      <h1 className="text-2xl font-semibold">Talent: {String(slug || '')}</h1>
-      <p className="text-gray-600">Details coming soon.</p>
-    </EnhancedLayout>
+    <div>
+      <Head>
+        <title>Talent - Zion Tech Solutions</title>
+        <meta name="description" content="Talent page" />
+      </Head>
+      
+      <main>
+        <h1>Talent</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
   );
-}
+};
+
+export default TalentSlugPage;

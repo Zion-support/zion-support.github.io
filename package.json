@@ -2,11 +2,23 @@
   "name": "operator-reminder-workflow",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
+  "bin": {
+    "zion": "scripts/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zion-Holdings/zion.app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zion-Holdings/zion.app/issues"
+  },
+  "homepage": "https://github.com/Zion-Holdings/zion.app#readme",
+  "engines": {
+    "node": ">=20.18.1",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
-    "auto:source-tree": "node automation/source-tree-sync.cjs",
-    "auto:changelog": "node automation/commit-changelog-generator.cjs",
-    "auto:fix": "node automation/auto-fix-orchestrator.cjs",
+    "devnet:start": "NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=development DEVNET=1 PORT=3001 next dev -p 3001",
     "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
     "feedback:analyze": "node scripts/analyze-feedback.js",
     "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
