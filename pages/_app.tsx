@@ -1,13 +1,30 @@
-import type { AppProps } from 'next/app';
+import App, { AppProps, AppContext } from 'next/app';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
-import '../styles/globals.css';
+import { TenantProvider } from '../components/multiverse/TenantProvider';
+import { getServerSideTenant } from '../utils/tenant';
 import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
+import '../styles/globals.css';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+function ZionApp({ Component, pageProps }: AppProps) {
   return (
-    <EnhancedLayout>
-      <Component {...pageProps} />
-    </EnhancedLayout>
+    <TenantProvider initialTenant={pageProps?.tenant ?? null}>
+      <EnhancedLayout>
+        <Component {...pageProps} />
+      </EnhancedLayout>
+    </TenantProvider>
   );
 }
+
+ZionApp.getInitialProps = async (appContext: AppContext) => {
+  const appProps = await App.getInitialProps(appContext);
+  const req = (appContext?.ctx as any)?.req;
+  let tenant = null;
+  if (req) {
+    const result = await getServerSideTenant({ req });
+    tenant = result.tenant;
+  }
+  return { ...appProps, pageProps: { ...appProps.pageProps, tenant } } as any;
+};
+
+export default ZionApp;

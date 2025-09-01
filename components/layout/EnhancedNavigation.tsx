@@ -1,22 +1,18 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
-const Web3LoginButton = dynamic(() => import('../auth/Web3LoginButton'), { ssr: false });
+import { useTenant } from '../multiverse/TenantProvider';
 
 export default function EnhancedNavigation() {
-  const [balance, setBalance] = React.useState<number | null>(null);
-  React.useEffect(() => {
-    const uid = typeof window !== 'undefined' ? (window.localStorage.getItem('zion_user_id') || 'demo-user') : 'demo-user';
-    fetch(`/api/wallet?userId=${encodeURIComponent(uid)}`)
-      .then((r) => r.json())
-      .then((d) => setBalance(d?.wallet?.balance ?? 0))
-      .catch(() => setBalance(0));
-  }, []);
+  const { tenant } = useTenant();
   return (
     <nav className="border-b border-gray-200 dark:border-gray-800 bg-transparent backdrop-blur supports-backdrop-blur:bg-transparent sticky top-0 z-40">
       <div className="container mx-auto px-4 h-14 flex items-center justify-between">
-        <Link href="/"><a className="font-semibold">Zion</a></Link>
+        <Link href="/">
+          <a className="font-semibold flex items-center gap-2">
+            {tenant?.logoUrl ? <img src={tenant.logoUrl} alt={tenant.name} className="w-6 h-6 rounded" /> : null}
+            <span>{tenant?.name ?? 'Zion'}</span>
+          </a>
+        </Link>
         <div className="flex items-center gap-4 text-sm">
           <Link href="/manifesto"><a>Manifesto</a></Link>
           <Link href="/roadmap"><a>Roadmap</a></Link>
@@ -26,8 +22,10 @@ export default function EnhancedNavigation() {
           <Link href="/certifications"><a>Certifications</a></Link>
           <Link href="/dao"><a>DAO</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
-          <Link href="/admin/usage-analytics"><a>Analytics</a></Link>
-          <Link href="/admin/pitch-generator"><a className="font-medium">Admin</a></Link>
+          <span className="inline-flex items-center gap-1 text-xs">
+            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--accent, #3b82f6)' }} />
+            <span className="text-gray-500">{tenant?.subdomain ?? 'global'}</span>
+          </span>
         </div>
         <div className="flex items-center gap-4 text-sm">
           <Link href="/services"><a>Services</a></Link>
