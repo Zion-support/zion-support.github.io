@@ -172,6 +172,14 @@
   schedule = "53 */6 * * *"
 
 [[scheduled.functions]]
+  name = "redirect-healer"
+  schedule = "*/15 * * * *"
+
+[[scheduled.functions]]
+  name = "sitemap-prioritizer"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
   name = "redirect-manager"
   schedule = "*/30 * * * *"
 
@@ -284,7 +292,6 @@ schedule = "*/2 * * * *" # every 2 minutes
   name = "branch-cleanup-runner"
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
-# New: Roadmap runner
 [[scheduled.functions]]
-  name = "roadmap-runner"
-  schedule = "*/10 * * * *"
+  name = "cache-warmer"
+  schedule = "*/5 * * * *" # every 5 minutes
