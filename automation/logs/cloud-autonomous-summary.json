@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-24T00:00:22.881Z",
+  "timestamp": "2025-08-23T23:56:52.080Z",
   "results": [
     {
       "name": "type-check",
@@ -71,7 +71,7 @@
     },
     {
       "name": "build",
-      "code": 0
+      "code": 1
     }
   ]
 }

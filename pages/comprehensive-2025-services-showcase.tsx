@@ -108,13 +108,18 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <SEO 
-        title="Comprehensive 2025 Services Showcase - Zion Tech Group"
-        description="Explore our comprehensive portfolio of innovative AI automation, IT infrastructure, micro SAAS solutions, and cutting-edge AI services. Transform your business with Zion Tech Group."
-        keywords={["AI automation", "IT infrastructure", "micro SAAS", "AI services", "business solutions", "technology services"]}
-        image="https://ziontechgroup.com/og-image-2025-services.jpg"
-      />
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+      <Head>
+        <title>Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group." />
+        <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" />
+        <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
+        <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
+      
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Comprehensive 2025 Innovative Services Showcase — Zion Tech Group","url":"https://ziontechgroup.com/comprehensive-2025-services-showcase","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
+
+      <EnhancedNavigation />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
