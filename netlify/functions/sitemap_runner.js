@@ -1,46 +1,31 @@
-#!/usr/bin/env node
-
-'use strict';
-
-const fs = require('fs');
+const { execSync } = require('child_process');
 const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    console.log('🤖 sitemap_runner function triggered');
+    console.log('🚀 sitemap_runner function triggered');
     
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'sitemap-runner-report.md');
+    // Execute the corresponding automation script
+    const scriptPath = path.join(process.cwd(), 'automation', 'sitemap-runner.cjs');
+    const result = execSync(`node "${scriptPath}"`, { 
+      encoding: 'utf8',
+      cwd: process.cwd(),
+      timeout: 30000 // 30 second timeout
+    });
     
-    const reportContent = `# Sitemap Runner Report
-
-Generated: ${timestamp}
-
-## Status
-- Task: sitemap_runner
-- Status: Completed
-- Timestamp: ${timestamp}
-
-## Actions Taken
-- Function executed successfully
-- Report generated
-- Ready for next scheduled run
-
-## Next Steps
-- Function will run again in 12 hours
-- Continue keeping sitemap fresh for SEO
-`;
-
-    fs.writeFileSync(reportPath, reportContent);
-    console.log('📝 Report generated');
+    console.log('✅ sitemap_runner completed successfully');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Sitemap runner completed successfully',
-        timestamp: timestamp,
-        status: 'success'
-      })
+        message: 'sitemap_runner executed successfully',
+        timestamp: new Date().toISOString(),
+        result: result
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      }
     };
     
   } catch (error) {
@@ -49,10 +34,14 @@ Generated: ${timestamp}
     return {
       statusCode: 500,
       body: JSON.stringify({
-        message: 'Sitemap runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString()
-      })
+        message: 'sitemap_runner execution failed',
+        timestamp: new Date().toISOString(),
+        error: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      }
     };
   }
 };

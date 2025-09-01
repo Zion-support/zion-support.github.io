@@ -1,46 +1,31 @@
-#!/usr/bin/env node
-
-'use strict';
-
-const fs = require('fs');
+const { execSync } = require('child_process');
 const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    console.log('🤖 front-index-orchestrator function triggered');
+    console.log('🚀 front-index-orchestrator function triggered');
     
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'front-index-orchestrator-report.md');
+    // Execute the corresponding automation script
+    const scriptPath = path.join(process.cwd(), 'automation', 'front-index-orchestrator.cjs');
+    const result = execSync(`node "${scriptPath}"`, { 
+      encoding: 'utf8',
+      cwd: process.cwd(),
+      timeout: 30000 // 30 second timeout
+    });
     
-    const reportContent = `# Front Index Orchestrator Report
-
-Generated: ${timestamp}
-
-## Status
-- Task: front-index-orchestrator
-- Status: Completed
-- Timestamp: ${timestamp}
-
-## Actions Taken
-- Function executed successfully
-- Report generated
-- Ready for next scheduled run
-
-## Next Steps
-- Function will run again in 5 minutes
-- Continue orchestrating front index operations
-`;
-
-    fs.writeFileSync(reportPath, reportContent);
-    console.log('📝 Report generated');
+    console.log('✅ front-index-orchestrator completed successfully');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Front index orchestrator completed successfully',
-        timestamp: timestamp,
-        status: 'success'
-      })
+        message: 'front-index-orchestrator executed successfully',
+        timestamp: new Date().toISOString(),
+        result: result
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      }
     };
     
   } catch (error) {
@@ -49,10 +34,14 @@ Generated: ${timestamp}
     return {
       statusCode: 500,
       body: JSON.stringify({
-        message: 'Front index orchestrator failed',
-        error: error.message,
-        timestamp: new Date().toISOString()
-      })
+        message: 'front-index-orchestrator execution failed',
+        timestamp: new Date().toISOString(),
+        error: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      }
     };
   }
 };

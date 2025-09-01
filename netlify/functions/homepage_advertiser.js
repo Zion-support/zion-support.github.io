@@ -1,46 +1,31 @@
-#!/usr/bin/env node
-
-'use strict';
-
-const fs = require('fs');
+const { execSync } = require('child_process');
 const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    console.log('🤖 homepage_advertiser function triggered');
+    console.log('🚀 homepage_advertiser function triggered');
     
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'homepage-advertiser-report.md');
+    // Execute the corresponding automation script
+    const scriptPath = path.join(process.cwd(), 'automation', 'homepage-auto-advertiser.cjs');
+    const result = execSync(`node "${scriptPath}"`, { 
+      encoding: 'utf8',
+      cwd: process.cwd(),
+      timeout: 30000 // 30 second timeout
+    });
     
-    const reportContent = `# Homepage Advertiser Report
-
-Generated: ${timestamp}
-
-## Status
-- Task: homepage_advertiser
-- Status: Completed
-- Timestamp: ${timestamp}
-
-## Actions Taken
-- Function executed successfully
-- Report generated
-- Ready for next scheduled run
-
-## Next Steps
-- Function will run again in 15 minutes
-- Continue monitoring homepage performance
-`;
-
-    fs.writeFileSync(reportPath, reportContent);
-    console.log('📝 Report generated');
+    console.log('✅ homepage_advertiser completed successfully');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Homepage advertiser completed successfully',
-        timestamp: timestamp,
-        status: 'success'
-      })
+        message: 'homepage_advertiser executed successfully',
+        timestamp: new Date().toISOString(),
+        result: result
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      }
     };
     
   } catch (error) {
@@ -49,10 +34,14 @@ Generated: ${timestamp}
     return {
       statusCode: 500,
       body: JSON.stringify({
-        message: 'Homepage advertiser failed',
-        error: error.message,
-        timestamp: new Date().toISOString()
-      })
+        message: 'homepage_advertiser execution failed',
+        timestamp: new Date().toISOString(),
+        error: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      }
     };
   }
 };
