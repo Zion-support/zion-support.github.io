@@ -58,4 +58,5 @@ export default function FoundationPage() {
       </div>
     </>
   );
-}
+
+export default Foundation;

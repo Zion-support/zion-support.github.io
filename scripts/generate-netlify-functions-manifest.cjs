@@ -6,49 +6,38 @@
 const fs = require('fs');
 const path = require('path');
 
-function ensureDirectory(directoryPath) {
-	if (!fs.existsSync(directoryPath)) {
-		fs.mkdirSync(directoryPath, { recursive: true });
-	}
+const functionsDir = path.join(__dirname, '..', 'netlify', 'functions');
+const manifestPath = path.join(functionsDir, 'functions-manifest.json');
+
+function listFunctions() {
+  if (!fs.existsSync(functionsDir)) {
+    console.log('Functions directory not found, creating empty manifest');
+    return [];
+  }
+  
+  const files = fs.readdirSync(functionsDir).filter(f => f.endsWith('.js') || f.endsWith('.ts'));
+  const names = files
+    .map(f => f.replace(/\.(js|ts)$/,'').trim())
+    .filter(name => !name.startsWith('_'))
+    .sort();
+  return names;
 }
 
-function writeJson(filePath, data) {
-	fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + '\n', 'utf8');
+function main() {
+  const names = listFunctions();
+  const manifest = { 
+    generatedAt: new Date().toISOString(), 
+    functions: names 
+  };
+  
+  // Ensure the directory exists
+  const manifestDir = path.dirname(manifestPath);
+  if (!fs.existsSync(manifestDir)) {
+    fs.mkdirSync(manifestDir, { recursive: true });
+  }
+  
+  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+  console.log(`Updated functions manifest with ${names.length} entries.`);
 }
 
-function generateManifest() {
-	const baseDir = process.cwd();
-	const netlifyDir = path.join(baseDir, 'netlify', 'functions');
-	const manifestPath = path.join(netlifyDir, 'functions-manifest.json');
-
-	ensureDirectory(netlifyDir);
-
-	let existing = null;
-	if (fs.existsSync(manifestPath)) {
-		try {
-			existing = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-		} catch (_) {
-			// ignore parse error; we'll overwrite
-		}
-	}
-
-	const manifest = {
-		version: 1,
-		generatedAt: new Date().toISOString(),
-		environment: {
-			node: process.version,
-		},
-		functions: existing && Array.isArray(existing.functions) ? existing.functions : [],
-	};
-
-	writeJson(manifestPath, manifest);
-	console.log(`[netlify:manifest] Manifest written to ${manifestPath}`);
-}
-
-try {
-	generateManifest();
-} catch (error) {
-	console.error('[netlify:manifest] Failed to generate manifest:', error?.message || error);
-	process.exitCode = 0; // do not fail build; treat as non-blocking
-}
-
+main();

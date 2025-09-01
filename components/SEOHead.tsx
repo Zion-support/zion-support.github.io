@@ -10,11 +10,11 @@ const SEOHead: React.FC<SEOProps> = ({
   url, 
   type = 'website' 
 }) => {
-  const siteUrl = 'https://ziontechgroup.com';
-  const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const defaultImage = `${siteUrl}/og-image.jpg`;
-
-  const structuredData = {
+  const siteName = 'Zion Tech Group';
+  const twitterHandle = '@ziontechgroup';
+  
+  // Structured data for better SEO
+  const structuredData: any = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
