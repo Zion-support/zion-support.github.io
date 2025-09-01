@@ -1,212 +1,259 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import { FeatureShowcase } from "@/components/FeatureShowcase";
+import { useState, useEffect } from 'react';
+import Button from '@/components/Button';
+import InteractiveCard, { TestimonialCard } from '@/components/InteractiveCard';
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeFeature, setActiveFeature] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
-    
-    // Auto-rotate features
-    const interval = setInterval(() => {
-      setActiveFeature((prev) => (prev + 1) % 6);
-    }, 3000);
-    
-    return () => clearInterval(interval);
   }, []);
 
   const features = [
     {
-      icon: (
-        <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-        </svg>
-      ),
-      title: "Marketplace & Jobs",
-      description: "Complete marketplace infrastructure with job posting, talent matching, and project management.",
-      color: "blue",
-      bgColor: "bg-blue-500/20",
-      hoverBgColor: "group-hover:bg-blue-500/30"
+      title: 'AI Autonomous Systems',
+      description: 'Revolutionary AI agents that operate independently, making decisions and executing complex tasks without human intervention.',
+      icon: '🤖',
+      href: '/ai-autonomous-systems',
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: (
-        <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-        </svg>
-      ),
-      title: "AI Governance",
-      description: "Intelligent governance systems with DAO voting, proposal management, and automated decision-making.",
-      color: "purple",
-      bgColor: "bg-purple-500/20",
-      hoverBgColor: "group-hover:bg-purple-500/30"
+      title: 'Quantum Neural Networks',
+      description: 'Next-generation quantum computing platforms that leverage quantum mechanics for unprecedented AI processing power.',
+      icon: '⚛️',
+      href: '/quantum-neural-network-platform',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: (
-        <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-        </svg>
-      ),
-      title: "Token Systems",
-      description: "Flexible token economics with rewards, staking, and multi-currency support for your economy.",
-      color: "green",
-      bgColor: "bg-green-500/20",
-      hoverBgColor: "group-hover:bg-green-500/30"
+      title: 'Enterprise Security',
+      description: 'AI-powered security solutions that protect your business with intelligent threat detection and response.',
+      icon: '🔒',
+      href: '/ai-powered-enterprise-security',
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: (
-        <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      ),
-      title: "Identity & KYC",
-      description: "Secure identity verification with KYC/AML compliance and Web3 wallet integration.",
-      color: "red",
-      bgColor: "bg-red-500/20",
-      hoverBgColor: "group-hover:bg-red-500/30"
+      title: 'Business Intelligence',
+      description: 'Advanced analytics and insights powered by AI to drive data-driven decision making.',
+      icon: '📊',
+      href: '/ai-business-intelligence',
+      color: 'from-orange-500 to-red-500'
     },
     {
-      icon: (
-        <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
-      title: "AI-Powered Tools",
-      description: "ZionGPT integration, resume builders, and AI moderation systems for enhanced user experience.",
-      color: "yellow",
-      bgColor: "bg-yellow-500/20",
-      hoverBgColor: "group-hover:bg-yellow-500/30"
+      title: 'Content Generation',
+      description: 'AI-powered content creation tools that generate high-quality, engaging content at scale.',
+      icon: '✍️',
+      href: '/ai-content-generator',
+      color: 'from-indigo-500 to-purple-500'
     },
     {
-      icon: (
-        <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-        </svg>
-      ),
-      title: "Modular Architecture",
-      description: "Pick and choose the features you need. Deploy only what matters for your specific use case.",
-      color: "indigo",
-      bgColor: "bg-indigo-500/20",
-      hoverBgColor: "group-hover:bg-indigo-500/30"
+      title: 'Research Automation',
+      description: 'Autonomous research assistants that accelerate discovery and innovation across all domains.',
+      icon: '🔬',
+      href: '/ai-autonomous-research-assistant',
+      color: 'from-teal-500 to-blue-500'
+    }
+  ];
+
+  const stats = [
+    { number: '500+', label: 'AI Models Deployed', icon: '🚀' },
+    { number: '50+', label: 'Enterprise Clients', icon: '🏢' },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: '⚡' },
+    { number: '24/7', label: 'AI Support', icon: '🤝' }
+  ];
+
+  const testimonials = [
+    {
+      quote: "Zion Tech Group's AI solutions have transformed our business operations completely. The autonomous systems are game-changing.",
+      author: "Sarah Chen",
+      position: "CTO, TechCorp",
+      company: "TechCorp Industries"
+    },
+    {
+      quote: "The quantum neural network platform exceeded our expectations. Processing speeds are incredible.",
+      author: "Dr. Michael Rodriguez",
+      position: "Head of Research",
+      company: "Quantum Labs"
+    },
+    {
+      quote: "Enterprise security has never been more robust. The AI threat detection is proactive and intelligent.",
+      author: "Lisa Thompson",
+      position: "Security Director",
+      company: "Global Finance Corp"
     }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center relative z-10">
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="absolute inset-0 opacity-20 bg-gradient-to-r from-purple-500/20 to-blue-500/20"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto text-center z-10">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="gradient-text animate-pulse">Zion OS</span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+              <span className="gradient-text text-shadow">
+                The Future of AI
+              </span>
+              <br />
+              <span className="text-white text-shadow">is Here</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Launch sovereign AI-powered digital economies with one click. 
-              Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.
+            <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
+              Zion Tech Group leads the revolution in AI-powered technology solutions. 
+              Transform your business with autonomous systems, quantum computing, and cutting-edge innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/multiverse/launch" className="btn-primary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
-                🚀 Launch Your Economy
-              </Link>
-              <Link href="/docs" className="btn-secondary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
-                📚 View Documentation
-              </Link>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button
+                href="/contact"
+                size="xl"
+                icon={
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                }
+                iconPosition="right"
+              >
+                Get Started Today
+              </Button>
+              <Button
+                href="/services"
+                variant="outline"
+                size="xl"
+                icon={
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                }
+                iconPosition="right"
+              >
+                Explore Services
+              </Button>
             </div>
           </div>
         </div>
-        
-        {/* Enhanced Background Elements */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-full blur-3xl animate-pulse-slow"></div>
-          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-r from-green-500/20 to-blue-600/20 rounded-full blur-2xl animate-pulse-slow animation-delay-1000"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-[300px] h-[300px] bg-gradient-to-r from-purple-500/20 to-pink-600/20 rounded-full blur-2xl animate-pulse-slow animation-delay-2000"></div>
-        </div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-cyan-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
       </section>
 
-      {/* Enhanced Features Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Stats Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/30 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">AI-Powered Solutions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI technologies designed for the future
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
               <div 
-                key={index}
-                className={`card group cursor-pointer transform transition-all duration-300 hover:scale-105 ${
-                  activeFeature === index ? 'ring-2 ring-blue-500/50 bg-white/10' : ''
-                }`}
-                onClick={() => setActiveFeature(index)}
+                key={index} 
+                className="text-center group transition-all duration-500"
               >
-                <div className={`w-12 h-12 ${feature.bgColor} rounded-lg flex items-center justify-center mb-4 ${feature.hoverBgColor} transition-colors`}>
-                  {feature.icon}
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                  {stat.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-400">
-                  {feature.description}
-                </p>
-                <div className={`mt-4 h-1 bg-gradient-to-r from-${feature.color}-500/50 to-${feature.color}-600/50 rounded-full transform origin-left transition-all duration-300 ${
-                  activeFeature === index ? 'scale-x-100' : 'scale-x-0'
-                }`}></div>
+                <div className="text-5xl md:text-6xl font-bold gradient-text mb-3 group-hover:scale-110 transition-transform duration-300">
+                  {stat.number}
+                </div>
+                <div className="text-gray-400 font-medium text-lg">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
+      {/* Features Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="card bg-transparent border-0">
-              <div className="text-4xl font-bold gradient-text mb-2">100+</div>
-              <div className="text-gray-400">Deployed Economies</div>
-            </div>
-            <div className="card bg-transparent border-0">
-              <div className="text-4xl font-bold gradient-text mb-2">50K+</div>
-              <div className="text-gray-400">Active Users</div>
-            </div>
-            <div className="card bg-transparent border-0">
-              <div className="text-4xl font-bold gradient-text mb-2">99.9%</div>
-              <div className="text-gray-400">Uptime</div>
-            </div>
-            <div className="card bg-transparent border-0">
-              <div className="text-4xl font-bold gradient-text mb-2">24/7</div>
-              <div className="text-gray-400">Support</div>
-            </div>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 text-shadow">
+              Revolutionary AI Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Discover our cutting-edge AI platforms that are transforming industries and reshaping the future of technology.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <InteractiveCard
+                key={index}
+                title={feature.title}
+                description={feature.description}
+                icon={feature.icon}
+                href={feature.href}
+                color={feature.color}
+                className="animate-fade-in"
+              />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Feature Showcase */}
-      <FeatureShowcase />
-
-      {/* Enhanced CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 transform hover:scale-105 transition-all duration-300">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Launch Your Digital Economy?
+      {/* Testimonials Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-shadow">
+              What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join the future of sovereign, AI-powered digital economies. 
-              Deploy in minutes, scale infinitely.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Real feedback from industry leaders who have transformed their businesses with our AI solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/multiverse/launch" className="btn-primary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
-                🚀 Start Deployment
-              </Link>
-              <Link href="/admin/instances" className="btn-secondary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
-                👀 View Examples
-              </Link>
-            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={index}
+                quote={testimonial.quote}
+                author={testimonial.author}
+                position={testimonial.position}
+                company={testimonial.company}
+                className="animate-fade-in"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 text-shadow">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+            Join the AI revolution and stay ahead of the competition with Zion Tech Group's cutting-edge solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button
+              href="/contact"
+              size="xl"
+              icon={
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              }
+              iconPosition="right"
+            >
+              Schedule a Demo
+            </Button>
+            <Button
+              href="/case-studies"
+              variant="outline"
+              size="xl"
+              icon={
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              }
+              iconPosition="right"
+            >
+              View Case Studies
+            </Button>
           </div>
         </div>
       </section>
