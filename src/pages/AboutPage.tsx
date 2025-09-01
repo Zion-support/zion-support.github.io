@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+=======
 import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export function AboutPage (...args: any[]) : any {
@@ -6,6 +12,7 @@ import {
 
 import { motion } from 'framer - motion.ts';
 
+>>>>>>> 82b8c9da73d581e93549ea90cb9ba854068d51e8
   Users,
   Target,
   Zap,
@@ -27,8 +34,14 @@ import { motion } from 'framer - motion.ts';
   Twitter,
   Github,
   Facebook,
+<<<<<<< HEAD
+  Instagram,
+} from 'lucide-react';
+=======
   Instagram} from 'lucide - react.ts';
+>>>>>>> 82b8c9da73d581e93549ea90cb9ba854068d51e8
 
+export function AboutPage() {
   const values = [
     {
 
