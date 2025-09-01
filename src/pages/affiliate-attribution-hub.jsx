@@ -3,23 +3,28 @@ import React from 'react';
 export default AffiliateAttributionHub;
 
 const AffiliateAttributionHub = () => {
+
     const features = [
         {
+
             title: "Multi - Touch Attribution",
             description: "Track customer journey across all touchpoints and channels",
             icon: "🔄"
         },
         {
+
             title: "Real - time Analytics",
             description: "Live insights into affiliate performance and conversions",
             icon: "📊"
         },
         {
+
             title: "Fraud Detection",
             description: "Advanced algorithms to detect and prevent affiliate fraud",
             icon: "🛡️"
         },
         {
+
             title: "Commission Management",
             description: "Automated commission calculation and payment processing",
             icon: "💰"
@@ -27,21 +32,25 @@ const AffiliateAttributionHub = () => {
     ];
     const attributionModels = [
         {
+
             name: "First - Touch Attribution",
             description: "Credit goes to the first affiliate that introduced the customer",
             useCase: "Brand awareness campaigns"
         },
         {
+
             name: "Last - Touch Attribution",
             description: "Credit goes to the last affiliate before conversion",
             useCase: "Direct response campaigns"
         },
         {
+
             name: "Linear Attribution",
             description: "Equal credit distribution across all touchpoints",
             useCase: "Multi - channel marketing"
         },
         {
+
             name: "Time - Decay Attribution",
             description: "More recent touchpoints receive higher credit",
             useCase: "Long sales cycles"
@@ -49,36 +58,44 @@ const AffiliateAttributionHub = () => {
     ];
     const platformFeatures = [
         {
+
             category: "Affiliate Management",
             features["Affiliate onboarding", "Performance tracking", "Commission rules", "Payment processing"];
         },;
         {
+
             category: "Analytics & Reporting",
             features["Real - time dashboards", "Custom reports", "ROI analysis", "Conversion tracking"];
         },;
         {
+
             category: "Fraud Prevention",
             features["Click fraud detection", "Conversion validation", "IP monitoring", "Behavioral analysis"];
         },;
         {
+
             category: "Integration & APIs",
             features["CRM integration", "E - commerce platforms", "Marketing tools", "Custom webhooks"];
         }
     ];
     const benefits = [
         {
+
             title: "Increased Revenue",
             description: "Optimize affiliate performance and maximize conversions"
         },
         {
+
             title: "Better ROI",
             description: "Accurate attribution leads to better marketing decisions"
         },
         {
+
             title: "Fraud Prevention",
             description: "Protect your budget from fraudulent affiliate activities"
         },
         {
+
             title: "Data Insights",
             description: "Deep understanding of customer journey and attribution patterns"
 

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Users, Globe, Eye, Video, MessageSquare, Zap, Monitor, ShoppingCart } from 'lucide-react';
 const MarketingServices = [
     {
+
         title: "Search Engine Optimization (SEO)",
         description: "Improve your website's visibility and rank higher in search results",
         price: "$1,500 - $8,000/month",
@@ -16,6 +17,7 @@ const MarketingServices = [
         link: "/request-quote?service=seo"
     },
     {
+
         title: "Pay-Per-Click (PPC) Management",
         description: "Strategic PPC campaigns across Google, Facebook, and other platforms",
         price: "$1,000 - $5,000/month + 10-15% ad spend",
@@ -26,6 +28,7 @@ const MarketingServices = [
         link: "/request-quote?service=ppc"
     },
     {
+
         title: "Social Media Marketing",
         description: "Engage your audience across all major social platforms",
         price: "$800 - $4,000/month",
@@ -35,6 +38,7 @@ const MarketingServices = [
         link: "/request-quote?service=social-media"
     },
     {
+
         title: "Content Marketing Strategy",
         description: "Create valuable content that attracts and converts your audience",
         price: "$2,000 - $10,000/month",
@@ -44,6 +48,7 @@ const MarketingServices = [
         link: "/request-quote?service=content-marketing"
     },
     {
+
         title: "Email Marketing Campaigns",
         description: "Build relationships and drive sales through targeted email campaigns",
         price: "$500 - $3,000/month",
@@ -53,6 +58,7 @@ const MarketingServices = [
         link: "/request-quote?service=email-marketing"
     },
     {
+
         title: "Marketing Analytics & Reporting",
         description: "Data-driven insights to optimize your marketing performance",
         price: "$800 - $3,000/month",
@@ -62,6 +68,7 @@ const MarketingServices = [
         link: "/request-quote?service=marketing-analytics"
     },
     {
+
         title: "Conversion Rate Optimization",
         description: "Improve your website's ability to convert visitors into customers",
         price: "$1,500 - $6,000/month",
@@ -71,6 +78,7 @@ const MarketingServices = [
         link: "/request-quote?service=conversion-optimization"
     },
     {
+
         title: "Influencer Marketing",
         description: "Partner with influencers to reach new audiences and build trust",
         price: "$2,000 - $15,000 per campaign",
@@ -80,6 +88,7 @@ const MarketingServices = [
         link: "/request-quote?service=influencer-marketing"
     },
     {
+
         title: "Video Marketing & Production",
         description: "Create engaging video content for multiple platforms",
         price: "$1,000 - $8,000 per video",
@@ -89,6 +98,7 @@ const MarketingServices = [
         link: "/request-quote?service=video-marketing"
     },
     {
+
         title: "Graphic Design Services",
         description: "Professional design for marketing materials and branding",
         price: "$50 - $300 per design",
@@ -98,6 +108,7 @@ const MarketingServices = [
         link: "/request-quote?service=graphic-design"
     },
     {
+
         title: "Marketing Automation",
         description: "Streamline your marketing processes with automation tools",
         price: "$1,000 - $5,000/month",
@@ -107,6 +118,7 @@ const MarketingServices = [
         link: "/request-quote?service=marketing-automation"
     },
     {
+
         title: "Local SEO & Google My Business",
         description: "Optimize your business for local search results",
         price: "$500 - $2,500/month",
@@ -116,6 +128,7 @@ const MarketingServices = [
         link: "/request-quote?service=local-seo"
     },
     {
+
         title: "E-commerce Marketing",
         description: "Specialized marketing strategies for online stores",
         price: "$1,500 - $8,000/month",
@@ -125,6 +138,7 @@ const MarketingServices = [
         link: "/request-quote?service=ecommerce-marketing"
     },
     {
+
         title: "Marketing Strategy Consulting",
         description: "Strategic guidance for your overall marketing approach",
         price: "$150 - $300/hour",
@@ -134,6 +148,7 @@ const MarketingServices = [
         link: "/request-quote?service=marketing-consulting"
     },
     {
+
         title: "Brand Development & Positioning",
         description: "Develop a strong brand identity and market position",
         price: "$5,000 - $25,000",
@@ -143,6 +158,7 @@ const MarketingServices = [
         link: "/request-quote?service=brand-development"
     },
     {
+
         title: "Marketing Technology Stack",
         description: "Audit and optimize your marketing technology infrastructure",
         price: "$2,000 - $10,000",
@@ -172,6 +188,7 @@ const categories = [
     { name: "MarTech", value: "martech", icon: <Monitor className="h-4 w-4"/> }
 ];
 export default function DigitalMarketingServicesPage() {
+
     const [selectedCategory, setSelectedCategory] = React.useState("all");
     const filteredServices = selectedCategory === "all"
         ? MarketingServices

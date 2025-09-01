@@ -35,7 +35,7 @@ const fetcher = async (url: string): Promise<WizardResponse> => {
 
     if (process.env.NODE_ENV === 'development') {
 
-      // // console.error(err);
+      // // // console.error(err);
     } else {
 
       captureException(err);

@@ -60,7 +60,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
 
     if (!web3ModalInstance) {
 
-        // // console.error('Web3Modal not initialized');
+        // // // console.error('Web3Modal not initialized');
         return;
     }
     try {
@@ -116,18 +116,18 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
           address: newAddress,
           chainId: newNetwork.chainId,
           isConnected: true});
-        // // console.log('Network changed to:', newNetwork.chainId);
+        // // // console.log('Network changed to:', newNetwork.chainId);
       });
 
       instance.on('disconnect', (error: any) => {
 
-        // // console.log('Disconnected', error);
+        // // // console.log('Disconnected', error);
         disconnectWallet();
       });
 
     } catch (error) {
 
-      // // console.error('Error connecting wallet:', error);
+      // // // console.error('Error connecting wallet:', error);
       // If user closes modal, it might throw an error, so we ensure state is reset
       disconnectWallet();
     }

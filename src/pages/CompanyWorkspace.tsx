@@ -8,6 +8,7 @@ import { useAuth  } from '@/hooks / useAuth';
 import { useCompWorkspace  } from '@/hooks / useCompWorkspace';
 import { useWhitelabel  } from '@/context / WhitelabelContext';
 export default React.memo (function CompWorkspace (...args[]) :  {
+
 import SEOHead from "../components / SEOHead.jsx";
 
     const { compSlug } = useParams () ;
@@ -15,6 +16,7 @@ import SEOHead from "../components / SEOHead.jsx";
     const { comp, isLoading, error } = useCompWorkspace (compSlug) ;
     const { isWhitelabel, tenant, brandName } = useWhitelabel () ;
     if (isLoading) {
+
         return < Navigate to = "/unauthorized"/>}
     return (<ProtectedRoute>
       <SEO title = {`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}/>;

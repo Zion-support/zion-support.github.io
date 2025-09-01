@@ -4,7 +4,7 @@ import React, { useState, useCallback } from 'react';
 export const toast = ({ title, description, variant = 'default' }) => {
 
   // In a real app, this would integrate with a toast library
-  // // // console.log(`Toast [${variant}]: ${title} - ${description}`);
+  // // // // console.log(`Toast [${variant}]: ${title} - ${description}`);
 
   // For now, just log to console
   // You can replace this with your preferred toast implementation

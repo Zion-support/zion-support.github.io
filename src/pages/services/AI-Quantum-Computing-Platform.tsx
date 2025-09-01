@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Cpu, 
   Zap, 
@@ -31,35 +32,42 @@ import {
 } from 'lucide-react';
 
 const AIQuantumComputingPlatform: React.FC = () => {
+
   const [activeTab, setActiveTab] = useState('overview');
 
   const features = [
     {
+
       icon: Brain,
       title: 'Quantum AI Hybrid Processing',
       description: 'Combines quantum computing power with AI algorithms for unprecedented computational capabilities'
     },
     {
+
       icon: Cpu,
       title: 'Quantum-Classical Integration',
       description: 'Seamless integration between quantum and classical computing resources'
     },
     {
+
       icon: Shield,
       title: 'Post-Quantum Cryptography',
       description: 'Advanced security protocols resistant to quantum attacks'
     },
     {
+
       icon: Database,
       title: 'Quantum Data Storage',
       description: 'Revolutionary data storage using quantum entanglement principles'
     },
     {
+
       icon: Network,
       title: 'Quantum Network Infrastructure',
       description: 'High-speed quantum communication networks for secure data transmission'
     },
     {
+
       icon: BarChart3,
       title: 'Quantum Analytics Engine',
       description: 'Real-time analytics powered by quantum computing algorithms'
@@ -68,31 +76,37 @@ const AIQuantumComputingPlatform: React.FC = () => {
 
   const useCases = [
     {
+
       title: 'Financial Modeling',
       description: 'Complex risk assessment and portfolio optimization using quantum algorithms',
       icon: TrendingUp
     },
     {
+
       title: 'Drug Discovery',
       description: 'Molecular simulation and protein folding prediction with quantum precision',
       icon: Atom
     },
     {
+
       title: 'Climate Modeling',
       description: 'Advanced climate prediction models using quantum computational power',
       icon: Globe
     },
     {
+
       title: 'Logistics Optimization',
       description: 'Complex routing and supply chain optimization with quantum algorithms',
       icon: Network
     },
     {
+
       title: 'AI Training',
       description: 'Accelerated machine learning model training using quantum computing',
       icon: Brain
     },
     {
+
       title: 'Cryptography',
       description: 'Next-generation encryption and security protocols',
       icon: Lock
@@ -101,6 +115,7 @@ const AIQuantumComputingPlatform: React.FC = () => {
 
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$2,500',
       period: '/month',
@@ -116,6 +131,7 @@ const AIQuantumComputingPlatform: React.FC = () => {
       popular: false
     },
     {
+
       plan: 'Professional',
       price: '$8,500',
       period: '/month',
@@ -132,6 +148,7 @@ const AIQuantumComputingPlatform: React.FC = () => {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$25,000',
       period: '/month',
@@ -152,31 +169,37 @@ const AIQuantumComputingPlatform: React.FC = () => {
 
   const benefits = [
     {
+
       icon: Zap,
       title: 'Exponential Speed',
       description: 'Up to 1000x faster than classical computing for specific problems'
     },
     {
+
       icon: Brain,
       title: 'AI Enhancement',
       description: 'Quantum-powered AI algorithms for superior pattern recognition'
     },
     {
+
       icon: Shield,
       title: 'Future-Proof Security',
       description: 'Post-quantum cryptography resistant to quantum attacks'
     },
     {
+
       icon: TrendingUp,
       title: 'Competitive Advantage',
       description: 'Stay ahead with cutting-edge quantum computing capabilities'
     },
     {
+
       icon: Globe,
       title: 'Global Scalability',
       description: 'Access quantum computing resources from anywhere in the world'
     },
     {
+
       icon: Users,
       title: 'Expert Support',
       description: 'Dedicated quantum computing specialists and AI experts'
@@ -320,6 +343,7 @@ const AIQuantumComputingPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'bg-gradient-to-br from-blue-600 to-purple-700 text-white shadow-2xl scale-105' 
                     : 'bg-white border-2 border-slate-200 hover:border-blue-300'
@@ -335,23 +359,27 @@ const AIQuantumComputingPlatform: React.FC = () => {
                 
                 <div className="text-center mb-8">
                   <h3 className={`text-2xl font-bold mb-2 ${
+
                     plan.popular ? 'text-white' : 'text-gray-900'
                   }`}>
                     {plan.plan}
                   </h3>
                   <div className="flex items-baseline justify-center">
                     <span className={`text-4xl font-bold ${
+
                       plan.popular ? 'text-white' : 'text-gray-900'
                     }`}>
                       {plan.price}
                     </span>
                     <span className={`ml-2 text-lg ${
+
                       plan.popular ? 'text-blue-100' : 'text-gray-600'
                     }`}>
                       {plan.period}
                     </span>
                   </div>
                   <p className={`mt-2 ${
+
                     plan.popular ? 'text-blue-100' : 'text-gray-600'
                   }`}>
                     {plan.description}
@@ -362,6 +390,7 @@ const AIQuantumComputingPlatform: React.FC = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
                       <CheckCircle className={`h-5 w-5 mr-3 mt-0.5 ${
+
                         plan.popular ? 'text-green-400' : 'text-green-500'
                       }`} />
                       <span className={plan.popular ? 'text-blue-100' : 'text-gray-600'}>
@@ -372,6 +401,7 @@ const AIQuantumComputingPlatform: React.FC = () => {
                 </ul>
                 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-white text-blue-600 hover:bg-gray-100'
                     : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'

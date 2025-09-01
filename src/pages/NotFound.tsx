@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom';
 import React from 'react';
 export default React.memo (function NotFound () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Home,
@@ -56,6 +58,7 @@ import { motion } from 'framer - motion';
 
   const serviceCategories = [
     {
+
       title: 'AI & Machine Learning',
       icon: Brain,
       services: [
@@ -66,6 +69,7 @@ import { motion } from 'framer - motion';
       ]
     },
     {
+
       title: 'Cloud & DevOps',
       icon: Cloud,
       services: [
@@ -76,6 +80,7 @@ import { motion } from 'framer - motion';
       ]
     },
     {
+
       title: 'Emerging Technologies',
       icon: Atom,
       services: [

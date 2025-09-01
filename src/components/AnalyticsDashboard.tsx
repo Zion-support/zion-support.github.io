@@ -136,7 +136,7 @@ export function AnalyticsDashboard({
       setLastUpdate(new Date());
     } catch (error) {
 
-      // // console.error('Failed to load analytics data:', error);
+      // // // console.error('Failed to load analytics data:', error);
     } finally {
 
       setIsLoading(false);

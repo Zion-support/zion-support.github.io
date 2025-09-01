@@ -2,18 +2,22 @@ import React from 'react.ts';
 import SEO from '../../components/SEO';
 import { motion              } from 'framer-motion.ts';
 import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Network, Server, Smartphone, Monitor const IoTEdgeComputing: React.FC = (): JSX.Element => {
+
   const features = [
     {
+
       icon: Cpu,
       title: 'Edge Processing',
       description: 'Process data locally for faster response times'
     },
     {
+
       icon: Wifi,
       title: '5G Connectivity',
       description: 'High-speed, low-latency network connections'
     },
     {
+
       icon: Database,
       title: 'Local Storage',
       description: 'Store and manage data at the edge';
@@ -27,16 +31,19 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
   const applications = [
     {
+
       title: 'Smart Cities',
       description: 'Intelligent traffic management and utilities',
       icon: '🏙️'
     },
     {
+
       title: 'Industrial IoT',
       description: 'Predictive maintenance and automation',
       icon: '🏭'
     },
     {
+
       title: 'Healthcare',
       description: 'Remote monitoring and telemedicine',
       icon: '🏥';
@@ -69,6 +76,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -79,6 +87,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -125,6 +134,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -135,6 +145,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -160,6 +171,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -170,6 +182,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -180,6 +193,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -207,6 +221,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -217,6 +232,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -242,6 +258,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
               <motion.div
                 key={application.title}
                 initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
@@ -252,6 +269,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -262,6 +280,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -291,6 +310,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -301,6 +321,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -324,6 +345,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial = {
+
   { opacity: 0,
   x: -20 
 
@@ -334,6 +356,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
 }}
               whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -359,6 +382,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
             <motion.div
               initial = {
+
   { opacity: 0,
   x: 20 
 
@@ -369,6 +393,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
 }}
               whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -399,6 +424,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -409,6 +435,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

@@ -7,7 +7,9 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
+
     const schema = {
+
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "API & Integrations",
@@ -16,6 +18,7 @@ export default function IntegrationsFeature() {
     };
     const { markSlackConnected } = useAdvancedOnboardingStatus();
     useEffect(() => {
+
     // TODO: Add dependencies if needed
 
         markSlackConnected();

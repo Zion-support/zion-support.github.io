@@ -98,7 +98,7 @@ export const EnhancedSecurity: React.FC = () => {
       setLastScan(new Date());
     } catch (error) {
 
-      // // console.error('Security check failed:', error);
+      // // // console.error('Security check failed:', error);
     }
   };
 

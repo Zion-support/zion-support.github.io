@@ -3,6 +3,7 @@ import { useParams, Link               } from 'react-router-dom.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 
 export default function GenericPage(...args[]: any):  {
+
   const { '*': slug } = useParams();
   const slugParts = slug ? slug.split('/').filter(Boolean) [];
   const path = '/' + slugParts.join('/');
@@ -10,6 +11,7 @@ export default function GenericPage(...args[]: any):  {
   const canonical = `https://ziontechgroup.com${path.endsWith('/') ? path : path + '/'}`;
   return (
     <main style = {
+
   {padding:20,fontFamily:'sans-serif',lineHeight:1.6,maxWidth:900,
   margin:'0 auto'
 }}>
@@ -21,6 +23,7 @@ export default function GenericPage(...args[]: any):  {
       <nav style={{marginBottom:16}} aria-label="Breadcrumbs">
         <Link to="/" style={{color:'#2563eb'}}>Home</Link>
         <span style = {
+
   {margin:'0 8px',
   color:'#9ca3af'
 }}>/</span>
@@ -29,6 +32,7 @@ export default function GenericPage(...args[]: any):  {
       <h1 style={{marginBottom:8}}>{title}</h1>
       <p style={{color:'#374151'}}>This page is under active development. If you were expecting specific information, please contact us and we will prioritize it.</p>
       <section style = {
+
   {marginTop:16, padding:'12px 16px', background:'#f9fafb', border:'1px solid #e5e7eb',
   borderRadius:8
 }}>

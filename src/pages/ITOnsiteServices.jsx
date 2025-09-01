@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function ITOnsiteServices () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Wrench,
@@ -30,6 +32,7 @@ import { motion } from 'framer - motion';
   FileText
 const onsiteServices = [
   {
+
     id: 1,
     title: "Network Infrastructure Setup",
     description: "Complete network design, installation, and configuration for businesses of all sizes.",
@@ -46,6 +49,7 @@ const onsiteServices = [
     coverage["Local", "Regional", "National"]
   },
   {
+
     id: 2,
     title: "Server Installation & Configuration",
     description: "Professional server setup, configuration, and optimization for optimal performance.",
@@ -62,6 +66,7 @@ const onsiteServices = [
     coverage["Local", "Regional", "National"]
   },
   {
+
     id: 3,
     title: "Cybersecurity Assessment",
     description: "Comprehensive security audit and vulnerability assessment of your IT infrastructure.",
@@ -78,6 +83,7 @@ const onsiteServices = [
     coverage["Local", "Regional", "National"]
   },
   {
+
     id: 4,
     title: "Data Center Setup",
     description: "Complete data center design, construction, and equipment installation.",
@@ -94,6 +100,7 @@ const onsiteServices = [
     coverage["Regional", "National"]
   },
   {
+
     id: 5,
     title: "Workstation Deployment",
     description: "Bulk workstation setup, configuration, and deployment for enterprise environments.",
@@ -110,6 +117,7 @@ const onsiteServices = [
     coverage["Local", "Regional", "National"]
   },
   {
+
     id: 6,
     title: "Emergency IT Support",
     description: "24 / 7 emergency on - site IT support for critical system failures and issues.",
@@ -129,6 +137,7 @@ const onsiteServices = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "TechCorp Manufacturing",
     industry: "Manufacturing",
@@ -138,6 +147,7 @@ const successStories = [
     logo: "TM"
   },
   {
+
     id: 2,
     comp: "Healthcare Plus Network",
     industry: "Healthcare",
@@ -147,6 +157,7 @@ const successStories = [
     logo: "HP"
   },
   {
+
     id: 3,
     comp: "Financial Services Inc",
     industry: "Finance",
@@ -159,6 +170,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Initial Assessment",
     description: "On - site evaluation of current infrastructure and requirements",
@@ -166,6 +178,7 @@ const processSteps = [
     duration: "1 - 2 days"
   },
   {
+
     step: 2,
     title: "Solution Design",
     description: "Custom solution design based on assessment findings",
@@ -173,6 +186,7 @@ const processSteps = [
     duration: "2 - 3 days"
   },
   {
+
     step: 3,
     title: "Implementation",
     description: "Professional installation and configuration of all systems",
@@ -180,6 +194,7 @@ const processSteps = [
     duration: "2 days - 4 weeks"
   },
   {
+
     step: 4,
     title: "Testing & Handover",
     description: "Comprehensive testing and client training",
@@ -209,11 +224,13 @@ const processSteps = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -223,16 +240,19 @@ const processSteps = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -274,11 +294,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -296,16 +318,19 @@ const processSteps = [
             {serviceAreas.map ( (area, index) => (<motion.div
                 key={area.region}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -337,11 +362,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -359,16 +386,19 @@ const processSteps = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -399,11 +429,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -423,6 +455,7 @@ const processSteps = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -436,16 +469,19 @@ const processSteps = [
             {filteredServices.map ( (service, index) => (<motion.div
                 key={service.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -500,11 +536,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -522,16 +560,19 @@ const processSteps = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -577,11 +618,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

@@ -85,7 +85,7 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
                 topIssues,
                 pageAnalyses,
                 summary'
-            // // // // // // // // // // console.error('Error analyzing SEO:', error);
+            // // // // // // // // // // // console.error('Error analyzing SEO:', error);
         }
         finally {
 
@@ -94,7 +94,7 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
             }) }
         catch (error) {
 
-            // // // console.error('Error analyzing SEO:', error)}
+            // // // // console.error('Error analyzing SEO:', error)}
         finally {
 
             setIsAnalyzing(false)}

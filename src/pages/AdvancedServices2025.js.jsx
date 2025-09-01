@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const AdvancedServices2025 = () => {
+
     const advancedServices = [
         {
+
             category: "Enterprise AI & Machine Learning",
             description: "Advanced artificial intelligence solutions for enterprise-scale operations",
             services[
                 {
+
                     title: "AI-Powered Enterprise Analytics",
                     description: "Comprehensive enterprise analytics platform with real-time insights and predictive capabilities",
                     icon: "📊",
@@ -18,6 +21,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "AI-powered insights, real-time processing, and seamless enterprise integration"
                 },
                 {
+
                     title: "AI-Driven Business Process Automation",
                     description: "End-to-end business process automation using AI and machine learning",
                     icon: "⚙️",
@@ -29,6 +33,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "AI-native approach, intelligent decision making, and comprehensive automation"
                 },
                 {
+
                     title: "AI-Powered Customer Experience Platform",
                     description: "Omnichannel customer experience optimization using AI and behavioral analytics",
                     icon: "🎯",
@@ -42,10 +47,12 @@ const AdvancedServices2025 = () => {
             ]
         },
         {
+
             category: "Emerging Technology Solutions",
             description: "Cutting-edge technology services for future-ready organizations",
             services[
                 {
+
                     title: "AI-Powered Quantum Computing Consulting",
                     description: "Strategic quantum computing implementation and optimization services",
                     icon: "⚛️",
@@ -57,6 +64,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "Deep quantum expertise, practical implementation, and strategic business focus"
                 },
                 {
+
                     title: "Metaverse Development & Strategy",
                     description: "Complete metaverse ecosystem development and strategic implementation",
                     icon: "🥽",
@@ -68,6 +76,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "Custom development, strategic implementation, and comprehensive ecosystem building"
                 },
                 {
+
                     title: "Web3 & Blockchain Infrastructure",
                     description: "Enterprise blockchain solutions and decentralized application development",
                     icon: "🔗",
@@ -81,10 +90,12 @@ const AdvancedServices2025 = () => {
             ]
         },
         {
+
             category: "Advanced Micro SaaS Solutions",
             description: "Innovative software-as-a-service solutions for modern businesses",
             services[
                 {
+
                     title: "AI-Powered Social Media Management",
                     description: "Intelligent social media automation with content creation and analytics",
                     icon: "📱",
@@ -96,6 +107,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "AI-powered content, intelligent automation, and predictive analytics"
                 },
                 {
+
                     title: "Smart Email Marketing Automation",
                     description: "Advanced email marketing with AI-driven personalization and optimization",
                     icon: "📧",
@@ -107,6 +119,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "AI personalization, predictive analytics, and automated optimization"
                 },
                 {
+
                     title: "AI-Powered SEO Optimization",
                     description: "Intelligent SEO optimization with automated content and keyword analysis",
                     icon: "🔍",
@@ -118,6 +131,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "AI-powered optimization, automated analysis, and predictive insights"
                 },
                 {
+
                     title: "Smart Customer Support Automation",
                     description: "AI-powered customer support with intelligent ticket routing and resolution",
                     icon: "🆘",
@@ -129,6 +143,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "AI-driven automation, intelligent routing, and proactive support"
                 },
                 {
+
                     title: "AI-Powered Lead Generation",
                     description: "Intelligent lead generation with predictive scoring and qualification",
                     icon: "🎯",
@@ -140,6 +155,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "Predictive scoring, automated qualification, and intelligent nurturing"
                 },
                 {
+
                     title: "Smart Event Management Platform",
                     description: "AI-powered event management with automated planning and optimization",
                     icon: "🎪",
@@ -153,10 +169,12 @@ const AdvancedServices2025 = () => {
             ]
         },
         {
+
             category: "Specialized IT Services",
             description: "Advanced IT infrastructure and specialized technology services",
             services[
                 {
+
                     title: "Zero Trust Security Architecture",
                     description: "Comprehensive zero trust security implementation and management",
                     icon: "🛡️",
@@ -168,6 +186,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "Comprehensive implementation, continuous monitoring, and strategic integration"
                 },
                 {
+
                     title: "Edge Computing Infrastructure",
                     description: "Distributed edge computing solutions for IoT and real-time applications",
                     icon: "🌐",
@@ -179,6 +198,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "Custom deployment, performance optimization, and comprehensive integration"
                 },
                 {
+
                     title: "5G Network Optimization",
                     description: "5G network design, deployment, and performance optimization",
                     icon: "📡",
@@ -190,6 +210,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "Custom optimization, performance tuning, and strategic planning"
                 },
                 {
+
                     title: "AI-Powered DevOps Automation",
                     description: "Intelligent DevOps automation with AI-driven optimization",
                     icon: "🚀",
@@ -201,6 +222,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "AI-driven automation, intelligent optimization, and comprehensive monitoring"
                 },
                 {
+
                     title: "Quantum-Safe Cryptography",
                     description: "Post-quantum cryptography implementation and migration services",
                     icon: "🔐",
@@ -212,6 +234,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "Expert implementation, comprehensive testing, and strategic migration"
                 },
                 {
+
                     title: "Smart Data Center Management",
                     description: "AI-powered data center optimization and management",
                     icon: "🏢",
@@ -225,10 +248,12 @@ const AdvancedServices2025 = () => {
             ]
         },
         {
+
             category: "Industry-Specific AI Solutions",
             description: "Specialized AI solutions tailored for specific industries",
             services[
                 {
+
                     title: "AI-Powered Healthcare Diagnostics",
                     description: "Advanced medical AI for diagnostic assistance and patient care",
                     icon: "🏥",
@@ -240,6 +265,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "Specialized medical AI, regulatory compliance, and clinical integration"
                 },
                 {
+
                     title: "AI-Powered Financial Services",
                     description: "Intelligent financial services with risk assessment and fraud detection",
                     icon: "💰",
@@ -251,6 +277,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "Specialized financial AI, regulatory compliance, and real-time processing"
                 },
                 {
+
                     title: "AI-Powered Manufacturing Optimization",
                     description: "Intelligent manufacturing with predictive maintenance and quality control",
                     icon: "🏭",
@@ -262,6 +289,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "Specialized manufacturing AI, predictive analytics, and industrial integration"
                 },
                 {
+
                     title: "AI-Powered Retail Optimization",
                     description: "Intelligent retail with inventory optimization and customer analytics",
                     icon: "🛒",
@@ -273,6 +301,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "Specialized retail AI, real-time optimization, and comprehensive analytics"
                 },
                 {
+
                     title: "AI-Powered Logistics Optimization",
                     description: "Intelligent logistics with route optimization and supply chain management",
                     icon: "🚚",
@@ -284,6 +313,7 @@ const AdvancedServices2025 = () => {
                     competitiveAdvantage: "Specialized logistics AI, real-time optimization, and comprehensive management"
                 },
                 {
+
                     title: "AI-Powered Energy Management",
                     description: "Intelligent energy management with consumption optimization and sustainability tracking",
                     icon: "⚡",

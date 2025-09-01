@@ -7,6 +7,7 @@ import { ProtectedRoute } from "@/components / ProtectedRoute";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components / ui / tabs";
 import SEO from "@/components / SEO";
 export default function HiringTracker () {
+
 import { Briefcase function HiringTrackerContent () {
 
     const { jobId } = useParams () ;

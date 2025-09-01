@@ -3,26 +3,31 @@ import { motion              } from 'framer-motion.ts';
 import { PenTool, Brain, TrendingUp, Target, Users, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Clock, Globe, Database, FileText, MessageSquare, BarChart3, Search, Eye, Share2, Calendar              } from 'lucide-react.ts';
 
 const AIContentMarketingSuite: React.FC = (): JSX.Element => {
+
   const features = [
     {
+
       title: "AI Content Generator",
       description: "Create high-quality, SEO-optimized content in seconds",
       icon: PenTool,
       benefits: ["Multiple content types", "SEO optimization", "Brand voice consistency"]
     },
     {
+
       title: "Content Calendar & Planning",
       description: "Intelligent content scheduling and topic ideation",
       icon: Calendar,
       benefits: ["AI-powered topic suggestions", "Optimal publishing times", "Content gap analysis"]
     },
     {
+
       title: "Social Media Automation",
       description: "Auto-generate and schedule posts across all platforms",
       icon: Share2,
       benefits: ["Multi-platform support", "Trend-based content", "Engagement optimization"]
     },
     {
+
       title: "Performance Analytics",
       description: "AI-driven insights and optimization recommendations",
       icon: BarChart3,
@@ -32,6 +37,7 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
 
   const capabilities = [
     {
+
       name: "Starter",
       price: "$199",
       period: "/month",
@@ -46,6 +52,7 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$499",
       period: "/month",
@@ -62,6 +69,7 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,299",
       period: "/month",
@@ -81,24 +89,28 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
 
   const useCases = [
     {
+
       type: "Blog Posts",
       description: "SEO-optimized articles with AI research",
       icon: FileText,
       features: ["Keyword research", "Outline generation", "SEO optimization"]
     },
     {
+
       type: "Social Media",
       description: "Engaging posts for all platforms",
       icon: Share2,
       features: ["Platform-specific content", "Trend integration", "Hashtag optimization"]
     },
     {
+
       type: "Email Campaigns",
       description: "Personalized email sequences",
       icon: MessageSquare,
       features: ["Segmentation", "A/B testing", "Performance tracking"]
     },
     {
+
       type: "Video Scripts",
       description: "Compelling video content scripts",
       icon: Eye,
@@ -116,10 +128,11 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
           <motion.div 
             className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full blur-3xl"
             animate={{
+
               scale: [1, 1.2, 1],
-              opacity: [0.1, 0.3, 0.1],
-            }}
+              opacity: [0.1, 0.3, 0.1]}}
             transition={{
+
               duration: 4,
               repeat: Infinity,
               ease: "easeInOut"
@@ -130,6 +143,7 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
         <div className="relative container mx-auto px-4 py-24 text-center text-white">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -140,6 +154,7 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -282,6 +297,7 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -292,6 +308,7 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -320,6 +337,7 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
+
                   plan.popular 
                     ? 'border-zion-cyan/40 scale-105 shadow-lg shadow-zion-cyan/25' 
                     : 'border-zion-cyan/20 hover:border-zion-cyan/40'
@@ -354,6 +372,7 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
                 <a 
                   href="https://ziontechgroup.com/contact" 
                   className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'
                       : 'border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'

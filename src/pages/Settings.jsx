@@ -3,6 +3,7 @@ import React from 'react';
 export default Settings;
 
 const Settings = () => {
+
   return (<>
       <Helmet>
         <title > Settings - Zion Tech Group</title>

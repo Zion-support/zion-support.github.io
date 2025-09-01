@@ -28,7 +28,7 @@ class EnhancedErrorBoundary extends Component {
 
         this.setState({ errorInfo });
         // Log error to console
-        // // console.error('Error caught by boundary:', error, errorInfo);
+        // // // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
         if (this.props.onError) {
 
@@ -70,8 +70,8 @@ class EnhancedErrorBoundary extends Component {
         if (process.env.NODE_ENV === 'development') {
 
             console.group('Error Report');
-            // // console.log('Error ID:', errorReport.id);
-            // // console.log('Error Details:', errorReport);
+            // // // console.log('Error ID:', errorReport.id);
+            // // // console.log('Error Details:', errorReport);
             console.groupEnd()}
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport })}

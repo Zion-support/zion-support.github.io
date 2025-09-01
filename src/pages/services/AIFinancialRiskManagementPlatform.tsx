@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
+import {
+
   Shield, 
   TrendingDown, 
   Brain, 
@@ -53,8 +54,10 @@ import {
 } from 'lucide-react';
 
 export default function AIFinancialRiskManagementPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Risk Assessment',
       description: 'Advanced machine learning algorithms that identify and quantify financial risks with 98%+ accuracy',
@@ -67,6 +70,7 @@ export default function AIFinancialRiskManagementPlatform() {
       ]
     },
     {
+
       icon: Shield,
       title: 'Comprehensive Risk Coverage',
       description: 'End-to-end risk management covering market, credit, operational, and liquidity risks',
@@ -79,6 +83,7 @@ export default function AIFinancialRiskManagementPlatform() {
       ]
     },
     {
+
       icon: TrendingDown,
       title: 'Early Warning Systems',
       description: 'Proactive risk detection and alerting to prevent financial losses before they occur',
@@ -91,6 +96,7 @@ export default function AIFinancialRiskManagementPlatform() {
       ]
     },
     {
+
       icon: BarChart3,
       title: 'Advanced Analytics & Reporting',
       description: 'Comprehensive risk analytics with customizable dashboards and regulatory reporting',
@@ -106,6 +112,7 @@ export default function AIFinancialRiskManagementPlatform() {
 
   const pricingPlans = [
     {
+
       name: 'Starter',
       price: '$799',
       period: '/month',
@@ -122,6 +129,7 @@ export default function AIFinancialRiskManagementPlatform() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$1,799',
       period: '/month',
@@ -140,6 +148,7 @@ export default function AIFinancialRiskManagementPlatform() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$4,999',
       period: '/month',
@@ -161,24 +170,28 @@ export default function AIFinancialRiskManagementPlatform() {
 
   const useCases = [
     {
+
       title: 'Banks & Credit Unions',
       description: 'Credit risk assessment, loan portfolio management, and regulatory compliance',
       icon: DollarSign,
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       title: 'Investment Firms',
       description: 'Portfolio risk analysis, market risk management, and performance optimization',
       icon: TrendingUp,
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       title: 'Insurance Companies',
       description: 'Underwriting risk assessment, claims analysis, and actuarial modeling',
       icon: Shield,
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       title: 'Fintech Startups',
       description: 'Risk scoring, fraud detection, and compliance automation',
       icon: Cpu,
@@ -188,21 +201,25 @@ export default function AIFinancialRiskManagementPlatform() {
 
   const benefits = [
     {
+
       title: 'Reduce Risk Exposure',
       value: '40-60%',
       description: 'Lower financial risk exposure through proactive management'
     },
     {
+
       title: 'Improve Compliance',
       value: '99.9%',
       description: 'Higher regulatory compliance and audit readiness'
     },
     {
+
       title: 'Faster Detection',
       value: 'Real-time',
       description: 'Immediate risk detection and response capabilities'
     },
     {
+
       title: 'Cost Savings',
       value: '25-35%',
       description: 'Lower operational costs and reduced losses'
@@ -412,6 +429,7 @@ export default function AIFinancialRiskManagementPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
+
                   plan.popular 
                     ? 'border-red-500/50 bg-red-500/5' 
                     : 'border-white/10 hover:border-white/20'
@@ -446,6 +464,7 @@ export default function AIFinancialRiskManagementPlatform() {
                 <a
                   href={plan.name === 'Enterprise' ? 'https://ziontechgroup.com/contact' : 'https://ziontechgroup.com/request-quote'}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white hover:from-red-600 hover:to-pink-600'
                       : 'bg-white/10 text-white hover:bg-white/20'

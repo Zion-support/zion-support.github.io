@@ -1,6 +1,8 @@
 import React from 'react';
 export default React.memo (function Compliance () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Shield,
@@ -36,11 +38,11 @@ import { motion } from 'framer - motion';
   ShieldCheck,
   Gauge,
   TrendingUp,
-  BarChart3,
-} from 'lucide - react';
+  BarChart3} from 'lucide - react';
 
   const complianceFrameworks = [
     {
+
       name: 'ISO 27001',
       description: 'Information Security Management System',
       status: 'Certified',
@@ -55,9 +57,9 @@ import { motion } from 'framer - motion';
         'Risk assessment and management',
         'Continuous improvement process',
         'International recognition',
-      ],
-    },
+      ]},
     {
+
       name: 'SOC 2 Type II',
       description: 'Service Organization Control 2',
       status: 'Compliant',
@@ -73,9 +75,9 @@ import { motion } from 'framer - motion';
         'Trust services criteria compliance',
         'Customer confidence and trust',
         'Operational effectiveness',
-      ],
-    },
+      ]},
     {
+
       name: 'GDPR',
       description: 'General Data Protection Regulation',
       status: 'Compliant',
@@ -90,9 +92,9 @@ import { motion } from 'framer - motion';
         'Individual privacy rights',
         'Transparent data processing',
         'Cross - border data transfer compliance',
-      ],
-    },
+      ]},
     {
+
       name: 'HIPAA',
       description: 'Health Insurance Portability and Accountability Act',
       status: 'Compliant',
@@ -107,43 +109,43 @@ import { motion } from 'framer - motion';
         'Patient privacy protection',
         'Administrative safeguards',
         'Technical safeguards',
-      ],
-    },
+      ]},
   ];
 
   const complianceMetrics = [
     {
+
       metric: '99.9%',
       label: 'Uptime',
       description: 'System availability',
       icon: Server,
-      trend: 'up',
-    },
+      trend: 'up'},
     {
+
       metric: '100%',
       label: 'Data Encryption',
       description: 'At rest and in transit',
       icon: Lock,
-      trend: 'stable',
-    },
+      trend: 'stable'},
     {
+
       metric: '< 1 hour',
       label: 'Incident Response',
       description: 'Average response time',
       icon: AlertTriangle,
-      trend: 'down',
-    },
+      trend: 'down'},
     {
+
       metric: '24 / 7',
       label: 'Monitoring',
       description: 'Security operations center',
       icon: Monitor,
-      trend: 'stable',
-    },
+      trend: 'stable'},
   ];
 
   const securityMeasures = [
     {
+
       category: 'Access Control',
       measures: [
         'Multi - factor authentication (MFA) ',
@@ -152,9 +154,9 @@ import { motion } from 'framer - motion';
         'Privileged access management (PAM) ',
         'Session management and timeout',
       ],
-      icon: Key,
-    },
+      icon: Key},
     {
+
       category: 'Data Protection',
       measures: [
         'End - to - end encryption (AES - 256) ',
@@ -163,9 +165,9 @@ import { motion } from 'framer - motion';
         'Data classification and labeling',
         'Secure data disposal',
       ],
-      icon: Database,
-    },
+      icon: Database},
     {
+
       category: 'Network Security',
       measures: [
         'Firewall and intrusion detection',
@@ -174,9 +176,9 @@ import { motion } from 'framer - motion';
         'Network segmentation',
         'Regular security assessments',
       ],
-      icon: Network,
-    },
+      icon: Network},
     {
+
       category: 'Application Security',
       measures: [
         'Secure software development lifecycle',
@@ -185,23 +187,22 @@ import { motion } from 'framer - motion';
         'Code security reviews',
         'API security and monitoring',
       ],
-      icon: Shield,
-    },
+      icon: Shield},
   ];
 
   const contactInfo = [
     {
+
       title: 'Compliance Team',
       email: 'compliance@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      responseTime: '24 - 48 hours',
-    },
+      responseTime: '24 - 48 hours'},
     {
+
       title: 'Security Team',
       email: 'security@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      responseTime: '2 - 4 hours',
-    },
+      responseTime: '2 - 4 hours'},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">

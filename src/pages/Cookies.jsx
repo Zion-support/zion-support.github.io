@@ -19,10 +19,10 @@ export default function Cookies () {
               <p className="text - gray - 300 mb - 6">
                 Last updated:{' '}
                 {new Date () .toLocaleDateString ('en - US', {
+
                   year: 'numeric',
                   month: 'long',
-                  day: 'numeric',
-                }) }
+                  day: 'numeric'}) }
               </p>
               <div className="space - y-8">
                 <section>

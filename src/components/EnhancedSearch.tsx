@@ -282,7 +282,7 @@ export function EnhancedSearch({
 
         setRecentSearches (JSON.parse (saved) ) } catch (error) {
 
-        // // // console.error('Failed to parse recent searches:', error)}    }
+        // // // // console.error('Failed to parse recent searches:', error)}    }
   }, []) ;
 
   // Handle click outside

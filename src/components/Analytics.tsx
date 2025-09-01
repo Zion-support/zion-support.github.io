@@ -104,7 +104,7 @@ export const Analytics: React.FC<AnalyticsProps> = () => {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
       } catch (error) {
 
-        // // console.warn('Performance tracking failed:', error);
+        // // // console.warn('Performance tracking failed:', error);
       }
     }
 
@@ -228,7 +228,7 @@ export const Analytics: React.FC<AnalyticsProps> = () => {
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
 
-      // // console.log('Analytics Event:', eventType, data);
+      // // // console.log('Analytics Event:', eventType, data);
     }
 
     // Store locally for offline analytics
@@ -255,7 +255,7 @@ export const Analytics: React.FC<AnalyticsProps> = () => {
       localStorage.setItem('offline_analytics', JSON.stringify(offlineEvents));
     } catch (error) {
 
-      // // console.warn('Failed to store offline analytics:', error);
+      // // // console.warn('Failed to store offline analytics:', error);
     }
   };
 

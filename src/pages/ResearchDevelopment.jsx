@@ -3,23 +3,28 @@ import React from 'react';
 export default ResearchDevelopment;
 
 const ResearchDevelopment = () => {
+
     const researchAreas = [
         {
+
             title: "Artificial Intelligence & Machine Learning",
             description: "Advancing the frontiers of AI with autonomous systems, neural networks, and intelligent automation.",
             focus["Neural Networks", "Autonomous Systems", "Natural Language Processing", "Computer Vision"]
         },
         {
+
             title: "Quantum Computing",
             description: "Exploring quantum algorithms and applications for solving complex computational problems.",
             focus["Quantum Algorithms", "Quantum Cryptography", "Financial Modeling", "Optimization"]
         },
         {
+
             title: "Cybersecurity & Privacy",
             description: "Developing next - generation security solutions and privacy - preserving technologies.",
             focus["Zero - Trust Architecture", "Threat Detection", "Privacy Engineering", "Compliance Automation"]
         },
         {
+
             title: "Cloud & Edge Computing",
             description: "Innovating distributed computing architectures and edge intelligence solutions.",
             focus["Edge AI", "Distributed Systems", "5G Networks", "IoT Integration"]

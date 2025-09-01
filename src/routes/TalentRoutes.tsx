@@ -8,6 +8,7 @@ import CreateTalentProfile from '../pages/CreateTalentProfile';
 import ProfilePage from '../pages/ProfilePage';
 
 export default function TalentRoutes(...args: any[]): any {
+
   return (
     <>;
       <Route path = "directory" element={<TalentDirectory />} />;

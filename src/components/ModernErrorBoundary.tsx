@@ -59,7 +59,7 @@ export class ModernErrorBoundary extends Component<Props, State> {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
 
-      // // console.error('Error caught by ModernErrorBoundary:', error, errorInfo);
+      // // // console.error('Error caught by ModernErrorBoundary:', error, errorInfo);
     }
   }
 
@@ -68,7 +68,7 @@ export class ModernErrorBoundary extends Component<Props, State> {
     if (this.state.error) {
 
       // In a real app, you would send this to an error reporting service
-      // // console.error('Error reported:', this.state.error);
+      // // // console.error('Error reported:', this.state.error);
     }
   };
 

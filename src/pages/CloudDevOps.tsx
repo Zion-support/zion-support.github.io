@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Cloud, 
   Brain, 
   Zap, 
@@ -48,38 +49,45 @@ import {
 } from 'lucide-react';
 
 export default function CloudDevOps() {
+
   const features = [
     {
+
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions with automated provisioning and management',
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       icon: GitBranch,
       title: 'CI/CD Pipelines',
       description: 'Automated build, test, and deployment workflows',
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       icon: Code,
       title: 'Infrastructure as Code',
       description: 'Version-controlled infrastructure with Terraform and CloudFormation',
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       icon: Monitor,
       title: 'Monitoring & Logging',
       description: 'Comprehensive observability and performance monitoring',
       color: 'from-yellow-500 to-orange-500'
     },
     {
+
       icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with automated compliance checks',
       color: 'from-red-500 to-pink-500'
     },
     {
+
       icon: Rocket,
       title: 'Auto-scaling',
       description: 'Intelligent resource scaling based on demand and performance',
@@ -98,21 +106,25 @@ export default function CloudDevOps() {
 
   const useCases = [
     {
+
       title: 'Web Applications',
       description: 'Scalable web apps with automated deployment and scaling',
       icon: Globe
     },
     {
+
       title: 'Microservices',
       description: 'Containerized microservices with orchestration and monitoring',
       icon: Package
     },
     {
+
       title: 'Data Platforms',
       description: 'Big data infrastructure with automated processing pipelines',
       icon: Database
     },
     {
+
       title: 'Mobile Backends',
       description: 'Scalable mobile app backends with real-time updates',
       icon: Smartphone
@@ -121,21 +133,25 @@ export default function CloudDevOps() {
 
   const devOpsCapabilities = [
     {
+
       name: 'Continuous Integration',
       description: 'Automated code building, testing, and quality checks',
       examples: ['Automated testing', 'Code quality gates', 'Build automation']
     },
     {
+
       name: 'Continuous Deployment',
       description: 'Automated deployment to multiple environments',
       examples: ['Staging deployment', 'Production rollout', 'Rollback automation']
     },
     {
+
       name: 'Infrastructure Management',
       description: 'Version-controlled infrastructure with automation',
       examples: ['Terraform scripts', 'CloudFormation templates', 'Resource provisioning']
     },
     {
+
       name: 'Monitoring & Alerting',
       description: 'Real-time system monitoring and automated alerts',
       examples: ['Performance metrics', 'Error tracking', 'Capacity planning']

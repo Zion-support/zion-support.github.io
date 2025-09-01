@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Rocket, 
   Satellite, 
   Globe, 
@@ -35,35 +36,42 @@ import {
 } from 'lucide-react';
 
 const AISpaceTechnologyPlatform: React.FC = () => {
+
   const [activeTab, setActiveTab] = useState('overview');
 
   const features = [
     {
+
       icon: Satellite,
       title: 'Advanced Satellite Technology',
       description: 'Next-generation satellite systems with AI-powered autonomous operations'
     },
     {
+
       icon: Navigation,
       title: 'Precision Navigation Systems',
       description: 'AI-enhanced GPS and navigation for space and terrestrial applications'
     },
     {
+
       icon: Telescope,
       title: 'Space Observation & Analytics',
       description: 'Real-time space data collection and AI-powered analysis'
     },
     {
+
       icon: Signal,
       title: 'Quantum Communication Networks',
       description: 'Secure space-based communication using quantum encryption'
     },
     {
+
       icon: Planet,
       title: 'Planetary Exploration AI',
       description: 'Autonomous robots and AI systems for space exploration'
     },
     {
+
       icon: Orbit,
       title: 'Orbital Optimization',
       description: 'AI algorithms for optimal satellite positioning and trajectory planning'
@@ -72,31 +80,37 @@ const AISpaceTechnologyPlatform: React.FC = () => {
 
   const useCases = [
     {
+
       title: 'Satellite Communications',
       description: 'High-speed internet and communication services from space',
       icon: Wifi
     },
     {
+
       title: 'Earth Observation',
       description: 'Climate monitoring, agriculture, and disaster response',
       icon: Globe
     },
     {
+
       title: 'Space Mining',
       description: 'AI-powered asteroid mining and resource extraction',
       icon: Rocket
     },
     {
+
       title: 'Space Tourism',
       description: 'Safe and efficient space travel experiences',
       icon: Users
     },
     {
+
       title: 'Scientific Research',
       description: 'Advanced research platforms for space science',
       icon: Telescope
     },
     {
+
       title: 'Defense & Security',
       description: 'Space-based security and surveillance systems',
       icon: Shield
@@ -105,6 +119,7 @@ const AISpaceTechnologyPlatform: React.FC = () => {
 
   const pricing = [
     {
+
       plan: 'Explorer',
       price: '$3,500',
       period: '/month',
@@ -121,6 +136,7 @@ const AISpaceTechnologyPlatform: React.FC = () => {
       popular: false
     },
     {
+
       plan: 'Pioneer',
       price: '$12,500',
       period: '/month',
@@ -138,6 +154,7 @@ const AISpaceTechnologyPlatform: React.FC = () => {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$45,000',
       period: '/month',
@@ -159,31 +176,37 @@ const AISpaceTechnologyPlatform: React.FC = () => {
 
   const benefits = [
     {
+
       icon: Zap,
       title: 'Space Innovation',
       description: 'Access to cutting-edge space technology and AI systems'
     },
     {
+
       icon: Globe,
       title: 'Global Coverage',
       description: 'Worldwide satellite coverage and communication networks'
     },
     {
+
       icon: Shield,
       title: 'Advanced Security',
       description: 'Military-grade security protocols for space operations'
     },
     {
+
       icon: TrendingUp,
       title: 'Competitive Edge',
       description: 'Stay ahead with revolutionary space technology solutions'
     },
     {
+
       icon: Rocket,
       title: 'Future-Ready',
       description: 'Prepare for the next generation of space exploration'
     },
     {
+
       icon: Users,
       title: 'Expert Team',
       description: 'Dedicated space technology specialists and AI experts'
@@ -192,31 +215,37 @@ const AISpaceTechnologyPlatform: React.FC = () => {
 
   const technologies = [
     {
+
       name: 'Quantum Satellites',
       description: 'Next-generation quantum communication satellites',
       icon: Satellite
     },
     {
+
       name: 'AI Navigation',
       description: 'Autonomous navigation systems for space vehicles',
       icon: Navigation
     },
     {
+
       name: 'Space Robotics',
       description: 'AI-powered robots for space exploration and maintenance',
       icon: Rocket
     },
     {
+
       name: 'Orbital Networks',
       description: 'Advanced satellite constellation management',
       icon: Network
     },
     {
+
       name: 'Space Analytics',
       description: 'Real-time data analysis from space sensors',
       icon: BarChart3
     },
     {
+
       name: 'Planetary AI',
       description: 'Intelligent systems for planetary exploration',
       icon: Planet
@@ -396,6 +425,7 @@ const AISpaceTechnologyPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'bg-gradient-to-br from-purple-600 to-blue-700 text-white shadow-2xl scale-105' 
                     : 'bg-white border-2 border-slate-200 hover:border-purple-300'
@@ -411,23 +441,27 @@ const AISpaceTechnologyPlatform: React.FC = () => {
                 
                 <div className="text-center mb-8">
                   <h3 className={`text-2xl font-bold mb-2 ${
+
                     plan.popular ? 'text-white' : 'text-gray-900'
                   }`}>
                     {plan.plan}
                   </h3>
                   <div className="flex items-baseline justify-center">
                     <span className={`text-4xl font-bold ${
+
                       plan.popular ? 'text-white' : 'text-gray-900'
                     }`}>
                       {plan.price}
                     </span>
                     <span className={`ml-2 text-lg ${
+
                       plan.popular ? 'text-purple-100' : 'text-gray-600'
                     }`}>
                       {plan.period}
                     </span>
                   </div>
                   <p className={`mt-2 ${
+
                     plan.popular ? 'text-purple-100' : 'text-gray-600'
                   }`}>
                     {plan.description}
@@ -438,6 +472,7 @@ const AISpaceTechnologyPlatform: React.FC = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
                       <CheckCircle className={`h-5 w-5 mr-3 mt-0.5 ${
+
                         plan.popular ? 'text-green-400' : 'text-green-500'
                       }`} />
                       <span className={plan.popular ? 'text-purple-100' : 'text-gray-600'}>
@@ -448,6 +483,7 @@ const AISpaceTechnologyPlatform: React.FC = () => {
                 </ul>
                 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-white text-purple-600 hover:bg-gray-100'
                     : 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'

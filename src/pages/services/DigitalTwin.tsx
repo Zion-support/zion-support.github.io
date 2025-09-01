@@ -22,28 +22,34 @@ import { Cpu,
 import { SEO              } from '../../components/SEO';
 
 export default function DigitalTwin(...args: any[]): any {
+
   const features = [
     {
+
       icon: Eye,
       title: "Real-time Monitoring",
       description: "Continuous monitoring of physical assets with instant alerts and notifications"
     },
     {
+
       icon: Server,
       title: "3D Visualization",
       description: "Interactive 3D models for immersive asset management and analysis"
     },
     {
+
       icon: Database,
       title: "Predictive Analytics",
       description: "AI-powered predictions for maintenance, performance, and optimization"
     },
     {
+
       icon: Lock,
       title: "IoT Integration",
       description: "Seamless connectivity with sensors, devices, and existing systems"
     },
     {
+
       icon: Globe,
       title: "Data Synchronization",
       description: "Real-time data sync between physical and digital representations";
@@ -57,12 +63,14 @@ export default function DigitalTwin(...args: any[]): any {
 
   const useCases = [
     {
+
       icon: Server,
       title: "Manufacturing",
       description: "Optimize production lines, predict equipment failures, and improve quality control",
       benefits: ["Predictive maintenance", "Quality optimization", "Production efficiency"]
     },
     {
+
       icon: Globe,
       title: "Smart Cities",
       description: "Monitor infrastructure, traffic patterns, and environmental conditions",
@@ -89,6 +97,7 @@ export default function DigitalTwin(...args: any[]): any {
 
   const pricing = [
     {
+
       name: "Basic",
       price: "$499",
       period: "/month",
@@ -104,6 +113,7 @@ export default function DigitalTwin(...args: any[]): any {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$1,299",
       period: "/month",
@@ -120,6 +130,7 @@ export default function DigitalTwin(...args: any[]): any {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$2,999",
       period: "/month",
@@ -139,16 +150,19 @@ export default function DigitalTwin(...args: any[]): any {
 
   const benefits = [
     {
+
       icon: Eye,
       title: "Operational Efficiency",
       description: "Streamline operations and reduce manual intervention by up to 60%"
     },
     {
+
       icon: Server,
       title: "Predictive Maintenance",
       description: "Prevent costly downtime with AI-powered failure predictions"
     },
     {
+
       icon: Database,
       title: "Cost Reduction",
       description: "Reduce operational costs by 30-40% through intelligent optimization";
@@ -207,6 +221,7 @@ export default function DigitalTwin(...args: any[]): any {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -217,6 +232,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -256,6 +272,7 @@ export default function DigitalTwin(...args: any[]): any {
 
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -266,6 +283,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -293,6 +311,7 @@ export default function DigitalTwin(...args: any[]): any {
                 <motion.div
                   key={feature.title}
                   initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -303,6 +322,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -313,6 +333,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -341,6 +362,7 @@ export default function DigitalTwin(...args: any[]): any {
           <div className="container-responsive">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -351,6 +373,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -378,6 +401,7 @@ export default function DigitalTwin(...args: any[]): any {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -388,6 +412,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -398,6 +423,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -436,6 +462,7 @@ export default function DigitalTwin(...args: any[]): any {
           <div className="container-responsive">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -446,6 +473,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -472,6 +500,7 @@ export default function DigitalTwin(...args: any[]): any {
                 <motion.div
                   key={plan.name}
                   initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -482,6 +511,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -492,6 +522,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -503,6 +534,7 @@ export default function DigitalTwin(...args: any[]): any {
 }}
                   viewport={{ once: true }}
                   className={`relative bg-slate-800/50 border rounded-xl p-8 ${
+
                     plan.popular
                       ? 'border-cyan-400/50 bg-slate-800/70'
                       : 'border-slate-700/50'
@@ -537,6 +569,7 @@ export default function DigitalTwin(...args: any[]): any {
                   <Link
                     to="/contact"
                     className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105'
                         : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
@@ -555,6 +588,7 @@ export default function DigitalTwin(...args: any[]): any {
           <div className="container-responsive">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -565,6 +599,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -592,6 +627,7 @@ export default function DigitalTwin(...args: any[]): any {
                 <motion.div
                   key={benefit.title}
                   initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -602,6 +638,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -612,6 +649,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -640,6 +678,7 @@ export default function DigitalTwin(...args: any[]): any {
           <div className="container-responsive">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -650,6 +689,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -677,6 +717,7 @@ export default function DigitalTwin(...args: any[]): any {
                 <motion.div
                   key={tech.name}
                   initial = {
+
   { opacity: 0,
   scale: 0.8 
 
@@ -687,6 +728,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
                   whileInView = {
+
   { opacity: 1,
   scale: 1 
 
@@ -697,6 +739,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -725,6 +768,7 @@ export default function DigitalTwin(...args: any[]): any {
           <div className="container-responsive">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -735,6 +779,7 @@ export default function DigitalTwin(...args: any[]): any {
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -913,21 +958,25 @@ export default function DigitalTwin(...args: any[]): any {
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {[
               {
+
                 step: '01',
                 title: 'Assessment',
                 description: 'Evaluate your current infrastructure and identify Digital Twin opportunities'
               },
               {
+
                 step: '02',
                 title: 'Design',
                 description: 'Create a comprehensive Digital Twin architecture and implementation plan'
               },
               {
+
                 step: '03',
                 title: 'Deployment',
                 description: 'Install sensors, deploy software, and establish data connections'
               },
               {
+
                 step: '04',
                 title: 'Optimization',
                 description: 'Fine-tune the system and implement advanced analytics and automation'

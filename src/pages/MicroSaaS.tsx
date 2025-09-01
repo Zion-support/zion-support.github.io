@@ -4,32 +4,38 @@ import { Link              } from 'react-router-dom.ts';
 import { Mail, FileText, Link2, BarChart3, Calendar, MessageSquare              } from 'lucide-react.ts';
 
 export default function MicroSaaS(...args: any[]): any {
+
   const products = [
     {
+
       name: 'AI Email Responder',
       price: '$39/mo',
       features: ['Auto-categorize and draft replies', 'Gmail/Outlook add-on', 'Team approval workflows'],
       link: '/contact'
     },
     {
+
       name: 'SEO Content Optimizer',
       price: '$49/mo',
       features: ['Topic clustering and briefs', 'Internal link suggestions', 'On-page optimization scores'],
       link: '/contact'
     },
     {
+
       name: 'Internal Linking (WordPress)',
       price: '$29/mo',
       features: ['Auto link graph builder', 'Context-aware suggestions', 'Bulk fix orphan pages'],
       link: '/contact'
     },
     {
+
       name: 'Review Booster (eCommerce)',
       price: '$59/mo',
       features: ['Post-purchase review flows', 'Photo/video prompts', 'Fraud/spam detection'],
       link: '/contact'
     },
     {
+
       name: 'Smart Surveys',
       price: '$25/mo',
       features: ['Mobile-first', 'Branching logic', 'AI summaries'],
@@ -39,21 +45,25 @@ export default function MicroSaaS(...args: any[]): any {
 
 const benefits = [
   {
+
     icon: Zap,
     title: 'Rapid Deployment',
     description: 'Get up and running in days, not months'
   },
   {
+
     icon: CheckCircle,
     title: 'Proven ROI',
     description: 'See measurable results within 30 days'
   },
   {
+
     icon: Shield,
     title: 'Enterprise Security',
     description: 'Bank-level security and compliance'
   },
   {
+
     icon: Users,
     title: '24/7 Support',
     description: 'Expert support whenever you need it'
@@ -61,6 +71,7 @@ const benefits = [
 ];
 
 export default function MicroSAAS() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">
       {/* Hero Section */}

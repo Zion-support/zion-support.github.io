@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default MobileLaunch;}}}}
 import {
+
 import { motion } from 'framer - motion';
 import SEO from '../components / SEO';
 
@@ -44,20 +45,24 @@ import SEO from '../components / SEO';
 } from 'lucide - react';
 
 const MobileLaunch: React.FC = () => {
+
   const features = [
     {
+
       title: "AI - Powered Insights",
       description: "Get intelligent recommendations and insights powered by our advanced AI algorithms",
       icon: Zap,
       color: "from - cyan - 400 to - blue - 500"
     },
     {
+
       title: "Real - time Sync",
       description: "Seamlessly sync data across all your devices with cloud - based synchronization",
       icon: Cloud,
       color: "from - blue - 400 to - purple - 500"
     },
     {
+
       title: "Secure & Private",
       description: "Enterprise - grade security with end - to - end encryption and privacy controls",
       icon: Shield,
@@ -73,18 +78,21 @@ const MobileLaunch: React.FC = () => {
 
   const appScreens = [
     {
+
       name: "Dashboard",
       description: "Overview of your business metrics and key performance indicators",
       icon: Home,
       features: ["Real - time metrics", "Customizable widgets", "Quick actions"]
     },
     {
+
       name: "AI Assistant",
       description: "Your personal AI companion for business insights and automation",
       icon: Zap,
       features: ["Natural language queries", "Smart recommendations", "Automated tasks"]
     },
     {
+
       name: "Analytics",
       description: "Comprehensive data visualization and business intelligence tools",
       icon: BarChart3,
@@ -100,6 +108,7 @@ const MobileLaunch: React.FC = () => {
 
   const downloadOptions = [
     {
+
       platform: "iOS App Store",
       icon: "🍎",
       description: "Download for iPhone and iPad",
@@ -107,6 +116,7 @@ const MobileLaunch: React.FC = () => {
       featured: true
     },
     {
+
       platform: "Google Play Store",
       icon: "🤖",
       description: "Download for Android devices",
@@ -144,11 +154,13 @@ const MobileLaunch: React.FC = () => {
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   x: -30
 
 }}
               animate = {
+
   { opacity: 1,
   x: 0
 
@@ -192,16 +204,19 @@ const MobileLaunch: React.FC = () => {
 
             <motion.div
               initial = {
+
   { opacity: 0,
   x: 30
 
 }}
               animate = {
+
   { opacity: 1,
   x: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -270,11 +285,13 @@ const MobileLaunch: React.FC = () => {
         <div className="container mx - auto px - 4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -295,16 +312,19 @@ const MobileLaunch: React.FC = () => {
             {features.map ( (feature, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -327,11 +347,13 @@ const MobileLaunch: React.FC = () => {
         <div className="container mx - auto px - 4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -351,16 +373,19 @@ const MobileLaunch: React.FC = () => {
             {appScreens.map ( (screen, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -390,11 +415,13 @@ const MobileLaunch: React.FC = () => {
         <div className="container mx - auto px - 4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -414,21 +441,25 @@ const MobileLaunch: React.FC = () => {
             {downloadOptions.map ( (option, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
 }}
                 className={`bg - slate - 800 / 50 border rounded - xl p - 8 text - center hover:border - cyan - 400 / 50 transition - all duration - 300 hover:scale - 105 ${
+
                   option.featured ? 'border - cyan - 400 / 30 bg - gradient - to - br from - cyan - 400 / 5 to - blue - 500 / 5' : 'border - slate - 700 / 50'
                 }`}
 
@@ -458,11 +489,13 @@ const MobileLaunch: React.FC = () => {
         <div className="container mx - auto px - 4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -482,16 +515,19 @@ const MobileLaunch: React.FC = () => {
             {systemRequirements.map ( (req, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
                 whileInView = {
+
   { opacity: 1,
   scale: 1
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -510,11 +546,13 @@ const MobileLaunch: React.FC = () => {
         <div className="container mx - auto px - 4 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

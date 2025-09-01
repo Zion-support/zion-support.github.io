@@ -26,7 +26,7 @@ export const MobileEmailCapture = () => {
                 setIsSuccess(false)}, 5000)}
         catch (error) {
 
-            // // console.error("Error subscribing:", error);
+            // // // console.error("Error subscribing:", error);
             enqueueSnackbar(error?.response?.data?.message || error.message, { variant: 'error' })}
         finally {
 

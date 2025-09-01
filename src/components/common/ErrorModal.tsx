@@ -37,7 +37,7 @@ export const ErrorModal = () => {
 
     try {
 
-      // // console.log('Retrying request:', { url, method, requestData, headers });
+      // // // console.log('Retrying request:', { url, method, requestData, headers });
       if (method.toUpperCase() === 'GET') {
 
         // For GET, requestData might be params. The axiosInstance.get method handles params in its config.
@@ -55,12 +55,12 @@ export const ErrorModal = () => {
       // If retry is successful, the global interceptor won't trigger the error modal again.
       // A success toast could be shown here.
       // For example: toast.success('Operation successful after retry!');
-      // // console.log('Retry successful');
+      // // // console.log('Retry successful');
     } catch (retryError) {
 
       // The global error interceptor in axios.ts should catch this and
       // potentially show the error modal again if the retry also fails.
-      // // console.error('Retry failed:', retryError);
+      // // // console.error('Retry failed:', retryError);
     } finally {
 
       // Ensure loading is set to false, even if the SHOW_ERROR_MODAL in context does it,

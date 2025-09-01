@@ -61,7 +61,7 @@ export function useProjects() {
       setError(null);
     } catch (err: any) {
 
-      // // console.error("Error fetching projects:", err);
+      // // // console.error("Error fetching projects:", err);
       setError("Failed to fetch projects: " + err.message);
       toast.error("Failed to fetch projects");
       setProjects([]); // Clear projects on error
@@ -101,7 +101,7 @@ export function useProjects() {
       return transformedProject as Project;
     } catch (err: any) {
 
-      // // console.error("Error fetching project:", err);
+      // // // console.error("Error fetching project:", err);
       toast.error("Failed to fetch project details");
       return null;
     }
@@ -126,7 +126,7 @@ export function useProjects() {
       return true;
     } catch (err: any) {
 
-      // // console.error("Error updating project status:", err);
+      // // // console.error("Error updating project status:", err);
       toast.error("Failed to update project status");
       return false;
     }

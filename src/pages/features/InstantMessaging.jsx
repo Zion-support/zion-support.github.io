@@ -6,7 +6,9 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function InstantMessaging() {
+
     const schema = {
+
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Instant Messaging",

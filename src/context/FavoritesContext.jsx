@@ -39,7 +39,7 @@ export function FavoritesProvider({ children }) {
       );
     } catch (err) {
 
-      // // console.error('Toggle favorite failed', err);
+      // // // console.error('Toggle favorite failed', err);
     }
   };
 

@@ -11,6 +11,7 @@ import SEO from "@/components/SEO";
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
     {
+
         id: "SR-1001",
         user: "john.doe@example.com",
         userId: "user-123",
@@ -22,6 +23,7 @@ const MOCK_SUPPORT_REQUESTS = [
         category: "authentication"
     },
     {
+
         id: "SR-1002",
         user: "sarah.smith@company.co",
         userId: "user-456",
@@ -33,6 +35,7 @@ const MOCK_SUPPORT_REQUESTS = [
         category: "billing"
     },
     {
+
         id: "SR-1003",
         user: "tech.guru@startup.io",
         userId: "user-789",
@@ -44,6 +47,7 @@ const MOCK_SUPPORT_REQUESTS = [
         category: "billing"
     },
     {
+
         id: "SR-1004",
         user: "developer@codelab.dev",
         userId: "user-235",
@@ -55,6 +59,7 @@ const MOCK_SUPPORT_REQUESTS = [
         category: "api"
     },
     {
+
         id: "SR-1005",
         user: "maria.rodriguez@design.co",
         userId: "user-567",
@@ -66,6 +71,7 @@ const MOCK_SUPPORT_REQUESTS = [
         category: "disputes"
     },
     {
+
         id: "SR-1006",
         user: "alex.wong@datacompany.com",
         userId: "user-890",
@@ -77,6 +83,7 @@ const MOCK_SUPPORT_REQUESTS = [
         category: "verification"
     },
     {
+
         id: "SR-1007",
         user: "jamie.taylor@tech.org",
         userId: "user-345",
@@ -89,26 +96,32 @@ const MOCK_SUPPORT_REQUESTS = [
     }
 ];
 export default function SupportRequests() {
+
     const [searchQuery, setSearchQuery] = useState("");
     const [statusFilter, setStatusFilter] = useState(null);
     const [priorityFilter, setPriorityFilter] = useState(null);
     const [categoryFilter, setCategoryFilter] = useState(null);
     // Apply filters to the request data
     const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
+
         // Apply search query filter
         if (searchQuery &&
             !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
+
             return false}
         // Apply status filter
         if (statusFilter && request.status !== statusFilter) {
+
             return false}
         // Apply priority filter
         if (priorityFilter && request.priority !== priorityFilter) {
+
             return false}
         // Apply category filter
         if (categoryFilter && request.category !== categoryFilter) {
+
             return false}
         return true});
     // Count by status for the summary dashboard
@@ -117,6 +130,7 @@ export default function SupportRequests() {
     const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
     const totalCount = MOCK_SUPPORT_REQUESTS.length;
     const resetFilters = () => {
+
         setSearchQuery("");
         setStatusFilter(null);
         setPriorityFilter(null);

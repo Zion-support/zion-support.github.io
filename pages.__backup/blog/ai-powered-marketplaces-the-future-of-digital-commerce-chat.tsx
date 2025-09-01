@@ -6,10 +6,16 @@ const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>AiPoweredMarketplacesTheFutureOfDigitalCommerceChat - Zion Tech Solutions</title>
-        <meta name="description" content="AiPoweredMarketplacesTheFutureOfDigitalCommerceChat blog post" />
+        <title>
+          AiPoweredMarketplacesTheFutureOfDigitalCommerceChat - Zion Tech
+          Solutions
+        </title>
+        <meta
+          name="description"
+          content="AiPoweredMarketplacesTheFutureOfDigitalCommerceChat blog post"
+        />
       </Head>
-      
+
       <main>
         <h1>AiPoweredMarketplacesTheFutureOfDigitalCommerceChat</h1>
         <p>Blog content coming soon...</p>

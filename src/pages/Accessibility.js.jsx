@@ -1,26 +1,31 @@
 import React from 'react';
 import { Eye, Ear, Hand, Brain, Shield, Award, CheckCircle } from 'lucide-react';
 const Accessibility = () => {
+
     const accessibilityFeatures = [
         {
+
             icon: Eye,
             title: "Visual Accessibility",
             description: "Support for users with visual impairments",
             features["High contrast mode", "Screen reader compatibility", "Resizable text", "Color-blind friendly design"]
         },
         {
+
             icon: Ear,
             title: "Auditory Accessibility",
             description: "Support for users with hearing impairments",
             features["Closed captions", "Audio descriptions", "Visual alerts", "Transcripts available"]
         },
         {
+
             icon: Hand,
             title: "Motor Accessibility",
             description: "Support for users with motor impairments",
             features["Keyboard navigation", "Voice control support", "Large click targets", "Customizable timing"]
         },
         {
+
             icon: Brain,
             title: "Cognitive Accessibility",
             description: "Support for users with cognitive impairments",
@@ -29,24 +34,28 @@ const Accessibility = () => {
     ];
     const complianceStandards = [
         {
+
             standard: "WCAG 2.1",
             level: "AA",
             description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",
             status: "Compliant"
         },
         {
+
             standard: "Section 508",
             level: "Federal",
             description: "Federal accessibility requirements for electronic information",
             status: "Compliant"
         },
         {
+
             standard: "ADA Title III",
             level: "Legal",
             description: "Americans with Disabilities Act digital accessibility requirements",
             status: "Compliant"
         },
         {
+
             standard: "EN 301 549",
             level: "European",
             description: "European accessibility requirements for ICT products and services",
@@ -55,31 +64,37 @@ const Accessibility = () => {
     ];
     const toolsAndTechnologies = [
         {
+
             name: "Screen Readers",
             description: "Compatible with JAWS, NVDA, VoiceOver, and TalkBack",
             icon: Eye
         },
         {
+
             name: "Voice Control",
             description: "Support for Dragon NaturallySpeaking and built-in voice assistants",
             icon: Ear
         },
         {
+
             name: "Keyboard Navigation",
             description: "Full keyboard accessibility with visible focus indicators",
             icon: Hand
         },
         {
+
             name: "High Contrast",
             description: "High contrast mode for better visibility",
             icon: Eye
         },
         {
+
             name: "Text Scaling",
             description: "Text can be scaled up to 200% without loss of functionality",
             icon: Brain
         },
         {
+
             name: "Alternative Text",
             description: "Descriptive alt text for all images and graphics",
             icon: Eye

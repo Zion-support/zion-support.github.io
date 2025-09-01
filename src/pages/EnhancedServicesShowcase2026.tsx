@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart, 
   MessageCircle, HelpCircle, DollarSign, Target, TrendingUp, 
   Atom, Network, Eye, PenTool, Heart, Building, Truck, 
@@ -13,11 +14,13 @@ import {
 import { enhancedInnovativeServices2026, enhancedServiceCategories } from '../data/enhancedInnovativeServices2026';
 
 export default function EnhancedServicesShowcase2026() {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('featured');
 
   const filteredServices = enhancedInnovativeServices2026.filter(service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -25,7 +28,9 @@ export default function EnhancedServicesShowcase2026() {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'price-low':
         return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
       case 'price-high':
@@ -40,21 +45,27 @@ export default function EnhancedServicesShowcase2026() {
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5
       }
     }
@@ -328,6 +339,7 @@ export default function EnhancedServicesShowcase2026() {
             <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
             <button
               onClick={() => {
+
                 setSelectedCategory('all');
                 setSearchTerm('');
                 setSortBy('featured');

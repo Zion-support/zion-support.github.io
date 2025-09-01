@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide-react';
 export default function ServicesOverview() {
+
     const stats = [
         { label: "Services Offered", value: "50+", icon: Target },
         { label: "Industries Served", value: "15+", icon: Users },
@@ -11,23 +12,29 @@ export default function ServicesOverview() {
         { label: "Client Satisfaction", value: "98%", icon: Check }
     ];
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0 
 
 },
         visible: {
+
             y: 0,
             opacity: 1,
             transition: {
+
                 duration: 0.5,
                 ease: "easeOut"
             }

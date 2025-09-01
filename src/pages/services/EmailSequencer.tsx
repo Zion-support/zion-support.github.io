@@ -1,6 +1,7 @@
 import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon              } from 'lucide-react.ts';
 
 export default function EmailSequencer(...args: any[]): any {
+
 	const features = [;
 		'Multi-step sequences with A/B testing',;
 		'AI subject line and body suggestions',;

@@ -88,7 +88,7 @@ export function ChatBotPanel() {
         catch (error) {
 
 "
-            // // // console.error("Error in AI chat:", error);
+            // // // // console.error("Error in AI chat:", error);
             toast({
 
 "
@@ -139,7 +139,7 @@ export function ChatBotPanel() {
         catch (error) {
 
 "
-            // // // console.error("Error in AI chat:", error);
+            // // // // console.error("Error in AI chat:", error);
             return {
 
                 success: false,"
@@ -164,7 +164,7 @@ export function ChatBotPanel() {
 
             // Send the conversation to the backend for logging
             // This would be implemented in a real system"
-            // // // console.log("Support escalation triggered", {
+            // // // // console.log("Support escalation triggered", {
 
                 conversationHistory: messages.map(m => ({
 
@@ -176,7 +176,7 @@ export function ChatBotPanel() {
         catch (error) {
 
 "
-            // // // console.error("Failed to log support escalation:", error)}
+            // // // // console.error("Failed to log support escalation:", error)}
     };
     const handleEscalateToLiveAgent = () => {
 

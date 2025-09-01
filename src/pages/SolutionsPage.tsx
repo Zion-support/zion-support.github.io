@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export function SolutionsPage (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Building,
@@ -29,11 +31,11 @@ import { motion } from 'framer - motion.ts';
   Globe,
   Phone,
   Mail,
-  MapPin,
-} from 'lucide - react.ts';
+  MapPin} from 'lucide - react.ts';
 
   const solutions = [
     {
+
       title: 'Enterprise Solutions',
       description: 'Comprehensive technology solutions for large enterprises',
       icon: Building,
@@ -52,9 +54,9 @@ import { motion } from 'framer - motion.ts';
         'Manufacturing',
         'Retail',
         'Technology',
-      ],
-    },
+      ]},
     {
+
       title: 'AI Business Intelligence',
       description:
         'Transform data into actionable insights with AI - powered analytics',
@@ -74,9 +76,9 @@ import { motion } from 'framer - motion.ts';
         'E - commerce',
         'Marketing',
         'Operations',
-      ],
-    },
+      ]},
     {
+
       title: 'Quantum AI Platform',
       description:
         'Revolutionary computing power combining quantum and AI technologies',
@@ -96,9 +98,9 @@ import { motion } from 'framer - motion.ts';
         'Pharmaceuticals',
         'Logistics',
         'Energy',
-      ],
-    },
+      ]},
     {
+
       title: 'Digital Twin Solutions',
       description:
         'Create virtual replicas of physical systems for optimization',
@@ -118,9 +120,9 @@ import { motion } from 'framer - motion.ts';
         'Smart Cities',
         'Transportation',
         'Energy',
-      ],
-    },
+      ]},
     {
+
       title: 'Zero Trust Security',
       description:
         'Advanced security framework for modern digital environments',
@@ -140,9 +142,9 @@ import { motion } from 'framer - motion.ts';
         'Government',
         'Technology',
         'Education',
-      ],
-    },
+      ]},
     {
+
       title: 'Cloud Transformation',
       description: 'Modernize your infrastructure with cloud - native solutions',
       icon: Cloud,
@@ -161,12 +163,12 @@ import { motion } from 'framer - motion.ts';
         'Healthcare',
         'Retail',
         'Manufacturing',
-      ],
-    },
+      ]},
   ];
 
   const industries = [
     {
+
       name: 'Healthcare',
       icon: Heart,
       description:
@@ -176,9 +178,9 @@ import { motion } from 'framer - motion.ts';
         'Digital Twin',
         'Cybersecurity',
         'Data Analytics',
-      ],
-    },
+      ]},
     {
+
       name: 'Finance',
       icon: TrendingUp,
       description: 'Risk management, fraud detection, and algorithmic trading',
@@ -187,9 +189,9 @@ import { motion } from 'framer - motion.ts';
         'Quantum AI Platform',
         'Zero Trust Security',
         'Cloud Solutions',
-      ],
-    },
+      ]},
     {
+
       name: 'Manufacturing',
       icon: Cpu,
       description:
@@ -199,9 +201,9 @@ import { motion } from 'framer - motion.ts';
         'IoT Solutions',
         'AI Analytics',
         'Robotics Integration',
-      ],
-    },
+      ]},
     {
+
       name: 'Retail',
       icon: ShoppingCart,
       description:
@@ -211,9 +213,9 @@ import { motion } from 'framer - motion.ts';
         'Data Analytics',
         'E - commerce Platform',
         'Customer Insights',
-      ],
-    },
+      ]},
     {
+
       name: 'Technology',
       icon: Zap,
       description:
@@ -223,9 +225,9 @@ import { motion } from 'framer - motion.ts';
         'API Development',
         'Cybersecurity',
         'AI Solutions',
-      ],
-    },
+      ]},
     {
+
       name: 'Government',
       icon: Building,
       description: 'Digital services, security, and citizen engagement',
@@ -234,8 +236,7 @@ import { motion } from 'framer - motion.ts';
         'Data Analytics',
         'Cloud Infrastructure',
         'AI Services',
-      ],
-    },
+      ]},
   ];
 
   const stats = [

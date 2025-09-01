@@ -79,7 +79,7 @@ export function ApiDocumentation() {
 }
 });
 const data = await response.json();`
-// // // // // // // // // // console.log(data);`,`
+// // // // // // // // // // // console.log(data);`,`
             python: `import requests
 headers = {
 
@@ -157,7 +157,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId`
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 });
 const data = await response.json();`
-// // // // // // // // // // console.log(data);`,`
+// // // // // // // // // // // console.log(data);`,`
             python: `import requests
 headers = {
 
@@ -271,7 +271,7 @@ print(data)`
   })
 });
 const data = await response.json();`
-// // // // // // // // // // console.log(data);`,`
+// // // // // // // // // // // console.log(data);`,`
             python: `import requests
 import json
 headers = {
@@ -358,7 +358,7 @@ print(data)`
 }
 });
 const data = await response.json();`
-// // // // // // // // // // console.log(data);`,`
+// // // // // // // // // // // console.log(data);`,`
             python: `import requests
 headers = {
 
@@ -429,7 +429,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 });
 const data = await response.json();`
-// // // // // // // // // // console.log(data);`,`
+// // // // // // // // // // // console.log(data);`,`
             python: `import requests
 headers = {
 
@@ -552,7 +552,7 @@ print(data)`
   })
 });
 const data = await response.json();`
-// // // // // // // // // // console.log(data);`,`
+// // // // // // // // // // // console.log(data);`,`
             python: `import requests
 import json
 headers = {
@@ -632,7 +632,7 @@ print(data)`
 }
 });
 const data = await response.json();`
-// // // // // // // // // // console.log(data);`,`
+// // // // // // // // // // // console.log(data);`,`
             python: `import requests
 headers = {
 

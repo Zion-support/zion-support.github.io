@@ -10,10 +10,11 @@ export default function Events() {
       time: '9:00 AM - 5:00 PM',
       location: 'San Francisco, CA',
       type: 'Conference',
-      description: 'Join industry leaders and experts for a day of insights into the future of cloud automation and AI-driven infrastructure.',
+      description:
+        'Join industry leaders and experts for a day of insights into the future of cloud automation and AI-driven infrastructure.',
       speakers: ['Dr. Sarah Chen', 'Mark Rodriguez', 'Lisa Thompson'],
       capacity: 500,
-      registered: 342
+      registered: 342,
     },
     {
       id: 2,
@@ -22,10 +23,11 @@ export default function Events() {
       time: '2:00 PM - 6:00 PM',
       location: 'Virtual Event',
       type: 'Workshop',
-      description: 'Hands-on workshop covering practical implementation of AI automation in cloud environments.',
+      description:
+        'Hands-on workshop covering practical implementation of AI automation in cloud environments.',
       speakers: ['Alex Johnson', 'Maria Garcia'],
       capacity: 100,
-      registered: 87
+      registered: 87,
     },
     {
       id: 3,
@@ -34,11 +36,12 @@ export default function Events() {
       time: '6:00 PM - 9:00 PM',
       location: 'New York, NY',
       type: 'Meetup',
-      description: 'Network with fellow developers and learn about the latest automation tools and techniques.',
+      description:
+        'Network with fellow developers and learn about the latest automation tools and techniques.',
       speakers: ['David Kim', 'Rachel Green'],
       capacity: 150,
-      registered: 98
-    }
+      registered: 98,
+    },
   ];
 
   const pastEvents = [
@@ -48,8 +51,9 @@ export default function Events() {
       date: '2025-01-10',
       location: 'Virtual Event',
       type: 'Product Launch',
-      description: 'Celebrated the official launch of Zion App with demonstrations and Q&A sessions.',
-      attendees: 1200
+      description:
+        'Celebrated the official launch of Zion App with demonstrations and Q&A sessions.',
+      attendees: 1200,
     },
     {
       id: 5,
@@ -57,16 +61,20 @@ export default function Events() {
       date: '2025-01-05',
       location: 'Virtual Event',
       type: 'Webinar',
-      description: 'Shared insights and best practices for implementing automation in production environments.',
-      attendees: 850
-    }
+      description:
+        'Shared insights and best practices for implementing automation in production environments.',
+      attendees: 850,
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Head>
         <title>Events - Zion App</title>
-        <meta name="description" content="Upcoming events, conferences, and workshops hosted by Zion App" />
+        <meta
+          name="description"
+          content="Upcoming events, conferences, and workshops hosted by Zion App"
+        />
       </Head>
 
       <div className="container mx-auto px-4 py-16">
@@ -82,38 +90,54 @@ export default function Events() {
 
           {/* Upcoming Events */}
           <section className="mb-16">
-            <h2 className="text-3xl font-semibold text-white mb-8">Upcoming Events</h2>
+            <h2 className="text-3xl font-semibold text-white mb-8">
+              Upcoming Events
+            </h2>
             <div className="space-y-8">
-              {upcomingEvents.map((event) => (
-                <div key={event.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+              {upcomingEvents.map(event => (
+                <div
+                  key={event.id}
+                  className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300"
+                >
                   <div className="md:flex md:items-start md:justify-between">
                     <div className="md:w-2/3">
                       <div className="flex items-center gap-3 mb-4">
-                        <span className={`px-3 py-1 text-xs font-medium rounded-full ${
-                          event.type === 'Conference' ? 'bg-purple-500/20 text-purple-400' :
-                          event.type === 'Workshop' ? 'bg-green-500/20 text-green-400' :
-                          'bg-blue-500/20 text-blue-400'
-                        }`}>
+                        <span
+                          className={`px-3 py-1 text-xs font-medium rounded-full ${
+                            event.type === 'Conference'
+                              ? 'bg-purple-500/20 text-purple-400'
+                              : event.type === 'Workshop'
+                                ? 'bg-green-500/20 text-green-400'
+                                : 'bg-blue-500/20 text-blue-400'
+                          }`}
+                        >
                           {event.type}
                         </span>
-                        <span className="text-gray-400 text-sm">{event.date}</span>
-                        <span className="text-gray-400 text-sm">{event.time}</span>
+                        <span className="text-gray-400 text-sm">
+                          {event.date}
+                        </span>
+                        <span className="text-gray-400 text-sm">
+                          {event.time}
+                        </span>
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-3">
                         {event.title}
                       </h3>
-                      <p className="text-gray-300 mb-4">
-                        {event.description}
-                      </p>
+                      <p className="text-gray-300 mb-4">{event.description}</p>
                       <div className="flex items-center gap-6 text-sm text-gray-400 mb-4">
                         <span>📍 {event.location}</span>
-                        <span>👥 {event.registered}/{event.capacity} registered</span>
+                        <span>
+                          👥 {event.registered}/{event.capacity} registered
+                        </span>
                       </div>
                       <div className="mb-4">
                         <p className="text-gray-400 text-sm mb-2">Speakers:</p>
                         <div className="flex flex-wrap gap-2">
-                          {event.speakers.map((speaker) => (
-                            <span key={speaker} className="px-3 py-1 bg-white/10 text-white text-sm rounded-full">
+                          {event.speakers.map(speaker => (
+                            <span
+                              key={speaker}
+                              className="px-3 py-1 bg-white/10 text-white text-sm rounded-full"
+                            >
                               {speaker}
                             </span>
                           ))}
@@ -136,16 +160,25 @@ export default function Events() {
 
           {/* Past Events */}
           <section className="mb-16">
-            <h2 className="text-3xl font-semibold text-white mb-8">Past Events</h2>
+            <h2 className="text-3xl font-semibold text-white mb-8">
+              Past Events
+            </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {pastEvents.map((event) => (
-                <div key={event.id} className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
+              {pastEvents.map(event => (
+                <div
+                  key={event.id}
+                  className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
+                >
                   <div className="flex items-center gap-3 mb-3">
-                    <span className={`px-3 py-1 text-xs font-medium rounded-full ${
-                      event.type === 'Product Launch' ? 'bg-orange-500/20 text-orange-400' :
-                          event.type === 'Webinar' ? 'bg-indigo-500/20 text-indigo-400' :
-                          'bg-gray-500/20 text-gray-400'
-                        }`}>
+                    <span
+                      className={`px-3 py-1 text-xs font-medium rounded-full ${
+                        event.type === 'Product Launch'
+                          ? 'bg-orange-500/20 text-orange-400'
+                          : event.type === 'Webinar'
+                            ? 'bg-indigo-500/20 text-indigo-400'
+                            : 'bg-gray-500/20 text-gray-400'
+                      }`}
+                    >
                       {event.type}
                     </span>
                     <span className="text-gray-400 text-sm">{event.date}</span>
@@ -158,7 +191,9 @@ export default function Events() {
                   </p>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-400">📍 {event.location}</span>
-                    <span className="text-gray-400">👥 {event.attendees} attendees</span>
+                    <span className="text-gray-400">
+                      👥 {event.attendees} attendees
+                    </span>
                   </div>
                 </div>
               ))}
@@ -172,7 +207,8 @@ export default function Events() {
                 Host an Event with Us
               </h3>
               <p className="text-gray-300 mb-6">
-                Interested in hosting a workshop, meetup, or conference? Let's collaborate!
+                Interested in hosting a workshop, meetup, or conference? Let's
+                collaborate!
               </p>
               <button className="px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors">
                 Get in Touch

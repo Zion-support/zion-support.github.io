@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Atom, 
   Zap, 
   Brain, 
@@ -30,33 +31,40 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function QuantumComputingAsAService() {
+
   const features = [
     {
+
       icon: <Atom className="w-6 h-6" />,
       title: "Quantum Processing Units",
       description: "Access to state-of-the-art quantum processors with 100+ qubits for complex computational tasks"
     },
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "Quantum Machine Learning",
       description: "Advanced quantum algorithms for machine learning, optimization, and pattern recognition"
     },
     {
+
       icon: <Zap className="w-6 h-6" />,
       title: "Quantum Simulation Engine",
       description: "High-fidelity quantum simulation for chemistry, materials science, and drug discovery"
     },
     {
+
       icon: <Database className="w-6 h-6" />,
       title: "Quantum Database",
       description: "Quantum-enhanced database systems for ultra-fast search and optimization queries"
     },
     {
+
       icon: <Target className="w-6 h-6" />,
       title: "Quantum Cryptography",
       description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms"
     },
     {
+
       icon: <Rocket className="w-6 h-6" />,
       title: "Quantum API Gateway",
       description: "RESTful APIs and SDKs for seamless integration with existing applications"
@@ -65,6 +73,7 @@ export default function QuantumComputingAsAService() {
 
   const pricing = [
     {
+
       name: "Quantum Starter",
       price: "$999",
       period: "/month",
@@ -79,6 +88,7 @@ export default function QuantumComputingAsAService() {
       popular: false
     },
     {
+
       name: "Quantum Professional",
       price: "$2,999",
       period: "/month",
@@ -94,6 +104,7 @@ export default function QuantumComputingAsAService() {
       popular: true
     },
     {
+
       name: "Quantum Enterprise",
       price: "$9,999",
       period: "/month",
@@ -122,21 +133,25 @@ export default function QuantumComputingAsAService() {
 
   const useCases = [
     {
+
       industry: "Pharmaceuticals",
       description: "Quantum simulation for drug discovery, protein folding, and molecular dynamics",
       advantage: "1000x faster drug discovery"
     },
     {
+
       industry: "Financial Services",
       description: "Quantum optimization for portfolio management, risk assessment, and trading algorithms",
       advantage: "Exponential speed improvement"
     },
     {
+
       industry: "Materials Science",
       description: "Quantum simulation for new materials, battery technology, and superconductors",
       advantage: "Revolutionary material discovery"
     },
     {
+
       industry: "Logistics & Supply Chain",
       description: "Quantum optimization for route planning, inventory management, and resource allocation",
       advantage: "Optimal solutions in seconds"
@@ -336,6 +351,7 @@ export default function QuantumComputingAsAService() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 ${
+
                   plan.popular 
                     ? 'border-purple-500 ring-2 ring-purple-500/20' 
                     : 'border-slate-700 hover:border-purple-500'

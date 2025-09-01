@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from 'react';
 export default React.memo (function ServicesOverview () {
+
 import {
+
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data / innovativeMicroSaasServices2025';
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
@@ -53,10 +55,10 @@ import { SEO } from '../components / SEO';
   DollarSign,
   Users,
   Eye,
-  ArrowUpRight,
-} from 'lucide - react';
+  ArrowUpRight} from 'lucide - react';
 
 const categoryIcons: Record < string, React.ReactNode> = {
+
   'AI & Analytics': <Brain className="w - 6 h - 6" />,
   'AI & Sales': <TrendingUp className="w - 6 h - 6" />,
   'AI & Support': <MessageCircle className="w - 6 h - 6" />,
@@ -83,10 +85,10 @@ const categoryIcons: Record < string, React.ReactNode> = {
   Analytics: <BarChart3 className="w - 6 h - 6" />,
   Automation: <Zap className="w - 6 h - 6" />,
   Innovation: <Lightbulb className="w - 6 h - 6" />,
-  'Emerging Tech': <Sparkles className="w - 6 h - 6" />,
-};
+  'Emerging Tech': <Sparkles className="w - 6 h - 6" />};
 
 const categoryColors: Record < string, string> = {
+
   'AI & Analytics': 'from - purple - 600 to - pink - 600',
   'AI & Sales': 'from - blue - 600 to - cyan - 600',
   'AI & Support': 'from - green - 600 to - emerald - 600',
@@ -113,67 +115,66 @@ const categoryColors: Record < string, string> = {
   Analytics: 'from - cyan - 600 to - blue - 600',
   Automation: 'from - green - 600 to - emerald - 600',
   Innovation: 'from - yellow - 600 to - orange - 600',
-  'Emerging Tech': 'from - purple - 600 to - indigo - 600',
-};
+  'Emerging Tech': 'from - purple - 600 to - indigo - 600'};
 
 const serviceCategories = [
   {
+
     name: 'AI & Machine Learning',
     icon: Brain,
     color: 'from - purple - 600 to - pink - 600',
     description:
       'Advanced AI solutions for business automation and intelligence',
-    count: 0,
-  },
+    count: 0},
   {
+
     name: 'Cybersecurity & Compliance',
     icon: Shield,
     color: 'from - red - 600 to - orange - 600',
     description: 'Enterprise - grade security and compliance solutions',
-    count: 0,
-  },
+    count: 0},
   {
+
     name: 'Cloud & DevOps',
     icon: Cloud,
     color: 'from - blue - 600 to - indigo - 600',
     description: 'Cloud infrastructure and development operations',
-    count: 0,
-  },
+    count: 0},
   {
+
     name: 'IoT & Edge Computing',
     icon: Cpu,
     color: 'from - green - 600 to - teal - 600',
     description: 'Internet of Things and edge computing solutions',
-    count: 0,
-  },
+    count: 0},
   {
+
     name: 'Digital Transformation',
     icon: Rocket,
     color: 'from - orange - 600 to - red - 600',
     description: 'Business transformation and modernization',
-    count: 0,
-  },
+    count: 0},
   {
+
     name: 'Emerging Technologies',
     icon: Sparkles,
     color: 'from - yellow - 600 to - orange - 600',
     description: 'Cutting - edge technologies and innovations',
-    count: 0,
-  },
+    count: 0},
   {
+
     name: 'Micro SaaS Solutions',
     icon: ShoppingCart,
     color: 'from - teal - 600 to - cyan - 600',
     description: 'Scalable software - as - a-service solutions',
-    count: 0,
-  },
+    count: 0},
   {
+
     name: 'Healthcare & Life Sciences',
     icon: Heart,
     color: 'from - red - 600 to - pink - 600',
     description: 'Healthcare technology and life sciences solutions',
-    count: 0,
-  },
+    count: 0},
 ];
 
   const [searchQuery, setSearchQuery] = useState ('') ;
@@ -183,6 +184,7 @@ const serviceCategories = [
   const [viewMode, setViewMode] = useState<'grid' | 'list'> ('grid') ;
 
   const categories = useMemo ( () => {
+
     const cats = [
       ...new Set (INNOVATIVE_MICRO_SAAS_SERVICES_2025.map (service => service.category) ) ,
     ];
@@ -191,30 +193,41 @@ const serviceCategories = [
 
   // Calculate service counts for each category
   const categoriesWithCounts = useMemo ( () => {
+
     return serviceCategories.map (cat => {
+
       const count = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter (service => {
+
         if (cat.name === 'AI & Machine Learning') {
+
           return service.category.includes ('AI') ;
         } else if (cat.name === 'Cybersecurity & Compliance') {
+
           return (service.category.includes ('Cybersecurity') ||
             service.category.includes ('Security') ) ;
         } else if (cat.name === 'Cloud & DevOps') {
+
           return (service.category.includes ('Cloud') ||
             service.category.includes ('DevOps') ) ;
         } else if (cat.name === 'IoT & Edge Computing') {
+
           return (service.category.includes ('IoT') ||
             service.category.includes ('Edge') ) ;
         } else if (cat.name === 'Digital Transformation') {
+
           return (service.category.includes ('Digital') ||
             service.category.includes ('Transformation') ) ;
         } else if (cat.name === 'Emerging Technologies') {
+
           return (service.category.includes ('Quantum') ||
             service.category.includes ('Space') ||
             service.category.includes ('Blockchain') ) ;
         } else if (cat.name === 'Micro SaaS Solutions') {
+
           return (service.category.includes ('Micro SaaS') ||
             service.category.includes ('SaaS') ) ;
         } else if (cat.name === 'Healthcare & Life Sciences') {
+
           return (service.category.includes ('Healthcare') ||
             service.category.includes ('Health') ) ;
         }
@@ -225,10 +238,12 @@ const serviceCategories = [
   }, []) ;
 
   const filteredServices = useMemo ( () => {
+
     let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
     // Filter by search query
     if (searchQuery) {
+
       filtered = filtered.filter (service =>
           service.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
           service.description
@@ -239,14 +254,18 @@ const serviceCategories = [
 
     // Filter by category
     if (selectedCategory !== 'all') {
+
       filtered = filtered.filter (service => service.category === selectedCategory) ;
     }
 
     // Filter by price range
     if (priceRange !== 'all') {
+
       filtered = filtered.filter (service => {
+
         const price = service.price;
         switch (priceRange) {
+
           case 'low':
             return price <= 1000;
           case 'medium':
@@ -261,7 +280,9 @@ const serviceCategories = [
 
     // Sort services
     filtered.sort ( (a, b) => {
+
       switch (sortBy) {
+
         case 'name':
           return a.title.localeCompare (b.title) ;
         case 'price - low':
@@ -279,11 +300,11 @@ const serviceCategories = [
   }, [searchQuery, selectedCategory, priceRange, sortBy]) ;
 
   const contactInfo = {
+
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     website: 'https://ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709'};
 
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
       <SEO
@@ -483,6 +504,7 @@ const serviceCategories = [
               <div role="button" className="flex space - x-2">
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`px - 4 py - 2 rounded - lg transition - colors duration - 300 ${
+
                     viewMode === 'grid'
                       ? 'bg - blue - 600 text - white'
                       : 'bg - white / 20 text - white hover:bg - white / 30'
@@ -492,6 +514,7 @@ const serviceCategories = [
                 </button>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`px - 4 py - 2 rounded - lg transition - colors duration - 300 ${
+
                     viewMode === 'list'
                       ? 'bg - blue - 600 text - white'
                       : 'bg - white / 20 text - white hover:bg - white / 30'
@@ -713,6 +736,7 @@ const serviceCategories = [
                 No services found matching your criteria
               </div>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+
                   setSearchQuery ('') ;
                   setSelectedCategory ('all') ;
                   setPriceRange ('all') ;

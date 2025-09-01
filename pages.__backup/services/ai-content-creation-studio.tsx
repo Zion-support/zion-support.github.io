@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Palette, 
-  PenTool, 
-  Image, 
-  Video, 
-  Mic, 
-  CheckCircle, 
+import {
+  Palette,
+  PenTool,
+  Image,
+  Video,
+  Mic,
+  CheckCircle,
   ArrowRight,
   FileText,
   Globe,
@@ -16,7 +16,7 @@ import {
   Star,
   Zap,
   Target,
-  TrendingUp
+  TrendingUp,
 } from 'lucide-react';
 
 export default function AIContentCreationStudio() {
@@ -24,33 +24,39 @@ export default function AIContentCreationStudio() {
     {
       icon: PenTool,
       title: 'AI Writing Assistant',
-      description: 'Generate high-quality written content for blogs, articles, marketing copy, and more.'
+      description:
+        'Generate high-quality written content for blogs, articles, marketing copy, and more.',
     },
     {
       icon: Image,
       title: 'AI Image Generation',
-      description: 'Create stunning visuals, graphics, and illustrations using advanced AI models.'
+      description:
+        'Create stunning visuals, graphics, and illustrations using advanced AI models.',
     },
     {
       icon: Video,
       title: 'AI Video Production',
-      description: 'Generate engaging video content with automated editing and effects.'
+      description:
+        'Generate engaging video content with automated editing and effects.',
     },
     {
       icon: Mic,
       title: 'AI Audio Creation',
-      description: 'Create podcasts, voiceovers, and audio content with natural-sounding AI voices.'
+      description:
+        'Create podcasts, voiceovers, and audio content with natural-sounding AI voices.',
     },
     {
       icon: FileText,
       title: 'Content Optimization',
-      description: 'AI-powered SEO optimization and content performance analysis.'
+      description:
+        'AI-powered SEO optimization and content performance analysis.',
     },
     {
       icon: Globe,
       title: 'Multi-Language Support',
-      description: 'Create content in multiple languages with accurate translation and localization.'
-    }
+      description:
+        'Create content in multiple languages with accurate translation and localization.',
+    },
   ];
 
   const benefits = [
@@ -59,30 +65,31 @@ export default function AIContentCreationStudio() {
     'Scale content production without increasing headcount',
     'Improve SEO performance with AI-optimized content',
     'Create personalized content for different audiences',
-    'Reduce content creation costs significantly'
+    'Reduce content creation costs significantly',
   ];
 
   const contentTypes = [
     {
       name: 'Blog Posts & Articles',
       description: 'SEO-optimized written content for websites and blogs.',
-      icon: FileText
+      icon: FileText,
     },
     {
       name: 'Social Media Content',
-      description: 'Engaging posts, captions, and visual content for all platforms.',
-      icon: Globe
+      description:
+        'Engaging posts, captions, and visual content for all platforms.',
+      icon: Globe,
     },
     {
       name: 'Marketing Materials',
       description: 'Brochures, flyers, and promotional content.',
-      icon: Target
+      icon: Target,
     },
     {
       name: 'Video Content',
       description: 'Product demos, tutorials, and promotional videos.',
-      icon: Video
-    }
+      icon: Video,
+    },
   ];
 
   const industries = [
@@ -93,7 +100,7 @@ export default function AIContentCreationStudio() {
     'Education & Training',
     'Real Estate',
     'Manufacturing',
-    'Professional Services'
+    'Professional Services',
   ];
 
   return (
@@ -111,8 +118,9 @@ export default function AIContentCreationStudio() {
                 AI Content Creation Studio
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600 lg:text-xl">
-                Transform your content strategy with our AI-powered studio that creates engaging, 
-                high-quality content across all formats and platforms.
+                Transform your content strategy with our AI-powered studio that
+                creates engaging, high-quality content across all formats and
+                platforms.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
@@ -125,7 +133,8 @@ export default function AIContentCreationStudio() {
                   href="/services"
                   className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600"
                 >
-                  View All Services <ArrowRight className="ml-2 h-5 w-5 inline" />
+                  View All Services{' '}
+                  <ArrowRight className="ml-2 h-5 w-5 inline" />
                 </Link>
               </div>
             </motion.div>
@@ -141,10 +150,11 @@ export default function AIContentCreationStudio() {
               Studio Features
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              Our AI studio provides comprehensive content creation tools for every type of digital content.
+              Our AI studio provides comprehensive content creation tools for
+              every type of digital content.
             </p>
           </div>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <motion.div
@@ -157,7 +167,9 @@ export default function AIContentCreationStudio() {
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-8 w-8 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
@@ -174,7 +186,8 @@ export default function AIContentCreationStudio() {
                 Why Choose AI Content Creation?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Our AI studio delivers measurable results that transform your content strategy and drive engagement.
+                Our AI studio delivers measurable results that transform your
+                content strategy and drive engagement.
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -219,10 +232,11 @@ export default function AIContentCreationStudio() {
               Content Types We Create
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              From written content to multimedia, we cover all your content creation needs.
+              From written content to multimedia, we cover all your content
+              creation needs.
             </p>
           </div>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {contentTypes.map((contentType, index) => (
               <motion.div
@@ -235,8 +249,12 @@ export default function AIContentCreationStudio() {
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <contentType.icon className="h-8 w-8 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{contentType.name}</h3>
-                <p className="text-gray-600 text-sm">{contentType.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {contentType.name}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {contentType.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -251,9 +269,10 @@ export default function AIContentCreationStudio() {
               Industries We Serve
             </h2>
             <p className="text-lg text-gray-600 mb-12">
-              Our AI content creation studio works across industries, providing tailored content solutions.
+              Our AI content creation studio works across industries, providing
+              tailored content solutions.
             </p>
-            
+
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {industries.map((industry, index) => (
                 <motion.div
@@ -265,7 +284,9 @@ export default function AIContentCreationStudio() {
                 >
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-6 w-6 text-orange-500" />
-                    <span className="font-medium text-gray-900">{industry}</span>
+                    <span className="font-medium text-gray-900">
+                      {industry}
+                    </span>
                   </div>
                 </motion.div>
               ))}
@@ -282,7 +303,8 @@ export default function AIContentCreationStudio() {
               Ready to Transform Your Content?
             </h2>
             <p className="mt-6 text-lg leading-8 text-orange-100">
-              Let's discuss how our AI content creation studio can revolutionize your content strategy.
+              Let's discuss how our AI content creation studio can revolutionize
+              your content strategy.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

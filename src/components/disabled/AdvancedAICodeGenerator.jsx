@@ -230,7 +230,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       return item ? JSON.parse(item) : initialValue} catch (error) {
 
 `
-      // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
+      // // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue}
   }) ;
 
@@ -243,7 +243,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {
 
 "`
-      // // // console.error(\`Error setting localStorage key "\${key}":\`, error)}
+      // // // // console.error(\`Error setting localStorage key "\${key}":\`, error)}
   };
 `
   return [storedValue, setValue] as const}`,
@@ -301,7 +301,7 @@ export function AdvancedAICodeGenerator() {
                 prompt: aiPrompt,`
   generatedCode: `// Generated code for: ${aiPrompt
 "`
-}\n\nfunction example() {\n  // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
+}\n\nfunction example() {\n  // // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
                 language: 'javascript',
                 confidence: 0.87,
                 alternatives[;

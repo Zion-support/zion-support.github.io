@@ -46,7 +46,7 @@ export const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps>
 
     } catch (error) {
 
-      // // console.error('Service Worker registration failed:', error);
+      // // // console.error('Service Worker registration failed:', error);
     }
   };
 

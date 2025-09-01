@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const UltimatePricing2025 = () => {
+
     const pricingTiers = [
         {
+
             name: "Micro SAAS Solutions",
             description: "Affordable, specialized software solutions for modern businesses",
             plans[
                 {
+
                     name: "AI-Powered HR Assistant",
                     price: "$199",
                     period: "/month",
@@ -26,6 +29,7 @@ const UltimatePricing2025 = () => {
                     competitiveAdvantage: "Advanced AI, comprehensive automation, bias-free processes"
                 },
                 {
+
                     name: "Smart Inventory Management",
                     price: "$149",
                     period: "/month",
@@ -45,6 +49,7 @@ const UltimatePricing2025 = () => {
                     competitiveAdvantage: "AI forecasting, real-time optimization, ERP integration"
                 },
                 {
+
                     name: "AI Legal Document Analyzer",
                     price: "$299",
                     period: "/month",
@@ -64,6 +69,7 @@ const UltimatePricing2025 = () => {
                     competitiveAdvantage: "Advanced NLP, comprehensive risk assessment, workflow integration"
                 },
                 {
+
                     name: "Smart Financial Planning",
                     price: "$99",
                     period: "/month",
@@ -85,10 +91,12 @@ const UltimatePricing2025 = () => {
             ]
         },
         {
+
             name: "Advanced AI & Machine Learning",
             description: "Enterprise-grade artificial intelligence solutions for innovation and competitive advantage",
             plans[
                 {
+
                     name: "AI-Powered Fraud Detection",
                     price: "$3,000",
                     period: "/month",
@@ -108,6 +116,7 @@ const UltimatePricing2025 = () => {
                     competitiveAdvantage: "Advanced ML algorithms, real-time processing, industry-leading accuracy"
                 },
                 {
+
                     name: "AI Supply Chain Optimization",
                     price: "$4,000",
                     period: "/month",
@@ -127,6 +136,7 @@ const UltimatePricing2025 = () => {
                     competitiveAdvantage: "AI optimization, real-time visibility, comprehensive risk management"
                 },
                 {
+
                     name: "AI-Powered Healthcare",
                     price: "$8,000",
                     period: "/month",
@@ -148,10 +158,12 @@ const UltimatePricing2025 = () => {
             ]
         },
         {
+
             name: "Emerging Technology Solutions",
             description: "Cutting-edge technology services for future-ready businesses",
             plans[
                 {
+
                     name: "Quantum Computing Consulting",
                     price: "$5,000",
                     period: "/month",
@@ -171,6 +183,7 @@ const UltimatePricing2025 = () => {
                     competitiveAdvantage: "Deep quantum expertise, practical experience, strategic focus"
                 },
                 {
+
                     name: "Metaverse Development",
                     price: "$8,000",
                     period: "/month",
@@ -190,6 +203,7 @@ const UltimatePricing2025 = () => {
                     competitiveAdvantage: "Custom development, rapid prototyping, comprehensive solutions"
                 },
                 {
+
                     name: "Web3 Development",
                     price: "$6,000",
                     period: "/month",
@@ -211,10 +225,12 @@ const UltimatePricing2025 = () => {
             ]
         },
         {
+
             name: "Advanced Cybersecurity",
             description: "Next-generation security solutions for evolving cyber threats",
             plans[
                 {
+
                     name: "Zero Trust Architecture",
                     price: "$4,500",
                     period: "/month",
@@ -234,6 +250,7 @@ const UltimatePricing2025 = () => {
                     competitiveAdvantage: "Comprehensive implementation, rapid deployment, ongoing optimization"
                 },
                 {
+
                     name: "AI-Powered Cybersecurity",
                     price: "$5,000",
                     period: "/month",
@@ -253,6 +270,7 @@ const UltimatePricing2025 = () => {
                     competitiveAdvantage: "Advanced AI algorithms, real-time protection, comprehensive intelligence"
                 },
                 {
+
                     name: "Quantum-Safe Cryptography",
                     price: "$4,000",
                     period: "/month",

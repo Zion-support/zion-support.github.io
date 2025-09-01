@@ -6,10 +6,12 @@ export const loginUser = createAsyncThunk('
   async (credentials, { rejectWithValue }) => {
 
     try {
+
       // Simulate API call
       const response = await new Promise((resolve, reject) => {
 
         setTimeout(() => {
+
           if (credentials.email && credentials.password) {
 
             resolve({
@@ -34,6 +36,7 @@ export const loginUser = createAsyncThunk('
 
       return response;
     } catch (error) {
+
       return rejectWithValue(error.message);
     }
   }
@@ -45,10 +48,12 @@ export const signupUser = createAsyncThunk('
   async (userData, { rejectWithValue }) => {
 
     try {
+
       // Simulate API call
       const response = await new Promise((resolve, reject) => {
 
         setTimeout(() => {
+
           if (userData.email && userData.password && userData.name) {
 
             resolve({
@@ -73,6 +78,7 @@ export const signupUser = createAsyncThunk('
 
       return response;
     } catch (error) {
+
       return rejectWithValue(error.message);
     }
   }
@@ -84,6 +90,7 @@ export const logoutUser = createAsyncThunk('
   async (_, { rejectWithValue }) => {
 
     try {
+
       // Simulate API call
       await new Promise(resolve => {
 
@@ -96,6 +103,7 @@ export const logoutUser = createAsyncThunk('
 
       return null;
     } catch (error) {
+
       return rejectWithValue(error.message);
     }
   }
@@ -122,6 +130,7 @@ export const checkAuthStatus = createAsyncThunk('
         throw new Error('No auth data found');
       }
     } catch (error) {
+
       return rejectWithValue(error.message);
     }
   }

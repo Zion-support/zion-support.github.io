@@ -309,7 +309,7 @@ Crawl-delay: 1`;
                 <span className="font-medium">Generated:</span> {new Date(sitemapData.generatedAt).toLocaleDateString()}
               </div>
 <<<<<<< HEAD
-        // // // // // // // // // // console.error('Error generating sitemaps:', error);
+        // // // // // // // // // // // console.error('Error generating sitemaps:', error);
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
@@ -434,9 +434,9 @@ export const generator = new SitemapGenerator(config);
     catch (error) {
 
 <<<<<<< HEAD
-        // // // // // console.error('Error generating sitemaps:', error);
+        // // // // // // console.error('Error generating sitemaps:', error);
 =======
-        // // // // // // // // // console.error('Error generating sitemaps:', error);
+        // // // // // // // // // // console.error('Error generating sitemaps:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
         throw error;

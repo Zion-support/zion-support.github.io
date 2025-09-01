@@ -4,44 +4,52 @@ import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 const DigitalTransformation = () => {
+
     const transformationServices = [
         {
+
             title: "Process Automation",
             description: "Streamline operations with intelligent automation solutions",
             features: ["Workflow Automation", "RPA Implementation", "Business Process Optimization", "Efficiency Metrics"],
             icon: "🤖"
         },
         {
+
             title: "Workflow Optimization",
             description: "Redesign and optimize business workflows for maximum efficiency",
             features: ["Process Mapping", "Bottleneck Analysis", "Workflow Redesign", "Performance Monitoring"],
             icon: "📊"
         },
         {
+
             title: "Change Management",
             description: "Guide your organization through digital transformation with expert change management",
             features: ["Stakeholder Engagement", "Training Programs", "Communication Strategy", "Success Metrics"],
             icon: "🔄"
         },
         {
+
             title: "Business Process Optimization",
             description: "Streamline operations and improve efficiency through digital workflows",
             features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
             icon: "⚡"
         },
         {
+
             title: "Customer Experience Enhancement",
             description: "Create seamless digital experiences that delight your customers",
             features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
             icon: "🎯"
         },
         {
+
             title: "Data & Analytics Strategy",
             description: "Leverage data insights to drive informed business decisions",
             features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
             icon: "📊"
         },
         {
+
             title: "Technology Infrastructure",
             description: "Modernize your technology stack for scalability and performance",
             features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],
@@ -68,10 +76,12 @@ const DigitalTransformation = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
+
   { opacity: 0,
   y: -20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -82,14 +92,17 @@ const DigitalTransformation = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.2 
 
@@ -98,14 +111,17 @@ const DigitalTransformation = () => {
             designed to modernize your operations and drive sustainable growth.
           </motion.p>
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.4 
 
@@ -132,14 +148,17 @@ const DigitalTransformation = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {transformationServices.map((service, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -176,10 +195,12 @@ const DigitalTransformation = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div className="text-center" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -194,14 +215,17 @@ const DigitalTransformation = () => {
             </motion.div>
             
             <motion.div className="text-center" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: 0.2 
 
@@ -216,14 +240,17 @@ const DigitalTransformation = () => {
             </motion.div>
             
             <motion.div className="text-center" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: 0.4 
 
@@ -254,14 +281,17 @@ const DigitalTransformation = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {transformationApproach.map((step, index) => (<motion.div key={index} className="text-center" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 

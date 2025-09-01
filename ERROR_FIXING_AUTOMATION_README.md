@@ -349,7 +349,9 @@ The `ecosystem.config.cjs` file contains all automation configurations:
 =======
 
 1. **Process Not Starting**
+
    > > > > > > > cursor/fix-project-errors-and-automate-future-fixes-1571
+
    ```bash
    # Check PM2 status
    pm2 status

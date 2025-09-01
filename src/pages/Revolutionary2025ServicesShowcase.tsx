@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 export default Revolutionary2025ServicesShowcase;}}}}}}}}
 import {
+
 import { motion } from 'framer - motion';
 import { revolutionary2025AdvancedMicroSaasServices } from "../data / revolutionary - 2025 - advanced - micro - saas - v2";
 import { revolutionary2025SpecializedITAIServices } from "../data / revolutionary - 2025 - specialized - it - ai - services";
@@ -102,32 +103,40 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
   const [selectedServices, setSelectedServices] = useState < any> ([]) ;
   // Filter services based on search and filters
   useEffect ( () => {
+
     let filtered = ALL_SERVICES;
     if (searchTerm) {
+
       filtered = filtered.filter (service =>;
         service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
         service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ;) ;
     }
     if (selectedCategory !== 'all') {
+
       filtered = filtered.filter (service => service.category === selectedCategory) };
     if (selectedPriceRange !== 'all') {;
       const [min, max] = selectedPriceRange.split ('-') .map (Number) ;
       filtered = filtered.filter (service => {;
         const price = parseInt (service.price.replace (/[^0 - 9]/g, '') ) ;
         if (max) {
+
           return price >= min && price <= max}
         return price >= min}) }
     if (selectedROI !== 'all') {
+
       const [min, max] = selectedROI.split ('-') .map (Number) ;
       filtered = filtered.filter (service => {;
         const roi = parseInt (service.roi.match (/\d+/) ?.[0] || '0') ;
         if (max) {
+
           return roi >= min && roi <= max}
         return roi >= min}) }
     // Sort services
     filtered.sort ( (a, b) => {
+
       switch (sortBy) {
+
         case 'price':
           return parseInt (a.price.replace (/[^0 - 9]/g, '') ) - parseInt (b.price.replace (/[^0 - 9]/g, '') ) ;
         case 'rating':
@@ -140,6 +149,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
     setServices (filtered) }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]) ;
   const categories = Array.from (new Set (ALL_SERVICES.map (service => service.category) ) ) ;
   const handleServiceSelect = useCallback ( (serviceId: string) => {
+
     setSelectedServices (prev =>
       prev.includes (serviceId) ? prev.filter (id => id !== serviceId) : [...prev, serviceId]) ;
   };
@@ -229,6 +239,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <div role="button" className="flex gap - 2">;
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                 className={`p - 3 rounded - lg transition - colors ${
+
                   viewMode === 'grid'
                     ? 'bg - cyan - 500 text - white'
                     : 'bg - slate - 800 text - gray - 400 hover:text - white'
@@ -238,6 +249,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               </button>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                 className={`p - 3 rounded - lg transition - colors ${
+
                   viewMode === 'list'
                     ? 'bg - cyan - 500 text - white'
                     : 'bg - slate - 800 text - gray - 400 hover:text - white'
@@ -247,6 +259,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               </button>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('comparison') }
                 className={`p - 3 rounded - lg transition - colors ${
+
                   viewMode === 'comparison'
                     ? 'bg - cyan - 500 text - white'
                     : 'bg - slate - 800 text - gray - 400 hover:text - white'
@@ -264,11 +277,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
           <motion.div
             className="text - center mb - 12"
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -287,11 +302,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 700 / 20 p - 6 rounded - xl border border - blue - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -314,16 +331,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - purple - 600 / 20 to - indigo - 700 / 20 p - 6 rounded - xl border border - purple - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.1
 
@@ -347,16 +367,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - green - 600 / 20 to - emerald - 700 / 20 p - 6 rounded - xl border border - green - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -390,11 +413,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
           <motion.div
             className="text - center mb - 12"
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -413,11 +438,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - violet - 600 / 20 to - purple - 700 / 20 p - 6 rounded - xl border border - violet - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -448,16 +475,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 700 / 20 p - 6 rounded - xl border border - blue - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.1
 
@@ -487,16 +517,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - green - 600 / 20 to - emerald - 700 / 20 p - 6 rounded - xl border border - green - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -538,11 +571,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
           <motion.div
             className="text - center mb - 12"
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -638,16 +673,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                   key={service.id}
                   className="bg - slate - 800 / 50 p - 8 rounded - xl border border - slate - 700 hover:border - cyan - 500 transition - all duration - 300 group hover:bg - slate - 800 / 70"
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -695,16 +733,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                   key={service.id}
                   className="bg - slate - 800 / 50 p - 6 rounded - xl border border - slate - 700 hover:border - cyan - 500 transition - all duration - 300"
                   initial = {
+
   { opacity: 0,
   x: -20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   x: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -835,11 +876,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - green - 600 / 20 to - emerald - 700 / 20 p - 8 rounded - xl border border - green - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -875,16 +918,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 700 / 20 p - 8 rounded - xl border - 2 border - blue - 500 / 50 transform scale - 105"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -926,16 +972,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - purple - 600 / 20 to - indigo - 700 / 20 p - 8 rounded - xl border border - purple - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.4
 
@@ -1012,11 +1061,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1033,16 +1084,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.1
 
@@ -1058,16 +1112,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -1083,16 +1140,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.3
 
@@ -1110,11 +1170,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - indigo - 600 / 20 to - purple - 700 / 20 p - 6 rounded - xl border border - indigo - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1141,16 +1203,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - purple - 600 / 20 to - pink - 700 / 20 p - 6 rounded - xl border border - purple - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.1
 
@@ -1176,16 +1241,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - pink - 600 / 20 to - red - 700 / 20 p - 6 rounded - xl border border - pink - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -1229,11 +1297,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1247,16 +1317,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.1
 
@@ -1269,16 +1342,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -1291,16 +1367,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.3
 
@@ -1315,11 +1394,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - emerald - 600 / 20 to - teal - 700 / 20 p - 6 rounded - xl border border - emerald - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1334,16 +1415,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - teal - 600 / 20 to - cyan - 700 / 20 p - 6 rounded - xl border border - teal - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.1
 
@@ -1357,16 +1441,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - cyan - 600 / 20 to - blue - 700 / 20 p - 6 rounded - xl border border - cyan - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -1393,11 +1480,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1411,16 +1500,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.1
 
@@ -1433,16 +1525,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -1455,16 +1550,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.3
 
@@ -1479,11 +1577,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - amber - 600 / 20 to - orange - 700 / 20 p - 6 rounded - xl border border - amber - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1498,16 +1598,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - orange - 600 / 20 to - red - 700 / 20 p - 6 rounded - xl border border - orange - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.1
 
@@ -1521,16 +1624,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - red - 600 / 20 to - pink - 700 / 20 p - 6 rounded - xl border border - red - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -1555,11 +1661,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         <div role="button" className="container mx - auto px - 4 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1609,11 +1717,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               <motion.div
                 className="relative flex items - center"
                 initial = {
+
   { opacity: 0,
   x: -50
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0
 
@@ -1638,16 +1748,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               <motion.div
                 className="relative flex items - center"
                 initial = {
+
   { opacity: 0,
   x: 50
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -1671,16 +1784,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               <motion.div
                 className="relative flex items - center"
                 initial = {
+
   { opacity: 0,
   x: -50
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: 0.4
 
@@ -1704,16 +1820,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               <motion.div
                 className="relative flex items - center"
                 initial = {
+
   { opacity: 0,
   x: 50
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: 0.6
 
@@ -1751,11 +1870,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center group"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1772,16 +1893,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center group"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.1
 
@@ -1797,16 +1921,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center group"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -1822,16 +1949,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center group"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.3
 
@@ -1875,11 +2005,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1893,16 +2025,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.1
 
@@ -1915,16 +2050,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -1937,16 +2075,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="text - center"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.3
 
@@ -1972,11 +2113,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - purple - 600 / 20 to - indigo - 700 / 20 p - 8 rounded - xl border border - purple - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1998,16 +2141,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - cyan - 600 / 20 to - blue - 700 / 20 p - 8 rounded - xl border border - cyan - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -2028,16 +2174,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <motion.div
               className="bg - gradient - to - r from - green - 600 / 20 to - emerald - 700 / 20 p - 8 rounded - xl border border - green - 500 / 30"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.4
 

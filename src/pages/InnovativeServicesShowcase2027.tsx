@@ -3,7 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { EMERGING_TECH_SERVICES_2027  } from '@/data / emergingTechServices2027';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data / innovativeMicroSaasServices2027';
 export default React.memo (function InnovativeServicesShowcase2027 (...args[]) :  {
+
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   Brain, Cpu, Database, Network, Shield, Zap, Rocket, Atom,
@@ -16,12 +18,13 @@ import { motion, AnimatePresence } from 'framer - motion';
   const [sortBy, setSortBy] = useState < any> ('aiScore') ;
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
   const categories = ['All', ...Array.from (new Set (allServices.map (service => service.category) ) ) ];
-  const filteredServices = allServices
+  const filteredServices = allServices;
     .filter (service => (selectedCategory === 'All' || service.category === selectedCategory) && (searchQuery === '' ||
         service.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         service.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ) ) .sort ( (a, b) => b[sortBy] - a[sortBy]) ;
   const containerVariants = {
+
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -31,11 +34,13 @@ import { motion, AnimatePresence } from 'framer - motion';
     };
   };
   const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0
 
 },
     visible: {
+
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -45,19 +50,23 @@ import { motion, AnimatePresence } from 'framer - motion';
     };
   };
   const cardVariants = {
+
   hidden: { scale: 0.8,
   opacity: 0
 
 },
     visible: {
+
       scale: 1,
       opacity: 1,
       transition: {
+
         duration: 0.3,
         ease: "easeOut"
 
     },
     hover: {
+
       scale: 1.05,;
       y: -10,;
       transition: {;
@@ -74,6 +83,7 @@ import { motion, AnimatePresence } from 'framer - motion';
           {[...Array (20) ].map ( (_, i) => (<div role="button" key={i}
               className="absolute w - 2 h - 2 bg - cyan - 400 rounded - full opacity - 20 animate - float"
               style={{
+
                 left: `${Math.random () * 100}%`,
                 top: `${Math.random () * 100}%`,
                 animationDelay: `${Math.random () * 3}s`,
@@ -86,11 +96,13 @@ import { motion, AnimatePresence } from 'framer - motion';
       <motion.section
         className="relative z - 10 pt - 20 pb - 16 px - 6"
         initial = {
+
   { opacity: 0,
   y: -50
 
 }}
         animate = {
+
   { opacity: 1,
   y: 0
 
@@ -101,16 +113,19 @@ import { motion, AnimatePresence } from 'framer - motion';
           <motion.h1
             className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent"
             initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
             animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
             transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -121,16 +136,19 @@ import { motion, AnimatePresence } from 'framer - motion';
           <motion.p
             className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.8,
   delay: 0.4
 
@@ -143,16 +161,19 @@ import { motion, AnimatePresence } from 'framer - motion';
           <motion.div
             className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mt - 16"
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.8,
   delay: 0.6
 
@@ -177,16 +198,19 @@ import { motion, AnimatePresence } from 'framer - motion';
       <motion.section
         className="relative z - 10 px - 6 pb - 12"
         initial = {
+
   { opacity: 0,
   y: 20
 
 }}
         animate = {
+
   { opacity: 1,
   y: 0
 
 }}
         transition = {
+
   { duration: 0.8,
   delay: 0.8
 
@@ -262,16 +286,19 @@ import { motion, AnimatePresence } from 'framer - motion';
                 className={viewMode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}
                 key={viewMode}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 exit = {
+
   { opacity: 0,
   y: -20
 
@@ -416,16 +443,19 @@ import { motion, AnimatePresence } from 'framer - motion';
       <motion.section
         className="relative z - 10 px - 6 pb - 20"
         initial = {
+
   { opacity: 0,
   y: 30 ;
 
 }}
         animate = {
+
   { opacity: 1,
   y: 0 ;
 
 }}
         transition = {
+
   { duration: 0.8,
   delay: 1.2 ;
 

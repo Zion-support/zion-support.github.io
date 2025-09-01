@@ -4,38 +4,45 @@ import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, 
 import { SEO              } from '@/components/SEO';
 
 export default function AIProjectManager(...args: any[]): any {
+
   const features = [
     {
+
       title: "AI-Powered Task Prioritization",
       description: "Intelligent algorithms automatically prioritize tasks based on deadlines, dependencies, and team capacity",
       icon: Target,
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       title: "Real-time Resource Optimization",
       description: "Dynamic resource allocation using machine learning to maximize team productivity and efficiency",
       icon: Users,
       color: "from-purple-500 to-pink-500"
     },
     {
+
       title: "Predictive Risk Assessment",
       description: "AI analyzes project patterns to identify potential risks before they become issues",
       icon: Shield,
       color: "from-orange-500 to-red-500"
     },
     {
+
       title: "Automated Progress Tracking",
       description: "Smart dashboards that automatically track progress and generate insights without manual input",
       icon: BarChart3,
       color: "from-green-500 to-emerald-500"
     },
     {
+
       title: "Intelligent Communication",
       description: "AI-powered notifications and updates ensure stakeholders are always informed at the right time",
       icon: Zap,
       color: "from-indigo-500 to-blue-500"
     },
     {
+
       title: "Cross-Platform Integration",
       description: "Seamlessly integrates with existing tools like Jira, Asana, Slack, and Microsoft Teams",
       icon: Globe,
@@ -44,6 +51,7 @@ export default function AIProjectManager(...args: any[]): any {
   ];
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$29",
       period: "/month",
@@ -59,6 +67,7 @@ export default function AIProjectManager(...args: any[]): any {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$79",
       period: "/month",
@@ -75,6 +84,7 @@ export default function AIProjectManager(...args: any[]): any {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$199",
       period: "/month",
@@ -92,18 +102,21 @@ export default function AIProjectManager(...args: any[]): any {
   ];
   const benefits = [
     {
+
       title: "30% Faster Project Delivery",
       description: "AI optimization reduces project timelines and improves efficiency",
       icon: Clock,
       metric: "30%"
     },
     {
+
       title: "50% Better Resource Utilization",
       description: "Smart resource allocation maximizes team productivity",
       icon: TrendingUp,
       metric: "50%"
     },
     {
+
       title: "90% Risk Reduction",
       description: "Predictive analytics prevent issues before they occur",
       icon: Shield,
@@ -247,6 +260,7 @@ export default function AIProjectManager(...args: any[]): any {
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
+
                   plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'
                 }`}
                 initial={{ opacity: 0, y: 30 }}
@@ -280,6 +294,7 @@ export default function AIProjectManager(...args: any[]): any {
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
                     : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'

@@ -12,12 +12,14 @@ import SEOHead from "../components / SEOHead";
 
 // Import all service data
 const InnovativeServicesShowcase = () => {
+
     const [searchTerm, setSearchTerm] = useState ('') ;
     const [selectedCategory, setSelectedCategory] = useState ('all') ;
     const [selectedSubcategory, setSelectedSubcategory] = useState ('all') ;
     const [priceRange, setPriceRange] = useState ('all') ;
     // SEO configuration
     const seoConfig = {
+
   title: "Innovative Services 2025 - Zion Tech Group",
         description: "Discover cutting - edge AI, IT infrastructure, and micro SaaS services designed to transform your business. Explore our innovative technology solutions.",
         keywords: "AI services, IT infrastructure, micro SaaS, innovative technology, business solutions",
@@ -32,10 +34,13 @@ const InnovativeServicesShowcase = () => {
         ...INNOVATIVE_MICRO_SAAS_SERVICES
     ];
     const getSubcategoriesForCategory = (category) => {
+
         if (category === 'all') return [];
         return INNOVATIVE_SERVICE_SUBCATEGORIES_2025[category] || []};
     const getCategoryIcon = (category) => {
+
         const categoryIcons = {
+
   'AI & Analytics': <Brain className="h - 5 w - 5"/>,
             'Emerging Technology': <Rocket className="h - 5 w - 5"/>,
             'Blockchain & Web3': <Cube className="h - 5 w - 5"/>,

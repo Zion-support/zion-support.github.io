@@ -25,18 +25,22 @@ import { Brain,
               } from 'lucide-react.ts';
 
 const AIBusinessIntelligence: React.FC = (): JSX.Element => {
+
   const features = [
     {
+
       icon: Brain,
       title: "Predictive Analytics",
       description: "Advanced machine learning algorithms that forecast trends and identify opportunities before they emerge."
     },
     {
+
       icon: BarChart3,
       title: "Real-time Dashboards",
       description: "Interactive visualizations that provide instant insights into your business performance and KPIs."
     },
     {
+
       icon: Target,
       title: "Intelligent Forecasting",
       description: "AI-powered forecasting models that help you make data-driven decisions with confidence."
@@ -49,6 +53,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
   ];
   const pricingPlans = [
     {
+
       name: 'Starter',
       price: '$2,500',
       period: '/month',
@@ -65,6 +70,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$5,000',
       period: '/month',
@@ -83,6 +89,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$12,000',
       period: '/month',
@@ -128,6 +135,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
   ];
   const useCases = [
     {
+
       title: 'Manufacturing',
       description: 'Predictive maintenance, quality control, and supply chain optimization',
       metrics: ['70% reduction in downtime', '45% improvement in quality', '35% cost savings']
@@ -155,10 +163,12 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       description: "Customer behavior analysis, inventory optimization, and demand forecasting"
     },
     {
+
       industry: "Finance",
       description: "Risk assessment, fraud detection, and investment portfolio optimization"
     },
     {
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -221,14 +231,17 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 }}
@@ -249,10 +262,12 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -286,14 +301,17 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
               </div>
                 key={benefit}
                 initial = {
+
   { opacity: 0,
   x: -20 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0 
 }}
                 transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 }}
@@ -312,14 +330,17 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
                   <motion.div
                     key={index}
                     initial = {
+
   { opacity: 0,
   x: -20 
 }}
                     whileInView = {
+
   { opacity: 1,
   x: 0 
 }}
                     transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 }}
@@ -364,10 +385,12 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -404,14 +427,17 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
               <motion.div
                 key={useCase.industry}
                 initial = {
+
   { opacity: 0,
   y: 20 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 }}
@@ -461,6 +487,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)              => (
               <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
+
                 plan.popular ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-200'
               }`}>
                 {plan.popular && (
@@ -489,6 +516,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
                 <a
                   href="/contact"
                   className={`w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
                       : 'bg-gray-900 text-white hover:bg-gray-800'
@@ -517,10 +545,12 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 }}

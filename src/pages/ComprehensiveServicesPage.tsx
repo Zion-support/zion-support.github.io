@@ -2,7 +2,9 @@ import { Link } from 'react - router - dom.ts';
 import React, { useState } from 'react.ts';
 export default ComprehensiveServicesPage;
 export function ComprehensiveServicesPage (...args: any[]) : any {
+
 import {
+
 import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data / comprehensivePricingGuide2025';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data / innovativeMicroSaasServices2025';
 import { motion } from 'framer - motion.ts';
@@ -39,8 +41,7 @@ import { motion } from 'framer - motion.ts';
   DollarSign,
   Clock,
   Award,
-  TrendingDown,
-} from 'lucide - react.ts';
+  TrendingDown} from 'lucide - react.ts';
 
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
@@ -57,10 +58,10 @@ import { motion } from 'framer - motion.ts';
     { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: Cloud },
     { id: 'Customer Service', name: 'Customer Service', icon: Users },
     {
+
       id: 'Compliance & Governance',
       name: 'Compliance & Governance',
-      icon: Lock,
-    },
+      icon: Lock},
   ];
 
   const priceRanges = [
@@ -71,6 +72,7 @@ import { motion } from 'framer - motion.ts';
   ];
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter (service => {
+
       const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
@@ -79,10 +81,13 @@ import { motion } from 'framer - motion.ts';
 
       let matchesPrice = true;
       if (priceRange === 'low') {
+
         matchesPrice = service.price < 1000;
       } else if (priceRange === 'medium') {
+
         matchesPrice = service.price >= 1000 && service.price <= 3000;
       } else if (priceRange === 'high') {
+
         matchesPrice = service.price > 3000;
       }
 
@@ -90,19 +95,23 @@ import { motion } from 'framer - motion.ts';
     }) ;
 
   const getCategoryIcon = (category: anystring) => {
+
     const categoryData = categories.find (cat => cat.id === category) ;
     return categoryData ? categoryData.icon : Globe;
   };
 
   const getPriceRange = (price: anynumber) => {
+
     if (price < 1000) return 'low';
     if (price <= 3000) return 'medium';
     return 'high';
   };
 
   const getPriceColor = (price: anynumber) => {
+
     const range = getPriceRange (price) ;
     switch (range) {
+
       case 'low':
         return 'text - green - 400';
       case 'medium':
@@ -232,8 +241,8 @@ import { motion } from 'framer - motion.ts';
                 <div className="flex items - center space - x-4 mb - 6">
                   <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">
                     {React.createElement (getCategoryIcon (service.category) , {
-                      className: 'w - 8 h - 8 text - white',
-                    }) }
+
+                      className: 'w - 8 h - 8 text - white'}) }
                   </div>
                   <div className="flex - 1">
                     <h3 className="text - xl font - bold text - white mb - 2">

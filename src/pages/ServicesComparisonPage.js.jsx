@@ -9,15 +9,18 @@ import { PRICING_TIERS } from '@/data/advancedServices';
 // Service comparison data
 const SERVICE_COMPARISONS = [
     {
+
         category: "AI & Automation",
         services[
             {
+
                 name: "AI Business Process Automation",
                 starter: { price: "$2,999", features["Basic workflow automation", "Email automation", "Document processing", "Standard support"] },
                 professional: { price: "$4,999", features["Advanced AI capabilities", "Custom integrations", "Priority support", "Training sessions", "Analytics dashboard"] },
                 enterprise: { price: "$7,999+", features["Full AI suite", "Custom development", "24/7 support", "On-site training", "SLA guarantees", "White-label options"] }
             },
             {
+
                 name: "AI Customer Intelligence",
                 starter: { price: "$3,999", features["Basic customer analytics", "Churn prediction", "Email support"] },
                 professional: { price: "$5,999", features["Advanced analytics", "Personalization engine", "Priority support", "Custom dashboards", "API access"] },
@@ -26,15 +29,18 @@ const SERVICE_COMPARISONS = [
         ]
     },
     {
+
         category: "Cybersecurity & Compliance",
         services[
             {
+
                 name: "AI Threat Detection System",
                 starter: { price: "$5,999", features["Basic threat detection", "Email alerts", "Standard support"] },
                 professional: { price: "$7,999", features["Advanced threat detection", "Behavioral analysis", "Priority support", "Custom rules", "Training"] },
                 enterprise: { price: "$12,999+", features["Full security suite", "Custom development", "24/7 monitoring", "Dedicated team", "Compliance reporting"] }
             },
             {
+
                 name: "Compliance Management Platform",
                 starter: { price: "$2,999", features["Basic compliance monitoring", "GDPR support", "Email support"] },
                 professional: { price: "$4,999", features["Multi-framework support", "Automated reporting", "Priority support", "Custom workflows", "Training"] },
@@ -43,15 +49,18 @@ const SERVICE_COMPARISONS = [
         ]
     },
     {
+
         category: "Cloud & DevOps",
         services[
             {
+
                 name: "Cloud Cost Optimization",
                 starter: { price: "$1,999", features["Basic cost analysis", "Resource optimization", "Email support"] },
                 professional: { price: "$3,999", features["Advanced optimization", "Automated scaling", "Priority support", "Custom policies", "Training"] },
                 enterprise: { price: "$5,999+", features["Full optimization suite", "Custom algorithms", "Dedicated support", "Advanced analytics", "Multi-cloud support"] }
             },
             {
+
                 name: "DevOps Automation Platform",
                 starter: { price: "$2,999", features["Basic CI/CD", "Automated testing", "Email support"] },
                 professional: { price: "$4,999", features["Advanced automation", "Custom pipelines", "Priority support", "Advanced testing", "Training"] },
@@ -60,15 +69,18 @@ const SERVICE_COMPARISONS = [
         ]
     },
     {
+
         category: "Data & Analytics",
         services[
             {
+
                 name: "Data Quality Platform",
                 starter: { price: "$3,999", features["Basic data validation", "Data cleaning", "Email support"] },
                 professional: { price: "$5,999", features["Advanced validation", "Custom rules", "Priority support", "Advanced analytics", "Training"] },
                 enterprise: { price: "$8,999+", features["Full data suite", "Custom algorithms", "Dedicated support", "Advanced governance", "Compliance features"] }
             },
             {
+
                 name: "Real-Time Analytics Dashboard",
                 starter: { price: "$1,999", features["Basic dashboard", "Real-time data", "Email support"] },
                 professional: { price: "$3,999", features["Advanced dashboards", "Custom visualizations", "Priority support", "Advanced analytics", "Training"] },
@@ -78,6 +90,7 @@ const SERVICE_COMPARISONS = [
     }
 ];
 export default function ServicesComparisonPage() {
+
     const [selectedCategory, setSelectedCategory] = useState("AI & Automation");
     return (<div className="min-h-screen bg-background">
       <SEO title="Services Comparison & Pricing - Zion Tech Group" description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget." keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services" canonical="https://ziontechgroup.com/services-comparison"/>

@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from "../../data/revolutionary-2025-advanced-services";
 import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from "../../data/emerging-tech-2025-specialized-services";
 const ServicesMarketingPage = () => {
+
     const allServices = [
         ...REVOLUTIONARY_2025_ADVANCED_SERVICES,
         ...EMERGING_TECH_2025_SPECIALIZED_SERVICES
     ];
     const serviceCategories = {
+
   'Micro SAAS': allServices.filter(s => s.category === 'Micro SAAS'),
         'IT Services': allServices.filter(s => s.category === 'IT Services'),
         'AI Solutions': allServices.filter(s => s.category === 'AI Solutions'),

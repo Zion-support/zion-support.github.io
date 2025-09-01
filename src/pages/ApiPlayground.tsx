@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default ApiPlayground;
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -25,10 +26,10 @@ import { SEO } from '../components / SEO';
   Globe,
   Key,
   FileText,
-  ExternalLink,
-} from 'lucide - react';
+  ExternalLink} from 'lucide - react';
 
 const ApiPlayground: React.FC = () => {
+
   const [selectedApi, setSelectedApi] = useState < any> (null) ;
   const [requestBody, setRequestBody] = useState ('') ;
   const [responseData, setResponseData] = useState ('') ;
@@ -54,6 +55,7 @@ const ApiPlayground: React.FC = () => {
 
   const apis = [
     {
+
       id: 1,
       name: 'AI Text Analysis',
       description:
@@ -68,42 +70,42 @@ const ApiPlayground: React.FC = () => {
       authentication: 'Bearer Token',
       parameters: [
         {
+
           name: 'text',
           type: 'string',
           required: true,
-          description: 'Text to analyze',
-        },
+          description: 'Text to analyze'},
         {
+
           name: 'language',
           type: 'string',
           required: false,
-          description: 'Language code (default: auto - detect) ',
-        },
+          description: 'Language code (default: auto - detect) '},
         {
+
           name: 'features',
           type: 'array',
           required: false,
-          description: 'Analysis features to enable',
-        },
+          description: 'Analysis features to enable'},
       ],
       requestExample: {
+
         text: "I love this new AI technology ! It's amazing how it can understand context.",
         language: 'en',
-        features: ['sentiment', 'entities', 'keywords'],
-      },
+        features: ['sentiment', 'entities', 'keywords']},
       responseExample: {
+
         sentiment: { score: 0.9, label: 'positive' },
         entities: [
           { text: 'AI technology', type: 'technology', confidence: 0.95 },
         ],
         keywords: ['AI', 'technology', 'amazing', 'context'],
-        language: 'en',
-      },
+        language: 'en'},
       documentation: 'https://docs.ziontechgroup.com / api / ai - text - analysis',
       sdk: 'https://github.com / ziontechgroup / ai - sdk',
-      featured: true,
-    },
+      featured: true},
     {
+
       id: 2,
       name: 'Cloud Resource Management',
       description:
@@ -118,46 +120,46 @@ const ApiPlayground: React.FC = () => {
       authentication: 'API Key',
       parameters: [
         {
+
           name: 'region',
           type: 'string',
           required: false,
-          description: 'Cloud region',
-        },
+          description: 'Cloud region'},
         {
+
           name: 'type',
           type: 'string',
           required: false,
-          description: 'Resource type',
-        },
+          description: 'Resource type'},
         {
+
           name: 'status',
           type: 'string',
           required: false,
-          description: 'Resource status',
-        },
+          description: 'Resource status'},
       ],
       requestExample: {
+
         region: 'us - east - 1',
         type: 'compute',
-        status: 'running',
-      },
+        status: 'running'},
       responseExample: {
+
         resources: [
           {
+
             id: 'i - 1234567890abcdef0',
             name: 'web - server - 01',
             type: 'compute',
             status: 'running',
-            region: 'us - east - 1',
-          },
+            region: 'us - east - 1'},
         ],
-        total: 1,
-      },
+        total: 1},
       documentation: 'https://docs.ziontechgroup.com / api / cloud - resources',
       sdk: 'https://github.com / ziontechgroup / cloud - sdk',
-      featured: false,
-    },
+      featured: false},
     {
+
       id: 3,
       name: 'Security Threat Detection',
       description: 'Detect and analyze security threats in real - time.',
@@ -171,40 +173,41 @@ const ApiPlayground: React.FC = () => {
       authentication: 'Bearer Token',
       parameters: [
         {
+
           name: 'data',
           type: 'object',
           required: true,
-          description: 'Security event data',
-        },
+          description: 'Security event data'},
         {
+
           name: 'severity',
           type: 'string',
           required: false,
-          description: 'Threat severity level',
-        },
+          description: 'Threat severity level'},
       ],
       requestExample: {
+
         data: {
+
           source_ip: '192.168.1.100',
           event_type: 'login_attempt',
-          timestamp: '2024 - 01 - 15T10:30:00Z',
-        },
-        severity: 'high',
-      },
+          timestamp: '2024 - 01 - 15T10:30:00Z'},
+        severity: 'high'},
       responseExample: {
+
         threat_detected: true,
         confidence: 0.95,
         threat_type: 'brute_force_attack',
-        recommendations: ['Enable 2FA', 'Block IP temporarily'],
-      },
+        recommendations: ['Enable 2FA', 'Block IP temporarily']},
       documentation: 'https://docs.ziontechgroup.com / api / security - threats',
       sdk: 'https://github.com / ziontechgroup / security - sdk',
-      featured: true,
-    },
+      featured: true},
   ];
 
   const getMethodColor = (method: string) => {
+
     switch (method) {
+
       case 'GET':
         return 'text - green - 400';
       case 'POST':
@@ -219,7 +222,9 @@ const ApiPlayground: React.FC = () => {
   };
 
   const getStatusColor = (status: string) => {
+
     switch (status) {
+
       case 'stable':
         return 'bg - green - 500 / 20 text - green - 400';
       case 'beta':
@@ -232,12 +237,14 @@ const ApiPlayground: React.FC = () => {
   };
 
   const handleApiSelect = useCallback ( (api: any) => {
+
     setSelectedApi (api) ;
     setRequestBody (JSON.stringify (api.requestExample, null, 2) ) ;
     setResponseData ('') ;
   };
 
   const handleTestApi = async () => {
+
     if (!selectedApi) return;
 
     setIsLoading (true) ;
@@ -245,12 +252,14 @@ const ApiPlayground: React.FC = () => {
 
     // Simulate API call
     setTimeout ( () => {
+
       setResponseData (JSON.stringify (selectedApi.responseExample, null, 2) ) ;
       setIsLoading (false) ;
     }, 2000) ;
   };
 
   const copyToClipboard = (text: string) => {
+
     navigator.clipboard.writeText (text) ;
   };
 
@@ -305,6 +314,7 @@ const ApiPlayground: React.FC = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
                         className={`p - 4 rounded - lg border cursor - pointer transition - all duration - 300 ${
+
                           selectedApi?.id === api.id
                             ? 'border - blue - 500 bg - blue - 500 / 10'
                             : 'border - slate - 700 / 50 bg - slate - 700 / 30 hover:border - slate - 600 / 50'
@@ -351,6 +361,7 @@ const ApiPlayground: React.FC = () => {
                   <div role="button" className="flex border - b border - slate - 700 / 50">
                     <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('playground') }
                       className={`px - 6 py - 3 text - sm font - medium transition - colors ${
+
                         activeTab === 'playground'
                           ? 'text - blue - 400 border - b-2 border - blue - 400'
                           : 'text - gray - 400 hover:text - gray - 300'
@@ -360,6 +371,7 @@ const ApiPlayground: React.FC = () => {
                     </button>
                     <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('documentation') }
                       className={`px - 6 py - 3 text - sm font - medium transition - colors ${
+
                         activeTab === 'documentation'
                           ? 'text - blue - 400 border - b-2 border - blue - 400'
                           : 'text - gray - 400 hover:text - gray - 300'

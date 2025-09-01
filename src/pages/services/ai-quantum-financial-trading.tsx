@@ -4,6 +4,7 @@ import { Brain, TrendingUp, Shield, Zap, CheckCircle, ArrowRight, Star, Globe, L
 import { SEO } from '@/components/SEO';
 
 const AIQuantumFinancialTrading: React.FC = () => {
+
   const features = [
     'Quantum-enhanced AI algorithms for market prediction',
     'Real-time multi-asset trading across global markets',
@@ -27,6 +28,7 @@ const AIQuantumFinancialTrading: React.FC = () => {
 
   const pricing = [
     {
+
       plan: 'Professional',
       price: '$4,999',
       period: 'month',
@@ -34,6 +36,7 @@ const AIQuantumFinancialTrading: React.FC = () => {
       popular: false
     },
     {
+
       plan: 'Institutional',
       price: '$12,999',
       period: 'month',
@@ -41,6 +44,7 @@ const AIQuantumFinancialTrading: React.FC = () => {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$29,999',
       period: 'month',
@@ -239,6 +243,7 @@ const AIQuantumFinancialTrading: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-white rounded-2xl shadow-xl border-2 ${
+
                   plan.popular ? 'border-purple-500 scale-105' : 'border-gray-200'
                 }`}
               >
@@ -269,6 +274,7 @@ const AIQuantumFinancialTrading: React.FC = () => {
                   <a
                     href="https://ziontechgroup.com/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-purple-600 text-white hover:bg-purple-700'
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200'

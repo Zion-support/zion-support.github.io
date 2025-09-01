@@ -5,6 +5,7 @@ import { advancedRealServices2025 } from "../data/2025-advanced-real-services-ex
 import { specializedITServices2025 } from "../data/2025-specialized-it-ai-services";
 import SEOHead from "../components/SEOHead";
 const AdvancedServicesShowcase2025 = () => {
+
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
@@ -31,13 +32,15 @@ const AdvancedServicesShowcase2025 = () => {
         'API Management',
         'Network Security'
     ];
-    const filteredServices = allServices
+    const filteredServices = allServices;
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()))
         .sort((a, b) => {
+
         switch (sortBy) {
+
             case 'price':
                 return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
             case 'rating':
@@ -49,7 +52,9 @@ const AdvancedServicesShowcase2025 = () => {
                 return a.name.localeCompare(b.name)}
     });
     const getCategoryIcon = (category) => {
+
         const icons = {
+
   'AI & Machine Learning': '🤖',
             'Cybersecurity': '🔐',
             'Healthcare Technology': '🏥',
@@ -73,30 +78,38 @@ const AdvancedServicesShowcase2025 = () => {
 };
         return icons[category] || '🚀'};
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0 
 
 },
         visible: {
+
             y: 0,
             opacity: 1,
             transition: {
+
                 duration: 0.5
             }
         }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <SEOHead config = {
+
   {
+
             title: "Advanced Real Services Showcase 2025 | Zion Tech Group",
             description: "Discover our comprehensive collection of 20+ advanced real micro SAAS, IT, and AI services. Market-ready solutions with proven ROI and competitive pricing.",
             keywords: "advanced services, micro SAAS, AI services, IT solutions, real services, enterprise solutions,
@@ -109,10 +122,12 @@ const AdvancedServicesShowcase2025 = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
+
   { opacity: 0,
   y: 30 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -123,14 +138,17 @@ const AdvancedServicesShowcase2025 = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.2 
 
@@ -141,14 +159,17 @@ const AdvancedServicesShowcase2025 = () => {
           
           {/* Contact Information */}
           <motion.div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-6 mb-8 border border-blue-500/30" initial = {
+
   { opacity: 0,
   scale: 0.95 
 
 }} animate = {
+
   { opacity: 1,
   scale: 1 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.4 
 
@@ -171,14 +192,17 @@ const AdvancedServicesShowcase2025 = () => {
 
           {/* Navigation Links */}
           <motion.div className="flex flex-wrap justify-center gap-4 mb-8" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.6 
 
@@ -199,14 +223,17 @@ const AdvancedServicesShowcase2025 = () => {
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
           <motion.div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.8 
 
@@ -349,14 +376,17 @@ const AdvancedServicesShowcase2025 = () => {
       <section className="px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-8 border border-blue-500/30" initial = {
+
   { opacity: 0,
   y: 30 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 1 
 

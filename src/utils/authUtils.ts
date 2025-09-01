@@ -3,14 +3,14 @@ export
       sessionStorage.removeItem('auth')}
   } catch (error) {
 
-    // // // console.error('Error cleaning up auth state:', error)}
+    // // // // console.error('Error cleaning up auth state:', error)}
 };
 
 export 
       return !!auth}
     return false} catch (error) {
 
-    // // // console.error('Error checking authentication status:', error);
+    // // // // console.error('Error checking authentication status:', error);
     return false}
 };
 
@@ -21,7 +21,7 @@ export
     }
     return null} catch (error) {
 
-    // // // console.error('Error getting auth token:', error);
+    // // // // console.error('Error getting auth token:', error);
 
       return null}
   };
@@ -33,7 +33,7 @@ export
     }
     return null} catch (error) {
 
-    // // // console.error('Error getting user data:', error);
+    // // // // console.error('Error getting user data:', error);
 
     return null}
 };
@@ -58,12 +58,12 @@ export const cleanupAuthState = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-    // // // // // console.error('Error cleaning up auth state:', error);
+    // // // // // // console.error('Error cleaning up auth state:', error);
 
 =======
-    // // // // // // // // // console.error('Error cleaning up auth state:', error);
+    // // // // // // // // // // console.error('Error cleaning up auth state:', error);
 =======
-    // // // // // // console.error('Error cleaning up auth state:', error);
+    // // // // // // // console.error('Error cleaning up auth state:', error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
@@ -81,12 +81,12 @@ export const isAuthenticated = (): boolean => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-    // // // // // console.error('Error checking authentication status:', error);
+    // // // // // // console.error('Error checking authentication status:', error);
 =======
-    // // // // // // // // // console.error('Error checking authentication status:', error);
+    // // // // // // // // // // console.error('Error checking authentication status:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
-    // // // // // // console.error('Error checking authentication status:', error);
+    // // // // // // // console.error('Error checking authentication status:', error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return false;
 
@@ -108,12 +108,12 @@ export const getAuthToken = (): string | null => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-    // // // // // console.error('Error getting auth token:', error);
+    // // // // // // console.error('Error getting auth token:', error);
 =======
-    // // // // // // // // // console.error('Error getting auth token:', error);
+    // // // // // // // // // // console.error('Error getting auth token:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
-    // // // // // // console.error('Error getting auth token:', error);
+    // // // // // // // console.error('Error getting auth token:', error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return null;
 
@@ -135,12 +135,12 @@ export const getUserData = ():  => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-    // // // // // console.error('Error getting user data:', error);
+    // // // // // // console.error('Error getting user data:', error);
 =======
-    // // // // // // // // // console.error('Error getting user data:', error);
+    // // // // // // // // // // console.error('Error getting user data:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
-    // // // // // // console.error('Error getting user data:', error);
+    // // // // // // // console.error('Error getting user data:', error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return null;
 

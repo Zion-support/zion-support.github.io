@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText, Search, CheckCircle } from 'lucide-react';
 const AIAutonomousLegalResearchAssistant = () => {
+
     const features = [
         "Autonomous case law analysis",
         "Statute interpretation & updates",
@@ -14,21 +15,25 @@ const AIAutonomousLegalResearchAssistant = () => {
     ];
     const benefits = [
         {
+
             icon: Clock,
             title: "Time Efficiency",
             description: "Reduce research time from hours to minutes with AI-powered automation"
         },
         {
+
             icon: BarChart3,
             title: "Accuracy & Precision",
             description: "AI algorithms ensure comprehensive and accurate legal research results"
         },
         {
+
             icon: TrendingUp,
             title: "Cost Reduction",
             description: "Lower legal research costs while improving quality and speed"
         },
         {
+
             icon: Shield,
             title: "Compliance & Updates",
             description: "Stay current with latest legal changes and regulatory updates"
@@ -36,6 +41,7 @@ const AIAutonomousLegalResearchAssistant = () => {
     ];
     const pricingPlans = [
         {
+
             name: "Professional",
             price: "$899",
             period: "/month",
@@ -49,6 +55,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             ]
         },
         {
+
             name: "Firm",
             price: "$1,999",
             period: "/month",
@@ -65,6 +72,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             popular: true
         },
         {
+
             name: "Enterprise",
             price: "$3,999",
             period: "/month",
@@ -82,21 +90,25 @@ const AIAutonomousLegalResearchAssistant = () => {
     ];
     const useCases = [
         {
+
             title: "Case Preparation",
             description: "Comprehensive legal research for case strategy and argument development",
             icon: FileText
         },
         {
+
             title: "Contract Review",
             description: "AI-powered analysis of contracts and legal documents",
             icon: Search
         },
         {
+
             title: "Regulatory Compliance",
             description: "Stay updated with changing regulations and compliance requirements",
             icon: Shield
         },
         {
+
             title: "Legal Opinions",
             description: "Generate well-researched legal opinions with AI assistance",
             icon: BarChart3

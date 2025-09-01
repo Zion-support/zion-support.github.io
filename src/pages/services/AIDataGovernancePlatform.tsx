@@ -23,26 +23,31 @@ import { Database,
              } from 'lucide-react.ts';
 
 const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Data Discovery',
       description: 'Automatically discover, classify, and catalog data across your entire organization using advanced machine learning.',
       price: '$399/month'
     },
     {
+
       icon: Shield,
       title: 'Intelligent Compliance Management',
       description: 'Automated compliance monitoring for GDPR, CCPA, HIPAA, and other regulatory frameworks with real-time alerts.',
       price: '$299/month'
     },
     {
+
       icon: Lock,
       title: 'Advanced Access Control',
       description: 'Role-based access control with AI-driven permission recommendations and automated privilege management.',
       price: '$199/month'
     },
     {
+
       icon: BarChart3,
       title: 'Data Quality Analytics',
       description: 'Continuous monitoring of data quality, integrity, and lineage with predictive analytics and automated remediation.',
@@ -52,6 +57,7 @@ const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
 
   const pricingPlans = [
     {
+
       name: 'Foundation',
       price: '$149',
       period: '/month',
@@ -67,6 +73,7 @@ const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$399',
       period: '/month',
@@ -83,6 +90,7 @@ const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$999',
       period: '/month',
@@ -288,6 +296,7 @@ const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
                 <motion.div
                   key={plan.name}
                   className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
+
                     plan.popular 
                       ? 'border-blue-500 bg-gradient-to-br from-blue-500/20 to-cyan-500/20' 
                       : 'border-blue-500/20 bg-gradient-to-br from-slate-800/50 to-slate-900/50'
@@ -326,6 +335,7 @@ const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
                   
                   <motion.button 
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
                         : 'border border-blue-500/30 text-blue-300 hover:bg-blue-500/10'

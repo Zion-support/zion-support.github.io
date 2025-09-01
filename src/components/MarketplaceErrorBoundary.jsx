@@ -19,13 +19,13 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, rese
             // Re-call SWR mutate('*') to refresh all cached data
             await mutate(() => true, null, { revalidate: true });
             resetErrorBoundary();
-            // // // // // // // // // // console.error('Error during retry:', retryError);
+            // // // // // // // // // // // console.error('Error during retry:', retryError);
             Sentry.captureException(retryError);
 
         }
         catch (retryError) {
 
-            // // // console.error('Error during retry:', retryError);
+            // // // // console.error('Error during retry:', retryError);
             Sentry.captureException(retryError)}
     };
     return (<div className="flex items-center justify-center min-h-[400px] p-6">"
@@ -62,7 +62,7 @@ export function MarketplaceErrorBoundary({ children }) {
     const handleError = (error, errorInfo) => {
 
         // Log boundary errors to Sentry'
-        // // // // // // // // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
+        // // // // // // // // // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
         Sentry.withScope((scope) => {
 
             scope.setTag('errorBoundary',marketplace');

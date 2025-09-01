@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Search, Zap, Cloud, Shield, Server, Code, GitBranch, Phone, Mail, MapPin } from 'lucide-react';
 const CloudDevOpsServices = () => {
+
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPricing, setSelectedPricing] = useState('all');
     // Cloud & DevOps Services data
     const cloudDevOpsServices = [
         {
+
             id: 1,
             name: "Multi-Cloud Infrastructure Management",
             category: "Cloud Management",
@@ -20,6 +22,7 @@ const CloudDevOpsServices = () => {
             targetAudience["Large enterprises", "Multi-cloud organizations", "Financial services", "Healthcare systems"],
             tags: ["Multi-Cloud", "AWS", "Azure", "GCP", "Infrastructure", "Cost Optimization"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
@@ -28,6 +31,7 @@ const CloudDevOpsServices = () => {
             support: "24/7 cloud support"
         },
         {
+
             id: 2,
             name: "Kubernetes Cluster Management",
             category: "Container Orchestration",
@@ -41,6 +45,7 @@ const CloudDevOpsServices = () => {
             targetAudience["DevOps teams", "Software companies", "Digital agencies", "E-commerce platforms"],
             tags: ["Kubernetes", "Container Orchestration", "DevOps", "Automation", "Scaling"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
@@ -49,6 +54,7 @@ const CloudDevOpsServices = () => {
             support: "24/7 K8s support"
         },
         {
+
             id: 3,
             name: "CI/CD Pipeline Automation",
             category: "DevOps Automation",
@@ -62,6 +68,7 @@ const CloudDevOpsServices = () => {
             targetAudience["Development teams", "Software companies", "IT departments", "Digital agencies"],
             tags: ["CI/CD", "Automation", "DevOps", "Testing", "Deployment"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
@@ -70,6 +77,7 @@ const CloudDevOpsServices = () => {
             support: "24/7 DevOps support"
         },
         {
+
             id: 4,
             name: "Serverless Architecture Design",
             category: "Serverless",
@@ -83,6 +91,7 @@ const CloudDevOpsServices = () => {
             targetAudience["Startups", "SaaS companies", "E-commerce platforms", "API providers"],
             tags: ["Serverless", "AWS Lambda", "Azure Functions", "Event-Driven", "Scalability"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
@@ -91,6 +100,7 @@ const CloudDevOpsServices = () => {
             support: "24/7 serverless support"
         },
         {
+
             id: 5,
             name: "Infrastructure as Code (IaC)",
             category: "Infrastructure",
@@ -104,6 +114,7 @@ const CloudDevOpsServices = () => {
             targetAudience["DevOps teams", "Infrastructure teams", "Cloud architects", "System administrators"],
             tags: ["Infrastructure as Code", "Terraform", "CloudFormation", "Ansible", "Automation"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
@@ -112,6 +123,7 @@ const CloudDevOpsServices = () => {
             support: "24/7 IaC support"
         },
         {
+
             id: 6,
             name: "Cloud Security & Compliance",
             category: "Security",
@@ -125,6 +137,7 @@ const CloudDevOpsServices = () => {
             targetAudience["Financial services", "Healthcare organizations", "E-commerce businesses", "Government agencies"],
             tags: ["Cloud Security", "Compliance", "SOC2", "HIPAA", "PCI-DSS", "Threat Detection"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
@@ -136,6 +149,7 @@ const CloudDevOpsServices = () => {
     const categories = ['all', 'Cloud Management', 'Container Orchestration', 'DevOps Automation', 'Serverless', 'Infrastructure', 'Security'];
     const pricingOptions = ['all', 'Enterprise', 'Professional', 'Standard'];
     const filteredServices = cloudDevOpsServices.filter(service => {
+
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -143,7 +157,9 @@ const CloudDevOpsServices = () => {
         const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
         return matchesSearch && matchesCategory && matchesPricing});
     const getCategoryIcon = (category) => {
+
         switch (category) {
+
             case 'Cloud Management': return <Cloud className="w-6 h-6"/>;
             case 'Container Orchestration': return <Server className="w-6 h-6"/>;
             case 'DevOps Automation': return <GitBranch className="w-6 h-6"/>;
@@ -153,7 +169,9 @@ const CloudDevOpsServices = () => {
             default: return <Code className="w-6 h-6"/>}
     };
     const getPricingColor = (pricing) => {
+
         switch (pricing) {
+
             case 'Enterprise': return 'text-purple-400';
             case 'Professional': return 'text-blue-400';
             case 'Standard': return 'text-green-400';

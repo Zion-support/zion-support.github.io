@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const QuantumComputing = () => {
+
     const quantumServices = [
         {
+
             icon: Brain,
             title: "Quantum Neural Networks",
             description: "Harness the power of quantum computing to create neural networks that can process complex data and solve problems beyond classical computing capabilities.",
@@ -10,6 +12,7 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
             path: "/solutions/quantum-neural-network"
         },
         {
+
             icon: Zap,
             title: "Quantum Edge Computing",
             description: "Deploy quantum computing capabilities at the edge for real-time processing and decision-making in distributed environments.",
@@ -17,6 +20,7 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
             path: "/solutions/quantum-edge-computing"
         },
         {
+
             icon: CircuitBoard,
             title: "Quantum Algorithm Development",
             description: "Custom quantum algorithms designed to solve specific business problems and optimize complex computational tasks.",
@@ -24,6 +28,7 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
             path: "/solutions/quantum-algorithms"
         },
         {
+
             icon: Atom,
             title: "Quantum Simulation",
             description: "Simulate complex quantum systems for research, drug discovery, materials science, and financial modeling.",
@@ -33,21 +38,25 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
     ];
     const applications = [
         {
+
             icon: Target,
             title: "Financial Services",
             description: "Optimize portfolio management, risk assessment, and algorithmic trading with quantum computing"
         },
         {
+
             icon: Shield,
             title: "Cybersecurity",
             description: "Develop quantum-resistant encryption and advanced security protocols for the future"
         },
         {
+
             icon: Users,
             title: "Healthcare",
             description: "Accelerate drug discovery, protein folding, and medical research with quantum simulations"
         },
         {
+
             icon: Globe,
             title: "Logistics",
             description: "Solve complex optimization problems in supply chain management and route planning"

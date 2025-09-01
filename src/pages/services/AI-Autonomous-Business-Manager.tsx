@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   TrendingUp, 
   Zap, 
@@ -39,23 +40,28 @@ import {
 import { SEO } from '@/components/SEO';
 
 export default function AIAutonomousBusinessManager() {
+
   const features = [
     {
+
       icon: Brain,
       title: "Autonomous Decision Making",
       description: "AI that makes strategic business decisions based on real-time data and market conditions"
     },
     {
+
       icon: TrendingUp,
       title: "Predictive Analytics",
       description: "Advanced forecasting models that predict market trends and business opportunities"
     },
     {
+
       icon: Zap,
       title: "Real-time Optimization",
       description: "Continuous optimization of business processes, resources, and strategies"
     },
     {
+
       icon: Shield,
       title: "Risk Management",
       description: "Intelligent risk assessment and mitigation strategies for business protection"
@@ -64,24 +70,28 @@ export default function AIAutonomousBusinessManager() {
 
   const services = [
     {
+
       title: "Strategic Planning",
       description: "AI-powered strategic planning with market analysis and competitive intelligence",
       icon: Target,
       features: ["Market analysis", "Competitive intelligence", "Strategic roadmaps", "Performance tracking"]
     },
     {
+
       title: "Financial Management",
       description: "Automated financial planning, budgeting, and cash flow optimization",
       icon: DollarSign,
       features: ["Budget optimization", "Cash flow management", "Financial forecasting", "Cost reduction"]
     },
     {
+
       title: "Operations Optimization",
       description: "Intelligent optimization of business operations and resource allocation",
       icon: Cog,
       features: ["Process optimization", "Resource allocation", "Efficiency improvement", "Automation strategies"]
     },
     {
+
       title: "Performance Analytics",
       description: "Comprehensive business performance monitoring and KPI optimization",
       icon: ChartBar,
@@ -104,6 +114,7 @@ export default function AIAutonomousBusinessManager() {
 
   const pricing = [
     {
+
       name: "Startup",
       price: "$1,999",
       period: "per month",
@@ -119,6 +130,7 @@ export default function AIAutonomousBusinessManager() {
       popular: false
     },
     {
+
       name: "Growth",
       price: "$4,999",
       period: "per month",
@@ -135,6 +147,7 @@ export default function AIAutonomousBusinessManager() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$12,999",
       period: "per month",
@@ -155,24 +168,28 @@ export default function AIAutonomousBusinessManager() {
 
   const useCases = [
     {
+
       title: "Small Business Management",
       description: "Automate day-to-day business operations and decision-making for small businesses",
       icon: Building2,
       benefits: ["Reduced operational costs", "Improved efficiency", "Better decision making"]
     },
     {
+
       title: "Corporate Strategy",
       description: "Develop and execute corporate strategies with AI-powered insights and optimization",
       icon: Briefcase,
       benefits: ["Strategic advantage", "Market positioning", "Performance optimization"]
     },
     {
+
       title: "Financial Planning",
       description: "Optimize financial planning and resource allocation with predictive analytics",
       icon: Calculator,
       benefits: ["Cost optimization", "Revenue maximization", "Risk mitigation"]
     },
     {
+
       title: "Operations Management",
       description: "Streamline operations and improve productivity with intelligent automation",
       icon: Cog,
@@ -488,6 +505,7 @@ export default function AIAutonomousBusinessManager() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-green-500/50 ring-2 ring-green-500/20' 
                     : 'border-gray-700'
@@ -522,6 +540,7 @@ export default function AIAutonomousBusinessManager() {
                 <Link
                   to="/contact"
                   className={`w-full inline-flex justify-center items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600'
                       : 'bg-gray-700 text-white hover:bg-gray-600'

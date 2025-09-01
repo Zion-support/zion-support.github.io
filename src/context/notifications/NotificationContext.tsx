@@ -58,7 +58,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
           },
           (payload) => {
 
-            // // console.log('Notification change received:', payload);
+            // // // console.log('Notification change received:', payload);
             notificationOps.fetchNotifications(); // Call fetchNotifications from the stable notificationOps
           }
         )

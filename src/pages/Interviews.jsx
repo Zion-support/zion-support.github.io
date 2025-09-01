@@ -5,39 +5,48 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components / ui / ta
 import { useInterviews } from "@/hooks / useInterviews";
 import SEO from "@/components / SEO";
 export default function Interviews () {
+
 import { Calendar, Clock, Video import { format, isAfter, parseISO, startOfDay } from "date - fns";
 
 function InterviewsContent () {
+
     const { interviews, isLoading, fetchInterviews } = useInterviews () ;
     const [activeTab, setActiveTab] = useState ("upcoming") ;
     useEffect ( () => {
+
         // Modified to handle Promise < Interview[]> return type
         const loadInterviews = async () => {
+
             await fetchInterviews () };
         loadInterviews () }, []) ;
     // Filter interviews based on status and date
     const now = new Date () ;
     const today = startOfDay (now) ;
-    const upcomingInterviews = interviews
+    const upcomingInterviews = interviews;
         .filter ( (interview) => {
+
         const interviewDate = parseISO (interview.scheduled_date) ;
         return isAfter (interviewDate, now) &&
             ['confirmed', 'requested'].includes (interview.status) }) .sort ( (a, b) => parseISO (a.scheduled_date) .getTime () - parseISO (b.scheduled_date) .getTime () ) ;
     const pastInterviews = interviews.filter (interview => {
+
         const interviewDate = parseISO (interview.scheduled_date) ;
         return ! isAfter (interviewDate, now) ||
             ['completed', 'declined', 'cancelled'].includes (interview.status) }) ;
     // Group interviews by date
     const grouped = {};
         interviews.forEach ( (interview) => {
+
             const dateKey = format (parseISO (interview.scheduled_date) , 'yyyy - MM - dd') ;
             if (!grouped[dateKey]) {
+
                 grouped[dateKey] = []}
             grouped[dateKey].push (interview) }) ;
         return grouped};
     const upcomingGrouped = groupInterviewsByDate (upcomingInterviews) ;
     const pastGrouped = groupInterviewsByDate (pastInterviews) ;
     const renderInterviewGroups = (groupedInterviews) => {
+
         return Object.entries (groupedInterviews) .sort ( ([dateA], [dateB]) => parseISO (dateA) .getTime () - parseISO (dateB) .getTime () ) .map ( ([date, interviews]) => (<div key={date} className="mb - 8">
           <h3 className="text - lg font - medium text - white mb - 4 flex items - center">
             <Calendar className="h - 5 w - 5 mr - 2"/>
@@ -45,6 +54,7 @@ function InterviewsContent () {
           </h3>
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4">
             {interviews.map ( (interview) => (<InterviewCard key={interview.id} interview={interview} onRefresh={async () => {
+
                     await fetchInterviews () }}/>) ) }
           </div>
         </div>) ) };

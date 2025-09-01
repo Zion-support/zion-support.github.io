@@ -32,7 +32,7 @@ export function ReferralMiddleware({ children }: Props) {
         localStorage.removeItem('referralCode');
       } catch (err) {
 
-        // // console.error('Error tracking referral', err);
+        // // // console.error('Error tracking referral', err);
       }
     }
     sendReferral();

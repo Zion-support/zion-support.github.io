@@ -4,25 +4,35 @@ import { cuttingEdgeInnovations2025 } from "../data / 2025 - cutting - edge - in
 import { specializedIndustrySolutions2025 } from "../data / 2025 - specialized - industry - solutions";
 
 const InnovationServicesMarketing = () => {
+
     const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
     const categories = Array.from (new Set (allServices.map (service => service.category) ) ) ;
     const industries = Array.from (new Set (specializedIndustrySolutions2025.map (service => service.industry) ) ) ;
     const formatPrice = (price, model) => {
+
         if (model === 'percentage of revenue') {
+
             return `${price}% of revenue`}
         else if (model === 'per device per day') {
+
             return `$${price.toFixed (2) }/device / day`}
         else if (model === 'per kWh managed') {
+
             return `$${price.toFixed (3) }/kWh`}
         else if (model === 'per acre') {
+
             return `$${price.toFixed (2) }/acre / month`}
         else if (model === 'per inference') {
+
             return `$${price.toFixed (3) }/inference`}
         else if (model === 'monthly per student') {
+
             return `$${price}/student / month`}
         else if (model === 'monthly per attorney') {
+
             return `$${price}/attorney / month`}
         else {
+
             return `$${price}/${model}`}
     };
     return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 pt - 32">
@@ -101,6 +111,7 @@ const InnovationServicesMarketing = () => {
           <h2 className="text - 4xl font - bold text - white text - center mb - 12">Service Categories</h2>
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {categories.map ( (category) => {
+
             const categoryServices = allServices.filter (service => service.category === category) ;
             const avgPrice = categoryServices.reduce ( (sum, service) => sum + service.price, 0) / categoryServices.length;
             return (<div key={category} className="bg - slate - 800 / 50 border border - white / 10 rounded - 2xl p - 6 hover:border - white / 20 transition - all duration - 300">
@@ -131,6 +142,7 @@ const InnovationServicesMarketing = () => {
           <h2 className="text - 4xl font - bold text - white text - center mb - 12">Industry - Specific Solutions</h2>
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {industries.map ( (industry) => {
+
             const industryServices = specializedIndustrySolutions2025.filter (service => service.industry === industry) ;
             const avgPrice = industryServices.reduce ( (sum, service) => sum + service.price, 0) / industryServices.length;
             return (<div key={industry} className="bg - slate - 800 / 50 border border - white / 10 rounded - 2xl p - 6 hover:border - white / 20 transition - all duration - 300">

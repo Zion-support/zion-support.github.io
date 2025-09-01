@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Search, 
   TrendingUp, 
   Target, 
@@ -50,38 +51,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function AIPoweredSEOOptimizationPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Keyword Research",
       description: "Advanced machine learning algorithms that discover high-value keywords with low competition and high search volume",
       benefits: ["Competitive analysis", "Search intent matching", "Long-tail keyword discovery"]
     },
     {
+
       icon: Search,
       title: "Intelligent Content Optimization",
       description: "AI-driven content recommendations that optimize your pages for search engines and user experience",
       benefits: ["Content gap analysis", "Semantic optimization", "Readability scoring"]
     },
     {
+
       icon: TrendingUp,
       title: "Real-time Performance Tracking",
       description: "Comprehensive monitoring of search rankings, traffic patterns, and conversion metrics with instant alerts",
       benefits: ["Live ranking updates", "Traffic analytics", "Conversion tracking"]
     },
     {
+
       icon: Target,
       title: "Competitive Intelligence",
       description: "Deep analysis of competitor strategies, backlink profiles, and content performance to identify opportunities",
       benefits: ["Competitor tracking", "Backlink analysis", "Content benchmarking"]
     },
     {
+
       icon: Zap,
       title: "Automated Technical SEO",
       description: "Smart detection and fixing of technical SEO issues like broken links, schema markup, and page speed",
       benefits: ["Issue detection", "Auto-fixing", "Performance optimization"]
     },
     {
+
       icon: BarChart3,
       title: "Advanced Analytics & Reporting",
       description: "Comprehensive insights into search performance, user behavior, and ROI of SEO efforts",
@@ -91,6 +99,7 @@ export default function AIPoweredSEOOptimizationPlatform() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$149",
       period: "/month",
@@ -107,6 +116,7 @@ export default function AIPoweredSEOOptimizationPlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$399",
       period: "/month",
@@ -125,6 +135,7 @@ export default function AIPoweredSEOOptimizationPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$999",
       period: "/month",
@@ -146,21 +157,25 @@ export default function AIPoweredSEOOptimizationPlatform() {
 
   const useCases = [
     {
+
       industry: "E-commerce",
       description: "Optimize product pages, category pages, and content for better search visibility and conversions",
       metrics: ["Organic traffic growth", "Product page rankings", "Conversion rate improvement"]
     },
     {
+
       industry: "SaaS & B2B",
       description: "Target high-intent keywords and optimize landing pages for lead generation and conversions",
       metrics: ["Lead generation", "Keyword rankings", "Organic traffic quality"]
     },
     {
+
       industry: "Local Business",
       description: "Dominate local search results and Google My Business optimization for better local visibility",
       metrics: ["Local pack rankings", "Local traffic", "Review management"]
     },
     {
+
       industry: "Content Publishers",
       description: "Optimize content strategy, improve rankings, and increase organic traffic and engagement",
       metrics: ["Content performance", "Traffic growth", "Engagement metrics"]
@@ -169,21 +184,25 @@ export default function AIPoweredSEOOptimizationPlatform() {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: "Increase Organic Traffic by 200-500%",
       description: "AI-optimized content and strategies significantly improve search rankings and traffic"
     },
     {
+
       icon: DollarSign,
       title: "Reduce Customer Acquisition Costs",
       description: "Organic traffic reduces dependency on paid advertising and lowers overall marketing costs"
     },
     {
+
       icon: Users,
       title: "Improve User Experience",
       description: "SEO optimization enhances site usability, speed, and mobile experience for better engagement"
     },
     {
+
       icon: Target,
       title: "Long-term Sustainable Growth",
       description: "SEO provides lasting results that compound over time, unlike paid advertising"
@@ -192,31 +211,37 @@ export default function AIPoweredSEOOptimizationPlatform() {
 
   const seoTools = [
     {
+
       icon: Search,
       title: "Keyword Research Suite",
       description: "Advanced keyword discovery, competition analysis, and search volume insights"
     },
     {
+
       icon: FileText,
       title: "Content Optimizer",
       description: "AI-powered content recommendations, readability scoring, and semantic optimization"
     },
     {
+
       icon: Monitor,
       title: "Technical SEO Auditor",
       description: "Comprehensive technical analysis, issue detection, and automated fixing"
     },
     {
+
       icon: BarChart3,
       title: "Performance Tracker",
       description: "Real-time ranking monitoring, traffic analytics, and conversion tracking"
     },
     {
+
       icon: Globe,
       title: "Backlink Analyzer",
       description: "Link profile analysis, competitor backlink research, and link building opportunities"
     },
     {
+
       icon: Users,
       title: "User Experience Optimizer",
       description: "Page speed optimization, mobile responsiveness, and user behavior analysis"
@@ -425,6 +450,7 @@ export default function AIPoweredSEOOptimizationPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
                     : 'border-slate-700'
@@ -457,6 +483,7 @@ export default function AIPoweredSEOOptimizationPlatform() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

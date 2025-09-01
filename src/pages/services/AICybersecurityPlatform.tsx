@@ -4,26 +4,31 @@ import React from 'react.ts';
 } from 'lucide-react';
 
 export default function AICybersecurityPlatform(...args: any[]): any {
+
   const features = [
     {
+
       icon: Shield,
       title: 'AI-Powered Threat Detection',
       description: 'Advanced machine learning algorithms that detect and respond to threats in real-time with 99.9% accuracy.',
       benefits: ['Zero-day threat detection', 'Behavioral analysis', 'Anomaly identification', 'Automated response']
     },
     {
+
       icon: Eye,
       title: 'Continuous Monitoring',
       description: '24/7 surveillance across all endpoints, networks, and cloud environments with instant alerting.',
       benefits: ['Real-time monitoring', 'Instant notifications', 'Comprehensive coverage', 'Historical analysis']
     },
     {
+
       icon: Lock,
       title: 'Zero-Trust Architecture',
       description: 'Implement comprehensive zero-trust security model with identity verification at every access point.',
       benefits: ['Identity verification', 'Access control', 'Network segmentation', 'Privilege management']
     },
     {
+
       icon: Zap,
       title: 'Automated Incident Response',
       description: 'AI-driven incident response that automatically contains and remediates threats within seconds.',
@@ -33,24 +38,28 @@ export default function AICybersecurityPlatform(...args: any[]): any {
 
   const securityLayers = [
     {
+
       icon: Network,
       title: 'Network Security',
       description: 'Advanced firewall, intrusion detection, and network segmentation',
       features: ['Next-gen firewalls', 'IDS/IPS systems', 'Network monitoring', 'Traffic analysis']
     },
     {
+
       icon: Server,
       title: 'Endpoint Protection',
       description: 'Comprehensive endpoint security for all devices and operating systems',
       features: ['Antivirus protection', 'Device control', 'Application whitelisting', 'Data encryption']
     },
     {
+
       icon: Globe,
       title: 'Cloud Security',
       description: 'Multi-cloud security with compliance and governance controls',
       features: ['Cloud access security', 'Compliance monitoring', 'Data protection', 'Identity management']
     },
     {
+
       icon: Smartphone,
       title: 'Mobile Security',
       description: 'Mobile device management and application security',
@@ -60,6 +69,7 @@ export default function AICybersecurityPlatform(...args: any[]): any {
 
   const pricingPlans = [
     {
+
       name: 'Essential',
       price: '$3,500',
       period: '/month',
@@ -77,6 +87,7 @@ export default function AICybersecurityPlatform(...args: any[]): any {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$7,500',
       period: '/month',
@@ -96,6 +107,7 @@ export default function AICybersecurityPlatform(...args: any[]): any {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$18,000',
       period: '/month',
@@ -119,31 +131,37 @@ export default function AICybersecurityPlatform(...args: any[]): any {
 
   const complianceFrameworks = [
     {
+
       name: 'SOC 2 Type II',
       description: 'Service Organization Control 2 compliance for data security',
       icon: Award
     },
     {
+
       name: 'ISO 27001',
       description: 'International standard for information security management',
       icon: Shield
     },
     {
+
       name: 'GDPR',
       description: 'General Data Protection Regulation compliance',
       icon: Lock
     },
     {
+
       name: 'HIPAA',
       description: 'Health Insurance Portability and Accountability Act',
       icon: Users
     },
     {
+
       name: 'PCI DSS',
       description: 'Payment Card Industry Data Security Standard',
       icon: CreditCard
     },
     {
+
       name: 'NIST',
       description: 'National Institute of Standards and Technology framework',
       icon: Star
@@ -152,21 +170,25 @@ export default function AICybersecurityPlatform(...args: any[]): any {
 
   const threatIntelligence = [
     {
+
       title: 'Real-time Threat Feeds',
       description: 'Live intelligence from global security networks and research teams',
       metrics: ['1M+ threat indicators', 'Global coverage', 'Instant updates', 'Automated integration']
     },
     {
+
       title: 'Behavioral Analysis',
       description: 'AI-powered analysis of user and system behavior patterns',
       metrics: ['99.9% detection rate', 'False positive reduction', 'Pattern recognition', 'Predictive alerts']
     },
     {
+
       title: 'Vulnerability Management',
       description: 'Continuous scanning and assessment of security vulnerabilities',
       metrics: ['Automated scanning', 'Risk prioritization', 'Patch management', 'Compliance tracking']
     },
     {
+
       title: 'Incident Response',
       description: 'Automated response and recovery from security incidents',
       metrics: ['<30 second response', 'Automated containment', 'Recovery automation', 'Forensic analysis']
@@ -250,6 +272,7 @@ import { Badge              } from '../../components/ui/Badge';
 import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu              } from 'lucide-react.ts';
 
 const AICybersecurityPlatform: React.FC = (): JSX.Element => {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -617,6 +640,7 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)              => (
               <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
+
                 plan.popular ? 'border-red-500 ring-4 ring-red-500/20' : 'border-gray-200'
               }`}>
                 {plan.popular && (
@@ -649,6 +673,7 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
                 <a
                   href="/contact"
                   className={`w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
                       : 'bg-gray-900 text-white hover:bg-gray-800'

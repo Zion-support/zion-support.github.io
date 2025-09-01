@@ -38,6 +38,7 @@ interface Notification {
 }
 
 interface AdvancedNotificationCenterProps {
+
   // Add your props here
 
 
@@ -115,14 +116,17 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
   }, []);
 
   useEffect(: unknown {
+
     setNotifications(generateMockNotifications());
   }, [generateMockNotifications]);
 
   // Auto-dismiss notifications
   useEffect(: unknown {
+
     if (!autoDismiss) return;
 
     const interval = setInterval(() => {
+
       setNotifications(prev =>
         prev.filter(notification => {
 
@@ -200,6 +204,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
   // Mark all as read
   const markAllAsRead = useCallback(() => {
+
     setNotifications(prev =>
       prev.map(notification => ({ ...notification, read: true }))
     );
@@ -207,6 +212,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
   // Clear all notifications
   const clearAll = useCallback(: unknown {
+
     setNotifications([]);
   }, []);
 
@@ -269,6 +275,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
   };
 
   const getPositionClasses = (...args: unknown[]): unknown => {
+
     switch (position) {
 
       case 'top-left':'

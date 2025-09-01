@@ -47,7 +47,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
       setTalents(data || []);
     } catch (error) {
 
-      // // console.error("Error fetching suggested talents:", error);
+      // // // console.error("Error fetching suggested talents:", error);
       toast({
 
         title: "Error",
@@ -61,7 +61,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
 
   const handleViewProfile = (talentId: string) => {
 
-    // // console.log("View talent profile:", talentId);
+    // // // console.log("View talent profile:", talentId);
     toast({
 
       title: "View Profile",
@@ -70,7 +70,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
 
   const handleInvite = (talentId: string) => {
 
-    // // console.log("Invite talent:", talentId);
+    // // // console.log("Invite talent:", talentId);
     toast({
 
       title: "Invite Talent",

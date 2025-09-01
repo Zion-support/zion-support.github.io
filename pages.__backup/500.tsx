@@ -7,9 +7,12 @@ export default function Custom500() {
     <>
       <Head>
         <title>500 - Server Error | Zion</title>
-        <meta name="description" content="Something went wrong on our end. Please try again." />
+        <meta
+          name="description"
+          content="Something went wrong on our end. Please try again."
+        />
       </Head>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-red-900 via-orange-900 to-red-800 flex items-center justify-center px-4">
         <div className="text-center text-white">
           <div className="mb-8">
@@ -21,25 +24,30 @@ export default function Custom500() {
               Something went wrong on our end. We're working to fix it.
             </p>
           </div>
-          
+
           <div className="space-y-4">
-            <button 
+            <button
               onClick={() => window.location.reload()}
               className="inline-block bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 mr-4"
             >
               Try Again
             </button>
-            
-            <Link 
+
+            <Link
               href="/"
               className="inline-block bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Go Home
             </Link>
-            
+
             <div className="text-sm text-gray-400 mt-6">
               <p>If the problem persists, please contact our support team.</p>
-              <Link href="/contact" className="text-red-400 hover:text-red-300 transition-colors">Contact Support</Link>
+              <Link
+                href="/contact"
+                className="text-red-400 hover:text-red-300 transition-colors"
+              >
+                Contact Support
+              </Link>
             </div>
           </div>
         </div>

@@ -10,8 +10,10 @@ export default function ServicesPricingPage () {
 
     // Group services by category for pricing table
     const servicesByCategory = SERVICE_CATEGORIES.reduce ( (acc, category) => {
+
         const categoryServices = COMPREHENSIVE_SERVICES.filter (service => service.category === category) ;
         if (categoryServices.length > 0) {
+
             acc[category] = categoryServices}
         return acc}, {}) ;
     return (<div className="min - h-screen bg - zion - blue - dark">
@@ -180,21 +182,25 @@ export default function ServicesPricingPage () {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
             {[
             {
+
                 icon: <Zap className="w - 8 h - 8"/>,
                 title: "Competitive Pricing",
                 description: "Market - leading rates without compromising on quality or features"
             },
             {
+
                 icon: <Shield className="w - 8 h - 8"/>,
                 title: "No Hidden Fees",
                 description: "Transparent pricing with clear breakdowns of all costs"
             },
             {
+
                 icon: <Users className="w - 8 h - 8"/>,
                 title: "Flexible Plans",
                 description: "Customizable solutions that grow with your business needs"
             },
             {
+
                 icon: <Building className="w - 8 h - 8"/>,
                 title: "Proven ROI",
                 description: "Measurable business outcomes and return on investment"

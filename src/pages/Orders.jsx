@@ -2,7 +2,7 @@ import { FileText import { Link } from 'react - router - dom';
 import React from 'react';
 import { EmptyState } from '@/components / ui / empty - state';
 import { Skeleton } from '@/components / ui / skeleton';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow, } from '@/components / ui / table';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from '@/components / ui / table';
 import { useAuth } from '@/hooks / useAuth';
 import { useGetOrdersQuery } from '@/hooks / useOrders';
 export default function OrdersPage () {

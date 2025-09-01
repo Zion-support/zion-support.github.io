@@ -3,38 +3,45 @@ import React from 'react.ts';
 export default Consulting;}}}}
 
 const Consulting = () => {
+
   const consultingServices = [
     {
+
       icon: Lightbulb,
       title: "Technology Strategy",
       description: "Strategic technology planning and digital transformation roadmaps",
       features["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"];
     },;
     {
+
       icon: Target,
       title: "AI & ML Consulting",
       description: "Expert guidance on AI implementation and machine learning strategies",
       features["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"];
     },;
     {
+
       icon: Shield,
       title: "Cybersecurity Consulting",
       description: "Comprehensive security assessments and risk management strategies",
       features["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"];
     },;
     {
+
       icon: Globe,
       title: "Cloud Strategy",
       description: "Cloud migration planning and multi - cloud optimization strategies",
       features["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"];
     },;
     {
+
       icon: Database,
       title: "Data Strategy",
       description: "Data governance, analytics, and business intelligence consulting",
       features["Data governance", "Analytics strategy", "BI implementation", "Data quality management"];
     },;
     {
+
       features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];
     };
       icon: Zap,;
@@ -46,26 +53,31 @@ const Consulting = () => {
 
   const industries = [
     {
+
       title: "Financial Services",
       description: "Banking, insurance, and fintech consulting",
       icon: TrendingUp
     },
     {
+
       title: "Healthcare",
       description: "Digital health and medical technology consulting",
       icon: Shield
     },
     {
+
       title: "Manufacturing",
       description: "Industry 4.0 and smart manufacturing consulting",
       icon: Cpu
     },
     {
+
       title: "Retail & E-commerce",
       description: "Digital commerce and customer experience consulting",
       icon: Users
     },
     {
+
       title: "Energy & Utilities",
       description: "Smart grid and sustainability consulting",
       icon: Globe;
@@ -88,16 +100,19 @@ const Consulting = () => {
 
   const process = [
     {
+
       phase: "Discovery",
       description: "Understanding your business needs and objectives",
       duration: "1 - 2 weeks"
     },
     {
+
       phase: "Assessment",
       description: "Comprehensive analysis of current state and opportunities",
       duration: "2 - 4 weeks"
     },
     {
+
       phase: "Strategy",
       description: "Developing customized solutions and implementation plans",
       duration: "3 - 6 weeks";

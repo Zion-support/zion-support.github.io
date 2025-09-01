@@ -23,33 +23,40 @@ import { Brain,
 import { SEO              } from '../../components/SEO';
 
 export default function AIBusinessIntelligence(...args: any[]): any {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Analytics",
       description: "Advanced machine learning algorithms for predictive insights and trend analysis"
     },
     {
+
       icon: BarChart3,
       title: "Real-Time Dashboards",
       description: "Live business metrics and KPIs with interactive visualizations"
     },
     {
+
       icon: Target,
       title: "Predictive Modeling",
       description: "Forecast business outcomes and identify growth opportunities"
     },
     {
+
       icon: TrendingUp,
       title: "Performance Tracking",
       description: "Monitor business performance across all departments and metrics"
     },
     {
+
       icon: Zap,
       title: "Automated Reporting",
       description: "Intelligent report generation and distribution to stakeholders"
     },
     {
+
       icon: Users,
       title: "Collaborative Insights",
       description: "Team-based analytics with shared dashboards and insights"
@@ -76,6 +83,7 @@ export default function AIBusinessIntelligence(...args: any[]): any {
 
   const pricing = [
     {
+
       name: "Starter",
       price: "$2,500",
       period: "/month",
@@ -89,6 +97,7 @@ export default function AIBusinessIntelligence(...args: any[]): any {
       ]
     },
     {
+
       name: "Professional",
       price: "$5,000",
       period: "/month",
@@ -103,6 +112,7 @@ export default function AIBusinessIntelligence(...args: any[]): any {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "Custom",
       period: "",
@@ -345,6 +355,7 @@ export default function AIBusinessIntelligence(...args: any[]): any {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-blue-500/50 ring-2 ring-blue-500/20' 
                     : 'border-slate-700/50'
@@ -461,6 +472,7 @@ export default function AIBusinessIntelligence(...args: any[]): any {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                     : 'border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'

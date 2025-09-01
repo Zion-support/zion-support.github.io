@@ -5,22 +5,27 @@ import { AdvancedServiceComparison } from "../components/AdvancedServiceComparis
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 const ServiceComparison = () => {
+
     const features = [
         {
+
             icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,
             title: 'Advanced Filtering',
             description: 'Filter services by category, complexity, price range, and technology stack'
         },
         {
+
             icon: <Target className="w-6 h-6 text-zion-purple"/>,
             title: 'Smart Comparison',
             description: 'Compare multiple services side-by-side with detailed feature analysis'
         },
         {
+
             icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,
             description: 'Real-time ratings and popularity indicators to guide your decision'
         },
         {
+
             icon: <Award className="w-6 h-6 text-zion-orange"/>,
             title: 'Expert Insights',
             description: 'Get detailed insights into each service\'s capabilities and target audience'
@@ -44,10 +49,12 @@ const ServiceComparison = () => {
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -65,6 +72,7 @@ const ServiceComparison = () => {
                 <ArrowRight className="w-5 h-5 ml-2"/>
               </Button>
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
+
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Help',
   '_blank')
 
@@ -80,10 +88,12 @@ const ServiceComparison = () => {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -99,14 +109,17 @@ const ServiceComparison = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -135,10 +148,12 @@ const ServiceComparison = () => {
       <section className="py-16 px-6 bg-zion-blue-light/5">
         <div className="max-w-4xl mx-auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -153,14 +168,17 @@ const ServiceComparison = () => {
 
           <div className="space-y-4">
             {benefits.map((benefit, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   x: -20 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -176,10 +194,12 @@ const ServiceComparison = () => {
       <section id="comparison-tool" className="py-16 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -201,10 +221,12 @@ const ServiceComparison = () => {
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -218,6 +240,7 @@ const ServiceComparison = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick = {
+
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Selection Help',
   '_blank')
 
@@ -226,6 +249,7 @@ const ServiceComparison = () => {
                 Get Expert Consultation
               </Button>
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
+
   () => window.open('tel:+13024640950',
   '_blank')
 

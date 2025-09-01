@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function AIAutonomousSystems () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Cpu,
@@ -586,6 +588,7 @@ import { motion } from 'framer - motion';
 
 const autonomousTechnologies = [
   {
+
     name: "Computer Vision",
     description: "Advanced image recognition and processing capabilities",
     icon: Eye,
@@ -593,6 +596,7 @@ const autonomousTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Machine Learning",
     description: "AI algorithms for autonomous decision making",
     icon: Brain,
@@ -600,6 +604,7 @@ const autonomousTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Sensor Fusion",
     description: "Integration of multiple sensor data sources",
     icon: Activity,
@@ -607,6 +612,7 @@ const autonomousTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Robotics Control",
     description: "Advanced control systems for autonomous movement",
     icon: Cpu,
@@ -617,6 +623,7 @@ const autonomousTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Automotive Manufacturer",
     industry: "Automotive",
@@ -626,6 +633,7 @@ const successStories = [
     logo: "AM"
   },
   {
+
     id: 2,
     comp: "Manufacturing Corporation",
     industry: "Manufacturing",
@@ -635,6 +643,7 @@ const successStories = [
     logo: "MC"
   },
   {
+
     id: 3,
     comp: "Agricultural Cooperative",
     industry: "Agriculture",
@@ -647,6 +656,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "System Requirements",
     description: "Define autonomous system requirements and constraints",
@@ -654,6 +664,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 2,
     title: "AI Development",
     description: "Develop AI algorithms and machine learning models",
@@ -661,6 +672,7 @@ const processSteps = [
     duration: "8 - 16 weeks"
   },
   {
+
     step: 3,
     title: "Hardware Integration",
     description: "Integrate sensors, actuators, and control systems",
@@ -668,6 +680,7 @@ const processSteps = [
     duration: "12 - 24 weeks"
   },
   {
+
     step: 4,
     title: "Testing & Validation",
     description: "Comprehensive testing and safety validation",
@@ -678,24 +691,28 @@ const processSteps = [
 
 const autonomousBenefits = [
   {
+
     title: "Increased Efficiency",
     description: "24 / 7 operation with consistent performance and reduced human error",
     icon: Zap,
     examples["24 / 7 operation", "Consistent performance", "Reduced errors", "Faster processing"];
   },;
   {
+
     title: "Enhanced Safety",
     description: "Advanced safety systems and risk mitigation capabilities",
     icon: Shield,
     examples["Risk mitigation", "Safety protocols", "Emergency systems", "Predictive safety"];
   },;
   {
+
     title: "Cost Reduction",
     description: "Lower operational costs and improved resource utilization",
     icon: TrendingUp,
     examples["Lower labor costs", "Resource optimization", "Reduced waste", "Improved ROI"];
   },;
   {
+
     title: "Scalability",
     description: "Systems that can scale and adapt to changing requirements",
     icon: Rocket,
@@ -724,11 +741,13 @@ const autonomousBenefits = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -738,16 +757,19 @@ const autonomousBenefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -790,11 +812,13 @@ const autonomousBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -812,16 +836,19 @@ const autonomousBenefits = [
             {autonomousBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -852,11 +879,13 @@ const autonomousBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -874,16 +903,19 @@ const autonomousBenefits = [
             {autonomousTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -899,6 +931,7 @@ const autonomousBenefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -917,11 +950,13 @@ const autonomousBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -939,16 +974,19 @@ const autonomousBenefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -979,11 +1017,13 @@ const autonomousBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1003,6 +1043,7 @@ const autonomousBenefits = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -1016,16 +1057,19 @@ const autonomousBenefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1080,11 +1124,13 @@ const autonomousBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1102,16 +1148,19 @@ const autonomousBenefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1157,11 +1206,13 @@ const autonomousBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

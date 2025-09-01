@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default React.memo (function SpaceTech (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Rocket,
@@ -53,73 +55,72 @@ import { motion } from 'framer - motion.ts';
   Eye,
   Brain,
   Network,
-  Cpu,
-} from 'lucide - react.ts';
+  Cpu} from 'lucide - react.ts';
 
   const features = [
     {
+
       icon: Rocket,
       title: 'Space Launch Systems',
       description: 'Advanced propulsion and launch vehicle technologies',
-      color: 'from - red - 500 to - orange - 500',
-    },
+      color: 'from - red - 500 to - orange - 500'},
     {
+
       icon: Satellite,
       title: 'Satellite Technology',
       description: 'Earth observation and communication satellites',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       icon: Globe,
       title: 'Earth Observation',
       description: 'Remote sensing and environmental monitoring',
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       icon: Zap,
       title: 'Space Communications',
       description: 'High - speed data transmission and networking',
-      color: 'from - yellow - 500 to - orange - 500',
-    },
+      color: 'from - yellow - 500 to - orange - 500'},
     {
+
       icon: Shield,
       title: 'Space Security',
       description: 'Cybersecurity and space defense systems',
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     {
+
       icon: Target,
       title: 'Navigation Systems',
       description: 'Precise positioning and navigation technologies',
-      color: 'from - indigo - 500 to - blue - 500',
-    },
+      color: 'from - indigo - 500 to - blue - 500'},
   ];
 
   const applications = [
     {
+
       title: 'Telecommunications',
       description: 'Global communication networks and internet connectivity',
       icon: Wifi,
-      benefits: ['Global coverage', 'High bandwidth', 'Low latency'],
-    },
+      benefits: ['Global coverage', 'High bandwidth', 'Low latency']},
     {
+
       title: 'Environmental Monitoring',
       description: 'Climate change tracking and natural disaster prediction',
       icon: Activity,
-      benefits: ['Climate data', 'Disaster response', 'Resource management'],
-    },
+      benefits: ['Climate data', 'Disaster response', 'Resource management']},
     {
+
       title: 'Navigation & GPS',
       description: 'Precise positioning and location services',
       icon: Target,
-      benefits: ['Global positioning', 'Navigation systems', 'Timing services'],
-    },
+      benefits: ['Global positioning', 'Navigation systems', 'Timing services']},
     {
+
       title: 'Scientific Research',
       description: 'Space exploration and astronomical discoveries',
       icon: Eye,
-      benefits: ['Astronomy', 'Planetary science', 'Space physics'],
-    },
+      benefits: ['Astronomy', 'Planetary science', 'Space physics']},
   ];
 
   const technologies = [

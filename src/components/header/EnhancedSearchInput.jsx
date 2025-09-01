@@ -99,7 +99,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       localStorage.setItem('recentSearches', JSON.stringify(newRecent));
 
       // Perform search (in a real app, this would navigate to search results)
-      // // // // // // // // // // console.log('Searching for:', query);
+      // // // // // // // // // // // console.log('Searching for:', query);
 
       // Close search
       setIsOpen(false);

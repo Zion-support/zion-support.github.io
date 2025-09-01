@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function Contact () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Mail,
@@ -16,115 +18,115 @@ import { motion } from 'framer - motion';
   Twitter,
   Facebook,
   Instagram,
-  Github,
-} from 'lucide - react';
+  Github} from 'lucide - react';
 
 const contactMethods = [
   {
+
     icon: Phone,
     title: 'Phone',
     value: '+1 302 464 0950',
     description: 'Call us during business hours',
     action: 'tel:+13024640950',
-    color: 'from - blue - 500 to - cyan - 500',
-  },
+    color: 'from - blue - 500 to - cyan - 500'},
   {
+
     icon: Mail,
     title: 'Email',
     value: 'kleber@ziontechgroup.com',
     description: 'Send us a message time',
     action: 'mailto:kleber@ziontechgroup.com',
-    color: 'from - purple - 500 to - pink - 500',
-  },
+    color: 'from - purple - 500 to - pink - 500'},
   {
+
     icon: MapPin,
     title: 'Address',
     value: '364 E Main St STE 1008',
     description: 'Middletown, DE 19709',
     action:
       'https://maps.google.com/?q = 364 + E+Main + St + STE + 1008 + Middletown + DE + 19709',
-    color: 'from - green - 500 to - emerald - 500',
-  },
+    color: 'from - green - 500 to - emerald - 500'},
   {
+
     icon: Clock,
     title: 'Business Hours',
     value: 'Mon - Fri: 9:00 AM - 6:00 PM',
     description: 'Eastern Time Zone',
     action: null,
-    color: 'from - orange - 500 to - red - 500',
-  },
+    color: 'from - orange - 500 to - red - 500'},
 ];
 
 const socialLinks = [
   {
+
     name: 'LinkedIn',
     icon: Linkedin,
     url: 'https://linkedin.com / company / ziontechgroup',
-    color: 'hover:text - blue - 500',
-  },
+    color: 'hover:text - blue - 500'},
   {
+
     name: 'Twitter',
     icon: Twitter,
     url: 'https://twitter.com / ziontechgroup',
-    color: 'hover:text - sky - 500',
-  },
+    color: 'hover:text - sky - 500'},
   {
+
     name: 'Facebook',
     icon: Facebook,
     url: 'https://facebook.com / ziontechgroup',
-    color: 'hover:text - blue - 600',
-  },
+    color: 'hover:text - blue - 600'},
   {
+
     name: 'Instagram',
     icon: Instagram,
     url: 'https://instagram.com / ziontechgroup',
-    color: 'hover:text - pink - 500',
-  },
+    color: 'hover:text - pink - 500'},
   {
+
     name: 'GitHub',
     icon: Github,
     url: 'https://github.com / ziontechgroup',
-    color: 'hover:text - gray - 400',
-  },
+    color: 'hover:text - gray - 400'},
 ];
 
 const contactFormFields = [
   {
+
     name: 'firstName',
     label: 'First Name',
     type: 'text',
     required: true,
-    placeholder: 'Enter your first name',
-  },
+    placeholder: 'Enter your first name'},
   {
+
     name: 'lastName',
     label: 'Last Name',
     type: 'text',
     required: true,
-    placeholder: 'Enter your last name',
-  },
+    placeholder: 'Enter your last name'},
   {
+
     name: 'email',
     label: 'Email',
     type: 'email',
     required: true,
-    placeholder: 'Enter your email address',
-  },
+    placeholder: 'Enter your email address'},
   {
+
     name: 'phone',
     label: 'Phone',
     type: 'tel',
     required: false,
-    placeholder: 'Enter your phone number (optional) ',
-  },
+    placeholder: 'Enter your phone number (optional) '},
   {
+
     name: 'comp',
     label: 'Comp',
     type: 'text',
     required: false,
-    placeholder: 'Enter your comp name (optional) ',
-  },
+    placeholder: 'Enter your comp name (optional) '},
   {
+
     name: 'service',
     label: 'Service Interest',
     type: 'select',
@@ -138,31 +140,32 @@ const contactFormFields = [
       'Mobile Development',
       'Micro SaaS Solutions',
       'Other',
-    ],
-  },
+    ]},
 ];
 
   const [formData, setFormData] = useState ({
+
     firstName: '',
     lastName: '',
     email: '',
     phone: '',
     comp: '',
     service: '',
-    message: '',
-  }) ;
+    message: ''}) ;
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [submitSuccess, setSubmitSuccess] = useState (false) ;
 
   const handleInputChange = e => {
+
     const { name, value } = e.target;
     setFormData (prev => ({
+
       ...prev,
-      [name]: value,
-    }) ) ;
+      [name]: value}) ) ;
   };
 
   const handleSubmit = async e => {
+
     e.preventDefault () ;
     setIsSubmitting (true) ;
 
@@ -174,16 +177,17 @@ const contactFormFields = [
 
     // Reset form after 3 seconds
     setTimeout ( () => {
+
       setSubmitSuccess (false) ;
       setFormData ({
+
         firstName: '',
         lastName: '',
         email: '',
         phone: '',
         comp: '',
         service: '',
-        message: '',
-      }) ;
+        message: ''}) ;
     }, 3000) ;
   };
 
@@ -271,6 +275,7 @@ const contactFormFields = [
                     href={method.action}
                     target={method.action.startsWith ('http') ? '_blank' : null}
                     rel={
+
                       method.action.startsWith ('http') ? 'noopener noreferrer'
                         : null
                     }

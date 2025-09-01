@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Brain,
   Zap,
   Users,
@@ -310,32 +311,38 @@ import {
 } from 'lucide-react';
 
 export function AIDigitalTwinPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Digital Twin Creation',
       description: 'Advanced AI algorithms that automatically generate and maintain accurate digital replicas of physical assets',
       benefits: ['Automated twin generation', 'Real-time synchronization', 'Predictive modeling', 'Intelligent updates']
     },
     {
+
       icon: Eye,
       title: 'Real-Time Monitoring & Visualization',
       description: 'Live 3D visualization and monitoring of physical assets through their digital twins',
       benefits: ['3D visualization', 'Real-time data', 'Interactive dashboards', 'Multi-view perspectives']
     },
     {
+
       icon: Zap,
       title: 'Predictive Analytics & Maintenance',
       description: 'AI-driven predictions for maintenance needs, performance optimization, and risk assessment',
       benefits: ['Predictive maintenance', 'Performance optimization', 'Risk assessment', 'Cost reduction']
     },
     {
+
       icon: Globe,
       title: 'Multi-Asset Management',
       description: 'Comprehensive management of multiple digital twins across your entire infrastructure',
       benefits: ['Centralized management', 'Asset relationships', 'Cross-asset analytics', 'Unified dashboard']
     },
     {
+
       icon: Cloud,
       title: 'Cloud-Native Architecture',
       description: 'Scalable cloud platform that grows with your digital twin needs',
@@ -345,6 +352,7 @@ export function AIDigitalTwinPlatform() {
 
   const pricingPlans = [
     {
+
       name: 'Digital Twin Starter',
       price: '$399',
       period: '/month',
@@ -361,6 +369,7 @@ export function AIDigitalTwinPlatform() {
       popular: false
     },
     {
+
       name: 'Digital Twin Pro',
       price: '$1,299',
       period: '/month',
@@ -379,6 +388,7 @@ export function AIDigitalTwinPlatform() {
       popular: true
     },
     {
+
       name: 'Enterprise Twin',
       price: 'Custom',
       period: '',
@@ -400,24 +410,28 @@ export function AIDigitalTwinPlatform() {
 
   const digitalTwinFeatures = [
     {
+
       title: 'Asset Modeling',
       description: 'Advanced 3D modeling and simulation capabilities',
       icon: Box,
       benefits: ['3D asset creation', 'Physics simulation', 'Material properties', 'Dynamic modeling']
     },
     {
+
       title: 'IoT Integration',
       description: 'Seamless integration with IoT sensors and devices',
       icon: Wifi,
       benefits: ['Sensor integration', 'Real-time data', 'Device management', 'Data validation']
     },
     {
+
       title: 'Predictive Analytics',
       description: 'AI-powered predictions for asset performance and maintenance',
       icon: TrendingUp,
       benefits: ['Performance prediction', 'Maintenance forecasting', 'Risk assessment', 'Optimization recommendations']
     },
     {
+
       title: 'Simulation & Testing',
       description: 'Virtual testing and scenario simulation capabilities',
       icon: TestTube,
@@ -427,24 +441,28 @@ export function AIDigitalTwinPlatform() {
 
   const industryApplications = [
     {
+
       title: 'Manufacturing',
       description: 'Digital twins for production lines, equipment, and processes',
       icon: Factory,
       benefits: ['Production optimization', 'Equipment monitoring', 'Process simulation', 'Quality control']
     },
     {
+
       title: 'Smart Cities',
       description: 'Urban infrastructure and building management',
       icon: Building2,
       benefits: ['Infrastructure monitoring', 'Building management', 'Traffic optimization', 'Energy efficiency']
     },
     {
+
       title: 'Healthcare',
       description: 'Medical device and facility digital twins',
       icon: Stethoscope,
       benefits: ['Device monitoring', 'Facility management', 'Patient flow', 'Resource optimization']
     },
     {
+
       title: 'Energy & Utilities',
       description: 'Power plants, grids, and renewable energy systems',
       icon: Zap,
@@ -454,24 +472,28 @@ export function AIDigitalTwinPlatform() {
 
   const technologyStack = [
     {
+
       name: '3D Visualization Engine',
       description: 'Advanced 3D rendering and visualization capabilities',
       icon: Eye,
       features: ['Real-time rendering', '3D modeling', 'Interactive visualization', 'Multi-platform support']
     },
     {
+
       name: 'AI/ML Engine',
       description: 'Machine learning algorithms for predictive analytics',
       icon: Brain,
       features: ['Predictive modeling', 'Pattern recognition', 'Anomaly detection', 'Continuous learning']
     },
     {
+
       name: 'IoT Platform',
       description: 'Comprehensive IoT device integration and management',
       icon: Wifi,
       features: ['Device integration', 'Data collection', 'Protocol support', 'Edge computing']
     },
     {
+
       name: 'Cloud Infrastructure',
       description: 'Scalable cloud platform with enterprise security',
       icon: Cloud,
@@ -735,6 +757,7 @@ export function AIDigitalTwinPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-8 rounded-xl border ${
+
                   plan.popular 
                     ? 'border-purple-500/50 shadow-lg shadow-purple-500/20' 
                     : 'border-purple-500/20'
@@ -769,6 +792,7 @@ export function AIDigitalTwinPlatform() {
                 <Link
                   to={plan.name === 'Enterprise Twin' ? '/contact' : '/pricing'}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white hover:from-purple-600 hover:to-indigo-700'
                       : 'border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'

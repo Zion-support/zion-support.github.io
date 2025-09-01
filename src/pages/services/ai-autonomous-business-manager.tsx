@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, Users, BarChart3, Shield, Zap, Clock, 
   TrendingUp, CheckCircle, Star, Target, ArrowRight,
   Phone, Mail, MapPin, Globe, Cpu, Database, 
@@ -9,10 +10,12 @@ import {
 } from 'lucide-react';
 
 const AIAutonomousBusinessManager: React.FC = () => {
+
   const [activeTab, setActiveTab] = useState('overview');
   const [showPricingModal, setShowPricingModal] = useState(false);
 
   const contactInfo = {
+
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -21,6 +24,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
 
   const features = [
     {
+
       category: "Autonomous Decision Making",
       items: [
         "AI-powered strategic planning and execution",
@@ -32,6 +36,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
       ]
     },
     {
+
       category: "Business Intelligence",
       items: [
         "Real-time KPI monitoring and reporting",
@@ -43,6 +48,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
       ]
     },
     {
+
       category: "Process Automation",
       items: [
         "End-to-end workflow automation",
@@ -54,6 +60,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
       ]
     },
     {
+
       category: "Communication Management",
       items: [
         "Multi-channel communication orchestration",
@@ -68,36 +75,42 @@ const AIAutonomousBusinessManager: React.FC = () => {
 
   const benefits = [
     {
+
       title: "24/7 Autonomous Operation",
       description: "Your business runs continuously without human intervention, maximizing efficiency and opportunities.",
       icon: Clock,
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       title: "Data-Driven Decisions",
       description: "Every decision is based on real-time data analysis, ensuring optimal outcomes and reduced risk.",
       icon: BarChart3,
       color: "from-green-500 to-emerald-500"
     },
     {
+
       title: "Cost Reduction",
       description: "Automation reduces operational costs by 30-50% while improving quality and consistency.",
       icon: DollarSign,
       color: "from-yellow-500 to-orange-500"
     },
     {
+
       title: "Scalable Growth",
       description: "The system automatically scales with your business, handling increased complexity and volume.",
       icon: TrendingUp,
       color: "from-purple-500 to-pink-500"
     },
     {
+
       title: "Risk Mitigation",
       description: "Continuous monitoring and predictive analytics identify and prevent potential issues before they occur.",
       icon: Shield,
       color: "from-red-500 to-pink-500"
     },
     {
+
       title: "Competitive Advantage",
       description: "Stay ahead of competitors with AI-powered insights and rapid adaptation to market changes.",
       icon: Award,
@@ -107,6 +120,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
 
   const useCases = [
     {
+
       industry: "E-commerce & Retail",
       applications: [
         "Automated inventory management",
@@ -117,6 +131,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
       ]
     },
     {
+
       industry: "Financial Services",
       applications: [
         "Risk assessment and management",
@@ -127,6 +142,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
       ]
     },
     {
+
       industry: "Healthcare",
       applications: [
         "Patient scheduling optimization",
@@ -137,6 +153,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
       ]
     },
     {
+
       industry: "Manufacturing",
       applications: [
         "Production planning optimization",
@@ -150,6 +167,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
 
   const technology = [
     {
+
       category: "AI & Machine Learning",
       technologies: [
         "GPT-4 Turbo with 128K context",
@@ -161,6 +179,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
       ]
     },
     {
+
       category: "Data Processing",
       technologies: [
         "Real-time data streaming",
@@ -172,6 +191,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
       ]
     },
     {
+
       category: "Integration & APIs",
       technologies: [
         "RESTful APIs",
@@ -183,6 +203,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
       ]
     },
     {
+
       category: "Security & Compliance",
       technologies: [
         "End-to-end encryption",
@@ -197,6 +218,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$15,000",
       period: "/month",
@@ -213,6 +235,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$35,000",
       period: "/month",
@@ -231,6 +254,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$75,000",
       period: "/month",
@@ -329,6 +353,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+
                   activeTab === tab.id
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
@@ -547,6 +572,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-6 ${
+
                       plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700/50'
                     }`}
                   >

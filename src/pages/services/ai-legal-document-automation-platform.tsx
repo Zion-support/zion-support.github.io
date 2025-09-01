@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   FileText, 
   Shield, 
   Zap, 
@@ -23,33 +24,40 @@ import {
 } from 'lucide-react';
 
 const AILegalDocumentAutomationPlatform = () => {
+
   const features = [
     {
+
       icon: <FileText className="w-6 h-6" />,
       title: "Smart Document Analysis",
       description: "AI-powered analysis of legal documents with 99.9% accuracy for contract review, compliance checking, and risk assessment."
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Compliance Automation",
       description: "Automated compliance checking against regulatory frameworks including GDPR, SOX, HIPAA, and industry-specific requirements."
     },
     {
+
       icon: <Zap className="w-6 h-6" />,
       title: "Contract Generation",
       description: "Intelligent contract generation with customizable templates, clause libraries, and automated negotiation support."
     },
     {
+
       icon: <Users className="w-6 h-6" />,
       title: "Collaborative Workflow",
       description: "Multi-user collaboration with role-based access control, approval workflows, and audit trails."
     },
     {
+
       icon: <CheckCircle className="w-6 h-6" />,
       title: "Risk Assessment",
       description: "AI-powered risk identification and scoring for contracts, legal documents, and business agreements."
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Analytics Dashboard",
       description: "Comprehensive analytics on document processing, compliance status, and legal risk metrics."
@@ -58,6 +66,7 @@ const AILegalDocumentAutomationPlatform = () => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -72,6 +81,7 @@ const AILegalDocumentAutomationPlatform = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -88,6 +98,7 @@ const AILegalDocumentAutomationPlatform = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
@@ -108,21 +119,25 @@ const AILegalDocumentAutomationPlatform = () => {
 
   const benefits = [
     {
+
       icon: <Clock className="w-8 h-8" />,
       title: "90% Time Savings",
       description: "Reduce document review time from hours to minutes with AI automation"
     },
     {
+
       icon: <DollarSign className="w-8 h-8" />,
       title: "Cost Reduction",
       description: "Cut legal document processing costs by up to 70%"
     },
     {
+
       icon: <Shield className="w-8 h-8" />,
       title: "Risk Mitigation",
       description: "Identify and prevent legal risks before they become issues"
     },
     {
+
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Scalability",
       description: "Handle increasing document volumes without proportional cost increases"
@@ -270,6 +285,7 @@ const AILegalDocumentAutomationPlatform = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800 p-8 rounded-lg border ${
+
                   plan.popular 
                     ? 'border-blue-500 ring-2 ring-blue-500/20' 
                     : 'border-slate-700'
@@ -304,6 +320,7 @@ const AILegalDocumentAutomationPlatform = () => {
                 <a
                   href="https://ziontechgroup.com/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                     plan.popular
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

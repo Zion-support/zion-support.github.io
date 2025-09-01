@@ -3,27 +3,34 @@ import SEO from "@/components/SEO";
 import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
 export default function CreatePostPage() {
+
     const navigate = useNavigate();
     const { toast } = useToast();
     const [searchParams] = useSearchParams();
     // Get category from URL query params if available
     const initialValues = {
+
         categoryId: initialCategory || "project-help"
     };
     const handleSubmit = async (values) => {
+
         try {
+
             // Here we would normally save to the database
             // For now, we'll just simulate a successful post creation
             // Parse tags into an array
             const tagsArray = values.tags.split(",").map(tag => tag.trim());
             toast({
+
                 title: "Post created",
                 description: "Your post has been published successfully"
             });
             // Redirect to the forum category
             router(`/community/category/${values.categoryId}`)}
         catch (error) {
+
             toast({
+
                 title: "Error",
                 description: "There was a problem creating your post",
                 variant: "destructive"

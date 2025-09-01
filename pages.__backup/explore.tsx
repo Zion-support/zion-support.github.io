@@ -5,51 +5,57 @@ import Link from 'next/link';
 export default function ExplorePage() {
   const explorationCategories = [
     {
-      title: "AI Automation",
-      description: "Discover how artificial intelligence is revolutionizing automation across industries",
-      icon: "🤖",
-      features: ["Machine Learning", "Neural Networks", "Predictive Analytics"],
-      link: "/explore/ai-automation"
+      title: 'AI Automation',
+      description:
+        'Discover how artificial intelligence is revolutionizing automation across industries',
+      icon: '🤖',
+      features: ['Machine Learning', 'Neural Networks', 'Predictive Analytics'],
+      link: '/explore/ai-automation',
     },
     {
-      title: "Cloud Computing",
-      description: "Explore the latest in cloud infrastructure and autonomous management",
-      icon: "☁️",
-      features: ["Auto-scaling", "Load Balancing", "Cost Optimization"],
-      link: "/explore/cloud-computing"
+      title: 'Cloud Computing',
+      description:
+        'Explore the latest in cloud infrastructure and autonomous management',
+      icon: '☁️',
+      features: ['Auto-scaling', 'Load Balancing', 'Cost Optimization'],
+      link: '/explore/cloud-computing',
     },
     {
-      title: "DevOps & CI/CD",
-      description: "Learn about autonomous development and deployment pipelines",
-      icon: "🔄",
-      features: ["Auto-deployment", "Testing", "Monitoring"],
-      link: "/explore/devops"
+      title: 'DevOps & CI/CD',
+      description:
+        'Learn about autonomous development and deployment pipelines',
+      icon: '🔄',
+      features: ['Auto-deployment', 'Testing', 'Monitoring'],
+      link: '/explore/devops',
     },
     {
-      title: "Content Generation",
-      description: "See how AI creates and optimizes content automatically",
-      icon: "✍️",
-      features: ["SEO Optimization", "Brand Consistency", "Multi-language"],
-      link: "/explore/content-generation"
-    }
+      title: 'Content Generation',
+      description: 'See how AI creates and optimizes content automatically',
+      icon: '✍️',
+      features: ['SEO Optimization', 'Brand Consistency', 'Multi-language'],
+      link: '/explore/content-generation',
+    },
   ];
 
   const trendingTopics = [
-    "Autonomous Systems",
-    "AI Ethics",
-    "Edge Computing",
-    "Quantum Computing",
-    "Blockchain Automation",
-    "IoT Integration"
+    'Autonomous Systems',
+    'AI Ethics',
+    'Edge Computing',
+    'Quantum Computing',
+    'Blockchain Automation',
+    'IoT Integration',
   ];
 
   return (
     <>
       <Head>
         <title>Explore | Zion - Discover AI & Automation</title>
-        <meta name="description" content="Explore the latest trends and technologies in AI automation, cloud computing, and autonomous systems." />
+        <meta
+          name="description"
+          content="Explore the latest trends and technologies in AI automation, cloud computing, and autonomous systems."
+        />
       </Head>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
@@ -58,7 +64,8 @@ export default function ExplorePage() {
               Explore Zion
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Discover the cutting-edge technologies and innovations shaping the future of autonomous automation
+              Discover the cutting-edge technologies and innovations shaping the
+              future of autonomous automation
             </p>
           </div>
         </div>
@@ -81,20 +88,27 @@ export default function ExplorePage() {
 
         {/* Exploration Categories */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Explore by Category</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Explore by Category
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {explorationCategories.map((category, index) => (
-              <Link 
+              <Link
                 key={index}
                 href={category.link}
                 className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <div className="text-6xl mb-4">{category.icon}</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{category.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {category.title}
+                </h3>
                 <p className="text-gray-600 mb-6">{category.description}</p>
                 <ul className="space-y-2 mb-6">
                   {category.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-700">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-gray-700"
+                    >
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                       {feature}
                     </li>
@@ -110,7 +124,9 @@ export default function ExplorePage() {
 
         {/* Trending Topics */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Trending Topics</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Trending Topics
+          </h2>
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <div className="flex flex-wrap gap-3 justify-center">
               {trendingTopics.map((topic, index) => (
@@ -130,21 +146,30 @@ export default function ExplorePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Learning Path */}
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Learning Path</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Learning Path
+              </h3>
               <p className="text-gray-600 mb-6">
-                Start your journey into autonomous automation with our curated learning paths.
+                Start your journey into autonomous automation with our curated
+                learning paths.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold mr-3">1</span>
+                  <span className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold mr-3">
+                    1
+                  </span>
                   Fundamentals of AI
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold mr-3">2</span>
+                  <span className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold mr-3">
+                    2
+                  </span>
                   Cloud Infrastructure
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-6 h-6 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center text-xs font-bold mr-3">3</span>
+                  <span className="w-6 h-6 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center text-xs font-bold mr-3">
+                    3
+                  </span>
                   Autonomous Systems
                 </div>
               </div>
@@ -155,9 +180,12 @@ export default function ExplorePage() {
 
             {/* Interactive Demo */}
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Try It Live</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Try It Live
+              </h3>
               <p className="text-gray-600 mb-6">
-                Experience autonomous automation in action with our interactive demos.
+                Experience autonomous automation in action with our interactive
+                demos.
               </p>
               <div className="space-y-3">
                 <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">

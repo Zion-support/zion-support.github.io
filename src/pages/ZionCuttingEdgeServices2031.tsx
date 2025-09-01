@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 export default ZionCuttingEdgeServices2031;
 import {
+
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2031 } from '../data / innovativeMicroSaasServices2031';
 import { motion } from 'framer - motion';
 
@@ -45,16 +46,17 @@ import { motion } from 'framer - motion';
   BookOpen,
   Truck,
   ChevronDown,
-  ChevronUp,
-} from 'lucide - react';
+  ChevronUp} from 'lucide - react';
 
 const ZionCuttingEdgeServices2031: React.FC = () => {
+
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState < string> ('All') ;
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'innovation'> ('name') ;
   const [expandedService, setExpandedService] = useState < number | null> (null) ;
 
   const categories = useMemo ( () => {
+
     const cats = [
       'All',
       ...Array.from (new Set (INNOVATIVE_MICRO_SAAS_SERVICES_2031.map (service => service.category) ) ) ,
@@ -63,9 +65,11 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
   }, []) ;
 
   const filteredServices = useMemo ( () => {
+
     let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2031;
 
     if (searchQuery) {
+
       filtered = filtered.filter (service =>
           service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
           service.description
@@ -75,21 +79,24 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
     }
 
     if (selectedCategory !== 'All') {
+
       filtered = filtered.filter (service => service.category === selectedCategory) ;
     }
 
     // Sort services
     filtered.sort ( (a, b) => {
+
       switch (sortBy) {
+
         case 'price':
           return a.price - b.price;
         case 'innovation':
           const innovationOrder = {
+
             Revolutionary: 3,
             'Cutting - edge': 2,
             Advanced: 1,
-            Breakthrough: 3,
-          };
+            Breakthrough: 3};
           return ( (innovationOrder[
               b.innovationLevel as keyof typeof innovationOrder
             ] || 0) - (innovationOrder[
@@ -104,7 +111,9 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
   }, [searchQuery, selectedCategory, sortBy]) ;
 
   const getCategoryIcon = (category: string) => {
+
     const iconMap: { [key: string]: React.ComponentType < any> } = {
+
       'FinTech & Trading': Coins,
       'Healthcare & AI': Heart,
       'Blockchain & Security': Lock,
@@ -114,22 +123,23 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
       'IoT & Predictive Analytics': Network,
       'Customer Experience & AI': Users,
       'Research & AI': Code,
-      'Business Intelligence & AI': BarChart3,
-    };
+      'Business Intelligence & AI': BarChart3};
     return iconMap[category] || Globe;
   };
 
   const getInnovationColor = (level: string) => {
+
     const colorMap: { [key: string]: string } = {
+
       Revolutionary: 'from - purple - 500 to - pink - 500',
       'Cutting - edge': 'from - blue - 500 to - indigo - 500',
       Advanced: 'from - green - 500 to - teal - 500',
-      Breakthrough: 'from - red - 500 to - orange - 500',
-    };
+      Breakthrough: 'from - red - 500 to - orange - 500'};
     return colorMap[level] || 'from - gray - 500 to - slate - 500';
   };
 
   const toggleServiceExpansion = (id: number) => {
+
     setExpandedService (expandedService === id ? null : id) ;
   };
 
@@ -222,6 +232,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
               {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                   onClick={ () => setSelectedCategory (category) }
                   className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all ${
+
                     selectedCategory === category
                       ? 'bg - cyan - 500 text - white shadow - lg shadow - cyan - 500 / 25'
                       : 'bg - white / 10 text - gray - 300 hover:bg - white / 20 border border - cyan - 400 / 20'
@@ -254,6 +265,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
         <div role="button" className="max - w-7xl mx - auto">
           <div role="button" className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8">
             {filteredServices.map (service => {
+
               const CategoryIcon = getCategoryIcon (service.category) ;
               return (<motion.div
                   key={service.id}

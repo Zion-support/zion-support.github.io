@@ -5,28 +5,34 @@ import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone
 import { SEO               } from '@/components/SEO';
 
 export default function EmployeeSchedulingSaaS(...args: []):  {
+
   const features = [
     {
+
       icon: Calendar,
       title: "Smart Scheduling",
       description: "AI-powered scheduling that automatically creates optimal shifts based on availability, skills, and business needs."
     },
     {
+
       icon: Users,
       title: "Employee Management",
       description: "Complete employee profiles with skills, availability, preferences, and performance tracking."
     },
     {
+
       icon: Clock,
       title: "Time Tracking",
       description: "Accurate time tracking with clock-in/out, break management, and overtime calculation."
     },
     {
+
       icon: BarChart3,
       title: "Analytics & Reporting",
       description: "Comprehensive insights into labor costs, productivity, and scheduling efficiency."
     },
     {
+
       icon: Smartphone,
       title: "Mobile App",
       description: "Full-featured mobile app for employees to view schedules, request time off, and clock in/out.";
@@ -39,26 +45,31 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
   ];
   const schedulingCapabilities = [
     {
+
       icon: Calendar,
       title: "Automated Scheduling",
       description: "AI algorithms create optimal schedules considering availability, skills, and business rules"
     },
     {
+
       icon: Users,
       title: "Shift Management",
       description: "Easy shift creation, editing, and assignment with drag-and-drop interface"
     },
     {
+
       icon: Clock,
       title: "Time Off Management",
       description: "Streamlined PTO requests, approvals, and calendar integration"
     },
     {
+
       icon: Bell,
       title: "Notifications",
       description: "Automated reminders for shift changes, time off approvals, and schedule updates"
     },
     {
+
       icon: Settings,
       title: "Custom Rules",
       description: "Configurable business rules for scheduling, overtime, and compliance";
@@ -71,6 +82,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
   ];
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$49",
       period: "/month",
@@ -86,6 +98,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$129",
       period: "/month",
@@ -102,6 +115,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$299",
       period: "/month",
@@ -120,16 +134,19 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
   ];
   const benefits = [
     {
+
       title: "Reduce Scheduling Time",
       description: "Cut scheduling time by up to 80% with AI-powered automation and smart tools.",
       icon: Clock
     },
     {
+
       title: "Improve Employee Satisfaction",
       description: "Give employees control over their schedules and improve work-life balance.",
       icon: Users
     },
     {
+
       title: "Optimize Labor Costs",
       description: "Reduce overtime costs and optimize staffing levels with data-driven insights.",
       icon: TrendingUp;
@@ -142,26 +159,31 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
   ];
   const industries = [
     {
+
       icon: Users,
       title: "Retail",
       description: "Manage complex retail schedules with seasonal demands and part-time workers"
     },
     {
+
       icon: Clock,
       title: "Healthcare",
       description: "Ensure proper staffing for patient care with 24/7 scheduling requirements"
     },
     {
+
       icon: Calendar,
       title: "Manufacturing",
       description: "Optimize production schedules with shift rotations and skill requirements"
     },
     {
+
       icon: Globe,
       title: "Hospitality",
       description: "Handle dynamic scheduling needs for hotels, restaurants, and events"
     },
     {
+
       icon: Settings,
       title: "Services",
       description: "Manage appointment-based scheduling for professional services";
@@ -187,10 +209,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
             <div className="text-center">
               <motion.div
                 initial = {
+
   { opacity: 0,
   y: 20 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -237,14 +261,17 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
@@ -276,14 +303,17 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
@@ -315,14 +345,17 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
@@ -354,14 +387,17 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   x: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
@@ -395,18 +431,22 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+
                     plan.popular
                       ? 'border-orange-500 ring-2 ring-orange-500/20'
                       : 'border-slate-700'
@@ -437,6 +477,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                   <Link
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
@@ -453,10 +494,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 }}

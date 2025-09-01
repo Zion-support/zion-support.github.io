@@ -1,6 +1,7 @@
 import React from 'react';
 export default InnovativeServices;}}
 import {
+
 import { motion } from 'framer - motion';
 
   Brain,
@@ -26,8 +27,10 @@ import { motion } from 'framer - motion';
  } from 'lucide - react';
 
 const InnovativeServices: React.FC = () : JSX.Element => {
+
   const innovations = [
     {
+
       id: 'ai - automation',
       title: 'AI Business Automation',
       description: 'Revolutionary AI - powered business process automation that transforms your operations',
@@ -42,6 +45,7 @@ const InnovativeServices: React.FC = () : JSX.Element => {
       color: 'from - zion - cyan to - zion - purple'
     },
     {
+
       id: 'quantum - computing',
       title: 'Quantum Computing Services',
       description: 'Next - generation quantum computing solutions for complex problem - solving',
@@ -56,6 +60,7 @@ const InnovativeServices: React.FC = () : JSX.Element => {
       color: 'from - zion - purple to - zion - blue'
     },
     {
+
       id: 'blockchain',
       title: 'Enterprise Blockchain',
       description: 'Secure, scalable blockchain solutions for enterprise applications',
@@ -70,6 +75,7 @@ const InnovativeServices: React.FC = () : JSX.Element => {
       color: 'from - zion - blue to - zion - green'
     },
     {
+
       id: 'iot - edge',
       title: 'IoT Edge Computing',
       description: 'Intelligent IoT solutions with edge computing for real - time processing',
@@ -84,6 +90,7 @@ const InnovativeServices: React.FC = () : JSX.Element => {
       color: 'from - zion - green to - zion - emerald'
     },
     {
+
       id: 'cybersecurity',
       title: 'Zero Trust Security',
       description: 'Advanced cybersecurity platform with zero - trust architecture',
@@ -98,6 +105,7 @@ const InnovativeServices: React.FC = () : JSX.Element => {
       color: 'from - zion - emerald to - zion - cyan'
     },
     {
+
       id: 'digital - twin',
       title: 'Digital Twin Technology',
       description: 'Create virtual replicas of physical systems for simulation and optimization',
@@ -112,6 +120,7 @@ const InnovativeServices: React.FC = () : JSX.Element => {
       color: 'from - zion - cyan to - zion - purple'
     },
     {
+
       id: 'metaverse',
       title: 'Metaverse & VR',
       description: 'Immersive virtual reality and metaverse development platform',
@@ -126,6 +135,7 @@ const InnovativeServices: React.FC = () : JSX.Element => {
       color: 'from - zion - purple to - zion - blue'
     },
     {
+
       id: 'green - tech',
       title: 'Green Tech Solutions',
       description: 'Sustainable technology solutions for environmental impact reduction',
@@ -133,8 +143,7 @@ const InnovativeServices: React.FC = () : JSX.Element => {
       features[;
         'Renewable energy optimization',
         'Carbon footprint tracking',
-        'Sustainable infrastructure',
-    };
+        'Sustainable infrastructure'};
         'Green data centers';
       ],;
       benefits: ['Environmental impact', 'Cost savings', 'Regulatory compliance'],;
@@ -156,11 +165,13 @@ const InnovativeServices: React.FC = () : JSX.Element => {
         <div className="relative max - w-7xl mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -201,16 +212,19 @@ const InnovativeServices: React.FC = () : JSX.Element => {
             {stats.map ( (stat, index) => (<motion.div
                 key={stat.label}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -232,11 +246,13 @@ const InnovativeServices: React.FC = () : JSX.Element => {
         <div className="max - w-7xl mx - auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -257,16 +273,19 @@ const InnovativeServices: React.FC = () : JSX.Element => {
             {innovations.map ( (innovation, index) => (<motion.div
                 key={innovation.id}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -324,11 +343,13 @@ const InnovativeServices: React.FC = () : JSX.Element => {
         <div className="max - w-4xl mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 

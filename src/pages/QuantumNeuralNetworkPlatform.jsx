@@ -4,21 +4,25 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
 
     const features = [
         {
+
             icon: Brain,
             title: 'Quantum Neural Networks',
             description: 'Advanced neural network architectures leveraging quantum computing principles for unprecedented processing power.'
         },
         {
+
             icon: Zap,
             title: 'Real - time Processing',
             description: 'Lightning - fast data processing and analysis with quantum - enhanced algorithms and parallel computing.'
         },
         {
+
             icon: Target,
             title: 'Precision Optimization',
             description: 'Quantum - inspired optimization algorithms that find optimal solutions in complex, multi - dimensional spaces.'
         },
         {
+
             icon: Shield,
             title: 'Quantum Security',
             description: 'Next - generation encryption and security protocols based on quantum mechanics principles.'
@@ -26,21 +30,25 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
     ];
     const useCases = [
         {
+
             title: 'Financial Modeling',
             description: 'Advanced risk assessment, portfolio optimization, and market prediction using quantum neural networks.',
             icon: TrendingUp
         },
         {
+
             title: 'Drug Discovery',
             description: 'Accelerated molecular simulation and drug candidate screening for pharmaceutical research.',
             icon: Globe
         },
         {
+
             title: 'Climate Modeling',
             description: 'Complex climate pattern analysis and prediction with quantum - enhanced computational power.',
             icon: Globe
         },
         {
+
             title: 'AI Training',
             description: 'Faster and more efficient training of large language models and neural networks.',
             icon: Brain
@@ -100,6 +108,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             {features.map ( (feature, index) => {
+
             const IconComponent = feature.icon;
             return (<div key={index} className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - blue - 500 / 30 transition - all duration - 300">
                   <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 600 to - cyan - 600 rounded - lg flex items - center justify - center mb - 4">
@@ -127,6 +136,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
             {useCases.map ( (useCase, index) => {
+
             const IconComponent = useCase.icon;
             return (<div key={index} className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 8 border border - white / 10">
                   <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 600 to - cyan - 600 rounded - xl flex items - center justify - center mb - 6">

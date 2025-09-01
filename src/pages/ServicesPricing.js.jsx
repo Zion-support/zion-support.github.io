@@ -7,6 +7,7 @@ import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail
 import SEO from '@/components/SEO';
 const pricingTiers = [
     {
+
         name: "Starter",
         description: "Perfect for small businesses and startups",
         price: "From $500",
@@ -29,6 +30,7 @@ const pricingTiers = [
         popular: false
     },
     {
+
         name: "Professional",
         description: "Ideal for growing businesses and teams",
         price: "From $2,000",
@@ -52,6 +54,7 @@ const pricingTiers = [
         popular: true
     },
     {
+
         name: "Enterprise",
         description: "For large organizations with complex needs",
         price: "From $5,000",
@@ -75,6 +78,7 @@ const pricingTiers = [
 ];
 const serviceCategories = [
     {
+
         name: "AI Services",
         icon: <Zap className="w-6 h-6"/>,
         services[
@@ -85,6 +89,7 @@ const serviceCategories = [
         ]
     },
     {
+
         name: "IT Services",
         icon: <Shield className="w-6 h-6"/>,
         services[
@@ -95,6 +100,7 @@ const serviceCategories = [
         ]
     },
     {
+
         name: "Business Solutions",
         icon: <TrendingUp className="w-6 h-6"/>,
         services[
@@ -105,6 +111,7 @@ const serviceCategories = [
         ]
     },
     {
+
         name: "Digital Solutions",
         icon: <Globe className="w-6 h-6"/>,
         services[
@@ -117,37 +124,44 @@ const serviceCategories = [
 ];
 const benefits = [
     {
+
         icon: <CheckCircle className="w-8 h-8"/>,
         title: "Scalable Solutions",
         description: "Start with what you need and scale up as your business grows"
     },
     {
+
         icon: <Shield className="w-8 h-8"/>,
         title: "Enterprise Security",
         description: "Bank-level security and compliance for all our solutions"
     },
     {
+
         icon: <Clock className="w-8 h-8"/>,
         title: "Rapid Deployment",
         description: "Get up and running in days, not months"
     },
     {
+
         icon: <Users className="w-8 h-8"/>,
         title: "Expert Support",
         description: "24/7 technical support and dedicated account management"
     },
     {
+
         icon: <TrendingUp className="w-8 h-8"/>,
         title: "Proven ROI",
         description: "Track record of delivering measurable business outcomes"
     },
     {
+
         icon: <BarChart3 className="w-8 h-8"/>,
         title: "Continuous Innovation",
         description: "Regular updates and new features to keep you ahead"
     }
 ];
 export default function ServicesPricing() {
+
     const [selectedTier, setSelectedTier] = useState('professional');
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO title="Micro SAAS Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS services. Choose from Starter, Professional, or Enterprise tiers to match your business needs and budget." keywords="micro SAAS pricing, service costs, AI services pricing, IT solutions pricing" url="https://ziontechgroup.com/services-pricing"/>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 export default Search;
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -17,10 +18,10 @@ import { SEO } from '../components / SEO';
   Calendar,
   Eye,
   Bookmark,
-  Share2,
-} from 'lucide - react';
+  Share2} from 'lucide - react';
 
 const Search: React.FC = () => {
+
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [activeCategory, setActiveCategory] = useState ('all') ;
   const [sortBy, setSortBy] = useState ('relevance') ;
@@ -45,6 +46,7 @@ const Search: React.FC = () => {
 
   const mockResults = [
     {
+
       id: 1,
       title: 'AI - Powered Business Intelligence Platform',
       description:
@@ -57,9 +59,9 @@ const Search: React.FC = () => {
       company: 'Zion Tech Group',
       tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning'],
       featured: true,
-      date: '2024 - 12 - 01',
-    },
+      date: '2024 - 12 - 01'},
     {
+
       id: 2,
       title: 'Senior Full - Stack Developer',
       description:
@@ -72,9 +74,9 @@ const Search: React.FC = () => {
       company: 'Zion Tech Group',
       tags: ['React', 'Node.js', 'Full - Stack', 'Cloud'],
       featured: false,
-      date: '2024 - 11 - 28',
-    },
+      date: '2024 - 11 - 28'},
     {
+
       id: 3,
       title: 'Cloud Infrastructure Setup',
       description:
@@ -87,9 +89,9 @@ const Search: React.FC = () => {
       company: 'Zion Tech Group',
       tags: ['Cloud', 'Infrastructure', 'AWS', 'Azure'],
       featured: true,
-      date: '2024 - 11 - 25',
-    },
+      date: '2024 - 11 - 25'},
     {
+
       id: 4,
       title: 'High - Performance Computing Cluster',
       description:
@@ -102,23 +104,26 @@ const Search: React.FC = () => {
       company: 'Zion Tech Group',
       tags: ['HPC', 'Computing', 'Data Processing', 'ML'],
       featured: false,
-      date: '2024 - 11 - 20',
-    },
+      date: '2024 - 11 - 20'},
   ];
 
   useEffect ( () => {
+
     if (searchQuery) {
+
       performSearch () ;
     }
   }, [searchQuery, activeCategory, sortBy]) ;
 
   const performSearch = async () => {
+
     setLoading (true) ;
     // Simulate API call delay
     await new Promise (resolve => setTimeout (resolve, 500) ) ;
 
     // Filter results based on search query and category
     let filteredResults = mockResults.filter (result => {
+
       const matchesQuery = result.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         result.tags.some ( (tag: string) =>
@@ -131,7 +136,9 @@ const Search: React.FC = () => {
 
     // Sort results
     filteredResults.sort ( (a, b) => {
+
       switch (sortBy) {
+
         case 'newest':
           return new Date (b.date) .getTime () - new Date (a.date) .getTime () ;
         case 'rating':
@@ -152,14 +159,18 @@ const Search: React.FC = () => {
   };
 
   const handleSearch = useCallback ( (e: React.FormEvent) => {
+
     e.preventDefault () ;
     if (searchQuery.trim () ) {
+
       performSearch () ;
     }
   };
 
   const getTypeIcon = (type: string) => {
+
     switch (type) {
+
       case 'services':
         return < Server className="w - 5 h - 5 text - blue - 400" />;
       case 'talent':
@@ -172,7 +183,9 @@ const Search: React.FC = () => {
   };
 
   const getTypeLabel = (type: string) => {
+
     switch (type) {
+
       case 'services':
         return 'Service';
       case 'talent':
@@ -250,6 +263,7 @@ const Search: React.FC = () => {
                       {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                           onClick={ () => setActiveCategory (category.id) }
                           className={`w - full text - left px - 3 py - 2 rounded - lg text - sm transition - colors ${
+
                             activeCategory === category.id
                               ? 'bg - blue - 500 text - white'
                               : 'text - gray - 300 hover:bg - slate - 700 / 50'
@@ -268,6 +282,7 @@ const Search: React.FC = () => {
                       {sortOptions.map (option => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={option.id}
                           onClick={ () => setSortBy (option.id) }
                           className={`w - full text - left px - 3 py - 2 rounded - lg text - sm transition - colors ${
+
                             sortBy === option.id
                               ? 'bg - purple - 500 text - white'
                               : 'text - gray - 300 hover:bg - slate - 700 / 50'

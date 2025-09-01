@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award } from 'lucide-react';
 import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data/nextGenInnovativeServices";
 export default function NextGenInnovativeServices() {
+
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedService, setSelectedService] = useState(null);
@@ -11,38 +12,49 @@ export default function NextGenInnovativeServices() {
     const categories = useMemo(() => ['all', ...Array.from(new Set(NEXT_GEN_INNOVATIVE_SERVICES.map(s => s.category)))], []);
     // Filter services based on search and category
     const filteredServices = useMemo(() => {
+
         return NEXT_GEN_INNOVATIVE_SERVICES.filter(service => {
+
             const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
             return matchesCategory && matchesSearch})}, [searchTerm, selectedCategory]);
     const formatPrice = (price, currency) => {
+
         return `${currency}${price.toLocaleString()}`};
     const getSupportLevelColor = (level) => {
+
         switch (level.toLowerCase()) {
+
             case 'enterprise': return 'bg-purple-600';
             case 'premium': return 'bg-blue-600';
             case 'standard': return 'bg-green-600';
             default: return 'bg-gray-600'}
     };
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0 
 
 },
         visible: {
+
             y: 0,
             opacity: 1,
             transition: {
+
                 duration: 0.5
             }
         }
@@ -53,10 +65,12 @@ export default function NextGenInnovativeServices() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -217,6 +231,7 @@ export default function NextGenInnovativeServices() {
         {filteredServices.length === 0 && (<div className="text-center py-12">
             <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
             <button onClick={() => {
+
                 setSearchTerm('');
                 setSelectedCategory('all')}} className="text-blue-400 hover:text-blue-300 transition-colors">
               Clear filters
@@ -227,14 +242,17 @@ export default function NextGenInnovativeServices() {
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div initial = {
+
   { opacity: 0,
   scale: 0.9 
 
 }} animate = {
+
   { opacity: 1,
   scale: 1 
 
 }} exit = {
+
   { opacity: 0,
   scale: 0.9 
 
@@ -387,14 +405,17 @@ export default function NextGenInnovativeServices() {
       {/* Contact CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.5 
 

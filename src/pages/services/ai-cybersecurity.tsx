@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Shield, 
   Brain, 
   Eye, 
@@ -61,38 +62,45 @@ import {
 import { SEO } from '@/components/SEO';
 
 const AICybersecurity: React.FC = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI Threat Detection',
       description: 'Advanced machine learning for real-time threat identification and response',
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       icon: Shield,
       title: 'Intelligent Firewall',
       description: 'AI-powered network protection with adaptive security rules',
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       icon: Eye,
       title: 'Behavioral Analysis',
       description: 'Monitor and detect anomalous user and system behavior patterns',
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       icon: Lock,
       title: 'Zero Trust Security',
       description: 'Comprehensive identity verification and access control',
       color: 'from-orange-500 to-red-500'
     },
     {
+
       icon: Search,
       title: 'Vulnerability Scanning',
       description: 'Automated security assessment and risk analysis',
       color: 'from-indigo-500 to-blue-500'
     },
     {
+
       icon: Activity,
       title: 'Incident Response',
       description: 'AI-driven threat containment and recovery automation',
@@ -111,12 +119,14 @@ const AICybersecurity: React.FC = () => {
 
   const useCases = [
     {
+
       title: 'Enterprise Security',
       description: 'Comprehensive protection for large organizations',
       icon: Building,
       color: 'from-blue-500 to-indigo-500'
     },
     {
+
       title: 'Cloud Security',
       description: 'Multi-cloud protection and compliance',
       icon: Cloud,

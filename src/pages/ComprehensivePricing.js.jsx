@@ -8,10 +8,13 @@ import enhancedMicroSaasServices2025 from "../data/enhancedMicroSaasServices2025
 import enhancedAIServices2025 from "../data/enhancedAIServices2025";
 import enhancedITServices2025 from "../data/enhancedITServices2025";
 const ComprehensivePricing = () => {
+
     const [activeTab, setActiveTab] = useState('microsaas');
     const [billingCycle, setBillingCycle] = useState('monthly');
     const getCategoryIcon = (category) => {
+
         switch (category.toLowerCase()) {
+
             case 'productivity': return <Users className="h-5 w-5"/>;
             case 'finance': return <DollarSign className="h-5 w-5"/>;
             case 'marketing': return <TrendingUp className="h-5 w-5"/>;
@@ -42,7 +45,9 @@ const ComprehensivePricing = () => {
             default: return <Star className="h-5 w-5"/>}
     };
     const getCategoryColor = (category) => {
+
         switch (category.toLowerCase()) {
+
             case 'productivity': return 'from-green-500 to-emerald-500';
             case 'finance': return 'from-blue-500 to-cyan-500';
             case 'marketing': return 'from-purple-500 to-pink-500';
@@ -73,23 +78,33 @@ const ComprehensivePricing = () => {
             default: return 'from-gray-500 to-slate-500'}
     };
     const formatPrice = (price, pricingModel) => {
+
         if (pricingModel === 'per API call') {
+
             return `$${price.toFixed(3)} per call`}
         else if (pricingModel === 'per word') {
+
             return `$${price.toFixed(2)} per word`}
         else if (pricingModel === 'per recommendation') {
+
             return `$${price.toFixed(3)} per recommendation`}
         else if (pricingModel === 'per employee/month') {
+
             return `$${price}/employee/month`}
         else if (pricingModel === 'monthly') {
+
             return `$${price}/month`}
         else if (pricingModel === 'usage-based') {
+
             return `$${price} per unit`}
         else if (pricingModel === 'tiered') {
+
             return `$${price}/month starting`}
         else if (pricingModel === 'enterprise') {
+
             return `$${price}/month`}
         else {
+
             return `$${price}`}
     };
     const renderITPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -163,6 +178,7 @@ const ComprehensivePricing = () => {
               
               <div className="flex gap-2">
                 <Button size="sm" className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold transition-all duration-300" onClick = {
+
   () => window.open(service.contactInfo.website,
   '_blank')
 
@@ -271,6 +287,7 @@ const ComprehensivePricing = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-3" onClick = {
+
   () => window.open('https://ziontechgroup.com',
   '_blank')
 

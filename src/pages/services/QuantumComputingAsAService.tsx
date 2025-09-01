@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { Atom, Cpu, Zap, Shield, BarChart3, Users, Clock, CheckCircle, ArrowRight, ExternalLink, Brain, Database, Globe, Lock, TrendingUp, Target, Network, Server, Cloud } from 'lucide-react';
 
 const QuantumComputingAsAService = () => {
+
   const features = [
     {
+
       icon: Atom,
       title: 'Quantum Processing Units (QPUs)',
       description: 'Access to state-of-the-art quantum processors including superconducting qubits, trapped ions, and photonic quantum computers.',
@@ -17,6 +19,7 @@ const QuantumComputingAsAService = () => {
       price: 'From $1,000/hour'
     },
     {
+
       icon: Cpu,
       title: 'Hybrid Quantum-Classical Computing',
       description: 'Seamless integration of quantum and classical computing resources for optimal problem-solving performance.',
@@ -29,6 +32,7 @@ const QuantumComputingAsAService = () => {
       price: 'From $500/hour'
     },
     {
+
       icon: Zap,
       title: 'Quantum Algorithm Library',
       description: 'Pre-built quantum algorithms for optimization, machine learning, cryptography, and scientific simulations.',
@@ -41,6 +45,7 @@ const QuantumComputingAsAService = () => {
       price: 'From $299/month'
     },
     {
+
       icon: Shield,
       title: 'Quantum Security & Encryption',
       description: 'Post-quantum cryptography solutions and quantum-resistant security protocols for future-proof protection.',
@@ -56,24 +61,28 @@ const QuantumComputingAsAService = () => {
 
   const applications = [
     {
+
       title: 'Financial Services',
       description: 'Portfolio optimization, risk assessment, and algorithmic trading with quantum speedup.',
       icon: BarChart3,
       benefits: ['Portfolio optimization', 'Risk modeling', 'Option pricing', 'Fraud detection']
     },
     {
+
       title: 'Drug Discovery',
       description: 'Molecular simulation, protein folding, and drug candidate screening using quantum chemistry.',
       icon: Target,
       benefits: ['Molecular modeling', 'Protein folding', 'Drug screening', 'Chemical reactions']
     },
     {
+
       title: 'Logistics & Supply Chain',
       description: 'Route optimization, inventory management, and supply chain optimization with quantum algorithms.',
       icon: Network,
       benefits: ['Route optimization', 'Inventory management', 'Demand forecasting', 'Resource allocation']
     },
     {
+
       title: 'Machine Learning',
       description: 'Quantum machine learning algorithms for pattern recognition and data classification.',
       icon: Brain,
@@ -92,6 +101,7 @@ const QuantumComputingAsAService = () => {
 
   const pricingTiers = [
     {
+
       name: 'Explorer',
       price: '$299/month',
       description: 'Perfect for learning and experimentation',
@@ -104,6 +114,7 @@ const QuantumComputingAsAService = () => {
       ]
     },
     {
+
       name: 'Professional',
       price: '$1,999/month',
       description: 'Ideal for research and development',
@@ -117,6 +128,7 @@ const QuantumComputingAsAService = () => {
       ]
     },
     {
+
       name: 'Enterprise',
       price: 'Custom',
       description: 'For large-scale quantum applications',
@@ -224,6 +236,7 @@ const QuantumComputingAsAService = () => {
           <div className="grid gap-8 md:grid-cols-3">
             {pricingTiers.map((tier, index) => (
               <div key={index} className={`rounded-xl border p-8 backdrop-blur-md ${
+
                 tier.name === 'Professional' 
                   ? 'border-2 border-blue-400 bg-gradient-to-br from-blue-500/10 to-indigo-600/10 relative' 
                   : 'border-white/10 bg-white/5'
@@ -247,6 +260,7 @@ const QuantumComputingAsAService = () => {
                 <Link 
                   to={tier.name === 'Enterprise' ? '/contact' : '/contact'} 
                   className={`w-full rounded-lg py-3 text-center font-semibold transition-all ${
+
                     tier.name === 'Enterprise'
                       ? 'border border-blue-400 text-blue-300 hover:bg-blue-400 hover:text-white'
                       : 'bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500'

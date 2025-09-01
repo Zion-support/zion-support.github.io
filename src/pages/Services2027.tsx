@@ -62,6 +62,7 @@ import { Search,
 // Mock data for 2027 services
 const SERVICES_2027 = [
   {
+
     id: 1,
     title: "AI Autonomous Business Platform",
     description: "Fully autonomous AI systems that manage and optimize business operations",
@@ -74,6 +75,7 @@ const SERVICES_2027 = [
     color: "from - purple - 500 to - pink - 500"
   },
   {
+
     id: 2,
     title: "Quantum AI Hybrid Platform",
     description: "Combines quantum computing with AI for unprecedented computational power",
@@ -86,6 +88,7 @@ const SERVICES_2027 = [
     color: "from - indigo - 500 to - purple - 500"
   },
   {
+
     id: 3,
     title: "Next - Gen Cybersecurity Suite",
     description: "AI - powered security with quantum - resistant encryption and zero - trust architecture",
@@ -98,6 +101,7 @@ const SERVICES_2027 = [
     color: "from - red - 500 to - orange - 500"
   },
   {
+
     id: 4,
     title: "Edge AI Computing Platform",
     description: "Distributed AI processing at the network edge for real - time intelligence",
@@ -110,6 +114,7 @@ const SERVICES_2027 = [
     color: "from - green - 500 to - emerald - 500"
   },
   {
+
     id: 5,
     title: "Digital Twin Ecosystem",
     description: "Comprehensive digital replicas with AI - powered optimization and simulation",
@@ -122,6 +127,7 @@ const SERVICES_2027 = [
     color: "from - cyan - 500 to - blue - 500"
   },
   {
+
     id: 6,
     title: "Sustainable Tech Solutions",
     description: "Green technology solutions for environmental sustainability and efficiency",
@@ -134,6 +140,7 @@ const SERVICES_2027 = [
     color: "from - green - 500 to - teal - 500"
   },
   {
+
     id: 7,
     title: "Metaverse Development Platform",
     description: "Complete metaverse solutions with AI - powered content creation and management",
@@ -146,6 +153,7 @@ const SERVICES_2027 = [
     color: "from - purple - 500 to - indigo - 500"
   },
   {
+
     id: 8,
     title: "Advanced IoT Solutions",
     description: "Intelligent IoT networks with AI and edge computing capabilities",
@@ -160,6 +168,7 @@ const SERVICES_2027 = [
 ];
 
 const Services2027: React.FC = () : JSX.Element => {
+
   const [query, setQuery] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [sortBy, setSortBy] = useState ('innovation') ;
@@ -177,10 +186,12 @@ const Services2027: React.FC = () : JSX.Element => {
   ];
 
   const filteredAndSorted = useMemo ( () => {
+
     let filtered = SERVICES_2027;
 
     // Filter by search query
     if (query.trim () ) {
+
       const q = query.trim () .toLowerCase () ;
       filtered = filtered.filter (s =>
         s.title.toLowerCase () .includes (q) ||
@@ -190,20 +201,24 @@ const Services2027: React.FC = () : JSX.Element => {
 
     // Filter by category
     if (selectedCategory !== 'all') {
+
       filtered = filtered.filter (s => s.category === selectedCategory) ;
     }
 
     // Sort services
     switch (sortBy) {
+
       case 'price':
         return filtered.sort ( (a, b) => a.price - b.price) ;
       case 'innovation':
         return filtered.sort ( (a, b) => {
+
           const innovationLevels = { 'Revolutionary': 3, 'Cutting - Edge': 2, 'Advanced': 1 };
           return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0) ;
         }) ;
       case 'roi':
         return filtered.sort ( (a, b) => {
+
           const aROI = parseInt (a.roi.split ('-') [0]) ;
           const bROI = parseInt (b.roi.split ('-') [0]) ;
           return bROI - aROI;

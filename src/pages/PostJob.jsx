@@ -4,17 +4,18 @@ import { useAuth } from '@/hooks / useAuth';
 import { useIsMobile } from '@/hooks / use - mobile';
 import SEO from '@/components / SEO';
   import {
+
 export default function PostJob () {
 
     Card,
     CardContent,
     CardDescription,
     CardHeader,
-    CardTitle,
-  } from '@/components / ui / card';
+    CardTitle} from '@/components / ui / card';
   const { isAuthenticated, isLoading } = useAuth () ;
   const isMobile = useIsMobile () ;
   if (isLoading) {
+
     return (<div className="flex items - center justify - center min - h-screen">
         <div className="animate - pulse">Loading...</div>
       </div>) ;

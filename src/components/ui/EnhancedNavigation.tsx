@@ -130,7 +130,7 @@ export const EnhancedNavigation: React.FC = () => {
 
     e.preventDefault();
     // Implement search functionality
-    // // console.log('Searching for:', searchQuery);
+    // // // console.log('Searching for:', searchQuery);
   }, [searchQuery]);
 
   return (

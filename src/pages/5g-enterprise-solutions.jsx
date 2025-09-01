@@ -5,33 +5,40 @@ export default FiveGEnterpriseSolutions;
 import { motion } from 'framer - motion';
 
 const FiveGEnterpriseSolutions = () => {
+
     const features = [
         {
+
             icon: Wifi,
             title: "Ultra - Fast Connectivity",
             description: "Lightning - fast 5G network speeds for enterprise applications"
         },
         {
+
             icon: Zap,
             title: "Low Latency",
             description: "Ultra - low latency for real - time applications and IoT devices"
         },
         {
+
             icon: Shield,
             title: "Enhanced Security",
             description: "Advanced security protocols for enterprise - grade protection"
         },
         {
+
             icon: BarChart3,
             title: "Network Slicing",
             description: "Customized network segments for different business needs"
         },
         {
+
             icon: Network,
             title: "Edge Computing",
             description: "Distributed computing at the network edge for faster processing"
         },
         {
+
             icon: Users,
             title: "Massive IoT Support",
             description: "Support for thousands of connected devices simultaneously"
@@ -39,21 +46,25 @@ const FiveGEnterpriseSolutions = () => {
     ];
     const solutions = [
         {
+
             title: "Smart Manufacturing",
             description: "Enable Industry 4.0 with real - time monitoring and automation",
             applications["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"];
         },;
         {
+
             title: "Healthcare Innovation",
             description: "Transform healthcare delivery with connected medical devices",
             applications["Remote Monitoring", "Telemedicine", "Medical IoT"];
         },;
         {
+
             title: "Autonomous Vehicles",
             description: "Power the future of transportation with reliable connectivity",
             applications["Vehicle - to - Everything", "Fleet Management", "Safety Systems"];
         },;
         {
+
             title: "Smart Cities",
             description: "Build intelligent urban infrastructure and services",
             applications["Traffic Management", "Energy Grids", "Public Safety"];
@@ -61,16 +72,19 @@ const FiveGEnterpriseSolutions = () => {
     ];
     const benefits = [
         {
+
             icon: Rocket,
             title: "10x Faster Speeds",
             description: "Achieve unprecedented network performance"
         },
         {
+
             icon: Target,
             title: "Improved Efficiency",
             description: "Streamline operations with real - time connectivity"
         },
         {
+
             icon: Globe,
             title: "Global Reach",
             description: "Connect your enterprise worldwide"
@@ -88,10 +102,12 @@ const FiveGEnterpriseSolutions = () => {
         <div className="absolute inset - 0 bg - gradient - to - r from - teal - 600 / 20 to - blue - 600 / 20"></div>
         <div className="relative container mx - auto px - 4 text - center">
           <motion.h1 initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
@@ -101,14 +117,17 @@ const FiveGEnterpriseSolutions = () => {
             </span>
           </motion.h1>
           <motion.p initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -117,14 +136,17 @@ const FiveGEnterpriseSolutions = () => {
             Experience ultra - fast speeds, ultra - low latency, and massive IoT support.
           </motion.p>
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.4
 
@@ -143,10 +165,12 @@ const FiveGEnterpriseSolutions = () => {
       <section className="py - 20 bg - black / 20">
         <div className="container mx - auto px - 4">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -161,14 +185,17 @@ const FiveGEnterpriseSolutions = () => {
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {features.map ( (feature, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.1
 
@@ -187,10 +214,12 @@ const FiveGEnterpriseSolutions = () => {
       <section className="py - 20">
         <div className="container mx - auto px - 4">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -205,14 +234,17 @@ const FiveGEnterpriseSolutions = () => {
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
             {solutions.map ( (solution, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.2
 
@@ -234,10 +266,12 @@ const FiveGEnterpriseSolutions = () => {
       <section className="py - 20 bg - gradient - to - r from - teal - 600 / 20 to - blue - 600 / 20">
         <div className="container mx - auto px - 4">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -252,14 +286,17 @@ const FiveGEnterpriseSolutions = () => {
 
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
             {benefits.map ( (benefit, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.1
 
@@ -278,10 +315,12 @@ const FiveGEnterpriseSolutions = () => {
       <section className="py - 20">
         <div className="container mx - auto px - 4">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -301,14 +340,17 @@ const FiveGEnterpriseSolutions = () => {
             { icon: Lock, name: "Security Layer", description: "Enterprise - grade security" },
             { icon: GitFork, name: "Management", description: "Network orchestration" }
         ].map ( (tech, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }} whileInView = {
+
   { opacity: 1,
   scale: 1
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.1
 
@@ -329,10 +371,12 @@ const FiveGEnterpriseSolutions = () => {
       <section className="py - 20 bg - gradient - to - r from - teal - 600 / 20 to - blue - 600 / 20">
         <div className="container mx - auto px - 4">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -352,14 +396,17 @@ const FiveGEnterpriseSolutions = () => {
             { icon: Wifi, title: "Deployment", description: "Install and configure 5G infrastructure" },
             { icon: BarChart3, title: "Optimization", description: "Monitor performance and optimize network" }
         ].map ( (step, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }} whileInView = {
+
   { opacity: 1,
   scale: 1
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.2
 
@@ -378,10 +425,12 @@ const FiveGEnterpriseSolutions = () => {
       <section className="py - 20">
         <div className="container mx - auto px - 4 text - center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 

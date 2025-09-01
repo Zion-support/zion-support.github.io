@@ -9,21 +9,25 @@ export default function AIContentGenerator () {
 
     const features = [
         {
+
             title: "AI Writing Assistant",
             description: "Generate high - quality content for blogs, social media, and marketing campaigns",
             icon: <PenTool className="h - 6 w - 6 text - zion - cyan"/>
         },
         {
+
             title: "Multi - Format Support",
             description: "Create content in various formats: text, images, videos, and audio",
             icon: <FileText className="h - 6 w - 6 text - zion - purple"/>
         },
         {
+
             title: "Brand Voice Consistency",
             description: "Maintain your brand's unique voice across all content pieces",
             icon: <Type className="h - 6 w - 6 text - zion - blue"/>
         },
         {
+
             title: "SEO Optimization",
             description: "AI - powered SEO suggestions to improve content visibility and ranking",
             icon: <Target className="h - 6 w - 6 text - zion - cyan"/>
@@ -32,31 +36,37 @@ export default function AIContentGenerator () {
 
     const contentTypes = [
         {
+
             title: "Blog Posts",
             description: "Long - form articles and blog content",
             icon: <FileText className="h - 8 w - 8 text - zion - cyan"/>
         },
         {
+
             title: "Social Media",
             description: "Posts for all major social platforms",
             icon: <Users className="h - 8 w - 8 text - zion - purple"/>
         },
         {
+
             title: "Marketing Copy",
             description: "Ads, landing pages, and promotional content",
             icon: <Target className="h - 8 w - 8 text - zion - blue"/>
         },
         {
+
             title: "Product Descriptions",
             description: "Compelling product and service descriptions",
             icon: <ShoppingBag className="h - 8 w - 8 text - zion - cyan"/>
         },
         {
+
             title: "Email Campaigns",
             description: "Newsletters and email marketing content",
             icon: <Mail className="h - 8 w - 8 text - zion - purple"/>
         },
         {
+
             title: "Video Scripts",
             description: "Scripts for video content and presentations",
             icon: <Video className="h - 8 w - 8 text - zion - blue"/>
@@ -65,6 +75,7 @@ export default function AIContentGenerator () {
 
     const pricingPlans = [
         {
+
             name: "Starter",
             price: "$49",
             period: "/month",
@@ -79,6 +90,7 @@ export default function AIContentGenerator () {
             popular: false
         },
         {
+
             name: "Professional",
             price: "$99",
             period: "/month",
@@ -96,6 +108,7 @@ export default function AIContentGenerator () {
             popular: true
         },
         {
+
             name: "Enterprise",
             price: "$199",
             period: "/month",
@@ -230,6 +243,7 @@ export default function AIContentGenerator () {
 
                     <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
                         {pricingPlans.map ( (plan, index) => (<Card key={index} className={`relative bg - slate - 800 / 50 border - slate - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:scale - 105 ${
+
                                 plan.popular ? 'border - cyan - 500 shadow - cyan - 500 / 25' : ''
                             }`}>
                                 {plan.popular && (<div className="absolute - top - 4 left - 1/2 transform - translate - x-1 / 2">

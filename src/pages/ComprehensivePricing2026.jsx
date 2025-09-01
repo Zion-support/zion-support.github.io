@@ -6,6 +6,7 @@ import { motion } from 'framer - motion';
 // import { ultimateInnovativeServices2026 } from '../data / 2026 - ultimate - innovative - services';
 // import { enterpriseITInfrastructureServices2026 } from '../data / 2026 - enterprise - it - infrastructure - services';
 const ComprehensivePricing2026 = () => {
+
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [billingCycle, setBillingCycle] = useState ('monthly') ;
   // Combine all services
@@ -22,7 +23,9 @@ const ComprehensivePricing2026 = () => {
     'Specialized Industry',
   ];
   const getCategoryServices = category => {
+
     switch (category) {
+
       case 'AI & Business Solutions':
         return allServices.filter (service =>
           [
@@ -62,30 +65,31 @@ const ComprehensivePricing2026 = () => {
   };
   const filteredServices = getCategoryServices (selectedCategory) ;
   const getAnnualPrice = monthlyPrice => {
+
     const price = parseInt (monthlyPrice.replace (/[^0 - 9]/g, '') ) ;
     const annualPrice = price * 12 * 0.8; // 20% discount for annual
     return `$${annualPrice.toLocaleString () }`;
   };
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+
+        staggerChildren: 0.1}}};
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5,
-        ease: 'easeOut',
-      },
-    },
-  };
+        ease: 'easeOut'}}};
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white">
       {/* Hero Section */}
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">
@@ -185,6 +189,7 @@ const ComprehensivePricing2026 = () => {
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white shadow - lg'
                     : 'bg - white / 10 text - gray - 300 hover:bg - white / 20 hover:text - white'

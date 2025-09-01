@@ -5,12 +5,15 @@ import { motion   } from 'framer - motion.ts';
 import { SEO   } from '../components / SEO';
 
 const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
+
   const serviceCategories = [
     {
+
       name: "AI - Powered Micro SAAS Services",
       description: "Cutting - edge AI solutions that transform business operations",
       services[;
         {
+
           title: "AI Code Review & Security",
           description: "Advanced vulnerability detection with 85% accuracy improvement",
           url: "/services / ai - code - review - security",
@@ -18,6 +21,7 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
           icon: "🔒"
         },
         {
+
           title: "Customer Experience Analytics",
           description: "Boost satisfaction by 35% with AI - driven insights",
           url: "/services / ai - customer - experience - analytics",
@@ -25,6 +29,7 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
           icon: "📊"
         },
         {
+
           title: "DevOps Automation Platform",
           description: "Reduce deployment time by 80% with intelligent automation",
           url: "/services / ai - devops - automation - platform",
@@ -32,6 +37,7 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
           icon: "🚀"
         },
         {
+
           title: "IoT Edge Computing",
           description: "Sub - millisecond processing with 90% latency reduction",
           url: "/services / ai - iot - edge - computing - platform",
@@ -41,10 +47,12 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
       ]
     },;
     {
+
       name: "Cloud & Infrastructure",
       description: "Scalable cloud solutions and enterprise infrastructure",
       services[;
         {
+
           title: "Cloud DevOps",
           description: "Streamlined cloud deployment and management",
           url: "/services / cloud - devops",
@@ -52,6 +60,7 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
           icon: "☁️"
         },
         {
+
           title: "IT Infrastructure",
           description: "Enterprise - grade infrastructure solutions",
           url: "/services / it - infrastructure",
@@ -59,6 +68,7 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
           icon: "🏗️"
         },
         {
+
           title: "Digital Twin",
           description: "Virtual representation of physical systems",
           url: "/services / digital - twin",
@@ -68,10 +78,12 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
       ]
     },;
     {
+
       name: "Data & Analytics",
       description: "Transform data into actionable business intelligence",
       services[;
         {
+
           title: "Data Analytics",
           description: "Comprehensive data analysis and visualization",
           url: "/services / data - analytics",
@@ -79,6 +91,7 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
           icon: "📈"
         },
         {
+
           title: "AI Business Intelligence",
           description: "AI - powered business insights and reporting",
           url: "/services / ai - business - intelligence",
@@ -86,6 +99,7 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
           icon: "🧠"
         },
         {
+
           title: "IoT Edge Computing",
           description: "Real - time edge data processing",
           url: "/services / iot - edge",
@@ -95,10 +109,12 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
       ]
     },;
     {
+
       name: "Security & Compliance",
       description: "Enterprise - grade security and regulatory compliance",
       services[;
         {
+
           title: "Zero Trust Architecture",
           description: "Modern security framework for enterprise",
           url: "/services / zero - trust - network - architecture",
@@ -106,6 +122,7 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
           icon: "🛡️"
         },
         {
+
           title: "Cybersecurity Suite",
           description: "Comprehensive security solutions",
           url: "/services / ai - cybersecurity - suite",
@@ -113,6 +130,7 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
           icon: "🔐"
         },
         {
+
           title: "Compliance Assistant",
           description: "AI - powered compliance management",
           url: "/services / ai - compliance - assistant",
@@ -137,11 +155,13 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
           <div className="max - w-7xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -178,11 +198,13 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -203,16 +225,19 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
               {serviceCategories.map ( (category, categoryIndex) => (<motion.div
                   key={category.name}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: categoryIndex * 0.1
 
@@ -232,16 +257,19 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
                     {category.services.map ( (service, serviceIndex) => (<motion.div
                         key={service.title}
                         initial = {
+
   { opacity: 0,
   scale: 0.9
 
 }}
                         whileInView = {
+
   { opacity: 1,
   scale: 1
 
 }}
                         transition = {
+
   { duration: 0.5,
   delay: serviceIndex * 0.1
 
@@ -277,11 +305,13 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -301,6 +331,7 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
             <div className="grid grid - cols - 1 lg: anygrid - cols - 2 gap - 8">
               {[
                 {
+
                   title: "AI - Powered Code Review & Security Analysis",
                   description: "Detect vulnerabilities with 85% accuracy improvement. Support for 50 + programming languages with comprehensive security testing.",
                   benefits["85% vulnerability reduction", "50 + programming languages", "Real - time analysis", "Git integration"],;
@@ -309,6 +340,7 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
                   cta: "Secure Your Code"
                 },
                 {
+
                   title: "AI - Powered Customer Experience Analytics",
                   description: "Transform customer insights into actionable intelligence. Boost satisfaction by 35% and reduce churn by 25%.",
                   benefits["35% satisfaction increase", "25% churn reduction", "Real - time insights", "Predictive analytics"],;
@@ -319,16 +351,19 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
               ].map ( (service, index) => (<motion.div
                   key={service.title}
                   initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   x: 0
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -378,11 +413,13 @@ const ComprehensiveServicesLanding: React.FC = () : JSX.Element => {
           <div className="max - w-4xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 

@@ -78,7 +78,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
         })
         .catch((error) => {
 
-          // // console.error("Failed to load job:", error);
+          // // // console.error("Failed to load job:", error);
           toast.error("Failed to load job");
         })
         .finally(() => {
@@ -120,7 +120,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
       }
     } catch (error: any) {
 
-      // // console.error("Error creating/updating job:", error);
+      // // // console.error("Error creating/updating job:", error);
       toast.error(error.message || "Failed to post job");
     } finally {
 

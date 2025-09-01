@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
+import {
+
   FileText, 
   Shield, 
   Lock, 
@@ -20,8 +21,10 @@ import {
 } from 'lucide-react';
 
 const Legal: React.FC = () => {
+
   const legalDocuments = [
     {
+
       title: 'Terms of Service',
       description: 'Our terms and conditions for using Zion Tech Group services',
       href: '/terms',
@@ -29,6 +32,7 @@ const Legal: React.FC = () => {
       category: 'Service Terms'
     },
     {
+
       title: 'Privacy Policy',
       description: 'How we collect, use, and protect your personal information',
       href: '/privacy',
@@ -36,6 +40,7 @@ const Legal: React.FC = () => {
       category: 'Data Protection'
     },
     {
+
       title: 'Cookie Policy',
       description: 'Information about cookies and how we use them',
       href: '/cookies',
@@ -43,6 +48,7 @@ const Legal: React.FC = () => {
       category: 'Data Protection'
     },
     {
+
       title: 'Data Processing Agreement',
       description: 'Terms for processing personal data on behalf of customers',
       href: '/data-processing-agreement',
@@ -50,6 +56,7 @@ const Legal: React.FC = () => {
       category: 'Data Protection'
     },
     {
+
       title: 'Service Level Agreement',
       description: 'Our commitment to service quality and availability',
       href: '/sla',
@@ -57,6 +64,7 @@ const Legal: React.FC = () => {
       category: 'Service Terms'
     },
     {
+
       title: 'Acceptable Use Policy',
       description: 'Guidelines for acceptable use of our services',
       href: '/acceptable-use',
@@ -67,18 +75,21 @@ const Legal: React.FC = () => {
 
   const legalCategories = [
     {
+
       name: 'Service Terms',
       description: 'Terms and conditions for using our services',
       icon: FileText,
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       name: 'Data Protection',
       description: 'Privacy and data handling policies',
       icon: Shield,
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       name: 'Compliance',
       description: 'Regulatory and industry compliance documents',
       icon: Scale,

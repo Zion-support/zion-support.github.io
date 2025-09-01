@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Shield, 
   TrendingUp, 
@@ -39,8 +40,10 @@ import {
 } from 'lucide-react';
 
 export default function ComprehensiveServicesShowcase() {
+
   const aiServices = [
     {
+
       title: 'AI Customer Success Platform',
       description: 'Transform customer relationships with intelligent automation and predictive analytics',
       icon: Users,
@@ -50,6 +53,7 @@ export default function ComprehensiveServicesShowcase() {
       link: '/ai-services/ai-powered-customer-success-platform'
     },
     {
+
       title: 'AI Cybersecurity Intelligence',
       description: 'Next-generation cybersecurity powered by artificial intelligence',
       icon: Shield,
@@ -59,6 +63,7 @@ export default function ComprehensiveServicesShowcase() {
       link: '/ai-services/ai-cybersecurity-intelligence-platform'
     },
     {
+
       title: 'AI Financial Analytics Platform',
       description: 'Revolutionize financial decision-making with AI-powered analytics',
       icon: TrendingUp,
@@ -71,6 +76,7 @@ export default function ComprehensiveServicesShowcase() {
 
   const itServices = [
     {
+
       title: 'AI DevOps Automation Platform',
       description: 'Transform development operations with intelligent automation',
       icon: Zap,
@@ -80,6 +86,7 @@ export default function ComprehensiveServicesShowcase() {
       link: '/it-services/ai-devops-automation-platform'
     },
     {
+
       title: 'AI Supply Chain Optimization',
       description: 'Revolutionize supply chain operations with AI-powered optimization',
       icon: Truck,
@@ -92,6 +99,7 @@ export default function ComprehensiveServicesShowcase() {
 
   const microSaasServices = [
     {
+
       title: 'AI Business Intelligence',
       description: 'Intelligent analysis and predictive modeling for business growth',
       icon: Brain,
@@ -101,6 +109,7 @@ export default function ComprehensiveServicesShowcase() {
       link: '/micro-saas/AIBusinessIntelligence'
     },
     {
+
       title: 'Customer Experience Platform',
       description: 'Deliver exceptional customer experiences with intelligent automation',
       icon: MessageSquare,
@@ -114,7 +123,9 @@ export default function ComprehensiveServicesShowcase() {
   const allServices = [...aiServices, ...itServices, ...microSaasServices];
 
   const getColorClasses = (color: string) => {
+
     const colorMap: { [key: string]: string } = {
+
       blue: 'border-blue-500 hover:border-blue-400 text-blue-400',
       red: 'border-red-500 hover:border-red-400 text-red-400',
       green: 'border-green-500 hover:border-green-400 text-green-400',
@@ -127,7 +138,9 @@ export default function ComprehensiveServicesShowcase() {
   };
 
   const getBgColorClasses = (color: string) => {
+
     const colorMap: { [key: string]: string } = {
+
       blue: 'bg-blue-600 hover:bg-blue-700',
       red: 'bg-red-600 hover:bg-red-700',
       green: 'bg-green-600 hover:bg-green-700',

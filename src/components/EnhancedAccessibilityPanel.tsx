@@ -166,7 +166,7 @@ export function EnhancedAccessibilityPanel() {
         setSettings (savedSettings) ;
         applySettings (savedSettings) } catch (error) {
 
-        // // // console.warn('Failed to load accessibility settings:', error)}    }
+        // // // // console.warn('Failed to load accessibility settings:', error)}    }
   }, [applySettings]) ;
 
   // Keyboard navigation support
@@ -342,7 +342,7 @@ export function EnhancedAccessibilityPanel() {
             severity: 'medium'})}
       })} catch (error) {
 
-      // // // console.error('Accessibility audit failed:', error)}
+      // // // // console.error('Accessibility audit failed:', error)}
 
     setIssues (newIssues) ;
     setIsScanning (false) }, []) ;

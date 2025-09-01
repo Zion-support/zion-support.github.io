@@ -5,6 +5,7 @@ import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 export default function VideoCall() {
+
     // useParams is typed as `` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
     const { roomId } = useParams();
@@ -13,6 +14,7 @@ export default function VideoCall() {
     const [hasJoined, setHasJoined] = useState(false);
     const [participants, setParticipants] = useState([
         {
+
             id: 'user-1',
             name: 'You',
             isVideoEnabled: true,
@@ -20,23 +22,30 @@ export default function VideoCall() {
         }
     ]);
     const handleJoinCall = () => {
+
         setIsJoining(true);
         // Simulate connection delay
         setTimeout(() => {
+
             setHasJoined(true);
             setIsJoining(false);
             toast.success("Call joined", {
+
                 description: `You have joined meeting room ${roomId}`
             })}, 1500)};
     const handleLeaveCall = () => {
+
         setHasJoined(false);
         toast.info("Call ended", {
+
             description: "You have left the meeting"
         });
         // Navigate back after a short delay
         setTimeout(() => {
+
             router(-1)}, 1500)};
     const simulateUserJoining = () => {
+
         // This is just for demo purposes - in a real app, this would be handled by the video call service
         const mockUsers = [
             { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
@@ -45,6 +54,7 @@ export default function VideoCall() {
         ];
         const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
         if (!participants.find(p => p.id === randomUser.id)) {
+
             setParticipants(prev => [...prev, randomUser]);
             toast(`${randomUser.name} joined the call`)}
     };

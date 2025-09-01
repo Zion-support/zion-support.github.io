@@ -9,6 +9,7 @@ import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import { ExportToCSV } from "@/components/quotes/ExportToCSV";
 import { QuoteStatusCards, QuotesFilter, QuotesTable } from "@/components/admin/quotes";
 export default function QuoteManager() {
+
     const { user } = useAuth();
     const isAdmin = user?.userType === 'admin';
     const [selectedQuote, setSelectedQuote] = useState(null);
@@ -16,6 +17,7 @@ export default function QuoteManager() {
     const { quotes, isLoading, error, statusFilter, setStatusFilter, archiveFilter, setArchiveFilter, searchQuery, setSearchQuery, dateRange, setDateRange, updateStatus, toggleArchive, deleteQuote } = useAdminQuotes();
     // Count quotes by status
     const statusCounts = {
+
   new: quotes.filter(q => q.status === 'new').length,
         in_review: quotes.filter(q => q.status === 'in_review').length,
         accepted: quotes.filter(q => q.status === 'accepted').length,
@@ -25,14 +27,17 @@ export default function QuoteManager() {
 
 };
     const handleViewDetails = (quote) => {
+
         setSelectedQuote(quote);
         setShowDetails(true)};
     const handleResetFilters = () => {
+
         setStatusFilter('all');
         setArchiveFilter('all');
         setSearchQuery('');
         setDateRange({ from: null, to: null })};
     if (!isAdmin) {
+
         return <Navigate to="/unauthorized" replace/>}
     return (<ProtectedRoute adminOnly>
       <div>
@@ -78,6 +83,7 @@ export default function QuoteManager() {
         
         {/* Quote Details Modal */}
         <QuoteDetails quote={selectedQuote} isOpen={showDetails} onClose={() => {
+
             setShowDetails(false);
             setSelectedQuote(null)}}/>
         

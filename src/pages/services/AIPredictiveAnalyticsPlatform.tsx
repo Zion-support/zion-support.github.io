@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   BarChart3, 
   Brain, 
   Zap, 
@@ -36,33 +37,40 @@ import {
 import { SEO } from '@/components/SEO';
 
 const AIPredictiveAnalyticsPlatform: React.FC = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: "Advanced ML Models",
       description: "State-of-the-art machine learning algorithms including deep learning, ensemble methods, and neural networks"
     },
     {
+
       icon: BarChart3,
       title: "Real-time Analytics",
       description: "Live data processing and instant insights with sub-second response times"
     },
     {
+
       icon: Zap,
       title: "AutoML Capabilities",
       description: "Automated model selection, hyperparameter tuning, and feature engineering"
     },
     {
+
       icon: Database,
       title: "Multi-Data Source Integration",
       description: "Connect to databases, APIs, cloud storage, and real-time data streams"
     },
     {
+
       icon: Shield,
       title: "Enterprise Security",
       description: "End-to-end encryption, role-based access control, and compliance with industry standards"
     },
     {
+
       icon: Activity,
       title: "Predictive Monitoring",
       description: "Proactive alerts and anomaly detection before issues impact your business"
@@ -71,6 +79,7 @@ const AIPredictiveAnalyticsPlatform: React.FC = () => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$399",
       period: "/month",
@@ -87,6 +96,7 @@ const AIPredictiveAnalyticsPlatform: React.FC = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$1,199",
       period: "/month",
@@ -105,6 +115,7 @@ const AIPredictiveAnalyticsPlatform: React.FC = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$3,999",
       period: "/month",
@@ -126,21 +137,25 @@ const AIPredictiveAnalyticsPlatform: React.FC = () => {
 
   const benefits = [
     {
+
       icon: Clock,
       title: "Predict Future Trends",
       description: "Forecast market changes, customer behavior, and business opportunities"
     },
     {
+
       icon: DollarSign,
       title: "Increase Revenue",
       description: "Identify growth opportunities and optimize pricing strategies"
     },
     {
+
       icon: Star,
       title: "Reduce Risk",
       description: "Predict and prevent potential issues before they impact your business"
     },
     {
+
       icon: TrendingUp,
       title: "Data-Driven Decisions",
       description: "Make informed strategic decisions based on predictive insights"
@@ -149,21 +164,25 @@ const AIPredictiveAnalyticsPlatform: React.FC = () => {
 
   const useCases = [
     {
+
       title: "Customer Behavior Prediction",
       description: "Predict customer churn, lifetime value, and purchasing patterns to optimize marketing strategies",
       examples: ["Churn prediction", "Customer segmentation", "Purchase forecasting", "Recommendation engines"]
     },
     {
+
       title: "Financial Risk Assessment",
       description: "Identify potential financial risks and opportunities through predictive modeling",
       examples: ["Credit scoring", "Fraud detection", "Market forecasting", "Investment optimization"]
     },
     {
+
       title: "Supply Chain Optimization",
       description: "Predict demand, optimize inventory levels, and prevent supply chain disruptions",
       examples: ["Demand forecasting", "Inventory optimization", "Supplier risk assessment", "Logistics optimization"]
     },
     {
+
       title: "Operational Efficiency",
       description: "Predict equipment failures, optimize resource allocation, and improve operational performance",
       examples: ["Predictive maintenance", "Resource optimization", "Performance monitoring", "Quality control"]
@@ -172,31 +191,37 @@ const AIPredictiveAnalyticsPlatform: React.FC = () => {
 
   const industries = [
     {
+
       name: "E-commerce",
       description: "Customer behavior prediction, inventory optimization, pricing strategies",
       icon: "🛒"
     },
     {
+
       name: "Healthcare",
       description: "Patient outcome prediction, disease progression, treatment optimization",
       icon: "🏥"
     },
     {
+
       name: "Finance",
       description: "Risk assessment, fraud detection, market prediction, portfolio optimization",
       icon: "💳"
     },
     {
+
       name: "Manufacturing",
       description: "Predictive maintenance, quality control, supply chain optimization",
       icon: "🏭"
     },
     {
+
       name: "Transportation",
       description: "Route optimization, demand forecasting, maintenance scheduling",
       icon: "🚚"
     },
     {
+
       name: "Energy",
       description: "Load forecasting, equipment maintenance, renewable energy optimization",
       icon: "⚡"
@@ -205,31 +230,37 @@ const AIPredictiveAnalyticsPlatform: React.FC = () => {
 
   const mlAlgorithms = [
     {
+
       name: "Deep Learning",
       description: "Neural networks for complex pattern recognition",
       useCase: "Image analysis, natural language processing"
     },
     {
+
       name: "Random Forest",
       description: "Ensemble method for classification and regression",
       useCase: "Customer segmentation, risk assessment"
     },
     {
+
       name: "Gradient Boosting",
       description: "Sequential learning for high accuracy predictions",
       useCase: "Financial modeling, demand forecasting"
     },
     {
+
       name: "Time Series Analysis",
       description: "Specialized algorithms for temporal data",
       useCase: "Sales forecasting, trend analysis"
     },
     {
+
       name: "Clustering",
       description: "Unsupervised learning for data exploration",
       useCase: "Market segmentation, anomaly detection"
     },
     {
+
       name: "Natural Language Processing",
       description: "Text analysis and sentiment prediction",
       useCase: "Customer feedback analysis, social media monitoring"
@@ -383,6 +414,7 @@ const AIPredictiveAnalyticsPlatform: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-purple-500 shadow-lg shadow-purple-500/20' 
                     : 'border-slate-700'
@@ -415,6 +447,7 @@ const AIPredictiveAnalyticsPlatform: React.FC = () => {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

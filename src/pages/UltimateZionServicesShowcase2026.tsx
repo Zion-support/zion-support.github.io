@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
+import {
+
   Search, 
   Filter, 
   Star, 
@@ -55,6 +56,7 @@ import {
 import { ENHANCED_MICRO_SAAS_SERVICES_2026 } from '../data/enhancedMicroSaasServices2026';
 
 const UltimateZionServicesShowcase2026: React.FC = () => {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -89,6 +91,7 @@ const UltimateZionServicesShowcase2026: React.FC = () => {
   ];
 
   const filteredServices = allServices.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -98,7 +101,9 @@ const UltimateZionServicesShowcase2026: React.FC = () => {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'rating':
         return b.rating - a.rating;
       case 'price':
@@ -113,21 +118,27 @@ const UltimateZionServicesShowcase2026: React.FC = () => {
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5,
         ease: "easeOut"
       }
@@ -135,7 +146,9 @@ const UltimateZionServicesShowcase2026: React.FC = () => {
   };
 
   const getCategoryIcon = (category: string) => {
+
     switch (category) {
+
       case 'AI & Business Intelligence': return <Brain className="w-6 h-6" />;
       case 'Cybersecurity': return <Shield className="w-6 h-6" />;
       case 'Customer Experience': return <Users className="w-6 h-6" />;
@@ -334,6 +347,7 @@ const UltimateZionServicesShowcase2026: React.FC = () => {
                     key={category.id}
                     onClick={() => setActiveCategory(category.id)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+
                       activeCategory === category.id
                         ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg'
                         : 'bg-zion-darker text-zion-light hover:bg-zion-dark hover:text-white border border-zion-cyan/30'
@@ -363,6 +377,7 @@ const UltimateZionServicesShowcase2026: React.FC = () => {
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-colors ${
+
                       viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'bg-zion-darker text-zion-light hover:bg-zion-dark'
                     }`}
                   >
@@ -371,6 +386,7 @@ const UltimateZionServicesShowcase2026: React.FC = () => {
                   <button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-colors ${
+
                       viewMode === 'list' ? 'bg-zion-cyan text-white' : 'bg-zion-darker text-zion-light hover:bg-zion-dark'
                     }`}
                   >
@@ -392,6 +408,7 @@ const UltimateZionServicesShowcase2026: React.FC = () => {
                   key={service.id}
                   variants={itemVariants}
                   className={`bg-gradient-to-br from-zion-darker to-zion-dark border border-zion-cyan/30 rounded-xl p-6 hover:border-zion-cyan/60 transition-all duration-300 transform hover:scale-105 ${
+
                     viewMode === 'list' ? 'flex flex-col lg:flex-row gap-6' : ''
                   }`}
                 >

@@ -5,14 +5,14 @@ import { Header } from '@/components / Header';
 import { QuoteRequestForm } from '@/components / QuoteRequestForm';
 import EnhancedSEO from '@/components / EnhancedSEO';
   import {
+
 export default function RequestQuote () {
 
     Card,
     CardContent,
     CardDescription,
     CardHeader,
-    CardTitle,
-  } from '@/components / ui / card';
+    CardTitle} from '@/components / ui / card';
 
   return (<div className="min - h-screen bg - zion - blue">
       <EnhancedSEO

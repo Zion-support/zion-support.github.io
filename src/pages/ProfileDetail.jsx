@@ -17,41 +17,52 @@ export default function ProfileDetail () {
     const [isLoading, setIsLoading] = useState (true) ;
     const [error, setError] = useState (null) ;
     useEffect ( () => {
+
         const fetchProfile = async () => {
+
             setIsLoading (true) ;
             setError (null) ;
             try {
+
                 if (!profileId) {
+
                     setError ("Profile ID is missing.") ;
                     return}
                 const { data, error } = await supabase
                     .from ("talent_profiles") .select ("*") .eq ("id", profileId) .single () ;
                 if (error) {
+
                     throw new Error (error.message) }
                 if (!data) {
+
                     setError ("Profile not found.") ;
                     return}
                 setProfileData (data) }
             catch (err) {
+
                 setError (err.message || "Failed to fetch profile.") ;
                 toast ({
+
                     title: "Error",
                     description: err.message || "Failed to fetch profile.",
-                    variant: "destructive",
-                }) }
+                    variant: "destructive"}) }
             finally {
+
                 setIsLoading (false) }
         };
         fetchProfile () }, [profileId]) ;
     if (isLoading) {
+
         return (<div className="min - h-screen flex items - center justify - center">
         <p > Loading profile...</p>
       </div>) }
     if (error) {
+
         return (<div className="min - h-screen flex items - center justify - center">
         <p > Error: {error}</p>
       </div>) }
     if (!profileData) {
+
         return (<div className="min - h-screen flex items - center justify - center">
         <p > Profile not found.</p>
       </div>) }
@@ -152,7 +163,9 @@ export default function ProfileDetail () {
           {/* Sidebar with HireNowCTA */}
           <div className="col - span - 4 lg:col - span - 1">
             <HireNowCTA talentProfile = {
+
   {
+
             id: profileData?.id || '',
             full_name: profileData?.full_name || '',
             professional_title: profileData?.professional_title || '',

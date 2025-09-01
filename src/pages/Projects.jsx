@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { useProjects } from "@/hooks / useProjects";
 import SEO from "@/components / SEO";
 export default function Projects () {
+
 import { Clock, Briefcase function ProjectsContent () {
 
     const { projects, isLoading } = useProjects () ;

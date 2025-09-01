@@ -52,10 +52,12 @@ const Services2026: React.FC = (): JSX.Element => {;
   ];
 
   const filteredAndSorted = useMemo(() => {
+
     let filtered = allServices;
 
     // Filter by search query
     if (query.trim()) {
+
       const q = query.trim().toLowerCase();
       filtered = filtered.filter(s =>;
         s.title.toLowerCase().includes(q) ||;
@@ -67,16 +69,20 @@ const Services2026: React.FC = (): JSX.Element => {;
 
     // Filter by category
     if (selectedCategory !== 'all') {
+
       filtered = filtered.filter(s => s.category === selectedCategory);
     }
 
     // Sort services
     switch (sortBy) {
+
       case 'price':
         return filtered.sort((a, b) => a.price - b.price);
       case 'innovation':
         return filtered.sort((a, b) => {
+
           const innovationLevels = {
+
   'Revolutionary': 3, 'Cutting-Edge': 2,;
   ;
   ;
@@ -95,6 +101,7 @@ const Services2026: React.FC = (): JSX.Element => {;
         });
       case 'roi':
         return filtered.sort((a, b) => {
+
           const aROI = parseInt(a.roi.split('-')[0]);
           const bROI = parseInt(b.roi.split('-')[0]);
           return bROI - aROI;
@@ -127,6 +134,7 @@ const Services2026: React.FC = (): JSX.Element => {;
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -137,6 +145,7 @@ const Services2026: React.FC = (): JSX.Element => {;
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -195,6 +204,7 @@ const Services2026: React.FC = (): JSX.Element => {;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-all duration-200 ${
+
                     selectedCategory === category.id
                       ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300'
                       : 'bg-slate-800/50 border-slate-600/50 text-slate-300 hover:border-cyan-400/50 hover:text-cyan-300'
@@ -242,6 +252,7 @@ const Services2026: React.FC = (): JSX.Element => {;
                 <motion.div
                   key={service.id}
                   initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -252,6 +263,7 @@ const Services2026: React.FC = (): JSX.Element => {;
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -334,6 +346,7 @@ const Services2026: React.FC = (): JSX.Element => {;
               <motion.div
                 key={service.id}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -344,6 +357,7 @@ const Services2026: React.FC = (): JSX.Element => {;
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -361,6 +375,7 @@ const Services2026: React.FC = (): JSX.Element => {;
                     {service.category}
                   </div>
                   <div className={`px-2 py-1 rounded-full text-xs font-medium ${
+
                     service.innovationLevel === 'Revolutionary'
                       ? 'bg-red-500/20 text-red-300 border border-red-500/30'
                       : service.innovationLevel === 'Cutting-Edge'

@@ -5,24 +5,28 @@ import { Brain, Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, P
 import SEO from '@/components/SEO';
 const features = [
     {
+
         title: "Cloud-Native Architecture",
         description: "Built on modern cloud infrastructure for scalability, reliability, and global accessibility.",
         icon: Cloud,
         color: "from-blue-500 to-cyan-500"
     },
     {
+
         title: "AI-Powered Intelligence",
         description: "Advanced machine learning algorithms that continuously learn and adapt to your business needs.",
         icon: Brain,
         color: "from-purple-500 to-pink-500"
     },
     {
+
         title: "Real-time Processing",
         description: "Instant data processing and analysis for immediate business insights and decision-making.",
         icon: Zap,
         color: "from-green-500 to-emerald-500"
     },
     {
+
         title: "Enterprise Security",
         description: "Bank-level security with encryption, compliance, and advanced threat protection.",
         icon: Shield,
@@ -39,21 +43,25 @@ const benefits = [
 ];
 const useCases = [
     {
+
         title: "Multi-Location Operations",
         description: "Manage business operations across multiple locations with centralized AI intelligence.",
         icon: Globe
     },
     {
+
         title: "Team Collaboration",
         description: "Enable seamless collaboration between distributed teams with AI-powered insights.",
         icon: Users
     },
     {
+
         title: "Data Analytics",
         description: "Comprehensive business analytics with real-time dashboards and reporting.",
         icon: BarChart3
     },
     {
+
         title: "Process Automation",
         description: "Automate complex business processes with intelligent workflow management.",
         icon: Cpu
@@ -61,12 +69,14 @@ const useCases = [
 ];
 const testimonials = [
     {
+
         content: "The AI Autonomous Business Platform has transformed how we operate. We can now manage our global operations from where with real-time insights.",
         name: "Jennifer Martinez",
         role: "CTO, GlobalTech Solutions",
         rating: 5
     },
     {
+
         content: "This platform is a game-changer. The AI capabilities and cloud architecture give us the flexibility we need to grow rapidly.",
         name: "David Kim",
         role: "VP Engineering, ScaleUp Inc",
@@ -74,6 +84,7 @@ const testimonials = [
     }
 ];
 export default function AIAutonomousBusinessPlatform() {
+
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
       <SEO title="AI Autonomous Business Platform - Zion Tech Group" description="Transform your business with our cloud-native AI platform. Scalable, secure, and intelligent business management for the modern enterprise." keywords="AI business platform, cloud AI platform, autonomous business platform, enterprise AI, business intelligence platform" canonical="https://ziontechgroup.com/ai-services/ai-autonomous-business-platform/"/>
 
@@ -82,10 +93,12 @@ export default function AIAutonomousBusinessPlatform() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-purple-900/50 to-cyan-900/50"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -124,10 +137,12 @@ export default function AIAutonomousBusinessPlatform() {
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -142,16 +157,20 @@ export default function AIAutonomousBusinessPlatform() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => {
+
             const IconComponent = feature.icon;
             return (<motion.div key={feature.title} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -170,10 +189,12 @@ export default function AIAutonomousBusinessPlatform() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -188,14 +209,17 @@ export default function AIAutonomousBusinessPlatform() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (<motion.div key={benefit} initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -211,10 +235,12 @@ export default function AIAutonomousBusinessPlatform() {
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -229,16 +255,20 @@ export default function AIAutonomousBusinessPlatform() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => {
+
             const IconComponent = useCase.icon;
             return (<motion.div key={useCase.title} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -257,10 +287,12 @@ export default function AIAutonomousBusinessPlatform() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -275,14 +307,17 @@ export default function AIAutonomousBusinessPlatform() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (<motion.div key={testimonial.name} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -306,10 +341,12 @@ export default function AIAutonomousBusinessPlatform() {
       <section className="py-20 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 

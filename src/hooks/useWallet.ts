@@ -35,7 +35,7 @@ export function useWallet() {
       // setError(null); // setError will be handled by the useEffect calling this
     } catch (err: any) {
 
-      // // console.error('Error fetching wallet:', err);
+      // // // console.error('Error fetching wallet:', err);
       setError(err.message);
       setWallet(null); // Ensure wallet is null on error
     } 
@@ -60,7 +60,7 @@ export function useWallet() {
       setTransactions((data || []) as TokenTransaction[]);
     } catch (err: any) {
 
-      // // console.error('Error fetching transactions:', err);
+      // // // console.error('Error fetching transactions:', err);
       // setError(err.message); // Decide if this should set a general error
       setTransactions([]); // Ensure transactions are empty on error
     }

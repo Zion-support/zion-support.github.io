@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 export default ComprehensivePricingGuide2031;
 import {
+
 import { COMPREHENSIVE_PRICING_GUIDE_2031 } from '../data / comprehensivePricingGuide2031';
 import { motion } from 'framer - motion';
 
@@ -44,16 +45,17 @@ import { motion } from 'framer - motion';
   Database,
   Code,
   BookOpen,
-  Truck,
-} from 'lucide - react';
+  Truck} from 'lucide - react';
 
 const ComprehensivePricingGuide2031: React.FC = () => {
+
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState < string> ('All') ;
   const [expandedService, setExpandedService] = useState < string | null> (null) ;
   const [selectedTier, setSelectedTier] = useState < string> ('Professional') ;
 
   const categories = useMemo ( () => {
+
     const cats = [
       'All',
       ...Array.from (new Set (COMPREHENSIVE_PRICING_GUIDE_2031.map (service => service.category) ) ) ,
@@ -62,9 +64,11 @@ const ComprehensivePricingGuide2031: React.FC = () => {
   }, []) ;
 
   const filteredServices = useMemo ( () => {
+
     let filtered = COMPREHENSIVE_PRICING_GUIDE_2031;
 
     if (searchQuery) {
+
       filtered = filtered.filter (service =>
           service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
           service.description
@@ -73,6 +77,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
     }
 
     if (selectedCategory !== 'All') {
+
       filtered = filtered.filter (service => service.category === selectedCategory) ;
     }
 
@@ -80,7 +85,9 @@ const ComprehensivePricingGuide2031: React.FC = () => {
   }, [searchQuery, selectedCategory]) ;
 
   const getCategoryIcon = (category: string) => {
+
     const iconMap: { [key: string]: React.ComponentType < any> } = {
+
       'FinTech & Trading': Coins,
       'Healthcare & AI': Heart,
       'Blockchain & Security': Lock,
@@ -90,34 +97,36 @@ const ComprehensivePricingGuide2031: React.FC = () => {
       'IoT & Predictive Analytics': Network,
       'Customer Experience & AI': Users,
       'Research & AI': Code,
-      'Business Intelligence & AI': BarChart3,
-    };
+      'Business Intelligence & AI': BarChart3};
     return iconMap[category] || Globe;
   };
 
   const getInnovationColor = (level: string) => {
+
     const colorMap: { [key: string]: string } = {
+
       Revolutionary: 'from - purple - 500 to - pink - 500',
       'Cutting - edge': 'from - blue - 500 to - indigo - 500',
       Advanced: 'from - green - 500 to - teal - 500',
-      Breakthrough: 'from - red - 500 to - orange - 500',
-    };
+      Breakthrough: 'from - red - 500 to - orange - 500'};
     return colorMap[level] || 'from - gray - 500 to - slate - 500';
   };
 
   const toggleServiceExpansion = (id: string) => {
+
     setExpandedService (expandedService === id ? null : id) ;
   };
 
   const getTierColor = (tierName: string) => {
+
     const colorMap: { [key: string]: string } = {
+
       Starter: 'from - gray - 500 to - slate - 500',
       Basic: 'from - blue - 500 to - cyan - 500',
       Creator: 'from - green - 500 to - emerald - 500',
       Student: 'from - purple - 500 to - pink - 500',
       Professional: 'from - cyan - 500 to - blue - 500',
-      Enterprise: 'from - orange - 500 to - red - 500',
-    };
+      Enterprise: 'from - orange - 500 to - red - 500'};
     return colorMap[tierName] || 'from - gray - 500 to - slate - 500';
   };
 
@@ -210,6 +219,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
               {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                   onClick={ () => setSelectedCategory (category) }
                   className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all ${
+
                     selectedCategory === category
                       ? 'bg - cyan - 500 text - white shadow - lg shadow - cyan - 500 / 25'
                       : 'bg - white / 10 text - gray - 300 hover:bg - white / 20 border border - cyan - 400 / 20'
@@ -244,6 +254,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
         <div role="button" className="max - w-7xl mx - auto">
           <div role="button" className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">
             {filteredServices.map (service => {
+
               const CategoryIcon = getCategoryIcon (service.category) ;
               const selectedPricingTier = service.pricingTiers.find (tier => tier.name === selectedTier) ||
                 service.pricingTiers[1];
@@ -289,6 +300,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                         {service.pricingTiers.map (tier => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={tier.name}
                             onClick={ () => setSelectedTier (tier.name) }
                             className={`px - 3 py - 1 rounded - lg text - xs font - medium transition - all ${
+
                               selectedTier === tier.name
                                 ? `bg - gradient - to - r ${getTierColor (tier.name) } text - white shadow - lg`
                                 : 'bg - white / 10 text - gray - 300 hover:bg - white / 20'

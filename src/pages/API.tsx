@@ -2,7 +2,9 @@ import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export default API;
 export default React.memo (function API () {
+
 import {
+
 import { motion } from 'framer - motion';
 import SEO from '../components / SEO';
 
@@ -31,20 +33,24 @@ import SEO from '../components / SEO';
 } from 'lucide - react';
 
 const API: React.FC = () => {
+
   const endpoints = [
     {
+
       method: 'GET',
       path: '/api / v1 / services',
       description: 'Retrieve all available services',
       auth: 'Required'
     },
     {
+
       method: 'POST',
       path: '/api / v1 / quote',
       description: 'Request a quote for services',
       auth: 'Required'
     },
     {
+
       method: 'GET',
       path: '/api / v1 / analytics',
       description: 'Get analytics data',
@@ -60,16 +66,19 @@ const API: React.FC = () => {
 
   const features = [
     {
+
       icon: Shield,
       title: 'Secure Authentication',
       description: 'OAuth 2.0 and API key authentication'
     },
     {
+
       icon: Zap,
       title: 'High Performance',
       description: 'Sub - 100ms response times guaranteed'
     },
     {
+
       icon: Globe,
       title: 'Global CDN',
       description: 'Worldwide edge locations for fast access';
@@ -85,24 +94,29 @@ url = "https://api.ziontechgroup.com / v1 / ai / text / analyze"
 headers = {"Authorization": "Bearer YOUR_API_KEY"}
 
 response = requests.post (url, json={
+
     "text": "Your text here",
     "analysis_type": "sentiment"
 }) print (response.json () ) `,
     category: 'AI & ML'
   },
   {
+
     title: 'Cloud Resource Management',
     language: 'JavaScript',
     description: 'Example of managing cloud resources through our infrastructure API.',
     code: `const axios = require ('axios') ;
 
 const api = axios.create ({
+
     baseURL: 'https://api.ziontechgroup.com / v1 / cloud',
     headers: {'Authorization': 'Bearer YOUR_API_KEY'}
 }) ;
 
 const createInstance = async () => {
+
     const response = await api.post ('/instances', {
+
         type: 'compute',
         size: 'medium',
         region: 'us - east - 1'
@@ -112,6 +126,7 @@ const createInstance = async () => {
     category: 'Cloud & DevOps'
   },
   {
+
     title: 'Security Threat Detection',
     language: 'Python',
     description: 'Implement real - time threat detection using our security API.',
@@ -122,6 +137,7 @@ def check_threat (ip_address) :;
     headers = {"Authorization": "Bearer YOUR_API_KEY"}
 
     response = requests.post (url, json={
+
         "ip": ip_address,
         "check_type": "comprehensive"
     }) return response.json () `,
@@ -146,11 +162,13 @@ def check_threat (ip_address) :;
         <div className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -190,11 +208,13 @@ def check_threat (ip_address) :;
         <div className="max - w-7xl mx - auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -214,16 +234,19 @@ def check_threat (ip_address) :;
             {apiCategories.map ( (category, index) => (<motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -245,11 +268,13 @@ def check_threat (ip_address) :;
         <div className="max - w-7xl mx - auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -269,16 +294,19 @@ def check_threat (ip_address) :;
             {quickStartExamples.map ( (example, index) => (<motion.div
                 key={endpoint.path}
                 initial = {
+
   { opacity: 0,
   x: -20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -288,6 +316,7 @@ def check_threat (ip_address) :;
                 <div className="flex items - center justify - between">
                   <div className="flex items - center space - x-4">
                     <span className={`px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                       endpoint.method === 'GET' ? 'bg - green - 500 / 20 text - green - 400' :
                       endpoint.method === 'POST' ? 'bg - blue - 500 / 20 text - blue - 400' :
                       endpoint.method === 'PUT' ? 'bg - yellow - 500 / 20 text - yellow - 400' :
@@ -298,6 +327,7 @@ def check_threat (ip_address) :;
                     <code className="text - blue - 300 font - mono text - lg">{endpoint.path}</code>
                   </div>
                   <span className={`px - 3 py - 1 rounded - full text - sm ${
+
                     endpoint.auth === 'Required' ? 'bg - red - 500 / 20 text - red - 400' : 'bg - green - 500 / 20 text - green - 400'
                   }`}>
                     {endpoint.auth}
@@ -314,11 +344,13 @@ def check_threat (ip_address) :;
         <div className="max - w-7xl mx - auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -338,16 +370,19 @@ def check_threat (ip_address) :;
             {sdks.map ( (sdk, index) => (<motion.div
                 key={sdk.name}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -376,11 +411,13 @@ def check_threat (ip_address) :;
         <div className="max - w-4xl mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

@@ -23,12 +23,15 @@ import { motion  } from 'framer - motion.ts';
     setError ('') ;
 
     try {
+
       // Simulate API call
       await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
       setSuccess ('Verification code sent to your email!') ;
       setStep ('verification') } catch (err) {
+
       setError ('Failed to send verification code. Please try again.') } finally {
+
       setIsLoading (false) }
   };
 
@@ -38,17 +41,21 @@ import { motion  } from 'framer - motion.ts';
     setError ('') ;
 
     try {
+
       // Simulate API call
       await new Promise (resolve => setTimeout (resolve, 1500) ) ;
 
       setSuccess ('Code verified ! Please set your new password.') ;
       setStep ('reset') } catch (err) {
+
       setError ('Invalid verification code. Please try again.') } finally {
+
       setIsLoading (false) }
   };
 
       return}
     if (newPassword !== confirmPassword) {
+
       setError ('Passwords do not match') ;
       return}
 
@@ -56,12 +63,15 @@ import { motion  } from 'framer - motion.ts';
     setError ('') ;
 
     try {
+
       // Simulate API call
       await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
       setSuccess ('Password reset successfully ! Redirecting to login...') ;
       setTimeout ( () => {
+
         window.location.href = '/login'}, 2000) } catch (err) {
+
       setError ('Failed to reset password. Please try again.') } finally {;
       setIsLoading (false) };
   };
@@ -77,11 +87,13 @@ import { motion  } from 'framer - motion.ts';
 
   const benefits = [
     {
+
       icon: <Brain className="w - 6 h - 6" />,
       title: 'AI - Powered Solutions',
       description: 'Access cutting - edge AI and machine learning technologies'
     },
     {
+
       icon: <Cloud className="w - 6 h - 6" />,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions for your business needs';
@@ -95,11 +107,13 @@ import { motion  } from 'framer - motion.ts';
 
   const renderEmailStep = () => (<motion.div
       initial = {
+
   { opacity: 0,
   y: 20
 
 }}
       animate = {
+
   { opacity: 1,
   y: 0
 
@@ -153,11 +167,13 @@ import { motion  } from 'framer - motion.ts';
 
   const renderVerificationStep = () => (<motion.div
       initial = {
+
   { opacity: 0,
   y: 20
 
 }}
       animate = {
+
   { opacity: 1,
   y: 0
 
@@ -230,11 +246,13 @@ import { motion  } from 'framer - motion.ts';
 
   const renderResetStep = () => (<motion.div
       initial = {
+
   { opacity: 0,
   y: 20
 
 }}
       animate = {
+
   { opacity: 1,
   y: 0
 
@@ -279,7 +297,9 @@ import { motion  } from 'framer - motion.ts';
               <div role="button" className="flex gap - 1 mb - 1">
                 {[1, 2, 3, 4].map ( (level) => (<div role="button" key={level}
                     className = {
+
   `h - 1 flex - 1 rounded - full transition - all duration - 300 ${
+
                       level <= passwordStrength.score
                         ? passwordStrength.color.replace ('text-',
   'bg-') : 'bg - slate - 600 / 30'
@@ -338,11 +358,13 @@ import { motion  } from 'framer - motion.ts';
           {/* Back to Login Link */}
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -359,11 +381,13 @@ import { motion  } from 'framer - motion.ts';
           {/* Error / Success Messages */}
           {error && (<motion.div
               initial = {
+
   { opacity: 0,
   y: 10
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -376,11 +400,13 @@ import { motion  } from 'framer - motion.ts';
 
           {success && (<motion.div
               initial = {
+
   { opacity: 0,
   y: 10
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -401,16 +427,19 @@ import { motion  } from 'framer - motion.ts';
           {/* Security Features */}
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.6,
   delay: 0.4
 
@@ -421,16 +450,19 @@ import { motion  } from 'framer - motion.ts';
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   x: -20
 
 }}
                 animate = {
+
   { opacity: 1,
   x: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: 0.6 + index * 0.1
 
@@ -457,16 +489,19 @@ import { motion  } from 'framer - motion.ts';
           <div role="button" className="text - center max - w-lg">
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.4
 
@@ -488,16 +523,19 @@ import { motion  } from 'framer - motion.ts';
 
             <motion.h2
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.6
 
@@ -509,16 +547,19 @@ import { motion  } from 'framer - motion.ts';
 
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.8
 
@@ -529,16 +570,19 @@ import { motion  } from 'framer - motion.ts';
                 <motion.div
                   key={benefit.title}
                   initial = {
+
   { opacity: 0,
   x: 20
 
 }}
                   animate = {
+
   { opacity: 1,
   x: 0
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: 1.0 + index * 0.1
 
@@ -561,16 +605,19 @@ import { motion  } from 'framer - motion.ts';
 
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 1.2
 

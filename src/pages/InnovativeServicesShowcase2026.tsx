@@ -1,7 +1,9 @@
 import React, { useState, useMemo } from 'react';
 export default InnovativeServicesShowcase2026;
 export default React.memo (function InnovativeServicesShowcase2026 () {
+
 import {
+
 import { INNOVATIVE_SERVICES } from '../data / servicesData';
 import { motion } from 'framer - motion';
 
@@ -45,6 +47,7 @@ import { motion } from 'framer - motion';
 
     // Filter by search query
     if (searchQuery) {
+
       filtered = filtered.filter (service =>;
         service.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
@@ -52,11 +55,14 @@ import { motion } from 'framer - motion';
 
     // Filter by category
     if (selectedCategory !== 'All') {
+
       filtered = filtered.filter (service => service.category === selectedCategory) ;
 
     // Sort services
     filtered.sort ( (a, b) => {
+
       switch (sortBy) {
+
         case 'price':
           return a.price - b.price;
         case 'innovation':
@@ -95,17 +101,22 @@ import { motion } from 'framer - motion';
         return 0}
   }) ;
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       };
     };
   };
 
   const getInnovationBadge = (level: string) => {
+
     const colors = {
+
   'Revolutionary': 'bg - gradient - to - r from - purple - 600 to - pink - 600',
       'Advanced': 'bg - gradient - to - r from - blue - 600 to - cyan - 600',;
   ;
@@ -241,16 +252,19 @@ import { motion } from 'framer - motion';
             {sortedServices.map ( (service, index) => (<motion.div
                 key={service.id}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -260,6 +274,7 @@ import { motion } from 'framer - motion';
                 {/* Innovation Level Badge */}
                 <div className="absolute top - 4 right - 4">
                   <span className={`px - 3 py - 1 rounded - full text - xs font - semibold ${
+
                     service.innovationLevel === 'Cutting - edge'
                       ? 'bg - gradient - to - r from - purple - 500 to - pink - 500 text - white'
                       : service.innovationLevel === 'Advanced'
@@ -400,11 +415,13 @@ import { motion } from 'framer - motion';
         <div className="container mx - auto px - 4 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

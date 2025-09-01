@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Cloud, 
   Shield, 
@@ -132,6 +133,7 @@ import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from '../data/innovativeIT
 import { EMERGING_TECHNOLOGY_SERVICES_2027 } from '../data/emergingTechnologyServices2027';
 
 export default function ComprehensiveServicesLanding2027() {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [expandedService, setExpandedService] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -171,6 +173,7 @@ export default function ComprehensiveServicesLanding2027() {
 
   // Filter services based on category and search
   const filteredServices = allServices.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = searchQuery === '' || 
       service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -180,11 +183,14 @@ export default function ComprehensiveServicesLanding2027() {
   });
 
   const toggleServiceExpansion = (serviceId: string) => {
+
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
   const getCategoryIcon = (category: string) => {
+
     const iconMap: { [key: string]: React.ReactNode } = {
+
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
       'Cybersecurity': <Shield className="w-6 h-6" />,
       'Cloud & DevOps': <Cloud className="w-6 h-6" />,
@@ -211,7 +217,9 @@ export default function ComprehensiveServicesLanding2027() {
   };
 
   const formatPrice = (price: number) => {
+
     if (price >= 1000) {
+
       return `$${(price / 1000).toFixed(1)}K`;
     }
     return `$${price}`;
@@ -332,6 +340,7 @@ export default function ComprehensiveServicesLanding2027() {
                 viewport={{ once: true }}
                 onClick={() => setActiveCategory(category.id)}
                 className={`p-6 rounded-2xl border transition-all duration-300 transform hover:scale-105 ${
+
                   activeCategory === category.id
                     ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50'
                     : 'bg-white/10 backdrop-blur-lg border-white/20 hover:border-cyan-500/30'
@@ -607,6 +616,7 @@ export default function ComprehensiveServicesLanding2027() {
 
 // Helper component for DNA icon
 function Dna({ className }: { className?: string }) {
+
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>

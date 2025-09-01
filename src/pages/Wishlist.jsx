@@ -3,37 +3,45 @@ import { useNavigate } from 'react-router-dom';
 import { Heart, ShoppingCart, MessageCircle, Star, MapPin, Clock } from 'lucide-react';
 
 export default function WishlistPage() {
+
     const [favorites, setFavorites] = useState([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
     useEffect(() => {
+
 <<<<<<< HEAD
         // Simulate loading favorites from localStorage
         const storedFavorites = localStorage.getItem('wishlist') || '[]';
         try {
+
             const parsedFavorites = JSON.parse(storedFavorites);
             setFavorites(parsedFavorites);
         } catch (error) {
-            console.error('Error parsing favorites:', error);
+
+            // console.error('Error parsing favorites:', error);
             setFavorites([]);
         }
         setLoading(false);
     }, []);
 
     const removeFromWishlist = (itemId) => {
+
         const updatedFavorites = favorites.filter(fav => fav.id !== itemId);
         setFavorites(updatedFavorites);
         localStorage.setItem('wishlist', JSON.stringify(updatedFavorites));
     };
 
     const addToCart = (item) => {
+
         const cart = JSON.parse(localStorage.getItem('cart') || '[]');
         const existingItem = cart.find(cartItem => cartItem.id === item.id);
         
         if (existingItem) {
+
             existingItem.quantity += 1;
         } else {
+
             cart.push({ ...item, quantity: 1 });
         }
         
@@ -43,6 +51,7 @@ export default function WishlistPage() {
     };
 
     if (loading) {
+
         return (
             <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 pt-24">
                 <div className="container mx-auto px-4 py-8">
@@ -184,6 +193,7 @@ export default function WishlistPage() {
 =======
         // Redirect if not authenticated and auth loading is complete
         if (!isAuthLoading && !user) {
+
             router('/login');
         }
     }, [user, isAuthLoading, navigate]);
@@ -191,22 +201,27 @@ export default function WishlistPage() {
         return null; // Or a loading spinner
     const { items, dispatch } = useCart();
     const addToCart = (item) => {
+
         const stored = safeStorage.getItem(getCartKey(user?.id));
         const cart = stored ? JSON.parse(stored) [];
         cart.push({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });
         safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
         dispatch({ type: 'SET_ITEMS', payload: cart })};
     const productMap = MARKETPLACE_LISTINGS.reduce((acc, p) => {
+
         acc[p.id] = p;
         return acc}, {});
     const talentMap = TALENT_PROFILES.reduce((acc, t) => {
+
         acc[t.id] = t;
         return acc}, {});
     return (<div className="container py-8">
       <h1 className="text-3xl font-bold mb-6">Wishlist</h1>
       {loading ? (<p>Loading...</p>) : favorites.length === 0 ? (<p>No items saved.</p>) : (<div className="responsive-grid">
           {favorites.map(fav => {
+
                 if (fav.item_type === 'talent') {
+
                     const talent = talentMap[fav.item_id];
                     return talent ? (<TalentCard key={fav.item_id} talent={talent} onMessage={() => { }} onBook={() => { }} isAuthenticated={true}/>) : null}
                 const item = productMap[fav.item_id];

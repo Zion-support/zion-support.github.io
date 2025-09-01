@@ -9,7 +9,7 @@ const CloudArchitectureChat: NextPage = () => {
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
         <meta name="description" content="CloudArchitectureChat blog post" />
       </Head>
-      
+
       <main>
         <h1>CloudArchitectureChat</h1>
         <p>Blog content coming soon...</p>

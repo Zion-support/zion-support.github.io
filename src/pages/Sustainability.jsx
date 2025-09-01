@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default Sustainability;
 import {
+
 import { motion } from 'framer - motion';
 
   Leaf,
@@ -46,12 +47,13 @@ import { motion } from 'framer - motion';
   Recycle,
   Cloud,
   Battery,
-  Thermometer,
-} from 'lucide - react';
+  Thermometer} from 'lucide - react';
 
 const Sustainability = () => {
+
   const sustainabilitySolutions = [
     {
+
       id: 1,
       title: 'Renewable Energy Systems',
       description:
@@ -66,9 +68,9 @@ const Sustainability = () => {
       price: 'From $200,000',
       timeline: '32 - 48 weeks',
       category: 'Energy',
-      technologies: ['Solar PV', 'Wind Power', 'Battery Storage', 'Smart Grid'],
-    },
+      technologies: ['Solar PV', 'Wind Power', 'Battery Storage', 'Smart Grid']},
     {
+
       id: 2,
       title: 'Green Building Solutions',
       description:
@@ -88,9 +90,9 @@ const Sustainability = () => {
         'BIM Modeling',
         'IoT Sensors',
         'Energy Management',
-      ],
-    },
+      ]},
     {
+
       id: 3,
       title: 'Waste Management Systems',
       description:
@@ -105,9 +107,9 @@ const Sustainability = () => {
       price: 'From $100,000',
       timeline: '20 - 32 weeks',
       category: 'Waste Management',
-      technologies: ['AI Sorting', 'IoT Monitoring', 'Biogas', 'Composting'],
-    },
+      technologies: ['AI Sorting', 'IoT Monitoring', 'Biogas', 'Composting']},
     {
+
       id: 4,
       title: 'Sustainable Transportation',
       description:
@@ -127,9 +129,9 @@ const Sustainability = () => {
         'Smart Routing',
         'Fleet Management',
         'Carbon Analytics',
-      ],
-    },
+      ]},
     {
+
       id: 5,
       title: 'Water Conservation',
       description:
@@ -149,9 +151,9 @@ const Sustainability = () => {
         'AI Analytics',
         'Smart Valves',
         'Water Quality',
-      ],
-    },
+      ]},
     {
+
       id: 6,
       title: 'Carbon Management',
       description:
@@ -171,12 +173,12 @@ const Sustainability = () => {
         'IoT Monitoring',
         'AI Reporting',
         'Blockchain',
-      ],
-    },
+      ]},
   ];
 
   const successStories = [
     {
+
       logo: '🏭',
       comp: 'EcoManufacturing Inc.',
       industry: 'Manufacturing',
@@ -185,9 +187,9 @@ const Sustainability = () => {
       solution:
         'Implemented solar power systems, energy - efficient equipment, and smart monitoring.',
       results:
-        '40% reduction in energy costs, 60% decrease in carbon footprint, LEED Gold certification.',
-    },
+        '40% reduction in energy costs, 60% decrease in carbon footprint, LEED Gold certification.'},
     {
+
       logo: '🏢',
       comp: 'GreenTech Office Complex',
       industry: 'Commercial Real Estate',
@@ -196,9 +198,9 @@ const Sustainability = () => {
       solution:
         'Complete building retrofit with smart HVAC, LED lighting, and renewable energy integration.',
       results:
-        '35% energy savings, 25% increase in tenant satisfaction, 50% reduction in maintenance costs.',
-    },
+        '35% energy savings, 25% increase in tenant satisfaction, 50% reduction in maintenance costs.'},
     {
+
       logo: '🚛',
       comp: 'Sustainable Logistics Co.',
       industry: 'Transportation & Logistics',
@@ -207,8 +209,7 @@ const Sustainability = () => {
       solution:
         'Transitioned to electric vehicles, implemented route optimization, and carbon tracking.',
       results:
-        '30% reduction in fuel costs, 45% decrease in carbon emissions, improved delivery efficiency.',
-    },
+        '30% reduction in fuel costs, 45% decrease in carbon emissions, improved delivery efficiency.'},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - green - 900 to - slate - 900 text - white">

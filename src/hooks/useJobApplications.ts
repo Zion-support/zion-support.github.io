@@ -86,7 +86,7 @@ export const useJobApplications = (jobId?: string) => {
       setError(null);
     } catch (err: any) {
 
-      // // console.error("Error fetching applications:", err);
+      // // // console.error("Error fetching applications:", err);
       setError("Failed to fetch applications: " + err.message);
       toast.error("Failed to fetch applications");
       setApplications([]); // Clear applications on error
@@ -140,7 +140,7 @@ export const useJobApplications = (jobId?: string) => {
       return true;
     } catch (err: any) {
 
-      // // console.error("Error applying to job:", err);
+      // // // console.error("Error applying to job:", err);
       toast.error("Failed to submit application: " + err.message);
       return false;
     }
@@ -165,7 +165,7 @@ export const useJobApplications = (jobId?: string) => {
       return true;
     } catch (err: any) {
 
-      // // console.error("Error updating application status:", err);
+      // // // console.error("Error updating application status:", err);
       toast.error("Failed to update application status: " + err.message);
       return false;
     }
@@ -196,7 +196,7 @@ export const useJobApplications = (jobId?: string) => {
       return true;
     } catch (err) {
 
-      // // console.error("Error marking application as viewed:", err);
+      // // // console.error("Error marking application as viewed:", err);
       return false;
     }
   };

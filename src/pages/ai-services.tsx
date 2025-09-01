@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
-import { 
+import {
+
   Brain, 
   Zap, 
   Shield, 
@@ -26,11 +27,14 @@ import {
 } from 'lucide-react';
 
 export default function AIServices() {
+
   const aiServices = [
     {
+
       category: 'AI Analytics & Intelligence',
       services: [
         {
+
           name: 'AI Predictive Analytics Platform',
           description: 'Advanced machine learning forecasting with 95%+ accuracy for business intelligence',
           icon: BarChart3,
@@ -38,6 +42,7 @@ export default function AIServices() {
           features: ['Real-time data processing', 'ML model training', 'Predictive insights', 'Custom dashboards']
         },
         {
+
           name: 'AI Business Intelligence Dashboard',
           description: 'Comprehensive BI solution powered by artificial intelligence',
           icon: Brain,
@@ -47,9 +52,11 @@ export default function AIServices() {
       ]
     },
     {
+
       category: 'AI Automation & Workflows',
       services: [
         {
+
           name: 'AI Workflow Orchestrator',
           description: 'Intelligent process automation and workflow optimization',
           icon: Workflow,
@@ -57,6 +64,7 @@ export default function AIServices() {
           features: ['Process automation', 'Smart routing', 'Performance monitoring', 'Scalable workflows']
         },
         {
+
           name: 'AI Autonomous Business Operations',
           description: 'Fully automated business processes with AI decision-making',
           icon: Rocket,
@@ -66,9 +74,11 @@ export default function AIServices() {
       ]
     },
     {
+
       category: 'AI Customer Experience',
       services: [
         {
+
           name: 'AI Customer Success Automation',
           description: 'Proactive customer engagement and success automation',
           icon: Users,
@@ -76,6 +86,7 @@ export default function AIServices() {
           features: ['Customer journey mapping', 'Predictive churn prevention', 'Automated onboarding', 'Success metrics']
         },
         {
+
           name: 'AI Marketing Automation Platform',
           description: 'Intelligent marketing campaigns and customer segmentation',
           icon: Target,
@@ -85,9 +96,11 @@ export default function AIServices() {
       ]
     },
     {
+
       category: 'AI Security & Compliance',
       services: [
         {
+
           name: 'AI Cybersecurity Suite',
           description: 'Advanced threat detection and security automation',
           icon: Shield,
@@ -95,6 +108,7 @@ export default function AIServices() {
           features: ['Threat detection', 'Behavioral analysis', 'Automated response', 'Compliance monitoring']
         },
         {
+
           name: 'AI Customer Support Automation',
           description: 'Intelligent customer support with natural language processing',
           icon: MessageCircle,
@@ -107,24 +121,28 @@ export default function AIServices() {
 
   const emergingAITech = [
     {
+
       name: 'Quantum AI Platform',
       description: 'Next-generation quantum computing for AI applications',
       icon: Cpu,
       href: '/services/quantum-ai-platform'
     },
     {
+
       name: 'Edge AI Computing',
       description: 'AI processing at the edge for ultra-low latency',
       icon: Cpu,
       href: '/services/edge-ai-computing'
     },
     {
+
       name: 'AI Healthcare Analytics',
       description: 'Medical data analysis and diagnostic assistance',
       icon: Heart,
       href: '/services/ai-healthcare-analytics-platform'
     },
     {
+
       name: 'AI Blockchain Integration',
       description: 'Secure and transparent AI-powered blockchain solutions',
       icon: Lock,
@@ -134,21 +152,25 @@ export default function AIServices() {
 
   const benefits = [
     {
+
       icon: Zap,
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and optimize business processes'
     },
     {
+
       icon: Brain,
       title: 'Intelligent Insights',
       description: 'Gain actionable insights from your data with AI analysis'
     },
     {
+
       icon: Shield,
       title: 'Enhanced Security',
       description: 'Advanced threat detection and automated security responses'
     },
     {
+
       icon: Users,
       title: 'Better Customer Experience',
       description: 'Personalized interactions and proactive customer support'

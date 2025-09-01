@@ -4,33 +4,40 @@ import { Target, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, 
 import { SEO              } from '@/components/SEO';
 
 export default function AIProjectManagement(...args: any[]): any {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Planning",
       description: "Intelligent project planning with predictive analytics and resource optimization"
     },
     {
+
       icon: Kanban,
       title: "Smart Task Management",
       description: "Automated task assignment, prioritization, and progress tracking"
     },
     {
+
       icon: Users,
       title: "Team Collaboration",
       description: "Enhanced team communication and real-time collaboration tools"
     },
     {
+
       icon: Target,
       title: "Goal Tracking",
       description: "AI-driven milestone tracking and performance optimization"
     },
     {
+
       icon: BarChart3,
       title: "Advanced Analytics",
       description: "Comprehensive project insights and predictive performance metrics"
     },
     {
+
       icon: Zap,
       title: "Automated Workflows",
       description: "Streamlined processes with intelligent automation and notifications"
@@ -57,6 +64,7 @@ export default function AIProjectManagement(...args: any[]): any {
 
   const pricing = [
     {
+
       name: "Starter",
       price: "$2,000",
       period: "/month",
@@ -70,6 +78,7 @@ export default function AIProjectManagement(...args: any[]): any {
       ]
     },
     {
+
       name: "Professional",
       price: "$4,500",
       period: "/month",
@@ -84,6 +93,7 @@ export default function AIProjectManagement(...args: any[]): any {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "Custom",
       period: "",
@@ -239,6 +249,7 @@ export default function AIProjectManagement(...args: any[]): any {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-orange-500/50 ring-2 ring-orange-500/20' 
                     : 'border-slate-700/50'
@@ -271,6 +282,7 @@ export default function AIProjectManagement(...args: any[]): any {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700'
                     : 'border border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white'

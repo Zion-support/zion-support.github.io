@@ -45,7 +45,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       setError(null);
     } catch (err: any) {
 
-      // // console.error("Error fetching jobs:", err);
+      // // // console.error("Error fetching jobs:", err);
       setError("Failed to fetch jobs. Please try again.");
       toast.error("Failed to fetch jobs");
       setJobs([]); // Clear jobs on error
@@ -73,7 +73,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       return true;
     } catch (err: any) {
 
-      // // console.error("Error updating job status:", err);
+      // // // console.error("Error updating job status:", err);
       toast.error("Failed to update job status");
       return false;
     }
@@ -97,7 +97,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       return true;
     } catch (err: any) {
 
-      // // console.error("Error deleting job:", err);
+      // // // console.error("Error deleting job:", err);
       toast.error("Failed to delete job");
       return false;
     }

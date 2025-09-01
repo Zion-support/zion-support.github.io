@@ -51,11 +51,11 @@ export function useToast(...args[]: any):  {
     toast,
     dismiss,
     dismissAll
-  // // // // // // // // // console.log('Toast:', { title, description, variant, duration });
+  // // // // // // // // // // console.log('Toast:', { title, description, variant, duration });
 };
   }}
 // Export a default toast function for backward compatibility
 export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {;
   // In a real implementation, this would dispatch to a global toast system;
-  // // console.log('Toast:', { title, description, variant, duration });
+  // // // console.log('Toast:', { title, description, variant, duration });
 };

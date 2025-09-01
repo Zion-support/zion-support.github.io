@@ -1,18 +1,12 @@
-<<<<<<< HEAD
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
-
-=======
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import compression from 'vite-plugin-compression'
 import { resolve } from 'path'
 
 // https://vitejs.dev/config/
->>>>>>> cursor/add-new-services-and-advertise-them-971c
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react()
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -30,9 +24,6 @@ export default defineConfig({
       '@constants': resolve(__dirname, 'src/constants'),
     },
   },
-<<<<<<< HEAD
-});
-=======
   build: {
     target: 'es2020',
     minify: 'esbuild',
@@ -40,43 +31,28 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          // Core React libraries
-          'react-core': ['react', 'react-dom'],
-          // Routing
-          'routing': ['react-router-dom'],
-          // UI and animations
-          'ui-animations': ['framer-motion', 'lucide-react'],
-          // Form handling
-          'forms': ['react-hook-form', '@hookform/resolvers', 'zod'],
-          // Utilities
-          'utils': ['clsx', 'tailwind-merge', 'class-variance-authority'],
-          // Charts and data visualization
-          'charts': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
-          // AI and ML related
-          'ai-ml': ['fuse.js', 'embla-carousel-react'],
-          // Enterprise features
-          'enterprise': ['@reduxjs/toolkit', 'react-redux', 'axios'],
+          'react-vendor': ['react', 'react-dom'],
+          'router-vendor': ['react-router-dom'],
+          'ui-vendor': ['framer-motion', 'lucide-react'],
+          'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'],
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
         },
-        chunkFileNames: (chunkInfo) => {
-          const facadeModuleId = chunkInfo.facadeModuleId
-            ? chunkInfo.facadeModuleId.split('/').pop()?.replace('.tsx', '').replace('.ts', '')
-            : 'chunk'
-          return `js/${facadeModuleId}-[hash].js`
-        },
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name?.split('.') || []
-          const ext = info[info.length - 1]
+          const info = assetInfo.name?.split('.') || [];
+          const ext = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp/i.test(ext)) {
+            return `images/[name]-[hash][extname]`;
+          }
           if (/\.(css)$/.test(assetInfo.name || '')) {
-            return `css/[name]-[hash].${ext}`
+            return `css/[name]-[hash].${ext}`;
           }
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
-            return `images/[name]-[hash].${ext}`
-          }
-          return `assets/[name]-[hash].${ext}`
+          return `assets/[name]-[hash].${ext}`;
         },
       },
     },
-    chunkSizeWarningLimit: 800, // Reduced from 1000
+    chunkSizeWarningLimit: 800,
     reportCompressedSize: true,
   },
   optimizeDeps: {
@@ -103,13 +79,23 @@ export default defineConfig({
     hmr: {
       overlay: false,
     },
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '/api')
+      }
+    }
   },
   preview: {
     port: 4173,
     host: true,
-    cors: true,
+    open: true
   },
-
+  css: {
+    devSourcemap: true
+  },
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
@@ -124,4 +110,3 @@ export default defineConfig({
     format: 'es',
   },
 })
->>>>>>> cursor/add-new-services-and-advertise-them-971c

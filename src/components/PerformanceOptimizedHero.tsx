@@ -67,10 +67,10 @@ const PerformanceOptimizedHero: React.FC < HeroProps> = ({
 
     return () => clearInterval(interval)}, [features.length]);
 
-    // // // // // // // // // // console.log('Hero CTA clicked');
+    // // // // // // // // // // // console.log('Hero CTA clicked');
   
     // Analytics tracking could be added here;
-    // // // console.log('Hero CTA clicked')}, []);
+    // // // // console.log('Hero CTA clicked')}, []);
 
   const containerVariants = {
 

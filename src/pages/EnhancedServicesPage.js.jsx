@@ -9,17 +9,21 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle } from 'lucide-react';
 import SEO from '@/components/SEO';
 export default function EnhancedServicesPage() {
+
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
     const filteredServices = ENHANCED_SERVICES.filter(service => {
+
         const matchesPrice = selectedPriceRange === 'all' ||
             (selectedPriceRange === 'basic' && service.price <= 2000) ||
             (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||
             (selectedPriceRange === 'enterprise' && service.price > 8000);
         return matchesSearch && matchesCategory && matchesPrice});
     const getCategoryIcon = (category) => {
+
         switch (category.toLowerCase()) {
+
             case 'ai automation':
             case 'ai & machine learning':
                 return <Brain className="w-5 h-5"/>;
@@ -51,6 +55,7 @@ export default function EnhancedServicesPage() {
                 return <Code className="w-5 h-5"/>}
     };
     const getPriceRange = (price) => {
+
         if (price <= 2000)
             return 'basic';
         if (price <= 8000)
@@ -348,6 +353,7 @@ export default function EnhancedServicesPage() {
                 Send Email
               </Button>
               <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10" onClick = {
+
   () => window.open(CONTACT_INFO.website,
   '_blank')
 

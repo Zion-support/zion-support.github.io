@@ -323,7 +323,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             timeOnPage: Math.max(prev.userEngagement.timeOnPage, timeOnPage),
             interactions: userInteractions}}});
 
-      // // // console.log('Analytics Event:', eventData)},
+      // // // // console.log('Analytics Event:', eventData)},
     [enabled, currentPage, scrollDepth, timeOnPage, userInteractions]
   );
   // Initialize mock data for dashboard

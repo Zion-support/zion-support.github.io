@@ -3,6 +3,7 @@ import React from 'react';
 export default Resources;
 
 const Resources = () => {
+
   return (<>
       <Helmet>
         <title > Resources - Zion Tech Group</title>

@@ -5,7 +5,9 @@ import { Button } from '@/components / ui / button';
 import { MICRO_SAAS_SERVICES } from '@/data / microSaasServices';
 import SEO from '@/components / SEO';
 export default React.memo (function ComprehensiveServicesOverview2027 (...args[]) :  {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Brain,
@@ -116,6 +118,7 @@ import { motion } from 'framer - motion';
 // Sample data for demonstration
 const MICRO_SAAS_SERVICES = [
   {
+
     id: 'micro - crm',
     title: 'Micro CRM',
     description: 'Lightweight customer relationship management for small businesses',
@@ -133,6 +136,7 @@ const MICRO_SAAS_SERVICES = [
     images: ['/images / micro - crm.jpg']
   },
   {
+
     id: 'helpdesk - platform',
     title: 'Helpdesk Platform',
     description: 'Streamlined customer support and ticket management system',
@@ -150,6 +154,7 @@ const MICRO_SAAS_SERVICES = [
     images: ['/images / helpdesk.jpg']
   },
   {
+
     id: 'website - analytics',
     title: 'Website Analytics',
     description: 'Comprehensive website performance and user behavior analytics',
@@ -190,10 +195,13 @@ const pricingModels = [;
   const [viewMode, setViewMode] = useState < any> ('grid') ;
   const [expandedService, setExpandedService] = useState < any> (null) ;
   useEffect ( () => {
+
     let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {
+
       filtered = filtered.filter (service => service.category === selectedCategory) }
     if (selectedPricing !== 'all') {
+
       filtered = filtered.filter (service => service.pricingModel === selectedPricing) };
     if (searchQuery.trim () ) {;
       const query = searchQuery.toLowerCase () ;
@@ -204,7 +212,9 @@ const pricingModels = [;
         service.subcategory?.toLowerCase () .includes (query) ;) ;
     }
     filtered.sort ( (a, b) => {
+
       switch (sortBy) {
+
         case 'rating':
           return (b.rating || 0) - (a.rating || 0) ;
         case 'price':
@@ -219,11 +229,13 @@ const pricingModels = [;
     setFilteredServices (filtered) }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
   const ServiceCard = ({ service }: { service}) => (<motion.div
       initial = {
+
   { opacity: 0,
   y: 20
 
 }}
       animate = {
+
   { opacity: 1,
   y: 0
 
@@ -297,16 +309,19 @@ const pricingModels = [;
           </div>
           {expandedService === service.id && (<motion.div
               initial = {
+
   { opacity: 0,
   height: 0
 
 }}
               animate = {
+
   { opacity: 1,
   height: 'auto'
 
 }}
               exit = {
+
   { opacity: 0,
   height: 0
 
@@ -371,16 +386,19 @@ const pricingModels = [;
           </motion.h1>
           <motion.p
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -512,6 +530,7 @@ const pricingModels = [;
           </div>
           {/* Services Grid */}
 <div role="button" className: {`grid gap - 8 ${
+
             viewMode === 'grid'
               ? 'grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3'
               : 'grid - cols - 1'
@@ -533,6 +552,7 @@ const pricingModels = [;
         </div>
         {/* Services Grid */}
 <div role="button" className: {`grid gap - 8 ${
+
           viewMode === 'grid'
             ? 'grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3'
             : 'grid - cols - 1'

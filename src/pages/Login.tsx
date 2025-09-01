@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export default React.memo (function Login () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Mail,
@@ -36,13 +38,13 @@ import { motion } from 'framer - motion';
   Smartphone,
   Monitor,
   Tablet,
-  Laptop,
-} from 'lucide - react';
+  Laptop} from 'lucide - react';
 
   const [isLogin, setIsLogin] = useState (true) ;
   const [showPassword, setShowPassword] = useState (false) ;
   const [showConfirmPassword, setShowConfirmPassword] = useState (false) ;
   const [formData, setFormData] = useState ({
+
     email: '',
     password: '',
     confirmPassword: '',
@@ -51,20 +53,21 @@ import { motion } from 'framer - motion';
     company: '',
     phone: '',
     acceptTerms: false,
-    acceptMarketing: false,
-  }) ;
+    acceptMarketing: false}) ;
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [submitted, setSubmitted] = useState (false) ;
 
   const handleInputChange = useCallback ( (e: React.ChangeEvent < HTMLInputElement>) => {
+
     const { name, value, type, checked } = e.target;
     setFormData (prev => ({
+
       ...prev,
-      [name]: type === 'checkbox' ? checked : value,
-    }) ) ;
+      [name]: type === 'checkbox' ? checked : value}) ) ;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+
     e.preventDefault () ;
     setIsSubmitting (true) ;
 
@@ -76,8 +79,10 @@ import { motion } from 'framer - motion';
 
     // Reset form after 5 seconds
     setTimeout ( () => {
+
       setSubmitted (false) ;
       setFormData ({
+
         email: '',
         password: '',
         confirmPassword: '',
@@ -86,14 +91,15 @@ import { motion } from 'framer - motion';
         company: '',
         phone: '',
         acceptTerms: false,
-        acceptMarketing: false,
-      }) ;
+        acceptMarketing: false}) ;
     }, 5000) ;
   };
 
   const toggleForm = () => {
+
     setIsLogin (!isLogin) ;
     setFormData ({
+
       email: '',
       password: '',
       confirmPassword: '',
@@ -102,14 +108,16 @@ import { motion } from 'framer - motion';
       company: '',
       phone: '',
       acceptTerms: false,
-      acceptMarketing: false,
-    }) ;
+      acceptMarketing: false}) ;
   };
 
   const isFormValid = () => {
+
     if (isLogin) {
+
       return formData.email && formData.password;
     } else {
+
       return (formData.email &&
         formData.password &&
         formData.confirmPassword &&
@@ -341,6 +349,7 @@ import { motion } from 'framer - motion';
             <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
               disabled={!isFormValid () || isSubmitting}
               className={`w - full py - 4 px - 6 rounded - lg font - semibold text - lg transition - all duration - 200 flex items - center justify - center space - x-2 ${
+
                 isFormValid () && !isSubmitting
                   ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 text - white transform hover:-translate - y-1 shadow - lg hover:shadow - xl'
                   : 'bg - gray - 600 text - gray - 400 cursor - not - allowed'

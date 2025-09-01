@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Brain,
   BarChart3,
   TrendingUp,
@@ -143,36 +144,43 @@ import {
 } from 'lucide-react';
 
 const AIBusinessIntelligencePlatform: React.FC = () => {
+
   const [activeTab, setActiveTab] = useState('overview');
   const [selectedPlan, setSelectedPlan] = useState('professional');
 
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Analytics",
       description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data"
     },
     {
+
       icon: BarChart3,
       title: "Real-Time Dashboards",
       description: "Interactive dashboards with live data updates and customizable widgets for instant business insights"
     },
     {
+
       icon: TrendingUp,
       title: "Predictive Analytics",
       description: "Forecast future trends and outcomes using historical data and AI models"
     },
     {
+
       icon: Users,
       title: "User Behavior Analysis",
       description: "Track and analyze user interactions to optimize customer experience and engagement"
     },
     {
+
       icon: Database,
       title: "Data Integration",
       description: "Connect to multiple data sources including databases, APIs, and third-party services"
     },
     {
+
       icon: Zap,
       title: "Automated Reporting",
       description: "Generate comprehensive reports automatically with AI-generated insights and recommendations"
@@ -181,6 +189,7 @@ const AIBusinessIntelligencePlatform: React.FC = () => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$99",
       period: "/month",
@@ -195,6 +204,7 @@ const AIBusinessIntelligencePlatform: React.FC = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$299",
       period: "/month",
@@ -210,6 +220,7 @@ const AIBusinessIntelligencePlatform: React.FC = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$799",
       period: "/month",
@@ -337,6 +348,7 @@ const AIBusinessIntelligencePlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-blue-500/50 ring-2 ring-blue-500/20' 
                     : 'border-gray-700'
@@ -371,6 +383,7 @@ const AIBusinessIntelligencePlatform: React.FC = () => {
                 <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'

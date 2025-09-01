@@ -72,6 +72,7 @@ interface Service {
   features: string[];
   benefits: string[];
 pricing: {
+
     starter: number;
     professional: number;
     enterprise: number;
@@ -85,6 +86,7 @@ pricing: {
   estimatedDelivery: string;
   website?: string;
   contactInfo?: {
+
     phone: string;
     email: string;
     address: string};
@@ -103,7 +105,9 @@ pricing: {
 
     // Add services from zion2026ComprehensiveServices
     zion2026ComprehensiveServices.forEach (service = > {
+
       services.push ({
+
         id: service.id,
         name: service.name,
         category: service.category,
@@ -111,6 +115,7 @@ pricing: {
         features: service.features,
         benefits: service.benefits,
         pricing: {
+
           starter: service.pricing.starter,
           professional: service.pricing.professional,
           enterprise: service.pricing.enterprise,
@@ -143,6 +148,7 @@ pricing: {
 
     // Sort services
     switch (sortBy) {
+
       case 'name':
         filtered.sort ( (a, b) => a.name.localeCompare (b.name) ) ;
         break;
@@ -184,11 +190,13 @@ pricing: {
         <div role="button" className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -274,6 +282,7 @@ pricing: {
               <div role="button" className="flex bg - white / 10 rounded - lg p - 1">
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`px - 3 py - 2 rounded - md transition - colors ${
+
                     viewMode === 'grid' ? 'bg - purple - 500 text - white' : 'text - gray - 300 hover:text - white'
                   }`}
 
@@ -281,6 +290,7 @@ pricing: {
                 </button>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`px - 3 py - 2 rounded - md transition - colors ${
+
                     viewMode === 'list' ? 'bg - purple - 500 text - white' : 'text - gray - 300 hover:text - white'
                   }`}
 
@@ -300,16 +310,19 @@ pricing: {
               {filteredServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -388,16 +401,19 @@ pricing: {
               {filteredServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial = {
+
   { opacity: 0,
   x: -20
 
 }}
                   animate = {
+
   { opacity: 1,
   x: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -467,16 +483,19 @@ pricing: {
 
             <motion.div
               initial = {
+
   { scale: 0.9,
   opacity: 0
 
 }}
               animate = {
+
   { scale: 1,
   opacity: 1
 
 }}
               exit = {
+
   { scale: 0.9,
   opacity: 0
 

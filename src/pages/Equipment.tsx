@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default Equipment;
 import {
+
 import { motion } from 'framer - motion';
 
   Server,
@@ -16,15 +17,16 @@ import { motion } from 'framer - motion';
   Cpu,
   HardDrive,
   Network,
-  Zap,
-} from 'lucide - react';
+  Zap} from 'lucide - react';
 
 const Equipment: React.FC = () => {
+
   const [view, setView] = useState<'grid' | 'list'> ('grid') ;
   const [searchQuery, setSearchQuery] = useState ('') ;
 
   const equipmentItems = [
     {
+
       id: 1,
       name: 'High - Performance Server',
       category: 'Servers',
@@ -32,9 +34,9 @@ const Equipment: React.FC = () => {
       status: 'Available',
       rating: 4.8,
       price: '$2,500 / month',
-      description: 'Enterprise - grade server with latest Intel processors',
-    },
+      description: 'Enterprise - grade server with latest Intel processors'},
     {
+
       id: 2,
       name: 'Network Switch',
       category: 'Networking',
@@ -42,9 +44,9 @@ const Equipment: React.FC = () => {
       status: 'In Use',
       rating: 4.6,
       price: '$800 / month',
-      description: '48 - port gigabit network switch with PoE support',
-    },
+      description: '48 - port gigabit network switch with PoE support'},
     {
+
       id: 3,
       name: 'Storage Array',
       category: 'Storage',
@@ -52,8 +54,7 @@ const Equipment: React.FC = () => {
       status: 'Available',
       rating: 4.9,
       price: '$1,200 / month',
-      description: 'High - capacity storage array with RAID protection',
-    },
+      description: 'High - capacity storage array with RAID protection'},
   ];
 
   const filteredItems = equipmentItems.filter (item =>
@@ -99,6 +100,7 @@ const Equipment: React.FC = () => {
             <div role="button" className="flex gap - 2">
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setView ('grid') }
                 className={`p - 3 rounded - lg transition - colors ${
+
                   view === 'grid'
                     ? 'bg - blue - 600 text - white'
                     : 'bg - white / 10 text - gray - 400 hover:text - white'
@@ -108,6 +110,7 @@ const Equipment: React.FC = () => {
               </button>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setView ('list') }
                 className={`p - 3 rounded - lg transition - colors ${
+
                   view === 'list'
                     ? 'bg - blue - 600 text - white'
                     : 'bg - white / 10 text - gray - 400 hover:text - white'
@@ -126,6 +129,7 @@ const Equipment: React.FC = () => {
           transition={{ delay: 0.2 }}
         >
           {filteredItems.length > 0 ? (<div role="button" className={
+
                 view === 'grid'
                   ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'
                   : 'space - y-4'

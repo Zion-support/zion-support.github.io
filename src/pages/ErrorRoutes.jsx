@@ -56,6 +56,7 @@ import { Home, ArrowLeft, AlertTriangle const NotFound = () => {
       </div>
     </div>) };
 const ServerError = () => {
+
     return (<div className="min - h-screen bg - gradient - to - br from - zinc - 50 to - zinc - 100 flex items - center justify - center">
       <div className="max - w-md mx - auto text - center px - 4">
         <div className="mb - 8">
@@ -87,6 +88,7 @@ const ServerError = () => {
       </div>
     </div>) };
 const ErrorRoutes = () => {
+
     const location = useLocation () ;
     // Check if it's a 500 error (you can implement your own logic here) const isServerError = location.pathname === '/500' || location.state?.error === 'server';
     return (<Routes>

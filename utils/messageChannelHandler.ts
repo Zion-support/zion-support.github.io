@@ -1,10 +1,12 @@
 <<<<<<< HEAD
 export const messageChannelHandler = {
+
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
 =======
 <<<<<<< HEAD
 export const messageChannelHandler = {
+
   sendMessage: (message: any) => { /* empty */ },
   receiveMessage: (callback: any) => { /* empty */ },
 =======

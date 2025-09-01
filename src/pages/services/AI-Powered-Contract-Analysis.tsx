@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   FileText, 
   Brain, 
   Shield, 
@@ -49,50 +50,59 @@ import {
 } from 'lucide-react';
 
 export default function AIPoweredContractAnalysis() {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Analysis",
       description: "Advanced NLP models analyze contracts with 98% accuracy, identifying risks, obligations, and opportunities.",
       benefits: ["98% accuracy rate", "Multi-language support", "Context-aware analysis"]
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Risk Assessment",
       description: "Automated risk scoring and compliance checking against industry standards and regulatory requirements.",
       benefits: ["Real-time risk scoring", "Regulatory compliance", "Industry benchmarks"]
     },
     {
+
       icon: <Zap className="w-6 h-6" />,
       title: "Real-time Processing",
       description: "Process contracts in seconds, not hours. Instant insights and recommendations for legal teams.",
       benefits: ["< 30 second processing", "Batch processing", "Instant notifications"]
     },
     {
+
       icon: <FileCheck className="w-6 h-6" />,
       title: "Compliance Monitoring",
       description: "Track regulatory changes and automatically flag non-compliant clauses and terms.",
       benefits: ["Auto-updating regulations", "Compliance alerts", "Audit trails"]
     },
     {
+
       icon: <Search className="w-6 h-6" />,
       title: "Smart Search",
       description: "Semantic search across contract databases with natural language queries and advanced filtering.",
       benefits: ["Natural language queries", "Advanced filters", "Search history"]
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Analytics Dashboard",
       description: "Comprehensive reporting on contract performance, risks, and opportunities across your portfolio.",
       benefits: ["Custom reports", "Real-time metrics", "Export capabilities"]
     },
     {
+
       icon: <Lock className="w-6 h-6" />,
       title: "Enterprise Security",
       description: "Bank-level security with end-to-end encryption, role-based access control, and audit logging.",
       benefits: ["SOC 2 Type II", "GDPR compliant", "HIPAA ready"]
     },
     {
+
       icon: <Globe className="w-6 h-6" />,
       title: "Global Compliance",
       description: "Support for international legal frameworks and multi-jurisdictional compliance requirements.",
@@ -102,6 +112,7 @@ export default function AIPoweredContractAnalysis() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -120,6 +131,7 @@ export default function AIPoweredContractAnalysis() {
       savings: "Save $200/month with annual billing"
     },
     {
+
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -142,6 +154,7 @@ export default function AIPoweredContractAnalysis() {
       savings: "Save $800/month with annual billing"
     },
     {
+
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
@@ -167,21 +180,25 @@ export default function AIPoweredContractAnalysis() {
 
   const benefits = [
     {
+
       icon: <Clock className="w-8 h-8" />,
       title: "Save 80% Time",
       description: "Reduce contract review time from hours to minutes with AI-powered analysis"
     },
     {
+
       icon: <ShieldCheck className="w-8 h-8" />,
       title: "Reduce Risk by 90%",
       description: "Identify potential issues before they become problems with advanced risk assessment"
     },
     {
+
       icon: <DollarSign className="w-8 h-8" />,
       title: "Cut Costs by 60%",
       description: "Lower legal expenses and improve contract negotiation outcomes"
     },
     {
+
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Improve Compliance",
       description: "Stay ahead of regulatory changes with automated compliance monitoring"
@@ -190,31 +207,37 @@ export default function AIPoweredContractAnalysis() {
 
   const useCases = [
     {
+
       title: "Legal Departments",
       description: "Streamline contract review processes and improve risk management",
       icon: <Building className="w-6 h-6" />
     },
     {
+
       title: "Financial Services",
       description: "Ensure regulatory compliance and manage complex financial agreements",
       icon: <Scale className="w-6 h-6" />
     },
     {
+
       title: "Healthcare Organizations",
       description: "Maintain HIPAA compliance and manage vendor contracts effectively",
       icon: <Heart className="w-6 h-6" />
     },
     {
+
       title: "Technology Companies",
       description: "Manage licensing agreements and partnership contracts efficiently",
       icon: <ZapIcon className="w-6 h-6" />
     },
     {
+
       title: "Real Estate Firms",
       description: "Streamline lease agreements and property management contracts",
       icon: <Building className="w-6 h-6" />
     },
     {
+
       title: "Manufacturing Companies",
       description: "Manage supplier contracts and ensure quality compliance",
       icon: <Settings className="w-6 h-6" />
@@ -223,6 +246,7 @@ export default function AIPoweredContractAnalysis() {
 
   const marketComparison = [
     {
+
       feature: "AI Accuracy",
       zion: "98%",
       competitor1: "92%",
@@ -230,6 +254,7 @@ export default function AIPoweredContractAnalysis() {
       competitor3: "85%"
     },
     {
+
       feature: "Processing Speed",
       zion: "< 30s",
       competitor1: "2-5 min",
@@ -237,6 +262,7 @@ export default function AIPoweredContractAnalysis() {
       competitor3: "10-15 min"
     },
     {
+
       feature: "Languages Supported",
       zion: "50+",
       competitor1: "25",
@@ -244,6 +270,7 @@ export default function AIPoweredContractAnalysis() {
       competitor3: "10"
     },
     {
+
       feature: "Compliance Frameworks",
       zion: "150+",
       competitor1: "75",
@@ -251,6 +278,7 @@ export default function AIPoweredContractAnalysis() {
       competitor3: "25"
     },
     {
+
       feature: "API Response Time",
       zion: "< 100ms",
       competitor1: "500ms",
@@ -367,6 +395,7 @@ export default function AIPoweredContractAnalysis() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-xl border-2 ${
+
                 plan.popular 
                   ? 'border-blue-500 bg-gradient-to-b from-slate-800/50 to-blue-900/20' 
                   : 'border-slate-700'
@@ -403,6 +432,7 @@ export default function AIPoweredContractAnalysis() {
                 <Link 
                   to="/request-quote"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white'
                       : 'bg-slate-700 hover:bg-slate-600 text-gray-300 hover:text-white'

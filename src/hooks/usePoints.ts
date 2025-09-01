@@ -34,7 +34,7 @@ export function usePoints() {
       setBalance(total);
     } else if (error) {
 
-      // // console.error("Error fetching ledger:", error);
+      // // // console.error("Error fetching ledger:", error);
       setLedger([]); // Clear ledger on error
       setBalance(0);  // Clear balance on error
     }

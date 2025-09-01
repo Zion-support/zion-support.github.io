@@ -6,20 +6,25 @@ import { Badge } from '@/components/ui/badge';
 import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from 'lucide-react';
 import SEO from '@/components/SEO';
 export default function PricingGuidePage() {
+
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
         ? EXPANDED_SERVICES
         : EXPANDED_SERVICES.filter(service => service.category === selectedCategory);
     const getCategoryStats = (category) => {
+
         const services = EXPANDED_SERVICES.filter(s => s.category === category);
         const avgPrice = services.reduce((sum, s) => sum + (s.price || 0), 0) / services.length;
         const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length;
         return { count: services.length, avgPrice, avgRating }};
     const formatPrice = (price) => {
+
         if (price >= 1000) {
+
             return `$${(price / 1000).toFixed(1)}K`}
         return `$${price}`};
     const getServiceTier = (price) => {
+
         if (price < 2000)
             return { tier: "Starter", color: "bg-green-100 text-green-800" };
         if (price < 5000)
@@ -93,6 +98,7 @@ export default function PricingGuidePage() {
               All Services ({EXPANDED_SERVICES.length})
             </Button>
             {SERVICE_CATEGORIES.map(category => {
+
             const stats = getCategoryStats(category.name);
             return (<Button key={category.id} variant={selectedCategory === category.name ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.name)} className={selectedCategory === category.name ? 'bg-zion-cyan text-white' : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'}>
                   {category.name} ({stats.count})
@@ -116,6 +122,7 @@ export default function PricingGuidePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredServices.map((service) => {
+
             const tier = getServiceTier(service.price || 0);
             return (<Card key={service.id} className="h-full hover:shadow-lg transition-shadow duration-300">
                 <div className="relative">

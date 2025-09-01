@@ -7,6 +7,7 @@ import SEO from "@/components / SEO";
 export default function ApplicationStatusTracker () {
 
 function ApplicationStatusTrackerContent () {
+
     const isMobile = useIsMobile () ;
     return (<>
       <SEO title="Application Status Tracker | Zion AI Marketplace" description="Track the status of your job applications in the Zion AI marketplace."/>

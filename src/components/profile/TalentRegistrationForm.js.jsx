@@ -131,7 +131,7 @@ export function TalentRegistrationForm() {
         catch (error) {
 
 "
-            // // // console.error("Error generating enhanced profile:", error);
+            // // // // console.error("Error generating enhanced profile:", error);
             toast({
 
 "
@@ -208,7 +208,7 @@ export function TalentRegistrationForm() {
         catch (error) {
 
 "
-            // // // console.error("Failed to send notification email:", error)}
+            // // // // console.error("Failed to send notification email:", error)}
     };
     // Handle form submission
     const onSubmit = async (values) => {
@@ -274,7 +274,7 @@ export function TalentRegistrationForm() {
                 catch (error) {
 
 "
-                    // // // console.error("Error enhancing profile:", error);
+                    // // // // console.error("Error enhancing profile:", error);
                     // Continue with submission even if enhancement fails"
                     finalSummary = ""}
             }
@@ -322,7 +322,7 @@ export function TalentRegistrationForm() {
         catch (error) {
 
 "
-            // // // console.error("Error creating profile:", error);
+            // // // // console.error("Error creating profile:", error);
             toast({
 
 "

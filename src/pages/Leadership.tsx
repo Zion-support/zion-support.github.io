@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom';
 import React from 'react';
 export default React.memo (function Leadership () {
+
 import {
+
 import SEO from '../components / SEO';
 
   Users,
@@ -27,6 +29,7 @@ import SEO from '../components / SEO';
 
   const leadershipTeam = [
     {
+
       name: 'Kleber Santos',
       title: 'Founder & CEO',
       image: 'https://images.unsplash.com / photo - 1507003211169 - 0a1dd7228f2d?w = 300 & h=300 & fit = crop',
@@ -37,6 +40,7 @@ import SEO from '../components / SEO';
       phone: '+1 302 464 0950'
     },
     {
+
       name: 'Dr. Sarah Chen',
       title: 'Chief Technology Officer',
       image: 'https://images.unsplash.com / photo - 1494790108755 - 2616b612b786?w = 300 & h=300 & fit = crop',
@@ -47,6 +51,7 @@ import SEO from '../components / SEO';
       phone: '+1 302 464 0951'
     },
     {
+
       name: 'Michael Rodriguez',
       title: 'Chief Operations Officer',
       image: 'https://images.unsplash.com / photo - 1472099645785 - 5658abf4ff4e?w = 300 & h=300 & fit = crop',
@@ -57,6 +62,7 @@ import SEO from '../components / SEO';
       phone: '+1 302 464 0952'
     },
     {
+
       name: 'Dr. Emily Watson',
       title: 'Head of AI Research',
       image: 'https://images.unsplash.com / photo - 1438761681033 - 6461ffad8d80?w = 300 & h=300 & fit = crop',;
@@ -70,16 +76,19 @@ import SEO from '../components / SEO';
 
   const values = [
     {
+
       icon: Brain,
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible with cutting - edge technology and creative problem - solving.'
     },
     {
+
       icon: Heart,
       title: 'Client Success',
       description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value.'
     },
     {
+
       icon: Shield,
       title: 'Trust & Security',
       description: 'We maintain the highest standards of security and ethical AI practices in everything we do.';
@@ -93,16 +102,19 @@ import SEO from '../components / SEO';
 
   const achievements = [
     {
+
       metric: '500+',
       label: 'AI Solutions Deployed',
       description: 'Successfully implemented AI solutions across diverse industries'
     },
     {
+
       metric: '50+',
       label: 'Enterprise Clients',
       description: 'Trusted by leading companies worldwide'
     },
     {
+
       metric: '95%',
       label: 'Client Satisfaction',
       description: 'Consistently high satisfaction ratings from our clients';

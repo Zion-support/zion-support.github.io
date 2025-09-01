@@ -12,7 +12,7 @@ const reportWebVitals = (metric: any) => {
 
   if (process.env.NODE_ENV === 'development') {
 
-    // // // console.log('Web Vitals:', metric);
+    // // // // console.log('Web Vitals:', metric);
   }
   // In production, you could send this to analytics
 };
@@ -43,7 +43,7 @@ try {
   // Register service worker with error handling
   registerServiceWorker().catch(error => {
 
-    // // console.warn('Service worker registration failed:', error);
+    // // // console.warn('Service worker registration failed:', error);
   });
 
   // Report web vitals if available
@@ -61,12 +61,12 @@ try {
       observer.observe({ entryTypes: ['navigation', 'resource', 'paint'] });
     } catch (error) {
 
-      // // console.warn('Performance monitoring failed:', error);
+      // // // console.warn('Performance monitoring failed:', error);
     }
   }
 } catch (error) {
 
-  // // console.error('Failed to render application:', error);
+  // // // console.error('Failed to render application:', error);
 
   // Fallback error display
   const rootElement = document.getElementById('root');

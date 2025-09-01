@@ -2,11 +2,30 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
-  Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award,
-  Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code,
-  ShoppingCart
+import {
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  BarChart3,
+  Target,
+  Zap,
+  Shield,
+  Globe,
+  Users,
+  Award,
+  Clock,
+  DollarSign,
+  Check,
+  ArrowUpRight,
+  Play,
+  BookOpen,
+  Code,
+  ShoppingCart,
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
@@ -14,46 +33,50 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 const features = [
   {
     title: 'Real-time Content Analytics',
-    description: 'Monitor content performance across all channels with live dashboards and insights',
+    description:
+      'Monitor content performance across all channels with live dashboards and insights',
     icon: BarChart3,
-    color: 'from-blue-500 to-cyan-500'
+    color: 'from-blue-500 to-cyan-500',
   },
   {
     title: 'AI-Powered Optimization',
-    description: 'Get intelligent suggestions for content improvement based on performance data',
+    description:
+      'Get intelligent suggestions for content improvement based on performance data',
     icon: Brain,
-    color: 'from-purple-500 to-pink-500'
+    color: 'from-purple-500 to-pink-500',
   },
   {
     title: 'Predictive Performance Modeling',
-    description: 'Forecast content success before publishing using advanced AI algorithms',
+    description:
+      'Forecast content success before publishing using advanced AI algorithms',
     icon: TrendingUp,
-    color: 'from-green-500 to-emerald-500'
+    color: 'from-green-500 to-emerald-500',
   },
   {
     title: 'Multi-Channel Strategy',
     description: 'Optimize content across all digital platforms simultaneously',
     icon: Globe,
-    color: 'from-orange-500 to-red-500'
+    color: 'from-orange-500 to-red-500',
   },
   {
     title: 'Competitor Analysis',
-    description: 'Track competitor content performance and identify opportunities',
+    description:
+      'Track competitor content performance and identify opportunities',
     icon: Target,
-    color: 'from-indigo-500 to-blue-500'
+    color: 'from-indigo-500 to-blue-500',
   },
   {
     title: 'SEO Content Intelligence',
     description: 'AI-powered SEO optimization and keyword gap identification',
     icon: Zap,
-    color: 'from-yellow-500 to-orange-500'
-  }
+    color: 'from-yellow-500 to-orange-500',
+  },
 ];
 
 const pricingPlans = [
@@ -68,10 +91,10 @@ const pricingPlans = [
       'Basic performance tracking',
       'SEO content insights',
       'Email support',
-      'Up to 100 content pieces/month'
+      'Up to 100 content pieces/month',
     ],
     popular: false,
-    color: 'from-gray-500 to-gray-600'
+    color: 'from-gray-500 to-gray-600',
   },
   {
     name: 'Professional',
@@ -85,10 +108,10 @@ const pricingPlans = [
       'Multi-channel optimization',
       'Priority support',
       'Up to 500 content pieces/month',
-      'Custom integrations'
+      'Custom integrations',
     ],
     popular: true,
-    color: 'from-blue-500 to-purple-600'
+    color: 'from-blue-500 to-purple-600',
   },
   {
     name: 'Enterprise',
@@ -103,44 +126,60 @@ const pricingPlans = [
       '24/7 phone support',
       'Unlimited content pieces',
       'White-label solutions',
-      'API access'
+      'API access',
     ],
     popular: false,
-    color: 'from-purple-500 to-pink-600'
-  }
+    color: 'from-purple-500 to-pink-600',
+  },
 ];
 
 const useCases = [
   {
     title: 'Content Marketing Optimization',
-    description: 'Optimize your content strategy based on real-time performance data and AI insights',
+    description:
+      'Optimize your content strategy based on real-time performance data and AI insights',
     icon: Target,
-    color: 'from-blue-500 to-cyan-500'
+    color: 'from-blue-500 to-cyan-500',
   },
   {
     title: 'SEO Strategy Enhancement',
-    description: 'Identify content gaps and optimize for search engines with AI-powered recommendations',
+    description:
+      'Identify content gaps and optimize for search engines with AI-powered recommendations',
     icon: TrendingUp,
-    color: 'from-green-500 to-emerald-500'
+    color: 'from-green-500 to-emerald-500',
   },
   {
     title: 'Social Media Management',
-    description: 'Create engaging content that performs across all social media platforms',
+    description:
+      'Create engaging content that performs across all social media platforms',
     icon: Globe,
-    color: 'from-purple-500 to-pink-500'
+    color: 'from-purple-500 to-pink-500',
   },
   {
     title: 'E-commerce Content',
-    description: 'Optimize product descriptions and marketing content for better conversions',
+    description:
+      'Optimize product descriptions and marketing content for better conversions',
     icon: ShoppingCart,
-    color: 'from-orange-500 to-red-500'
-  }
+    color: 'from-orange-500 to-red-500',
+  },
 ];
 
 const integrations = [
-  'WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Google Analytics',
-  'Facebook Ads', 'Google Ads', 'LinkedIn', 'Twitter', 'Instagram',
-  'YouTube', 'TikTok', 'Slack', 'Zapier', 'API Access'
+  'WordPress',
+  'Shopify',
+  'HubSpot',
+  'Mailchimp',
+  'Google Analytics',
+  'Facebook Ads',
+  'Google Ads',
+  'LinkedIn',
+  'Twitter',
+  'Instagram',
+  'YouTube',
+  'TikTok',
+  'Slack',
+  'Zapier',
+  'API Access',
 ];
 
 export default function AIContentIntelligencePlatform() {
@@ -148,13 +187,31 @@ export default function AIContentIntelligencePlatform() {
     <Layout>
       <Head>
         <title>AI Content Intelligence Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling." />
-        <meta name="keywords" content="AI content intelligence, content optimization, content analytics, AI content marketing, content performance, SEO optimization" />
-        <meta property="og:title" content="AI Content Intelligence Platform | Zion Tech Group" />
-        <meta property="og:description" content="Transform your content creation with AI-powered intelligence and analytics." />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-content-intelligence-platform" />
+        <meta
+          name="description"
+          content="Transform your content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling."
+        />
+        <meta
+          name="keywords"
+          content="AI content intelligence, content optimization, content analytics, AI content marketing, content performance, SEO optimization"
+        />
+        <meta
+          property="og:title"
+          content="AI Content Intelligence Platform | Zion Tech Group"
+        />
+        <meta
+          property="og:description"
+          content="Transform your content creation with AI-powered intelligence and analytics."
+        />
+        <meta
+          property="og:url"
+          content="https://ziontechgroup.com/ai-content-intelligence-platform"
+        />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-content-intelligence-platform" />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/ai-content-intelligence-platform"
+        />
       </Head>
 
       {/* Hero Section */}
@@ -171,13 +228,17 @@ export default function AIContentIntelligencePlatform() {
                 <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
                   NEW SERVICE
                 </span>
-                <span className="text-gray-400 text-sm">Launch Date: January 15, 2025</span>
+                <span className="text-gray-400 text-sm">
+                  Launch Date: January 15, 2025
+                </span>
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                 AI Content Intelligence Platform
               </h1>
               <p className="text-xl lg:text-2xl text-gray-300 mb-8">
-                Transform content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling.
+                Transform content creation with AI-powered intelligence and
+                analytics. Get real-time insights, optimization suggestions, and
+                predictive performance modeling.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -201,7 +262,9 @@ export default function AIContentIntelligencePlatform() {
             >
               <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">
                 <div className="text-6xl mb-4">🧠</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Key Benefits</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Key Benefits
+                </h3>
                 <div className="space-y-3">
                   <div className="flex items-center text-green-400">
                     <CheckCircle className="w-5 h-5 mr-3" />
@@ -236,7 +299,8 @@ export default function AIContentIntelligencePlatform() {
               Powerful Features for Content Success
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Content Intelligence Platform provides everything you need to create, optimize, and scale your content strategy.
+              Our AI Content Intelligence Platform provides everything you need
+              to create, optimize, and scale your content strategy.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -250,10 +314,14 @@ export default function AIContentIntelligencePlatform() {
                 className="group relative"
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {feature.title}
+                  </h3>
                   <p className="text-gray-400">{feature.description}</p>
                 </div>
               </motion.div>
@@ -276,7 +344,8 @@ export default function AIContentIntelligencePlatform() {
               Perfect For Every Content Need
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Whether you're a content creator, marketing team, or enterprise organization, our platform adapts to your specific requirements.
+              Whether you're a content creator, marketing team, or enterprise
+              organization, our platform adapts to your specific requirements.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -290,10 +359,14 @@ export default function AIContentIntelligencePlatform() {
                 className="group"
               >
                 <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {useCase.title}
+                  </h3>
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
                 </div>
               </motion.div>
@@ -316,7 +389,8 @@ export default function AIContentIntelligencePlatform() {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your content needs and scale as you grow.
+              Choose the plan that best fits your content needs and scale as you
+              grow.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -336,16 +410,25 @@ export default function AIContentIntelligencePlatform() {
                     </span>
                   </div>
                 )}
-                <div className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border ${plan.popular ? 'border-blue-500' : 'border-gray-700'} rounded-2xl p-8 h-full`}>
+                <div
+                  className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border ${plan.popular ? 'border-blue-500' : 'border-gray-700'} rounded-2xl p-8 h-full`}
+                >
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {plan.name}
+                    </h3>
+                    <div className="text-4xl font-bold text-blue-400 mb-2">
+                      {plan.price}
+                    </div>
                     <div className="text-gray-400 mb-4">{plan.period}</div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
+                      <li
+                        key={featureIndex}
+                        className="flex items-center text-gray-300"
+                      >
                         <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
@@ -379,7 +462,8 @@ export default function AIContentIntelligencePlatform() {
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with your existing tools and platforms for a unified content management experience.
+              Connect with your existing tools and platforms for a unified
+              content management experience.
             </p>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
@@ -412,7 +496,9 @@ export default function AIContentIntelligencePlatform() {
               Ready to Transform Your Content Strategy?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Get in touch with our team to discuss how our AI Content Intelligence Platform can revolutionize your content creation and optimization.
+              Get in touch with our team to discuss how our AI Content
+              Intelligence Platform can revolutionize your content creation and
+              optimization.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="flex flex-col items-center space-y-3">

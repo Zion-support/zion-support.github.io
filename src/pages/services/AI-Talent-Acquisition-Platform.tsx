@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Users,
   Search,
   Brain,
@@ -28,38 +29,45 @@ import {
 } from 'lucide-react';
 
 export default function AITalentAcquisitionPlatform() {
+
   const features = [
     {
+
       title: 'AI-Powered Candidate Matching',
       description: 'Advanced algorithms that match candidates to job requirements with 95% accuracy',
       icon: Brain,
       color: 'from-blue-600 to-cyan-600'
     },
     {
+
       title: 'Intelligent Job Posting',
       description: 'AI-optimized job descriptions that attract the right candidates',
       icon: FileText,
       color: 'from-purple-600 to-pink-600'
     },
     {
+
       title: 'Automated Screening',
       description: 'AI-driven resume parsing and initial candidate assessment',
       icon: Search,
       color: 'from-green-600 to-emerald-600'
     },
     {
+
       title: 'Predictive Analytics',
       description: 'Forecast hiring needs and candidate success probability',
       icon: BarChart3,
       color: 'from-orange-600 to-red-600'
     },
     {
+
       title: 'Multi-Channel Sourcing',
       description: 'Automated candidate sourcing across job boards, social media, and databases',
       icon: Globe,
       color: 'from-teal-600 to-green-600'
     },
     {
+
       title: 'Interview Scheduling',
       description: 'Intelligent scheduling with automated reminders and follow-ups',
       icon: Clock,
@@ -69,6 +77,7 @@ export default function AITalentAcquisitionPlatform() {
 
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$199',
       period: '/month',
@@ -84,6 +93,7 @@ export default function AITalentAcquisitionPlatform() {
       popular: false
     },
     {
+
       plan: 'Professional',
       price: '$499',
       period: '/month',
@@ -101,6 +111,7 @@ export default function AITalentAcquisitionPlatform() {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$1,299',
       period: '/month',
@@ -121,21 +132,25 @@ export default function AITalentAcquisitionPlatform() {
 
   const benefits = [
     {
+
       icon: Zap,
       title: 'Faster Hiring',
       description: 'Reduce time-to-hire by up to 60% with AI automation'
     },
     {
+
       icon: TrendingUp,
       title: 'Better Quality Hires',
       description: 'AI-powered matching improves candidate quality by 40%'
     },
     {
+
       icon: DollarSign,
       title: 'Cost Reduction',
       description: 'Save up to 50% on recruitment costs'
     },
     {
+
       icon: Users,
       title: 'Improved Experience',
       description: 'Better candidate and hiring manager experience'
@@ -144,24 +159,28 @@ export default function AITalentAcquisitionPlatform() {
 
   const useCases = [
     {
+
       title: 'Technology Companies',
       description: 'AI-powered matching for technical roles, skill assessment, and cultural fit',
       icon: Building,
       color: 'from-blue-600 to-cyan-600'
     },
     {
+
       title: 'Healthcare Organizations',
       description: 'Specialized recruitment for medical professionals with compliance tracking',
       icon: Shield,
       color: 'from-green-600 to-emerald-600'
     },
     {
+
       title: 'Financial Services',
       description: 'Secure hiring for financial roles with background verification',
       icon: DollarSign,
       color: 'from-purple-600 to-pink-600'
     },
     {
+
       title: 'Manufacturing & Logistics',
       description: 'High-volume hiring for operational roles with skill-based matching',
       icon: Briefcase,
@@ -411,6 +430,7 @@ export default function AITalentAcquisitionPlatform() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${
+
                   plan.popular 
                     ? 'border-blue-500 bg-gray-800/70 scale-105' 
                     : 'border-gray-700 hover:border-blue-500/50'
@@ -446,6 +466,7 @@ export default function AITalentAcquisitionPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                       : 'border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'

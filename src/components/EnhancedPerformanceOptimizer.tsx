@@ -167,7 +167,7 @@ export function EnhancedPerformanceOptimizer() {
           });
         } catch (error) {
 
-          // // console.log('Battery API not supported');
+          // // // console.log('Battery API not supported');
         }
       }
     };

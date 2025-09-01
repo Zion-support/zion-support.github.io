@@ -65,7 +65,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
       try {
 
-        mergeGuestCart(items).catch(err => // // console.error('Cart merge failed', err));
+        mergeGuestCart(items).catch(err => // // // console.error('Cart merge failed', err));
         dispatch({ type: 'SET_ITEMS', payload: items });
         safeStorage.removeItem(GUEST_CART_KEY)} catch {
 

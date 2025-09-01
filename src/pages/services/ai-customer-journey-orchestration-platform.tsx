@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Route, 
   Users, 
   Target, 
@@ -51,38 +52,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function AICustomerJourneyOrchestrationPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Journey Mapping",
       description: "Advanced machine learning algorithms that automatically map and optimize customer touchpoints across all channels",
       benefits: ["Automated journey discovery", "Real-time optimization", "Predictive path analysis"]
     },
     {
+
       icon: Route,
       title: "Multi-Channel Orchestration",
       description: "Seamlessly orchestrate customer interactions across email, SMS, web, mobile apps, and social media",
       benefits: ["Unified customer experience", "Cross-channel consistency", "Automated channel switching"]
     },
     {
+
       icon: Target,
       title: "Personalized Journey Optimization",
       description: "Dynamically adjust customer journeys based on real-time behavior, preferences, and context",
       benefits: ["Real-time personalization", "Contextual optimization", "Behavioral adaptation"]
     },
     {
+
       icon: Users,
       title: "Customer Segmentation & Targeting",
       description: "Advanced AI segmentation that identifies micro-segments and predicts optimal journey paths",
       benefits: ["Micro-segmentation", "Predictive targeting", "Dynamic persona creation"]
     },
     {
+
       icon: Zap,
       title: "Automated Journey Triggers",
       description: "Intelligent automation that triggers personalized journeys based on customer actions and milestones",
       benefits: ["Smart triggers", "Milestone tracking", "Automated responses"]
     },
     {
+
       icon: Shield,
       title: "Privacy-First Journey Management",
       description: "GDPR-compliant journey orchestration with built-in consent management and data protection",
@@ -92,6 +100,7 @@ export default function AICustomerJourneyOrchestrationPlatform() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$499",
       period: "/month",
@@ -108,6 +117,7 @@ export default function AICustomerJourneyOrchestrationPlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$1,299",
       period: "/month",
@@ -126,6 +136,7 @@ export default function AICustomerJourneyOrchestrationPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$2,999",
       period: "/month",
@@ -147,21 +158,25 @@ export default function AICustomerJourneyOrchestrationPlatform() {
 
   const useCases = [
     {
+
       industry: "E-commerce",
       description: "Create personalized shopping journeys from discovery to post-purchase support",
       metrics: ["Conversion rates", "Customer lifetime value", "Cart abandonment reduction"]
     },
     {
+
       industry: "SaaS",
       description: "Optimize user onboarding, feature adoption, and retention journeys",
       metrics: ["User activation", "Feature adoption", "Churn reduction"]
     },
     {
+
       industry: "Financial Services",
       description: "Build trust through personalized financial journey experiences",
       metrics: ["Account activation", "Product adoption", "Customer satisfaction"]
     },
     {
+
       industry: "Healthcare",
       description: "Create patient-centric care journeys from appointment to follow-up",
       metrics: ["Patient engagement", "Appointment adherence", "Outcome improvement"]
@@ -338,6 +353,7 @@ export default function AICustomerJourneyOrchestrationPlatform() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-purple-500/50 shadow-lg shadow-purple-500/25' 
                     : 'border-slate-700'
@@ -370,6 +386,7 @@ export default function AICustomerJourneyOrchestrationPlatform() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

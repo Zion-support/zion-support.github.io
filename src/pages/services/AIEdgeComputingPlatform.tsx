@@ -1,4 +1,5 @@
 import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud, Wifi export default function AIEdgeComputingPlatform(...args: any[]): any {
+
   const features = [
     'AI-powered edge device management and optimization',
     'Real-time data processing at the edge',
@@ -23,18 +24,21 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
 
   const pricing = [
     {
+
       name: 'Starter',
       price: '$499/mo',
       features: ['Up to 50 edge devices', 'Basic edge processing', 'Standard monitoring', 'Email support', 'Monthly reports'],
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$1,199/mo',
       features: ['Up to 200 edge devices', 'Advanced AI analytics', 'Real-time processing', 'Priority support', 'Custom workflows', 'API access'],
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$3,499/mo',
       features: ['Unlimited edge devices', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
@@ -169,6 +173,7 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
+
                 plan.popular ? 'border-teal-500' : 'border-gray-200'
               } p-8`}>
                 {plan.popular && (
@@ -195,6 +200,7 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                   plan.popular
                     ? 'bg-teal-600 text-white hover:bg-teal-700'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'

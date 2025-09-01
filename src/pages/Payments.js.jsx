@@ -3,6 +3,7 @@ import { TransactionHistory } from "@/components/transactions/TransactionHistory
 import { GradientHeading } from "@/components/GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Payments() {
+
     return (<>
       
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -37,6 +38,7 @@ export default function Payments() {
                       Manage your payment methods and set your default preference.
                     </p>
                     <Button onClick = {
+
   () => window.open('https://stripe.com',
   '_blank')
 

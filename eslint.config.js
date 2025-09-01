@@ -52,21 +52,21 @@ export default [
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
-        vi: 'readonly'
+        vi: 'readonly',
       },
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
+          jsx: true,
         },
-        project: './tsconfig.json'
-      }
+        project: './tsconfig.json',
+      },
     },
     plugins: {
-      'react': react,
+      react: react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      '@typescript-eslint': tseslint
+      '@typescript-eslint': tseslint,
     },
     rules: {
       // React rules
@@ -86,16 +86,16 @@ export default [
       'no-console': 'warn',
       'no-debugger': 'error',
       'prefer-const': 'error',
-      'no-var': 'error'
-    }
+      'no-var': 'error',
+    },
   },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: tsparser,
       parserOptions: {
-        project: './tsconfig.json'
-      }
+        project: './tsconfig.json',
+      },
     },
     rules: {
       '@typescript-eslint/no-unused-vars': 'error',

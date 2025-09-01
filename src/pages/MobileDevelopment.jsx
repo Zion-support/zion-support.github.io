@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function MobileDevelopment () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Smartphone,
@@ -54,6 +56,7 @@ import { motion } from 'framer - motion';
 
 const mobileTechnologies = [
   {
+
     name: "iOS Development",
     description: "Native iOS development with Apple's latest technologies",
     icon: Smartphone,
@@ -61,6 +64,7 @@ const mobileTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Android Development",
     description: "Native Android development with Google's modern tools",
     icon: Smartphone,
@@ -68,6 +72,7 @@ const mobileTechnologies = [
     reliability: "High"
   },
   {
+
     name: "React Native",
     description: "Cross - platform development with React and native performance",
     icon: AppWindow,
@@ -75,6 +80,7 @@ const mobileTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Flutter",
     description: "Google's UI toolkit for cross - platform development",
     icon: Palette,
@@ -85,6 +91,7 @@ const mobileTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "E - commerce Startup",
     industry: "Retail",
@@ -94,6 +101,7 @@ const successStories = [
     logo: "ES"
   },
   {
+
     id: 2,
     comp: "Healthcare Provider",
     industry: "Healthcare",
@@ -103,6 +111,7 @@ const successStories = [
     logo: "HP"
   },
   {
+
     id: 3,
     comp: "Logistics Comp",
     industry: "Transportation",
@@ -115,6 +124,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Requirements Analysis",
     description: "Gather and analyze mobile app requirements and user needs",
@@ -122,6 +132,7 @@ const processSteps = [
     duration: "1 - 2 weeks"
   },
   {
+
     step: 2,
     title: "Design & Prototyping",
     description: "Create UI / UX designs and interactive prototypes",
@@ -129,6 +140,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 3,
     title: "Development",
     description: "Build the mobile application with chosen technology stack",
@@ -136,6 +148,7 @@ const processSteps = [
     duration: "10 - 36 weeks"
   },
   {
+
     step: 4,
     title: "Testing & Deployment",
     description: "Test the app and deploy to app stores",
@@ -146,24 +159,28 @@ const processSteps = [
 
 const mobileBenefits = [
   {
+
     title: "Enhanced User Experience",
     description: "Native mobile apps provide superior user experience and performance",
     icon: Users,
     examples["Smooth animations", "Fast performance", "Native features", "Intuitive UI"];
   },;
   {
+
     title: "Offline Functionality",
     description: "Mobile apps can work offline and sync when connectivity is restored",
     icon: Cloud,
     examples["Offline access", "Data synchronization", "Cached content", "Background sync"];
   },;
   {
+
     title: "Device Integration",
     description: "Access to device features like camera, GPS, and sensors",
     icon: Smartphone,
     examples["Camera access", "GPS location", "Push notifications", "Biometric auth"];
   },;
   {
+
     title: "App Store Presence",
     description: "Visibility in app stores and potential for monetization",
     icon: Award,
@@ -192,11 +209,13 @@ const mobileBenefits = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -206,16 +225,19 @@ const mobileBenefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -257,11 +279,13 @@ const mobileBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -279,16 +303,19 @@ const mobileBenefits = [
             {mobileBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -319,11 +346,13 @@ const mobileBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -341,16 +370,19 @@ const mobileBenefits = [
             {mobileTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -366,6 +398,7 @@ const mobileBenefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -384,11 +417,13 @@ const mobileBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -406,16 +441,19 @@ const mobileBenefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -446,11 +484,13 @@ const mobileBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -470,6 +510,7 @@ const mobileBenefits = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -483,16 +524,19 @@ const mobileBenefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -547,11 +591,13 @@ const mobileBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -569,16 +615,19 @@ const mobileBenefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -624,11 +673,13 @@ const mobileBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

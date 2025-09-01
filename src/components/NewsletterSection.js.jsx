@@ -46,7 +46,7 @@ export function NewsletterSection() {
 
         e.preventDefault();
         // Here you would typically send the email to your newsletter service'
-        // // // console.log('Newsletter subscription:', email);
+        // // // // console.log('Newsletter subscription:', email);
         setIsSubscribed(true);
         setEmail('')};
     const handleUnsubscribe = () => {

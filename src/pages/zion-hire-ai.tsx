@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Users, 
   Brain, 
   Target, 
@@ -58,33 +59,40 @@ import {
 } from 'lucide-react';
 
 export default function ZionHireAI() {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Candidate Matching",
       description: "Advanced algorithms that match candidates to job requirements with high accuracy."
     },
     {
+
       icon: <Search className="w-6 h-6" />,
       title: "Intelligent Talent Sourcing",
       description: "Automated discovery of qualified candidates from multiple sources and platforms."
     },
     {
+
       icon: <Filter className="w-6 h-6" />,
       title: "Smart Screening & Assessment",
       description: "Automated candidate screening with AI-driven skill and culture fit assessment."
     },
     {
+
       icon: <Users className="w-6 h-6" />,
       title: "Bias-Free Hiring",
       description: "AI algorithms designed to eliminate unconscious bias in the hiring process."
     },
     {
+
       icon: <BarChart className="w-6 h-6" />,
       title: "Predictive Analytics",
       description: "Data-driven insights to predict candidate success and retention."
     },
     {
+
       icon: <Workflow className="w-6 h-6" />,
       title: "Automated Workflows",
       description: "Streamlined hiring processes with intelligent automation and scheduling."
@@ -102,26 +110,32 @@ export default function ZionHireAI() {
 
   const hiringSolutions = [
     {
+
       solution: "Talent Sourcing",
       description: "AI-powered candidate discovery and passive talent engagement"
     },
     {
+
       solution: "Resume Parsing",
       description: "Intelligent extraction and analysis of candidate information"
     },
     {
+
       solution: "Skill Assessment",
       description: "Automated technical and soft skill evaluation"
     },
     {
+
       solution: "Interview Scheduling",
       description: "Smart calendar management and interview coordination"
     },
     {
+
       solution: "Cultural Fit Analysis",
       description: "AI-driven assessment of candidate-company compatibility"
     },
     {
+
       solution: "Onboarding Automation",
       description: "Streamlined new hire integration and training"
     }
@@ -129,18 +143,22 @@ export default function ZionHireAI() {
 
   const useCases = [
     {
+
       industry: "Technology Companies",
       description: "Fast-paced hiring for technical roles with skill validation"
     },
     {
+
       industry: "Enterprise Organizations",
       description: "Large-scale recruitment with compliance and diversity focus"
     },
     {
+
       industry: "Startups",
       description: "Efficient hiring for growth-stage companies with limited resources"
     },
     {
+
       industry: "Recruitment Agencies",
       description: "Enhanced candidate matching and client service delivery"
     }

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
 interface FormData {
+
   name: string;
   email: string;
   company: string;
@@ -11,13 +12,14 @@ interface FormData {
 }
 
 const ContactForm: React.FC = () => {
+
   const [formData, setFormData] = useState<FormData>({
+
     name: '',
     email: '',
     company: '',
     service: '',
-    message: '',
-  });
+    message: ''});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
@@ -34,19 +36,24 @@ const ContactForm: React.FC = () => {
   ];
 
   const validateForm = (): boolean => {
+
     const newErrors: Partial<FormData> = {};
 
     if (!formData.name.trim()) {
+
       newErrors.name = 'Name is required';
     }
 
     if (!formData.email.trim()) {
+
       newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+
       newErrors.email = 'Email is invalid';
     }
 
     if (!formData.message.trim()) {
+
       newErrors.message = 'Message is required';
     }
 
@@ -55,9 +62,11 @@ const ContactForm: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+
     e.preventDefault();
 
     if (!validateForm()) {
+
       return;
     }
 
@@ -71,14 +80,15 @@ const ContactForm: React.FC = () => {
 
     // Reset form after 3 seconds
     setTimeout(() => {
+
       setIsSubmitted(false);
       setFormData({
+
         name: '',
         email: '',
         company: '',
         service: '',
-        message: '',
-      });
+        message: ''});
     }, 3000);
   };
 
@@ -87,16 +97,19 @@ const ContactForm: React.FC = () => {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
+
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
 
     // Clear error when user starts typing
     if (errors[name as keyof FormData]) {
+
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
   };
 
   if (isSubmitted) {
+
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -174,6 +187,7 @@ const ContactForm: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+
                   errors.name ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="John Doe"
@@ -197,6 +211,7 @@ const ContactForm: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="john@company.com"
@@ -264,6 +279,7 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               rows={5}
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+
                 errors.message ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="Tell us about your project and how we can help..."
@@ -279,6 +295,7 @@ const ContactForm: React.FC = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2 ${
+
               isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >

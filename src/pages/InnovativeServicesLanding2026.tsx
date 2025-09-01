@@ -5,14 +5,18 @@ import { ADVANCED_INNOVATIVE_SERVICES_2025 } from "../data/advancedInnovativeSer
 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from "../data/nextGenInnovativeServices2026";
 
 const InnovativeServicesLanding2026: React.FC = () => {
+
   // Combine all services
   const allServices = [...ADVANCED_INNOVATIVE_SERVICES_2025, ...NEXT_GEN_INNOVATIVE_SERVICES_2026];
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1,
         delayChildren: 0.2
       }
@@ -20,8 +24,10 @@ const InnovativeServicesLanding2026: React.FC = () => {
   };
 
   const itemVariants = {
+
     hidden: { opacity: 0, y: 20 },
     visible: {
+
       opacity: 1,
       y: 0,
       transition: { duration: 0.5 }
@@ -29,11 +35,14 @@ const InnovativeServicesLanding2026: React.FC = () => {
   };
 
   const calculateTotalValue = () => {
+
     return allServices.reduce((total, service) => total + service.price, 0);
   };
 
   const calculateAverageROI = () => {
+
     const rois = allServices.map(service => {
+
       const roiStr = service.roi;
       const match = roiStr.match(/(\d+)%/);
       return match ? parseInt(match[1]) : 0;
@@ -42,15 +51,19 @@ const InnovativeServicesLanding2026: React.FC = () => {
   };
 
   const getTopServices = () => {
+
     return allServices
       .sort((a, b) => b.rating - a.rating)
       .slice(0, 6);
   };
 
   const getServicesByCategory = () => {
+
     const categories = {};
     allServices.forEach(service => {
+
       if (!categories[service.category]) {
+
         categories[service.category] = [];
       }
       categories[service.category].push(service);

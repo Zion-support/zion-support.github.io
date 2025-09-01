@@ -2,38 +2,45 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
 export default function GovernmentSolutions() {
+
     const solutions = [
         {
+
             icon: Building2,
             title: "Digital Government",
             description: "Modern digital government platforms and citizen services",
             features: ["Citizen Portals", "Digital Services", "E-Government", "Service Automation"]
         },
         {
+
             icon: Shield,
             title: "Government Security",
             description: "Comprehensive cybersecurity and compliance solutions for government",
             features: ["FedRAMP Compliance", "Zero-Trust Security", "Data Protection", "Incident Response"]
         },
         {
+
             icon: Users,
             title: "Citizen Experience",
             description: "AI-powered citizen engagement and service delivery",
             features: ["Smart Chatbots", "Personalized Services", "Multi-channel Support", "Accessibility"]
         },
         {
+
             icon: BarChart3,
             title: "Government Analytics",
             description: "Advanced analytics and insights for government decision-making",
             features: ["Performance Metrics", "Data Visualization", "Predictive Analytics", "Reporting"]
         },
         {
+
             icon: Lock,
             title: "Compliance & Audit",
             description: "Automated compliance monitoring and regulatory reporting",
             features: ["Regulatory Compliance", "Audit Trails", "Risk Management", "Policy Enforcement"]
         },
         {
+
             icon: Zap,
             title: "Process Automation",
             description: "Intelligent automation for government operations and workflows",
@@ -50,6 +57,7 @@ export default function GovernmentSolutions() {
     ];
     const caseStudies = [
         {
+
             organization: "State Government Agency",
             specialty: "Digital Services",
             challenge: "Outdated citizen services and long processing times",
@@ -57,6 +65,7 @@ export default function GovernmentSolutions() {
             results: "70% reduction in processing times, 85% improvement in citizen satisfaction"
         },
         {
+
             organization: "Federal Department",
             specialty: "Security & Compliance",
             challenge: "Cybersecurity vulnerabilities and compliance gaps",
@@ -108,6 +117,7 @@ export default function GovernmentSolutions() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => {
+
             const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">

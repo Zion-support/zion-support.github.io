@@ -79,9 +79,9 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
         // Log low FPS for debugging
         if (fps < 30) {
 
-          // // // // // // // // // console.warn(`Low FPS detected: ${fps}`);
+          // // // // // // // // // // console.warn(`Low FPS detected: ${fps}`);
         }
-          // // console.warn(`Low FPS detected: ${fps}`)}
+          // // // console.warn(`Low FPS detected: ${fps}`)}
       }
       animationFrameId = requestAnimationFrame(measureFPS)};
     animationFrameId = requestAnimationFrame(measureFPS);
@@ -101,9 +101,9 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
         // Warn if memory usage is high
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-          // // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
+          // // // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
         }
-          // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
+          // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
       }
     };
     const intervalId = setInterval(checkMemoryUsage, 5000);
@@ -127,9 +127,9 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       observerRef.current.observe(element)}
   }, [enableLazyLoading, createIntersectionObserver]);
   // Performance monitoring
-        // // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
+        // // // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
       }
-        // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+        // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
       // Report to analytics if available
       if (window.gtag) {
 

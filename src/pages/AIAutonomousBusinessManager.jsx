@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function AIAutonomousBusinessManager () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Brain,
@@ -586,6 +588,7 @@ import { motion } from 'framer - motion';
 
 const businessTechnologies = [
   {
+
     name: "AI & Machine Learning",
     description: "Advanced AI algorithms for business intelligence",
     icon: Brain,
@@ -593,6 +596,7 @@ const businessTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Data Analytics",
     description: "Comprehensive data analysis and visualization",
     icon: BarChart3,
@@ -600,6 +604,7 @@ const businessTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Process Automation",
     description: "Intelligent automation of business processes",
     icon: Cog,
@@ -607,6 +612,7 @@ const businessTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Predictive Analytics",
     description: "AI - powered forecasting and planning",
     icon: Target,
@@ -617,6 +623,7 @@ const businessTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Global Manufacturing Corp",
     industry: "Manufacturing",
@@ -626,6 +633,7 @@ const successStories = [
     logo: "GMC"
   },
   {
+
     id: 2,
     comp: "Financial Services Group",
     industry: "Finance",
@@ -635,6 +643,7 @@ const successStories = [
     logo: "FSG"
   },
   {
+
     id: 3,
     comp: "Retail Chain Network",
     industry: "Retail",
@@ -647,6 +656,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Business Assessment",
     description: "Evaluate current business processes and identify AI opportunities",
@@ -654,6 +664,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 2,
     title: "AI Strategy Development",
     description: "Develop AI strategy and implementation roadmap",
@@ -661,6 +672,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
   },
   {
+
     step: 3,
     title: "System Implementation",
     description: "Build and deploy AI business management systems",
@@ -668,6 +680,7 @@ const processSteps = [
     duration: "16 - 40 weeks"
   },
   {
+
     step: 4,
     title: "Optimization & Training",
     description: "Optimize systems and train business teams",
@@ -678,24 +691,28 @@ const processSteps = [
 
 const businessBenefits = [
   {
+
     title: "Intelligent Decision Making",
     description: "AI - powered insights enable better, data - driven business decisions",
     icon: Brain,
     examples["Data - driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"];
   },;
   {
+
     title: "Process Automation",
     description: "Automated workflows reduce manual effort and improve efficiency",
     icon: Zap,
     examples["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"];
   },;
   {
+
     title: "Cost Optimization",
     description: "AI identifies cost - saving opportunities and optimizes resource allocation",
     icon: TrendingUp,
     examples["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"];
   },;
   {
+
     title: "Competitive Advantage",
     description: "AI capabilities provide strategic advantages in the marketplace",
     icon: Rocket,
@@ -724,11 +741,13 @@ const businessBenefits = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -738,16 +757,19 @@ const businessBenefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -790,11 +812,13 @@ const businessBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -812,16 +836,19 @@ const businessBenefits = [
             {businessBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -852,11 +879,13 @@ const businessBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -874,16 +903,19 @@ const businessBenefits = [
             {businessTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -899,6 +931,7 @@ const businessBenefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -917,11 +950,13 @@ const businessBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -939,16 +974,19 @@ const businessBenefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -979,11 +1017,13 @@ const businessBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1003,6 +1043,7 @@ const businessBenefits = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -1016,16 +1057,19 @@ const businessBenefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1080,11 +1124,13 @@ const businessBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1102,16 +1148,19 @@ const businessBenefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1157,11 +1206,13 @@ const businessBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

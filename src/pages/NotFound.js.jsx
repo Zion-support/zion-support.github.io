@@ -2,27 +2,33 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 const NotFound = () => {
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20 flex items-center justify-center">
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <motion.div initial = {
+
   { opacity: 0,
   y: 30 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition={{ duration: 0.8 }}>
           {/* 404 Number */}
           <motion.div initial = {
+
   { opacity: 0,
   scale: 0.5 
 
 }} animate = {
+
   { opacity: 1,
   scale: 1 
 
 }} transition = {
+
   { duration: 1,
   delay: 0.2 
 
@@ -31,14 +37,17 @@ const NotFound = () => {
           </motion.div>
           {/* Error Message */}
           <motion.h1 initial = {
+
   { opacity: 0,
   y: 30 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.4 
 
@@ -46,14 +55,17 @@ const NotFound = () => {
             Page Not Found
           </motion.h1>
           <motion.p initial = {
+
   { opacity: 0,
   y: 30 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.6 
 
@@ -63,14 +75,17 @@ const NotFound = () => {
           </motion.p>
           {/* Navigation Options */}
           <motion.div initial = {
+
   { opacity: 0,
   y: 30 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.8 
 
@@ -107,14 +122,17 @@ const NotFound = () => {
           </motion.div>
           {/* CTA Buttons */}
           <motion.div initial = {
+
   { opacity: 0,
   y: 30 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 1 
 
@@ -134,6 +152,7 @@ const NotFound = () => {
           </motion.div>
           {/* Additional Help */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
+
   { duration: 0.8,
   delay: 1.2 
 

@@ -9,7 +9,7 @@ export const useGlobalEventListeners = () => {
 
     const handleGlobalError = (event: CustomEvent) => {
 
-      // // console.log('GlobalEventListener: Caught globalError event', event.detail);
+      // // // console.log('GlobalEventListener: Caught globalError event', event.detail);
       dispatch({
 
         type: 'SHOW_ERROR_MODAL',
@@ -21,7 +21,7 @@ export const useGlobalEventListeners = () => {
 
     const handleGlobalLoading = (event: CustomEvent) => {
 
-      // // console.log('GlobalEventListener: Caught globalLoading event', event.detail);
+      // // // console.log('GlobalEventListener: Caught globalLoading event', event.detail);
       dispatch({
 
         type: 'SET_IS_LOADING',

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function DigitalTwin () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Monitor,
@@ -48,6 +50,7 @@ import { motion } from 'framer - motion';
 
 const digitalTwinTechnologies = [
   {
+
     name: "IoT Sensors",
     description: "Real - time data collection from physical assets",
     icon: Activity,
@@ -55,6 +58,7 @@ const digitalTwinTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "3D Modeling",
     description: "Digital representation of physical objects and spaces",
     icon: Layers,
@@ -62,6 +66,7 @@ const digitalTwinTechnologies = [
     reliability: "High"
   },
   {
+
     name: "AI & Machine Learning",
     description: "Intelligent analysis and prediction capabilities",
     icon: Brain,
@@ -69,6 +74,7 @@ const digitalTwinTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Real - time Analytics",
     description: "Instant processing and analysis of streaming data",
     icon: RefreshCw,
@@ -79,6 +85,7 @@ const digitalTwinTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Advanced Manufacturing Corp",
     industry: "Manufacturing",
@@ -88,6 +95,7 @@ const successStories = [
     logo: "AMC"
   },
   {
+
     id: 2,
     comp: "Metropolitan City",
     industry: "Municipal",
@@ -97,6 +105,7 @@ const successStories = [
     logo: "MC"
   },
   {
+
     id: 3,
     comp: "Regional Power Grid",
     industry: "Energy",
@@ -109,6 +118,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Asset Assessment",
     description: "Evaluate physical assets and determine digital twin requirements",
@@ -116,6 +126,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 2,
     title: "Data Integration",
     description: "Integrate IoT sensors and data sources for real - time monitoring",
@@ -123,6 +134,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
   },
   {
+
     step: 3,
     title: "Digital Modeling",
     description: "Create 3D digital models and simulation environments",
@@ -130,6 +142,7 @@ const processSteps = [
     duration: "8 - 20 weeks"
   },
   {
+
     step: 4,
     title: "AI Integration",
     description: "Implement AI algorithms and predictive analytics",
@@ -140,24 +153,28 @@ const processSteps = [
 
 const digitalTwinBenefits = [
   {
+
     title: "Real - time Monitoring",
     description: "Continuous monitoring of physical assets and systems",
     icon: Eye,
     examples["Live data feeds", "Instant alerts", "Performance tracking"]
   },
   {
+
     title: "Predictive Analytics",
     description: "AI - powered predictions for maintenance and optimization",
     icon: TrendingUp,
     examples["Predictive maintenance", "Performance forecasting", "Risk assessment"]
   },
   {
+
     title: "Simulation & Testing",
     description: "Virtual testing of scenarios and what - if analysis",
     icon: Monitor,
     examples["Process simulation", "Scenario testing", "Optimization modeling"]
   },
   {
+
     title: "Cost Optimization",
     description: "Reduced operational costs through better resource management",
     icon: Gauge,
@@ -186,11 +203,13 @@ const digitalTwinBenefits = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -200,16 +219,19 @@ const digitalTwinBenefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -251,11 +273,13 @@ const digitalTwinBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -273,16 +297,19 @@ const digitalTwinBenefits = [
             {digitalTwinBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -313,11 +340,13 @@ const digitalTwinBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -335,16 +364,19 @@ const digitalTwinBenefits = [
             {digitalTwinTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -360,6 +392,7 @@ const digitalTwinBenefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -378,11 +411,13 @@ const digitalTwinBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -400,16 +435,19 @@ const digitalTwinBenefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -440,11 +478,13 @@ const digitalTwinBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -464,6 +504,7 @@ const digitalTwinBenefits = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -477,16 +518,19 @@ const digitalTwinBenefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -541,11 +585,13 @@ const digitalTwinBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -563,16 +609,19 @@ const digitalTwinBenefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -618,11 +667,13 @@ const digitalTwinBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

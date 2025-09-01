@@ -69,7 +69,7 @@ export function ContractForm({
   //   //   onContractGenerated(contract);
   //   // } catch (error) {
 
-  //   //   // // console.error("Error generating contract:", error);
+  //   //   // // // console.error("Error generating contract:", error);
   //   //   toast({
 
   //   //     title: "Contract Generation Failed",

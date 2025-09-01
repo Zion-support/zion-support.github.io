@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Shield, 
   Zap, 
@@ -43,6 +44,7 @@ import { CUTTING_EDGE_SERVICES_2025, SPECIALIZED_SERVICES_2025 } from '../data/2
 import { EMERGING_TECH_SERVICES_2025, ADDITIONAL_EMERGING_TECH_SERVICES } from '../data/emerging-tech-services-2025';
 
 const ComprehensiveServicesOverview2025: React.FC = () => {
+
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -73,6 +75,7 @@ const ComprehensiveServicesOverview2025: React.FC = () => {
   ];
 
   const filteredServices = allServices.filter(service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -81,32 +84,40 @@ const ComprehensiveServicesOverview2025: React.FC = () => {
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5
       }
     }
   };
 
   const getCategoryIcon = (category: string) => {
+
     const categoryData = categories.find(c => c.id === category);
     return categoryData?.icon || Star;
   };
 
   const getCategoryColor = (category: string) => {
+
     const categoryData = categories.find(c => c.id === category);
     return categoryData?.color || 'text-zion-cyan';
   };
@@ -180,6 +191,7 @@ const ComprehensiveServicesOverview2025: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-12">Service Categories</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {categories.map((category) => {
+
               const IconComponent = category.icon;
               return (
                 <motion.div
@@ -188,6 +200,7 @@ const ComprehensiveServicesOverview2025: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`text-center p-4 rounded-lg cursor-pointer transition-all duration-300 ${
+
                     selectedCategory === category.id 
                       ? 'bg-zion-cyan/20 border border-zion-cyan' 
                       : 'bg-zion-slate/30 border border-zion-slate-light/20 hover:border-zion-cyan/40'
@@ -228,6 +241,7 @@ const ComprehensiveServicesOverview2025: React.FC = () => {
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-2 rounded-lg transition-colors ${
+
                   viewMode === 'grid' 
                     ? 'bg-zion-cyan text-zion-slate-dark' 
                     : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'
@@ -243,6 +257,7 @@ const ComprehensiveServicesOverview2025: React.FC = () => {
               <button
                 onClick={() => setViewMode('list')}
                 className={`p-2 rounded-lg transition-colors ${
+
                   viewMode === 'list' 
                     ? 'bg-zion-cyan text-zion-slate-dark' 
                     : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'
@@ -287,6 +302,7 @@ const ComprehensiveServicesOverview2025: React.FC = () => {
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
                           {(() => {
+
                             const IconComponent = getCategoryIcon(service.category);
                             return <IconComponent className={`w-5 h-5 ${getCategoryColor(service.category)}`} />;
                           })()}
@@ -417,6 +433,7 @@ const ComprehensiveServicesOverview2025: React.FC = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3">
                         {(() => {
+
                           const IconComponent = getCategoryIcon(service.category);
                           return <IconComponent className={`w-6 h-6 ${getCategoryColor(service.category)}`} />;
                         })()}
@@ -534,6 +551,7 @@ const ComprehensiveServicesOverview2025: React.FC = () => {
               <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
               <button
                 onClick={() => {
+
                   setSearchTerm('');
                   setSelectedCategory('all');
                 }}

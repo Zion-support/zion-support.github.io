@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Shield, 
   Brain, 
   Eye, 
@@ -152,33 +153,40 @@ import {
 } from 'lucide-react';
 
 export default function AICybersecurityThreatIntelligence() {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Threat Detection",
       description: "Advanced machine learning models detect and analyze threats in real-time with 99.7% accuracy, reducing false positives by 85%."
     },
     {
+
       icon: <Eye className="w-6 h-6" />,
       title: "Real-time Monitoring",
       description: "24/7 monitoring across all endpoints, networks, and cloud environments with instant threat response and automated mitigation."
     },
     {
+
       icon: <Radar className="w-6 h-6" />,
       title: "Threat Intelligence",
       description: "Global threat intelligence network providing early warning of emerging threats, zero-day vulnerabilities, and attack patterns."
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Automated Response",
       description: "AI-driven incident response automatically blocks threats, isolates compromised systems, and initiates recovery procedures."
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Advanced Analytics",
       description: "Comprehensive security analytics dashboard with threat trends, risk scoring, and compliance reporting."
     },
     {
+
       icon: <Globe className="w-6 h-6" />,
       title: "Global Coverage",
       description: "Monitor and protect assets across on-premise, cloud, hybrid, and edge computing environments worldwide."
@@ -187,6 +195,7 @@ export default function AICybersecurityThreatIntelligence() {
 
   const pricingPlans = [
     {
+
       name: "Essential",
       price: "$799",
       period: "/month",
@@ -201,6 +210,7 @@ export default function AICybersecurityThreatIntelligence() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$1,999",
       period: "/month",
@@ -217,6 +227,7 @@ export default function AICybersecurityThreatIntelligence() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "Custom",
       period: "",
@@ -237,21 +248,25 @@ export default function AICybersecurityThreatIntelligence() {
 
   const benefits = [
     {
+
       icon: <Shield className="w-8 h-8" />,
       title: "Enhanced Protection",
       description: "Protect against 99.7% of known and unknown threats with AI-powered detection and response"
     },
     {
+
       icon: <Clock className="w-8 h-8" />,
       title: "Faster Response",
       description: "Reduce incident response time from hours to minutes with automated threat mitigation"
     },
     {
+
       icon: <DollarSign className="w-8 h-8" />,
       title: "Cost Reduction",
       description: "Save up to 60% on security operations costs while improving protection levels"
     },
     {
+
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Proactive Defense",
       description: "Identify and prevent 90% of attacks before they can cause damage or data loss"
@@ -260,21 +275,25 @@ export default function AICybersecurityThreatIntelligence() {
 
   const threatTypes = [
     {
+
       title: "Malware & Ransomware",
       description: "Advanced detection and prevention of sophisticated malware, ransomware, and fileless attacks",
       icon: <Bug className="w-6 h-6" />
     },
     {
+
       title: "Network Attacks",
       description: "Real-time detection of DDoS, man-in-the-middle, and network intrusion attempts",
       icon: <Network className="w-6 h-6" />
     },
     {
+
       title: "Social Engineering",
       description: "AI-powered detection of phishing, spear-phishing, and social engineering campaigns",
       icon: <Users className="w-6 h-6" />
     },
     {
+
       title: "Insider Threats",
       description: "Behavioral analysis to detect malicious insider activities and data exfiltration",
       icon: <Eye className="w-6 h-6" />
@@ -283,6 +302,7 @@ export default function AICybersecurityThreatIntelligence() {
 
   const securityMetrics = [
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Threat Detection Rate",
       current: "99.7%",
@@ -290,6 +310,7 @@ export default function AICybersecurityThreatIntelligence() {
       description: "Percentage of threats successfully detected and blocked"
     },
     {
+
       icon: <Clock className="w-6 h-6" />,
       title: "Response Time",
       current: "2.3 minutes",
@@ -297,6 +318,7 @@ export default function AICybersecurityThreatIntelligence() {
       description: "Average time from threat detection to response"
     },
     {
+
       icon: <DollarSign className="w-6 h-6" />,
       title: "Security ROI",
       current: "450%",
@@ -304,6 +326,7 @@ export default function AICybersecurityThreatIntelligence() {
       description: "Return on investment in security technology"
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "False Positive Rate",
       current: "0.3%",
@@ -314,31 +337,37 @@ export default function AICybersecurityThreatIntelligence() {
 
   const complianceStandards = [
     {
+
       name: "SOC 2 Type II",
       description: "Service Organization Control 2 compliance for security, availability, and confidentiality",
       icon: <CheckCircle className="w-6 h-6" />
     },
     {
+
       name: "ISO 27001",
       description: "International standard for information security management systems",
       icon: <CheckCircle className="w-6 h-6" />
     },
     {
+
       name: "GDPR",
       description: "General Data Protection Regulation compliance for EU data protection",
       icon: <CheckCircle className="w-6 h-6" />
     },
     {
+
       name: "HIPAA",
       description: "Health Insurance Portability and Accountability Act compliance",
       icon: <CheckCircle className="w-6 h-6" />
     },
     {
+
       name: "PCI DSS",
       description: "Payment Card Industry Data Security Standard compliance",
       icon: <CheckCircle className="w-6 h-6" />
     },
     {
+
       name: "NIST",
       description: "National Institute of Standards and Technology cybersecurity framework",
       icon: <CheckCircle className="w-6 h-6" />
@@ -538,6 +567,7 @@ export default function AICybersecurityThreatIntelligence() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                 plan.popular 
                   ? 'border-red-500/50 bg-slate-800/70' 
                   : 'border-slate-600'

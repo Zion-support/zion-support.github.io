@@ -7,6 +7,7 @@ import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from "lucide-react";
 function HiringTrackerContent() {
+
     const { jobId } = useParams();
     const [activeTab, setActiveTab] = useState("kanban");
     return (<>
@@ -43,6 +44,7 @@ function HiringTrackerContent() {
       
     </>)}
 export default function HiringTracker() {
+
     return (<ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>)}

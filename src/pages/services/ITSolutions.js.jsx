@@ -2,23 +2,28 @@ import React from 'react';
 import SEO from "@/components/SEO";
 import { Shield, Database, Monitor } from 'lucide-react';
 const ITSolutions = () => {
+
     const features = [
         {
+
             icon: Settings,
             title: "System Integration",
             description: "Seamless integration of existing and new IT systems"
         },
         {
+
             icon: Monitor,
             title: "IT Support",
             description: "24/7 IT support and maintenance services"
         },
         {
+
             icon: Database,
             title: "Data Management",
             description: "Comprehensive data management and backup solutions"
         },
         {
+
             icon: Shield,
             title: "IT Security",
             description: "Multi-layered security for your IT infrastructure"
@@ -39,10 +44,12 @@ const ITSolutions = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
           <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -53,14 +60,17 @@ const ITSolutions = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl md:text-2xl text-teal-100 max-w-4xl mx-auto leading-relaxed mb-8" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.2 
 
@@ -69,14 +79,17 @@ const ITSolutions = () => {
             efficiency, security, and performance across your organization.
           </motion.p>
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.4 
 
@@ -100,14 +113,17 @@ const ITSolutions = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -135,14 +151,17 @@ const ITSolutions = () => {
 
             <div className="space-y-6">
               {benefits.map((benefit, index) => (<motion.div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm" initial = {
+
   { opacity: 0,
   x: -20 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 

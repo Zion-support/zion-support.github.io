@@ -1,25 +1,30 @@
 import React from 'react';
 import { Brain, Zap, Target, TrendingUp, Shield, Globe, Lightbulb, Atom, CircuitBoard const QuantumNeuralNetwork = () => {
+
     const quantumFeatures = [
         {
+
             icon: Atom,
             title: "Quantum Processing",
             description: "Leverage quantum computing power for neural network operations",
             features: ["Quantum superposition", "Entanglement processing", "Quantum parallelism", "Coherent computation"]
         },
         {
+
             icon: CircuitBoard,
             title: "Hybrid Architecture",
             description: "Combine classical and quantum computing for optimal performance",
             features: ["Classical-quantum interface", "Hybrid algorithms", "Optimized workflows", "Seamless integration"]
         },
         {
+
             icon: Brain,
             title: "Neural Optimization",
             description: "Advanced neural network architectures optimized for quantum systems",
             features: ["Quantum neural layers", "Optimized training", "Efficient inference", "Scalable networks"]
         },
         {
+
             icon: Zap,
             title: "Performance Enhancement",
             description: "Exponential speedup for complex neural network operations",
@@ -28,36 +33,42 @@ import { Brain, Zap, Target, TrendingUp, Shield, Globe, Lightbulb, Atom, Circuit
     ];
     const applications = [
         {
+
             title: "Drug Discovery",
             description: "Accelerate pharmaceutical research with quantum-enhanced molecular modeling",
             icon: Atom,
             benefits: ["Faster molecular simulations", "Improved drug efficacy", "Reduced development time", "Better target identification"]
         },
         {
+
             title: "Financial Modeling",
             description: "Advanced risk assessment and portfolio optimization using quantum algorithms",
             icon: TrendingUp,
             benefits: ["Complex risk calculations", "Portfolio optimization", "Market prediction", "Fraud detection"]
         },
         {
+
             title: "Climate Modeling",
             description: "Accurate climate predictions and environmental impact assessments",
             icon: Globe,
             benefits: ["Precise simulations", "Long-term forecasting", "Impact analysis", "Policy optimization"]
         },
         {
+
             title: "AI Training",
             description: "Train large-scale AI models with quantum-enhanced optimization",
             icon: Brain,
             benefits: ["Faster convergence", "Better accuracy", "Larger models", "Efficient training"]
         },
         {
+
             title: "Cryptography",
             description: "Quantum-resistant encryption and secure communication systems",
             icon: Shield,
             benefits: ["Post-quantum security", "Advanced encryption", "Secure communications", "Future-proof systems"]
         },
         {
+
             title: "Logistics Optimization",
             description: "Complex routing and supply chain optimization problems",
             icon: Target,
@@ -74,31 +85,37 @@ import { Brain, Zap, Target, TrendingUp, Shield, Globe, Lightbulb, Atom, Circuit
     ];
     const implementation = [
         {
+
             phase: "Assessment",
             description: "Evaluate current systems and identify quantum opportunities",
             duration: "2-3 weeks"
         },
         {
+
             phase: "Architecture",
             description: "Design quantum-classical hybrid architecture",
             duration: "4-6 weeks"
         },
         {
+
             phase: "Development",
             description: "Build quantum neural network components",
             duration: "12-20 weeks"
         },
         {
+
             phase: "Integration",
             description: "Integrate with existing classical systems",
             duration: "4-8 weeks"
         },
         {
+
             phase: "Testing",
             description: "Validate quantum advantage and performance",
             duration: "3-6 weeks"
         },
         {
+
             phase: "Deployment",
             description: "Production deployment and user training",
             duration: "2-4 weeks"

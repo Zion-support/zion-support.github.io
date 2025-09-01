@@ -14,6 +14,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
     let services: any[] = [];
 
     switch (activeTab) {
+
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
         break;
@@ -25,6 +26,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         break}
 
     if (searchTerm) {
+
       services = services.filter (service => ;
         service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
@@ -32,6 +34,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
     }
 
     if (selectedCategory !== 'all') {
+
       services = services.filter (service => service.category === selectedCategory) };
 ;
     return services};
@@ -40,6 +43,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
     let services: any[] = [];
 
     switch (activeTab) {
+
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
         break;
@@ -54,7 +58,9 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
     return categories};
 
   const renderServiceCard = (service) => {
+
     if (activeTab === 'microsaas') {
+
       return (<div role="button" key={service.id} className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 border border - gray - 100 overflow - hidden">
           <div role="button" className="p - 6">
             <div role="button" className="flex items - start justify - between mb - 4">
@@ -150,6 +156,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
           </div>;
         </div>;) ;
     } else if (activeTab = == 'it') {
+
       return (<div role="button" key={service.id} className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 border border - gray - 100 overflow - hidden">
           <div role="button" className="p - 6">
             <div role="button" className="flex items - start justify - between mb - 4">
@@ -244,6 +251,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
           </div>;
         </div>;) ;
     } else {
+
       return (<div role="button" key = {service.id} className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 border border - gray - 100 overflow - hidden">
           <div role="button" className="p - 6">
             <div role="button" className="flex items - start justify - between mb - 4">
@@ -446,6 +454,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
             <div role="button" className="flex flex - wrap gap - 2 justify - center">
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('microsaas') }
                 className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 ${
+
                   activeTab === 'microsaas'
                     ? 'bg - gradient - to - r from - blue - 600 to - purple - 600 text - white shadow - lg'
                     : 'bg - white text - gray - 700 hover:bg - gray - 50 border border - gray - 200'
@@ -454,6 +463,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 Micro SAAS Services ({innovativeMicroSaasServices2030.length}) </button>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('it') }
                 className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 ${
+
                   activeTab === 'it'
                     ? 'bg - gradient - to - r from - green - 600 to - blue - 600 text - white shadow - lg'
                     : 'bg - white text - gray - 700 hover:bg - gray - 50 border border - gray - 200'
@@ -462,6 +472,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 IT Services ({comprehensiveITServices2030.length}) </button>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('ai') }
                 className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 ${
+
                   activeTab === 'ai'
                     ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 text - white shadow - lg'
                     : 'bg - white text - gray - 700 hover:bg - gray - 50 border border - gray - 200'

@@ -1,25 +1,30 @@
 import React from 'react';
 import { Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi const QuantumEdgeComputing = () => {
+
     const edgeFeatures = [
         {
+
             icon: Wifi,
             title: "Edge Processing",
             description: "Process data at the edge for real-time decision making",
             features: ["Local computation", "Reduced latency", "Bandwidth optimization", "Offline capability"]
         },
         {
+
             icon: Atom,
             title: "Quantum Enhancement",
             description: "Quantum algorithms for edge computing optimization",
             features: ["Quantum optimization", "Enhanced security", "Improved efficiency", "Future-proof technology"]
         },
         {
+
             icon: Zap,
             title: "Real-time Analytics",
             description: "Instant insights and decision making at the edge",
             features: ["Live data processing", "Instant responses", "Predictive analytics", "Actionable insights"]
         },
         {
+
             icon: Shield,
             title: "Edge Security",
             description: "Advanced security protocols for edge devices",
@@ -28,36 +33,42 @@ import { Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi cons
     ];
     const useCases = [
         {
+
             title: "IoT Networks",
             description: "Intelligent edge processing for IoT device networks",
             icon: Wifi,
             benefits: ["Reduced latency", "Lower bandwidth costs", "Improved reliability", "Scalable deployment"]
         },
         {
+
             title: "Autonomous Vehicles",
             description: "Real-time decision making for autonomous systems",
             icon: Target,
             benefits: ["Instant response", "Safety enhancement", "Efficient routing", "Continuous operation"]
         },
         {
+
             title: "Smart Cities",
             description: "Intelligent infrastructure management and optimization",
             icon: Globe,
             benefits: ["Traffic optimization", "Energy efficiency", "Public safety", "Resource management"]
         },
         {
+
             title: "Industrial IoT",
             description: "Manufacturing and industrial process optimization",
             icon: Cpu,
             benefits: ["Predictive maintenance", "Quality control", "Efficiency improvement", "Cost reduction"]
         },
         {
+
             title: "Healthcare Monitoring",
             description: "Real-time health monitoring and alert systems",
             icon: Shield,
             benefits: ["Instant alerts", "Continuous monitoring", "Data privacy", "Improved outcomes"]
         },
         {
+
             title: "Financial Services",
             description: "High-frequency trading and risk assessment",
             icon: TrendingUp,
@@ -74,31 +85,37 @@ import { Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi cons
     ];
     const implementation = [
         {
+
             phase: "Edge Assessment",
             description: "Evaluate current edge infrastructure and requirements",
             duration: "2-3 weeks"
         },
         {
+
             phase: "Architecture Design",
             description: "Design quantum-enhanced edge computing architecture",
             duration: "4-6 weeks"
         },
         {
+
             phase: "Edge Development",
             description: "Build and configure edge computing nodes",
             duration: "8-12 weeks"
         },
         {
+
             phase: "Quantum Integration",
             description: "Integrate quantum algorithms and optimization",
             duration: "6-10 weeks"
         },
         {
+
             phase: "Network Deployment",
             description: "Deploy edge nodes across the network",
             duration: "4-8 weeks"
         },
         {
+
             phase: "Testing & Optimization",
             description: "Validate performance and optimize systems",
             duration: "3-6 weeks"

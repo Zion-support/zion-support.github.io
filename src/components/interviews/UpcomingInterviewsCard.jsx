@@ -26,7 +26,7 @@ export function UpcomingInterviewsCard() {
                     !isPast(parseISO(interview.scheduled_date)))
                     .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime())
                     .slice(0, 3); // Take only the next 3 interviews"
-                // // // // // // // // // // console.error("Error loading upcoming interviews:", error);
+                // // // // // // // // // // // console.error("Error loading upcoming interviews:", error);
             }
             finally {
 
@@ -36,7 +36,7 @@ export function UpcomingInterviewsCard() {
             catch (error) {
 
 "
-                // // // console.error("Error loading upcoming interviews:", error)}
+                // // // // console.error("Error loading upcoming interviews:", error)}
             finally {
 
                 setIsLoading(false)}

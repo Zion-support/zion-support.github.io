@@ -1,4 +1,5 @@
 import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud export default function AIDigitalTwinPlatform(...args: any[]): any {
+
   const features = [
     'AI-powered digital twin creation and management',
     'Real-time IoT sensor data integration',
@@ -23,18 +24,21 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
 
   const pricing = [
     {
+
       name: 'Starter',
       price: '$599/mo',
       features: ['Up to 10 digital twins', 'Basic monitoring', 'Standard dashboards', 'Email support', 'Monthly reports'],
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$1,299/mo',
       features: ['Up to 50 digital twins', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$3,999/mo',
       features: ['Unlimited digital twins', 'Full AI suite', 'Custom models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
@@ -169,6 +173,7 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
+
                 plan.popular ? 'border-blue-500' : 'border-gray-200'
               } p-8`}>
                 {plan.popular && (
@@ -195,6 +200,7 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                   plan.popular
                     ? 'bg-blue-600 text-white hover:bg-blue-700'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'

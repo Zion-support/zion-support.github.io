@@ -57,17 +57,17 @@ export const useAICodeGeneration = () => {
                 target: options.target,
 <<<<<<< HEAD
                 quality: options.quality
-            // // // // // // // // // // // console.error('Failed to generate code:', error);
+            // // // // // // // // // // // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
 
 =======
                 quality: options.quality'
 <<<<<<< HEAD
-            // // // // // // // // // // console.error('Failed to generate code:', error);
+            // // // // // // // // // // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation',generation_failed',error', undefined, {
 
 =======
-            // // // // // // // // // // console.error('Failed to generate code:', error);'            trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
+            // // // // // // // // // // // console.error('Failed to generate code:', error);'            trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
 
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -83,18 +83,18 @@ export const useAICodeGeneration = () => {
         catch (error) {
 
 <<<<<<< HEAD
-            // // // // console.error('Failed to generate code:', error);
+            // // // // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', null, {
 
 =======
 <<<<<<< HEAD
 
-            // // // console.error('Failed to generate code:', error);
+            // // // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation',generation_failed',error', null, {
 
 =======
 '
-            // // // console.error('Failed to generate code:', error);'            trackEvent('ai_code_generation', 'generation_failed', 'error', null, {
+            // // // // console.error('Failed to generate code:', error);'            trackEvent('ai_code_generation', 'generation_failed', 'error', null, {
 
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -136,17 +136,17 @@ export const useAICodeGeneration = () => {
                 security: analysis.security,
 <<<<<<< HEAD
                 performance: analysis.performance
-            // // // // // // // // // // // console.error('Failed to analyze code:', error);
+            // // // // // // // // // // // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
 
 =======
                 performance: analysis.performance'
 <<<<<<< HEAD
-            // // // // // // // // // // console.error('Failed to analyze code:', error);
+            // // // // // // // // // // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis',analysis_failed',error', undefined, {
 
 =======
-            // // // // // // // // // // console.error('Failed to analyze code:', error);'            trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
+            // // // // // // // // // // // console.error('Failed to analyze code:', error);'            trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
 
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -162,18 +162,18 @@ export const useAICodeGeneration = () => {
         catch (error) {
 
 <<<<<<< HEAD
-            // // // // console.error('Failed to analyze code:', error);
+            // // // // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {
 
 =======
 <<<<<<< HEAD
 
-            // // // console.error('Failed to analyze code:', error);
+            // // // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis',analysis_failed',error', null, {
 
 =======
 '
-            // // // console.error('Failed to analyze code:', error);'            trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {
+            // // // // console.error('Failed to analyze code:', error);'            trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {
 
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -216,16 +216,16 @@ export const useAICodeGeneration = () => {
 <<<<<<< HEAD
                     optimizedCode = optimizeForAccessibility(code);
 <<<<<<< HEAD
-            // // // // // // // // // // // console.error('Failed to optimize code:', error);
+            // // // // // // // // // // // // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
 
 =======
-            // // // // // // // // // // console.error('Failed to optimize code:', error);
+            // // // // // // // // // // // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation',optimization_failed',error', undefined, {
 
 =======
                     optimizedCode = optimizeForAccessibility(code);'
-            // // // // // // // // // // console.error('Failed to optimize code:', error);'            trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
+            // // // // // // // // // // // console.error('Failed to optimize code:', error);'            trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
 
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -240,18 +240,18 @@ export const useAICodeGeneration = () => {
         catch (error) {
 
 <<<<<<< HEAD
-            // // // // console.error('Failed to optimize code:', error);
+            // // // // // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {
 
 =======
 <<<<<<< HEAD
 
-            // // // console.error('Failed to optimize code:', error);
+            // // // // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation',optimization_failed',error', null, {
 
 =======
 '
-            // // // console.error('Failed to optimize code:', error);'            trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {
+            // // // // console.error('Failed to optimize code:', error);'            trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {
 
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -271,18 +271,18 @@ export const useAICodeGeneration = () => {
             if (language === 'typescript' || language === 'javascript') {
 
 <<<<<<< HEAD
-            // // // // // // // // // // // console.error('Failed to generate tests:', error);
+            // // // // // // // // // // // // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
 
 =======
 <<<<<<< HEAD
 
-            // // // // // // // // // // console.error('Failed to generate tests:', error);
+            // // // // // // // // // // // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation',test_generation_failed',error', undefined, {
 
 =======
 '
-            // // // // // // // // // // console.error('Failed to generate tests:', error);'            trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
+            // // // // // // // // // // // console.error('Failed to generate tests:', error);'            trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
 
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -303,18 +303,18 @@ export const useAICodeGeneration = () => {
         catch (error) {
 
 <<<<<<< HEAD
-            // // // // console.error('Failed to generate tests:', error);
+            // // // // // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {
 
 =======
 <<<<<<< HEAD
 
-            // // // console.error('Failed to generate tests:', error);
+            // // // // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation',test_generation_failed',error', null, {
 
 =======
 '
-            // // // console.error('Failed to generate tests:', error);'            trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {
+            // // // // console.error('Failed to generate tests:', error);'            trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {
 
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -334,18 +334,18 @@ export const useAICodeGeneration = () => {
             if (language === 'typescript' || language === 'javascript') {
 
 <<<<<<< HEAD
-            // // // // // // // // // // // console.error('Failed to generate documentation:', error);
+            // // // // // // // // // // // // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
 
 =======
 <<<<<<< HEAD
 
-            // // // // // // // // // // console.error('Failed to generate documentation:', error);
+            // // // // // // // // // // // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation',doc_generation_failed',error', undefined, {
 
 =======
 '
-            // // // // // // // // // // console.error('Failed to generate documentation:', error);'            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
+            // // // // // // // // // // // console.error('Failed to generate documentation:', error);'            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
 
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -366,18 +366,18 @@ export const useAICodeGeneration = () => {
         catch (error) {
 
 <<<<<<< HEAD
-            // // // // console.error('Failed to generate documentation:', error);
+            // // // // // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {
 
 =======
 <<<<<<< HEAD
 
-            // // // console.error('Failed to generate documentation:', error);
+            // // // // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation',doc_generation_failed',error', null, {
 
 =======
 '
-            // // // console.error('Failed to generate documentation:', error);'            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {
+            // // // // console.error('Failed to generate documentation:', error);'            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {
 
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -500,11 +500,11 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
 
 <<<<<<< HEAD
-  // // // // // // // // // // // console.log(\`Server running on port \${PORT}\`);
+  // // // // // // // // // // // // console.log(\`Server running on port \${PORT}\`);
 });`;
 =======
 `
-  // // // // // // // // // // console.log(\`Server running on port \${PORT}\`);`});`;
+  // // // // // // // // // // // console.log(\`Server running on port \${PORT}\`);`});`;
 >>>>>>> main
     };
     const generatePythonCode = (prompt, _options) => {
@@ -552,23 +552,23 @@ if __name__ == "__main__":`
 // This is a placeholder implementation
 <<<<<<< HEAD
 
-// // // // // // // // // // // console.log("Generated code placeholder");
-// // // // // // // // // // // console.log("Prompt:", "${prompt}");
-// // // // // // // // // // // console.log("Language:", "${options.language}");`;
+// // // // // // // // // // // // console.log("Generated code placeholder");
+// // // // // // // // // // // // console.log("Prompt:", "${prompt}");
+// // // // // // // // // // // // console.log("Language:", "${options.language}");`;
     };
-// // // // console.log("Generated code placeholder");
-// // // // console.log("Prompt:", "${prompt}");
-// // // // console.log("Language:", "${options.language}");`};
+// // // // // console.log("Generated code placeholder");
+// // // // // console.log("Prompt:", "${prompt}");
+// // // // // console.log("Language:", "${options.language}");`};
     // Helper functions for code analysis
 =======
 "
-// // // // // // // // // // console.log("Generated code placeholder");"
-// // // // // // // // // // console.log("Prompt:", "${prompt}");"`
-// // // // // // // // // // console.log("Language:", "${options.language}");`;
+// // // // // // // // // // // console.log("Generated code placeholder");"
+// // // // // // // // // // // console.log("Prompt:", "${prompt}");"`
+// // // // // // // // // // // console.log("Language:", "${options.language}");`;
     };"
-// // // console.log("Generated code placeholder");"
-// // // console.log("Prompt:", "${prompt}");"`
-// // // console.log("Language:", "${options.language}");`};    // Helper functions for code analysis
+// // // // console.log("Generated code placeholder");"
+// // // // console.log("Prompt:", "${prompt}");"`
+// // // // console.log("Language:", "${options.language}");`};    // Helper functions for code analysis
 >>>>>>> main
     const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
         return Math.min(10, Math.max(1, Math.floor(cyclomaticComplexity / 5)));

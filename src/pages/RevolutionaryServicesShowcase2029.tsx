@@ -1,7 +1,9 @@
 import React, { useState } from 'react.ts';
 import { SEO } from '@/components / SEO';
 export default React.memo (function RevolutionaryServicesShowcase2029 (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from '../../data / revolutionary - 2029 - cutting - edge - services';
 import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data / revolutionary - 2029 - emerging - tech - services';
@@ -30,8 +32,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data / revoluti
   Dna,
   Atom,
   Link,
-  Box,
-} from 'lucide - react.ts';
+  Box} from 'lucide - react.ts';
 
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
@@ -67,6 +68,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data / revoluti
   ];
 
   const filteredServices = allServices.filter (service => {
+
     const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
       service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
       service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
@@ -75,7 +77,9 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data / revoluti
   }) ;
 
   const sortedServices = [...filteredServices].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'price - low':
         return (parseFloat (a.price.replace ('$', '') .replace (',', '') ) -
           parseFloat (b.price.replace ('$', '') .replace (',', '') ) ) ;
@@ -92,7 +96,9 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data / revoluti
   }) ;
 
   const getCategoryIcon = (category: anystring) => {
+
     const iconMap: { [key: string]: React.ReactNode } = {
+
       'AI & Analytics': <BarChart3 className="w - 5 h - 5" />,
       'AI & Automation': <Zap className="w - 5 h - 5" />,
       'AI & Cybersecurity': <Shield className="w - 5 h - 5" />,
@@ -112,8 +118,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data / revoluti
       'AI & Autonomous Vehicles': <Car className="w - 5 h - 5" />,
       'AI & Digital Twins': <Box className="w - 5 h - 5" />,
       'AI & Blockchain': <Link className="w - 5 h - 5" />,
-      'AI & Metaverse': <Globe className="w - 5 h - 5" />,
-    };
+      'AI & Metaverse': <Globe className="w - 5 h - 5" />};
     return iconMap[category] || <Cpu className="w - 5 h - 5" />;
   };
 

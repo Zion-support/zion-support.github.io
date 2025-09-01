@@ -7,21 +7,25 @@ import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, Tr
 import { TrustedBySection } from "../TrustedBySection";
 const blockchainBenefits = [
     {
+
         title: "Transparency",
         description: "Immutable, transparent records that build trust and enable verifiable transactions",
         icon: <Globe className="h-6 w-6"/>
     },
     {
+
         title: "Security",
         description: "Cryptographic security and decentralized architecture protect against fraud and attacks",
         icon: <Lock className="h-6 w-6"/>
     },
     {
+
         title: "Efficiency",
         description: "Automated smart contracts reduce intermediaries and streamline complex processes",
         icon: <Zap className="h-6 w-6"/>
     },
     {
+
         title: "Innovation",
         description: "Enable new business models and revenue streams through tokenization and DeFi",
         icon: <TrendingUp className="h-6 w-6"/>
@@ -29,27 +33,32 @@ const blockchainBenefits = [
 ];
 const useCases = [
     {
+
         title: "Supply Chain Management",
         description: "Track products from origin to consumer with immutable records and real-time visibility",
         icon: <LinkIcon className="h-6 w-6"/>
     },
     {
+
         title: "Digital Identity",
         description: "Self-sovereign identity solutions for secure, privacy-preserving authentication",
         icon: <Shield className="h-6 w-6"/>
     },
     {
+
         title: "Asset Tokenization",
         description: "Convert real-world assets into digital tokens for fractional ownership and trading",
         icon: <Coins className="h-6 w-6"/>
     },
     {
+
         title: "Decentralized Finance",
         description: "Build financial services without intermediaries using smart contracts and DeFi protocols",
         icon: <Wallet className="h-6 w-6"/>
     }
 ];
 export default function BlockchainServicesPage() {
+
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">

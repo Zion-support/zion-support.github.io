@@ -84,6 +84,7 @@ export function LoadingPulse({ size = 'md', color = 'primary' }: Omit<LoadingSpi
           key={i}`
           className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
           style={{
+
 `
             animationDelay: `${i * 0.2}s`
           }}

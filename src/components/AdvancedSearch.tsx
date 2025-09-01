@@ -259,7 +259,7 @@ export function AdvancedSearch() {
       
     } catch (error) {
 
-      // // console.error('Search failed:', error);
+      // // // console.error('Search failed:', error);
     } finally {
 
       setIsSearching(false);

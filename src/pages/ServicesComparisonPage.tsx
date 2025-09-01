@@ -1,10 +1,12 @@
 import { BarChart3, CheckCircle, Star, TrendingUp, Users, Zap } from 'lucide - react';
 import React from 'react';
 export default React.memo (function ServicesComparisonPage () {
+
 import { motion } from 'framer - motion';
 
   const services = [
     {
+
       name: 'AI Business Intelligence',
       category: 'AI & Analytics',
       features: ['Machine Learning', 'Data Visualization', 'Predictive Analytics', 'Real - time Insights'],
@@ -14,6 +16,7 @@ import { motion } from 'framer - motion';
       icon: BarChart3
     },
     {
+
       name: 'Digital Twin Platform',
       category: 'IoT & Simulation',
       features: ['Real - time Monitoring', 'Predictive Maintenance', '3D Visualization', 'API Integration'],
@@ -23,6 +26,7 @@ import { motion } from 'framer - motion';
       icon: Zap
     },
     {
+
       name: 'Cybersecurity Suite',
       category: 'Security',
       features: ['Threat Detection', 'Incident Response', 'Compliance Monitoring', '24 / 7 Support'],

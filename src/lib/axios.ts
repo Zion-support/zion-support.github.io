@@ -183,7 +183,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
   // Global Error Interceptor
   instance.interceptors.response.use(undefined, async (error: any) => {
 
-    // // console.log("Global error interceptor caught (axios.ts):", error);
+    // // // console.log("Global error interceptor caught (axios.ts):", error);
 
     // 1. Set Loading False via event
     document.dispatchEvent(new CustomEvent('globalLoading', { detail: { isLoading: false } }));

@@ -3,6 +3,7 @@ import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "../data/ultimateMicroSaasServ
 import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from "../data/innovativeEnterpriseSolutions2025";
 import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from "../data/emergingTechnologySolutions2025";
 const UltimateServicesShowcase2025 = () => {
+
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -16,8 +17,9 @@ const UltimateServicesShowcase2025 = () => {
     // Get unique categories
     const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
     // Filter and sort services
-    const filteredServices = allServices
+    const filteredServices = allServices;
         .filter(service => {
+
         const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
         const priceMatch = selectedPriceRange === 'all' ||
             (selectedPriceRange === 'low' && service.price < 5000) ||
@@ -28,7 +30,9 @@ const UltimateServicesShowcase2025 = () => {
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         return categoryMatch && priceMatch && searchMatch})
         .sort((a, b) => {
+
         switch (sortBy) {
+
             case 'price':
                 return a.price - b.price;
             case 'name':
@@ -39,11 +43,15 @@ const UltimateServicesShowcase2025 = () => {
                 return 0}
     });
     const formatPrice = (price) => {
+
         if (price >= 1000) {
+
             return `$${(price / 1000).toFixed(1)}K`}
         return `$${price}`};
     const getSupportLevelColor = (level) => {
+
         switch (level) {
+
             case 'enterprise':
                 return 'bg-purple-600';
             case 'premium':

@@ -4,7 +4,9 @@ import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
+
   const [formData, setFormData] = useState({
+
     name: '',
     email: '',
     company: '',
@@ -16,13 +18,16 @@ const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+
     setFormData({
+
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -34,8 +39,10 @@ const Contact: React.FC = () => {
     
     // Reset form after 3 seconds
     setTimeout(() => {
+
       setIsSubmitted(false);
       setFormData({
+
         name: '',
         email: '',
         company: '',
@@ -48,24 +55,28 @@ const Contact: React.FC = () => {
 
   const contactMethods = [
     {
+
       icon: <Phone className="h-6 w-6" />,
       title: "Phone",
       details: "+1 (302) 464-0950",
       description: "Available Mon-Fri, 9AM-6PM EST"
     },
     {
+
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
       details: "kleber@ziontechgroup.com",
       description: "We'll respond within 24 hours"
     },
     {
+
       icon: <MapPin className="h-6 w-6" />,
       title: "Office",
       details: "364 E Main St STE 1008, Middletown DE 19709",
       description: "Visit us for a consultation"
     },
     {
+
       icon: <Clock className="h-6 w-6" />,
       title: "Business Hours",
       details: "Monday - Friday",
@@ -346,14 +357,17 @@ const Contact: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
+
                 title: "Expert Team",
                 description: "Our team consists of industry veterans with decades of combined experience in AI, cloud computing, and digital transformation."
               },
               {
+
                 title: "Proven Results",
                 description: "We've helped hundreds of companies achieve significant improvements in efficiency, cost savings, and competitive advantage."
               },
               {
+
                 title: "24/7 Support",
                 description: "Round-the-clock support ensures your business never stops, with rapid response times for critical issues."
               }

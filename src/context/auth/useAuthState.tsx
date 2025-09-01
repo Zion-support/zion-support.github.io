@@ -56,18 +56,18 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
                 accessToken: parsed.token,
 :src/context/auth/useAuthState.tsx
                 refreshToken: parsed.refreshToken || null'
-        // // // // // // // // // // console.error('Error checking auth state:', error)} finally {
+        // // // // // // // // // // // console.error('Error checking auth state:', error)} finally {
 
         setIsLoading(false)})}
                 refreshToken: parsed.refreshToken || null
-        // // // // // // // // // console.error('Error checking auth state:', error)} finally {
+        // // // // // // // // // // console.error('Error checking auth state:', error)} finally {
 
         setIsLoading(false)})}
           }
         }
       } catch (error) {
 
-        // // // console.error('Error checking auth state:', error)} finally {
+        // // // // console.error('Error checking auth state:', error)} finally {
 
         setIsLoading(false)}
     };

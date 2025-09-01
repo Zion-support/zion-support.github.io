@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Skeleton from '@/components/ui/skeleton';
 import { useAuth } from '@/hooks/useAuth';
 export default function CartPage() {
+
     const navigate = useNavigate();
     const { items, dispatch } = useCart();
     const { user } = useAuth();
@@ -11,63 +12,84 @@ export default function CartPage() {
     const [cartLoading, setCartLoading] = useState(true);
     const [showEmpty, setShowEmpty] = useState(false);
     useEffect(() => {
+
         if (reduxItems.length > 0) {
+
             setItems(reduxItems);
             setCartLoading(false)}
         else {
+
             const stored = safeStorage.getItem('zion_cart');
             if (stored) {
+
                 try {
+
                     dispatch(setItemsAction(JSON.parse(stored)))}
                 catch {
+
                     dispatch(setItemsAction([]))}
             }
             else {
+
                 dispatch(setItemsAction([]))}
         }
         ;
         load()}, [user, dispatch]);
     const updateQuantity = async (id, qty) => {
+
         dispatch(updateQuantityAction({ id, quantity: qty }));
         if (user) {
+
             try {
+
                 await fetch('/api/cart', {
+
                     method: 'PATCH',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ id, quantity: qty }),
-                })}
+                    body: JSON.stringify({ id, quantity: qty })})}
             catch (err) {
-                console.error('Failed to update cart', err)}
+
+                // console.error('Failed to update cart', err)}
         }
         setCartLoading(false)}, [reduxItems];
     useEffect(() => {
+
         if (!cartLoading && items.length === 0) {
+
             setShowEmpty(true)}
     }, [cartLoading, items]);
     const updateQuantity = (id, qty) => {
+
         dispatch(updateQuantityAction({ id, quantity: qty }))};
     const removeItem = (id) => {
+
         dispatch(removeItemAction(id))};
     const handleCheckout = () => {
+
         router.push('/checkout')};
     const applyCode = async () => {
+
         try {
+
             const res = await apiClient.post('/coupons/validate', {
+
                 code,
-                amount: subtotal,
-            });
+                amount: subtotal});
             setDiscount(res.data.discount || 0)}
         catch (e) {
+
             setDiscount(0)}
     };
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
     const total = subtotal - discount;
     if (cartLoading) {
+
         return (<div className="container py-10 space-y-4">
         <Skeleton className="h-8 w-1/3"/>
         <Skeleton className="h-32 w-full"/>
       </div>)}
     if (showEmpty) {
+
         return (<div className="container py-10 text-center">
         <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"/>
         <p>{t('cart.empty')}</p>
@@ -86,6 +108,7 @@ export default function CartPage() {
             </div>
             <div className="flex items-center gap-2">
               <input type="number" min={1} value={item.quantity} onChange = {
+
   e => updateQuantity(item.id, parseInt(e.target.value || '1',
   10))
 

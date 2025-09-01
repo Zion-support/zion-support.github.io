@@ -2,12 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-=======
->>>>>>> main
-
   Mail,
   Phone,
   MapPin,
@@ -30,7 +24,6 @@ export function FooterNewsletter() {
     setIsLoading (true) ;
     // Simulate API call
     setTimeout(() => {
-
       setIsSubscribed(true);
       setIsLoading(false);
       setEmail('');
@@ -88,40 +81,34 @@ export function FooterNewsletter() {
 }
 
 export function Footer() {
-
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     {
-
       name: 'LinkedIn',
       url: 'https://www.linkedin.com/company/ziontechgroup',
       icon: '💼',
       color: 'hover:bg-blue-600/20'
     },
     {
-
       name: 'Twitter',
       url: 'https://twitter.com/ziontechgroup',
       icon: '🐦',
       color: 'hover:bg-sky-500/20'
     },
     {
-
       name: 'GitHub',
       url: 'https://github.com/Zion-Holdings',
       icon: '💻',
       color: 'hover:bg-gray-600/20'
     },
     {
-
       name: 'YouTube',
       url: 'https://www.youtube.com/@ziontechgroup',
       icon: '📺',
       color: 'hover:bg-red-600/20'
     },
     {
-
       name: 'Discord',
       url: 'https://discord.gg/ziontechgroup',
       icon: '🎮',
@@ -131,7 +118,6 @@ export function Footer() {
 
   const footerSections = [
     {
-
       title: 'Services',
       links: [
         { label: 'AI Solutions', path: '/services/ai' },
@@ -141,7 +127,6 @@ export function Footer() {
       ]
     },
     {
-
       title: 'Company',
       links: [
         { label: 'About Us', path: '/about' },
@@ -151,7 +136,6 @@ export function Footer() {
       ]
     },
     {
-
       title: 'Resources',
       links: [
         { label: 'FAQ', path: '/faq' },
@@ -164,28 +148,24 @@ export function Footer() {
 
   const contactInfo = [
     {
-
       icon: Mail,
       label: 'Email',
       value: 'kleber@ziontechgroup.com',
       href: 'mailto:kleber@ziontechgroup.com'
     },
     {
-
       icon: Phone,
       label: 'Phone',
       value: '+1 302 464 0950',
       href: 'tel:+13024640950'
     },
     {
-
       icon: MapPin,
       label: 'Address',
       value: '364 E Main St STE 1008, Middletown DE 19709',
       href: '#'
     },
     {
-
       icon: Globe,
       label: 'Website',
       value: 'ziontechgroup.com',

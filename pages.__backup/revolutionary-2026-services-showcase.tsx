@@ -2,7 +2,18 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap, Brain, Atom, Rocket, Shield, Globe, Cpu, Database } from 'lucide-react';
+import {
+  ArrowRight,
+  Star,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Globe,
+  Cpu,
+  Database,
+} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionary2026AIServices } from '../data/revolutionary-2026-ai-services';
@@ -14,13 +25,13 @@ export default function Revolutionary2026ServicesShowcase() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com',
   };
 
   const allRevolutionaryServices = [
     ...revolutionary2026AIServices,
     ...revolutionary2026ITInfrastructureServices,
-    ...revolutionary2026MicroSaasServices
+    ...revolutionary2026MicroSaasServices,
   ];
 
   const serviceStats = {
@@ -31,12 +42,12 @@ export default function Revolutionary2026ServicesShowcase() {
     totalValue: allRevolutionaryServices.reduce((sum, service) => {
       const price = parseInt(service.price.replace(/[^0-9]/g, ''));
       return sum + price;
-    }, 0)
+    }, 0),
   };
 
   return (
-    <UltraAdvancedFuturisticBackground 
-      intensity="extreme" 
+    <UltraAdvancedFuturisticBackground
+      intensity="extreme"
       colorScheme="quantum"
       particleCount={500}
       animationSpeed={2.5}
@@ -45,15 +56,36 @@ export default function Revolutionary2026ServicesShowcase() {
     >
       <div className="min-h-screen">
         <Head>
-          <title>Revolutionary 2026 Services - Zion Tech Group | Next-Generation Technology</title>
-          <meta name="description" content="Experience the future with Zion Tech Group's revolutionary 2026 services. AI consciousness simulation, quantum computing, and cutting-edge infrastructure solutions." />
-          <meta name="keywords" content="2026 services, revolutionary AI, quantum computing, consciousness simulation, neuromorphic computing, DNA computing, photonic computing, holographic computing, quantum internet, edge quantum computing, space mining AI" />
+          <title>
+            Revolutionary 2026 Services - Zion Tech Group | Next-Generation
+            Technology
+          </title>
+          <meta
+            name="description"
+            content="Experience the future with Zion Tech Group's revolutionary 2026 services. AI consciousness simulation, quantum computing, and cutting-edge infrastructure solutions."
+          />
+          <meta
+            name="keywords"
+            content="2026 services, revolutionary AI, quantum computing, consciousness simulation, neuromorphic computing, DNA computing, photonic computing, holographic computing, quantum internet, edge quantum computing, space mining AI"
+          />
           <meta name="author" content="Zion Tech Group" />
-          <meta property="og:title" content="Revolutionary 2026 Services - Zion Tech Group" />
-          <meta property="og:description" content="Next-generation technology services for 2026 and beyond" />
-          <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2026-services-showcase" />
+          <meta
+            property="og:title"
+            content="Revolutionary 2026 Services - Zion Tech Group"
+          />
+          <meta
+            property="og:description"
+            content="Next-generation technology services for 2026 and beyond"
+          />
+          <meta
+            property="og:url"
+            content="https://ziontechgroup.com/revolutionary-2026-services-showcase"
+          />
           <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2026-services-showcase" />
+          <link
+            rel="canonical"
+            href="https://ziontechgroup.com/revolutionary-2026-services-showcase"
+          />
         </Head>
 
         <UltraAdvancedNavigation />
@@ -79,7 +111,7 @@ export default function Revolutionary2026ServicesShowcase() {
                 </div>
               </motion.div>
 
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -91,45 +123,61 @@ export default function Revolutionary2026ServicesShowcase() {
                 </span>
               </motion.h1>
 
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-5xl mx-auto font-medium"
               >
-                Experience the <span className="text-purple-400 font-bold">Future</span> with <span className="text-pink-400 font-bold">Groundbreaking</span> Technology
+                Experience the{' '}
+                <span className="text-purple-400 font-bold">Future</span> with{' '}
+                <span className="text-pink-400 font-bold">Groundbreaking</span>{' '}
+                Technology
               </motion.p>
 
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="text-lg md:text-xl text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed"
               >
-                <span className="text-purple-300 font-semibold">{serviceStats.totalServices}</span> revolutionary services that push the boundaries of what's possible. From AI consciousness simulation to quantum space mining, we're building tomorrow's technology today.
+                <span className="text-purple-300 font-semibold">
+                  {serviceStats.totalServices}
+                </span>{' '}
+                revolutionary services that push the boundaries of what's
+                possible. From AI consciousness simulation to quantum space
+                mining, we're building tomorrow's technology today.
               </motion.p>
-              
+
               {/* Service Statistics Grid */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.55 }}
                 className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto"
               >
                 <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="text-2xl font-bold text-purple-400">{serviceStats.aiServices}</div>
+                  <div className="text-2xl font-bold text-purple-400">
+                    {serviceStats.aiServices}
+                  </div>
                   <div className="text-sm text-gray-300">AI Services</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="text-2xl font-bold text-pink-400">{serviceStats.itInfrastructure}</div>
+                  <div className="text-2xl font-bold text-pink-400">
+                    {serviceStats.itInfrastructure}
+                  </div>
                   <div className="text-sm text-gray-300">IT Infrastructure</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="text-2xl font-bold text-red-400">{serviceStats.microSaas}</div>
+                  <div className="text-2xl font-bold text-red-400">
+                    {serviceStats.microSaas}
+                  </div>
                   <div className="text-sm text-gray-300">Micro SaaS</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="text-2xl font-bold text-cyan-400">${(serviceStats.totalValue / 1000).toFixed(0)}K+</div>
+                  <div className="text-2xl font-bold text-cyan-400">
+                    ${(serviceStats.totalValue / 1000).toFixed(0)}K+
+                  </div>
                   <div className="text-sm text-gray-300">Total Value</div>
                 </div>
               </motion.div>
@@ -173,7 +221,9 @@ export default function Revolutionary2026ServicesShowcase() {
                 🧠 Revolutionary AI Services 2026
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Experience the future of artificial intelligence with consciousness simulation, quantum hybrid computing, and autonomous decision engines
+                Experience the future of artificial intelligence with
+                consciousness simulation, quantum hybrid computing, and
+                autonomous decision engines
               </p>
             </motion.div>
 
@@ -191,23 +241,37 @@ export default function Revolutionary2026ServicesShowcase() {
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-4xl">{service.icon}</div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                        <div className="text-sm text-gray-400">{service.period}</div>
+                        <div className="text-2xl font-bold text-cyan-400">
+                          {service.price}
+                        </div>
+                        <div className="text-sm text-gray-400">
+                          {service.period}
+                        </div>
                       </div>
                     </div>
-                    <h4 className="text-xl font-bold text-white mb-2">{service.name}</h4>
+                    <h4 className="text-xl font-bold text-white mb-2">
+                      {service.name}
+                    </h4>
                     <p className="text-gray-300 mb-4">{service.tagline}</p>
                     <div className="space-y-2 mb-4">
                       {service.features.slice(0, 4).map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-gray-400">
+                        <div
+                          key={idx}
+                          className="flex items-center text-sm text-gray-400"
+                        >
                           <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
                           {feature}
                         </div>
                       ))}
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-cyan-400 font-semibold">{service.category}</span>
-                      <Link href={service.link} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                      <span className="text-sm text-cyan-400 font-semibold">
+                        {service.category}
+                      </span>
+                      <Link
+                        href={service.link}
+                        className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                      >
                         Learn More →
                       </Link>
                     </div>
@@ -232,47 +296,64 @@ export default function Revolutionary2026ServicesShowcase() {
                 ⚛️ Revolutionary IT Infrastructure 2026
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Next-generation computing infrastructure with quantum cloud, neuromorphic computing, and photonic processors
+                Next-generation computing infrastructure with quantum cloud,
+                neuromorphic computing, and photonic processors
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {revolutionary2026ITInfrastructureServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group relative"
-                >
-                  <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-4xl">{service.icon}</div>
-                      <div className="text-right">
-                        <div className="text-2xl font-bold text-purple-400">{service.price}</div>
-                        <div className="text-sm text-gray-400">{service.period}</div>
+              {revolutionary2026ITInfrastructureServices.map(
+                (service, index) => (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                  >
+                    <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-4xl">{service.icon}</div>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-purple-400">
+                            {service.price}
+                          </div>
+                          <div className="text-sm text-gray-400">
+                            {service.period}
+                          </div>
+                        </div>
+                      </div>
+                      <h4 className="text-xl font-bold text-white mb-2">
+                        {service.name}
+                      </h4>
+                      <p className="text-gray-300 mb-4">{service.tagline}</p>
+                      <div className="space-y-2 mb-4">
+                        {service.features.slice(0, 4).map((feature, idx) => (
+                          <div
+                            key={idx}
+                            className="flex items-center text-sm text-gray-400"
+                          >
+                            <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-purple-400 font-semibold">
+                          {service.category}
+                        </span>
+                        <Link
+                          href={service.link}
+                          className="text-purple-400 hover:text-purple-300 transition-colors"
+                        >
+                          Learn More →
+                        </Link>
                       </div>
                     </div>
-                    <h4 className="text-xl font-bold text-white mb-2">{service.name}</h4>
-                    <p className="text-gray-300 mb-4">{service.tagline}</p>
-                    <div className="space-y-2 mb-4">
-                      {service.features.slice(0, 4).map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-gray-400">
-                          <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-purple-400 font-semibold">{service.category}</span>
-                      <Link href={service.link} className="text-purple-400 hover:text-purple-300 transition-colors">
-                        Learn More →
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                )
+              )}
             </div>
           </div>
         </section>
@@ -291,7 +372,8 @@ export default function Revolutionary2026ServicesShowcase() {
                 🚀 Revolutionary Micro SaaS 2026
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Intelligent business solutions powered by AI for marketing, sales, customer service, and analytics
+                Intelligent business solutions powered by AI for marketing,
+                sales, customer service, and analytics
               </p>
             </motion.div>
 
@@ -309,23 +391,37 @@ export default function Revolutionary2026ServicesShowcase() {
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-4xl">{service.icon}</div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-pink-400">{service.price}</div>
-                        <div className="text-sm text-gray-400">{service.period}</div>
+                        <div className="text-2xl font-bold text-pink-400">
+                          {service.price}
+                        </div>
+                        <div className="text-sm text-gray-400">
+                          {service.period}
+                        </div>
                       </div>
                     </div>
-                    <h4 className="text-xl font-bold text-white mb-2">{service.name}</h4>
+                    <h4 className="text-xl font-bold text-white mb-2">
+                      {service.name}
+                    </h4>
                     <p className="text-gray-300 mb-4">{service.tagline}</p>
                     <div className="space-y-2 mb-4">
                       {service.features.slice(0, 4).map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-gray-400">
+                        <div
+                          key={idx}
+                          className="flex items-center text-sm text-gray-400"
+                        >
                           <div className="w-2 h-2 bg-pink-400 rounded-full mr-2"></div>
                           {feature}
                         </div>
                       ))}
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-pink-400 font-semibold">{service.category}</span>
-                      <Link href={service.link} className="text-pink-400 hover:text-pink-300 transition-colors">
+                      <span className="text-sm text-pink-400 font-semibold">
+                        {service.category}
+                      </span>
+                      <Link
+                        href={service.link}
+                        className="text-pink-400 hover:text-pink-300 transition-colors"
+                      >
                         Learn More →
                       </Link>
                     </div>
@@ -352,10 +448,11 @@ export default function Revolutionary2026ServicesShowcase() {
                 </span>
               </h2>
               <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
-                Transform your business with revolutionary 2026 technology. Contact our experts for a free consultation.
+                Transform your business with revolutionary 2026 technology.
+                Contact our experts for a free consultation.
               </p>
             </motion.div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -366,8 +463,12 @@ export default function Revolutionary2026ServicesShowcase() {
               >
                 <div className="text-4xl mb-4">📱</div>
                 <h3 className="text-xl font-bold text-white mb-3">Phone</h3>
-                <p className="text-purple-400 text-lg font-semibold mb-2">{contactInfo.mobile}</p>
-                <p className="text-gray-300 text-sm">Available 24/7 for urgent inquiries</p>
+                <p className="text-purple-400 text-lg font-semibold mb-2">
+                  {contactInfo.mobile}
+                </p>
+                <p className="text-gray-300 text-sm">
+                  Available 24/7 for urgent inquiries
+                </p>
               </motion.div>
 
               <motion.div
@@ -379,7 +480,9 @@ export default function Revolutionary2026ServicesShowcase() {
               >
                 <div className="text-4xl mb-4">✉️</div>
                 <h3 className="text-xl font-bold text-white mb-3">Email</h3>
-                <p className="text-pink-400 text-lg font-semibold mb-2">{contactInfo.email}</p>
+                <p className="text-pink-400 text-lg font-semibold mb-2">
+                  {contactInfo.email}
+                </p>
                 <p className="text-gray-300 text-sm">Response within 2 hours</p>
               </motion.div>
 
@@ -392,7 +495,9 @@ export default function Revolutionary2026ServicesShowcase() {
               >
                 <div className="text-4xl mb-4">📍</div>
                 <h3 className="text-xl font-bold text-white mb-3">Address</h3>
-                <p className="text-red-400 text-lg font-semibold mb-2">364 E Main St STE 1008</p>
+                <p className="text-red-400 text-lg font-semibold mb-2">
+                  364 E Main St STE 1008
+                </p>
                 <p className="text-gray-300 text-sm">Middletown DE 19709</p>
               </motion.div>
             </div>
@@ -405,9 +510,12 @@ export default function Revolutionary2026ServicesShowcase() {
               className="text-center mt-12"
             >
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto">
-                <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Ready to Get Started?
+                </h3>
                 <p className="text-gray-300 mb-6">
-                  Join the future of technology with our revolutionary 2026 services.
+                  Join the future of technology with our revolutionary 2026
+                  services.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link

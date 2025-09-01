@@ -4,6 +4,7 @@ import { Brain, Link, Shield, Zap, CheckCircle, ArrowRight, Star, Globe, Lock, C
 import { SEO } from '@/components/SEO';
 
 const AIBlockchainSupplyChain: React.FC = () => {
+
   const features = [
     'AI-powered demand forecasting and inventory optimization',
     'Blockchain-based supply chain transparency and traceability',
@@ -27,6 +28,7 @@ const AIBlockchainSupplyChain: React.FC = () => {
 
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$3,999',
       period: 'month',
@@ -34,6 +36,7 @@ const AIBlockchainSupplyChain: React.FC = () => {
       popular: false
     },
     {
+
       plan: 'Enterprise',
       price: '$9,999',
       period: 'month',
@@ -41,6 +44,7 @@ const AIBlockchainSupplyChain: React.FC = () => {
       popular: true
     },
     {
+
       plan: 'Global',
       price: '$24,999',
       period: 'month',
@@ -286,6 +290,7 @@ const AIBlockchainSupplyChain: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-white rounded-2xl shadow-xl border-2 ${
+
                   plan.popular ? 'border-orange-500 scale-105' : 'border-gray-200'
                 }`}
               >
@@ -316,6 +321,7 @@ const AIBlockchainSupplyChain: React.FC = () => {
                   <a
                     href="https://ziontechgroup.com/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-orange-600 text-white hover:bg-orange-700'
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200'

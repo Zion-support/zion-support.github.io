@@ -2,15 +2,41 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, 
-  Phone, Zap, DollarSign, Shield, Mail, 
-  MapPin, Rocket, Brain, Sparkles, Atom, 
-  Dna, Users, Globe, Cpu, Lock, Database,
-  BarChart3, Target, Microscope, Cloud,
-  FileText, Search, Globe2, Calendar,
-  Users2, Zap as Lightning, BarChart,
-  MessageSquare, BookOpen, Target as TargetIcon
+import {
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Atom,
+  Dna,
+  Users,
+  Globe,
+  Cpu,
+  Lock,
+  Database,
+  BarChart3,
+  Target,
+  Microscope,
+  Cloud,
+  FileText,
+  Search,
+  Globe2,
+  Calendar,
+  Users2,
+  Zap as Lightning,
+  BarChart,
+  MessageSquare,
+  BookOpen,
+  Target as TargetIcon,
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
@@ -18,85 +44,97 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 const features = [
   {
     icon: Brain,
     title: 'AI-Powered Content Generation',
-    description: 'Advanced AI models create high-quality, engaging content that matches your brand voice and style.',
-    color: 'from-blue-500 to-purple-600'
+    description:
+      'Advanced AI models create high-quality, engaging content that matches your brand voice and style.',
+    color: 'from-blue-500 to-purple-600',
   },
   {
     icon: Search,
     title: 'SEO Optimization',
-    description: 'Real-time keyword analysis and SEO optimization to improve search rankings and drive organic traffic.',
-    color: 'from-green-500 to-emerald-600'
+    description:
+      'Real-time keyword analysis and SEO optimization to improve search rankings and drive organic traffic.',
+    color: 'from-green-500 to-emerald-600',
   },
   {
     icon: Globe2,
     title: 'Multi-Language Support',
-    description: 'Create content in multiple languages with automatic localization and cultural adaptation.',
-    color: 'from-cyan-500 to-blue-600'
+    description:
+      'Create content in multiple languages with automatic localization and cultural adaptation.',
+    color: 'from-cyan-500 to-blue-600',
   },
   {
     icon: BarChart,
     title: 'Performance Analytics',
-    description: 'Comprehensive analytics and A/B testing to optimize content performance and engagement.',
-    color: 'from-purple-500 to-pink-600'
+    description:
+      'Comprehensive analytics and A/B testing to optimize content performance and engagement.',
+    color: 'from-purple-500 to-pink-600',
   },
   {
     icon: Calendar,
     title: 'Content Calendar Management',
-    description: 'Organize and schedule content with automated workflows and team collaboration tools.',
-    color: 'from-orange-500 to-red-600'
+    description:
+      'Organize and schedule content with automated workflows and team collaboration tools.',
+    color: 'from-orange-500 to-red-600',
   },
   {
     icon: Users2,
     title: 'Team Collaboration',
-    description: 'Work together seamlessly with approval workflows, comments, and version control.',
-    color: 'from-indigo-500 to-purple-600'
-  }
+    description:
+      'Work together seamlessly with approval workflows, comments, and version control.',
+    color: 'from-indigo-500 to-purple-600',
+  },
 ];
 
 const useCases = [
   {
     title: 'Blog Content Creation',
-    description: 'Generate engaging blog posts, articles, and thought leadership content at scale.',
+    description:
+      'Generate engaging blog posts, articles, and thought leadership content at scale.',
     icon: FileText,
-    color: 'from-blue-500 to-purple-600'
+    color: 'from-blue-500 to-purple-600',
   },
   {
     title: 'Social Media Marketing',
-    description: 'Create optimized social media posts for all platforms with consistent brand messaging.',
+    description:
+      'Create optimized social media posts for all platforms with consistent brand messaging.',
     icon: MessageSquare,
-    color: 'from-green-500 to-emerald-600'
+    color: 'from-green-500 to-emerald-600',
   },
   {
     title: 'Email Campaigns',
-    description: 'Generate personalized email content that drives engagement and conversions.',
+    description:
+      'Generate personalized email content that drives engagement and conversions.',
     icon: Mail,
-    color: 'from-cyan-500 to-blue-600'
+    color: 'from-cyan-500 to-blue-600',
   },
   {
     title: 'Product Descriptions',
-    description: 'Create compelling product descriptions that highlight benefits and drive sales.',
+    description:
+      'Create compelling product descriptions that highlight benefits and drive sales.',
     icon: TargetIcon,
-    color: 'from-purple-500 to-pink-600'
+    color: 'from-purple-500 to-pink-600',
   },
   {
     title: 'Educational Content',
-    description: 'Develop comprehensive educational materials and training content.',
+    description:
+      'Develop comprehensive educational materials and training content.',
     icon: BookOpen,
-    color: 'from-orange-500 to-red-600'
+    color: 'from-orange-500 to-red-600',
   },
   {
     title: 'SEO Content',
-    description: 'Generate SEO-optimized content that ranks well and drives organic traffic.',
+    description:
+      'Generate SEO-optimized content that ranks well and drives organic traffic.',
     icon: Search,
-    color: 'from-indigo-500 to-purple-600'
-  }
+    color: 'from-indigo-500 to-purple-600',
+  },
 ];
 
 const pricingPlans = [
@@ -110,10 +148,10 @@ const pricingPlans = [
       'Basic SEO optimization',
       'Content calendar',
       'Email support',
-      'Basic analytics'
+      'Basic analytics',
     ],
     popular: false,
-    color: 'from-gray-500 to-gray-600'
+    color: 'from-gray-500 to-gray-600',
   },
   {
     name: 'Professional',
@@ -127,10 +165,10 @@ const pricingPlans = [
       'Team collaboration',
       'Advanced analytics',
       'Priority support',
-      'Custom brand voice training'
+      'Custom brand voice training',
     ],
     popular: true,
-    color: 'from-blue-500 to-purple-600'
+    color: 'from-blue-500 to-purple-600',
   },
   {
     name: 'Enterprise',
@@ -145,40 +183,77 @@ const pricingPlans = [
       'Custom workflows',
       'API access',
       'White-label options',
-      '24/7 phone support'
+      '24/7 phone support',
     ],
     popular: false,
-    color: 'from-purple-500 to-pink-600'
-  }
+    color: 'from-purple-500 to-pink-600',
+  },
 ];
 
 const integrations = [
-  'WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Google Analytics',
-  'Facebook', 'Twitter', 'LinkedIn', 'Instagram', 'TikTok',
-  'Slack', 'Microsoft Teams', 'Trello', 'Asana', 'Notion',
-  'Salesforce', 'Pipedrive', 'Zapier', 'Make', 'Webhooks'
+  'WordPress',
+  'Shopify',
+  'HubSpot',
+  'Mailchimp',
+  'Google Analytics',
+  'Facebook',
+  'Twitter',
+  'LinkedIn',
+  'Instagram',
+  'TikTok',
+  'Slack',
+  'Microsoft Teams',
+  'Trello',
+  'Asana',
+  'Notion',
+  'Salesforce',
+  'Pipedrive',
+  'Zapier',
+  'Make',
+  'Webhooks',
 ];
 
 export default function AIContentIntelligenceSuite() {
   return (
     <Layout>
       <Head>
-        <title>AI Content Intelligence Suite | Zion Tech Group - Revolutionary AI Content Creation Platform</title>
-        <meta name="description" content="Transform content creation with our AI-powered intelligence suite. Generate engaging content, optimize for SEO, and manage your content calendar with advanced AI technology." />
-        <meta name="keywords" content="AI content creation, content generation, SEO optimization, content management, AI writing, Zion Tech Group" />
+        <title>
+          AI Content Intelligence Suite | Zion Tech Group - Revolutionary AI
+          Content Creation Platform
+        </title>
+        <meta
+          name="description"
+          content="Transform content creation with our AI-powered intelligence suite. Generate engaging content, optimize for SEO, and manage your content calendar with advanced AI technology."
+        />
+        <meta
+          name="keywords"
+          content="AI content creation, content generation, SEO optimization, content management, AI writing, Zion Tech Group"
+        />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="AI Content Intelligence Suite - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary AI-powered content creation and optimization platform." />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-content-intelligence-suite" />
+        <meta
+          property="og:title"
+          content="AI Content Intelligence Suite - Zion Tech Group"
+        />
+        <meta
+          property="og:description"
+          content="Revolutionary AI-powered content creation and optimization platform."
+        />
+        <meta
+          property="og:url"
+          content="https://ziontechgroup.com/ai-content-intelligence-suite"
+        />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-content-intelligence-suite" />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/ai-content-intelligence-suite"
+        />
       </Head>
 
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black"></div>
-        
+
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -204,7 +279,9 @@ export default function AIContentIntelligenceSuite() {
               <span className="text-white">Suite</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your content creation with AI-powered intelligence. Generate engaging content at scale, optimize for SEO, and maintain your brand voice across all channels.
+              Transform your content creation with AI-powered intelligence.
+              Generate engaging content at scale, optimize for SEO, and maintain
+              your brand voice across all channels.
             </p>
           </motion.div>
 
@@ -270,7 +347,8 @@ export default function AIContentIntelligenceSuite() {
               Revolutionary Features
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our AI Content Intelligence Suite combines cutting-edge technology with intuitive design to deliver exceptional results.
+              Our AI Content Intelligence Suite combines cutting-edge technology
+              with intuitive design to deliver exceptional results.
             </p>
           </motion.div>
 
@@ -284,10 +362,14 @@ export default function AIContentIntelligenceSuite() {
                 viewport={{ once: true }}
                 className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300 group"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                >
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-400">{feature.description}</p>
               </motion.div>
             ))}
@@ -309,7 +391,8 @@ export default function AIContentIntelligenceSuite() {
               Use Cases & Applications
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover how our AI Content Intelligence Suite can transform your content creation across various industries and use cases.
+              Discover how our AI Content Intelligence Suite can transform your
+              content creation across various industries and use cases.
             </p>
           </motion.div>
 
@@ -323,10 +406,14 @@ export default function AIContentIntelligenceSuite() {
                 viewport={{ once: true }}
                 className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-blue-500/30 transition-all duration-300 group"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                >
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {useCase.title}
+                </h3>
                 <p className="text-gray-400">{useCase.description}</p>
               </motion.div>
             ))}
@@ -335,7 +422,10 @@ export default function AIContentIntelligenceSuite() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-gradient-to-r from-gray-900 to-black">
+      <section
+        id="pricing"
+        className="py-20 bg-gradient-to-r from-gray-900 to-black"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -348,7 +438,8 @@ export default function AIContentIntelligenceSuite() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Choose the perfect plan for your content creation needs. All plans include a 14-day free trial.
+              Choose the perfect plan for your content creation needs. All plans
+              include a 14-day free trial.
             </p>
           </motion.div>
 
@@ -361,8 +452,8 @@ export default function AIContentIntelligenceSuite() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`p-8 bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border rounded-3xl transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-blue-500/50 scale-105 shadow-2xl shadow-blue-500/25' 
+                  plan.popular
+                    ? 'border-blue-500/50 scale-105 shadow-2xl shadow-blue-500/25'
                     : 'border-white/10 hover:border-blue-500/30'
                 }`}
               >
@@ -373,11 +464,15 @@ export default function AIContentIntelligenceSuite() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {plan.name}
+                  </h3>
                   <div className="flex items-baseline justify-center space-x-2 mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-4xl font-bold text-white">
+                      {plan.price}
+                    </span>
                     <span className="text-gray-400">{plan.period}</span>
                   </div>
                   <p className="text-gray-400">{plan.description}</p>
@@ -385,7 +480,10 @@ export default function AIContentIntelligenceSuite() {
 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center space-x-3"
+                    >
                       <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
@@ -419,7 +517,8 @@ export default function AIContentIntelligenceSuite() {
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Connect with your favorite tools and platforms to streamline your content creation workflow.
+              Connect with your favorite tools and platforms to streamline your
+              content creation workflow.
             </p>
           </motion.div>
 
@@ -433,7 +532,9 @@ export default function AIContentIntelligenceSuite() {
                 viewport={{ once: true }}
                 className="p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300 text-center"
               >
-                <span className="text-gray-300 text-sm font-medium">{integration}</span>
+                <span className="text-gray-300 text-sm font-medium">
+                  {integration}
+                </span>
               </motion.div>
             ))}
           </div>
@@ -454,7 +555,9 @@ export default function AIContentIntelligenceSuite() {
               Ready to Transform Your Content Creation?
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Contact us today to learn how our AI Content Intelligence Suite can revolutionize your content strategy and drive unprecedented engagement.
+              Contact us today to learn how our AI Content Intelligence Suite
+              can revolutionize your content strategy and drive unprecedented
+              engagement.
             </p>
           </motion.div>
 
@@ -486,7 +589,9 @@ export default function AIContentIntelligenceSuite() {
               className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
             >
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Email Us
+              </h3>
               <p className="text-gray-400 mb-4">{contactInfo.email}</p>
               <Link
                 href={`mailto:${contactInfo.email}`}
@@ -505,7 +610,9 @@ export default function AIContentIntelligenceSuite() {
               className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
             >
               <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Visit Us
+              </h3>
               <p className="text-gray-400 mb-4">{contactInfo.address}</p>
               <Link
                 href="/contact"

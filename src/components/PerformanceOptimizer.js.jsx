@@ -75,10 +75,10 @@ export const PerformanceOptimizer = ({ children }) => {
                 .register('/sw.js')
                 .then((registration) => {
 
-                // // // console.log('SW registered: ', registration)})
+                // // // // console.log('SW registered: ', registration)})
                 .catch((registrationError) => {
 
-                // // // console.log('SW registration failed: ', registrationError)})}
+                // // // // console.log('SW registration failed: ', registrationError)})}
     }, []);
     // Intersection Observer for lazy loading
     useEffect(() => {

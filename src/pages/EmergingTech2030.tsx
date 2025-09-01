@@ -1,6 +1,7 @@
 import { Link  } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default React.memo (function EmergingTech2030 (...args[]) :  {
+
 import { Brain,
 import { emergingTechServices2030 } from "../data / emergingTechServices2030";
 import { motion  } from 'framer - motion.ts';
@@ -34,6 +35,7 @@ import { SEO } from "../components / SEO";
 } from 'lucide - react';
 
   const containerVariants = {
+
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -44,6 +46,7 @@ import { SEO } from "../components / SEO";
   };
 
   const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0
 
@@ -58,6 +61,7 @@ import { SEO } from "../components / SEO";
   };
 
   const serviceIcons = {
+
   'Quantum Computing': Brain,
     'Artificial Intelligence': Cpu,
     'Neuromorphic Computing': Brain,
@@ -208,6 +212,7 @@ import { SEO } from "../components / SEO";
 
                     <Link
                       to = {
+
   `/services/${service.id.replace (/-/g,
   '-') }`}
                       className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300 transition - colors group"
@@ -242,36 +247,42 @@ import { SEO } from "../components / SEO";
             <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 8">
               {[
                 {
+
                   icon: Award,
                   title: 'Industry Expertise',
                   description: 'Deep knowledge across multiple industries with proven track records of successful implementations.',
                   color: 'from - yellow - 500 to - orange - 600'
                 },
                 {
+
                   icon: Users,
                   title: 'Expert Team',
                   description: 'World - class engineers, scientists, and consultants with advanced degrees and industry experience.',
                   color: 'from - blue - 500 to - cyan - 600'
                 },
                 {
+
                   icon: Target,
                   title: 'Custom Solutions',
                   description: 'Tailored solutions designed specifically for your business needs and industry requirements.',
                   color: 'from - green - 500 to - emerald - 600'
                 },
                 {
+
                   icon: BarChart3,
                   title: 'Proven Results',
                   description: 'Track record of delivering measurable business outcomes and ROI for our clients.',
                   color: 'from - purple - 500 to - pink - 600'
                 },
                 {
+
                   icon: Lightbulb,
                   title: 'Innovation First',
                   description: 'Always at the forefront of technology, exploring emerging trends and cutting - edge solutions.',
                   color: 'from - indigo - 500 to - purple - 600'
                 },
                 {
+
                   icon: Shield,
                   title: 'Enterprise Security',
                   description: 'Bank - grade security with SOC 2 compliance and enterprise - level data protection.',

@@ -3,7 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
-import { 
+import {
+
   Shield, 
   Database, 
   Lock, 
@@ -32,26 +33,31 @@ import {
 } from 'lucide-react';
 
 export default function AIDataGovernance() {
+
   const features = [
     {
+
       icon: Shield,
       title: 'Intelligent Data Classification',
       description: 'AI-powered automatic classification of sensitive data with context-aware labeling and risk assessment',
       benefits: ['Automated PII detection', 'Context-aware classification', 'Risk scoring', 'Real-time updates']
     },
     {
+
       icon: Lock,
       title: 'Advanced Access Control',
       description: 'Dynamic access management with behavioral analytics and just-in-time permissions',
       benefits: ['Behavioral analytics', 'Just-in-time access', 'Role-based permissions', 'Audit trails']
     },
     {
+
       icon: Eye,
       title: 'Privacy Compliance Automation',
       description: 'Automated GDPR, CCPA, and HIPAA compliance with intelligent data subject request handling',
       benefits: ['Automated compliance', 'Data subject requests', 'Consent management', 'Regulatory reporting']
     },
     {
+
       icon: Database,
       title: 'Data Lineage & Quality',
       description: 'End-to-end data lineage tracking with quality monitoring and impact analysis',
@@ -61,21 +67,25 @@ export default function AIDataGovernance() {
 
   const complianceFrameworks = [
     {
+
       name: 'GDPR',
       description: 'General Data Protection Regulation compliance with automated data subject rights management',
       features: ['Right to be forgotten', 'Data portability', 'Consent management', 'Breach notification']
     },
     {
+
       name: 'CCPA/CPRA',
       description: 'California Consumer Privacy Act compliance with automated consumer rights fulfillment',
       features: ['Consumer rights', 'Opt-out mechanisms', 'Data disclosure', 'Financial incentives']
     },
     {
+
       name: 'HIPAA',
       description: 'Health Insurance Portability and Accountability Act compliance for healthcare data',
       features: ['PHI protection', 'Access controls', 'Audit logging', 'Breach prevention']
     },
     {
+
       name: 'SOC 2 Type II',
       description: 'Service Organization Control 2 compliance for cloud service providers',
       features: ['Security controls', 'Availability monitoring', 'Processing integrity', 'Confidentiality']
@@ -84,6 +94,7 @@ export default function AIDataGovernance() {
 
   const pricing = [
     {
+
       name: 'Foundation',
       price: '$3,500',
       period: '/month',
@@ -99,6 +110,7 @@ export default function AIDataGovernance() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$8,500',
       period: '/month',
@@ -115,6 +127,7 @@ export default function AIDataGovernance() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$18,000',
       period: '/month',
@@ -135,21 +148,25 @@ export default function AIDataGovernance() {
 
   const useCases = [
     {
+
       title: 'Financial Services',
       description: 'Comprehensive data governance for banks, insurance, and fintech companies',
       benefits: ['Regulatory compliance', 'Fraud detection', 'Risk management', 'Customer privacy']
     },
     {
+
       title: 'Healthcare & Life Sciences',
       description: 'HIPAA-compliant data governance with patient privacy protection',
       benefits: ['Patient data security', 'Clinical research', 'Drug development', 'Compliance automation']
     },
     {
+
       title: 'E-commerce & Retail',
       description: 'Customer data protection with personalized marketing compliance',
       benefits: ['Customer privacy', 'Marketing compliance', 'Fraud prevention', 'Data monetization']
     },
     {
+
       title: 'Government & Public Sector',
       description: 'Secure data governance for sensitive government information',
       benefits: ['National security', 'Public records', 'Compliance automation', 'Audit readiness']
@@ -387,6 +404,7 @@ export default function AIDataGovernance() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border-2 ${
+
                   plan.popular 
                     ? 'border-cyan-500 shadow-2xl shadow-cyan-500/20' 
                     : 'border-slate-700'
@@ -421,6 +439,7 @@ export default function AIDataGovernance() {
                 <Link 
                   to={plan.cta === 'Contact Sales' ? '/contact' : '/contact'}
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'

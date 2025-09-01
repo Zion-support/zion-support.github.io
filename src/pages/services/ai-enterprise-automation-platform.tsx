@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Zap, 
   Shield, 
@@ -25,38 +26,45 @@ import {
 import { SEO } from '@/components/SEO';
 
 const AIEnterpriseAutomationPlatform: React.FC = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: 'Intelligent Process Discovery',
       description: 'AI-powered analysis to identify automation opportunities across your organization',
       benefits: ['Process mapping', 'Efficiency analysis', 'ROI calculation', 'Implementation roadmap']
     },
     {
+
       icon: Workflow,
       title: 'Visual Workflow Designer',
       description: 'Drag-and-drop interface for creating complex automation workflows without coding',
       benefits: ['No-code design', 'Template library', 'Custom workflows', 'Version control']
     },
     {
+
       icon: Integration,
       title: 'Multi-System Integration',
       description: 'Connect with 500+ enterprise systems and applications seamlessly',
       benefits: ['API integration', 'Data synchronization', 'Real-time updates', 'Error handling']
     },
     {
+
       icon: Brain,
       title: 'Machine Learning Integration',
       description: 'Advanced ML algorithms that learn and improve automation processes over time',
       benefits: ['Predictive analytics', 'Pattern recognition', 'Continuous learning', 'Performance optimization']
     },
     {
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'SOC 2 Type II compliant security with enterprise-grade encryption and access controls',
       benefits: ['Data encryption', 'Role-based access', 'Audit logging', 'Compliance reporting']
     },
     {
+
       icon: BarChart3,
       title: 'Real-time Analytics',
       description: 'Comprehensive dashboards and reporting for monitoring automation performance',
@@ -66,6 +74,7 @@ const AIEnterpriseAutomationPlatform: React.FC = () => {
 
   const pricingTiers = [
     {
+
       name: 'Starter',
       price: '$2,500',
       period: '/month',
@@ -81,6 +90,7 @@ const AIEnterpriseAutomationPlatform: React.FC = () => {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$7,500',
       period: '/month',
@@ -98,6 +108,7 @@ const AIEnterpriseAutomationPlatform: React.FC = () => {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$15,000',
       period: '/month',
@@ -120,21 +131,25 @@ const AIEnterpriseAutomationPlatform: React.FC = () => {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: '300% Efficiency Increase',
       description: 'Average productivity improvement across all automated processes'
     },
     {
+
       icon: Clock,
       title: '25+ Hours Saved Per Week',
       description: 'Time savings for each team member using the platform'
     },
     {
+
       icon: Users,
       title: 'Improved Employee Satisfaction',
       description: 'Eliminate repetitive tasks and focus on high-value work'
     },
     {
+
       icon: Shield,
       title: 'Enhanced Compliance',
       description: 'Automated compliance checks and audit trails'
@@ -143,18 +158,22 @@ const AIEnterpriseAutomationPlatform: React.FC = () => {
 
   const useCases = [
     {
+
       industry: 'Financial Services',
       applications: ['Loan processing', 'Risk assessment', 'Compliance reporting', 'Customer onboarding']
     },
     {
+
       industry: 'Healthcare',
       applications: ['Patient scheduling', 'Claims processing', 'Medical record management', 'Billing automation']
     },
     {
+
       industry: 'Manufacturing',
       applications: ['Supply chain management', 'Quality control', 'Inventory management', 'Production planning']
     },
     {
+
       industry: 'Retail',
       applications: ['Order processing', 'Inventory management', 'Customer service', 'Marketing automation']
     }
@@ -334,6 +353,7 @@ const AIEnterpriseAutomationPlatform: React.FC = () => {
                 <motion.div
                   key={tier.name}
                   className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                     tier.popular 
                       ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
                       : 'border-gray-700/50'
@@ -372,6 +392,7 @@ const AIEnterpriseAutomationPlatform: React.FC = () => {
                   
                   <motion.button
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       tier.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                         : 'bg-gray-700 text-white hover:bg-gray-600'

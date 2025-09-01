@@ -57,7 +57,7 @@ export function useDisputes() {
       setError(null);
     } catch (err: any) {
 
-      // // console.error("Error fetching disputes:", err);
+      // // // console.error("Error fetching disputes:", err);
       setError("Failed to fetch disputes: " + err.message);
       toast.error("Failed to fetch disputes");
       setDisputes([]); // Clear disputes on error
@@ -103,7 +103,7 @@ export function useDisputes() {
       } as Dispute;
     } catch (err: any) {
 
-      // // console.error("Error fetching dispute:", err);
+      // // // console.error("Error fetching dispute:", err);
       toast.error("Failed to fetch dispute details");
       return null;
     }
@@ -143,7 +143,7 @@ export function useDisputes() {
       return data as Dispute;
     } catch (err: any) {
 
-      // // console.error("Error creating dispute:", err);
+      // // // console.error("Error creating dispute:", err);
       toast.error("Failed to submit dispute");
       return null;
     }
@@ -170,7 +170,7 @@ export function useDisputes() {
       return true;
     } catch (err: any) {
 
-      // // console.error("Error updating dispute status:", err);
+      // // // console.error("Error updating dispute status:", err);
       toast.error("Failed to update dispute status");
       return false;
     }
@@ -215,7 +215,7 @@ export function useDisputes() {
       return true;
     } catch (err: any) {
 
-      // // console.error("Error resolving dispute:", err);
+      // // // console.error("Error resolving dispute:", err);
       toast.error("Failed to resolve dispute");
       return false;
     }
@@ -239,7 +239,7 @@ export function useDisputes() {
       return data as DisputeMessage[];
     } catch (err: any) {
 
-      // // console.error("Error fetching dispute messages:", err);
+      // // // console.error("Error fetching dispute messages:", err);
       toast.error("Failed to fetch messages");
       return [];
     }
@@ -271,7 +271,7 @@ export function useDisputes() {
       return true;
     } catch (err: any) {
 
-      // // console.error("Error sending message:", err);
+      // // // console.error("Error sending message:", err);
       toast.error("Failed to send message");
       return false;
     }

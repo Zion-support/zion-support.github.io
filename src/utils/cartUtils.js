@@ -46,7 +46,7 @@ export const getCart = () => {
     return cartData ? JSON.parse(cartData) : [];
   } catch (error) {
 
-    // // console.warn('Failed to get cart from localStorage:', error);
+    // // // console.warn('Failed to get cart from localStorage:', error);
     return [];
   }
 };
@@ -63,7 +63,7 @@ export const saveCart = (cart) => {
     return true;
   } catch (error) {
 
-    // // console.warn('Failed to save cart to localStorage:', error);
+    // // // console.warn('Failed to save cart to localStorage:', error);
     return false;
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
   }
@@ -102,7 +102,7 @@ export const addToCart = (cart, newItem) => {
 
   if (!validateCartItem(newItem)) {
 
-    // // console.warn('Invalid cart item:', newItem);
+    // // // console.warn('Invalid cart item:', newItem);
     return cart;
   }
 
@@ -433,7 +433,7 @@ export const exportCartData = (cart) => {
     return JSON.stringify(cart, null, 2);
   } catch (error) {
 
-    // // console.error('Error exporting cart data:', error);
+    // // // console.error('Error exporting cart data:', error);
     return '[]';
   }
 };
@@ -455,7 +455,7 @@ export const importCartData = (cartData) => {
     return [];
   } catch (error) {
 
-    // // console.error('Error importing cart data:', error);
+    // // // console.error('Error importing cart data:', error);
     return [];
   }
 };

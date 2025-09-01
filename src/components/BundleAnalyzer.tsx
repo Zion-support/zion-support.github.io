@@ -128,26 +128,26 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 =======
       // Log performance insights'
       console.group('🚀 Bundle Analysis');
-      // // // console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);`
-      // // // console.log(`Chunk Count: ${chunkCount}`);`
-      // // // console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024).toFixed(2)} MB)`);`
-      // // // console.log(`Average Chunk Size: ${(averageChunkSize / 1024 / 1024).toFixed(2)} MB`);`
-      // // // console.log(`Estimated Gzip Savings: ${(gzipSavings / 1024 / 1024).toFixed(2)} MB`);
+      // // // // console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);`
+      // // // // console.log(`Chunk Count: ${chunkCount}`);`
+      // // // // console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024).toFixed(2)} MB)`);`
+      // // // // console.log(`Average Chunk Size: ${(averageChunkSize / 1024 / 1024).toFixed(2)} MB`);`
+      // // // // console.log(`Estimated Gzip Savings: ${(gzipSavings / 1024 / 1024).toFixed(2)} MB`);
       
       // Performance recommendations
       if (totalSize > 5 * 1024 * 1024) { // 5MB'
-        // // // console.warn('⚠️ Bundle size is large. Consider code splitting and lazy loading.')}
+        // // // // console.warn('⚠️ Bundle size is large. Consider code splitting and lazy loading.')}
       
       if (chunkCount > 20) {
 
-        // // // console.warn('⚠️ Too many chunks. Consider consolidating small chunks.')}
+        // // // // console.warn('⚠️ Too many chunks. Consider consolidating small chunks.')}
       
       if (largestChunk.size > 2 * 1024 * 1024) { // 2MB'
-        // // // console.warn('⚠️ Largest chunk is too big. Consider splitting it further.')}
+        // // // // console.warn('⚠️ Largest chunk is too big. Consider splitting it further.')}
       
       console.groupEnd () } catch (error) {
 
-      // // // console.error('Bundle analysis failed:', error)}
+      // // // // console.error('Bundle analysis failed:', error)}
 >>>>>>> main
   }, [enabled]) ;
 
@@ -175,7 +175,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     optimizations.forEach(optimization => {
 
 `
-      // // // console.log(`🔧 Optimization: any${optimization}`)});
+      // // // // console.log(`🔧 Optimization: any${optimization}`)});
 
     return optimizations}, [enabled, metrics]) ;
   useEffect(() => {
@@ -206,7 +206,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 >>>>>>> main
     if (optimizations && optimizations.length > 0) {
 
-      // // // console.log('📊 Bundle optimization recommendations:', optimizations);
+      // // // // console.log('📊 Bundle optimization recommendations:', optimizations);
 <<<<<<< HEAD
     }
   }, [enabled, optimizeBundle]);

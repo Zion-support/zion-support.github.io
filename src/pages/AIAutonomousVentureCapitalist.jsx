@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function AIAutonomousVentureCapitalist () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Brain,
@@ -586,6 +588,7 @@ import { motion } from 'framer - motion';
 
 const vcTechnologies = [
   {
+
     name: "AI & Machine Learning",
     description: "Advanced AI algorithms for investment analysis",
     icon: Brain,
@@ -593,6 +596,7 @@ const vcTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Financial Analytics",
     description: "Comprehensive financial data analysis",
     icon: BarChart3,
@@ -600,6 +604,7 @@ const vcTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Market Intelligence",
     description: "Real - time market data and insights",
     icon: TrendingUp,
@@ -607,6 +612,7 @@ const vcTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Risk Management",
     description: "AI - powered risk assessment and management",
     icon: Shield,
@@ -617,6 +623,7 @@ const vcTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Innovation Capital Partners",
     industry: "Venture Capital",
@@ -626,6 +633,7 @@ const successStories = [
     logo: "ICP"
   },
   {
+
     id: 2,
     comp: "Tech Growth Fund",
     industry: "Investment Fund",
@@ -635,6 +643,7 @@ const successStories = [
     logo: "TGF"
   },
   {
+
     id: 3,
     comp: "Startup Ventures Ltd",
     industry: "Venture Capital",
@@ -647,6 +656,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Investment Strategy Assessment",
     description: "Evaluate current investment processes and identify AI opportunities",
@@ -654,6 +664,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 2,
     title: "AI Strategy Development",
     description: "Develop AI strategy and implementation roadmap",
@@ -661,6 +672,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
   },
   {
+
     step: 3,
     title: "System Implementation",
     description: "Build and deploy AI venture capital systems",
@@ -668,6 +680,7 @@ const processSteps = [
     duration: "22 - 48 weeks"
   },
   {
+
     step: 4,
     title: "Testing & Optimization",
     description: "Test systems and optimize performance",
@@ -678,24 +691,28 @@ const processSteps = [
 
 const vcBenefits = [
   {
+
     title: "Better Investment Decisions",
     description: "AI - powered insights enable data - driven investment decisions",
     icon: Brain,
     examples["Data - driven insights", "Market analysis", "Risk assessment", "Portfolio optimization"];
   },;
   {
+
     title: "Increased Deal Flow",
     description: "AI systems identify more investment opportunities",
     icon: Zap,
     examples["Deal sourcing", "Market scanning", "Opportunity identification", "Better coverage"];
   },;
   {
+
     title: "Improved Returns",
     description: "AI optimization leads to better portfolio performance",
     icon: TrendingUp,
     examples["Portfolio optimization", "Risk management", "Exit timing", "Better performance"];
   },;
   {
+
     title: "Operational Efficiency",
     description: "Automation reduces manual effort and improves processes",
     icon: Rocket,
@@ -724,11 +741,13 @@ const vcBenefits = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -738,16 +757,19 @@ const vcBenefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -790,11 +812,13 @@ const vcBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -812,16 +836,19 @@ const vcBenefits = [
             {vcBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -852,11 +879,13 @@ const vcBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -874,16 +903,19 @@ const vcBenefits = [
             {vcTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -899,6 +931,7 @@ const vcBenefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -917,11 +950,13 @@ const vcBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -939,16 +974,19 @@ const vcBenefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -979,11 +1017,13 @@ const vcBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1003,6 +1043,7 @@ const vcBenefits = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -1016,16 +1057,19 @@ const vcBenefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1080,11 +1124,13 @@ const vcBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1102,16 +1148,19 @@ const vcBenefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1157,11 +1206,13 @@ const vcBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

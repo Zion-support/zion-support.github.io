@@ -9,6 +9,7 @@ import {Header} from '@/components / Header';
 import {SEO} from '@/components / SEO';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
 export default function MicroSAASServicesPage () {
+
 import { Badge } from "../ui / badge";
 import { Button } from "../ui / button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui / card";
@@ -17,6 +18,7 @@ import {Star,
 
     const microSAASServices = [
         {
+
             id: "crm - saas",
             title: "ZionCRM Pro",
             description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.",
@@ -36,6 +38,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - crm",
             details: "Streamline your sales process with our comprehensive CRM solution. Track leads, manage contacts, and close more deals with intelligent automation and insights.",
             pricing: {
+
                 starter: "$29 / month",
                 professional: "$79 / month",
                 enterprise: "$199 / month"
@@ -45,6 +48,7 @@ import {Star,
             reviewCount: 342
         },
         {
+
             id: "project - management",
             title: "ZionProject Hub",
             description: "Project management platform with task tracking, team collaboration, and resource management.",
@@ -64,6 +68,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - project",
             details: "Keep your projects on track with our intuitive project management platform. Collaborate with your team, track progress, and deliver results on time.",
             pricing: {
+
                 starter: "$19 / month",
                 professional: "$49 / month",
                 enterprise: "$99 / month"
@@ -73,6 +78,7 @@ import {Star,
             reviewCount: 267
         },
         {
+
             id: "analytics - platform",
             title: "ZionAnalytics",
             description: "Business intelligence platform with real - time dashboards, reporting, and data visualization.",
@@ -92,6 +98,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - analytics",
             details: "Transform your data into actionable insights with our powerful analytics platform. Create custom dashboards, generate reports, and make data - driven decisions.",
             pricing: {
+
                 starter: "$39 / month",
                 professional: "$89 / month",
                 enterprise: "$199 / month"
@@ -101,6 +108,7 @@ import {Star,
             reviewCount: 189
         },
         {
+
             id: "communication - tool",
             title: "ZionChat",
             description: "Team communication platform with chat, video calls, and file sharing capabilities.",
@@ -120,6 +128,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - chat",
             details: "Connect your team with our modern communication platform. Chat, call, and collaborate seamlessly across all devices and platforms.",
             pricing: {
+
                 starter: "$15 / month",
                 professional: "$39 / month",
                 enterprise: "$79 / month"
@@ -129,6 +138,7 @@ import {Star,
             reviewCount: 198
         },
         {
+
             id: "document - management",
             title: "ZionDocs",
             description: "Document management system with version control, collaboration, and secure storage.",
@@ -148,6 +158,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - docs",
             details: "Organize and secure your documents with our enterprise - grade document management system. Collaborate with your team while maintaining version control and security.",
             pricing: {
+
                 starter: "$25 / month",
                 professional: "$59 / month",
                 enterprise: "$129 / month"
@@ -157,6 +168,7 @@ import {Star,
             reviewCount: 156
         },
         {
+
             id: "payment - processor",
             title: "ZionPay",
             description: "Payment processing solution with multiple payment methods, invoicing, and subscription management.",
@@ -176,6 +188,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - pay",
             details: "Accept payments from customers worldwide with our secure payment processing solution. Support multiple payment methods and automate your billing processes.",
             pricing: {
+
                 starter: "2.9% + $0.30",
                 professional: "2.5% + $0.30",
                 enterprise: "2.2% + $0.30"
@@ -185,6 +198,7 @@ import {Star,
             reviewCount: 423
         },
         {
+
             id: "marketing - automation",
             title: "ZionMarketing",
             description: "Marketing automation platform with email campaigns, lead nurturing, and conversion tracking.",
@@ -204,6 +218,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - marketing",
             details: "Automate your marketing efforts and nurture leads effectively with our comprehensive marketing automation platform. Track conversions and optimize your campaigns.",
             pricing: {
+
                 starter: "$49 / month",
                 professional: "$99 / month",
                 enterprise: "$199 / month"
@@ -213,6 +228,7 @@ import {Star,
             reviewCount: 234
         },
         {
+
             id: "inventory - management",
             title: "ZionInventory",
             description: "Inventory management system with stock tracking, order management, and supplier management.",
@@ -232,6 +248,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - inventory",
             details: "Keep track of your inventory in real - time with our comprehensive inventory management system. Prevent stockouts and optimize your supply chain.",
             pricing: {
+
                 starter: "$35 / month",
                 professional: "$79 / month",
                 enterprise: "$149 / month"
@@ -241,6 +258,7 @@ import {Star,
             reviewCount: 178
         },
         {
+
             id: "hr - management",
             title: "ZionHR",
             description: "Human resources management platform with employee onboarding, time tracking, and performance management.",
@@ -260,6 +278,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - hr",
             details: "Streamline your HR processes with our comprehensive human resources management platform. Manage employees, track performance, and ensure compliance.",
             pricing: {
+
                 starter: "$45 / month",
                 professional: "$89 / month",
                 enterprise: "$179 / month"
@@ -269,6 +288,7 @@ import {Star,
             reviewCount: 145
         },
         {
+
             id: "accounting - software",
             title: "ZionBooks",
             description: "Cloud - based accounting software with invoicing, expense tracking, and financial reporting.",
@@ -288,6 +308,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - books",
             details: "Manage your business finances with our cloud - based accounting software. Create invoices, track expenses, and generate comprehensive financial reports.",
             pricing: {
+
                 starter: "$30 / month",
                 professional: "$69 / month",
                 enterprise: "$129 / month"
@@ -297,6 +318,7 @@ import {Star,
             reviewCount: 267
         },
         {
+
             id: "ecommerce - platform",
             title: "ZionShop",
             description: "E - commerce platform with online store creation, payment processing, and inventory management.",
@@ -316,6 +338,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - shop",
             details: "Create and manage your online store with our comprehensive e - commerce platform. Sell products, process payments, and grow your business online.",
             pricing: {
+
                 starter: "$40 / month",
                 professional: "$89 / month",
                 enterprise: "$199 / month"
@@ -325,6 +348,7 @@ import {Star,
             reviewCount: 198
         },
         {
+
             id: "learning - platform",
             title: "ZionAcademy",
             description: "Online learning management system with course creation, student management, and progress tracking.",
@@ -344,6 +368,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - academy",
             details: "Create and deliver online courses with our comprehensive learning management system. Engage students and track their progress effectively.",
             pricing: {
+
                 starter: "$55 / month",
                 professional: "$109 / month",
                 enterprise: "$249 / month"
@@ -353,6 +378,7 @@ import {Star,
             reviewCount: 167
         },
         {
+
             id: "ai - content - generator",
             title: "ZionAI Writer",
             description: "AI - powered content generation platform for blogs, marketing copy, and creative writing.",
@@ -372,6 +398,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - ai - writer",
             details: "Generate high - quality, SEO - optimized content in seconds with our advanced AI writing platform. Save time and improve your content strategy.",
             pricing: {
+
                 starter: "$39 / month",
                 professional: "$79 / month",
                 enterprise: "$159 / month"
@@ -381,6 +408,7 @@ import {Star,
             reviewCount: 234
         },
         {
+
             id: "blockchain - wallet",
             title: "ZionWallet",
             description: "Secure cryptocurrency wallet with DeFi integration, staking, and portfolio management.",
@@ -400,6 +428,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - wallet",
             details: "Manage your cryptocurrency portfolio with our secure, multi - chain wallet. Access DeFi protocols and earn staking rewards.",
             pricing: {
+
                 starter: "Free",
                 professional: "$9 / month",
                 enterprise: "$29 / month"
@@ -409,6 +438,7 @@ import {Star,
             reviewCount: 189
         },
         {
+
             id: "quantum - computing",
             title: "ZionQuantum",
             description: "Quantum computing platform for complex problem solving and optimization.",
@@ -428,6 +458,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - quantum",
             details: "Access quantum computing power for complex optimization problems, cryptography, and scientific research.",
             pricing: {
+
                 starter: "$299 / month",
                 professional: "$799 / month",
                 enterprise: "$1,999 / month"
@@ -437,6 +468,7 @@ import {Star,
             reviewCount: 89
         },
         {
+
             id: "iot - platform",
             title: "ZionIoT Hub",
             description: "Internet of Things platform for device management, data collection, and automation.",
@@ -456,6 +488,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - iot",
             details: "Connect and manage your IoT devices with our comprehensive platform. Monitor, analyze, and automate your connected ecosystem.",
             pricing: {
+
                 starter: "$45 / month",
                 professional: "$89 / month",
                 enterprise: "$179 / month"
@@ -465,6 +498,7 @@ import {Star,
             reviewCount: 156
         },
         {
+
             id: "cybersecurity - suite",
             title: "ZionShield",
             description: "Comprehensive cybersecurity platform with threat detection, vulnerability scanning, and incident response.",
@@ -484,6 +518,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - shield",
             details: "Protect your business with our advanced cybersecurity platform. Detect threats, prevent attacks, and respond to incidents in real - time.",
             pricing: {
+
                 starter: "$89 / month",
                 professional: "$179 / month",
                 enterprise: "$399 / month"
@@ -493,6 +528,7 @@ import {Star,
             reviewCount: 312
         },
         {
+
             id: "data - visualization",
             title: "ZionViz",
             description: "Advanced data visualization platform with interactive charts, dashboards, and reporting tools.",
@@ -512,6 +548,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - viz",
             details: "Transform your data into compelling visual stories with our advanced visualization platform. Create interactive dashboards and reports.",
             pricing: {
+
                 starter: "$49 / month",
                 professional: "$99 / month",
                 enterprise: "$199 / month"
@@ -521,6 +558,7 @@ import {Star,
             reviewCount: 178
         },
         {
+
             id: "workflow - automation",
             title: "ZionFlow",
             description: "No - code workflow automation platform for business process optimization and task automation.",
@@ -540,6 +578,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - flow",
             details: "Automate your business processes with our intuitive no - code platform. Build complex workflows without writing a single line of code.",
             pricing: {
+
                 starter: "$35 / month",
                 professional: "$69 / month",
                 enterprise: "$139 / month"
@@ -549,6 +588,7 @@ import {Star,
             reviewCount: 203
         },
         {
+
             id: "supply - chain",
             title: "ZionSupply",
             description: "End - to - end supply chain management platform with real - time tracking and optimization.",
@@ -568,6 +608,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - supply",
             details: "Optimize your supply chain operations with real - time tracking, demand forecasting, and intelligent route optimization.",
             pricing: {
+
                 starter: "$69 / month",
                 professional: "$139 / month",
                 enterprise: "$279 / month"
@@ -577,6 +618,7 @@ import {Star,
             reviewCount: 167
         },
         {
+
             id: "customer - support",
             title: "ZionSupport",
             description: "AI - powered customer support platform with chatbots, ticket management, and knowledge base.",
@@ -596,6 +638,7 @@ import {Star,
             link: "https://ziontechgroup.com / zion - support",
             details: "Deliver exceptional customer support with our AI - powered platform. Automate responses and provide instant solutions.",
             pricing: {
+
                 starter: "$29 / month",
                 professional: "$59 / month",
                 enterprise: "$119 / month"
@@ -632,11 +675,14 @@ import {Star,
     const [selectedCategory, setSelectedCategory] = React.useState ("All Services") ;
     const [filteredServices, setFilteredServices] = React.useState (microSAASServices) ;
     React.useEffect ( () => {
+
         if (selectedCategory === "All Services") {
+
             setFilteredServices (microSAASServices) ;
         }
         // Filter by search query
         if (searchQuery.trim () ) {
+
             const query = searchQuery.toLowerCase () ;
             filtered = filtered.filter (service => service.title.toLowerCase () .includes (query) ||
                 service.description.toLowerCase () .includes (query) ||
@@ -645,7 +691,9 @@ import {Star,
         }
         // Sort services
         filtered.sort ( (a, b) => {
+
             switch (sortBy) {
+
                 case 'rating':
                     return (b.rating || 0) - (a.rating || 0) ;
                 case 'price':

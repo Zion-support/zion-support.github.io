@@ -178,7 +178,7 @@ export function PerformanceMonitor() {
         return () => lcpObserver.disconnect();
       } catch (e) {
 
-        // // console.warn('PerformanceObserver not supported');
+        // // // console.warn('PerformanceObserver not supported');
       }
     }
     

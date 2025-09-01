@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from "../../data / 2025 - advanced - innovative - services - expansion - v3";
 
 const ComprehensivePricingShowcase2025 = () => {
+
     const [selectedCategory, setSelectedCategory] = useState ('all') ;
     const [priceRange, setPriceRange] = useState ('all') ;
     const allServices = [
@@ -32,23 +33,30 @@ const ComprehensivePricingShowcase2025 = () => {
         { value: 'medium', label: '$500 - $2,000 / month', min: 500, max: 2000 },
         { value: 'high', label: 'Over $2,000 / month', min: 2000 }
     ];
-    const filteredServices = allServices
+    const filteredServices = allServices;
         .filter (service => selectedCategory === 'all' || service.category === selectedCategory) .filter (service => {
+
         if (priceRange === 'all') return true;
         const range = priceRanges.find (r => r.value === priceRange) ;
         if (!range) return true;
         if (service.price) {
+
             const price = parseFloat (service.price.replace (/[^0 - 9.]/g, '') ) ;
             if (range.min && range.max) {
+
                 return price >= range.min && price <= range.max}
             else if (range.max) {
+
                 return price <= range.max}
             else if (range.min) {
+
                 return price >= range.min}
         }
         return true}) ;
     const getServiceTypeColor = (type) => {
+
         switch (type) {
+
             case 'Micro SAAS':
                 return 'bg - blue - 100 text - blue - 800 border - blue - 200';
             case 'IT Service':
@@ -59,7 +67,9 @@ const ComprehensivePricingShowcase2025 = () => {
                 return 'bg - gray - 100 text - gray - 800 border - gray - 200'}
     };
     const getCategoryIcon = (category) => {
+
         const icons = {
+
   'Legal Tech & Compliance': '⚖️',
             'Quantum Computing & Security': '🔐',
             'Healthcare & Biotech': '🏥',

@@ -196,7 +196,7 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
         setPerformanceMetrics(prev => ({ ...prev, networkSpeed }));
       } catch (error) {
 
-        // // console.warn('Network speed measurement failed:', error);
+        // // // console.warn('Network speed measurement failed:', error);
       }
 
       return () => {
@@ -271,7 +271,7 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
         applyMobileOptimizations(parsed);
       } catch (error) {
 
-        // // console.warn('Failed to load mobile experience settings:', error);
+        // // // console.warn('Failed to load mobile experience settings:', error);
       }
     }
   }, [applyMobileOptimizations]);

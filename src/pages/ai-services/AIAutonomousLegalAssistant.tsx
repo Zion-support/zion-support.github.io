@@ -3,23 +3,28 @@ import { motion } from 'framer-motion';
 import { Scale, FileText, Shield, Zap, ArrowRight, Brain, Search, Clock, DollarSign, CheckCircle, Users, TrendingUp, Target, Gavel, BookOpen, Lock, Database, Cloud, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function AIAutonomousLegalAssistant() {
+
   const features = [
     {
+
       icon: Scale,
       title: 'AI-Powered Legal Analysis',
       description: 'Advanced AI algorithms that analyze legal documents with human-level accuracy'
     },
     {
+
       icon: FileText,
       title: 'Contract Review Automation',
       description: 'Automated contract analysis that identifies risks, clauses, and compliance issues'
     },
     {
+
       icon: Shield,
       title: 'Risk Assessment',
       description: 'Intelligent risk identification and mitigation recommendations for legal documents'
     },
     {
+
       icon: Zap,
       title: 'Document Automation',
       description: 'Streamlined document generation and management for legal workflows'
@@ -28,21 +33,25 @@ export default function AIAutonomousLegalAssistant() {
 
   const capabilities = [
     {
+
       title: 'Contract Analysis & Review',
       description: 'AI-powered analysis of contracts, agreements, and legal documents with instant risk assessment',
       icon: FileText
     },
     {
+
       title: 'Legal Research Assistant',
       description: 'Automated legal research, case law analysis, and precedent identification',
       icon: Search
     },
     {
+
       title: 'Compliance Monitoring',
       description: 'Real-time compliance tracking and regulatory requirement monitoring',
       icon: Shield
     },
     {
+
       title: 'Document Generation',
       description: 'Intelligent legal document creation with customizable templates and clauses',
       icon: BookOpen
@@ -51,21 +60,25 @@ export default function AIAutonomousLegalAssistant() {
 
   const benefits = [
     {
+
       title: 'Time Savings',
       description: 'Reduce document review time by up to 80% with AI automation',
       icon: Clock
     },
     {
+
       title: 'Cost Reduction',
       description: 'Lower legal costs through efficient automation and reduced manual work',
       icon: DollarSign
     },
     {
+
       title: 'Risk Mitigation',
       description: 'Identify and address legal risks before they become problems',
       icon: Shield
     },
     {
+
       title: 'Improved Accuracy',
       description: 'Eliminate human errors with consistent AI-powered analysis',
       icon: CheckCircle
@@ -74,6 +87,7 @@ export default function AIAutonomousLegalAssistant() {
 
   const pricing = [
     {
+
       plan: 'Professional',
       price: '$5,499',
       period: 'one-time',
@@ -87,6 +101,7 @@ export default function AIAutonomousLegalAssistant() {
       recommended: false
     },
     {
+
       plan: 'Enterprise',
       price: '$7,999',
       period: 'one-time',
@@ -101,6 +116,7 @@ export default function AIAutonomousLegalAssistant() {
       recommended: true
     },
     {
+
       plan: 'Custom',
       price: 'Contact Us',
       period: 'custom',
@@ -118,21 +134,25 @@ export default function AIAutonomousLegalAssistant() {
 
   const useCases = [
     {
+
       title: 'Corporate Legal Teams',
       description: 'Streamline contract management and compliance for large organizations',
       icon: Users
     },
     {
+
       title: 'Law Firms',
       description: 'Enhance client services with AI-powered legal research and document review',
       icon: Gavel
     },
     {
+
       title: 'In-House Counsel',
       description: 'Improve efficiency and reduce costs for internal legal departments',
       icon: Building
     },
     {
+
       title: 'Compliance Officers',
       description: 'Automate regulatory compliance monitoring and reporting',
       icon: Shield
@@ -362,6 +382,7 @@ export default function AIAutonomousLegalAssistant() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
+
                   plan.recommended 
                     ? 'border-blue-500 shadow-blue-500/20' 
                     : 'border-zion-slate-700'
@@ -391,6 +412,7 @@ export default function AIAutonomousLegalAssistant() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-xl font-medium transition-all duration-300 ${
+
                   plan.recommended
                     ? 'bg-blue-500 hover:bg-blue-600 text-white'
                     : 'bg-zion-slate-700 hover:bg-zion-slate-600 text-white'

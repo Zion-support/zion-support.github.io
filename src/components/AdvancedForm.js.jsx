@@ -324,11 +324,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 });
 <<<<<<< HEAD
 
-            // // // // // console.error('Form submission failed:', error);
+            // // // // // // console.error('Form submission failed:', error);
 
 =======
             }
-            // // // // // // // // // console.error('Form submission failed:', error);
+            // // // // // // // // // // console.error('Form submission failed:', error);
         }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         finally {
@@ -338,7 +338,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 =======
 >>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx
                 })}
-            // // // console.error('Form submission failed:', error)}
+            // // // // console.error('Form submission failed:', error)}
         finally {
 
             setIsSubmitting(false)}

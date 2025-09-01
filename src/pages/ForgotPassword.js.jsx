@@ -4,25 +4,29 @@ import { z } from "zod";
 import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 // Form validation schema
 const forgotPasswordSchema = z.object({
-    email: z.string().email("Please enter a valid email"),
-});
+
+    email: z.string().email("Please enter a valid email")});
 export default function ForgotPassword() {
+
     const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const handleSubmit = async (e) => {
+
         e.preventDefault();
         if (!email.trim())
             return;
         setIsLoading(true);
         // Simulate API call
         setTimeout(() => {
+
             setIsSubmitted(true);
             setIsLoading(false)}, 2000)};
     if (isSubmitted) {
+
         return (<>
         <SEO title="Password Reset Sent - Zion Tech Group" description="Check your email for password reset instructions." canonical="https://ziontechgroup.com/forgot-password"/>
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   TrendingUp, 
   Shield, 
   Brain, 
@@ -48,38 +49,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function AIFinancialRiskManagementTradingPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Risk Assessment",
       description: "Advanced machine learning algorithms that analyze market data, economic indicators, and portfolio performance to identify and quantify financial risks",
       benefits: ["Real-time risk scoring", "Portfolio stress testing", "Scenario analysis"]
     },
     {
+
       icon: TrendingUp,
       title: "Intelligent Trading Algorithms",
       description: "AI-driven trading strategies that automatically execute trades based on market conditions, risk parameters, and performance optimization",
       benefits: ["Algorithmic trading", "Market timing", "Portfolio rebalancing"]
     },
     {
+
       icon: Shield,
       title: "Comprehensive Risk Monitoring",
       description: "24/7 monitoring of market risks, credit risks, operational risks, and compliance risks with automated alerts and mitigation strategies",
       benefits: ["Risk alerts", "Compliance monitoring", "Automated mitigation"]
     },
     {
+
       icon: BarChart3,
       title: "Advanced Analytics Dashboard",
       description: "Real-time analytics platform providing insights into portfolio performance, risk metrics, and market opportunities",
       benefits: ["Performance tracking", "Risk metrics", "Market insights"]
     },
     {
+
       icon: Users,
       title: "Portfolio Management Tools",
       description: "Comprehensive portfolio management with AI-powered optimization, diversification strategies, and performance attribution analysis",
       benefits: ["Portfolio optimization", "Diversification", "Performance analysis"]
     },
     {
+
       icon: Activity,
       title: "Regulatory Compliance",
       description: "Automated compliance monitoring and reporting for financial regulations including Basel III, Solvency II, and Dodd-Frank",
@@ -89,6 +97,7 @@ export default function AIFinancialRiskManagementTradingPlatform() {
 
   const pricingPlans = [
     {
+
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -106,6 +115,7 @@ export default function AIFinancialRiskManagementTradingPlatform() {
       popular: false
     },
     {
+
       name: "Institutional",
       price: "$1,999",
       period: "/month",
@@ -124,6 +134,7 @@ export default function AIFinancialRiskManagementTradingPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$4,999",
       period: "/month",
@@ -369,6 +380,7 @@ export default function AIFinancialRiskManagementTradingPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-white p-8 rounded-xl shadow-lg border-2 ${
+
                   plan.popular 
                     ? 'border-blue-500 relative' 
                     : 'border-slate-200'
@@ -403,6 +415,7 @@ export default function AIFinancialRiskManagementTradingPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-blue-600 hover:bg-blue-700 text-white'
                       : 'bg-slate-100 hover:bg-slate-200 text-slate-900'

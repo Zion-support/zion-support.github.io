@@ -51,7 +51,7 @@ export const usePerformanceMonitor = () => {
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (e) {
 
-        // // console.warn('FCP observer failed:', e);
+        // // // console.warn('FCP observer failed:', e);
       }
 
       // Largest Contentful Paint
@@ -69,7 +69,7 @@ export const usePerformanceMonitor = () => {
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       } catch (e) {
 
-        // // console.warn('LCP observer failed:', e);
+        // // // console.warn('LCP observer failed:', e);
       }
 
       // First Input Delay
@@ -86,7 +86,7 @@ export const usePerformanceMonitor = () => {
         fidObserver.observe({ entryTypes: ['first-input'] });
       } catch (e) {
 
-        // // console.warn('FID observer failed:', e);
+        // // // console.warn('FID observer failed:', e);
       }
 
       // Cumulative Layout Shift
@@ -108,7 +108,7 @@ export const usePerformanceMonitor = () => {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
       } catch (e) {
 
-        // // console.warn('CLS observer failed:', e);
+        // // // console.warn('CLS observer failed:', e);
       }
     }
   }, []);

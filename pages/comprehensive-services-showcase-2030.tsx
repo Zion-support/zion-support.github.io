@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Cloud, 
   Shield, 
@@ -30,40 +31,48 @@ import {
 } from 'lucide-react';
 
 export default function ComprehensiveServicesShowcase2030() {
+
   const serviceCategories = [
     {
+
       name: 'AI & Machine Learning',
       icon: Brain,
       color: 'from-purple-600 to-indigo-700',
       description: 'Cutting-edge artificial intelligence and machine learning solutions',
       services: [
         {
+
           name: 'AI Autonomous Operations',
           description: 'Revolutionary AI platform for autonomous business operations',
           href: '/services/ai-autonomous-business-operations-platform',
           featured: true
         },
         {
+
           name: 'AI Sales Intelligence',
           description: 'Advanced sales intelligence and lead generation',
           href: '/services/ai-sales-intelligence-platform'
         },
         {
+
           name: 'AI Content Creation Studio',
           description: 'AI-powered content generation and management',
           href: '/services/ai-content-creation-studio'
         },
         {
+
           name: 'AI Customer Support',
           description: 'Intelligent customer support automation',
           href: '/services/ai-customer-support-automation'
         },
         {
+
           name: 'AI Data Pipeline Optimizer',
           description: 'Optimize data pipelines with AI-driven insights',
           href: '/services/ai-data-pipeline-optimizer'
         },
         {
+
           name: 'AI SEO Auditor',
           description: 'AI-powered SEO analysis and optimization',
           href: '/services/ai-seo-auditor'
@@ -71,27 +80,32 @@ export default function ComprehensiveServicesShowcase2030() {
       ]
     },
     {
+
       name: 'Cloud & DevOps',
       icon: Cloud,
       color: 'from-cyan-600 to-blue-700',
       description: 'Scalable cloud infrastructure and DevOps automation',
       services: [
         {
+
           name: 'Cloud Migration',
           description: 'Seamless migration to cloud platforms',
           href: '/services/cloud-migration'
         },
         {
+
           name: 'Kubernetes Orchestration',
           description: 'Container orchestration and management',
           href: '/services/kubernetes-orchestration'
         },
         {
+
           name: 'DevOps Automation',
           description: 'Automate development and deployment processes',
           href: '/services/devops-automation'
         },
         {
+
           name: 'Infrastructure as Code',
           description: 'Manage infrastructure through code',
           href: '/services/infrastructure-as-code'
@@ -99,28 +113,33 @@ export default function ComprehensiveServicesShowcase2030() {
       ]
     },
     {
+
       name: 'Cybersecurity',
       icon: Shield,
       color: 'from-red-600 to-orange-700',
       description: 'Advanced security and compliance solutions',
       services: [
         {
+
           name: 'Quantum AI Cybersecurity',
           description: 'Next-generation cybersecurity with quantum AI',
           href: '/services/quantum-ai-cybersecurity-platform',
           featured: true
         },
         {
+
           name: 'Zero Trust Architecture',
           description: 'Implement zero-trust security framework',
           href: '/services/zero-trust-architecture'
         },
         {
+
           name: 'SOC 2 Compliance',
           description: 'Achieve and maintain SOC 2 compliance',
           href: '/services/soc2-compliance'
         },
         {
+
           name: 'Threat Detection',
           description: 'Advanced threat detection and response',
           href: '/services/threat-detection'
@@ -128,27 +147,32 @@ export default function ComprehensiveServicesShowcase2030() {
       ]
     },
     {
+
       name: 'Data & Analytics',
       icon: BarChart3,
       color: 'from-emerald-600 to-teal-700',
       description: 'Data platforms and business intelligence',
       services: [
         {
+
           name: 'Data Warehousing',
           description: 'Build scalable data warehouses',
           href: '/services/data-warehousing'
         },
         {
+
           name: 'Business Intelligence',
           description: 'Transform data into actionable insights',
           href: '/services/business-intelligence'
         },
         {
+
           name: 'Real-time Analytics',
           description: 'Real-time data processing and analytics',
           href: '/services/real-time-analytics'
         },
         {
+
           name: 'Data Quality Management',
           description: 'Ensure data quality and governance',
           href: '/services/data-quality-management'
@@ -156,27 +180,32 @@ export default function ComprehensiveServicesShowcase2030() {
       ]
     },
     {
+
       name: 'Enterprise Solutions',
       icon: Database,
       color: 'from-blue-600 to-indigo-700',
       description: 'Enterprise-grade business solutions',
       services: [
         {
+
           name: 'ERP Systems',
           description: 'Enterprise resource planning solutions',
           href: '/services/erp-systems'
         },
         {
+
           name: 'CRM Platforms',
           description: 'Customer relationship management',
           href: '/services/crm-platforms'
         },
         {
+
           name: 'Workflow Automation',
           description: 'Automate business workflows',
           href: '/services/workflow-automation'
         },
         {
+
           name: 'Integration Services',
           description: 'Connect disparate systems and applications',
           href: '/services/integration-services'
@@ -184,27 +213,32 @@ export default function ComprehensiveServicesShowcase2030() {
       ]
     },
     {
+
       name: 'Emerging Technologies',
       icon: Rocket,
       color: 'from-pink-600 to-rose-700',
       description: 'Quantum computing, blockchain, and IoT',
       services: [
         {
+
           name: 'Quantum Computing',
           description: 'Quantum computing solutions and consulting',
           href: '/services/quantum-computing'
         },
         {
+
           name: 'Blockchain Development',
           description: 'Blockchain and Web3 solutions',
           href: '/services/blockchain-development'
         },
         {
+
           name: 'IoT Platforms',
           description: 'Internet of Things platform development',
           href: '/services/iot-platforms'
         },
         {
+
           name: 'Edge Computing',
           description: 'Edge computing and distributed systems',
           href: '/services/edge-computing'
@@ -301,6 +335,7 @@ export default function ComprehensiveServicesShowcase2030() {
                     <motion.div
                       key={service.name}
                       className={`p-6 rounded-xl border-2 transition-all duration-300 hover:shadow-lg ${
+
                         service.featured 
                           ? 'border-blue-500 bg-blue-50' 
                           : 'border-gray-200 hover:border-gray-300'

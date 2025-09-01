@@ -22,7 +22,7 @@ export const UserMenu = () => {
         try {
 
             await logout();
-            // // // // // // // // // // console.error('Logout failed:', error);
+            // // // // // // // // // // // console.error('Logout failed:', error);
         }
     };
     if (!user) {
@@ -32,7 +32,7 @@ export const UserMenu = () => {
             setIsOpen(false)}
         catch (error) {
 
-            // // // console.error('Logout failed:', error)}
+            // // // // console.error('Logout failed:', error)}
     };
     if (!user) {
 

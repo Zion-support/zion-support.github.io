@@ -1,6 +1,7 @@
 import { Link  } from 'react - router - dom.ts';
 import React, { useState } from 'react.ts';
 export default React.memo (function PricingGuide (...args[]) :  {
+
 import { Calculator,
 import { SEO } from "../components / SEO";
 
@@ -34,6 +35,7 @@ import { SEO } from "../components / SEO";
   const [selectedPeriod, setSelectedPeriod] = useState ('monthly') ;
 
   const currencyRates = {
+
   USD: { symbol: '$',
   rate: 1 ;
 ;
@@ -47,6 +49,7 @@ import { SEO } from "../components / SEO";
 
   const pricingPlans = [
     {
+
       name: "Starter",
       icon: Zap,
       description: "Perfect for small businesses getting started with AI",
@@ -68,6 +71,7 @@ import { SEO } from "../components / SEO";
       popular: false
     },
     {
+
       name: "Professional",
       icon: Brain,
       description: "Ideal for growing companies with advanced needs",
@@ -91,6 +95,7 @@ import { SEO } from "../components / SEO";
       popular: true
     },
     {
+
       name: "Enterprise",
       icon: Rocket,
       description: "Full - scale solutions for large organizations",
@@ -116,6 +121,7 @@ import { SEO } from "../components / SEO";
 
   const servicePricing = [
     {
+
       category: "AI & Machine Learning",
       icon: Brain,
       services[;
@@ -126,6 +132,7 @@ import { SEO } from "../components / SEO";
       ]
     },;
     {
+
       category: "Cloud & DevOps",
       icon: Cloud,
       services[;
@@ -135,6 +142,7 @@ import { SEO } from "../components / SEO";
       ]
     },;
     {
+
       category: "Cybersecurity",
       icon: Shield,
       services[;
@@ -144,6 +152,7 @@ import { SEO } from "../components / SEO";
       ]
     },;
     {
+
       category: "IT Infrastructure",
       icon: Cpu,
       services[;
@@ -196,6 +205,7 @@ import { SEO } from "../components / SEO";
                 <div role="button" className="flex bg - slate - 700 rounded - lg p - 1">
                   <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedPeriod ('monthly') }
                     className={`px - 4 py - 2 rounded - md text - sm font - medium transition - all duration - 200 ${
+
                       selectedPeriod === 'monthly'
                         ? 'bg - cyan - 500 text - white'
                         : 'text - slate - 300 hover:text - white'
@@ -205,6 +215,7 @@ import { SEO } from "../components / SEO";
                   </button>
                   <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedPeriod ('yearly') }
                     className={`px - 4 py - 2 rounded - md text - sm font - medium transition - all duration - 200 ${
+
                       selectedPeriod === 'yearly'
                         ? 'bg - cyan - 500 text - white'
                         : 'text - slate - 300 hover:text - white'
@@ -240,6 +251,7 @@ import { SEO } from "../components / SEO";
 
           <div role="button" className="grid grid - cols - 1 lg: grid - cols - 3 gap - 8">
             {pricingPlans.map ( (plan, index) => (<div role="button" key={index} className={`relative bg - slate - 800 / 50 border rounded - 2xl p - 8 ${
+
                 plan.popular
                   ? 'border - cyan - 500 / 50 bg - gradient - to - br from - slate - 800 / 50 to - cyan - 900 / 20'
                   : 'border - slate - 700 / 50'
@@ -269,6 +281,7 @@ import { SEO } from "../components / SEO";
                   <Link
                     to={plan.cta === "Contact Sales" ? "/contact" : "/request - quote"}
                     className={`w - full inline - flex items - center justify - center px - 6 py - 3 rounded - lg font - semibold transition - all duration - 200 ${
+
                       plan.popular
                         ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white hover:from - cyan - 600 hover:to - blue - 700'
                         : 'bg - slate - 700 text - white hover:bg - slate - 600 border border - slate - 600'

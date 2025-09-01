@@ -4,11 +4,14 @@ import React, { useState } from 'react';
 import React, { useState } from 'react';
 import { SEO } from '@/components / SEO';
 export default React.memo (function Solutions () {
+
 export default Solutions;
 import {
+
 import { motion } from 'framer - motion';
 
 const Solutions: React.FC = () => {
+
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 text - white">
       <SEO
         title="Solutions - Zion Tech Group"
@@ -59,6 +62,7 @@ const Solutions: React.FC = () => {
 
 const solutionCategories = [
   {
+
     id: 'ai - ml',
     name: 'AI & Machine Learning',
     icon: Brain,
@@ -74,6 +78,7 @@ const solutionCategories = [
     ]
   },
   {
+
     id: 'cybersecurity',
     name: 'Cybersecurity',
     icon: Shield,
@@ -89,6 +94,7 @@ const solutionCategories = [
     ]
   },
   {
+
     id: 'cloud - computing',
     name: 'Cloud Computing',
     icon: Cloud,
@@ -104,6 +110,7 @@ const solutionCategories = [
     ]
   },
   {
+
     id: 'data - analytics',
     name: 'Data Analytics',
     icon: TrendingUp,
@@ -119,6 +126,7 @@ const solutionCategories = [
     ]
   },
   {
+
     id: 'iot - edge',
     name: 'IoT & Edge Computing',
     icon: Zap,
@@ -134,6 +142,7 @@ const solutionCategories = [
     ]
   },
   {
+
     id: 'digital - transformation',
     name: 'Digital Transformation',
     icon: Globe,
@@ -152,6 +161,7 @@ const solutionCategories = [
 
 const industrySolutions = [
   {
+
     industry: 'Healthcare',
     icon: Heart,
     solutions: [
@@ -165,6 +175,7 @@ const industrySolutions = [
     color: 'from - pink - 500 to - rose - 600'
   },
   {
+
     industry: 'Finance',
     icon: DollarSign,
     solutions: [
@@ -178,6 +189,7 @@ const industrySolutions = [
     color: 'from - green - 500 to - emerald - 600'
   },
   {
+
     industry: 'Manufacturing',
     icon: Cpu,
     solutions: [
@@ -191,6 +203,7 @@ const industrySolutions = [
     color: 'from - blue - 500 to - cyan - 600'
   },
   {
+
     industry: 'Retail',
     icon: ShoppingCart,
     solutions: [
@@ -204,6 +217,7 @@ const industrySolutions = [
     color: 'from - purple - 500 to - indigo - 600'
   },
   {
+
     industry: 'Education',
     icon: BookOpen,
     solutions: [
@@ -217,6 +231,7 @@ const industrySolutions = [
     color: 'from - yellow - 500 to - orange - 600'
   },
   {
+
     industry: 'Government',
     icon: Shield,
     solutions: [
@@ -233,6 +248,7 @@ const industrySolutions = [
 
 const featuredSolutions = [
   {
+
     id: 1,
     name: 'AI - Powered Business Intelligence',
     category: 'AI & ML',
@@ -257,6 +273,7 @@ const featuredSolutions = [
     color: 'from - purple - 500 to - indigo - 600'
   },
   {
+
     id: 2,
     name: 'Zero - Trust Security Framework',
     category: 'Cybersecurity',
@@ -281,6 +298,7 @@ const featuredSolutions = [
     color: 'from - red - 500 to - pink - 600'
   },
   {
+
     id: 3,
     name: 'Cloud - Native Infrastructure',
     category: 'Cloud Computing',
@@ -308,6 +326,7 @@ const featuredSolutions = [
 
   const industrySolutions = [
     {
+
       title: 'Enterprise Solutions',
       icon: Building,
       description: 'Scalable enterprise - grade solutions for large organizations',
@@ -329,6 +348,7 @@ const featuredSolutions = [
       href: '/solutions / enterprise'
     },
     {
+
       title: 'Healthcare Solutions',
       icon: Heart,
       description: 'AI - powered healthcare solutions for improved patient outcomes',
@@ -350,6 +370,7 @@ const featuredSolutions = [
       href: '/solutions / healthcare'
     },
     {
+
       title: 'Financial Services',
       icon: DollarSign,
       description: 'Advanced financial technology solutions for modern banking',
@@ -371,6 +392,7 @@ const featuredSolutions = [
       href: '/solutions / financial'
     },
     {
+
       title: 'Manufacturing Solutions',
       icon: Truck,
       description: 'Smart manufacturing and Industry 4.0 solutions',
@@ -392,6 +414,7 @@ const featuredSolutions = [
       href: '/solutions / manufacturing'
     },
     {
+
       title: 'Government Solutions',
       icon: Shield,
       description: 'Secure and compliant government technology solutions',
@@ -413,6 +436,7 @@ const featuredSolutions = [
       href: '/solutions / government'
     },
     {
+
       title: 'Education Solutions',
       icon: BookOpen,
       description: 'Innovative educational technology for modern learning',
@@ -437,6 +461,7 @@ const featuredSolutions = [
 
   const technologySolutions = [
     {
+
       title: 'AI & Machine Learning',
       icon: Brain,
       description: 'Cutting - edge AI solutions for business transformation',
@@ -451,6 +476,7 @@ const featuredSolutions = [
       ]
     },
     {
+
       title: 'Cloud & Infrastructure',
       icon: Cloud,
       description: 'Scalable cloud solutions and infrastructure management',
@@ -465,6 +491,7 @@ const featuredSolutions = [
       ]
     },
     {
+
       title: 'Cybersecurity',
       icon: Shield,
       description: 'Advanced security solutions for modern threats',
@@ -479,6 +506,7 @@ const featuredSolutions = [
       ]
     },
     {
+
       title: 'Quantum Computing',
       icon: Atom,
       description: 'Next - generation quantum computing solutions',
@@ -507,11 +535,13 @@ const featuredSolutions = [
         <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -533,6 +563,7 @@ const featuredSolutions = [
               {industries.map ( (industry) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={industry.id}
                   onClick={ () => setSelectedIndustry (industry.id) }
                   className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 flex items - center ${
+
                     selectedIndustry === industry.id
                       ? 'bg - blue - 500 text - white shadow - lg shadow - blue - 500 / 30'
                       : 'bg - slate - 800 / 50 text - gray - 300 hover:bg - slate - 700 / 50 border border - slate - 700 / 50'
@@ -581,6 +612,7 @@ const featuredSolutions = [
 
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {solutionCategories.map ( (category, index) => {
+
               const IconComponent = category.icon;
               return (<motion.div
                   key={category.id}
@@ -631,6 +663,7 @@ const featuredSolutions = [
 
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {industrySolutions.map ( (industry, index) => {
+
               const IconComponent = industry.icon;
               return (<motion.div
                   key={industry.industry}
@@ -680,6 +713,7 @@ const featuredSolutions = [
 
           <div role="button" className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">
             {filteredSolutions.map ( (solution, index) => {
+
               const IconComponent = solution.icon;
               return (<motion.div
                   key={solution.id}
@@ -791,11 +825,13 @@ const featuredSolutions = [
         <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -814,16 +850,19 @@ const featuredSolutions = [
               return (<motion.div
                   key = {category.id}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -861,11 +900,13 @@ const featuredSolutions = [
         <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -884,16 +925,19 @@ const featuredSolutions = [
               return (<motion.div
                   key = {industry.industry}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -931,11 +975,13 @@ const featuredSolutions = [
         <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -954,16 +1000,19 @@ const featuredSolutions = [
               return (<motion.div
                   key = {solution.id}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1029,11 +1078,13 @@ const featuredSolutions = [
         <div role="button" className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

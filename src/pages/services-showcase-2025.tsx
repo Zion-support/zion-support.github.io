@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Scale, 
   Heart, 
@@ -28,8 +29,10 @@ import {
 } from 'lucide-react';
 
 const ServicesShowcase2025 = () => {
+
   const featuredServices = [
     {
+
       icon: <Scale className="w-12 h-12" />,
       title: "AI Legal Document Automation Platform",
       description: "Transform your legal practice with AI-powered document automation. Generate, analyze, and manage legal documents with unprecedented speed and accuracy.",
@@ -39,6 +42,7 @@ const ServicesShowcase2025 = () => {
       link: "/services/ai-legal-document-automation-platform"
     },
     {
+
       icon: <Heart className="w-12 h-12" />,
       title: "AI Healthcare Analytics Platform",
       description: "Revolutionize healthcare delivery with AI-powered analytics. Monitor patients in real-time, predict health outcomes, and deliver personalized care.",
@@ -48,6 +52,7 @@ const ServicesShowcase2025 = () => {
       link: "/services/ai-healthcare-analytics-platform"
     },
     {
+
       icon: <TrendingUp className="w-12 h-12" />,
       title: "AI Financial Trading Platform",
       description: "Revolutionize your trading with AI-powered market analysis, predictive signals, and automated portfolio management.",
@@ -57,6 +62,7 @@ const ServicesShowcase2025 = () => {
       link: "/services/ai-financial-trading-platform"
     },
     {
+
       icon: <Truck className="w-12 h-12" />,
       title: "AI Supply Chain Optimization Platform",
       description: "Transform your supply chain with AI-powered optimization. Predict demand, optimize routes, and manage inventory with precision.",
@@ -66,6 +72,7 @@ const ServicesShowcase2025 = () => {
       link: "/services/ai-supply-chain-optimization-platform"
     },
     {
+
       icon: <Home className="w-12 h-12" />,
       title: "AI Real Estate Analytics Platform",
       description: "Transform your real estate investments with AI-powered market analysis, predictive valuations, and portfolio optimization.",
@@ -78,6 +85,7 @@ const ServicesShowcase2025 = () => {
 
   const allServices = [
     {
+
       category: "AI & Machine Learning",
       services: [
         "AI Content Creation Studio Pro",
@@ -93,6 +101,7 @@ const ServicesShowcase2025 = () => {
       ]
     },
     {
+
       category: "Financial Technology",
       services: [
         "AI Financial Trading Platform",
@@ -104,6 +113,7 @@ const ServicesShowcase2025 = () => {
       ]
     },
     {
+
       category: "Healthcare Technology",
       services: [
         "AI Healthcare Analytics Platform",
@@ -113,6 +123,7 @@ const ServicesShowcase2025 = () => {
       ]
     },
     {
+
       category: "Legal Technology",
       services: [
         "AI Legal Document Automation Platform",
@@ -121,6 +132,7 @@ const ServicesShowcase2025 = () => {
       ]
     },
     {
+
       category: "Supply Chain & Logistics",
       services: [
         "AI Supply Chain Optimization Platform",
@@ -130,6 +142,7 @@ const ServicesShowcase2025 = () => {
       ]
     },
     {
+
       category: "Real Estate Technology",
       services: [
         "AI Real Estate Analytics Platform",
@@ -139,6 +152,7 @@ const ServicesShowcase2025 = () => {
       ]
     },
     {
+
       category: "Security & Compliance",
       services: [
         "AI Cybersecurity Platform",
@@ -152,21 +166,25 @@ const ServicesShowcase2025 = () => {
 
   const benefits = [
     {
+
       icon: <Brain className="w-8 h-8" />,
       title: "AI-Powered Intelligence",
       description: "Advanced machine learning algorithms deliver insights and automation that transform business operations"
     },
     {
+
       icon: <Shield className="w-8 h-8" />,
       title: "Enterprise Security",
       description: "Bank-grade security with compliance certifications including SOC2, HIPAA, and industry-specific standards"
     },
     {
+
       icon: <Zap className="w-8 h-8" />,
       title: "Lightning Fast",
       description: "Optimized performance with sub-second response times and 99.9% uptime guarantees"
     },
     {
+
       icon: <Globe className="w-8 h-8" />,
       title: "Global Scale",
       description: "Deploy anywhere with multi-region support and automatic scaling capabilities"

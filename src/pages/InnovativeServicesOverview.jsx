@@ -7,6 +7,7 @@ import { innovativeITAIServices2025 } from "../../data / 2025 - innovative - it 
 import { motion } from 'framer - motion';
 
 const InnovativeServicesOverview = () => {
+
     const [selectedService, setSelectedService] = useState (null) ;
     const [selectedCategory, setSelectedCategory] = useState ('all') ;
     const allServices = [
@@ -31,6 +32,7 @@ const InnovativeServicesOverview = () => {
     const filteredServices = selectedCategory === 'all'
         ? allServices
         : allServices.filter (service => {
+
             const category = categories.find (c => c.id === selectedCategory) ;
             if (!category) return true;
             const categoryMappings = {

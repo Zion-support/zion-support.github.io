@@ -5,7 +5,7 @@
 
       setIsSubmitting (false) ;
 =======
-      // // // // // // // // // // console.error('Newsletter subscription failed:', error)} finally {
+      // // // // // // // // // // // console.error('Newsletter subscription failed:', error)} finally {
 
       setIsSubmitting(false);
 
@@ -13,7 +13,7 @@
 
 >>>>>>> main
 
-      // // // console.error('Newsletter subscription failed:', error)} finally {
+      // // // // console.error('Newsletter subscription failed:', error)} finally {
 
       setIsSubmitting(false)}
   };

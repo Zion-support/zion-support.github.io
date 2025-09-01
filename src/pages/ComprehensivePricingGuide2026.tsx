@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 export default ComprehensivePricingGuide2026;
 export default ComprehensivePricingGuide2026;
 import {
+
 import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from '../data / comprehensivePricingGuide2026';
 import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from "../data / comprehensivePricingGuide2026";
 import { motion } from 'framer - motion';
@@ -37,9 +38,11 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
   const tiers = ['all', 'Starter', 'Professional', 'Enterprise'];
 
   const filteredPricing = useMemo ( () => {
+
     let filtered = ALL_PRICING_GUIDES_2026;
 
     if (selectedService !== 'all') {
+
       filtered = filtered.filter (service => service.serviceName === selectedService) ;
     }
 
@@ -150,16 +153,19 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
             {filteredPricing.map ( (servicePricing, index) => (<motion.div
                 key={servicePricing.serviceId}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -214,16 +220,19 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                     <motion.div
                       key={tier.name}
                       initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                       animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                       transition = {
+
   { duration: 0.6,
   delay: (index * 0.1) + (tierIndex * 0.1) }}
                       className="bg - white / 5 backdrop - blur - sm rounded - 2xl p - 6 border border - white / 10 hover:border - blue - 500 / 50 transition - all duration - 300"

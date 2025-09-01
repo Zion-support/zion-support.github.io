@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Stethoscope,
   Brain,
   Zap,
@@ -155,26 +156,31 @@ import {
 } from 'lucide-react';
 
 export function AIHealthcarePredictiveAnalytics2025() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Disease Prediction',
       description: 'Advanced machine learning algorithms that predict disease progression and outcomes',
       benefits: ['Early detection', 'Risk stratification', 'Personalized insights']
     },
     {
+
       icon: Stethoscope,
       title: 'Clinical Decision Support',
       description: 'Real-time clinical recommendations based on patient data and medical literature',
       benefits: ['Evidence-based guidance', 'Treatment optimization', 'Drug interaction alerts']
     },
     {
+
       icon: Zap,
       title: 'Real-time Monitoring',
       description: 'Continuous patient monitoring with instant alerts for critical changes',
       benefits: ['24/7 surveillance', 'Predictive alerts', 'Automated reporting']
     },
     {
+
       icon: Users,
       title: 'Population Health Analytics',
       description: 'Comprehensive population health insights and trend analysis',
@@ -184,6 +190,7 @@ export function AIHealthcarePredictiveAnalytics2025() {
 
   const pricingPlans = [
     {
+
       name: 'Clinical',
       price: '$599',
       period: '/month',
@@ -200,6 +207,7 @@ export function AIHealthcarePredictiveAnalytics2025() {
       popular: false
     },
     {
+
       name: 'Hospital',
       price: '$1,999',
       period: '/month',
@@ -218,6 +226,7 @@ export function AIHealthcarePredictiveAnalytics2025() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -239,24 +248,28 @@ export function AIHealthcarePredictiveAnalytics2025() {
 
   const healthcareFeatures = [
     {
+
       title: 'Predictive Modeling',
       description: 'Advanced AI models trained on millions of patient records for accurate predictions',
       icon: Brain,
       benefits: ['Disease prediction', 'Risk assessment', 'Outcome forecasting']
     },
     {
+
       title: 'Clinical Intelligence',
       description: 'AI-powered clinical insights that support evidence-based decision making',
       icon: Stethoscope,
       benefits: ['Treatment recommendations', 'Drug interactions', 'Clinical guidelines']
     },
     {
+
       title: 'Patient Analytics',
       description: 'Comprehensive patient data analysis with actionable insights',
       icon: BarChart3,
       benefits: ['Patient segmentation', 'Trend analysis', 'Performance metrics']
     },
     {
+
       title: 'Population Health',
       description: 'Population-level insights for public health and resource planning',
       icon: Users,
@@ -520,6 +533,7 @@ export function AIHealthcarePredictiveAnalytics2025() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
                     : 'border-gray-700'
@@ -554,6 +568,7 @@ export function AIHealthcarePredictiveAnalytics2025() {
                 <Link
                   to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'

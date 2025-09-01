@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Grid3X3, ListFilter, Loader2 } from 'lucide-react';
 
 export default function Marketplace() {
+
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProductTypes, setSelectedProductTypes] = useState([]);
@@ -16,8 +17,10 @@ export default function Marketplace() {
 
   // Sample data for demonstration
   useEffect(() => {
+
     setListings([
       {
+
         id: 1,
         title: 'AI Development Services',
         category: 'AI Services',
@@ -27,6 +30,7 @@ export default function Marketplace() {
         description: 'Professional AI development and consulting services'
       },
       {
+
         id: 2,
         title: 'Cloud Infrastructure Solutions',
         category: 'IT Services',
@@ -39,6 +43,7 @@ export default function Marketplace() {
   }, []);
 
   const clearAllFilters = () => {
+
     setSearchQuery('');
     setSelectedProductTypes([]);
     setSelectedLocations([]);
@@ -47,10 +52,14 @@ export default function Marketplace() {
   };
 
   const handleRequestQuote = (listingId) => {
+
     const listing = listings.find(item => item.id === listingId);
     if (listing) {
+
       navigate('/request-quote', {
+
         state: {
+
           serviceType: listing.category,
           specificItem: listing
         }
@@ -59,16 +68,21 @@ export default function Marketplace() {
   };
 
   const filteredListings = listings.filter(listing => {
+
     if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase())) {
+
       return false;
     }
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
+
       return false;
     }
     if (selectedLocations.length > 0 && !selectedLocations.includes(listing.location)) {
+
       return false;
     }
     if (selectedRating && listing.rating < selectedRating) {
+
       return false;
     }
     return true;

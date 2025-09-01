@@ -30,6 +30,7 @@ import { Search,
  } from 'lucide - react.ts';
 
 const ComprehensivePricingShowcase2025: React.FC = () : JSX.Element => {
+
     const [searchTerm, setSearchTerm] = useState ('') ;
     const [selectedCategory, setSelectedCategory] = useState < any> ('all') ;
     const [selectedService, setSelectedService] = useState < any> (null) ;
@@ -46,9 +47,11 @@ const ComprehensivePricingShowcase2025: React.FC = () : JSX.Element => {
     ];
 
     const filteredServices = useMemo ( () => {
+
         let filtered = comprehensivePricingGuide2025;
 
         if (searchTerm) {
+
             filtered = filtered.filter (service =>
                 service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
                 service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
@@ -56,6 +59,7 @@ const ComprehensivePricingShowcase2025: React.FC = () : JSX.Element => {
         }
 
         if (selectedCategory !== 'all') {
+
             filtered = filtered.filter (service => service.category === selectedCategory) ;
         }
 
@@ -63,7 +67,9 @@ const ComprehensivePricingShowcase2025: React.FC = () : JSX.Element => {
     }, [searchTerm, selectedCategory]) ;
 
     const getCategoryColor = (category: anystring) => {
+
         const colors: { [key: string]: string } = {
+
             'Fintech': 'from - green - 500 to - emerald - 600',
             'Healthtech': 'from - red - 500 to - pink - 600',
             'Edutech': 'from - purple - 500 to - violet - 600',
@@ -76,7 +82,9 @@ const ComprehensivePricingShowcase2025: React.FC = () : JSX.Element => {
     };
 
     const getCategoryIcon = (category: anystring) => {
+
         const icons: { [key: string]: React.ReactNode } = {
+
             'Fintech': <DollarSign className="w - 5 h - 5" />,
             'Healthtech': <Heart className="w - 5 h - 5" />,
             'Edutech': <GraduationCap className="w - 5 h - 5" />,
@@ -242,6 +250,7 @@ const ComprehensivePricingShowcase2025: React.FC = () : JSX.Element => {
                                         <div role="button" className="grid grid - cols - 1 md: anygrid - cols - 3 gap - 6">
                                             {service.pricing.map ( (tier, tierIndex) => (<div role="button" key={tierIndex}
                                                     className={`relative rounded - xl border - 2 p - 6 ${
+
                                                         tier.popular
                                                             ? 'border - blue - 500 bg - blue - 50 shadow - lg'
                                                             : 'border - gray - 200 bg - white'

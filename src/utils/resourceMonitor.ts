@@ -20,12 +20,12 @@ class ResourceMonitor {
     this.setupResourceObservers();
     this.monitorCriticalResources();
 
-    // // // console.log('🔍 Resource Monitor started')}
+    // // // // console.log('🔍 Resource Monitor started')}
 
   stop() {
 
     this.isMonitoring = false;
-    // // // console.log('🔍 Resource Monitor stopped')}
+    // // // // console.log('🔍 Resource Monitor stopped')}
 
   private setupErrorListeners() {
 
@@ -174,7 +174,7 @@ class ResourceMonitor {
       timestamp: Date.now()};
 
     this.errors.push(resourceError);
-    // // // console.error('🚨 Resource Error:', resourceError);
+    // // // // console.error('🚨 Resource Error:', resourceError);
 
     // Attempt to retry loading
     this.attemptRetry(url, type);
@@ -187,7 +187,7 @@ class ResourceMonitor {
     if (attempts >= this.maxRetries) {
 
 `
-      // // // console.warn(`Max retry attempts reached for ${url}`);
+      // // // // console.warn(`Max retry attempts reached for ${url}`);
       return}
 
     this.retryAttempts.set(url, attempts + 1);
@@ -208,7 +208,7 @@ class ResourceMonitor {
   private retryResource(url: string, type: ResourceError['type']) {
 
 `
-    // // // console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`);
+    // // // // console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`);
 
     if (type === 'script') {
 
@@ -224,12 +224,12 @@ class ResourceMonitor {
     script.onload = () => {
 
 `
-      // // // console.log(`✅ Script loaded successfully: ${src}`);
+      // // // // console.log(`✅ Script loaded successfully: ${src}`);
       this.retryAttempts.delete(src)};
     script.onerror = () => {
 
 `
-      // // // console.error(`❌ Script retry failed: ${src}`)};
+      // // // // console.error(`❌ Script retry failed: ${src}`)};
     document.head.appendChild(script)}
 
   private loadStylesheet(href: string) {
@@ -239,12 +239,12 @@ class ResourceMonitor {
     link.onload = () => {
 
 `
-      // // // console.log(`✅ Stylesheet loaded successfully: ${href}`);
+      // // // // console.log(`✅ Stylesheet loaded successfully: ${href}`);
       this.retryAttempts.delete(href)};
     link.onerror = () => {
 
 `
-      // // // console.error(`❌ Stylesheet retry failed: ${href}`)};
+      // // // // console.error(`❌ Stylesheet retry failed: ${href}`)};
     document.head.appendChild(link)}
   private reportError(error: ResourceError) {
 
@@ -252,7 +252,7 @@ class ResourceMonitor {
     if (process.env.NODE_ENV === 'production') {
 
       // Example: Sentry, LogRocket, etc.'
-      // // // console.log('📊 Reporting error to monitoring service:', error);
+      // // // // console.log('📊 Reporting error to monitoring service:', error);
 <<<<<<< HEAD
     }
   }

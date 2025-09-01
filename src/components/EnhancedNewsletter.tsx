@@ -60,14 +60,14 @@ interface NewsletterFormData {
       await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
       // Here you would typically send the data to your newsletter service'
-      // // // // // // // // // // console.log('Newsletter subscription:', formData);
+      // // // // // // // // // // // console.log('Newsletter subscription:', formData);
 
 <<<<<<< HEAD
       console.log ('Newsletter subscription: ', formData) ;
 
       setStatus ('success') ;
 =======
-      // // // console.log('Newsletter subscription: ', formData);
+      // // // // console.log('Newsletter subscription: ', formData);
       '
       setStatus('success');
 >>>>>>> main
@@ -82,7 +82,7 @@ interface NewsletterFormData {
           interests[],;
           frequency: 'monthly'
         });
-      // // // // // // // // // // console.error('Newsletter subscription error:', error);
+      // // // // // // // // // // // console.error('Newsletter subscription error:', error);
 <<<<<<< HEAD
     }
         setStatus('idle')}, 3000)} catch (error) {
@@ -94,7 +94,7 @@ interface NewsletterFormData {
 '
       setStatus('error');'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      // // // console.error('Newsletter subscription error:', error)}
+      // // // // console.error('Newsletter subscription error:', error)}
   };
 
       setErrors (prev => ({ ...prev, interests: null }) ) }

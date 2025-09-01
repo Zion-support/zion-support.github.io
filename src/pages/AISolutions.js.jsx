@@ -2,8 +2,10 @@ import React from 'react';
 import SEO from "@/components/SEO";
 import { Brain, Cpu, Shield, Cloud, Zap, Target, Users, BarChart3, Globe, Rocket } from 'lucide-react';
 const AISolutions = () => {
+
     const aiServices = [
         {
+
             icon: Brain,
             title: "AI Autonomous Systems",
             description: "Self-learning AI systems that operate independently and continuously improve performance",
@@ -11,6 +13,7 @@ const AISolutions = () => {
             path: "/ai-autonomous-systems"
         },
         {
+
             icon: Cpu,
             title: "AI Research Assistant",
             description: "Intelligent research tools that accelerate discovery and analysis across all domains",
@@ -18,6 +21,7 @@ const AISolutions = () => {
             path: "/ai-autonomous-research-assistant"
         },
         {
+
             icon: Shield,
             title: "AI-Powered Cybersecurity",
             description: "Advanced threat detection and prevention using artificial intelligence",
@@ -25,6 +29,7 @@ const AISolutions = () => {
             path: "/ai-powered-enterprise-security"
         },
         {
+
             icon: Cloud,
             title: "AI Business Intelligence",
             description: "Comprehensive business analytics and insights powered by AI",
@@ -32,6 +37,7 @@ const AISolutions = () => {
             path: "/ai-business-intelligence"
         },
         {
+
             icon: Zap,
             title: "AI Content Generation",
             description: "Automated content creation for marketing, documentation, and communication",
@@ -39,6 +45,7 @@ const AISolutions = () => {
             path: "/ai-content-generator"
         },
         {
+
             icon: Target,
             title: "AI Sales & Marketing",
             description: "Intelligent automation for sales processes and marketing campaigns",
@@ -48,21 +55,25 @@ const AISolutions = () => {
     ];
     const benefits = [
         {
+
             icon: Rocket,
             title: "Accelerated Innovation",
             description: "Speed up development cycles and bring new solutions to market faster"
         },
         {
+
             icon: Users,
             title: "Enhanced User Experience",
             description: "Create more intuitive and personalized user interactions"
         },
         {
+
             icon: BarChart3,
             title: "Data-Driven Decisions",
             description: "Make better business decisions with AI-powered insights and analytics"
         },
         {
+
             icon: Globe,
             title: "Global Scalability",
             description: "Scale your operations globally with AI automation and optimization"

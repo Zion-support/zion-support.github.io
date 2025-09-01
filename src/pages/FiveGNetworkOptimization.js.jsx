@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Radio, Zap, Shield, ArrowRight, CheckCircle, BarChart3, Globe, Cpu } from 'lucide-react';
 const FiveGNetworkOptimization = () => {
+
     return (<>
       <Helmet>
         <title>5G Network Optimization - Zion Tech Group</title>
@@ -46,31 +47,37 @@ const FiveGNetworkOptimization = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
             {
+
                 icon: Zap,
                 title: "Speed Enhancement",
                 description: "Optimize throughput and reduce latency with intelligent traffic management and resource allocation"
             },
             {
+
                 icon: Globe,
                 title: "Coverage Expansion",
                 description: "Maximize coverage area and eliminate dead zones with strategic optimization algorithms"
             },
             {
+
                 icon: BarChart3,
                 title: "Performance Analytics",
                 description: "Real-time monitoring and analytics to track network performance and identify optimization opportunities"
             },
             {
+
                 icon: Shield,
                 title: "Security Optimization",
                 description: "Enhanced security protocols and threat detection integrated into network optimization"
             },
             {
+
                 icon: Cpu,
                 title: "AI-Driven Optimization",
                 description: "Machine learning algorithms continuously optimize network parameters for peak performance"
             },
             {
+
                 icon: CheckCircle,
                 title: "Quality Assurance",
                 description: "Automated quality monitoring and self-healing capabilities for consistent service delivery"
@@ -97,21 +104,25 @@ const FiveGNetworkOptimization = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
             {
+
                 metric: "40%",
                 title: "Speed Increase",
                 description: "Average improvement in network throughput"
             },
             {
+
                 metric: "60%",
                 title: "Latency Reduction",
                 description: "Decreased response times for critical applications"
             },
             {
+
                 metric: "25%",
                 title: "Coverage Expansion",
                 description: "Increased coverage area with same infrastructure"
             },
             {
+
                 metric: "99.9%",
                 title: "Uptime Guarantee",
                 description: "Enhanced reliability and service availability"
@@ -140,18 +151,22 @@ const FiveGNetworkOptimization = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {[
             {
+
                 title: "Smart Cities",
                 description: "Enable IoT sensors, traffic management, and public safety systems with reliable 5G connectivity."
             },
             {
+
                 title: "Industrial IoT",
                 description: "Support manufacturing automation, robotics, and real-time monitoring with ultra-low latency."
             },
             {
+
                 title: "Healthcare",
                 description: "Enable telemedicine, remote patient monitoring, and medical device connectivity."
             },
             {
+
                 title: "Autonomous Vehicles",
                 description: "Provide the reliable, low-latency connectivity required for vehicle-to-everything communication."
             }

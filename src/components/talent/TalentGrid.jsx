@@ -3,7 +3,7 @@ import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
 export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated, viewProfile, clearFilters, handleBook, handleMessage }) {
 
 "
-            // // // // // // // // // // console.log("Book talent:", talent.id);
+            // // // // // // // // // // // console.log("Book talent:", talent.id);
         }
     };
     const handleMessageInternal = (talent) => {

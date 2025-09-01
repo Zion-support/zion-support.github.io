@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Users, 
   TrendingUp, 
   MessageSquare, 
@@ -23,23 +24,28 @@ import {
 } from 'lucide-react';
 
 export default function AIPoweredCustomerSuccessPlatform() {
+
   const features = [
     {
+
       icon: Users,
       title: 'AI Customer Segmentation',
       description: 'Intelligent customer clustering and behavior analysis'
     },
     {
+
       icon: MessageSquare,
       title: 'Predictive Churn Prevention',
       description: 'Identify at-risk customers before they leave'
     },
     {
+
       icon: TrendingUp,
       title: 'Automated Success Metrics',
       description: 'Track and optimize customer success KPIs in real-time'
     },
     {
+
       icon: Zap,
       title: 'Smart Workflow Automation',
       description: 'Automate routine customer success tasks'
@@ -48,31 +54,37 @@ export default function AIPoweredCustomerSuccessPlatform() {
 
   const capabilities = [
     {
+
       title: 'Customer Health Scoring',
       description: 'AI-powered algorithms to assess customer satisfaction and engagement levels',
       icon: Target
     },
     {
+
       title: 'Predictive Analytics',
       description: 'Forecast customer behavior and identify expansion opportunities',
       icon: TrendingUp
     },
     {
+
       title: 'Intelligent Onboarding',
       description: 'Personalized customer onboarding paths based on usage patterns',
       icon: Users
     },
     {
+
       title: 'Automated Success Campaigns',
       description: 'Trigger-based campaigns to improve customer engagement',
       icon: Zap
     },
     {
+
       title: 'Real-time Insights Dashboard',
       description: 'Comprehensive view of customer success metrics and trends',
       icon: BarChart3
     },
     {
+
       title: 'Integration Hub',
       description: 'Seamless integration with CRM, support, and analytics tools',
       icon: Database
@@ -90,6 +102,7 @@ export default function AIPoweredCustomerSuccessPlatform() {
 
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$299',
       period: '/month',
@@ -103,6 +116,7 @@ export default function AIPoweredCustomerSuccessPlatform() {
       popular: false
     },
     {
+
       plan: 'Professional',
       price: '$799',
       period: '/month',
@@ -117,6 +131,7 @@ export default function AIPoweredCustomerSuccessPlatform() {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$1,999',
       period: '/month',
@@ -299,6 +314,7 @@ export default function AIPoweredCustomerSuccessPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-slate-800/50 p-8 rounded-xl border ${
+
                   plan.popular 
                     ? 'border-blue-500 ring-2 ring-blue-500/20' 
                     : 'border-slate-700'
@@ -332,6 +348,7 @@ export default function AIPoweredCustomerSuccessPlatform() {
                 <a 
                   href="https://ziontechgroup.com/contact" 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                     plan.popular
                       ? 'bg-blue-600 hover:bg-blue-700 text-white'
                       : 'bg-slate-700 hover:bg-slate-600 text-white'

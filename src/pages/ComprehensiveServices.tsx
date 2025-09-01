@@ -2,7 +2,9 @@ import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 import { SEO } from '@/components / SEO';
 export default React.memo (function ComprehensiveServices () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Brain,
@@ -64,8 +66,7 @@ import { motion } from 'framer - motion';
   Rocket as RocketIcon,
   Leaf as LeafIcon,
   Search,
-  Filter,
-} from 'lucide - react';
+  Filter} from 'lucide - react';
 
   const [activeCategory, setActiveCategory] = useState ('all') ;
   const [searchQuery, setSearchQuery] = useState ('') ;
@@ -74,6 +75,7 @@ import { motion } from 'framer - motion';
   // Comprehensive service categories with real market prices
   const serviceCategories = [
     {
+
       id: 'ai - ml',
       name: 'AI & Machine Learning',
       icon: Brain,
@@ -82,6 +84,7 @@ import { motion } from 'framer - motion';
         'Cutting - edge artificial intelligence and machine learning solutions',
       services: [
         {
+
           name: 'AI Business Intelligence Platform',
           description:
             'Advanced analytics with ML insights and predictive modeling',
@@ -101,9 +104,9 @@ import { motion } from 'framer - motion';
           icon: BarChart3,
           category: 'ai - ml',
           badge: 'Popular',
-          roi: '300%',
-        },
+          roi: '300%'},
         {
+
           name: 'AI Customer Experience Platform',
           description: 'Intelligent customer engagement with personalization',
           price: '$1,800 / month',
@@ -121,9 +124,9 @@ import { motion } from 'framer - motion';
           icon: Users,
           category: 'ai - ml',
           badge: 'New',
-          roi: '250%',
-        },
+          roi: '250%'},
         {
+
           name: 'AI Cybersecurity Threat Detection',
           description: 'ML - powered threat detection and response',
           price: '$3,200 / month',
@@ -141,11 +144,10 @@ import { motion } from 'framer - motion';
           icon: Shield,
           category: 'ai - ml',
           badge: 'Featured',
-          roi: '400%',
-        },
-      ],
-    },
+          roi: '400%'},
+      ]},
     {
+
       id: 'micro - saas',
       name: 'Micro SAAS Solutions',
       icon: Zap,
@@ -153,6 +155,7 @@ import { motion } from 'framer - motion';
       description: 'Scalable software - as - a-service for specific business needs',
       services: [
         {
+
           name: 'AI Project Management Suite',
           description: 'Intelligent project planning and resource optimization',
           price: '$150 / month',
@@ -170,9 +173,9 @@ import { motion } from 'framer - motion';
           icon: Workflow,
           category: 'micro - saas',
           badge: 'Best Value',
-          roi: '200%',
-        },
+          roi: '200%'},
         {
+
           name: 'Smart Inventory Management',
           description: 'AI - driven inventory optimization and forecasting',
           price: '$200 / month',
@@ -190,9 +193,9 @@ import { motion } from 'framer - motion';
           icon: Truck,
           category: 'micro - saas',
           badge: 'Popular',
-          roi: '180%',
-        },
+          roi: '180%'},
         {
+
           name: 'AI Content Creation Platform',
           description: 'Automated content generation with SEO optimization',
           price: '$120 / month',
@@ -210,11 +213,10 @@ import { motion } from 'framer - motion';
           icon: Brain,
           category: 'micro - saas',
           badge: 'New',
-          roi: '150%',
-        },
-      ],
-    },
+          roi: '150%'},
+      ]},
     {
+
       id: 'it - infrastructure',
       name: 'IT Infrastructure & Services',
       icon: Server,
@@ -223,6 +225,7 @@ import { motion } from 'framer - motion';
         'Comprehensive IT solutions for modern business infrastructure',
       services: [
         {
+
           name: 'Cloud Migration & Optimization',
           description: 'Seamless cloud migration with cost optimization',
           price: '$5,000 / project',
@@ -240,9 +243,9 @@ import { motion } from 'framer - motion';
           icon: Cloud,
           category: 'it - infrastructure',
           badge: 'Featured',
-          roi: '350%',
-        },
+          roi: '350%'},
         {
+
           name: 'DevOps Automation Platform',
           description: 'End - to - end DevOps automation with CI / CD pipelines',
           price: '$2,800 / month',
@@ -260,9 +263,9 @@ import { motion } from 'framer - motion';
           icon: Code,
           category: 'it - infrastructure',
           badge: 'Popular',
-          roi: '280%',
-        },
+          roi: '280%'},
         {
+
           name: 'Cybersecurity Compliance Suite',
           description:
             'Comprehensive security compliance for industry standards',
@@ -281,11 +284,10 @@ import { motion } from 'framer - motion';
           icon: Lock,
           category: 'it - infrastructure',
           badge: 'Essential',
-          roi: '500%',
-        },
-      ],
-    },
+          roi: '500%'},
+      ]},
     {
+
       id: 'quantum - tech',
       name: 'Quantum & Emerging Tech',
       icon: Atom,
@@ -293,6 +295,7 @@ import { motion } from 'framer - motion';
       description: 'Next - generation technologies for future - ready businesses',
       services: [
         {
+
           name: 'Quantum Computing Solutions',
           description: 'Quantum algorithms for optimization and cryptography',
           price: '$15,000 / month',
@@ -310,9 +313,9 @@ import { motion } from 'framer - motion';
           icon: Atom,
           category: 'quantum - tech',
           badge: 'Future Tech',
-          roi: '1000%',
-        },
+          roi: '1000%'},
         {
+
           name: 'Blockchain Enterprise Platform',
           description:
             'Secure blockchain for supply chain and digital identity',
@@ -331,9 +334,9 @@ import { motion } from 'framer - motion';
           icon: LinkIcon,
           category: 'quantum - tech',
           badge: 'Innovative',
-          roi: '300%',
-        },
+          roi: '300%'},
         {
+
           name: 'IoT Edge Computing Platform',
           description: 'Real - time data processing at the edge',
           price: '$2,200 / month',
@@ -351,11 +354,10 @@ import { motion } from 'framer - motion';
           icon: Cpu,
           category: 'quantum - tech',
           badge: 'Industrial',
-          roi: '250%',
-        },
-      ],
-    },
+          roi: '250%'},
+      ]},
     {
+
       id: 'green - tech',
       name: 'Green Technology',
       icon: Leaf,
@@ -364,6 +366,7 @@ import { motion } from 'framer - motion';
         'Sustainable technology solutions for environmental responsibility',
       services: [
         {
+
           name: 'Carbon Footprint Analytics',
           description:
             'AI - powered carbon tracking and sustainability reporting',
@@ -382,9 +385,9 @@ import { motion } from 'framer - motion';
           icon: Leaf,
           category: 'green - tech',
           badge: 'Eco - Friendly',
-          roi: '180%',
-        },
+          roi: '180%'},
         {
+
           name: 'Smart Energy Management',
           description: 'Intelligent energy optimization using IoT and AI',
           price: '$1,500 / month',
@@ -402,11 +405,10 @@ import { motion } from 'framer - motion';
           icon: Zap,
           category: 'green - tech',
           badge: 'Cost - Effective',
-          roi: '220%',
-        },
-      ],
-    },
+          roi: '220%'},
+      ]},
     {
+
       id: 'space - tech',
       name: 'Space Technology',
       icon: Satellite,
@@ -414,6 +416,7 @@ import { motion } from 'framer - motion';
       description: 'Satellite and space - based technology for global insights',
       services: [
         {
+
           name: 'Satellite Data Analytics',
           description: 'Earth observation data analysis for various industries',
           price: '$2,800 / month',
@@ -431,21 +434,20 @@ import { motion } from 'framer - motion';
           icon: Satellite,
           category: 'space - tech',
           badge: 'Global',
-          roi: '350%',
-        },
-      ],
-    },
+          roi: '350%'},
+      ]},
   ];
 
   const contactInfo = {
+
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
 
   const filteredServices = serviceCategories.flatMap (category =>
     category.services.filter (service => {
+
       const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
       const matchesSearch = searchQuery === '' ||
         service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
@@ -460,23 +462,23 @@ import { motion } from 'framer - motion';
     }) ) ;
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+
+        staggerChildren: 0.1}}};
 
   const itemVariants = {
+
     hidden: { opacity: 0, y: 20 },
     visible: {
+
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
+      transition: { duration: 0.6 }}};
 
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 text - white">
       <SEO
@@ -590,6 +592,7 @@ import { motion } from 'framer - motion';
                 Try adjusting your search criteria or filters
               </p>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+
                   setSearchQuery ('') ;
                   setActiveCategory ('all') ;
                   setPriceRange ('all') ;
@@ -633,6 +636,7 @@ import { motion } from 'framer - motion';
                         </div>
                         {service.badge && (<span
                             className={`px - 3 py - 1 text - xs font - semibold rounded - full ${
+
                               service.badge === 'Popular'
                                 ? 'bg - blue - 500 / 20 text - blue - 400 border border - blue - 500 / 30'
                                 : service.badge === 'New'
@@ -871,29 +875,29 @@ import { motion } from 'framer - motion';
           >
             {[
               {
+
                 icon: Award,
                 title: 'Proven Expertise',
                 description:
-                  '500 + successful projects across industries with measurable results',
-              },
+                  '500 + successful projects across industries with measurable results'},
               {
+
                 icon: Zap,
                 title: 'Innovation First',
                 description:
-                  'Cutting - edge technologies and methodologies for competitive advantage',
-              },
+                  'Cutting - edge technologies and methodologies for competitive advantage'},
               {
+
                 icon: Shield,
                 title: 'Enterprise Security',
                 description:
-                  'Bank - level security and compliance for enterprise - grade solutions',
-              },
+                  'Bank - level security and compliance for enterprise - grade solutions'},
               {
+
                 icon: Heart,
                 title: '24 / 7 Support',
                 description:
-                  'Round - the - clock technical support and maintenance services',
-              },
+                  'Round - the - clock technical support and maintenance services'},
             ].map ( (item, index) => (<motion.div
                 key={index}
                 variants={itemVariants}

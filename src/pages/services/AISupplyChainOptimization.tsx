@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Truck, 
   Brain, 
   TrendingUp, 
@@ -27,28 +28,34 @@ import {
 } from 'lucide-react';
 
 export default function AISupplyChainOptimization() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI Demand Forecasting',
       description: 'Predict demand patterns with 92% accuracy using advanced machine learning algorithms'
     },
     {
+
       icon: Route,
       title: 'Intelligent Route Optimization',
       description: 'AI-powered logistics optimization reducing delivery times by 35% and costs by 25%'
     },
     {
+
       icon: Warehouse,
       title: 'Smart Inventory Management',
       description: 'Automated inventory optimization preventing stockouts and reducing carrying costs'
     },
     {
+
       icon: Activity,
       title: 'Real-time Monitoring',
       description: 'Live tracking and predictive alerts for supply chain disruptions and delays'
     },
     {
+
       icon: BarChart3,
       title: 'Predictive Analytics',
       description: 'Data-driven insights for supply chain optimization and risk mitigation'
@@ -66,24 +73,28 @@ export default function AISupplyChainOptimization() {
 
   const services = [
     {
+
       title: 'Complete Supply Chain Suite',
       description: 'End-to-end AI-powered supply chain optimization platform',
       price: 'From $4,999/month',
       features: ['Demand forecasting', 'Route optimization', 'Inventory management', 'Real-time monitoring', 'Analytics dashboard', 'API integrations']
     },
     {
+
       title: 'Logistics Optimization',
       description: 'AI-powered transportation and route optimization solution',
       price: 'From $2,499/month',
       features: ['Route planning', 'Fleet management', 'Cost optimization', 'Delivery tracking', 'Performance analytics']
     },
     {
+
       title: 'Inventory Intelligence',
       description: 'Smart inventory management and demand forecasting',
       price: 'From $1,999/month',
       features: ['Demand prediction', 'Stock optimization', 'Reorder automation', 'Supplier management', 'Cost analysis']
     },
     {
+
       title: 'Supply Chain Analytics',
       description: 'Comprehensive analytics and reporting platform',
       price: 'From $1,499/month',
@@ -101,21 +112,25 @@ export default function AISupplyChainOptimization() {
 
   const useCases = [
     {
+
       industry: 'E-commerce',
       description: 'Optimize inventory levels and delivery routes for online retail',
       savings: 'Save up to $500K annually'
     },
     {
+
       industry: 'Manufacturing',
       description: 'Streamline production planning and supplier management',
       savings: 'Reduce costs by 35%'
     },
     {
+
       industry: 'Healthcare',
       description: 'Ensure critical medical supplies are always available',
       savings: 'Improve patient care by 40%'
     },
     {
+
       industry: 'Food & Beverage',
       description: 'Optimize fresh food logistics and reduce waste',
       savings: 'Cut waste by 30%'
@@ -282,6 +297,7 @@ export default function AISupplyChainOptimization() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 ${
+
                   index === 0 ? 'border-blue-500/50 bg-blue-500/5' : 'border-slate-700'
                 }`}
               >
@@ -309,6 +325,7 @@ export default function AISupplyChainOptimization() {
                 <a
                   href="https://ziontechgroup.com/contact"
                   className={`w-full inline-flex justify-center items-center px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+
                     index === 0
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
                       : 'border border-slate-600 text-slate-300 hover:border-blue-500/50 hover:text-blue-400'

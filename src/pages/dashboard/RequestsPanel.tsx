@@ -14,11 +14,13 @@ import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute               } from '@/components/ProtectedRoute';
 
 export default function RequestsPanel(...args[]: any):  {
+
   const { user } = useAuth();
 
   const [selectedQuote, setSelectedQuote] = useState<any>(null);
   const [showDetails, setShowDetails] = useState(false);
   const {
+
     quotes,
     unreadCount,
     isLoading,
@@ -83,6 +85,7 @@ export default function RequestsPanel(...args[]: any):  {
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {
+
             setShowDetails(false);
             setSelectedQuote(null)}}
         />

@@ -29,7 +29,7 @@ export function UpcomingInterviewsCard() {
             catch (error) {
 
 "
-                // // // console.error("Error loading upcoming interviews:", error)}
+                // // // // console.error("Error loading upcoming interviews:", error)}
             finally {
 
                 setIsLoading(false)}

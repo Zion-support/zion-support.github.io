@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Brain,
   Zap,
   Lock,
@@ -286,6 +287,7 @@ const ALL_SERVICES_2028 = [
 // Service categories
 const SERVICE_CATEGORIES = [
   {
+
     id: 'all',
     name: 'All Services',
     icon: Globe,
@@ -293,6 +295,7 @@ const SERVICE_CATEGORIES = [
     count: ALL_SERVICES_2028.length
   },
   {
+
     id: 'ai-enterprise',
     name: 'AI & Enterprise',
     icon: Brain,
@@ -300,6 +303,7 @@ const SERVICE_CATEGORIES = [
     count: ALL_SERVICES_2028.filter(s => s.category.includes('AI') || s.category.includes('Enterprise')).length
   },
   {
+
     id: 'quantum-computing',
     name: 'Quantum Computing',
     icon: Atom,
@@ -307,6 +311,7 @@ const SERVICE_CATEGORIES = [
     count: ALL_SERVICES_2028.filter(s => s.category.includes('Quantum')).length
   },
   {
+
     id: 'cybersecurity',
     name: 'Cybersecurity',
     icon: Shield,
@@ -314,6 +319,7 @@ const SERVICE_CATEGORIES = [
     count: ALL_SERVICES_2028.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Security')).length
   },
   {
+
     id: 'healthcare',
     name: 'Healthcare Technology',
     icon: HeartPulse,
@@ -321,6 +327,7 @@ const SERVICE_CATEGORIES = [
     count: ALL_SERVICES_2028.filter(s => s.category.includes('Healthcare')).length
   },
   {
+
     id: 'financial',
     name: 'Financial Technology',
     icon: DollarSign,
@@ -328,6 +335,7 @@ const SERVICE_CATEGORIES = [
     count: ALL_SERVICES_2028.filter(s => s.category.includes('Financial')).length
   },
   {
+
     id: 'blockchain',
     name: 'Blockchain & Web3',
     icon: GitBranch,
@@ -335,6 +343,7 @@ const SERVICE_CATEGORIES = [
     count: ALL_SERVICES_2028.filter(s => s.category.includes('Blockchain') || s.category.includes('DeFi') || s.category.includes('NFT')).length
   },
   {
+
     id: 'emerging-tech',
     name: 'Emerging Technology',
     icon: Rocket,
@@ -346,21 +355,25 @@ const SERVICE_CATEGORIES = [
 // Pricing tiers
 const PRICING_TIERS = [
   {
+
     id: 'all',
     name: 'All Prices',
     range: 'All pricing options'
   },
   {
+
     id: 'budget',
     name: 'Budget',
     range: 'Under $15,000/month'
   },
   {
+
     id: 'mid-range',
     name: 'Mid-Range',
     range: '$15,000 - $30,000/month'
   },
   {
+
     id: 'enterprise',
     name: 'Enterprise',
     range: 'Over $30,000/month'
@@ -369,6 +382,7 @@ const PRICING_TIERS = [
 
 // Contact information
 const CONTACT_INFO = {
+
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   website: 'https://ziontechgroup.com',
@@ -376,6 +390,7 @@ const CONTACT_INFO = {
 };
 
 export default function ComprehensiveServicesShowcase2028() {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -384,6 +399,7 @@ export default function ComprehensiveServicesShowcase2028() {
   const [showFilters, setShowFilters] = useState(false);
 
   const filteredServices = ALL_SERVICES_2028.filter(service => {
+
     const matchesCategory = selectedCategory === 'all' || 
       SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory)?.name.includes(service.category) ||
       service.category.toLowerCase().includes(selectedCategory.toLowerCase());
@@ -401,7 +417,9 @@ export default function ComprehensiveServicesShowcase2028() {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'price':
         return a.price - b.price;
       case 'roi':
@@ -417,18 +435,22 @@ export default function ComprehensiveServicesShowcase2028() {
   });
 
   const getCategoryIcon = (categoryName: string) => {
+
     const category = SERVICE_CATEGORIES.find(cat => cat.name === categoryName);
     if (!category) return Globe;
     return category.icon;
   };
 
   const getCategoryColor = (categoryName: string) => {
+
     const category = SERVICE_CATEGORIES.find(cat => cat.name === categoryName);
     return category?.color || 'from-blue-500 to-cyan-500';
   };
 
   const formatPrice = (price: number) => {
+
     if (price >= 1000) {
+
       return `$${(price / 1000).toFixed(0)}K`;
     }
     return `$${price}`;
@@ -540,6 +562,7 @@ export default function ComprehensiveServicesShowcase2028() {
                             key={category.id}
                             onClick={() => setSelectedCategory(category.id)}
                             className={`p-2 rounded-lg text-sm transition-colors ${
+
                               selectedCategory === category.id
                                 ? 'bg-blue-600 text-white'
                                 : 'bg-white/10 text-gray-300 hover:bg-white/20'
@@ -564,6 +587,7 @@ export default function ComprehensiveServicesShowcase2028() {
                             key={tier.id}
                             onClick={() => setSelectedPricing(tier.id)}
                             className={`w-full p-3 rounded-lg text-left transition-colors ${
+
                               selectedPricing === tier.id
                                 ? 'bg-blue-600 text-white'
                                 : 'bg-white/10 text-gray-300 hover:bg-white/20'

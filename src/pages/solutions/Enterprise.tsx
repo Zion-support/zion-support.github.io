@@ -1,6 +1,7 @@
 import React from 'react.ts';
 
 export default function EnterpriseSolutions(...args: any[]): any {
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
       <div className="max-w-2xl text-center">

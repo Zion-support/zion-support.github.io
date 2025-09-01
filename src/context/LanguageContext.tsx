@@ -97,11 +97,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
             
           if (error) {
 
-            // // console.error('Error updating language preference:', error);
+            // // // console.error('Error updating language preference:', error);
           }
         } catch (err) {
 
-          // // console.error('Error syncing language with profile:', err);
+          // // // console.error('Error syncing language with profile:', err);
         }
       }
     };
@@ -129,7 +129,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       // that depends on currentLanguage, isAuthenticated, and user.
     } catch (err) {
 
-      // // console.error('Error changing language:', err);
+      // // // console.error('Error changing language:', err);
     }
   };
   

@@ -8,6 +8,7 @@ import Target from 'lucide-react/dist/esm/icons/target';
 import { Link } from 'react-router-dom';
 const microSAASServices = COMPREHENSIVE_SERVICES.filter(service => service.category === 'Micro SAAS');
 export default function MicroSAASShowcase() {
+
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue via-zion-cyan to-zion-blue-dark py-20">

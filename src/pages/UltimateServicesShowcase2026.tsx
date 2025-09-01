@@ -1,6 +1,8 @@
 import React from 'react.ts';
 export default React.memo (function UltimateServicesShowcase2026 (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Star,
@@ -46,15 +48,16 @@ import { motion } from 'framer - motion.ts';
   Briefcase,
   Newspaper,
   BookOpen,
-  ExternalLink,
-} from 'lucide - react.ts';
+  ExternalLink} from 'lucide - react.ts';
 
   const services = [
     {
+
       category: 'AI & Machine Learning',
       icon: Brain,
       services: [
         {
+
           name: 'AI Workflow Orchestrator',
           description: 'Intelligent process automation and workflow management',
           href: '/services / ai - workflow - orchestrator',
@@ -63,9 +66,9 @@ import { motion } from 'framer - motion.ts';
             'Workflow Optimization',
             'AI Decision Making',
             'Integration Hub',
-          ],
-        },
+          ]},
         {
+
           name: 'AI Data Governance Platform',
           description: 'Comprehensive data management and compliance',
           href: '/services / ai - data - governance - platform',
@@ -74,9 +77,9 @@ import { motion } from 'framer - motion.ts';
             'Compliance Management',
             'Privacy Protection',
             'Audit Trails',
-          ],
-        },
+          ]},
         {
+
           name: 'AI Customer Experience Analytics',
           description: 'Deep insights into customer behavior and satisfaction',
           href: '/services / ai - customer - experience - analytics',
@@ -85,15 +88,15 @@ import { motion } from 'framer - motion.ts';
             'Sentiment Analysis',
             'Predictive Insights',
             'Personalization',
-          ],
-        },
-      ],
-    },
+          ]},
+      ]},
     {
+
       category: 'Cloud & Infrastructure',
       icon: Cloud,
       services: [
         {
+
           name: 'Cloud DevOps',
           description: 'Streamlined development and operations',
           href: '/services / cloud - devops',
@@ -102,9 +105,9 @@ import { motion } from 'framer - motion.ts';
             'Infrastructure as Code',
             'Monitoring',
             'Automation',
-          ],
-        },
+          ]},
         {
+
           name: 'FinOps Advisor',
           description: 'Cloud cost optimization and management',
           href: '/services / finops - advisor',
@@ -113,15 +116,15 @@ import { motion } from 'framer - motion.ts';
             'Resource Optimization',
             'Budget Management',
             'ROI Tracking',
-          ],
-        },
-      ],
-    },
+          ]},
+      ]},
     {
+
       category: 'Cybersecurity',
       icon: Shield,
       services: [
         {
+
           name: 'AI Cybersecurity Platform',
           description: 'AI - powered threat detection and response',
           href: '/services / ai - cybersecurity - platform',
@@ -130,9 +133,9 @@ import { motion } from 'framer - motion.ts';
             'Automated Response',
             'Risk Assessment',
             'Compliance',
-          ],
-        },
+          ]},
         {
+
           name: 'Zero Trust Network Access',
           description: 'Secure access control and network security',
           href: '/services / zero - trust - network - access',
@@ -141,15 +144,15 @@ import { motion } from 'framer - motion.ts';
             'Access Control',
             'Network Segmentation',
             'Monitoring',
-          ],
-        },
-      ],
-    },
+          ]},
+      ]},
     {
+
       category: 'Emerging Technologies',
       icon: Atom,
       services: [
         {
+
           name: 'Quantum Computing Solutions',
           description: 'Next - generation quantum computing services',
           href: '/services / quantum - computing',
@@ -158,9 +161,9 @@ import { motion } from 'framer - motion.ts';
             'Optimization',
             'Simulation',
             'Research',
-          ],
-        },
+          ]},
         {
+
           name: 'IoT Edge Computing',
           description: 'Smart device networks and edge processing',
           href: '/services / iot - edge - computing',
@@ -169,15 +172,15 @@ import { motion } from 'framer - motion.ts';
             'Edge Processing',
             'Real - time Analytics',
             'Connectivity',
-          ],
-        },
-      ],
-    },
+          ]},
+      ]},
     {
+
       category: 'Micro SaaS Solutions',
       icon: ShoppingCart,
       services: [
         {
+
           name: 'Micro CRM',
           description: 'Customer relationship management for small businesses',
           href: '/services / micro - crm',
@@ -186,9 +189,9 @@ import { motion } from 'framer - motion.ts';
             'Sales Tracking',
             'Customer Insights',
             'Automation',
-          ],
-        },
+          ]},
         {
+
           name: 'Website Analytics',
           description: 'Privacy - first analytics for small businesses',
           href: '/services / website - analytics',
@@ -197,10 +200,8 @@ import { motion } from 'framer - motion.ts';
             'Performance Metrics',
             'Privacy Compliance',
             'Insights',
-          ],
-        },
-      ],
-    },
+          ]},
+      ]},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light">

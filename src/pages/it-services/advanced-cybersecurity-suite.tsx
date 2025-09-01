@@ -3,33 +3,40 @@ import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, AlertTriangle, Network, Server, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Users, Globe, BarChart3, Key } from 'lucide-react';
 
 const AdvancedCybersecuritySuite: React.FC = () => {
+
   const features = [
     {
+
       icon: Shield,
       title: "Zero-Trust Architecture",
       description: "Implement comprehensive zero-trust security model with continuous verification and least-privilege access controls"
     },
     {
+
       icon: Eye,
       title: "Advanced Threat Detection",
       description: "AI-powered threat detection with behavioral analysis, anomaly detection, and real-time threat intelligence"
     },
     {
+
       icon: Lock,
       title: "Endpoint Security",
       description: "Comprehensive endpoint protection with EDR/XDR capabilities, ransomware protection, and device control"
     },
     {
+
       icon: Network,
       title: "Network Security",
       description: "Advanced firewall management, intrusion prevention, and network segmentation with micro-segmentation"
     },
     {
+
       icon: Server,
       title: "Cloud Security",
       description: "Multi-cloud security with CSPM, workload protection, and secure cloud-native development"
     },
     {
+
       icon: AlertTriangle,
       title: "Incident Response",
       description: "24/7 security operations center with automated incident response and threat hunting capabilities"
@@ -49,6 +56,7 @@ const AdvancedCybersecuritySuite: React.FC = () => {
 
   const pricing = [
     {
+
       plan: "Essential",
       price: "$2,999",
       period: "/month",
@@ -63,6 +71,7 @@ const AdvancedCybersecuritySuite: React.FC = () => {
       popular: false
     },
     {
+
       plan: "Professional",
       price: "$7,999",
       period: "/month",
@@ -79,6 +88,7 @@ const AdvancedCybersecuritySuite: React.FC = () => {
       popular: true
     },
     {
+
       plan: "Enterprise",
       price: "$19,999",
       period: "/month",
@@ -98,24 +108,28 @@ const AdvancedCybersecuritySuite: React.FC = () => {
 
   const benefits = [
     {
+
       icon: Shield,
       title: "Threat Prevention",
       value: "99.9%",
       description: "Advanced threat prevention with AI-powered detection and automated response"
     },
     {
+
       icon: Zap,
       title: "Response Time",
       value: "< 5 min",
       description: "Lightning-fast incident response with automated threat containment"
     },
     {
+
       icon: Users,
       title: "Compliance Ready",
       value: "100%",
       description: "Full compliance with SOC 2, ISO 27001, GDPR, and industry standards"
     },
     {
+
       icon: BarChart3,
       title: "Risk Reduction",
       value: "85-95%",
@@ -342,6 +356,7 @@ const AdvancedCybersecuritySuite: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className={`relative bg-white/5 border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-red-400/50 bg-gradient-to-b from-red-500/10 to-transparent' 
                     : 'border-white/10'
@@ -375,6 +390,7 @@ const AdvancedCybersecuritySuite: React.FC = () => {
                 <a
                   href="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'

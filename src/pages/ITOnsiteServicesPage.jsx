@@ -22,12 +22,14 @@ export default function ITOnsiteServicesPage () {
   const success = searchParams.get ('success') ;
   // Show success toast if redirected from successful payment
   useEffect ( () => {
+
     if (success === 'true') {
+
       toast ({
+
         title: 'Payment Successful',
         description:
-          'Your IT onsite service request has been received. Our team will contact you shortly.',
-      }) ;
+          'Your IT onsite service request has been received. Our team will contact you shortly.'}) ;
     }
   }, [success]) ;
   // Popular countries for the featured cards
@@ -40,9 +42,10 @@ export default function ITOnsiteServicesPage () {
     'Singapore',
   ];
   // Filter countries based on search query
-  const filteredCountries = onsiteServicePricing
+  const filteredCountries = onsiteServicePricing;
     .filter (country =>
       country.country.toLowerCase () .includes (searchQuery.toLowerCase () ) ) .sort ( (a, b) => {
+
       // First, sort by popular status
       const aIsPopular = popularCountries.includes (a.country) ;
       const bIsPopular = popularCountries.includes (b.country) ;
@@ -52,9 +55,11 @@ export default function ITOnsiteServicesPage () {
       return a.country.localeCompare (b.country) ;
     }) ;
   const handleCountrySelect = country => {
+
     setSelectedCountry (country) ;
     // Scroll to the service details section
     setTimeout ( () => {
+
       document
         .getElementById ('service - details') ?.scrollIntoView ({ behavior: 'smooth' }) ;
     }, 100) ;

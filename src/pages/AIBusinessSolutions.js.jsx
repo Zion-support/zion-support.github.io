@@ -1,26 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 export default function AIBusinessSolutions() {
+
     const benefits = [
         {
+
             title: 'Increased Efficiency',
             description: 'Automate repetitive tasks and optimize workflows',
             metric: '40%',
             detail: 'Average efficiency improvement'
         },
         {
+
             title: 'Cost Reduction',
             description: 'Reduce operational costs through intelligent automation',
             metric: '30%',
             detail: 'Average cost savings'
         },
         {
+
             title: 'Better Decision Making',
             description: 'Data-driven insights for strategic decisions',
             metric: '60%',
             detail: 'Faster decision making'
         },
         {
+
             title: 'Enhanced Customer Experience',
             description: 'Personalized and responsive customer interactions',
             metric: '50%',
@@ -29,26 +34,32 @@ export default function AIBusinessSolutions() {
     ];
     const industries = [
         {
+
             name: 'Healthcare',
             applications['Patient diagnosis', 'Drug discovery', 'Medical imaging', 'Predictive healthcare']
         },
         {
+
             name: 'Manufacturing',
             applications['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Production planning']
         },
         {
+
             name: 'Retail',
             applications['Inventory management', 'Customer segmentation', 'Price optimization', 'Demand forecasting']
         },
         {
+
             name: 'Financial Services',
             applications['Risk assessment', 'Fraud detection', 'Portfolio management', 'Customer service']
         },
         {
+
             name: 'Transportation',
             applications['Route optimization', 'Fleet management', 'Predictive maintenance', 'Demand forecasting']
         },
         {
+
             name: 'Energy',
             applications['Grid optimization', 'Predictive maintenance', 'Energy trading', 'Sustainability analysis']
         }

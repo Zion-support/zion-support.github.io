@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Shield, 
   TrendingUp, 
@@ -55,33 +56,40 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AIFinancialRiskManagement() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI Risk Assessment',
       description: 'Advanced machine learning algorithms for real-time risk evaluation and threat detection'
     },
     {
+
       icon: Shield,
       title: 'Compliance Monitoring',
       description: 'Automated regulatory compliance tracking and reporting for financial institutions'
     },
     {
+
       icon: TrendingUp,
       title: 'Predictive Analytics',
       description: 'Forecast market risks and identify potential threats before they materialize'
     },
     {
+
       icon: Target,
       title: 'Portfolio Optimization',
       description: 'AI-driven portfolio management with risk-adjusted return optimization'
     },
     {
+
       icon: AlertTriangle,
       title: 'Real-time Alerts',
       description: 'Instant notifications for risk threshold breaches and compliance violations'
     },
     {
+
       icon: BarChart3,
       title: 'Comprehensive Reporting',
       description: 'Detailed risk analytics and regulatory reporting with customizable dashboards'
@@ -99,21 +107,25 @@ export default function AIFinancialRiskManagement() {
 
   const useCases = [
     {
+
       industry: 'Investment Banking',
       applications: ['Portfolio risk management', 'Market risk analysis', 'Credit risk assessment', 'Regulatory compliance'],
       icon: DollarSign
     },
     {
+
       industry: 'Insurance',
       applications: ['Underwriting risk', 'Claims fraud detection', 'Actuarial modeling', 'Regulatory reporting'],
       icon: Shield
     },
     {
+
       industry: 'Commercial Banking',
       applications: ['Credit risk analysis', 'Loan portfolio management', 'Basel compliance', 'Stress testing'],
       icon: Factory
     },
     {
+
       industry: 'Asset Management',
       applications: ['Portfolio optimization', 'Risk-adjusted returns', 'ESG risk assessment', 'Performance attribution'],
       icon: BarChart
@@ -131,6 +143,7 @@ export default function AIFinancialRiskManagement() {
 
   const pricing = [
     {
+
       plan: 'Professional',
       price: '$899',
       period: '/month',
@@ -148,6 +161,7 @@ export default function AIFinancialRiskManagement() {
       popular: false
     },
     {
+
       plan: 'Enterprise',
       price: '$1,899',
       period: '/month',
@@ -167,6 +181,7 @@ export default function AIFinancialRiskManagement() {
       popular: true
     },
     {
+
       plan: 'Institution',
       price: '$3,599',
       period: '/month',
@@ -187,21 +202,27 @@ export default function AIFinancialRiskManagement() {
   ];
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5
       }
     }
@@ -409,6 +430,7 @@ export default function AIFinancialRiskManagement() {
                 key={index}
                 variants={itemVariants}
                 className={`relative bg-slate-800/50 p-8 rounded-2xl border ${
+
                   plan.popular 
                     ? 'border-red-400 ring-2 ring-red-400/20' 
                     : 'border-slate-700'
@@ -443,6 +465,7 @@ export default function AIFinancialRiskManagement() {
                 <Link
                   to={plan.plan === 'Institution' ? '/contact' : '/contact'}
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

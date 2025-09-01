@@ -1,6 +1,8 @@
 import React from 'react';
 export default React.memo (function ComprehensiveServicesShowcase2031 () {
+
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -82,11 +84,11 @@ import { SEO } from '../components / SEO';
   Users as UsersIcon4,
   Code as CodeIcon2,
   HelpCircle as HelpCircleIcon2,
-  DollarSign as DollarSignIcon2,
-} from 'lucide - react';
+  DollarSign as DollarSignIcon2} from 'lucide - react';
 
   const featuredServices = [
     {
+
       id: 'ai - quantum - hybrid - platform',
       name: 'AI Quantum Hybrid Platform',
       description:
@@ -101,9 +103,9 @@ import { SEO } from '../components / SEO';
       ],
       href: '/services / ai - quantum - hybrid - platform',
       category: 'AI & Quantum Computing',
-      featured: true,
-    },
+      featured: true},
     {
+
       id: 'ai - autonomous - research - assistant',
       name: 'AI Autonomous Research Assistant',
       description:
@@ -118,9 +120,9 @@ import { SEO } from '../components / SEO';
       ],
       href: '/services / ai - autonomous - research - assistant',
       category: 'AI & Research',
-      featured: true,
-    },
+      featured: true},
     {
+
       id: 'ai - cybersecurity - threat - intelligence',
       name: 'AI Cybersecurity Threat Intelligence',
       description:
@@ -135,9 +137,9 @@ import { SEO } from '../components / SEO';
       ],
       href: '/services / ai - cybersecurity - threat - intelligence',
       category: 'AI & Cybersecurity',
-      featured: true,
-    },
+      featured: true},
     {
+
       id: 'ai - business - intelligence',
       name: 'AI Business Intelligence',
       description:
@@ -152,9 +154,9 @@ import { SEO } from '../components / SEO';
       ],
       href: '/services / ai - business - intelligence',
       category: 'AI & Analytics',
-      featured: true,
-    },
+      featured: true},
     {
+
       id: 'ai - financial - analytics',
       name: 'AI Financial Analytics',
       description:
@@ -169,9 +171,9 @@ import { SEO } from '../components / SEO';
       ],
       href: '/services / ai - financial - analytics',
       category: 'AI & Finance',
-      featured: true,
-    },
+      featured: true},
     {
+
       id: 'ai - marketing - automation',
       name: 'AI Marketing Automation',
       description:
@@ -186,12 +188,12 @@ import { SEO } from '../components / SEO';
       ],
       href: '/services / ai - marketing - automation',
       category: 'AI & Marketing',
-      featured: true,
-    },
+      featured: true},
   ];
 
   const serviceCategories = [
     {
+
       title: 'AI & Machine Learning',
       icon: Brain,
       color: 'from - purple - 500 to - cyan - 500',
@@ -202,9 +204,9 @@ import { SEO } from '../components / SEO';
         'AI Customer Support',
         'AI Content Creation',
         'AI HR Platform',
-      ],
-    },
+      ]},
     {
+
       title: 'Quantum Computing',
       icon: Atom,
       color: 'from - indigo - 500 to - purple - 500',
@@ -213,9 +215,9 @@ import { SEO } from '../components / SEO';
         'Quantum Computing Solutions',
         'Quantum Machine Learning',
         'Quantum Cryptography',
-      ],
-    },
+      ]},
     {
+
       title: 'Cybersecurity',
       icon: Shield,
       color: 'from - red - 500 to - orange - 500',
@@ -224,9 +226,9 @@ import { SEO } from '../components / SEO';
         'Zero Trust Network Access',
         'Security Headers & CSP',
         'DSR Privacy Portal',
-      ],
-    },
+      ]},
     {
+
       title: 'Research & Analytics',
       icon: Search,
       color: 'from - blue - 500 to - cyan - 500',
@@ -235,9 +237,9 @@ import { SEO } from '../components / SEO';
         'Data Analytics Platform',
         'Business Intelligence',
         'Predictive Analytics',
-      ],
-    },
+      ]},
     {
+
       title: 'Cloud & Infrastructure',
       icon: Cloud,
       color: 'from - cyan - 500 to - blue - 500',
@@ -246,9 +248,9 @@ import { SEO } from '../components / SEO';
         'IT Infrastructure',
         'Digital Twin Platform',
         'IoT Edge Computing',
-      ],
-    },
+      ]},
     {
+
       title: 'Micro SaaS Solutions',
       icon: ShoppingCart,
       color: 'from - orange - 500 to - red - 500',
@@ -257,8 +259,7 @@ import { SEO } from '../components / SEO';
         'Helpdesk Platform',
         'Website Analytics',
         'Affiliate Tracking',
-      ],
-    },
+      ]},
   ];
 
   const benefits = [
@@ -272,6 +273,7 @@ import { SEO } from '../components / SEO';
 
   const pricingTiers = [
     {
+
       name: 'Starter',
       price: '$299',
       period: 'monthly',
@@ -281,9 +283,9 @@ import { SEO } from '../components / SEO';
         'Standard support',
         'Core integrations',
         'Basic analytics',
-      ],
-    },
+      ]},
     {
+
       name: 'Professional',
       price: '$799',
       period: 'monthly',
@@ -294,9 +296,9 @@ import { SEO } from '../components / SEO';
         'Custom integrations',
         'Advanced analytics',
         'API access',
-      ],
-    },
+      ]},
     {
+
       name: 'Enterprise',
       price: '$1,999',
       period: 'monthly',
@@ -307,8 +309,7 @@ import { SEO } from '../components / SEO';
         'White - label solutions',
         'On - premise deployment',
         'Custom consulting',
-      ],
-    },
+      ]},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
@@ -521,6 +522,7 @@ import { SEO } from '../components / SEO';
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border ${
+
                   index === 1
                     ? 'border - purple - 500 / 50 bg - purple - 500 / 10'
                     : 'border - white / 10'
@@ -552,6 +554,7 @@ import { SEO } from '../components / SEO';
                 <a
                   href="/contact"
                   className={`w - full inline - flex items - center justify - center px - 6 py - 3 rounded - lg font - semibold transition - colors ${
+
                     index === 1
                       ? 'bg - purple - 600 hover:bg - purple - 700 text - white'
                       : 'bg - white / 10 hover:bg - white / 20 text - white border border - white / 20'

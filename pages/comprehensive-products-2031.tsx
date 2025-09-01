@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import {
+
   Brain,
   Cloud,
   Shield,
@@ -36,6 +37,7 @@ import {
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2031 } from '../src/data/comprehensiveInnovativeServices2031';
 
 const ComprehensiveProducts2031: NextPage = () => {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -54,6 +56,7 @@ const ComprehensiveProducts2031: NextPage = () => {
 
   // Filter products based on category and search
   const filteredProducts = COMPREHENSIVE_INNOVATIVE_SERVICES_2031.filter(product => {
+
     const matchesCategory = activeCategory === 'all' || product.category === activeCategory;
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -116,12 +119,14 @@ const ComprehensiveProducts2031: NextPage = () => {
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {productCategories.map((category) => {
+
             const IconComponent = category.icon;
             return (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+
                   activeCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
                     : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
@@ -275,6 +280,7 @@ const ComprehensiveProducts2031: NextPage = () => {
             <p className="text-gray-300 mb-6">Try adjusting your search or category filters</p>
             <button
               onClick={() => {
+
                 setActiveCategory('all');
                 setSearchTerm('');
               }}

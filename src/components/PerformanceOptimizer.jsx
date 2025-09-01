@@ -85,7 +85,7 @@ export const PerformanceOptimizer = ({ children }) => {
         .register('/sw.js')
         .then(registration => {
 
-          // // // // console.log('SW registered: ', registration);
+          // // // // // console.log('SW registered: ', registration);
 
           // Check for updates'
           registration.addEventListener('updatefound', () => {
@@ -101,7 +101,7 @@ export const PerformanceOptimizer = ({ children }) => {
                 ) {
 
                   // New service worker available'
-                  // // // // console.log('New service worker available');
+                  // // // // // console.log('New service worker available');
                 }
               });
             }
@@ -109,7 +109,7 @@ export const PerformanceOptimizer = ({ children }) => {
         })
         .catch(registrationError => {
 
-          // // // // console.warn('SW registration failed: ', registrationError);
+          // // // // // console.warn('SW registration failed: ', registrationError);
         });
     }
   }, []);

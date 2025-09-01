@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight } from 'lucide-react';
 export default function EnterpriseIT() {
+
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -31,10 +32,12 @@ export default function EnterpriseIT() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -49,14 +52,17 @@ export default function EnterpriseIT() {
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.5,
   delay: 0.1 
 
@@ -71,14 +77,17 @@ export default function EnterpriseIT() {
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.5,
   delay: 0.2 
 
@@ -93,14 +102,17 @@ export default function EnterpriseIT() {
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.5,
   delay: 0.3 
 
@@ -115,14 +127,17 @@ export default function EnterpriseIT() {
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.5,
   delay: 0.4 
 
@@ -137,14 +152,17 @@ export default function EnterpriseIT() {
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.5,
   delay: 0.5 
 

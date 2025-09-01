@@ -6,12 +6,15 @@ import { SearchResultCard } from "@/components/search/SearchResultCard";
 import { SearchBar } from "@/components/SearchBar";
 const LIMIT = 20;
 export default function SearchResultsPage() {
+
     const router = useRouter();
     const initialQuery = router.query.q || "";
     const [query, setQuery] = useState(initialQuery);
     const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading, refetch } = useInfiniteQuery({
+
         queryKey["search", query],
         queryFn: async ({ pageParam = 1 }) => {
+
             const res = await fetch(`/api/search?q=${encodeURIComponent(query)}&page=${pageParam}&limit=${LIMIT}`);
             if (!res.ok)
                 throw new Error("Failed to fetch");
@@ -22,18 +25,23 @@ export default function SearchResultsPage() {
     });
     // Refetch when the URL param changes
     useEffect(() => {
+
         if (initialQuery !== query) {
+
             setQuery(initialQuery);
             refetch()}
     }, [initialQuery]);
     const allResults = data?.pages.flat() ?? [];
     const loader = useRef(null);
     useEffect(() => {
+
         const el = loader.current;
         if (!el)
             return;
         const observer = new IntersectionObserver((entries) => {
+
             if (entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
+
                 fetchNextPage()}
         });
         observer.observe(el);

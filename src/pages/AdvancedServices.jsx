@@ -4,6 +4,7 @@ import { FuturisticServicesShowcase } from "../components / FuturisticServicesSh
 import { motion } from 'framer - motion';
 
 const AdvancedServices = () => {
+
     return (<div className="min - h-screen bg - gradient - to - br from - black via - gray - 900 to - blue - 900">
       {/* Hero Section */}
       <section className="relative pt - 32 pb - 20 overflow - hidden">
@@ -11,19 +12,21 @@ const AdvancedServices = () => {
         <div className="absolute inset - 0">
           <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10"></div>
           {[...Array (30) ].map ( (_, i) => (<div key={i} className="absolute w - 2 h - 2 bg - cyan - 400 / 20 rounded - full animate - float" style={{
+
                 left: `${Math.random () * 100}%`,
                 top: `${Math.random () * 100}%`,
                 animationDelay: `${Math.random () * 5}s`,
-                animationDuration: `${3 + Math.random () * 4}s`,
-            }}/>) ) }
+                animationDuration: `${3 + Math.random () * 4}s`}}/>) ) }
         </div>
 
         <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 50
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
@@ -41,29 +44,35 @@ const AdvancedServices = () => {
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 12 max - w-4xl mx - auto">
               {[
             {
+
                 icon: "🚀",
                 title: "Future - Ready Technology",
                 description: "Built with quantum - safe encryption, AI - powered automation, and edge computing capabilities"
             },
             {
+
                 icon: "⚡",
                 title: "Lightning Fast Performance",
                 description: "Optimized for speed with real - time processing and sub - millisecond response times"
             },
             {
+
                 icon: "🔒",
                 title: "Enterprise Security",
                 description: "SOC 2, ISO 27001, and GDPR compliant with advanced threat protection"
             }
         ].map ( (benefit, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   y: 30
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.2
 
@@ -95,10 +104,12 @@ const AdvancedServices = () => {
         <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 via - blue - 500 / 5 to - purple - 500 / 5"></div>
         <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 50
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -120,14 +131,17 @@ const AdvancedServices = () => {
             { name: "Cloud", icon: "☁️", color: "from - blue - 400 to - indigo - 500" },
             { name: "Security", icon: "🔒", color: "from - red - 400 to - pink - 500" }
         ].map ( (tech, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }} whileInView = {
+
   { opacity: 1,
   scale: 1
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -146,10 +160,12 @@ const AdvancedServices = () => {
         <div className="absolute inset - 0 bg - gradient - to - r from - blue - 500 / 5 via - purple - 500 / 5 to - cyan - 500 / 5"></div>
         <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 50
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -165,50 +181,59 @@ const AdvancedServices = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {[
             {
+
                 icon: "🎯",
                 title: "Proven Results",
                 description: "Over 500 + successful implementations with measurable ROI improvements",
                 stats: "95% client satisfaction rate"
             },
             {
+
                 icon: "⚡",
                 title: "Rapid Deployment",
                 description: "Get up and running in weeks, not months with our agile approach",
                 stats: "3x faster than traditional solutions"
             },
             {
+
                 icon: "🔧",
                 title: "24 / 7 Support",
                 description: "Round - the - clock technical support and maintenance services",
                 stats: "99.9% uptime guarantee"
             },
             {
+
                 icon: "🚀",
                 title: "Future - Proof",
                 description: "Built with scalability and emerging technologies in mind",
                 stats: "100% cloud - native architecture"
             },
             {
+
                 icon: "💡",
                 title: "Innovation First",
                 description: "Constantly evolving solutions with the latest tech breakthroughs",
                 stats: "Monthly feature updates"
             },
             {
+
                 icon: "🤝",
                 title: "Partnership Approach",
                 description: "We work as an extension of your team, not just a vendor",
                 stats: "Long - term strategic partnerships"
             }
         ].map ( (feature, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   y: 30
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -227,10 +252,12 @@ const AdvancedServices = () => {
         <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10"></div>
         <div className="relative z - 10 max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 50
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 

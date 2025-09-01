@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
 import SEO from '@/components / SEO';
 export default React.memo (function EnhancedServicesPage (...args[]) :  {
+
 import {
 
   Search,

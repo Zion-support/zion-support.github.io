@@ -5,28 +5,34 @@ import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, Trendi
 import { SEO               } from '@/components/SEO';
 
 export default function AISupportHelpdesk(...args[]: any):  {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Support",
       description: "Intelligent chatbots and virtual agents that understand context and provide accurate, helpful responses 24/7."
     },
     {
+
       icon: MessageCircle,
       title: "Multi-channel Support",
       description: "Seamless support across email, chat, phone, social media, and self-service portals."
     },
     {
+
       icon: Zap,
       title: "Instant Resolution",
       description: "Automated ticket routing, smart categorization, and AI-powered solutions for faster issue resolution."
     },
     {
+
       icon: BarChart3,
       title: "Advanced Analytics",
       description: "Comprehensive insights into support performance, customer satisfaction, and operational efficiency."
     },
     {
+
       icon: Smartphone,
       title: "Mobile-First Design",
       description: "Fully responsive support platform accessible on  device with native mobile apps.";
@@ -39,26 +45,31 @@ export default function AISupportHelpdesk(...args[]: any):  {
   ];
   const aiCapabilities = [
     {
+
       icon: Brain,
       title: "Natural Language Processing",
       description: "Advanced NLP for understanding customer intent and context"
     },
     {
+
       icon: MessageCircle,
       title: "Conversational AI",
       description: "Human-like conversations with personality and empathy"
     },
     {
+
       icon: Zap,
       title: "Predictive Analytics",
       description: "Anticipate issues and proactively resolve problems"
     },
     {
+
       icon: Shield,
       title: "Smart Escalation",
       description: "Intelligent routing to the right agent or department"
     },
     {
+
       icon: Clock,
       title: "24/7 Availability",
       description: "Round-the-clock support without human intervention";
@@ -71,6 +82,7 @@ export default function AISupportHelpdesk(...args[]: any):  {
   ];
   const pricingPlans = [
     {
+
       name: "Support Starter",
       price: "$79",
       period: "/month",
@@ -86,6 +98,7 @@ export default function AISupportHelpdesk(...args[]: any):  {
       popular: false
     },
     {
+
       name: "Support Professional",
       price: "$199",
       period: "/month",
@@ -102,6 +115,7 @@ export default function AISupportHelpdesk(...args[]: any):  {
       popular: true
     },
     {
+
       name: "Support Enterprise",
       price: "$499",
       period: "/month",
@@ -120,16 +134,19 @@ export default function AISupportHelpdesk(...args[]: any):  {
   ];
   const benefits = [
     {
+
       title: "Reduce Support Costs",
       description: "Automate routine inquiries and reduce the need for human agents by up to 70%.",
       icon: TrendingUp
     },
     {
+
       title: "Improve Customer Satisfaction",
       description: "Provide instant, accurate responses and faster resolution times for better customer experience.",
       icon: Users
     },
     {
+
       title: "Scale Support Operations",
       description: "Handle unlimited support requests without increasing headcount or response times.",
       icon: Globe;
@@ -142,26 +159,31 @@ export default function AISupportHelpdesk(...args[]: any):  {
   ];
   const supportChannels = [
     {
+
       icon: MessageCircle,
       title: "Live Chat",
       description: "Real-time chat support with AI assistance and human handoff"
     },
     {
+
       icon: Mail,
       title: "Email Support",
       description: "Structured email support with automated categorization and routing"
     },
     {
+
       icon: Phone,
       title: "Phone Support",
       description: "Voice support with AI call screening and intelligent routing"
     },
     {
+
       icon: Globe,
       title: "Self-Service Portal",
       description: "Knowledge base and FAQ with AI-powered search and suggestions"
     },
     {
+
       icon: Smartphone,
       title: "Mobile App",
       description: "Native mobile apps for iOS and Android with push notifications";
@@ -187,10 +209,12 @@ export default function AISupportHelpdesk(...args[]: any):  {
             <div className="text-center">
               <motion.div
                 initial = {
+
   { opacity: 0,
   y: 20 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -237,14 +261,17 @@ export default function AISupportHelpdesk(...args[]: any):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
@@ -276,14 +303,17 @@ export default function AISupportHelpdesk(...args[]: any):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
@@ -315,14 +345,17 @@ export default function AISupportHelpdesk(...args[]: any):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
@@ -354,14 +387,17 @@ export default function AISupportHelpdesk(...args[]: any):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   x: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
@@ -395,18 +431,22 @@ export default function AISupportHelpdesk(...args[]: any):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+
                     plan.popular
                       ? 'border-teal-500 ring-2 ring-teal-500/20'
                       : 'border-slate-700'
@@ -437,6 +477,7 @@ export default function AISupportHelpdesk(...args[]: any):  {
                   <Link
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-gradient-to-r from-teal-500 to-cyan-600 text-white hover:from-teal-600 hover:to-cyan-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
@@ -453,10 +494,12 @@ export default function AISupportHelpdesk(...args[]: any):  {
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 }}

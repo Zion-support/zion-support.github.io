@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default SupplyChain;
 import {
+
 import { motion } from 'framer - motion';
 
   Truck,
@@ -51,12 +52,13 @@ import { motion } from 'framer - motion';
   Monitor,
   Cloud,
   Settings,
-  Palette,
-} from 'lucide - react';
+  Palette} from 'lucide - react';
 
 const SupplyChain = () => {
+
   const supplyChainSolutions = [
     {
+
       id: 1,
       title: 'Supply Chain Visibility',
       description:
@@ -76,9 +78,9 @@ const SupplyChain = () => {
         'GPS Tracking',
         'Real - time Analytics',
         'Cloud Platforms',
-      ],
-    },
+      ]},
     {
+
       id: 2,
       title: 'Inventory Management',
       description:
@@ -98,9 +100,9 @@ const SupplyChain = () => {
         'Predictive Analytics',
         'ERP Integration',
         'Real - time Data',
-      ],
-    },
+      ]},
     {
+
       id: 3,
       title: 'Route Optimization',
       description:
@@ -120,9 +122,9 @@ const SupplyChain = () => {
         'GPS Integration',
         'Traffic Data',
         'Optimization Engines',
-      ],
-    },
+      ]},
     {
+
       id: 4,
       title: 'Warehouse Management',
       description:
@@ -142,9 +144,9 @@ const SupplyChain = () => {
         'Automation',
         'IoT Sensors',
         'Robotics Integration',
-      ],
-    },
+      ]},
     {
+
       id: 5,
       title: 'Supplier Management',
       description:
@@ -164,9 +166,9 @@ const SupplyChain = () => {
         'Analytics',
         'Risk Management',
         'Compliance Tools',
-      ],
-    },
+      ]},
     {
+
       id: 6,
       title: 'Logistics Analytics',
       description:
@@ -186,12 +188,12 @@ const SupplyChain = () => {
         'Data Visualization',
         'Predictive Models',
         'Real - time Dashboards',
-      ],
-    },
+      ]},
   ];
 
   const successStories = [
     {
+
       logo: '🚛',
       comp: 'Global Logistics Corp',
       industry: 'Logistics & Transportation',
@@ -200,9 +202,9 @@ const SupplyChain = () => {
       solution:
         'Implemented end - to - end supply chain visibility platform with real - time tracking and analytics.',
       results:
-        '30% reduction in operational costs, 40% improvement in delivery times, 25% increase in customer satisfaction.',
-    },
+        '30% reduction in operational costs, 40% improvement in delivery times, 25% increase in customer satisfaction.'},
     {
+
       logo: '🏭',
       comp: 'Manufacturing Solutions Inc.',
       industry: 'Manufacturing',
@@ -211,9 +213,9 @@ const SupplyChain = () => {
       solution:
         'Deployed AI - powered inventory management system with demand forecasting and automated reordering.',
       results:
-        '35% reduction in inventory costs, 50% decrease in stockouts, 20% improvement in order fulfillment.',
-    },
+        '35% reduction in inventory costs, 50% decrease in stockouts, 20% improvement in order fulfillment.'},
     {
+
       logo: '📦',
       comp: 'E - commerce Express',
       industry: 'E - commerce',
@@ -222,8 +224,7 @@ const SupplyChain = () => {
       solution:
         'Implemented AI - driven route optimization with real - time traffic data and dynamic routing.',
       results:
-        '25% reduction in delivery times, 30% decrease in fuel costs, 40% improvement in customer satisfaction.',
-    },
+        '25% reduction in delivery times, 30% decrease in fuel costs, 40% improvement in customer satisfaction.'},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white">

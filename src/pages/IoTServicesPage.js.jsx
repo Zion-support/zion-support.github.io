@@ -7,27 +7,32 @@ import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, Arrow
 import { TrustedBySection } from "../components/TrustedBySection.js.jsx";
 const iotUseCases = [
     {
+
         title: "Smart Manufacturing",
         description: "Monitor production lines, predict maintenance needs, and optimize manufacturing processes",
         icon: <Cpu className="h-6 w-6"/>
     },
     {
+
         title: "Smart Cities",
         description: "Manage traffic, utilities, and public services with connected IoT infrastructure",
         icon: <Globe className="h-6 w-6"/>
     },
     {
+
         title: "Connected Healthcare",
         description: "Remote patient monitoring, medical device management, and healthcare analytics",
         icon: <Activity className="h-6 w-6"/>
     },
     {
+
         title: "Smart Agriculture",
         description: "Precision farming, environmental monitoring, and automated irrigation systems",
         icon: <Settings className="h-6 w-6"/>
     }
 ];
 export default function IoTServicesPage() {
+
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">

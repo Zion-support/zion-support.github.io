@@ -87,12 +87,12 @@ try {
     renderApp();
   } catch (error) {
 
-    // // console.error('Global error caught in main.jsx:', error);
+    // // // console.error('Global error caught in main.jsx:', error);
     displayFatalError(error.message);
 }
 
 window.addEventListener('error', (e) => {
 
-    // // console.error('Unhandled error:', e.error || e.message);
+    // // // console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
 });

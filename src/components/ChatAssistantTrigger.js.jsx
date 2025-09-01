@@ -34,7 +34,7 @@ export function ChatAssistantTrigger() {
         catch (error) {
 
 "
-            // // // console.error("Error in AI chat:", error);
+            // // // // console.error("Error in AI chat:", error);
             return Promise.resolve()}
     };
     return (<>"

@@ -4,14 +4,14 @@ import { Button } from '@/components / ui / button';
 import { SEO } from '@/components / SEO';
 export default ITServicesPage;
 import {
+
 import {
 
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
+  CardTitle} from '@/components / ui / card';
   Cloud,
   Shield,
   Server,
@@ -51,12 +51,13 @@ import {
   Brain as BrainIcon,
   Cpu as CpuIcon,
   Lock as LockIcon,
-  Wifi as WifiIcon,
-} from 'lucide - react';
+  Wifi as WifiIcon} from 'lucide - react';
 
 const ITServicesPage = () => {
+
   const itServices = [
     {
+
       title: 'Cloud Infrastructure Management',
       description:
         'Comprehensive cloud services including AWS, Azure, and Google Cloud with 24 / 7 monitoring and optimization.',
@@ -74,9 +75,9 @@ const ITServicesPage = () => {
       badge: 'Popular',
       link: 'https://ziontechgroup.com / cloud - infrastructure',
       details:
-        'Expert cloud infrastructure management with multi - cloud strategies, cost optimization, and enterprise - grade security.',
-    },
+        'Expert cloud infrastructure management with multi - cloud strategies, cost optimization, and enterprise - grade security.'},
     {
+
       title: 'Cybersecurity Services',
       description:
         'Complete security solutions including threat detection, penetration testing, and incident response.',
@@ -94,9 +95,9 @@ const ITServicesPage = () => {
       badge: 'Premium',
       link: 'https://ziontechgroup.com / cybersecurity',
       details:
-        'Comprehensive cybersecurity services protecting your business from evolving threats with advanced detection and response capabilities.',
-    },
+        'Comprehensive cybersecurity services protecting your business from evolving threats with advanced detection and response capabilities.'},
     {
+
       title: 'DevOps & CI / CD',
       description:
         'Streamline development and deployment processes with automated pipelines and infrastructure as code.',
@@ -113,9 +114,9 @@ const ITServicesPage = () => {
       category: 'DevOps',
       link: 'https://ziontechgroup.com / devops',
       details:
-        'Modern DevOps practices with automated CI / CD pipelines, infrastructure automation, and continuous monitoring.',
-    },
+        'Modern DevOps practices with automated CI / CD pipelines, infrastructure automation, and continuous monitoring.'},
     {
+
       title: 'Database Management',
       description:
         'Expert database administration, optimization, and migration services for all major database platforms.',
@@ -132,9 +133,9 @@ const ITServicesPage = () => {
       category: 'Database',
       link: 'https://ziontechgroup.com / database - management',
       details:
-        'Professional database management services ensuring optimal performance, security, and reliability for your critical data.',
-    },
+        'Professional database management services ensuring optimal performance, security, and reliability for your critical data.'},
     {
+
       title: 'Network Infrastructure',
       description:
         'Design, implement, and maintain robust network solutions with enterprise - grade security.',
@@ -151,9 +152,9 @@ const ITServicesPage = () => {
       category: 'Networking',
       link: 'https://ziontechgroup.com / network - infrastructure',
       details:
-        'Enterprise - grade network infrastructure with advanced security, monitoring, and automation capabilities.',
-    },
+        'Enterprise - grade network infrastructure with advanced security, monitoring, and automation capabilities.'},
     {
+
       title: 'IT Consulting & Strategy',
       description:
         'Strategic IT planning and digital transformation guidance for modern businesses.',
@@ -170,9 +171,9 @@ const ITServicesPage = () => {
       category: 'Consulting',
       link: 'https://ziontechgroup.com / it - consulting',
       details:
-        'Strategic IT consulting helping businesses align technology with business objectives and drive digital transformation.',
-    },
+        'Strategic IT consulting helping businesses align technology with business objectives and drive digital transformation.'},
     {
+
       title: 'Managed IT Services',
       description:
         'Complete IT management for small to enterprise businesses with proactive monitoring and support.',
@@ -190,9 +191,9 @@ const ITServicesPage = () => {
       badge: 'New',
       link: 'https://ziontechgroup.com / managed - it',
       details:
-        'Comprehensive managed IT services providing peace of mind with 24 / 7 monitoring, support, and proactive maintenance.',
-    },
+        'Comprehensive managed IT services providing peace of mind with 24 / 7 monitoring, support, and proactive maintenance.'},
     {
+
       title: 'Data Center Services',
       description:
         'On - premise and colocation data center solutions with enterprise - grade infrastructure.',
@@ -209,9 +210,9 @@ const ITServicesPage = () => {
       category: 'Data Center',
       link: 'https://ziontechgroup.com / data - center',
       details:
-        'Enterprise - grade data center services with redundant power, cooling, and security systems for mission - critical applications.',
-    },
+        'Enterprise - grade data center services with redundant power, cooling, and security systems for mission - critical applications.'},
     {
+
       title: 'Mobile App Development',
       description:
         'Custom mobile applications for iOS and Android with modern development practices.',
@@ -228,9 +229,9 @@ const ITServicesPage = () => {
       category: 'Development',
       link: 'https://ziontechgroup.com / mobile - development',
       details:
-        'Professional mobile app development with modern frameworks, comprehensive testing, and ongoing maintenance support.',
-    },
+        'Professional mobile app development with modern frameworks, comprehensive testing, and ongoing maintenance support.'},
     {
+
       title: 'Web Development',
       description:
         'Modern web applications and e - commerce solutions with responsive design and SEO optimization.',
@@ -247,9 +248,9 @@ const ITServicesPage = () => {
       category: 'Development',
       link: 'https://ziontechgroup.com / web - development',
       details:
-        'Modern web development services creating fast, secure, and scalable web applications optimized for search engines.',
-    },
+        'Modern web development services creating fast, secure, and scalable web applications optimized for search engines.'},
     {
+
       title: 'AI & Machine Learning',
       description:
         'Custom AI solutions and machine learning models for business automation and insights.',
@@ -267,9 +268,9 @@ const ITServicesPage = () => {
       badge: 'Innovative',
       link: 'https://ziontechgroup.com / ai - ml',
       details:
-        'Cutting - edge AI and machine learning solutions automating business processes and providing actionable insights from data.',
-    },
+        'Cutting - edge AI and machine learning solutions automating business processes and providing actionable insights from data.'},
     {
+
       title: 'Blockchain Development',
       description:
         'Blockchain solutions including smart contracts, DApps, and enterprise blockchain integration.',
@@ -287,9 +288,9 @@ const ITServicesPage = () => {
       badge: 'Emerging',
       link: 'https://ziontechgroup.com / blockchain',
       details:
-        'Innovative blockchain development services creating secure, transparent, and decentralized solutions for modern businesses.',
-    },
+        'Innovative blockchain development services creating secure, transparent, and decentralized solutions for modern businesses.'},
     {
+
       title: 'IoT Solutions',
       description:
         'Internet of Things platforms and solutions for connected devices and smart systems.',
@@ -306,9 +307,9 @@ const ITServicesPage = () => {
       category: 'IoT',
       link: 'https://ziontechgroup.com / iot - solutions',
       details:
-        'Comprehensive IoT solutions connecting devices, collecting data, and creating intelligent automation systems.',
-    },
+        'Comprehensive IoT solutions connecting devices, collecting data, and creating intelligent automation systems.'},
     {
+
       title: 'Data Analytics & BI',
       description:
         'Business intelligence solutions with advanced analytics, reporting, and data visualization.',
@@ -325,9 +326,9 @@ const ITServicesPage = () => {
       category: 'Analytics',
       link: 'https://ziontechgroup.com / data - analytics',
       details:
-        'Comprehensive data analytics and business intelligence solutions transforming raw data into actionable business insights.',
-    },
+        'Comprehensive data analytics and business intelligence solutions transforming raw data into actionable business insights.'},
     {
+
       title: 'Disaster Recovery',
       description:
         'Comprehensive disaster recovery and business continuity solutions for critical business operations.',
@@ -344,8 +345,7 @@ const ITServicesPage = () => {
       category: 'Recovery',
       link: 'https://ziontechgroup.com / disaster - recovery',
       details:
-        'Robust disaster recovery solutions ensuring business continuity and rapid recovery from any disruption.',
-    },
+        'Robust disaster recovery solutions ensuring business continuity and rapid recovery from any disruption.'},
   ];
 
   const categories = [

@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   BarChart3, Brain, Zap, Target, CheckCircle, ArrowRight, TrendingUp,
   MessageCircle, Phone, Mail, MapPin, Star, Award, Lightbulb,
   Settings, Search, Users, Cloud, Cpu, Database, Layers, FileText,
@@ -9,38 +10,45 @@ import {
 } from 'lucide-react';
 
 const AIDataAnalyticsBI: React.FC = () => {
+
   const features = [
     {
+
       icon: BarChart3,
       title: 'Advanced Analytics',
       description: 'AI-powered data analysis and insights',
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       icon: Brain,
       title: 'Intelligent Insights',
       description: 'AI-driven business intelligence',
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       icon: Zap,
       title: 'Real-time Processing',
       description: 'Instant data analysis and reporting',
       color: 'from-yellow-500 to-orange-500'
     },
     {
+
       icon: Target,
       title: 'Predictive Analytics',
       description: 'AI-powered forecasting and trends',
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       icon: Cloud,
       title: 'Cloud Platform',
       description: 'Cloud-based analytics infrastructure',
       color: 'from-indigo-500 to-blue-500'
     },
     {
+
       icon: Database,
       title: 'Big Data Processing',
       description: 'Scalable data processing and storage',
@@ -50,6 +58,7 @@ const AIDataAnalyticsBI: React.FC = () => {
 
   const solutions = [
     {
+
       title: 'Business Intelligence',
       description: 'AI-powered BI dashboards and reporting',
       icon: BarChart3,
@@ -57,6 +66,7 @@ const AIDataAnalyticsBI: React.FC = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       title: 'Predictive Analytics',
       description: 'AI-driven forecasting and trend analysis',
       icon: TrendingUp,
@@ -64,6 +74,7 @@ const AIDataAnalyticsBI: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       title: 'Data Mining',
       description: 'Intelligent data discovery and pattern recognition',
       icon: Search,
@@ -71,6 +82,7 @@ const AIDataAnalyticsBI: React.FC = () => {
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       title: 'Performance Analytics',
       description: 'AI-powered performance monitoring and optimization',
       icon: Activity,

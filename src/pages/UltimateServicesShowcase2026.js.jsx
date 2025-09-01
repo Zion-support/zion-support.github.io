@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ultimateInnovativeServices2026 } from "../data/2026-ultimate-innovative-services";
 import { enterpriseITInfrastructureServices2026 } from "../data/2026-enterprise-it-infrastructure-services";
 const UltimateServicesShowcase2026 = () => {
+
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
@@ -32,13 +33,15 @@ const UltimateServicesShowcase2026 = () => {
         'IT Asset Management',
         'Performance Monitoring'
     ];
-    const filteredServices = allServices
+    const filteredServices = allServices;
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase()))
         .sort((a, b) => {
+
         switch (sortBy) {
+
             case 'price':
                 return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
             case 'category':
@@ -50,7 +53,9 @@ const UltimateServicesShowcase2026 = () => {
                 return a.name.localeCompare(b.name)}
     });
     const getCategoryIcon = (category) => {
+
         const icons = {
+
   'Business Intelligence': '📊',
             'Marketing Automation': '🎯',
             'Customer Service': '🤖',
@@ -76,23 +81,29 @@ const UltimateServicesShowcase2026 = () => {
 };
         return icons[category] || '🚀'};
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0 
 
 },
         visible: {
+
             y: 0,
             opacity: 1,
             transition: {
+
                 duration: 0.5,
                 ease: "easeOut"
             }
@@ -103,10 +114,12 @@ const UltimateServicesShowcase2026 = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -117,14 +130,17 @@ const UltimateServicesShowcase2026 = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.2 
 
@@ -136,14 +152,17 @@ const UltimateServicesShowcase2026 = () => {
           
           {/* Contact Information */}
           <motion.div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.4 
 
@@ -216,10 +235,12 @@ const UltimateServicesShowcase2026 = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" animate="visible">
             {filteredServices.map((service, index) => (<motion.div key={service.id} variants={itemVariants} className="group" whileHover = {
+
   { scale: 1.02,
   y: -5 
 
 }} transition = {
+
   { type: "spring",
   stiffness: 300 
 
@@ -319,10 +340,12 @@ const UltimateServicesShowcase2026 = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 

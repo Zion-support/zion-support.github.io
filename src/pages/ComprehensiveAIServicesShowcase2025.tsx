@@ -2,6 +2,7 @@ import { Link  } from 'react - router - dom.ts';
 import React from 'react.ts';
 import { SEO  } from '@/components / SEO';
 export default React.memo (function ComprehensiveAIServicesShowcase2025 (...args[]) :  {
+
 import { Brain,
 import { motion  } from 'framer - motion.ts';
 
@@ -26,6 +27,7 @@ import { motion  } from 'framer - motion.ts';
 
   const aiServices = [
     {
+
       icon: FileText,
       title: "AI Legal Document Automation",
       description: "Transform legal operations with AI - powered document automation, compliance monitoring, and intelligent legal research",
@@ -35,6 +37,7 @@ import { motion  } from 'framer - motion.ts';
       category: "Legal Tech"
     },
     {
+
       icon: Heart,
       title: "AI Healthcare Predictive Analytics",
       description: "Revolutionize healthcare delivery with AI - powered predictive analytics and early disease detection",
@@ -44,6 +47,7 @@ import { motion  } from 'framer - motion.ts';
       category: "Healthcare"
     },
     {
+
       icon: TrendingUp,
       title: "AI Financial Trading & Risk Management",
       description: "Transform trading operations with AI - powered algorithms and comprehensive risk management",
@@ -53,6 +57,7 @@ import { motion  } from 'framer - motion.ts';
       category: "FinTech"
     },
     {
+
       icon: Truck,
       title: "AI Supply Chain Optimization",
       description: "Optimize supply chains with AI - powered demand forecasting and logistics optimization",
@@ -62,6 +67,7 @@ import { motion  } from 'framer - motion.ts';
       category: "Logistics"
     },
     {
+
       icon: Shield,
       title: "AI Cybersecurity Suite",
       description: "Advanced cybersecurity with AI - powered threat detection and automated response",
@@ -71,10 +77,10 @@ import { motion  } from 'framer - motion.ts';
       category: "Security"
     },
     {
+
       icon: BarChart3,
       title: "AI Business Intelligence Platform",
-      description: "Transform data into actionable insights with AI - powered business intelligence",
-    };
+      description: "Transform data into actionable insights with AI - powered business intelligence"};
       price: "From $1,499 / month",;
       features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real - time Reporting"],;
       link: "/services / ai - business - intelligence - platform",;
@@ -84,26 +90,31 @@ import { motion  } from 'framer - motion.ts';
 
   const industrySolutions = [
     {
+
       title: "Healthcare & Life Sciences",
       description: "AI - powered diagnostics, drug discovery, and patient care optimization",
       icon: Heart
     },
     {
+
       title: "Financial Services",
       description: "AI trading algorithms, risk management, and fraud detection",
       icon: DollarSign
     },
     {
+
       title: "Legal & Compliance",
       description: "Document automation, compliance monitoring, and legal research",
       icon: FileText
     },
     {
+
       title: "Manufacturing & Logistics",
       description: "Supply chain optimization, predictive maintenance, and quality control",
       icon: Truck
     },
     {
+
       title: "Retail & E-commerce",
       description: "Customer analytics, inventory optimization, and personalized marketing",
       icon: Users;
@@ -141,11 +152,13 @@ import { motion  } from 'framer - motion.ts';
           <div className="relative z - 10 max - w-7xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -184,11 +197,13 @@ import { motion  } from 'framer - motion.ts';
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -209,16 +224,19 @@ import { motion  } from 'framer - motion.ts';
               {aiServices.map ( (service, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -267,11 +285,13 @@ import { motion  } from 'framer - motion.ts';
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -292,16 +312,19 @@ import { motion  } from 'framer - motion.ts';
               {industrySolutions.map ( (solution, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -323,11 +346,13 @@ import { motion  } from 'framer - motion.ts';
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -348,16 +373,19 @@ import { motion  } from 'framer - motion.ts';
               {advancedTechnologies.map ( (tech, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -376,11 +404,13 @@ import { motion  } from 'framer - motion.ts';
           <div className="max - w-4xl mx - auto text - center">
             <motion.h2
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -392,16 +422,19 @@ import { motion  } from 'framer - motion.ts';
             </motion.h2>
             <motion.p
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -413,16 +446,19 @@ import { motion  } from 'framer - motion.ts';
             </motion.p>
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.4
 
@@ -452,11 +488,13 @@ import { motion  } from 'framer - motion.ts';
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -476,11 +514,13 @@ import { motion  } from 'framer - motion.ts';
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
               <motion.div
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -495,16 +535,19 @@ import { motion  } from 'framer - motion.ts';
 
               <motion.div
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -518,16 +561,19 @@ import { motion  } from 'framer - motion.ts';
 
               <motion.div
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: 0.4
 
@@ -542,16 +588,19 @@ import { motion  } from 'framer - motion.ts';
 
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.6
 

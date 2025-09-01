@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Check, Shield, AlertTriangle, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CybersecuritySuite() {
+
     const features = [
         "24/7 threat monitoring and detection",
         "Real-time security incident response",
@@ -22,6 +23,7 @@ export default function CybersecuritySuite() {
     ];
     const pricingPlans = [
         {
+
             name: "Essential",
             price: "$199",
             period: "/month",
@@ -37,6 +39,7 @@ export default function CybersecuritySuite() {
             popular: false
         },
         {
+
             name: "Professional",
             price: "$499",
             period: "/month",
@@ -54,6 +57,7 @@ export default function CybersecuritySuite() {
             popular: true
         },
         {
+
             name: "Enterprise",
             price: "$1,299",
             period: "/month",
@@ -75,21 +79,25 @@ export default function CybersecuritySuite() {
     ];
     const securityServices = [
         {
+
             title: "Threat Detection & Response",
             description: "Advanced AI-powered threat detection with automated response capabilities to neutralize threats in real-time.",
             icon: <Eye className="h-8 w-8 text-zion-cyan"/>
         },
         {
+
             title: "Vulnerability Management",
             description: "Continuous vulnerability assessment and prioritization with automated remediation workflows.",
             icon: <AlertTriangle className="h-8 w-8 text-zion-purple"/>
         },
         {
+
             title: "Security Compliance",
             description: "Automated compliance monitoring and reporting for major frameworks including GDPR, HIPAA, and SOC2.",
             icon: <Shield className="h-8 w-8 text-zion-cyan"/>
         },
         {
+
             title: "Incident Response",
             description: "Rapid incident response with automated playbooks and expert security team support.",
             icon: <Shield className="h-8 w-8 text-zion-purple"/>

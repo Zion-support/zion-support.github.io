@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export default React.memo (function Talent () {
+
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -464,8 +466,7 @@ import { SEO } from '../components / SEO';
   YellowWaxBean,
   YellowEyeBean,
   YellowIndianBean,
-  YellowWaxBean,
-} from 'lucide - react';
+  YellowWaxBean} from 'lucide - react';
 
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
@@ -493,6 +494,7 @@ import { SEO } from '../components / SEO';
   const talentPool = [
     // AI & ML
     {
+
       id: 'ai - engineer - senior',
       name: 'Dr. Sarah Chen',
       title: 'Senior AI Engineer',
@@ -525,9 +527,9 @@ import { SEO } from '../components / SEO';
       ],
       rating: 4.9,
       reviews: 23,
-      featured: true,
-    },
+      featured: true},
     {
+
       id: 'ml - engineer - mid',
       name: 'Alex Rodriguez',
       title: 'ML Engineer',
@@ -559,10 +561,10 @@ import { SEO } from '../components / SEO';
       ],
       rating: 4.7,
       reviews: 18,
-      featured: false,
-    },
+      featured: false},
     // Cloud & DevOps
     {
+
       id: 'devops - architect',
       name: 'Michael Thompson',
       title: 'DevOps Architect',
@@ -595,10 +597,10 @@ import { SEO } from '../components / SEO';
       ],
       rating: 4.9,
       reviews: 31,
-      featured: true,
-    },
+      featured: true},
     // Security
     {
+
       id: 'security - engineer',
       name: 'Jennifer Park',
       title: 'Security Engineer',
@@ -627,10 +629,10 @@ import { SEO } from '../components / SEO';
       ],
       rating: 4.8,
       reviews: 25,
-      featured: false,
-    },
+      featured: false},
     // Data & Analytics
     {
+
       id: 'data - scientist',
       name: 'David Kim',
       title: 'Data Scientist',
@@ -662,10 +664,10 @@ import { SEO } from '../components / SEO';
       ],
       rating: 4.6,
       reviews: 16,
-      featured: false,
-    },
+      featured: false},
     // Software Development
     {
+
       id: 'fullstack - developer',
       name: 'Emily Watson',
       title: 'Full Stack Developer',
@@ -694,19 +696,21 @@ import { SEO } from '../components / SEO';
       ],
       rating: 4.7,
       reviews: 19,
-      featured: false,
-    },
+      featured: false},
   ];
 
   const toggleTalentExpansion = (talentId: string) => {
+
     setExpandedTalent (expandedTalent === talentId ? null : talentId) ;
   };
 
   const filteredTalent = talentPool.filter (talent => {
+
     if (selectedCategory !== 'all' && talent.category !== selectedCategory) return false;
     if (selectedExperience !== 'all' &&
       talent.experience !== selectedExperience) return false;
     if (searchQuery) {
+
       return (talent.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         talent.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         talent.skills.some (skill =>
@@ -716,7 +720,9 @@ import { SEO } from '../components / SEO';
   }) ;
 
   const getCategoryColor = (category: string) => {
+
     switch (category) {
+
       case 'ai - ml':
         return 'bg - purple - 500 / 20 text - purple - 400';
       case 'cloud':
@@ -733,7 +739,9 @@ import { SEO } from '../components / SEO';
   };
 
   const getExperienceColor = (experience: string) => {
+
     switch (experience) {
+
       case 'junior':
         return 'bg - green - 500 / 20 text - green - 400';
       case 'mid':
@@ -748,15 +756,18 @@ import { SEO } from '../components / SEO';
   };
 
   const getAvailabilityColor = (availability: string) => {
+
     return availability === 'Available'
       ? 'bg - green - 500 / 20 text - green - 400'
       : 'bg - red - 500 / 20 text - red - 400';
   };
 
   const renderStars = (rating: number) => {
+
     return Array.from ({ length: 5 }, (_, i) => (<Star
         key={i}
         className={`w - 4 h - 4 ${
+
           i < Math.floor (rating) ? 'text - yellow - 400 fill - current'
             : 'text - gray - 400'
         }`}
@@ -845,6 +856,7 @@ import { SEO } from '../components / SEO';
               <div role="button" className="flex items - center gap - 2">
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`p - 2 rounded - lg transition - all duration - 200 ${
+
                     viewMode === 'grid'
                       ? 'bg - blue - 400 / 20 text - blue - 400'
                       : 'bg - slate - 800 / 50 text - gray - 400 hover:text - white'
@@ -854,6 +866,7 @@ import { SEO } from '../components / SEO';
                 </button>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - lg transition - all duration - 200 ${
+
                     viewMode === 'list'
                       ? 'bg - blue - 400 / 20 text - blue - 400'
                       : 'bg - slate - 800 / 50 text - gray - 400 hover:text - white'
@@ -905,6 +918,7 @@ import { SEO } from '../components / SEO';
                           className={`px - 3 py - 1 rounded - full text - xs font - medium ${getExperienceColor (talent.experience) }`}
                         >
                           {
+
                             experienceLevels.find (e => e.id === talent.experience) ?.name
                           }
                         </span>
@@ -1059,6 +1073,7 @@ import { SEO } from '../components / SEO';
                           className={`px - 2 py - 1 rounded - full text - xs font - medium ${getExperienceColor (talent.experience) }`}
                         >
                           {
+
                             experienceLevels.find (e => e.id === talent.experience) ?.name
                           }
                         </span>
@@ -1138,6 +1153,7 @@ import { SEO } from '../components / SEO';
                             className={`px - 3 py - 1 rounded - full text - xs font - medium ${getCategoryColor (talent.category) }`}
                           >
                             {
+
                               categories.find (c => c.id === talent.category) ?.name
                             }
                           </span>
@@ -1145,6 +1161,7 @@ import { SEO } from '../components / SEO';
                             className={`px - 3 py - 1 rounded - full text - xs font - medium ${getExperienceColor (talent.experience) }`}
                           >
                             {
+
                               experienceLevels.find (e => e.id === talent.experience) ?.name
                             }
                           </span>
@@ -1207,6 +1224,7 @@ import { SEO } from '../components / SEO';
                             <div role="button" className="text - gray - 400">Experience</div>
                             <div role="button" className="text - green - 400 font - medium text - sm">
                               {
+
                                 experienceLevels
                                   .find (e => e.id === talent.experience) ?.name.split (' ') [0]
                               }

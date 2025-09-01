@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react.ts';
 import { SEO } from '@/components / SEO';
 export default React.memo (function RevolutionaryServices2029 (...args: any[]) : any {
+
 import {
+
 import { motion, AnimatePresence } from 'framer - motion.ts';
 import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data / revolutionary - 2029 - advanced - micro - saas - services';
 
@@ -46,8 +48,7 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data / re
   Play,
   Pause,
   Volume2,
-  VolumeX,
-} from 'lucide - react.ts';
+  VolumeX} from 'lucide - react.ts';
 
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('All') ;
@@ -70,6 +71,7 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data / re
   ];
 
   const filteredServices = REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES.filter (service => {
+
       const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         service.category.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
@@ -78,7 +80,9 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data / re
     }) ;
 
   const sortedServices = [...filteredServices].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0) ;
       case 'price - low':
@@ -115,19 +119,19 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data / re
             key={i}
             className="absolute w - 2 h - 2 bg - cyan - 400 rounded - full opacity - 20"
             animate={{
+
               x: [0, 100, 0],
               y: [0, -100, 0],
-              opacity: [0.2, 0.8, 0.2],
-            }}
+              opacity: [0.2, 0.8, 0.2]}}
             transition={{
+
               duration: Math.random () * 10 + 10,
               repeat: Infinity,
-              delay: Math.random () * 5,
-            }}
+              delay: Math.random () * 5}}
             style={{
+
               left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`,
-            }}
+              top: `${Math.random () * 100}%`}}
           />) ) }
       </div>
 
@@ -470,35 +474,45 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data / re
 
       <style jsx>{`
         .animate - blob {
+
           animation: blob 7s infinite;
         }
         .animation - delay - 2000 {
+
           animation - delay: 2s;
         }
         .animation - delay - 4000 {
+
           animation - delay: 4s;
         }
         @keyframes blob {
+
           0% {
+
             transform: translate (0px, 0px) scale (1) ;
           }
           33% {
+
             transform: translate (30px, -50px) scale (1.1) ;
           }
           66% {
+
             transform: translate (-20px, 20px) scale (0.9) ;
           }
           100% {
+
             transform: translate (0px, 0px) scale (1) ;
           }
         }
         .line - clamp - 3 {
+
           display: -webkit - box;
           -webkit - line - clamp: 3;
           -webkit - box - orient: vertical;
           overflow: hidden;
         }
         .slider::-webkit - slider - thumb {
+
           appearance: none;
           height: 20px;
           width: 20px;
@@ -507,6 +521,7 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data / re
           cursor: pointer;
         }
         .slider::-moz - range - thumb {
+
           height: 20px;
           width: 20px;
           border - radius: 50%;

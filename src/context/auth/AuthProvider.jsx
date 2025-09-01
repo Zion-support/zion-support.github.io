@@ -56,7 +56,7 @@ export const AuthProvider = ({ children }) => {
 
             // useEmailAuth.login already shows a toast on error.
             // We just need to return the error to the caller of AuthProvider.login"
-            // // // // // // // // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
+            // // // // // // // // // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
             // It's possible the server token is valid but client Supabase has an issue.
             // For now, treat as a login failure and let user retry.
             // Potentially clear tokens if this state is problematic: await logout();"
@@ -143,27 +143,27 @@ export const AuthProvider = ({ children }) => {
                     else if (error) {
 
 "
-                        // // // // // // // // // // console.error("Error fetching user profile:", error);
+                        // // // // // // // // // // // console.error("Error fetching user profile:", error);
                         setUser(null);
 
                 catch (error) {
 
 "
-                    // // // // // // // // // // console.error("Error fetching user profile:", error);
+                    // // // // // // // // // // // console.error("Error fetching user profile:", error);
                     setUser(null);
 
 <<<<<<< HEAD
-                        // // console.error("Error fetching user profile:", error);
+                        // // // console.error("Error fetching user profile:", error);
 =======
 "
-                        // // // console.error("Error fetching user profile:", error);
+                        // // // // console.error("Error fetching user profile:", error);
 >>>>>>> main
                         setUser(null)}
                 }
                 catch (error) {
 
 "
-                    // // // console.error("Error fetching user profile:", error);
+                    // // // // console.error("Error fetching user profile:", error);
                     setUser(null)}
             }
             else {

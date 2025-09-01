@@ -32,33 +32,40 @@ import { MessageCircle,
 import { SEO              } from '../../components/SEO';
 
 const AICustomerSupportAutomation = () => {
+
   const features = [
     {
+
       icon: Bot,
       title: "AI-Powered Chatbots",
       description: "Intelligent chatbots that understand context, handle complex queries, and provide accurate responses 24/7 with 95%+ accuracy"
     },
     {
+
       icon: Brain,
       title: "Natural Language Processing",
       description: "Advanced NLP that understands customer intent, sentiment, and provides personalized responses in multiple languages"
     },
     {
+
       icon: Clock,
       title: "24/7 Availability",
       description: "Round-the-clock customer support with instant responses, reducing wait times from hours to seconds"
     },
     {
+
       icon: BarChart3,
       title: "Smart Ticket Routing",
       description: "AI-powered ticket classification and routing to the right agents based on complexity, urgency, and expertise"
     },
     {
+
       icon: TrendingUp,
       title: "Performance Analytics",
       description: "Comprehensive insights into support metrics, customer satisfaction, and agent performance with actionable recommendations"
     },
     {
+
       icon: Shield,
       title: "Enterprise Security",
       description: "Bank-grade security with data encryption, GDPR compliance, and role-based access control for sensitive customer information"
@@ -67,6 +74,7 @@ const AICustomerSupportAutomation = () => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$199",
       period: "/month",
@@ -83,6 +91,7 @@ const AICustomerSupportAutomation = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$599",
       period: "/month",
@@ -101,6 +110,7 @@ const AICustomerSupportAutomation = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
@@ -122,21 +132,25 @@ const AICustomerSupportAutomation = () => {
 
   const useCases = [
     {
+
       title: "E-commerce Support",
       description: "Handle order inquiries, returns, and product questions automatically while escalating complex issues to human agents",
       icon: ShoppingCart
     },
     {
+
       title: "SaaS Customer Success",
       description: "Provide instant technical support, onboarding assistance, and feature explanations to improve user adoption",
       icon: Monitor
     },
     {
+
       title: "Financial Services",
       description: "Handle account inquiries, transaction questions, and basic banking operations with security and compliance",
       icon: DollarSign
     },
     {
+
       title: "Healthcare Support",
       description: "Manage appointment scheduling, general inquiries, and provide health information while maintaining HIPAA compliance",
       icon: Heart
@@ -145,24 +159,28 @@ const AICustomerSupportAutomation = () => {
 
   const benefits = [
     {
+
       icon: Clock,
       title: "Faster Response",
       value: "90%",
       description: "Reduce response times from hours to seconds"
     },
     {
+
       icon: DollarSign,
       title: "Cost Reduction",
       value: "60-80%",
       description: "Lower support costs while improving quality"
     },
     {
+
       icon: Users,
       title: "Customer Satisfaction",
       value: "40%",
       description: "Improve CSAT scores with instant support"
     },
     {
+
       icon: TrendingUp,
       title: "Efficiency Gain",
       value: "3x",
@@ -172,6 +190,7 @@ const AICustomerSupportAutomation = () => {
 
   const testimonials = [
     {
+
       name: "Jennifer Adams",
       role: "Customer Success Director",
       company: "TechFlow Solutions",
@@ -179,6 +198,7 @@ const AICustomerSupportAutomation = () => {
       rating: 5
     },
     {
+
       name: "Marcus Chen",
       role: "Operations Manager",
       company: "E-commerce Plus",
@@ -186,6 +206,7 @@ const AICustomerSupportAutomation = () => {
       rating: 5
     },
     {
+
       name: "Sarah Williams",
       role: "VP of Support",
       company: "CloudTech Inc",
@@ -487,6 +508,7 @@ const AICustomerSupportAutomation = () => {
                 )}
                 
                 <div className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${
+
                   plan.popular 
                     ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
                     : 'border-white/20 hover:border-cyan-400/40'
@@ -512,6 +534,7 @@ const AICustomerSupportAutomation = () => {
                   <a
                     href="https://ziontechgroup.com/contact"
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${
+
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400'
                         : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'

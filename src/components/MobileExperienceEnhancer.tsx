@@ -161,7 +161,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         setGestureHistory(prev => [gesture, ...prev.slice(0, 9)]);
         
         // Log gesture for debugging'
-        // // // console.log('Touch Gesture:', gesture)}
+        // // // // console.log('Touch Gesture:', gesture)}
     };
 
     document.addEventListener('touchstart', handleTouchStart, { passive: false });

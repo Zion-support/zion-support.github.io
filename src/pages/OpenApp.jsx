@@ -3,6 +3,7 @@ import React from 'react';
 export default OpenApp;
 
 const OpenApp = () => {
+
   return (<>
       <Helmet>
         <title > Open App - Zion Tech Group</title>

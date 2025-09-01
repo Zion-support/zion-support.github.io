@@ -1,6 +1,7 @@
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-import { 
+import {
+
   Check, 
   Star, 
   TrendingUp, 
@@ -27,10 +28,12 @@ import { COMPREHENSIVE_PRICING_PLANS_2028,
              } from '../data/comprehensivePricingGuide2028';
 
 export default function ComprehensivePricing2028(...args: any[]): any {
+
   const [selectedPlan, setSelectedPlan] = useState('professional-2028');
   const [expandedCategories, setExpandedCategories] = useState<any>([]);
 
   const toggleCategory = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+
     setExpandedCategories(prev => 
       prev.includes(categoryId) 
         ? prev.filter(id => id !== categoryId)
@@ -161,6 +164,7 @@ export default function ComprehensivePricing2028(...args: any[]): any {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className={`relative rounded-2xl p-8 border transition-all duration-300 ${
+
                 selectedPlan === plan.id
                   ? 'bg-gradient-to-br from-blue-600/20 to-purple-600/20 border-blue-500/50 scale-105'
                   : 'bg-white/10 backdrop-blur-lg border-white/20 hover:border-blue-500/30'
@@ -184,6 +188,7 @@ export default function ComprehensivePricing2028(...args: any[]): any {
                 <button
                   onClick={() => setSelectedPlan(plan.id)}
                   className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
+
                     selectedPlan === plan.id
                       ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white'
                       : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
@@ -228,6 +233,7 @@ export default function ComprehensivePricing2028(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -238,6 +244,7 @@ export default function ComprehensivePricing2028(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

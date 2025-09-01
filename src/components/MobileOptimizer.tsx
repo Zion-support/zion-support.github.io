@@ -171,7 +171,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           });
         } catch (error) {
 
-          // // console.log('Battery API not supported');
+          // // // console.log('Battery API not supported');
         }
       }
     };
@@ -363,19 +363,19 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 
       case 'left':
         // Navigate forward/next
-        // // console.log('Swipe left - navigate forward');
+        // // // console.log('Swipe left - navigate forward');
         break;
       case 'right':
         // Navigate back
-        // // console.log('Swipe right - navigate back');
+        // // // console.log('Swipe right - navigate back');
         break;
       case 'up':
         // Scroll up or show menu
-        // // console.log('Swipe up - scroll up');
+        // // // console.log('Swipe up - scroll up');
         break;
       case 'down':
         // Scroll down or hide menu
-        // // console.log('Swipe down - scroll down');
+        // // // console.log('Swipe down - scroll down');
         break;
     }
   }, [settings.swipeGestures]);
@@ -454,7 +454,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       
     } catch (error) {
 
-      // // console.error('Mobile optimization failed:', error);
+      // // // console.error('Mobile optimization failed:', error);
     } finally {
 
       setIsOptimizing(false);

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Rocket, ArrowRight } from 'lucide-react';
 
 export default function Index() {
+
   return (
     <>
       <Head>

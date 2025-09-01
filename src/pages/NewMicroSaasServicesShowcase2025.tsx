@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Brain,
   Shield,
   Rocket,
@@ -56,8 +57,10 @@ import {
 } from 'lucide-react';
 
 export default function NewMicroSaasServicesShowcase2025() {
+
   const newServices = [
     {
+
       name: 'AI Customer Churn Prediction',
       description: 'AI-powered platform to predict and prevent customer churn with 95%+ accuracy',
       category: 'AI & Analytics',
@@ -75,6 +78,7 @@ export default function NewMicroSaasServicesShowcase2025() {
       ]
     },
     {
+
       name: 'AI Content Performance Analytics',
       description: 'AI-driven analytics platform to optimize content performance and engagement',
       category: 'AI & Analytics',
@@ -92,6 +96,7 @@ export default function NewMicroSaasServicesShowcase2025() {
       ]
     },
     {
+
       name: 'AI Legal Document Automation',
       description: 'AI-powered platform for automated legal document creation and compliance',
       category: 'Enterprise Solutions',
@@ -109,6 +114,7 @@ export default function NewMicroSaasServicesShowcase2025() {
       ]
     },
     {
+
       name: 'AI Healthcare Analytics Platform',
       description: 'Advanced healthcare analytics and predictive diagnostics powered by AI',
       category: 'Healthcare Tech',
@@ -126,6 +132,7 @@ export default function NewMicroSaasServicesShowcase2025() {
       ]
     },
     {
+
       name: 'AI Financial Trading Platform',
       description: 'AI-powered trading systems and financial analytics for optimal portfolio management',
       category: 'FinTech',
@@ -143,6 +150,7 @@ export default function NewMicroSaasServicesShowcase2025() {
       ]
     },
     {
+
       name: 'AI Supply Chain Optimization',
       description: 'Intelligent supply chain management with AI-driven insights and automation',
       category: 'Enterprise Solutions',
@@ -160,6 +168,7 @@ export default function NewMicroSaasServicesShowcase2025() {
       ]
     },
     {
+
       name: 'AI Real Estate Investment Platform',
       description: 'AI-powered platform for real estate investment analysis and decision making',
       category: 'FinTech',
@@ -189,6 +198,7 @@ export default function NewMicroSaasServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = React.useState('all');
 
   const filteredServices = newServices.filter(service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesCategory;
   });
@@ -267,6 +277,7 @@ export default function NewMicroSaasServicesShowcase2025() {
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 ${
+
                     selectedCategory === category.id
                       ? 'border-blue-500 bg-blue-500/20 text-blue-400'
                       : 'border-gray-600 text-gray-300 hover:border-gray-500 hover:bg-gray-700/50'

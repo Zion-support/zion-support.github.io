@@ -199,7 +199,7 @@ export function SecurityEnhancer() {
   
       setSecurityStatus(status)} catch (error) {
 
-      // // // console.error('Failed to check security status:', error)}
+      // // // // console.error('Failed to check security status:', error)}
   }, []) ;
 
   // Run security scan

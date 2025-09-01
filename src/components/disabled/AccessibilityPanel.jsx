@@ -30,17 +30,17 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             catch (error) {
 
 <<<<<<< HEAD
-                // // // // // console.error('Failed to parse accessibility settings:', error);
+                // // // // // // console.error('Failed to parse accessibility settings:', error);
 
 
 =======
-                // // // // // // // // // console.error('Failed to parse accessibility settings:', error);
+                // // // // // // // // // // console.error('Failed to parse accessibility settings:', error);
             }
 =======
                 setSettings(prev => ({ ...prev, ...parsed }))}
             catch (error) {
 
-                // // console.error('Failed to parse accessibility settings:', error)}
+                // // // console.error('Failed to parse accessibility settings:', error)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2

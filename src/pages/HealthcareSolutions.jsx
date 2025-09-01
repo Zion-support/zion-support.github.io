@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function HealthcareSolutions () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Heart,
@@ -25,6 +27,7 @@ import { motion } from 'framer - motion';
   AlertTriangle
 const healthcareSolutions = [
   {
+
     id: 1,
     title: "HIPAA - Compliant Mobile Apps",
     description: "Secure mobile applications that meet healthcare privacy standards and regulations.",
@@ -41,6 +44,7 @@ const healthcareSolutions = [
     compliance["HIPAA", "HITECH", "SOC 2"]
   },
   {
+
     id: 2,
     title: "AI - Powered Diagnostics",
     description: "Machine learning algorithms that assist healthcare professionals in diagnosis and treatment planning.",
@@ -57,6 +61,7 @@ const healthcareSolutions = [
     compliance["FDA", "CE Mark", "ISO 13485"]
   },
   {
+
     id: 3,
     title: "Electronic Health Records (EHR) ",
     description: "Comprehensive digital health record systems that streamline patient care and data management.",
@@ -73,6 +78,7 @@ const healthcareSolutions = [
     compliance["HL7 FHIR", "ONC", "Meaningful Use"]
   },
   {
+
     id: 4,
     title: "Telemedicine Platform",
     description: "Secure video conferencing and remote consultation tools for healthcare providers.",
@@ -89,6 +95,7 @@ const healthcareSolutions = [
     compliance["HIPAA", "HITECH", "SOC 2"]
   },
   {
+
     id: 5,
     title: "IoT Health Monitoring",
     description: "Connected devices and sensors for continuous patient monitoring and data collection.",
@@ -105,6 +112,7 @@ const healthcareSolutions = [
     compliance["FDA", "ISO 13485", "IEC 62304"]
   },
   {
+
     id: 6,
     title: "Cybersecurity Framework",
     description: "Comprehensive security solutions to protect patient data and healthcare systems.",
@@ -124,24 +132,28 @@ const healthcareSolutions = [
 
 const complianceStandards = [
   {
+
     name: "HIPAA",
     description: "Health Insurance Portability and Accountability Act",
     icon: Lock,
     requirements["Privacy Rule", "Security Rule", "Breach Notification"]
   },
   {
+
     name: "HITECH",
     description: "Health Information Technology for Economic and Clinical Health",
     icon: Zap,
     requirements["Meaningful Use", "EHR Incentives", "Privacy Protections"]
   },
   {
+
     name: "FDA",
     description: "Food and Drug Administration",
     icon: Shield,
     requirements["Medical Device Approval", "Software as Medical Device", "Clinical Trials"]
   },
   {
+
     name: "SOC 2",
     description: "System and Organization Controls",
     icon: CheckCircle,
@@ -151,6 +163,7 @@ const complianceStandards = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "MedTech Solutions",
     industry: "Healthcare Technology",
@@ -160,6 +173,7 @@ const successStories = [
     logo: "MS"
   },
   {
+
     id: 2,
     comp: "HealthCare Plus",
     industry: "Hospital Network",
@@ -169,6 +183,7 @@ const successStories = [
     logo: "HP"
   },
   {
+
     id: 3,
     comp: "Digital Diagnostics",
     industry: "Medical Imaging",
@@ -181,6 +196,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Compliance Assessment",
     description: "Evaluate regulatory requirements and compliance standards",
@@ -188,6 +204,7 @@ const processSteps = [
     duration: "1 - 2 weeks"
   },
   {
+
     step: 2,
     title: "Security Architecture",
     description: "Design secure, compliant system architecture",
@@ -195,6 +212,7 @@ const processSteps = [
     duration: "2 - 3 weeks"
   },
   {
+
     step: 3,
     title: "Development & Testing",
     description: "Build solution with continuous security testing",
@@ -202,6 +220,7 @@ const processSteps = [
     duration: "8 - 24 weeks"
   },
   {
+
     step: 4,
     title: "Compliance Validation",
     description: "Validate compliance and obtain necessary certifications",
@@ -231,11 +250,13 @@ const processSteps = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -245,16 +266,19 @@ const processSteps = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -297,11 +321,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -319,16 +345,19 @@ const processSteps = [
             {complianceStandards.map ( (standard, index) => (<motion.div
                 key={standard.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -358,11 +387,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -380,16 +411,19 @@ const processSteps = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -420,11 +454,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -444,6 +480,7 @@ const processSteps = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -457,16 +494,19 @@ const processSteps = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -521,11 +561,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -543,16 +585,19 @@ const processSteps = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -598,11 +643,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

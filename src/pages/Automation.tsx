@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Zap, 
   Bot, 
   Workflow, 
@@ -23,29 +24,34 @@ import {
 } from 'lucide-react';
 
 const Automation: React.FC = () => {
+
   const [activeTab, setActiveTab] = useState('overview');
   const [selectedWorkflow, setSelectedWorkflow] = useState<string | null>(null);
 
   const automationFeatures = [
     {
+
       icon: <Bot className="w-8 h-8" />,
       title: "AI-Powered Automation",
       description: "Intelligent automation that learns from your processes and continuously improves efficiency",
       benefits: ["Reduces manual errors", "24/7 operation", "Adaptive learning"]
     },
     {
+
       icon: <Workflow className="w-8 h-8" />,
       title: "Visual Workflow Builder",
       description: "Drag-and-drop interface to create complex automation workflows without coding",
       benefits: ["No-code setup", "Visual process mapping", "Easy modifications"]
     },
     {
+
       icon: <Cpu className="w-8 h-8" />,
       title: "Process Intelligence",
       description: "Advanced analytics and insights to optimize your automation strategies",
       benefits: ["Performance metrics", "Bottleneck identification", "ROI tracking"]
     },
     {
+
       icon: <Database className="w-8 h-8" />,
       title: "Enterprise Integration",
       description: "Seamlessly connect with your existing systems and applications",
@@ -55,24 +61,28 @@ const Automation: React.FC = () => {
 
   const automationCategories = [
     {
+
       name: "Customer Service",
       icon: <Users className="w-6 h-6" />,
       description: "Automate customer interactions and support processes",
       examples: ["Chatbot responses", "Ticket routing", "Follow-up emails"]
     },
     {
+
       name: "Data Processing",
       icon: <Database className="w-6 h-6" />,
       description: "Automate data collection, cleaning, and analysis",
       examples: ["ETL processes", "Report generation", "Data validation"]
     },
     {
+
       name: "Marketing Automation",
       icon: <Target className="w-6 h-6" />,
       description: "Streamline marketing campaigns and lead nurturing",
       examples: ["Email sequences", "Social media posting", "Lead scoring"]
     },
     {
+
       name: "HR & Operations",
       icon: <Workflow className="w-6 h-6" />,
       description: "Automate HR processes and operational workflows",
@@ -82,6 +92,7 @@ const Automation: React.FC = () => {
 
   const workflowTemplates = [
     {
+
       id: "customer-onboarding",
       name: "Customer Onboarding",
       description: "Automated customer onboarding process with welcome emails and setup guides",
@@ -90,6 +101,7 @@ const Automation: React.FC = () => {
       complexity: "Medium"
     },
     {
+
       id: "data-backup",
       name: "Data Backup & Sync",
       description: "Automated data backup and synchronization across multiple systems",
@@ -98,6 +110,7 @@ const Automation: React.FC = () => {
       complexity: "Low"
     },
     {
+
       id: "invoice-processing",
       name: "Invoice Processing",
       description: "Automated invoice processing with OCR and payment tracking",

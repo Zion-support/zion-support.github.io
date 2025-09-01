@@ -2,12 +2,31 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, 
-  Phone, Zap, DollarSign, Shield, Mail, 
-  MapPin, Rocket, Brain, Sparkles, Atom, 
-  Dna, Users, Globe, Cpu, Lock, Database,
-  BarChart3, Target, Microscope, Cloud
+import {
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Atom,
+  Dna,
+  Users,
+  Globe,
+  Cpu,
+  Lock,
+  Database,
+  BarChart3,
+  Target,
+  Microscope,
+  Cloud,
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { innovative2025NewServices } from '../data/innovative-2025-new-services';
@@ -16,7 +35,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 const categories = [
@@ -24,60 +43,81 @@ const categories = [
     name: 'AI & Machine Learning',
     icon: Brain,
     color: 'from-blue-500 to-purple-600',
-    count: 4
+    count: 4,
   },
   {
     name: 'Quantum Computing',
     icon: Atom,
     color: 'from-indigo-500 to-purple-600',
-    count: 2
+    count: 2,
   },
   {
     name: 'Edge Computing',
     icon: Globe,
     color: 'from-cyan-500 to-blue-600',
-    count: 1
+    count: 1,
   },
   {
     name: 'Blockchain & Web3',
     icon: Lock,
     color: 'from-orange-500 to-red-600',
-    count: 1
+    count: 1,
   },
   {
     name: 'Space Technology',
     icon: Rocket,
     color: 'from-red-500 to-pink-600',
-    count: 1
+    count: 1,
   },
   {
     name: 'DevOps & Automation',
     icon: Zap,
     color: 'from-yellow-500 to-orange-600',
-    count: 1
-  }
+    count: 1,
+  },
 ];
 
 export default function Innovative2025ServicesShowcase() {
   return (
     <Layout>
       <Head>
-        <title>Innovative 2025 Services Showcase | Zion Tech Group - Revolutionary Technology Solutions</title>
-        <meta name="description" content="Discover our innovative 2025 technology services including AI-powered solutions, quantum computing, edge computing, blockchain, and space technology. Transform your business with cutting-edge innovations." />
-        <meta name="keywords" content="innovative services 2025, AI solutions, quantum computing, edge computing, blockchain, space technology, Zion Tech Group" />
+        <title>
+          Innovative 2025 Services Showcase | Zion Tech Group - Revolutionary
+          Technology Solutions
+        </title>
+        <meta
+          name="description"
+          content="Discover our innovative 2025 technology services including AI-powered solutions, quantum computing, edge computing, blockchain, and space technology. Transform your business with cutting-edge innovations."
+        />
+        <meta
+          name="keywords"
+          content="innovative services 2025, AI solutions, quantum computing, edge computing, blockchain, space technology, Zion Tech Group"
+        />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Innovative 2025 Services Showcase - Zion Tech Group" />
-        <meta property="og:description" content="Discover revolutionary technology services for 2025 including AI, quantum computing, and emerging technologies." />
-        <meta property="og:url" content="https://ziontechgroup.com/innovative-2025-services-showcase" />
+        <meta
+          property="og:title"
+          content="Innovative 2025 Services Showcase - Zion Tech Group"
+        />
+        <meta
+          property="og:description"
+          content="Discover revolutionary technology services for 2025 including AI, quantum computing, and emerging technologies."
+        />
+        <meta
+          property="og:url"
+          content="https://ziontechgroup.com/innovative-2025-services-showcase"
+        />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/innovative-2025-services-showcase" />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/innovative-2025-services-showcase"
+        />
       </Head>
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black"></div>
-        
+
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -100,7 +140,9 @@ export default function Innovative2025ServicesShowcase() {
               <span className="text-white">Services Showcase</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover revolutionary technology services that will transform your business in 2025. From AI-powered solutions to quantum computing and space technology.
+              Discover revolutionary technology services that will transform
+              your business in 2025. From AI-powered solutions to quantum
+              computing and space technology.
             </p>
           </motion.div>
 
@@ -141,7 +183,8 @@ export default function Innovative2025ServicesShowcase() {
               Technology Categories
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Explore our comprehensive range of innovative technology services across multiple cutting-edge domains.
+              Explore our comprehensive range of innovative technology services
+              across multiple cutting-edge domains.
             </p>
           </motion.div>
 
@@ -155,13 +198,22 @@ export default function Innovative2025ServicesShowcase() {
                 viewport={{ once: true }}
                 className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300 group"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                >
                   <category.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>
-                <p className="text-gray-400 mb-4">{category.count} innovative services</p>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {category.name}
+                </h3>
+                <p className="text-gray-400 mb-4">
+                  {category.count} innovative services
+                </p>
                 <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div className={`h-2 bg-gradient-to-r ${category.color} rounded-full transition-all duration-500`} style={{ width: `${(category.count / 10) * 100}%` }}></div>
+                  <div
+                    className={`h-2 bg-gradient-to-r ${category.color} rounded-full transition-all duration-500`}
+                    style={{ width: `${(category.count / 10) * 100}%` }}
+                  ></div>
                 </div>
               </motion.div>
             ))}
@@ -183,7 +235,8 @@ export default function Innovative2025ServicesShowcase() {
               Revolutionary Services
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Each service is designed to provide maximum value with cutting-edge technology and proven results.
+              Each service is designed to provide maximum value with
+              cutting-edge technology and proven results.
             </p>
           </motion.div>
 
@@ -200,11 +253,15 @@ export default function Innovative2025ServicesShowcase() {
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center space-x-4">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300`}>
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300`}
+                    >
                       {service.icon}
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {service.name}
+                      </h3>
                       <p className="text-gray-400">{service.tagline}</p>
                     </div>
                   </div>
@@ -216,31 +273,44 @@ export default function Innovative2025ServicesShowcase() {
                 </div>
 
                 {/* Service Description */}
-                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
 
                 {/* Pricing and Features */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-2">
-                    <span className="text-3xl font-bold text-white">{service.price}</span>
+                    <span className="text-3xl font-bold text-white">
+                      {service.price}
+                    </span>
                     <span className="text-gray-400">{service.period}</span>
                   </div>
                   <div className="flex items-center space-x-2 text-yellow-400">
                     <Star className="w-5 h-5 fill-current" />
-                    <span className="text-white font-semibold">{service.rating}</span>
+                    <span className="text-white font-semibold">
+                      {service.rating}
+                    </span>
                     <span className="text-gray-400">({service.reviews})</span>
                   </div>
                 </div>
 
                 {/* Key Features */}
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">
+                    Key Features
+                  </h4>
                   <div className="grid grid-cols-1 gap-2">
-                    {service.features.slice(0, 5).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-2 text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </div>
-                    ))}
+                    {service.features
+                      .slice(0, 5)
+                      .map((feature, featureIndex) => (
+                        <div
+                          key={featureIndex}
+                          className="flex items-center space-x-2 text-gray-300"
+                        >
+                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+                        </div>
+                      ))}
                   </div>
                 </div>
 
@@ -248,19 +318,27 @@ export default function Innovative2025ServicesShowcase() {
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                   <div>
                     <span className="text-gray-400">Market Size:</span>
-                    <p className="text-white font-semibold">{service.marketSize}</p>
+                    <p className="text-white font-semibold">
+                      {service.marketSize}
+                    </p>
                   </div>
                   <div>
                     <span className="text-gray-400">Growth Rate:</span>
-                    <p className="text-white font-semibold">{service.growthRate}</p>
+                    <p className="text-white font-semibold">
+                      {service.growthRate}
+                    </p>
                   </div>
                   <div>
                     <span className="text-gray-400">Setup Time:</span>
-                    <p className="text-white font-semibold">{service.setupTime}</p>
+                    <p className="text-white font-semibold">
+                      {service.setupTime}
+                    </p>
                   </div>
                   <div>
                     <span className="text-gray-400">Trial:</span>
-                    <p className="text-white font-semibold">{service.trialDays} days</p>
+                    <p className="text-white font-semibold">
+                      {service.trialDays} days
+                    </p>
                   </div>
                 </div>
 
@@ -292,7 +370,8 @@ export default function Innovative2025ServicesShowcase() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Contact us today to learn how our innovative 2025 services can revolutionize your operations and drive unprecedented growth.
+              Contact us today to learn how our innovative 2025 services can
+              revolutionize your operations and drive unprecedented growth.
             </p>
           </motion.div>
 
@@ -324,7 +403,9 @@ export default function Innovative2025ServicesShowcase() {
               className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
             >
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Email Us
+              </h3>
               <p className="text-gray-400 mb-4">{contactInfo.email}</p>
               <Link
                 href={`mailto:${contactInfo.email}`}
@@ -343,7 +424,9 @@ export default function Innovative2025ServicesShowcase() {
               className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
             >
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Visit Us
+              </h3>
               <p className="text-gray-400 mb-4">{contactInfo.address}</p>
               <Link
                 href="/contact"

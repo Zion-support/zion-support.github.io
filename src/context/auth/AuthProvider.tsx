@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       if (clientLoginResult?.error) {
 
         // loginImpl (useEmailAuth.login) already shows a toast.
-        // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
+        // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
         return { error: (clientLoginResult.error as any)?.message || "Client-side login failed." };
       }
 
@@ -144,7 +144,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
         if (sessionError) {
 
-          // // console.error("Error setting Supabase session:", sessionError);
+          // // // console.error("Error setting Supabase session:", sessionError);
           toast({
 
             title: "Signup Error",
@@ -184,7 +184,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       }
     } catch (err: any) {
 
-      // // console.error("Signup exception:", err);
+      // // // console.error("Signup exception:", err);
       toast({
 
         title: "Signup Failed",
@@ -246,12 +246,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
               }
             } else if (error) {
 
-              // // console.error("Error fetching user profile:", error);
+              // // // console.error("Error fetching user profile:", error);
               setUser(null);
             }
           } catch (error) {
 
-            // // console.error("Error fetching user profile:", error);
+            // // // console.error("Error fetching user profile:", error);
             setUser(null);
             setAvatarUrl(null);
           }

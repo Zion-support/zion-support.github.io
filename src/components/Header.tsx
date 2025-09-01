@@ -110,7 +110,7 @@ export function Header({ className }: HeaderProps) {
 
   
     // Add search logic here'
-    // // // console.log('Searching for:', searchQuery)};
+    // // // // console.log('Searching for:', searchQuery)};
 
   
   return()

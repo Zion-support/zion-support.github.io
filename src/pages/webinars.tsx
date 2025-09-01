@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
-import { 
+import {
+
   Video, 
   Calendar, 
   Clock, 
@@ -26,6 +27,7 @@ import {
 } from 'lucide-react';
 
 export default function Webinars() {
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -40,6 +42,7 @@ export default function Webinars() {
 
   const webinars = [
     {
+
       id: 1,
       title: 'AI-Powered Cybersecurity: The Future of Threat Detection',
       description: 'Learn how artificial intelligence is revolutionizing cybersecurity and providing real-time threat detection capabilities.',
@@ -58,6 +61,7 @@ export default function Webinars() {
       recordingUrl: null
     },
     {
+
       id: 2,
       title: 'Cloud Migration Strategies for Enterprise Success',
       description: 'Discover proven strategies for migrating legacy systems to the cloud while minimizing downtime and maximizing ROI.',
@@ -76,6 +80,7 @@ export default function Webinars() {
       recordingUrl: null
     },
     {
+
       id: 3,
       title: 'Machine Learning in Healthcare: Transforming Patient Care',
       description: 'Explore how ML algorithms are improving diagnostic accuracy and patient outcomes in modern healthcare.',
@@ -94,6 +99,7 @@ export default function Webinars() {
       recordingUrl: null
     },
     {
+
       id: 4,
       title: 'Digital Transformation: From Strategy to Implementation',
       description: 'A comprehensive guide to planning and executing successful digital transformation initiatives.',
@@ -112,6 +118,7 @@ export default function Webinars() {
       recordingUrl: null
     },
     {
+
       id: 5,
       title: 'Edge Computing: The Next Frontier of Technology',
       description: 'Learn about edge computing technologies and their applications in IoT, AI, and real-time processing.',
@@ -130,6 +137,7 @@ export default function Webinars() {
       recordingUrl: null
     },
     {
+
       id: 6,
       title: 'Zero Trust Security Architecture: Implementation Guide',
       description: 'Step-by-step guide to implementing zero trust security principles in your organization.',
@@ -153,6 +161,7 @@ export default function Webinars() {
   const pastWebinars = webinars.filter(webinar => new Date(webinar.date) <= new Date());
 
   const filteredWebinars = upcomingWebinars.filter(webinar => {
+
     const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
     const matchesSearch = webinar.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          webinar.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -216,6 +225,7 @@ export default function Webinars() {
                       key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
                       className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 whitespace-nowrap ${
+
                         selectedCategory === category.id
                           ? 'bg-blue-600 text-white border-blue-600'
                           : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400'
@@ -443,21 +453,25 @@ export default function Webinars() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
+
                 icon: Brain,
                 title: 'Expert Knowledge',
                 description: 'Learn from industry leaders and technology experts'
               },
               {
+
                 icon: Clock,
                 title: 'Time Efficient',
                 description: '90-minute sessions packed with actionable insights'
               },
               {
+
                 icon: Users,
                 title: 'Interactive Q&A',
                 description: 'Get your questions answered by experts'
               },
               {
+
                 icon: Award,
                 title: 'Certificates',
                 description: 'Receive certificates of completion for your records'

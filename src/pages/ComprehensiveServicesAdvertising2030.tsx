@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   ArrowRight, 
   Star, 
   CheckCircle, 
@@ -23,6 +24,7 @@ import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_SERVICES_INDEX_2030 } from '../data/comprehensiveServicesIndex2030';
 
 export default function ComprehensiveServicesAdvertising2030() {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -48,6 +50,7 @@ export default function ComprehensiveServicesAdvertising2030() {
   ];
 
   const filteredServices = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -56,6 +59,7 @@ export default function ComprehensiveServicesAdvertising2030() {
   });
 
   const getCategoryIcon = (category: string) => {
+
     const cat = categories.find(c => c.id === category);
     return cat ? cat.icon : '🔧';
   };
@@ -151,6 +155,7 @@ export default function ComprehensiveServicesAdvertising2030() {
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
@@ -262,21 +267,25 @@ export default function ComprehensiveServicesAdvertising2030() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
+
                 icon: <Zap className="w-12 h-12" />,
                 title: "Innovation First",
                 description: "Leading-edge AI and emerging technologies that keep you ahead of the competition."
               },
               {
+
                 icon: <Users className="w-12 h-12" />,
                 title: "Expert Team",
                 description: "Experienced professionals with deep expertise in AI, cloud, and emerging technologies."
               },
               {
+
                 icon: <Target className="w-12 h-12" />,
                 title: "Proven Results",
                 description: "Track record of delivering measurable ROI and business transformation."
               },
               {
+
                 icon: <Award className="w-12 h-12" />,
                 title: "Quality Assured",
                 description: "Enterprise-grade solutions with comprehensive support and maintenance."

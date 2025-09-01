@@ -4,44 +4,52 @@ import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 const DigitalTransformation = () => {
+
     const transformationServices = [
         {
+
             title: "Process Automation",
             description: "Streamline operations with intelligent automation solutions",
             features: ["Workflow Automation", "RPA Implementation", "Business Process Optimization", "Efficiency Metrics"],
             icon: "🤖"
         },
         {
+
             title: "Workflow Optimization",
             description: "Redesign and optimize business workflows for maximum efficiency",
             features: ["Process Mapping", "Bottleneck Analysis", "Workflow Redesign", "Performance Monitoring"],
             icon: "📊"
         },
         {
+
             title: "Change Management",
             description: "Guide your organization through digital transformation with expert change management",
             features: ["Stakeholder Engagement", "Training Programs", "Communication Strategy", "Success Metrics"],
             icon: "🔄"
         },
         {
+
             title: "Business Process Optimization",
             description: "Streamline operations and improve efficiency through digital workflows",
             features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
             icon: "⚡"
         },
         {
+
             title: "Customer Experience Enhancement",
             description: "Create seamless digital experiences that delight your customers",
             features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
             icon: "🎯"
         },
         {
+
             title: "Data & Analytics Strategy",
             description: "Leverage data insights to drive informed business decisions",
             features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
             icon: "📊"
         },
         {
+
             title: "Technology Infrastructure",
             description: "Modernize your technology stack for scalability and performance",
             features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],

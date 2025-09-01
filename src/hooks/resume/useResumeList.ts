@@ -60,7 +60,7 @@ export function useResumeList() {
       return transformedResumes;
     } catch (e: any) {
 
-      // // console.error('Error fetching resumes:', e);
+      // // // console.error('Error fetching resumes:', e);
       setError(e.message);
       setResumes([]); // Clear resumes on error
       return [];

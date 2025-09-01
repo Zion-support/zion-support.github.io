@@ -4,8 +4,10 @@ export default News;
 import { motion } from 'framer - motion';
 
 const News: React.FC = () => {
+
   const newsArticles = [
     {
+
       id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI - Powered Healthcare Analytics Platform',
       excerpt: 'Our latest healthcare analytics solution leverages advanced AI to provide real - time insights for improved patient care and operational efficiency.',
@@ -17,6 +19,7 @@ const News: React.FC = () => {
       href: '/news / ai - healthcare - analytics - launch'
     },
     {
+
       id: 2,
       title: 'Quantum Computing Breakthrough: Zion Tech Achieves 1000 + Qubit Processing',
       excerpt: 'Our quantum computing research team has achieved a major milestone in quantum processing power, opening new possibilities for complex computations.',
@@ -28,6 +31,7 @@ const News: React.FC = () => {
       href: '/news / quantum - computing - breakthrough'
     },
     {
+
       id: 3,
       title: 'Zion Tech Group Named Top AI Company by Tech Innovation Awards 2024',
       excerpt: 'We are honored to be recognized as a leading AI company for our innovative solutions and contributions to the technology industry.',
@@ -39,6 +43,7 @@ const News: React.FC = () => {
       href: '/news / top - ai - company - award'
     },
     {
+
       id: 4,
       title: 'New Partnership with Global Healthcare Consortium Announced',
       excerpt: 'Zion Tech Group joins forces with leading healthcare organizations to advance AI - powered medical technology solutions worldwide.',
@@ -50,6 +55,7 @@ const News: React.FC = () => {
       href: '/news / healthcare - consortium - partnership'
     },
     {
+
       id: 5,
       title: 'Edge Computing Platform Achieves 99.9% Uptime in Production',
       excerpt: 'Our edge computing solution demonstrates exceptional reliability and performance in real - world enterprise environments.',
@@ -61,6 +67,7 @@ const News: React.FC = () => {
       href: '/news / edge - computing - uptime - milestone'
     },
     {
+
       id: 6,
       title: 'Zion Tech Group Expands to European Markets',
       excerpt: 'Strategic expansion into European markets brings our AI solutions to new customers and strengthens our global presence.',

@@ -4,68 +4,70 @@ export default ComprehensiveServicesLanding2025;
 import { innovativeMicroSaasServices2025 } from '../data / innovativeMicroSaasServices2025';
 
 const ComprehensiveServicesLanding2025 = () => {
+
   const [selectedIndustry, setSelectedIndustry] = useState ('all') ;
   const industries = [
     {
+
       id: 'all',
       name: 'All Industries',
       icon: '🏢',
-      description: 'Comprehensive solutions across all sectors',
-    },
+      description: 'Comprehensive solutions across all sectors'},
     {
+
       id: 'finance',
       name: 'Financial Services',
       icon: '💰',
-      description: 'AI - powered trading, risk management, and compliance',
-    },
+      description: 'AI - powered trading, risk management, and compliance'},
     {
+
       id: 'healthcare',
       name: 'Healthcare',
       icon: '🏥',
-      description: 'Advanced analytics, patient care, and research',
-    },
+      description: 'Advanced analytics, patient care, and research'},
     {
+
       id: 'manufacturing',
       name: 'Manufacturing',
       icon: '🏭',
-      description: 'Smart factories, IoT, and supply chain optimization',
-    },
+      description: 'Smart factories, IoT, and supply chain optimization'},
     {
+
       id: 'energy',
       name: 'Energy & Utilities',
       icon: '⚡',
-      description: 'Renewable energy management and grid optimization',
-    },
+      description: 'Renewable energy management and grid optimization'},
     {
+
       id: 'logistics',
       name: 'Logistics & Transportation',
       icon: '🚚',
-      description: 'Autonomous logistics and route optimization',
-    },
+      description: 'Autonomous logistics and route optimization'},
     {
+
       id: 'legal',
       name: 'Legal Services',
       icon: '⚖️',
-      description: 'AI - powered research and document analysis',
-    },
+      description: 'AI - powered research and document analysis'},
     {
+
       id: 'marketing',
       name: 'Marketing & Advertising',
       icon: '📢',
-      description: 'Autonomous campaigns and AI content generation',
-    },
+      description: 'Autonomous campaigns and AI content generation'},
   ];
   const getServicesByIndustry = industry => {
+
     if (industry === 'all') return innovativeMicroSaasServices2025;
     const industryMap = {
+
       finance: ['FinTech & AI', 'Cybersecurity & Quantum Computing'],
       healthcare: ['Healthcare & AI'],
       manufacturing: ['IoT & Edge Computing', 'Blockchain & Supply Chain'],
       energy: ['Energy & Sustainability'],
       logistics: ['Logistics & Transportation'],
       legal: ['Legal Tech & AI'],
-      marketing: ['Marketing & AI'],
-    };
+      marketing: ['Marketing & AI']};
     return innovativeMicroSaasServices2025.filter (service =>
       industryMap[industry]?.includes (service.category) ) ;
   };
@@ -157,6 +159,7 @@ const ComprehensiveServicesLanding2025 = () => {
                 key={industry.id}
                 onClick={ () => setSelectedIndustry (industry.id) }
                 className={`p - 6 rounded - xl border transition - all duration - 300 text - left ${
+
                   selectedIndustry === industry.id
                     ? 'bg - blue - 500 / 20 border - blue - 400 scale - 105'
                     : 'bg - white / 10 border - white / 20 hover:border - blue - 400 hover:scale - 105'

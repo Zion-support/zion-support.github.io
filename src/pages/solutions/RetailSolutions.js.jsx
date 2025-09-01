@@ -2,33 +2,40 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Store } from 'lucide-react';
 export default function RetailSolutions() {
+
     const features = [
         {
+
             icon: Brain,
             title: "AI-Powered Customer Insights",
             description: "Machine learning models to understand customer behavior and preferences"
         },
         {
+
             icon: BarChart3,
             title: "Real-time Analytics",
             description: "Live monitoring of sales, inventory, and customer engagement metrics"
         },
         {
+
             icon: Target,
             title: "Personalized Marketing",
             description: "AI-driven targeted marketing campaigns and product recommendations"
         },
         {
+
             icon: Zap,
             title: "Inventory Optimization",
             description: "Intelligent inventory management and demand forecasting"
         },
         {
+
             icon: Shield,
             title: "E-commerce Security",
             description: "Advanced security for online retail and payment processing"
         },
         {
+
             icon: Smartphone,
             title: "Omnichannel Experience",
             description: "Seamless integration across online and offline retail channels"
@@ -44,18 +51,22 @@ export default function RetailSolutions() {
     ];
     const solutions = [
         {
+
             title: "E-commerce Platform",
             description: "Modern online retail platform with AI-powered features"
         },
         {
+
             title: "Customer Analytics",
             description: "Comprehensive customer behavior analysis and insights"
         },
         {
+
             title: "Inventory Management",
             description: "Smart inventory optimization and demand forecasting"
         },
         {
+
             title: "Marketing Automation",
             description: "AI-driven marketing campaigns and personalization"
         }
@@ -75,10 +86,12 @@ export default function RetailSolutions() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -111,10 +124,12 @@ export default function RetailSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -130,14 +145,17 @@ export default function RetailSolutions() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (<motion.div key={feature.title} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 
@@ -156,10 +174,12 @@ export default function RetailSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -174,10 +194,12 @@ export default function RetailSolutions() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div initial = {
+
   { opacity: 0,
   x: -20 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -192,10 +214,12 @@ export default function RetailSolutions() {
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   x: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -216,10 +240,12 @@ export default function RetailSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -235,14 +261,17 @@ export default function RetailSolutions() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {retailTypes.map((type, index) => (<motion.div key={type} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 
@@ -258,10 +287,12 @@ export default function RetailSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 

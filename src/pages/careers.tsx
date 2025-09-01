@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
-import { 
+import {
+
   Search, 
   Filter, 
   MapPin, 
@@ -65,6 +66,7 @@ import {
 } from 'lucide-react';
 
 export default function Careers() {
+
   const [activeDepartment, setActiveDepartment] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLocation, setSelectedLocation] = useState('all');
@@ -92,6 +94,7 @@ export default function Careers() {
 
   const jobListings = [
     {
+
       id: 1,
       title: 'Senior Software Engineer - Full Stack',
       department: 'engineering',
@@ -116,6 +119,7 @@ export default function Careers() {
       urgent: true
     },
     {
+
       id: 2,
       title: 'AI Research Scientist',
       department: 'ai-ml',
@@ -140,6 +144,7 @@ export default function Careers() {
       urgent: false
     },
     {
+
       id: 3,
       title: 'Cybersecurity Engineer',
       department: 'cybersecurity',
@@ -164,6 +169,7 @@ export default function Careers() {
       urgent: true
     },
     {
+
       id: 4,
       title: 'Data Scientist',
       department: 'data-science',
@@ -188,6 +194,7 @@ export default function Careers() {
       urgent: false
     },
     {
+
       id: 5,
       title: 'Product Manager',
       department: 'product',
@@ -212,6 +219,7 @@ export default function Careers() {
       urgent: false
     },
     {
+
       id: 6,
       title: 'UX/UI Designer',
       department: 'design',
@@ -238,6 +246,7 @@ export default function Careers() {
   ];
 
   const filteredJobs = jobListings.filter(job => {
+
     const matchesDepartment = activeDepartment === 'all' || job.department === activeDepartment;
     const matchesLocation = selectedLocation === 'all' || job.location === selectedLocation;
     const matchesSearch = job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -248,21 +257,25 @@ export default function Careers() {
 
   const companyValues = [
     {
+
       icon: Brain,
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible, constantly exploring new technologies and approaches.'
     },
     {
+
       icon: Users,
       title: 'Collaboration',
       description: 'Great ideas come from diverse teams working together. We value every voice and perspective.'
     },
     {
+
       icon: Target,
       title: 'Impact Driven',
       description: 'We focus on solving real-world problems that make a difference in people\'s lives.'
     },
     {
+
       icon: Heart,
       title: 'People First',
       description: 'Our team is our greatest asset. We invest in growth, well-being, and work-life balance.'
@@ -271,31 +284,37 @@ export default function Careers() {
 
   const benefits = [
     {
+
       icon: Home,
       title: 'Remote First',
       description: 'Work from anywhere with flexible schedules and home office setup support.'
     },
     {
+
       icon: DollarSign,
       title: 'Competitive Compensation',
       description: 'Above-market salaries, equity packages, and performance bonuses.'
     },
     {
+
       icon: Shield,
       title: 'Health & Wellness',
       description: 'Comprehensive health coverage, mental health support, and wellness programs.'
     },
     {
+
       icon: GraduationCap,
       title: 'Learning & Growth',
       description: 'Professional development budget, conference attendance, and learning resources.'
     },
     {
+
       icon: Coffee,
       title: 'Team Culture',
       description: 'Regular team events, hackathons, and a collaborative, supportive environment.'
     },
     {
+
       icon: Award,
       title: 'Recognition',
       description: 'Performance recognition, career advancement opportunities, and mentorship programs.'
@@ -304,21 +323,25 @@ export default function Careers() {
 
   const culture = [
     {
+
       icon: Lightbulb,
       title: 'Innovation Labs',
       description: 'Dedicated time for exploring new ideas and technologies.'
     },
     {
+
       icon: Gamepad2,
       title: 'Fun & Games',
       description: 'Regular game nights, team challenges, and creative activities.'
     },
     {
+
       icon: Palette,
       title: 'Creative Freedom',
       description: 'Express your creativity through design, code, and problem-solving.'
     },
     {
+
       icon: Plane,
       title: 'Travel Opportunities',
       description: 'Conference attendance and team retreats in exciting locations.'
@@ -507,6 +530,7 @@ export default function Careers() {
                     key={dept.id}
                     onClick={() => setActiveDepartment(dept.id)}
                     className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-200 ${
+
                       activeDepartment === dept.id
                         ? 'bg-cyan-500/20 border-cyan-400/50 text-cyan-400'
                         : 'bg-slate-800/50 border-slate-600/50 text-gray-300 hover:border-cyan-400/30 hover:text-cyan-300'
@@ -527,6 +551,7 @@ export default function Careers() {
                     key={location.id}
                     onClick={() => setSelectedLocation(location.id)}
                     className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-200 ${
+
                       selectedLocation === location.id
                         ? 'bg-cyan-500/20 border-cyan-400/50 text-cyan-400'
                         : 'bg-slate-800/50 border-slate-600/50 text-gray-300 hover:border-cyan-400/30 hover:text-cyan-300'

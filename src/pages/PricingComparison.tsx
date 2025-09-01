@@ -9,13 +9,16 @@ const PricingComparison: React.FC = () : JSX.Element => {;
 
   const pricingData = [
     {
+
       category: "AI - Powered Micro SAAS Services",
       services[;
         {
+
           name: "AI Code Review & Security",
           description: "Advanced vulnerability detection with AI - powered analysis",
           plans[;
             {
+
               name: "Starter",
               price: { monthly: 49, yearly: 39 },
               features[;
@@ -28,6 +31,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: false
             },
             {
+
               name: "Professional",
               price: { monthly: 199, yearly: 159 },
               features[;
@@ -42,6 +46,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: true
             },
             {
+
               name: "Enterprise",
               price: { monthly: 799, yearly: 639 },
               features[;
@@ -58,10 +63,12 @@ const PricingComparison: React.FC = () : JSX.Element => {;
           ]
         },;
         {
+
           name: "AI Customer Experience Analytics",
           description: "Transform customer insights into actionable intelligence",
           plans[;
             {
+
               name: "Basic",
               price: { monthly: 299, yearly: 239 },
               features[;
@@ -74,6 +81,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: false
             },
             {
+
               name: "Advanced",
               price: { monthly: 799, yearly: 639 },
               features[;
@@ -88,6 +96,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: true
             },
             {
+
               name: "Enterprise",
               price: { monthly: 1999, yearly: 1599 },
               features[;
@@ -104,10 +113,12 @@ const PricingComparison: React.FC = () : JSX.Element => {;
           ]
         },;
         {
+
           name: "AI DevOps Automation Platform",
           description: "Revolutionize DevOps workflow with AI - powered automation",
           plans[;
             {
+
               name: "Starter",
               price: { monthly: 199, yearly: 159 },
               features[;
@@ -120,6 +131,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: false
             },
             {
+
               name: "Professional",
               price: { monthly: 599, yearly: 479 },
               features[;
@@ -134,6 +146,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: true
             },
             {
+
               name: "Enterprise",
               price: { monthly: 1499, yearly: 1199 },
               features[;
@@ -150,10 +163,12 @@ const PricingComparison: React.FC = () : JSX.Element => {;
           ]
         },;
         {
+
           name: "AI IoT Edge Computing Platform",
           description: "Revolutionize IoT with AI - powered edge computing",
           plans[;
             {
+
               name: "Basic",
               price: { monthly: 299, yearly: 239 },
               features[;
@@ -166,6 +181,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: false
             },
             {
+
               name: "Professional",
               price: { monthly: 999, yearly: 799 },
               features[;
@@ -180,6 +196,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: true
             },
             {
+
               name: "Enterprise",
               price: { monthly: 2499, yearly: 1999 },
               features[;
@@ -198,13 +215,16 @@ const PricingComparison: React.FC = () : JSX.Element => {;
       ]
     },;
     {
+
       category: "Enterprise Services",
       services[;
         {
+
           name: "Cloud & Infrastructure",
           description: "Enterprise - grade cloud and infrastructure solutions",
           plans[;
             {
+
               name: "Consultation",
               price: { monthly: 5000, yearly: 50000 },
               features[;
@@ -217,6 +237,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: false
             },
             {
+
               name: "Implementation",
               price: { monthly: 15000, yearly: 150000 },
               features[;
@@ -229,6 +250,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: true
             },
             {
+
               name: "Managed Services",
               price: { monthly: 25000, yearly: 250000 },
               features[;
@@ -243,10 +265,12 @@ const PricingComparison: React.FC = () : JSX.Element => {;
           ]
         },;
         {
+
           name: "Data & Analytics",
           description: "Comprehensive data analytics and business intelligence",
           plans[;
             {
+
               name: "Assessment",
               price: { monthly: 3000, yearly: 30000 },
               features[;
@@ -259,6 +283,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: false
             },
             {
+
               name: "Implementation",
               price: { monthly: 10000, yearly: 100000 },
               features[;
@@ -271,6 +296,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: true
             },
             {
+
               name: "Managed Analytics",
               price: { monthly: 20000, yearly: 200000 },
               features[;
@@ -285,10 +311,12 @@ const PricingComparison: React.FC = () : JSX.Element => {;
           ]
         },;
         {
+
           name: "Security & Compliance",
           description: "Enterprise - grade security and compliance solutions",
           plans[;
             {
+
               name: "Assessment",
               price: { monthly: 4000, yearly: 40000 },
               features[;
@@ -301,6 +329,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: false
             },
             {
+
               name: "Implementation",
               price: { monthly: 12000, yearly: 120000 },
               features[;
@@ -313,6 +342,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               popular: true
             },
             {
+
               name: "Managed Security",
               price: { monthly: 25000, yearly: 250000 },
               features[;
@@ -350,11 +380,13 @@ const PricingComparison: React.FC = () : JSX.Element => {;
           <div role="button" className="max - w-7xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -399,16 +431,19 @@ const PricingComparison: React.FC = () : JSX.Element => {;
             {pricingData.map ( (category, categoryIndex) => (<motion.div
                 key={category.category}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.8,
   delay: categoryIndex * 0.2
 
@@ -428,16 +463,19 @@ const PricingComparison: React.FC = () : JSX.Element => {;
                   {category.services.map ( (service, serviceIndex) => (<motion.div
                       key={service.name}
                       initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                       whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                       transition = {
+
   { duration: 0.6,
   delay: serviceIndex * 0.1
 
@@ -459,22 +497,26 @@ const PricingComparison: React.FC = () : JSX.Element => {;
                           return (<motion.div
                               key = {plan.name}
                               initial = {
+
   { opacity: 0,
   scale: 0.9
 
 }}
                               whileInView = {
+
   { opacity: 1,
   scale: 1
 
 }}
                               transition = {
+
   { duration: 0.5,
   delay: planIndex * 0.1
 
 }}
                               viewport={{ once: true }}
                               className={`relative rounded - xl p - 8 transition - all duration - 300 ${
+
                                 plan.popular
                                   ? 'bg - gradient - to - br from - blue - 600 / 20 to - purple - 600 / 20 border - 2 border - blue - 500 / 50 scale - 105'
                                   : 'bg - white / 10 backdrop - blur - sm border border - white / 20'
@@ -510,6 +552,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
                                 <Link
                                   to="/contact"
                                   className={`block w - full py - 3 px - 6 rounded - lg font - semibold text - center transition - all duration - 300 ${
+
                                     plan.popular
                                       ? 'bg - gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700 text - white'
                                       : 'bg - white / 20 hover:bg - white / 30 text - white border border - white / 30'
@@ -519,6 +562,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
                                 </Link>
                                 <Link
                                   to = {
+
   `/services/${service.name.toLowerCase () .replace (/\s+/g,
   '-') }`}
                                   className="block w - full py - 2 px - 6 rounded - lg text - center text - gray - 300 hover:text - white transition - colors duration - 300"
@@ -539,11 +583,13 @@ const PricingComparison: React.FC = () : JSX.Element => {;
           <div role="button" className="max - w-4xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -605,11 +651,13 @@ const PricingComparison: React.FC = () : JSX.Element => {;
           <div role="button" className="max - w-4xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 

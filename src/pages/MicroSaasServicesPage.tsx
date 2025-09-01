@@ -2,6 +2,7 @@ import React from 'react';
 import SEO from '@/components / SEO';
 
 const MicroSAASServicesPage = () => {
+
   return (<React.Fragment>
       <SEO
         title="Micro SAAS Services - Zion Tech Group"
@@ -49,6 +50,7 @@ const MicroSAASServicesPage = () => {
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`${
+
                   selectedCategory === category
                     ? "bg - zion - purple text - white"
                     : "border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"

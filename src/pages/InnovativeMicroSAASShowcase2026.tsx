@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Code, 
   Search, 
@@ -72,8 +73,10 @@ import {
 } from 'lucide-react';
 
 const InnovativeMicroSAASShowcase2026: React.FC = () => {
+
   const services = [
     {
+
       title: "AI Autonomous Code Reviewer",
       description: "AI-powered code review that never sleeps, providing instant feedback, security insights, and quality improvements on every commit.",
       icon: Code,
@@ -96,6 +99,7 @@ const InnovativeMicroSAASShowcase2026: React.FC = () => {
       ]
     },
     {
+
       title: "AI-Powered SEO Platform",
       description: "Revolutionize your search engine optimization with AI that understands search algorithms, optimizes content in real-time, and drives organic traffic growth.",
       icon: Search,
@@ -118,6 +122,7 @@ const InnovativeMicroSAASShowcase2026: React.FC = () => {
       ]
     },
     {
+
       title: "AI-Powered Customer Churn Predictor",
       description: "Stop losing customers before they leave. Our AI predicts churn with 95% accuracy and provides actionable insights to retain your most valuable customers.",
       icon: TrendingDown,
@@ -140,6 +145,7 @@ const InnovativeMicroSAASShowcase2026: React.FC = () => {
       ]
     },
     {
+
       title: "AI Business Intelligence Dashboard",
       description: "Transform your data into actionable insights with AI-powered business intelligence that learns and adapts to your business needs.",
       icon: BarChart3,
@@ -162,6 +168,7 @@ const InnovativeMicroSAASShowcase2026: React.FC = () => {
       ]
     },
     {
+
       title: "AI Customer Support Automation",
       description: "Provide 24/7 intelligent customer support with AI that understands context, resolves issues, and escalates when needed.",
       icon: MessageCircle,
@@ -184,6 +191,7 @@ const InnovativeMicroSAASShowcase2026: React.FC = () => {
       ]
     },
     {
+
       title: "AI Project Management Platform",
       description: "Transform your project management with AI-powered insights, automated workflows, and intelligent resource allocation.",
       icon: Workflow,
@@ -209,24 +217,28 @@ const InnovativeMicroSAASShowcase2026: React.FC = () => {
 
   const pricingComparison = [
     {
+
       service: "AI Autonomous Code Reviewer",
       market: "$800",
       ourPrice: "$149",
       savings: "81%"
     },
     {
+
       service: "AI-Powered SEO Platform",
       market: "$600",
       ourPrice: "$179",
       savings: "70%"
     },
     {
+
       service: "AI Customer Churn Predictor",
       market: "$500",
       ourPrice: "$199",
       savings: "60%"
     },
     {
+
       service: "AI Business Intelligence",
       market: "$1,200",
       ourPrice: "$299",
@@ -236,31 +248,37 @@ const InnovativeMicroSAASShowcase2026: React.FC = () => {
 
   const industries = [
     {
+
       title: "Technology",
       description: "SaaS companies, startups, and tech enterprises",
       icon: Cpu
     },
     {
+
       title: "E-commerce",
       description: "Online retailers and digital marketplaces",
       icon: ShoppingCart
     },
     {
+
       title: "Financial Services",
       description: "Banks, fintech, and investment firms",
       icon: Coins
     },
     {
+
       title: "Healthcare",
       description: "Medical practices and health tech companies",
       icon: Activity
     },
     {
+
       title: "Manufacturing",
       description: "Industrial and manufacturing companies",
       icon: Building2
     },
     {
+
       title: "Education",
       description: "Schools, universities, and edtech platforms",
       icon: GraduationCap

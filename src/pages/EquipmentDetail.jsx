@@ -20,6 +20,7 @@ export default function EquipmentDetail () {
     // In a real app, this would fetch from an API
     const equipment = equipmentId ? EQUIPMENT_DETAILS[equipmentId] : null;
     if (!equipment) {
+
         return (<>
         <Header />
         <div className="min - h-screen bg - zion - blue py - 12 px - 4">
@@ -33,33 +34,41 @@ export default function EquipmentDetail () {
         <Footer />
       </>) }
     const handleAddToCart = () => {
+
         setIsAdding (true) ;
         // Simulate API call
         setTimeout ( () => {
+
             setIsAdding (false) ;
             toast ({
+
                 title: "Added to cart",
-                description: `${quantity}x ${equipment.name} added to your cart.`,
-            }) }, 800) };
+                description: `${quantity}x ${equipment.name} added to your cart.`}) }, 800) };
     const handleBuyNow = async () => {
+
         if (!isAuthenticated) {
+
             router (`/login?next=/equipment/${equipmentId}`) ;
             return;
         }
         setIsAdding (true) ;
         try {
+
             const response = await fetch ('/checkout / create - session', {
+
                 method: 'POST',
                 headers: { 'Content - Type': 'application / json' },
-                body: JSON.stringify ({ productId: equipmentId }) ,
-            }) ;
+                body: JSON.stringify ({ productId: equipmentId }) }) ;
             const { url } = await response.json () ;
             if (url) {
+
                 window.location.href = url}
         }
         catch (err) {
+
             toast ({ title: 'Payment error', description: 'Could not start checkout.' }) }
         finally {
+
             setIsAdding (false) }
     };
     return (<>

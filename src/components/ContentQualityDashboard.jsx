@@ -66,7 +66,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     title: 'Contact Us - Get in Touch',
                     content: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.',
                     metaDescription: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.',
-            // // // // // // // // // // console.error('Error analyzing pages:', error);
+            // // // // // // // // // // // console.error('Error analyzing pages:', error);
         }
         finally {
 
@@ -83,7 +83,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
             setReport(newReport)}
         catch (error) {
 
-            // // // console.error('Error analyzing pages:', error)}
+            // // // // console.error('Error analyzing pages:', error)}
         finally {
 
             setIsLoading(false)}

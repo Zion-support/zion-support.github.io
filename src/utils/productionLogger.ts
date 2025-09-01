@@ -6,7 +6,7 @@ export function logErrorToProduction(message: string, error?: Error: any): void 
   // For now, just console.error in development
   if (process.env.NODE_ENV === 'development') {
 
-    // // // console.error(message, error)}  // TODO: Implement production error logging service
+    // // // // console.error(message, error)}  // TODO: Implement production error logging service
 }
 =======
 export function logErrorToProduction(message: string, error?: ): void {
@@ -17,14 +17,14 @@ export function logErrorToProduction(message: string, error?: ): void {
   if (process.env.NODE_ENV === 'development') {
 
 <<<<<<< HEAD
-    // // // // // console.error(message, error);
+    // // // // // // console.error(message, error);
 
 =======
-    // // // // // // // // // console.error(message, error);
+    // // // // // // // // // // console.error(message, error);
 =======
   // For now, just // // // // console.error in development
   if (process.env.NODE_ENV = == 'development') {;
-    // // // // // // console.error(message, error);
+    // // // // // // // console.error(message, error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2

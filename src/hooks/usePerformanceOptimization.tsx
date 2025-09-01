@@ -90,10 +90,10 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
 :src/hooks/usePerformanceOptimization.tsx
 
-          // // // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}`
+          // // // // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}`
+          // // // // console.warn(`Low FPS detected: ${fps}`)}
+          // // // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}
           // // // console.warn(`Low FPS detected: ${fps}`)}
-          // // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}
-          // // console.warn(`Low FPS detected: ${fps}`)}
       }
 
       animationFrameId = requestAnimationFrame(measureFPS)};
@@ -126,16 +126,16 @@ const metricsRef:  useRef<PerformanceMetrics>({;
         // Warn if memory usage is high
 :src/hooks/usePerformanceOptimization.tsx
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB'
-          // // // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
-          // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
+          // // // // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
+          // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
       }
     };
 
     
     return : unknown clearInterval(intervalId)}, [enableMemoryManagement]);
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-          // // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
-          // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
+          // // // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
+          // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
       }
     };
 
@@ -166,14 +166,14 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
 :src/hooks/usePerformanceOptimization.tsx
   // Performance monitoring'`
-        // // // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}'`
+        // // // // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}'`
 <<<<<<< HEAD
-        // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}
+        // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}
 =======
-        // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+        // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
   // Performance monitoring
-        // // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
-        // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+        // // // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+        // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Report to analytics if available

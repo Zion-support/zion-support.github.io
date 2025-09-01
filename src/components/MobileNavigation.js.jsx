@@ -86,7 +86,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
 
         e.preventDefault();
         // Implement search functionality'
-        // // // console.log('Search query:', searchQuery)};
+        // // // // console.log('Search query:', searchQuery)};
     const menuVariants = {
 
   closed: {

@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import {
+
   Brain,
   Shield,
   Heart,
@@ -29,6 +30,7 @@ import {
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2031 } from '../src/data/comprehensiveInnovativeServices2031';
 
 const RevolutionaryServicesShowcase2031: NextPage = () => {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('innovation');
@@ -47,8 +49,9 @@ const RevolutionaryServicesShowcase2031: NextPage = () => {
   ];
 
   // Filter and sort services
-  const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2031
+  const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2031;
     .filter(service => {
+
       const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -56,7 +59,9 @@ const RevolutionaryServicesShowcase2031: NextPage = () => {
       return matchesCategory && matchesSearch;
     })
     .sort((a, b) => {
+
       switch (sortBy) {
+
         case 'innovation':
           return b.innovationLevel === 'Breakthrough' ? 1 : -1;
         case 'price':
@@ -71,7 +76,9 @@ const RevolutionaryServicesShowcase2031: NextPage = () => {
     });
 
   const getInnovationColor = (level: string) => {
+
     switch (level) {
+
       case 'Breakthrough': return 'from-purple-600 to-pink-600';
       case 'Advanced': return 'from-blue-600 to-cyan-600';
       default: return 'from-green-600 to-teal-600';
@@ -137,12 +144,14 @@ const RevolutionaryServicesShowcase2031: NextPage = () => {
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => {
+
                 const IconComponent = category.icon;
                 return (
                   <button
                     key={category.id}
                     onClick={() => setActiveCategory(category.id)}
                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-sm ${
+
                       activeCategory === category.id
                         ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
                         : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
@@ -190,6 +199,7 @@ const RevolutionaryServicesShowcase2031: NextPage = () => {
                     </div>
                     <div>
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+
                         service.innovationLevel === 'Breakthrough' 
                           ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
                           : service.innovationLevel === 'Advanced'
@@ -379,6 +389,7 @@ const RevolutionaryServicesShowcase2031: NextPage = () => {
             <p className="text-gray-300 mb-6">Try adjusting your search or category filters</p>
             <button
               onClick={() => {
+
                 setActiveCategory('all');
                 setSearchTerm('');
               }}

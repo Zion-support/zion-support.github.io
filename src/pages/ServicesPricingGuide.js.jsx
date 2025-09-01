@@ -8,25 +8,31 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign } from 'lucide-react';
 import SEO from '@/components/SEO';
 export default function ServicesPricingGuide() {
+
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
         ? EXPANDED_SERVICES
         : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
     const getPriceTier = (price) => {
+
         if (price < 10000)
             return 'Starter';
         if (price < 25000)
             return 'Professional';
         return 'Enterprise'};
     const getPriceTierColor = (tier) => {
+
         switch (tier) {
+
             case 'Starter': return 'bg-green-500';
             case 'Professional': return 'bg-blue-500';
             case 'Enterprise': return 'bg-purple-500';
             default: return 'bg-gray-500'}
     };
     const getServiceIcon = (category) => {
+
         switch (category) {
+
             case 'AI Development': return <TrendingUp className="w-5 h-5 text-blue-500"/>;
             case 'Cloud Services': return <Globe className="w-5 h-5 text-green-500"/>;
             case 'Cybersecurity': return <Shield className="w-5 h-5 text-red-500"/>;

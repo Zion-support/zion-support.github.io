@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   TrendingUp, 
   Brain, 
   BarChart3, 
@@ -27,28 +28,34 @@ import {
 } from 'lucide-react';
 
 export default function AIFinancialAnalytics() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI Market Prediction',
       description: 'Advanced AI algorithms predict market movements with 87% accuracy using real-time data analysis'
     },
     {
+
       icon: ChartLine,
       title: 'Real-time Analytics',
       description: 'Live financial data analysis and market insights updated every second for optimal decision making'
     },
     {
+
       icon: Target,
       title: 'Portfolio Optimization',
       description: 'AI-powered portfolio rebalancing and risk management for maximum returns with minimal risk'
     },
     {
+
       icon: Activity,
       title: 'Risk Assessment',
       description: 'Machine learning risk models that identify potential market threats and investment opportunities'
     },
     {
+
       icon: BarChart3,
       title: 'Sentiment Analysis',
       description: 'AI analysis of market sentiment from news, social media, and financial reports'
@@ -66,24 +73,28 @@ export default function AIFinancialAnalytics() {
 
   const services = [
     {
+
       title: 'Enterprise Financial Platform',
       description: 'Complete AI-powered financial analytics and trading platform for institutions',
       price: 'From $5,999/month',
       features: ['AI market prediction', 'Portfolio optimization', 'Risk management', 'Trading automation', 'Real-time analytics', 'Custom integrations']
     },
     {
+
       title: 'AI Trading Algorithms',
       description: 'Custom AI trading strategies and automated execution systems',
       price: 'From $3,499/month',
       features: ['Strategy development', 'Backtesting', 'Live trading', 'Performance analytics', 'Risk controls', 'API access']
     },
     {
+
       title: 'Portfolio Intelligence',
       description: 'AI-powered portfolio analysis and optimization tools',
       price: 'From $2,499/month',
       features: ['Portfolio analysis', 'Risk assessment', 'Rebalancing', 'Performance tracking', 'Custom reports']
     },
     {
+
       title: 'Market Intelligence',
       description: 'Real-time market data and AI-powered insights',
       price: 'From $1,999/month',
@@ -101,21 +112,25 @@ export default function AIFinancialAnalytics() {
 
   const assetClasses = [
     {
+
       class: 'Stocks & Equities',
       description: 'AI-powered stock selection and market timing strategies',
       performance: 'Average 25% annual returns'
     },
     {
+
       class: 'Cryptocurrencies',
       description: 'Advanced crypto trading algorithms and portfolio management',
       performance: 'Average 45% annual returns'
     },
     {
+
       class: 'Forex & Commodities',
       description: 'AI-driven currency and commodity trading strategies',
       performance: 'Average 18% annual returns'
     },
     {
+
       class: 'Fixed Income',
       description: 'Intelligent bond portfolio optimization and yield enhancement',
       performance: 'Average 12% annual returns'
@@ -282,6 +297,7 @@ export default function AIFinancialAnalytics() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 ${
+
                   index === 0 ? 'border-green-500/50 bg-green-500/5' : 'border-slate-700'
                 }`}
               >
@@ -309,6 +325,7 @@ export default function AIFinancialAnalytics() {
                 <a
                   href="https://ziontechgroup.com/contact"
                   className={`w-full inline-flex justify-center items-center px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+
                     index === 0
                       ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
                       : 'border border-slate-600 text-slate-300 hover:border-green-500/50 hover:text-green-400'

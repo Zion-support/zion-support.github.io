@@ -12,7 +12,9 @@ export default function PricingGuide () {
         ? EXPANDED_SERVICES
         : EXPANDED_SERVICES.filter (service => service.category.toLowerCase () .replace (/\s+/g, '-') === selectedCategory) ;
     const getCategoryIcon = (category) => {
+
         const icons = {
+
   'AI Development': <Brain className="w - 6 h - 6"/>,
             'Cloud Services': <Cloud className="w - 6 h - 6"/>,
             'DevOps': <Zap className="w - 6 h - 6"/>,

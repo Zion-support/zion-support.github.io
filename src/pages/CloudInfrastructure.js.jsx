@@ -3,39 +3,46 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, BarChart3, MessageSquare, Phone, Mail, Lock, Cpu, HardDrive, Wifi, TrendingUp, DollarSign } from 'lucide-react';
 export default function CloudInfrastructure() {
+
     const [selectedProvider, setSelectedProvider] = useState('aws');
     const cloudServices = [
         {
+
             title: 'Infrastructure as Code',
             description: 'Automate cloud infrastructure deployment and management',
             icon: Code,
             features['Terraform', 'CloudFormation', 'ARM Templates', 'Deployment Automation']
         },
         {
+
             title: 'Container Orchestration',
             description: 'Manage and scale containerized applications',
             icon: Cpu,
             features['Kubernetes', 'Docker', 'ECS/EKS', 'Azure AKS', 'GKE']
         },
         {
+
             title: 'Serverless Computing',
             description: 'Build and run applications without managing servers',
             icon: Zap,
             features['AWS Lambda', 'Azure Functions', 'Cloud Functions', 'Event-driven Architecture']
         },
         {
+
             title: 'Database Solutions',
             description: 'Managed database services for optimal performance',
             icon: Database,
             features['RDS, Aurora', 'Azure SQL', 'Cloud SQL', 'NoSQL Options']
         },
         {
+
             title: 'Security & Compliance',
             description: 'Enterprise-grade security and compliance features',
             icon: Shield,
             features['IAM & Access Control', 'Encryption', 'Compliance Frameworks', 'Security Monitoring']
         },
         {
+
             title: 'Monitoring & Analytics',
             description: 'Comprehensive monitoring and observability',
             icon: BarChart3,
@@ -61,10 +68,12 @@ export default function CloudInfrastructure() {
       <section className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 py-20">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -99,19 +108,23 @@ export default function CloudInfrastructure() {
 
           {/* Stats Grid */}
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition={{ delay: 0.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, index) => (<motion.div key={stat.label} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -132,10 +145,12 @@ export default function CloudInfrastructure() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -148,10 +163,12 @@ export default function CloudInfrastructure() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {cloudProviders.map((provider, index) => (<motion.button key={provider.id} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -177,10 +194,12 @@ export default function CloudInfrastructure() {
 
           {/* Provider Details */}
           <motion.div key={selectedProvider} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -215,10 +234,12 @@ export default function CloudInfrastructure() {
       <section className="py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -231,10 +252,12 @@ export default function CloudInfrastructure() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (<motion.div key={benefit.title} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -253,10 +276,12 @@ export default function CloudInfrastructure() {
       <section className="py-20 bg-gradient-to-r from-cyan-400/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -284,10 +309,12 @@ export default function CloudInfrastructure() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -300,10 +327,12 @@ export default function CloudInfrastructure() {
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -316,10 +345,12 @@ export default function CloudInfrastructure() {
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 

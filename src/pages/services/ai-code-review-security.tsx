@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Code, 
   Shield, 
   Bug, 
@@ -64,33 +65,40 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AICodeReviewSecurity() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Code Analysis',
       description: 'Advanced machine learning algorithms that understand code context and identify potential issues'
     },
     {
+
       icon: Shield,
       title: 'Security Vulnerability Detection',
       description: 'Comprehensive security scanning for OWASP Top 10, CWE, and custom security rules'
     },
     {
+
       icon: Bug,
       title: 'Automated Bug Detection',
       description: 'Static and dynamic analysis to catch bugs before they reach production'
     },
     {
+
       icon: Code,
       title: 'Multi-Language Support',
       description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, Go, Rust'
     },
     {
+
       icon: GitBranch,
       title: 'Git Integration',
       description: 'Seamless integration with GitHub, GitLab, Bitbucket, and Azure DevOps'
     },
     {
+
       icon: Zap,
       title: 'Real-time Analysis',
       description: 'Instant feedback on every commit, pull request, and code review'
@@ -108,21 +116,25 @@ export default function AICodeReviewSecurity() {
 
   const useCases = [
     {
+
       industry: 'Financial Services',
       applications: ['PCI DSS compliance', 'Secure coding standards', 'Fraud prevention', 'Regulatory compliance'],
       icon: Shield
     },
     {
+
       industry: 'Healthcare',
       applications: ['HIPAA compliance', 'Medical device security', 'Patient data protection', 'Clinical system validation'],
       icon: Lock
     },
     {
+
       industry: 'E-commerce',
       applications: ['Payment security', 'User data protection', 'API security', 'Mobile app security'],
       icon: Globe
     },
     {
+
       industry: 'Government',
       applications: ['FedRAMP compliance', 'FISMA requirements', 'National security standards', 'Public sector security'],
       icon: Building
@@ -144,6 +156,7 @@ export default function AICodeReviewSecurity() {
 
   const pricingPlans = [
     {
+
       name: 'Developer',
       description: 'Perfect for individual developers and small teams',
       price: { monthly: 49, annual: 490 },
@@ -162,6 +175,7 @@ export default function AICodeReviewSecurity() {
       link: '/contact'
     },
     {
+
       name: 'Team',
       description: 'Ideal for development teams and growing companies',
       price: { monthly: 199, annual: 1990 },
@@ -182,6 +196,7 @@ export default function AICodeReviewSecurity() {
       link: '/contact'
     },
     {
+
       name: 'Enterprise',
       description: 'For large organizations with complex security needs',
       price: { monthly: 799, annual: 7990 },
@@ -206,21 +221,25 @@ export default function AICodeReviewSecurity() {
 
   const securityFeatures = [
     {
+
       title: 'Static Application Security Testing (SAST)',
       description: 'Analyze source code for security vulnerabilities without executing the application',
       benefits: ['Early vulnerability detection', 'Cost-effective security testing', 'Comprehensive code coverage']
     },
     {
+
       title: 'Dynamic Application Security Testing (DAST)',
       description: 'Test running applications for security vulnerabilities from an external perspective',
       benefits: ['Real-world attack simulation', 'Runtime vulnerability detection', 'API security testing']
     },
     {
+
       title: 'Software Composition Analysis (SCA)',
       description: 'Identify and manage open source dependencies and their associated security risks',
       benefits: ['License compliance', 'Vulnerability tracking', 'Dependency management']
     },
     {
+
       title: 'Interactive Application Security Testing (IAST)',
       description: 'Combine SAST and DAST approaches for comprehensive security analysis',
       benefits: ['Hybrid security testing', 'Accurate vulnerability detection', 'Reduced false positives']
@@ -502,6 +521,7 @@ export default function AICodeReviewSecurity() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-purple-500 bg-gradient-to-br from-purple-500/20 to-pink-500/20' 
                     : 'border-white/10'
@@ -542,6 +562,7 @@ export default function AICodeReviewSecurity() {
                 <Link
                   to={plan.link}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
                       : 'border border-white/20 text-white hover:bg-white/10'

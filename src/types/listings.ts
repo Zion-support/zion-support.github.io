@@ -1,4 +1,5 @@
 export interface Listing {
+
   id: string;
   title: string;
   description: string;
@@ -9,6 +10,7 @@ export interface Listing {
   tags: string[];
   images: string[];
 seller: {
+
     id: string;
     name: string;
     rating: number;
@@ -43,6 +45,7 @@ export interface ServiceListing extends Listing {
 
 =======
 ;export interface ServiceListing extends Listing {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
@@ -63,6 +66,7 @@ export interface ServiceListing extends Listing {
   portfolio?: string[];
   references?: string[]}
 ;export interface CartItem {
+
   id: string;
   title: string;
   price: number;
@@ -70,6 +74,7 @@ export interface ServiceListing extends Listing {
   type: 'product' | 'service' | 'talent';
   image?: string}
 ;export interface WishlistItem {
+
   id: string;
   userId: string;
   listingId: string;

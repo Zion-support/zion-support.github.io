@@ -362,7 +362,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     } catch (error) {
 
-      // // console.warn('PerformanceObserver not supported:', error);
+      // // // console.warn('PerformanceObserver not supported:', error);
     }
   }, [enabled]);
   // Send analytics data to service
@@ -458,7 +458,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
         body: JSON.stringify(event)});
     } catch (error) {
 
-      // // console.warn('Failed to send analytics event:', error);
+      // // // console.warn('Failed to send analytics event:', error);
       // Store locally for retry
       storeEventLocally(event);
     }

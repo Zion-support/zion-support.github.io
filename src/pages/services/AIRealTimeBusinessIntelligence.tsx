@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
+
   Brain,
   BarChart3,
   TrendingUp,
@@ -36,6 +37,7 @@ import {
 } from 'lucide-react';
 
 const AIRealTimeBusinessIntelligence: React.FC = () => {
+
   const features = [
     "Real-time data processing and analytics",
     "Predictive modeling and forecasting",

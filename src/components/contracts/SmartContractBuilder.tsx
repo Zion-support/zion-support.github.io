@@ -148,7 +148,7 @@ export function SmartContractBuilder({
       // setActiveTab("preview"); // Or a specific solidity preview tab
     } catch (error) {
 
-      // // console.error("Error generating Solidity contract:", error);
+      // // // console.error("Error generating Solidity contract:", error);
       toast.error("Failed to generate Solidity contract.")}
   };
   
@@ -180,7 +180,7 @@ export function SmartContractBuilder({
         throw new Error("No content received from draft generator.")}
     } catch (err: any) {
 
-      // // console.error("Error generating legal draft:", err);
+      // // // console.error("Error generating legal draft:", err);
       setLegalDraftError(err.message || "Failed to generate legal draft.");
       toast.error(err.message || "Failed to generate legal draft.")} finally {
 
@@ -195,7 +195,7 @@ export function SmartContractBuilder({
         .catch((err) => {
 
           toast.error("PDF generation failed.");
-          // // console.error("Error generating PDF:", err)})} else {
+          // // // console.error("Error generating PDF:", err)})} else {
 
       toast.warn("No draft content available to download or form values missing.")}
   };
@@ -295,7 +295,7 @@ export function SmartContractBuilder({
       setOnChainDeploymentStatus('success');
       toast.success(`Contract deployed successfully at ${deployedAddr}`)} catch (err: any) {
 
-      // // console.error("Deployment error:", err);
+      // // // console.error("Deployment error:", err);
       setDeploymentError(err.message || "An unknown error occurred during deployment.");
       setOnChainDeploymentStatus('error');
       toast.error(err.message || "Deployment failed.")}

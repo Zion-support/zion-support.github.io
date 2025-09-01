@@ -6,8 +6,10 @@ import { Badge } from "../ui/badge";
 import { Code, BookOpen, Zap, Shield, Users, MessageSquare, Github, ExternalLink, Terminal, Webhook, Key, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 export default function DeveloperPortal() {
+
     const apiFeatures = [
         {
+
             title: 'RESTful APIs',
             description: 'Clean, intuitive REST APIs for all major platform features',
             icon: Code,
@@ -15,6 +17,7 @@ export default function DeveloperPortal() {
             docs: '/api-docs'
         },
         {
+
             title: 'Webhooks',
             description: 'Real-time notifications for platform events and updates',
             icon: Webhook,
@@ -22,6 +25,7 @@ export default function DeveloperPortal() {
             docs: '/api-docs/webhooks'
         },
         {
+
             title: 'Authentication',
             description: 'Secure OAuth 2.0 and API key authentication',
             icon: Key,
@@ -29,6 +33,7 @@ export default function DeveloperPortal() {
             docs: '/api-docs/auth'
         },
         {
+
             title: 'SDKs & Libraries',
             description: 'Official SDKs for JavaScript, Python, and more',
             icon: Terminal,
@@ -38,24 +43,28 @@ export default function DeveloperPortal() {
     ];
     const quickStartSteps = [
         {
+
             step: 1,
             title: 'Get API Keys',
             description: 'Sign up and generate your API keys from the dashboard',
             action: 'Get Started'
         },
         {
+
             step: 2,
             title: 'Read Documentation',
             description: 'Explore our comprehensive API documentation and guides',
             action: 'View Docs'
         },
         {
+
             step: 3,
             title: 'Test Endpoints',
             description: 'Use our interactive API playground to test endpoints',
             action: 'Try API'
         },
         {
+
             step: 4,
             title: 'Build & Deploy',
             description: 'Integrate our APIs into your applications',
@@ -64,6 +73,7 @@ export default function DeveloperPortal() {
     ];
     const resources = [
         {
+
             title: 'API Reference',
             description: 'Complete API endpoint documentation with examples',
             icon: BookOpen,
@@ -71,6 +81,7 @@ export default function DeveloperPortal() {
             badge: 'Complete'
         },
         {
+
             title: 'Getting Started Guide',
             description: 'Step-by-step tutorial for new developers',
             icon: Zap,
@@ -78,6 +89,7 @@ export default function DeveloperPortal() {
             badge: 'Beginner'
         },
         {
+
             title: 'Code Samples',
             description: 'Ready-to-use code examples in multiple languages',
             icon: Code,
@@ -85,6 +97,7 @@ export default function DeveloperPortal() {
             badge: 'Examples'
         },
         {
+
             title: 'SDK Downloads',
             description: 'Official SDKs and client libraries',
             icon: Terminal,
@@ -92,6 +105,7 @@ export default function DeveloperPortal() {
             badge: 'Download'
         },
         {
+
             title: 'Community Forum',
             description: 'Connect with other developers and get help',
             icon: Users,
@@ -99,6 +113,7 @@ export default function DeveloperPortal() {
             badge: 'Community'
         },
         {
+
             title: 'Support & Help',
             description: 'Technical support and troubleshooting guides',
             icon: MessageSquare,
@@ -140,6 +155,7 @@ export default function DeveloperPortal() {
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Powerful APIs & Tools</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {apiFeatures.map((feature) => {
+
             const IconComponent = feature.icon;
             return (<Card key={feature.title} className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors">
                   <CardHeader className="pb-3">
@@ -194,6 +210,7 @@ export default function DeveloperPortal() {
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Developer Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {resources.map((resource) => {
+
             const IconComponent = resource.icon;
             return (<Card key={resource.title} className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors">
                   <CardHeader className="pb-3">

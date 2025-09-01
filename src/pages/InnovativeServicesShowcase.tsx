@@ -28,6 +28,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
 
     // Filter by search term
     if (searchTerm) {
+
       filtered = filtered.filter (service =>;
         service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
@@ -36,6 +37,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
 
     // Filter by category
     if (selectedCategory !== 'all') {
+
       filtered = filtered.filter (service => service.category === selectedCategory) }
 
     // Filter by price range;
@@ -44,12 +46,14 @@ const InnovativeServicesShowcase: React.FC = () => {;
       if (priceRange = == '3000+') {;
         filtered = filtered.filter (service => service.price >= 3000) ;
       } else {
+
         filtered = filtered.filter (service => service.price >= min && service.price <= max) ;
       }
     }
 
     // Sort services
     switch (sortBy) {
+
       case 'rating':
         filtered.sort ( (a, b) => b.rating - a.rating) ;
         break;

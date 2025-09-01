@@ -30,18 +30,22 @@ import { BarChart3,
 import SEO from '../../components/SEO';
 
 export default function DataAnalytics(...args: []):  {
+
   const features = [
     {
+
       icon: Database,
       title: 'Data Integration',
       description: 'Connect and consolidate data from multiple sources into a unified analytics platform.'
     },
     {
+
       icon: Brain,
       title: 'Advanced Analytics',
       description: 'Leverage machine learning and AI for predictive insights and pattern recognition.'
     },
     {
+
       icon: BarChart3,
       title: 'Real-time Dashboards',
       description: 'Interactive visualizations that provide instant insights into your business performance.';
@@ -55,18 +59,21 @@ export default function DataAnalytics(...args: []):  {
 
   const solutions = [
     {
+
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable insights with interactive dashboards and reports',
       icon: BarChart3,
       benefits: ['Real-time monitoring', 'Custom dashboards', 'Automated reporting', 'Mobile access']
     },
     {
+
       title: 'Predictive Analytics',
       description: 'Forecast future trends and outcomes using advanced statistical models and ML algorithms',
       icon: Brain,
       benefits: ['Trend forecasting', 'Risk assessment', 'Opportunity identification', 'Scenario planning']
     },
     {
+
       title: 'Data Mining',
       description: 'Discover hidden patterns and relationships in large datasets',
       icon: Search,
@@ -82,18 +89,21 @@ export default function DataAnalytics(...args: []):  {
 
   const useCases = [
     {
+
       industry: 'Retail',
       description: 'Customer behavior analysis, inventory optimization, and sales forecasting',
       icon: Users,
       metrics: ['Customer Lifetime Value', 'Inventory Turnover', 'Sales Growth', 'Conversion Rates']
     },
     {
+
       industry: 'Finance',
       description: 'Risk assessment, fraud detection, and investment portfolio optimization',
       icon: Shield,
       metrics: ['Risk Score', 'Fraud Detection Rate', 'Portfolio Performance', 'Compliance Metrics']
     },
     {
+
       industry: 'Healthcare',
       description: 'Patient outcome prediction, resource optimization, and treatment effectiveness',
       icon: Activity,
@@ -109,16 +119,19 @@ export default function DataAnalytics(...args: []):  {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: 'Improved Decision Making',
       description: 'Make data-driven decisions with confidence using real-time insights and analytics'
     },
     {
+
       icon: Zap,
       title: 'Operational Efficiency',
       description: 'Streamline processes and optimize operations based on data-driven insights'
     },
     {
+
       icon: Eye,
       title: 'Better Visibility',
       description: 'Gain comprehensive visibility into all aspects of your business performance';
@@ -143,6 +156,7 @@ export default function DataAnalytics(...args: []):  {
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -153,6 +167,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -195,6 +210,7 @@ export default function DataAnalytics(...args: []):  {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial = {
+
   { opacity: 0,
   x: -20 
 
@@ -205,6 +221,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
               whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -251,6 +268,7 @@ export default function DataAnalytics(...args: []):  {
 
             <motion.div
               initial = {
+
   { opacity: 0,
   x: 20 
 
@@ -261,6 +279,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
               whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -313,6 +332,7 @@ export default function DataAnalytics(...args: []):  {
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -323,6 +343,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -349,6 +370,7 @@ export default function DataAnalytics(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -359,6 +381,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -369,6 +392,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -396,11 +420,13 @@ export default function DataAnalytics(...args: []):  {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -422,16 +448,19 @@ export default function DataAnalytics(...args: []):  {
               <motion.div
                 key={industry.name}
                 initial = {
+
   { opacity: 0,
   scale: 0.8 
 
 }}
                 whileInView = {
+
   { opacity: 1,
   scale: 1 
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -454,6 +483,7 @@ export default function DataAnalytics(...args: []):  {
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -464,6 +494,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -490,6 +521,7 @@ export default function DataAnalytics(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -500,6 +532,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -510,6 +543,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -547,6 +581,7 @@ export default function DataAnalytics(...args: []):  {
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -557,6 +592,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -583,6 +619,7 @@ export default function DataAnalytics(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -593,6 +630,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -603,6 +641,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -640,6 +679,7 @@ export default function DataAnalytics(...args: []):  {
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -650,6 +690,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -676,6 +717,7 @@ export default function DataAnalytics(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -686,6 +728,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -696,6 +739,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -723,6 +767,7 @@ export default function DataAnalytics(...args: []):  {
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -733,6 +778,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -756,21 +802,25 @@ export default function DataAnalytics(...args: []):  {
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {[
               {
+
                 step: '01',
                 title: 'Assessment',
                 description: 'Evaluate your current data infrastructure and analytics needs'
               },
               {
+
                 step: '02',
                 title: 'Strategy',
                 description: 'Develop comprehensive analytics strategy and implementation roadmap'
               },
               {
+
                 step: '03',
                 title: 'Implementation',
                 description: 'Deploy analytics solutions and configure custom dashboards'
               },
               {
+
                 step: '04',
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve analytics capabilities'
@@ -779,6 +829,7 @@ export default function DataAnalytics(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -789,6 +840,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -799,6 +851,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -826,6 +879,7 @@ export default function DataAnalytics(...args: []):  {
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -836,6 +890,7 @@ export default function DataAnalytics(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

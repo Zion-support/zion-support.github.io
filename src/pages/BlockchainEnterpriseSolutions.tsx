@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default React.memo (function BlockchainEnterpriseSolutions (...args[]) :  {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Brain,
@@ -266,11 +268,11 @@ import { motion } from 'framer - motion';
   RedBlackTree,
   AVLTree,
   SplayTree,
-  Treap,
- } from 'lucide - react';
+  Treap} from 'lucide - react';
 
 const blockchainSolutions = [
   {
+
     id: 1,
     title: "Enterprise Blockchain Platform",
     description: "Custom blockchain platform designed for enterprise use cases and requirements.",
@@ -287,6 +289,7 @@ const blockchainSolutions = [
     technologies["Blockchain", "Smart Contracts", "Consensus", "Scalability"];
   },;
   {
+
     id: 2,
     title: "Supply Chain Blockchain",
     description: "Transparent and traceable supply chain solutions using blockchain technology.",
@@ -303,6 +306,7 @@ const blockchainSolutions = [
     technologies["Blockchain", "IoT", "Supply Chain", "Compliance"];
   },;
   {
+
     id: 3,
     title: "Financial Blockchain Solutions",
     description: "Blockchain - based financial services and payment solutions.",
@@ -319,6 +323,7 @@ const blockchainSolutions = [
     technologies["Blockchain", "Fintech", "Payments", "Compliance"];
   },;
   {
+
     id: 4,
     title: "Identity Management Blockchain",
     description: "Decentralized identity management and verification systems.",
@@ -335,6 +340,7 @@ const blockchainSolutions = [
     technologies["Blockchain", "Identity", "Security", "Privacy"];
   },;
   {
+
     id: 5,
     title: "Smart Contract Development",
     description: "Custom smart contract development for business automation.",
@@ -351,6 +357,7 @@ const blockchainSolutions = [
     technologies["Smart Contracts", "Blockchain", "Automation", "Security"];
   },;
   {
+
     id: 6,
     title: "Blockchain Integration Services",
     description: "Integration services for existing enterprise systems with blockchain.",
@@ -372,6 +379,7 @@ const blockchainSolutions = [
 
 const blockchainTechnologies = [
   {
+
     name: "Blockchain Platforms",
     description: "Enterprise blockchain platforms and frameworks",
     icon: Building,
@@ -379,6 +387,7 @@ const blockchainTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Smart Contracts",
     description: "Self - executing contracts with business logic",
     icon: Code,
@@ -386,6 +395,7 @@ const blockchainTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Consensus Mechanisms",
     description: "Blockchain consensus and validation protocols",
     icon: Network,
@@ -403,6 +413,7 @@ const blockchainTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Global Supply Chain Corp",
     industry: "Manufacturing",
@@ -412,6 +423,7 @@ const successStories = [
     logo: "GSC"
   },
   {
+
     id: 2,
     comp: "Digital Bank International",
     industry: "Finance",
@@ -421,6 +433,7 @@ const successStories = [
     logo: "DBI"
   },
   {
+
     id: 3,
     comp: "Healthcare Identity Solutions",;
     industry: "Healthcare",;
@@ -433,6 +446,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Blockchain Assessment",
     description: "Evaluate business needs and identify blockchain opportunities",
@@ -440,6 +454,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 2,
     title: "Blockchain Strategy",
     description: "Develop blockchain strategy and implementation roadmap",
@@ -447,6 +462,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
   },
   {
+
     step: 3,
     title: "Platform Development",
     description: "Build and deploy blockchain platform and applications",
@@ -464,24 +480,28 @@ const processSteps = [
 
 const blockchainBenefits = [
   {
+
     title: "Transparency & Trust",
     description: "Blockchain provides immutable, transparent records that build trust",
     icon: Eye,
     examples["Immutable records", "Transparent transactions", "Audit trails", "Trust building"];
   },;
   {
+
     title: "Security & Privacy",
     description: "Advanced cryptography ensures data security and privacy protection",
     icon: Shield,
     examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"];
   },;
   {
+
     title: "Automation & Efficiency",
     description: "Smart contracts automate business processes and reduce manual effort",
     icon: Zap,
     examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"];
   },;
   {
+
     examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];
   };
     title: "Cost Reduction",;
@@ -512,11 +532,13 @@ const blockchainBenefits = [
         <div role="button" className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -526,16 +548,19 @@ const blockchainBenefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -577,11 +602,13 @@ const blockchainBenefits = [
         <div role="button" className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -599,16 +626,19 @@ const blockchainBenefits = [
             {blockchainBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -639,11 +669,13 @@ const blockchainBenefits = [
         <div role="button" className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -661,16 +693,19 @@ const blockchainBenefits = [
             {blockchainTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -686,6 +721,7 @@ const blockchainBenefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -704,11 +740,13 @@ const blockchainBenefits = [
         <div role="button" className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -726,16 +764,19 @@ const blockchainBenefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -766,11 +807,13 @@ const blockchainBenefits = [
         <div role="button" className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -789,6 +832,7 @@ const blockchainBenefits = [
             {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -802,16 +846,19 @@ const blockchainBenefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -866,11 +913,13 @@ const blockchainBenefits = [
         <div role="button" className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -888,16 +937,19 @@ const blockchainBenefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -943,11 +995,13 @@ const blockchainBenefits = [
         <div role="button" className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

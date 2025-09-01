@@ -27,13 +27,13 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
     // Check if service worker is supported'
     if ('serviceWorker' in navigator) {
 
-      // // // // // // // // // // console.log('Service worker not available');
+      // // // // // // // // // // // console.log('Service worker not available');
       // Register service worker'
       navigator.serviceWorker.register('/sw.js')
         .then((reg) => {
 
           setRegistration(reg);
-          // // // console.log('Service Worker registered successfully:', reg);
+          // // // // console.log('Service Worker registered successfully:', reg);
           
           // Check for updates
           if (autoCheck) {
@@ -42,7 +42,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
           // Listen for updates'
           reg.addEventListener('updatefound', () => {
 
-            // // // console.log('Service Worker update found');
+            // // // // console.log('Service Worker update found');
             
             if (newWorker) {
 
@@ -60,7 +60,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
           // Listen for controller change (update applied)
           navigator.serviceWorker.addEventListener('controllerchange', () => {
 
-            // // // console.log('Service Worker controller changed - update applied');
+            // // // // console.log('Service Worker controller changed - update applied');
             setUpdateComplete(true);
             setUpdateAvailable(false);
             setUpdating(false);
@@ -72,7 +72,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
               setUpdateComplete(false)}, 3000)})})
         .catch((error) => {
 
-          // // // console.error('Service Worker registration failed:', error)})}
+          // // // // console.error('Service Worker registration failed:', error)})}
   }, [autoCheck, showUpdatePrompt]) ;
   useEffect ( () => {
 
@@ -84,9 +84,9 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
   }, [autoCheck, checkInterval, registration]) ;
 
   
-      // // // console.log('Service Worker update check completed')} catch (error) {
+      // // // // console.log('Service Worker update check completed')} catch (error) {
 
-      // // // console.error('Service Worker update check failed:', error)}
+      // // // // console.error('Service Worker update check failed:', error)}
   };
 
   
@@ -104,10 +104,10 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
 
         window.location.reload () }, 1000) } catch (error) {
 
-      // // // // // // // // // // console.error('Update failed:', error);
+      // // // // // // // // // // // console.error('Update failed:', error);
       setIsUpdating(false);
 
-      // // // console.error('Failed to apply update:', error);
+      // // // // console.error('Failed to apply update:', error);
       setUpdating(false);
       setShowPrompt(true)}
   };

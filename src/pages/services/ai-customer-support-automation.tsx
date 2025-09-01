@@ -4,38 +4,45 @@ import { MessageCircle, Brain, Users, Clock, Shield, CheckCircle, Star, Award, R
 import { SEO              } from '@/components/SEO';
 
 export default function AICustomerSupportAutomation(...args: any[]): any {
+
   const features = [
     {
+
       icon: Bot,
       title: "AI-Powered Chatbots",
       description: "Intelligent chatbots that understand natural language and provide instant, accurate responses 24/7",
       benefits: ["Natural language processing", "Multi-language support", "Context-aware conversations"]
     },
     {
+
       icon: Brain,
       title: "Smart Ticket Routing",
       description: "Automatically categorize and route support tickets to the right agents based on content analysis",
       benefits: ["Intelligent categorization", "Priority-based routing", "Reduced response times"]
     },
     {
+
       icon: MessageCircle,
       title: "Omnichannel Support",
       description: "Unified support across email, chat, social media, and phone with consistent experience",
       benefits: ["Channel integration", "Unified customer history", "Seamless transitions"]
     },
     {
+
       icon: TrendingUp,
       title: "Predictive Analytics",
       description: "Anticipate customer needs and potential issues before they arise using AI algorithms",
       benefits: ["Issue prevention", "Proactive support", "Customer satisfaction improvement"]
     },
     {
+
       icon: Users,
       title: "Agent Productivity Tools",
       description: "AI-powered tools that help support agents provide faster, more accurate responses",
       benefits: ["Response suggestions", "Knowledge base integration", "Performance analytics"]
     },
     {
+
       icon: Zap,
       title: "Automated Workflows",
       description: "Streamline support processes with intelligent automation and workflow management",
@@ -45,6 +52,7 @@ export default function AICustomerSupportAutomation(...args: any[]): any {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$199",
       period: "/month",
@@ -61,6 +69,7 @@ export default function AICustomerSupportAutomation(...args: any[]): any {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$499",
       period: "/month",
@@ -79,6 +88,7 @@ export default function AICustomerSupportAutomation(...args: any[]): any {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,299",
       period: "/month",
@@ -100,21 +110,25 @@ export default function AICustomerSupportAutomation(...args: any[]): any {
 
   const useCases = [
     {
+
       industry: "E-commerce",
       description: "Handle product inquiries, order tracking, and returns with intelligent automation",
       metrics: ["Response time reduction", "Customer satisfaction", "Support cost savings"]
     },
     {
+
       industry: "SaaS",
       description: "Provide technical support, feature explanations, and onboarding assistance",
       metrics: ["Ticket resolution time", "User activation", "Churn reduction"]
     },
     {
+
       industry: "Healthcare",
       description: "Manage appointment scheduling, general inquiries, and basic health information",
       metrics: ["Patient satisfaction", "Staff efficiency", "Wait time reduction"]
     },
     {
+
       industry: "Financial Services",
       description: "Handle account inquiries, transaction support, and basic financial guidance",
       metrics: ["Support efficiency", "Compliance adherence", "Customer retention"]
@@ -123,21 +137,25 @@ export default function AICustomerSupportAutomation(...args: any[]): any {
 
   const benefits = [
     {
+
       icon: Clock,
       title: "24/7 Availability",
       description: "Provide instant support around the clock without additional staffing costs"
     },
     {
+
       icon: TrendingUp,
       title: "Increased Efficiency",
       description: "Handle more support requests with faster response times and automated processes"
     },
     {
+
       icon: Users,
       title: "Improved Satisfaction",
       description: "Deliver consistent, accurate, and personalized support experiences"
     },
     {
+
       icon: DollarSign,
       title: "Cost Reduction",
       description: "Reduce support costs while improving service quality and coverage"
@@ -343,6 +361,7 @@ export default function AICustomerSupportAutomation(...args: any[]): any {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20' 
                     : 'border-slate-700/50'
@@ -375,6 +394,7 @@ export default function AICustomerSupportAutomation(...args: any[]): any {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

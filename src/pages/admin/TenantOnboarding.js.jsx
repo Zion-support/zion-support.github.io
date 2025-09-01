@@ -12,10 +12,12 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Switch } from "@/components/ui/switch";
 export default function TenantOnboarding() {
+
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("comp");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState({
+
         brand_name: "",
         subdomain: "",
         logo_url: "",
@@ -29,18 +31,23 @@ export default function TenantOnboarding() {
     // Check if user has admin role
     const isAdmin = user?.role === "admin";
     if (!isAdmin) {
+
         return <Navigate to="/unauthorized"/>}
     const handleInputChange = (e) => {
+
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }))};
     const handleSubmit = async (e) => {
+
         e.preventDefault();
         setIsSubmitting(true);
         try {
+
             // Generate subdomain if not provided
             const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
             // Create landing page copy
             const landingPageCopy = {
+
   headline: "AI Hiring Assistant",
   subtitle: `Find the best talent for your ${formData.industry || "comp"
 
@@ -51,6 +58,7 @@ export default function TenantOnboarding() {
             const { data, error } = await supabase
                 .from('whitelabel_tenants')
                 .insert({
+
                 brand_name: formData.brand_name,
                 subdomain: subdomain,
                 custom_domain: formData.custom_domain || null,
@@ -68,10 +76,12 @@ export default function TenantOnboarding() {
             if (error)
                 throw error;
             toast.success("Tenant created successfully!", {
+
                 description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
             });
             // Reset form
             setFormData({
+
                 brand_name: "",
                 subdomain: "",
                 logo_url: "",
@@ -83,11 +93,14 @@ export default function TenantOnboarding() {
                 is_co_branded: true
             })}
         catch (error) {
-            console.error("Error creating tenant:", error);
+
+            // console.error("Error creating tenant:", error);
             toast.error("Failed to create tenant", {
+
                 description: error.message
             })}
         finally {
+
             setIsSubmitting(false)}
     };
     return (<>
@@ -127,6 +140,7 @@ export default function TenantOnboarding() {
                     <div className="space-y-2">
                       <Label htmlFor="industry">Industry</Label>
                       <Select name="industry" value={formData.industry} onValueChange = {
+
   (value) => handleSelectChange("industry",
   value)
 
@@ -150,6 +164,7 @@ export default function TenantOnboarding() {
                     <div className="space-y-2">
                       <Label htmlFor="comp_size">Comp Size</Label>
                       <Select name="comp_size" value={formData.comp_size} onValueChange = {
+
   (value) => handleSelectChange("comp_size",
   value)
 
@@ -189,6 +204,7 @@ export default function TenantOnboarding() {
                     <div className="space-y-2">
                       <Label htmlFor="theme_preset">Theme Preset</Label>
                       <Select name="theme_preset" value={formData.theme_preset} onValueChange = {
+
   (value) => handleSelectChange("theme_preset",
   value)
 
@@ -214,6 +230,7 @@ export default function TenantOnboarding() {
                         </p>
                       </div>
                       <Switch id="is_co_branded" checked={formData.is_co_branded} onCheckedChange = {
+
   (checked) => handleSwitchChange("is_co_branded",
   checked)
 
@@ -226,6 +243,7 @@ export default function TenantOnboarding() {
                       <Label htmlFor="subdomain">Subdomain</Label>
                       <div className="flex items-center">
                         <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder = {
+
   formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,
   '') : "comp"
 

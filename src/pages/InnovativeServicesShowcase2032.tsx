@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Search, 
   Filter, 
   Star, 
@@ -25,6 +26,7 @@ import {
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2032 } from '../data/innovativeMicroSaasServices2032';
 
 const InnovativeServicesShowcase2032: React.FC = () => {
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');
@@ -41,10 +43,12 @@ const InnovativeServicesShowcase2032: React.FC = () => {
   ];
 
   const filteredServices = useMemo(() => {
+
     let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2032;
 
     // Filter by search term
     if (searchTerm) {
+
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -54,12 +58,15 @@ const InnovativeServicesShowcase2032: React.FC = () => {
 
     // Filter by category
     if (selectedCategory !== 'All') {
+
       filtered = filtered.filter(service => service.category === selectedCategory);
     }
 
     // Filter by price range
     if (selectedPriceRange !== 'All') {
+
       switch (selectedPriceRange) {
+
         case 'Under $500':
           filtered = filtered.filter(service => service.price < 500);
           break;
@@ -77,6 +84,7 @@ const InnovativeServicesShowcase2032: React.FC = () => {
 
     // Sort services
     switch (sortBy) {
+
       case 'price-low':
         filtered.sort((a, b) => a.price - b.price);
         break;
@@ -98,7 +106,9 @@ const InnovativeServicesShowcase2032: React.FC = () => {
   }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
   const getCategoryIcon = (category: string) => {
+
     switch (category) {
+
       case 'AI & Legal Tech':
         return <Shield className="w-6 h-6" />;
       case 'Cybersecurity':
@@ -125,7 +135,9 @@ const InnovativeServicesShowcase2032: React.FC = () => {
   };
 
   const getInnovationBadge = (level: string) => {
+
     switch (level) {
+
       case 'Revolutionary':
         return (
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white">
@@ -436,6 +448,7 @@ const InnovativeServicesShowcase2032: React.FC = () => {
             <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
             <button
               onClick={() => {
+
                 setSearchTerm('');
                 setSelectedCategory('All');
                 setSelectedPriceRange('All');

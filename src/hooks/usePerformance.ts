@@ -43,7 +43,7 @@ export function usePerformance(...args[]):  {
     // Check if PerformanceObserver is supported
     if (!('PerformanceObserver' in window)) {
 
-      // // console.warn('PerformanceObserver not supported');
+      // // // console.warn('PerformanceObserver not supported');
       return}
     // First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {
@@ -92,7 +92,7 @@ export function usePerformance(...args[]):  {
       fidObserver.observe({ entryTypes['first-input'] });
       clsObserver.observe({ entryTypes['layout-shift'] })} catch (error) {
 
-      // // console.warn('Error setting up performance observers:', error)}
+      // // // console.warn('Error setting up performance observers:', error)}
     // Navigation timing metrics
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
@@ -176,7 +176,7 @@ export function usePerformance(...args[]):  {
 
         if (entry.duration > 50) {
 
-          // // console.warn('Long task detected: ', {
+          // // // console.warn('Long task detected: ', {
 
             duration: entry.duration,
             startTime: entry.startTime,
@@ -187,7 +187,7 @@ export function usePerformance(...args[]):  {
 
       longTaskObserver.observe({ entryTypes['longtask'] })} catch (error) {
 
-      // // console.warn('Error setting up long task observer:', error)}
+      // // // console.warn('Error setting up long task observer:', error)}
     return ()  => longTaskObserver.disconnect()}, []);
   return {
 
@@ -212,7 +212,7 @@ export function usePerformanceEvent(eventName: string, callback: (entry: Perform
 
       observer.observe({ entryTypes[eventName] })} catch (error) {
 
-      // // console.warn(`Error observing ${eventName}:`, error)}
+      // // // console.warn(`Error observing ${eventName}:`, error)}
     return ()  => observer.disconnect()}, [eventName, callback])}
 // Hook for measuring time between renders
 export function useRenderTime(...args[]):  {

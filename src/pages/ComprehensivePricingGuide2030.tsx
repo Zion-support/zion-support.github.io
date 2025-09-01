@@ -71,6 +71,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
   const pricingTiers = [
     {
+
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
       price: 299,
@@ -88,6 +89,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       bestFor: 'Small businesses, startups, individual professionals'
     },
     {
+
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
       price: 999,
@@ -107,6 +109,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       bestFor: 'Growing businesses, mid - size companies, agencies'
     },
     {
+
       name: 'Enterprise',
       description: 'For large organizations with complex needs',
       price: 2999,
@@ -130,6 +133,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
   const marketInsights = [
     {
+
       title: 'AI Services Market',
       value: '$29.9B',
       growth: '+32.4%',
@@ -137,6 +141,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       color: 'from - purple - 500 to - pink - 600'
     },
     {
+
       title: 'Cloud Services Market',
       value: '$832.1B',
       growth: '+17.5%',
@@ -144,6 +149,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       color: 'from - blue - 500 to - cyan - 600'
     },
     {
+
       title: 'IoT Market',
       value: '$1.1T',
       growth: '+25.7%',
@@ -151,6 +157,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       color: 'from - green - 500 to - emerald - 600'
     },
     {
+
       title: 'Quantum Computing',
       value: '$65.0B',
       growth: '+48.2%',
@@ -165,11 +172,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         <div role="button" className="max - w-7xl mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -240,6 +249,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setActiveCategory (category.id) }
                   className={`flex items - center gap - 2 px - 4 py - 2 rounded - lg border transition - all ${
+
                     activeCategory === category.id
                       ? 'bg - purple - 600 border - purple - 500 text - white'
                       : 'bg - white / 10 border - white / 20 text - white hover:bg - white / 20'
@@ -261,11 +271,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         <div role="button" className="max - w-7xl mx - auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -279,16 +291,19 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             {marketInsights.map ( (insight, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -319,16 +334,19 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               return (<motion.div
                   key = {service.id}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -431,11 +449,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         <div role="button" className="max - w-7xl mx - auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -455,31 +475,37 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {[
               {
+
                 icon: DollarSign,
                 title: "Transparent Pricing",
                 description: "No hidden fees or surprise charges. Clear, upfront pricing for all services."
               },
               {
+
                 icon: Award,
                 title: "Premium Quality",
                 description: "Enterprise - grade solutions at competitive prices. Quality that exceeds expectations."
               },
               {
+
                 icon: Users,
                 title: "Scalable Plans",
                 description: "Start small and scale up as your business grows. Flexible pricing options."
               },
               {
+
                 icon: Zap,
                 title: "Fast ROI",
                 description: "Our services deliver measurable results quickly, maximizing your investment."
               },
               {
+
                 icon: Shield,
                 title: "Risk - Free Trial",
                 description: "Try our services with confidence. Free trials and money - back guarantees."
               },
               {
+
                 icon: Clock,
                 title: "24 / 7 Support",
                 description: "Round - the - clock support included in all plans. No additional support fees."
@@ -488,16 +514,19 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -534,11 +563,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         <div role="button" className="max - w-4xl mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -551,16 +582,19 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             </motion.h2>
             <motion.p
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -573,16 +607,19 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.4
 
@@ -621,16 +658,19 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.6
 

@@ -29,7 +29,7 @@ export function useJobDetails(jobId: string | undefined) {
       setError(null);
     } catch (err: any) {
 
-      // // console.error('Error loading job details:', err);
+      // // // console.error('Error loading job details:', err);
       setError(err.message);
       setJob(null); // Clear job on error
     } finally {

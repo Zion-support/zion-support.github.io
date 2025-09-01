@@ -1,23 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
 const AccessibilityAuditor = () => {
+
     const features = [
         {
+
             title: "Automated Testing",
             description: "Comprehensive automated accessibility testing for WCAG 2.1 AA compliance",
             icon: "🔍"
         },
         {
+
             title: "Manual Review",
             description: "Expert manual accessibility audits by certified professionals",
             icon: "👁️"
         },
         {
+
             title: "Real-time Monitoring",
             description: "Continuous monitoring and alerting for accessibility issues",
             icon: "📊"
         },
         {
+
             title: "Compliance Reporting",
             description: "Detailed reports with actionable recommendations",
             icon: "📋"
@@ -32,14 +37,17 @@ const AccessibilityAuditor = () => {
     ];
     const testingAreas = [
         {
+
             category: "Visual Accessibility",
             items["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
         },
         {
+
             category: "Content Accessibility",
             items["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
         },
         {
+
             category: "Technical Accessibility",
             items["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
         }

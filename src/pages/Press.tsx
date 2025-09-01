@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default React.memo (function Press () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Newspaper,
@@ -17,8 +19,7 @@ import { motion } from 'framer - motion';
   Zap,
   Shield,
   Brain,
-  Rocket,
-} from 'lucide - react';
+  Rocket} from 'lucide - react';
 
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
 
@@ -32,6 +33,7 @@ import { motion } from 'framer - motion';
 
   const pressReleases = [
     {
+
       id: 1,
       title: 'Zion Tech Group Announces Breakthrough in Quantum AI Technology',
       date: '2024 - 01 - 15',
@@ -42,9 +44,9 @@ import { motion } from 'framer - motion';
       content:
         "Zion Tech Group today announced a major breakthrough in quantum artificial intelligence technology. The company's new quantum neural network platform has demonstrated unprecedented performance improvements, achieving computational speeds 1000 times faster than traditional AI systems for complex scientific and business applications. This breakthrough represents a significant milestone in the convergence of quantum computing and artificial intelligence, potentially revolutionizing fields from drug discovery to financial modeling.",
       featured: true,
-      tags: ['Quantum AI', 'Technology Breakthrough', 'Innovation'],
-    },
+      tags: ['Quantum AI', 'Technology Breakthrough', 'Innovation']},
     {
+
       id: 2,
       title: 'Zion Tech Group Secures $50M Series B Funding Round',
       date: '2024 - 01 - 10',
@@ -55,9 +57,9 @@ import { motion } from 'framer - motion';
       content:
         "Zion Tech Group has successfully closed a $50 million Series B funding round, led by prominent venture capital firms including Sequoia Capital and Andreessen Horowitz. The funding will be used to accelerate product development, expand the company's AI and cybersecurity solutions portfolio, and scale operations to meet growing market demand. This investment validates Zion Tech Group's position as a leader in next - generation technology solutions.",
       featured: true,
-      tags: ['Funding', 'Investment', 'Growth'],
-    },
+      tags: ['Funding', 'Investment', 'Growth']},
     {
+
       id: 3,
       title: 'Zion Tech Group Named to Inc. 5000 Fastest - Growing Companies',
       date: '2023 - 12 - 20',
@@ -68,9 +70,9 @@ import { motion } from 'framer - motion';
       content:
         "Zion Tech Group has been named to the prestigious Inc. 5000 list of America's fastest - growing private companies, ranking in the top 100. This recognition highlights the company's exceptional growth trajectory and innovative approach to solving complex business challenges through AI and technology solutions. The achievement reflects Zion Tech Group's commitment to delivering value to clients while maintaining rapid expansion.",
       featured: false,
-      tags: ['Award', 'Growth', 'Recognition'],
-    },
+      tags: ['Award', 'Growth', 'Recognition']},
     {
+
       id: 4,
       title: 'Zion Tech Group Launches AI - Powered Cybersecurity Platform',
       date: '2023 - 12 - 15',
@@ -81,9 +83,9 @@ import { motion } from 'framer - motion';
       content:
         'Zion Tech Group has launched its latest AI - powered cybersecurity platform, designed to provide enterprise - grade protection against increasingly sophisticated cyber threats. The platform leverages advanced machine learning algorithms to detect and respond to security incidents in real - time, offering organizations unprecedented levels of protection and threat intelligence.',
       featured: false,
-      tags: ['Cybersecurity', 'AI', 'Product Launch'],
-    },
+      tags: ['Cybersecurity', 'AI', 'Product Launch']},
     {
+
       id: 5,
       title:
         'Zion Tech Group CEO Kleber Oliveira Featured in Forbes Technology Council',
@@ -95,9 +97,9 @@ import { motion } from 'framer - motion';
       content:
         'Zion Tech Group CEO Kleber Oliveira has been featured in Forbes Technology Council, sharing expert insights on the future of artificial intelligence and its transformative impact on business operations. The article explores how AI is reshaping industries and creating new opportunities for innovation and growth.',
       featured: false,
-      tags: ['Thought Leadership', 'AI', 'Business Transformation'],
-    },
+      tags: ['Thought Leadership', 'AI', 'Business Transformation']},
     {
+
       id: 6,
       title: 'Zion Tech Group Expands Global Operations to Europe',
       date: '2023 - 12 - 05',
@@ -108,12 +110,12 @@ import { motion } from 'framer - motion';
       content:
         'Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.',
       featured: false,
-      tags: ['Global Expansion', 'Europe', 'Market Growth'],
-    },
+      tags: ['Global Expansion', 'Europe', 'Market Growth']},
   ];
 
   const mediaCoverage = [
     {
+
       id: 1,
       title: 'How Zion Tech Group is Revolutionizing AI with Quantum Computing',
       publication: 'TechCrunch',
@@ -123,9 +125,9 @@ import { motion } from 'framer - motion';
       excerpt:
         "In - depth feature on Zion Tech Group's innovative approach to combining quantum computing with artificial intelligence to solve complex business problems.",
       url: 'https://techcrunch.com / zion - tech - group - quantum - ai',
-      featured: true,
-    },
+      featured: true},
     {
+
       id: 2,
       title:
         "The Rise of Autonomous Business Operations: Zion Tech Group's Vision",
@@ -136,9 +138,9 @@ import { motion } from 'framer - motion';
       excerpt:
         'Expert analysis of how autonomous business operations are transforming enterprise efficiency and decision - making processes.',
       url: 'https://hbr.org / autonomous - business - operations',
-      featured: true,
-    },
+      featured: true},
     {
+
       id: 3,
       title: "Cybersecurity in the AI Era: Zion Tech Group's Defense Strategy",
       publication: 'Wired',
@@ -148,9 +150,9 @@ import { motion } from 'framer - motion';
       excerpt:
         "Comprehensive coverage of Zion Tech Group's AI - powered cybersecurity solutions and their effectiveness against modern threats.",
       url: 'https://wired.com / ai - cybersecurity - zion',
-      featured: false,
-    },
+      featured: false},
     {
+
       id: 4,
       title: "Startup Spotlight: Zion Tech Group's Journey to AI Leadership",
       publication: 'VentureBeat',
@@ -160,12 +162,12 @@ import { motion } from 'framer - motion';
       excerpt:
         "Profile of Zion Tech Group's rapid growth and innovative approach to AI and technology solutions.",
       url: 'https://venturebeat.com / zion - tech - group - startup',
-      featured: false,
-    },
+      featured: false},
   ];
 
   const awards = [
     {
+
       id: 1,
       title: 'Inc. 5000 Fastest - Growing Companies',
       organization: 'Inc. Magazine',
@@ -173,18 +175,18 @@ import { motion } from 'framer - motion';
       category: 'awards',
       description:
         'Ranked among the top 100 fastest - growing private companies in America',
-      image: '/images / awards / inc5000.png',
-    },
+      image: '/images / awards / inc5000.png'},
     {
+
       id: 2,
       title: 'Best AI Solution Provider',
       organization: 'Tech Innovation Awards',
       year: '2023',
       category: 'awards',
       description: 'Recognized for excellence in AI - powered business solutions',
-      image: '/images / awards / tech - innovation.png',
-    },
+      image: '/images / awards / tech - innovation.png'},
     {
+
       id: 3,
       title: 'Cybersecurity Excellence Award',
       organization: 'InfoSec Awards',
@@ -192,8 +194,7 @@ import { motion } from 'framer - motion';
       category: 'awards',
       description:
         'Outstanding achievement in AI - powered cybersecurity solutions',
-      image: '/images / awards / infosec.png',
-    },
+      image: '/images / awards / infosec.png'},
   ];
 
   const filteredContent = selectedCategory === 'all'
@@ -201,23 +202,23 @@ import { motion } from 'framer - motion';
       : [...pressReleases, ...mediaCoverage, ...awards].filter (item => item.category === selectedCategory) ;
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+
+        staggerChildren: 0.1}}};
 
   const itemVariants = {
+
     hidden: { opacity: 0, y: 20 },
     visible: {
+
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
+      transition: { duration: 0.6 }}};
 
   return (<div role="button" className="min - h-screen bg - futuristic">
       {/* Hero Section */}
@@ -261,6 +262,7 @@ import { motion } from 'framer - motion';
             {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                 onClick={ () => setSelectedCategory (category.id) }
                 className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 300 ${
+
                   selectedCategory === category.id
                     ? 'bg - zion - cyan text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 50 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40 hover:text - white'

@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Zap, 
   Cpu, 
@@ -26,8 +27,10 @@ import {
 } from 'lucide-react';
 
 export default function AISolutions() {
+
   const aiSolutionCategories = [
     {
+
       name: "AI Business Solutions",
       description: "Transform your business operations with intelligent AI solutions",
       icon: Target,
@@ -37,6 +40,7 @@ export default function AISolutions() {
       solutions: ["Business Intelligence", "Process Automation", "Customer Analytics", "Predictive Modeling"]
     },
     {
+
       name: "AI Infrastructure",
       description: "Enterprise-grade AI infrastructure and deployment solutions",
       icon: Server,
@@ -46,6 +50,7 @@ export default function AISolutions() {
       solutions: ["AI Cloud Platforms", "AI DevOps", "AI Security", "AI Monitoring"]
     },
     {
+
       name: "Quantum AI",
       description: "Revolutionary quantum computing combined with AI for unprecedented performance",
       icon: Atom,
@@ -55,6 +60,7 @@ export default function AISolutions() {
       solutions: ["Quantum Neural Networks", "Quantum Machine Learning", "Quantum Optimization", "Quantum Security"]
     },
     {
+
       name: "AI Research & Development",
       description: "Cutting-edge AI research and development for next-generation solutions",
       icon: Lightbulb,
@@ -67,6 +73,7 @@ export default function AISolutions() {
 
   const featuredSolutions = [
     {
+
       title: "AI-Powered Quantum Neural Network Platform",
       description: "Revolutionary platform combining quantum computing with neural networks to solve previously unsolvable problems",
       price: "From $24,999/month",
@@ -76,6 +83,7 @@ export default function AISolutions() {
       popular: true
     },
     {
+
       title: "AI-Powered Autonomous Business Intelligence",
       description: "Next-generation business intelligence platform that autonomously analyzes data and makes strategic recommendations",
       price: "From $8,999/month",
@@ -84,6 +92,7 @@ export default function AISolutions() {
       color: "from-blue-400 to-indigo-500"
     },
     {
+
       title: "AI-Powered Cybersecurity Threat Intelligence",
       description: "Advanced cybersecurity platform that uses AI to detect, analyze, and respond to threats in real-time",
       price: "From $15,999/month",
@@ -94,6 +103,7 @@ export default function AISolutions() {
   ];
 
   const contactInfo = {
+
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
@@ -230,6 +240,7 @@ export default function AISolutions() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 ${
+
                   solution.popular ? 'ring-2 ring-blue-500' : ''
                 }`}
               >

@@ -58,7 +58,9 @@ const EmergingTechShowcase2025: React.FC = () => {;
     : EMERGING_TECH_SERVICES_2025.filter (service => service.category === selectedCategory) ;
 
   useEffect ( () => {
+
     if (autoPlay) {
+
       const interval = setInterval ( () => {;
         setCurrentSlide ( (prev) => (prev + 1) % filteredServices.length) ;
       }, 5000) ;
@@ -74,16 +76,19 @@ const EmergingTechShowcase2025: React.FC = () => {;
             {filteredServices.map ( (service, index) => (<motion.div
                 key={service.id}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -195,16 +200,19 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
             <motion.div
               initial = {
+
   { scale: 0.9,
   opacity: 0
 
 }}
               animate = {
+
   { scale: 1,
   opacity: 1
 
 }}
               exit = {
+
   { scale: 0.9,
   opacity: 0
 

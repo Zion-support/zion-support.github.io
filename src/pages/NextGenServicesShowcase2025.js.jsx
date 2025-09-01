@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play } from 'lucide-react';
 export default function NextGenServicesShowcase2025() {
+
     const featuredServices = [
         {
+
             id: 'ai-consciousness-simulator',
             title: 'AI Consciousness Simulation Platform',
             description: 'Revolutionary AI platform that simulates human-like consciousness for advanced decision-making and creative problem-solving.',
@@ -20,6 +22,7 @@ export default function NextGenServicesShowcase2025() {
             path: '/ai-consciousness-simulation'
         },
         {
+
             id: 'quantum-ai-optimization',
             title: 'Quantum-Enhanced AI Optimization Suite',
             description: 'Cutting-edge quantum computing integration with AI for exponentially faster optimization and breakthrough problem-solving.',
@@ -35,6 +38,7 @@ export default function NextGenServicesShowcase2025() {
             path: '/quantum-ai-optimization'
         },
         {
+
             id: 'intelligent-edge-computing',
             title: 'Intelligent Edge Computing Platform',
             description: 'Next-generation edge computing infrastructure with AI acceleration, 5G integration, and real-time decision-making capabilities.',
@@ -50,6 +54,7 @@ export default function NextGenServicesShowcase2025() {
             path: '/intelligent-edge-computing'
         },
         {
+
             id: 'multimodal-ai-platform',
             title: 'Unified Multimodal AI Intelligence Platform',
             description: 'Advanced AI platform that processes text, images, audio, video, and sensor data simultaneously for comprehensive understanding.',
@@ -67,6 +72,7 @@ export default function NextGenServicesShowcase2025() {
     ];
     const microSaasServices = [
         {
+
             title: 'AI-Powered Social Media Scheduling Suite',
             description: 'Intelligent social media management with AI content generation and optimal posting optimization.',
             price: '$149/month',
@@ -75,6 +81,7 @@ export default function NextGenServicesShowcase2025() {
             trial: '14 days free'
         },
         {
+
             title: 'Smart Inventory Optimization System',
             description: 'AI-driven inventory management that predicts demand and automates reordering to prevent stockouts.',
             price: '$299/month',
@@ -83,6 +90,7 @@ export default function NextGenServicesShowcase2025() {
             trial: '30 days free'
         },
         {
+
             title: 'Customer Behavior Prediction Engine',
             description: 'Advanced analytics platform that predicts customer behavior and identifies churn risks.',
             price: '$399/month',
@@ -93,6 +101,7 @@ export default function NextGenServicesShowcase2025() {
     ];
     const infrastructureServices = [
         {
+
             title: 'Quantum-Secure Cloud Infrastructure',
             description: 'Revolutionary cloud infrastructure protected by quantum-resistant encryption for ultimate security.',
             price: '$25,000/month',
@@ -100,6 +109,7 @@ export default function NextGenServicesShowcase2025() {
             category: 'Cloud Security'
         },
         {
+
             title: 'Autonomous Infrastructure Management',
             description: 'Self-managing IT infrastructure that automatically optimizes performance and resolves issues.',
             price: '$12,000/month',
@@ -107,6 +117,7 @@ export default function NextGenServicesShowcase2025() {
             category: 'Infrastructure Automation'
         },
         {
+
             title: 'Blockchain Infrastructure as a Service',
             description: 'Complete blockchain platform supporting multiple protocols and enterprise-grade security.',
             price: '$20,000/month',
@@ -120,10 +131,12 @@ export default function NextGenServicesShowcase2025() {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-cyan-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -154,10 +167,12 @@ export default function NextGenServicesShowcase2025() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -172,14 +187,17 @@ export default function NextGenServicesShowcase2025() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredServices.map((service, index) => (<motion.div key={service.id} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.2 
 
@@ -247,10 +265,12 @@ export default function NextGenServicesShowcase2025() {
       <section className="py-20 bg-gradient-to-br from-gray-900/50 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -265,14 +285,17 @@ export default function NextGenServicesShowcase2025() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasServices.map((service, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.2 
 
@@ -312,10 +335,12 @@ export default function NextGenServicesShowcase2025() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -330,14 +355,17 @@ export default function NextGenServicesShowcase2025() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {infrastructureServices.map((service, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.2 
 
@@ -377,10 +405,12 @@ export default function NextGenServicesShowcase2025() {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 

@@ -68,9 +68,9 @@ export function AdvancedDataVisualization() {
 
         // Simulate chart download
 <<<<<<< HEAD
-        // // // // // console.log(`Downloading chart as ${format}`);
+        // // // // // // console.log(`Downloading chart as ${format}`);
 =======
-        // // // // // // // // // console.log(`Downloading chart as ${format}`);
+        // // // // // // // // // // console.log(`Downloading chart as ${format}`);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
 =======
@@ -81,9 +81,9 @@ export function AdvancedDataVisualization() {
 
         // Simulate chart download
 <<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
-        // // // console.log(`Downloading chart as ${format}`)};
+        // // // // console.log(`Downloading chart as ${format}`)};
 ========
-        // // console.log(`Downloading chart as ${format}`)};
+        // // // console.log(`Downloading chart as ${format}`)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 >>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
     const renderChart = () => {

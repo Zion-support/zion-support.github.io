@@ -4,23 +4,28 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity } from 'lucide-react';
 const IncidentResponsePlatform = () => {
+
     const features = [
         {
+
             title: "AI-Powered Threat Detection",
             description: "Advanced machine learning algorithms detect threats in real-time with high accuracy and low false positives",
             icon: <Eye className="w-6 h-6"/>
         },
         {
+
             title: "Automated Response Workflows",
             description: "Intelligent automation handles routine incidents while escalating critical threats to human analysts",
             icon: <Zap className="w-6 h-6"/>
         },
         {
+
             title: "Real-time Alerting & Notifications",
             description: "Instant notifications across multiple channels with customizable escalation paths and response teams",
             icon: <AlertTriangle className="w-6 h-6"/>
         },
         {
+
             title: "Incident Timeline Tracking",
             description: "Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance",
             icon: <Clock className="w-6 h-6"/>
@@ -28,21 +33,25 @@ const IncidentResponsePlatform = () => {
     ];
     const benefits = [
         {
+
             metric: "70%",
             description: "Reduction in response time",
             icon: <Clock className="w-5 h-5"/>
         },
         {
+
             metric: "45%",
             description: "Improvement in resolution quality",
             icon: <TrendingUp className="w-5 h-5"/>
         },
         {
+
             metric: "24/7",
             description: "Automated monitoring",
             icon: <Activity className="w-5 h-5"/>
         },
         {
+
             metric: "90%",
             description: "Compliance assurance",
             icon: <Shield className="w-5 h-5"/>
@@ -50,6 +59,7 @@ const IncidentResponsePlatform = () => {
     ];
     const pricingPlans = [
         {
+
             name: "Professional",
             price: "$299",
             period: "/month",
@@ -65,6 +75,7 @@ const IncidentResponsePlatform = () => {
             popular: false
         },
         {
+
             name: "Enterprise",
             price: "$599",
             period: "/month",
@@ -81,6 +92,7 @@ const IncidentResponsePlatform = () => {
             popular: true
         },
         {
+
             name: "Custom",
             price: "Custom",
             period: "",
@@ -122,10 +134,12 @@ const IncidentResponsePlatform = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -133,14 +147,17 @@ const IncidentResponsePlatform = () => {
               🚨
             </motion.div>
             <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: 0.2 
 
@@ -151,14 +168,17 @@ const IncidentResponsePlatform = () => {
               </span>
             </motion.h1>
             <motion.p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: 0.4 
 
@@ -169,14 +189,17 @@ const IncidentResponsePlatform = () => {
             
             {/* Key Metrics */}
             <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: 0.6 
 
@@ -188,14 +211,17 @@ const IncidentResponsePlatform = () => {
             </motion.div>
 
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: 0.8 
 
@@ -214,10 +240,12 @@ const IncidentResponsePlatform = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <motion.div className="text-center mb-16" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -232,14 +260,17 @@ const IncidentResponsePlatform = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -256,10 +287,12 @@ const IncidentResponsePlatform = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div className="text-center mb-16" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -276,14 +309,17 @@ const IncidentResponsePlatform = () => {
               {pricingPlans.map((plan, index) => (<motion.div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${plan.popular
                 ? 'border-red-400 bg-red-900/20'
                 : 'border-white/20 hover:border-white/40'}`} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -326,10 +362,12 @@ const IncidentResponsePlatform = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Integrations */}
               <motion.div initial = {
+
   { opacity: 0,
   x: -20 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -345,10 +383,12 @@ const IncidentResponsePlatform = () => {
 
               {/* Use Cases */}
               <motion.div initial = {
+
   { opacity: 0,
   x: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -369,10 +409,12 @@ const IncidentResponsePlatform = () => {
         <section className="py-20 bg-gradient-to-r from-red-900/50 to-pink-900/50">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2 className="text-3xl md:text-4xl font-bold text-white mb-6" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -380,14 +422,17 @@ const IncidentResponsePlatform = () => {
               Ready to Enhance Your Security Posture?
             </motion.h2>
             <motion.p className="text-xl text-gray-300 mb-8" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: 0.2 
 
@@ -396,14 +441,17 @@ const IncidentResponsePlatform = () => {
             </motion.p>
             
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: 0.4 
 
@@ -418,14 +466,17 @@ const IncidentResponsePlatform = () => {
             </motion.div>
 
             <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: 0.6 
 
@@ -452,6 +503,7 @@ const IncidentResponsePlatform = () => {
             </motion.div>
 
             <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {
+
   { duration: 0.6,
   delay: 0.8 
 

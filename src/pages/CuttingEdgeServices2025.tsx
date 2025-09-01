@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Shield, 
   Zap, 
@@ -22,6 +23,7 @@ import {
 import { CUTTING_EDGE_SERVICES_2025, SPECIALIZED_SERVICES_2025 } from '../data/2025-cutting-edge-innovations';
 
 const CuttingEdgeServices2025: React.FC = () => {
+
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
@@ -38,6 +40,7 @@ const CuttingEdgeServices2025: React.FC = () => {
   ];
 
   const filteredServices = CUTTING_EDGE_SERVICES_2025.filter(service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -46,21 +49,27 @@ const CuttingEdgeServices2025: React.FC = () => {
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5
       }
     }
@@ -342,6 +351,7 @@ const CuttingEdgeServices2025: React.FC = () => {
               <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
               <button
                 onClick={() => {
+
                   setSearchTerm('');
                   setSelectedCategory('all');
                 }}

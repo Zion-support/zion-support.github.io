@@ -43,7 +43,7 @@ export const EnhancedInteractiveFeatures: React.FC = () => {
         setFeedback(JSON.parse(savedFeedback));
       } catch (error) {
 
-        // // console.error('Failed to parse saved feedback:', error);
+        // // // console.error('Failed to parse saved feedback:', error);
       }
     }
 
@@ -99,7 +99,7 @@ export const EnhancedInteractiveFeatures: React.FC = () => {
         });
       } catch (error) {
 
-        // // console.error('Error sharing:', error);
+        // // // console.error('Error sharing:', error);
       }
     } else {
 
@@ -110,7 +110,7 @@ export const EnhancedInteractiveFeatures: React.FC = () => {
         alert('Link copied to clipboard!');
       } catch (error) {
 
-        // // console.error('Failed to copy:', error);
+        // // // console.error('Failed to copy:', error);
       }
     }
   };

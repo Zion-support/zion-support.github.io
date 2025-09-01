@@ -32,13 +32,13 @@ export function useReferrals() {
 
       if (error && error.code !== 'PGRST116') {
 
-        // // console.error("Error fetching referral code:", error);
+        // // // console.error("Error fetching referral code:", error);
         // Not throwing here, allowing other fetches to proceed
       }
       setReferralCode(data || null); // Set to null if no data
     } catch (error) {
 
-      // // console.error("Error in fetchReferralCode:", error);
+      // // // console.error("Error in fetchReferralCode:", error);
     }
   }, [user?.id]);
 
@@ -57,7 +57,7 @@ export function useReferrals() {
       setReferrals(data || []);
     } catch (error) {
 
-      // // console.error("Error fetching referrals:", error);
+      // // // console.error("Error fetching referrals:", error);
     }
   }, [user?.id]);
 
@@ -76,7 +76,7 @@ export function useReferrals() {
       setRewards(data || []);
     } catch (error) {
 
-      // // console.error("Error fetching rewards:", error);
+      // // // console.error("Error fetching rewards:", error);
     }
   }, [user?.id]);
 
@@ -118,7 +118,7 @@ export function useReferrals() {
       
     } catch (error) {
 
-      // // console.error("Error fetching referral stats:", error);
+      // // // console.error("Error fetching referral stats:", error);
     }
   }, [user?.id]);
 
@@ -176,7 +176,7 @@ export function useReferrals() {
       return data;
     } catch (error: any) {
 
-      // // console.error("Error generating referral code:", error);
+      // // // console.error("Error generating referral code:", error);
       toast({
 
         title: "Error generating code",

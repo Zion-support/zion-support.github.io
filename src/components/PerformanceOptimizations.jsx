@@ -148,9 +148,9 @@ export function PerformanceOptimizations() {
   ]);
   const handleItemClick = useCallback(item => {
 
-    // // // // // // // // // // console.log('Item clicked:', item);
+    // // // // // // // // // // // console.log('Item clicked:', item);
   }, []);
-  // // // console.log('Item clicked:', item)}, []);
+  // // // // console.log('Item clicked:', item)}, []);
   const addItem = useCallback(() => {
 
     setData(prev => [

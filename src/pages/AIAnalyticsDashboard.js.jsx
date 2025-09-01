@@ -6,23 +6,28 @@ import SEO from "@/components/SEO";
 import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function AIAnalyticsDashboard() {
+
     const features = [
         {
+
             title: "AI-Powered Insights",
             description: "Advanced machine learning algorithms analyze your data to uncover hidden patterns and opportunities",
             icon: <Brain className="h-6 w-6 text-zion-cyan"/>
         },
         {
+
             title: "Real-time Analytics",
             description: "Monitor your business metrics in real-time with live dashboards and instant notifications",
             icon: <Zap className="h-6 w-6 text-zion-purple"/>
         },
         {
+
             title: "Predictive Analytics",
             description: "Forecast future trends and make data-driven decisions with confidence",
             icon: <TrendingUp className="h-6 w-6 text-zion-blue"/>
         },
         {
+
             title: "Custom Dashboards",
             description: "Build personalized dashboards tailored to your specific business needs",
             icon: <BarChart3 className="h-6 w-6 text-zion-cyan"/>
@@ -30,6 +35,7 @@ export default function AIAnalyticsDashboard() {
     ];
     const pricingPlans = [
         {
+
             name: "Starter",
             price: "$99",
             period: "/month",
@@ -44,6 +50,7 @@ export default function AIAnalyticsDashboard() {
             popular: false
         },
         {
+
             name: "Professional",
             price: "$299",
             period: "/month",
@@ -59,6 +66,7 @@ export default function AIAnalyticsDashboard() {
             popular: true
         },
         {
+
             name: "Enterprise",
             price: "$799",
             period: "/month",
@@ -76,18 +84,21 @@ export default function AIAnalyticsDashboard() {
     ];
     const testimonials = [
         {
+
             name: "Sarah Chen",
             role: "CTO, TechFlow Inc.",
             content: "Zion's AI Analytics Dashboard transformed how we understand our customer data. The insights are game-changing.",
             rating: 5
         },
         {
+
             name: "Marcus Rodriguez",
             role: "Data Scientist, DataCorp",
             content: "The predictive analytics capabilities are incredible. We've improved our forecasting accuracy by 40%.",
             rating: 5
         },
         {
+
             name: "Emily Watson",
             role: "VP Operations, GrowthTech",
             content: "Real-time dashboards help us make faster, better decisions. ROI was immediate.",

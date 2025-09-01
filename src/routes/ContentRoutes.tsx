@@ -3,6 +3,7 @@ import { SitemapPage } from '@/components/SitemapPage';
 
 
 const ContentRoutes = () => {
+
   return (
     <Routes>
       {/* Content Routes */}

@@ -31,7 +31,7 @@ interface ServiceWorkerState {
         .register('/sw.js')
         .then((registration) => {
 
-          // // // console.log('SW registered: any, registration);
+          // // // // console.log('SW registered: any, registration);
           setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
 
           // Check for updates'
@@ -70,7 +70,7 @@ setSwState (prev: > ({ ;
             window.location.reload()})})
         .catch((registrationError) => {
 
-          // // // console.log('SW registration failed: ', registrationError)})}
+          // // // // console.log('SW registration failed: ', registrationError)})}
 
     // Online/offline detection
     

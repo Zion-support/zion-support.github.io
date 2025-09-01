@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import {
+
   Brain,
   Shield,
   Heart,
@@ -35,6 +36,7 @@ import {
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2031 } from '../src/data/comprehensiveInnovativeServices2031';
 
 const ComprehensivePricingGuide2031: NextPage = () => {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
   const [innovationLevel, setInnovationLevel] = useState('all');
@@ -68,13 +70,16 @@ const ComprehensivePricingGuide2031: NextPage = () => {
 
   // Filter services based on selected criteria
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2031.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesInnovation = innovationLevel === 'all' || service.innovationLevel === innovationLevel;
     
     let matchesPrice = true;
     if (priceRange !== 'all') {
+
       const price = parseInt(service.price.replace(/[^0-9]/g, ''));
       switch (priceRange) {
+
         case 'budget':
           matchesPrice = price >= 1000 && price <= 2000;
           break;
@@ -94,6 +99,7 @@ const ComprehensivePricingGuide2031: NextPage = () => {
   });
 
   const getPriceRange = (price: string) => {
+
     const numPrice = parseInt(price.replace(/[^0-9]/g, ''));
     if (numPrice <= 2000) return 'budget';
     if (numPrice <= 4000) return 'mid';
@@ -102,6 +108,7 @@ const ComprehensivePricingGuide2031: NextPage = () => {
   };
 
   const getROIColor = (roi: string) => {
+
     const roiNum = parseInt(roi.replace(/[^0-9]/g, ''));
     if (roiNum >= 500) return 'text-purple-400';
     if (roiNum >= 300) return 'text-green-400';
@@ -259,6 +266,7 @@ const ComprehensivePricingGuide2031: NextPage = () => {
                 <div className="flex-1">
                   <div className="flex items-center space-x-3 mb-3">
                     <div className={`w-12 h-12 bg-gradient-to-r ${
+
                       service.innovationLevel === 'Breakthrough' 
                         ? 'from-purple-600 to-pink-600' 
                         : 'from-blue-600 to-cyan-600'
@@ -267,6 +275,7 @@ const ComprehensivePricingGuide2031: NextPage = () => {
                     </div>
                     <div className="flex flex-col">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+
                         service.innovationLevel === 'Breakthrough' 
                           ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
                           : 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
@@ -274,6 +283,7 @@ const ComprehensivePricingGuide2031: NextPage = () => {
                         {service.innovationLevel}
                       </span>
                       <span className={`px-3 py-1 rounded-full text-xs font-medium mt-1 ${
+
                         getPriceRange(service.price) === 'budget' ? 'bg-green-500/20 text-green-300 border border-green-500/30' :
                         getPriceRange(service.price) === 'mid' ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' :
                         getPriceRange(service.price) === 'premium' ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30' :
@@ -432,6 +442,7 @@ const ComprehensivePricingGuide2031: NextPage = () => {
             <p className="text-gray-300 mb-6">Try adjusting your filters to see available services</p>
             <button
               onClick={() => {
+
                 setActiveCategory('all');
                 setPriceRange('all');
                 setInnovationLevel('all');

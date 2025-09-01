@@ -5,12 +5,15 @@ import { motion   } from 'framer - motion.ts';
 import { SEO   } from '../components / SEO';
 
 const ServicesSitemap: React.FC = () : JSX.Element => {
+
   const allServices = [
     {
+
       category: "AI - Powered Micro SAAS Services",
       description: "Cutting - edge AI solutions with measurable business impact",
       services[;
         {
+
           title: "AI Code Review & Security Analysis",
           url: "/services / ai - code - review - security",
           description: "Advanced vulnerability detection with 85% accuracy improvement",
@@ -18,6 +21,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           features["85% vulnerability reduction", "50 + programming languages", "SAST, DAST, SCA, IAST", "Git integration"];
         },;
         {
+
           title: "AI Customer Experience Analytics",
           url: "/services / ai - customer - experience - analytics",
           description: "Transform customer insights into actionable intelligence",
@@ -25,6 +29,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           features["Real - time sentiment analysis", "Customer journey tracking", "Predictive analytics", "Omnichannel insights"];
         },;
         {
+
           title: "AI DevOps Automation Platform",
           url: "/services / ai - devops - automation - platform",
           description: "Revolutionize DevOps workflow with AI - powered automation",
@@ -32,6 +37,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           features["AI pipeline optimization", "Intelligent deployment", "GitOps workflows", "Multi - cloud orchestration"];
         },;
         {
+
           title: "AI IoT Edge Computing Platform",
           url: "/services / ai - iot - edge - computing - platform",
           description: "Revolutionize IoT with AI - powered edge computing",
@@ -41,10 +47,12 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
       ]
     },;
     {
+
       category: "Cloud & Infrastructure Services",
       description: "Scalable cloud solutions and enterprise infrastructure",
       services[;
         {
+
           title: "Cloud DevOps",
           url: "/services / cloud - devops",
           description: "Streamlined cloud deployment and management",
@@ -52,6 +60,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           features["Multi - cloud deployment", "Infrastructure as Code", "Automated scaling", "Cost optimization"];
         },;
         {
+
           title: "IT Infrastructure",
           url: "/services / it - infrastructure",
           description: "Enterprise - grade infrastructure solutions",
@@ -59,6 +68,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           features["Network design", "Server management", "Storage solutions", "Backup & recovery"];
         },;
         {
+
           title: "Digital Twin",
           url: "/services / digital - twin",
           description: "Virtual representation of physical systems",
@@ -68,10 +78,12 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
       ]
     },;
     {
+
       category: "Data & Analytics Services",
       description: "Transform data into actionable business intelligence",
       services[;
         {
+
           title: "Data Analytics",
           url: "/services / data - analytics",
           description: "Comprehensive data analysis and visualization",
@@ -79,6 +91,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           features["Data visualization", "Statistical analysis", "Trend identification", "Reporting dashboards"];
         },;
         {
+
           title: "AI Business Intelligence",
           url: "/services / ai - business - intelligence",
           description: "AI - powered business insights and reporting",
@@ -86,6 +99,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           features["Predictive analytics", "Natural language queries", "Automated insights", "Real - time reporting"];
         },;
         {
+
           title: "IoT Edge Computing",
           url: "/services / iot - edge",
           description: "Real - time edge data processing",
@@ -95,10 +109,12 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
       ]
     },;
     {
+
       category: "Security & Compliance Services",
       description: "Enterprise - grade security and regulatory compliance",
       services[;
         {
+
           title: "Zero Trust Network Architecture",
           url: "/services / zero - trust - network - architecture",
           description: "Modern security framework for enterprise",
@@ -106,6 +122,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           features["Identity verification", "Micro - segmentation", "Continuous monitoring", "Least privilege access"];
         },;
         {
+
           title: "AI Cybersecurity Suite",
           url: "/services / ai - cybersecurity - suite",
           description: "Comprehensive security solutions",
@@ -113,6 +130,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           features["Threat detection", "Vulnerability assessment", "Incident response", "Security automation"];
         },;
         {
+
           title: "AI Compliance Assistant",
           url: "/services / ai - compliance - assistant",
           description: "AI - powered compliance management",
@@ -122,10 +140,12 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
       ]
     },;
     {
+
       category: "Additional Specialized Services",
       description: "Industry - specific and specialized solutions",
       services[;
         {
+
           title: "Healthcare Technology",
           url: "/services / healthcare - tech",
           description: "Technology solutions for healthcare industry",
@@ -133,6 +153,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           features["HIPAA compliance", "Patient data management", "Telemedicine platforms", "Healthcare analytics"];
         },;
         {
+
           title: "Blockchain Enterprise Solutions",
           url: "/services / blockchain - enterprise - solutions",
           description: "Enterprise blockchain implementation",
@@ -140,6 +161,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           features["Smart contracts", "Supply chain tracking", "Digital identity", "Decentralized applications"];
         },;
         {
+
           title: "Sustainability Technology",
           url: "/services / sustainability",
           description: "Green technology solutions",
@@ -172,11 +194,13 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           <div className="max - w-7xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -213,11 +237,13 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -238,16 +264,19 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
               {quickAccessLinks.map ( (link, index) => (<motion.div
                   key={link.title}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -275,11 +304,13 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -300,16 +331,19 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
               {allServices.map ( (category, categoryIndex) => (<motion.div
                   key={category.category}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: categoryIndex * 0.1
 
@@ -330,16 +364,19 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
                     {category.services.map ( (service, serviceIndex) => (<motion.div
                         key={service.title}
                         initial = {
+
   { opacity: 0,
   scale: 0.9
 
 }}
                         whileInView = {
+
   { opacity: 1,
   scale: 1
 
 }}
                         transition = {
+
   { duration: 0.5,
   delay: serviceIndex * 0.1
 
@@ -388,11 +425,13 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
           <div className="max - w-4xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 

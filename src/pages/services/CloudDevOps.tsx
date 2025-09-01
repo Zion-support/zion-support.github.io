@@ -13,38 +13,45 @@ import { Cloud,
              } from 'lucide-react.ts';
 
 const CloudDevOps = () => {
+
   const services = [
     {
+
       icon: <Cloud className="w-8 h-8" />,
       title: "Cloud Migration",
       description: "Seamless migration to cloud platforms with minimal downtime and maximum efficiency.",
       features: ["Strategy planning", "Data migration", "Performance optimization", "Cost management"]
     },
     {
+
       icon: <GitBranch className="w-8 h-8" />,
       title: "DevOps Automation",
       description: "Streamline development and operations with automated CI/CD pipelines and infrastructure as code.",
       features: ["CI/CD pipelines", "Infrastructure as Code", "Automated testing", "Deployment automation"]
     },
     {
+
       icon: <Server className="w-8 h-8" />,
       title: "Container Orchestration",
       description: "Manage and scale containerized applications with Kubernetes and Docker expertise.",
       features: ["Kubernetes management", "Docker optimization", "Auto-scaling", "Load balancing"]
     },
     {
+
       icon: <Zap className="w-8 h-8" />,
       title: "Performance Optimization",
       description: "Optimize cloud infrastructure and applications for maximum performance and cost efficiency.",
       features: ["Performance monitoring", "Cost optimization", "Resource management", "Auto-scaling"]
     },
     {
+
       icon: <Shield className="w-8 h-8" />,
       title: "Security & Compliance",
       description: "Implement robust security measures and ensure compliance with industry standards.",
       features: ["Security audits", "Compliance frameworks", "Threat detection", "Access management"]
     },
     {
+
       icon: <Database className="w-8 h-8" />,
       title: "Database Management",
       description: "Optimize database performance and implement backup and recovery strategies.",

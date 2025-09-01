@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
+import {
+
   Truck, 
   Package, 
   Globe, 
@@ -58,8 +59,10 @@ import {
 } from 'lucide-react';
 
 export default function AISupplyChainOptimizationPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Demand Forecasting',
       description: 'Advanced machine learning algorithms that predict demand with 95%+ accuracy across all product categories',
@@ -72,6 +75,7 @@ export default function AISupplyChainOptimizationPlatform() {
       ]
     },
     {
+
       icon: Route,
       title: 'Intelligent Route Optimization',
       description: 'AI-driven logistics optimization that reduces delivery times and transportation costs by up to 30%',
@@ -84,6 +88,7 @@ export default function AISupplyChainOptimizationPlatform() {
       ]
     },
     {
+
       icon: Warehouse,
       title: 'Smart Inventory Management',
       description: 'Automated inventory optimization that maintains optimal stock levels while reducing carrying costs',
@@ -96,6 +101,7 @@ export default function AISupplyChainOptimizationPlatform() {
       ]
     },
     {
+
       icon: AlertTriangle,
       title: 'Risk Management & Resilience',
       description: 'Proactive risk identification and mitigation strategies to ensure supply chain continuity',
@@ -111,6 +117,7 @@ export default function AISupplyChainOptimizationPlatform() {
 
   const pricingPlans = [
     {
+
       name: 'Starter',
       price: '$599',
       period: '/month',
@@ -127,6 +134,7 @@ export default function AISupplyChainOptimizationPlatform() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$1,299',
       period: '/month',
@@ -145,6 +153,7 @@ export default function AISupplyChainOptimizationPlatform() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$3,499',
       period: '/month',
@@ -166,24 +175,28 @@ export default function AISupplyChainOptimizationPlatform() {
 
   const useCases = [
     {
+
       title: 'Manufacturing',
       description: 'Production planning, raw material optimization, and supplier management',
       icon: Factory,
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       title: 'Retail & E-commerce',
       description: 'Inventory optimization, demand forecasting, and last-mile delivery',
       icon: Package,
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       title: 'Logistics & Transportation',
       description: 'Route optimization, fleet management, and capacity planning',
       icon: Truck,
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       title: 'Healthcare & Pharmaceuticals',
       description: 'Cold chain management, critical supply tracking, and compliance',
       icon: Activity,
@@ -193,21 +206,25 @@ export default function AISupplyChainOptimizationPlatform() {
 
   const benefits = [
     {
+
       title: 'Reduce Costs',
       value: '25-35%',
       description: 'Lower inventory carrying costs and transportation expenses'
     },
     {
+
       title: 'Improve Efficiency',
       value: '40-50%',
       description: 'Faster order fulfillment and reduced lead times'
     },
     {
+
       title: 'Increase Accuracy',
       value: '95%+',
       description: 'Higher demand forecasting accuracy and inventory optimization'
     },
     {
+
       title: 'Enhance Visibility',
       value: 'Real-time',
       description: 'End-to-end supply chain visibility and tracking'
@@ -417,6 +434,7 @@ export default function AISupplyChainOptimizationPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
+
                   plan.popular 
                     ? 'border-green-500/50 bg-green-500/5' 
                     : 'border-white/10 hover:border-white/20'
@@ -451,6 +469,7 @@ export default function AISupplyChainOptimizationPlatform() {
                 <a
                   href={plan.name === 'Enterprise' ? 'https://ziontechgroup.com/contact' : 'https://ziontechgroup.com/request-quote'}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
                       : 'bg-white/10 text-white hover:bg-white/20'

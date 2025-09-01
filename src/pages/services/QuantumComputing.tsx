@@ -25,23 +25,28 @@ import { Zap,
 import { SEO              } from '@/components/SEO';
 
 export default function QuantumComputing(...args: []):  {
+
   const features = [
     {
+
       icon: Atom,
       title: "Quantum Processing",
       description: "Advanced quantum algorithms for complex computational problems"
     },
     {
+
       icon: Brain,
       title: "AI Integration",
       description: "Seamless integration with machine learning and AI systems"
     },
     {
+
       icon: Shield,
       title: "Quantum Security",
       description: "Unbreakable encryption using quantum key distribution"
     },
     {
+
       icon: Cloud,
       title: "Cloud Quantum",
       description: "Access quantum computing power through our cloud platform"
@@ -49,21 +54,25 @@ export default function QuantumComputing(...args: []):  {
   ];
   const useCases = [
     {
+
       title: "Financial Modeling",
       description: "Quantum algorithms for risk assessment and portfolio optimization",
       icon: TrendingUp
     },
     {
+
       title: "Drug Discovery",
       description: "Molecular simulation and protein folding for pharmaceutical research",
       icon: Brain
     },
     {
+
       title: "Cryptography",
       description: "Quantum-resistant encryption and secure communications",
       icon: Lock
     },
     {
+
       title: "Optimization",
       description: "Solving complex logistics and supply chain problems",
       icon: Network
@@ -93,10 +102,12 @@ export default function QuantumComputing(...args: []):  {
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 }}

@@ -12,8 +12,11 @@ import { toast } from '@/hooks / use - toast';
 import { useAuth } from '@/hooks / useAuth';
 import { zodResolver } from '@hookform / resolvers / zod';
 export default function Signup () {
+
 import {
+
 import {
+
 import { z } from 'zod';
 
   User,
@@ -23,39 +26,37 @@ import { z } from 'zod';
   EyeOff,
   Facebook,
   Twitter,
-  Loader2,
-} from 'lucide - react';
+  Loader2} from 'lucide - react';
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from '@/components / ui / form';
+  FormMessage} from '@/components / ui / form';
 // Form validation schema
-const signupSchema = z
+const signupSchema = z;
   .object ({
+
     displayName: z.string () .min (2, 'Name must be at least 2 characters') ,
     email: z.string () .email ('Please enter a valid email') ,
     password: z
       .string () .min (8, 'Password must be at least 8 characters') .regex (/[A - Z]/, 'Password must contain at least one uppercase letter') .regex (/[a - z]/, 'Password must contain at least one lowercase letter') .regex (/[0 - 9]/, 'Password must contain at least one number') ,
     confirmPassword: z.string () ,
     termsAccepted: z.boolean () .refine (val => val === true, {
-      message: 'You must accept the terms and conditions',
-    }) ,
-  }) .refine (data => data.password === data.confirmPassword, {
+
+      message: 'You must accept the terms and conditions'}) }) .refine (data => data.password === data.confirmPassword, {
+
     message: 'Passwords do not match',
-    path: ['confirmPassword'],
-  }) ;
+    path: ['confirmPassword']}) ;
   const {
+
     signup,
     loginWithGoogle,
     loginWithFacebook,
     loginWithTwitter,
     isLoading,
     isAuthenticated,
-    user,
-  } = useAuth () ;
+    user} = useAuth () ;
   const navigate = useNavigate () ;
   const [showPassword, setShowPassword] = useState (false) ;
   const [showConfirmPassword, setShowConfirmPassword] = useState (false) ;
@@ -65,52 +66,59 @@ const signupSchema = z
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   // Initialize react - hook - form
   const form = useForm ({
+
     resolver: zodResolver (signupSchema) ,
     defaultValues: {
+
       displayName: '',
       email: '',
       password: '',
       confirmPassword: '',
-      termsAccepted: false,
-    },
-  }) ;
+      termsAccepted: false}}) ;
   // Form submission handler
   const onSubmit = async data => {
+
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting (true) ;
     try {
+
       const { res, data: resData } = await register (data.displayName,
         data.email,
         data.password) ;
       // Handle duplicate email error from API
       if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
+
         form.setError ('email', { message: resData.message }) ;
         toast.error ('Email already registered – please login.') ;
         return;
       }
       // Check for successful response
       if (res.ok && resData.token && resData.user) {
+
         // Successful registration
         safeStorage.setItem ('authToken', resData.token) ;
         setUser (resData.user) ;
         setTokens ({
+
           accessToken: resData.token,
-          refreshToken: resData.refreshToken || null,
-        }) ;
+          refreshToken: resData.refreshToken || null}) ;
         // Handle email verification required case
         if (resData?.emailVerificationRequired) {
+
           setShowVerificationMessage (true) ;
           // Do not proceed to set session or navigate
         } else if (resData?.session) {
+
           // Set the session directly if verification is not required
           const { error: sessionError } = await supabase.auth.setSession (resData.session) ;
           if (sessionError) {
+
             // // // // // // // console.error ("Error setting session:", sessionError) ;
             form.setError ('root', {
+
               message:
                 sessionError.message ||
-                'Failed to set session. Please try logging in.',
-            }) ;
+                'Failed to set session. Please try logging in.'}) ;
             toast.error (sessionError.message ||
                 'Failed to set session. Please try logging in.') ;
             return;
@@ -121,12 +129,13 @@ const signupSchema = z
           toast.success ('Welcome to ZionAI 🎉') ;
           router ('/dashboard') ;
         } else {
+
           // This case might indicate an unexpected response from the API
           // // // // // // // console.error ("Registration response did not include session or emailVerificationRequired flag.", resData) ;
           form.setError ('root', {
+
             message:
-              'Registration complete, but an unexpected issue occurred. Please try logging in.',
-          }) ;
+              'Registration complete, but an unexpected issue occurred. Please try logging in.'}) ;
           toast.error ('Registration complete, but an unexpected issue occurred. Please try logging in manually.') ;
           // Potentially navigate to login or show a more specific error
           return;
@@ -134,13 +143,16 @@ const signupSchema = z
         // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification) if (data.newsletterOptIn &&
           mailchimpService &&
           !resData?.emailVerificationRequired) {
+
           try {
+
             await mailchimpService.addSubscriber ({
+
               email: data.email,
-              mergeFields: { FNAME: data.displayName },
-            }) ;
+              mergeFields: { FNAME: data.displayName }}) ;
             await mailchimpService.sendWelcomeEmail (data.email, 'NEW10') ;
           } catch (err) {
+
             // // // // // // // console.error ('Mailchimp subscription failed', err) ;
             // Non - critical error, don't block user flow
           }
@@ -149,29 +161,37 @@ const signupSchema = z
         // If emailVerificationRequired, no toast / navigation here, message is shown
       }
       try {
+
         /* empty */
       } catch (err) {
+
         const message = err.message ?? 'Registration failed';
         form.setError ('root', { message }) ;
         toast.error (message) ;
       } finally {
+
         setIsSubmitting (false) ;
       }
     } finally {
+
       /* empty */
     }
     const onInvalid = errors => {
+
       const firstError = Object.keys (errors) [0];
       if (firstError) {
+
         form.setFocus (firstError) ;
       }
     };
     // Redirect if user is already logged in and has completed profile
     if (isAuthenticated && user?.profileComplete) {
+
       return < Navigate to="/" />;
     }
     // Redirect to onboarding if user is authenticated but hasn't completed profile
     if (isAuthenticated && !user?.profileComplete) {
+
       return < Navigate to="/onboarding" />;
     }
     return (<>
@@ -304,10 +324,12 @@ const signupSchema = z
                                 className="bg - zion - blue pl - 10 border - zion - blue - light focus:border - zion - purple"
                                 value={confirmPasswordValue}
                                 onChange={e => {
+
                                   field.onChange (e) ;
                                   setConfirmPasswordValue (e.target.value) ;
                                 }}
                                 onBlur={e => {
+
                                   field.onBlur () ;
                                   setConfirmPasswordValue (e.target.value) ;
                                 }}

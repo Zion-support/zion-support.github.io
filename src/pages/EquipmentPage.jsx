@@ -6,6 +6,7 @@ import { Filter, SortAsc, Star, ShoppingCart import { Footer } from '@/component
 export default EquipmentPage;
 
 const EquipmentPage = () => {
+
   const [equipment, setEquipment] = useState ([]) ;
   const [loading, setLoading] = useState (true) ;
   const [filterCategory, setFilterCategory] = useState ('') ;
@@ -21,8 +22,10 @@ const EquipmentPage = () => {
   const availabilityOptions = ['In Stock', 'Low Stock', 'Out of Stock'];
 
   useEffect ( () => {
+
     // Simulate loading
     setTimeout ( () => {
+
       setLoading (false) }, 1000) }, []) ;
 
   const EquipmentCard = ({ equipment }) => (<Card className="h - full hover:shadow - lg transition - shadow">
@@ -89,6 +92,7 @@ const EquipmentPage = () => {
               </Card>) ) ) : (// Sample equipment data
             [
               {
+
                 title: "Dell PowerEdge R750 Server",
                 category: "Servers",
                 brand: "Dell",
@@ -99,6 +103,7 @@ const EquipmentPage = () => {
                 description: "High - performance 2U rack server with Intel Xeon processors, perfect for enterprise workloads."
               },
               {
+
                 title: "Cisco Catalyst 9300 Switch",
                 category: "Networking",
                 brand: "Cisco",
@@ -109,6 +114,7 @@ const EquipmentPage = () => {
                 description: "Enterprise - grade network switch with advanced security features and high throughput."
               },
               {
+
                 title: "HP ProLiant DL380 Gen10",
                 category: "Servers",
                 brand: "HP",

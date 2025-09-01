@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const EnhancedFooter: React.FC = () => {
+
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">

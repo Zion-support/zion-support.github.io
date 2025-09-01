@@ -54,7 +54,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
 :src/hooks/usePerformance.tsx
   const observerRef = useRef<PerformanceObserver | null>(null);'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      // // // // // // // // // // console.warn('PerformanceObserver not supported');
+      // // // // // // // // // // // console.warn('PerformanceObserver not supported');
       return;
 
     // First Contentful Paint (FCP)
@@ -79,7 +79,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     
       for (const entry of list.getEntries()) {
 
-      // // // // // // // // // console.warn('PerformanceObserver not supported');
+      // // // // // // // // // // console.warn('PerformanceObserver not supported');
       return;
 
     // First Contentful Paint (FCP)
@@ -132,13 +132,13 @@ export function usePerformance(options: PerformanceOptions = {}) {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (error) {
 
-      // // // // // // // // // // console.warn('Error setting up performance observers:', error)}
+      // // // // // // // // // // // console.warn('Error setting up performance observers:', error)}
       fcpObserver.observe({ entryTypes: ['paint'] });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       fidObserver.observe({ entryTypes: ['first-input'] });
       clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (error) {
 
-      // // // // // // // // // console.warn('Error setting up performance observers:', error)}
+      // // // // // // // // // // console.warn('Error setting up performance observers:', error)}
     // Navigation timing metrics
   
   
@@ -158,7 +158,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
         windowLoad
       }));
 
-          // // // // // // // // // // console.warn('Long task detected:', {
+          // // // // // // // // // // // console.warn('Long task detected:', {
 
             duration: entry.duration,
             startTime: entry.startTime,;
@@ -173,18 +173,18 @@ export function usePerformance(options: PerformanceOptions = {}) {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) {
 
-      // // // // // // // // // // console.warn('Error setting up long task observer:', error)}
+      // // // // // // // // // // // console.warn('Error setting up long task observer:', error)}
     return : unknown longTaskObserver.disconnect();
       if (logToConsole) {
 
-        // // // console.log('Navigation Timing:', { ttfb, domLoad, windowLoad })}
+        // // // // console.log('Navigation Timing:', { ttfb, domLoad, windowLoad })}
       longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) {
 
-      // // // // // // // // // console.warn('Error setting up long task observer:', error)}
+      // // // // // // // // // // console.warn('Error setting up long task observer:', error)}
     return () => longTaskObserver.disconnect();
       if (logToConsole) {
 
-        // // console.log('Navigation Timing:', { ttfb, domLoad, windowLoad })}
+        // // // console.log('Navigation Timing:', { ttfb, domLoad, windowLoad })}
     }
   }, [enableNavigationTiming, logToConsole]);
 
@@ -195,13 +195,13 @@ export function usePerformance(options: PerformanceOptions = {}) {
     
     if (slowResources.length > 0 && logToConsole) {
 
-      // // // console.warn('Slow resources detected:', slowResources)}
+      // // // // console.warn('Slow resources detected:', slowResources)}
   
     
     
     if (slowResources.length > 0 && logToConsole) {
 
-      // // console.warn('Slow resources detected:', slowResources)}
+      // // // console.warn('Slow resources detected:', slowResources)}
 
     return resources}, [enableResourceTiming, logToConsole]);
 
@@ -226,18 +226,18 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
             
             setMetrics(prev => ({ ...prev, fcp }));
+            if (logToConsole) // // // // console.log('FCP:', fcp)}
+        })});
+      observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
+
+      // // // // console.warn('FCP monitoring not supported')}
+            
+            setMetrics(prev => ({ ...prev, fcp }));
             if (logToConsole) // // // console.log('FCP:', fcp)}
         })});
       observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
 
       // // // console.warn('FCP monitoring not supported')}
-            
-            setMetrics(prev => ({ ...prev, fcp }));
-            if (logToConsole) // // console.log('FCP:', fcp)}
-        })});
-      observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
-
-      // // console.warn('FCP monitoring not supported')}
 
     // Largest Contentful Paint
     try {
@@ -251,21 +251,21 @@ export function usePerformance(options: PerformanceOptions = {}) {
         if (lastEntry) {
 
           setMetrics(prev => ({ ...prev, lcp }));
-          if (logToConsole) // // // console.log('LCP:', lcp)}
+          if (logToConsole) // // // // console.log('LCP:', lcp)}
       });
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
 
-      // // // console.warn('LCP monitoring not supported')}
+      // // // // console.warn('LCP monitoring not supported')}
         
         
         if (lastEntry) {
 
           setMetrics(prev => ({ ...prev, lcp }));
-          if (logToConsole) // // console.log('LCP:', lcp)}
+          if (logToConsole) // // // console.log('LCP:', lcp)}
       });
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
 
-      // // console.warn('LCP monitoring not supported')}
+      // // // console.warn('LCP monitoring not supported')}
 
     // Cumulative Layout Shift
     try {
@@ -282,6 +282,21 @@ export function usePerformance(options: PerformanceOptions = {}) {
             clsValue += (entry as any).value}
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));
+        if (logToConsole) // // // // console.log('CLS:', clsValue)});
+      clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
+
+      // // // // console.warn('CLS monitoring not supported')}
+  }, [enableWebVitals, logToConsole]);
+
+  // Monitor First Input Delay
+  
+    let firstInputTime: number | null = null;
+    let firstInputDelay: number | null = null;
+
+    
+            clsValue += (entry as any).value}
+        }
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
         if (logToConsole) // // // console.log('CLS:', clsValue)});
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
 
@@ -294,26 +309,11 @@ export function usePerformance(options: PerformanceOptions = {}) {
     let firstInputDelay: number | null = null;
 
     
-            clsValue += (entry as any).value}
-        }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-        if (logToConsole) // // console.log('CLS:', clsValue)});
-      clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
-
-      // // console.warn('CLS monitoring not supported')}
-  }, [enableWebVitals, logToConsole]);
-
-  // Monitor First Input Delay
-  
-    let firstInputTime: number | null = null;
-    let firstInputDelay: number | null = null;
-
-    
       firstInputTime = performance.now();
       firstInputDelay = firstInputTime - (performance.timeOrigin || 0);
 
       setMetrics(prev => ({ ...prev, fid: firstInputDelay }));
-      if (logToConsole) // // // console.log('FID:', firstInputDelay);
+      if (logToConsole) // // // // console.log('FID:', firstInputDelay);
 
 :src/hooks/usePerformance.tsx
       // Remove listeners after first input'
@@ -567,7 +567,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     sendMetricsToAnalytics
   };
 :src/hooks/usePerformance.tsx
-      // // // // // // // // // // console.warn(`Error observing ${eventName}:`, error)}
+      // // // // // // // // // // // console.warn(`Error observing ${eventName}:`, error)}
     return : unknown observer.disconnect()}, [eventName, callback]);
 
 // Hook for measuring time between renders;
@@ -576,7 +576,7 @@ export function useRenderTime(...args: unknown[]): unknown {
   const [renderTime, setRenderTime] = useState<typeof 0>(0);
   useEffect(: unknown {
 
-      // // // // // // // // // console.warn(`Error observing ${eventName}:`, error)}
+      // // // // // // // // // // console.warn(`Error observing ${eventName}:`, error)}
     return () => observer.disconnect()}, [eventName, callback]);
 
 // Hook for measuring time between renders
@@ -607,7 +607,7 @@ export function useComponentPerformance(componentName: string) {
       
       // Log slow components
       if (totalTime > 16) { // 16ms = 60fps threshold`
-        // // // console.warn(`Slow component render: ${componentName} took ${totalTime.toFixed(2)}ms`)}
+        // // // // console.warn(`Slow component render: ${componentName} took ${totalTime.toFixed(2)}ms`)}
     }}, [componentName]);
   
   useEffect(() => {
@@ -621,7 +621,7 @@ export function useComponentPerformance(componentName: string) {
 
       // Log slow components
       if (totalTime > 16) { // 16ms = 60fps threshold
-        // // console.warn(`Slow component render: ${componentName} took ${totalTime.toFixed(2)}ms`)}
+        // // // console.warn(`Slow component render: ${componentName} took ${totalTime.toFixed(2)}ms`)}
     }}, [componentName]);
 
   return { renderTime, mountTime }}

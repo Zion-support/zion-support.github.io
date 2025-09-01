@@ -26,28 +26,34 @@ import { Users,
              } from 'lucide-react.ts';
 
 export default function InterviewAssessmentAI(...args: any[]): any {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Assessment",
       description: "Intelligent evaluation of candidate skills, personality, and cultural fit."
     },
     {
+
       icon: Video,
       title: "Video Interview Analysis",
       description: "Advanced video processing for facial expressions, tone, and communication skills."
     },
     {
+
       icon: Target,
       title: "Skills Evaluation",
       description: "Comprehensive assessment of technical and soft skills through AI analysis."
     },
     {
+
       icon: BarChart3,
       title: "Performance Analytics",
       description: "Data-driven insights into hiring effectiveness and candidate performance."
     },
     {
+
       icon: Shield,
       title: "Bias-Free Evaluation",
       description: "Objective assessment algorithms that eliminate unconscious bias in hiring."
@@ -65,26 +71,31 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
   const assessmentTypes = [
     {
+
       type: "Technical Skills",
       description: "Evaluate coding, problem-solving, and domain-specific technical abilities",
       icon: Cpu
     },
     {
+
       type: "Soft Skills",
       description: "Assess communication, leadership, teamwork, and emotional intelligence",
       icon: Users
     },
     {
+
       type: "Cultural Fit",
       description: "Analyze values alignment and organizational culture compatibility",
       icon: Globe
     },
     {
+
       type: "Personality Assessment",
       description: "Evaluate personality traits and work style preferences",
       icon: Brain
     },
     {
+
       type: "Behavioral Analysis",
       description: "Assess past behavior patterns and situational responses",
       icon: TrendingUp;
@@ -98,26 +109,31 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
   const useCases = [
     {
+
       industry: "Technology",
       description: "Software engineering, data science, and technical role assessments",
       icon: Cpu
     },
     {
+
       industry: "Finance",
       description: "Risk assessment, compliance, and financial analysis role evaluations",
       icon: DollarSign
     },
     {
+
       industry: "Healthcare",
       description: "Medical professional, nursing, and healthcare administration assessments",
       icon: Heart
     },
     {
+
       industry: "Sales & Marketing",
       description: "Sales performance, customer relationship, and marketing role evaluations",
       icon: TrendingUp
     },
     {
+
       industry: "Manufacturing",
       description: "Engineering recruitment, technical skills, and safety compliance assessment"
     }
@@ -137,6 +153,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -147,6 +164,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -191,6 +209,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -201,6 +220,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -228,6 +248,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -238,6 +259,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -248,6 +270,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -290,6 +313,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -300,6 +324,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -327,6 +352,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
               <motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -337,6 +363,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -347,6 +374,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -389,6 +417,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -399,6 +428,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -426,6 +456,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
               <motion.div
                 key={type.type}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -436,6 +467,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -446,6 +478,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -488,6 +521,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -498,6 +532,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -525,6 +560,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
               <motion.div
                 key={useCase.industry}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -535,6 +571,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -545,6 +582,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -587,6 +625,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -597,6 +636,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

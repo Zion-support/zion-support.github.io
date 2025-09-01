@@ -9,10 +9,13 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
     const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Logistics', 'Real Estate', 'Energy', 'Cybersecurity', 'Legal', 'Media', 'Transportation'];
     const solutionTypes = ['all', 'Digital Health', 'FinTech', 'Industry 4.0', 'Digital Commerce', 'EdTech', 'Supply Chain', 'PropTech', 'Energy Tech', 'Security', 'LegalTech', 'MediaTech', 'Mobility'];
     const filteredSolutions = industrySolutions.filter (solution => {
+
         const matchesSolutionType = selectedSolutionType === 'all' || solution.solutionType === selectedSolutionType;
         return matchesSearch && matchesIndustry && matchesSolutionType}) ;
     const formatPrice = (price, model) => {
+
         switch (model) {
+
             case 'monthly':
                 return `$${price.toLocaleString () }/month`;
             case 'hourly':
@@ -23,12 +26,15 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
                 return `$${price.toLocaleString () }`}
     };
     const getIndustryColor = (score) => {
+
         if (score >= 95) return 'text - green - 500';
         if (score >= 90) return 'text - blue - 500';
         if (score >= 85) return 'text - yellow - 500';
         return 'text - orange - 500'};
     const getIndustryIcon = (industry) => {
+
         switch (industry) {
+
             case 'Healthcare': return < Stethoscope className="w - 6 h - 6"/>;
             case 'Finance': return < CreditCard className="w - 6 h - 6"/>;
             case 'Manufacturing': return < Factory className="w - 6 h - 6"/>;

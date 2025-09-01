@@ -6,11 +6,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function WhitelabelManager() {
+
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("tenants");
     // Check if user has admin role
     const isAdmin = user?.role === "admin";
     if (!isAdmin) {
+
         return <Navigate to="/unauthorized"/>}
     return (<>
       <SEO title="White-Label Management - Zion AI Marketplace" description="Create and manage white-label instances of the Zion AI Marketplace platform."/>

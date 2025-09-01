@@ -79,7 +79,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
           results.push (pageResult) } catch (error) {
 
 `
-          // // // console.error(`Error analyzing ${page}:`, error)}
+          // // // // console.error(`Error analyzing ${page}:`, error)}
 
         // Add delay to prevent overwhelming the server
         await new Promise (resolve => setTimeout (resolve, 100) ) }
@@ -95,7 +95,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
         missingPages
       }) } catch (error) {
 
-      // // // console.error('Analysis failed:', error)} finally {
+      // // // // console.error('Analysis failed:', error)} finally {
 
       setIsAnalyzing(false);
       setProgress(100);

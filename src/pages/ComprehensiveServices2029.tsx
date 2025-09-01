@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Globe, 
   Zap, 
   Shield, 
@@ -16,6 +17,7 @@ import {
 } from 'lucide-react';
 
 const ComprehensiveServices2029: React.FC = () => {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const serviceCategories = [
@@ -30,6 +32,7 @@ const ComprehensiveServices2029: React.FC = () => {
 
   const featuredServices = [
     {
+
       id: 1,
       title: "AI-Powered Business Intelligence",
       description: "Advanced analytics and insights powered by machine learning algorithms",
@@ -40,6 +43,7 @@ const ComprehensiveServices2029: React.FC = () => {
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       id: 2,
       title: "Cloud Infrastructure Management",
       description: "Comprehensive cloud infrastructure optimization and management",
@@ -50,6 +54,7 @@ const ComprehensiveServices2029: React.FC = () => {
       color: "from-purple-500 to-pink-500"
     },
     {
+
       id: 3,
       title: "Zero-Trust Security Framework",
       description: "Modern security architecture with continuous verification",
@@ -60,6 +65,7 @@ const ComprehensiveServices2029: React.FC = () => {
       color: "from-green-500 to-emerald-500"
     },
     {
+
       id: 4,
       title: "Micro SAAS Platform",
       description: "Scalable microservices architecture for rapid deployment",
@@ -120,6 +126,7 @@ const ComprehensiveServices2029: React.FC = () => {
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all ${
+
                   selectedCategory === category.id
                     ? 'bg-blue-600 text-white shadow-lg'
                     : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700'

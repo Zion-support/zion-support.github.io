@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Users,
   Brain,
   Zap,
@@ -155,26 +156,31 @@ import {
 } from 'lucide-react';
 
 export function AICustomerExperienceAnalytics2025() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Sentiment Analysis',
       description: 'Advanced natural language processing that understands customer emotions and feedback',
       benefits: ['Real-time sentiment', 'Emotion detection', 'Feedback categorization']
     },
     {
+
       icon: Users,
       title: 'Customer Journey Mapping',
       description: 'Comprehensive customer journey visualization with touchpoint analysis',
       benefits: ['Journey tracking', 'Touchpoint optimization', 'Conversion analysis']
     },
     {
+
       icon: Zap,
       title: 'Predictive Customer Behavior',
       description: 'Machine learning algorithms that predict customer actions and preferences',
       benefits: ['Behavior prediction', 'Churn prevention', 'Personalization']
     },
     {
+
       icon: BarChart3,
       title: 'Real-time Analytics Dashboard',
       description: 'Live customer experience metrics with instant insights and alerts',
@@ -184,6 +190,7 @@ export function AICustomerExperienceAnalytics2025() {
 
   const pricingPlans = [
     {
+
       name: 'Starter',
       price: '$199',
       period: '/month',
@@ -200,6 +207,7 @@ export function AICustomerExperienceAnalytics2025() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$599',
       period: '/month',
@@ -218,6 +226,7 @@ export function AICustomerExperienceAnalytics2025() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -239,24 +248,28 @@ export function AICustomerExperienceAnalytics2025() {
 
   const customerExperienceFeatures = [
     {
+
       title: 'Sentiment Intelligence',
       description: 'AI-powered understanding of customer emotions and feedback across all channels',
       icon: Brain,
       benefits: ['Emotion detection', 'Feedback analysis', 'Trend identification']
     },
     {
+
       title: 'Journey Optimization',
       description: 'Data-driven customer journey optimization for improved conversion rates',
       icon: Users,
       benefits: ['Journey mapping', 'Touchpoint analysis', 'Conversion optimization']
     },
     {
+
       title: 'Predictive Insights',
       description: 'Advanced predictive modeling for customer behavior and satisfaction',
       icon: TrendingUp,
       benefits: ['Behavior prediction', 'Satisfaction forecasting', 'Churn prevention']
     },
     {
+
       title: 'Multi-Channel Analytics',
       description: 'Unified analytics across all customer touchpoints and channels',
       icon: Globe,
@@ -520,6 +533,7 @@ export function AICustomerExperienceAnalytics2025() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
                     : 'border-gray-700'
@@ -554,6 +568,7 @@ export function AICustomerExperienceAnalytics2025() {
                 <Link
                   to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'

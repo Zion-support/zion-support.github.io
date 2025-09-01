@@ -45,6 +45,7 @@ import {
   DollarSign} from 'lucide-react';
 
 interface AIConversation {
+
   id: string;
   type: 'chat' | 'task' | 'analysis' | 'recommendation';
   title: string;
@@ -60,6 +61,7 @@ interface AIConversation {
 }
 
 interface AIMessage {
+
   id: string;
   type: 'user' | 'assistant' | 'system';
   content: string;
@@ -356,6 +358,7 @@ const actionStatusColors = {
   failed: 'from-red-500 to-pink-500'};
 
 const AdvancedAIAssistant: React.FC = () => {
+
   const [selectedView, setSelectedView] = useState<'
     'overview' | 'conversations' | 'insights' | 'features''
   >('overview');
@@ -557,6 +560,7 @@ const AdvancedAIAssistant: React.FC = () => {
               key={view}
               onClick={() => setSelectedView(view)}
               className={`flex-1 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
+
                 selectedView === view
                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25'
                   : 'text-gray-300 hover:text-white hover:bg-white/10'

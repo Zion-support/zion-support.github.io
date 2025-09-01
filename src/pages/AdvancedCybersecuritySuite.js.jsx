@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, Lock, Eye, ArrowRight, CheckCircle, Zap, AlertTriangle, Users } from 'lucide-react';
 const AdvancedCybersecuritySuite = () => {
+
     return (<>
       <Helmet>
         <title>Advanced Cybersecurity Suite - Zion Tech Group</title>
@@ -46,31 +47,37 @@ const AdvancedCybersecuritySuite = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
             {
+
                 icon: Eye,
                 title: "Advanced Threat Detection",
                 description: "AI-powered threat intelligence that identifies and responds to zero-day attacks and advanced persistent threats"
             },
             {
+
                 icon: Lock,
                 title: "Multi-Factor Authentication",
                 description: "Enterprise-grade authentication with biometric, token-based, and behavioral analysis security layers"
             },
             {
+
                 icon: AlertTriangle,
                 title: "Real-time Monitoring",
                 description: "24/7 security operations center with automated incident response and threat hunting capabilities"
             },
             {
+
                 icon: Shield,
                 title: "Endpoint Protection",
                 description: "Comprehensive endpoint security with anti-malware, device control, and application whitelisting"
             },
             {
+
                 icon: Zap,
                 title: "Automated Response",
                 description: "Instant threat mitigation with automated quarantine, isolation, and remediation workflows"
             },
             {
+
                 icon: Users,
                 title: "User Behavior Analytics",
                 description: "Machine learning-based analysis to detect insider threats and compromised accounts"
@@ -97,21 +104,25 @@ const AdvancedCybersecuritySuite = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
             {
+
                 metric: "99.99%",
                 title: "Threat Detection",
                 description: "Accuracy in identifying malicious activities"
             },
             {
+
                 metric: "<5s",
                 title: "Response Time",
                 description: "Average time to threat containment"
             },
             {
+
                 metric: "Zero",
                 title: "Successful Breaches",
                 description: "Client environments with our full suite"
             },
             {
+
                 metric: "24/7",
                 title: "Monitoring",
                 description: "Continuous security operations coverage"

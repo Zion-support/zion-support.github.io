@@ -1,6 +1,7 @@
 import { Link } from 'react - router - dom';
 import React from 'react';
 export default React.memo (function AccessibilityPage () {
+
 import {
 
   Eye,
@@ -26,6 +27,7 @@ import {
 
   const accessibilityFeatures = [
     {
+
       category: 'Visual Accessibility',
       icon: Eye,
       features: [
@@ -38,6 +40,7 @@ import {
       ]
     },
     {
+
       category: 'Auditory Accessibility',
       icon: Ear,
       features: [
@@ -49,6 +52,7 @@ import {
       ]
     },
     {
+
       category: 'Motor Accessibility',
       icon: Hand,
       features: [
@@ -60,6 +64,7 @@ import {
       ]
     },
     {
+
       category: 'Cognitive Accessibility',
       icon: Brain,
       features: [
@@ -74,6 +79,7 @@ import {
 
   const complianceStandards = [
     {
+
       standard: 'WCAG 2.1 AA',
       status: 'Compliant',
       icon: CheckCircle,
@@ -81,6 +87,7 @@ import {
       color: 'text - green - 500'
     },
     {
+
       standard: 'Section 508',
       status: 'Compliant',
       icon: CheckCircle,
@@ -88,6 +95,7 @@ import {
       color: 'text - green - 500'
     },
     {
+
       standard: 'ADA Title III',
       status: 'Compliant',
       icon: CheckCircle,
@@ -95,6 +103,7 @@ import {
       color: 'text - green - 500'
     },
     {
+
       standard: 'EN 301 549',
       status: 'Compliant',
       icon: CheckCircle,
@@ -111,21 +120,25 @@ import {
 
   const accessibilityTools = [
     {
+
       name: 'Screen Reader Support',
       description: 'Full compatibility with popular screen readers including JAWS, NVDA, and VoiceOver',
       icon: Monitor
     },
     {
+
       name: 'Mobile Accessibility',
       description: 'Optimized for mobile devices with touch - friendly interfaces and responsive design',
       icon: Smartphone
     },
     {
+
       name: 'Voice Navigation',
       description: 'Voice control support for hands - free navigation and interaction',
       icon: Globe
     },
     {
+
       name: 'Customizable Interface',
       description: 'Personalizable themes, fonts, and layout options to meet individual needs',
       icon: Zap
@@ -133,21 +146,27 @@ import {
   ];
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { opacity: 0, y: 20 },
     visible: {
+
       opacity: 1,
       y: 0,
       transition: {
+
         duration: 0.5
       }
     }

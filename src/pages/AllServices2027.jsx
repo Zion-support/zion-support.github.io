@@ -9,15 +9,16 @@ import { MICRO_SAAS_SERVICES } from '@/data / microSaasServices';
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '@/data / 2025 - specialized - industry - solutions.jsx';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
 export default function AllServices2027 () {
+
 import {
+
 import {
 
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
+  CardTitle} from '@/components / ui / card';
   Brain,
   Cloud,
   Shield,
@@ -43,8 +44,7 @@ import {
   Clock,
   Target,
   Rocket,
-  Lightbulb,
-} from 'lucide - react';
+  Lightbulb} from 'lucide - react';
 
 // Import all service data
 
@@ -60,30 +60,31 @@ const ALL_SERVICES = [
 const SERVICE_CATEGORIES = [
   { id: 'all', name: 'All Services', icon: Globe, count: ALL_SERVICES.length },
   {
+
     id: 'ai - services',
     name: 'AI Services',
     icon: Brain,
-    count: ALL_SERVICES.filter (s => s.category.includes ('AI') || s.tags.includes ('AI') ) .length,
-  },
+    count: ALL_SERVICES.filter (s => s.category.includes ('AI') || s.tags.includes ('AI') ) .length},
   {
+
     id: 'quantum - computing',
     name: 'Quantum Computing',
     icon: Rocket,
-    count: ALL_SERVICES.filter (s => s.category.includes ('Quantum') || s.tags.includes ('Quantum') ) .length,
-  },
+    count: ALL_SERVICES.filter (s => s.category.includes ('Quantum') || s.tags.includes ('Quantum') ) .length},
   {
+
     id: 'cybersecurity',
     name: 'Cybersecurity',
     icon: Shield,
-    count: ALL_SERVICES.filter (s => s.category.includes ('Security') || s.tags.includes ('Security') ) .length,
-  },
+    count: ALL_SERVICES.filter (s => s.category.includes ('Security') || s.tags.includes ('Security') ) .length},
   {
+
     id: 'business - intelligence',
     name: 'Business Intelligence',
     icon: BarChart3,
-    count: ALL_SERVICES.filter (s => s.category.includes ('Business') || s.tags.includes ('Business') ) .length,
-  },
+    count: ALL_SERVICES.filter (s => s.category.includes ('Business') || s.tags.includes ('Business') ) .length},
   {
+
     id: 'industry - solutions',
     name: 'Industry Solutions',
     icon: Target,
@@ -99,9 +100,9 @@ const SERVICE_CATEGORIES = [
         'Agriculture',
         'Legal Services',
         'Media & Entertainment',
-      ].includes (s.category) ) .length,
-  },
+      ].includes (s.category) ) .length},
   {
+
     id: 'emerging - tech',
     name: 'Emerging Tech',
     icon: Lightbulb,
@@ -112,44 +113,43 @@ const SERVICE_CATEGORIES = [
         'Autonomous Systems',
         'Neuromorphic Computing',
         'Federated Learning',
-      ].includes (s.category) ) .length,
-  },
+      ].includes (s.category) ) .length},
 ];
 
 // Contact information
 const CONTACT_INFO = {
+
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown DE 19709',
   website: 'https://ziontechgroup.com',
   supportHours: '24 / 7',
-  responseTime: '< 2 hours',
-};
+  responseTime: '< 2 hours'};
 
 // Benefits section
 const BENEFITS = [
   {
+
     icon: <Zap className="h - 6 w - 6" />,
     title: 'Immediate Deployment',
     description:
-      'All services are ready for immediate deployment with no setup delays',
-  },
+      'All services are ready for immediate deployment with no setup delays'},
   {
+
     icon: <Shield className="h - 6 w - 6" />,
     title: 'Enterprise Security',
     description:
-      'Bank - level security with SOC 2 compliance and 24 / 7 monitoring',
-  },
+      'Bank - level security with SOC 2 compliance and 24 / 7 monitoring'},
   {
+
     icon: <Users className="h - 6 w - 6" />,
     title: 'Dedicated Support',
-    description: '24 / 7 technical support with dedicated account managers',
-  },
+    description: '24 / 7 technical support with dedicated account managers'},
   {
+
     icon: <TrendingUp className="h - 6 w - 6" />,
     title: 'Proven ROI',
-    description: 'Average 300% ROI within 6 months of implementation',
-  },
+    description: 'Average 300% ROI within 6 months of implementation'},
 ];
 
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
@@ -158,6 +158,7 @@ const BENEFITS = [
 
   // Filter services based on category and search
   const filteredServices = ALL_SERVICES.filter (service => {
+
     const matchesSearch = searchQuery === '' ||
       service.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
@@ -169,7 +170,9 @@ const BENEFITS = [
 
   // Sort services
   const sortedServices = [...filteredServices].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'featured':
         return b.featured - a.featured;
       case 'rating':

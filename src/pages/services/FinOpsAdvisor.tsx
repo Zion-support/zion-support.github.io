@@ -2,6 +2,7 @@ import React from 'react.ts';
 import SEO from '@/components/SEO';
 
 export default function FinOpsAdvisor(...args: []):  {
+
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -10,6 +11,7 @@ export default function FinOpsAdvisor(...args: []):  {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -20,6 +22,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -66,6 +69,7 @@ export default function FinOpsAdvisor(...args: []):  {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -76,6 +80,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -102,6 +107,7 @@ export default function FinOpsAdvisor(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -112,6 +118,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -122,6 +129,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -149,6 +157,7 @@ export default function FinOpsAdvisor(...args: []):  {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -159,6 +168,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -185,6 +195,7 @@ export default function FinOpsAdvisor(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
@@ -195,6 +206,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -205,6 +217,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -236,6 +249,7 @@ export default function FinOpsAdvisor(...args: []):  {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -246,6 +260,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -272,6 +287,7 @@ export default function FinOpsAdvisor(...args: []):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   x: -20 
 
@@ -282,6 +298,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
                   whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -292,6 +309,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -313,6 +331,7 @@ export default function FinOpsAdvisor(...args: []):  {
                 <motion.div
                   key={index + 3}
                   initial = {
+
   { opacity: 0,
   x: 20 
 
@@ -323,6 +342,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
                   whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -333,6 +353,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -358,6 +379,7 @@ export default function FinOpsAdvisor(...args: []):  {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -368,6 +390,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -394,6 +417,7 @@ export default function FinOpsAdvisor(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -404,6 +428,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -414,6 +439,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -441,6 +467,7 @@ export default function FinOpsAdvisor(...args: []):  {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -451,6 +478,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

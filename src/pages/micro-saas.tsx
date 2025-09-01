@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Code, 
   Store, 
   Zap, 
@@ -29,8 +30,10 @@ import {
 } from 'lucide-react';
 
 export default function MicroSaaS() {
+
   const microSaasCategories = [
     {
+
       name: "AI-Powered SaaS Solutions",
       description: "Intelligent software solutions that leverage artificial intelligence to automate and optimize business processes",
       icon: Brain,
@@ -40,6 +43,7 @@ export default function MicroSaaS() {
       solutions: ["AI Automation", "Smart Analytics", "Predictive Tools", "Intelligent Workflows"]
     },
     {
+
       name: "Business Process SaaS",
       description: "Streamlined software solutions designed to optimize core business operations and workflows",
       icon: Workflow,
@@ -49,6 +53,7 @@ export default function MicroSaaS() {
       solutions: ["Project Management", "Customer Support", "Inventory Management", "Email Marketing"]
     },
     {
+
       name: "Industry-Specific SaaS",
       description: "Tailored software solutions designed for specific industries and business verticals",
       icon: Target,
@@ -58,6 +63,7 @@ export default function MicroSaaS() {
       solutions: ["Healthcare", "Finance", "Education", "E-commerce", "Real Estate"]
     },
     {
+
       name: "Enterprise SaaS Platforms",
       description: "Scalable enterprise-grade software platforms for large organizations",
       icon: Building,
@@ -70,6 +76,7 @@ export default function MicroSaaS() {
 
   const featuredMicroSaas = [
     {
+
       title: "AI-Powered Content Creation Studio",
       description: "Revolutionary content creation platform that uses AI to generate high-quality, engaging content across multiple formats",
       price: "From $2,999/month",
@@ -79,6 +86,7 @@ export default function MicroSaaS() {
       popular: true
     },
     {
+
       title: "Smart Project Management Platform",
       description: "Intelligent project management solution that uses AI to optimize workflows, predict delays, and improve team productivity",
       price: "From $1,999/month",
@@ -87,6 +95,7 @@ export default function MicroSaaS() {
       color: "from-blue-400 to-indigo-500"
     },
     {
+
       title: "AI-Powered Customer Support Automation",
       description: "Advanced customer support platform that automates responses and provides intelligent solutions to customer inquiries",
       price: "From $3,999/month",
@@ -97,6 +106,7 @@ export default function MicroSaaS() {
   ];
 
   const contactInfo = {
+
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
@@ -233,6 +243,7 @@ export default function MicroSaaS() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 ${
+
                   solution.popular ? 'ring-2 ring-blue-500' : ''
                 }`}
               >

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   ArrowRight, 
   Brain, 
   Cloud, 
@@ -85,6 +86,7 @@ import { zion2027AdvancedMicroSaasServices } from '../data/zion-2027-advanced-mi
 import { zion2027EmergingTechnologyServices } from '../data/zion-2027-emerging-technology-services';
 
 export default function AdvancedServicesShowcase2027() {
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
@@ -99,7 +101,7 @@ export default function AdvancedServicesShowcase2027() {
   const categories = ['all', ...new Set(allServices.map(service => service.category))];
 
   // Filter and sort services
-  const filteredServices = allServices
+  const filteredServices = allServices;
     .filter(service =>
       (selectedCategory === 'all' || service.category === selectedCategory) &&
       (service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -107,7 +109,9 @@ export default function AdvancedServicesShowcase2027() {
        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()))
     )
     .sort((a, b) => {
+
       switch (sortBy) {
+
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
         case 'price':
@@ -122,7 +126,9 @@ export default function AdvancedServicesShowcase2027() {
     });
 
   const getCategoryIcon = (category: string) => {
+
     const iconMap: { [key: string]: any } = {
+
       'AI & Fintech': BrainIcon,
       'AI & Healthcare': BrainIcon,
       'IoT & Edge Computing': GlobeIcon,
@@ -147,7 +153,9 @@ export default function AdvancedServicesShowcase2027() {
   };
 
   const getCategoryColor = (category: string) => {
+
     const colorMap: { [key: string]: string } = {
+
       'AI & Fintech': 'from-green-600 to-emerald-700',
       'AI & Healthcare': 'from-blue-600 to-cyan-700',
       'IoT & Edge Computing': 'from-purple-600 to-indigo-700',
@@ -309,6 +317,7 @@ export default function AdvancedServicesShowcase2027() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
             {filteredServices.map((service) => {
+
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
               

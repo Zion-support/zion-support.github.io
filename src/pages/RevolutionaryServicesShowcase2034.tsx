@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
+import {
+
   Brain, 
   Shield, 
   Zap, 
@@ -61,6 +62,7 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2034 } from '../data/innovativeMicroSaas
 import { ADVANCED_IT_INFRASTRUCTURE_SERVICES_2034 } from '../data/advancedITInfrastructureServices2034';
 
 export default function RevolutionaryServicesShowcase2034() {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState(null);
 
@@ -80,6 +82,7 @@ export default function RevolutionaryServicesShowcase2034() {
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
     : allServices.filter(service => {
+
         if (selectedCategory === 'ai') return REVOLUTIONARY_AI_SERVICES_2034.includes(service);
         if (selectedCategory === 'micro-saas') return INNOVATIVE_MICRO_SAAS_SERVICES_2034.includes(service);
         if (selectedCategory === 'it-infrastructure') return ADVANCED_IT_INFRASTRUCTURE_SERVICES_2034.includes(service);
@@ -87,6 +90,7 @@ export default function RevolutionaryServicesShowcase2034() {
       });
 
   const contactInfo = {
+
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
@@ -165,6 +169,7 @@ export default function RevolutionaryServicesShowcase2034() {
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
                     : 'bg-slate-700 text-gray-300 hover:bg-slate-600'

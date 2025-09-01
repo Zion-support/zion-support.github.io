@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 export default PricingPage;
 export function PricingPage () {
+
 import {
+
 import { COMPREHENSIVE_PRICING_2025 } from '../data/comprehensivePricing2025';
 import { motion } from 'framer - motion';
 
@@ -24,65 +26,67 @@ import { motion } from 'framer - motion';
   Atom,
   Code,
   Cloud,
-  TrendingUp as TrendingUpIcon,
-} from 'lucide - react';
+  TrendingUp as TrendingUpIcon} from 'lucide - react';
 
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [billingCycle, setBillingCycle] = useState ('monthly') ;
 
   const categories = [
     {
+
       id: 'all',
       name: 'All Categories',
       icon: Globe,
-      color: 'from - blue - 500 to - cyan - 600',
-    },
+      color: 'from - blue - 500 to - cyan - 600'},
     {
+
       id: 'AI & Analytics',
       name: 'AI & Analytics',
       icon: Brain,
-      color: 'from - purple - 500 to - pink - 600',
-    },
+      color: 'from - purple - 500 to - pink - 600'},
     {
+
       id: 'Quantum Computing',
       name: 'Quantum Computing',
       icon: Atom,
-      color: 'from - cyan - 500 to - blue - 600',
-    },
+      color: 'from - cyan - 500 to - blue - 600'},
     {
+
       id: 'Cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
-      color: 'from - red - 500 to - orange - 600',
-    },
+      color: 'from - red - 500 to - orange - 600'},
     {
+
       id: 'Blockchain & Web3',
       name: 'Blockchain & Web3',
       icon: Code,
-      color: 'from - green - 500 to - emerald - 600',
-    },
+      color: 'from - green - 500 to - emerald - 600'},
     {
+
       id: 'Marketing & Sales',
       name: 'Marketing & Sales',
       icon: TrendingUp,
-      color: 'from - yellow - 500 to - orange - 600',
-    },
+      color: 'from - yellow - 500 to - orange - 600'},
   ];
 
   const filteredServices = COMPREHENSIVE_PRICING_2025.filter(service =>
       selectedCategory === 'all' || service.category === selectedCategory);
 
   const getCategoryIcon = (category: string) => {
+
     const categoryData = categories.find (cat => cat.id === category) ;
     return categoryData ? categoryData.icon : Globe;
   };
 
   const getCategoryColor = (category: string) => {
+
     const categoryData = categories.find (cat => cat.id === category) ;
     return categoryData ? categoryData.color : 'from - gray - 500 to - slate - 600';
   };
 
   const getPriceColor = (price: number) => {
+
     if (price < 1000) return 'text - green - 400';
     if (price <= 3000) return 'text - yellow - 400';
     return 'text - red - 400';
@@ -128,6 +132,7 @@ import { motion } from 'framer - motion';
             {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                 onClick={ () => setSelectedCategory (category.id) }
                 className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${
+
                   selectedCategory === category.id
                     ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white'
                     : 'text - gray - 400 hover:text - white hover:bg - gray - 700'
@@ -156,8 +161,8 @@ import { motion } from 'framer - motion';
                   <div role="button" className={`w - 20 h - 20 bg - gradient - to - r ${getCategoryColor (service.category) } rounded - 2xl flex items - center justify - center`}
                   >
                     {React.createElement (getCategoryIcon (service.category) , {
-                      className: 'w - 10 h - 10 text - white',
-                    }) }
+
+                      className: 'w - 10 h - 10 text - white'}) }
                   </div>
                 </div>
                 <h2 className="text - 3xl font - bold text - white mb - 2">
@@ -190,6 +195,7 @@ import { motion } from 'framer - motion';
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: tierIndex * 0.1 }}
                     className={`relative bg - gray - 700 rounded - xl p - 6 border - 2 transition - all duration - 300 hover:scale - 105 ${
+
                       tier.popular
                         ? 'border - cyan - 500 bg - gradient - to - br from - gray - 700 to - gray - 800'
                         : 'border - gray - 600 hover:border - cyan - 500'

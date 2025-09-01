@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import { EMERGING_TECH_SERVICES_2027  } from '@/data / emergingTechServices2027';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data / innovativeMicroSaasServices2027';
 export default React.memo (function ComprehensivePricing2027 (...args[]) :  {
+
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
@@ -21,16 +23,18 @@ import { motion, AnimatePresence } from 'framer - motion';
 
   const categories = ['All', ...Array.from (new Set (allServices.map (service => service.category) ) ) ];
 
-  const filteredServices = allServices
+  const filteredServices = allServices;
     .filter (service => (selectedCategory === 'All' || service.category === service.category) && (searchQuery === '' ||
         service.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         service.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ) ) .sort ( (a, b) => {
+
       if (sortBy === 'price') return a.price - b.price;
       if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
       return b.rating - a.rating}) ;
 
   const containerVariants = {
+
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -41,11 +45,13 @@ import { motion, AnimatePresence } from 'framer - motion';
   };
 
   const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0
 
 },
     visible: {
+
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -56,19 +62,23 @@ import { motion, AnimatePresence } from 'framer - motion';
   };
 
   const cardVariants = {
+
   hidden: { scale: 0.8,
   opacity: 0
 
 },
     visible: {
+
       scale: 1,
       opacity: 1,
       transition: {
+
         duration: 0.3,
         ease: "easeOut"
 
     },
     hover: {
+
       scale: 1.02,;
       y: -5,;
       transition: {;
@@ -79,16 +89,19 @@ import { motion, AnimatePresence } from 'framer - motion';
   };
 
             initial = {
+
   { opacity: 0,
   scale: 0.8 ;
 
 }}
             animate = {
+
   { opacity: 1,
   scale: 1 ;
 
 }}
             transition = {
+
   { duration: 0.8,
   delay: 0.2 ;
 
@@ -99,16 +112,19 @@ import { motion, AnimatePresence } from 'framer - motion';
           <motion.p
             className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.8,
   delay: 0.4
 
@@ -122,16 +138,19 @@ import { motion, AnimatePresence } from 'framer - motion';
           <motion.div
             className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mt - 16"
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.8,
   delay: 0.6
 
@@ -157,16 +176,19 @@ import { motion, AnimatePresence } from 'framer - motion';
       <motion.section
         className="relative z - 10 px - 6 pb - 12"
         initial = {
+
   { opacity: 0,
   y: 20 ;
 
 }}
         animate = {
+
   { opacity: 1,
   y: 0 ;
 
 }}
         transition = {
+
   { duration: 0.8,
   delay: 0.8 ;
 
@@ -246,16 +268,19 @@ import { motion, AnimatePresence } from 'framer - motion';
                 className={viewMode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}
                 key={viewMode}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 exit = {
+
   { opacity: 0,
   y: -20
 
@@ -341,16 +366,19 @@ import { motion, AnimatePresence } from 'framer - motion';
                         <AnimatePresence>
                           {expandedService === service.id && (<motion.div
                               initial = {
+
   { opacity: 0,
   height: 0
 
 }}
                               animate = {
+
   { opacity: 1,
   height: 'auto'
 
 }}
                               exit = {
+
   { opacity: 0,
   height: 0
 
@@ -466,16 +494,19 @@ import { motion, AnimatePresence } from 'framer - motion';
       <motion.section
         className="relative z - 10 px - 6 pb - 20"
         initial = {
+
   { opacity: 0,
   y: 30 ;
 
 }}
         animate = {
+
   { opacity: 1,
   y: 0 ;
 
 }}
         transition = {
+
   { duration: 0.8,
   delay: 1.2 ;
 

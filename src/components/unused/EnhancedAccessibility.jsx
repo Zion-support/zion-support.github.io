@@ -24,12 +24,12 @@ const EnhancedAccessibility = () => {
 
                 const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));
-                // // // // // // // // // // console.warn('Failed to load accessibility settings:', error);
+                // // // // // // // // // // // console.warn('Failed to load accessibility settings:', error);
             }
                 applySettings({ ...settings, ...parsed })}
             catch (error) {
 
-                // // // console.warn('Failed to load accessibility settings:', error)}
+                // // // // console.warn('Failed to load accessibility settings:', error)}
         }
         // Check for user preferences'
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches;

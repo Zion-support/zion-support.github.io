@@ -178,7 +178,7 @@ export function Search({
     setIsOpen(false);
     setQuery(result.title);
     // In real app, navigate to result.url
-    // // console.log('Navigating to:', result.url);
+    // // // console.log('Navigating to:', result.url);
   };
 
   // Handle outside click

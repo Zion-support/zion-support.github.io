@@ -104,11 +104,11 @@ export const AnalyticsMonitor: React.FC = () => {
       // Log event for debugging (remove in production)
       if (process.env.NODE_ENV === 'development') {
 
-        // // console.log('Analytics event stored locally:', event);
+        // // // console.log('Analytics event stored locally:', event);
       }
     } catch (error) {
 
-      // // console.warn('Error storing analytics event locally:', error);
+      // // // console.warn('Error storing analytics event locally:', error);
     }
   }, [storeEventLocally]);
 
@@ -130,7 +130,7 @@ export const AnalyticsMonitor: React.FC = () => {
       localStorage.setItem('analytics-events', JSON.stringify(events));
     } catch (error) {
 
-      // // console.warn('Error storing event locally:', error);
+      // // // console.warn('Error storing event locally:', error);
     }
   }, []);
 
@@ -268,7 +268,7 @@ export const AnalyticsMonitor: React.FC = () => {
         };
       } catch (error) {
 
-        // // console.warn('Performance monitoring not supported:', error);
+        // // // console.warn('Performance monitoring not supported:', error);
       }
     }
 

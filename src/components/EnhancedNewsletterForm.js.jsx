@@ -47,12 +47,12 @@ export function EnhancedNewsletterForm() {
       } else {
 
         // Handle error responses'
-        // // // console.error('Newsletter subscription failed:', data);
+        // // // // console.error('Newsletter subscription failed:', data);
         toast.error(data.error || 'Subscription failed. Please try again.');
       }
     } catch (err) {
 
-      // // // console.error('Newsletter subscription error:', err);
+      // // // // console.error('Newsletter subscription error:', err);
       toast.error('Unable to subscribe right now. Please try again later.');
     } finally {
 

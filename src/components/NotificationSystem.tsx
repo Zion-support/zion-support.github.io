@@ -113,11 +113,11 @@ enableSound:  true,;
       timeouts.forEach (timeout => clearTimeout (timeout) ) }}, [notifications, settings.autoDismiss, settings.defaultDuration]) ;
 
   // Play notification sound'
-        // // // // // // // // // // console.warn('Could not play notification sound:', error)}    }
+        // // // // // // // // // // // console.warn('Could not play notification sound:', error)}    }
   }, [settings.sound]) ;
 
   // Trigger vibration'
-        // // // // // // // // // // console.warn('Could not trigger vibration:', error)}    }
+        // // // // // // // // // // // console.warn('Could not trigger vibration:', error)}    }
   }, [settings.vibration]) ;
 
   // Add notification'

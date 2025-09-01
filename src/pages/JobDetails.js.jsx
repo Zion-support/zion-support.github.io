@@ -12,6 +12,7 @@ import { ApplyToJobModal } from '@/components/messaging/job-application';
 import SEO from '@/components/SEO';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 export default function JobDetails() {
+
     // Cast to specify the expected route param type since useParams may be untyped
     const { jobId } = useParams();
     const { job, isLoading, error } = useJobDetails(jobId);
@@ -20,10 +21,12 @@ export default function JobDetails() {
     const { isWhitelabel, brandName } = useWhitelabel();
     const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
     if (isLoading) {
+
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
       </div>)}
     if (error || !job) {
+
         return (<>
         
         <div className="container mx-auto px-4 py-16 text-center">
@@ -34,24 +37,30 @@ export default function JobDetails() {
         
       </>)}
     const handleApply = () => {
+
         if (!isAuthenticated) {
+
             toast.error("Please log in to apply for this job");
             router('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
             return}
         if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
+
             toast.error("Only job seekers can apply for jobs");
             return}
         setIsApplyModalOpen(true)};
     const handleApplySuccess = async (appliedJobId) => {
+
         toast.success("Application submitted successfully!");
         setIsApplyModalOpen(false)};
     const formatBudget = (budget) => {
+
         if (!budget)
             return "Not specified";
         return `$${budget.min} - $${budget.max}`};
     const isOwnJob = user?.id === job.client_id;
     return (<>
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description = {
+
   job.description.substring(0,
   160)
 
@@ -144,7 +153,9 @@ export default function JobDetails() {
       
       {/* Job application modal */}
       {job && (<ApplyToJobModal job = {
+
   {
+
                 id: job.id,
                 title: job.title,
                 description: job.description,

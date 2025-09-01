@@ -43,33 +43,40 @@ import { Code,
              } from 'lucide-react.ts';
 
 const AIAutonomousCodeReviewer = () => {
+
   const features = [
     {
+
       icon: Code,
       title: 'AI-Powered Code Analysis',
       description: 'Advanced machine learning algorithms that understand code patterns, detect bugs, and suggest improvements'
     },
     {
+
       icon: Shield,
       title: 'Security Vulnerability Detection',
       description: 'Automated scanning for security flaws, SQL injection, XSS, and other critical vulnerabilities'
     },
     {
+
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Identify performance bottlenecks, memory leaks, and inefficient algorithms in your codebase'
     },
     {
+
       icon: GitBranch,
       title: 'Git Integration',
       description: 'Seamless integration with GitHub, GitLab, Bitbucket, and other version control systems'
     },
     {
+
       icon: Monitor,
       title: 'Real-time Monitoring',
       description: 'Continuous code quality monitoring with instant notifications and detailed reports'
     },
     {
+
       icon: Users,
       title: 'Team Collaboration',
       description: 'Built-in code review workflows, comments, and approval systems for development teams'
@@ -85,21 +92,25 @@ const AIAutonomousCodeReviewer = () => {
   ];
   const services = [
     {
+
       icon: Server,
       title: 'Static Code Analysis',
       description: 'Comprehensive static analysis for multiple programming languages including Python, JavaScript, Java, C++, Go, and Rust'
     },
     {
+
       icon: Workflow,
       title: 'Automated Review Workflows',
       description: 'Customizable review processes, automated approvals, and integration with CI/CD pipelines'
     },
     {
+
       icon: Box,
       title: 'Container Security Scanning',
       description: 'Docker and container security analysis, vulnerability scanning, and compliance checking'
     },
     {
+
       icon: Database,
       title: 'Database Code Review',
       description: 'SQL query optimization, database schema analysis, and performance tuning recommendations'
@@ -107,24 +118,29 @@ const AIAutonomousCodeReviewer = () => {
   ];
   const useCases = [
     {
+
       industry: 'Software Development',
       description: 'Automated code reviews for development teams, ensuring quality and consistency across projects'
     },
     {
+
       industry: 'DevOps & CI/CD',
       description: 'Integration with automated pipelines for continuous code quality monitoring and deployment gates'
     },
     {
+
       industry: 'Security Teams',
       description: 'Proactive security scanning and vulnerability detection in application code'
     },
     {
+
       industry: 'Code Quality Management',
       description: 'Maintaining high coding standards and reducing technical debt in large codebases'
     }
   ];
   const pricing = [
     {
+
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -141,6 +157,7 @@ const AIAutonomousCodeReviewer = () => {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$799',
       period: '/month',
@@ -159,6 +176,7 @@ const AIAutonomousCodeReviewer = () => {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$1,999',
       period: '/month',
@@ -367,6 +385,7 @@ const AIAutonomousCodeReviewer = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-blue-500/50 bg-blue-500/5' 
                     : 'border-slate-700/50'
@@ -396,6 +415,7 @@ const AIAutonomousCodeReviewer = () => {
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

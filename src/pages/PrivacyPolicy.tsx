@@ -1,6 +1,7 @@
 import React from 'react';
 export default PrivacyPolicy;}
 import {
+
 import { motion } from 'framer - motion';
 
   Shield,
@@ -23,66 +24,77 @@ const PrivacyPolicy = () => {;
 
   const sections = [
     {
+
       id: 'overview',
       title: 'Overview',
       icon: Eye,
       content: `Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us.`
     },
     {
+
       id: 'information - collection',
       title: 'Information We Collect',
       icon: Database,
       content: `We collect information you provide directly to us, such as when you create an account, use our services, or contact us. This may include your name, email address, phone number, company information, and any other information you choose to provide.`
     },
     {
+
       id: 'usage - information',
       title: 'How We Use Your Information',
       icon: Users,
       content: `We use the information we collect to provide, maintain, and improve our services, communicate with you, process transactions, and ensure the security of our platform.`
     },
     {
+
       id: 'information - sharing',
       title: 'Information Sharing and Disclosure',
       icon: Globe,
       content: `We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy or as required by law.`
     },
     {
+
       id: 'data - security',
       title: 'Data Security',
       icon: Lock,
       content: `We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.`
     },
     {
+
       id: 'your - rights',
       title: 'Your Rights and Choices',
       icon: CheckCircle,
       content: `You have the right to access, correct, or delete your personal information. You can also opt out of certain communications and control how your information is used.`
     },
     {
+
       id: 'cookies',
       title: 'Cookies and Tracking Technologies',
       icon: Eye,
       content: `We use cookies and similar tracking technologies to enhance your experience, analyze usage patterns, and provide personalized content and advertisements.`
     },
     {
+
       id: 'third - party',
       title: 'Third - Party Services',
       icon: ExternalLink,
       content: `Our services may contain links to third - party websites or integrate with third - party services. We are not responsible for the privacy practices of these third parties.`
     },
     {
+
       id: 'international',
       title: 'International Data Transfers',
       icon: Globe,
       content: `Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers.`
     },
     {
+
       id: 'children',
       title: 'Children\'s Privacy',
       icon: Users,
       content: `Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.`
     },
     {
+
       id: 'changes',
       title: 'Changes to This Policy',
       icon: AlertTriangle,
@@ -98,18 +110,21 @@ const PrivacyPolicy = () => {;
 
   const dataCategories = [
     {
+
       category: 'Personal Information',
       examples: ['Name, email address, phone number', 'Company and job title', 'Billing and payment information'],
       purpose: 'Account management, service delivery, billing',
       retention: 'As long as your account is active plus 7 years'
     },
     {
+
       category: 'Usage Data',
       examples: ['Service usage patterns', 'Feature interactions', 'Performance metrics'],
       purpose: 'Service improvement, analytics, troubleshooting',
       retention: '2 years from collection'
     },
     {
+
       category: 'Technical Data',
       examples: ['IP address, device information', 'Browser type and version', 'Operating system'],
       purpose: 'Security, fraud prevention, service optimization',
@@ -125,26 +140,31 @@ const PrivacyPolicy = () => {;
 
   const securityMeasures = [
     {
+
       measure: 'Encryption',
       description: 'All data is encrypted in transit and at rest using industry - standard encryption protocols',
       icon: Lock
     },
     {
+
       measure: 'Access Controls',
       description: 'Strict access controls and authentication mechanisms to prevent unauthorized access',
       icon: Shield
     },
     {
+
       measure: 'Regular Audits',
       description: 'Regular security audits and penetration testing to identify and address vulnerabilities',
       icon: CheckCircle
     },
     {
+
       measure: 'Data Backup',
       description: 'Regular data backups with disaster recovery procedures in place',
       icon: Database
     },
     {
+
       measure: 'Employee Training',
       description: 'Regular security training for all employees to ensure data protection awareness',
       icon: Users;
@@ -169,11 +189,13 @@ const PrivacyPolicy = () => {;
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -589,16 +611,19 @@ const PrivacyPolicy = () => {;
             {/* How We Use Your Information */}
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20 ;
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0 ;
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2 ;
 
@@ -614,16 +639,19 @@ const PrivacyPolicy = () => {;
                     key={section.id}
                     href={`#${section.id}`}
                     initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                     animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                     transition = {
+
   { duration: 0.6,
   delay: 0.1 * index
 
@@ -646,16 +674,19 @@ const PrivacyPolicy = () => {;
           <div className="max - w-4xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.4
 
@@ -682,16 +713,19 @@ const PrivacyPolicy = () => {;
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.6
 
@@ -705,16 +739,19 @@ const PrivacyPolicy = () => {;
                 {dataCategories.map ( (category, index) => (<motion.div
                     key={category.category}
                     initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                     animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                     transition = {
+
   { duration: 0.6,
   delay: 0.1 * index
 
@@ -752,16 +789,19 @@ const PrivacyPolicy = () => {;
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.8
 
@@ -775,16 +815,19 @@ const PrivacyPolicy = () => {;
                 {securityMeasures.map ( (measure, index) => (<motion.div
                     key={measure.measure}
                     initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                     animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                     transition = {
+
   { duration: 0.6,
   delay: 0.1 * index
 
@@ -807,16 +850,19 @@ const PrivacyPolicy = () => {;
           <div className="max - w-4xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 1.0
 
@@ -863,16 +909,19 @@ const PrivacyPolicy = () => {;
             {/* Information Sharing and Disclosure */}
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.3
 
@@ -912,16 +961,19 @@ const PrivacyPolicy = () => {;
             {/* Data Security */}
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.4
 
@@ -965,16 +1017,19 @@ const PrivacyPolicy = () => {;
             {/* Your Rights and Choices */}
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.5
 
@@ -1026,16 +1081,19 @@ const PrivacyPolicy = () => {;
             {/* International Data Transfers */}
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20 ;
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 ;
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.6 ;
 
@@ -1059,16 +1117,19 @@ const PrivacyPolicy = () => {;
             {/* Children's Privacy */}
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20 ;
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 ;
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.7 ;
 
@@ -1092,16 +1153,19 @@ const PrivacyPolicy = () => {;
             {/* Changes to This Policy */}
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20 ;
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 ;
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.8 ;
 
@@ -1141,16 +1205,19 @@ const PrivacyPolicy = () => {;
             {/* Contact Information */}
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20 ;
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 ;
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.9 ;
 

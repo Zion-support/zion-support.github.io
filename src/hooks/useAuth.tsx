@@ -46,10 +46,10 @@ export function useAuth(...args: unknown[]): unknown {
 :src/hooks/useAuth.tsx
             isLoading: false})} catch (error) {
 
-          // // // console.error('Error parsing stored user:', error);
+          // // // // console.error('Error parsing stored user:', error);
             isLoading: false})} catch (error) {
 
-          // // console.error('Error parsing stored user:', error);
+          // // // console.error('Error parsing stored user:', error);
           setAuthState({
 
             user: null,

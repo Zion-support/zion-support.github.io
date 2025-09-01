@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Atom,
   Brain,
   Cpu,
@@ -37,33 +38,40 @@ import {
 } from 'lucide-react';
 
 const AIQuantumComputingSolutions = () => {
+
   const features = [
     {
+
       icon: Atom,
       title: "Quantum AI Processing",
       description: "Leverage quantum computing power for AI algorithms, achieving 1000x faster computation than classical systems"
     },
     {
+
       icon: Brain,
       title: "Quantum Neural Networks",
       description: "Advanced quantum neural networks that process complex patterns and solve previously intractable problems"
     },
     {
+
       icon: Cpu,
       title: "Hybrid Quantum-Classical",
       description: "Seamless integration between quantum and classical computing for optimal performance and reliability"
     },
     {
+
       icon: Database,
       title: "Quantum Database Optimization",
       description: "Revolutionary database queries and optimization using quantum algorithms for massive datasets"
     },
     {
+
       icon: Shield,
       title: "Quantum Cryptography",
       description: "Unbreakable encryption using quantum key distribution and post-quantum cryptography standards"
     },
     {
+
       icon: Network,
       title: "Quantum Internet",
       description: "Next-generation quantum networking for ultra-secure, high-speed data transmission"
@@ -72,6 +80,7 @@ const AIQuantumComputingSolutions = () => {
 
   const pricing = [
     {
+
       name: "Quantum Starter",
       price: "$1,999",
       period: "/month",
@@ -87,6 +96,7 @@ const AIQuantumComputingSolutions = () => {
       popular: false
     },
     {
+
       name: "Quantum Professional",
       price: "$4,999",
       period: "/month",
@@ -104,6 +114,7 @@ const AIQuantumComputingSolutions = () => {
       popular: true
     },
     {
+
       name: "Quantum Enterprise",
       price: "$12,999",
       period: "/month",
@@ -124,21 +135,25 @@ const AIQuantumComputingSolutions = () => {
 
   const benefits = [
     {
+
       icon: Zap,
       title: "1000x Faster Processing",
       description: "Quantum advantage for complex computational problems and AI training"
     },
     {
+
       icon: Lock,
       title: "Unbreakable Security",
       description: "Quantum cryptography provides mathematically proven security"
     },
     {
+
       icon: Target,
       title: "Revolutionary AI",
       description: "Quantum AI algorithms solve previously impossible problems"
     },
     {
+
       icon: Globe,
       title: "Future-Proof Technology",
       description: "Stay ahead with cutting-edge quantum computing capabilities"
@@ -147,21 +162,25 @@ const AIQuantumComputingSolutions = () => {
 
   const useCases = [
     {
+
       icon: BarChart3,
       title: "Financial Modeling",
       description: "Quantum algorithms for portfolio optimization, risk assessment, and market prediction"
     },
     {
+
       icon: Search,
       title: "Drug Discovery",
       description: "Molecular simulation and protein folding for pharmaceutical research"
     },
     {
+
       icon: Network,
       title: "Logistics Optimization",
       description: "Complex routing and supply chain optimization problems"
     },
     {
+
       icon: Code,
       title: "Cryptography",
       description: "Post-quantum cryptography and quantum-resistant algorithms"
@@ -330,6 +349,7 @@ const AIQuantumComputingSolutions = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-blue-500 shadow-2xl shadow-blue-500/25' 
                     : 'border-slate-700'
@@ -361,6 +381,7 @@ const AIQuantumComputingSolutions = () => {
                 <Link
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

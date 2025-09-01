@@ -3,6 +3,7 @@ import { Input } from '@/components / ui / input';
 import { Switch } from '@/components / ui / switch';
 import AdminLayout from '@/components / admin / AdminLayout';
   import {
+
 export default function ProductsAdminPage () {
 
     Table,
@@ -10,8 +11,7 @@ export default function ProductsAdminPage () {
     TableHeader,
     TableRow,
     TableBody,
-    TableCell,
-  } from '@/components / ui / table';
+    TableCell} from '@/components / ui / table';
   const initialProducts = [
     { id: 1, name: 'Alpha', category: 'Software', status: 'pending' },
     { id: 2, name: 'Beta', category: 'Hardware', status: 'approved' },
@@ -22,13 +22,14 @@ export default function ProductsAdminPage () {
   const filtered = products.filter (p =>
     p.name.toLowerCase () .includes (search.toLowerCase () ) ) ;
   const toggleApproval = id => {
+
     setProducts (prev =>
       prev.map (p =>
         p.id === id
           ? {
+
               ...p,
-              status: p.status === 'approved' ? 'rejected' : 'approved',
-            }
+              status: p.status === 'approved' ? 'rejected' : 'approved'}
           : p) ) ;
   };
   return (<AdminLayout>

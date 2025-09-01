@@ -4,10 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Careers() {
+
     // Sample job listings
     const jobs = {
+
   engineering[
             {
+
                 title: "Senior Frontend Engineer",
                 location: "Remote",
                 type: "Full-time",
@@ -18,6 +21,7 @@ export default function Careers() {
 
 },
             {
+
                 title: "AI Research Engineer",
                 location: "San Francisco, CA",
                 type: "Full-time",
@@ -25,6 +29,7 @@ export default function Careers() {
                 description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
             },
             {
+
                 title: "Full Stack Developer",
                 location: "Remote",
                 type: "Full-time",
@@ -34,6 +39,7 @@ export default function Careers() {
         ],
         product[
             {
+
                 title: "Product Manager",
                 location: "New York, NY",
                 type: "Full-time",
@@ -41,6 +47,7 @@ export default function Careers() {
                 description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
             },
             {
+
                 title: "UX/UI Designer",
                 location: "Remote",
                 type: "Full-time",
@@ -50,6 +57,7 @@ export default function Careers() {
         ],
         marketing[
             {
+
                 title: "Growth Marketing Manager",
                 location: "Remote",
                 type: "Full-time",
@@ -57,6 +65,7 @@ export default function Careers() {
                 description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
             },
             {
+
                 title: "Content Strategist",
                 location: "London, UK",
                 type: "Full-time",
@@ -66,6 +75,7 @@ export default function Careers() {
         ],
         operations[
             {
+
                 title: "Community Manager",
                 location: "Remote",
                 type: "Full-time",
@@ -73,6 +83,7 @@ export default function Careers() {
                 description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
             },
             {
+
                 title: "Talent Acquisition Specialist",
                 location: "Remote",
                 type: "Full-time",
@@ -84,6 +95,7 @@ export default function Careers() {
     // Benefits list
     const benefits = [
         {
+
             title: "Flexible Work",
             description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",
             icon: (<svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -91,6 +103,7 @@ export default function Careers() {
         </svg>)
         },
         {
+
             title: "Health & Wellness",
             description: "Comprehensive health insurance and wellness programs to keep you at your best.",
             icon: (<svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -98,6 +111,7 @@ export default function Careers() {
         </svg>)
         },
         {
+
             title: "Continuous Learning",
             description: "Education stipends and dedicated learning time to help you grow professionally.",
             icon: (<svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -105,6 +119,7 @@ export default function Careers() {
         </svg>)
         },
         {
+
             title: "Competitive Compensation",
             description: "Salary packages that recognize your value, plus equity options to share in our success.",
             icon: (<svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

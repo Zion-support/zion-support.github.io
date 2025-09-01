@@ -11,7 +11,7 @@ export class ServiceWorkerRegistration {
 
     if (!this.isSupported) {
 
-      // // console.warn('Service Worker is not supported in this browser');
+      // // // console.warn('Service Worker is not supported in this browser');
       return null;
     }
 
@@ -24,7 +24,7 @@ export class ServiceWorkerRegistration {
       });
 
       this.instance = registration;
-      // // console.log('Service Worker registered successfully:', registration);
+      // // // console.log('Service Worker registered successfully:', registration);
 
       // Handle updates
       this.handleUpdates(registration);
@@ -35,7 +35,7 @@ export class ServiceWorkerRegistration {
       return registration;
     } catch (error) {
 
-      // // console.error('Service Worker registration failed:', error);
+      // // // console.error('Service Worker registration failed:', error);
       return null;
     }
   }
@@ -55,13 +55,13 @@ export class ServiceWorkerRegistration {
       const unregistered = await this.instance.unregister();
       if (unregistered) {
 
-        // // console.log('Service Worker unregistered successfully');
+        // // // console.log('Service Worker unregistered successfully');
         this.instance = null as any;
       }
       return unregistered;
     } catch (error) {
 
-      // // console.error('Service Worker unregistration failed:', error);
+      // // // console.error('Service Worker unregistration failed:', error);
       return false;
     }
   }
@@ -79,10 +79,10 @@ export class ServiceWorkerRegistration {
     try {
 
       await this.instance.update();
-      // // console.log('Service Worker update check completed');
+      // // // console.log('Service Worker update check completed');
     } catch (error) {
 
-      // // console.error('Service Worker update check failed:', error);
+      // // // console.error('Service Worker update check failed:', error);
     }
   }
 
@@ -171,12 +171,12 @@ export class ServiceWorkerRegistration {
 
     registration.addEventListener('install', (event) => {
 
-      // // console.log('Service Worker installing...');
+      // // // console.log('Service Worker installing...');
     });
 
     registration.addEventListener('activate', (event) => {
 
-      // // console.log('Service Worker activated');
+      // // // console.log('Service Worker activated');
       // Claim all clients
       event.waitUntil(registration.active?.postMessage({ type: 'SKIP_WAITING' }));
     });
@@ -242,7 +242,7 @@ export class ServiceWorkerRegistration {
 
     if (!('Notification' in window)) {
 
-      // // console.warn('Notifications not supported');
+      // // // console.warn('Notifications not supported');
       return 'denied';
     }
 
@@ -264,7 +264,7 @@ export class ServiceWorkerRegistration {
     
     if (permission !== 'granted') {
 
-      // // console.warn('Notification permission not granted');
+      // // // console.warn('Notification permission not granted');
       return null;
     }
 
@@ -280,7 +280,7 @@ export class ServiceWorkerRegistration {
       return notification;
     } catch (error) {
 
-      // // console.error('Failed to show notification:', error);
+      // // // console.error('Failed to show notification:', error);
       return null;
     }
   }
@@ -322,7 +322,7 @@ export class ServiceWorkerRegistration {
       return cacheInfo;
     } catch (error) {
 
-      // // console.error('Failed to get cache info:', error);
+      // // // console.error('Failed to get cache info:', error);
       return [];
     }
   }
@@ -338,10 +338,10 @@ export class ServiceWorkerRegistration {
       await Promise.all(
         cacheNames.map(name => caches.delete(name))
       );
-      // // console.log('All caches cleared');
+      // // // console.log('All caches cleared');
     } catch (error) {
 
-      // // console.error('Failed to clear caches:', error);
+      // // // console.error('Failed to clear caches:', error);
     }
   }
 }

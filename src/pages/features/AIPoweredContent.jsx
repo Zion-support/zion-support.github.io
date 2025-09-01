@@ -8,8 +8,10 @@ import Link from 'next/link';
 import { useFeatureUsage } from "@/hooks/useFeatureUsage";
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function AIPoweredContent() {
+
     useFeatureUsage('ZionGPT');
     const schema = {
+
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "AI Content Generation",
@@ -18,6 +20,7 @@ export default function AIPoweredContent() {
     };
     const { markAiExplored } = useAdvancedOnboardingStatus();
     useEffect(() => {
+
     // TODO: Add dependencies if needed
 
         markAiExplored();

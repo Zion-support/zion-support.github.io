@@ -7,10 +7,12 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 export default function OrderDetailPage() {
+
     const { orderId } = useParams();
     const { user } = useAuth();
     const { data: order, isLoading } = useGetOrderQuery(orderId);
     const handleDownload = async () => {
+
         if (!order)
             return;
         const blob = await generateInvoicePdf(order);
@@ -23,11 +25,15 @@ export default function OrderDetailPage() {
         document.body.removeChild(link);
         URL.revokeObjectURL(url)};
     const handleResend = async () => {
+
         if (!order || !user?.email)
             return;
         try {
+
             await supabase.functions.invoke('send-email', {
+
                 body: {
+
                     to: user.email,
                     subject: `Receipt for order ${order.orderId}`,
                     html: `<p>Thank you for your purchase. Total ${order.total}.</p>`
@@ -35,9 +41,11 @@ export default function OrderDetailPage() {
             });
             toast({ title: 'Receipt sent!' })}
         catch (err) {
+
             toast({ title: 'Failed to send receipt', variant: 'destructive' })}
     };
     if (isLoading || !order) {
+
         return (<div className="container max-w-3xl py-10">
         <Skeleton className="h-6 w-full"/>
       </div>)}

@@ -16,6 +16,7 @@ const CHAINS = [
     { id: 'bnb', name: 'BNB', logo: '/logos/bnb-logo.svg' },
 ];
 function suggestChain(region, stake) {
+
     if (stake > 1000)
         return 'ethereum';
     if (region === 'asia')
@@ -24,6 +25,7 @@ function suggestChain(region, stake) {
         return 'polygon';
     return 'optimism'}
 export default function TokenIntegrations() {
+
     const { address, isConnected } = useWallet();
     const [fromChain, setFromChain] = useState('ethereum');
     const [toChain, setToChain] = useState('polygon');
@@ -33,15 +35,18 @@ export default function TokenIntegrations() {
     const [stake, setStake] = useState(0);
     const [suggested, setSuggested] = useState(null);
     const handleBridge = () => {
+
         setStatus('Bridging...');
         setTxHash(null);
         // TODO: integrate actual LayerZero bridge logic
         // Record onchain tx logs and enforce rate limits
         // Use burn-and-mint model if tokens are wrapped
         setTimeout(() => {
+
             setTxHash('0xabc123');
             setStatus(`ZION$ arrived on ${toChain} in 12s`)}, 1200)};
     const handleSuggest = () => {
+
         const chain = suggestChain(region.toLowerCase(), stake);
         setSuggested(chain)};
     return (<div>

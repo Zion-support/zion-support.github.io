@@ -11,23 +11,28 @@ import { motion } from 'framer - motion';
 import SEOHead from "../components / SEOHead";
 
 const AutonomousBusinessOperationsPlatform = () => {
+
     const features = [
                                             {
+
                                                 icon: Bot,
                                                 title: 'Intelligent Automation',
                                                 description: 'AI - powered automation that learns from your business processes and continuously improves efficiency.'
                                             },
                                             {
+
                                                 icon: Workflow,
                                                 title: 'Process Orchestration',
                                                 description: 'Seamlessly orchestrate complex business workflows across multiple systems and departments.'
                                             },
                                             {
+
                                                 icon: Zap,
                                                 title: 'Real - time Optimization',
                                                 description: 'Dynamic optimization of business operations based on real - time data and market conditions.'
                                             },
                                             {
+
                                                 icon: Shield,
                                                 title: 'Secure Operations',
                                                 description: 'Enterprise - grade security with role - based access control and audit trails for all operations.'
@@ -35,21 +40,25 @@ const AutonomousBusinessOperationsPlatform = () => {
                                         ];
                                         const useCases = [
                                             {
+
                                                 title: 'Supply Chain Management',
                                                 description: 'Automated inventory management, demand forecasting, and supplier coordination.',
                                                 icon: Workflow
                                             },
                                             {
+
                                                 title: 'Customer Service',
                                                 description: 'Intelligent chatbots, ticket routing, and automated customer support workflows.',
                                                 icon: Users
                                             },
                                             {
+
                                                 title: 'Financial Operations',
                                                 description: 'Automated invoicing, expense management, and financial reporting.',
                                                 icon: BarChart3
                                             },
                                             {
+
                                                 title: 'HR & Recruitment',
                                                 description: 'Automated candidate screening, onboarding processes, and performance management.',
                                                 icon: Users
@@ -105,10 +114,12 @@ const AutonomousBusinessOperationsPlatform = () => {
       <section className="py - 20 px - 4">
         <div className="container mx - auto max - w-6xl">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -124,10 +135,12 @@ const AutonomousBusinessOperationsPlatform = () => {
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {features.map ( (feature, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -154,6 +167,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <p className="text - gray - 300">{feature.description}</p>
               </div>) ) }
                 transition = {
+
   { duration: 0.8,
   delay: index * 0.1
 
@@ -255,6 +269,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             {features.map ( (feature, index) => {
+
                                                             const IconComponent = feature.icon;
                                                             return (<div key={index} className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - green - 500 / 30 transition - all duration - 300">
                   <div className="w - 12 h - 12 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - lg flex items - center justify - center mb - 4">
@@ -282,6 +297,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
             {useCases.map ( (useCase, index) => {
+
                                                             const IconComponent = useCase.icon;
                                                             return (<div key={index} className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 8 border border - white / 10">
                   <div className="w - 16 h - 16 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - xl flex items - center justify - center mb - 6">
@@ -892,7 +908,9 @@ const AutonomousBusinessOperationsPlatform = () => {
     </>
     <>
       <SEOHead customData = {
+
   {
+
                                                             title: "Autonomous Business Operations Platform - Zion Tech Group",
                                                             description: "Revolutionary AI - powered platform that automates and optimizes your entire business operations. Streamline processes, reduce costs, and boost efficiency with intelligent automation.",
                                                             keywords["business automation", "AI operations", "process automation", "business intelligence", "autonomous systems", "enterprise automation", "workflow automation"],

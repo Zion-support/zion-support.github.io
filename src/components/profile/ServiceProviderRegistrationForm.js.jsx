@@ -164,7 +164,7 @@ export function ServiceProviderRegistrationForm() {
           'AI has created a professional bio and suggested additional services for your profile.'});
     } catch (error) {
 
-      // // // console.error("Error generating enhanced profile:", error);
+      // // // // console.error("Error generating enhanced profile:", error);
       toast({
 
         title: 'Generation failed',
@@ -248,7 +248,7 @@ export function ServiceProviderRegistrationForm() {
         } catch (error) {
 
 "
-          // // // console.error("Error enhancing profile:", error);
+          // // // // console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails
         }
       } else if (generatedContent) {
@@ -318,7 +318,7 @@ export function ServiceProviderRegistrationForm() {
         } catch (emailError) {
 
 "
-          // // // console.error("Failed to send notification email:", emailError);
+          // // // // console.error("Failed to send notification email:", emailError);
           // Continue with submission even if email fails
         }
       }
@@ -335,7 +335,7 @@ export function ServiceProviderRegistrationForm() {
     } catch (error) {
 
 "
-      // // // console.error("Error creating profile:", error);
+      // // // // console.error("Error creating profile:", error);
       toast({
 
         title: 'Error Creating Profile',

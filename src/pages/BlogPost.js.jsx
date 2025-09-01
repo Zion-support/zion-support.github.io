@@ -7,15 +7,18 @@ import { Separator } from "@/components/ui/separator";
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts";
 export default function BlogPost() {
+
     const { slug } = useParams();
     const navigate = useNavigate();
     const [post, setPost] = useState(null);
     const [relatedPosts, setRelatedPosts] = useState([]);
     const [showShareMenu, setShowShareMenu] = useState(false);
     useEffect(() => {
+
         // Find the current post by slug
         const currentPost = BLOG_POSTS.find(p => p.slug === slug);
         if (currentPost) {
+
             setPost(currentPost);
             // Find related posts (same category, excluding current post)
             const related = BLOG_POSTS.filter(p => p.id !== currentPost.id &&
@@ -23,16 +26,19 @@ export default function BlogPost() {
                     p.tags.some(tag => currentPost.tags.includes(tag)))).slice(0, 3);
             setRelatedPosts(related)}
         else {
+
             // Post not found
             router("/blog", { replace: true })}
         // Scroll to top when post changes
         window.scrollTo(0, 0)}, [slug, navigate]);
     if (!post) {
+
         return (<div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
         <div className="animate-pulse">Loading article...</div>
       </div>)}
     // Helper function title = encodeURIComponent(post.title);
         switch (platform) {
+
             case 'facebook':
                 return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
             case 'twitter':
@@ -44,6 +50,7 @@ export default function BlogPost() {
     };
     return (<>
       <SEO title={post.title} description={post.excerpt} keywords = {
+
   post.tags.join(",
   ")
 
@@ -76,6 +83,7 @@ export default function BlogPost() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
               <div className="flex items-center mb-4 sm:mb-0">
                 <img src={post.author.avatarUrl} alt={post.author.name} className="w-12 h-12 rounded-full mr-3" onError={(e) => {
+
             const target = e.target;
             target.src = "/images/blog-placeholder.svg"}}/>
                 <div>
@@ -122,6 +130,7 @@ export default function BlogPost() {
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
               <img src={post.featuredImage} alt={post.title} className="object-cover w-full h-full" onError={(e) => {
+
             const target = e.target;
             target.src = "/images/blog-placeholder.svg"}}/>
             </div>
@@ -147,6 +156,7 @@ export default function BlogPost() {
                   {relatedPosts.map(relatedPost => (<Link key={relatedPost.id} to={`/blog/${relatedPost.slug}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300">
                       <div className="aspect-[16/9] relative">
                         <img src={relatedPost.featuredImage} alt={relatedPost.title} className="object-cover w-full h-full" onError={(e) => {
+
                     const target = e.target;
                     target.src = "/images/blog-placeholder.svg"}}/>
                       </div>

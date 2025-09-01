@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export default React.memo (function FAQ () {
+
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   ChevronDown,
@@ -15,10 +17,10 @@ import { motion, AnimatePresence } from 'framer - motion';
   MessageCircle,
   Phone,
   Mail,
-  Globe,
-} from 'lucide - react';
+  Globe} from 'lucide - react';
 
 interface FAQItem {
+
   id: string;
   question: string;
   answer: string;
@@ -28,93 +30,93 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
+
     id: 'ai - services',
     question: 'What AI services does Zion Tech Group offer?',
     answer:
       'We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, AI - powered cybersecurity, and custom AI solution development for businesses.',
     category: 'AI Services',
-    icon: Brain,
-  },
+    icon: Brain},
   {
+
     id: 'cybersecurity',
     question: 'How does Zion Tech Group ensure cybersecurity?',
     answer:
       'We implement enterprise - grade security measures including zero - trust architecture, AI - powered threat detection, regular security audits, compliance with industry standards, and 24 / 7 monitoring.',
     category: 'Security',
-    icon: Shield,
-  },
+    icon: Shield},
   {
+
     id: 'cloud - solutions',
     question: 'What cloud solutions are available?',
     answer:
       'Our cloud services include cloud migration, infrastructure as code, container orchestration, serverless computing, multi - cloud strategy, and cloud security implementation.',
     category: 'Cloud',
-    icon: Cloud,
-  },
+    icon: Cloud},
   {
+
     id: 'pricing',
     question: 'How is pricing structured for your services?',
     answer:
       'We offer flexible pricing models including project - based pricing, subscription plans, and custom enterprise solutions. Contact us for a personalized quote based on your specific needs.',
     category: 'General',
-    icon: Zap,
-  },
+    icon: Zap},
   {
+
     id: 'support',
     question: 'What kind of support do you provide?',
     answer:
       'We offer 24 / 7 technical support, dedicated account managers, comprehensive documentation, training programs, and ongoing maintenance and updates.',
     category: 'Support',
-    icon: HelpCircle,
-  },
+    icon: HelpCircle},
   {
+
     id: 'implementation',
     question: 'How long does it take to implement your solutions?',
     answer:
       'Implementation timelines vary based on project complexity. Simple solutions can be deployed in weeks, while complex enterprise systems may take several months. We provide detailed project timelines during planning.',
     category: 'General',
-    icon: Zap,
-  },
+    icon: Zap},
   {
+
     id: 'customization',
     question: 'Can you customize solutions for our specific needs?',
     answer:
       'Absolutely ! We specialize in custom development and can tailor any solution to meet your unique business requirements, industry standards, and compliance needs.',
     category: 'General',
-    icon: Zap,
-  },
+    icon: Zap},
   {
+
     id: 'maintenance',
     question: 'Do you provide ongoing maintenance and updates?',
     answer:
       'Yes, we offer comprehensive maintenance packages including regular updates, security patches, performance monitoring, and continuous improvement of your solutions.',
     category: 'Support',
-    icon: HelpCircle,
-  },
+    icon: HelpCircle},
   {
+
     id: 'quantum - computing',
     question: 'What quantum computing services do you offer?',
     answer:
       'Our quantum computing services include quantum algorithm development, quantum machine learning, quantum cryptography, quantum simulation, and quantum optimization solutions for complex problems.',
     category: 'AI Services',
-    icon: Brain,
-  },
+    icon: Brain},
   {
+
     id: 'compliance',
     question: 'How do you handle compliance and regulatory requirements?',
     answer:
       'We ensure compliance with industry standards including HIPAA, SOC 2, GDPR, and other regulatory frameworks. Our solutions are built with compliance in mind from the ground up.',
     category: 'Security',
-    icon: Shield,
-  },
+    icon: Shield},
   {
+
     id: 'scalability',
     question: 'How scalable are your solutions?',
     answer:
       'All our solutions are designed with scalability in mind. We use cloud - native architectures, microservices, and containerization to ensure your systems can grow with your business needs.',
     category: 'Cloud',
-    icon: Cloud,
-  },
+    icon: Cloud},
 ];
 
 const categories = [
@@ -131,6 +133,7 @@ const categories = [
   const [searchQuery, setSearchQuery] = useState ('') ;
 
   const filteredFAQs = faqData.filter (faq => {
+
     const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory;
     const matchesSearch = faq.question.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       faq.answer.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
@@ -138,6 +141,7 @@ const categories = [
   }) ;
 
   const toggleItem = (id: string) => {
+
     setActiveItem (activeItem === id ? null : id) ;
   };
 
@@ -183,6 +187,7 @@ const categories = [
             {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 200 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white shadow - lg'
                     : 'bg - white / 10 text - gray - 300 hover:bg - white / 20 border border - white / 20'

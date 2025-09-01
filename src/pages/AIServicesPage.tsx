@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default AIServicesPage;}}}}
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 import SEO from '../components / SEO';
@@ -31,6 +32,7 @@ import SEO from '../components / SEO';
 
 const AIServices = [
     {
+
         title: "AI Strategy Consulting",
         description: "Strategic guidance for implementing AI solutions in your business",
         price: "$2,500 - $15,000",
@@ -41,11 +43,14 @@ const AIServices = [
         link: "/request - quote?service = ai - strategy"
     },
     {
+
 } from 'lucide - react';
 
 const AIServicesPage = () => {
+
   const aiServices = [
     {
+
       id: 'ai - consciousness - simulator',
       name: 'AI Consciousness Simulator',
       tagline: 'Simulate and test AI consciousness emergence patterns',
@@ -87,6 +92,7 @@ const AIServicesPage = () => {
       customers: 25
     },
     {
+
       id: 'quantum - emotion - processor',
       name: 'Quantum Emotion Processor',
       tagline: 'Process and analyze emotions using quantum computing',
@@ -131,16 +137,19 @@ const AIServicesPage = () => {
 
   const aiSolutions = [
     {
+
       title: 'AI - Powered Chatbots',
       description: 'Intelligent customer service automation',
       benefits: ['24 / 7 Availability', 'Multi - language Support', 'Seamless Integration']
     },
     {
+
       title: 'Intelligent Document Processing',
       description: 'Automated data extraction and analysis',
       benefits: ['Faster Processing', 'Reduced Errors', 'Cost Savings']
     },
     {
+
       title: 'Predictive Maintenance',
       description: 'Prevent equipment failures with AI insights',
       benefits: ['Reduced Downtime', 'Lower Costs', 'Improved Safety'];
@@ -154,6 +163,7 @@ const AIServicesPage = () => {
 
   const caseStudies = [
     {
+
       company: 'TechCorp Industries',
       industry: 'Manufacturing',
       challenge: 'Quality control inefficiencies',
@@ -161,6 +171,7 @@ const AIServicesPage = () => {
       results: ['99.2% accuracy', '40% faster inspection', '30% cost reduction']
     },
     {
+
       company: 'Global Finance Ltd',
       industry: 'Financial Services',
       challenge: 'Fraud detection complexity',
@@ -177,6 +188,7 @@ const AIServicesPage = () => {
   ];
 
 const AIServicesPage: React.FC = () => {
+
   return (<>
       <SEO
         title="AI Services - Zion Tech Group"
@@ -223,16 +235,19 @@ const AIServicesPage: React.FC = () => {
               {aiSolutions.map ( (solution, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -258,16 +273,19 @@ const AIServicesPage: React.FC = () => {
               {caseStudies.map ( (study, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 

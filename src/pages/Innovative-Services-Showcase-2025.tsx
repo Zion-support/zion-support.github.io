@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Rocket, 
   Brain, 
   Shield, 
@@ -26,8 +27,10 @@ import {
 import { SEO } from '../components/SEO';
 
 export default function InnovativeServicesShowcase2025() {
+
   const featuredServices = [
     {
+
       id: "ai-legal-document-generator",
       title: "AI-Powered Legal Document Generator",
       description: "Revolutionary AI-powered legal document generation with real-time compliance monitoring and multi-jurisdiction support. Save 80% on legal document creation time.",
@@ -43,6 +46,7 @@ export default function InnovativeServicesShowcase2025() {
       color: "from-blue-500 to-purple-600"
     },
     {
+
       id: "ai-supply-chain-optimization",
       title: "AI-Powered Supply Chain Optimization",
       description: "Transform your supply chain with AI-powered predictive analytics, real-time visibility, and automated optimization. Reduce costs by 25-40%.",
@@ -58,6 +62,7 @@ export default function InnovativeServicesShowcase2025() {
       color: "from-green-500 to-blue-600"
     },
     {
+
       id: "ai-healthcare-diagnostics",
       title: "AI-Powered Healthcare Diagnostics Platform",
       description: "Revolutionary healthcare diagnostics with 98% accuracy, real-time analysis, and clinical decision support. Transform patient care delivery.",
@@ -73,6 +78,7 @@ export default function InnovativeServicesShowcase2025() {
       color: "from-red-500 to-pink-600"
     },
     {
+
       id: "blockchain-supply-chain-transparency",
       title: "Blockchain Supply Chain Transparency Platform",
       description: "End-to-end supply chain traceability with blockchain technology, smart contracts, and automated compliance. Build trust and transparency.",

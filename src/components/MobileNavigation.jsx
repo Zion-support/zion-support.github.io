@@ -92,9 +92,9 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
 
         e.preventDefault();
         // Implement search functionality'
-        // // // // // // // // // // console.log('Search query:', searchQuery);
+        // // // // // // // // // // // console.log('Search query:', searchQuery);
     };
-        // // // console.log('Search query:', searchQuery)};
+        // // // // console.log('Search query:', searchQuery)};
     const menuVariants = {
 
   closed: {

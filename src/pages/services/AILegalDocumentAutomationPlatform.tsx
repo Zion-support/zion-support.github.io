@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   FileText,
   Shield,
   Zap,
@@ -57,33 +58,40 @@ import {
 } from 'lucide-react';
 
 export default function AILegalDocumentAutomationPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Document Generation',
       description: 'Advanced AI creates legally compliant documents from templates and user inputs'
     },
     {
+
       icon: Shield,
       title: 'Legal Compliance Engine',
       description: 'Automated compliance checking against current laws and regulations across jurisdictions'
     },
     {
+
       icon: Zap,
       title: 'Smart Template Library',
       description: 'Extensive library of legal document templates with AI-powered customization'
     },
     {
+
       icon: Users,
       title: 'Collaborative Workflow',
       description: 'Multi-user collaboration with version control and approval workflows'
     },
     {
+
       icon: Clock,
       title: 'Real-time Updates',
       description: 'Automatic updates when laws change, ensuring documents remain compliant'
     },
     {
+
       icon: Target,
       title: 'Intelligent Review',
       description: 'AI-powered document review with risk assessment and improvement suggestions'
@@ -101,6 +109,7 @@ export default function AILegalDocumentAutomationPlatform() {
 
   const pricing = [
     {
+
       name: 'Solo Practitioner',
       price: '$299',
       period: '/month',
@@ -115,6 +124,7 @@ export default function AILegalDocumentAutomationPlatform() {
       popular: false
     },
     {
+
       name: 'Law Firm',
       price: '$599',
       period: '/month',
@@ -130,6 +140,7 @@ export default function AILegalDocumentAutomationPlatform() {
       popular: true
     },
     {
+
       name: 'Enterprise Legal',
       price: '$1,299',
       period: '/month',
@@ -148,21 +159,25 @@ export default function AILegalDocumentAutomationPlatform() {
 
   const useCases = [
     {
+
       title: 'Contract Management',
       description: 'Automate contract creation, review, and management with AI-powered insights',
       icon: FileText
     },
     {
+
       title: 'Legal Research',
       description: 'AI-powered legal research and case law analysis for faster insights',
       icon: Search
     },
     {
+
       title: 'Compliance Monitoring',
       description: 'Automated compliance tracking and regulatory updates across jurisdictions',
       icon: Shield
     },
     {
+
       title: 'Document Review',
       description: 'Intelligent document review with risk assessment and improvement suggestions',
       icon: Eye
@@ -171,21 +186,25 @@ export default function AILegalDocumentAutomationPlatform() {
 
   const documentTypes = [
     {
+
       icon: FileText,
       title: 'Contracts & Agreements',
       count: '50+ templates'
     },
     {
+
       icon: Briefcase,
       title: 'Corporate Documents',
       count: '75+ templates'
     },
     {
+
       icon: Gavel,
       title: 'Litigation Documents',
       count: '100+ templates'
     },
     {
+
       icon: Scale,
       title: 'Regulatory Filings',
       count: '60+ templates'
@@ -444,6 +463,7 @@ export default function AILegalDocumentAutomationPlatform() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`bg-gray-800/50 rounded-xl p-6 border ${
+
                   plan.popular 
                     ? 'border-purple-500/50 bg-purple-500/10' 
                     : 'border-gray-700'
@@ -478,6 +498,7 @@ export default function AILegalDocumentAutomationPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'

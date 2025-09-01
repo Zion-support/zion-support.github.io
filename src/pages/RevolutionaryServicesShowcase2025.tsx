@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Shield, 
   Rocket, 
@@ -235,6 +236,7 @@ import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '@/data/revolutionaryMicr
 import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '@/data/revolutionaryMicroSaasServices2025';
 
 export default function RevolutionaryServicesShowcase2025() {
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -278,6 +280,7 @@ export default function RevolutionaryServicesShowcase2025() {
 
   // Filter and sort services
   const filteredServices = allServices.filter(service => {
+
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -296,7 +299,9 @@ export default function RevolutionaryServicesShowcase2025() {
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'price-low':
         return a.price - b.price;
       case 'price-high':
@@ -311,12 +316,15 @@ export default function RevolutionaryServicesShowcase2025() {
   });
 
   const getCategoryIcon = (category: string) => {
+
     const categoryData = categories.find(cat => cat.id === category.toLowerCase().replace(' ', '-'));
     return categoryData ? categoryData.icon : Zap;
   };
 
   const getInnovationBadgeColor = (level: string) => {
+
     switch (level) {
+
       case 'Revolutionary':
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced':
@@ -448,6 +456,7 @@ export default function RevolutionaryServicesShowcase2025() {
                     <div className={`p-3 rounded-lg ${getInnovationBadgeColor(service.innovationLevel)}`}>
                       {getCategoryIcon(service.category.toLowerCase().replace(' ', '-')) && 
                         React.createElement(getCategoryIcon(service.category.toLowerCase().replace(' ', '-')), {
+
                           className: "h-6 w-6 text-white"
                         })
                       }

@@ -12,6 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components / ui / ta
 import { Textarea } from "@/components / ui / textarea";
 import { useAuth } from "@/hooks / useAuth";
 export default function ContentGenerator () {
+
 import { toast } from "sonner";
 
     const { user, isLoading } = useAuth () ;
@@ -26,18 +27,24 @@ import { toast } from "sonner";
     const [testEmail, setTestEmail] = useState ('') ;
     // Redirect if not logged in
     React.useEffect ( () => {
+
         if (!isLoading && !user) {
+
             toast.error ("You must be logged in to access this page") ;
             router ("/login?redirect=/content - generator") ;
             navigate ("/login?redirect=/content - generator") ;
         }
     }, [user, isLoading, router]) ;
     const generateContent = async () => {
+
         setIsGenerating (true) ;
         setPreviewContent (null) ;
         try {
+
             const { data, error } = await supabase.functions.invoke ('generate - content', {
+
                 body: {
+
                     contentType,
                     prompt: customPrompt || null,
                     topic: topic || null,
@@ -51,25 +58,34 @@ import { toast } from "sonner";
             toast.error ("Failed to generate content. Please try again.") ;
 
         finally {
+
             setIsGenerating (false) ;
 
             toast.success (`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`) }
         catch (error) {
+
             console.error ("Error generating content:", error) ;
             toast.error ("Failed to generate content. Please try again.") }
         finally {
+
             setIsGenerating (false) }
     };
     const sendTestNewsletter = async () => {
+
         if (!testEmail) {
+
             toast.error ("Please enter a test email address") ;
             return}
         if (!previewContent) {
+
             toast.error ("Generate newsletter content first") ;
             return}
         try {
+
             const { data, error } = await supabase.functions.invoke ('send - newsletter', {
+
                 body: {
+
                     subject: previewContent.subject,
                     previewText: previewContent.previewText,
                     body: previewContent.body,
@@ -83,11 +99,13 @@ import { toast } from "sonner";
 
             toast.success (`Test newsletter sent to ${testEmail}!`) }
         catch (error) {
+
             console.error ("Error sending test newsletter:", error) ;
             toast.error ("Failed to send test newsletter. Please try again.") }
     };
     // Check if user is still loading
     if (isLoading) {
+
         return (<>
 
         <div className="min - h-screen bg - zion - blue flex items - center justify - center">
@@ -127,6 +145,7 @@ import { toast } from "sonner";
                   <div className="space - y-2">
                     <Label htmlFor="topic" className="text - white">Topic (Optional) </Label>
                     <Input id="topic" placeholder = {
+
   contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g.,
   May Platform Updates";
 
@@ -192,7 +211,9 @@ import { toast } from "sonner";
                                 <h2 className="text - 2xl font - bold text - white">{previewContent.title}</h2>
                                 <p className="text - zion - slate - light">{previewContent.metaDescription}</p>
                                 <div className="prose prose - invert max - w-none" dangerouslySetInnerHTML = {
+
   {
+
                 __html: previewContent.body
                     .replace (/^#{1,
   6;

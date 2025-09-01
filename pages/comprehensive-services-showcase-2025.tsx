@@ -4,6 +4,7 @@ import { ArrowRight, Star, TrendingUp, Users, Shield, Zap, Brain, Cloud, Databas
 import { comprehensiveRealServices2025 } from '../src/data/comprehensive-real-services-2025';
 
 export default function ComprehensiveServicesShowcase2025() {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 

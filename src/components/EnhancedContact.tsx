@@ -82,7 +82,7 @@ export function EnhancedContact(...args[]):  {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
 
-      // // // // // // // // // // console.error('Error submitting form:', error)} finally {
+      // // // // // // // // // // // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false);
 <<<<<<< HEAD
@@ -94,7 +94,7 @@ export function EnhancedContact(...args[]):  {
 
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      // // // console.error('Error submitting form:', error)} finally {
+      // // // // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false)}
   };

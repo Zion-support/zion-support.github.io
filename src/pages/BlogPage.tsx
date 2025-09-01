@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom';
 import React from 'react';
 export function BlogPage (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion';
 
   FileText,
@@ -12,11 +14,11 @@ import { motion } from 'framer - motion';
   Filter,
   Tag,
   Clock,
-  Eye,
-} from 'lucide - react';
+  Eye} from 'lucide - react';
 
   const blogPosts = [
     {
+
       id: 1,
       title: 'The Future of AI in Business: 2025 Trends and Predictions',
       excerpt:
@@ -26,9 +28,9 @@ import { motion } from 'framer - motion';
       readTime: '8 min read',
       category: 'AI & Technology',
       tags: ['AI', 'Business', 'Trends', '2025'],
-      image: '🤖',
-    },
+      image: '🤖'},
     {
+
       id: 2,
       title: 'Quantum Computing: Breaking Down the Barriers',
       excerpt:
@@ -38,9 +40,9 @@ import { motion } from 'framer - motion';
       readTime: '12 min read',
       category: 'Quantum Computing',
       tags: ['Quantum', 'Computing', 'Innovation'],
-      image: '⚛️',
-    },
+      image: '⚛️'},
     {
+
       id: 3,
       title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
       excerpt:
@@ -50,9 +52,9 @@ import { motion } from 'framer - motion';
       readTime: '10 min read',
       category: 'Cybersecurity',
       tags: ['Security', 'AI', 'Threats', 'Solutions'],
-      image: '🔒',
-    },
+      image: '🔒'},
     {
+
       id: 4,
       title: 'Digital Transformation: A Complete Guide for Enterprises',
       excerpt:
@@ -62,9 +64,9 @@ import { motion } from 'framer - motion';
       readTime: '15 min read',
       category: 'Digital Transformation',
       tags: ['Digital', 'Transformation', 'Enterprise', 'Strategy'],
-      image: '🚀',
-    },
+      image: '🚀'},
     {
+
       id: 5,
       title: 'The Rise of Edge Computing: Processing Data Where It Matters',
       excerpt:
@@ -74,9 +76,9 @@ import { motion } from 'framer - motion';
       readTime: '9 min read',
       category: 'Edge Computing',
       tags: ['Edge Computing', 'IoT', 'Real - time', 'Data'],
-      image: '🌐',
-    },
+      image: '🌐'},
     {
+
       id: 6,
       title: 'Machine Learning in Healthcare: Saving Lives with Data',
       excerpt:
@@ -86,8 +88,7 @@ import { motion } from 'framer - motion';
       readTime: '11 min read',
       category: 'Healthcare AI',
       tags: ['Healthcare', 'Machine Learning', 'Medical AI', 'Data'],
-      image: '🏥',
-    },
+      image: '🏥'},
   ];
 
   const categories = [

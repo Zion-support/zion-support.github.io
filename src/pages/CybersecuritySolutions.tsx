@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default React.memo (function CybersecuritySolutions (...args[]) :  {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Shield,
@@ -34,6 +36,7 @@ import { motion } from 'framer - motion';
 
   const securityServices = [
     {
+
       icon: Shield,
       title: "Threat Detection & Response",
       description: "Advanced security monitoring and incident response to protect against cyber threats",
@@ -41,6 +44,7 @@ import { motion } from 'framer - motion';
       color: "from - zion - red to - zion - orange"
     },
     {
+
       icon: Lock,
       title: "Identity & Access Management",
       description: "Secure authentication and authorization systems for your organization",
@@ -48,6 +52,7 @@ import { motion } from 'framer - motion';
       color: "from - zion - blue to - zion - cyan"
     },
     {
+
       icon: Eye,
       title: "Security Auditing & Compliance",
       description: "Comprehensive security assessments and compliance management",
@@ -55,6 +60,7 @@ import { motion } from 'framer - motion';
       color: "from - zion - purple to - zion - pink"
     },
     {
+
       icon: Network,
       title: "Network Security",
       description: "Protect your network infrastructure with advanced security measures",
@@ -62,6 +68,7 @@ import { motion } from 'framer - motion';
       color: "from - zion - green to - zion - emerald"
     },
     {
+
       icon: Database,
       title: "Data Protection",
       description: "Safeguard sensitive data with encryption and backup solutions",
@@ -69,8 +76,8 @@ import { motion } from 'framer - motion';
       color: "from - zion - yellow to - zion - orange"
     },
     {
-      icon: Cloud,
-    };
+
+      icon: Cloud};
       title: "Cloud Security",;
       description: "Secure your cloud infrastructure and applications",;
       features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],;
@@ -89,6 +96,7 @@ import { motion } from 'framer - motion';
 
   const securityThreats = [
     {
+
       title: "Advanced Persistent Threats (APTs) ",
       description: "Sophisticated, long - term cyber attacks targeting specific organizations",
       type: "malware",
@@ -97,6 +105,7 @@ import { motion } from 'framer - motion';
       icon: Target
     },
     {
+
       title: "Ransomware Attacks",
       description: "Malicious software that encrypts data and demands payment for decryption",
       type: "ransomware",
@@ -105,6 +114,7 @@ import { motion } from 'framer - motion';
       icon: Lock
     },
     {
+
       title: "Social Engineering",
       description: "Manipulation tactics to trick users into revealing sensitive information",
       type: "phishing",
@@ -113,6 +123,7 @@ import { motion } from 'framer - motion';
       icon: Users
     },
     {
+
       title: "Distributed Denial of Service",
       description: "Overwhelming systems with traffic to disrupt services",
       type: "ddos",
@@ -121,6 +132,7 @@ import { motion } from 'framer - motion';
       icon: Network
     },
     {
+
       title: "Insider Threats",
       description: "Security risks from employees or contractors with access to systems",
       type: "insider",
@@ -129,9 +141,9 @@ import { motion } from 'framer - motion';
       icon: Shield
     },
     {
+
       title: "Zero - Day Exploits",
-      description: "Unknown vulnerabilities exploited before security patches are available",
-    };
+      description: "Unknown vulnerabilities exploited before security patches are available"};
       type: "malware",;
       impact: "Critical",;
       solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],;
@@ -141,36 +153,42 @@ import { motion } from 'framer - motion';
 
   const complianceFrameworks = [
     {
+
       name: "SOC 2 Type II",
       description: "Service Organization Control 2 compliance for data security",
       requirements["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"],;
       icon: ShieldCheck
     },
     {
+
       name: "ISO 27001",
       description: "International standard for information security management",
       requirements["Risk Assessment", "Security Controls", "Management System", "Continuous Improvement"],;
       icon: CheckCircle
     },
     {
+
       name: "GDPR",
       description: "General Data Protection Regulation for EU data privacy",
       requirements["Data Protection", "User Consent", "Right to Erasure", "Data Portability"],;
       icon: Lock
     },
     {
+
       name: "HIPAA",
       description: "Health Insurance Portability and Accountability Act",
       requirements["Patient Privacy", "Data Security", "Access Controls", "Audit Trails"],;
       icon: Database
     },
     {
+
       name: "PCI DSS",
       description: "Payment Card Industry Data Security Standard",
       requirements["Card Data Protection", "Network Security", "Access Control", "Monitoring"],;
       icon: CreditCard
     },
     {
+
     };
       name: "NIST Cybersecurity Framework",;
       description: "U.S. government framework for cybersecurity risk management",;
@@ -187,6 +205,7 @@ import { motion } from 'framer - motion';
   ];
 
   const containerVariants = {
+
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -197,6 +216,7 @@ import { motion } from 'framer - motion';
   };
 
   const itemVariants = {
+
   hidden: { opacity: 0,
   y: 20
 
@@ -224,11 +244,13 @@ import { motion } from 'framer - motion';
         <div role="button" className="container mx - auto px - 4 text - center relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -274,11 +296,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -308,6 +332,7 @@ import { motion } from 'framer - motion';
                 className="bg - zion - blue - dark / 50 backdrop - blur - sm border border - zion - cyan / 20 rounded - xl p - 8 hover:border - zion - cyan / 40 transition - all duration - 300 group"
                 variants={itemVariants}
                 whileHover = {
+
   { y: -5,
   scale: 1.02
 
@@ -337,11 +362,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -363,12 +390,15 @@ import { motion } from 'framer - motion';
             className="flex flex - wrap justify - center gap - 4 mb - 12"
           >
             {threatTypes.map ( (threat) => {
+
             initial = {
+
   { opacity: 0,
   y: 20 ;
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -384,6 +414,7 @@ import { motion } from 'framer - motion';
               return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key = {threat.id}
                   onClick={ () => setSelectedThreat (threat.id) }
                   className={`flex items - center gap - 3 px - 6 py - 3 rounded - xl font - medium transition - all duration - 300 ${
+
                     selectedThreat === threat.id
                       ? 'bg - zion - red text - white shadow - lg shadow - zion - red / 25'
                       : 'bg - zion - slate - dark / 50 text - zion - slate - light hover:bg - zion - slate - dark hover:text - white border border - zion - red / 20'
@@ -408,6 +439,7 @@ import { motion } from 'framer - motion';
                 className="bg - zion - slate - dark / 50 backdrop - blur - sm border border - zion - cyan / 20 rounded - xl p - 6 hover:border - zion - cyan / 40 transition - all duration - 300"
                 variants={itemVariants}
                 whileHover = {
+
   { y: -5,
   scale: 1.02
 
@@ -421,6 +453,7 @@ import { motion } from 'framer - motion';
                     <h3 className="text - xl font - bold text - white">{threat.title}</h3>
                   </div>
                   <span className={`px - 3 py - 1 rounded - full text - xs font - medium ${
+
                     threat.impact === 'Critical' ? 'bg - red - 500 / 20 text - red - 400' :
                     threat.impact === 'High' ? 'bg - orange - 500 / 20 text - orange - 400' :
                     'bg - yellow - 500 / 20 text - yellow - 400'
@@ -451,11 +484,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -485,6 +520,7 @@ import { motion } from 'framer - motion';
                 className="bg - zion - blue - dark / 50 backdrop - blur - sm border border - zion - cyan / 20 rounded - xl p - 6 hover:border - zion - cyan / 40 transition - all duration - 300 group"
                 variants={itemVariants}
                 whileHover = {
+
   { y: -5,
   scale: 1.02
 
@@ -517,11 +553,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -567,11 +605,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -597,24 +637,28 @@ import { motion } from 'framer - motion';
 
             {[;
               {
+
                 step: "01",
                 title: "Security Assessment",
                 description: "Evaluate current security posture and identify vulnerabilities",
                 icon: Eye
               },
               {
+
                 step: "02",
                 title: "Strategy Development",
                 description: "Design comprehensive security roadmap and policies",
                 icon: Target
               },
               {
+
                 step: "03",
                 title: "Implementation",
                 description: "Deploy security solutions and configure protection systems",
                 icon: Shield
               },
               {
+
                 step: "04",
                 title: "Monitoring & Maintenance",
                 description: "Continuous security monitoring and regular updates",
@@ -649,11 +693,13 @@ import { motion } from 'framer - motion';
         <div role="button" className="container mx - auto px - 4 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

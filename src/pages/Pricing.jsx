@@ -3,8 +3,10 @@ export default Pricing;
 import { SEO } from '../components / SEO';
 
 const Pricing = () => {
+
   const pricingTiers = [
     {
+
       name: 'Starter',
       price: '$19',
       period: '/month',
@@ -20,9 +22,9 @@ const Pricing = () => {
       ],
       popular: false,
       cta: 'Start Free Trial',
-      link: '/signup?plan = starter',
-    },
+      link: '/signup?plan = starter'},
     {
+
       name: 'Professional',
       price: '$49',
       period: '/month',
@@ -41,9 +43,9 @@ const Pricing = () => {
       ],
       popular: true,
       cta: 'Start Free Trial',
-      link: '/signup?plan = professional',
-    },
+      link: '/signup?plan = professional'},
     {
+
       name: 'Business',
       price: '$99',
       period: '/month',
@@ -66,9 +68,9 @@ const Pricing = () => {
       ],
       popular: false,
       cta: 'Start Free Trial',
-      link: '/signup?plan = business',
-    },
+      link: '/signup?plan = business'},
     {
+
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -92,8 +94,7 @@ const Pricing = () => {
       ],
       popular: false,
       cta: 'Contact Sales',
-      link: '/contact',
-    },
+      link: '/contact'},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
@@ -130,6 +131,7 @@ const Pricing = () => {
             {pricingTiers.map ( (tier, index) => (<div
                 key={index}
                 className={`bg - slate - 800 / 50 border rounded - xl p - 8 ${
+
                   tier.popular
                     ? 'border - blue - 500 shadow - lg shadow - blue - 500 / 25'
                     : 'border - white / 10'
@@ -169,6 +171,7 @@ const Pricing = () => {
                 <a
                   href={tier.link}
                   className={`block w - full text - center py - 3 px - 6 rounded - lg font - semibold transition - all ${
+
                     tier.popular
                       ? 'bg - gradient - to - r from - blue - 500 to - cyan - 500 text - white hover:from - blue - 600 hover:to - cyan - 600'
                       : 'bg - transparent border border - white text - white hover:text - slate - 900'

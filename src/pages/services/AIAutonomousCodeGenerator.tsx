@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Code, 
   Brain, 
   Zap, 
@@ -31,33 +32,40 @@ import {
 import { SEO } from '@/components/SEO';
 
 const AIAutonomousCodeGenerator: React.FC = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Code Generation",
       description: "Generate production-ready code using advanced AI models trained on millions of repositories"
     },
     {
+
       icon: Zap,
       title: "Multi-Language Support",
       description: "Support for 50+ programming languages including Python, JavaScript, TypeScript, Java, C++, Go, Rust"
     },
     {
+
       icon: Shield,
       title: "Security-First Approach",
       description: "Built-in security scanning, vulnerability detection, and secure coding best practices"
     },
     {
+
       icon: Workflow,
       title: "Intelligent Workflow Automation",
       description: "Automate entire development workflows from requirements to deployment"
     },
     {
+
       icon: GitBranch,
       title: "Git Integration & Version Control",
       description: "Seamless Git integration with automated branching, merging, and conflict resolution"
     },
     {
+
       icon: Database,
       title: "Database Schema Generation",
       description: "Automatically generate database schemas, migrations, and optimization queries"
@@ -66,6 +74,7 @@ const AIAutonomousCodeGenerator: React.FC = () => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -82,6 +91,7 @@ const AIAutonomousCodeGenerator: React.FC = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -100,6 +110,7 @@ const AIAutonomousCodeGenerator: React.FC = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$2,499",
       period: "/month",
@@ -121,21 +132,25 @@ const AIAutonomousCodeGenerator: React.FC = () => {
 
   const benefits = [
     {
+
       icon: Clock,
       title: "10x Faster Development",
       description: "Reduce development time from weeks to days with AI-generated code"
     },
     {
+
       icon: DollarSign,
       title: "70% Cost Reduction",
       description: "Lower development costs through automation and reduced manual coding"
     },
     {
+
       icon: Star,
       title: "Higher Code Quality",
       description: "AI-generated code follows best practices and industry standards"
     },
     {
+
       icon: Users,
       title: "Team Productivity",
       description: "Enable developers to focus on complex problem-solving instead of boilerplate code"
@@ -144,21 +159,25 @@ const AIAutonomousCodeGenerator: React.FC = () => {
 
   const useCases = [
     {
+
       title: "Web Application Development",
       description: "Generate full-stack web applications with modern frameworks like React, Vue, Angular, and Node.js",
       examples: ["E-commerce platforms", "Admin dashboards", "API services", "Real-time applications"]
     },
     {
+
       title: "Mobile App Development",
       description: "Create cross-platform mobile applications for iOS and Android using React Native, Flutter, or native code",
       examples: ["Business apps", "E-commerce apps", "Social media apps", "Utility apps"]
     },
     {
+
       title: "Data Science & ML",
       description: "Generate data processing pipelines, machine learning models, and analytics dashboards",
       examples: ["ETL pipelines", "ML model training", "Data visualization", "Predictive analytics"]
     },
     {
+
       title: "DevOps & Infrastructure",
       description: "Automate infrastructure as code, CI/CD pipelines, and cloud deployment scripts",
       examples: ["Terraform configurations", "Docker containers", "Kubernetes manifests", "CI/CD workflows"]
@@ -273,6 +292,7 @@ const AIAutonomousCodeGenerator: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-blue-500 shadow-lg shadow-blue-500/20' 
                     : 'border-slate-700'
@@ -305,6 +325,7 @@ const AIAutonomousCodeGenerator: React.FC = () => {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

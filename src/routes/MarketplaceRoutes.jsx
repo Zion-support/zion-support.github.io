@@ -22,6 +22,7 @@ import Checkout from "@/pages/Checkout";
 import NewProductsPage from "@/pages/NewProductsPage";
 import MoreProductsPage from "@/pages/MoreProductsPage";
 const MarketplaceRoutes = () => {
+
     return (<Routes>
       {/* Marketplace Routes */}
       <Route index element={<Marketplace />}/>

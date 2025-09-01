@@ -66,7 +66,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
         applySettings({ ...settings, ...parsed });
       } catch (error) {
 
-        // // console.error('Failed to parse accessibility settings:', error);
+        // // // console.error('Failed to parse accessibility settings:', error);
       }
     }
   }, [applySettings]);

@@ -114,7 +114,7 @@ export const EnhancedSEOAccessibility: React.FC = () => {
       
     } catch (error) {
 
-      // // console.error('Error analyzing SEO:', error);
+      // // // console.error('Error analyzing SEO:', error);
     } finally {
 
       setIsAnalyzing(false);
@@ -189,7 +189,7 @@ export const EnhancedSEOAccessibility: React.FC = () => {
       
     } catch (error) {
 
-      // // console.error('Error analyzing accessibility:', error);
+      // // // console.error('Error analyzing accessibility:', error);
     } finally {
 
       setIsAnalyzing(false);

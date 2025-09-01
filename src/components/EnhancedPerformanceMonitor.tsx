@@ -126,7 +126,7 @@ export const EnhancedPerformanceMonitor: React.FC = () => {
         }).observe({ entryTypes: ['largest-contentful-paint'] });
       } catch (e) {
 
-        // // console.warn('LCP observation not supported');
+        // // // console.warn('LCP observation not supported');
       }
     }
 

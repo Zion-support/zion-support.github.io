@@ -35,11 +35,13 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
 
     // Apply search filter
     if (searchQuery) {
+
       services = searchServices (searchQuery) ;
     }
 
     // Apply category filter
     if (selectedCategory !== 'all') {
+
       services = getServicesByCategory (selectedCategory as ZionService['category']) ;
     }
 
@@ -74,6 +76,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
   const getCategoryIcon = (category: anystring) => {;
     const categoryData = categories.find (cat => cat.id === category) ;
     if (categoryData) {
+
       const IconComponent = categoryData.icon;
       return < IconComponent className="w - 5 h - 5" />;
     }
@@ -92,11 +95,13 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
         <div role="button" className="relative max - w-7xl mx - auto text - center">
           <motion.h1
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -114,16 +119,19 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
           </motion.h1>
           <motion.p
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -136,16 +144,19 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
           </motion.p>
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.8,
   delay: 0.4
 
@@ -246,21 +257,25 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
               {filteredServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                   exit = {
+
   { opacity: 0,
   y: -20
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -350,16 +365,19 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
                   <AnimatePresence>
                     {expandedService === service.id && (<motion.div
                         initial = {
+
   { opacity: 0,
   height: 0
 
 }}
                         animate = {
+
   { opacity: 1,
   height: 'auto'
 
 }}
                         exit = {
+
   { opacity: 0,
   height: 0
 

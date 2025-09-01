@@ -4,15 +4,16 @@ import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { SEO } from '@/components / SEO';
 export default function DeveloperPortal () {
+
 import {
+
 import {
 
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
+  CardTitle} from '@/components / ui / card';
   Code,
   BookOpen,
   Zap,
@@ -24,107 +25,106 @@ import {
   Terminal,
   Webhook,
   Key,
-  Mail,
-} from 'lucide - react';
+  Mail} from 'lucide - react';
   const apiFeatures = [
     {
+
       title: 'RESTful APIs',
       description: 'Clean, intuitive REST APIs for all major platform features',
       icon: Code,
       status: 'Stable',
-      docs: '/api - docs',
-    },
+      docs: '/api - docs'},
     {
+
       title: 'Webhooks',
       description: 'Real - time notifications for platform events and updates',
       icon: Webhook,
       status: 'Beta',
-      docs: '/api - docs / webhooks',
-    },
+      docs: '/api - docs / webhooks'},
     {
+
       title: 'Authentication',
       description: 'Secure OAuth 2.0 and API key authentication',
       icon: Key,
       status: 'Stable',
-      docs: '/api - docs / auth',
-    },
+      docs: '/api - docs / auth'},
     {
+
       title: 'SDKs & Libraries',
       description: 'Official SDKs for JavaScript, Python, and more',
       icon: Terminal,
       status: 'Stable',
-      docs: '/api - docs / sdks',
-    },
+      docs: '/api - docs / sdks'},
   ];
   const quickStartSteps = [
     {
+
       step: 1,
       title: 'Get API Keys',
       description: 'Sign up and generate your API keys from the dashboard',
-      action: 'Get Started',
-    },
+      action: 'Get Started'},
     {
+
       step: 2,
       title: 'Read Documentation',
       description: 'Explore our comprehensive API documentation and guides',
-      action: 'View Docs',
-    },
+      action: 'View Docs'},
     {
+
       step: 3,
       title: 'Test Endpoints',
       description: 'Use our interactive API playground to test endpoints',
-      action: 'Try API',
-    },
+      action: 'Try API'},
     {
+
       step: 4,
       title: 'Build & Deploy',
       description: 'Integrate our APIs into your applications',
-      action: 'View Examples',
-    },
+      action: 'View Examples'},
   ];
   const resources = [
     {
+
       title: 'API Reference',
       description: 'Complete API endpoint documentation with examples',
       icon: BookOpen,
       href: '/api - docs',
-      badge: 'Complete',
-    },
+      badge: 'Complete'},
     {
+
       title: 'Getting Started Guide',
       description: 'Step - by - step tutorial for new developers',
       icon: Zap,
       href: '/api - docs / getting - started',
-      badge: 'Beginner',
-    },
+      badge: 'Beginner'},
     {
+
       title: 'Code Samples',
       description: 'Ready - to - use code examples in multiple languages',
       icon: Code,
       href: '/api - docs / samples',
-      badge: 'Examples',
-    },
+      badge: 'Examples'},
     {
+
       title: 'SDK Downloads',
       description: 'Official SDKs and client libraries',
       icon: Terminal,
       href: '/api - docs / sdks',
-      badge: 'Download',
-    },
+      badge: 'Download'},
     {
+
       title: 'Community Forum',
       description: 'Connect with other developers and get help',
       icon: Users,
       href: '/community',
-      badge: 'Community',
-    },
+      badge: 'Community'},
     {
+
       title: 'Support & Help',
       description: 'Technical support and troubleshooting guides',
       icon: MessageSquare,
       href: '/help',
-      badge: 'Support',
-    },
+      badge: 'Support'},
   ];
   return (<div className="min - h-screen bg - background">
       <SEO
@@ -178,6 +178,7 @@ import {
           </h2>
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
             {apiFeatures.map (feature => {
+
               const IconComponent = feature.icon;
               return (<Card
                   key={feature.title}
@@ -188,6 +189,7 @@ import {
                       <IconComponent className="h - 8 w - 8 text - zion - cyan" />
                       <Badge
                         variant={
+
                           feature.status === 'Stable' ? 'default' : 'secondary'
                         }
                       >
@@ -257,6 +259,7 @@ import {
           </h2>
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">
             {resources.map (resource => {
+
               const IconComponent = resource.icon;
               return (<Card
                   key={resource.title}

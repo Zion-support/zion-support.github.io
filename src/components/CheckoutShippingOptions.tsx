@@ -39,10 +39,10 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
 
           setRates(data.rates || [])} else {
 
-          // // console.error('Rates error', data)}
+          // // // console.error('Rates error', data)}
       } catch (err) {
 
-        // // console.error('Rates error', err)} finally {
+        // // // console.error('Rates error', err)} finally {
 
         setLoading(false)}
     };

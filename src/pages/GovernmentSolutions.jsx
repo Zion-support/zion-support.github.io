@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function GovernmentSolutions () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Building2,
@@ -27,6 +29,7 @@ import { motion } from 'framer - motion';
   Globe2
 const governmentSolutions = [;
   {
+
     id: 1,
     title: "Citizen Portal Platform",
     description: "Comprehensive digital platform for citizen services and government interactions.",
@@ -43,6 +46,7 @@ const governmentSolutions = [;
     compliance["FISMA", "FedRAMP", "Section 508", "WCAG 2.1"];
   },;
   {
+
     id: 2,
     title: "Cybersecurity Framework",
     description: "Enterprise - grade security solutions meeting federal cybersecurity requirements.",
@@ -59,6 +63,7 @@ const governmentSolutions = [;
     compliance["NIST", "FISMA", "FedRAMP", "CIS Controls"];
   },;
   {
+
     id: 3,
     title: "Data Analytics Platform",
     description: "Advanced analytics and reporting tools for government decision - making.",
@@ -75,6 +80,7 @@ const governmentSolutions = [;
     compliance["FISMA", "FedRAMP", "Data Privacy", "Open Data"];
   },;
   {
+
     id: 4,
     title: "Legacy System Modernization",
     description: "Modernization of outdated government systems to improve efficiency and security.",
@@ -91,6 +97,7 @@ const governmentSolutions = [;
     compliance["FISMA", "FedRAMP", "Section 508", "Cloud Security"];
   },;
   {
+
     id: 5,
     title: "Emergency Response System",
     description: "Integrated emergency management and response coordination platform.",
@@ -107,6 +114,7 @@ const governmentSolutions = [;
     compliance["FISMA", "FedRAMP", "Emergency Protocols", "Interoperability"];
   },;
   {
+
     id: 6,
     title: "Regulatory Compliance Platform",
     description: "Automated compliance monitoring and reporting for government regulations.",
@@ -126,24 +134,28 @@ const governmentSolutions = [;
 
 const complianceStandards = [
   {
+
     name: "FISMA",
     description: "Federal Information Security Management Act",
     icon: Shield,
     requirements["Risk Assessment", "Security Controls", "Continuous Monitoring", "Incident Response"];
   },;
   {
+
     name: "FedRAMP",
     description: "Federal Risk and Authorization Management Program",
     icon: Lock,
     requirements["Cloud Security", "Authorization Process", "Continuous Monitoring", "Security Assessment"];
   },;
   {
+
     name: "Section 508",
     description: "Accessibility requirements for federal electronic and information technology",
     icon: Users,
     requirements["Web Accessibility", "Document Accessibility", "Software Accessibility", "Testing & Validation"];
   },;
   {
+
     name: "NIST",
     description: "National Institute of Standards and Technology Cybersecurity Framework",
     icon: Brain,
@@ -153,6 +165,7 @@ const complianceStandards = [
 
 const successStories = [
   {
+
     id: 1,
     agency: "Department of Transportation",
     industry: "Federal Government",
@@ -162,6 +175,7 @@ const successStories = [
     logo: "DOT"
   },
   {
+
     id: 2,
     agency: "State Health Department",
     industry: "State Government",
@@ -171,6 +185,7 @@ const successStories = [
     logo: "SHD"
   },
   {
+
     id: 3,
     agency: "City Municipal Services",
     industry: "Local Government",
@@ -183,6 +198,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Requirements Analysis",
     description: "Analyze government requirements and compliance standards",
@@ -190,6 +206,7 @@ const processSteps = [
     duration: "2 - 3 weeks"
   },
   {
+
     step: 2,
     title: "Security Architecture",
     description: "Design secure, compliant system architecture",
@@ -197,6 +214,7 @@ const processSteps = [
     duration: "3 - 4 weeks"
   },
   {
+
     step: 3,
     title: "Development & Testing",
     description: "Build solution with continuous security testing",
@@ -204,6 +222,7 @@ const processSteps = [
     duration: "16 - 40 weeks"
   },
   {
+
     step: 4,
     title: "Compliance Validation",
     description: "Validate compliance and obtain necessary certifications",
@@ -233,11 +252,13 @@ const processSteps = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -247,16 +268,19 @@ const processSteps = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -298,11 +322,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -320,16 +346,19 @@ const processSteps = [
             {complianceStandards.map ( (standard, index) => (<motion.div
                 key={standard.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -359,11 +388,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -381,16 +412,19 @@ const processSteps = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -421,11 +455,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -445,6 +481,7 @@ const processSteps = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -458,16 +495,19 @@ const processSteps = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -522,11 +562,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -544,16 +586,19 @@ const processSteps = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -599,11 +644,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

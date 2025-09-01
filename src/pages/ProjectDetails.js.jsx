@@ -7,17 +7,18 @@ import { useProjects } from "@/hooks/useProjects";
 import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger, } from "@/components/ui/tabs";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger, } from "@/components/ui/alert-dialog";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger} from "@/components/ui/alert-dialog";
 import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
-import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle, } from "lucide-react";
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
 function ProjectDetailsContent() {
+
     const router = useRouter();
     // Get projectId from Next.js router query params
     const { projectId } = router.query;
@@ -31,26 +32,32 @@ function ProjectDetailsContent() {
     const [activeTab, setActiveTab] = useState("details");
     // Load project data
     useEffect(() => {
+
         async function loadProject() {
+
             if (!projectId)
                 return;
             setIsLoading(true);
             const projectData = await getProjectById(projectId);
             if (projectData) {
+
                 setProject(projectData);
                 // Now fetch notes
                 fetchProjectNotes(projectId)}
             else {
+
                 toast({
+
                     title: "Project not found",
                     description: "The requested project could not be found.",
-                    variant: "destructive",
-                });
+                    variant: "destructive"});
                 router.push("/dashboard")}
             setIsLoading(false)}
         loadProject()}, [projectId]);
     const fetchProjectNotes = async (projectId) => {
+
         try {
+
             const { data, error } = await supabase
                 .from("project_notes")
                 .select(`
@@ -63,20 +70,23 @@ function ProjectDetailsContent() {
                 throw error;
             setNotes(data || [])}
         catch (err) {
-            console.error("Error fetching project notes:", err)}
+
+            // console.error("Error fetching project notes:", err)}
     };
     const handleSubmitNote = async () => {
+
         if (!newNote.trim() || !project || !user)
             return;
         setIsSubmittingNote(true);
         try {
+
             const { data, error } = await supabase
                 .from("project_notes")
                 .insert({
+
                 project_id: project.id,
                 user_id: user.id,
-                content: newNote,
-            })
+                content: newNote})
                 .select();
             if (error)
                 throw error;
@@ -84,38 +94,45 @@ function ProjectDetailsContent() {
             fetchProjectNotes(project.id);
             setNewNote("");
             toast({
+
                 title: "Note added",
-                description: "Your note has been added to the project.",
-            })}
+                description: "Your note has been added to the project."})}
         catch (err) {
-            console.error("Error adding note:", err);
+
+            // console.error("Error adding note:", err);
             toast({
+
                 title: "Failed to add note",
                 description: err.message || "An error occurred while adding your note.",
-                variant: "destructive",
-            })}
+                variant: "destructive"})}
         finally {
+
             setIsSubmittingNote(false)}
     };
     const handleStatusChange = async (newStatus) => {
+
         if (!project)
             return;
         const success = await updateProjectStatus(project.id, newStatus);
         if (success) {
+
             setProject({
+
                 ...project,
-                status: newStatus,
-            });
+                status: newStatus});
             // If offer was accepted, show a special toast
             if (newStatus === "offer_accepted") {
+
                 toast({
+
                     title: "Offer Accepted! 🎉",
-                    description: "The project is now in progress. Congratulations!",
-                })}
+                    description: "The project is now in progress. Congratulations!"})}
         }
     };
     const getStatusBadge = (status) => {
+
         switch (status) {
+
             case "offer_sent":
                 return <Badge variant="outline">Offer Sent</Badge>;
             case "offer_accepted":
@@ -132,6 +149,7 @@ function ProjectDetailsContent() {
                 return <Badge variant="outline">{status}</Badge>}
     };
     if (isLoading) {
+
         return (<div className="container mx-auto py-8">
         <div className="flex justify-center items-center h-64">
           <div className="text-center">
@@ -141,6 +159,7 @@ function ProjectDetailsContent() {
         </div>
       </div>)}
     if (!project) {
+
         return (<div className="container mx-auto py-8">
         <Card>
           <CardContent className="flex flex-col items-center justify-center py-10">
@@ -158,6 +177,7 @@ function ProjectDetailsContent() {
     // Check if user is either the client or the talent
     const isTalent = user?.id === project.talent_id;
     if (!isClient && !isTalent) {
+
         router.push("/unauthorized");
         return null}
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
@@ -516,6 +536,7 @@ function ProjectDetailsContent() {
       
     </>)}
 export default function ProjectDetails() {
+
     return (<ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>)}

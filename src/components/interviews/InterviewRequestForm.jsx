@@ -83,7 +83,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         catch (error) {
 
 "
-            // // // // // // // // // // console.error("Failed to schedule interview:", error);
+            // // // // // // // // // // // console.error("Failed to schedule interview:", error);
             toast({
 
 "

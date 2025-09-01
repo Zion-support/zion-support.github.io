@@ -333,31 +333,31 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Handle report actions
-          // // // // // // // // // console.log(`Downloading ${report.title}`);
+          // // // // // // // // // // console.log(`Downloading ${report.title}`);
           break;
         case 'share':
           // Simulate share
-          // // // // // // // // // console.log(`Sharing ${report.title}`);
+          // // // // // // // // // // console.log(`Sharing ${report.title}`);
           break;
         case 'print':
           // Simulate print
-          // // // // // // // // // console.log(`Printing ${report.title}`);
+          // // // // // // // // // // console.log(`Printing ${report.title}`);
           break;
   };
   // Export report data
   const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv') => {
 
-    // // // // // // // // // console.log(`Exporting ${report.title} as ${format}`);
+    // // // // // // // // // // console.log(`Exporting ${report.title} as ${format}`);
 =======
-          // // // // // // console.log(`Downloading ${report.title}`);
+          // // // // // // // console.log(`Downloading ${report.title}`);
           break;
         case 'share':
           // Simulate share
-          // // // // // // console.log(`Sharing ${report.title}`);
+          // // // // // // // console.log(`Sharing ${report.title}`);
           break;
         case 'print':
           // Simulate print
-          // // console.log(`Printing ${report.title}`);
+          // // // console.log(`Printing ${report.title}`);
           break}
     }
   };

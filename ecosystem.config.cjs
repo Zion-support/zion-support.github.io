@@ -12,14 +12,14 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-        PORT: 3000,
+        PORT: 3000
       },
       env_production: {
         NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider',
-      },
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+      }
     },
-
+    
     // Backend server
     {
       name: 'zion-backend',
@@ -31,8 +31,8 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
-      },
+        NODE_ENV: 'production'
+      }
     },
 
     // PM2 Error Prevention Automation - runs every 5 minutes (HIGHEST PRIORITY)
@@ -45,11 +45,11 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000', // 5 minutes
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
       },
       log_file: './automation/logs/pm2-error-prevention.log',
       error_file: './automation/logs/pm2-error-prevention-error.log',
-      out_file: './automation/logs/pm2-error-prevention-out.log',
+      out_file: './automation/logs/pm2-error-prevention-out.log'
     },
 
     // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
@@ -62,8 +62,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000', // 15 minutes
-      },
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
     },
 
     // Comprehensive error fixer - runs every 30 minutes (HIGH PRIORITY)
@@ -76,8 +76,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000', // 30 minutes
-      },
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
     },
 
     // TypeScript error fixer - runs every 45 minutes (HIGH PRIORITY)
@@ -90,8 +90,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '2700000', // 45 minutes
-      },
+        AUTOMATION_INTERVAL: '2700000' // 45 minutes
+      }
     },
 
     // JSX error fixer - runs every 40 minutes (HIGH PRIORITY)
@@ -104,8 +104,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '2400000', // 40 minutes
-      },
+        AUTOMATION_INTERVAL: '2400000' // 40 minutes
+      }
     },
 
     // Master error fixer - runs every hour (COORDINATES ALL ERROR FIXERS)
@@ -118,8 +118,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000', // 1 hour
-      },
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
     },
 
     // Continuous link checker - runs every 30 minutes
@@ -132,8 +132,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000', // 30 minutes
-      },
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
     },
 
     // Continuous improvement - runs every 2 hours
@@ -146,8 +146,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000', // 2 hours
-      },
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
     },
 
     // Continuous build and test - runs every hour
@@ -160,8 +160,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000', // 1 hour
-      },
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
     },
 
     // Continuous security audit - runs every 4 hours
@@ -174,8 +174,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '14400000', // 4 hours
-      },
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
     },
 
     // Continuous dependency updates - runs every 6 hours
@@ -188,8 +188,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000', // 6 hours
-      },
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
     },
 
     // Continuous performance monitoring - runs every 2 hours
@@ -202,8 +202,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000', // 2 hours
-      },
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
     },
 
     // Continuous quality checks - runs every 3 hours
@@ -216,8 +216,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '10800000', // 3 hours
-      },
+        AUTOMATION_INTERVAL: '10800000' // 3 hours
+      }
     },
 
     // Continuous link integrity checker - runs every 2 hours
@@ -230,8 +230,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000', // 2 hours
-      },
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
     },
 
     // Continuous front maximizer - runs every 4 hours
@@ -244,8 +244,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '14400000', // 4 hours
-      },
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
     },
 
     // Continuous sitemap runner - runs every 6 hours
@@ -258,8 +258,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000', // 6 hours
-      },
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
     },
 
     // INTELLIGENT AUTOMATION SYSTEMS
@@ -271,30 +271,32 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'production'
       },
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      log_file: './logs/ai-code-review.log',
-      error_file: './logs/ai-code-review-error.log',
-      out_file: './logs/ai-code-review-out.log',
+      cron_restart: '0 8 * * *', // Restart daily at 8 AM
+      log_file: 'logs/sitemap-runner.log',
+      out_file: 'logs/sitemap-runner-out.log',
+      error_file: 'logs/sitemap-runner-error.log'
     },
 
+    // Automated Build & Lint fixer
     {
-      name: 'smart-dependency-intelligence',
+      name: 'auto-fix-and-build',
       script: './scripts/automation/smart-dependency-intelligence.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'production'
       },
       cron_restart: '0 */6 * * *', // Every 6 hours
       log_file: './logs/smart-dependency-intelligence.log',
       error_file: './logs/smart-dependency-intelligence-error.log',
-      out_file: './logs/smart-dependency-intelligence-out.log',
+      out_file: './logs/smart-dependency-intelligence-out.log'
     },
 
+    // Predictive Issue Detection - Anticipates and prevents issues
     {
       name: 'predictive-issue-detection',
       script: './scripts/automation/predictive-issue-detection.cjs',
@@ -303,14 +305,15 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'production'
       },
       cron_restart: '0 */3 * * *', // Every 3 hours
       log_file: './logs/predictive-issue-detection.log',
       error_file: './logs/predictive-issue-detection-error.log',
-      out_file: './logs/predictive-issue-detection-out.log',
+      out_file: './logs/predictive-issue-detection-out.log'
     },
 
+    // Intelligent Build Pipeline - Optimizes build processes
     {
       name: 'intelligent-build-pipeline',
       script: './scripts/automation/intelligent-build-pipeline.cjs',
@@ -319,13 +322,112 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'production'
       },
       cron_restart: '0 */8 * * *', // Every 8 hours
       log_file: './logs/intelligent-build-pipeline.log',
       error_file: './logs/intelligent-build-pipeline-error.log',
-      out_file: './logs/intelligent-build-pipeline-out.log',
+      out_file: './logs/intelligent-build-pipeline-out.log'
     },
+
+    // AI Code Review - Runs AI-powered code review
+    {
+      name: 'ai-code-review',
+      script: './scripts/automation/ai-code-review.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      log_file: './logs/ai-code-review.log',
+      error_file: './logs/ai-code-review-error.log',
+      out_file: './logs/ai-code-review-out.log'
+    },
+
+    // Smart Dependency Intelligence - Manages dependencies intelligently
+    {
+      name: 'smart-dependency-intelligence',
+      script: './scripts/automation/smart-dependency-intelligence.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      log_file: './logs/smart-dependency-intelligence.log',
+      error_file: './logs/smart-dependency-intelligence-error.log',
+      out_file: './logs/smart-dependency-intelligence-out.log'
+    },
+
+    // Predictive Issue Detection - Anticipates and prevents issues
+    {
+      name: 'predictive-issue-detection',
+      script: './scripts/automation/predictive-issue-detection.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */3 * * *', // Every 3 hours
+      log_file: './logs/predictive-issue-detection.log',
+      error_file: './logs/predictive-issue-detection-error.log',
+      out_file: './logs/predictive-issue-detection-out.log'
+    },
+
+    // Intelligent Build Pipeline - Optimizes build processes
+    {
+      name: 'intelligent-build-pipeline',
+      script: './scripts/automation/intelligent-build-pipeline.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */8 * * *', // Every 8 hours
+      log_file: './logs/intelligent-build-pipeline.log',
+      error_file: './logs/intelligent-build-pipeline-error.log',
+      out_file: './logs/intelligent-build-pipeline-out.log'
+    },
+
+    // Auto-fix and build automation
+    {
+      name: 'auto-fix-and-build',
+      script: 'bash',
+      args: '-lc "npm install --silent && npm run lint || true && npm run type-check || true && npm run build"',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: { NODE_ENV: 'production' },
+      cron_restart: '0 */6 * * *',
+      log_file: 'logs/auto-fix-and-build.log',
+      out_file: 'logs/auto-fix-and-build-out.log',
+      error_file: 'logs/auto-fix-and-build-error.log'
+    },
+
+    // Watcher to rebuild on changes
+    {
+      name: 'dev-watch-build',
+      script: 'bash',
+      args: '-lc "npm run build"',
+      instances: 1,
+      watch: ['src', 'public', 'vite.config.ts'],
+      ignore_watch: ['dist', 'node_modules', 'logs'],
+      max_memory_restart: '1G',
+      env: { NODE_ENV: 'development' },
+      log_file: 'logs/dev-watch-build.log',
+      out_file: 'logs/dev-watch-build-out.log',
+      error_file: 'logs/dev-watch-build-error.log'
+    }
   ],
 
   deploy: {
@@ -336,9 +438,8 @@ module.exports = {
       repo: 'git@github.com:your-username/bolt.new.zion.app.git',
       path: '/workspace/production',
       'pre-deploy-local': '',
-      'post-deploy':
-        'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
-      'pre-setup': '',
-    },
-  },
+      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
+      'pre-setup': ''
+    }
+  }
 };

@@ -25,33 +25,40 @@ import { Workflow,
              } from 'lucide-react.ts';
 
 export default function AIWorkflowOrchestrator() {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Workflow Intelligence",
       description: "Advanced machine learning algorithms that analyze and optimize your business processes automatically."
     },
     {
+
       icon: <Workflow className="w-6 h-6" />,
       title: "Visual Workflow Designer",
       description: "Drag-and-drop interface for creating complex workflows with AI suggestions and best practices."
     },
     {
+
       icon: <Zap className="w-6 h-6" />,
       title: "Real-time Process Optimization",
       description: "Continuous monitoring and automatic optimization of workflows based on performance metrics."
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Advanced Analytics Dashboard",
       description: "Comprehensive insights into workflow performance, bottlenecks, and optimization opportunities."
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Enterprise Security",
       description: "Bank-level security with role-based access control, audit trails, and compliance features."
     },
     {
+
       icon: <Cloud className="w-6 h-6" />,
       title: "Cloud-Native Architecture",
       description: "Scalable, resilient infrastructure that grows with your business needs."
@@ -60,6 +67,7 @@ export default function AIWorkflowOrchestrator() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$99",
       period: "/month",
@@ -75,6 +83,7 @@ export default function AIWorkflowOrchestrator() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$299",
       period: "/month",
@@ -92,6 +101,7 @@ export default function AIWorkflowOrchestrator() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "Custom",
       period: "",
@@ -112,21 +122,25 @@ export default function AIWorkflowOrchestrator() {
 
   const benefits = [
     {
+
       icon: <TrendingUp className="w-8 h-8 text-green-500" />,
       title: "Increase Efficiency",
       description: "Reduce manual tasks by up to 80% with intelligent automation"
     },
     {
+
       icon: <Clock className="w-8 h-8 text-blue-500" />,
       title: "Save Time",
       description: "Accelerate process execution by 3-5x with AI optimization"
     },
     {
+
       icon: <Target className="w-8 h-8 text-purple-500" />,
       title: "Improve Accuracy",
       description: "Eliminate human errors with intelligent validation and checks"
     },
     {
+
       icon: <Users className="w-8 h-8 text-cyan-500" />,
       title: "Enhance Collaboration",
       description: "Streamline team communication and task coordination"
@@ -198,6 +212,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -208,6 +223,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2 
 
@@ -227,6 +243,7 @@ export default function AIWorkflowOrchestrator() {
                   <motion.div
                     key={feature.title}
                     initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -237,6 +254,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
                     animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -247,6 +265,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
                     transition = {
+
   { duration: 0.6,
   delay: 0.1 * index 
 
@@ -296,6 +315,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -306,6 +326,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.4 
 
@@ -325,6 +346,7 @@ export default function AIWorkflowOrchestrator() {
                   <motion.div
                     key={benefit}
                     initial = {
+
   { opacity: 0,
   x: -20 
 
@@ -335,6 +357,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
                     animate = {
+
   { opacity: 1,
   x: 0 
 
@@ -345,6 +368,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
                     transition = {
+
   { duration: 0.6,
   delay: 0.05 * index 
 
@@ -370,6 +394,7 @@ export default function AIWorkflowOrchestrator() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -380,6 +405,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -390,6 +416,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.6 
 
@@ -409,6 +436,7 @@ export default function AIWorkflowOrchestrator() {
                   <motion.div
                     key={useCase.title}
                     initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -419,6 +447,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
                     animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -429,6 +458,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
                     transition = {
+
   { duration: 0.6,
   delay: 0.1 * index 
 
@@ -457,6 +487,7 @@ export default function AIWorkflowOrchestrator() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -467,6 +498,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -477,6 +509,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.8 
 
@@ -496,6 +529,7 @@ export default function AIWorkflowOrchestrator() {
                   <motion.div
                     key={plan.name}
                     initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -506,6 +540,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
                     animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -516,6 +551,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
                     transition = {
+
   { duration: 0.6,
   delay: 0.1 * index 
 
@@ -526,6 +562,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
                     className={`relative bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border ${
+
                       plan.popular 
                         ? 'border-blue-500 ring-2 ring-blue-500/20' 
                         : 'border-slate-100 hover:border-blue-200'
@@ -558,6 +595,7 @@ export default function AIWorkflowOrchestrator() {
                     </ul>
                     
                     <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors ${
+
                       plan.popular
                         ? 'bg-blue-600 text-white hover:bg-blue-700'
                         : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
@@ -576,6 +614,7 @@ export default function AIWorkflowOrchestrator() {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -586,6 +625,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -596,6 +636,7 @@ export default function AIWorkflowOrchestrator() {
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 1.0 
 

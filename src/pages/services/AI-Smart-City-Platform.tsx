@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Building2, 
   Shield, 
@@ -42,23 +43,28 @@ import {
 import { SEO } from '@/components/SEO';
 
 export default function AISmartCityPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Urban Analytics",
       description: "Advanced machine learning algorithms that analyze city data for intelligent decision-making"
     },
     {
+
       icon: Building2,
       title: "Smart Infrastructure Management",
       description: "Real-time monitoring and optimization of city infrastructure systems"
     },
     {
+
       icon: Shield,
       title: "Cybersecurity & Privacy",
       description: "Enterprise-grade security with citizen privacy protection and GDPR compliance"
     },
     {
+
       icon: Zap,
       title: "Real-time Response Systems",
       description: "Instant alerts and automated responses to urban incidents and emergencies"
@@ -67,24 +73,28 @@ export default function AISmartCityPlatform() {
 
   const services = [
     {
+
       title: "Smart Transportation",
       description: "AI-powered traffic management, public transit optimization, and intelligent parking systems",
       icon: Car,
       features: ["Traffic flow optimization", "Smart parking management", "Public transit analytics", "Congestion prediction"]
     },
     {
+
       title: "Energy Management",
       description: "Intelligent grid management, renewable energy integration, and consumption optimization",
       icon: Lightbulb,
       features: ["Smart grid optimization", "Renewable energy integration", "Demand response", "Energy efficiency analytics"]
     },
     {
+
       title: "Public Safety",
       description: "AI-powered surveillance, emergency response, and crime prevention systems",
       icon: Shield,
       features: ["Predictive policing", "Emergency response optimization", "Surveillance analytics", "Crime hotspot detection"]
     },
     {
+
       title: "Environmental Monitoring",
       description: "Real-time air quality, water quality, and environmental impact monitoring",
       icon: Leaf,
@@ -105,6 +115,7 @@ export default function AISmartCityPlatform() {
 
   const pricing = [
     {
+
       plan: "City Starter",
       price: "$15,000",
       period: "/month",
@@ -119,6 +130,7 @@ export default function AISmartCityPlatform() {
       popular: false
     },
     {
+
       plan: "City Professional",
       price: "$45,000",
       period: "/month",
@@ -134,6 +146,7 @@ export default function AISmartCityPlatform() {
       popular: true
     },
     {
+
       plan: "City Enterprise",
       price: "$125,000",
       period: "/month",
@@ -152,21 +165,25 @@ export default function AISmartCityPlatform() {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: "Operational Efficiency",
       description: "Reduce operational costs by 30-40% through intelligent automation and optimization"
     },
     {
+
       icon: Users,
       title: "Citizen Experience",
       description: "Improve quality of life with better services, reduced wait times, and enhanced accessibility"
     },
     {
+
       icon: Globe,
       title: "Sustainability",
       description: "Achieve environmental goals with smart resource management and green technology integration"
     },
     {
+
       icon: Shield,
       title: "Public Safety",
       description: "Enhance security and emergency response with AI-powered monitoring and prediction"
@@ -379,6 +396,7 @@ export default function AISmartCityPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-green-500/10' 
                     : 'border-slate-700/50'
@@ -412,6 +430,7 @@ export default function AISmartCityPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-green-600 text-white hover:from-blue-400 hover:to-green-500 hover:scale-105'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

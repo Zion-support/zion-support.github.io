@@ -37,7 +37,7 @@ export function useJobMatches(jobId: string) {
       setMatches(data || []);
     } catch (error) {
 
-      // // console.error("Error fetching job matches:", error);
+      // // // console.error("Error fetching job matches:", error);
       toast({
 
         title: "Error",
@@ -69,7 +69,7 @@ export function useJobMatches(jobId: string) {
       await fetchMatches();
     } catch (error) {
 
-      // // console.error("Error triggering AI matching:", error);
+      // // // console.error("Error triggering AI matching:", error);
       toast({
 
         title: "Matching Failed",

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Zap, 
   Users, 
@@ -57,8 +58,10 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function NewInnovativeServicesShowcase2025() {
+
   const newServices = [
     {
+
       icon: Heart,
       title: "AI-Powered Customer Success Platform",
       description: "Transform customer success with AI intelligence. Proactively manage relationships, prevent churn, and drive expansion revenue.",
@@ -82,6 +85,7 @@ export default function NewInnovativeServicesShowcase2025() {
       category: "Customer Success & Retention"
     },
     {
+
       icon: FileText,
       title: "AI Document Processing & Automation",
       description: "Automate document workflows with 99.5% accuracy. Process PDFs, images, emails, and more with intelligent extraction.",
@@ -105,6 +109,7 @@ export default function NewInnovativeServicesShowcase2025() {
       category: "Document Automation & Processing"
     },
     {
+
       icon: TrendingUp,
       title: "AI-Driven Revenue Operations Platform",
       description: "Unify sales, marketing, and customer success data to drive predictable revenue growth and optimize your revenue engine.",
@@ -128,6 +133,7 @@ export default function NewInnovativeServicesShowcase2025() {
       category: "Revenue Operations & Intelligence"
     },
     {
+
       icon: GraduationCap,
       title: "AI-Powered Learning Management System",
       description: "Deliver personalized learning experiences with intelligent content curation and advanced analytics to maximize outcomes.",
@@ -151,6 +157,7 @@ export default function NewInnovativeServicesShowcase2025() {
       category: "Learning & Development"
     },
     {
+
       icon: Leaf,
       title: "AI Energy Management & Sustainability Platform",
       description: "Optimize energy consumption, reduce costs, and improve sustainability through intelligent automation and predictive analytics.",
@@ -185,21 +192,25 @@ export default function NewInnovativeServicesShowcase2025() {
 
   const benefits = [
     {
+
       icon: Brain,
       title: "AI-Powered Intelligence",
       description: "Advanced machine learning algorithms that provide intelligent insights and automation across all services"
     },
     {
+
       icon: Zap,
       title: "Seamless Integration",
       description: "Easy integration with existing systems and workflows through APIs and custom connectors"
     },
     {
+
       icon: Shield,
       title: "Enterprise Security",
       description: "Bank-level security with SOC2, GDPR, and industry-specific compliance requirements"
     },
     {
+
       icon: Cloud,
       title: "Scalable Infrastructure",
       description: "Cloud-native architecture that scales with your business needs and ensures 99.9% uptime"

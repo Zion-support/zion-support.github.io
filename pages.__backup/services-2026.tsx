@@ -6,14 +6,25 @@ export default function Services2026Page() {
   return (
     <>
       <Head>
-        <title>2026 Services | Zion Tech Group - AI & Emerging Technology Solutions</title>
-        <meta name="description" content="Explore Zion Tech Group's comprehensive 2026 portfolio of AI, quantum computing, emerging technology, and specialized industry solutions. Transform your business with cutting-edge innovation." />
+        <title>
+          2026 Services | Zion Tech Group - AI & Emerging Technology Solutions
+        </title>
+        <meta
+          name="description"
+          content="Explore Zion Tech Group's comprehensive 2026 portfolio of AI, quantum computing, emerging technology, and specialized industry solutions. Transform your business with cutting-edge innovation."
+        />
         <meta property="og:title" content="2026 Services - Zion Tech Group" />
-        <meta property="og:description" content="AI, quantum computing, emerging technology, and specialized industry solutions for 2026." />
+        <meta
+          property="og:description"
+          content="AI, quantum computing, emerging technology, and specialized industry solutions for 2026."
+        />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="AI services, quantum computing, emerging technology, micro SAAS, healthcare AI, fintech, manufacturing IoT, retail AI, education AI, logistics AI, Zion Tech Group" />
+        <meta
+          name="keywords"
+          content="AI services, quantum computing, emerging technology, micro SAAS, healthcare AI, fintech, manufacturing IoT, retail AI, education AI, logistics AI, Zion Tech Group"
+        />
       </Head>
-      
+
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -21,7 +32,7 @@ export default function Services2026Page() {
             <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black" />
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-transparent to-purple-500/10" />
           </div>
-          
+
           <div className="relative z-10 container mx-auto px-6 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -32,9 +43,12 @@ export default function Services2026Page() {
                 2026 Services Portfolio
               </h1>
               <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-8">
-                Discover the future of technology with our comprehensive portfolio of AI, quantum computing, emerging technology, and specialized industry solutions designed to transform your business in 2026 and beyond.
+                Discover the future of technology with our comprehensive
+                portfolio of AI, quantum computing, emerging technology, and
+                specialized industry solutions designed to transform your
+                business in 2026 and beyond.
               </p>
-              
+
               {/* Contact Information */}
               <div className="flex flex-wrap justify-center gap-6 text-sm text-white/70 mb-8">
                 <div className="flex items-center gap-2">
@@ -79,7 +93,9 @@ export default function Services2026Page() {
                 Service Categories
               </h2>
               <p className="text-xl text-white/70 max-w-3xl mx-auto">
-                Our comprehensive portfolio covers every aspect of modern technology innovation, from AI and quantum computing to specialized industry solutions.
+                Our comprehensive portfolio covers every aspect of modern
+                technology innovation, from AI and quantum computing to
+                specialized industry solutions.
               </p>
             </div>
 
@@ -87,9 +103,13 @@ export default function Services2026Page() {
               {/* AI & Machine Learning */}
               <div className="bg-gradient-to-br from-blue-600/20 to-indigo-700/20 backdrop-blur-xl rounded-2xl p-8 border border-blue-500/30">
                 <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-2xl font-bold mb-4 text-blue-400">AI & Machine Learning</h3>
+                <h3 className="text-2xl font-bold mb-4 text-blue-400">
+                  AI & Machine Learning
+                </h3>
                 <p className="text-white/70 mb-6">
-                  Advanced AI solutions including autonomous content creation, customer success automation, financial advisory, and HR optimization.
+                  Advanced AI solutions including autonomous content creation,
+                  customer success automation, financial advisory, and HR
+                  optimization.
                 </p>
                 <ul className="space-y-2 text-sm text-white/60">
                   <li>• AI Autonomous Content Factory</li>
@@ -102,9 +122,12 @@ export default function Services2026Page() {
               {/* Quantum & Emerging Tech */}
               <div className="bg-gradient-to-br from-purple-600/20 to-pink-700/20 backdrop-blur-xl rounded-2xl p-8 border border-purple-500/30">
                 <div className="text-4xl mb-4">⚛️</div>
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">Quantum & Emerging Tech</h3>
+                <h3 className="text-2xl font-bold mb-4 text-purple-400">
+                  Quantum & Emerging Tech
+                </h3>
                 <p className="text-white/70 mb-6">
-                  Cutting-edge quantum computing, space mining, zero trust security, and metaverse development solutions.
+                  Cutting-edge quantum computing, space mining, zero trust
+                  security, and metaverse development solutions.
                 </p>
                 <ul className="space-y-2 text-sm text-white/60">
                   <li>• Quantum Internet Protocol</li>
@@ -117,9 +140,12 @@ export default function Services2026Page() {
               {/* Healthcare & Biotech */}
               <div className="bg-gradient-to-br from-green-600/20 to-emerald-700/20 backdrop-blur-xl rounded-2xl p-8 border border-green-500/30">
                 <div className="text-4xl mb-4">🏥</div>
-                <h3 className="text-2xl font-bold mb-4 text-green-400">Healthcare & Biotech</h3>
+                <h3 className="text-2xl font-bold mb-4 text-green-400">
+                  Healthcare & Biotech
+                </h3>
                 <p className="text-white/70 mb-6">
-                  AI-powered diagnostic platforms, medical image analysis, and healthcare automation solutions.
+                  AI-powered diagnostic platforms, medical image analysis, and
+                  healthcare automation solutions.
                 </p>
                 <ul className="space-y-2 text-sm text-white/60">
                   <li>• AI Diagnostic Platform</li>
@@ -132,9 +158,12 @@ export default function Services2026Page() {
               {/* Fintech & Finance */}
               <div className="bg-gradient-to-br from-yellow-600/20 to-orange-700/20 backdrop-blur-xl rounded-2xl p-8 border border-yellow-500/30">
                 <div className="text-4xl mb-4">📈</div>
-                <h3 className="text-2xl font-bold mb-4 text-yellow-400">Fintech & Finance</h3>
+                <h3 className="text-2xl font-bold mb-4 text-yellow-400">
+                  Fintech & Finance
+                </h3>
                 <p className="text-white/70 mb-6">
-                  AI-powered trading platforms, portfolio optimization, and financial advisory services.
+                  AI-powered trading platforms, portfolio optimization, and
+                  financial advisory services.
                 </p>
                 <ul className="space-y-2 text-sm text-white/60">
                   <li>• AI Trading Platform</li>
@@ -147,9 +176,12 @@ export default function Services2026Page() {
               {/* Manufacturing & IoT */}
               <div className="bg-gradient-to-br from-blue-600/20 to-cyan-700/20 backdrop-blur-xl rounded-2xl p-8 border border-cyan-500/30">
                 <div className="text-4xl mb-4">🏭</div>
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Manufacturing & IoT</h3>
+                <h3 className="text-2xl font-bold mb-4 text-cyan-400">
+                  Manufacturing & IoT
+                </h3>
                 <p className="text-white/70 mb-6">
-                  Smart factory automation, IoT sensor integration, and predictive maintenance solutions.
+                  Smart factory automation, IoT sensor integration, and
+                  predictive maintenance solutions.
                 </p>
                 <ul className="space-y-2 text-sm text-white/60">
                   <li>• IoT Platform</li>
@@ -162,9 +194,12 @@ export default function Services2026Page() {
               {/* Retail & E-commerce */}
               <div className="bg-gradient-to-br from-pink-600/20 to-rose-700/20 backdrop-blur-xl rounded-2xl p-8 border border-pink-500/30">
                 <div className="text-4xl mb-4">🛍️</div>
-                <h3 className="text-2xl font-bold mb-4 text-pink-400">Retail & E-commerce</h3>
+                <h3 className="text-2xl font-bold mb-4 text-pink-400">
+                  Retail & E-commerce
+                </h3>
                 <p className="text-white/70 mb-6">
-                  AI-powered personalization, dynamic pricing, and customer experience optimization.
+                  AI-powered personalization, dynamic pricing, and customer
+                  experience optimization.
                 </p>
                 <ul className="space-y-2 text-sm text-white/60">
                   <li>• AI Personalization</li>
@@ -188,7 +223,8 @@ export default function Services2026Page() {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-white/70 max-w-3xl mx-auto">
-                We combine cutting-edge technology with real-world business value to deliver solutions that transform industries.
+                We combine cutting-edge technology with real-world business
+                value to deliver solutions that transform industries.
               </p>
             </div>
 
@@ -197,32 +233,52 @@ export default function Services2026Page() {
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lightbulb className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Innovation First</h3>
-                <p className="text-white/70">Pioneering the latest technologies and approaches in every solution we deliver.</p>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  Innovation First
+                </h3>
+                <p className="text-white/70">
+                  Pioneering the latest technologies and approaches in every
+                  solution we deliver.
+                </p>
               </div>
 
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Customer Success</h3>
-                <p className="text-white/70">Dedicated support and success teams ensuring your implementation succeeds.</p>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  Customer Success
+                </h3>
+                <p className="text-white/70">
+                  Dedicated support and success teams ensuring your
+                  implementation succeeds.
+                </p>
               </div>
 
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Enterprise Grade</h3>
-                <p className="text-white/70">Bank-level security, compliance, and scalability for enterprise deployments.</p>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  Enterprise Grade
+                </h3>
+                <p className="text-white/70">
+                  Bank-level security, compliance, and scalability for
+                  enterprise deployments.
+                </p>
               </div>
 
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Proven ROI</h3>
-                <p className="text-white/70">Measurable business impact with average 300%+ ROI across all solutions.</p>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  Proven ROI
+                </h3>
+                <p className="text-white/70">
+                  Measurable business impact with average 300%+ ROI across all
+                  solutions.
+                </p>
               </div>
             </div>
           </div>
@@ -235,9 +291,10 @@ export default function Services2026Page() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Join thousands of businesses already leveraging our cutting-edge technology solutions to drive innovation and growth.
+              Join thousands of businesses already leveraging our cutting-edge
+              technology solutions to drive innovation and growth.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-6 mb-8">
               <div className="flex items-center gap-2 text-white/90">
                 <Phone className="w-5 h-5" />
@@ -278,7 +335,13 @@ export default function Services2026Page() {
 
 // Import required components and icons
 import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, ExternalLink, Lightbulb, 
-  Users, Shield, TrendingUp 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Lightbulb,
+  Users,
+  Shield,
+  TrendingUp,
 } from 'lucide-react';

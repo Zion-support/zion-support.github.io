@@ -162,7 +162,7 @@ export const EnterpriseDashboard = () => {
             await new Promise(resolve => setTimeout(resolve, 1000));
             // Update timestamps (simplified for demo)
             const now = new Date();
-            // // // console.log('Data refreshed at:', now.toLocaleTimeString());
+            // // // // console.log('Data refreshed at:', now.toLocaleTimeString());
             trackEvent('enterprise_dashboard',data_refreshed',manual', null, {
 
                 tab: activeTab,
@@ -170,7 +170,7 @@ export const EnterpriseDashboard = () => {
             }) }
         catch (error) {
 
-            // // // console.error('Failed to refresh data:', error);
+            // // // // console.error('Failed to refresh data:', error);
             trackEvent('enterprise_dashboard',refresh_failed',error', null, {
 
                 error: error instanceof Error ? error.message : 'Unknown error'

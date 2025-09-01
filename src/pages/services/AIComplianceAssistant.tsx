@@ -25,31 +25,37 @@ import { Shield,
 
   const features = [
     {
+
       icon: Shield,
       title: "Automated Compliance Monitoring",
       description: "24/7 monitoring of regulatory changes and automatic updates to compliance requirements."
     },
     {
+
       icon: CheckCircle,
       title: "Risk Assessment & Scoring",
       description: "AI-powered risk analysis with real-time scoring and prioritization of compliance issues."
     },
     {
+
       icon: FileText,
       title: "Document Management",
       description: "Intelligent document processing, classification, and automated compliance verification."
     },
     {
+
       icon: Users,
       title: "Role-Based Access Control",
       description: "Secure access management with granular permissions and audit trails."
     },
     {
+
       icon: Zap,
       title: "Real-Time Alerts",
       description: "Instant notifications for compliance violations and regulatory changes."
     },
     {
+
       icon: Globe,
       title: "Multi-Jurisdiction Support",
       description: "Comprehensive coverage of global regulations including GDPR, CCPA, SOX, and more."
@@ -67,26 +73,31 @@ import { Shield,
 
   const regulations = [
     {
+
       name: "GDPR (General Data Protection Regulation)",
       description: "EU data protection and privacy regulation",
       icon: Shield
     },
     {
+
       name: "CCPA (California Consumer Privacy Act)",
       description: "California consumer privacy protection law",
       icon: Lock
     },
     {
+
       name: "SOX (Sarbanes-Oxley Act)",
       description: "Financial reporting and corporate governance regulation",
       icon: FileText
     },
     {
+
       name: "HIPAA (Health Insurance Portability and Accountability Act)",
       description: "Healthcare data privacy and security regulation",
       icon: Eye
     },
     {
+
       name: "PCI DSS (Payment Card Industry Data Security Standard)",
       description: "Payment card data security standards",
       icon: Cpu;
@@ -100,24 +111,29 @@ import { Shield,
 
   const useCases = [
     {
+
       industry: "Financial Services",
       description: "Ensure compliance with SOX, PCI DSS, and financial regulations",
       icon: Shield
     },
     {
+
       industry: "Healthcare",
       description: "Maintain HIPAA compliance and patient data protection",
       icon: Users
     },
     {
+
       industry: "E-commerce",
       description: "Data privacy compliance, payment security, and customer data protection"
     },
     {
+
       industry: "Manufacturing",
       description: "Environmental compliance, safety regulations, and quality standards"
     },
     {
+
       industry: "Technology",
       description: "Data privacy, security compliance, and international regulatory adherence"
     }
@@ -136,6 +152,7 @@ import { Shield,
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -146,6 +163,7 @@ import { Shield,
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -200,6 +218,7 @@ import { Shield,
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -210,6 +229,7 @@ import { Shield,
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -237,6 +257,7 @@ import { Shield,
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -247,6 +268,7 @@ import { Shield,
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -257,6 +279,7 @@ import { Shield,
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -288,6 +311,7 @@ import { Shield,
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -298,6 +322,7 @@ import { Shield,
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -346,6 +371,7 @@ import { Shield,
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -356,6 +382,7 @@ import { Shield,
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -407,6 +434,7 @@ import { Shield,
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -417,6 +445,7 @@ import { Shield,
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -444,6 +473,7 @@ import { Shield,
               <motion.div
                 key={regulation.name}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -454,6 +484,7 @@ import { Shield,
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -464,6 +495,7 @@ import { Shield,
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -506,6 +538,7 @@ import { Shield,
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -516,6 +549,7 @@ import { Shield,
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -565,6 +599,7 @@ import { Shield,
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -575,6 +610,7 @@ import { Shield,
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

@@ -5,14 +5,15 @@ import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { ResumeWizard } from '@/components / resume - builder / ResumeWizard';
 import SEO from '@/components / SEO';
   import {
+
 export default function PortfolioBuilder () {
 
     Tabs,
     TabsContent,
     TabsList,
-    TabsTrigger,
-  } from '@/components / ui / tabs';
+    TabsTrigger} from '@/components / ui / tabs';
   function PortfolioBuilderContent () {
+
     const [activeTab, setActiveTab] = useState ('resume') ;
     return (<>
         <SEO

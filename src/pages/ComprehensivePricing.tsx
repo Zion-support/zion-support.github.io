@@ -3,8 +3,11 @@ import React, { useState } from 'react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 export default React.memo (function ComprehensivePricing () {
+
 import {
+
 import {
+
 import { cuttingEdgeComprehensiveServices2027 } from '../../data / 2027 - cutting - edge - comprehensive - services';
 import { specializedInnovativeServices2027 } from '../../data / 2027 - specialized - innovative - services';
 
@@ -12,8 +15,7 @@ import { specializedInnovativeServices2027 } from '../../data / 2027 - specializ
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
+  CardTitle} from '@/components / ui / card';
   Star,
   CheckCircle,
   Phone,
@@ -23,18 +25,18 @@ import { specializedInnovativeServices2027 } from '../../data / 2027 - specializ
   TrendingUp,
   Users,
   Shield,
-  Zap,
-} from 'lucide - react';
+  Zap} from 'lucide - react';
 
 const contactInfo = {
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 
 const pricingTiers = [
   {
+
     name: 'Starter',
     price: '$999',
     period: '/month',
@@ -46,9 +48,9 @@ const pricingTiers = [
       'Basic analytics',
       'Email support',
     ],
-    popular: false,
-  },
+    popular: false},
   {
+
     name: 'Professional',
     price: '$2,999',
     period: '/month',
@@ -61,9 +63,9 @@ const pricingTiers = [
       'Phone & email support',
       'Training sessions',
     ],
-    popular: true,
-  },
+    popular: true},
   {
+
     name: 'Enterprise',
     price: '$7,999',
     period: '/month',
@@ -77,8 +79,7 @@ const pricingTiers = [
       'Custom training programs',
       'SLA guarantees',
     ],
-    popular: false,
-  },
+    popular: false},
 ];
 
   const [selectedCategory, setSelectedCategory] = useState < any> ('all') ;
@@ -95,12 +96,15 @@ const pricingTiers = [
 
   // Filter services based on selection
   const filteredServices = allServices.filter (service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
 
     let matchesPrice = true;
     if (selectedPriceRange !== 'all') {
+
       const price = parseInt (service.price.replace (/[^0 - 9]/g, '') ) ;
       switch (selectedPriceRange) {
+
         case 'under - 1000':
           matchesPrice = price < 1000;
           break;
@@ -347,6 +351,7 @@ const pricingTiers = [
               </p>
               <Button
                 onClick={ () => {
+
                   setSelectedCategory ('all') ;
                   setSelectedPriceRange ('all') ;
                 }}

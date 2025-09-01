@@ -101,7 +101,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                 score: 78,
                 lastUpdated: new Date()
             };
-            // // // // // // // // // // console.error('Bundle analysis failed:', error);
+            // // // // // // // // // // // console.error('Bundle analysis failed:', error);
         }
         finally {
 
@@ -110,7 +110,7 @@ import { motion, AnimatePresence } from 'framer - motion';
             setAnalysis (mockAnalysis) }
         catch (error) {
 
-            // // // console.error('Bundle analysis failed:', error)}
+            // // // // console.error('Bundle analysis failed:', error)}
         finally {
 
             setIsAnalyzing(false)}

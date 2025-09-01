@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Cpu, 
   Network, 
   Zap, 
@@ -32,33 +33,40 @@ import {
 } from 'lucide-react';
 
 export default function EdgeComputingSolutions() {
+
   const features = [
     {
+
       icon: <Cpu className="w-6 h-6" />,
       title: "Edge AI Processing",
       description: "Deploy AI models directly on edge devices for real-time inference and decision making without cloud dependency."
     },
     {
+
       icon: <Network className="w-6 h-6" />,
       title: "5G Edge Networks",
       description: "Ultra-low latency edge computing infrastructure optimized for 5G networks and IoT applications."
     },
     {
+
       icon: <Zap className="w-6 h-6" />,
       title: "Real-time Analytics",
       description: "Process data at the edge for instant insights and immediate response to critical events."
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Edge Security",
       description: "Advanced security protocols and encryption at the edge to protect data and applications."
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Edge Orchestration",
       description: "Intelligent workload distribution and resource management across edge computing nodes."
     },
     {
+
       icon: <Globe className="w-6 h-6" />,
       title: "Global Edge Network",
       description: "Worldwide edge computing infrastructure with strategic node placement for optimal performance."
@@ -67,6 +75,7 @@ export default function EdgeComputingSolutions() {
 
   const pricingPlans = [
     {
+
       name: "Edge Starter",
       price: "$199",
       period: "/month",
@@ -82,6 +91,7 @@ export default function EdgeComputingSolutions() {
       popular: false
     },
     {
+
       name: "Edge Professional",
       price: "$599",
       period: "/month",
@@ -99,6 +109,7 @@ export default function EdgeComputingSolutions() {
       popular: true
     },
     {
+
       name: "Edge Enterprise",
       price: "$1,499",
       period: "/month",
@@ -119,21 +130,25 @@ export default function EdgeComputingSolutions() {
 
   const useCases = [
     {
+
       title: "Smart Cities",
       description: "Real-time traffic management, environmental monitoring, and public safety systems.",
       icon: <Building2 className="w-8 h-8" />
     },
     {
+
       title: "Industrial IoT",
       description: "Predictive maintenance, quality control, and process optimization in manufacturing.",
       icon: <Factory className="w-8 h-8" />
     },
     {
+
       title: "Autonomous Vehicles",
       description: "Real-time decision making, sensor processing, and navigation systems.",
       icon: <Truck className="w-8 h-8" />
     },
     {
+
       title: "Healthcare",
       description: "Patient monitoring, medical device management, and emergency response systems.",
       icon: <Users className="w-8 h-8" />
@@ -142,21 +157,25 @@ export default function EdgeComputingSolutions() {
 
   const benefits = [
     {
+
       title: "Ultra-Low Latency",
       description: "Response times under 10ms for critical applications",
       icon: <Zap className="w-6 h-6" />
     },
     {
+
       title: "Reduced Bandwidth",
       description: "Process data locally, reducing cloud transmission costs",
       icon: <Network className="w-6 h-6" />
     },
     {
+
       title: "Enhanced Privacy",
       description: "Keep sensitive data local and secure",
       icon: <Shield className="w-6 h-6" />
     },
     {
+
       title: "Scalability",
       description: "Easily scale edge computing resources as needed",
       icon: <TrendingUp className="w-6 h-6" />
@@ -341,6 +360,7 @@ export default function EdgeComputingSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-blue-500/50 shadow-2xl shadow-blue-500/20' 
                     : 'border-gray-700'
@@ -373,6 +393,7 @@ export default function EdgeComputingSolutions() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600'
                     : 'border border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400'
