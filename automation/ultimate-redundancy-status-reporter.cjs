@@ -1,5 +1,9 @@
 #!/usr/bin/env node
-'use strict';
+
+/**
+ * Ultimate Redundancy Status Reporter
+ * Reports the current status of the ultimate redundancy system
+ */
 
 const fs = require('fs');
 const path = require('path');
@@ -7,146 +11,55 @@ const path = require('path');
 class UltimateRedundancyStatusReporter {
   constructor() {
     this.statusFile = path.join(__dirname, 'ultimate-redundancy-status.json');
-    this.logDir = path.join(__dirname, 'logs');
-    this.ensureLogDirectory();
+    this.configFile = path.join(__dirname, 'ultimate-redundancy-config.json');
   }
 
-  ensureLogDirectory() {
-    if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
-    }
-  }
-
-  async getSystemStatus() {
+  async getStatus() {
     try {
-      const status = {
-        timestamp: new Date().toISOString(),
-        system: 'ultimate-redundancy',
-        version: '2.0.0',
-        status: 'operational',
-        components: {
-          pm2: this.checkPM2Status(),
-          netlify: this.checkNetlifyStatus(),
-          github: this.checkGitHubStatus(),
-          automation: this.checkAutomationStatus()
-        },
-        health: {
-          overall: 'healthy',
-          lastCheck: new Date().toISOString(),
-          uptime: process.uptime(),
-          memory: process.memoryUsage()
-        }
-      };
-
-      return status;
+      if (fs.existsSync(this.statusFile)) {
+        const statusData = JSON.parse(fs.readFileSync(this.statusFile, 'utf8'));
+        return {
+          success: true,
+          status: statusData,
+          timestamp: new Date().toISOString()
+        };
+      } else {
+        return {
+          success: false,
+          error: 'Status file not found',
+          timestamp: new Date().toISOString()
+        };
+      }
     } catch (error) {
       return {
-        timestamp: new Date().toISOString(),
-        system: 'ultimate-redundancy',
-        status: 'error',
-        error: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       };
-    }
-  }
-
-  checkPM2Status() {
-    try {
-      // Check if PM2 is running
-      return {
-        status: 'active',
-        processes: 'monitoring',
-        health: 'healthy'
-      };
-    } catch (error) {
-      return {
-        status: 'inactive',
-        error: error.message
-      };
-    }
-  }
-
-  checkNetlifyStatus() {
-    try {
-      // Check Netlify functions status
-      return {
-        status: 'active',
-        functions: 'operational',
-        health: 'healthy'
-      };
-    } catch (error) {
-      return {
-        status: 'error',
-        error: error.message
-      };
-    }
-  }
-
-  checkGitHubStatus() {
-    try {
-      // Check GitHub Actions status
-      return {
-        status: 'active',
-        workflows: 'operational',
-        health: 'healthy'
-      };
-    } catch (error) {
-      return {
-        status: 'error',
-        error: error.message
-      };
-    }
-  }
-
-  checkAutomationStatus() {
-    try {
-      // Check automation scripts status
-      return {
-        status: 'active',
-        scripts: 'running',
-        health: 'healthy'
-      };
-    } catch (error) {
-      return {
-        status: 'error',
-        error: error.message
-      };
-    }
-  }
-
-  async saveStatus(status) {
-    try {
-      fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2));
-      console.log(`[Status Reporter] Status saved to ${this.statusFile}`);
-    } catch (error) {
-      console.error('[Status Reporter] Failed to save status:', error.message);
     }
   }
 
   async generateReport() {
-    const status = await this.getSystemStatus();
-    await this.saveStatus(status);
+    const status = await this.getStatus();
+    console.log('Ultimate Redundancy Status Report');
+    console.log('================================');
+    console.log(`Timestamp: ${status.timestamp}`);
+    console.log(`Status: ${status.success ? 'OK' : 'ERROR'}`);
     
-    const reportPath = path.join(this.logDir, `status-report-${Date.now()}.json`);
-    fs.writeFileSync(reportPath, JSON.stringify(status, null, 2));
+    if (status.success) {
+      console.log('System Status:', JSON.stringify(status.status, null, 2));
+    } else {
+      console.log('Error:', status.error);
+    }
     
-    console.log(`[Status Reporter] Report generated: ${reportPath}`);
     return status;
   }
 }
 
-// Export for use in other modules
-module.exports = UltimateRedundancyStatusReporter;
-
-// Run if called directly
+// CLI execution
 if (require.main === module) {
   const reporter = new UltimateRedundancyStatusReporter();
-  reporter.generateReport()
-    .then(status => {
-      console.log('[Status Reporter] Status report completed');
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('[Status Reporter] Error generating report:', error.message);
-      process.exit(1);
-    });
+  reporter.generateReport().catch(console.error);
 }
+
+module.exports = UltimateRedundancyStatusReporter;

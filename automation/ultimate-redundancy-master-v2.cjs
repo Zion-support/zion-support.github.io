@@ -1,265 +1,149 @@
 #!/usr/bin/env node
-'use strict';
+
+/**
+ * Ultimate Redundancy Master V2
+ * Master controller for the ultimate redundancy system version 2
+ */
 
 const fs = require('fs');
 const path = require('path');
+const { spawn } = require('child_process');
 
 class UltimateRedundancyMasterV2 {
   constructor() {
     this.configFile = path.join(__dirname, 'ultimate-redundancy-v2-config.json');
     this.statusFile = path.join(__dirname, 'ultimate-redundancy-v2-status.json');
-    this.logDir = path.join(__dirname, 'logs');
-    this.ensureLogDirectory();
-    this.loadConfig();
+    this.pidFile = path.join(__dirname, 'ultimate-redundancy-v2-master.pid');
+    this.isRunning = false;
   }
 
-  ensureLogDirectory() {
-    if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
-    }
-  }
-
-  loadConfig() {
+  async start() {
     try {
-      if (fs.existsSync(this.configFile)) {
-        this.config = JSON.parse(fs.readFileSync(this.configFile, 'utf8'));
-      } else {
-        this.config = this.getDefaultConfig();
-        this.saveConfig();
+      console.log('🚀 Starting Ultimate Redundancy Master V2...');
+      
+      if (this.isRunning) {
+        console.log('⚠️  Master is already running');
+        return false;
       }
-    } catch (error) {
-      console.error('[Master V2] Failed to load config:', error.message);
-      this.config = this.getDefaultConfig();
-    }
-  }
 
-  getDefaultConfig() {
-    return {
-      version: '2.0.0',
-      redundancyLevel: 'ultimate-v2',
-      autoRecovery: true,
-      healthCheckInterval: 30000,
-      maxRetries: 5,
-      components: {
-        pm2: {
-          enabled: true,
-          autoRestart: true,
-          maxMemory: '1G'
-        },
-        netlify: {
-          enabled: true,
-          functions: ['ultimate-build-guardian', 'ultimate-redundancy-monitor']
-        },
-        github: {
-          enabled: true,
-          workflows: ['build', 'deploy', 'test']
-        },
-        automation: {
-          enabled: true,
-          scripts: ['ultimate-redundancy-v2-system', 'status-reporter']
-        }
-      }
-    };
-  }
+      // Start the main system
+      const systemProcess = spawn('node', [
+        path.join(__dirname, 'ultimate-redundancy-system-v2.cjs'),
+        'start'
+      ], {
+        stdio: 'inherit',
+        detached: true
+      });
 
-  saveConfig() {
-    try {
-      fs.writeFileSync(this.configFile, JSON.stringify(this.config, null, 2));
-      console.log('[Master V2] Configuration saved');
-    } catch (error) {
-      console.error('[Master V2] Failed to save config:', error.message);
-    }
-  }
-
-  async startSystem() {
-    try {
-      console.log('[Master V2] Starting Ultimate Redundancy V2 System...');
+      // Save PID
+      fs.writeFileSync(this.pidFile, systemProcess.pid.toString());
       
-      // Initialize all components
-      await this.initializeComponents();
+      this.isRunning = true;
+      console.log('✅ Ultimate Redundancy Master V2 started successfully');
       
-      // Start monitoring
-      this.startMonitoring();
-      
-      // Save status
-      await this.updateStatus('running');
-      
-      console.log('[Master V2] System started successfully');
       return true;
     } catch (error) {
-      console.error('[Master V2] Failed to start system:', error.message);
-      await this.updateStatus('error', error.message);
+      console.error('❌ Failed to start Ultimate Redundancy Master V2:', error.message);
       return false;
     }
   }
 
-  async initializeComponents() {
-    const components = this.config.components;
-    
-    if (components.pm2.enabled) {
-      await this.initializePM2();
-    }
-    
-    if (components.netlify.enabled) {
-      await this.initializeNetlify();
-    }
-    
-    if (components.github.enabled) {
-      await this.initializeGitHub();
-    }
-    
-    if (components.automation.enabled) {
-      await this.initializeAutomation();
-    }
-  }
-
-  async initializePM2() {
-    console.log('[Master V2] Initializing PM2 components...');
-    // PM2 initialization logic would go here
-  }
-
-  async initializeNetlify() {
-    console.log('[Master V2] Initializing Netlify components...');
-    // Netlify initialization logic would go here
-  }
-
-  async initializeGitHub() {
-    console.log('[Master V2] Initializing GitHub components...');
-    // GitHub initialization logic would go here
-  }
-
-  async initializeAutomation() {
-    console.log('[Master V2] Initializing automation components...');
-    // Automation initialization logic would go here
-  }
-
-  startMonitoring() {
-    console.log('[Master V2] Starting health monitoring...');
-    
-    setInterval(async () => {
-      await this.performHealthCheck();
-    }, this.config.healthCheckInterval);
-  }
-
-  async performHealthCheck() {
+  async stop() {
     try {
-      const health = {
-        timestamp: new Date().toISOString(),
-        overall: 'healthy',
-        components: {}
+      console.log('🛑 Stopping Ultimate Redundancy Master V2...');
+      
+      if (fs.existsSync(this.pidFile)) {
+        const pid = fs.readFileSync(this.pidFile, 'utf8').trim();
+        process.kill(parseInt(pid), 'SIGTERM');
+        fs.unlinkSync(this.pidFile);
+      }
+      
+      this.isRunning = false;
+      console.log('✅ Ultimate Redundancy Master V2 stopped successfully');
+      
+      return true;
+    } catch (error) {
+      console.error('❌ Failed to stop Ultimate Redundancy Master V2:', error.message);
+      return false;
+    }
+  }
+
+  async status() {
+    try {
+      const status = {
+        isRunning: this.isRunning,
+        pid: null,
+        config: null,
+        timestamp: new Date().toISOString()
       };
 
-      // Check each component
-      for (const [name, component] of Object.entries(this.config.components)) {
-        if (component.enabled) {
-          health.components[name] = await this.checkComponentHealth(name);
-        }
+      if (fs.existsSync(this.pidFile)) {
+        status.pid = fs.readFileSync(this.pidFile, 'utf8').trim();
       }
 
-      // Update overall health
-      const componentHealths = Object.values(health.components);
-      if (componentHealths.every(h => h.status === 'healthy')) {
-        health.overall = 'healthy';
-      } else if (componentHealths.some(h => h.status === 'error')) {
-        health.overall = 'error';
-      } else {
-        health.overall = 'warning';
+      if (fs.existsSync(this.configFile)) {
+        status.config = JSON.parse(fs.readFileSync(this.configFile, 'utf8'));
       }
 
-      await this.updateStatus(health.overall, null, health);
-      
+      return status;
     } catch (error) {
-      console.error('[Master V2] Health check failed:', error.message);
-      await this.updateStatus('error', error.message);
+      return {
+        isRunning: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
+      };
     }
   }
 
-  async checkComponentHealth(componentName) {
-    // Component-specific health check logic would go here
-    return {
-      status: 'healthy',
-      lastCheck: new Date().toISOString()
-    };
-  }
-
-  async updateStatus(status, error = null, health = null) {
-    const statusData = {
-      timestamp: new Date().toISOString(),
-      status: status,
-      error: error,
-      health: health,
-      uptime: process.uptime(),
-      memory: process.memoryUsage()
-    };
-
+  async health() {
     try {
-      fs.writeFileSync(this.statusFile, JSON.stringify(statusData, null, 2));
-    } catch (error) {
-      console.error('[Master V2] Failed to update status:', error.message);
-    }
-  }
+      const status = await this.status();
+      const health = {
+        status: 'healthy',
+        checks: {
+          master: status.isRunning,
+          pid: !!status.pid,
+          config: !!status.config
+        },
+        timestamp: new Date().toISOString()
+      };
 
-  async stopSystem() {
-    try {
-      console.log('[Master V2] Stopping Ultimate Redundancy V2 System...');
-      
-      // Stop monitoring
-      // Cleanup logic would go here
-      
-      await this.updateStatus('stopped');
-      
-      console.log('[Master V2] System stopped successfully');
-      return true;
+      if (!health.checks.master || !health.checks.pid || !health.checks.config) {
+        health.status = 'unhealthy';
+      }
+
+      return health;
     } catch (error) {
-      console.error('[Master V2] Failed to stop system:', error.message);
-      return false;
+      return {
+        status: 'error',
+        error: error.message,
+        timestamp: new Date().toISOString()
+      };
     }
   }
 }
 
-// Export for use in other modules
-module.exports = UltimateRedundancyMasterV2;
-
-// Run if called directly
+// CLI execution
 if (require.main === module) {
   const master = new UltimateRedundancyMasterV2();
-  
   const command = process.argv[2];
-  
+
   switch (command) {
     case 'start':
-      master.startSystem()
-        .then(success => {
-          if (success) {
-            console.log('[Master V2] System started');
-            process.exit(0);
-          } else {
-            console.error('[Master V2] Failed to start system');
-            process.exit(1);
-          }
-        });
+      master.start().catch(console.error);
       break;
-      
     case 'stop':
-      master.stopSystem()
-        .then(success => {
-          if (success) {
-            console.log('[Master V2] System stopped');
-            process.exit(0);
-          } else {
-            console.error('[Master V2] Failed to stop system');
-            process.exit(1);
-          }
-        });
+      master.stop().catch(console.error);
       break;
-      
     case 'status':
-      console.log('[Master V2] Current status:', master.config);
-      process.exit(0);
+      master.status().then(console.log).catch(console.error);
       break;
-      
+    case 'health':
+      master.health().then(console.log).catch(console.error);
+      break;
     default:
-      console.log('[Master V2] Usage: node ultimate-redundancy-master-v2.cjs [start|stop|status]');
-      process.exit(1);
+      console.log('Usage: node ultimate-redundancy-master-v2.cjs [start|stop|status|health]');
   }
 }
+
+module.exports = UltimateRedundancyMasterV2;

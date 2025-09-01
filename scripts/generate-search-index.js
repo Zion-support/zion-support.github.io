@@ -1,81 +1,107 @@
 #!/usr/bin/env node
 
+/**
+ * Generate Search Index
+ * Creates a search index for the website content
+ */
+
 const fs = require('fs');
 const path = require('path');
 
-function generateSearchIndex() {
-  const publicDir = path.join(process.cwd(), 'public');
-  const searchIndexPath = path.join(publicDir, 'search-index.json');
-  
-  // Ensure public directory exists
-  if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true });
+const PAGES_DIR = path.join(__dirname, '..', 'pages');
+const OUTPUT_DIR = path.join(__dirname, '..', 'public', 'search');
+
+// Content types to index
+const CONTENT_TYPES = {
+  'pages': {
+    path: PAGES_DIR,
+    extensions: ['.tsx', '.ts', '.jsx', '.js'],
+    exclude: ['_app', '_document', 'api']
+  },
+  'blog': {
+    path: path.join(PAGES_DIR, 'blog'),
+    extensions: ['.tsx', '.ts', '.jsx', '.js'],
+    exclude: []
   }
-  
-  // Basic search index structure
+};
+
+function extractTextFromJSX(content) {
+  // Simple text extraction from JSX/TSX content
+  return content
+    .replace(/<[^>]*>/g, ' ') // Remove HTML/JSX tags
+    .replace(/import.*?from.*?['"`][^'"`]*['"`];?/g, '') // Remove imports
+    .replace(/export.*?function.*?{/g, '') // Remove function declarations
+    .replace(/[{}()]/g, ' ') // Remove brackets
+    .replace(/\s+/g, ' ') // Normalize whitespace
+    .trim();
+}
+
+function generateSearchIndex() {
   const searchIndex = {
-    pages: [
-      {
-        title: 'Zion Tech Group — Autonomous Innovation Hub',
-        url: '/',
-        description: 'Leading-edge technology solutions and autonomous innovation systems.',
-        keywords: ['technology', 'innovation', 'automation', 'AI', 'autonomous systems'],
-        category: 'home'
-      },
-      {
-        title: 'About Us',
-        url: '/about',
-        description: 'Learn about Zion Tech Group and our mission.',
-        keywords: ['about', 'company', 'mission', 'team'],
-        category: 'company'
-      },
-      {
-        title: 'Our Services',
-        url: '/services',
-        description: 'Explore our comprehensive technology services.',
-        keywords: ['services', 'technology', 'solutions', 'consulting'],
-        category: 'services'
-      },
-      {
-        title: 'Resources',
-        url: '/resources',
-        description: 'Access our knowledge base and resources.',
-        keywords: ['resources', 'knowledge', 'guides', 'documentation'],
-        category: 'resources'
-      },
-      {
-        title: 'Case Studies',
-        url: '/case-studies',
-        description: 'Real-world examples of our technology solutions.',
-        keywords: ['case studies', 'examples', 'success stories', 'projects'],
-        category: 'portfolio'
-      },
-      {
-        title: 'Blog',
-        url: '/blog',
-        description: 'Latest insights and updates from our team.',
-        keywords: ['blog', 'insights', 'updates', 'news'],
-        category: 'content'
-      },
-      {
-        title: 'Contact',
-        url: '/contact',
-        description: 'Get in touch with our team.',
-        keywords: ['contact', 'support', 'inquiry', 'get quote'],
-        category: 'contact'
-      }
-    ],
-    lastUpdated: new Date().toISOString(),
-    totalPages: 7
+    pages: [],
+    blog: [],
+    generated: new Date().toISOString()
   };
+
+  // Process each content type
+  Object.entries(CONTENT_TYPES).forEach(([type, config]) => {
+    if (!fs.existsSync(config.path)) return;
+
+    const files = fs.readdirSync(config.path, { recursive: true });
+    
+    files.forEach(file => {
+      if (typeof file === 'string') {
+        const filePath = path.join(config.path, file);
+        const stats = fs.statSync(filePath);
+        
+        if (stats.isFile()) {
+          const ext = path.extname(file);
+          if (config.extensions.includes(ext)) {
+            const fileName = path.basename(file, ext);
+            
+            // Skip excluded files
+            if (config.exclude.some(excluded => fileName.startsWith(excluded))) {
+              return;
+            }
+
+            try {
+              const content = fs.readFileSync(filePath, 'utf8');
+              const text = extractTextFromJSX(content);
+              
+              const entry = {
+                id: `${type}-${fileName}`,
+                title: fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+                content: text.substring(0, 500), // Limit content length
+                url: `/${type === 'pages' ? '' : type + '/'}${fileName}`,
+                type: type,
+                lastModified: stats.mtime.toISOString()
+              };
+
+              searchIndex[type].push(entry);
+            } catch (error) {
+              console.warn(`⚠️  Could not process ${filePath}:`, error.message);
+            }
+          }
+        }
+      }
+    });
+  });
+
+  // Ensure output directory exists
+  if (!fs.existsSync(OUTPUT_DIR)) {
+    fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+  }
+
+  // Write search index
+  const indexPath = path.join(OUTPUT_DIR, 'index.json');
+  fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2));
   
-  fs.writeFileSync(searchIndexPath, JSON.stringify(searchIndex, null, 2));
-  console.log(`✅ Search index generated at: ${searchIndexPath}`);
-  console.log(`📊 Indexed ${searchIndex.pages.length} pages`);
+  console.log(`✅ Search index generated at: ${indexPath}`);
+  console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`);
 }
 
 if (require.main === module) {
   generateSearchIndex();
 }
 
-module.exports = generateSearchIndex;
+module.exports = { generateSearchIndex };
