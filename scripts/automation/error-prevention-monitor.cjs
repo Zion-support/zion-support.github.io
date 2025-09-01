@@ -6,388 +6,595 @@ const { execSync } = require('child_process');
 
 class ErrorPreventionMonitor {
   constructor() {
-    this.workspacePath = process.cwd();
-    this.logsPath = path.join(this.workspacePath, 'logs');
-    this.reportsPath = path.join(this.workspacePath, 'automation-reports');
-    this.ensureDirectories();
-    this.errorPatterns = new Map();
-    this.preventionHistory = new Map();
-  }
-
-  ensureDirectories() {
-    [this.logsPath, this.reportsPath].forEach(dir => {
+    this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, 'error-reports');
+    this.logsDir = path.join(this.projectRoot, 'automation/logs');
+    this.checkInterval = parseInt(process.env.PREVENTION_CHECK_INTERVAL) || 600000; // 10 minutes
+    this.preventiveActionsEnabled = process.env.PREVENTIVE_ACTIONS_ENABLED === 'true';
+    
+    // Ensure directories exist
+    [this.reportsDir, this.logsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
     });
+    
+    this.preventionHistory = [];
+    this.riskFactors = new Map();
   }
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    
-    const logFile = path.join(this.logsPath, 'error-prevention-monitor.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    console.log(`[${timestamp}] [${level}] ${message}`);
   }
 
-  async scanForPotentialErrors() {
-    this.log('🔍 Scanning for potential errors...');
+  async checkFileSizeIssues() {
+    this.log('Checking for file size issues...', 'INFO');
     
-    const potentialErrors = [];
+    const largeFiles = [];
+    const maxSize = 1024 * 1024; // 1MB
     
-    // Scan source files for common error patterns
-    const sourceFiles = this.findSourceFiles();
-    
-    for (const filePath of sourceFiles) {
-      try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        const errors = this.analyzeFileForPotentialErrors(filePath, content);
-        potentialErrors.push(...errors);
-      } catch (error) {
-        this.log(`⚠️ Could not read file ${filePath}: ${error.message}`, 'WARN');
+    try {
+      const files = this.getAllSourceFiles();
+      
+      for (const file of files) {
+        const stats = fs.statSync(file);
+        if (stats.size > maxSize) {
+          largeFiles.push({
+            file,
+            size: stats.size,
+            sizeMB: (stats.size / (1024 * 1024)).toFixed(2)
+          });
+        }
       }
+      
+      return largeFiles;
+    } catch (error) {
+      this.log(`Error checking file sizes: ${error.message}`, 'ERROR');
+      return [];
+    }
+  }
+
+  async checkCircularDependencies() {
+    this.log('Checking for circular dependencies...', 'INFO');
+    
+    const circularDeps = [];
+    
+    try {
+      // Use madge to detect circular dependencies
+      const output = execSync('npx madge --circular src/', { stdio: 'pipe' }).toString();
+      
+      if (output.trim()) {
+        const lines = output.split('\n').filter(line => line.trim());
+        for (const line of lines) {
+          circularDeps.push({
+            cycle: line.trim(),
+            severity: 'high'
+          });
+        }
+      }
+      
+      return circularDeps;
+    } catch (error) {
+      // madge returns non-zero exit code when circular dependencies are found
+      if (error.stdout) {
+        const output = error.stdout.toString();
+        const lines = output.split('\n').filter(line => line.trim());
+        for (const line of lines) {
+          circularDeps.push({
+            cycle: line.trim(),
+            severity: 'high'
+          });
+        }
+      }
+      return circularDeps;
+    }
+  }
+
+  async checkUnusedDependencies() {
+    this.log('Checking for unused dependencies...', 'INFO');
+    
+    const unusedDeps = [];
+    
+    try {
+      const output = execSync('npx depcheck --json', { stdio: 'pipe' }).toString();
+      const result = JSON.parse(output);
+      
+      if (result.dependencies && result.dependencies.length > 0) {
+        for (const dep of result.dependencies) {
+          unusedDeps.push({
+            dependency: dep,
+            type: 'unused',
+            severity: 'medium'
+          });
+        }
+      }
+      
+      return unusedDeps;
+    } catch (error) {
+      this.log(`Error checking unused dependencies: ${error.message}`, 'WARN');
+      return [];
+    }
+  }
+
+  async checkSecurityVulnerabilities() {
+    this.log('Checking for security vulnerabilities...', 'INFO');
+    
+    const vulnerabilities = [];
+    
+    try {
+      const output = execSync('npm audit --json', { stdio: 'pipe' }).toString();
+      const result = JSON.parse(output);
+      
+      if (result.vulnerabilities) {
+        for (const [pkg, vuln] of Object.entries(result.vulnerabilities)) {
+          vulnerabilities.push({
+            package: pkg,
+            severity: vuln.severity,
+            title: vuln.title,
+            description: vuln.description,
+            recommendation: vuln.recommendation
+          });
+        }
+      }
+      
+      return vulnerabilities;
+    } catch (error) {
+      // npm audit returns non-zero exit code when vulnerabilities are found
+      if (error.stdout) {
+        try {
+          const output = error.stdout.toString();
+          const result = JSON.parse(output);
+          
+          if (result.vulnerabilities) {
+            for (const [pkg, vuln] of Object.entries(result.vulnerabilities)) {
+              vulnerabilities.push({
+                package: pkg,
+                severity: vuln.severity,
+                title: vuln.title,
+                description: vuln.description,
+                recommendation: vuln.recommendation
+              });
+            }
+          }
+        } catch (parseError) {
+          this.log(`Error parsing audit output: ${parseError.message}`, 'WARN');
+        }
+      }
+      return vulnerabilities;
+    }
+  }
+
+  async checkPerformanceIssues() {
+    this.log('Checking for performance issues...', 'INFO');
+    
+    const performanceIssues = [];
+    
+    try {
+      // Check for large bundle size indicators
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      
+      // Check for heavy dependencies
+      const heavyDeps = ['lodash', 'moment', 'date-fns', 'ramda', 'underscore'];
+      for (const dep of heavyDeps) {
+        if (packageJson.dependencies && packageJson.dependencies[dep]) {
+          performanceIssues.push({
+            type: 'heavy-dependency',
+            dependency: dep,
+            severity: 'medium',
+            recommendation: `Consider using lighter alternatives for ${dep}`
+          });
+        }
+      }
+      
+      // Check for multiple CSS frameworks
+      const cssFrameworks = ['bootstrap', 'tailwindcss', 'bulma', 'foundation'];
+      const foundFrameworks = cssFrameworks.filter(framework => 
+        packageJson.dependencies && packageJson.dependencies[framework]
+      );
+      
+      if (foundFrameworks.length > 1) {
+        performanceIssues.push({
+          type: 'multiple-css-frameworks',
+          frameworks: foundFrameworks,
+          severity: 'medium',
+          recommendation: 'Consider using only one CSS framework to reduce bundle size'
+        });
+      }
+      
+      return performanceIssues;
+    } catch (error) {
+      this.log(`Error checking performance issues: ${error.message}`, 'ERROR');
+      return [];
+    }
+  }
+
+  async checkCodeQualityIssues() {
+    this.log('Checking for code quality issues...', 'INFO');
+    
+    const qualityIssues = [];
+    
+    try {
+      // Check for TODO comments
+      const todoComments = this.findTodoComments();
+      if (todoComments.length > 10) {
+        qualityIssues.push({
+          type: 'excessive-todos',
+          count: todoComments.length,
+          severity: 'medium',
+          recommendation: 'Review and address TODO comments'
+        });
+      }
+      
+      // Check for console statements in production code
+      const consoleStatements = this.findConsoleStatements();
+      if (consoleStatements.length > 5) {
+        qualityIssues.push({
+          type: 'console-statements',
+          count: consoleStatements.length,
+          severity: 'low',
+          recommendation: 'Remove console statements from production code'
+        });
+      }
+      
+      // Check for hardcoded values
+      const hardcodedValues = this.findHardcodedValues();
+      if (hardcodedValues.length > 20) {
+        qualityIssues.push({
+          type: 'hardcoded-values',
+          count: hardcodedValues.length,
+          severity: 'medium',
+          recommendation: 'Extract hardcoded values to configuration files'
+        });
+      }
+      
+      return qualityIssues;
+    } catch (error) {
+      this.log(`Error checking code quality issues: ${error.message}`, 'ERROR');
+      return [];
+    }
+  }
+
+  getAllSourceFiles() {
+    const sourceFiles = [];
+    const srcDir = path.join(this.projectRoot, 'src');
+    
+    if (!fs.existsSync(srcDir)) {
+      return sourceFiles;
     }
     
-    this.log(`Found ${potentialErrors.length} potential error patterns`);
-    return potentialErrors;
-  }
-
-  findSourceFiles() {
-    const sourceFiles = [];
-    
-    const scanDirectory = (dir) => {
+    const walkDir = (dir) => {
       const files = fs.readdirSync(dir);
-      files.forEach(file => {
+      
+      for (const file of files) {
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
         
-        if (stat.isDirectory() && !file.startsWith('.') && !file.startsWith('node_modules')) {
-          scanDirectory(filePath);
-        } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(file)) {
+        if (stat.isDirectory()) {
+          walkDir(filePath);
+        } else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
           sourceFiles.push(filePath);
         }
-      });
+      }
     };
     
-    scanDirectory(this.workspacePath);
+    walkDir(srcDir);
     return sourceFiles;
   }
 
-  analyzeFileForPotentialErrors(filePath, content) {
-    const errors = [];
-    const lines = content.split('\n');
+  findTodoComments() {
+    const todos = [];
+    const files = this.getAllSourceFiles();
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      const lineNumber = i + 1;
-      
-      // Check for common error patterns
-      if (this.detectUnsafeCode(line)) {
-        errors.push({
-          file: filePath,
-          line: lineNumber,
-          pattern: 'unsafe-code',
-          description: 'Potentially unsafe code detected',
-          severity: 'warning'
-        });
-      }
-      
-      if (this.detectMemoryLeak(line)) {
-        errors.push({
-          file: filePath,
-          line: lineNumber,
-          pattern: 'memory-leak',
-          description: 'Potential memory leak detected',
-          severity: 'warning'
-        });
-      }
-      
-      if (this.detectAsyncError(line)) {
-        errors.push({
-          file: filePath,
-          line: lineNumber,
-          pattern: 'async-error',
-          description: 'Potential async error handling issue',
-          severity: 'warning'
-        });
-      }
-      
-      if (this.detectTypeIssue(line)) {
-        errors.push({
-          file: filePath,
-          line: lineNumber,
-          pattern: 'type-issue',
-          description: 'Potential type-related issue',
-          severity: 'warning'
-        });
-      }
-    }
-    
-    return errors;
-  }
-
-  detectUnsafeCode(line) {
-    const unsafePatterns = [
-      /eval\s*\(/,
-      /Function\s*\(/,
-      /innerHTML\s*=/,
-      /outerHTML\s*=/,
-      /document\.write\s*\(/,
-      /setTimeout\s*\([^,]*,\s*0\)/,
-      /setInterval\s*\([^,]*,\s*0\)/
-    ];
-    
-    return unsafePatterns.some(pattern => pattern.test(line));
-  }
-
-  detectMemoryLeak(line) {
-    const memoryLeakPatterns = [
-      /addEventListener\s*\([^,]*,\s*[^,]*,\s*false\)/,
-      /setInterval\s*\([^,]*,\s*\d+\)/,
-      /setTimeout\s*\([^,]*,\s*\d+\)/,
-      /new\s+Promise\s*\(/,
-      /fetch\s*\(/
-    ];
-    
-    return memoryLeakPatterns.some(pattern => pattern.test(line));
-  }
-
-  detectAsyncError(line) {
-    const asyncErrorPatterns = [
-      /\.then\s*\([^)]*\)/,
-      /\.catch\s*\([^)]*\)/,
-      /async\s+function/,
-      /await\s+/
-    ];
-    
-    return asyncErrorPatterns.some(pattern => pattern.test(line));
-  }
-
-  detectTypeIssue(line) {
-    const typeIssuePatterns = [
-      /:\s*any\s*[=,]/,
-      /as\s+any/,
-      /<any>/,
-      /any\[\]/,
-      /Record<string,\s*any>/,
-      /{[^}]*:\s*any[^}]*}/
-    ];
-    
-    return typeIssuePatterns.some(pattern => pattern.test(line));
-  }
-
-  async applyPreventiveFixes(potentialErrors) {
-    this.log(`🔧 Applying preventive fixes for ${potentialErrors.length} potential issues...`);
-    
-    let fixedCount = 0;
-    const fixResults = [];
-
-    for (const error of potentialErrors) {
-      try {
-        const fixed = await this.applyPreventiveFix(error);
-        if (fixed) {
-          fixedCount++;
-        }
-        
-        fixResults.push({
-          error,
-          fixed,
-          timestamp: new Date().toISOString()
-        });
-        
-      } catch (fixError) {
-        this.log(`❌ Error applying preventive fix: ${fixError.message}`, 'ERROR');
-        fixResults.push({
-          error,
-          fixed: false,
-          error: fixError.message,
-          timestamp: new Date().toISOString()
-        });
-      }
-    }
-
-    this.log(`✅ Applied ${fixedCount} preventive fixes`);
-    return { fixedCount, totalIssues: potentialErrors.length, results: fixResults };
-  }
-
-  async applyPreventiveFix(error) {
-    const filePath = error.file;
-    
-    if (!fs.existsSync(filePath)) {
-      return false;
-    }
-
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
+    for (const file of files) {
+      const content = fs.readFileSync(file, 'utf8');
       const lines = content.split('\n');
-      const lineIndex = error.line - 1;
       
-      if (lineIndex < 0 || lineIndex >= lines.length) {
-        return false;
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].includes('TODO') || lines[i].includes('FIXME')) {
+          todos.push({
+            file,
+            line: i + 1,
+            comment: lines[i].trim()
+          });
+        }
       }
+    }
+    
+    return todos;
+  }
 
-      const originalLine = lines[lineIndex];
-      let fixedLine = originalLine;
-      let fixed = false;
-
-      switch (error.pattern) {
-        case 'unsafe-code':
-          fixedLine = await this.fixUnsafeCode(originalLine);
-          fixed = fixedLine !== originalLine;
-          break;
-          
-        case 'memory-leak':
-          fixedLine = await this.fixMemoryLeak(originalLine);
-          fixed = fixedLine !== originalLine;
-          break;
-          
-        case 'async-error':
-          fixedLine = await this.fixAsyncError(originalLine);
-          fixed = fixedLine !== originalLine;
-          break;
-          
-        case 'type-issue':
-          fixedLine = await this.fixTypeIssue(originalLine);
-          fixed = fixedLine !== originalLine;
-          break;
+  findConsoleStatements() {
+    const consoleStatements = [];
+    const files = this.getAllSourceFiles();
+    
+    for (const file of files) {
+      const content = fs.readFileSync(file, 'utf8');
+      const lines = content.split('\n');
+      
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].includes('console.')) {
+          consoleStatements.push({
+            file,
+            line: i + 1,
+            statement: lines[i].trim()
+          });
+        }
       }
+    }
+    
+    return consoleStatements;
+  }
 
-      if (fixed) {
-        lines[lineIndex] = fixedLine;
-        fs.writeFileSync(filePath, lines.join('\n'));
-        this.log(`✅ Applied preventive fix in ${filePath}:${error.line}`);
-        return true;
+  findHardcodedValues() {
+    const hardcodedValues = [];
+    const files = this.getAllSourceFiles();
+    
+    for (const file of files) {
+      const content = fs.readFileSync(file, 'utf8');
+      const lines = content.split('\n');
+      
+      for (let i = 0; i < lines.length; i++) {
+        // Look for hardcoded URLs, API keys, etc.
+        const hardcodedPatterns = [
+          /https?:\/\/[^\s'"]+/g,
+          /api_key\s*[:=]\s*['"][^'"]+['"]/g,
+          /password\s*[:=]\s*['"][^'"]+['"]/g,
+          /secret\s*[:=]\s*['"][^'"]+['"]/g
+        ];
+        
+        for (const pattern of hardcodedPatterns) {
+          const matches = lines[i].match(pattern);
+          if (matches) {
+            hardcodedValues.push({
+              file,
+              line: i + 1,
+              value: matches[0],
+              type: 'hardcoded'
+            });
+          }
+        }
       }
+    }
+    
+    return hardcodedValues;
+  }
 
-      return false;
-    } catch (fixError) {
-      this.log(`❌ Failed to apply preventive fix: ${fixError.message}`, 'ERROR');
-      return false;
+  async takePreventiveActions(issues) {
+    if (!this.preventiveActionsEnabled) {
+      this.log('Preventive actions are disabled', 'INFO');
+      return [];
+    }
+
+    const actionsTaken = [];
+    
+    for (const issue of issues) {
+      try {
+        const action = await this.takeActionForIssue(issue);
+        if (action) {
+          actionsTaken.push(action);
+        }
+      } catch (error) {
+        this.log(`Failed to take action for issue: ${error.message}`, 'ERROR');
+      }
+    }
+    
+    return actionsTaken;
+  }
+
+  async takeActionForIssue(issue) {
+    switch (issue.type) {
+      case 'unused-dependency':
+        return await this.removeUnusedDependency(issue);
+      case 'security-vulnerability':
+        return await this.fixSecurityVulnerability(issue);
+      case 'console-statements':
+        return await this.removeConsoleStatements(issue);
+      case 'excessive-todos':
+        return await this.flagTodosForReview(issue);
+      default:
+        return null;
     }
   }
 
-  async fixUnsafeCode(line) {
-    let fixedLine = line;
-    
-    // Replace eval with safer alternatives
-    if (line.includes('eval(')) {
-      fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, 'JSON.parse($1)');
+  async removeUnusedDependency(issue) {
+    try {
+      execSync(`npm uninstall ${issue.dependency}`, { stdio: 'pipe' });
+      return {
+        type: 'dependency-removed',
+        dependency: issue.dependency,
+        action: 'uninstalled'
+      };
+    } catch (error) {
+      this.log(`Failed to remove unused dependency ${issue.dependency}: ${error.message}`, 'WARN');
+      return null;
     }
-    
-    // Replace innerHTML with textContent where possible
-    if (line.includes('.innerHTML =')) {
-      fixedLine = line.replace(/\.innerHTML\s*=\s*([^;]+)/g, '.textContent = $1');
-    }
-    
-    return fixedLine;
   }
 
-  async fixMemoryLeak(line) {
-    let fixedLine = line;
-    
-    // Add cleanup for event listeners
-    if (line.includes('addEventListener')) {
-      fixedLine = line.replace(
-        /addEventListener\s*\(([^,]+),\s*([^,]+),\s*false\)/g,
-        'addEventListener($1, $2, { once: true })'
-      );
+  async fixSecurityVulnerability(issue) {
+    try {
+      execSync('npm audit fix', { stdio: 'pipe' });
+      return {
+        type: 'security-fix',
+        package: issue.package,
+        action: 'audit-fix-applied'
+      };
+    } catch (error) {
+      this.log(`Failed to fix security vulnerability: ${error.message}`, 'WARN');
+      return null;
     }
-    
-    return fixedLine;
   }
 
-  async fixAsyncError(line) {
-    let fixedLine = line;
-    
-    // Add error handling for promises
-    if (line.includes('.then(') && !line.includes('.catch(')) {
-      fixedLine = line + '\n  .catch(error => console.error(\'Error:\', error))';
+  async removeConsoleStatements(issue) {
+    try {
+      const content = fs.readFileSync(issue.file, 'utf8');
+      const lines = content.split('\n');
+      
+      // Comment out console statements
+      if (issue.line > 0 && issue.line <= lines.length) {
+        lines[issue.line - 1] = `// ${lines[issue.line - 1]} // eslint-disable-line no-console`;
+        fs.writeFileSync(issue.file, lines.join('\n'));
+        
+        return {
+          type: 'console-statement-commented',
+          file: issue.file,
+          line: issue.line,
+          action: 'commented-out'
+        };
+      }
+      
+      return null;
+    } catch (error) {
+      this.log(`Failed to remove console statement: ${error.message}`, 'WARN');
+      return null;
     }
-    
-    return fixedLine;
   }
 
-  async fixTypeIssue(line) {
-    let fixedLine = line;
+  async flagTodosForReview(issue) {
+    // Create a review file for TODOs
+    const reviewFile = path.join(this.reportsDir, 'todo-review.md');
+    const todos = this.findTodoComments();
     
-    // Replace any with more specific types
-    if (line.includes(': any')) {
-      fixedLine = line.replace(/: any/g, ': unknown');
+    let content = '# TODO Review Required\n\n';
+    content += `Generated on: ${new Date().toISOString()}\n\n`;
+    content += `Total TODOs found: ${todos.length}\n\n`;
+    
+    for (const todo of todos) {
+      content += `## ${todo.file}:${todo.line}\n`;
+      content += `${todo.comment}\n\n`;
     }
     
-    if (line.includes('as any')) {
-      fixedLine = line.replace(/as any/g, 'as unknown');
-    }
+    fs.writeFileSync(reviewFile, content);
     
-    return fixedLine;
-  }
-
-  async generateReport(fixResults) {
-    this.log('📊 Generating error prevention monitoring report...');
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        totalIssues: fixResults.totalIssues,
-        fixedIssues: fixResults.fixedCount,
-        preventionRate: fixResults.totalIssues > 0 ? (fixResults.fixedCount / fixResults.totalIssues * 100).toFixed(2) : 100
-      },
-      fixResults: fixResults.results,
-      recommendations: [
-        'Review applied fixes to ensure they meet your requirements',
-        'Consider adding more specific type annotations',
-        'Implement proper error handling for async operations',
-        'Regularly review code for potential security issues'
-      ]
+    return {
+      type: 'todo-review-created',
+      file: reviewFile,
+      count: todos.length,
+      action: 'review-file-created'
     };
-
-    const reportFile = path.join(this.reportsPath, 'error-prevention-monitor-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
-    this.log(`📄 Report generated: ${reportFile}`);
-    return report;
   }
 
-  async run() {
-    this.log('🚀 Starting Error Prevention Monitor...');
+  async runPreventionCheck() {
+    this.log('Starting error prevention check...');
     
     try {
-      // Scan for potential errors
-      const potentialErrors = await this.scanForPotentialErrors();
+      // Run all prevention checks
+      const [
+        largeFiles,
+        circularDeps,
+        unusedDeps,
+        vulnerabilities,
+        performanceIssues,
+        qualityIssues
+      ] = await Promise.all([
+        this.checkFileSizeIssues(),
+        this.checkCircularDependencies(),
+        this.checkUnusedDependencies(),
+        this.checkSecurityVulnerabilities(),
+        this.checkPerformanceIssues(),
+        this.checkCodeQualityIssues()
+      ]);
       
-      if (potentialErrors.length === 0) {
-        this.log('🎉 No potential errors detected!');
-        return { success: true, issues: [], fixed: 0 };
+      const allIssues = [
+        ...largeFiles.map(f => ({ ...f, type: 'large-file' })),
+        ...circularDeps.map(d => ({ ...d, type: 'circular-dependency' })),
+        ...unusedDeps.map(d => ({ ...d, type: 'unused-dependency' })),
+        ...vulnerabilities.map(v => ({ ...v, type: 'security-vulnerability' })),
+        ...performanceIssues.map(p => ({ ...p, type: 'performance-issue' })),
+        ...qualityIssues.map(q => ({ ...q, type: 'quality-issue' }))
+      ];
+      
+      if (allIssues.length === 0) {
+        this.log('No prevention issues found', 'INFO');
+        return;
       }
       
-      // Apply preventive fixes
-      const fixResults = await this.applyPreventiveFixes(potentialErrors);
+      this.log(`Found ${allIssues.length} prevention issues`, 'INFO');
       
-      // Generate report
-      const report = await this.generateReport(fixResults);
+      // Take preventive actions
+      const actionsTaken = await this.takePreventiveActions(allIssues);
       
-      this.log('🎉 Error Prevention Monitor completed!');
-      this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
-      
-      return {
-        success: fixResults.fixedCount > 0,
-        issues: potentialErrors,
-        fixed: fixResults.fixedCount,
-        report
+      const report = {
+        timestamp: new Date().toISOString(),
+        issuesFound: allIssues.length,
+        issues: allIssues,
+        actionsTaken: actionsTaken.length,
+        actions: actionsTaken,
+        summary: {
+          largeFiles: largeFiles.length,
+          circularDeps: circularDeps.length,
+          unusedDeps: unusedDeps.length,
+          vulnerabilities: vulnerabilities.length,
+          performanceIssues: performanceIssues.length,
+          qualityIssues: qualityIssues.length
+        }
       };
       
+      // Save report
+      const reportPath = path.join(this.reportsDir, `prevention-report-${Date.now()}.json`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      
+      // Update prevention history
+      this.preventionHistory.push(report);
+      if (this.preventionHistory.length > 50) {
+        this.preventionHistory = this.preventionHistory.slice(-50);
+      }
+      
+      this.log(`Prevention check completed. Report saved to ${reportPath}`, 'INFO');
+      
     } catch (error) {
-      this.log(`💥 Error Prevention Monitor failed: ${error.message}`, 'ERROR');
-      throw error;
+      this.log(`Prevention check failed: ${error.message}`, 'ERROR');
     }
+  }
+
+  async startMonitor() {
+    this.log('Starting error prevention monitor...');
+    
+    // Run initial check
+    await this.runPreventionCheck();
+    
+    // Set up periodic checking
+    setInterval(async () => {
+      try {
+        await this.runPreventionCheck();
+      } catch (error) {
+        this.log(`Error in periodic prevention check: ${error.message}`, 'ERROR');
+      }
+    }, this.checkInterval);
+
+    this.log(`Error prevention monitor started. Checking every ${this.checkInterval / 1000} seconds.`);
+  }
+
+  getStatus() {
+    return {
+      running: true,
+      preventionHistory: this.preventionHistory.length,
+      checkInterval: this.checkInterval,
+      preventiveActionsEnabled: this.preventiveActionsEnabled
+    };
   }
 }
 
-// Run the automation if called directly
+// Main execution
 if (require.main === module) {
   const monitor = new ErrorPreventionMonitor();
-  monitor.run().catch(console.error);
+  
+  // Handle graceful shutdown
+  process.on('SIGINT', () => {
+    monitor.log('Shutting down error prevention monitor...');
+    process.exit(0);
+  });
+
+  process.on('SIGTERM', () => {
+    monitor.log('Shutting down error prevention monitor...');
+    process.exit(0);
+  });
+
+  // Start monitor
+  monitor.startMonitor().catch(error => {
+    monitor.log(`Failed to start monitor: ${error.message}`, 'ERROR');
+    process.exit(1);
+  });
 }
 
 module.exports = ErrorPreventionMonitor;
