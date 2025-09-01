@@ -5,13 +5,11 @@ import CartPage from '@/pages/Cart';
 import { CartProvider } from '@/context/CartContext';
 import { AuthContext } from '@/context/auth/AuthContext';
 import { safeStorage } from '@/utils/safeStorage';
-
 const item = { id: '1', name: 'Test Item', price: 10, quantity: 1 };
 
 function renderCart(user: any) {
   return render(
-    <AuthContext.Provider value={{ user, isLoading: false } as any}>
-      <CartProvider>
+<AuthContext.Provider value={{ user, isLoading: false } as any}><CartProvider>
         <MemoryRouter initialEntries={['/cart']}>
           <Routes>
             <Route path="/cart" element={<CartPage />} />
@@ -30,8 +28,7 @@ describe('cart persistence', () => {
     expect(screen.getByText(/Test Item/i)).toBeInTheDocument();
 
     rerender(
-      <AuthContext.Provider value={{ user: { id: 'u1' }, isLoading: false } as any}>
-        <CartProvider>
+<AuthContext.Provider value={{ user: { id: 'u1' }, isLoading: false } as any}><CartProvider>
           <MemoryRouter initialEntries={['/cart']}>
             <Routes>
               <Route path="/cart" element={<CartPage />} />

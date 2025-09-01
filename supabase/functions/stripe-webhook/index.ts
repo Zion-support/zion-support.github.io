@@ -24,10 +24,7 @@ serve(async req => {
       event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
     } catch (err) {
       return new Response(`Webhook Error: ${err.message}`, { status: 400 });
-    }
-
-    if (event.type === 'checkout.session.completed') {
-      const session = event.data.object as Stripe.Checkout.Session;
+if (event.type === "checkout.session.completed") {const session = event.data.object as Stripe.Checkout.Session;
       const orderId = session.metadata?.orderId;
 
       if (orderId) {

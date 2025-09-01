@@ -3,34 +3,14 @@
 # No Next.js plugins or configurations are needed
 
 [build]
-
-  command = "pnpm install --frozen-lockfile && pnpm run build"
-  publish = ".next"
-
-  functions = "netlify/functions"
-  edge_functions = "netlify/edge-functions"
-  # Explicitly specify this is a static site, not a framework
+  command = "npm ci && npm run build"
+  publish = "dist"
   base = "."
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max_old_space_size=6144"
-  # Use npm for dependency management
-  NPM_FLAGS = "--ignore-scripts"
-  # Skip Netlify's Next.js plugin since this is a Vite static site
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  # Force Vite/static site detection
-  NETLIFY_USE_YARN = "false"
-  NETLIFY_USE_NPM = "true"
-  # Disable framework detection
-  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
-  # Force static site build
-  NETLIFY_FORCE_STATIC_BUILD = "true"
-  # Skip all framework plugins
-  NETLIFY_SKIP_FRAMEWORK_PLUGINS = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
 
 # Fix MIME type issues

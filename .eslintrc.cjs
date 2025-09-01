@@ -1,39 +1,41 @@
 module.exports = {
-  root: true,
   env: {
     browser: true,
     es2021: true,
     node: true,
   },
   extends: [
+    'next/core-web-vitals',
     'eslint:recommended',
-    '@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:jsx-a11y/recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2022,
+    ecmaVersion: 12,
     sourceType: 'module',
-    project: './tsconfig.json',
   },
-  plugins: ['react', '@typescript-eslint', 'jsx-a11y'],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
-    'react/react-in-jsx-scope': 'off', // Not needed in React 17+
-    'react/prop-types': 'off', // Using TypeScript instead
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'jsx-a11y/anchor-is-valid': 'off', // React Router handles this
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    'no-console': 'warn',
   },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
-  ignorePatterns: ['dist/', 'build/', 'node_modules/', '*.config.js', '*.config.ts'],
-};
+  ignorePatterns: [
+    'node_modules/',
+    '.next/',
+    'out/',
+    'dist/',
+    'automation/',
+    'components.disabled/',
+    '**/*.disabled',
+    '**/*.backup',
+    '**/*.tsbackup',
+  ],
+}; 

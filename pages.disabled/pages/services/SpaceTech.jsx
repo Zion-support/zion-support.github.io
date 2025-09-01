@@ -10,33 +10,19 @@ const SpaceTech = () => {}
           <div className="flex justify-center mb-6">""
             <div className="p-3 bg-blue-600/20 rounded-full">""
               <Cog className="h-12 w-12 text-blue-400" />
-<<<<<<< HEAD:pages.disabled/pages/services/SpaceTech.jsx
+:pages.disabled/pages/services/SpaceTech.jsx
             </div>"
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            Space Technology Solutions"
-=======
-            </div>
-          </div>""
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            Space Technology Solutions;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/SpaceTech.jsx
-          </h1>""
+            Space Technology Solutions"</h1>""
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             This service page is under development. Contact us for more;
             information.
-<<<<<<< HEAD:pages.disabled/pages/services/SpaceTech.jsx
+:pages.disabled/pages/services/SpaceTech.jsx
           </p>"
           <Link""
             to="/contact""
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
-=======
-          </p>
-          <Link""
-            to="/contact""
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/SpaceTech.jsx
-          >
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
             Contact Us for More Information;
           </Link>
         </div>
@@ -46,10 +32,6 @@ const SpaceTech = () => {}
 };
 ;
 export { SpaceTech };
-<<<<<<< HEAD:pages.disabled/pages/services/SpaceTech.jsx
+:pages.disabled/pages/services/SpaceTech.jsx
 export default SpaceTech;'"
 '"'"
-=======
-export default SpaceTech;
-'""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/SpaceTech.jsx

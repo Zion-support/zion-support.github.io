@@ -11,24 +11,20 @@ const baseData: QuoteFormData = {
   startDate: undefined,
   endDate: undefined,
   timeline: 'flexible',
-  budget: { amount: 0, type: 'fixed' },
-  contactInfo: { name: '', email: '', phone: '', company: '' },
-};
+budget: { amount: 0, type: 'fixed' },
+  contactInfo: { name: '', email: '', phone: '', company: '' },};
 
 it('shows results when searching services', async () => {
   const data = { ...baseData };
   const updateFormData = (d: Partial<QuoteFormData>) => Object.assign(data, d);
-
-  global.fetch = vi.fn().mockResolvedValue({
+global.fetch = vi.fn().mockResolvedValue({
     ok: true,
     json: async () => [
       { id: 'service-3', title: 'IT Consulting', category: 'service' },
-    ],
-  }) as any;
+    ],}) as any;
 
   render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
-
-  fireEvent.click(screen.getByText('Services'));
+fireEvent.click(screen.getByText('Services'));
 
   const input = screen.getByPlaceholderText(/search service/i);
   fireEvent.change(input, { target: { value: 'IT' } });
@@ -44,16 +40,14 @@ it('renders services from api response', async () => {
 
   global.fetch = vi.fn().mockResolvedValue({
     ok: true,
-    json: async () => [
+json: async () => [
       { id: '1', title: 'First', category: 'service' },
       { id: '2', title: 'Second', category: 'service' },
       { id: '3', title: 'Third', category: 'service' },
-    ],
-  }) as any;
+    ],}) as any;
 
   render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
-
-  fireEvent.click(screen.getByText('Services'));
+fireEvent.click(screen.getByText('Services'));
 
   await waitFor(() => {
     expect(screen.getAllByRole('button', { name: /request quote/i })).toHaveLength(3);
