@@ -86,8 +86,12 @@ export function Header({ className }: HeaderProps) {
       icon: Zap,
       dropdown: [
         { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
+        { name: 'AI Financial Advisor', href: '/services/ai-autonomous-financial-advisor', icon: Coins },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform', icon: Heart },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation-platform', icon: PenTool },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Enterprise Cybersecurity', href: '/services/enterprise-cybersecurity-platform', icon: ShieldCheck },
         { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cpu },
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },

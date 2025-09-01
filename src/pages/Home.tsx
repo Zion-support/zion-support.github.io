@@ -216,14 +216,15 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       color: "from-blue-500 to-cyan-500"
     },
     {
-      name: 'AI Healthcare Analytics',
-      description: 'Predictive diagnostics and care optimization powered by AI',
+      title: "AI Healthcare Analytics",
+      subtitle: "Predictive diagnostics and care optimization",
+      description: "Transform healthcare delivery with AI-powered analytics and predictive insights.",
+      cta: "Explore Healthcare AI",
+      link: "/services/ai-healthcare-analytics-platform",
       icon: Heart,
-      href: '/services/ai-healthcare-analytics',
-      color: 'from-green-600 to-emerald-600',
-      features: ['Predictive analytics', 'Diagnostic support', 'Care optimization']
+      color: "from-green-600 to-emerald-600"
     }
-  ], []);
+  ];
 
   // Auto-advance slides
   useEffect(() => {
