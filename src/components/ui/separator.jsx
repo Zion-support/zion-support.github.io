@@ -1,15 +1,16 @@
-import React from 'react';
 export function Separator({
-  className = '',
+
+  className = '','
   orientation = 'horizontal',
   decorative = true,
   ...props
 }) {
-  const baseClasses =
+
+  const baseClasses ='
     orientation === 'horizontal' ? 'h-px w-full' : 'h-full w-px';
 
-  return (
-    <div
+  return()
+    <div'
       role={decorative ? 'none' : 'separator'}
       aria-orientation={orientation}
       className={`${baseClasses} bg-gray-300 ${className}`}
@@ -17,3 +18,4 @@ export function Separator({
     />
   );
 }
+'`

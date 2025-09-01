@@ -2,23 +2,24 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 
 export function GradientHeading({
-  children,
-  variant = 'primary',
-  size = '2xl',
+
+  children,'
+  variant = 'primary','
+  size = '2xl','
   className = '',
-  customGradient,
-}) {
+  customGradient}) {
+
   const gradients = {
-    primary:
+
+    primary:'
       'bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent',
-    secondary:
+    secondary:'
       'bg-gradient-to-r from-zion-blue via-zion-cyan to-zion-purple bg-clip-text text-transparent',
-    accent:
+    accent:'
       'bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparent',
     custom:
-      customGradient ||
-      'bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent',
-  };
+      customGradient ||'
+      'bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent'};
 
   const getGradientClasses = () => {
     return gradients[variant];
@@ -26,23 +27,23 @@ export function GradientHeading({
 
   const getSizeClasses = () => {
     const sizes = {
-      xs: 'text-xs',
-      sm: 'text-sm',
-      md: 'text-base',
-      lg: 'text-lg',
-      xl: 'text-xl',
-      '2xl': 'text-2xl',
-      '3xl': 'text-3xl',
-      '4xl': 'text-4xl',
-      '5xl': 'text-5xl',
-      '6xl': 'text-6xl',
-    };
+'
+      xs: 'text-xs','
+      sm: 'text-sm','
+      md: 'text-base','
+      lg: 'text-lg','
+      xl: 'text-xl','
+      '2xl': 'text-2xl','
+      '3xl': 'text-3xl','
+      '4xl': 'text-4xl','
+      '5xl': 'text-5xl','
+      '6xl': 'text-6xl'};
     return sizes[size];
   };
 
-  return (
+  return()
     <h1
-      className={cn(
+      className={cn('
         'font-bold leading-tight',
         getSizeClasses(),
         getGradientClasses(),
@@ -53,3 +54,4 @@ export function GradientHeading({
     </h1>
   );
 }
+'

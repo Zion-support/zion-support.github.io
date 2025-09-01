@@ -89,8 +89,8 @@ import {
   Ridge,
   Joy,
 } from 'lucide-react';
-
-export function AISolutions() {
+;
+export function AISolutions(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -218,7 +218,7 @@ export function AISolutions() {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 py-20">
@@ -278,7 +278,7 @@ export function AISolutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index 
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -333,7 +333,7 @@ export function AISolutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -389,7 +389,7 @@ export function AISolutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {technologies.map((tech, index) => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, y: 20 }}

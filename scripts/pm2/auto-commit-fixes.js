@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
+;
 class AutoCommitFixes {
   constructor() {
     this.projectRoot = process.cwd();
@@ -214,7 +214,7 @@ class AutoCommitFixes {
 
 
 
-// Run the auto commit fixes
+// Run the auto commit fixes;
 const autoCommit = new AutoCommitFixes();
 autoCommit.run().catch(error => {
   process.exit(1);

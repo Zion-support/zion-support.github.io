@@ -1,27 +1,28 @@
-import React from 'react';
+import React from 'react';'
 import { cn } from '@/lib/utils';
 export function EnhancedCard({
+
   children,
-  className,
+  className,'
   variant = 'default',
   hover = true,
-  onClick,
+  onClick,'
   as: Component = 'div',
-  href,
-}) {
+  href}) {
+'
   const baseClasses = 'rounded-xl transition-all duration-300';
   const variantClasses = {
-    default: 'bg-zion-blue-dark border border-zion-blue-light',
-    elevated: 'bg-zion-blue-dark shadow-lg shadow-zion-purple/10',
+'
+    default: 'bg-zion-blue-dark border border-zion-blue-light','
+    elevated: 'bg-zion-blue-dark shadow-lg shadow-zion-purple/10','
     outlined: 'bg-transparent border-2 border-zion-cyan/30',
-    gradient:
-      'bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light',
-  };
-  const hoverClasses = hover
-    ? 'hover:shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]'
-    : '';
+    gradient:'
+      'bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light'};
+  const hoverClasses = hover;'
+    ? 'hover:shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]''
+    : '';'
   const interactiveClasses = onClick || href ? 'cursor-pointer' : '';
-  const classes = cn(
+  const classes = cn()
     baseClasses,
     variantClasses[variant],
     hoverClasses,
@@ -29,13 +30,14 @@ export function EnhancedCard({
     className
   );
   if (href) {
-    return (
+
+    return()
       <a href={href} className={classes} onClick={onClick}>
         {children}
       </a>
     );
   }
-  return (
+  return()
     <Component className={classes} onClick={onClick}>
       {children}
     </Component>
@@ -43,5 +45,7 @@ export function EnhancedCard({
 }
 // Enhanced Card Header component
 export function EnhancedCardFooter({ children, className }) {
+'
   return <div className={cn('p-6 pt-0', className)}>{children}</div>;
 }
+'

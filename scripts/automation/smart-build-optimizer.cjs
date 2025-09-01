@@ -13,36 +13,50 @@ const crypto = require('crypto');
 class SmartBuildOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs', 'smart-build-optimizer.log');
-    this.performanceLog = path.join(this.projectRoot, 'logs', 'build-performance.json');
-    this.optimizationsLog = path.join(this.projectRoot, 'logs', 'build-optimizations.json');
+    this.logFile = path.join(
+      this.projectRoot,
+      'logs',
+      'smart-build-optimizer.log'
+    );
+    this.performanceLog = path.join(
+      this.projectRoot,
+      'logs',
+      'build-performance.json'
+    );
+    this.optimizationsLog = path.join(
+      this.projectRoot,
+      'logs',
+      'build-optimizations.json'
+    );
     this.ensureLogsDirectory();
-    
+
     this.buildHistory = [];
     this.optimizationStrategies = {
       vite: {
-        'build.rollupOptions.output.manualChunks': 'Split vendor chunks intelligently',
-        'build.rollupOptions.treeshake': 'Enable tree shaking for smaller bundles',
+        'build.rollupOptions.output.manualChunks':
+          'Split vendor chunks intelligently',
+        'build.rollupOptions.treeshake':
+          'Enable tree shaking for smaller bundles',
         'build.minify': 'Use esbuild for faster minification',
-        'build.sourcemap': 'Conditional source maps for production'
+        'build.sourcemap': 'Conditional source maps for production',
       },
       typescript: {
-        'incremental': 'Enable incremental compilation',
-        'tsBuildInfoFile': 'Use build info file for faster rebuilds',
-        'skipLibCheck': 'Skip library checking for faster builds'
+        incremental: 'Enable incremental compilation',
+        tsBuildInfoFile: 'Use build info file for faster rebuilds',
+        skipLibCheck: 'Skip library checking for faster builds',
       },
       dependencies: {
-        'preinstall': 'Use npm ci for faster installs',
-        'cache': 'Leverage npm cache effectively',
-        'parallel': 'Install dependencies in parallel'
-      }
+        preinstall: 'Use npm ci for faster installs',
+        cache: 'Leverage npm cache effectively',
+        parallel: 'Install dependencies in parallel',
+      },
     };
-    
+
     this.performanceThresholds = {
       buildTime: 300000, // 5 minutes
       bundleSize: 5000000, // 5MB
       installTime: 120000, // 2 minutes
-      rebuildTime: 60000 // 1 minute
+      rebuildTime: 60000, // 1 minute
     };
   }
 
@@ -62,36 +76,41 @@ class SmartBuildOptimizer {
 
   async runOptimization() {
     this.log('Starting smart build optimization...');
-    
+
     const optimization = {
       timestamp: new Date().toISOString(),
       currentPerformance: {},
       optimizations: [],
       recommendations: [],
-      applied: []
+      applied: [],
     };
 
     try {
       // 1. Analyze current build performance
       optimization.currentPerformance = await this.analyzeBuildPerformance();
-      
+
       // 2. Identify optimization opportunities
-      optimization.optimizations = await this.identifyOptimizations(optimization.currentPerformance);
-      
+      optimization.optimizations = await this.identifyOptimizations(
+        optimization.currentPerformance
+      );
+
       // 3. Apply safe optimizations
-      optimization.applied = await this.applyOptimizations(optimization.optimizations);
-      
+      optimization.applied = await this.applyOptimizations(
+        optimization.optimizations
+      );
+
       // 4. Generate recommendations
       optimization.recommendations = this.generateRecommendations(optimization);
-      
+
       // 5. Save optimization results
       await this.saveOptimizationResults(optimization);
-      
+
       // 6. Test optimizations
       await this.testOptimizations(optimization.applied);
-      
-      this.log(`Build optimization completed: ${optimization.applied.length} optimizations applied`);
 
+      this.log(
+        `Build optimization completed: ${optimization.applied.length} optimizations applied`
+      );
     } catch (error) {
       this.log(`Build optimization failed: ${error.message}`, 'ERROR');
     }
@@ -106,7 +125,7 @@ class SmartBuildOptimizer {
       installTime: 0,
       rebuildTime: 0,
       memoryUsage: 0,
-      cpuUsage: 0
+      cpuUsage: 0,
     };
 
     try {
@@ -132,8 +151,9 @@ class SmartBuildOptimizer {
       performance.memoryUsage = process.memoryUsage().heapUsed;
       performance.cpuUsage = process.cpuUsage().user;
 
-      this.log(`Performance analysis: Build=${performance.buildTime}ms, Bundle=${performance.bundleSize}bytes, Install=${performance.installTime}ms`);
-
+      this.log(
+        `Performance analysis: Build=${performance.buildTime}ms, Bundle=${performance.bundleSize}bytes, Install=${performance.installTime}ms`
+      );
     } catch (error) {
       this.log(`Performance analysis failed: ${error.message}`, 'WARN');
     }
@@ -145,10 +165,10 @@ class SmartBuildOptimizer {
     return new Promise((resolve, reject) => {
       const build = spawn('npm', ['run', 'build'], {
         cwd: this.projectRoot,
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
 
-      build.on('close', (code) => {
+      build.on('close', code => {
         if (code === 0) {
           resolve();
         } else {
@@ -164,10 +184,10 @@ class SmartBuildOptimizer {
     return new Promise((resolve, reject) => {
       const install = spawn('npm', ['install'], {
         cwd: this.projectRoot,
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
 
-      install.on('close', (code) => {
+      install.on('close', code => {
         if (code === 0) {
           resolve();
         } else {
@@ -183,10 +203,10 @@ class SmartBuildOptimizer {
     return new Promise((resolve, reject) => {
       const rebuild = spawn('npm', ['run', 'build'], {
         cwd: this.projectRoot,
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
 
-      rebuild.on('close', (code) => {
+      rebuild.on('close', code => {
         if (code === 0) {
           resolve();
         } else {
@@ -205,7 +225,7 @@ class SmartBuildOptimizer {
 
       let totalSize = 0;
       const files = this.getAllFilesRecursive(distPath);
-      
+
       for (const file of files) {
         const stats = fs.statSync(file);
         totalSize += stats.size;
@@ -220,18 +240,18 @@ class SmartBuildOptimizer {
 
   getAllFilesRecursive(dir, files = []) {
     const items = fs.readdirSync(dir);
-    
+
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         this.getAllFilesRecursive(fullPath, files);
       } else {
         files.push(fullPath);
       }
     }
-    
+
     return files;
   }
 
@@ -245,7 +265,7 @@ class SmartBuildOptimizer {
         priority: 'HIGH',
         description: 'Build time exceeds threshold',
         action: 'Optimize Vite configuration and TypeScript settings',
-        config: 'vite.config.ts'
+        config: 'vite.config.ts',
       });
     }
 
@@ -256,7 +276,7 @@ class SmartBuildOptimizer {
         priority: 'HIGH',
         description: 'Bundle size exceeds threshold',
         action: 'Implement code splitting and tree shaking',
-        config: 'vite.config.ts'
+        config: 'vite.config.ts',
       });
     }
 
@@ -267,7 +287,7 @@ class SmartBuildOptimizer {
         priority: 'MEDIUM',
         description: 'Install time exceeds threshold',
         action: 'Optimize dependency installation',
-        config: 'package.json'
+        config: 'package.json',
       });
     }
 
@@ -278,7 +298,7 @@ class SmartBuildOptimizer {
         priority: 'MEDIUM',
         description: 'Rebuild time exceeds threshold',
         action: 'Enable incremental compilation',
-        config: 'tsconfig.json'
+        config: 'tsconfig.json',
       });
     }
 
@@ -292,7 +312,11 @@ class SmartBuildOptimizer {
       try {
         const result = await this.applyOptimization(optimization);
         if (result.success) {
-          applied.push({ ...optimization, applied: true, result: result.message });
+          applied.push({
+            ...optimization,
+            applied: true,
+            result: result.message,
+          });
         }
       } catch (error) {
         this.log(`Failed to apply optimization: ${error.message}`, 'WARN');
@@ -323,7 +347,7 @@ class SmartBuildOptimizer {
       const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');
       if (fs.existsSync(viteConfigPath)) {
         let config = fs.readFileSync(viteConfigPath, 'utf8');
-        
+
         // Add build optimizations
         if (!config.includes('build.rollupOptions')) {
           config = config.replace(
@@ -343,12 +367,15 @@ class SmartBuildOptimizer {
     chunkSizeWarningLimit: 1000
   },`
           );
-          
+
           fs.writeFileSync(viteConfigPath, config);
-          return { success: true, message: 'Vite build configuration optimized' };
+          return {
+            success: true,
+            message: 'Vite build configuration optimized',
+          };
         }
       }
-      
+
       return { success: true, message: 'Build time optimization applied' };
     } catch (error) {
       return { success: false, message: error.message };
@@ -361,19 +388,22 @@ class SmartBuildOptimizer {
       const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
       if (fs.existsSync(tsConfigPath)) {
         const config = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
-        
+
         config.compilerOptions = {
           ...config.compilerOptions,
           incremental: true,
           tsBuildInfoFile: './node_modules/.cache/.tsbuildinfo',
           skipLibCheck: true,
-          removeComments: true
+          removeComments: true,
         };
-        
+
         fs.writeFileSync(tsConfigPath, JSON.stringify(config, null, 2));
-        return { success: true, message: 'TypeScript configuration optimized for bundle size' };
+        return {
+          success: true,
+          message: 'TypeScript configuration optimized for bundle size',
+        };
       }
-      
+
       return { success: true, message: 'Bundle size optimization applied' };
     } catch (error) {
       return { success: false, message: error.message };
@@ -386,16 +416,17 @@ class SmartBuildOptimizer {
       const packagePath = path.join(this.projectRoot, 'package.json');
       if (fs.existsSync(packagePath)) {
         const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
-        
+
         if (!pkg.scripts['install:fast']) {
           pkg.scripts['install:fast'] = 'npm ci --prefer-offline --no-audit';
-          pkg.scripts['install:clean'] = 'rm -rf node_modules package-lock.json && npm install';
-          
+          pkg.scripts['install:clean'] =
+            'rm -rf node_modules package-lock.json && npm install';
+
           fs.writeFileSync(packagePath, JSON.stringify(pkg, null, 2));
           return { success: true, message: 'Fast install scripts added' };
         }
       }
-      
+
       return { success: true, message: 'Install time optimization applied' };
     } catch (error) {
       return { success: false, message: error.message };
@@ -408,17 +439,17 @@ class SmartBuildOptimizer {
       const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
       if (fs.existsSync(tsConfigPath)) {
         const config = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
-        
+
         config.compilerOptions = {
           ...config.compilerOptions,
           incremental: true,
-          tsBuildInfoFile: './node_modules/.cache/.tsbuildinfo'
+          tsBuildInfoFile: './node_modules/.cache/.tsbuildinfo',
         };
-        
+
         fs.writeFileSync(tsConfigPath, JSON.stringify(config, null, 2));
         return { success: true, message: 'Incremental compilation enabled' };
       }
-      
+
       return { success: true, message: 'Rebuild time optimization applied' };
     } catch (error) {
       return { success: false, message: error.message };
@@ -429,21 +460,28 @@ class SmartBuildOptimizer {
     const recommendations = [];
 
     // Performance recommendations
-    if (optimization.currentPerformance.buildTime > this.performanceThresholds.buildTime) {
+    if (
+      optimization.currentPerformance.buildTime >
+      this.performanceThresholds.buildTime
+    ) {
       recommendations.push({
         category: 'PERFORMANCE',
         priority: 'HIGH',
         suggestion: 'Consider using esbuild for faster builds',
-        action: 'Update Vite configuration to use esbuild minifier'
+        action: 'Update Vite configuration to use esbuild minifier',
       });
     }
 
-    if (optimization.currentPerformance.bundleSize > this.performanceThresholds.bundleSize) {
+    if (
+      optimization.currentPerformance.bundleSize >
+      this.performanceThresholds.bundleSize
+    ) {
       recommendations.push({
         category: 'BUNDLE_SIZE',
         priority: 'HIGH',
         suggestion: 'Implement dynamic imports for code splitting',
-        action: 'Use React.lazy() and dynamic imports for route-based splitting'
+        action:
+          'Use React.lazy() and dynamic imports for route-based splitting',
       });
     }
 
@@ -452,7 +490,7 @@ class SmartBuildOptimizer {
       category: 'WORKFLOW',
       priority: 'MEDIUM',
       suggestion: 'Use npm ci for faster, reliable installs',
-      action: 'Run npm ci instead of npm install in CI/CD environments'
+      action: 'Run npm ci instead of npm install in CI/CD environments',
     });
 
     return recommendations;
@@ -460,22 +498,33 @@ class SmartBuildOptimizer {
 
   async saveOptimizationResults(optimization) {
     try {
-      fs.writeFileSync(this.optimizationsLog, JSON.stringify(optimization, null, 2));
+      fs.writeFileSync(
+        this.optimizationsLog,
+        JSON.stringify(optimization, null, 2)
+      );
       this.log('Optimization results saved');
     } catch (error) {
-      this.log(`Failed to save optimization results: ${error.message}`, 'ERROR');
+      this.log(
+        `Failed to save optimization results: ${error.message}`,
+        'ERROR'
+      );
     }
   }
 
   async testOptimizations(optimizations) {
     this.log('Testing applied optimizations...');
-    
+
     for (const optimization of optimizations) {
       try {
         const performance = await this.analyzeBuildPerformance();
-        this.log(`Optimization test for ${optimization.type}: Build time = ${performance.buildTime}ms`);
+        this.log(
+          `Optimization test for ${optimization.type}: Build time = ${performance.buildTime}ms`
+        );
       } catch (error) {
-        this.log(`Optimization test failed for ${optimization.type}: ${error.message}`, 'WARN');
+        this.log(
+          `Optimization test failed for ${optimization.type}: ${error.message}`,
+          'WARN'
+        );
       }
     }
   }
@@ -484,9 +533,10 @@ class SmartBuildOptimizer {
 // Main execution
 if (require.main === module) {
   const optimizer = new SmartBuildOptimizer();
-  
+
   // Run optimization
-  optimizer.runOptimization()
+  optimizer
+    .runOptimization()
     .then(optimization => {
       console.log('Smart Build Optimization completed successfully');
       process.exit(0);

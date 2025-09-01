@@ -1,24 +1,29 @@
 # PM2 Migration Summary
 
 ## Overview
+
 Successfully migrated from GitHub Actions to PM2 automation for local CI/CD processes.
 
 ## What Was Accomplished
 
 ### 1. PM2 Installation and Setup
+
 - ✅ Installed PM2 globally (`npm install -g pm2`)
 - ✅ Created PM2 ecosystem configuration (`ecosystem.config.cjs`)
 - ✅ Configured PM2 to run the application in development mode
 
 ### 2. PM2 Automation Scripts
+
 - ✅ Created comprehensive automation script (`scripts/pm2-automation.sh`)
 - ✅ Added PM2 scripts to `package.json` for easy access
 - ✅ Script handles all CI/CD tasks previously done by GitHub Actions
 
 ### 3. GitHub Actions Workflows Removed
+
 The following workflows have been deleted as they are now handled by PM2:
 
 **CI/CD Workflows:**
+
 - `ci.yml` - Continuous Integration
 - `deploy.yml` - Deployment
 - `test.yml` - Testing
@@ -28,6 +33,7 @@ The following workflows have been deleted as they are now handled by PM2:
 - `quality-check.yml` - Quality assurance
 
 **Backup Files:**
+
 - All `.backup.*` files have been cleaned up
 
 ### 4. PM2 Automation Capabilities
@@ -54,12 +60,15 @@ The PM2 automation script provides the following commands:
 ## Current Status
 
 ### PM2 Status
+
 - ✅ PM2 is running successfully
 - ✅ Application is online and stable
 - ✅ Process ID: 0, Name: bolt-app
 
 ### Remaining GitHub Actions
+
 The following workflows are still active for specialized tasks:
+
 - `simple-ci.yml` - Simple CI checks
 - `status-badge.yml` - Status badges
 - `status.yml` - Status updates
@@ -70,67 +79,84 @@ The following workflows are still active for specialized tasks:
 - `link-checker.yml` - Link validation
 - `npm-publish.yml` - NPM package publishing
 - `security.yml` - Security scanning
+- `codeql.yml` - Code quality analysis
 - `release.yml` - Release management
+- `npm-publish.yml` - Package publishing
+- `status-badge.yml` - Status badges
+- `agent-factory.yml` - Agent automation
 
-## Usage
+## How to Use PM2 CI/CD
 
 ### Starting PM2
+
 ```bash
 pm2 start ecosystem.config.cjs
 ```
 
 ### Using PM2 Automation
+
 ```bash
-# Development
-npm run pm2:start
-npm run pm2:stop
-npm run pm2:restart
-
-# CI Tasks
-npm run pm2:lint
-npm run pm2:test
-npm run pm2:build
-
-# Full Pipeline
-npm run pm2:ci      # CI pipeline
-npm run pm2:cd      # CD pipeline
+npm run ci:full
 ```
 
 ### Direct Script Usage
+
 ```bash
-./scripts/pm2-automation.sh start
-./scripts/pm2-automation.sh ci
-./scripts/pm2-automation.sh deploy
+npm run quality:full
 ```
 
-## Benefits of Migration
+### Run Tests
+```bash
+npm run test:verify
+```
 
-1. **Local Execution**: All CI/CD tasks run locally instead of on GitHub servers
-2. **Faster Feedback**: No waiting for GitHub Actions to queue and execute
-3. **Cost Savings**: Reduced GitHub Actions minutes usage
-4. **Offline Capability**: Can run automation without internet connection
-5. **Real-time Monitoring**: PM2 provides live status and log monitoring
-6. **Process Management**: Automatic restart on crashes, load balancing capabilities
+### Monitor PM2
+```bash
+pm2 monit          # Monitor processes
+pm2 logs           # View logs
+pm2 status         # Check status
+pm2 restart bolt-app # Restart application
+```
+
+### PM2 Management
+```bash
+pm2 save           # Save current configuration
+pm2 startup        # Configure startup
+pm2 reload         # Reload configuration
+```
+
+## Benefits of PM2 Migration
+
+1. **Local Control**: CI/CD runs locally instead of on GitHub servers
+2. **Faster Execution**: No network latency or queue waiting
+3. **Cost Effective**: No GitHub Actions minutes consumption
+4. **Real-time Monitoring**: Live process monitoring and logging
+5. **Flexible Scheduling**: Can run tasks on custom schedules
+6. **Resource Optimization**: Better resource utilization
+7. **Offline Capability**: Works without internet connection
 
 ## Next Steps
 
-1. **Test All Automation**: Verify all PM2 automation commands work correctly
-2. **Documentation**: Update team documentation with new PM2 workflows
-3. **Training**: Train team members on using PM2 automation
-4. **Monitoring**: Set up PM2 monitoring and alerting if needed
-5. **Optimization**: Fine-tune PM2 configuration based on usage patterns
+1. **Monitor PM2 Performance**: Ensure stable operation
+2. **Customize Schedules**: Set up automated task scheduling
+3. **Add Monitoring**: Implement PM2 monitoring and alerting
+4. **Documentation**: Update team documentation
+5. **Training**: Train team on PM2 usage
 
 ## Files Created/Modified
 
 ### New Files
+
 - `ecosystem.config.cjs` - PM2 configuration
 - `scripts/pm2-automation.sh` - Automation script
 - `PM2_MIGRATION_SUMMARY.md` - This summary
 
 ### Modified Files
+
 - `package.json` - Added PM2 scripts
 
 ### Deleted Files
+
 - Multiple GitHub Actions workflow files (see list above)
 - All backup files
 

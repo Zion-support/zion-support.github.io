@@ -1,41 +1,36 @@
 # Error Automation System
 
-A comprehensive automated error fixing and monitoring system for the Zion Tech Group project.
+This project includes a comprehensive PM2-based automation system that continuously monitors and automatically fixes common project errors.
 
 ## 🚀 Quick Start
 
 ### Start the Automation System
+
 ```bash
-npm run automation:start
+./start-error-automation.sh start
 ```
 
 ### Manual Error Fixing
-```bash
-# Run comprehensive error fixing
-npm run automation:comprehensive
 
-# Run basic error fixing
-npm run automation:error-fix
+```bash
+./start-error-automation.sh status
 ```
 
 ### Monitor the System
+
 ```bash
-# Check status
-npm run automation:status
+./start-error-automation.sh logs
+```
 
-# View logs
-npm run automation:logs
-
-# Restart all processes
-npm run automation:restart
-
-# Stop all processes
-npm run automation:stop
+### Stop the System
+```bash
+./start-error-automation.sh stop
 ```
 
 ## 📋 What This System Does
 
 ### 🔧 Error Fixing
+
 - **Merge Conflicts**: Automatically resolves Git merge conflicts
 - **Syntax Errors**: Fixes common JavaScript/TypeScript syntax issues
 - **Unused Imports**: Removes unused imports and variables
@@ -47,48 +42,54 @@ npm run automation:stop
 - **Console Statements**: Handles console.log statements in production
 
 ### 🔍 Code Quality Checks
+
 - **ESLint**: Runs linting with auto-fix
 - **TypeScript**: Type checking
 - **Prettier**: Code formatting
 - **Bundle Analysis**: Performance monitoring
 
 ### 🔒 Security & Dependencies
+
 - **Security Audits**: npm audit checks
 - **Dependency Updates**: Outdated package detection
 - **Vulnerability Scanning**: Security vulnerability detection
 
 ## 📊 Automation Schedule
 
-| Process | Frequency | Priority |
-|---------|-----------|----------|
+| Process                   | Frequency        | Priority   |
+| ------------------------- | ---------------- | ---------- |
 | Comprehensive Error Fixer | Every 10 minutes | 🔴 HIGHEST |
-| Error Fixer Automation | Every 15 minutes | 🔴 HIGH |
-| Console Error Fixer | Every 15 minutes | 🔴 HIGH |
-| Code Quality Checks | Every 30 minutes | 🟡 MEDIUM |
-| Security Checks | Every 4 hours | 🟡 MEDIUM |
-| Performance Monitoring | Every 2 hours | 🟢 LOW |
-| Dependency Updates | Every 6 hours | 🟢 LOW |
+| Error Fixer Automation    | Every 15 minutes | 🔴 HIGH    |
+| Console Error Fixer       | Every 15 minutes | 🔴 HIGH    |
+| Code Quality Checks       | Every 30 minutes | 🟡 MEDIUM  |
+| Security Checks           | Every 4 hours    | 🟡 MEDIUM  |
+| Performance Monitoring    | Every 2 hours    | 🟢 LOW     |
+| Dependency Updates        | Every 6 hours    | 🟢 LOW     |
 
 ## 📁 File Structure
 
 ```
-scripts/
-├── automation/
-│   ├── error-fixer-automation.cjs          # Basic error fixing
-│   ├── comprehensive-error-automation.cjs  # Full automation orchestrator
-│   └── console-error-fixer.cjs            # Console error handling
-├── start-error-automation.sh               # Startup script
-└── ...
-
-reports/
-├── automation-reports/                     # Comprehensive reports
-├── error-reports/                         # Error fixing reports
-└── logs/                                  # Process logs
+├── scripts/automation/
+│   ├── comprehensive-error-fixer.cjs      # Main error fixing orchestrator
+│   ├── continuous-error-monitor.cjs       # Continuous monitoring system
+│   ├── typescript-error-fixer.cjs         # TypeScript-specific fixes
+│   ├── eslint-error-fixer.cjs             # ESLint-specific fixes
+│   ├── import-export-fixer.cjs            # Import/export fixes
+│   ├── syntax-error-fixer.cjs             # Syntax error fixes
+│   ├── dependency-error-fixer.cjs         # Dependency management
+│   ├── error-report-generator.cjs         # Report generation
+│   ├── build-health-monitor.cjs           # Build monitoring
+│   └── code-quality-monitor.cjs           # Code quality analysis
+├── ecosystem-error-automation.config.cjs  # PM2 configuration
+├── start-error-automation.sh              # Management script
+├── error-reports/                         # Generated error reports
+└── automation/logs/                       # Process logs
 ```
 
-## 🔧 Configuration
+## 🛠️ Management Commands
 
 ### PM2 Ecosystem Configuration
+
 The system uses `ecosystem.config.cjs` to manage PM2 processes:
 
 ```javascript
@@ -107,30 +108,32 @@ The system uses `ecosystem.config.cjs` to manage PM2 processes:
 ```
 
 ### Environment Variables
+
 - `NODE_ENV`: Set to 'production' for production mode
 - `AUTOMATION_INTERVAL`: Interval between runs in milliseconds
 
 ## 📈 Monitoring & Reports
 
 ### Real-time Monitoring
+
 ```bash
-# View all processes
-pm2 status
+./start-error-automation.sh stop
+```
 
-# View specific process logs
-pm2 logs comprehensive-error-fixer
-
-# Monitor in real-time
-pm2 monit
+### Restart Automation
+```bash
+./start-error-automation.sh restart
 ```
 
 ### Generated Reports
+
 - **Comprehensive Reports**: `automation-reports/comprehensive-report-*.json`
 - **Error Reports**: `error-reports/error-fixer-report-*.json`
 - **Statistics**: `automation-reports/automation-stats.json`
 - **Error Logs**: `logs/error-log-*.json`
 
 ### Report Structure
+
 ```json
 {
   "timestamp": "2024-01-01T00:00:00.000Z",
@@ -158,59 +161,77 @@ pm2 monit
 }
 ```
 
-## 🛠️ Troubleshooting
+### View Logs
+```bash
+# View all logs
+./start-error-automation.sh logs
 
-### Common Issues
+# View specific process logs
+./start-error-automation.sh logs continuous-error-monitor
+```
 
 #### PM2 Not Installed
+
 ```bash
-npm install -g pm2
+./start-error-automation.sh fix
 ```
 
 #### Permission Issues
+
 ```bash
-sudo chmod +x scripts/start-error-automation.sh
+./start-error-automation.sh help
 ```
 
 #### Process Not Starting
+
 ```bash
-# Check PM2 logs
+# View all processes
+pm2 list
+
+# View logs
 pm2 logs
 
-# Restart processes
-pm2 restart all
+# Restart specific process
+pm2 restart continuous-error-monitor
 
-# Check system resources
-pm2 monit
+# Stop all processes
+pm2 stop all
+
+# Delete all processes
+pm2 delete all
 ```
 
 #### High Memory Usage
+
 ```bash
 # Increase memory limit in ecosystem.config.cjs
 max_memory_restart: '2G'
 
-# Restart processes
-pm2 restart all
-```
+### Environment Variables
+- `AUTOMATION_INTERVAL` - Override default intervals (in milliseconds)
+- `NODE_ENV` - Set to 'production' for production mode
 
 ### Debug Mode
+
 ```bash
 # Run with debug logging
 DEBUG=* npm run automation:comprehensive
 
-# View detailed logs
-pm2 logs --lines 100
-```
+- Process intervals
+- Memory limits
+- Log file locations
+- Environment variables
 
 ## 🔄 Integration with CI/CD
 
 ### GitHub Actions Integration
+
 ```yaml
 name: Error Automation
 on:
   schedule:
-    - cron: '*/10 * * * *'  # Every 10 minutes
-  workflow_dispatch:  # Manual trigger
+    - cron: '*/10 * * * *' # Every 10 minutes
+  workflow_dispatch: # Manual trigger
 
 jobs:
   error-fix:
@@ -226,23 +247,22 @@ jobs:
 ```
 
 ### Pre-commit Hooks
+
 ```bash
-#!/bin/sh
-# .git/hooks/pre-commit
+# Run comprehensive error fixer
+node scripts/automation/comprehensive-error-fixer.cjs
 
-# Run error fixing before commit
-npm run automation:error-fix
+# Run TypeScript fixer
+node scripts/automation/typescript-error-fixer.cjs
 
-# Check if any files were modified
-if git diff --cached --name-only | grep -q .; then
-  echo "Error fixes applied. Please review changes before committing."
-  exit 1
-fi
+# Run ESLint fixer
+node scripts/automation/eslint-error-fixer.cjs
 ```
 
-## 📚 Advanced Usage
+## 📈 Performance Monitoring
 
 ### Custom Error Fixing Rules
+
 Create custom rules in `scripts/automation/error-fixer-automation.cjs`:
 
 ```javascript
@@ -251,12 +271,13 @@ const customFixes = [
   {
     pattern: /your-custom-pattern/g,
     replacement: 'your-replacement',
-    description: 'Custom fix description'
-  }
+    description: 'Custom fix description',
+  },
 ];
 ```
 
 ### Extending Automation
+
 Add new automation processes to `ecosystem.config.cjs`:
 
 ```javascript
@@ -275,6 +296,7 @@ Add new automation processes to `ecosystem.config.cjs`:
 ```
 
 ### Performance Optimization
+
 - Monitor memory usage with `pm2 monit`
 - Adjust `max_memory_restart` based on system resources
 - Use clustering for CPU-intensive operations
@@ -283,12 +305,14 @@ Add new automation processes to `ecosystem.config.cjs`:
 ## 🤝 Contributing
 
 ### Adding New Error Fixes
+
 1. Add fix logic to `ErrorFixerAutomation` class
 2. Update documentation
 3. Add tests
 4. Submit pull request
 
 ### Reporting Issues
+
 1. Check existing reports in `automation-reports/`
 2. Review logs in `logs/`
 3. Create issue with detailed error information
@@ -297,11 +321,17 @@ Add new automation processes to `ecosystem.config.cjs`:
 ## 📞 Support
 
 For issues or questions:
+
 - Check the logs: `npm run automation:logs`
 - Review reports: `automation-reports/`
 - Check PM2 status: `npm run automation:status`
 - Restart system: `npm run automation:restart`
 
-## 📄 License
+1. Check the logs: `./start-error-automation.sh logs`
+2. Review error reports in `error-reports/`
+3. Check PM2 status: `pm2 list`
+4. Run manual fixes if needed
+
+---
 
 This automation system is part of the Zion Tech Group project and follows the same licensing terms.

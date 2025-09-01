@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';'
 export function FloatingOrbs({ count = 6, className = '' }) {
+
   const canvasRef = useRef(null);
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas) return;'
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     // Set canvas size
@@ -11,7 +12,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    resizeCanvas();
+    resizeCanvas();'
     window.addEventListener('resize', resizeCanvas);
     // Orb class
     class Orb {
@@ -45,7 +46,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
         ctx.save();
         ctx.globalAlpha = this.opacity;
         // Create gradient
-        const gradient = ctx.createRadialGradient(
+        const gradient = ctx.createRadialGradient()
           this.x,
           this.y,
           0,
@@ -53,7 +54,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
           this.y,
           this.radius
         );
-        gradient.addColorStop(0, this.color);
+        gradient.addColorStop(0, this.color);'
         gradient.addColorStop(1, 'transparent');
         ctx.fillStyle = gradient;
         ctx.beginPath();
@@ -65,12 +66,14 @@ export function FloatingOrbs({ count = 6, className = '' }) {
     // Create orbs
     const orbs = [];
     for (let i = 0; i < count; i++) {
+
       orbs.push(new Orb());
     }
     // Animation loop
     let animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       orbs.forEach(orb => {
+
         orb.update();
         orb.draw();
       });
@@ -79,15 +82,17 @@ export function FloatingOrbs({ count = 6, className = '' }) {
     animate();
     // Cleanup
     return () => {
+'
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationId);
     };
   }, [count]);
-  return (
+  return()
     <canvas
-      ref={canvasRef}
-      className={`fixed inset-0 pointer-events-none z-0 ${className}`}
+      ref={canvasRef}`
+      className={`fixed inset-0 pointer-events-none z-0 ${className}`}'
       style={{ background: 'transparent' }}
     />
   );
 }
+'`

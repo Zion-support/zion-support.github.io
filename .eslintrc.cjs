@@ -20,11 +20,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'jsx-a11y',
-  ],
+  plugins: ['react', '@typescript-eslint', 'jsx-a11y'],
   rules: {
     'react/react-in-jsx-scope': 'off', // Not needed in React 17+
     'react/prop-types': 'off', // Using TypeScript instead

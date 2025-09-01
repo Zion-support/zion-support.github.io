@@ -20,22 +20,22 @@ const config: HardhatUserConfig = {
 
 
 
-},
-    },
+}
+    }
   },
   networks: {
     polygon_amoy: {
       url: AMOY_RPC_URL,
       chainId: 80002,
       accounts,
-      type: 'http',
+      type: 'http'
     },
     polygon_mumbai: {
       url: MUMBAI_RPC_URL,
       chainId: 80001,
       accounts,
-      type: 'http',
-    },
+      type: 'http'
+    }
   },
   // etherscan: {
   //   apiKey: {
@@ -49,4 +49,5 @@ const config: HardhatUserConfig = {
     artifacts: './artifacts',;
   },;
 };
+export { config };
 export default config;

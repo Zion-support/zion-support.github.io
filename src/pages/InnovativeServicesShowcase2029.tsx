@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-export default React.memo (function InnovativeServicesShowcase2029 (...args: any[]) : any {
+import React, { useState, useEffect } from 'react.ts';'
+import { motion, AnimatePresence } from 'framer-motion.ts';
 import {
-import { innovativeMicroSAASServices2029 } from '../../data / innovative - micro - saas - 2029';
-import { motion, AnimatePresence } from 'framer - motion.ts';
-
 
   Brain,
   Shield,
@@ -12,8 +9,7 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
   Rocket,
   Star,
   TrendingUp,
-  CheckCircle,
-  ArrowRight,
+  CheckCircle,  ArrowRight,
   Globe,
   Cpu,
   Lock,
@@ -47,110 +43,115 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
   List,
   Play,
   Pause,
-  Volume2,
-  VolumeX,
-} from 'lucide - react.ts';
+  Volume2,'
+  VolumeX} from 'lucide-react.ts';'
+import { innovativeMicroSAASServices2029 } from '../../data/innovative-micro-saas-2029';
+export default function InnovativeServicesShowcase2029(...args: any[]): any {
+'
+  const [selectedCategory, setSelectedCategory] = useState('All');'
+  const [searchQuery, setSearchQuery] = useState('');'
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
 
-  const [selectedCategory, setSelectedCategory] = useState ('All') ;
-  const [searchQuery, setSearchQuery] = useState ('') ;
-  const [viewMode, setViewMode] = useState < any> ('grid') ;
-  const [isPlaying, setIsPlaying] = useState (false) ;
-  const [isMuted, setIsMuted] = useState (false) ;
-
-  const categories = [
-    'All',
-    'AI & Analytics',
-    'Cybersecurity',
-    'AI & Operations',
-    'Blockchain & Security',
-    'AI & Legal Tech',
-    'IoT & Edge Computing',
-    'AI & Healthcare',
-    'Quantum Computing & AI',
-    'AI & Fintech',
+  const categories = ['
+    'All','
+    'AI & Analytics','
+    'Cybersecurity','
+    'AI & Operations','
+    'Blockchain & Security','
+    'AI & Legal Tech','
+    'IoT & Edge Computing','
+    'AI & Healthcare','
+    'Quantum Computing & AI','
+    'AI & Fintech','
     'Sustainability & Consulting',
   ];
 
-  const filteredServices = innovativeMicroSAASServices2029.filter (service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
-      service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
-      service.tagline.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
+  const filteredServices = innovativeMicroSAASServices2029.filter(service => {
+
+    const matchesCategory ='
+      selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesSearch =
+      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.tagline.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   }) ;
 
   const togglePlayPause = () => setIsPlaying (!isPlaying) ;
   const toggleMute = () => setIsMuted (!isMuted) ;
 
-  return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 relative overflow - hidden">
-      {/* Animated Background */}
-      <div role="button" className="absolute inset - 0 overflow - hidden">
-        <div role="button" className="absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%,rgba (120,119,198,0.1) ,transparent_50%) ]"></div>
-        <div role="button" className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%,rgba (120,119,198,0.1) ,transparent_50%) ]"></div>
-        <div role="button" className="absolute inset - 0 bg-[radial - gradient (circle_at_20%_80%,rgba (120,119,198,0.1) ,transparent_50%) ]"></div>
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      {/* Animated Background */}"
+      <div className="absolute inset-0 overflow-hidden">"
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>"
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]"></div>"
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]"></div>
 
-        {/* Floating Particles */}
-        <div role="button" className="absolute inset - 0">
-          {[...Array (50) ].map ( (_, i) => (<motion.div
-              key={i}
-              className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30"
+        {/* Floating Particles */}"
+        <div className="absolute inset-0">
+          {[...Array(50)].map((_, i) => (
+            <motion.div
+              key={i}"
+              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
               animate={{
+
                 x: [0, 100, 0],
                 y: [0, -100, 0],
-                opacity: [0.3, 0.8, 0.3],
-              }}
+                opacity: [0.3, 0.8, 0.3]}}
               transition={{
-                duration: Math.random () * 10 + 10,
+
+                duration: Math.random() * 10 + 10,
                 repeat: Infinity,
-                delay: Math.random () * 5,
-              }}
+                delay: Math.random() * 5}}
               style={{
-                left: `${Math.random () * 100}%`,
-                top: `${Math.random () * 100}%`,
-              }}
-            />) ) }
+
+                left: `${Math.random() * 100}%`,`
+                top: `${Math.random() * 100}%`}}
+            />
+          ))}
         </div>
       </div>
 
-      {/* Header Section */}
-      <div role="button" className="relative z - 10 pt - 20 pb - 16 px - 4 sm:px - 6 lg:px - 8">
+      {/* Header Section */}"
+      <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max - w-7xl mx - auto text - center"
+          transition={{ duration: 0.8 }}"
+          className="max-w-7xl mx-auto text-center"
         >
           <motion.div
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 text - cyan - 300 text - sm font - medium mb - 6"
-          >
-            <Star className="w - 4 h - 4 mr - 2 text - yellow - 400" />
-            Revolutionary 2029 Services
+            transition={{ duration: 1, delay: 0.2 }}"
+            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6"
+          >"
+            <Star className="w-4 h-4 mr-2 text-yellow-400" />            Revolutionary 2029 Services
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text - 4xl md:text - 6xl font - bold text - white mb - 6"
-          >
-            <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">
-              Next - Generation
+            transition={{ duration: 0.8, delay: 0.3 }}"
+            className="text-4xl md:text-6xl font-bold text-white mb-6"
+          >"
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Next-Generation
             </span>
-            <br />
-            <span className="text - white">Micro SAAS Solutions</span>
+            <br />"
+            <span className="text-white">Micro SAAS Solutions</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text - xl text - gray - 300 max - w-3xl mx - auto mb - 8"
+            transition={{ duration: 0.8, delay: 0.4 }}"
+            className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
           >
-            Experience the future of business technology with our cutting - edge
-            micro SAAS services. From quantum computing to AI - powered
+            Experience the future of business technology with our cutting-edge
+            micro SAAS services. From quantum computing to AI-powered'
             healthcare, we're revolutionizing how businesses operate.
           </motion.p>
 
@@ -158,215 +159,236 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex items - center justify - center space - x-4 mb - 8"
+            transition={{ duration: 0.8, delay: 0.5 }}"
+            className="flex items-center justify-center space-x-4 mb-8"
           >
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={togglePlayPause}
-              className="p - 3 rounded - full bg - gradient - to - r from - cyan - 500 to - purple - 500 hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 transform hover:scale - 110"
+            <button
+              onClick={togglePlayPause}"
+              className="p-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-110"
             >
-              {isPlaying ? (<Pause className="w - 5 h - 5 text - white" />) : (<Play className="w - 5 h - 5 text - white" />) }
-            </button>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleMute}
-              className="p - 3 rounded - full bg - gradient - to - r from - purple - 500 to - pink - 500 hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 110"
+              {isPlaying ? ("
+                <Pause className="w-5 h-5 text-white" />
+              ) : ("
+                <Play className="w-5 h-5 text-white" />
+              )}            </button>
+            <button
+              onClick={toggleMute}"
+              className="p-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-110"
             >
-              {isMuted ? (<VolumeX className="w - 5 h - 5 text - white" />) : (<Volume2 className="w - 5 h - 5 text - white" />) }
-            </button>
+              {isMuted ? ("
+                <VolumeX className="w-5 h-5 text-white" />
+              ) : ("
+                <Volume2 className="w-5 h-5 text-white" />
+              )}            </button>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Search and Filter Section */}
-      <div role="button" className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 mb - 12">
-        <div role="button" className="max - w-7xl mx - auto">
+      {/* Search and Filter Section */}"
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-12">"
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="bg - white / 10 backdrop - blur - lg rounded - 2xl p - 6 border border - white / 20"
-          >
-            <div role="button" className="flex flex - col lg:flex - row gap - 6 items - center">
-              {/* Search */}
-              <div role="button" className="flex - 1 relative">
-                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />
-                <input
-                  type="text"
-                  placeholder="Search innovative services..."
+            transition={{ duration: 0.8, delay: 0.6 }}"
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >"
+            <div className="flex flex-col lg:flex-row gap-6 items-center">
+              {/* Search */}"
+              <div className="flex-1 relative">"
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input"
+                  type="text""                  placeholder="Search innovative services..."
                   value={searchQuery}
-                  onChange={e => setSearchQuery (e.target.value) }
-                  className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent"
+                  onChange={e => setSearchQuery(e.target.value)}"
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
 
-              {/* Category Filter */}
-              <div role="button" className="flex flex - wrap gap - 2">
-                {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
-                    onClick={ () => setSelectedCategory (category) }
-                    className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${
-                      selectedCategory === category
-                        ? 'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white shadow - lg'
-                        : 'bg - white / 10 text - gray - 300 hover:bg - white / 20 border border - white / 20'
+              {/* Category Filter */}"
+              <div className="flex flex-wrap gap-2">
+                {categories.map(category => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}`
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+
+                      selectedCategory === category'
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg''
+                        : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'`
                     }`}
                   >
                     {category}
                   </button>) ) }
               </div>
 
-              {/* View Mode Toggle */}
-              <div role="button" className="flex bg - white / 10 rounded - lg p - 1 border border - white / 20">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
-                  className={`p - 2 rounded - md transition - all duration - 300 ${
-                    viewMode === 'grid'
-                      ? 'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white'
-                      : 'text - gray - 400 hover:text - white'
+              {/* View Mode Toggle */}"
+              <div className="flex bg-white/10 rounded-lg p-1 border border-white/20">
+                <button'
+                  onClick={() => setViewMode('grid')}`
+                  className={`p-2 rounded-md transition-all duration-300 ${
+'
+                    viewMode === 'grid''
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white''
+                      : 'text-gray-400 hover:text-white'`
                   }`}
-                >
-                  <Grid className="w - 5 h - 5" />
-                </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
-                  className={`p - 2 rounded - md transition - all duration - 300 ${
-                    viewMode === 'list'
-                      ? 'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white'
-                      : 'text - gray - 400 hover:text - white'
+                >"
+                  <Grid className="w-5 h-5" />                </button>
+                <button'
+                  onClick={() => setViewMode('list')}`
+                  className={`p-2 rounded-md transition-all duration-300 ${
+'
+                    viewMode === 'list''
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white''
+                      : 'text-gray-400 hover:text-white'`
                   }`}
-                >
-                  <List className="w - 5 h - 5" />
-                </button>
+                >"
+                  <List className="w-5 h-5" />                </button>
               </div>
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Services Grid */}
-      <div role="button" className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 pb - 20">
-        <div role="button" className="max - w-7xl mx - auto">
+      {/* Services Grid */}"
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">"
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className={`grid gap - 6 ${
-              viewMode === 'grid'
-                ? 'grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 3'
-                : 'grid - cols - 1'
+            transition={{ duration: 0.8, delay: 0.7 }}`
+            className={`grid gap-6 ${
+'
+              viewMode === 'grid''
+                ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3''
+                : 'grid-cols-1'`
             }`}
           >
             <AnimatePresence>
-              {filteredServices.map ( (service, index) => (<motion.div
+              {filteredServices.map((service, index) => (
+                <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}`
                   className={`group relative ${
-                    viewMode === 'list' ? 'flex flex - col lg:flex - row' : ''
+'
+                    viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''`
                   }`}
                 >
-                  <div role="button" className={`bg - white / 10 backdrop - blur - lg rounded - 2xl border border - white / 20 overflow - hidden transition - all duration - 500 hover:scale - 105 hover:shadow - 2xl hover:shadow - cyan - 500 / 25 ${
-                      viewMode === 'list' ? 'flex - 1' : ''
+                  <div`
+                    className={`bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 ${
+'
+                      viewMode === 'list' ? 'flex-1' : ''`
                     }`}
                   >
                     {/* Service Header */}
-                    <div role="button" className={`p - 6 ${service.popular ? 'bg - gradient - to - r from - yellow - 500 / 20 to - orange - 500 / 20' : ''}`}
-                    >
-                      <div role="button" className="flex items - start justify - between mb - 4">
-                        <div role="button" className="flex items - center space - x-3">
-                          <div role="button" className="text - 3xl">{service.icon}</div>
-                          <div>
-                            <h3 className="text - xl font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300">
+                    <div'`
+                      className={`p-6 ${service.popular ? 'bg-gradient-to-r from-yellow-500/20 to-orange-500/20' : ''}`}
+                    >"
+                      <div className="flex items-start justify-between mb-4">"
+                        <div className="flex items-center space-x-3">"
+                          <div className="text-3xl">{service.icon}</div>
+                          <div>"
+                            <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                               {service.name}
-                            </h3>
-                            <p className="text - gray - 400 text - sm">
+                            </h3>"
+                            <p className="text-gray-400 text-sm">
                               {service.category}
                             </p>
                           </div>
                         </div>
-                        {service.popular && (<span className="px - 2 py - 1 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs font - medium rounded - full">
+                        {service.popular && ("
+                          <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium rounded-full">
                             Popular
                           </span>) }
                       </div>
-
-                      <p className="text - gray - 300 mb - 4 leading - relaxed">
+"
+                      <p className="text-gray-300 mb-4 leading-relaxed">
                         {service.tagline}
                       </p>
-
-                      <div role="button" className="flex items - center justify - between mb - 4">
-                        <div role="button" className="flex items - center space - x-2">
-                          <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />
-                          <span className="text - white font - medium">
+"
+                      <div className="flex items-center justify-between mb-4">"
+                        <div className="flex items-center space-x-2">"
+                          <Star className="w-4 h-4 text-yellow-400 fill-current" />"
+                          <span className="text-white font-medium">
                             {service.rating}
+                          </span>"
+                          <span className="text-gray-400">
+                            ({service.reviews})
                           </span>
-                          <span className="text - gray - 400"> ({service.reviews}) </span>
-                        </div>
-                        <div role="button" className="text - right">
-                          <div role="button" className="text - 2xl font - bold text - white">
+                        </div>"
+                        <div className="text-right">"
+                          <div className="text-2xl font-bold text-white">
                             {service.price}
-                          </div>
-                          <div role="button" className="text - gray - 400 text - sm">
+                          </div>"
+                          <div className="text-gray-400 text-sm">
                             {service.period}
-                          </div>
-                        </div>
+                          </div>                        </div>
                       </div>
                     </div>
 
-                    {/* Service Content */}
-                    <div role="button" className="p - 6 pt - 0">
-                      <p className="text - gray - 300 mb - 6 leading - relaxed">
+                    {/* Service Content */}"
+                    <div className="p-6 pt-0">"
+                      <p className="text-gray-300 mb-6 leading-relaxed">
                         {service.description}
                       </p>
 
-                      {/* Features */}
-                      <div role="button" className="mb - 6">
-                        <h4 className="text - white font - semibold mb - 3 flex items - center">
-                          <CheckCircle className="w - 4 h - 4 mr - 2 text - cyan - 400" />
-                          Key Features
-                        </h4>
-                        <div role="button" className="grid grid - cols - 1 gap - 2">
-                          {service.features.slice (0, 3) .map ( (feature, idx) => (<div role="button" key={idx}
-                              className="flex items - center text - sm text - gray - 400"
-                            >
-                              <div role="button" className="w - 1.5 h - 1.5 bg - cyan - 400 rounded - full mr - 2"></div>
+                      {/* Features */}"
+                      <div className="mb-6">"
+                        <h4 className="text-white font-semibold mb-3 flex items-center">"
+                          <CheckCircle className="w-4 h-4 mr-2 text-cyan-400" />                          Key Features
+                        </h4>"
+                        <div className="grid grid-cols-1 gap-2">
+                          {service.features.slice(0, 3).map((feature, idx) => (
+                            <div
+                              key={idx}"
+                              className="flex items-center text-sm text-gray-400"
+                            >"
+                              <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
                               {feature}
                             </div>) ) }
                         </div>
                       </div>
 
-                      {/* Market Info */}
-                      <div role="button" className="grid grid - cols - 2 gap - 4 mb - 6 text - sm">
-                        <div>
-                          <p className="text - gray - 400">Market Size</p>
-                          <p className="text - white font - medium">
+                      {/* Market Info */}"
+                      <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
+                        <div>"
+                          <p className="text-gray-400">Market Size</p>"
+                          <p className="text-white font-medium">
                             {service.marketSize}
                           </p>
                         </div>
-                        <div>
-                          <p className="text - gray - 400">Growth Rate</p>
-                          <p className="text - white font - medium">
+                        <div>"
+                          <p className="text-gray-400">Growth Rate</p>"
+                          <p className="text-white font-medium">
                             {service.growthRate}
                           </p>
                         </div>
                       </div>
 
-                      {/* ROI */}
-                      <div role="button" className="mb - 6 p - 4 bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 rounded - xl border border - green - 500 / 30">
-                        <p className="text - green - 300 text - sm font - medium">
+                      {/* ROI */}"
+                      <div className="mb-6 p-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl border border-green-500/30">"
+                        <p className="text-green-300 text-sm font-medium">
                           ROI Impact
-                        </p>
-                        <p className="text - white font - semibold">
+                        </p>"
+                        <p className="text-white font-semibold">
                           {service.roi}
                         </p>
                       </div>
 
-                      {/* Action Buttons */}
-                      <div role="button" className="flex space - x-3">
+                      {/* Action Buttons */}"
+                      <div className="flex space-x-3">
                         <a
-                          href={service.link}
-                          className="flex - 1 bg - gradient - to - r from - cyan - 500 to - purple - 500 hover:from - cyan - 600 hover:to - purple - 600 text - white font - medium py - 3 px - 4 rounded - xl transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center group"
+                          href={service.link}"
+                          className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-medium py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
                         >
-                          Learn More < ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform duration - 300" />
-                        </a>
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 3 border border - white / 20 text - white rounded - xl hover:bg - white / 10 transition - all duration - 300">
-                          <MessageCircle className="w - 5 h - 5" />
-                        </button>
+                          Learn More"
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        </a>"
+                        <button className="px-4 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10 transition-all duration-300">"
+                          <MessageCircle className="w-5 h-5" />                        </button>
                       </div>
                     </div>
                   </div>
@@ -377,56 +399,58 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
           {/* No Results */}
           {filteredServices.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text - center py - 20"
-            >
-              <div role="button" className="text - gray - 400 text - xl mb - 4">
+              animate={{ opacity: 1 }}"
+              className="text-center py-20"
+            >"
+              <div className="text-gray-400 text-xl mb-4">
                 No services found
-              </div>
-              <p className="text - gray - 500">
+              </div>"
+              <p className="text-gray-500">
                 Try adjusting your search or filter criteria
               </p>
-            </motion.div>) }
+            </motion.div>
+          )}
         </div>
       </div>
 
-      {/* Contact CTA */}
-      <div role="button" className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 pb - 20">
-        <div role="button" className="max - w-4xl mx - auto">
+      {/* Contact CTA */}"
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">"
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 backdrop - blur - lg rounded - 3xl p - 8 border border - cyan - 500 / 30 text - center"
-          >
-            <h2 className="text - 3xl font - bold text - white mb - 4">
+            transition={{ duration: 0.8, delay: 0.8 }}"
+            className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-lg rounded-3xl p-8 border border-cyan-500/30 text-center"
+          >"
+            <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
-            </h2>
-            <p className="text - gray - 300 mb - 8 text - lg">
+            </h2>"
+            <p className="text-gray-300 mb-8 text-lg">
               Get in touch with our team to discuss how these innovative
               solutions can drive your business forward.
-            </p>
-            <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <a
-                href="/contact"
-                className="bg - gradient - to - r from - cyan - 500 to - purple - 500 hover:from - cyan - 600 hover:to - purple - 600 text - white font - medium py - 4 px - 8 rounded - xl transition - all duration - 300 transform hover:scale - 105"
+            </p>"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a"
+                href="/contact""
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-medium py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
               >
                 Contact Us
               </a>
-              <a
-                href="/request - quote"
-                className="border border - white / 20 text - white font - medium py - 4 px - 8 rounded - xl hover:bg - white / 10 transition - all duration - 300"
+              <a"
+                href="/request-quote""
+                className="border border-white/20 text-white font-medium py-4 px-8 rounded-xl hover:bg-white/10 transition-all duration-300"
               >
                 Request Quote
               </a>
-            </div>
-            <div role="button" className="mt - 8 text - gray - 400">
-              <p > Mobile: +1 302 464 0950</p>
-              <p > Email: kleber@ziontechgroup.com</p>
-              <p > Address: 364 E Main St STE 1008 Middletown DE 19709</p>
+            </div>"
+            <div className="mt-8 text-gray-400">
+              <p>Mobile: +1 302 464 0950</p>
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
             </div>
           </motion.div>
         </div>
       </div>
     </div>) ;
 }
+'"`

@@ -11,13 +11,13 @@
  * 4. Reports and logs all activities
  * 5. Integrates with existing health check system
  */
-
+;
 const puppeteer = require('puppeteer');
 const fs = require('fs').promises;
 const path = require('path');
 const { execSync } = require('child_process');
 
-// Configuration
+// Configuration;
 const CONFIG = {
   appUrl: 'https://ziontechgroup.com',
   checkInterval: 5 * 60 * 1000, // 5 minutes
@@ -59,7 +59,7 @@ const CONFIG = {
     'connection-fix': 'Fix connection issues'
 
 };
-
+;
 class BrowserErrorMonitor {
   constructor() {
     this.browser = null;
@@ -494,7 +494,7 @@ class BrowserErrorMonitor {
     await this.start();
 
 
-// PM2 process management
+// PM2 process management;
 const monitor = new BrowserErrorMonitor();
 
 // Handle process signals

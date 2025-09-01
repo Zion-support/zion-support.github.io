@@ -20,6 +20,7 @@ The PM2 automation system provides the following functionality that was previous
 ## Installation
 
 1. Ensure PM2 is installed globally:
+
    ```bash
    npm install -g pm2
    ```
@@ -38,6 +39,7 @@ The PM2 automation system provides the following functionality that was previous
 ### PM2 Ecosystem Configuration
 
 The `ecosystem.config.js` file contains PM2 configuration for:
+
 - Application startup and monitoring
 - Environment-specific settings
 - Deployment automation
@@ -47,9 +49,11 @@ The `ecosystem.config.js` file contains PM2 configuration for:
 The main automation script (`scripts/pm2-automation.js`) provides the following commands:
 
 #### CI Process
+
 ```bash
 node scripts/pm2-automation.js ci
 ```
+
 - Installs dependencies
 - Runs linting (non-blocking)
 - Runs type checking (non-blocking)
@@ -57,18 +61,22 @@ node scripts/pm2-automation.js ci
 - Runs tests if available (non-blocking)
 
 #### Deployment Process
+
 ```bash
 node scripts/pm2-automation.js deploy
 ```
+
 - Installs dependencies
 - Builds the project
 - Verifies build output
 - Prepares for deployment
 
 #### Dependency Updates
+
 ```bash
 node scripts/pm2-automation.js deps
 ```
+
 - Checks for outdated packages
 - Runs security audit
 - Updates dependencies
@@ -76,17 +84,21 @@ node scripts/pm2-automation.js deps
 - Runs quality checks (non-blocking)
 
 #### Security Checks
+
 ```bash
 node scripts/pm2-automation.js security
 ```
+
 - Installs dependencies
 - Runs security audit
 - Checks for outdated packages
 
 #### Start Monitoring
+
 ```bash
 node scripts/pm2-automation.js deploy
 ```
+
 - Starts PM2 monitoring
 - Provides monitoring dashboard access
 
@@ -115,6 +127,7 @@ Add the following to your crontab (`crontab -e`):
 ### Manual Cron Execution
 
 You can also run the cron script manually:
+
 ```bash
 bash scripts/pm2-cron.sh
 ```
@@ -171,6 +184,7 @@ All automation tasks log to `pm2-automation.log` in the workspace root.
 ### PM2 Logs
 
 PM2 logs are stored in `~/.pm2/logs/` and can be viewed with:
+
 ```bash
 pm2 logs
 ```
@@ -178,6 +192,7 @@ pm2 logs
 ### Monitoring Dashboard
 
 Access the PM2 monitoring dashboard:
+
 ```bash
 pm2 monit
 ```
@@ -187,11 +202,13 @@ pm2 monit
 ### Common Issues
 
 1. **PM2 not found**: Ensure PM2 is installed globally
+
    ```bash
    npm install -g pm2
    ```
 
 2. **Permission denied**: Make scripts executable
+
    ```bash
    chmod +x scripts/pm2-automation.js scripts/pm2-cron.sh
    ```
@@ -203,11 +220,13 @@ pm2 monit
 ### Debugging
 
 1. Check automation logs:
+
    ```bash
    tail -f pm2-automation.log
    ```
 
 2. Check PM2 logs:
+
    ```bash
    pm2 logs bolt-zion-app
    ```
@@ -244,6 +263,7 @@ This PM2 automation system replaces the following GitHub Actions workflows:
 ## Support
 
 For issues with the PM2 automation system:
+
 1. Check the logs in `pm2-automation.log`
 2. Review PM2 logs with `pm2 logs`
 3. Verify script permissions and dependencies

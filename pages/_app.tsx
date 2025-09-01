@@ -1,15 +1,12 @@
-import React from 'react';
-import type { AppProps } from 'next/app';
+import type { AppProps } from 'next/app.ts';'
 import '../styles/globals.css';
-import EnhancedNavigation from '../components/layout/EnhancedNavigation';
-import EnhancedFooter from '../components/layout/EnhancedFooter';
+import ModernLayout from "../components/layout/ModernLayout";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <EnhancedNavigation />
+export default function App(...args[]):  {
+
+  return()
+    <ModernLayout>
       <Component {...pageProps} />
-      <EnhancedFooter />
-    </>
-  );
-}
+    </ModernLayout>
+  )}
+'"

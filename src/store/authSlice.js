@@ -1,33 +1,35 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Async thunk for login
-export const loginUser = createAsyncThunk(
+export const loginUser = createAsyncThunk('
   'auth/loginUser',
   async (credentials, { rejectWithValue }) => {
+
     try {
       // Simulate API call
       const response = await new Promise((resolve, reject) => {
+
         setTimeout(() => {
           if (credentials.email && credentials.password) {
+
             resolve({
+
               user: {
+
                 id: 1,
-                email: credentials.email,
-                name: 'John Doe',
-                role: 'user',
-              },
-              token: 'mock-jwt-token',
-            });
+                email: credentials.email,'
+                name: 'John Doe','
+                role: 'user'},'
+              token: 'mock-jwt-token'});
           } else {
-            Promise.Promise.Promise.Promise.Promise.Promise.Promise.Promise.Promise.reject(
-              new Error('Invalid credentials')
-            );
+'
+            reject(new Error('Invalid credentials'));
           }
         }, 1000);
       });
 
-      // Store token in localStorage
-      localStorage.setItem('token', response.token);
+      // Store token in localStorage'
+      localStorage.setItem('token', response.token);'
       localStorage.setItem('user', JSON.stringify(response.user));
 
       return response;
@@ -38,33 +40,35 @@ export const loginUser = createAsyncThunk(
 );
 
 // Async thunk for signup
-export const signupUser = createAsyncThunk(
+export const signupUser = createAsyncThunk('
   'auth/signupUser',
   async (userData, { rejectWithValue }) => {
+
     try {
       // Simulate API call
       const response = await new Promise((resolve, reject) => {
+
         setTimeout(() => {
           if (userData.email && userData.password && userData.name) {
+
             resolve({
+
               user: {
+
                 id: Date.now(),
                 email: userData.email,
-                name: userData.name,
-                role: 'user',
-              },
-              token: 'mock-jwt-token',
-            });
+                name: userData.name,'
+                role: 'user'},'
+              token: 'mock-jwt-token'});
           } else {
-            Promise.Promise.Promise.Promise.Promise.Promise.Promise.Promise.Promise.reject(
-              new Error('Invalid user data')
-            );
+'
+            reject(new Error('Invalid user data'));
           }
         }, 1000);
       });
 
-      // Store token in localStorage
-      localStorage.setItem('token', response.token);
+      // Store token in localStorage'
+      localStorage.setItem('token', response.token);'
       localStorage.setItem('user', JSON.stringify(response.user));
 
       return response;
@@ -75,17 +79,19 @@ export const signupUser = createAsyncThunk(
 );
 
 // Async thunk for logout
-export const logoutUser = createAsyncThunk(
+export const logoutUser = createAsyncThunk('
   'auth/logoutUser',
   async (_, { rejectWithValue }) => {
+
     try {
       // Simulate API call
       await new Promise(resolve => {
+
         setTimeout(resolve, 500);
       });
 
-      // Clear localStorage
-      localStorage.removeItem('token');
+      // Clear localStorage'
+      localStorage.removeItem('token');'
       localStorage.removeItem('user');
 
       return null;
@@ -96,19 +102,23 @@ export const logoutUser = createAsyncThunk(
 );
 
 // Async thunk for checking auth status
-export const checkAuthStatus = createAsyncThunk(
+export const checkAuthStatus = createAsyncThunk('
   'auth/checkAuthStatus',
   async (_, { rejectWithValue }) => {
+
     try {
-      const token = localStorage.getItem('token');
+'
+      const token = localStorage.getItem('token');'
       const user = localStorage.getItem('user');
 
       if (token && user) {
+
         return {
+
           user: JSON.parse(user),
-          token: token,
-        };
+          token: token};
       } else {
+'
         throw new Error('No auth data found');
       }
     } catch (error) {
@@ -116,38 +126,45 @@ export const checkAuthStatus = createAsyncThunk(
     }
   }
 );
-
+;
 const initialState = {
+
   user: null,
   token: null,
   isAuthenticated: false,
   isLoading: false,
-  error: null,
-};
+  error: null};
 
 const authSlice = createSlice({
+'
   name: 'auth',
   initialState,
   reducers: {
+
     clearError: state => {
+
       state.error = null;
     },
     setUser: (state, action) => {
+
       state.user = action.payload;
       state.isAuthenticated = !!action.payload;
     },
     setLoggedIn: (state, action) => {
+
       state.isAuthenticated = action.payload;
-    },
-  },
+    }},
   extraReducers: builder => {
+
     // Login
     builder
       .addCase(loginUser.pending, state => {
+
         state.isLoading = true;
         state.error = null;
       })
       .addCase(loginUser.fulfilled, (state, action) => {
+
         state.isLoading = false;
         state.user = action.payload.user;
         state.token = action.payload.token;
@@ -155,6 +172,7 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(loginUser.rejected, (state, action) => {
+
         state.isLoading = false;
         state.error = action.payload;
       });
@@ -162,10 +180,12 @@ const authSlice = createSlice({
     // Signup
     builder
       .addCase(signupUser.pending, state => {
+
         state.isLoading = true;
         state.error = null;
       })
       .addCase(signupUser.fulfilled, (state, action) => {
+
         state.isLoading = false;
         state.isAuthenticated = true;
         state.user = action.payload.user;
@@ -173,6 +193,7 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(signupUser.rejected, (state, action) => {
+
         state.isLoading = false;
         state.error = action.payload;
       });
@@ -180,9 +201,11 @@ const authSlice = createSlice({
     // Logout
     builder
       .addCase(logoutUser.pending, state => {
+
         state.isLoading = true;
       })
       .addCase(logoutUser.fulfilled, state => {
+
         state.isLoading = false;
         state.user = null;
         state.token = null;
@@ -190,6 +213,7 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(logoutUser.rejected, (state, action) => {
+
         state.isLoading = false;
         state.error = action.payload;
       });
@@ -197,9 +221,11 @@ const authSlice = createSlice({
     // Check auth status
     builder
       .addCase(checkAuthStatus.pending, state => {
+
         state.isLoading = true;
       })
       .addCase(checkAuthStatus.fulfilled, (state, action) => {
+
         state.isLoading = false;
         state.isAuthenticated = true;
         state.user = action.payload.user;
@@ -207,13 +233,13 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(checkAuthStatus.rejected, state => {
+
         state.isLoading = false;
         state.isAuthenticated = false;
         state.user = null;
         state.token = null;
       });
-  },
-});
+  }});
 
 export const { clearError, setUser, setLoggedIn } = authSlice.actions;
 
@@ -225,3 +251,4 @@ export const selectIsLoading = state => state.auth.isLoading;
 export const selectError = state => state.auth.error;
 
 export default authSlice.reducer;
+'

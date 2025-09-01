@@ -1,12 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
-// https://vitejs.dev/config/
+// https://vitejs.dev/config/;
+export { defineConfig };
 export default defineConfig({
-  plugins: [react()],
-  root: '.',
-  base: '/',
+  plugins: [
+    react(),
+    splitVendorChunkPlugin()
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -21,8 +23,8 @@ export default defineConfig({
       '@data': resolve(__dirname, 'src/data'),
       '@services': resolve(__dirname, 'src/services'),
       '@context': resolve(__dirname, 'src/context'),
-      '@constants': resolve(__dirname, 'src/constants')
-    }
+      '@constants': resolve(__dirname, 'src/constants'),
+    },
   },
   build: {
     target: 'esnext',
@@ -32,12 +34,17 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
-      }
+        pure_funcs: [
+          'console.log',
+          'console.info',
+          'console.debug',
+          'console.warn',
+        ],
+      },
     },
     rollupOptions: {
       input: {
-        main: './index.html'
+        main: './index.html',
       },
       output: {
         manualChunks: {
@@ -45,26 +52,28 @@ export default defineConfig({
           'router-vendor': ['react-router-dom'],
           'ui-vendor': ['framer-motion', 'lucide-react'],
           'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod']
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
+        assetFileNames: assetInfo => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp/i.test(ext)) {
             return `images/[name]-[hash][extname]`;
           }
           if (/css/i.test(ext)) {
             return `css/[name]-[hash][extname]`;
           }
+          if (/woff2?|ttf|eot/i.test(ext)) {
+            return `fonts/[name]-[hash][extname]`;
+          }
           return `assets/[name]-[hash][extname]`;
-        }
-      }
+        },
+      },
     },
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 1000,
   },
-
 
   optimizeDeps: {
     include: [
@@ -74,7 +83,7 @@ export default defineConfig({
       'framer-motion',
       'lucide-react',
       'clsx',
-      'tailwind-merge'
+      'tailwind-merge',
     ],
   },
   server: {
@@ -83,29 +92,29 @@ export default defineConfig({
     open: true,
     cors: true,
     hmr: {
-      overlay: false
+      overlay: false,
     },
     proxy: {
       '/api': {
         target: 'http://localhost:5000',
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api/, '/api')
-      }
-    }
+        rewrite: path => path.replace(/^\/api/, '/api'),
+      },
+    },
   },
   preview: {
     port: 4173,
     host: true,
-    open: true
+    open: true,
   },
   css: {
     devSourcemap: true,
-    postcss: './postcss.config.js'
+    postcss: './postcss.config.js',
   },
 
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
-    __BUILD_TIME__: JSON.stringify(new Date().toISOString())
-  }
-})
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
+  },
+});

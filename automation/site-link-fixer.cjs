@@ -25,13 +25,22 @@ function ensureFile(relPath, contents) {
   }
 }
 
-const placeholder = (title, body) => `import Head from 'next/head';\nexport default function Page(){return(<div className=\"min-h-screen bg-slate-950 text-white\"><Head><title>${title}</title><meta name=\"description\" content=\"${body}\"/></Head><main className=\"container mx-auto px-6 py-16\"><h1 className=\"text-4xl font-bold\">${title}</h1><p className=\"mt-3 text-white/80\">${body}</p></main></div>)}\n`;
+const placeholder = (title, body) =>
+  `import Head from 'next/head';\nexport default function Page(){return(<div className=\"min-h-screen bg-slate-950 text-white\"><Head><title>${title}</title><meta name=\"description\" content=\"${body}\"/></Head><main className=\"container mx-auto px-6 py-16\"><h1 className=\"text-4xl font-bold\">${title}</h1><p className=\"mt-3 text-white/80\">${body}</p></main></div>)}\n`;
 
-(function main(){
+(function main() {
   for (const p of requiredPages) {
     if (p.kind === 'file') {
-      const title = p.file.split('/').slice(-1)[0].replace(/\.tsx?$/, '').replace(/-/g,' ').replace(/\b\w/g, c=>c.toUpperCase());
-      ensureFile(p.file, placeholder(title, 'Auto-created to prevent broken internal links.'));
+      const title = p.file
+        .split('/')
+        .slice(-1)[0]
+        .replace(/\.tsx?$/, '')
+        .replace(/-/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase());
+      ensureFile(
+        p.file,
+        placeholder(title, 'Auto-created to prevent broken internal links.')
+      );
     }
   }
   console.log('Site link fixer completed.');

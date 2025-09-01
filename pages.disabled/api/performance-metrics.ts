@@ -1,8 +1,9 @@
-// API endpoint for performance metrics collection
+// API endpoint for performance metrics collection;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { PerformanceReport } from '@/utils/performance-monitor';
 
 interface PerformanceData {
+
   timestamp: string;
   url: string;
   userAgent: string;
@@ -12,27 +13,31 @@ interface PerformanceData {
   cls: number;
   ttfb: number;
   sessionId: string;
+
 }
 
 interface ErrorData {
+
   timestamp: string;
   url: string;
   userAgent: string;
   error: string;
   stack?: string;
   sessionId: string;
+
 }
 
 // In-memory storage for demo purposes
-// In production, use a proper database
+// In production, use a proper database;
 let performanceMetrics: PerformanceData[] = [];
 let errorLogs: ErrorData[] = [];
-
+;
+export { function };
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ): Promise
-
+;
 export default function Performance-metricsPage() {
   return (
     <void> {
@@ -157,11 +162,11 @@ export default function Performance-metricsPage() {
     });
   }
 }
-
-function calculateAverages(metrics: PerformanceData[]) {
+;
+function calculateAverages(...args: unknown[]): unknown {
   if (metrics.length === 0) return null;
 
-  const sums = metrics.reduce((acc, metric) => ({
+  const sums = metrics.reduce(acc: unknown, metric: unknown ({
     fcp: acc.fcp + metric.fcp,
     lcp: acc.lcp + metric.lcp,
     fid: acc.fid + metric.fid,

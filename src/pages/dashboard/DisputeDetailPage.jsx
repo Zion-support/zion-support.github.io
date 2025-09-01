@@ -1,6 +1,6 @@
-import React from 'react';
-import SEO from '@/components/SEO';
-import { DisputeDetail } from '@/components/disputes';
+import React from 'react';'
+import SEO from '@/components/SEO';'
+import { DisputeDetail } from '@/components/disputes';'
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 function DisputeDetailPage() {
     return (<ProtectedRoute>
@@ -10,13 +10,15 @@ function DisputeDetailPage() {
         <DisputeDetail />
 
       </>
-    </ProtectedRoute>)}
+    </ProtectedRoute>)};
+export { DisputeDetailPage };
 export default DisputeDetailPage;
-
-export default DisputeDetailPage;
-export default DisputeDetailPage;
-export default DisputeDetailPage;
+;
 export default DisputeDetailPage;
 export default DisputeDetailPage;
 export default DisputeDetailPage;
 export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+'"

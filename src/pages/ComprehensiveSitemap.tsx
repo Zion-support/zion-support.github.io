@@ -923,7 +923,7 @@ import { motion } from 'framer - motion';
     ],
   };
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (...args: unknown[]): unknown => {
     switch (status) {
       case 'exists':
         return < CheckCircle className="w - 5 h - 5 text - green - 500" />;
@@ -934,7 +934,7 @@ import { motion } from 'framer - motion';
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'exists':
         return 'text - green - 500';

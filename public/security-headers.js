@@ -1,6 +1,6 @@
 // Security Headers Configuration
 // This file provides security headers for the Zion Tech Group application
-
+;
 const securityHeaders = {
   // Content Security Policy
   'Content-Security-Policy': [
@@ -16,7 +16,7 @@ const securityHeaders = {
     "base-uri 'self'",
     "form-action 'self'",
     "frame-ancestors 'none'",
-    "upgrade-insecure-requests"
+    'upgrade-insecure-requests',
   ].join('; '),
 
   // X-Frame-Options
@@ -40,7 +40,7 @@ const securityHeaders = {
     'usb=()',
     'magnetometer=()',
     'gyroscope=()',
-    'accelerometer=()'
+    'accelerometer=()',
   ].join(', '),
 
   // Strict-Transport-Security
@@ -56,30 +56,32 @@ const securityHeaders = {
   'Cross-Origin-Resource-Policy': 'same-origin',
 
   // Origin-Agent-Cluster
-  'Origin-Agent-Cluster': '?1'
+  'Origin-Agent-Cluster': '?1',
 };
 
-// Function to apply security headers
+// Function to apply security headers;
 function applySecurityHeaders() {
   if (typeof window !== 'undefined') {
     // Client-side security measures
     console.log('Security headers applied on client side');
-    
+
     // Disable console in production
     if (process.env.NODE_ENV === 'production') {
       console.log = () => {};
       console.warn = () => {};
       console.error = () => {};
     }
-    
+
     // Prevent eval usage
-    window.eval = function() {
+    window.eval = function () {
       throw new Error('eval() is not allowed for security reasons');
     };
-    
+
     // Prevent Function constructor
-    window.Function = function() {
-      throw new Error('Function constructor is not allowed for security reasons');
+    window.Function = function () {
+      throw new Error(
+        'Function constructor is not allowed for security reasons'
+      );
     };
   }
 }

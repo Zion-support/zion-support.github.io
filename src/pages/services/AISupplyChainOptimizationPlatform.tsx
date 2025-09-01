@@ -1,92 +1,134 @@
-import React from 'react.ts';
-import { SEO   } from '../../components/SEO';
-import { GradientHeading   } from '../../components/ui/GradientHeading';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '../../components/ui/card';
-import { Badge   } from '../../components/ui/badge';
-import { Button   } from '../../components/ui/button';
+import React from 'react.ts';'
+import { SEO   } from '../../components/SEO';'
+import { GradientHeading   } from '../../components/ui/GradientHeading';'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '../../components/ui/card';'
+import { Badge   } from '../../components/ui/badge';'
+import { Button   } from '../../components/ui/button';'
 import { CheckCircle, Truck, Globe, TrendingUp, Zap, Shield, Users, Clock, BarChart3   } from 'lucide-react.ts';
-
+;
 const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
+
   const features = [
     {
-      icon: <Truck className="h-6 w-6 text-blue-500" />,
-      title: "Smart Logistics",
+
+      icon: <Truck className="h-6 w-6 text-blue-500" />,"
+      title: "Smart Logistics","
       description: "AI-powered route optimization and real-time tracking for maximum efficiency"
     },
     {
-      icon: <Globe className="h-6 w-6 text-green-500" />,
-      title: "Global Supply Chain",
+"
+      icon: <Globe className="h-6 w-6 text-green-500" />,"
+      title: "Global Supply Chain","
       description: "Manage complex international supply chains with intelligent risk assessment"
     },
     {
-      icon: <TrendingUp className="h-6 w-6 text-purple-500" />,
-      title: "Predictive Analytics",
+"
+      icon: <TrendingUp className="h-6 w-6 text-purple-500" />,"
+      title: "Predictive Analytics","
       description: "Forecast demand, optimize inventory, and prevent supply chain disruptions"
     },
     {
-      icon: <Zap className="h-6 w-6 text-yellow-500" />,
-      title: "Real-time Monitoring",
+"
+      icon: <Zap className="h-6 w-6 text-yellow-500" />,"
+      title: "Real-time Monitoring","
       description: "Track shipments, inventory levels, and supplier performance in real-time"
     },
     {
-      icon: <Shield className="h-6 w-6 text-red-500" />,
-      title: "Risk Management",
+"
+      icon: <Shield className="h-6 w-6 text-red-500" />,"
+      title: "Risk Management","
       description: "Identify and mitigate supply chain risks with AI-powered insights"
     },
     {
-      icon: <BarChart3 className="h-6 w-6 text-cyan-500" />,
-      title: "Performance Analytics",
+"
+      icon: <BarChart3 className="h-6 w-6 text-cyan-500" />,"
+      title: "Performance Analytics","
       description: "Comprehensive reporting and analytics for continuous improvement";
     };
   ];
 
-  const pricingTiers = [
+  const optimizationModules = [
     {
-      name: "Starter",
-      price: "$399",
-      period: "/month",
+      icon: Activity,
+      title: "Demand Forecasting",
+      description: "AI-powered demand prediction using historical data, market trends, and external factors"
+    },
+    {
+      icon: LineChart,
+      title: "Inventory Optimization",
+      description: "Smart inventory management that balances stock levels with demand and reduces carrying costs"
+    },
+    {
+      icon: PieChart,
+      title: "Supplier Performance Analytics",
+      description: "Comprehensive evaluation of supplier performance with predictive scoring and recommendations"
+    },
+    {
+      icon: MapPin,
+      title: "Network Optimization",
+      description: "Optimize warehouse locations, distribution centers, and transportation routes for maximum efficiency"
+    },
+    {
+      icon: BarChart3,
+      title: "Cost Optimization",
+      description: "Identify cost-saving opportunities across transportation, warehousing, and procurement operations"
+    },
+    {
+      icon: Target,
+      title: "Sustainability Optimization",
+      description: "Optimize supply chain operations for environmental impact and sustainability goals"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+"
+      name: "Starter","
+      price: "$399","
+      period: "/month","
       description: "Perfect for small businesses optimizing their supply chain",
-      features[;
-        "Up to 3 warehouses",
-        "Basic route optimization",
-        "Inventory tracking",
-        "Standard reporting",
-        "Email support",
-        "5GB data storage"
+      features[;"
+        "Up to 3 warehouses","
+        "Basic route optimization","
+        "Inventory tracking","
+        "Standard reporting","
+        "Email support","        "5GB data storage"
       ],;
       popular: false
     },
     {
-      name: "Professional",
-      price: "$999",
-      period: "/month",
+"
+      name: "Professional","
+      price: "$999","
+      period: "/month","
       description: "Ideal for growing businesses with complex supply chain needs",
-      features[;
-        "Up to 10 warehouses",
-        "Advanced AI optimization",
-        "Real-time monitoring",
-        "Custom dashboards",
-        "Priority support",
-        "25GB data storage",
-        "API access",
+      features[;"
+        "Up to 10 warehouses","
+        "Advanced AI optimization","
+        "Real-time monitoring","
+        "Custom dashboards","
+        "Priority support","
+        "25GB data storage","
+        "API access","
         "Multi-currency support"
       ],;
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$2,499",
-      period: "/month",
+"
+      name: "Enterprise","
+      price: "$2,499","
+      period: "/month","
       description: "For large enterprises with global supply chain operations",
-      features[;
-        "Unlimited warehouses",
-        "Premium AI optimization",
-        "Custom development",
-        "24/7 dedicated support",
-        "Unlimited data storage",
-        "Advanced security",
-        "On-premise options",
-        "Custom integrations",
+      features[;"
+        "Unlimited warehouses","
+        "Premium AI optimization","
+        "Custom development","
+        "24/7 dedicated support","
+        "Unlimited data storage","
+        "Advanced security","
+        "On-premise options","
+        "Custom integrations","
         "White-label solutions"
       ],;
       popular: false;
@@ -95,106 +137,110 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
 
   const benefits = [
     {
-      metric: "35%",
+"
+      metric: "35%","
       description: "Reduction in logistics costs through route optimization"
     },
     {
-      metric: "50%",
+"
+      metric: "50%","
       description: "Improvement in delivery times and customer satisfaction"
     },
     {
-      metric: "40%",
+"
+      metric: "40%","
       description: "Reduction in inventory carrying costs"
     },
     {
-      metric: "90%",
+"
+      metric: "90%","
       description: "Faster response to supply chain disruptions";
     };
   ];
 
   const useCases = [
     {
-      title: "E-commerce Fulfillment",
+"
+      title: "E-commerce Fulfillment","
       description: "Optimize warehouse operations and last-mile delivery for online retailers"
     },
     {
-      title: "Manufacturing",
+"
+      title: "Manufacturing","
       description: "Streamline raw material procurement and production scheduling"
     },
     {
-      title: "Retail Distribution",
+"
+      title: "Retail Distribution","
       description: "Optimize store replenishment and cross-docking operations"
     },
     {
-      title: "Healthcare Supply Chain",
+"
+      title: "Healthcare Supply Chain","
       description: "Ensure critical medical supplies reach their destination on time";
-    };
-  ];
+    };  ];
 
-  return (
+  return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group"
-        description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
-      />
+      <SEO "
+        title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group""        description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
+       />
       
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
+      {/* Hero Section */}"
+      <div className="relative overflow-hidden">"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">"
+          <div className="text-center">"
             <GradientHeading className="text-5xl md:text-6xl font-bold mb-6">
               AI-Powered Supply Chain Optimization Platform
-            </GradientHeading>
+            </GradientHeading>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Revolutionize your supply chain with cutting-edge AI technology. Optimize logistics, reduce costs, 
               and enhance customer satisfaction with intelligent supply chain management.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Button size="lg" className="bg-zion-purple hover:bg-zion-purple/90">
                 Start Free Trial
-              </Button>
+              </Button>"
               <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-slate-900">
                 Schedule Demo
               </Button>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      {/* Key Benefits */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-4">Transform Your Supply Chain</h2>
+      {/* Key Benefits */}"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
+        <div className="text-center mb-16">"
+          <h2 className="text-3xl font-bold text-white mb-4">Transform Your Supply Chain</h2>"
           <p className="text-gray-300 text-lg">See measurable improvements in your logistics operations</p>
         </div>
-        
+        "
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-          {benefits.map((benefit, index)   => (
-            <div key={index} className="text-center">
-              <div className="text-4xl font-bold text-zion-cyan mb-2">{benefit.metric}</div>
+          {benefits.map((benefit, index)   => ("
+            <div key={index} className="text-center">"
+              <div className="text-4xl font-bold text-zion-cyan mb-2">{benefit.metric}</div>"
               <p className="text-gray-300">{benefit.description}</p>
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
+        </section>
 
-      {/* Features */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-4">Powerful Features</h2>
+      {/* Features */}"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
+        <div className="text-center mb-16">"
+          <h2 className="text-3xl font-bold text-white mb-4">Powerful Features</h2>"
           <p className="text-gray-300 text-lg">Everything you need for intelligent supply chain management</p>
         </div>
-        
+        "
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index)   => (
+          {features.map((feature, index)   => ("
             <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-zion-cyan transition-colors">
-              <CardHeader>
+              <CardHeader>"
                 <div className="flex items-center gap-3">
-                  {feature.icon}
+                  {feature.icon}"
                   <CardTitle className="text-white">{feature.title}</CardTitle>
                 </div>
               </CardHeader>
-              <CardContent>
+              <CardContent>"
                 <p className="text-gray-300">{feature.description}</p>
               </CardContent>
             </Card>
@@ -202,20 +248,20 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
         </div>
       </div>
 
-      {/* Use Cases */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-4">Industry Use Cases</h2>
+      {/* Use Cases */}"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
+        <div className="text-center mb-16">"
+          <h2 className="text-3xl font-bold text-white mb-4">Industry Use Cases</h2>"
           <p className="text-gray-300 text-lg">Optimize supply chains across various industries</p>
         </div>
-        
+        "
         <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-          {useCases.map((useCase, index)   => (
+          {useCases.map((useCase, index)   => ("
             <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-zion-cyan transition-colors">
-              <CardHeader>
+              <CardHeader>"
                 <CardTitle className="text-white">{useCase.title}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent>"
                 <p className="text-gray-300">{useCase.description}</p>
               </CardContent>
             </Card>
@@ -223,38 +269,37 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
         </div>
       </div>
 
-      {/* Pricing */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-4">Transparent Pricing</h2>
+      {/* Pricing */}"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
+        <div className="text-center mb-16">"
+          <h2 className="text-3xl font-bold text-white mb-4">Transparent Pricing</h2>"
           <p className="text-gray-300 text-lg">Choose the plan that fits your supply chain needs</p>
         </div>
-        
+        "
         <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-          {pricingTiers.map((tier, index)   => (
+          {pricingTiers.map((tier, index)   => ('
             <Card key={index} className={`relative ${tier.popular ? 'border-zion-cyan ring-2 ring-zion-cyan' : 'border-slate-700'} bg-slate-800/50`}>
-              {tier.popular && (
+              {tier.popular && ("
                 <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-zion-cyan text-slate-900">
                   Most Popular
                 </Badge>
-              )}
-              <CardHeader className="text-center">
-                <CardTitle className="text-white text-2xl">{tier.name}</CardTitle>
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-4xl font-bold text-zion-cyan">{tier.price}</span>
+              )}"
+              <CardHeader className="text-center">"
+                <CardTitle className="text-white text-2xl">{tier.name}</CardTitle>"
+                <div className="flex items-baseline justify-center gap-1">"
+                  <span className="text-4xl font-bold text-zion-cyan">{tier.price}</span>"
                   <span className="text-gray-400">{tier.period}</span>
-                </div>
+                </div>"
                 <CardDescription className="text-gray-300">{tier.description}</CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent>"
                 <ul className="space-y-3 mb-6">
-                  {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                  {tier.features.map((feature, featureIndex) => ("
+                    <li key={featureIndex} className="flex items-center gap-2">"
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
-                </ul>
+                </ul>"
                 <Button className="w-full bg-zion-purple hover:bg-zion-purple/90">
                   Get Started
                 </Button>
@@ -264,17 +309,17 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Supply Chain?</h2>
+      {/* CTA Section */}"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
+        <div className="text-center">"
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Supply Chain?</h2>"
           <p className="text-gray-300 text-lg mb-8">
             Join industry leaders who have already transformed their logistics operations
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Button size="lg" className="bg-zion-purple hover:bg-zion-purple/90">
               Start Free Trial
-            </Button>
+            </Button>"
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-slate-900">
               Contact Sales
             </Button>
@@ -282,31 +327,30 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
         </div>
       </div>
 
-      {/* Contact Information */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white mb-6">Need Help Getting Started?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
-              <h4 className="text-white font-semibold mb-2">24/7 Support</h4>
+      {/* Contact Information */}"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
+        <div className="text-center">"
+          <h3 className="text-2xl font-bold text-white mb-6">Need Help Getting Started?</h3>"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+            <div className="text-center">"
+              <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4" />"
+              <h4 className="text-white font-semibold mb-2">24/7 Support</h4>"
               <p className="text-gray-300">Round-the-clock assistance for all your needs</p>
-            </div>
-            <div className="text-center">
-              <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
-              <h4 className="text-white font-semibold mb-2">Expert Consultation</h4>
+            </div>"
+            <div className="text-center">"
+              <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4" />"
+              <h4 className="text-white font-semibold mb-2">Expert Consultation</h4>"
               <p className="text-gray-300">Get personalized guidance from our supply chain experts</p>
+            </div>"
+            <div className="text-center">"
+              <Globe className="h-12 w-12 text-zion-cyan mx-auto mb-4" />"
+              <h4 className="text-white font-semibold mb-2">Global Reach</h4>"              <p className="text-gray-300">Serving businesses worldwide with local expertise</p>
             </div>
-            <div className="text-center">
-              <Globe className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
-              <h4 className="text-white font-semibold mb-2">Global Reach</h4>
-              <p className="text-gray-300">Serving businesses worldwide with local expertise</p>
-            </div>
-          </div>
-          <div className="mt-8">
+          </div>"
+          <div className="mt-8">"
             <p className="text-gray-300 mb-4">
               <strong>Contact us:</strong> +1 302 464 0950 | kleber@ziontechgroup.com
-            </p>
+            </p>"
             <p className="text-gray-300">
               <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
             </p>
@@ -316,4 +360,4 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
     </div>;
   )};
 
-export default AISupplyChainOptimizationPlatform;
+export default AISupplyChainOptimizationPlatform;'"`

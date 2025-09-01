@@ -3,12 +3,13 @@ import { ApiScope } from '../../../utils/devportal/types';
 import { createApiKey, getUserIdFromRequest } from '../../../utils/devportal/auth';
 import { getApiKeys, saveApiKeys } from '../../../utils/devportal/storage';
 import { generateApiToken } from '../../../utils/devportal/auth';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+;
+export { function };
+export default function handler(...args: unknown[]): unknown {
   const userId = getUserIdFromRequest(req);
 
   if (req.method === 'GET') {
-    const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt);
+    const keys = getApiKeys().filter(k: unknown k.userId === userId && !k.revokedAt);
     return res.status(200).json({ data: keys });
   }
 
@@ -22,10 +23,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'PUT') {
     const { id, action, scopes } = req.body || {};
     const keys = getApiKeys();
-    const idx = keys.findIndex((k) => k.id === id && k.userId === userId);
+    const idx = keys.findIndex(k: unknown k.id === id && k.userId === userId);
     if (idx
-
-export default function KeysPage() {
+;
+export default function KeysPage(...args: unknown[]): unknown {
   return (
     < 0) return res.status(404).json({ error: { code: 'not_found', message: 'Key not found' } });
 
@@ -54,7 +55,7 @@ export default function KeysPage() {
   if (req.method === 'DELETE') {
     const { id } = req.query;
     const keys = getApiKeys();
-    const idx = keys.findIndex((k) => k.id === id && k.userId === userId);
+    const idx = keys.findIndex(k: unknown k.id === id && k.userId === userId);
     if (idx < 0) return res.status(404).json({ error: { code: 'not_found', message: 'Key not found' } });
     keys[idx].revokedAt = new Date().toISOString();
     saveApiKeys(keys);
