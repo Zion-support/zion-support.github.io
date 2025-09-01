@@ -1,4 +1,4 @@
-import { ComprehensiveMicroSaasService } from './comprehensive-2025-micro-saas-expansion';
+import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -7,7 +7,7 @@ const contact = {
   website: 'https://ziontechgroup.com'
 };
 
-export const emergingTechServices2025: ComprehensiveMicroSaasService[] = [
+export const emergingTechServices2025: MicroSaasService[] = [
   // Quantum Computing Services
   {
     id: 'neuromorphic-computing',
@@ -52,7 +52,7 @@ export const emergingTechServices2025: ComprehensiveMicroSaasService[] = [
     competitors: ['IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum'],
     marketSize: '$1.5B Quantum Computing market',
     growthRate: '45% CAGR',
-    variant: 'quantum-advanced',
+    variant: 'quantum',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Production-ready neuromorphic platform with custom hardware integration, comprehensive development tools, and edge deployment capabilities.',
@@ -214,7 +214,7 @@ export const emergingTechServices2025: ComprehensiveMicroSaasService[] = [
     competitors: ['Planet Labs, Maxar Technologies, Airbus Defence and Space, BlackSky'],
     marketSize: '$4.5B Space Data market',
     growthRate: '35% CAGR',
-    variant: 'ai-futuristic',
+    variant: 'default',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Cloud-based platform with satellite data access, custom analytics, and dedicated space technology experts.',
@@ -340,7 +340,7 @@ export const emergingTechServices2025: ComprehensiveMicroSaasService[] = [
     competitors: ['Unity, Unreal Engine, PTC Vuforia, Magic Leap'],
     marketSize: '$45B AR/VR market',
     growthRate: '30% CAGR',
-    variant: 'ai-futuristic',
+    variant: 'holographic',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Cloud-based platform with custom content development, device support, and dedicated AR/VR experts.',
@@ -403,7 +403,7 @@ export const emergingTechServices2025: ComprehensiveMicroSaasService[] = [
     competitors: ['NVIDIA DRIVE, ROS, ABB Robotics, KUKA Robotics'],
     marketSize: '$65B Autonomous Systems market',
     growthRate: '40% CAGR',
-    variant: 'ai-futuristic',
+    variant: 'default',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Custom autonomous system development, integration services, and dedicated robotics experts.',
@@ -630,7 +630,7 @@ export const emergingTechServices2025: ComprehensiveMicroSaasService[] = [
     competitors: ['Schneider Electric, Siemens, GE Digital, ABB'],
     marketSize: '$75B Smart Energy market',
     growthRate: '20% CAGR',
-    variant: 'ai-energy-enterprise',
+    variant: 'default',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Custom energy system integration, AI model training, and dedicated energy experts.',
@@ -693,7 +693,7 @@ export const emergingTechServices2025: ComprehensiveMicroSaasService[] = [
     competitors: ['Siemens Mobility, Cubic Corporation, Kapsch TrafficCom, TomTom'],
     marketSize: '$45B Intelligent Transportation market',
     growthRate: '18% CAGR',
-    variant: 'ai-transportation',
+    variant: 'default',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Custom transportation system integration, AI model training, and dedicated mobility experts.',
@@ -760,7 +760,7 @@ export const emergingTechServices2025: ComprehensiveMicroSaasService[] = [
     competitors: ['ISARA Corporation, PQShield, Crypto Quantique, Qrypt'],
     marketSize: '$8B Quantum Cybersecurity market',
     growthRate: '50% CAGR',
-    variant: 'quantum-security-enterprise',
+    variant: 'quantum-cyberpunk',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Production-ready quantum internet platform with comprehensive network infrastructure, quantum communication protocols, and commercial deployment capabilities.',

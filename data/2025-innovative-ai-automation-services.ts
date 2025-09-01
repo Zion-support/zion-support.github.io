@@ -185,7 +185,7 @@ export const innovativeAIAutomationServices2025 = [
     setupTime: '8 hours',
     category: 'AI & Security',
     realService: true,
-    technology: ['Python, TensorFlow, OpenAI, Elasticsearch, Redis, PostgreSQL'],
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'],
     integrations: ['SIEM systems, Firewalls, IDS/IPS, Vulnerability scanners'],
     useCases: ['Security monitoring, Threat detection, Incident response, Compliance management'],
     roi: 'Reduce security incident response time by 75% and improve threat detection by 60%',

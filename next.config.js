@@ -100,12 +100,17 @@ const nextConfig = {
   ],
 
   webpack: (config, { dev, isServer, webpack }) => {
-    // Exclude apps directory from the build to prevent TypeScript errors
-    config.module.rules.push({
-      test: /apps\/api\/src\/index\.ts$/,
-      use: 'ignore-loader'
-    });
+    // Exclude contracts directory from webpack processing
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'hardhat/config': false,
+    };
     
+    // Ignore hardhat config files
+    config.module.rules.push({
+      test: /hardhat\.config\.(ts|js)$/,
+      loader: 'ignore-loader',
+    });
     // Fix EventEmitter memory leak by increasing max listeners
     // events.EventEmitter.defaultMaxListeners = 20; // Will be set by build script
     

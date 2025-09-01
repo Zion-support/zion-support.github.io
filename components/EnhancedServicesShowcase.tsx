@@ -213,7 +213,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                      <AnimatePresence>
+          <AnimatePresence>
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
