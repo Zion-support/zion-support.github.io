@@ -15,6 +15,16 @@ interface ServiceTypeStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 
+const serviceListSchema = z.array(
+  z.object({
+    id: z.string(),
+    title: z.string(),
+    category: z.string(),
+    image: z.string().optional(),
+    description: z.string().optional(),
+  })
+);
+
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
