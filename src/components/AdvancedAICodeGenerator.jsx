@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
-import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge const mockCodeSnippets = [;
+import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge } from 'lucide-react';
+
+const mockCodeSnippets = [
     {
         id: '1',
         title: 'React Hook for API Calls',
@@ -46,7 +48,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   }, [url]);
 
   return { data, loading, error, execute }}`,
-        tags['react', 'hooks', 'api', 'typescript'],;
+        tags: ['react', 'hooks', 'api', 'typescript'],
         complexity: 'medium',
         rating: 4.8,
         usageCount: 1250,
@@ -89,7 +91,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   0% { background-position: -200% 0}
   100% { background-position: 200% 0}
 }`,
-        tags['css', 'tailwind', 'animations', 'utilities'],;
+        tags: ['css', 'tailwind', 'animations', 'utilities'],
         complexity: 'low',
         rating: 4.6,
         usageCount: 890,
@@ -171,12 +173,12 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       })}
   }
 }`,
-        tags['javascript', 'forms', 'validation', 'class'],;
+        tags: ['javascript', 'forms', 'validation', 'class'],
         complexity: 'high',
         rating: 4.9,
         usageCount: 2100,
         createdAt: '2024-01-08'
-
+    }
 ];
 const mockAIGenerations = [
     {
@@ -209,13 +211,13 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
   return [storedValue, setValue] as const}`,
         language: 'typescript',
         confidence: 0.94,
-        alternatives[;
+        alternatives: [
             'Alternative 1: With error boundaries',
             'Alternative 2: With event listeners',
             'Alternative 3: With custom serializer'
-        ],;
+        ],
         timestamp: '2024-01-15T11:45:00Z'
-
+    }
 ];
 export function AdvancedAICodeGenerator() {
     const [isOpen, setIsOpen] = useState(false);
@@ -266,11 +268,11 @@ export function AdvancedAICodeGenerator() {
 }\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated code";\n}`,
                 language: 'javascript',
                 confidence: 0.87,
-                alternatives[;
+                alternatives: [
                     'Alternative 1: Functional approach',
                     'Alternative 2: Class-based approach',
                     'Alternative 3: Async/await pattern'
-                ],;
+                ],
                 timestamp: new Date().toISOString()
             };
             setAiGenerations(prev => [newGeneration, ...prev]);

@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const AIServicesShowcase = () => {
   return (
@@ -41,9 +41,9 @@ export const AIServicesShowcase = () => {
               Learn More →
             </Link>;
           </div>;
-        </div>;
-      </div>;
-    </section>;
+        </div>
+      </div>
+    </section>
   );
 };
 

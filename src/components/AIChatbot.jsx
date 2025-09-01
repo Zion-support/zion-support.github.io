@@ -20,13 +20,14 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             addBotMessage(welcomeMessage, {
                 intent: 'greeting',
                 confidence: 1.0,
-                suggestions[;
+                suggestions: [
                     "Tell me about your services",
                     "How can I get a quote?",
                     "What technologies do you use?",
                     "Contact information"
                 ]
-            })}
+            });
+        }
     }, [isOpen, messages.length, welcomeMessage]);
     // Auto-scroll to bottom
     useEffect(() => {
@@ -115,7 +116,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             addBotMessage(response, {
                 intent: 'response',
                 confidence: 0.9,
-                suggestions[;
+                suggestions: [
                     "Tell me more",
                     "Get a quote",
                     "View services",

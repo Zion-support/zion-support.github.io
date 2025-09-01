@@ -13,6 +13,7 @@ import {
   Star,
   CheckCircle,
   Rocket
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface AIService {
@@ -30,7 +31,7 @@ interface AIService {
   route: string;
   status: 'active' | 'beta' | 'coming-soon';
 
-const AdvancedAIServicesHub: React.FC = () => {;
+const AdvancedAIServicesHub: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity');
