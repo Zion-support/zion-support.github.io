@@ -7,30 +7,35 @@ interface SectionProps {
   spacing?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
-const Section: React.FC<SectionProps> = ({ 
+export default function Section({ 
   children, 
   className = '', 
   container = true,
-  spacing = 'lg'
-}) => {
+  spacing = 'lg' 
+}: SectionProps) {
   const spacingClasses = {
-    sm: 'py-12',
-    md: 'py-16',
-    lg: 'py-24',
-    xl: 'py-32'
+    sm: 'py-8',
+    md: 'py-12',
+    lg: 'py-16',
+    xl: 'py-24',
   };
 
-  const content = container ? (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {children}
-    </div>
-  ) : children;
+  const baseClasses = spacingClasses[spacing];
+  const classes = `${baseClasses} ${className}`;
+
+  if (container) {
+    return (
+      <section className={classes}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {children}
+        </div>
+      </section>
+    );
+  }
 
   return (
-    <section className={`${spacingClasses[spacing]} ${className}`}>
-      {content}
+    <section className={classes}>
+      {children}
     </section>
   );
-};
-
-export default Section;
+}

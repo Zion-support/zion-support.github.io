@@ -1,47 +1,43 @@
 import React from 'react';
 import Link from 'next/link';
 
-export interface ButtonProps {
+interface ButtonProps {
   children: React.ReactNode;
-  href?: string;
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
-  className?: string;
+  href?: string;
   onClick?: () => void;
+  className?: string;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
 }
 
-const Button: React.FC<ButtonProps> = ({
+export default function Button({
   children,
-  href,
   variant = 'primary',
   size = 'md',
-  className = '',
+  href,
   onClick,
+  className = '',
   disabled = false,
   type = 'button',
-}) => {
-  const baseClasses =
-    'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
-
-  const variantClasses = {
-    primary:
-      'bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white hover:from-cyan-500 hover:to-fuchsia-500 focus:ring-cyan-400',
-    secondary:
-      'bg-white/10 text-white hover:bg-white/20 border border-white/20 hover:border-cyan-400/50 focus:ring-cyan-400',
-    outline:
-      'bg-transparent text-white border border-white/20 hover:bg-white/10 hover:border-cyan-400/50 focus:ring-cyan-400',
-    ghost: 'bg-transparent text-white hover:bg-white/10 focus:ring-cyan-400',
+}: ButtonProps) {
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+  
+  const variants = {
+    primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500 shadow-lg hover:shadow-xl transform hover:scale-105',
+    secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500',
+    outline: 'border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 focus:ring-gray-500',
+    ghost: 'text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:ring-gray-500',
   };
 
-  const sizeClasses = {
+  const sizes = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg',
   };
 
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const classes = `${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`;
 
   if (href) {
     return (
@@ -61,6 +57,4 @@ const Button: React.FC<ButtonProps> = ({
       {children}
     </button>
   );
-};
-
-export default Button;
+}
