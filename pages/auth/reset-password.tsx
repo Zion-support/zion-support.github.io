@@ -1,1 +1,1 @@
-export default function AuthResetPassword() { return null; }
+export default function ResetPassword() { return null; }

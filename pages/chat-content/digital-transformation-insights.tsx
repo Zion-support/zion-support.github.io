@@ -1,1 +1,1 @@
-export default function ChatDigitalTransformationInsights() { return null; }
+export default function Page() { return null; }

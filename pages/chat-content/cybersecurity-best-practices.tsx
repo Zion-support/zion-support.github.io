@@ -1,1 +1,1 @@
-export default function ChatCybersecurityBestPractices() { return null; }
+export default function Page() { return null; }

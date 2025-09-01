@@ -1,1 +1,1 @@
-export default function ChatEmergingTechnologyTrends() { return null; }
+export default function Page() { return null; }

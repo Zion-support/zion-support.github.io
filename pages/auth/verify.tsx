@@ -1,1 +1,1 @@
-export default function AuthVerify() { return null; }
+export default function Verify() { return null; }

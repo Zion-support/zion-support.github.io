@@ -1,1 +1,1 @@
-export default function ChatCloudComputingStrategies() { return null; }
+export default function Page() { return null; }

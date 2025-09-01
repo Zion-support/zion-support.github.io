@@ -1,1 +1,1 @@
-export default function ChatInnovationInEnterpriseTechnology() { return null; }
+export default function Page() { return null; }

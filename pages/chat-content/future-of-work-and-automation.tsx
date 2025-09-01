@@ -1,1 +1,1 @@
-export default function ChatFutureOfWorkAndAutomation() { return null; }
+export default function Page() { return null; }

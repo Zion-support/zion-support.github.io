@@ -1,1 +1,1 @@
-export default function ChatSustainableTechnologyPractices() { return null; }
+export default function Page() { return null; }

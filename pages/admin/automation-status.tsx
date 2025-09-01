@@ -1,1 +1,1 @@
-export default function AdminAutomationStatus() { return null; }
+export default function AutomationStatus() { return null; }

@@ -1,1 +1,1 @@
-export default function ChatAiPoweredBusinessSolutionsDiscussion() { return null; }
+export default function Page() { return null; }
