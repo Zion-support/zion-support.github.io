@@ -12,16 +12,20 @@ export default function BlogPage() {
       category: "AI Innovation",
       date: "2025-01-17",
       readTime: "5 min read",
-      image: "🤖"
+      image: "🤖",
+      author: "Dr. Sarah Chen",
+      featured: true
     },
     {
       id: 2,
-      title: "Building Self-Healing Applications",
-      excerpt: "Learn how to create applications that automatically detect and resolve issues without human intervention.",
-      category: "Development",
-      date: "2025-01-16",
-      readTime: "7 min read",
-      image: "🔧"
+      title: "Automation in Modern DevOps",
+      excerpt: "How automated CI/CD pipelines and infrastructure management are revolutionizing software development.",
+      date: "2025-01-18",
+      category: "DevOps",
+      readTime: "4 min read",
+      image: "⚡",
+      author: "Marcus Rodriguez",
+      featured: false
     },
     {
       id: 3,
@@ -30,25 +34,31 @@ export default function BlogPage() {
       category: "Cloud Computing",
       date: "2025-01-15",
       readTime: "6 min read",
-      image: "☁️"
+      image: "☁️",
+      author: "Alex Thompson",
+      featured: false
     },
     {
       id: 4,
-      title: "AI-Powered Content Generation at Scale",
-      excerpt: "How Zion Tech Group generates thousands of pages of content using autonomous AI systems.",
-      category: "Content AI",
-      date: "2025-01-14",
-      readTime: "4 min read",
-      image: "📝"
+      title: "Machine Learning in Production",
+      excerpt: "Best practices for deploying and maintaining ML models in production environments.",
+      date: "2025-01-16",
+      category: "Machine Learning",
+      readTime: "7 min read",
+      image: "🧠",
+      author: "Dr. Priya Patel",
+      featured: true
     },
     {
       id: 5,
-      title: "The Economics of Autonomous Technology",
-      excerpt: "Understanding the cost benefits and ROI of implementing autonomous systems in your business.",
-      category: "Business",
-      date: "2025-01-13",
-      readTime: "8 min read",
-      image: "💰"
+      title: "The Rise of Self-Healing Applications",
+      excerpt: "How modern applications are becoming more resilient through autonomous monitoring and recovery.",
+      date: "2025-01-15",
+      category: "Automation",
+      readTime: "5 min read",
+      image: "🔧",
+      author: "David Kim",
+      featured: false
     },
     {
       id: 6,
@@ -57,65 +67,79 @@ export default function BlogPage() {
       date: "2025-01-14",
       category: "AI Ethics",
       readTime: "8 min read",
-      image: "⚖️"
+      image: "⚖️",
+      author: "Dr. Elena Rodriguez",
+      featured: true
     },
     {
       id: 7,
-      title: "Edge Computing and IoT Integration",
-      excerpt: "How edge computing is transforming IoT deployments and enabling real-time autonomous decision making.",
+      title: "Edge Computing and IoT Automation",
+      excerpt: "How edge computing is enabling autonomous decision-making in IoT devices and smart infrastructure.",
       date: "2025-01-13",
-      category: "Edge Computing",
+      category: "IoT",
       readTime: "6 min read",
-      image: "🌐"
+      image: "🌐",
+      author: "James Wilson",
+      featured: false
     },
     {
       id: 8,
-      title: "Quantum Computing Applications",
-      excerpt: "Exploring the potential of quantum computing in solving complex problems and advancing AI capabilities.",
+      title: "Quantum Computing in AI Applications",
+      excerpt: "Exploring the potential of quantum computing to revolutionize AI algorithms and machine learning.",
       date: "2025-01-12",
-      category: "Quantum Computing",
+      category: "Quantum AI",
       readTime: "9 min read",
-      image: "⚛️"
+      image: "⚛️",
+      author: "Dr. Michael Chang",
+      featured: true
     },
     {
       id: 9,
-      title: "Cybersecurity in the AI Era",
-      excerpt: "New challenges and solutions for protecting AI systems and autonomous infrastructure from cyber threats.",
+      title: "Cybersecurity in Autonomous Systems",
+      excerpt: "Protecting AI systems from emerging threats and ensuring secure autonomous operations.",
       date: "2025-01-11",
       category: "Cybersecurity",
       readTime: "7 min read",
-      image: "🔒"
+      image: "🔒",
+      author: "Lisa Chen",
+      featured: false
     },
     {
       id: 10,
-      title: "Sustainable Technology Solutions",
-      excerpt: "How AI and automation are helping organizations reduce their environmental impact and achieve sustainability goals.",
+      title: "Sustainable AI: Green Computing Practices",
+      excerpt: "How AI can contribute to environmental sustainability and reduce carbon footprints in technology.",
       date: "2025-01-10",
       category: "Sustainability",
       readTime: "5 min read",
-      image: "🌱"
+      image: "🌱",
+      author: "Dr. Robert Green",
+      featured: false
     },
     {
       id: 11,
-      title: "Digital Transformation Strategies",
-      excerpt: "Comprehensive guide to implementing digital transformation initiatives using AI and automation technologies.",
+      title: "Human-AI Collaboration in the Workplace",
+      excerpt: "Building effective partnerships between humans and AI systems for enhanced productivity and innovation.",
       date: "2025-01-09",
-      category: "Digital Transformation",
-      readTime: "8 min read",
-      image: "🚀"
+      category: "Collaboration",
+      readTime: "6 min read",
+      image: "🤝",
+      author: "Amanda Foster",
+      featured: false
     },
     {
       id: 12,
-      title: "The Future of Work",
-      excerpt: "How AI and automation are reshaping the workplace and creating new opportunities for human-AI collaboration.",
+      title: "The Future of Autonomous Vehicles",
+      excerpt: "How AI is transforming transportation and creating safer, more efficient autonomous vehicle systems.",
       date: "2025-01-08",
-      category: "Future of Work",
-      readTime: "6 min read",
-      image: "👥"
+      category: "Transportation",
+      readTime: "8 min read",
+      image: "🚗",
+      author: "Dr. Carlos Mendez",
+      featured: true
     }
   ];
 
-  const categories = ["All", "AI Development", "DevOps", "Cloud", "Machine Learning", "Automation", "AI Ethics", "Edge Computing", "Quantum Computing", "Cybersecurity", "Sustainability", "Digital Transformation", "Future of Work"];
+  const categories = ["All", "AI Development", "DevOps", "Cloud", "Machine Learning", "Automation", "AI Ethics", "IoT", "Quantum AI", "Cybersecurity", "Sustainability", "Collaboration", "Transportation"];
 
   return (
     <>
@@ -129,37 +153,52 @@ export default function BlogPage() {
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="max-w-6xl mx-auto">
-            <nav className="mb-8">
-              <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Home
-              </a>
-              <span className="mx-2 text-white/40">|</span>
-              <a href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">
-                Resources
-              </a>
-              <span className="mx-2 text-white/40">|</span>
-              <a href="/case-studies" className="text-purple-400 hover:text-purple-300 transition-colors">
-                Case Studies
-              </a>
-            </nav>
-            
-            <header className="text-center mb-16">
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Zion Tech Group Blog
-              </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Insights, trends, and innovations in AI automation and autonomous technology
-              </p>
-            </header>
-            
-            {/* Featured Post */}
-            <section className="mb-16">
-              <h2 className="text-2xl font-bold mb-8 text-white">Featured Article</h2>
-              {blogPosts.filter(post => post.featured).map(post => (
-                <div key={post.id} className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Our Blog
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Insights, trends, and expert perspectives on AI, automation, and the future of technology
+            </p>
+          </section>
+
+          {/* Featured Posts */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-cyan-400">Featured Articles</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              {blogPosts.filter(post => post.featured).slice(0, 4).map((post) => (
+                <article key={post.id} className="bg-gradient-to-br from-cyan-500/10 to-fuchsia-500/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-cyan-500/15 transition-all duration-300 hover:scale-105 border border-cyan-400/20">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="inline-block px-3 py-1 bg-cyan-400/20 text-cyan-300 text-sm rounded-full border border-cyan-400/30">
+                      {post.category}
+                    </span>
+                    <span className="text-white/60 text-sm">{post.readTime}</span>
+                  </div>
+                  <div className="text-6xl mb-4 text-center">{post.image}</div>
+                  <h3 className="text-2xl font-bold mb-3 text-white hover:text-cyan-400 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-white/80 mb-4 text-base leading-relaxed">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-cyan-300 text-sm">By {post.author}</span>
+                    <span className="text-white/60 text-sm">{post.date}</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          {/* All Posts */}
+          <section className="mx-auto max-w-6xl">
+            <h2 className="text-3xl font-bold mb-8 text-fuchsia-400">All Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.map((post) => (
+                <article key={post.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                  <div className="text-6xl mb-4 text-center">{post.image}</div>
+                  <div className="mb-4">
+                    <span className="inline-block px-3 py-1 bg-cyan-400/20 text-cyan-300 text-sm rounded-full border border-cyan-400/30">
                       {post.category}
                     </span>
                   </div>
@@ -169,9 +208,9 @@ export default function BlogPage() {
                   <p className="text-white/70 mb-4 text-sm leading-relaxed">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center justify-between text-sm text-white/50">
-                    <span>{post.date}</span>
-                    <span>{post.readTime}</span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-cyan-300 text-sm">By {post.author}</span>
+                    <span className="text-white/60 text-sm">{post.readTime}</span>
                   </div>
                   <a href={post.id === 1 ? "/blog/autonomous-ai-systems-2025" : post.id === 3 ? "/blog/cloud-native-architecture-2025" : "/blog"} className="w-full mt-4 px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 text-center block">
                     Read More
