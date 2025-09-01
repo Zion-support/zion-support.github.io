@@ -1,3 +1,3 @@
 export default function TalentIndex() {
-  return <div>Talent</div>;
+  return <div className="py-8">Talent (placeholder)</div>;
 }

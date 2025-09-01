@@ -1,3 +1,3 @@
 export default function ProductsIndex() {
-  return <div>Products</div>;
+  return <div className="py-8">Products (placeholder)</div>;
 }

@@ -1,3 +1,3 @@
 export default function AuthCallback() {
-  return <div>Auth Callback</div>;
+  return <div className="py-8">Auth Callback (placeholder)</div>;
 }

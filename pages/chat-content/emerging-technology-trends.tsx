@@ -1,1 +1,1 @@
-export default function Page() { return <div>Emerging technology trends</div>; }
+export default function EmergingTechnologyTrends() { return <div className="py-8">Content (placeholder)</div>; }

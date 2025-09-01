@@ -1,3 +1,3 @@
-export default function AutomationStatus() {
-  return <div>Automation Status</div>;
+export default function AdminAutomationStatus() {
+  return <div className="py-8">Admin Automation Status (placeholder)</div>;
 }

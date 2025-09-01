@@ -1,3 +1,3 @@
-export default function Verify() {
-  return <div>Verify</div>;
+export default function VerifyAccount() {
+  return <div className="py-8">Verify Account (placeholder)</div>;
 }

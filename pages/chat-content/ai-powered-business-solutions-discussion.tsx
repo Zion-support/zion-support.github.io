@@ -1,1 +1,1 @@
-export default function Page() { return <div>AI-powered business solutions</div>; }
+export default function AIPoweredBusinessSolutionsDiscussion() { return <div className="py-8">Content (placeholder)</div>; }

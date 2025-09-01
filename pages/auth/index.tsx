@@ -1,3 +1,3 @@
 export default function AuthIndex() {
-  return <div>Auth</div>;
+  return <div className="py-8">Auth Portal (placeholder)</div>;
 }

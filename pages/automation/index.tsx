@@ -1,3 +1,3 @@
 export default function AutomationIndex() {
-  return <div>Automation</div>;
+  return <div className="py-8">Automation Dashboard (placeholder)</div>;
 }
