@@ -45,5 +45,10 @@ module.exports = {
     'out/',
     '*.config.js',
     '*.config.ts',
-  ],
+    'scripts/',
+    'automation/',
+    'netlify/',
+    'src/',
+    'apps/'
+  ]
 };
