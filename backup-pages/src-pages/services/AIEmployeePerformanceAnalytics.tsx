@@ -67,8 +67,7 @@
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
 =
-=======
-        title="AI Employee Performance Analytics - Zion Tech Group""        description="Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance."
+title="AI Employee Performance Analytics - Zion Tech Group""        description="Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance."
        />
       
       {/* Hero Section */}"

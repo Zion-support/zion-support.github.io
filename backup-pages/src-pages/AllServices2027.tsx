@@ -8,7 +8,6 @@
     selectedCategory === 'All' || service.category === selectedCategory;
   );
 
-  
     if (categoryId === 'All') {;
       return {;
         count: INNOVATIVE_SERVICES_2027.length,;
@@ -22,13 +21,11 @@
       avgRating: Math.round ( (services.reduce ( (sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
     }};
 
-  
     visible: {
       opacity: 1,;
       transition: {
         staggerChildren: 0.1}}};
 
-  
       opacity: 1,;
       transition: {
         duration: 0.5}}};
@@ -123,8 +120,7 @@
           </div>;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {categories.map((category) => {;
-              
-              
+
               return()                <motion.div
                   key = {category.id}
                   variants={itemVariants}
@@ -360,9 +356,7 @@
 // Service Card Component
 const ServiceCard: React.FC<{ service}> = ({ service }) => {
 
-  
             </a>;
-=======
 '
       case 'AI Services':;            </a>;
           </div>;
@@ -374,7 +368,6 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
 // Service Card Component
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
 
-  
     switch (category) {;
       case 'AI Services':;"
         return <Brain className="w-5 h-5"  />;

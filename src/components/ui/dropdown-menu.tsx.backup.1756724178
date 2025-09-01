@@ -1,1 +1,0 @@
-const DropdownMenu({ children }) { const [isOpen, setIsOpen] = useState(false); return (<DropdownMenuContext.Provider value = { { isOpen, setIsOpen ; ; ; }}>; <div className="relative">; {children}; </div>; </DropdownMenuContext.Provider>)}; export function DropdownMenuTrigger(...args: unknown[]): unknown {; 

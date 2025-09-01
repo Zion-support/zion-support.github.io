@@ -8,7 +8,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Compliance monitoring and reporting';
   ];
 
-  
     'Reduce time-to-hire by 60%',;
     'Improve candidate quality by 40%',;
     'Reduce hiring costs by 30%',;
@@ -17,15 +16,12 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Data-driven decision making';
   ];
 
-  
-
     { ;'
       name: 'Enterprise', ;'
       price: '$999/mo', ;'      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
       popular: false};
   ];
 
-  
     'Recruitment and talent acquisition',;
     'Employee performance management',;
     'Learning and development',;
@@ -34,15 +30,13 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Employee engagement and retention';
   ];
 
-  
     'Learning & Development',;
     'Workforce Analytics',;
     'Employee Engagement',;
     'Compliance & Reporting',;
     'Onboarding & Offboarding',;
     'Succession Planning';
-=======
-    'Talent Acquisition','
+'Talent Acquisition','
     'Performance Management',;'
     'Learning & Development',;'
     'Workforce Analytics',;'

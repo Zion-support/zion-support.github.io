@@ -1,1 +1,0 @@
-export const MetaTags = ({ title, description, keywords = "AI, artificial intelligence, machine learning, cybersecurity, cloud computing, IT services, enterprise solutions, Zion Tech Group", image = "https://ziontechgroup.com/og-image.jpg", url = "https://ziontechgroup.com", type = "website", author = "Zion Tech Group", publishedTime, modifiedTime }) => { 

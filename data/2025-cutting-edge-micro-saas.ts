@@ -16,8 +16,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Custom AI model training'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 199,
         period: 'month',
         features: ['Up to 1,000 customers', 'Basic AI features', 'Email support']
@@ -30,26 +29,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       enterprise: {
         price: 1299,
         period: 'month',
-        features: ['Unlimited customers', 'Full AI platform', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 199, 
-        period: 'month', 
-        features['Up to 1,000 customers', 'Basic AI features', 'Email support'] 
-      },
-      professional: { 
-        price: 499, 
-        period: 'month', 
-        features['Up to 10,000 customers', 'Advanced AI features', 'Priority support', 'Custom workflows'] 
-      },
-      enterprise: { 
-        price: 1299, 
-        period: 'month', 
-        features['Unlimited customers', 'Full AI platform', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Unlimited customers', 'Full AI platform', 'Dedicated specialists', '24/7 support']},
     category: 'Customer Success',
     tags['Customer Success', 'AI', 'Churn Prediction', 'Engagement', 'Analytics'],
     website: 'https://ziontechgroup.com/customer-success-ai-pro',
@@ -87,8 +67,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Real-time collaboration tools'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 299,
         period: 'month',
         features: ['Basic optimization features', 'Standard analytics', 'Email support']
@@ -101,26 +80,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       enterprise: {
         price: 1999,
         period: 'month',
-        features: ['Full quantum platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 299, 
-        period: 'month', 
-        features['Basic optimization features', 'Standard analytics', 'Email support'] 
-      },
-      professional: { 
-        price: 799, 
-        period: 'month', 
-        features['Advanced optimization', 'Quantum algorithms', 'Priority support', 'Custom modeling'] 
-      },
-      enterprise: { 
-        price: 1999, 
-        period: 'month', 
-        features['Full quantum platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full quantum platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']},
     category: 'Supply Chain',
     tags['Supply Chain', 'Quantum Computing', 'Logistics', 'Optimization', 'Analytics'],
     website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer',
@@ -158,8 +118,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'White-label solutions'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 149,
         period: 'month',
         features: ['Up to 1,000 verifications', 'Basic verification features', 'Email support']
@@ -172,26 +131,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       enterprise: {
         price: 999,
         period: 'month',
-        features: ['Unlimited verifications', 'Full verification platform', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 149, 
-        period: 'month', 
-        features['Up to 1,000 verifications', 'Basic verification features', 'Email support'] 
-      },
-      professional: { 
-        price: 399, 
-        period: 'month', 
-        features['Up to 10,000 verifications', 'Advanced verification features', 'Priority support', 'Custom workflows'] 
-      },
-      enterprise: { 
-        price: 999, 
-        period: 'month', 
-        features['Unlimited verifications', 'Full verification platform', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Unlimited verifications', 'Full verification platform', 'Dedicated specialists', '24/7 support']},
     category: 'Identity Verification',
     tags['Identity Verification', 'Blockchain', 'Biometrics', 'Security', 'Compliance'],
     website: 'https://ziontechgroup.com/blockid-verify-pro',
@@ -229,8 +169,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Predictive modeling capabilities'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 249,
         period: 'month',
         features: ['Up to 500 employees', 'Basic analytics features', 'Email support']
@@ -243,26 +182,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       enterprise: {
         price: 1699,
         period: 'month',
-        features: ['Unlimited employees', 'Full analytics platform', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 249, 
-        period: 'month', 
-        features['Up to 500 employees', 'Basic analytics features', 'Email support'] 
-      },
-      professional: { 
-        price: 649, 
-        period: 'month', 
-        features['Up to 5,000 employees', 'Advanced analytics features', 'Priority support', 'Custom reporting'] 
-      },
-      enterprise: { 
-        price: 1699, 
-        period: 'month', 
-        features['Unlimited employees', 'Full analytics platform', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Unlimited employees', 'Full analytics platform', 'Dedicated specialists', '24/7 support']},
     category: 'HR Analytics',
     tags['HR Analytics', 'AI', 'Performance Management', 'Employee Engagement', 'Predictive Analytics'],
     website: 'https://ziontechgroup.com/hr-analytics-ai-suite',
@@ -300,8 +220,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Comprehensive risk reporting'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 399,
         period: 'month',
         features: ['Basic risk management', 'Standard analytics', 'Email support']
@@ -314,26 +233,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       enterprise: {
         price: 2499,
         period: 'month',
-        features: ['Full risk management platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 399, 
-        period: 'month', 
-        features['Basic risk management', 'Standard analytics', 'Email support'] 
-      },
-      professional: { 
-        price: 999, 
-        period: 'month', 
-        features['Advanced risk management', 'Quantum algorithms', 'Priority support', 'Custom models'] 
-      },
-      enterprise: { 
-        price: 2499, 
-        period: 'month', 
-        features['Full risk management platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full risk management platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']},
     category: 'Financial Risk Management',
     tags['Risk Management', 'Quantum Computing', 'Financial Analytics', 'Portfolio Optimization', 'Compliance'],
     website: 'https://ziontechgroup.com/quantum-risk-financial-manager',
@@ -349,24 +249,9 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Investment strategy optimization',
       'Regulatory compliance reporting',
       'Risk model development',
-<<<<<<< HEAD
-      'Performance analysis and attribution'
+'Performance analysis and attribution'
     ],
-<<<<<<< HEAD
-    integrations: ['Bloomberg Terminal', 'Reuters Eikon', 'Trading Platforms', 'Risk Management Systems', 'Financial Data Providers'],
+integrations: ['Bloomberg Terminal', 'Reuters Eikon', 'Trading Platforms', 'Risk Management Systems', 'Financial Data Providers'],
     compliance: ['Basel III', 'Solvency II', 'Dodd-Frank', 'Financial Regulations', 'Risk Management Standards']
 
-];}}}}}}
-=======
-    integrations['Bloomberg Terminal', 'Reuters Eikon', 'Trading Platforms', 'Risk Management Systems', 'Financial Data Providers'],
-    compliance['Basel III', 'Solvency II', 'Dodd-Frank', 'Financial Regulations', 'Risk Management Standards']
-  };
-=======;
-      'Performance analysis and attribution';
-    ],;
-    integrations: ['Bloomberg Terminal', 'Reuters Eikon', 'Trading Platforms', 'Risk Management Systems', 'Financial Data Providers'],;
-    compliance: ['Basel III', 'Solvency II', 'Dodd-Frank', 'Financial Regulations', 'Risk Management Standards'];
-  };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+];}}}}}}];

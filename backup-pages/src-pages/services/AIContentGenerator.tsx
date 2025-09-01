@@ -99,7 +99,6 @@ export default function AIContentGenerator(...args[]):  {
       description: 'Track content performance with AI-powered insights and optimization recommendations'};
   ];
 
-  
     'Increase content production by 10x with AI assistance',;
     'Improve SEO rankings by 45% with optimized content',;
     'Reduce content creation costs by 60%',;
@@ -108,12 +107,10 @@ export default function AIContentGenerator(...args[]):  {
     'Maintain consistent brand voice across all content';
   ];
 
-  
         'Advanced security features',;
         'Custom integrations';
       ],;
-=======
-        'Unlimited AI-generated content','
+'Unlimited AI-generated content','
         'Unlimited image generation','
         'Custom AI model training','
         'White-label solution','

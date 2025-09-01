@@ -41,10 +41,8 @@
       metrics['Reduce risk by 30%',Increase product adoption by 45%',Improve satisfaction scores']};
   ];
 
-  
     'Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
-=======
-    'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;'    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
+'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;'    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
   ];
 
   return ("

@@ -21,11 +21,9 @@
       category: 'Integration'};
   ];
 
-  
       description: 'Quick start tutorial for new developers',
       icon: '🚀',
       difficulty: 'Beginner'
-=======
 '
       title: 'Getting Started Guide',;'
       description: 'Quick start tutorial for new developers','
@@ -52,7 +50,6 @@
       difficulty: 'All Levels'};
   ];
 
-  
       code: `
     'Content-Type': 'application/json'}}) ;
 
@@ -168,11 +165,6 @@ const data = await response.json();`
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
@@ -342,11 +334,6 @@ const data = await response.json();`
   { duration: 0.6,
   delay: index * 0.1 
 
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
 "
@@ -437,11 +424,6 @@ const data = await response.json();`
 
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
 
 }}"
             className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"

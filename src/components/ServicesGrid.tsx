@@ -1,1 +1,0 @@
-export function ServicesGrid(...args: any[]): any { return() <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8"> {services.map((service, index) => ( <motion.div 

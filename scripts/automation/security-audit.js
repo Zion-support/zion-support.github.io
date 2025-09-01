@@ -5,7 +5,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log('🔒 Starting continuous security audit automation...');
-=======
 // // // console.log('🔒 Starting continuous security audit automation...');
 // Get automation interval from environment variable (default: 4 hours)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours
@@ -37,8 +36,7 @@ async function runSecurityAudit() {
         // // // // // // // console.log('✅ Security issues auto-fixed');
       } catch (fixError) {
         // // // // // // // console.log('❌ Could not auto-fix security issues');
-=======
-        // Don't exit, just log the error and continue
+// Don't exit, just log the error and continue
     // Check for known vulnerabilities in dependencies
     // // // console.log('📦 Checking for known vulnerabilities...');
     try {
@@ -70,20 +68,17 @@ async function runSecurityAudit() {
     }
     // Run security scan if available
     // // // // // // // console.log('🔍 Running additional security scans...');
-=======
-    try {
+try {
       if (fs.existsSync('security-scan.js')) {
         execSync('node security-scan.js', { stdio: 'inherit' });
     } catch (error) {
       // // // // // // // console.log('ℹ️  No additional security scan available');
     }
-=======
-      // // // console.log('ℹ️  No additional security scan available');
+// // // console.log('ℹ️  No additional security scan available');
     // Generate security report
   status: 'completed'
 };
-=======
-    const reportPath = path.join(process.cwd(), 'security-audit-report.json');
+const reportPath = path.join(process.cwd(), 'security-audit-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`📊 Report saved to ${reportPath}`);
     // // // console.log('✅ Continuous security audit completed successfully');
@@ -93,13 +88,11 @@ async function runSecurityAudit() {
     // // // // // // // console.log('✅ Continuous security audit completed successfully');
   } catch (error) {
     // // // // // // // console.error('❌ Continuous security audit failed:', error.message);
-=======
-    // Don't exit, just log the error and continue
+// Don't exit, just log the error and continue
 // Main continuous loop
 async function runContinuous() {
   // // // // // // // console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-=======
-  // // // console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+// // // console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // Run initial security audit
   await runSecurityAudit();
   // Set up continuous execution
@@ -111,8 +104,7 @@ async function runContinuous() {
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
-=======
-  // // // console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+// // // console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
@@ -120,15 +112,13 @@ process.on('SIGINT', () => {
 });
 process.on('SIGTERM', () => {
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
-=======
-  // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+// // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
 // Start the continuous security audit
 runContinuous().catch(error => {
   // // // // // // // console.error('❌ Failed to start continuous security audit:', error);
-=======
-  // // // console.error('❌ Failed to start continuous security audit:', error);
+// // // console.error('❌ Failed to start continuous security audit:', error);
   process.exit(1);
 });
 }}}}}}}}}

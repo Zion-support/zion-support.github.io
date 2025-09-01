@@ -36,13 +36,7 @@ export interface Revolutionary2026AIAutomationService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomationService[] = [
+reviews: number;export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomationService[] = [
   // AI Consciousness Orchestration Platform
   {
     id: 'ai-consciousness-orchestration-platform',

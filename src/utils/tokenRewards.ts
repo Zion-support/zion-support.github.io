@@ -1,1 +1,0 @@
-export async function rewardOnboarding(...args: any[]): any { " await apiClient("/functions/v1/token-manager/earn", { " 

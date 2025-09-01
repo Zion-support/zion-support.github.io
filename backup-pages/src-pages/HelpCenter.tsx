@@ -298,19 +298,14 @@ export function HelpCenter() {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  
     if (query.trim() === '') {
-=======
-    setSearchQuery(query);'    if (query.trim() === '') {
+setSearchQuery(query);'    if (query.trim() === '') {
 
       setFilteredFAQs(faqData);
       return;
 
-    
     setFilteredFAQs (filtered) };
 
-  
-  
   return()
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">"      <div className="container-responsive">
         {/* Header */}

@@ -132,7 +132,6 @@ const Community: React.FC = () => {
     }
   ];
 
-  
       title: 'Getting Started with AI Business Intelligence - Best Practices',
       content: 'I\'ve been using Zion Tech Group\'s AI Business Intelligence service for the past month and wanted to share some best practices I\'ve learned...',
       author: {
@@ -237,15 +236,11 @@ const Community: React.FC = () => {
     }
   ];
 
-  
-    
     return matchesSearch && matchesCategory}) ;
 
-  
       case 'popular':
         return b.likes - a.likes;
-=======
-        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();'      case 'popular':
+return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();'      case 'popular':
         return b.likes - a.likes;'
       case 'most-replied':
         return b.replies - a.replies;
@@ -255,10 +250,8 @@ const Community: React.FC = () => {
         return 0}
   }) ;
 
-  
     return category ? category.color : 'from-gray-500 to-gray-600'};
 
-  
     return category ? category.name : 'Unknown'};
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -320,11 +313,6 @@ const Community: React.FC = () => {
   { duration: 0.6,
   delay: 0.5 
 
-
-
-
-
-
 }}"
           className="text-3xl font-bold text-white text-center mb-12"
 
@@ -351,11 +339,6 @@ const Community: React.FC = () => {
 
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
-
-
-
-
-
 
 }}"
               className="group"
@@ -433,11 +416,6 @@ const Community: React.FC = () => {
   { duration: 0.6,
   delay: 0.7 
 
-
-
-
-
-
 }}"
             className="text-3xl font-bold text-white text-center mb-12"
 
@@ -464,11 +442,6 @@ const Community: React.FC = () => {
 
   { duration: 0.6,
   delay: 0.8 + index * 0.1 
-
-
-
-
-
 
 }}"
                 className="group"

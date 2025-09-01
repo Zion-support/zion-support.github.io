@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
 
-<<<<<<< HEAD
 export default function Revolutionary2025ServicesShowcasePage() {
   // Placeholder data for services
   const services = [
@@ -32,66 +31,7 @@ export default function Revolutionary2025ServicesShowcasePage() {
       features: ['Cloud Migration', 'DevOps Automation', 'Infrastructure as Code', 'Monitoring', 'Scalability'],
       price: 'Custom',
       rating: 5,
-      customers: 60
-=======
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services';
-import { revolutionaryITInfrastructure2025Services } from '../data/revolutionary-2025-it-infrastructure';
-import { revolutionary2025MicroSaasServices } from '../data/revolutionary-2025-micro-saas';
-
-export default function Revolutionary2025ServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'popularity' | 'newest'>('popularity');
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  // Combine all revolutionary services
-  const allRevolutionaryServices = [
-    ...revolutionaryAI2025Services,
-    ...revolutionaryITInfrastructure2025Services,
-    ...revolutionary2025MicroSaasServices
-  ];
-
-  // Service categories
-  const serviceCategories = [
-    { id: 'all', name: 'All Services', icon: Sparkles, count: allRevolutionaryServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: revolutionaryAI2025Services.length },
-    { id: 'infrastructure', name: 'IT Infrastructure', icon: Cpu, count: revolutionaryITInfrastructure2025Services.length },
-          { id: 'saas', name: 'Micro SaaS', icon: Zap, count: revolutionary2025MicroSaasServices.length }
-  ];
-
-  // Filter services based on selected category
-  const filteredServices = selectedCategory === 'all' 
-    ? allRevolutionaryServices 
-    : allRevolutionaryServices.filter(service => {
-        if (selectedCategory === 'ai') return service.category.includes('AI');
-        if (selectedCategory === 'infrastructure') return service.category.includes('IT') || service.category.includes('Network') || service.category.includes('Computing');
-        if (selectedCategory === 'saas') return service.category.includes('AI') || service.category.includes('Virtual') || service.category.includes('Creative');
-        return true;
-      });
-
-  // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
-        return parseInt(a.price.replace('$', '').replace(',', '')) - parseInt(b.price.replace('$', '').replace(',', ''));
-      case 'rating':
-        return b.rating - a.rating;
-      case 'popularity':
-        return b.customers - a.customers;
-      case 'newest':
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-      default:
-        return 0;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-    }
+      customers: 60}
   });
 
   // Statistics

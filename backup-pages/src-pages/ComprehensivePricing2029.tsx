@@ -6,19 +6,15 @@ export default function ComprehensivePricing2029(...args: any[]): any {
   const [viewMode, setViewMode] = useState<any>('grid');
   const [sortBy, setSortBy] = useState<any>('popularity');
 
-  
   // Combine all services
-  
-  
-    
+
     return matchesCategory && matchesSearch}) ;
 
   // Sort services
   
       case 'rating':
         return b.rating - a.rating;
-=======
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));'      case 'rating':
+return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));'      case 'rating':
         return b.rating - a.rating;'
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0) ;
@@ -26,7 +22,6 @@ export default function ComprehensivePricing2029(...args: any[]): any {
         return 0}
   }) ;
 
-  
     return iconMap[category] || Cpu};
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">

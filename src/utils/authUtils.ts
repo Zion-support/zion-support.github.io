@@ -1,1 +1,0 @@
-export const cleanupAuthState = () => { // Clean up stored authentication state try { ; if (typeof window !== "null") {; // Clear any stored tokens or user data; 

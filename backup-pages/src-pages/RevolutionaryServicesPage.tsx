@@ -135,11 +135,6 @@ export function RevolutionaryServicesPage(...args: any[]): any {
   const [priceRange, setPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('name');
 
-  
-  
-  
-  
-      
       let matchesPrice = true;
       if (priceRange === 'low') {
 
@@ -152,11 +147,9 @@ export function RevolutionaryServicesPage(...args: any[]): any {
       return matchesSearch && matchesCategory && matchesPrice}
   );
 
-  
       case 'price-low':
         return a.price - b.price;
-=======
-        return a.title.localeCompare(b.title);'      case 'price-low':
+return a.title.localeCompare(b.title);'      case 'price-low':
         return a.price - b.price;'
       case 'price-high':
         return b.price - a.price;
@@ -174,17 +167,13 @@ export function RevolutionaryServicesPage(...args: any[]): any {
         return 0}
   }) ;
 
-  
     return categoryData ? categoryData.icon : Globe};
 
-  
     return categoryData ? categoryData.color : 'from-gray-500 to-slate-600'};
 
-  
     if (price <= 3000) return 'medium';
     return 'high'};
 
-  
     switch (range) {
 
       case 'low':'
@@ -197,7 +186,6 @@ export function RevolutionaryServicesPage(...args: any[]): any {
         return 'text-gray-400'}
   };
 
-  
     switch (range) {
 
       case 'low':'
@@ -210,7 +198,6 @@ export function RevolutionaryServicesPage(...args: any[]): any {
         return 'bg-gray-500/20 text-gray-400'}
   };
 
-  
       case 'Advanced':'
         return 'text-blue-400';
       case 'Standard':'
@@ -219,7 +206,6 @@ export function RevolutionaryServicesPage(...args: any[]): any {
         return 'text-gray-400'}
   };
 
-  
       case 'Advanced':'
         return 'bg-blue-500/20';
       case 'Standard':'

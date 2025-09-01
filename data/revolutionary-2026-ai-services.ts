@@ -11,14 +11,8 @@ export interface Revolutionary2026AiService {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
-    address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
+address: string;
+  };export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
   {
     id: "2026-revolutionary-ai",
     name: "2026 Revolutionary AI Platform",

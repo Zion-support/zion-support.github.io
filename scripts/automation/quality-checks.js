@@ -5,7 +5,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log('🔍 Starting continuous quality checks automation...');
-=======
 // // // console.log('🔍 Starting continuous quality checks automation...');
 // Get automation interval from environment variable (default: 3 hours)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; // 3 hours
@@ -121,11 +120,9 @@ async function runQualityChecks() {
     }
     // Generate quality report
     // // // // // // // console.log('📊 Generating quality report...');
-=======
-  status: 'completed'
+status: 'completed'
 };
-=======
-    console.log('📊 Generating quality report...');
+console.log('📊 Generating quality report...');
     const reportPath = path.join(process.cwd(), 'quality-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`✅ Quality report saved to ${reportPath}`);
@@ -136,13 +133,11 @@ async function runQualityChecks() {
     // // // // // // // console.log('✅ Continuous quality checks completed successfully');
   } catch (error) {
     // // // // // // // console.error('❌ Continuous quality checks failed:', error.message);
-=======
-    // Don't exit, just log the error and continue
+// Don't exit, just log the error and continue
 // Main continuous loop
 async function runContinuous() {
   // // // // // // // console.log(`🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-=======
-  // // // console.log(`🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+// // // console.log(`🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // Run initial quality checks
   await runQualityChecks();
   // Set up continuous execution
@@ -154,8 +149,7 @@ async function runContinuous() {
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
-=======
-  // // // console.log(`✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+// // // console.log(`✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
@@ -163,15 +157,13 @@ process.on('SIGINT', () => {
 });
 process.on('SIGTERM', () => {
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
-=======
-  // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+// // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
 // Start the continuous quality checks
 runContinuous().catch(error => {
   // // // // // // // console.error('❌ Failed to start continuous quality checks:', error);
-=======
-  // // // console.error('❌ Failed to start continuous quality checks:', error);
+// // // console.error('❌ Failed to start continuous quality checks:', error);
   process.exit(1);
 });
 }}}}}}}}}}

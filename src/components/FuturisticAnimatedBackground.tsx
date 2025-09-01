@@ -1,1 +1,0 @@
-import React from 'react'; export const FuturisticAnimatedBackground: React.FC = () => {; export default FuturisticAnimatedBackground; 

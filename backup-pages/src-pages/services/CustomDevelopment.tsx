@@ -28,8 +28,7 @@
     {
 
       title: 'Mobile',
-=======
-      icon: Monitor,'
+icon: Monitor,'
       stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']},;    {
 '
       title: 'Backend','

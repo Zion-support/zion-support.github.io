@@ -9,14 +9,12 @@ export default function AIAutonomousVehiclePlatform() {
     'Cloud-based vehicle monitoring and control';
   ];
 
-  
         'On-premise deployment options',;
         'Custom integrations and APIs',;
         'White-label solutions available',;
         'Regulatory compliance tools';
       ]};
-=======
-        'Unlimited vehicle management','
+'Unlimited vehicle management','
         'Custom autonomous algorithms','
         '24/7 dedicated support',;'
         'On-premise deployment options',;'
@@ -25,7 +23,6 @@ export default function AIAutonomousVehiclePlatform() {
       ]};
   ];
 
-  
     'Ride-sharing and taxi services',;
     'Logistics and delivery fleets',;
     'Public transportation systems',;
@@ -34,14 +31,12 @@ export default function AIAutonomousVehiclePlatform() {
     'Emergency response vehicles';
   ];
 
-  
     'Reduce transportation costs by 40-60% through automation',;
     'Improve safety by eliminating human error factors',;
     'Increase fleet efficiency and utilization rates',;
     'Enable 24/7 operation without driver fatigue',;
     'Reduce carbon emissions through optimized routing';
   ];
-
 
   const industries = [;'
     'Transportation and Logistics',;'

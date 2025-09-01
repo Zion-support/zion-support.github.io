@@ -14,14 +14,12 @@
   Filter'
 } from 'lucide-react';
 
-
       'Legacy Modernization',;
       'Digital Strategy',;
       'Change Management',;
       'Technology Consulting';
     ]};
-=======
-      'Process Automation','
+'Process Automation','
       'Customer Experience',;'
       'Legacy Modernization',;'
       'Digital Strategy',;'
@@ -45,7 +43,6 @@
     color: 'from-blue-500 to-cyan-600'};
 ];
 
-  
     // Retail & E-commerce Solutions
     {
 
@@ -93,7 +90,6 @@
     }
   ];
 
-  
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}"
@@ -180,7 +176,6 @@
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutionCategories.map((category, index) => {
 
-              
               return()                <motion.div
                   key={category.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -231,7 +226,6 @@
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industrySolutions.map((industry, index) => {
 
-              
               return()                <motion.div
                   key={industry.industry}
                   initial={{ opacity: 0, y: 20 }}
@@ -281,7 +275,6 @@
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredSolutions.map((solution, index) => {
 
-              
               return()                <motion.div
                   key={solution.id}
                   initial={{ opacity: 0, y: 20 }}

@@ -1,1 +1,0 @@
-// Added useCallback // Added Link import function InterviewsContent() { const { interviews, isLoading, fetchInterviews } = useInterviews(); // fetchInterviews is stable from the hook const [activeTab, setActiveTab] = useState("upcoming"); useEffect(() => { 

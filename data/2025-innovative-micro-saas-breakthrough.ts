@@ -16,8 +16,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
       'Custom AI model training for industry-specific content'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 99,
         period: 'month',
         features: ['20 articles/month', 'Basic AI templates', 'SEO suggestions', 'Email support']
@@ -30,26 +29,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
       enterprise: {
         price: 899,
         period: 'month',
-        features: ['Unlimited content', 'Custom AI training', 'Full API access', 'Dedicated account manager', '24/7 support']
-
-=======
-      starter: { 
-        price: 99, 
-        period: 'month', 
-        features['20 articles/month', 'Basic AI templates', 'SEO suggestions', 'Email support'] 
-      },
-      professional: { 
-        price: 299, 
-        period: 'month', 
-        features['100 articles/month', 'Advanced AI models', 'Full SEO suite', 'Team collaboration', 'Priority support'] 
-      },
-      enterprise: { 
-        price: 899, 
-        period: 'month', 
-        features['Unlimited content', 'Custom AI training', 'Full API access', 'Dedicated account manager', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Unlimited content', 'Custom AI training', 'Full API access', 'Dedicated account manager', '24/7 support']},
     category: 'Content & Marketing',
     tags['AI', 'Content Generation', 'SEO', 'Marketing Automation', 'NLP', 'Enterprise'],
     website: 'https://ziontechgroup.com/ai-content-factory-enterprise',
@@ -87,8 +67,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
       'Mobile-first responsive design and applications'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 149,
         period: 'month',
         features: ['Up to 5,000 contacts', 'Basic automation', 'Email campaigns', 'Standard support']
@@ -101,26 +80,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
       enterprise: {
         price: 999,
         period: 'month',
-        features: ['Unlimited contacts', 'Quantum analytics', 'White-label solution', 'Dedicated support', 'Custom integrations']
-
-=======
-      starter: { 
-        price: 149, 
-        period: 'month', 
-        features['Up to 5,000 contacts', 'Basic automation', 'Email campaigns', 'Standard support'] 
-      },
-      professional: { 
-        price: 399, 
-        period: 'month', 
-        features['Up to 50,000 contacts', 'Advanced analytics', 'Sales forecasting', 'Custom workflows', 'Priority support'] 
-      },
-      enterprise: { 
-        price: 999, 
-        period: 'month', 
-        features['Unlimited contacts', 'Quantum analytics', 'White-label solution', 'Dedicated support', 'Custom integrations'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Unlimited contacts', 'Quantum analytics', 'White-label solution', 'Dedicated support', 'Custom integrations']},
     category: 'Sales & CRM',
     tags['CRM', 'Quantum Computing', 'AI', 'Sales Automation', 'Predictive Analytics', 'Enterprise'],
     website: 'https://ziontechgroup.com/quantum-crm-suite-enterprise',
@@ -158,8 +118,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
       'API access for custom integrations'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 799,
         period: 'month',
         features: ['Basic decision engine', 'Up to 1000 decisions/month', 'Standard analytics', 'Email support']
@@ -172,26 +131,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
       enterprise: {
         price: 4999,
         period: 'month',
-        features: ['Full autonomous platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-
-=======
-      starter: { 
-        price: 799, 
-        period: 'month', 
-        features['Basic decision engine', 'Up to 1000 decisions/month', 'Standard analytics', 'Email support'] 
-      },
-      professional: { 
-        price: 1999, 
-        period: 'month', 
-        features['Advanced decision engine', 'Unlimited decisions', 'Custom models', 'Priority support', 'API access'] 
-      },
-      enterprise: { 
-        price: 4999, 
-        period: 'month', 
-        features['Full autonomous platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full autonomous platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']},
     category: 'AI & Automation',
     tags['AI', 'Autonomous Systems', 'Decision Making', 'Machine Learning', 'Automation', 'Enterprise'],
     website: 'https://ziontechgroup.com/ai-autonomous-decision-engine',
@@ -229,8 +169,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
       'API access for legal software integration'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 299,
         period: 'month',
         features: ['Basic contract analysis', 'Up to 50 contracts/month', 'Standard templates', 'Email support']
@@ -243,26 +182,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
       enterprise: {
         price: 1999,
         period: 'month',
-        features: ['Full legal platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-
-=======
-      starter: { 
-        price: 299, 
-        period: 'month', 
-        features['Basic contract analysis', 'Up to 50 contracts/month', 'Standard templates', 'Email support'] 
-      },
-      professional: { 
-        price: 799, 
-        period: 'month', 
-        features['Advanced contract analysis', 'Unlimited contracts', 'Custom templates', 'Priority support', 'API access'] 
-      },
-      enterprise: { 
-        price: 1999, 
-        period: 'month', 
-        features['Full legal platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full legal platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']},
     category: 'Legal Technology',
     tags['AI', 'Legal Tech', 'Contract Management', 'Legal Analysis', 'Compliance', 'Enterprise'],
     website: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
@@ -300,8 +220,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
       'HIPAA compliance and security'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 599,
         period: 'month',
         features: ['Basic diagnostics', 'Up to 100 patients/month', 'Standard models', 'Email support']
@@ -314,26 +233,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
       enterprise: {
         price: 3999,
         period: 'month',
-        features: ['Full healthcare platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-
-=======
-      starter: { 
-        price: 599, 
-        period: 'month', 
-        features['Basic diagnostics', 'Up to 100 patients/month', 'Standard models', 'Email support'] 
-      },
-      professional: { 
-        price: 1499, 
-        period: 'month', 
-        features['Advanced diagnostics', 'Unlimited patients', 'Custom models', 'Priority support', 'API access'] 
-      },
-      enterprise: { 
-        price: 3999, 
-        period: 'month', 
-        features['Full healthcare platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full healthcare platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']},
     category: 'Healthcare Technology',
     tags['AI', 'Healthcare', 'Medical Diagnostics', 'Patient Care', 'Medical Technology', 'Enterprise'],
     website: 'https://ziontechgroup.com/ai-healthcare-diagnostics-pro',
@@ -349,24 +249,9 @@ export const innovativeMicroSaasBreakthrough2025 = [
       'Treatment planning and optimization',
       'Patient monitoring and care',
       'Medical research and analysis',
-<<<<<<< HEAD
-      'Healthcare workflow automation'
+'Healthcare workflow automation'
     ],
-<<<<<<< HEAD
-    integrations: ['Electronic health records', 'Medical imaging systems', 'Laboratory systems', 'Patient monitoring devices', 'Healthcare platforms'],
+integrations: ['Electronic health records', 'Medical imaging systems', 'Laboratory systems', 'Patient monitoring devices', 'Healthcare platforms'],
     compliance: ['HIPAA', 'FDA regulations', 'Medical device standards', 'SOC2', 'ISO 27001', 'Healthcare compliance standards']
 
-];}}}}}}
-=======
-    integrations['Electronic health records', 'Medical imaging systems', 'Laboratory systems', 'Patient monitoring devices', 'Healthcare platforms'],
-    compliance['HIPAA', 'FDA regulations', 'Medical device standards', 'SOC2', 'ISO 27001', 'Healthcare compliance standards']
-  };
-=======;
-      'Healthcare workflow automation';
-    ],;
-    integrations: ['Electronic health records', 'Medical imaging systems', 'Laboratory systems', 'Patient monitoring devices', 'Healthcare platforms'],;
-    compliance: ['HIPAA', 'FDA regulations', 'Medical device standards', 'SOC2', 'ISO 27001', 'Healthcare compliance standards'];
-  };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+];}}}}}}];

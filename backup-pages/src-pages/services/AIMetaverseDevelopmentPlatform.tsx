@@ -9,14 +9,12 @@ export default function AIMetaverseDevelopmentPlatform() {
     'Metaverse economy and NFT marketplace tools';
   ];
 
-  
         'On-premise deployment options',;
         'Custom integrations and APIs',;
         'White-label solutions available',;
         'Enterprise security features';
       ]};
-=======
-        'Unlimited virtual worlds','
+'Unlimited virtual worlds','
         'Custom AI algorithms','
         '24/7 dedicated support',;'
         'On-premise deployment options',;'
@@ -25,7 +23,6 @@ export default function AIMetaverseDevelopmentPlatform() {
       ]};
   ];
 
-  
     'Virtual events and conferences',;
     'Gaming and entertainment platforms',;
     'Virtual real estate and architecture',;
@@ -34,14 +31,12 @@ export default function AIMetaverseDevelopmentPlatform() {
     'Social networking and communities';
   ];
 
-  
     'Reduce development time by 50-70% with AI automation',;
     'Create immersive experiences that increase user engagement',;
     'Scale virtual worlds efficiently with intelligent optimization',;
     'Enable cross-platform compatibility and accessibility',;
     'Build sustainable metaverse economies and ecosystems';
   ];
-
 
   const industries = [;'
     'Gaming and Entertainment',;'

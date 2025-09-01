@@ -1,9 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/clean-merge-website-fixes
 interface SEOProps {
   title: string;
   description: string;
@@ -35,22 +31,12 @@ export function SEO({
   noindex = false,
   nofollow = false
 }: SEOProps) {
-<<<<<<< HEAD
-  const siteUrl = 'https://ziontechgroup.com';
+const siteUrl = 'https://ziontechgroup.com';
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
   const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
   
   // Default meta description if none provided
-<<<<<<< HEAD
-  const metaDescription = description || 
-=======
-<<<<<<< HEAD
-  const metaDescription = description ||
-=======
-  const metaDescription = description || ;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> cursor/add-new-services-and-advertise-them-971c
-    'Zion Tech Group - Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Transform your business with our innovative technology ecosystem.';
+const metaDescription = description ||'Zion Tech Group - Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Transform your business with our innovative technology ecosystem.';
 
   // Default title if none provided
   const fullTitle = title ? `${title} | Zion Tech Group` : 'Zion Tech Group - AI & Technology Solutions';
@@ -64,15 +50,13 @@ export function SEO({
 
   // Structured data for organization
   const organizationSchema = {
-=======
-  const siteName = 'Zion Tech Group';
+const siteName = 'Zion Tech Group';
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullCanonical = canonical || window.location.href;
 
   // Default structured data for organization
   const defaultStructuredData = {
->>>>>>> origin/clean-merge-website-fixes
-    "@context": "https://schema.org",
+"@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": siteUrl,
@@ -131,37 +115,14 @@ export function SEO({
         {
           "@type": "Offer",
           "itemOffered": {
-<<<<<<< HEAD
-            "@type": "Service",
+"@type": "Service",
             "name": "Cloud & DevOps",
             "description": "Scalable cloud infrastructure and development operations"
           }
         }
       ]
-    }
-=======
-<<<<<<< HEAD
-            "@type": "Service",
-            "name": "Cloud & DevOps",
-            "description": "Scalable cloud infrastructure and development operations"
-
-
-      ]
-
-=======
-            "@type": "Service",;
-            "name": "Cloud & DevOps",;
-            "description": "Scalable cloud infrastructure and development operations";
-          };
-        };
-      ];
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> cursor/add-new-services-and-advertise-them-971c
-  };
-<<<<<<< HEAD
-
-  // Structured data for the current page
+    }};
+// Structured data for the current page
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": type === 'article' ? 'Article' : 'WebPage',
@@ -191,42 +152,17 @@ export function SEO({
       "articleSection": section,
       "keywords": tags.join(', ')
     })
-  };
-
-=======
-
-  // Merge with custom structured data
-  const finalStructuredData = structuredData || defaultStructuredData;
-
->>>>>>> origin/clean-merge-website-fixes
-  return (
+  };return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-<<<<<<< HEAD
-      <meta name="description" content={metaDescription} />
+<meta name="description" content={metaDescription} />
       <meta name="robots" content={robotsContent} />
       
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={`${siteUrl}${canonical}`} />}
       
-      {/* Open Graph / Facebook */}
-=======
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="author" content={author || 'Zion Tech Group'} />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={fullCanonical} />
-      
-      {/* Robots Meta */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
->>>>>>> origin/clean-merge-website-fixes
-      <meta property="og:type" content={type} />
+      {/* Open Graph / Facebook */}<meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:url" content={fullUrl} />
@@ -236,30 +172,17 @@ export function SEO({
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-<<<<<<< HEAD
-      {/* Twitter Card */}
+{/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      <meta name="twitter:image" content={fullImageUrl} />
-=======
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
->>>>>>> origin/clean-merge-website-fixes
-      
-      {/* Additional Meta Tags */}
+      <meta name="twitter:image" content={fullImageUrl} />{/* Additional Meta Tags */}
       <meta name="author" content={author} />
       <meta name="keywords" content={tags.join(', ')} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
-      <meta name="theme-color" content="#22ddd2" />
+<meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
       
       {/* Favicon */}
@@ -271,50 +194,22 @@ export function SEO({
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://cdn.gpteng.co" />
-=======
->>>>>>> origin/clean-merge-website-fixes
-      
-      {/* Structured Data */}
+      <link rel="preconnect" href="https://cdn.gpteng.co" />{/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}
       </script>
       <script type="application/ld+json">
         {JSON.stringify(pageSchema)}
       </script>
-<<<<<<< HEAD
-      {/* Additional SEO Meta Tags */}
+{/* Additional SEO Meta Tags */}
       <meta name="application-name" content="Zion Tech Group" />
-<<<<<<< HEAD
-      <meta name="apple-mobile-web-app-title" content="Zion Tech" />
+<meta name="apple-mobile-web-app-title" content="Zion Tech" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      
-=======
-<<<<<<< HEAD
-      <meta name="apple-mobile-web-app-title" content="Zion Tech" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-
->>>>>>> cursor/add-new-services-and-advertise-them-971c
-      {/* Security Headers */}
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />{/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-<<<<<<< HEAD
-=======
-=======
-      <meta name="apple-mobile-web-app-title" content="Zion Tech" />;
-      <meta name="apple-mobile-web-app-capable" content="yes" />;
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />;
-      ;
-      {/* Security Headers */};
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />;
-      <meta httpEquiv="X-Frame-Options" content="DENY" />;
-      <meta httpEquiv="X-XSS-Protection" content="1; mode = block" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> cursor/add-new-services-and-advertise-them-971c
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+<meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
       
       {/* Performance and UX */}
       <meta name="format-detection" content="telephone=no" />
@@ -334,9 +229,7 @@ export function SEO({
       <meta name="business:contact_data:country_name" content="United States" />
       <meta name="business:contact_data:phone_number" content="+1-800-ZION-TECH" />
       <meta name="business:contact_data:email" content="info@ziontechgroup.com" />
-=======
-      
-      {/* Additional structured data for articles */}
+{/* Additional structured data for articles */}
       {type === 'article' && (
         <script type="application/ld+json">
           {JSON.stringify({
@@ -366,7 +259,6 @@ export function SEO({
           })}
         </script>
       )}
->>>>>>> origin/clean-merge-website-fixes
-    </Helmet>
+</Helmet>
   );
 }

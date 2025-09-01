@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, Search as SearchIcon, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles as SparklesIcon, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain as BrainIcon, Atom as AtomIcon, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon2, MessageSquare as MessageSquareIcon, FileText as MessageSquareIcon2, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as CodeIcon2, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon2, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon2, Atom as AtomIcon2, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
 
-
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
@@ -185,33 +184,18 @@ export default function Services2026ShowcaseEnhancedPage() {
           <title>Enhanced 2026 Services Showcase - Zion Tech Group</title>
           <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology." />
           <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" />
-<<<<<<< HEAD
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-          <link rel="icon" href="/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="icon" href="/favicon.ico" />
           
           {/* Open Graph */}
           <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
-<<<<<<< HEAD
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-=======
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-          
-          {/* Twitter */}
+<meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />{/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
-<<<<<<< HEAD
-          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-=======
-          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-        </Head>
+<meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" /></Head>
 
         {/* Enhanced Header Section */}
         <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">

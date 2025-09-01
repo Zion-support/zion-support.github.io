@@ -38,8 +38,7 @@ class AutomationFactory {
       this.log(`Error saving status: ${error.message}`);
     // // // // // // // // console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage);
-=======
-    }
+}
   }
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -84,8 +83,7 @@ class CodeQualityMonitor {
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-=======
-  }
+}
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
@@ -148,8 +146,7 @@ class CodeQualityMonitor {
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
     // // // // // // // // console.log('Metrics:', metrics);
   }
-=======
-          walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
+walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
           files.push(fullPath)}
       })};
     walkDir(projectRoot);
@@ -186,8 +183,7 @@ class PerformanceOptimizer {
     this.optimizations = [];
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-=======
-    this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log')}
+this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log')}
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
@@ -260,8 +256,7 @@ class PerformanceOptimizer {
       'Use React.memo for expensive components'
     // // // // // // // // console.log('Performance report:', report);
   }
-=======
-    ]}
+]}
   saveReport(report) {
     const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))}
@@ -355,8 +350,7 @@ optimizer.optimizePerformance().then(report => {
       const duration = Date.now() - info.startTime;
       // // // // // // // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`);
     }
-=======
-      console.log(`\n${name}:`);
+console.log(`\n${name}:`);
       console.log(`  Description: ${script.description}`);
       console.log(`  Status: ${status}`);
       console.log(`  Last Run: ${lastRun}`);
@@ -413,8 +407,7 @@ switch (command) {
     // // // // // // // // console.log('  node automation-factory.js continuous');
     break;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
-=======
-    console.log('Usage:');
+console.log('Usage:');
     console.log('  node automation-factory.js list');
     console.log('  node automation-factory.js run [script-name]');
     console.log('  node automation-factory.js generate');

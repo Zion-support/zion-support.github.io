@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { InnovativeMicroSaasService } from './2025-innovative-real-micro-saas-services'
 const contact = {
   mobile: '+1 302 464 0950',
@@ -75,16 +74,9 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '3 days',
     category: 'Proposal Automation',
     realService: true,
-    technology: ['Next.js', 'Vector DB', 'LLM function calling'],
-=======
-<<<<<<< HEAD
-import type { InnovativeMicroSaasService } from "./2025-innovative-real-micro-saas-services"
-const calling'],
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    integrations: ['SharePoint', 'Google Drive', 'Confluence'],
+    technology: ['Next.js', 'Vector DB', 'LLM function calling'],integrations: ['SharePoint', 'Google Drive', 'Confluence'],
     useCases: ['Federal RFPs', 'Enterprise vendor bids', 'MSA/SOW drafting'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    roi: 'Save 60–80% proposal hours',
+roi: 'Save 60–80% proposal hours',
     competitors['Loopio', 'RFPIO'],
     marketSize: '$1.2B proposal software market',
     growthRate: '18% YoY',

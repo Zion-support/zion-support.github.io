@@ -1,1 +1,0 @@
-"const ServiceCategory = ({ category, services }) => {"; 

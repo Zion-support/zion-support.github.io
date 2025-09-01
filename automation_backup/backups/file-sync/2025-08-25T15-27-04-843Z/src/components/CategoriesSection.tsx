@@ -243,20 +243,13 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             className='text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors';
 ;
             View All Categories;
-<<<<<<< HEAD
-<<<<<<< HEAD;
+;
             <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300'                                                                                                                                                                              />;
           </Link>;
         </motion.div>;
       </div>;
     </section>;
-  )};
-=======;
-            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300'                                                                                                                                                                              />;
-=======
-            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300'              />;
->>>>>>> cursor/website-audit-content-update-and-deployment-efec
-          </Link>;
+  )};</Link>;
         </motion.div>;
       </div>;
     </section>;

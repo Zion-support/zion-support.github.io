@@ -11,14 +11,8 @@ export interface Revolutionary2027MicroSaas {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
-    address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = [
+address: string;
+  };export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = [
   {
     id: "2027-revolutionary-micro-saas",
     name: "2027 Revolutionary Micro SAAS Platform",

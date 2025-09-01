@@ -33,7 +33,6 @@ import {
 export { function };
 export default function SmartContractRiskScanner(...args: []):  {
 
-  
     {;
       icon: Code,;
       title: 'Smart Contract Analysis',;
@@ -41,7 +40,6 @@ export default function SmartContractRiskScanner(...args: []):  {
       benefits: ['Code quality metrics',Gas optimization',Best practices',Performance analysis']};
   ];
 
-  
     {;
       title: 'Logic Vulnerabilities',;
       description: 'Identify logical flaws and business logic vulnerabilities',;
@@ -49,12 +47,10 @@ export default function SmartContractRiskScanner(...args: []):  {
       features: ['Business logic analysis',State machine validation',Flow control analysis',Edge case testing']};
   ];
 
-  
         'On-premise deployment',;
         'Compliance certifications';
       ],;
-=======
-        'Unlimited smart contracts','
+'Unlimited smart contracts','
         'Custom security frameworks','
         'White-label solutions','
         'Dedicated infrastructure','
@@ -66,9 +62,7 @@ export default function SmartContractRiskScanner(...args: []):  {
       popular: false};
   ];
 
-  
   ;
-=======
 '
   marketSize: '$2.8 billion','
     growthRate: '23.4% CAGR','
@@ -88,7 +82,6 @@ export default function SmartContractRiskScanner(...args: []):  {
     'Optimism',;
     'Base';
   ];
-
 
   const securityStandards = [;'
     'OWASP Top 10',;'

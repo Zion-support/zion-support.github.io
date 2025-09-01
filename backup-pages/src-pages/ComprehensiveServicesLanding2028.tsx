@@ -18,15 +18,13 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       default: return Rocket}
   };
 
-  
       'from-green-600 to-emerald-600',;
       'from-red-600 to-orange-600',;
       'from-indigo-600 to-purple-600',;
       'from-yellow-600 to-orange-600',;
       'from-teal-600 to-blue-600',;
       'from-pink-600 to-red-600';
-=======
-      'from-blue-600 to-cyan-600','
+'from-blue-600 to-cyan-600','
       'from-purple-600 to-pink-600',;'
       'from-green-600 to-emerald-600',;'
       'from-red-600 to-orange-600',;'
@@ -36,10 +34,8 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
     ];
     return colors[Math.abs (category.length) % colors.length]};
 
-  
     setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) };
 
-  
     setCurrentTestimonial ( (prev) => (prev - 1 + testimonials.length) % testimonials.length) };
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
@@ -93,11 +89,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.8,
   delay: 0.2 
 
-
-
-
-
-
 }}"
             className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8"
 
@@ -121,11 +112,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
 
 }}"
             className="flex flex-wrap justify-center gap-4"
@@ -172,11 +158,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                 className="text-center"
@@ -237,11 +218,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105 group"
@@ -322,11 +298,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
 
 }}"
             className="text-center mt-12"
@@ -486,11 +457,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.1 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -519,11 +485,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
 
 }}"
               className="text-center"
@@ -554,11 +515,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.3 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -587,11 +543,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}"
               className="text-center"
@@ -622,11 +573,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.5 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -655,11 +601,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
 
 }}"
               className="text-center"
@@ -695,11 +636,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
 
 }}"
             className="bg-zion-blue-dark border border-zion-cyan/30 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
@@ -862,11 +798,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.1 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -899,11 +830,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
 
 }}"
               className="text-center"
@@ -938,11 +864,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.3 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -974,11 +895,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}"
             className="text-center mt-12"

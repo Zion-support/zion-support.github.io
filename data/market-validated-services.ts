@@ -18,14 +18,8 @@ export interface MarketValidatedService {
 		mobile: string;
 		email: string;
 		address: string;
-<<<<<<< HEAD
-		website?: string;
-	};
-
-=======
-		website?: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const contactInfo = {
+website?: string;
+	};const contactInfo = {
   mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',;

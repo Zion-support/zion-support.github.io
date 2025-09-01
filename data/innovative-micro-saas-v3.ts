@@ -11,14 +11,8 @@ export interface InnovativeMicroSaasV3 {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
-    address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
+address: string;
+  };export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
   {
     id: "ai-customer-support",
     name: "AI Customer Support Platform",

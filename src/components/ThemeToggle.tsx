@@ -1,1 +1,0 @@
-import { Sun, Moon, Monitor type Theme = "dark" | "light" | "system"; type Theme = "dark" | "light" | "system"; interface ThemeToggleProps { // Add your props here className?: string} " export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = " }) => {;" const [theme, setTheme] = useState<Theme>("system"); 

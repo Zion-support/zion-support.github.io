@@ -25,7 +25,6 @@ import {
 export { function };
 export default function AIContentGenerationPlatform(...args[]):  {
 
-  
     },;
     {
 
@@ -80,7 +79,6 @@ export default function AIContentGenerationPlatform(...args[]):  {
       metrics: ['55% faster report creation',50% improvement in brand consistency',35% reduction in review cycles']};
   ];
 
-  
     {;
       icon: TrendingUp,;
       title: 'Scalability',;
@@ -88,7 +86,6 @@ export default function AIContentGenerationPlatform(...args[]):  {
       value: '10x'};
   ];
 
-  
     'Machine Learning',;
     'Cloud Computing',;
     'Real-time Processing',;
@@ -97,11 +94,9 @@ export default function AIContentGenerationPlatform(...args[]):  {
     'Analytics & Insights';
   ];
 
-  
         '10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output'
       ],;
-=======
-      features[;'
+features[;'
         '10,000 words per month','
         '100 AI-generated images','
         '5 video generations','

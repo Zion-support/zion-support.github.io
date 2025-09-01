@@ -91,8 +91,6 @@ FuturisticBackground.displayName = 'FuturisticBackground';
 
 // Enhanced hero section component
 
-  
-  
   }, [heroSlides.length]) }, [heroSlides.length]) ;
 
   useEffect ( () => {
@@ -291,8 +289,7 @@ StatsSection.displayName = 'StatsSection';
 
 });
 
-=======
-  )});
+)});
 '
 CTASection.displayName = 'CTASection';
 
@@ -303,7 +300,6 @@ const EnhancedHome: React.FC = () => {
   useEffect ( () => {
     setIsLoaded (true) }, []) ;
 
-  
     if (servicesSection) {
 
       servicesSection.scrollIntoView({ behavior: 'smooth' })}

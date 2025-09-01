@@ -5,7 +5,6 @@ import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log('🔗 Starting continuous link checker automation...');
-=======
 // // // console.log('🔗 Starting continuous link checker automation...');
 // Get automation interval from environment variable (default: 30 minutes)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes
@@ -27,14 +26,12 @@ async function checkLinks() {
       // // // // // // // console.log('✅ Build completed');
     } catch (error) {
       // // // // // // // console.log('⚠️  Build failed but continuing...');
-=======
-      return;
+return;
     // Check if dist folder exists
     const distPath = path.join(process.cwd(), 'dist');
     if (!fs.existsSync(distPath)) {
       // // // // // // // console.log('⚠️  Dist folder not found, skipping link check');
-=======
-      // // // console.log('⚠️  Dist folder not found, skipping link check');
+// // // console.log('⚠️  Dist folder not found, skipping link check');
       return;
     // Check for index.html
     const indexHtmlPath = path.join(distPath, 'index.html');
@@ -51,8 +48,7 @@ async function checkLinks() {
     // Find all HTML files
     const htmlFiles = findHtmlFiles(distPath);
     // // // // // // // console.log(`📄 Found ${htmlFiles.length} HTML files to check`);
-=======
-    // Check for broken references
+// Check for broken references
     let hasIssues = false;
     const brokenReferences = [];
     for (const htmlFile of htmlFiles) {
@@ -78,8 +74,7 @@ async function checkLinks() {
     if (!hasIssues) {
       // // // // // // // console.log('✅ No broken references found');
     }
-=======
-        // // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`);
+// // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`);
     if (brokenReferences.length > 0) {
       // // // console.log('⚠️  Broken references found:');
       brokenReferences.forEach(ref => {
@@ -92,11 +87,9 @@ async function checkLinks() {
   } catch (error) {
     // // // // // // // console.error('❌ Link check failed:', error.message);
     // Don't exit, just log the error and continue
-=======
-  summary: 'Link check completed'
+summary: 'Link check completed'
 };
-=======
-    const reportPath = path.join(process.cwd(), 'link-checker-report.json');
+const reportPath = path.join(process.cwd(), 'link-checker-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`📊 Report saved to ${reportPath}`);
   } catch (error) {
@@ -139,8 +132,7 @@ function isValidReference(ref, distPath) {
 // Main continuous loop
 async function runContinuous() {
   // // // // // // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-=======
-  // // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+// // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // Run initial check
   await checkLinks();
   // Set up continuous execution
@@ -152,8 +144,7 @@ async function runContinuous() {
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
-=======
-  // // // console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+// // // console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
@@ -161,15 +152,13 @@ process.on('SIGINT', () => {
 });
 process.on('SIGTERM', () => {
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
-=======
-  // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+// // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
 // Start the continuous link checker
 runContinuous().catch(error => {
   // // // // // // // console.error('❌ Failed to start continuous link checker:', error);
-=======
-  // // // console.error('❌ Failed to start continuous link checker:', error);
+// // // console.error('❌ Failed to start continuous link checker:', error);
   process.exit(1);
 });
 }}}}}}}}}}}}}}}}}}}}}}

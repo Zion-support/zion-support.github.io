@@ -42,8 +42,7 @@
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
 =
-=======
-        title="AI Customer Feedback Analytics - Zion Tech Group""        description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."
+title="AI Customer Feedback Analytics - Zion Tech Group""        description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."
        />
       
       {/* Hero Section */}"

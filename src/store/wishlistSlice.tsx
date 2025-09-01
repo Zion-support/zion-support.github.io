@@ -1,1 +1,0 @@
-:src/store/wishlistSlice.tsx 

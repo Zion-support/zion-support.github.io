@@ -76,7 +76,6 @@
       ]};
   ];
 
-  
       title: 'Community Forum',;
       icon: Users,;
       description: 'Connect with peers and experts',;
@@ -84,9 +83,7 @@
       href: '/community'};
   ];
 
-  
   ;
-=======
 '
   phone: '+1 302 464 0950','
     email: 'kleber@ziontechgroup.com',;  ;

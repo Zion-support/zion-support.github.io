@@ -1,1 +1,32 @@
-(()=>{var r={};r.id=888,r.ids=[888],r.modules={487:(r,e,s)=>{"use strict";s.r(e),s.d(e,{default:()=>u});var t=s(997);function i({children:r}){return t.jsx("div",{className:"min-h-screen",children:r})}function u({Component:r,pageProps:e}){return t.jsx(i,{children:t.jsx(r,{...e})})}s(636),s(689)},636:()=>{},689:r=>{"use strict";r.exports=require("react")},997:r=>{"use strict";r.exports=require("react/jsx-runtime")}};var e=require("../webpack-runtime.js");e.C(r);var s=e(e.s=487);module.exports=s})();
+"use strict";
+(() => {
+var exports = {};
+exports.id = 888;
+exports.ids = [888];
+exports.modules = {
+
+/***/ 9232:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 6689:
+/***/ ((module) => {
+
+module.exports = require("react");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [35], () => (__webpack_exec__(5035)));
+module.exports = __webpack_exports__;
+
+})();

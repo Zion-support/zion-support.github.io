@@ -5,8 +5,6 @@
   const [selectedCategory, setSelectedCategory] = useState('All');'
   const [sortBy, setSortBy] = useState('innovation');
 
-  
-  
     // Filter by search query
     if (searchQuery) {
 
@@ -37,7 +35,6 @@
 
     return filtered}, [searchQuery, selectedCategory, sortBy]) ;
 
-  
     switch (category) {;
       case 'AI & Automation':;
         return <Cpu className="w-5 h-5"  />;
@@ -61,10 +58,8 @@
         return 0}
   }) }};
 
-  
   ;
   ;
-=======
 '
   'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600','
       'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;  ;
@@ -210,11 +205,6 @@
 
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                 className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10"

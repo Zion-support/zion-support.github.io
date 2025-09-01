@@ -1,1 +1,0 @@
-export const showApiError = (error: , fallbackMessage?: string) => {; const message = error?.message || fallbackMessage || "An unexpected error occurred"; 

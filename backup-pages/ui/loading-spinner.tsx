@@ -6,9 +6,7 @@
 };
 ;
 
-
   ;
-=======
 '
   primary: 'border-cyan-400','
   secondary: 'border-blue-400','
@@ -44,7 +42,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             duration: 1,
             repeat: Infinity,"
   ease: "linear"
-
 
 }}
         />
@@ -93,7 +90,6 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
         duration: 1,
         repeat: Infinity,"
   ease: "linear"
-
 
 ;
 

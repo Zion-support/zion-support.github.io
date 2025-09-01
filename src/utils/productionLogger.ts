@@ -1,1 +1,0 @@
-export function logErrorToProduction(message: string, error?: ): void { // In production, we might want to send errors to a logging service // // // // // // // // // // console.error(message, error); } 

@@ -55,7 +55,7 @@ class AutoFixer {
       this.log('info', 'Checking for merge conflicts...');
       
       // Find files with merge conflict markers
-      const conflictFiles = execSync('grep -r "<<<<<<< HEAD" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" -l || true', {
+      const conflictFiles = execSync('grep -r "" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" -l || true', {
         cwd: this.projectRoot,
         encoding: 'utf8'
       }).trim().split('\n').filter(f => f);
@@ -91,11 +91,8 @@ class AutoFixer {
     
     // Simple merge conflict resolution - keep HEAD version and remove markers
     let fixed = content
-      .replace(/<<<<<<< HEAD\n/g, '')
-      .replace(/=======\n[\s\S]*?>>>>>>> [^\n]+\n/g, '')
-      .replace(/>>>>>>> [^\n]+\n/g, '');
-    
-    // Clean up any remaining artifacts
+      .replace(/\n/g, '')
+      .replace(/.replace(/// Clean up any remaining artifacts
     fixed = fixed
       .replace(/\n\n\n+/g, '\n\n')
       .replace(/^\s*\n/gm, '\n')

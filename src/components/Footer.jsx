@@ -1,1 +1,0 @@
-"import {;" Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe} from "lucide-react";"export function FooterNewsletter() { const [email, setEmail] = useState(");" const [isSubscribed, setIsSubscribed] = useState(false);" const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async e => {; 
