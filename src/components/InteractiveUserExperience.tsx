@@ -4,6 +4,7 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Progress } from './ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+<<<<<<< HEAD
 import {
 
   User,
@@ -35,6 +36,8 @@ interface UserPreference {
 
 }
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface UserActivity {
 
   id: string;
@@ -45,7 +48,6 @@ interface UserActivity {
   category: 'navigation' | 'interaction' | 'search' | 'purchase';
 
 }
-
 interface AccessibilityFeature {
 
   id: string;
@@ -53,7 +55,6 @@ interface AccessibilityFeature {
   enabled: boolean;
   description: string;
   impact: 'high' | 'medium' | 'low';
-
 const InteractiveUserExperience: React.FC = () => {
   const [preferences, setPreferences] = useState<UserPreference[]>([]);
   const [userActivities, setUserActivities] = useState<UserActivity[]>([]);
@@ -164,8 +165,7 @@ const InteractiveUserExperience: React.FC = () => {
     setPreferences(samplePreferences);
     setUserActivities(sampleActivities);
     setAccessibilityFeatures(sampleAccessibility);
-    setIsLoading(false);
-  }, []);
+    setIsLoading(false)}, [])}, [])}, []);
 
   const updatePreference = useCallback()
     (id: string, value: string | boolean | number) => {
@@ -232,8 +232,7 @@ const InteractiveUserExperience: React.FC = () => {
         return 'bg-blue-500';
       default:'
         return 'bg-gray-500';
-    }
-  };
+    }  };
 
   if (isLoading) {
 
@@ -245,14 +244,12 @@ const InteractiveUserExperience: React.FC = () => {
         </div>
       </div>) ;
   }
-
   return ("
     <div className="space-y-6">
       {/* Header */}"
       <div className="flex items-center gap-3">"
         <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">"
-          <User className="w-6 h-6 text-white" />
-        </div>
+          <User className="w-6 h-6 text-white" />        </div>
         <div>"
           <h2 className="text-2xl font-bold">Interactive User Experience</h2>"
           <p className="text-gray-600">
@@ -329,8 +326,7 @@ const InteractiveUserExperience: React.FC = () => {
           <Card>
             <CardHeader>"
               <CardTitle className="flex items-center gap-2">"
-                <TrendingUp className="w-5 h-5" />
-                Recent User Activities
+                <TrendingUp className="w-5 h-5" />                Recent User Activities
               </CardTitle>
             </CardHeader>
             <CardContent>"
@@ -373,8 +369,7 @@ const InteractiveUserExperience: React.FC = () => {
               <Card key={feature.id}>
                 <CardHeader>"
                   <CardTitle className="flex items-center gap-2">"
-                    <Accessibility className="w-5 h-5" />
-                    {feature.name}
+                    <Accessibility className="w-5 h-5" />                    {feature.name}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>"
@@ -406,6 +401,5 @@ const InteractiveUserExperience: React.FC = () => {
       </Tabs>
     </div>) ;
 };
-
 export { InteractiveUserExperience };
 '"

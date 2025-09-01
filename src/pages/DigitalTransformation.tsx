@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -49,6 +50,10 @@ import {
         "Stakeholder interviews","
         "Technology audit","
         "Gap analysis"
+=======
+import React, { useState } from 'react';'
+import { motion } from 'framer-motion';        "Gap analysis"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
@@ -91,8 +96,7 @@ import {
         "Performance monitoring",;"
         "Continuous optimization",;"
         "Training and support";
-      ];
-    };
+      ]};
   ];
 
   const testimonials = [
@@ -114,17 +118,14 @@ import {
 
     };'"
       content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",;"
-      name: "Marcus Johnson",;"
-      role: "CTO, DigitalFirst Inc",;
-      rating: 5;
-    };
+      name: "Marcus Johnson",;"      role: "CTO, DigitalFirst Inc",;
+      rating: 5};
   ];
 
   const stats = [;"
     { number: "85%", label: "Average efficiency improvement" },;"
     { number: "3.2x", label: "Faster time to market" },;"
-    { number: "40%", label: "Cost reduction achieved" },;"
-    { number: "92%", label: "Customer satisfaction increase" };
+    { number: "40%", label: "Cost reduction achieved" },;"    { number: "92%", label: "Customer satisfaction increase" };
   ];
 
   return ("
@@ -139,8 +140,7 @@ import {
         <div className="container mx-auto px-4 text-center relative z-10">"
           <div className="flex justify-center mb-8">"
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">"
-              <Rocket className="w-12 h-12 text-white" />
-            </div>
+              <Rocket className="w-12 h-12 text-white" />            </div>
           </div>
 "
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
@@ -257,8 +257,7 @@ import {
                 <div className="space-y-3">
                   {service.features.map((feature, featureIndex) => ("
                     <div key={featureIndex} className="flex items-center gap-3">"
-                      <Check className="w-4 h-4 text-zion-cyan flex-shrink-0" />"
-                      <span className="text-zion-slate-light text-sm">{feature}</span>
+                      <Check className="w-4 h-4 text-zion-cyan flex-shrink-0" />"                      <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -326,8 +325,7 @@ import {
                     <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{phase.description}</p>
 "
                     <div className="flex items-center gap-2 text-zion-cyan text-sm mb-4">"
-                      <Clock className="w-4 h-4" />
-                      {phase.duration}
+                      <Clock className="w-4 h-4" />                      {phase.duration}
                     </div>
 
                     {/* Activities */}
@@ -350,8 +348,7 @@ import {
                         <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: any</div>
                         {phase.activities.map((activity, activityIndex)  => ("
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">"
-                            <Check className="w-3 h-3 text-zion-cyan" />
-                            {activity}
+                            <Check className="w-3 h-3 text-zion-cyan" />                            {activity}
                           </div>) ) }
                       </motion.div>) }
                   </div>
@@ -404,8 +401,7 @@ import {
 "
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => ("
-                    <Star key={i} className="w-5 h-5 text-zion-cyan fill-current" />
-                  ))}
+                    <Star key={i} className="w-5 h-5 text-zion-cyan fill-current" />                  ))}
                 </div>
 "
                 <p className="text-zion-slate-light mb-6 leading-relaxed">"{testimonial.content}"</p>

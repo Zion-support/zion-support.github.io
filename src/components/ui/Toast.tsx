@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react.ts';
 import { X, CheckCircle, AlertCircle, Info, XCircle  } from 'lucide-react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
+=======
+'export type ToastType = 'success' | 'error' | 'warning' | 'info';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ;
 export interface Toast {
   id: anystring;
@@ -13,7 +17,6 @@ export interface Toast {
 
 
 }
-
 interface ToastProps extends React.PropsWithChildren<{}> {
 
   toast: Toast;
@@ -23,7 +26,6 @@ interface ToastProps extends React.PropsWithChildren<{}> {
 ;
 const ToastItem: React.FC<ToastProps> = { toast: unknown, onRemove }: unknown {
   const [isVisible, setIsVisible] = useState<typeof true>(true);
-
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 
   const [isVisible, setIsVisible] = useState(true);
@@ -66,8 +68,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800';
       default:'
         return 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800';
-    }
-  };
+    }  };
 
   return()
     <motion.div
@@ -104,8 +105,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
     </motion.div>
   );
 };
-;
-export const ToastContainer: React.FC = (): JSX.Element => {
+;export const ToastContainer: React.FC = (): JSX.Element => {
 
   const [toasts, setToasts] = useState<any>([]);
 
@@ -120,7 +120,6 @@ export const ToastContainer: React.FC = (): JSX.Element => {
 
     setToasts(prev => prev.filter(toast => toast.id !== id));
   };
-
   // Expose addToast globally for easy access
   useEffect(: unknown {
     (window as ).showToast = addToast;
@@ -128,27 +127,23 @@ export const ToastContainer: React.FC = (): JSX.Element => {
       delete (window as ).showToast;
     };
   }, []);
-
   return ("
     <div className="fixed top-4 right-4 z-50 space-y-2">
       <AnimatePresence>
         {toasts.map(toast => (
-          <ToastItem
-            key={toast.id}
+          <ToastItem key={toast.id}
             toast={toast}
             onRemove={removeToast}
-          />
+           />
         ))}
       </AnimatePresence>
     </div>
-  );
-};
+  )};
 
 // Utility function to show toasts
 export const showToast = (type: anyToastType, title: string, message?: string, duration?: number)  => {
 
   if (typeof window !== 'undefined' && (window as ).showToast) {
 
-    (window as ).showToast({ type, title, message, duration });
-  }
+    (window as ).showToast({ type, title, message, duration });  }
 };'"`

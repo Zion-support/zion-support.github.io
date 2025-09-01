@@ -79,6 +79,7 @@ export default function HealthcareTech(...args: []):  {
     };
   ];
 
+<<<<<<< HEAD
   const applications = [;
     { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },;
     { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },;
@@ -86,14 +87,27 @@ export default function HealthcareTech(...args: []):  {
     { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },;
     { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },;
     { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' };
+=======
+  const applications = [;'
+    { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },;'
+    { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },;'
+    { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },;'
+    { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },;'
+    { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },;'    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="Healthcare Technology Services - Zion Tech Group"
         description="Transform healthcare delivery with cutting-edge technology solutions. From AI diagnostics to telemedicine, we help healthcare providers deliver better patient care."
       />
+=======
+        title="Healthcare Technology Services - Zion Tech Group""        description="Transform healthcare delivery with cutting-edge technology solutions. From AI diagnostics to telemedicine, we help healthcare providers deliver better patient care."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -127,8 +141,7 @@ export default function HealthcareTech(...args: []):  {
 "
             <div className="flex justify-center mb-6">"
               <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center">"
-                <Heart className="w-10 h-10 text-white" />
-              </div>
+                <Heart className="w-10 h-10 text-white" />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Healthcare"

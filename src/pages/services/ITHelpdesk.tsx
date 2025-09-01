@@ -23,8 +23,7 @@ export default function ITHelpdesk() {
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 mb-6">"
             <LifeBuoy className="w-4 h-4 mr-2"/> IT support that scales with your MSP
           </div>"
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">IT Helpdesk Software</h1>"
-          <p className="text-white/90 text-xl">Ticketing, SLAs, and client portals built for managed service providers.</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">IT Helpdesk Software</h1>"          <p className="text-white/90 text-xl">Ticketing, SLAs, and client portals built for managed service providers.</p>
         </div>
       </section>
 "
@@ -34,8 +33,7 @@ export default function ITHelpdesk() {
           <ul className="space-y-3">
             {features.map((f) => ("
               <li key={f} className="flex items-start">"
-                <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />"
-                <span className="text-zion-slate-dark">{f}</span>
+                <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />"                <span className="text-zion-slate-dark">{f}</span>
               </li>
             ))}
           </ul>
@@ -54,8 +52,7 @@ export default function ITHelpdesk() {
             ))}
           </div>"
           <div className="mt-6 flex gap-3">"
-            <a href="/pricing" className="px-5 py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover:bg-zion-cyan/20 transition-colors inline-flex items-center">View Full Pricing <ArrowRight className="w-4 h-4 ml-2"/></a>
-          </div>
+            <a href="/pricing" className="px-5 py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover:bg-zion-cyan/20 transition-colors inline-flex items-center">View Full Pricing <ArrowRight className="w-4 h-4 ml-2"/></a>          </div>
         </div>
       </section>
 "
@@ -71,8 +68,7 @@ export default function ITHelpdesk() {
         <div className="mt-10 text-center">"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;"
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg"><Phone className="w-4 h-4 mr-2"/> +1 302 464 0950</a>;"
-            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com</a>;
-          </div>;
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com</a>;          </div>;
         </div>;
       </section>;
     </div>;

@@ -20,8 +20,7 @@ export interface PricingTier2031 {
   implementationTime: string;
   supportLevel: string;
 }
-;
-export interface ServiceCategory2031 {
+;export interface ServiceCategory2031 {
 
   id: string;
   name: string;
@@ -50,8 +49,7 @@ export interface ServiceCategory2031 {
 };
   }[];
 }
-;
-export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
+;export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
   {
 
     id: 'ai-powered-micro-saas',

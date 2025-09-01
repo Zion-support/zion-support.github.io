@@ -1,4 +1,5 @@
 import React from 'react.ts';
+<<<<<<< HEAD
 import { SEO  } from "../../components/SEO";
 import { motion  } from 'framer-motion.ts';
 import { Users, 
@@ -99,6 +100,10 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           </div>"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Customer Experience Platform</h1>"
           <p className="text-rose-100 text-xl">Revolutionize your customer experience with AI-powered insights, personalization, and automation that delights customers and drives business growth.</p>
+=======
+import { SEO  } from "../../components/SEO";'
+import { motion  } from 'framer-motion.ts';          <p className="text-rose-100 text-xl">Revolutionize your customer experience with AI-powered insights, personalization, and automation that delights customers and drives business growth.</p>
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         </div>
       </section>
 "
@@ -109,8 +114,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             <ul className="space-y-3">
               {features.map((f) => ("
                 <li key={f} className="flex items-start">"
-                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"
-                  <span className="text-gray-700">{f}</span>
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"                  <span className="text-gray-700">{f}</span>
                 </li>
               ))}
             </ul>"
@@ -136,8 +140,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
               </a>"
               <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-gray-300 rounded-lg hover:border-pink-400 transition-colors inline-flex items-center">"
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
+                Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
             </div>
           </div>
         </div>
@@ -145,8 +148,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {['25-40% CSAT improvement',Real-time insights',AI personalization'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
-              <Brain className="w-6 h-6 text-pink-600 mb-3" />"
-              <div className="text-gray-900 font-semibold">{t}</div>
+              <Brain className="w-6 h-6 text-pink-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
         </div>
@@ -156,8 +158,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map((useCase) => ("
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">"
-                <MessageCircle className="w-5 h-5 text-pink-600 mr-3" />"
-                <span className="text-gray-700">{useCase}</span>
+                <MessageCircle className="w-5 h-5 text-pink-600 mr-3" />"                <span className="text-gray-700">{useCase}</span>
               </div>
             </div>;"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -172,14 +173,12 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Transform CX"
-                <ArrowRight className="w-5 h-5" />
-              </a>
+                <ArrowRight className="w-5 h-5" />              </a>
               <a "
                 href="tel:+13024640950"
                 className="border border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >"
-                <Phone className="w-5 h-5" />
-                CX Consultation
+                <Phone className="w-5 h-5" />                CX Consultation
               </a>
             </div>
           </motion.div>
@@ -304,8 +303,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center gap-3 text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -370,8 +368,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 <div className="space-y-3">
                   {useCase.benefits.map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center gap-3 text-green-400">"
-                      <TrendingUp className="w-5 h-5 flex-shrink-0" />
-                      {benefit}
+                      <TrendingUp className="w-5 h-5 flex-shrink-0" />                      {benefit}
                     </div>
                   ))}
                 </div>

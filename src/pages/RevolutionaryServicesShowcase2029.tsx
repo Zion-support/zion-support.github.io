@@ -25,6 +25,7 @@ import {
   Plane,
   Dna,
   Atom,
+<<<<<<< HEAD
   Link,
   Box} from 'lucide-react.ts';
 import { SEO } from '@/components/SEO';
@@ -67,6 +68,13 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
           parseFloat(b.price.replace('$',).replace(',,))
         );
       case 'price-high':
+=======
+  Link,'
+  Box} from 'lucide-react.ts';'
+import { SEO } from '@/components/SEO';'
+import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from '../../data/revolutionary-2029-cutting-edge-services';'
+import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolutionary-2029-emerging-tech-services';      case 'price-high':
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         return ('
           parseFloat(b.price.replace('$',).replace(',,)) -'
           parseFloat(a.price.replace('$',).replace(',,))
@@ -106,7 +114,6 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
       'AI & Metaverse': <Globe className="w-5 h-5" />};"
     return iconMap[category] || <Cpu className="w-5 h-5" />;
   };
-
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
@@ -116,8 +123,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
 
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>"
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>"        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -209,8 +215,12 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search revolutionary services..."
+=======
+                  type="text""                  placeholder="Search revolutionary services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -343,8 +353,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
                     <span>({service.reviews})</span>
                   </div>"
                   <div className="flex items-center gap-1">"
-                    <Users className="w-4 h-4" />
-                    <span>{service.customers} customers</span>
+                    <Users className="w-4 h-4" />                    <span>{service.customers} customers</span>
                   </div>
                 </div>
 
@@ -392,8 +401,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
                     Learn More
                   </a>"
                   <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300">"
-                    <Star className="w-4 h-4" />
-                  </button>
+                    <Star className="w-4 h-4" />                  </button>
                 </div>
               </div>
             </motion.div>) ) }

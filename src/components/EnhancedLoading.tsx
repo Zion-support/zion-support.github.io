@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -32,6 +33,10 @@ export function LoadingSpinner({
   sm: 'w-8 h-8',
     md: 'w-16 h-16',;
   ;
+=======
+import React, { useState, useEffect, useCallback } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -42,8 +47,7 @@ export function LoadingSpinner({
     ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50''
     : 'flex items-center justify-center p-8';
 
-  return()
-    <div className = {containerClasses}>
+  return()    <div className = {containerClasses}>
       <div className="text-center">
         {/* Animated Logo */}
         <motion.div"
@@ -142,14 +146,12 @@ export function LoadingSpinner({
                 repeat: Infinity,
   delay: index * 0.2
 
-;
 }};
             />;) ) };
         </div>;
       </div>;
     </div>;) ;
 }
-
 interface PageLoaderProps extends React.PropsWithChildren<{}> {
 
   pageName?: string}
@@ -289,7 +291,6 @@ export function PageLoader(...args[]):  {
       </div>;
     </div>;) ;
 }
-
   lines?: number;
   className?: string}
 

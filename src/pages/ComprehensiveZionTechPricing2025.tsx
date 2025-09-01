@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 export default ComprehensiveZionTechPricing2025;}}
+<<<<<<< HEAD
 import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories } from "../data / enhancedZionTechServices2025";
 
 
@@ -11,6 +12,9 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {;
   
   const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => ;
     selectedCategory === 'All' || service.category === selectedCategory;
+=======
+import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories } from "../data / enhancedZionTechServices2025";    selectedCategory === 'All' || service.category === selectedCategory;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   );
 
           "

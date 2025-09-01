@@ -1,91 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-
-  Brain,
-  Cloud,
-  Shield,
-  Server,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Globe as GlobeIcon,
-  Atom,
-  Blockchain,
-  Heart,
-  Scale,
-  Factory,
-  Satellite,
-  ShoppingCart,
-  Building,
-  Truck,
-  Eye,
-  EyeOff,
-  ExternalLink,
-  Award,
-  Target,
-  Lightbulb,
-  Sparkles,
-  Zap as ZapIcon,
-  Brain as BrainIcon,
-  Dna,
-  Space,
-  Layers,
-  Monitor,
-  Smartphone,
-  Globe2,
-  Leaf,
-  BarChart3,
-  PieChart,
-  TrendingDown,
-  Activity,
-  Shield as ShieldIcon,
-  Lock as LockIcon,
-  Key,
-  Database as DatabaseIcon,
-  Server as ServerIcon,
-  Wifi,
-  Smartphone as SmartphoneIcon,
-  Monitor as MonitorIcon,
-  Globe as GlobeIcon2,
-  Cpu as CpuIcon,
-  Brain as BrainIcon2,
-  Atom as AtomIcon,
-  Rocket as RocketIcon,
-  Satellite as SatelliteIcon,
-  Dna as DnaIcon,
-  Layers as LayersIcon,
-  Monitor as MonitorIcon2,
-  Smartphone as SmartphoneIcon2,
-  Globe as GlobeIcon3,
-  Cpu as CpuIcon2,
-  Network as NetworkIcon,
-  Leaf as LeafIcon'
-} from 'lucide-react';
-import SEO from "@/components/SEO";"
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
-
 export default function ComprehensiveServicesOverview2026(...args[]):  {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -237,10 +152,16 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO"
+<<<<<<< HEAD
         title="Comprehensive Services Overview 2026 | Zion Tech Group"
         description="Explore our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories. From Quantum AI to Sustainable Technology."
         keywords="comprehensive services, quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
       />
+=======
+        title="Comprehensive Services Overview 2026 | Zion Tech Group""
+        description="Explore our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories. From Quantum AI to Sustainable Technology.""        keywords="comprehensive services, quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple py-20">"
@@ -455,8 +376,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                       </>
                     ) : (
                       <>"
-                        <Eye className="w-4 h-4" />
-                        View All Services
+                        <Eye className="w-4 h-4" />                        View All Services
                       </>) }
                   </button>
 
@@ -531,8 +451,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                                 to="/contact"
                                 className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-sm"
 "
-                                <MessageCircle className="w-4 h-4" />
-                                Get Started;
+                                <MessageCircle className="w-4 h-4" />                                Get Started;
                               </Link>;
                             </div>) ) }
                         </div>
@@ -575,15 +494,13 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                 to="/contact"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-lg"
 "
-                <MessageCircle className="w-5 h-5" />
-                Start Your Journey
+                <MessageCircle className="w-5 h-5" />                Start Your Journey
               </Link>
               <a"
                 href="tel:+13024640950"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-slate-300 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg"
 "
-                <Phone className="w-5 h-5" />
-                Call Now
+                <Phone className="w-5 h-5" />                Call Now
               </a>
             </div>"
             <div className="mt-8 text-zion-slate-400">

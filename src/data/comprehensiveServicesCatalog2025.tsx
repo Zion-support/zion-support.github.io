@@ -1,7 +1,9 @@
+:src/data/comprehensiveServicesCatalog2025.tsx
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "./innovativeMicroSaasServices2025";"
 import { EXPANDED_INNOVATIVE_SERVICES_2025, SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "./expandedInnovativeServices2025";"
 import { EMERGING_TECH_SERVICES_2025, EMERGING_TECH_SOLUTIONS_2025 } from "./emergingTechServices2025";
 ;
+
 export interface ComprehensiveService2025 {
   id: string;
   title: string;
@@ -47,6 +49,7 @@ export const COMPREHENSIVE_SERVICES_CATALOG_2025: ComprehensiveService2025[] = [
 ];
 
 // Service categories for easy filtering
+:src/data/comprehensiveServicesCatalog2025.tsx
 export const SERVICE_CATEGORIES = ["
   "AI & Analytics","
   "AI & Customer Experience","
@@ -90,22 +93,53 @@ export const SERVICE_CATEGORIES = ["
 
 // Service pricing tiers;
 export const PRICING_TIERS = [;
+<<<<<<< HEAD
+=======
+  { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 },;'
+  { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000/month', count: 0 },;'
+export 
+  "Sustainability",;
+  "Manufacturing",;
+  "Retail",;
+  "Energy",;
+  "Transportation",;
+  "Logistics";
+];
+
+// Service pricing tiers
+export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 },;
   { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000/month', count: 0 },;
   { id: 'enterprise', name: 'Enterprise', range: '$5,000+/month', count: 0 };
 ];
 
 // Innovation levels
+<<<<<<< HEAD
 export const INNOVATION_LEVELS = [;
+=======
+:src/data/comprehensiveServicesCatalog2025.tsx
+export const INNOVATION_LEVELS = [;'
+  { id: 'advanced', name: 'Advanced', count: 0 },;'
+  { id: 'cutting-edge', name: 'Cutting-edge', count: 0 },;'
+export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   { id: 'advanced', name: 'Advanced', count: 0 },;
   { id: 'cutting-edge', name: 'Cutting-edge', count: 0 },;
   { id: 'revolutionary', name: 'Revolutionary', count: 0 };
 ];
 
 // Support levels
+<<<<<<< HEAD
 export const SUPPORT_LEVELS = [;
   { id: 'standard', name: 'Standard', count: 0 },;
   { id: 'premium', name: 'Premium', count: 0 },;
+=======
+:src/data/comprehensiveServicesCatalog2025.tsx
+export const SUPPORT_LEVELS = [;'
+  { id: 'standard', name: 'Standard', count: 0 },;'
+  { id: 'premium', name: 'Premium', count: 0 },;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   { id: 'enterprise', name: 'Enterprise', count: 0 };
 ];
 
@@ -116,6 +150,14 @@ export const calculateServiceStats = (...args: unknown[]): unknown => {
   totalServices: COMPREHENSIVE_SERVICES_CATALOG_2025.length,
     categories: SERVICE_CATEGORIES.length,
     pricingTiers: PRICING_TIERS.map(tier => ({;
+export 
+  { id: 'standard', name: 'Standard', count: 0 },;
+  { id: 'premium', name: 'Premium', count: 0 },;
+  { id: 'enterprise', name: 'Enterprise', count: 0 };
+];
+
+// Calculate counts for each category
+export 
       ...tier,;
   ;
   ;
@@ -124,13 +166,7 @@ export const calculateServiceStats = (...args: unknown[]): unknown => {
         if (tier.id === 'budget') return service.price <= 1000;
         if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
         if (tier.id === 'enterprise') return service.price > 5000;
-        return false;
-      
-
-
-
-
-}).length
+        return false}).length
     })),;
     innovationLevels: INNOVATION_LEVELS.map(level = > ({
 
@@ -143,14 +179,12 @@ export const calculateServiceStats = (...args: unknown[]): unknown => {
       ...level,;
       count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => ;
         service.supportLevel.toLowerCase() === level.id;
-      ).length;
-    }));
-  };
+      ).length}))};
 
-  return stats;
-};
+  return stats};
 
 // Get services by category
+:src/data/comprehensiveServicesCatalog2025.tsx
 export const getServicesByCategory = (category: string) => {
 
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
@@ -186,25 +220,55 @@ export const getServicesBySupportLevel = (level: string) => {
 export const searchServices = (query: string) => {
 
   const searchTerm = query.toLowerCase();
+export 
+};
+
+// Get services by price range
+export 
+};
+
+// Get services by innovation level
+export 
+};
+
+// Get services by support level
+export 
+};
+
+// Search services
+export 
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.title.toLowerCase().includes(searchTerm) ||
     service.description.toLowerCase().includes(searchTerm) ||
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
     service.category.toLowerCase().includes(searchTerm) ||
     service.subcategory.toLowerCase().includes(searchTerm)
-  );
-};
+  )};
 
+:src/data/comprehensiveServicesCatalog2025.tsx
 // Get featured services (high ROI and innovation);
 export const getFeaturedServices = (...args: unknown[]): unknown => {;
   return COMPREHENSIVE_SERVICES_CATALOG_2025;
+<<<<<<< HEAD
     .sort((a, b) => {;
       const aScore = parseInt(a.roi.replace(/\D/g,)) + (a.innovationLevel === 'Cutting-edge' ? 100 : 0);
       const bScore = parseInt(b.roi.replace(/\D/g,)) + (b.innovationLevel === 'Cutting-edge' ? 100 : 0);
+=======
+    .sort((a, b) => {;'
+      const aScore = parseInt(a.roi.replace(/\D/g, '')) + (a.innovationLevel === 'Cutting-edge' ? 100 : 0);'
+      const bScore = parseInt(b.roi.replace(/\D/g, '')) + (b.innovationLevel === 'Cutting-edge' ? 100 : 0);
+// Get featured services (high ROI and innovation)
+export 
+  return COMPREHENSIVE_SERVICES_CATALOG_2025;
+    .sort((a, b) => {;
+      
+      
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       return bScore - aScore})
     .slice(0, limit)};
 
 // Get trending services (recent and popular)
+:src/data/comprehensiveServicesCatalog2025.tsx
 export const getTrendingServices = (limit: number = 10) => {;
   return COMPREHENSIVE_SERVICES_CATALOG_2025;
     .filter(service => service.betaAccess || service.launchDate?.includes('2025'));
@@ -223,15 +287,28 @@ export const getServicesByIndustry = (industry: string)  => {
     'iot': ['IoT & Edge Computing',Edge AI'],;
     'ai': ['AI & Analytics',AI & Customer Experience',AI & Business Automation',AI & Robotics'];
   };
+export 
+  return COMPREHENSIVE_SERVICES_CATALOG_2025;
+    .filter(service => service.betaAccess || service.launchDate?.includes('2025'));
+    .sort((a, b) => b.price - a.price) // Higher price often indicates more demand;
+    .slice(0, limit)};
 
-  const categories = industryMap[industry.toLowerCase()] || [];
+// Get services by industry
+export 
+    'blockchain': ['Blockchain', 'DeFi & NFTs', 'Supply Chain & Sustainability'],;
+    'quantum': ['Quantum Computing', 'Quantum AI', 'Quantum Security', 'Quantum Finance', 'Quantum Chemistry'],;
+    'iot': ['IoT & Edge Computing', 'Edge AI'],;
+    'ai': ['AI & Analytics', 'AI & Customer Experience', 'AI & Business Automation', 'AI & Robotics']};
+
+  
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     categories.some(category => service.category.includes(category))
-  );
-};
+  )};
 
 // Get service recommendations based on user preferences
+:src/data/comprehensiveServicesCatalog2025.tsx
 export const getServiceRecommendations = (preferences: {
+export 
   industry?: string;
   budget?: number;
   innovationLevel?: string;
@@ -240,6 +317,7 @@ export const getServiceRecommendations = (preferences: {
   let recommendations = COMPREHENSIVE_SERVICES_CATALOG_2025;
 
   if (preferences.industry) {
+:src/data/comprehensiveServicesCatalog2025.tsx
 
     recommendations = getServicesByIndustry(preferences.industry);
   }
@@ -248,13 +326,16 @@ export const getServiceRecommendations = (preferences: {
 
     recommendations = recommendations.filter(service => service.price <= preferences.budget!);
   }
+    recommendations = getServicesByIndustry(preferences.industry)}
+
+  if (preferences.budget) {
+    recommendations = recommendations.filter(service => service.price <= preferences.budget!)}
 
   if (preferences.innovationLevel) {
 
     recommendations = recommendations.filter(service =>
       service.innovationLevel.toLowerCase() === preferences.innovationLevel!.toLowerCase()
-    );
-  }
+    )}
 
   if (preferences.supportLevel) {
 
@@ -263,13 +344,24 @@ export const getServiceRecommendations = (preferences: {
     )};
     recommendations = recommendations.filter(service => ;
       service.innovationLevel.toLowerCase() === preferences.innovationLevel!.toLowerCase();
-    );
-  }
+    )}
 
   return recommendations.sort((a, b) => {
+<<<<<<< HEAD
 
     const aScore = parseInt(a.roi.replace(/\D/g,));
     const bScore = parseInt(b.roi.replace(/\D/g,));
+=======
+:src/data/comprehensiveServicesCatalog2025.tsx
+'
+    const aScore = parseInt(a.roi.replace(/\D/g, ''));'
+    const bScore = parseInt(b.roi.replace(/\D/g, ''));
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     return bScore - aScore})};
 
 export default COMPREHENSIVE_SERVICES_CATALOG_2025;}}}}}'"
+    
+    
+    return bScore - aScore})};
+
+export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}

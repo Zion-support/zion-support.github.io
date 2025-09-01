@@ -1,30 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { ChevronLeft, ChevronRight, Star, Quote  } from 'lucide-react';
-
-interface Testimonial {
-  id: number;
-  name: string;
-  role: string;
-  comp: string;
-  content: string;
-  rating: number;
-  avatar: string;
-  industry: string
-}
-
-  const nextTestimonial = (...args: unknown[]): unknown => {;
-    setCurrentIndex(prev: unknown (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = (...args: unknown[]): unknown => {;
-    setCurrentIndex(prev: unknown (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const goToTestimonial = (...args: unknown[]): unknown => {;
-    setCurrentIndex(index);
-  };
-
   return()
     <section className = "py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">"
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,8 +32,7 @@ interface Testimonial {
           viewport={{ once: true }}
 "
           <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">"
-            <Quote className="w-4 h-4 text-zion-cyan mr-2" />"
-            <span className="text-zion-cyan text-sm font-medium">Client Success Stories</span>
+            <Quote className="w-4 h-4 text-zion-cyan mr-2" />"            <span className="text-zion-cyan text-sm font-medium">Client Success Stories</span>
           </div>
 "
           <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">"
@@ -117,8 +92,7 @@ interface Testimonial {
               {/* Rating */}"
               <div className="flex justify-center mb-6">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => ("
-                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                ))}
+                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />                ))}
               </div>
 
               {/* Quote */}"
@@ -153,16 +127,14 @@ interface Testimonial {
             className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
             aria-label="Previous testimonial"
 "
-            <ChevronLeft className="w-6 h-6" />
-          </button>
+            <ChevronLeft className="w-6 h-6" />          </button>
 
           <button
             onClick={nextTestimonial}"
             className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
             aria-label="Next testimonial"
 "
-            <ChevronRight className="w-6 h-6" />
-          </button>;
+            <ChevronRight className="w-6 h-6" />          </button>;
         </div>
 
         {/* Dots Indicator */}"
@@ -188,36 +160,15 @@ interface Testimonial {
           initial = {
 
   { opacity: 0,
-  y: 20 ;
-
-
-
-
-
-
-}}
+  y: 20 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
           transition = {
 
   { duration: 0.8,
-  delay: 0.4 ;
-
-
-
-
-
-
-}}
+  delay: 0.4 }}
           viewport={{ once: true }}
 "
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>"
@@ -242,7 +193,6 @@ interface Testimonial {
         </motion.div>;
       </div>;
     </section>;
-  );
-};
+  )};
 
 export default Testimonials;}}}'"`

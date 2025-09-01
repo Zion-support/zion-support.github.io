@@ -6,6 +6,7 @@ import {
   BarChart3,
   Search,
   Zap,
+<<<<<<< HEAD
   CheckCircle2,
   Link as LinkIcon} from 'lucide-react.ts';
 
@@ -69,6 +70,10 @@ export default function SEOAuditor(...args: any[]): any {
         <div className="container-responsive">"
           <h1 className="heading-responsive text-gradient">AI SEO Auditor</h1>"
           <p className="text-responsive text-zion-blue-light/80 max-w-2xl mt-4">
+=======
+  CheckCircle2,'
+  Link as LinkIcon} from 'lucide-react.ts';          <p className="text-responsive text-zion-blue-light/80 max-w-2xl mt-4">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             Ship faster with AI-driven audits, clear priorities, and one-click
             fixes.
           </p>"

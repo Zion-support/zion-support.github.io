@@ -9,8 +9,7 @@ import {
   Zap,
   Brain,
   Cloud,
-  Shield,
-  Rocket,
+  Shield,  Rocket,
   ArrowRight,
   Users,
   Building,
@@ -243,8 +242,7 @@ import {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'};
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
         <div className="container-responsive">
@@ -319,8 +317,7 @@ import {
                 {tier.popular && ("
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">"
-                      <Star className="w-4 h-4" />
-                      Most Popular
+                      <Star className="w-4 h-4" />                      Most Popular
                     </div>
                   </div>
                 )}
@@ -345,8 +342,7 @@ import {
                   <ul className="space-y-4 mb-8">
                     {tier.features.map((feature, idx) => ("
                       <li key={idx} className="flex items-center gap-3">"
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-                        <span className="text-gray-300">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -478,8 +474,7 @@ import {
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm mt-4"
                 >
                   Get Custom Quote"
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                  <ArrowRight className="w-4 h-4" />                </Link>
               </motion.div>) ) }
           </div>
         </div>
@@ -497,8 +492,7 @@ import {
           >"
             <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-3xl p-12 border border-slate-600/50">"
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">"
-                <Calculator className="w-10 h-10 text-white" />
-              </div>
+                <Calculator className="w-10 h-10 text-white" />              </div>
 "
               <h2 className="text-4xl font-bold text-white mb-6">
                 Need a Custom Quote?
@@ -525,8 +519,7 @@ import {
                   to="/demo"
                   className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300"
                 >"
-                  <Play className="w-5 h-5 inline mr-2" />
-                  Schedule Demo
+                  <Play className="w-5 h-5 inline mr-2" />                  Schedule Demo
                 </Link>
               </div>
             </div>
@@ -591,8 +584,7 @@ import {
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Visit Us
                 </h3>"
-                <p className="text-slate-300 text-sm">{contactInfo.address}</p>
-              </div>
+                <p className="text-slate-300 text-sm">{contactInfo.address}</p>              </div>
             </div>
           </motion.div>
         </div>

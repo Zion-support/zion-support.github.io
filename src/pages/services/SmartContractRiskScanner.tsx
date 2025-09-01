@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from "../../components/SEO";
 import {
-
   Shield, 
   Search, 
   AlertTriangle, 
@@ -128,27 +127,45 @@ export default function SmartContractRiskScanner(...args: []):  {
       period: '',
       description: 'Tailored solutions for large organizations and enterprises',
       features: ['
+<<<<<<< HEAD
         'Unlimited smart contracts',Custom security frameworks',White-label solutions',Dedicated infrastructure',24/7 dedicated support',Custom integrations',;
         'On-premise deployment',;
         'Compliance certifications';
       ],;
+=======
+        'Unlimited smart contracts','
+        'Custom security frameworks','
+        'White-label solutions','
+        'Dedicated infrastructure','
+        '24/7 dedicated support','
+        'Custom integrations',;'
+        'On-premise deployment',;'        'Compliance certifications';
+      ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
-      popular: false;
-    };
+      popular: false};
   ];
 
   const marketInfo = {
+<<<<<<< HEAD
 
   marketSize: '$2.8 billion',
     growthRate: '23.4% CAGR',
     averageMarketPrice: '$500-$2,000/month',
     setupTime: '1-2 weeks',;
   ;
+=======
+'
+  marketSize: '$2.8 billion','
+    growthRate: '23.4% CAGR','
+    averageMarketPrice: '$500-$2,000/month','
+    setupTime: '1-2 weeks',;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   roi: '300-500% within 6 months';
-  ;
+  };
 
 
 
@@ -167,6 +184,7 @@ export default function SmartContractRiskScanner(...args: []):  {
     'Base';
   ];
 
+<<<<<<< HEAD
   const securityStandards = [;
     'OWASP Top 10',;
     'Smart Contract Security Verification Standard',;
@@ -174,14 +192,27 @@ export default function SmartContractRiskScanner(...args: []):  {
     'DeFi Security Guidelines',;
     'ISO 27001 Compliance',;
     'SOC 2 Type II';
+=======
+  const securityStandards = [;'
+    'OWASP Top 10',;'
+    'Smart Contract Security Verification Standard',;'
+    'Ethereum Security Best Practices',;'
+    'DeFi Security Guidelines',;'
+    'ISO 27001 Compliance',;'    'SOC 2 Type II';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="Smart Contract Risk Scanner - Zion Tech Group"
         description="AI-powered smart contract security scanner with automated vulnerability detection, multi-chain support, and comprehensive risk assessment. Protect your DeFi projects from security threats."
       />
+=======
+        title="Smart Contract Risk Scanner - Zion Tech Group""        description="AI-powered smart contract security scanner with automated vulnerability detection, multi-chain support, and comprehensive risk assessment. Protect your DeFi projects from security threats."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 overflow-hidden">"
@@ -214,8 +245,7 @@ export default function SmartContractRiskScanner(...args: []):  {
             className="text-center"
 "
             <div className="inline-flex items-center space-x-2 bg-red-600/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4" />
-              <span>Blockchain Security Solution</span>
+              <Shield className="w-4 h-4" />              <span>Blockchain Security Solution</span>
             </div>
 "
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">"
@@ -238,8 +268,7 @@ export default function SmartContractRiskScanner(...args: []):  {
                 className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 flex items-center justify-center space-x-2"
 
                 <span>Start Free Trial</span>"
-                <ArrowRight className="w-5 h-5" />
-              </motion.button>
+                <ArrowRight className="w-5 h-5" />              </motion.button>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -382,8 +411,7 @@ export default function SmartContractRiskScanner(...args: []):  {
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => ("
                         <li key={idx} className="flex items-center space-x-2 text-sm text-gray-400">"
-                          <CheckCircle className="w-4 h-4 text-red-400" />
-                          <span>{benefit}</span>
+                          <CheckCircle className="w-4 h-4 text-red-400" />                          <span>{benefit}</span>
                         </li>
                       ))}
                     </ul>
@@ -484,8 +512,7 @@ export default function SmartContractRiskScanner(...args: []):  {
                 <ul className="space-y-2">
                   {capability.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">"
-                      <CheckCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
-                      <span>{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-red-400 flex-shrink-0" />                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -574,8 +601,7 @@ export default function SmartContractRiskScanner(...args: []):  {
 "
                 <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
                   <Globe className="w-6 h-6 text-white" />
-                </div>"
-                <h3 className="text-lg font-semibold text-white">{network}</h3>
+                </div>"                <h3 className="text-lg font-semibold text-white">{network}</h3>
               </motion.div>;
             ))}
           </div>
@@ -661,8 +687,7 @@ export default function SmartContractRiskScanner(...args: []):  {
 "
                 <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
                   <Award className="w-6 h-6 text-white" />
-                </div>"
-                <h3 className="text-lg font-semibold text-white">{standard}</h3>
+                </div>"                <h3 className="text-lg font-semibold text-white">{standard}</h3>
               </motion.div>;
             ))}
           </div>
@@ -771,8 +796,7 @@ export default function SmartContractRiskScanner(...args: []):  {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center space-x-3 text-sm text-gray-300">"
-                      <CheckCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
-                      <span>{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-red-400 flex-shrink-0" />                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>

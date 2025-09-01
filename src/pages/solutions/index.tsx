@@ -9,8 +9,7 @@ import {
   Server,
   BarChart3,
   Users,
-  ShoppingCart,
-  Building,
+  ShoppingCart,  Building,
   Heart,
   Globe,
   Zap,
@@ -292,8 +291,7 @@ export default function Solutions(...args: any[]): any {
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>"
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -375,8 +373,7 @@ export default function Solutions(...args: any[]): any {
                       <Star className="w-4 h-4 text-yellow-400" />"
                       <span className="text-xs text-yellow-400 font-medium">
                         Featured
-                      </span>
-                    </div>
+                      </span>                    </div>
                   )}
                 </Link>
               </motion.div>

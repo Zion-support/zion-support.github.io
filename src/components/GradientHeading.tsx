@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 
@@ -27,6 +28,11 @@ const GradientHeading = React.forwardRef<HTMLHeadingElement, GradientHeadingProp
   }
 );
 
+=======
+import React from 'react';'
+import { cn } from '@/lib/utils';);
+'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 GradientHeading.displayName = 'GradientHeading';
 
 export { GradientHeading };

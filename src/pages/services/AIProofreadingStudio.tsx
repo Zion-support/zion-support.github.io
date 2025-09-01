@@ -5,8 +5,7 @@ const AIProofreadingStudio: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">"
     <SEO title="AI Proofreading Studio - Zion Tech Group" description="AI-powered proofreading, tone, and localization for marketing and technical content." />"
     <section className="container mx-auto px-4 py-12">"
-      <h1 className="text-4xl font-bold mb-4">AI Proofreading Studio</h1>"
-      <p className="text-slate-300 max-w-3xl">Improve clarity, tone, and accuracy across blogs, docs, and emails. Enforce brand voice and compliance with customizable playbooks.</p>
+      <h1 className="text-4xl font-bold mb-4">AI Proofreading Studio</h1>"      <p className="text-slate-300 max-w-3xl">Improve clarity, tone, and accuracy across blogs, docs, and emails. Enforce brand voice and compliance with customizable playbooks.</p>
     </section>"
     <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">"
       <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">"

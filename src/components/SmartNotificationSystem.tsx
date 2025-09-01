@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -46,8 +47,13 @@ import {
 interface SmartNotificationSystemProps {
   // Add your props here
 
+=======
+import React from 'react';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
+type SmartNotificationSystemProps = {
   enabled?: boolean;
+<<<<<<< HEAD
   maxNotifications?: number;
   autoDismiss?: boolean;
   autoDismissDelay?: number;
@@ -661,5 +667,13 @@ export const addNotification = ('
 
   // This will be implemented by the component instance'
   // console.warn('addNotification called before component initialization');
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 };
-'"`
+
+const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
+  if (!enabled) return null;
+  return <div className="hidden" aria-hidden="true" />;
+};
+
+export default SmartNotificationSystem;

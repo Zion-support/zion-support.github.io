@@ -9,8 +9,7 @@ import {
   Cloud,
   Shield,
   Users,
-  BarChart3,
-  Zap,
+  BarChart3,  Zap,
   ArrowRight,
   CheckCircle,
   Star,
@@ -110,8 +109,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
   const industries = ['
     'Healthcare',Finance',Manufacturing',Retail',Education',Government',Technology',Transportation',
   ];
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10"></div>"
@@ -122,8 +120,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium mb-6">"
-              <Zap className="w-4 h-4 mr-2" />
-              Digital Transformation Solutions
+              <Zap className="w-4 h-4 mr-2" />              Digital Transformation Solutions
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -145,8 +142,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
                 Start Transformation
               </button>"
               <button className="px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-200 flex items-center justify-center">"
-                <Settings className="w-5 h-5 mr-2" />
-                Schedule Consultation
+                <Settings className="w-5 h-5 mr-2" />                Schedule Consultation
               </button>
             </div>
           </motion.div>
@@ -264,8 +260,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
                   transition={{ duration: 0.5, delay: index * 0.1 }}"
                   className="flex items-start space-x-3"
                 >"
-                  <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />"
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                  <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />"                  <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
               ))}
             </div>"
@@ -278,8 +273,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
                   transition={{ duration: 0.5, delay: index * 0.1 }}"
                   className="flex items-start space-x-3"
                 >"
-                  <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />"
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                  <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />"                  <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
               ))}
             </div>
@@ -318,8 +312,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {useCase.industry}
-                </h3>"
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
+                </h3>"                <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -346,8 +339,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 flex items-center justify-center">
                 Get Started Today"
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </button>"
-              <button className="px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-200">
+              </button>"              <button className="px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-200">
                 Contact Sales
               </button>
             </div>
@@ -357,6 +349,5 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
     </div>
   );
 }
-
 export default DigitalTransformation;
 '"

@@ -21,9 +21,14 @@ export default FuturisticAnimatedBackground;
     window.addEventListener('resize', resizeCanvas);
 
     // Add enhanced grid background'
+<<<<<<< HEAD
     const gridCanvas = document.createElement('canvas');
     const gridCtx = gridCanvas.getContext('2d');
     if (gridCtx) {
+=======
+    const gridCanvas = document.createElement('canvas');'
+    const gridCtx = gridCanvas.getContext('2d');    if (gridCtx) {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       gridCanvas.width = canvas.width;
       gridCanvas.height = canvas.height;
@@ -37,22 +42,19 @@ export default FuturisticAnimatedBackground;
         gridCtx.beginPath();
         gridCtx.moveTo(x, 0);
         gridCtx.lineTo(x, gridCanvas.height);
-        gridCtx.stroke();
-      }
+        gridCtx.stroke()}
       
       for (let y = 0; y < gridCanvas.height; y += 40) {
 
         gridCtx.beginPath();
         gridCtx.moveTo(0, y);
         gridCtx.lineTo(gridCanvas.width, y);
-        gridCtx.stroke();
-      }
+        gridCtx.stroke()}
     }
 
     // Animation variables
     let animationId: number;
-    const time = 0;
-
+    
     // Particle system
     const particles: Array<{
 
@@ -72,7 +74,6 @@ export default FuturisticAnimatedBackground;
       const y = Math.random () * canvas.height;
       const angle = Math.random () * Math.PI * 2;
       const speed = Math.random () * 0.5 + 0.1;
-
       particles.push({
 
         x,
@@ -87,8 +88,7 @@ export default FuturisticAnimatedBackground;
     };
 
     // Update and draw particles
-    const animate = (...args: unknown[]): unknown => {;
-      time += 0.01;
+    const animate = (...args: unknown[]): unknown => {;      time += 0.01;
 
       // Clear canvas with fade effect'
       ctx.fillStyle = 'rgba(2, 6, 23, 0.1);
@@ -103,7 +103,6 @@ export default FuturisticAnimatedBackground;
       for (let i = particles.length - 1; i >= 0; i--) {
 
         const particle = particles[i];
-
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -118,7 +117,6 @@ export default FuturisticAnimatedBackground;
         // Draw particle with glow effect
         const alpha = 1 - (particle.life / particle.maxLife) ;
         const size = particle.size * (1 - alpha * 0.5) ;
-
         // Outer glow
         ctx.shadowColor = particle.color;
         ctx.shadowBlur = 20;
@@ -140,9 +138,8 @@ export default FuturisticAnimatedBackground;
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.3;
 
-      const gridSize = 50;
-      const offsetY = (time * 5) % gridSize;
-
+      
+      
       // Vertical lines
       for (let x = offsetX; x < canvas.width; x += gridSize) {
 
@@ -182,8 +179,12 @@ export default FuturisticAnimatedBackground;
 
       // Floating circle
       const circleSize = 20 + Math.sin(time * 2) * 10;
+<<<<<<< HEAD
 
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.5);
+=======
+'      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ctx.beginPath();
       ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2);
       ctx.stroke();
@@ -207,7 +208,6 @@ export default FuturisticAnimatedBackground;
 
       animationId = requestAnimationFrame (animate) ;
     };
-
     animate () ;
 
     return () => {
@@ -216,7 +216,6 @@ export default FuturisticAnimatedBackground;
       cancelAnimationFrame(animationId);
     };
   }, []) ;
-
   return()
     <canvas
       ref = {canvasRef}

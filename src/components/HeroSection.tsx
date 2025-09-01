@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -34,6 +35,11 @@ interface HeroSlide {
 }
 ;
 const heroSlides: HeroSlide[] = [
+=======
+import React, { useState, useEffect, useCallback, useMemo } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';'
+import { Link } from 'react-router-dom';const heroSlides: HeroSlide[] = [
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   {
 
     id: 'ai-solutions',
@@ -119,7 +125,6 @@ const swipePower = (offset: number, velocity: number) => {
 
   return Math.abs(offset) * velocity;
 };
-
   const [currentSlide, setCurrentSlide] = useState (0) ;
   const [isAutoPlaying, setIsAutoPlaying] = useState (true) ;
   const [direction, setDirection] = useState (0) ;
@@ -152,7 +157,6 @@ const swipePower = (offset: number, velocity: number) => {
     },
     [currentSlide]
   );
-
   // Auto-play functionality with pause on hover
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -168,14 +172,19 @@ const swipePower = (offset: number, velocity: number) => {
   // Handle keyboard navigation
   useEffect ( () => {
     const handleKeyDown = (e: KeyboardEvent) => {
+<<<<<<< HEAD
 
       if (e.key === 'ArrowLeft') prevSlide();
       if (e.key === 'ArrowRight') nextSlide();
       if (e.key === ' ') {
+=======
+'
+      if (e.key === 'ArrowLeft') prevSlide();'
+      if (e.key === 'ArrowRight') nextSlide();'      if (e.key === ' ') {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         e.preventDefault();
-        setIsAutoPlaying(!isAutoPlaying);
-      }
+        setIsAutoPlaying(!isAutoPlaying)}
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -204,7 +213,7 @@ const swipePower = (offset: number, velocity: number) => {
   }, [memoizedSlides]) ;
 
   const currentSlideData = memoizedSlides[currentSlide];
-
+  
   if (isLoading) {
 
     return ("
@@ -217,7 +226,6 @@ const swipePower = (offset: number, velocity: number) => {
         </div>
       </div>) ;
   }
-
   return ("
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Background Pattern */}"
@@ -243,8 +251,7 @@ const swipePower = (offset: number, velocity: number) => {
                 transition={{ duration: 0.6, delay: 0.4 }}"
                 className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-300 text-sm font-medium"
               >"
-                <Star className="w-4 h-4 mr-2 text-yellow-400" />
-                Leading Technology Solutions
+                <Star className="w-4 h-4 mr-2 text-yellow-400" />                Leading Technology Solutions
               </motion.div>
 
               <motion.h1
@@ -286,8 +293,7 @@ const swipePower = (offset: number, velocity: number) => {
             >
               {currentSlideData.features.map((feature, index) => ("
                 <div key={feature} className="flex items-center space-x-2">"
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />"
-                  <span className="text-slate-300 text-sm">{feature}</span>
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />"                  <span className="text-slate-300 text-sm">{feature}</span>
                 </div>
               ))}
             </motion.div>
@@ -304,8 +310,7 @@ const swipePower = (offset: number, velocity: number) => {
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
               >
                 {currentSlideData.cta}"
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+                <ArrowRight className="w-5 h-5 ml-2" />              </Link>
 
               <button
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}"
@@ -319,8 +324,7 @@ const swipePower = (offset: number, velocity: number) => {
                   <Pause className="w-5 h-5" />
                 ) : ("
                   <Play className="w-5 h-5" />
-                )}
-              </button>
+                )}              </button>
             </motion.div>
 
             {/* Stats */}
@@ -391,8 +395,7 @@ const swipePower = (offset: number, velocity: number) => {
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm"
         aria-label="Previous slide"
       >"
-        <ChevronLeft className="w-6 h-6" />
-      </button>
+        <ChevronLeft className="w-6 h-6" />      </button>
 
       <button
         onClick={nextSlide}"
@@ -403,6 +406,5 @@ const swipePower = (offset: number, velocity: number) => {
       </button>
     </section>) ;
 }
-
 export { HeroSection };
 '"`

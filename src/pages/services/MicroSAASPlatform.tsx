@@ -8,8 +8,7 @@ import {
   Database,
   Cloud,
   Users,
-  Target,
-  ArrowRight,
+  Target,  ArrowRight,
   CheckCircle,
   Star,
   Award,
@@ -213,8 +212,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       duration: '1-2 weeks'},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50">
       <Helmet>
         <title>Micro SAAS Platform - Zion Tech Group</title>
         <meta"
@@ -245,8 +243,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
 "
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm mb-8">"
-            <Rocket className="w-4 h-4 text-purple-300" />
-            <span>Micro SAAS Platform</span>
+            <Rocket className="w-4 h-4 text-purple-300" />            <span>Micro SAAS Platform</span>
           </div>
 "
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
@@ -268,8 +265,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Start Building"
-              <ArrowRight className="w-5 h-5" />
-            </a>
+              <ArrowRight className="w-5 h-5" />            </a>
             <a"
               href="#demo"
               className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
@@ -289,8 +285,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
               <span>Enterprise Security</span>
             </div>"
             <div className="flex items-center gap-2">"
-              <Users className="w-5 h-5 text-purple-400" />
-              <span>500+ Successful Launches</span>
+              <Users className="w-5 h-5 text-purple-400" />              <span>500+ Successful Launches</span>
             </div>
           </div>
         </div>
@@ -331,8 +326,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
                         key={idx}"
                         className="flex items-center gap-3 text-gray-700"
                       >"
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                        <span>{benefit}</span>
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />                        <span>{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -379,8 +373,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
                       key={idx}"
                       className="flex items-center gap-3 text-gray-700"
                     >"
-                      <Code className="w-5 h-5 text-purple-500 flex-shrink-0" />
-                      <span>{feature}</span>
+                      <Code className="w-5 h-5 text-purple-500 flex-shrink-0" />                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -421,8 +414,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
                       key={idx}"
                       className="flex items-center gap-3 text-gray-700"
                     >"
-                      <TrendingUp className="w-5 h-5 text-purple-500 flex-shrink-0" />"
-                      <span className="font-semibold">{metric}</span>
+                      <TrendingUp className="w-5 h-5 text-purple-500 flex-shrink-0" />"                      <span className="font-semibold">{metric}</span>
                     </div>
                   ))}
                 </div>
@@ -456,8 +448,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
                 </h3>"
                 <p className="text-gray-600 mb-3">{phase.description}</p>"
                 <div className="inline-flex items-center gap-2 text-purple-600 font-semibold">"
-                  <Clock className="w-4 h-4" />
-                  <span>{phase.duration}</span>
+                  <Clock className="w-4 h-4" />                  <span>{phase.duration}</span>
                 </div>
               </div>
             ))}
@@ -517,8 +508,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
                       key={idx}"
                       className="flex items-center gap-3 text-gray-700"
                     >"
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span>{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -547,8 +537,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
               className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold"
             >
               Contact our development team"
-              <ArrowRight className="w-4 h-4" />
-            </a>
+              <ArrowRight className="w-4 h-4" />            </a>
           </div>
         </div>
       </section>
@@ -571,8 +560,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
               className="inline-flex items-center gap-2 bg-white text-purple-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Start Building"
-              <ArrowRight className="w-5 h-5" />
-            </a>
+              <ArrowRight className="w-5 h-5" />            </a>
             <a"
               href="/contact"
               className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
@@ -591,8 +579,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
               <span>No setup fees</span>
             </div>"
             <div className="flex items-center gap-2">"
-              <Users className="w-5 h-5 text-blue-400" />
-              <span>Expert development support</span>
+              <Users className="w-5 h-5 text-blue-400" />              <span>Expert development support</span>
             </div>
           </div>
         </div>

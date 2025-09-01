@@ -846,8 +846,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
 ];
 
 // Export all expanded services;
-export const ALL_EXPANDED_SERVICES_2027 = [;
-  ...advancedCybersecurityServices,;
+export const ALL_EXPANDED_SERVICES_2027 = [;  ...advancedCybersecurityServices,;
   ...advancedDataAnalyticsServices,;
   ...advancedCloudDevOpsServices,;
   ...advancedIoTServices,;
@@ -857,6 +856,7 @@ export const ALL_EXPANDED_SERVICES_2027 = [;
 
 // Service categories for filtering
 export const EXPANDED_SERVICE_CATEGORIES = ['
+<<<<<<< HEAD
   'All',;
   'Cybersecurity',;
   'Data Analytics',;
@@ -869,10 +869,21 @@ export const EXPANDED_SERVICE_CATEGORIES = ['
 // Helper function to get services by category
 export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {;
   if (category === 'All') {;
+=======
+  'All',;'
+  'Cybersecurity',;'
+  'Data Analytics',;'
+  'Cloud & DevOps',;'
+  'IoT & Edge Computing',;'
+  'Financial Technology',;'  'Healthcare Technology';
+];
+
+// Helper function to get services by category
+export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {;'  if (category === 'All') {;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     return ALL_EXPANDED_SERVICES_2027;
 
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);
-};
+  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)};
 
 // Helper function to get services by subcategory;
 export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] => {;
@@ -881,8 +892,7 @@ export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedS
 
 // Helper function to search services;
 export const searchExpandedServices = (query: string): ExpandedService2027[] => {;
-  const lowercaseQuery = query.toLowerCase();
-  return ALL_EXPANDED_SERVICES_2027.filter(service =>
+  const lowercaseQuery = query.toLowerCase();  return ALL_EXPANDED_SERVICES_2027.filter(service =>
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery) ||

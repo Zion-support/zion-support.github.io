@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Atom, 
@@ -35,6 +36,11 @@ const QuantumAIPlatform = (...args: unknown[]): unknown => {
         "Drug discovery acceleration";
       ];
     };
+=======
+import React from 'react.ts';'
+import { Link  } from 'react-router-dom.ts';        "Drug discovery acceleration";
+      ]};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const pricingPlans = [
@@ -75,12 +81,10 @@ const QuantumAIPlatform = (...args: unknown[]): unknown => {
         "24/7 dedicated support","
         "White-label solutions","
         "On-premise deployment",;"
-        "SLA guarantees",;"
-        "Quantum strategy consulting";
+        "SLA guarantees",;"        "Quantum strategy consulting";
       ],;"
       cta: "Contact Sales",;
-      popular: false;
-    };
+      popular: false};
   ];
 
   const useCases = [
@@ -111,10 +115,8 @@ const QuantumAIPlatform = (...args: unknown[]): unknown => {
       applications: [;"
         "Grid optimization",;"
         "Energy trading",;"
-        "Resource allocation",;"
-        "Climate modeling";
-      ];
-    };
+        "Resource allocation",;"        "Climate modeling";
+      ]};
   ];
 
   const quantumAdvantages = [
@@ -144,15 +146,19 @@ const QuantumAIPlatform = (...args: unknown[]): unknown => {
       description: "Leverage quantum correlations for secure communication",;
       icon: Network,;"
       metric: "100%";
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="Quantum AI Platform - Zion Tech Group"
         description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
       />
+=======
+        title="Quantum AI Platform - Zion Tech Group""        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -184,8 +190,7 @@ const QuantumAIPlatform = (...args: unknown[]): unknown => {
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">"
-              <Atom className="w-4 h-4 mr-2" />
-              Next-Generation Quantum Technology
+              <Atom className="w-4 h-4 mr-2" />              Next-Generation Quantum Technology
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Quantum AI Platform"
@@ -395,8 +400,7 @@ const QuantumAIPlatform = (...args: unknown[]): unknown => {
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, idx) => ("
                     <li key={idx} className="text-gray-300 flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
-                      {benefit}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -506,8 +510,7 @@ const QuantumAIPlatform = (...args: unknown[]): unknown => {
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, idx) => ("
                     <li key={idx} className="text-gray-300 flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -609,8 +612,7 @@ const QuantumAIPlatform = (...args: unknown[]): unknown => {
                 <ul className="space-y-2">
                   {useCase.applications.map((application, appIndex) => ("
                     <li key={appIndex} className="text-gray-300 text-sm flex items-center">"
-                      <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {application}
+                      <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />                      {application}
                     </li>
                   ))}
                 </div>"
@@ -684,6 +686,5 @@ const QuantumAIPlatform = (...args: unknown[]): unknown => {
   );
 };
 ;
-export { QuantumAIPlatform };
-export default QuantumAIPlatform;
+export { QuantumAIPlatform };export default QuantumAIPlatform;
 '"`

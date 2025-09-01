@@ -34,12 +34,19 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
       features: ['Up to 200 employees',Advanced AI analytics',Custom workflows',Priority support',Integration APIs'],
       popular: true
     },;
+<<<<<<< HEAD
     { ;
       name: 'Enterprise', ;
       price: '$999/mo', ;
       features: ['Unlimited employees',Full AI suite',Custom AI training',Dedicated support',White-label solutions',Advanced compliance'],;
       popular: false;
     };
+=======
+    { ;'
+      name: 'Enterprise', ;'
+      price: '$999/mo', ;'      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
+      popular: false};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const useCases = [;
@@ -52,6 +59,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
   ];
 
   const platformModules = ['
+<<<<<<< HEAD
     'Talent Acquisition',Performance Management',;
     'Learning & Development',;
     'Workforce Analytics',;
@@ -59,6 +67,15 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Compliance & Reporting',;
     'Onboarding & Offboarding',;
     'Succession Planning';
+=======
+    'Talent Acquisition','
+    'Performance Management',;'
+    'Learning & Development',;'
+    'Workforce Analytics',;'
+    'Employee Engagement',;'
+    'Compliance & Reporting',;'
+    'Onboarding & Offboarding',;'    'Succession Planning';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -69,8 +86,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"
             <Sparkles className="w-4 h-4 mr-2" /> AI-Powered HR & Talent Management
           </div>"
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">AI HR & Talent Platform</h1>"
-          <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">AI HR & Talent Platform</h1>"          <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
             Transform your HR operations with AI-driven insights, automated workflows, and intelligent talent management.
             Build better teams and drive organizational success.
           </p>"
@@ -98,8 +114,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <ul className="space-y-4">
               {features.map((feature, index) => ("
                 <li key={index} className="flex items-start">"
-                  <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"
-                  <span className="text-gray-700">{feature}</span>
+                  <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"                  <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -110,8 +125,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <ul className="space-y-4">
               {benefits.map((benefit, index) => ("
                 <li key={index} className="flex items-start">"
-                  <TrendingUp className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />"
-                  <span className="text-gray-700">{benefit}</span>
+                  <TrendingUp className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />"                  <span className="text-gray-700">{benefit}</span>
                 </li>
               ))}
             </ul>
@@ -130,8 +144,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div className="grid md:grid-cols-4 gap-6">
             {platformModules.map((module, index) => ("
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">"
-                <Briefcase className="w-8 h-8 text-orange-500 mx-auto mb-4" />"
-                <h3 className="text-lg font-semibold text-gray-900 text-sm">{module}</h3>
+                <Briefcase className="w-8 h-8 text-orange-500 mx-auto mb-4" />"                <h3 className="text-lg font-semibold text-gray-900 text-sm">{module}</h3>
               </div>
             ))}
           </div>
@@ -148,8 +161,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
         <div className="grid md:grid-cols-3 gap-6">
           {useCases.map((useCase, index) => ("
             <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">"
-              <Target className="w-8 h-8 text-orange-500 mb-4" />"
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
+              <Target className="w-8 h-8 text-orange-500 mb-4" />"              <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
             </div>
           ))}
         </div>
@@ -176,8 +188,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             </div>"
             <div className="bg-white rounded-lg p-6 shadow-sm text-center">"
               <Award className="w-12 h-12 text-orange-500 mx-auto mb-4" />"
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Performance Insights</h3>"
-              <p className="text-gray-600">AI-driven performance analysis and development recommendations</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Performance Insights</h3>"              <p className="text-gray-600">AI-driven performance analysis and development recommendations</p>
             </div>
           </div>
         </div>
@@ -214,8 +225,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-700">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -287,8 +297,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">"
             <Phone className="w-8 h-8 text-orange-500 mx-auto mb-4" />"
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>"
-            <p className="text-gray-600 mb-4">Speak with our HR technology experts</p>"
-            <a href="tel:+13024640950" className="text-orange-600 hover:text-orange-700 font-semibold">
+            <p className="text-gray-600 mb-4">Speak with our HR technology experts</p>"            <a href="tel:+13024640950" className="text-orange-600 hover:text-orange-700 font-semibold">
               +1 302 464 0950
             </a>
           </div>
@@ -296,8 +305,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">"
             <Mail className="w-8 h-8 text-orange-500 mx-auto mb-4" />"
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>"
-            <p className="text-gray-600 mb-4">Get detailed information and pricing</p>"
-            <a href="mailto:kleber@ziontechgroup.com" className="text-orange-600 hover:text-orange-700 font-semibold">
+            <p className="text-gray-600 mb-4">Get detailed information and pricing</p>"            <a href="mailto:kleber@ziontechgroup.com" className="text-orange-600 hover:text-orange-700 font-semibold">
               kleber@ziontechgroup.com
             </a>
           </div>
@@ -314,8 +322,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             rel="noreferrer"
             className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold";
           >;"
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
-          </a>;
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;          </a>;
         </div>;
       </section>;
     </div>;

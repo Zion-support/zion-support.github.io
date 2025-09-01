@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 
 interface User {
 
@@ -8,15 +7,19 @@ interface User {
   role: 'user' | 'admin' | 'moderator';
   userType?: string;
   displayName?: string;
+:src/hooks/useAuth.tsx
   avatarUrl?: string;
 
 }
+  avatarUrl?: string}
 
 interface AuthState {
 
   user: User | null;
   isAuthenticated: boolean;
+:src/hooks/useAuth.tsx
   isLoading: boolean;
+  isLoading: boolean}
 
 }
 ;
@@ -29,35 +32,46 @@ export function useAuth(...args: unknown[]): unknown {
 
   useEffect(: unknown {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+:src/hooks/useAuth.tsx
     const checkAuth = () => {
 
       const storedUser = localStorage.getItem('zion_user');
       const token = localStorage.getItem('authToken');
 
+    
+      
       if (storedUser && token) {
 
         try {
-          const user = JSON.parse(storedUser);
+          
           setAuthState({
 
             user,
             isAuthenticated: true,
+:src/hooks/useAuth.tsx
             isLoading: false});
         } catch (error) {
 
           // console.error('Error parsing stored user:', error);
+            isLoading: false,
+          })} catch (error) {
+          console.error('Error parsing stored user:', error);
           setAuthState({
 
             user: null,
             isAuthenticated: false,
+:src/hooks/useAuth.tsx
             isLoading: false});
         }
+            isLoading: false,
+          })}
       } else {
 
         setAuthState({
 
           user: null,
           isAuthenticated: false,
+:src/hooks/useAuth.tsx
           isLoading: false});
       }
     };
@@ -75,7 +89,13 @@ export function useAuth(...args: unknown[]): unknown {
       name: 'John Doe',
       role: 'user',
       userType: 'creator'};
+          isLoading: false,
+        })}
+    };
 
+    checkAuth()}, []);
+
+  
     setAuthState({
 
       user: mockUser,
@@ -86,6 +106,7 @@ export function useAuth(...args: unknown[]): unknown {
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     localStorage.setItem('authToken',mock-jwt-token');
 
+:src/hooks/useAuth.tsx
     return { success: true, user: mockUser };
   };
 
@@ -111,7 +132,14 @@ export function useAuth(...args: unknown[]): unknown {
       name,
       role: 'user',
       userType: 'creator'};
+    return { success: true, user: mockUser }};
 
+  
+    // Clear localStorage
+    localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken')};
+
+  
     setAuthState({
 
       user: mockUser,
@@ -122,22 +150,26 @@ export function useAuth(...args: unknown[]): unknown {
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     localStorage.setItem('authToken',mock-jwt-token');
 
-    return { success: true, user: mockUser };
-  };
+    return { success: true, user: mockUser }};
 
+:src/hooks/useAuth.tsx
   const updateProfile = (updates: Partial<User>) => {
 
     if (authState.user) {
 
       const updatedUser = { ...authState.user, ...updates };
+  
       setAuthState(prev => ({
 
+:src/hooks/useAuth.tsx
         ...prev,
         user: updatedUser}));
 
       // Update localStorage'
       localStorage.setItem('zion_user', JSON.stringify(updatedUser));
     }
+      // Update localStorage
+      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
   };
 
   return {
@@ -146,5 +178,12 @@ export function useAuth(...args: unknown[]): unknown {
     login,
     logout,
     register,
+:src/hooks/useAuth.tsx
     updateProfile};
 }
+<<<<<<< HEAD
+=======
+'
+    updateProfile,
+  }}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

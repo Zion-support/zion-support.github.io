@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
 
   Brain,
@@ -56,6 +57,8 @@ import {
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
 import { comprehensiveServices } from '../data/comprehensiveServices';
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface Service {
 
   id: string;
@@ -72,8 +75,7 @@ interface Service {
     currency: string;
     billingCycle: string;
   
-};
-  rating: number;
+};  rating: number;
   reviewCount: number;
   launchDate: string;
   status: string;
@@ -84,9 +86,7 @@ interface Service {
 
     phone: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 
 const ComprehensiveServicesShowcase2027: React.FC = () => {
 
@@ -128,7 +128,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         website: service.website,
         contactInfo: service.contactInfo});
     });
-
     // Add services from comprehensiveServices
     comprehensiveServices.forEach(service => {
 
@@ -156,9 +155,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         website: service.website,
         contactInfo: service.contactInfo});
     });
-
-    return services;
-  }, []);
+    return services}, []);
 
   const categories = useMemo(() => {
     const cats = ['
@@ -179,7 +176,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         selectedCategory === 'All' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
     }) ;
-
     // Sort services
     switch (sortBy) {
 
@@ -246,8 +242,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         return 'bg-purple-100 text-purple-800';
       default:'
         return 'bg-gray-100 text-gray-800';
-    }
-  };
+    }  };
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -275,16 +270,14 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 whileTap={{ scale: 0.95 }}"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
               >"
-                <Play className="w-5 h-5" />
-                Watch Demo
+                <Play className="w-5 h-5" />                Watch Demo
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
               >"
-                <BookOpen className="w-5 h-5" />
-                View Documentation
+                <BookOpen className="w-5 h-5" />                View Documentation
               </motion.button>
             </div>
           </motion.div>
@@ -300,8 +293,12 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search services..."
+=======
+                  type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
@@ -376,8 +373,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                     </span>"
                     <span className="text-xs text-gray-400">
                       ({service.reviewCount})
-                    </span>
-                  </div>
+                    </span>                  </div>
                 </div>
 
                 {/* Description */}"
@@ -389,8 +385,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 <div className="mb-4">"
                   <div className="flex items-center gap-2 mb-2">"
                     <DollarSign className="w-4 h-4 text-green-400" />"
-                    <span className="text-sm text-gray-300">Starting from</span>"
-                    <span className="text-lg font-bold text-green-400">
+                    <span className="text-sm text-gray-300">Starting from</span>"                    <span className="text-lg font-bold text-green-400">
                       {service.pricing.currency}
                       {service.pricing.starter.toLocaleString()}
                     </span>"
@@ -427,8 +422,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                     Get Started
                   </button>"
                   <button className="px-4 py-2 border border-white/20 text-white rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-200">"
-                    <Eye className="w-4 h-4" />
-                  </button>
+                    <Eye className="w-4 h-4" />                  </button>
                 </div>
               </motion.div>) ) }
           </AnimatePresence>
@@ -446,8 +440,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             </h3>"
             <p className="text-gray-400">
               Try adjusting your search or filter criteria
-            </p>
-          </motion.div>
+            </p>          </motion.div>
         )}
       </div>
 
@@ -486,8 +479,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                     onClick={() => setSelectedService(null)}"
                     className="p-2 hover:bg-white/10 rounded-lg transition-colors"
                   >"
-                    <X className="w-6 h-6 text-gray-400" />
-                  </button>
+                    <X className="w-6 h-6 text-gray-400" />                  </button>
                 </div>
 "
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -509,8 +501,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                           key={idx}"
                           className="flex items-center gap-2 text-gray-300"
                         >"
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          {feature}
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />                          {feature}
                         </li>) ) }
                     </ul>
 "
@@ -523,8 +514,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                           key={idx}"
                           className="flex items-center gap-2 text-gray-300"
                         >"
-                          <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
-                          {benefit}
+                          <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />                          {benefit}
                         </li>) ) }
                     </ul>
                   </div>
@@ -622,8 +612,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                             {selectedService.contactInfo.email}
                           </div>"
                           <div className="flex items-center gap-2 text-gray-300">"
-                            <MapPin className="w-4 h-4" />
-                            {selectedService.contactInfo.address}
+                            <MapPin className="w-4 h-4" />                            {selectedService.contactInfo.address}
                           </div>
                         </div>
                       </div>) }
@@ -663,16 +652,14 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               whileTap={{ scale: 0.95 }}"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
             >"
-              <Phone className="w-5 h-5" />
-              Call +1 302 464 0950
+              <Phone className="w-5 h-5" />              Call +1 302 464 0950
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}"
               className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
             >"
-              <Mail className="w-5 h-5" />
-              Email kleber@ziontechgroup.com
+              <Mail className="w-5 h-5" />              Email kleber@ziontechgroup.com
             </motion.button>
           </div>"
           <div className="mt-6 text-gray-400">
@@ -691,6 +678,5 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       </div>
     </div>) ;
 };
-
 export default ComprehensiveServicesShowcase2027;
 '"`

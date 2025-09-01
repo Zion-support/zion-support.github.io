@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-
   Target, 
   TrendingUp, 
   Users, 
@@ -157,8 +156,7 @@ const AIMarketingAutomation = (...args: unknown[]): unknown => {
         title="AI Marketing Automation - Zion Tech Group"
         description="Revolutionary AI-powered marketing automation platform that personalizes campaigns, optimizes performance, and delivers exceptional ROI through intelligent automation."
       />
-      "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}"
         <section className="relative overflow-hidden py-20 px-4">"
           <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10"></div>"
@@ -170,8 +168,7 @@ const AIMarketingAutomation = (...args: unknown[]): unknown => {
               className="text-center"
             >"
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-pink-500/20 border border-pink-400/30 text-pink-400 text-sm font-medium mb-6">"
-                <Target className="w-4 h-4 mr-2" />
-                AI Marketing Automation
+                <Target className="w-4 h-4 mr-2" />                AI Marketing Automation
               </div>"
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
                 <span className="bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 bg-clip-text text-transparent">
@@ -190,8 +187,7 @@ const AIMarketingAutomation = (...args: unknown[]): unknown => {
                   whileTap={{ scale: 0.95 }}"
                   className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >"
-                  <Play className="w-5 h-5 mr-2" />
-                  Start Free Trial
+                  <Play className="w-5 h-5 mr-2" />                  Start Free Trial
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -331,8 +327,7 @@ const AIMarketingAutomation = (...args: unknown[]): unknown => {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center text-gray-300">"
-                        <CheckCircle className="w-5 h-5 text-pink-400 mr-3 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-5 h-5 text-pink-400 mr-3 flex-shrink-0" />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -376,8 +371,7 @@ const AIMarketingAutomation = (...args: unknown[]): unknown => {
                   className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Start Free Trial"
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </motion.button>
+                  <ArrowRight className="w-5 h-5 ml-2" />                </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
@@ -394,6 +388,5 @@ const AIMarketingAutomation = (...args: unknown[]): unknown => {
   );
 };
 ;
-export { AIMarketingAutomation };
-export default AIMarketingAutomation;
+export { AIMarketingAutomation };export default AIMarketingAutomation;
 '"`

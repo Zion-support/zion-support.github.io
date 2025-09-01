@@ -8,8 +8,7 @@ import {
   Shield,
   Cloud,
   Brain,
-  Database,
-  Globe,
+  Database,  Globe,
   Mail,
   Phone,
   ArrowRight,
@@ -24,7 +23,6 @@ import {
   GraduationCap,
   Truck} from 'lucide-react';
 import { SEO } from '../components/SEO';
-
 const ServicesPricingPage: React.FC = () => {
 
   const [selectedPlan, setSelectedPlan] = useState('starter');
@@ -131,7 +129,6 @@ const ServicesPricingPage: React.FC = () => {
       'Supply Chain': <Truck className="h-5 w-5" />};"
     return categoryIcons[category] || <Zap className="h-5 w-5" />;
   };
-
   return()
     <>
       <SEO"
@@ -139,8 +136,7 @@ const ServicesPricingPage: React.FC = () => {
         description="Comprehensive technology services and flexible pricing plans designed to accelerate your digital transformation journey."
         keywords="services, pricing, AI solutions, cybersecurity, cloud management, data analytics, Zion Tech Group"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}"
         <section className="pt-32 pb-16 px-4">"
           <div className="max-w-7xl mx-auto text-center">
@@ -151,8 +147,7 @@ const ServicesPricingPage: React.FC = () => {
             >"
               <div className="flex items-center justify-center space-x-3 mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">"
-                  <Award className="w-8 h-8 text-white" />
-                </div>
+                  <Award className="w-8 h-8 text-white" />                </div>
               </div>"
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Services & Pricing
@@ -256,8 +251,7 @@ const ServicesPricingPage: React.FC = () => {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => ("
                       <li key={idx} className="flex items-center text-gray-300">"
-                        <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
+                        <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />                        {feature}
                       </li>) ) }
                   </ul>
 
@@ -318,8 +312,7 @@ const ServicesPricingPage: React.FC = () => {
                         key={idx}"
                         className="flex items-center text-gray-400 text-sm"
                       >"
-                        <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {service}
+                        <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />                        {service}
                       </li>) ) }
                   </ul>
                 </motion.div>) ) }
@@ -350,8 +343,7 @@ const ServicesPricingPage: React.FC = () => {
                   Contact Sales
                 </button>"
                 <button className="px-8 py-3 border border-blue-400 text-blue-400 rounded-lg font-medium hover:bg-blue-400 hover:text-white transition-all duration-300">"
-                  <Phone className="w-5 h-5 inline mr-2" />
-                  Schedule Demo
+                  <Phone className="w-5 h-5 inline mr-2" />                  Schedule Demo
                 </button>
               </div>
             </motion.div>
@@ -360,6 +352,5 @@ const ServicesPricingPage: React.FC = () => {
       </div>
     </>) ;
 };
-
 export default ServicesPricingPage;
 '"`

@@ -25,8 +25,7 @@ import {
   Shield,
   BarChart3,
   Settings,
-  ChevronDown,
-  ChevronUp,
+  ChevronDown,  ChevronUp,
   Lightbulb,
   Cpu,
   HardDrive,
@@ -496,8 +495,7 @@ export default function GreenIT() {
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>"
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -512,8 +510,7 @@ export default function GreenIT() {
                 Green IT'
               </span>{' '}
               Solutions
-            </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            </h1>"            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Transform your technology infrastructure with sustainable
               solutions that reduce energy consumption, lower costs, and
               minimize environmental impact.
@@ -695,8 +692,7 @@ export default function GreenIT() {
                                 key={featureIndex}"
                                 className="flex items-center text-gray-300 text-sm"
                               >"
-                                <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                                {feature}
+                                <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />                                {feature}
                               </li>) ) }
                           </ul>
                         </div>
@@ -711,8 +707,7 @@ export default function GreenIT() {
                                 key={benefitIndex}"
                                 className="flex items-center text-gray-300 text-sm"
                               >"
-                                <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
-                                {benefit}
+                                <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />                                {benefit}
                               </li>) ) }
                           </ul>
                         </div>
@@ -827,8 +822,7 @@ export default function GreenIT() {
                           key={resultIndex}"
                           className="flex items-center text-gray-300 text-sm"
                         >"
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {result}
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />                          {result}
                         </li>) ) }
                     </ul>
                   </div>

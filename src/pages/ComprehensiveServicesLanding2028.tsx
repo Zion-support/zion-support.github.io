@@ -1,6 +1,7 @@
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
+<<<<<<< HEAD
 import { Brain, 
 import { motion  } from 'framer - motion.ts';
 import { revolutionaryMicroSaasServices2028, 
@@ -61,6 +62,8 @@ import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -77,8 +80,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   const stats = [;"
     { number: "500+", label: "Successful Projects", icon: CheckCircle },;"
     { number: "15+", label: "Years of Innovation", icon: Award },;"
-    { number: "99.9%", label: "Client Satisfaction", icon: Star },;"
-    { number: "24/7", label: "Support Available", icon: Clock };
+    { number: "99.9%", label: "Client Satisfaction", icon: Star },;"    { number: "24/7", label: "Support Available", icon: Clock };
   ];
 
       default: return Rocket}
@@ -87,6 +89,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   const getCategoryColor = (category: string)  => {
 
     const colors = ['
+<<<<<<< HEAD
       'from-blue-600 to-cyan-600',from-purple-600 to-pink-600',;
       'from-green-600 to-emerald-600',;
       'from-red-600 to-orange-600',;
@@ -94,6 +97,15 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       'from-yellow-600 to-orange-600',;
       'from-teal-600 to-blue-600',;
       'from-pink-600 to-red-600';
+=======
+      'from-blue-600 to-cyan-600','
+      'from-purple-600 to-pink-600',;'
+      'from-green-600 to-emerald-600',;'
+      'from-red-600 to-orange-600',;'
+      'from-indigo-600 to-purple-600',;'
+      'from-yellow-600 to-orange-600',;'
+      'from-teal-600 to-blue-600',;'      'from-pink-600 to-red-600';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ];
     return colors[Math.abs (category.length) % colors.length]};
 
@@ -104,15 +116,21 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   const prevTestimonial = () => {;
     setCurrentTestimonial ( (prev) => (prev - 1 + testimonials.length) % testimonials.length) ;
   };
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO "
+<<<<<<< HEAD
         title="Comprehensive Services Landing 2028 - Zion Tech Group"
         description="Discover our comprehensive suite of innovative micro SAAS, IT infrastructure, and AI services for 2028. Transform your business with cutting-edge technology solutions."
         keywords="comprehensive services 2028, micro SAAS, IT services, AI services, technology solutions, business transformation"
         canonical="https://ziontechgroup.com/comprehensive-services-landing-2028"
       />
+=======
+        title="Comprehensive Services Landing 2028 - Zion Tech Group""
+        description="Discover our comprehensive suite of innovative micro SAAS, IT infrastructure, and AI services for 2028. Transform your business with cutting-edge technology solutions.""
+        keywords="comprehensive services 2028, micro SAAS, IT services, AI services, technology solutions, business transformation""        canonical="https://ziontechgroup.com/comprehensive-services-landing-2028"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden">"
@@ -452,8 +470,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 "
               <div className="flex justify-center mb-6">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => ("
-                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                ))}
+                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />                ))}
               </div>
 "
               <blockquote className="text-xl text-white mb-6 italic">"
@@ -476,13 +493,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 "
             <div className="flex items-center justify-center gap-4 mt-8">
               <Button"
+<<<<<<< HEAD
                 variant="ghost"
                 size="sm"
+=======
+                variant="ghost""                size="sm"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 onClick={prevTestimonial}"
                 className="text-zion-slate-light hover:text-white"
 "
-                <ChevronLeft className="w-5 h-5" />
-              </Button>
+                <ChevronLeft className="w-5 h-5" />              </Button>
 "
               <div className="flex gap-2">
                 {testimonials.map((_, index) => (
@@ -497,13 +517,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               </div>
 
               <Button"
+<<<<<<< HEAD
                 variant="ghost"
                 size="sm"
+=======
+                variant="ghost""                size="sm"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 onClick={nextTestimonial}"
                 className="text-zion-slate-light hover:text-white"
 "
-                <ChevronRight className="w-5 h-5" />
-              </Button>
+                <ChevronRight className="w-5 h-5" />              </Button>
             </div>
           </div>
         </div>
@@ -564,8 +587,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">"
                 <Award className="w-12 h-12 text-zion-cyan mx-auto" />
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-3">Proven Expertise</h3>"
-              <p className="text-zion-slate-light">
+              <h3 className="text-xl font-semibold text-white mb-3">Proven Expertise</h3>"              <p className="text-zion-slate-light">
                 15+ years of technology innovation and successful project delivery across industries
               </p>
             </motion.div>
@@ -599,8 +621,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">"
                 <Lightbulb className="w-12 h-12 text-zion-cyan mx-auto" />
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>"
-              <p className="text-zion-slate-light">
+              <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>"              <p className="text-zion-slate-light">
                 Cutting-edge solutions leveraging AI, quantum computing, and emerging technologies
               </p>
             </motion.div>
@@ -634,8 +655,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">"
                 <TrendingUp className="w-12 h-12 text-zion-cyan mx-auto" />
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-3">Proven ROI</h3>"
-              <p className="text-zion-slate-light">
+              <h3 className="text-xl font-semibold text-white mb-3">Proven ROI</h3>"              <p className="text-zion-slate-light">
                 Every solution is designed to deliver measurable business impact and rapid returns
               </p>
             </motion.div>
@@ -669,8 +689,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">"
                 <Users className="w-12 h-12 text-zion-cyan mx-auto" />
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-3">Expert Team</h3>"
-              <p className="text-zion-slate-light">
+              <h3 className="text-xl font-semibold text-white mb-3">Expert Team</h3>"              <p className="text-zion-slate-light">
                 World-class engineers, designers, and business consultants dedicated to your success
               </p>
             </motion.div>
@@ -704,8 +723,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">"
                 <Shield className="w-12 h-12 text-zion-cyan mx-auto" />
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-3">Enterprise Security</h3>"
-              <p className="text-zion-slate-light">
+              <h3 className="text-xl font-semibold text-white mb-3">Enterprise Security</h3>"              <p className="text-zion-slate-light">
                 Bank-level security and compliance standards for all our solutions and services
               </p>
             </motion.div>
@@ -739,8 +757,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">"
                 <Clock className="w-12 h-12 text-zion-cyan mx-auto" />
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>"
-              <p className="text-zion-slate-light">
+              <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>"              <p className="text-zion-slate-light">
                 Round-the-clock technical support and maintenance for all our enterprise solutions
               </p>
             </motion.div>
@@ -794,8 +811,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                   className="text-zion-slate-light hover:text-white"
                   onClick={() => setSelectedService(null)}
 "
-                  <X className="w-5 h-5" />
-                </Button>
+                  <X className="w-5 h-5" />                </Button>
               </div>
 "
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -807,8 +823,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                   <ul className="space-y-2 mb-6">
                     {selectedService.features.map((feature, index) => ("
                       <li key={index} className="flex items-center gap-2 text-zion-slate-light">"
-                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />                        {feature}
                       </li>) ) }
                   </ul>
 "
@@ -816,8 +831,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                   <ul className="space-y-2 mb-6">
                     {selectedService.benefits.map((benefit, index) => ("
                       <li key={index} className="flex items-center gap-2 text-zion-slate-light">"
-                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                        {benefit}
+                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />                        {benefit}
                       </li>) ) }
                   </ul>
                 </div>
@@ -948,8 +962,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 "
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30">"
                 <Phone className="w-12 h-12 text-zion-cyan mx-auto mb-4" />"
-                <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"
-                <p className="text-zion-slate-light mb-3">Speak directly with our experts</p>
+                <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"                <p className="text-zion-slate-light mb-3">Speak directly with our experts</p>
                 <a"
                   href="tel:+13024640950"
                   className="text-zion-cyan hover:text-zion-cyan-light font-semibold text-lg"
@@ -987,8 +1000,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 "
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30">"
                 <Mail className="w-12 h-12 text-zion-cyan mx-auto mb-4" />"
-                <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>"
-                <p className="text-zion-slate-light mb-3">Send us a detailed message</p>
+                <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>"                <p className="text-zion-slate-light mb-3">Send us a detailed message</p>
                 <a"
                   href="mailto:kleber@ziontechgroup.com"
                   className="text-zion-cyan hover:text-zion-cyan-light font-semibold text-lg"
@@ -1027,8 +1039,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30">"
                 <MapPin className="w-12 h-12 text-zion-cyan mx-auto mb-4" />"
                 <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>"
-                <p className="text-zion-slate-light mb-3">Our headquarters location</p>"
-                <address className="text-zion-cyan font-semibold text-sm not-italic">
+                <p className="text-zion-slate-light mb-3">Our headquarters location</p>"                <address className="text-zion-cyan font-semibold text-sm not-italic">
                   364 E Main St STE 1008<br />
                   Middletown DE 19709
                 </address>

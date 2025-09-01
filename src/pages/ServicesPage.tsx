@@ -9,8 +9,7 @@ import {
   Server,
   Zap,
   Globe,
-  Cpu,
-  Database,
+  Cpu,  Database,
   Network,
   Lock,
   Code,
@@ -34,7 +33,6 @@ import {
 import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '@/data/innovativeMicroSaasServices2025';
 import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '@/data/additionalInnovativeServices2025';
-
 export default function ServicesPage() {
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -158,9 +156,14 @@ export default function ServicesPage() {
     switch (sortBy) {
 
       case 'price-low':
+<<<<<<< HEAD
         return a.price - b.price;
       case 'price-high':
         return b.price - a.price;
+=======
+        return a.price - b.price;'      case 'price-high':
+        return b.price - a.price;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'newest':
         return ('
           new Date(b.createdAt || '2025-01-01').getTime() -'
@@ -186,7 +189,6 @@ export default function ServicesPage() {
     );
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
-
   return()
     <>
       <SEO
@@ -196,8 +198,7 @@ export default function ServicesPage() {
         url="https://ziontechgroup.com/services"
       />
 
-      {/* Hero Section */}"
-      <section className="bg-futuristic min-h-[60vh] flex items-center relative overflow-hidden">
+      {/* Hero Section */}"      <section className="bg-futuristic min-h-[60vh] flex items-center relative overflow-hidden">
         {/* Animated background elements */}"
         <div className="absolute inset-0 opacity-20">"
           <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse"></div>"
@@ -229,8 +230,12 @@ export default function ServicesPage() {
               <div className="relative">"
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search for services, technologies, or solutions..."
+=======
+                  type="text""                  placeholder="Search for services, technologies, or solutions..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-xl px-12 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"
@@ -318,8 +323,7 @@ export default function ServicesPage() {
             <div className="flex flex-wrap gap-4">
               {/* Price Range Filter */}"
               <div className="flex items-center gap-2">"
-                <Filter className="w-4 h-4 text-zion-cyan" />
-                <select
+                <Filter className="w-4 h-4 text-zion-cyan" />                <select
                   value={selectedPriceRange}
                   onChange={e => setSelectedPriceRange(e.target.value)}"
                   className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -334,8 +338,7 @@ export default function ServicesPage() {
 
               {/* Sort Options */}"
               <div className="flex items-center gap-2">"
-                <TrendingUp className="w-4 h-4 text-zion-cyan" />
-                <select
+                <TrendingUp className="w-4 h-4 text-zion-cyan" />                <select
                   value={sortBy}
                   onChange={e => setSortBy(e.target.value)}"
                   className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -431,8 +434,7 @@ export default function ServicesPage() {
                       {/* ROI & Market Price */}"
                       <div className="flex items-center justify-between text-sm">"
                         <div className="flex items-center gap-1 text-zion-green">"
-                          <TrendingUp className="w-4 h-4" />
-                          <span>ROI: {service.roi}</span>
+                          <TrendingUp className="w-4 h-4" />                          <span>ROI: {service.roi}</span>
                         </div>"
                         <div className="text-zion-slate-light">
                           Market: {service.marketPrice}
@@ -450,8 +452,7 @@ export default function ServicesPage() {
                               key={idx}"
                               className="flex items-center gap-2 text-sm text-zion-slate-light"
                             >"
-                              <CheckCircle className="w-3 h-3 text-zion-cyan" />
-                              {feature}
+                              <CheckCircle className="w-3 h-3 text-zion-cyan" />                              {feature}
                             </div>) ) }
                         </div>
                       </div>
@@ -465,8 +466,7 @@ export default function ServicesPage() {
                           <span>{service.estimatedDelivery}</span>
                         </div>"
                         <div className="flex items-center gap-1">"
-                          <Star className="w-4 h-4 text-zion-cyan" />
-                          <span>{service.supportLevel}</span>
+                          <Star className="w-4 h-4 text-zion-cyan" />                          <span>{service.supportLevel}</span>
                         </div>
                       </div>
 
@@ -475,8 +475,7 @@ export default function ServicesPage() {
                         className="btn-futuristic px-4 py-2 text-sm"
                       >
                         Learn More"
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
+                        <ArrowRight className="w-4 h-4 ml-2" />                      </Link>
                     </div>
                   </motion.div>
                 ))}
@@ -501,8 +500,7 @@ export default function ServicesPage() {
                     setSearchQuery('');
                     setSelectedCategory('all');
                     setSelectedPriceRange('all');
-                  }}"
-                  className="btn-futuristic px-6 py-3"
+                  }}"                  className="btn-futuristic px-6 py-3"
                 >
                   View All Services
                 </button>
@@ -540,8 +538,7 @@ export default function ServicesPage() {
                 whileHover={{ y: -5 }}
               >"
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <Rocket className="w-8 h-8 text-white" />
-                </div>
+                  <Rocket className="w-8 h-8 text-white" />                </div>
 "
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                   {service.title}
@@ -590,8 +587,7 @@ export default function ServicesPage() {
               </Link>
 "
               <a href="tel:+13024640950" className="btn-neon px-8 py-4 text-lg">"
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now: +1 302 464 0950
+                <Phone className="w-5 h-5 mr-2" />                Call Now: +1 302 464 0950
               </a>
             </div>
 "

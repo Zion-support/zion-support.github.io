@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { Navigate, useLocation  } from 'react-router-dom.ts';
 import { useAuth  } from '@/hooks/useAuth';
@@ -14,13 +15,17 @@ interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
   const location = useLocation () ;
 
   if (isLoading) {
+=======
+import React from 'react.ts';'
+import { Navigate, useLocation  } from 'react-router-dom.ts';'
+import { useAuth  } from '@/hooks/useAuth';  if (isLoading) {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     return()
       <div className = "flex items-center justify-center min-h-screen">;"
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>;
       </div>;
-    );
-  }
+    )}
 
   if (requireAuth && !isAuthenticated) {
 "

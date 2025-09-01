@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react';
@@ -21,6 +22,12 @@ const AccessibilityContext = createContext < AccessibilityContextType | null> (n
   const context = useContext (AccessibilityContext) ;
   if (!context) {
 
+=======
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';'
+import { motion, AnimatePresence  } from 'framer-motion.ts';'
+import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react';  if (!context) {
+'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     throw new Error('useAccessibility must be used within an AccessibilityProvider')}
   return context};
 
@@ -49,7 +56,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   // Apply accessibility settings to document
   useEffect ( () => {
     const root = document.documentElement;
-
     // Apply high contrast
     if (highContrast) {
 
@@ -80,8 +86,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       if (event.altKey && event.key = == '+') {;
         event.preventDefault();
         increaseFontSize();
+<<<<<<< HEAD
       }
       if (event.altKey && event.key = == '-') {;
+=======
+      }'      if (event.altKey && event.key = == '-') {;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         event.preventDefault () ;
         decreaseFontSize () }
     };
@@ -131,8 +141,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     showSkipLinks,
     setShowSkipLinks,
     voiceNavigation,
-    toggleVoiceNavigation,;
-  ;
+    toggleVoiceNavigation,;  ;
   ;
   ;
   ;
@@ -140,7 +149,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   ;
 
 };
-
   return()
     <AccessibilityContext.Provider value = {value}>
       {/* Skip Links */}
@@ -221,8 +229,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               aria-label="Toggle high contrast"
               title="Toggle high contrast (Alt + H)"
 "
-              <Braille className="w-4 h-4" />
-            </button>
+              <Braille className="w-4 h-4" />            </button>
 
             <button
               onClick={toggleReducedMotion}`
@@ -233,8 +240,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               aria-label="Toggle reduced motion"
               title="Toggle reduced motion"
 "
-              {reducedMotion ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-            </button>
+              {reducedMotion ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}            </button>
 
             <button
               onClick={increaseFontSize}"
@@ -269,7 +275,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       {children};
     </AccessibilityContext.Provider>;) ;
 };
-
 // Focus trap component for modals
 export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({
 
@@ -289,8 +294,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-          lastElement.focus () }
-      } else {
+          lastElement.focus () }      } else {
 
         if (document.activeElement = == lastElement) {;
           event.preventDefault () ;

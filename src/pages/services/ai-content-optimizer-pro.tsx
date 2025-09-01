@@ -2,7 +2,6 @@ import React from 'react';
 import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
 import {
-
   CheckCircle, 
   TrendingUp, 
   Zap, 
@@ -28,16 +27,23 @@ import {
 const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
   const contactInfo = {
+<<<<<<< HEAD
 
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
   ;
+=======
+'
+  phone: '+1 302 464 0950','
+    email: 'kleber@ziontechgroup.com','
+    address: '364 E Main St STE 1008 Middletown DE 19709',;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   website: 'https://ziontechgroup.com';
-  ;
+  };
 
 
 
@@ -175,6 +181,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       rating: 5
     },
     {
+<<<<<<< HEAD
 
       name: 'Sarah Williams'};
       role: 'Content Creator',;
@@ -182,6 +189,13 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',;
       rating: 5;
     };
+=======
+'
+      name: 'Sarah Williams'};'
+      role: 'Content Creator',;'
+      company: 'Creative Content Studio',;'      content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',;
+      rating: 5};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -192,8 +206,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
         keywords="AI content optimization, SEO optimization, content readability, content marketing, AI writing tools, content analytics"
         canonical="https://ziontechgroup.com/services/ai-content-optimizer-pro"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+"      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-7xl mx-auto text-center">
@@ -347,8 +360,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => ("
                       <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">"
-                        <CheckCircle className="text-green-400 w-4 h-4 mr-2 flex-shrink-0" />
-                        {benefit}
+                        <CheckCircle className="text-green-400 w-4 h-4 mr-2 flex-shrink-0" />                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -441,8 +453,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   <div className="space-y-2">
                     {useCase.metrics.map((metric, metricIndex) => ("
                       <div key={metricIndex} className="flex items-center text-green-400 text-sm">"
-                        <TrendingUp className="w-4 h-4 mr-2" />
-                        {metric}
+                        <TrendingUp className="w-4 h-4 mr-2" />                        {metric}
                       </div>
                     ))}
                   </div>
@@ -700,8 +711,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 "
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => ("
-                      <Star key={i} className="text-yellow-400 w-4 h-4 fill-current" />
-                    ))}
+                      <Star key={i} className="text-yellow-400 w-4 h-4 fill-current" />                    ))}
                   </div>"
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                   <div>"
@@ -764,8 +774,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                 </div>"
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">"
                   <MapPin className="text-red-400 w-8 h-8 mx-auto mb-3" />"
-                  <h3 className="text-white font-semibold mb-2">Visit Us</h3>"
-                  <p className="text-gray-300 text-sm">{contactInfo.address}</p>
+                  <h3 className="text-white font-semibold mb-2">Visit Us</h3>"                  <p className="text-gray-300 text-sm">{contactInfo.address}</p>
                 </div>
               </div>
 "
@@ -774,15 +783,13 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   href={`tel:${contactInfo.phone}`}"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
 "
-                  <Phone className="w-4 h-4" />
-                  <span>Call Now</span>
+                  <Phone className="w-4 h-4" />                  <span>Call Now</span>
                 </a>
                 <a`
                   href={`mailto:${contactInfo.email}`}"
                   className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
 "
-                  <Mail className="w-4 h-4" />
-                  <span>Send Email</span>
+                  <Mail className="w-4 h-4" />                  <span>Send Email</span>
                 </a>
                 <a
                   href={contactInfo.website}"
@@ -790,8 +797,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   rel="noopener noreferrer"
                   className="border-2 border-green-400 text-green-400 font-semibold py-3 px-8 rounded-lg hover:bg-green-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
 "
-                  <ExternalLink className="w-4 h-4" />
-                  <span>Visit Website</span>
+                  <ExternalLink className="w-4 h-4" />                  <span>Visit Website</span>
                 </a>;
               </div>;
             </motion.div>;

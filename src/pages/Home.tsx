@@ -286,9 +286,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       <FuturisticBackground />
       "
       <div className="relative z-10 container mx-auto px-4 text-center">"
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
+        <AnimatePresence mode="wait">          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
@@ -296,33 +294,38 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
             className="max-w-5xl mx-auto"
           >`
             <div className={`w-24 h-24 bg-gradient-to-r ${heroSlides[currentSlide].color} rounded-3xl flex items-center justify-center mx-auto mb-8`}>"
-              {React.createElement(heroSlides[currentSlide].icon, { className: "w-12 h-12 text-white" })}
-            </div>
+              {React.createElement(heroSlides[currentSlide].icon, { className: "w-12 h-12 text-white" })}            </div>
             "
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              {heroSlides[currentSlide].title}
+              Revolutionary AI & Technology Services
             </h1>
             "
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
-              {heroSlides[currentSlide].subtitle}
+              Transform Your Business with Cutting-Edge Solutions
             </h2>
             "
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              {heroSlides[currentSlide].description}
+              Discover our comprehensive portfolio of innovative micro SAAS, IT, and AI services 
+              designed to drive business growth and competitive advantage.
             </p>
             "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to={heroSlides[currentSlide].link}"
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                to={heroSlides[currentSlide].link}"                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
               >
-                {heroSlides[currentSlide].cta}
+                Explore Services
               </Link>
               <Link"
+<<<<<<< HEAD
                 to="/contact"
                 className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               >
                 Get Started
+=======
+                to="/contact""
+                className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"              >
+                View Pricing
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               </Link>
             </div>
           </motion.div>
@@ -338,6 +341,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
                 index === currentSlide ? 'bg-cyan-400 w-8' : 'bg-white/30'`
               }`}
+<<<<<<< HEAD
             />) ) }
         </div>
 
@@ -470,6 +474,9 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
+=======
+            />) ) }            <motion.div
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -527,9 +534,46 @@ const StatsSection = () => {
                 <stat.icon className="w-10 h-10 text-white" />
               </div>"
               <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>"
-              <div className="text-gray-300">{stat.label}</div>
+              <div className="text-gray-300">{stat.label}</div>            </motion.div>
+
+            {/* Quantum Computing */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                <Atom className="w-8 h-8 text-white"  />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Quantum Computing</h3>
+              <p className="text-gray-400 mb-4">
+                Revolutionary quantum algorithms and machine learning solutions for complex problems.
+              </p>
+              <Link to="/services-showcase" className="text-cyan-400 hover:text-cyan-300 flex items-center">
+                Learn More <ArrowRight className="w-4 h-4 ml-2"  />
+              </Link>
             </motion.div>
-          ))}
+
+            {/* Cybersecurity */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-4">
+                <Shield className="w-8 h-8 text-white"  />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Cybersecurity</h3>
+              <p className="text-gray-400 mb-4">
+                Military-grade security solutions with advanced threat detection and zero-trust architecture.
+              </p>
+              <Link to="/services-showcase" className="text-cyan-400 hover:text-cyan-300 flex items-center">
+                Learn More <ArrowRight className="w-4 h-4 ml-2"  />
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>) ;
@@ -568,10 +612,9 @@ const CTASection = () => {
             <Link"
               to="/services"
               className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-
             >
-              Explore Services
-            </Link>
+              Call Now: +1 302 464 0950
+            </a>
           </div>
 
           {/* Contact Information */}"
@@ -696,5 +739,4 @@ export default function Home() {
 };
 
 export default Home;
-
 '"`

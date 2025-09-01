@@ -1,21 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Brain,
-  Zap,
-  Shield,
-  TrendingUp,
-  Users,
-  Globe,
-  Cpu,
-  Database,
-  ArrowRight,
-  Star,
-  CheckCircle,
-  Rocket'
-import { Link } from 'react-router-dom';
-
 interface AIService {
 
   id: string;
@@ -27,8 +11,7 @@ interface AIService {
 
     starter: number;
     professional: number;
-    enterprise: number;
-  };
+    enterprise: number};
   icon: React.ComponentType<any>;
   route: string;
   status: 'active' | 'beta' | 'coming-soon';
@@ -130,9 +113,14 @@ const AdvancedAIServicesHub: React.FC = () => {;
   }) ;
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
+<<<<<<< HEAD
     switch (sortBy) {;
       case 'name':;
         return a.name.localeCompare(b.name);
+=======
+    switch (sortBy) {;'      case 'name':;
+        return a.name.localeCompare(b.name);'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'price':;
         return a.pricing.starter - b.pricing.starter;
       case 'popularity':;
@@ -141,7 +129,6 @@ const AdvancedAIServicesHub: React.FC = () => {;
         return 0;
 
   }) ;
-
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       <div className="container mx-auto px-4 py-16">
@@ -201,8 +188,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
                 onChange={(e) => setSearchQuery(e.target.value)}"
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />"
-              <Brain className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            </div>
+              <Brain className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />            </div>
 
             {/* Sort Options */}
             <select
@@ -326,8 +312,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
                   <div className="space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => ("
                       <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">"
-                        <CheckCircle className="w-4 h-4 text-green-400" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-green-400" />                        {feature}
                       </div>) ) }
                   </div>
                 </div>
@@ -347,8 +332,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
                   className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/25"
                 >
                   Explore Service"
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />                </Link>
               </motion.div>) ) }
           </AnimatePresence>
         </motion.div>
@@ -380,8 +364,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">"
-                <Rocket className="w-5 h-5" />
-                Get Started
+                <Rocket className="w-5 h-5" />                Get Started
               </button>"
               <button className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300">
                 Schedule Demo;

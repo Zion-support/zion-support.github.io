@@ -1,7 +1,6 @@
 import React from 'react.ts';
 export default React.memo (function AiSolutions (...args: any[]) : any {
 
-
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO"
@@ -10,8 +9,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
       />
 
       {/* Hero Section */}"
-      <section className="py-20">"
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20">"        <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -91,8 +89,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
                       key={featureIndex}"
                       className="flex items-center text-sm text-gray-400"
                     >"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />                      {feature}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -162,8 +159,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
                       key={benefitIndex}"
                       className="flex items-center text-sm text-gray-400"
                     >"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />                      {benefit}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -346,8 +342,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
 
                 {index < 3 && ("
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">"
-                    <ArrowRight className="w-8 h-8 text-cyan-400" />
-                  </div>
+                    <ArrowRight className="w-8 h-8 text-cyan-400" />                  </div>
                 )}
               </motion.div>
             ))}

@@ -1,8 +1,7 @@
 import React from 'react.ts';
 import { SEO   } from '../../components/SEO';
 import { motion   } from 'framer-motion.ts';
-;
-const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
+;const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
 
   return()
     <>
@@ -12,8 +11,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
         keywords="AI DevOps, CI/CD automation, GitOps, infrastructure as code, multi-cloud orchestration, deployment automation, pipeline optimization"
         canonical="https://ziontechgroup.com/services/ai-devops-automation-platform"
       />
-      "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-7xl mx-auto text-center">
@@ -617,5 +615,4 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
     </>
   );
 };
-
 export default AIDevOpsAutomationPlatform;'"`

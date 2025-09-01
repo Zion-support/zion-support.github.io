@@ -7,8 +7,7 @@ import {
   Zap,
   Users,
   TrendingUp,
-  Shield,
-  Clock,
+  Shield,  Clock,
   BarChart3,
   Headphones,
   Bot} from 'lucide-react.ts';
@@ -27,8 +26,7 @@ export default function AIContentGenerator(...args: any[]): any {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"></div>"
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="text-center">"
-            <div className="max-w-4xl mx-auto mb-12">"
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <div className="max-w-4xl mx-auto mb-12">"              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 AI Content Generator
               </h1>"
               <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -69,8 +67,7 @@ export default function AIContentGenerator(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Intelligent Content Creation
-              </h3>"
-              <p className="text-gray-300">
+              </h3>"              <p className="text-gray-300">
                 AI-powered writing that understands your brand voice and creates
                 engaging, original content
               </p>
@@ -82,8 +79,7 @@ export default function AIContentGenerator(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 SEO Optimization
-              </h3>"
-              <p className="text-gray-300">
+              </h3>"              <p className="text-gray-300">
                 Automatically optimize content for search engines with
                 intelligent keyword integration
               </p>
@@ -95,8 +91,7 @@ export default function AIContentGenerator(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Audience Targeting
-              </h3>"
-              <p className="text-gray-300">
+              </h3>"              <p className="text-gray-300">
                 Create content specifically tailored to your target audience
                 demographics and preferences
               </p>
@@ -108,8 +103,7 @@ export default function AIContentGenerator(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Performance Analytics
-              </h3>"
-              <p className="text-gray-300">
+              </h3>"              <p className="text-gray-300">
                 Track content performance and get insights to improve your
                 content strategy
               </p>
@@ -121,8 +115,7 @@ export default function AIContentGenerator(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Quality Assurance
-              </h3>"
-              <p className="text-gray-300">
+              </h3>"              <p className="text-gray-300">
                 Built-in plagiarism detection and content quality checks ensure
                 originality
               </p>
@@ -134,8 +127,7 @@ export default function AIContentGenerator(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Rapid Content Scaling
-              </h3>"
-              <p className="text-gray-300">
+              </h3>"              <p className="text-gray-300">
                 Generate weeks worth of content in minutes, not hours
               </p>
             </div>

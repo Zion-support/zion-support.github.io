@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Brain, 
@@ -89,6 +90,10 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
         "Email support","
         "Data integration (3 sources)","
         "Monthly reports"
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';        "Monthly reports"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -126,8 +131,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
         "Custom integrations",;"
         "SLA guarantees";
       ],;
-      popular: false;
-    };
+      popular: false};
   ];
 
   const useCases = [
@@ -154,15 +158,19 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
     {;"
       industry: "Retail",;"
       description: "Demand forecasting, customer segmentation, and store performance analysis";
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="AI Business Intelligence Platform - Zion Tech Group"
         description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
       />
+=======
+        title="AI Business Intelligence Platform - Zion Tech Group""        description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -207,8 +215,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
               <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
                 Start Free Trial"
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>"
-              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
+              </Button>"              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
                 Schedule Demo
               </Button>
             </div>
@@ -384,8 +391,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
                 viewport={{ once: true }}"
                 className="flex items-start space-x-3"
 "
-                <CheckCircle className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0" />"
-                <span className="text-gray-300">{benefit}</span>
+                <CheckCircle className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0" />"                <span className="text-gray-300">{benefit}</span>
               </motion.div>;
             ))}
           </div>
@@ -495,8 +501,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="h-5 w-5 text-cyan-500 mr-3 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="h-5 w-5 text-cyan-500 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -642,8 +647,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
               <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
                 Start Free Trial"
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>"
-              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
+              </Button>"              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
                 Contact Sales
               </Button>
             </div>
@@ -700,8 +704,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
               </div>"
               <div className="flex flex-col items-center">"
                 <MapPin className="h-8 w-8 text-cyan-500 mb-4" />"
-                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>"
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>"                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
 "

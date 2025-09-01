@@ -25,8 +25,7 @@ export default function GenericPage() {
         lineHeight: 1.6,
         maxWidth: 900,
         margin: '0 auto'}}
-    >
-      <Helmet>
+    >      <Helmet>
         <title>{title} | Zion Tech Group</title>
         <meta
           name="description"`

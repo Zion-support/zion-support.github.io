@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -28,6 +29,11 @@ const itServices2028 = [
     description: 'Revolutionary quantum-ready cloud infrastructure that provides unprecedented performance, security, and scalability for enterprise applications.',
     features[;
       'Quantum-ready computing nodes',Advanced AI optimization',Zero-latency networking',Quantum encryption',Auto-scaling infrastructure',Real-time monitoring',Disaster recovery',Global CDN',API management',DevOps automation'
+=======
+import React, { useState } from 'react';'
+import { motion } from 'framer-motion';'
+import { Link } from 'react-router-dom';      'DevOps automation'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],;
     popular: true,
     icon: Cloud,
@@ -148,8 +154,7 @@ const itServices2028 = [
     growthRate: '220% annual growth',;
     rating: 4.6,;
     reviews: 156,;
-    customers: 89;
-  };
+    customers: 89};
 ];
 
             </a>;

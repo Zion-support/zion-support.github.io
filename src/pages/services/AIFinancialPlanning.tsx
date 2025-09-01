@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '../../components/SEO';
@@ -178,6 +179,11 @@ export default function AIFinancialPlanning(...args: any[]): any {
         "Custom integrations",;"
         "Multi-account support",;"
         "Tax filing assistance";
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { SEO  } from '../../components/SEO';        "Tax filing assistance";
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false;
@@ -216,10 +222,8 @@ export default function AIFinancialPlanning(...args: any[]): any {
       icon: Receipt;
     },;
     {;"
-      industry: "Investment Management",;"
-      description: "Build and manage investment portfolios with AI-driven insights",;
-      icon: TrendingUp;
-    };
+      industry: "Investment Management",;"      description: "Build and manage investment portfolios with AI-driven insights",;
+      icon: TrendingUp};
   ];
 
   const integrations = [
@@ -299,15 +303,19 @@ export default function AIFinancialPlanning(...args: any[]): any {
     {;"
       category: "Goal Planning",;"
       areas: ["Retirement Planning", "Debt Management", "Emergency Fund", "Major Purchases"];
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
         title="AI Financial Planning & Budgeting - Zion Tech Group"
         description="Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management."
       />
+=======
+        title="AI Financial Planning & Budgeting - Zion Tech Group""        description="Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -340,8 +348,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6">"
-              <DollarSign className="w-4 h-4 mr-2" />
-              AI-Powered Financial Planning
+              <DollarSign className="w-4 h-4 mr-2" />              AI-Powered Financial Planning
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Financial Planning"
@@ -359,8 +366,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
                 Start Free Trial
               </button>"
               <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />
-                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -612,8 +618,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
                 <ul className="space-y-2">
                   {category.areas.map((area, areaIndex) => ("
                     <li key={areaIndex} className="flex items-center text-gray-300 text-sm">"
-                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2 flex-shrink-0" />
-                      {area}
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2 flex-shrink-0" />                      {area}
                     </li>
                   ))}
                 </ul>
@@ -829,8 +834,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />"
-                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -1087,8 +1091,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Star className="w-5 h-5 mr-2" />                Start Free Trial
               </button>"
               <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />

@@ -4,9 +4,18 @@ function toCamelCase(str) {
   return str
     .replace(/^[0-9]/, (match) => {
       const numberWords = {
+<<<<<<< HEAD
   '5': 'Five',4': 'Four',3': 'Three',2': 'Two',1': 'One',
   <<<<<<< HEAD
         '0': 'Zero'
+=======
+  '5': 'Five',
+        '4': 'Four',
+        '3': 'Three',
+        '2': 'Two',
+        '1': 'One',
+          '0': 'Zero'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
 
 };

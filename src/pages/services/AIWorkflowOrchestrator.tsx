@@ -10,8 +10,7 @@ import {
   TrendingUp,
   Shield,
   Cloud,
-  BarChart3,
-  CheckCircle,
+  BarChart3,  CheckCircle,
   ArrowRight,
   Play,
   Code,
@@ -129,8 +128,7 @@ const AIWorkflowOrchestrator: React.FC = props {
         'Minimize human error with intelligent automation and validation'},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>"
@@ -143,8 +141,7 @@ const AIWorkflowOrchestrator: React.FC = props {
           >"
             <div className="flex justify-center mb-6">"
               <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">"
-                <Workflow className="w-8 h-8 text-white" />
-              </div>
+                <Workflow className="w-8 h-8 text-white" />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               AI Workflow Orchestrator
@@ -159,15 +156,13 @@ const AIWorkflowOrchestrator: React.FC = props {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >"
-                <Play className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Play className="w-5 h-5 mr-2" />                Start Free Trial
               </Link>
               <Link"
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Watch Demo
+                <ArrowRight className="w-5 h-5 mr-2" />                Watch Demo
               </Link>
             </div>
           </motion.div>
@@ -273,8 +268,7 @@ const AIWorkflowOrchestrator: React.FC = props {
                       key={featureIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -357,15 +351,13 @@ const AIWorkflowOrchestrator: React.FC = props {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >"
-                <Rocket className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Rocket className="w-5 h-5 mr-2" />                Start Free Trial
               </Link>
               <Link"
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
-                <Play className="w-5 h-5 mr-2" />
-                Schedule Demo
+                <Play className="w-5 h-5 mr-2" />                Schedule Demo
               </Link>
             </div>
           </motion.div>
@@ -393,8 +385,7 @@ const AIWorkflowOrchestrator: React.FC = props {
                 364 E Main St STE 1008
                 <br />
                 Middletown DE 19709
-              </p>
-            </div>
+              </p>            </div>
           </div>
         </div>
       </section>
@@ -402,6 +393,5 @@ const AIWorkflowOrchestrator: React.FC = props {
   );
 };
 ;
-export { AIWorkflowOrchestrator };
-export default AIWorkflowOrchestrator;
+export { AIWorkflowOrchestrator };export default AIWorkflowOrchestrator;
 '"`

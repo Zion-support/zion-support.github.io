@@ -25,19 +25,16 @@ export interface FinancialAIService2028 {
     email: string;
     website: string;
   
-};
-  technicalSpecs?: {
+};  technicalSpecs?: {
 
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
-  regulatoryCompliance?: string[];
-}
+  regulatoryCompliance?: string[]}
 
 export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] =
   [

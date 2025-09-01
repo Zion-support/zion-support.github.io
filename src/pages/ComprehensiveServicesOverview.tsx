@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { motion  } from 'framer-motion.ts';
@@ -41,3 +42,8 @@ import { motion  } from 'framer - motion.ts';
     }
     return service.pricing?.basic || 0;
   };
+=======
+import React, { useState, useEffect } from 'react.ts';'
+import { Link  } from 'react-router-dom.ts';'
+import { motion  } from 'framer-motion.ts';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";"
 import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";"
 import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";"
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film } from "lucide-react";"
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 
 const categoryColors: { [key: string]: string } = {
@@ -60,11 +61,15 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   ;
+=======
+import { Link } from "react-router-dom";  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   website: 'https://ziontechgroup.com';
 ;
+<<<<<<< HEAD
 
 };
 
@@ -93,6 +98,8 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
 
   return ("
     <div className = "py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">"
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       <div className="container mx-auto px-4">
         {/* Header */}"
         <div className="text-center mb-16">"
@@ -112,8 +119,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
             </Link>"
             <Link to="/contact">"
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">"
-                <Mail className="h-5 w-5 mr-2"/>
-                Request Demo
+                <Mail className="h-5 w-5 mr-2"/>                Request Demo
               </Button>
             </Link>
           </div>
@@ -134,8 +140,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
             </div>"
             <div className="flex flex-col items-center">"
               <MapPin className="h-8 w-8 text-zion-cyan mb-2"/>"
-              <h3 className="text-lg font-semibold text-white mb-1">Visit Us</h3>"
-              <p className="text-zion-slate-light text-sm">{contactInfo.address}</p>
+              <h3 className="text-lg font-semibold text-white mb-1">Visit Us</h3>"              <p className="text-zion-slate-light text-sm">{contactInfo.address}</p>
             </div>
           </div>
         </div>
@@ -198,8 +203,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                   <div className="mt-4 flex items-center justify-between text-sm">"
                     <div className="flex items-center">"
                       <Star className="h-4 w-4 text-yellow-400 mr-1"/>
-                      <span>{service.rating}</span>"
-                      <span className="text-zion-slate-light ml-1">({service.reviews})</span>
+                      <span>{service.rating}</span>"                      <span className="text-zion-slate-light ml-1">({service.reviews})</span>
                     </div>"
                     <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
                       {service.customers} customers
@@ -208,8 +212,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                   <Link to={service.link} className="mt-4 w-full">"
                     <Button className="w-full bg-zion-cyan text-white hover:bg-zion-cyan-dark">
                       Learn More"
-                      <ArrowRight className="h-4 w-4 ml-2"/>
-                    </Button>
+                      <ArrowRight className="h-4 w-4 ml-2"/>                    </Button>
                   </Link>
                 </CardContent>
               </Card>) ) }
@@ -255,8 +258,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                     <h4 className="font-semibold text-white text-sm">Key Features: any</h4>
                     {service.features.slice(0, 3).map((feature, index)  => ("
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">"
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
-                        {feature}
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>                        {feature}
                       </div>) ) }
                   </div>
 
@@ -280,8 +282,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                   <div className="flex items-center justify-between text-sm mb-4">"
                     <div className="flex items-center">"
                       <Star className="h-4 w-4 text-yellow-400 mr-1"/>
-                      <span>{service.rating}</span>"
-                      <span className="text-zion-slate-light ml-1">({service.reviews})</span>
+                      <span>{service.rating}</span>"                      <span className="text-zion-slate-light ml-1">({service.reviews})</span>
                     </div>"
                     <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
                       {service.customers} customers
@@ -298,8 +299,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                     </Link>"
                     <Link to="/contact" className="w-full">"
                       <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white">"
-                        <Phone className="h-4 w-4 mr-2"/>
-                        Get Quote
+                        <Phone className="h-4 w-4 mr-2"/>                        Get Quote
                       </Button>
                     </Link>
                   </div>
@@ -343,8 +343,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
               </Link>"
               <Link to="/contact">"
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue px-8 py-3">"
-                  <Mail className="h-5 w-5 mr-2"/>
-                  Schedule Demo
+                  <Mail className="h-5 w-5 mr-2"/>                  Schedule Demo
                 </Button>
               </Link>
             </div>"
@@ -358,7 +357,6 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
       </div>;
     </div>;) ;
 }
-
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;

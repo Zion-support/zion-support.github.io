@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { motion  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Search, 
 
 
@@ -167,6 +168,8 @@ const SERVICES_2027 = [
   }
 ];
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 const Services2027: React.FC = (): JSX.Element => {
 
   const [query, setQuery] = useState('');
@@ -191,20 +194,17 @@ const Services2027: React.FC = (): JSX.Element => {
     // Filter by search query
     if (query.trim()) {
 
-      const q = query.trim().toLowerCase();
-      filtered = filtered.filter(s =>
+      const q = query.trim().toLowerCase();      filtered = filtered.filter(s =>
         s.title.toLowerCase().includes(q) ||
         s.description.toLowerCase().includes(q) ||
         s.category.toLowerCase().includes(q)
-      );
-    }
+      )}
     
     // Filter by category'
     if (selectedCategory !== 'all') {
 
       filtered = filtered.filter(s => s.category === selectedCategory);
-    }
-    
+    }    
     // Sort services
     switch (sortBy) {
 
@@ -222,10 +222,8 @@ const Services2027: React.FC = (): JSX.Element => {
           const aROI = parseInt(a.roi.split('-')[0]);
           const bROI = parseInt(b.roi.split('-')[0]);
           return bROI - aROI;
-        }) ;
-      default:
-        return filtered;
-    }
+        }) ;      default:
+        return filtered}
   }, [query, selectedCategory, sortBy]);
 
   const featuredServices = SERVICES_2027.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 3);
@@ -233,11 +231,18 @@ const Services2027: React.FC = (): JSX.Element => {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO "
+<<<<<<< HEAD
         title="2027 Services - Zion Tech Group"
         description="Discover our revolutionary 2027 services including AI Autonomous Platforms, Quantum AI, Next-Gen Cybersecurity, and Metaverse Development. Leading the future of technology."
         keywords="2027 services, AI autonomous, quantum AI, cybersecurity, metaverse, edge computing, digital twin"
         canonicalUrl="https://ziontechgroup.com/services2027"
       />
+=======
+        title="2027 Services - Zion Tech Group" "
+        description="Discover our revolutionary 2027 services including AI Autonomous Platforms, Quantum AI, Next-Gen Cybersecurity, and Metaverse Development. Leading the future of technology." "
+        keywords="2027 services, AI autonomous, quantum AI, cybersecurity, metaverse, edge computing, digital twin""        canonicalUrl="https://ziontechgroup.com/services2027"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -249,8 +254,7 @@ const Services2027: React.FC = (): JSX.Element => {
             transition={{ duration: 0.6 }}
           >"
             <div className="flex items-center justify-center space-x-2 mb-4">"
-              <Sparkles className="w-8 h-8 text-purple-400" />"
-              <span className="text-purple-400 font-semibold text-lg">2027</span>
+              <Sparkles className="w-8 h-8 text-purple-400" />"              <span className="text-purple-400 font-semibold text-lg">2027</span>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Future-Ready Services
@@ -287,8 +291,12 @@ const Services2027: React.FC = (): JSX.Element => {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input"
+<<<<<<< HEAD
                     type="text"
                     placeholder="Search 2027 services..."
+=======
+                    type="text""                    placeholder="Search 2027 services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/5 border border-purple-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400/50 focus:border-purple-400/50"
@@ -363,8 +371,7 @@ const Services2027: React.FC = (): JSX.Element => {
                 <div className="space-y-3 mb-6">
                   {service.features.slice(0, 3).map((feature, idx) => ("
                     <div key={idx} className="flex items-center space-x-2">"
-                      <CheckCircle className="w-4 h-4 text-purple-400" />"
-                      <span className="text-sm text-gray-300">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-purple-400" />"                      <span className="text-sm text-gray-300">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -385,8 +392,7 @@ const Services2027: React.FC = (): JSX.Element => {
                   className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg transition-all duration-300 group-hover:scale-105"
                 >
                   <span>Learn More</span>"
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />                </Link>
               </motion.div>) ) }
           </div>
         </div>
@@ -439,8 +445,7 @@ const Services2027: React.FC = (): JSX.Element => {
                   className="flex items-center justify-center space-x-2 px-3 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 text-purple-400 font-medium rounded-lg transition-all duration-300 text-sm"
                 >
                   <span>View Details</span>"
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
+                  <ArrowRight className="w-3 h-3" />                </Link>
               </motion.div>) ) }
           </div>
         </div>
@@ -482,5 +487,4 @@ const Services2027: React.FC = (): JSX.Element => {
       </section>
     </div>) ;
 };
-
 export default Services2027;'"`

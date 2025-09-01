@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -172,6 +173,11 @@ const PrivacyPolicy = () => {;
       description: 'Comprehensive incident response plan for handling security breaches',;
       icon: AlertTriangle;
     };
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';      description: 'Comprehensive incident response plan for handling security breaches',;
+      icon: AlertTriangle};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -203,8 +209,7 @@ const PrivacyPolicy = () => {;
               className="text-center"
             >"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Info className="w-8 h-8 text-zion-cyan" />
-                Introduction
+                <Info className="w-8 h-8 text-zion-cyan" />                Introduction
               </h2>"
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>"
@@ -227,8 +232,7 @@ const PrivacyPolicy = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Database className="w-8 h-8 text-zion-cyan" />
-                Information We Collect
+                <Database className="w-8 h-8 text-zion-cyan" />                Information We Collect
               </h2>
 "
               <div className="space-y-6">
@@ -251,8 +255,7 @@ const PrivacyPolicy = () => {;
                       Information you provide when contacting us or requesting services
                     </li>"
                     <li className="flex items-start gap-2">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Resume or professional background information for job applications
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                      Resume or professional background information for job applications
                     </li>
                   </ul>
                 </div>
@@ -276,8 +279,7 @@ const PrivacyPolicy = () => {;
                       Pages visited and time spent on our website
                     </li>"
                     <li className="flex items-start gap-2">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Referring website and search terms
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                      Referring website and search terms
                     </li>
                   </ul>
                 </div>
@@ -303,8 +305,7 @@ const PrivacyPolicy = () => {;
                   </ul>
                 </div>"
                 <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">"
-                  <Download className="w-4 h-4" />
-                  Download PDF
+                  <Download className="w-4 h-4" />                  Download PDF
                 </button>
               </div>
             </motion.div>
@@ -318,8 +319,7 @@ const PrivacyPolicy = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Eye className="w-8 h-8 text-zion-cyan" />
-                How We Use Your Information
+                <Eye className="w-8 h-8 text-zion-cyan" />                How We Use Your Information
               </h2>
 "
               <p className="text-zion-slate-light mb-4">
@@ -352,8 +352,7 @@ const PrivacyPolicy = () => {;
                   Analyzing website usage and trends
                 </li>"
                 <li className="flex items-start gap-2">"
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Complying with legal obligations and protecting our rights
+                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                  Complying with legal obligations and protecting our rights
                 </li>
               </ul>
             </motion.div>
@@ -367,8 +366,7 @@ const PrivacyPolicy = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Share className="w-8 h-8 text-zion-cyan" />
-                Information Sharing and Disclosure
+                <Share className="w-8 h-8 text-zion-cyan" />                Information Sharing and Disclosure
               </h2>
 "
               <p className="text-zion-slate-light mb-4">
@@ -389,8 +387,7 @@ const PrivacyPolicy = () => {;
                   <strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred
                 </li>"
                 <li className="flex items-start gap-2">"
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Consent:</strong> We may share information with your explicit consent
+                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                  <strong>Consent:</strong> We may share information with your explicit consent
                 </li>
               </ul>
             </motion.div>
@@ -404,8 +401,7 @@ const PrivacyPolicy = () => {;
               className="mb-12"
             >"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Lock className="w-8 h-8 text-zion-cyan" />
-                Data Security
+                <Lock className="w-8 h-8 text-zion-cyan" />                Data Security
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -429,8 +425,7 @@ const PrivacyPolicy = () => {;
                     Access controls and authentication measures
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Employee training on data protection
+                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Employee training on data protection
                   </li>
                 </ul>
                 <p > However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.
@@ -447,8 +442,7 @@ const PrivacyPolicy = () => {;
               className="mb-12"
             >"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Users className="w-8 h-8 text-zion-cyan" />
-                Your Rights and Choices
+                <Users className="w-8 h-8 text-zion-cyan" />                Your Rights and Choices
               </h2>
 "
               <p className="text-zion-slate-light mb-4">
@@ -477,8 +471,7 @@ const PrivacyPolicy = () => {;
                   <strong>Opt-out:</strong> Unsubscribe from marketing communications
                 </li>"
                 <li className="flex items-start gap-2">"
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Cookies:</strong> Manage cookie preferences through your browser settings
+                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                  <strong>Cookies:</strong> Manage cookie preferences through your browser settings
                 </li>
               </ul>
 "
@@ -496,8 +489,7 @@ const PrivacyPolicy = () => {;
               className="mb-12"
             >"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Globe className="w-8 h-8 text-zion-cyan" />
-                International Data Transfers
+                <Globe className="w-8 h-8 text-zion-cyan" />                International Data Transfers
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -518,8 +510,12 @@ const PrivacyPolicy = () => {;
               className="mb-12"
             >"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
+<<<<<<< HEAD
                 <AlertTriangle className="w-8 h-8 text-zion-cyan" />
                 Children's Privacy
+=======
+                <AlertTriangle className="w-8 h-8 text-zion-cyan" />'                Children's Privacy
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -540,8 +536,7 @@ const PrivacyPolicy = () => {;
               className="mb-12"
             >"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Calendar className="w-8 h-8 text-zion-cyan" />
-                Changes to This Policy
+                <Calendar className="w-8 h-8 text-zion-cyan" />                Changes to This Policy
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -561,8 +556,7 @@ const PrivacyPolicy = () => {;
                     Updating the "Last Updated" date
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Sending email notifications for significant changes
+                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Sending email notifications for significant changes
                   </li>
                 </ul>
                 <p > Your continued use of our website after any changes indicates your acceptance of the updated policy.
@@ -578,8 +572,7 @@ const PrivacyPolicy = () => {;
               viewport={{ once: true }}
             >"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Mail className="w-8 h-8 text-zion-cyan" />
-                Contact Us
+                <Mail className="w-8 h-8 text-zion-cyan" />                Contact Us
               </h2>
 "
               <p className="text-zion-slate-light mb-6">
@@ -603,8 +596,7 @@ const PrivacyPolicy = () => {;
                     <span>{address}</span>
                   </div>"
                   <div className="flex items-center gap-3 text-zion-slate-light">"
-                    <Globe className="w-5 h-5 text-zion-cyan" />
-                    <span>{website}</span>
+                    <Globe className="w-5 h-5 text-zion-cyan" />                    <span>{website}</span>
                   </div>
                 </div>
               </div>
@@ -623,14 +615,12 @@ const PrivacyPolicy = () => {;
   { opacity: 0,
   y: 20 ;
 
-}}
-              animate = {
+}}              animate = {
 
   { opacity: 1,
   y: 0 ;
 
-}}
-              transition = {
+}}              transition = {
 
   { duration: 0.6,
   delay: 0.2 ;
@@ -638,8 +628,7 @@ const PrivacyPolicy = () => {;
 }}
             >"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Eye className="w-8 h-8 text-zion-cyan" />
-                How We Use Your Information
+                <Eye className="w-8 h-8 text-zion-cyan" />                How We Use Your Information
               </h2>
               "
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -676,8 +665,7 @@ const PrivacyPolicy = () => {;
                       <section.icon className="w-4 h-4 text-blue-600" />
                     </div>"
                     <span className="font-medium text-slate-900">{section.title}</span>"
-                    <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
-                  </motion.a>
+                    <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />                  </motion.a>
                 ))}
               </div>
             </motion.div>
@@ -932,8 +920,7 @@ const PrivacyPolicy = () => {;
                   Analyzing website usage and trends
                 </li>"
                 <li className="flex items-start gap-2">"
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Complying with legal obligations and protecting our rights
+                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                  Complying with legal obligations and protecting our rights
                 </li>
               </ul>
             </motion.div>
@@ -962,8 +949,7 @@ const PrivacyPolicy = () => {;
               className="mb-12"
             >"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Share className="w-8 h-8 text-zion-cyan" />
-                Information Sharing and Disclosure
+                <Share className="w-8 h-8 text-zion-cyan" />                Information Sharing and Disclosure
               </h2>
               "
               <p className="text-zion-slate-light mb-4">
@@ -984,8 +970,7 @@ const PrivacyPolicy = () => {;
                   <strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred
                 </li>"
                 <li className="flex items-start gap-2">"
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Consent:</strong> We may share information with your explicit consent
+                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                  <strong>Consent:</strong> We may share information with your explicit consent
                 </li>
               </ul>
             </motion.div>
@@ -1014,8 +999,7 @@ const PrivacyPolicy = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Lock className="w-8 h-8 text-zion-cyan" />
-                Data Security
+                <Lock className="w-8 h-8 text-zion-cyan" />                Data Security
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -1039,8 +1023,7 @@ const PrivacyPolicy = () => {;
                     Access controls and authentication measures
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Employee training on data protection
+                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Employee training on data protection
                   </li>
                 </ul>
                 <p > However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.
@@ -1072,8 +1055,7 @@ const PrivacyPolicy = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Users className="w-8 h-8 text-zion-cyan" />
-                Your Rights and Choices
+                <Users className="w-8 h-8 text-zion-cyan" />                Your Rights and Choices
               </h2>
 "
               <p className="text-zion-slate-light mb-4">
@@ -1102,8 +1084,7 @@ const PrivacyPolicy = () => {;
                   <strong>Opt-out:</strong> Unsubscribe from marketing communications
                 </li>"
                 <li className="flex items-start gap-2">"
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Cookies:</strong> Manage cookie preferences through your browser settings
+                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                  <strong>Cookies:</strong> Manage cookie preferences through your browser settings
                 </li>
               </ul>
 "
@@ -1117,15 +1098,11 @@ const PrivacyPolicy = () => {;
               initial = {
 
   { opacity: 0,
-  y: 20 ;
-
-}}
+  y: 20 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 ;
-
-}}
+  y: 0 }}
               transition = {
 
   { duration: 0.8,
@@ -1136,8 +1113,7 @@ const PrivacyPolicy = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Globe className="w-8 h-8 text-zion-cyan" />
-                International Data Transfers
+                <Globe className="w-8 h-8 text-zion-cyan" />                International Data Transfers
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -1154,15 +1130,11 @@ const PrivacyPolicy = () => {;
               initial = {
 
   { opacity: 0,
-  y: 20 ;
-
-}}
+  y: 20 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 ;
-
-}}
+  y: 0 }}
               transition = {
 
   { duration: 0.8,
@@ -1173,8 +1145,12 @@ const PrivacyPolicy = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
+<<<<<<< HEAD
                 <AlertTriangle className="w-8 h-8 text-zion-cyan" />
                 Children's Privacy
+=======
+                <AlertTriangle className="w-8 h-8 text-zion-cyan" />'                Children's Privacy
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -1191,15 +1167,11 @@ const PrivacyPolicy = () => {;
               initial = {
 
   { opacity: 0,
-  y: 20 ;
-
-}}
+  y: 20 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 ;
-
-}}
+  y: 0 }}
               transition = {
 
   { duration: 0.8,
@@ -1210,8 +1182,7 @@ const PrivacyPolicy = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Calendar className="w-8 h-8 text-zion-cyan" />
-                Changes to This Policy
+                <Calendar className="w-8 h-8 text-zion-cyan" />                Changes to This Policy
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -1231,8 +1202,7 @@ const PrivacyPolicy = () => {;
                     Updating the "Last Updated" date
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Sending email notifications for significant changes
+                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Sending email notifications for significant changes
                   </li>
                 </ul>
                 <p > Your continued use of our website after  changes indicates your acceptance of the updated policy.
@@ -1245,26 +1215,19 @@ const PrivacyPolicy = () => {;
               initial = {
 
   { opacity: 0,
-  y: 20 ;
-
-}}
+  y: 20 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 ;
-
-}}
+  y: 0 }}
               transition = {
 
   { duration: 0.8,
-  delay: 0.9 ;
-
-}}
+  delay: 0.9 }}
               viewport={{ once: true }}
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Mail className="w-8 h-8 text-zion-cyan" />
-                Contact Us
+                <Mail className="w-8 h-8 text-zion-cyan" />                Contact Us
               </h2>
 "
               <p className="text-zion-slate-light mb-6">
@@ -1288,8 +1251,7 @@ const PrivacyPolicy = () => {;
                     <span>{address}</span>
                   </div>"
                   <div className="flex items-center gap-3 text-zion-slate-light">"
-                    <Globe className="w-5 h-5 text-zion-cyan" />
-                    <span>{website}</span>
+                    <Globe className="w-5 h-5 text-zion-cyan" />                    <span>{website}</span>
                   </div>
                 </div>
               </div>

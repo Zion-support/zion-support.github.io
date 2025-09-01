@@ -1,4 +1,3 @@
-import { ProductListing  } from '@/types/listings';
 
 // Advanced AI Services 2030 - Zion Tech Group
 // Cutting-edge AI solutions with real market applications
@@ -37,7 +36,6 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     setupTime: "6-8 weeks","
     integrations["Research Databases", "Academic APIs", "Data Sources", "Publication Platforms", "Collaboration Tools"];
   },;
-
   // AI-Powered Metaverse Development Platform
   {
 "
@@ -71,7 +69,6 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     setupTime: "8-10 weeks","
     integrations["VR Headsets", "3D Modeling Tools", "Blockchain Platforms", "Payment Gateways", "Social Platforms"];
   },;
-
   // AI-Powered Space Technology Analytics
   {
 "
@@ -105,7 +102,6 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     setupTime: "10-12 weeks","
     integrations["Satellite APIs", "Ground Stations", "Weather Services", "Navigation Systems", "Space Agencies"];
   },;
-
   // AI-Powered Quantum Machine Learning Platform
   {
 "
@@ -139,7 +135,6 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     setupTime: "12-16 weeks","
     integrations["Quantum Computers", "ML Frameworks", "Cloud Platforms", "Data Sources", "AI Models"];
   },;
-
   // AI-Powered Environmental Technology Platform
   {
 "
@@ -173,7 +168,6 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     setupTime: "5-7 weeks","
     integrations["IoT Sensors", "Satellite Data", "Weather APIs", "Government Databases", "Sustainability Tools"];
   },;
-
   // AI-Powered Entertainment Content Generation
   {
 "
@@ -207,7 +201,6 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     setupTime: "6-8 weeks","
     integrations["Video Editing Tools", "Audio Software", "3D Modeling", "Streaming Platforms", "Social Media"];
   },;
-
   // AI-Powered Education Personalization Platform
   {
 "
@@ -240,6 +233,5 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     roi: "500% within 12 months","
     setupTime: "4-6 weeks","
     integrations["LMS Systems", "Student Information Systems", "Content Libraries", "Assessment Tools", "Analytics Platforms"];
-  }
-];
+  }];
 '"

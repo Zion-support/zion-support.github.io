@@ -42,8 +42,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
           description: "Revolutionize IoT with AI-powered edge computing","
           pricing: "$299 - $2,499/month","
           features["Sub-millisecond processing", "Edge AI intelligence", "Distributed computing", "Hybrid cloud integration"];
-        }
-      ]
+        }      ]
     },;
     {
 "
@@ -73,8 +72,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
           description: "Virtual representation of physical systems","
           pricing: "Custom pricing","
           features["Real-time monitoring", "Predictive maintenance", "Performance optimization", "Simulation modeling"];
-        }
-      ]
+        }      ]
     },;
     {
 "
@@ -104,8 +102,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
           description: "Real-time edge data processing","
           pricing: "Custom pricing","
           features["Edge processing", "Real-time analytics", "Data filtering", "Local decision making"];
-        }
-      ]
+        }      ]
     },;
     {
 "
@@ -135,8 +132,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
           description: "AI-powered compliance management","
           pricing: "Custom pricing","
           features["Regulatory monitoring", "Compliance reporting", "Risk assessment", "Audit preparation"];
-        }
-      ]
+        }      ]
     },;
     {
 "
@@ -175,8 +171,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
     { title: "AI Services Showcase", url: "/ai-services-showcase", description: "Explore our AI solutions" },"
     { title: "Comprehensive Services", url: "/comprehensive-services", description: "View all services" },"
     { title: "Pricing Guide", url: "/pricing", description: "Transparent pricing information" },"
-    { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },;"
-    { title: "Request Quote", url: "/request-quote", description: "Get custom pricing" };
+    { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },;"    { title: "Request Quote", url: "/request-quote", description: "Get custom pricing" };
   ];
 
   return()
@@ -187,8 +182,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
         keywords="Zion Tech Group services, AI services, cloud services, data analytics, cybersecurity, micro SAAS, business solutions, service directory"
         canonical="https://ziontechgroup.com/services-sitemap"
       />
-      "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-7xl mx-auto text-center">

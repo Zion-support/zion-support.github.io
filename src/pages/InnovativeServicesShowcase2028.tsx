@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
@@ -400,6 +401,13 @@ export default function InnovativeServicesShowcase2028() {
         keywords="AI services, micro SAAS, IT services, quantum computing, blockchain, IoT, green technology, space technology, Zion Tech Group"
         canonicalUrl="https://ziontechgroup.com/innovative-services-showcase-2028"
       />
+=======
+import React, { useState } from 'react';'
+import { motion } from 'framer-motion';'
+import { SEO } from '@/components/SEO';'
+import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgroup.com/innovative-services-showcase-2028"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-28 pb-16 overflow-hidden">"
@@ -455,8 +463,7 @@ export default function InnovativeServicesShowcase2028() {
                 onChange={e => setSearchQuery(e.target.value)}"
                 className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />"
-              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-            </div>
+              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />            </div>
 
             {/* Category Filter */}"
             <div className="flex flex-wrap gap-2">
@@ -566,8 +573,7 @@ export default function InnovativeServicesShowcase2028() {
                         key={idx}"
                         className="flex items-center text-sm text-slate-400"
                       >"
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />                        {feature}
                       </div>) ) }
                   </div>
 
@@ -581,8 +587,7 @@ export default function InnovativeServicesShowcase2028() {
                         key={idx}"
                         className="flex items-center text-sm text-slate-400"
                       >"
-                        <TrendingUp className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        {benefit}
+                        <TrendingUp className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />                        {benefit}
                       </div>) ) }
                   </div>
 
@@ -592,8 +597,7 @@ export default function InnovativeServicesShowcase2028() {
                     className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                   >
                     Get Started"
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />                  </Link>
                 </div>
                 
                 <div className="mb-6">
@@ -653,8 +657,7 @@ export default function InnovativeServicesShowcase2028() {
                 Speak with our experts directly
               </p>
               <a`
-                href={`tel:${contactInfo.phone}`}"
-                className="text-2xl font-bold text-cyan-400 text-center block hover:text-cyan-300 transition-colors duration-300"
+                href={`tel:${contactInfo.phone}`}"                className="text-2xl font-bold text-cyan-400 text-center block hover:text-cyan-300 transition-colors duration-300"
               >
                 {contactInfo.phone}
               </a>
@@ -677,8 +680,7 @@ export default function InnovativeServicesShowcase2028() {
                 Send us your requirements
               </p>
               <a`
-                href={`mailto:${contactInfo.email}`}"
-                className="text-lg font-semibold text-cyan-400 text-center block hover:text-cyan-300 transition-colors duration-300 break-all"
+                href={`mailto:${contactInfo.email}`}"                className="text-lg font-semibold text-cyan-400 text-center block hover:text-cyan-300 transition-colors duration-300 break-all"
               >
                 {contactInfo.email}
               </a>
@@ -699,8 +701,7 @@ export default function InnovativeServicesShowcase2028() {
               </h3>"
               <p className="text-slate-300 text-center mb-4">
                 Our headquarters location
-              </p>"
-              <p className="text-slate-300 text-center text-sm leading-relaxed">
+              </p>"              <p className="text-slate-300 text-center text-sm leading-relaxed">
                 {contactInfo.address}
               </p>
             </motion.div>

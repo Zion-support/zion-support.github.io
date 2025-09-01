@@ -103,7 +103,6 @@ const ComprehensivePricing2025 = () => {
   ];
 
   const filteredData = pricingData.filter(item => {
-
     const categoryMatch ='
       selectedCategory === 'All' || item.category === selectedCategory;
     const industryMatch ='
@@ -238,6 +237,5 @@ const ComprehensivePricing2025 = () => {
       </div>
     </div>) ;
 };
-
 export default ComprehensivePricing2025;
 '"`

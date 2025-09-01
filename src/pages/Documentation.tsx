@@ -7,8 +7,7 @@ import {
   Filter,
   Star,
   Clock,
-  Eye,
-  ExternalLink,
+  Eye,  ExternalLink,
   Code,
   FileText,
   Video,
@@ -21,7 +20,6 @@ import {
   Brain,
   TrendingUp} from 'lucide-react';
 import { SEO } from '../components/SEO';
-
 const Documentation: React.FC = () => {
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -192,7 +190,6 @@ const Documentation: React.FC = () => {
 
     return matchesSearch && matchesCategory;
   }) ;
-
   // Update counts
   categories.forEach(cat => {
 
@@ -200,7 +197,6 @@ const Documentation: React.FC = () => {
 
       cat.count = documentationItems.length;
     } else {
-
       cat.count = documentationItems.filter()
         item => item.category === cat.id
       ).length;
@@ -214,8 +210,7 @@ const Documentation: React.FC = () => {
         description="Comprehensive documentation, tutorials, and resources to help you succeed with Zion Tech Group's innovative solutions."
         keywords="documentation, tutorials, API reference, guides, examples, developer resources, Zion Tech Group"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}"
         <section className="pt-32 pb-16 px-4">"
           <div className="max-w-7xl mx-auto text-center">
@@ -226,8 +221,7 @@ const Documentation: React.FC = () => {
             >"
               <div className="flex items-center justify-center space-x-3 mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">"
-                  <BookOpen className="w-8 h-8 text-white" />
-                </div>
+                  <BookOpen className="w-8 h-8 text-white" />                </div>
               </div>"
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Documentation & Resources
@@ -248,8 +242,12 @@ const Documentation: React.FC = () => {
               <div className="relative mb-6">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search documentation..."
+=======
+                  type="text""                  placeholder="Search documentation..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -329,8 +327,7 @@ const Documentation: React.FC = () => {
                       )}
                     </div>"
                     <div className="flex items-center gap-2 text-gray-400 text-sm">"
-                      <Eye className="w-4 h-4" />
-                      {item.views.toLocaleString()}
+                      <Eye className="w-4 h-4" />                      {item.views.toLocaleString()}
                     </div>
                     <h3 className="text-2xl font-bold text-white">{category.name}</h3>
                   </div>
@@ -348,8 +345,7 @@ const Documentation: React.FC = () => {
                       {item.readTime}
                     </div>"
                     <div className="flex items-center gap-1">"
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      {item.rating}
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />                      {item.rating}
                     </div>
                   </div>
 "
@@ -364,8 +360,7 @@ const Documentation: React.FC = () => {
                   </div>
 "
                   <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">"
-                    <FileText className="w-4 h-4" />
-                    Read More
+                    <FileText className="w-4 h-4" />                    Read More
                   </button>
                 </motion.div>) ) }
             </div>
@@ -378,8 +373,7 @@ const Documentation: React.FC = () => {
                 </h3>"
                 <p className="text-gray-400">
                   Try adjusting your search criteria or filters.
-                </p>
-              </div>
+                </p>              </div>
             )}
           </div>
         </div>
@@ -422,14 +416,12 @@ const Documentation: React.FC = () => {
                   </p>
 "
                   <button className="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-2 px-4 rounded-lg font-medium hover:from-green-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2">"
-                    <ExternalLink className="w-4 h-4" />
-                    Visit Resource
+                    <ExternalLink className="w-4 h-4" />                    Visit Resource
                   </button>
                 </motion.div>) ) }
             </div>
           </div>
         </div>
       </section>
-
 export default Documentation;
 '"`

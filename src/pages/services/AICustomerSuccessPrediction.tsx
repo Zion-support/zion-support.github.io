@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -159,6 +160,11 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       features[;
         'Up to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support'
       ],;
+=======
+import React, { useState } from 'react';'
+import { motion } from 'framer-motion';        'Email support'
+      ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
@@ -212,17 +218,27 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
   ];
 
   const integrations = ['
+<<<<<<< HEAD
     'Salesforce',HubSpot',Intercom',Zendesk',Slack',Microsoft Teams',;
     'Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
+=======
+    'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;'    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO "
+<<<<<<< HEAD
         title="AI Customer Success Prediction Platform | Zion Tech Group"
         description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting."
         keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
       />
+=======
+        title="AI Customer Success Prediction Platform | Zion Tech Group""
+        description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.""        keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -501,8 +517,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 <div className="space-y-2">
                   {capability.benefits.map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center text-sm text-gray-400">"
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />                      {benefit}
                     </div>
                   ))}
                 </ul>
@@ -610,8 +625,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 <div className="space-y-2">
                   {useCase.metrics.map((metric, metricIndex) => ("
                     <div key={metricIndex} className="flex items-center text-sm text-gray-400">"
-                      <Target className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                      {metric}
+                      <Target className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />                      {metric}
                     </div>
                   ))}
                 </div>
@@ -811,8 +825,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -982,8 +995,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             <div className="flex flex-wrap justify-center gap-4">"
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105">
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a "
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
@@ -1004,8 +1016,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               </div>"
               <div className="flex items-center">"
                 <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                <span>Cancel anytime</span>
-              </div>
+                <span>Cancel anytime</span>              </div>
             </div>
           </motion.div>
         </div>
@@ -1019,8 +1030,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
                 <Phone className="w-6 h-6 text-white" />
               </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"
-              <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"              <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300 transition-colors">
                 +1 302 464 0950
               </a>"
               <p className="text-sm text-slate-400 mt-2">Available 24/7 for urgent support</p>
@@ -1029,8 +1039,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
                 <Mail className="w-6 h-6 text-white" />
               </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 transition-colors">
                 kleber@ziontechgroup.com
               </a>"
               <p className="text-sm text-slate-400 mt-2">Response within 2 hours</p>
@@ -1039,8 +1048,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
                 <MapPin className="w-6 h-6 text-white" />
               </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"
-              <p className="text-slate-300">
+              <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"              <p className="text-slate-300">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </p>"

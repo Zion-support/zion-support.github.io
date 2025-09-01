@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -165,6 +166,11 @@ const Resources: React.FC = (): JSX.Element => {;
       fileSize: '450 MB',
       fileType: 'MP4',
       downloadUrl: 'https://ziontechgroup.com/resources/cybersecurity-ai-webinar.mp4'
+=======
+import React from 'react';'
+import { Link } from 'react-router-dom';'
+import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup.com/resources/cybersecurity-ai-webinar.mp4'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
@@ -239,8 +245,7 @@ const Resources: React.FC = (): JSX.Element => {;
         { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },;
         { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },;
         { title: 'ROI Analysis Guide', type: 'Analysis', readTime: '12 min', featured: false };
-      ];
-    };
+      ]};
   ];
 
   const featuredResources = [
@@ -283,10 +288,16 @@ const Resources: React.FC = (): JSX.Element => {;
   ];
 
   const contactInfo = {
+<<<<<<< HEAD
 
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',;
   ;
+=======
+'
+  phone: '+1 302 464 0950','
+    email: 'kleber@ziontechgroup.com',;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -294,7 +305,6 @@ const Resources: React.FC = (): JSX.Element => {;
   ;
 
 };
-
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
@@ -391,8 +401,7 @@ const Resources: React.FC = (): JSX.Element => {;
                     }`}>
                       {resource.badge}
                     </span>"
-                    <ExternalLink className="w-4 h-4 text-cyan-500 group-hover:text-cyan-400 transition-colors" />
-                  </div>
+                    <ExternalLink className="w-4 h-4 text-cyan-500 group-hover:text-cyan-400 transition-colors" />                  </div>
                 </Link>;
               </motion.div>) ) }
           </div>
@@ -424,8 +433,7 @@ const Resources: React.FC = (): JSX.Element => {;
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">;
               {featuredResources.map((resource, index)  => {;
                 const ResourceIcon = getResourceIcon(resource.type);
-                return()
-                  <motion.article
+                return()                  <motion.article
                     key = {resource.id}
                     initial = {
 
@@ -451,8 +459,7 @@ const Resources: React.FC = (): JSX.Element => {;
                       {/* Resource Image Placeholder */}"
                       <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative">"
                         <ResourceIcon className="w-16 h-16 text-zion-cyan" />"
-                        <div className="absolute top-4 right-4">"
-                          <span className="px-3 py-1 bg-zion-cyan text-white text-xs rounded-full font-semibold">
+                        <div className="absolute top-4 right-4">"                          <span className="px-3 py-1 bg-zion-cyan text-white text-xs rounded-full font-semibold">
                             Featured
                           </span>
                         </div>
@@ -469,8 +476,7 @@ const Resources: React.FC = (): JSX.Element => {;
                             {resource.readTime || resource.duration}
                           </span>"
                           <span className="flex items-center">"
-                            <Download className="w-4 h-4 mr-2" />
-                            {resource.downloads?.toLocaleString() || resource.views?.toLocaleString()}
+                            <Download className="w-4 h-4 mr-2" />                            {resource.downloads?.toLocaleString() || resource.views?.toLocaleString()}
                           </span>
                         </div>
 "
@@ -581,8 +587,7 @@ const Resources: React.FC = (): JSX.Element => {;
                             {item.readTime || item.duration}
                           </span>
                           {item.featured && ("
-                            <Star className="w-3 h-3 text-yellow-400 ml-1 inline" />
-                          )}
+                            <Star className="w-3 h-3 text-yellow-400 ml-1 inline" />                          )}
                         </div>
                       </div>
 "
@@ -602,8 +607,7 @@ const Resources: React.FC = (): JSX.Element => {;
                           >
                             {tag}
                           </span>"
-                          <ExternalLink className="w-3 h-3 text-cyan-500/50 group-hover:text-cyan-400 transition-colors" />
-                        </div>;
+                          <ExternalLink className="w-3 h-3 text-cyan-500/50 group-hover:text-cyan-400 transition-colors" />                        </div>;
                       </div>;
                     </div>
                   </div>
@@ -691,8 +695,7 @@ const Resources: React.FC = (): JSX.Element => {;
                   <span className="text-xs text-gray-500">
                     {category.items.length} resources
                   </span>"
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
-                </div>
+                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />                </div>
               </motion.div>) ) }
           </div>
         </div>
@@ -769,8 +772,7 @@ const Resources: React.FC = (): JSX.Element => {;
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm"
                 >
                   Access Resource"
-                  <ExternalLink className="w-4 h-4" />
-                </Link>
+                  <ExternalLink className="w-4 h-4" />                </Link>
               </motion.div>
             ))}
           </div>
@@ -812,8 +814,7 @@ const Resources: React.FC = (): JSX.Element => {;
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
                     <Phone className="w-6 h-6 text-white" />
                   </div>"
-                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"`
-                  <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"`                  <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
                     {contactInfo.phone}
                   </a>
                 </div>
@@ -822,8 +823,7 @@ const Resources: React.FC = (): JSX.Element => {;
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
                     <Mail className="w-6 h-6 text-white" />
                   </div>"
-                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"`
-                  <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"`                  <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
                     {contactInfo.email}
                   </a>
                 </div>
@@ -832,8 +832,7 @@ const Resources: React.FC = (): JSX.Element => {;
                   <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
                     <MapPin className="w-6 h-6 text-white" />
                   </div>"
-                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"
-                  <p className="text-slate-300 text-sm">
+                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"                  <p className="text-slate-300 text-sm">
                     {contactInfo.address}
                   </p>
                 </div>
@@ -856,8 +855,7 @@ const Resources: React.FC = (): JSX.Element => {;
                   to="/demo"
                   className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300"
                 >"
-                  <Play className="w-5 h-5 inline mr-2" />
-                  Schedule Demo
+                  <Play className="w-5 h-5 inline mr-2" />                  Schedule Demo
                 </Link>
               </div>
             </div>;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -163,6 +164,11 @@ const microSAASServices2028 = [
     description: 'Advanced AI content creation platform that generates high-quality articles, social media posts, marketing copy, and creative content across all platforms.',
     features[;
       'AI article generation',Social media content creation',Marketing copy optimization',SEO content optimization',Multi-language support',Content scheduling',Brand voice customization',Plagiarism detection',Content analytics',Team collaboration tools'
+=======
+import React, { useState } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';'
+import { Link } from 'react-router-dom';      'Team collaboration tools'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],;
     popular: true,
     icon: FileText,
@@ -429,8 +435,7 @@ const microSAASServices2028 = [
     growthRate: '260% annual growth',;
     rating: 4.6,;
     reviews: 234,;
-    customers: 123;
-  };
+    customers: 123};
 ];
 
           return b.popular ? 1 : -1}
@@ -511,8 +516,7 @@ const microSAASServices2028 = [
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-64 px-4 py-2 pl-10 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
                 />"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
-              </div>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />              </div>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}"
@@ -592,8 +596,7 @@ const microSAASServices2028 = [
                 <div className="space-y-2 mb-6">
                   {service.features.slice(0, 3).map((feature, idx) => ("
                     <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-zion-cyan" />                      {feature}
                     </div>
                   ))}
                   {service.features.length > 3 && ("
@@ -605,8 +608,7 @@ const microSAASServices2028 = [
                 {/* Stats */}"
                 <div className="flex items-center justify-between text-sm text-zion-slate-light mb-6">"
                   <div className="flex items-center gap-1">"
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    {service.rating} ({service.reviews} reviews)
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />                    {service.rating} ({service.reviews} reviews)
                   </div>
                   <div>{service.customers} customers</div>
                 </div>
@@ -617,8 +619,7 @@ const microSAASServices2028 = [
                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold text-center group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 
                   Learn More"
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />                </Link>
 
                 {/* Market Info */}"
                 <div className="mt-6 pt-6 border-t border-zion-slate/30">"
@@ -667,15 +668,13 @@ const microSAASServices2028 = [
               href="tel:+13024640950"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 "
-              <Phone className="w-5 h-5" />
-              +1 302 464 0950
+              <Phone className="w-5 h-5" />              +1 302 464 0950
             </a>
             <a"
               href="mailto:kleber@ziontechgroup.com"
               className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 "
-              <Mail className="w-5 h-5" />
-              kleber@ziontechgroup.com
+              <Mail className="w-5 h-5" />              kleber@ziontechgroup.com
             </a>;
           </motion.div>;
         </div>;

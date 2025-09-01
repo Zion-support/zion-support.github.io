@@ -3,8 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
 ;
-export { function };
-export default function FinOpsAdvisor(...args: []):  {
+export { function };export default function FinOpsAdvisor(...args: []):  {
 
   return()
     <>
@@ -21,8 +20,7 @@ export default function FinOpsAdvisor(...args: []):  {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center">"
               <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-8">"
-                <DollarSign className="w-4 h-4 mr-2" />
-                Cloud Financial Operations
+                <DollarSign className="w-4 h-4 mr-2" />                Cloud Financial Operations
               </div>
 "
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -44,8 +42,7 @@ export default function FinOpsAdvisor(...args: []):  {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>"
                 <button className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">"
-                  <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
+                  <Play className="mr-2 w-5 h-5" />                  Watch Demo
                 </button>
               </div>
             </div>
@@ -182,8 +179,7 @@ export default function FinOpsAdvisor(...args: []):  {
                   <ul className="space-y-1">
                     {area.benefits.map((benefit, benefitIndex) => ("
                       <li key={benefitIndex} className="text-sm text-emerald-400 flex items-center">"
-                        <CheckCircle className="w-3 h-3 mr-2" />
-                        {benefit}
+                        <CheckCircle className="w-3 h-3 mr-2" />                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -262,8 +258,7 @@ export default function FinOpsAdvisor(...args: []):  {
                     "Reduced cloud waste and unused resources"
                   ].map((saving, index) => ("
                     <div key={index} className="flex items-start space-x-3">"
-                      <CheckCircle className="w-6 h-6 text-emerald-400 mt-0.5 flex-shrink-0" />"
-                      <span className="text-slate-300">{saving}</span>
+                      <CheckCircle className="w-6 h-6 text-emerald-400 mt-0.5 flex-shrink-0" />"                      <span className="text-slate-300">{saving}</span>
                     </div>
                   ))}
                 </div>
@@ -356,8 +351,7 @@ export default function FinOpsAdvisor(...args: []):  {
                   <ul className="space-y-1">
                     {tool.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="text-sm text-emerald-400 flex items-center">"
-                        <CheckCircle className="w-3 h-3 mr-2" />
-                        {feature}
+                        <CheckCircle className="w-3 h-3 mr-2" />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -433,8 +427,7 @@ export default function FinOpsAdvisor(...args: []):  {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200"
 
                 Schedule a Consultation"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"

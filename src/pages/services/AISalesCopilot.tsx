@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-
   Users, 
   TrendingUp, 
   Target, 
@@ -191,9 +190,14 @@ const AISalesCopilot = (...args: unknown[]): unknown => {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
         title="AI Sales Copilot - Zion Tech Group"
         description="Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth."
       />
+=======
+        title="AI Sales Copilot - Zion Tech Group""        description="Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -206,8 +210,7 @@ const AISalesCopilot = (...args: unknown[]): unknown => {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">"
-              <Users className="w-4 h-4 mr-2" />
-              AI-Powered Sales
+              <Users className="w-4 h-4 mr-2" />              AI-Powered Sales
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Sales"
@@ -225,8 +228,7 @@ const AISalesCopilot = (...args: unknown[]): unknown => {
                 Start Free Trial
               </button>"
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />
-                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -471,8 +473,7 @@ const AISalesCopilot = (...args: unknown[]): unknown => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />
-                Get Started Today
+                <Star className="w-5 h-5 mr-2" />                Get Started Today
               </button>"
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />
@@ -486,7 +487,6 @@ const AISalesCopilot = (...args: unknown[]): unknown => {
   );
 };
 ;
-export { AISalesCopilot };
-export default AISalesCopilot;
+export { AISalesCopilot };export default AISalesCopilot;
 
 '"

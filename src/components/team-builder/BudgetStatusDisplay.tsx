@@ -1,6 +1,7 @@
 import { Progress  } from '@/components/ui/progress';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert'; // AlertTitle not used, but kept for consistency'
 import { Badge  } from '@/components/ui/badge'; // Badge not used, but kept for consistency'
+<<<<<<< HEAD
 import { TrendingDown, TrendingUp, AlertTriangle, CheckCircle, Info  } from 'lucide-react';
 import { Card  } from '@/components/ui/card'; // Added missing import
 
@@ -33,6 +34,12 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
   } else if (budgetString.startsWith('>) || budgetString.startsWith('over')) {
 
     min = parseFloat(budgetString.replace(/[>$,\soverk]/g,));
+=======
+import { TrendingDown, TrendingUp, AlertTriangle, CheckCircle, Info  } from 'lucide-react';'
+import { Card  } from '@/components/ui/card'; // Added missing import  } else if (budgetString.startsWith('>') || budgetString.startsWith('over')) {
+'
+    min = parseFloat(budgetString.replace(/[>$,\soverk]/g, ''));'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
      if (budgetString.includes('k')) min = kTo1000(budgetString);
     max = Infinity; // No explicit maximum"
   } else { // Assuming a single number or "approx X"'
@@ -50,9 +57,14 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
 export const BudgetStatusDisplay = (...args: unknown[]): unknown => {;
   const userBudget = parseBudget(projectBriefBudget);
   const estimatedAvgCost = (estimatedCost.min + estimatedCost.max) / 2;
+<<<<<<< HEAD
 
   let status: 'good' | 'warning' | 'danger' | 'info' = 'info';"
   let message = "";
+=======
+'
+  let status: 'good' | 'warning' | 'danger' | 'info' = 'info';"  let message = "";
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   let progressValue = 0; // Percentage for the progress bar
 
   if (userBudget.max !== null && userBudget.max !== Infinity) {
@@ -83,9 +95,14 @@ export const BudgetStatusDisplay = (...args: unknown[]): unknown => {;
       status = 'warning';"
       message = "The estimated cost is below your specified minimum budget.";
       progressValue = (estimatedAvgCost / userBudget.min) * 100};
+<<<<<<< HEAD
   } else {;
     status = 'info';"
     message = "Your budget was specified as a general figure. The estimated cost is provided for your review.";
+=======
+  } else {;'
+    status = 'info';"    message = "Your budget was specified as a general figure. The estimated cost is provided for your review.";
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // No clear target for progress bar, maybe show 50% or hide it
     progressValue = 50}
 ;
@@ -105,8 +122,7 @@ export const BudgetStatusDisplay = (...args: unknown[]): unknown => {;
   const getProgressColor = () => {;'"
     if (status === 'good') return "bg-green-500";'"
     if (status === 'warning') return "bg-yellow-500";'"
-    if (status === 'danger') return "bg-red-500";"
-    return "bg-blue-500"}
+    if (status === 'danger') return "bg-red-500";"    return "bg-blue-500"}
 
   return ("
     <Card className = "p-4 shadow-sm">"
@@ -117,8 +133,7 @@ export const BudgetStatusDisplay = (...args: unknown[]): unknown => {;
       <AlertDescription className="text-sm mb-3">{message}</AlertDescription>
       {userBudget.max !== null && userBudget.max !== Infinity && userBudget.max > 0 && (
         <>
-          <Progress value={progressValue} className={`w-full h-2.5 ${getProgressColor()}`} />"
-          <div className="flex justify-between text-xs text-muted-foreground mt-1">
+          <Progress value={progressValue} className={`w-full h-2.5 ${getProgressColor()}`} />"          <div className="flex justify-between text-xs text-muted-foreground mt-1">
             <span>Your Max: ${userBudget.max.toLocaleString()}</span>
             <span>Est. Avg: ${estimatedAvgCost.toLocaleString()}</span>
           </div>

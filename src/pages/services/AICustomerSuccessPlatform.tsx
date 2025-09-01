@@ -5,8 +5,7 @@ import {
   Users,
   MessageSquare,
   TrendingUp,
-  CheckCircle,
-  Play,
+  CheckCircle,  Play,
   Star,
   Award,
   MessageCircle,
@@ -290,8 +289,7 @@ const AICustomerSuccessPlatform = () => {
     'Salesforce CRM',HubSpot',Zendesk',Intercom',Slack',Microsoft Teams',Google Workspace',Slack',Zapier',Webhook APIs',
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+  return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -302,8 +300,7 @@ const AICustomerSuccessPlatform = () => {
             className="text-center"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">"
-              <Sparkles className="w-4 h-4 mr-2" />
-              AI-Powered Customer Success
+              <Sparkles className="w-4 h-4 mr-2" />              AI-Powered Customer Success
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Customer Success with"
@@ -323,16 +320,14 @@ const AICustomerSuccessPlatform = () => {
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
               >"
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
+                <Play className="w-5 h-5 mr-2" />                Watch Demo
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
-                <Settings className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Settings className="w-5 h-5 mr-2" />                Start Free Trial
               </Link>
               <Link
                 to="/demo"
@@ -412,8 +407,7 @@ const AICustomerSuccessPlatform = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-start space-x-3"
               >"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"
-                <span className="text-zion-slate-light text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"                <span className="text-zion-slate-light text-lg">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -507,8 +501,7 @@ const AICustomerSuccessPlatform = () => {
                       key={featureIndex}"
                       className="flex items-center space-x-3"
                     >"
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-                      <span className="text-zion-slate-light">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"                      <span className="text-zion-slate-light">{feature}</span>
                     </li>
                   ))}
                 </ul>"
@@ -577,16 +570,14 @@ const AICustomerSuccessPlatform = () => {
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <ArrowRight className="w-5 h-5 mr-2" />                Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
-                <MessageSquare className="w-5 h-5 mr-2" />
-                Schedule Demo
+                <MessageSquare className="w-5 h-5 mr-2" />                Schedule Demo
               </motion.button>
             </div>
           </motion.div>
@@ -610,8 +601,7 @@ const AICustomerSuccessPlatform = () => {
             </p>"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
               <div className="flex items-center justify-center space-x-3">"
-                <Phone className="w-6 h-6 text-blue-400" />"
-                <span className="text-zion-slate-light">+1 302 464 0950</span>
+                <Phone className="w-6 h-6 text-blue-400" />"                <span className="text-zion-slate-light">+1 302 464 0950</span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
                 <Mail className="w-6 h-6 text-blue-400" />"
@@ -627,21 +617,18 @@ const AICustomerSuccessPlatform = () => {
                   Middletown DE 19709
                 </span>
               </div>
-            </div>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Contact Us
+                <ArrowRight className="w-5 h-5 mr-2" />                Contact Us
               </a>
               <a"
                 href="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
-                <Globe className="w-5 h-5 mr-2" />
-                Visit Website
+                <Globe className="w-5 h-5 mr-2" />                Visit Website
               </a>
             </div>
           </motion.div>
@@ -651,6 +638,5 @@ const AICustomerSuccessPlatform = () => {
   );
 };
 ;
-export { AICustomerSuccessPlatform };
-export default AICustomerSuccessPlatform;
+export { AICustomerSuccessPlatform };export default AICustomerSuccessPlatform;
 '"`

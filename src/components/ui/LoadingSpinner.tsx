@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { cn } from '../../utils/cn';
 
@@ -15,9 +16,16 @@ export default function LoadingSpinner({
   className = '',
   showText = false,
   text = 'Loading...'
-  className?: string;
-}
+=======
 
+type LoadingSpinnerProps = {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  className?: string;
+  text?: string;
+};
+
+<<<<<<< HEAD
 export function LoadingSpinner({
 
   size = 'md',
@@ -421,3 +429,19 @@ export function AppLoadingSpinner() {
   );
 }
 '"`
+=======
+export default function LoadingSpinner({ size = 'md', className = '', text }: LoadingSpinnerProps) {
+  const sizeClasses: Record<string, string> = {
+    sm: 'w-6 h-6',
+    md: 'w-10 h-10',
+    lg: 'w-14 h-14',
+    xl: 'w-20 h-20'
+  };
+  return (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin`} aria-label="Loading" />
+      {text ? <p className="mt-3 text-sm text-gray-400">{text}</p> : null}
+    </div>
+  );
+}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

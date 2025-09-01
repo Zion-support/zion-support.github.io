@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
   DollarSign,
@@ -21,6 +22,12 @@ export default function Dashboard(...args[]):  {
   const stats = [
       icon: <TrendingUp className="h - 6 w - 6 text - orange - 500" />;
     };
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';    };
+  ]};
+  ]};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const recentProjects = [
@@ -157,8 +164,7 @@ export default function Dashboard(...args[]):  {
         return "bg-green-100 text-green-800";"
       case "In Progress":;"
         return "bg-blue-100 text-blue-800";"
-      case "Planning":;"
-        return "bg-yellow-100 text-yellow-800";
+      case "Planning":;"        return "bg-yellow-100 text-yellow-800";
       default:;"
         return "bg-gray-100 text-gray-800"}
   };
@@ -170,8 +176,7 @@ export default function Dashboard(...args[]):  {
         return "bg-red-100 text-red-800";"
       case "Medium":;"
         return "bg-yellow-100 text-yellow-800";"
-      case "Low":;"
-        return "bg-green-100 text-green-800";
+      case "Low":;"        return "bg-green-100 text-green-800";
       default:;"
         return "bg-gray-100 text-gray-800"}
   };
@@ -191,8 +196,7 @@ export default function Dashboard(...args[]):  {
               <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
             </button>"
             <button className="p-2 text-zion-slate-light hover:text-white transition-colors">"
-              <Settings className="h-6 w-6" />
-            </button>
+              <Settings className="h-6 w-6" />            </button>
 import {
 
   BarChart3, 
@@ -271,12 +275,20 @@ export default function Dashboard() {
   ];
 
   const quickActions = ['
+<<<<<<< HEAD
     { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },;
     { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;
     { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },;
     { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;
     { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;
     { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }
+=======
+    { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },;'
+    { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;'
+    { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },;'
+    { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;'
+    { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;'    { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
@@ -295,8 +307,7 @@ export default function Dashboard() {
               </button>"
               <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">"
                 <Settings className="h-6 w-6" />
-              </button>"
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
+              </button>"              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
                 ZT
               </div>
             </div>
@@ -437,8 +448,7 @@ export default function Dashboard() {
                 <h2 className="text-xl font-semibold text-gray-900">Recent Services</h2>"
                 <button className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
                   View All"
-                  <ArrowRight className="h-4 w-4 ml-1" />
-                </button>
+                  <ArrowRight className="h-4 w-4 ml-1" />                </button>
               </div>"
               <div className="space-y-4">
                 {recentServices.map((service, index) => (
@@ -527,8 +537,7 @@ export default function Dashboard() {
                       <h3 className="font-medium text-gray-900">{service.name}</h3>"
                       <div className="flex items-center mt-1 space-x-4 text-sm text-gray-500">"
                         <span className="flex items-center">"
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-1" />
-                          {service.status}
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-1" />                          {service.status}
                         </span>
                         <span>{service.lastUsed}</span>
                       </div>
@@ -596,8 +605,7 @@ export default function Dashboard() {
                       <h4 className="text-sm font-medium text-gray-900">{event.title}</h4>"
                       <div className="flex items-center mt-1 text-xs text-gray-500 space-x-2">"
                         <span className="flex items-center">"
-                          <Calendar className="h-3 w-3 mr-1" />
-                          {event.date}
+                          <Calendar className="h-3 w-3 mr-1" />                          {event.date}
                         </span>
                         <span>{event.time}</span>"
                         <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">
@@ -706,6 +714,5 @@ export default function Dashboard() {
         </div>;
       </div>;
     </div>;) ;
-}
-}
+}}
 '"`

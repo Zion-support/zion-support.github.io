@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -159,6 +160,10 @@ import {
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
+=======
+import React from 'react';'
+import { Link } from 'react-router-dom';            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               Accessibility"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"
                 {" "}Auditor

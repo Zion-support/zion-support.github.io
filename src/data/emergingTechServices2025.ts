@@ -30,13 +30,11 @@ contactInfo: {
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
 }
-;
-export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
+;export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
   // Quantum Computing Solutions
   {
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -70,6 +71,10 @@ const coreExpertise = ["
   "Data Science & Analytics",;"
   "IoT & Edge Computing",;"
   "Mobile & Web Development";
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';  "Mobile & Web Development";
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 export function TeamExpertiseSection() {
@@ -128,8 +133,7 @@ export function TeamExpertiseSection() {
               <div key = {stat.label} className="text-center">"
                 <div className="flex justify-center mb-4">"
                   <div className="p-3 bg-blue-100 rounded-full">"
-                    <IconComponent className="h-8 w-8 text-blue-600" />
-                  </div>
+                    <IconComponent className="h-8 w-8 text-blue-600" />                  </div>
                 </div>"
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   {stat.value}
@@ -200,8 +204,7 @@ export function TeamExpertiseSection() {
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
                 View Team Profiles"
-                <Users className="ml-2 h-5 w-5" />
-              </button>
+                <Users className="ml-2 h-5 w-5" />              </button>
             </div>
           </div>
         </motion.div>
@@ -215,7 +218,6 @@ export default TeamExpertiseSection;"
       </div>;
     </section>;) ;
 }
-
 export default TeamExpertiseSection;
 export default TeamExpertiseSection;
 '"

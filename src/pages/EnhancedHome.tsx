@@ -2,7 +2,6 @@ import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'reac
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-
   Users, 
   TrendingUp, 
   Award, 
@@ -70,7 +69,6 @@ const FuturisticBackground = React.memo(() => {
       delay: i * 0.1,
       duration: 5 + i * 0.3
     }) ) , []) ;
-
   return()
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}"
@@ -154,7 +152,6 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
     const interval = setInterval (nextSlide, 5000) ;
     return () => clearInterval (interval) ;
   }, [nextSlide]) ;
-
   return ("
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">"
       <div className="max-w-7xl mx-auto text-center">
@@ -166,8 +163,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           className="mb-12"
         >"
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 mb-6">"
-            <Sparkles className="w-5 h-5 text-cyan-400 mr-2" />"
-            <span className="text-cyan-400 font-medium">2025 Innovation Hub</span>
+            <Sparkles className="w-5 h-5 text-cyan-400 mr-2" />"            <span className="text-cyan-400 font-medium">2025 Innovation Hub</span>
           </div>
           "
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -186,16 +182,14 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
               aria-label="Explore our services"
             >
               <span>Explore Services</span>"
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+              <ArrowRight className="w-5 h-5" />            </Link>
             <button
               onClick={onGetStarted}"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
               aria-label="Get started with Zion Tech"
             >
               <span>Get Started</span>"
-              <ArrowRight className="w-5 h-5" />
-            </button>
+              <ArrowRight className="w-5 h-5" />            </button>
           </div>
         </motion.div>
 
@@ -243,15 +237,13 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
               className="absolute left-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400"
               aria-label="Previous slide"
             >"
-              <ChevronLeft className="w-6 h-6" />
-            </button>
+              <ChevronLeft className="w-6 h-6" />            </button>
             <button
               onClick={nextSlide}"
               className="absolute right-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400"
               aria-label="Next slide"
             >"
-              <ChevronRight className="w-6 h-6" />
-            </button>
+              <ChevronRight className="w-6 h-6" />            </button>
 
             {/* Dots Indicator */}"
             <div className="flex justify-center mt-6 space-x-2">
@@ -308,7 +300,6 @@ const FeaturesSection = React.memo ( () => {
       color: "from-yellow-500 to-orange-500"
     }
   ], []) ;
-
   return ("
     <section className="py-20 px-4 sm:px-6 lg:px-8">"
       <div className="max-w-7xl mx-auto">
@@ -361,7 +352,6 @@ const StatsSection = React.memo(() => {
     { number: "99.9%", label: "Uptime Guarantee", icon: ShieldCheck },"
     { number: "24/7", label: "Support Available", icon: Clock }
   ], []);
-
   return ("
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-slate-dark to-zion-slate">"
       <div className="max-w-7xl mx-auto">"
@@ -426,9 +416,14 @@ const CTASection = React.memo(() => {
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 });
 
+=======
+  );});
+'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 CTASection.displayName = 'CTASection';
 
 // Main EnhancedHome component
@@ -447,43 +442,46 @@ const EnhancedHome: React.FC = () => {
       servicesSection.scrollIntoView({ behavior: 'smooth' });
     }
   }, []) ;
-
   if (!isLoaded) {
 
     return ("
       <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center">"
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
       </div>
-    );
-  }
+    )}
 
   return()
     <>
       <EnhancedSEO "
+<<<<<<< HEAD
         title="Zion Tech Group - Leading AI Solutions & Technology Services"
         description="Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation."
         keywords="AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services"
         type="website"
       />
+=======
+        title="Zion Tech Group - Leading AI Solutions & Technology Services""
+        description="Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.""
+        keywords="AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services""        type="website"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       <FuturisticBackground />
-      "
-      <div className="relative z-10">
-        <HeroSection onGetStarted={handleGetStarted} />
+      "      <div className="relative z-10">
+        <HeroSection onGetStarted={handleGetStarted}  />
         
         <LazyLoadWrapper>
-          <FeaturesSection />
+          <FeaturesSection  />
         </LazyLoadWrapper>
         
         <LazyLoadWrapper>
-          <StatsSection />
+          <StatsSection  />
         </LazyLoadWrapper>
         
         <LazyLoadWrapper>
-          <CTASection />
+          <CTASection  />
         </LazyLoadWrapper>
       </div>
     </>) ;
 };
-
 export default EnhancedHome;'"`

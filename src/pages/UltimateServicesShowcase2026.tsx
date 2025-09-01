@@ -10,8 +10,7 @@ import {
   Zap,
   Atom,
   Cpu,
-  Network,
-  Database,
+  Network,  Database,
   TrendingUp,
   Users,
   Target,
@@ -170,8 +169,7 @@ export default function UltimateServicesShowcase2026(...args: any[]): any {
       ]},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+  return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -264,8 +262,7 @@ export default function UltimateServicesShowcase2026(...args: any[]): any {
                         href={service.href}"
                         className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
                       >"
-                        Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                      </a>
+                        Learn More <ArrowRight className="w-4 h-4 ml-1" />                      </a>
                     </div>) ) }
                 </div>
               </motion.div>) ) }

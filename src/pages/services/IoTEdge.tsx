@@ -50,11 +50,17 @@ export default function IoTEdge(...args: []):  {
       description: 'High-speed connectivity for IoT applications',
       icon: Wifi;
     },;
+<<<<<<< HEAD
     {;
       title: 'Security & Compliance',;
       description: 'End-to-end security for IoT ecosystems',;
       icon: Shield;
     };
+=======
+    {;'
+      title: 'Security & Compliance',;'      description: 'End-to-end security for IoT ecosystems',;
+      icon: Shield};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
@@ -90,8 +96,7 @@ export default function IoTEdge(...args: []):  {
             className="text-center max-w-4xl mx-auto"
 "
             <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6">"
-              <Cpu className="w-5 h-5 text-blue-400" />"
-              <span className="text-blue-400 font-medium">IoT & Edge Computing</span>
+              <Cpu className="w-5 h-5 text-blue-400" />"              <span className="text-blue-400 font-medium">IoT & Edge Computing</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -108,8 +113,7 @@ export default function IoTEdge(...args: []):  {
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start IoT Project"
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </button>"
-              <button className="btn-outline px-8 py-4 text-lg">
+              </button>"              <button className="btn-outline px-8 py-4 text-lg">
                 Learn More
               </button>
             </div>

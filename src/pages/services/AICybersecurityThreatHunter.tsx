@@ -68,8 +68,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
           <p className="text-red-100 text-xl">
             Stay ahead of cyber threats with intelligent AI-powered security
             detection and automated response.
-          </p>
-        </div>
+          </p>        </div>
       </section>
 "
       <section className="py-16 max-w-6xl mx-auto px-6">"
@@ -81,8 +80,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
             <ul className="space-y-3">
               {features.map(f => ("
                 <li key={f} className="flex items-start">"
-                  <Check className="w-5 h-5 text-red-600 mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{f}</span>
+                  <Check className="w-5 h-5 text-red-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{f}</span>
                 </li>
               ))}
             </ul>"
@@ -126,8 +124,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
                 rel="noreferrer"
                 className="px-5 py-3 border border-red-600 text-red-600 rounded-lg inline-flex items-center"
               >"
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
+                Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
             </div>
           </div>
         </div>
@@ -140,8 +137,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
             <ul className="space-y-3">
               {benefits.map(b => ("
                 <li key={b} className="flex items-start">"
-                  <Eye className="w-5 h-5 text-red-600 mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{b}</span>
+                  <Eye className="w-5 h-5 text-red-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{b}</span>
                 </li>
               ))}
             </ul>
@@ -153,8 +149,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
             <ul className="space-y-3">
               {useCases.map(u => ("
                 <li key={u} className="flex items-start">"
-                  <Target className="w-5 h-5 text-red-600 mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{u}</span>
+                  <Target className="w-5 h-5 text-red-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{u}</span>
                 </li>
               ))}
             </ul>
@@ -171,8 +166,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
                 key={f}"
                 className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm"
               >"
-                <Brain className="w-6 h-6 text-red-600 mb-3" />"
-                <div className="text-zion-slate-dark font-semibold">{f}</div>
+                <Brain className="w-6 h-6 text-red-600 mb-3" />"                <div className="text-zion-slate-dark font-semibold">{f}</div>
               </div>
             ))}
           </div>
@@ -199,8 +193,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
               </h4>"
               <p className="text-sm text-zion-slate-light">
                 Proactive, intelligent, low false positives, automated response
-              </p>
-            </div>
+              </p>            </div>
           </div>
         </div>
 "
@@ -230,8 +223,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
               rel="noreferrer"
               className="text-red-600 hover:underline"
             >
-              https://ziontechgroup.com
-            </a>
+              https://ziontechgroup.com            </a>
           </div>
         </div>
       </section>

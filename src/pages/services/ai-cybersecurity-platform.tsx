@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -218,6 +219,11 @@ export function AICybersecurityPlatform() {
 
   return()
     <div className="min-h-screen bg-gray-900 text-white">
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';'
+import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray-900 text-white">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -228,8 +234,7 @@ export function AICybersecurityPlatform() {
             className="text-center"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">"
-              <Sparkles className="w-4 h-4 mr-2" />
-              AI-Powered Cybersecurity
+              <Sparkles className="w-4 h-4 mr-2" />              AI-Powered Cybersecurity
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               AI Cybersecurity Platform
@@ -245,8 +250,7 @@ export function AICybersecurityPlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Protecting Today"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/pricing"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
@@ -318,8 +322,7 @@ export function AICybersecurityPlatform() {
                       key={idx}"
                       className="flex items-center text-sm text-gray-300"
                     >"
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -371,8 +374,7 @@ export function AICybersecurityPlatform() {
                           key={idx}"
                           className="flex items-center text-sm text-gray-300"
                         >"
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {benefit}
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />                          {benefit}
                         </li>
                       ))}
                     </ul>
@@ -413,8 +415,7 @@ export function AICybersecurityPlatform() {
               >"
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3">"
                   <Check className="w-6 h-6 text-white" />
-                </div>"
-                <h3 className="font-semibold text-cyan-400">{framework}</h3>
+                </div>"                <h3 className="font-semibold text-cyan-400">{framework}</h3>
               </motion.div>
             ))}
           </div>
@@ -473,8 +474,7 @@ export function AICybersecurityPlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -517,8 +517,7 @@ export function AICybersecurityPlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/pricing"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
@@ -557,8 +556,7 @@ export function AICybersecurityPlatform() {
                   364 E Main St STE 1008
                   <br />
                   Middletown DE 19709
-                </p>
-              </div>
+                </p>              </div>
             </div>
           </motion.div>
         </div>

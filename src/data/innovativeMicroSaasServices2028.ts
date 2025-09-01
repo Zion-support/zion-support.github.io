@@ -84,20 +84,17 @@ export interface AIService {
     email: string;
     website: string;
   
-};
-  technicalSpecs?: {
+};  technicalSpecs?: {
 
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
   aiCapabilities?: string[];
-  sustainabilityFeatures?: string[];
-}
+  sustainabilityFeatures?: string[]}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2028: InnovativeMicroSaasService2028[] =
   [

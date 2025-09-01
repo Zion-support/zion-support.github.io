@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -112,6 +113,11 @@ export default function FuturisticServicesShowcase(...args[]):  {
 			case 'active': return 'bg-blue-500';
 			default: return 'bg-gray-500'}
 	};
+=======
+import React, { useState, useEffect } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';			default: return 'bg-gray-500'}
+	};'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 			default: return 'UNKNOWN'}
 	};
 	return()
@@ -149,8 +155,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 								className="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-colors"
 "
 								{isPlaying ? <Pause className="w-5 h-5 text-white" /> : <Play className="w-5 h-5 text-white" />}
-							</button>"
-							<div className="flex gap-2">
+							</button>"							<div className="flex gap-2">
 								{futuristicServices.map((_, index) => (
 									<button
 										key={index}
@@ -230,8 +235,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 													transition={{ delay: index * 0.1 }}"
 													className="flex items-center text-zion-slate-light"
 "
-													<Star className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-													{feature}
+													<Star className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />													{feature}
 												</motion.li>;) ) }
 										</ul>
 									</div>
@@ -242,8 +246,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 										className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-purple hover:to-zion-cyan text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
 
 										Get Started"
-										<ArrowRight className="ml-2 w-5 h-5" />
-									</a>
+										<ArrowRight className="ml-2 w-5 h-5" />									</a>
 								</div>
 								{/* Right Side - Visual Element */}"
 								<div className="relative">`

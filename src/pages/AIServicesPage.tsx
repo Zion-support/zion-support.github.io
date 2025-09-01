@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -165,6 +166,11 @@ const AIServicesPage = () => {
       results: ['80% faster diagnosis',Improved accuracy',Better patient outcomes'];
     };
   ];
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';'
+import { Link } from 'react-router-dom';  ];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 const AIServicesPage: React.FC = () => {
   return()
@@ -178,8 +184,7 @@ const AIServicesPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800 text-white">"
         <div className="max-w-7xl mx-auto px-6 py-20">"
           <div className="text-center mb-16">"
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">"
-              AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">"              AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>
             </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive artificial intelligence solutions for modern businesses
@@ -244,8 +249,7 @@ const AIServicesPage: React.FC = () => {
                   <ul className="space-y-2">
                     {solution.benefits.map((benefit, idx) => ("
                       <li key={idx} className="flex items-center text-sm text-gray-300">"
-                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
-                        {benefit}
+                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />                        {benefit}
                       </li>) ) }
                   </ul>
                 </motion.div>;) ) }
@@ -300,8 +304,7 @@ const AIServicesPage: React.FC = () => {
                       <ul className="text-gray-300 text-sm space-y-1">
                         {study.results.map((result, idx) => ("
                           <li key={idx} className="flex items-center">"
-                            <CheckCircle className="w-3 h-3 text-purple-400 mr-2" />
-                            {result}
+                            <CheckCircle className="w-3 h-3 text-purple-400 mr-2" />                            {result}
                           </li>) ) }
                       </ul>
                     </div>

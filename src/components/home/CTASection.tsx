@@ -28,8 +28,7 @@ const CTASection: React.FC = (): JSX.Element => {
       icon: Star,;"
       title: "Proven Results",;"
       description: "Trusted by industry leaders worldwide";
-    };
-  ];
+    };  ];
 
   return ("
     <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">
@@ -70,8 +69,7 @@ const CTASection: React.FC = (): JSX.Element => {
             className="mb-6"
 "
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full mb-6">"
-              <Star className="w-4 h-4 text-zion-cyan mr-2" />"
-              <span className="text-zion-cyan text-sm font-medium">Ready to Transform?</span>
+              <Star className="w-4 h-4 text-zion-cyan mr-2" />"              <span className="text-zion-cyan text-sm font-medium">Ready to Transform?</span>
             </div>
           </motion.div>
 
@@ -163,36 +161,15 @@ const CTASection: React.FC = (): JSX.Element => {
           initial = {
 
   { opacity: 0,
-  y: 30 ;
-
-
-
-
-
-
-}}
+  y: 30 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
           transition = {
 
   { duration: 0.8,
-  delay: 0.6 ;
-
-
-
-
-
-
-}}
+  delay: 0.6 }}
           viewport={{ once: true }}
         >
           {features.map((feature, index (;
@@ -250,36 +227,15 @@ const CTASection: React.FC = (): JSX.Element => {
           initial = {
 
   { opacity: 0,
-  y: 30 ;
-
-
-
-
-
-
-}}
+  y: 30 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
           transition = {
 
   { duration: 0.8,
-  delay: 0.8 ;
-
-
-
-
-
-
-}}
+  delay: 0.8 }}
           viewport={{ once: true }}
 
           <Link"
@@ -295,8 +251,7 @@ const CTASection: React.FC = (): JSX.Element => {
             className="group inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-bold text-lg rounded-2xl hover:bg-zion-cyan hover:text-zion-slate-dark transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
 
             Explore Services"
-            <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
-          </Link>
+            <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />          </Link>
         </motion.div>
 
         {/* Trust Indicators */}
@@ -307,14 +262,7 @@ const CTASection: React.FC = (): JSX.Element => {
           transition = {
 
   { duration: 1,
-  delay: 1 ;
-
-
-
-
-
-
-}}
+  delay: 1 }}
           viewport={{ once: true }}
 "
           <p className="text-zion-slate-light text-sm mb-4">Trusted by industry leaders worldwide</p>"
@@ -327,7 +275,6 @@ const CTASection: React.FC = (): JSX.Element => {
         </motion.div>;
       </div>;
     </section>;
-  );
-};
+  )};
 
 export default CTASection;}}'"

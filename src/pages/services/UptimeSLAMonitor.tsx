@@ -156,10 +156,8 @@ export default function UptimeSLAMonitor(...args: []):  {
       icon: TrendingUp;
     },;
     {;"
-      title: "Reduce MTTR",;"
-      description: "Faster incident response with detailed error information and automated escalation.",;
-      icon: Zap;
-    };
+      title: "Reduce MTTR",;"      description: "Faster incident response with detailed error information and automated escalation.",;
+      icon: Zap};
   ];
 
   return()
@@ -169,8 +167,7 @@ export default function UptimeSLAMonitor(...args: []):  {
         description="Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting."
         canonical="/services/uptime-sla-monitor"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+"      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 overflow-hidden">"
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>"
@@ -493,8 +490,7 @@ export default function UptimeSLAMonitor(...args: []):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center space-x-3">"
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"
-                        <span className="text-gray-300">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>

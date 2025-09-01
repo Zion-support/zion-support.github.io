@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '../../components/SEO';
@@ -162,6 +163,11 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
         "Custom reporting",;"
         "On-premise deployment options",;"
         "SLA guarantees";
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { SEO  } from '../../components/SEO';        "SLA guarantees";
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false;
@@ -200,10 +206,8 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
       icon: Award;
     },;
     {;"
-      industry: "Manufacturing",;"
-      description: "Track customer satisfaction with products, service quality, and identify improvement areas",;
-      icon: Settings;
-    };
+      industry: "Manufacturing",;"      description: "Track customer satisfaction with products, service quality, and identify improvement areas",;
+      icon: Settings};
   ];
 
   const integrations = [
@@ -235,15 +239,19 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
     {;"
       name: "Analytics Tools",;"
       platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"];
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
         title="AI Customer Feedback Analytics - Zion Tech Group"
         description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."
       />
+=======
+        title="AI Customer Feedback Analytics - Zion Tech Group""        description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -276,8 +284,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Analytics
+              <Brain className="w-4 h-4 mr-2" />              AI-Powered Analytics
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Customer Feedback"
@@ -295,8 +302,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
                 Start Free Trial
               </button>"
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />
-                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -612,8 +618,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />"
-                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -870,8 +875,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Star className="w-5 h-5 mr-2" />                Start Free Trial
               </button>"
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />

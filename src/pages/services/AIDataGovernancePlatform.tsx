@@ -8,8 +8,7 @@ import {
   Zap,
   Lock,
   Users,
-  BarChart3,
-  CheckCircle,
+  BarChart3,  CheckCircle,
   ArrowRight,
   Play,
   Globe,
@@ -135,8 +134,7 @@ const AIDataGovernancePlatform: React.FC = props {
     'GDPR (General Data Protection Regulation),CCPA (California Consumer Privacy Act),HIPAA (Health Insurance Portability and Accountability Act),SOX (Sarbanes-Oxley Act),PCI DSS (Payment Card Industry Data Security Standard),ISO 27001 (Information Security Management),SOC 2 Type II (Service Organization Control),NIST Cybersecurity Framework',
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20"></div>"
@@ -149,8 +147,7 @@ const AIDataGovernancePlatform: React.FC = props {
           >"
             <div className="flex justify-center mb-6">"
               <div className="p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full">"
-                <Shield className="w-8 h-8 text-white" />
-              </div>
+                <Shield className="w-8 h-8 text-white" />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
               AI Data Governance Platform
@@ -165,15 +162,13 @@ const AIDataGovernancePlatform: React.FC = props {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105"
               >"
-                <Play className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Play className="w-5 h-5 mr-2" />                Start Free Trial
               </Link>
               <Link"
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Watch Demo
+                <ArrowRight className="w-5 h-5 mr-2" />                Watch Demo
               </Link>
             </div>
           </motion.div>
@@ -249,8 +244,7 @@ const AIDataGovernancePlatform: React.FC = props {
               >"
                 <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4">"
                   <CheckCircle className="w-6 h-6 text-white" />
-                </div>"
-                <p className="text-white font-medium text-sm">{framework}</p>
+                </div>"                <p className="text-white font-medium text-sm">{framework}</p>
               </motion.div>
             ))}
           </div>
@@ -316,8 +310,7 @@ const AIDataGovernancePlatform: React.FC = props {
                       key={featureIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -400,15 +393,13 @@ const AIDataGovernancePlatform: React.FC = props {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105"
               >"
-                <Rocket className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Rocket className="w-5 h-5 mr-2" />                Start Free Trial
               </Link>
               <Link"
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
-                <Play className="w-5 h-5 mr-2" />
-                Schedule Demo
+                <Play className="w-5 h-5 mr-2" />                Schedule Demo
               </Link>
             </div>
           </motion.div>
@@ -436,14 +427,12 @@ const AIDataGovernancePlatform: React.FC = props {
                 364 E Main St STE 1008
                 <br />
                 Middletown DE 19709
-              </p>
-            </div>
+              </p>            </div>
           </div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIDataGovernancePlatform;
 '"`

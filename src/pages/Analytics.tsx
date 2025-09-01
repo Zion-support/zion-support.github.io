@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -122,15 +123,26 @@ const Analytics: React.FC = () => {
     { name: "Slack", icon: "💬", description: "Team communication metrics" },;"
     { name: "HubSpot", icon: "🎯", description: "Marketing and lead data" },;"
     { name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" };
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';'
+import { Link } from 'react-router-dom';    { name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="Analytics - Zion Tech Group"
         description="Transform your data into actionable insights with our comprehensive analytics solutions. Real-time monitoring, AI-powered analysis, and custom dashboards."
         keywords="analytics, business intelligence, data analysis, AI analytics, Zion Tech Group"
       />
+=======
+        title="Analytics - Zion Tech Group""
+        description="Transform your data into actionable insights with our comprehensive analytics solutions. Real-time monitoring, AI-powered analysis, and custom dashboards.""        keywords="analytics, business intelligence, data analysis, AI analytics, Zion Tech Group"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -177,8 +189,7 @@ const Analytics: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 
                 Get Started"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
@@ -370,8 +381,7 @@ const Analytics: React.FC = () => {
                 <div className="space-y-3 mb-6">
                   {type.features.map((feature, featureIndex) => ("
                     <div key={featureIndex} className="flex items-center text-slate-400">"
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />                      {feature}
                     </div>) ) }
                 </div>
 
@@ -380,8 +390,7 @@ const Analytics: React.FC = () => {
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
 
                   Learn More"
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>;
+                  <ArrowRight className="ml-2 w-4 h-4" />                </Link>;
               </motion.div>) ) }
           </div>
         </div>
@@ -485,8 +494,7 @@ const Analytics: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 
                 Start Your Analytics Journey"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"

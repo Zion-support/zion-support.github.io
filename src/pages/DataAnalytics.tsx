@@ -10,8 +10,7 @@ import {
   Zap,
   Shield,
   Cloud,
-  Users,
-  Target,
+  Users,  Target,
   ArrowRight,
   CheckCircle,
   Star,
@@ -122,8 +121,7 @@ export default function DataAnalytics(...args: any[]): any {
     'Python & R',Apache Spark',TensorFlow',Power BI',Tableau',AWS Redshift',Google BigQuery',Snowflake',Apache Kafka',Elasticsearch',
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+  return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">"
         <div className="max-w-7xl mx-auto">
@@ -147,15 +145,13 @@ export default function DataAnalytics(...args: any[]): any {
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
               >
                 <span>Get Started</span>"
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+                <ArrowRight className="w-5 h-5" />              </Link>
               <Link"
                 to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>"
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+                <ArrowRight className="w-5 h-5" />              </Link>
             </div>
           </motion.div>
         </div>
@@ -249,8 +245,7 @@ export default function DataAnalytics(...args: any[]): any {
                       key={benefitIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {benefit}
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />                      {benefit}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -317,15 +312,13 @@ export default function DataAnalytics(...args: any[]): any {
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
               >
                 <span>Get Started Today</span>"
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+                <ArrowRight className="w-5 h-5" />              </Link>
               <Link"
                 to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>"
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+                <ArrowRight className="w-5 h-5" />              </Link>
             </div>
           </motion.div>
         </div>

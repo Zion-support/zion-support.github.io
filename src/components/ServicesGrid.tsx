@@ -2,20 +2,6 @@ import React from 'react.ts';
 import { Link } from 'react-router-dom.ts';
 import { motion } from 'framer-motion.ts';
 import { ArrowRight, CheckCircle, LucideIcon } from 'lucide-react.ts';
-
-interface Service {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  href: string;
-  features: string[];
-  color: string;
-}
-
-interface ServicesGridProps extends React.PropsWithChildren<{}> {
-  services: Service[];
-}
-
 export function ServicesGrid(...args: any[]): any {
 
   return()
@@ -55,8 +41,7 @@ export function ServicesGrid(...args: any[]): any {
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >"
-                <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />"
-                <span className="truncate">{feature}</span>
+                <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />"                <span className="truncate">{feature}</span>
               </motion.div>) ) }
           </div>
 
@@ -73,6 +58,5 @@ export function ServicesGrid(...args: any[]): any {
         </motion.div>) ) }
     </div>) ;
 }
-
 export default ServicesGrid;
 '"`

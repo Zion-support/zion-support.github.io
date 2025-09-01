@@ -2,6 +2,7 @@
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
+<<<<<<< HEAD
 import { Calendar,
 import { motion  } from 'framer - motion.ts';
 
@@ -174,6 +175,8 @@ export default function Events(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
   const [selectedStatus, setSelectedStatus] = useState<typeof 'All'>('All');
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function Events(...args: any[]): any {
 
   const [selectedType, setSelectedType] = useState('All');
@@ -415,7 +418,6 @@ export default function Events(...args: any[]): any {
 "
       return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
     }
-
   };
 
   return ("
@@ -444,8 +446,12 @@ export default function Events(...args: any[]): any {
               <div className="relative">"
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search events, topics, or speakers..."
+=======
+                  type="text""                  placeholder="Search events, topics, or speakers..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}"
                   className="w-full pl-12 pr-4 py-4 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20"
@@ -487,8 +493,12 @@ export default function Events(...args: any[]): any {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
                   <input"
+<<<<<<< HEAD
                     type="text"
                     placeholder="Search events..."
+=======
+                    type="text""                    placeholder="Search events..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -561,8 +571,7 @@ export default function Events(...args: any[]): any {
               {upcomingEvents.map((event, index)  => {
 
                 const CategoryIcon = getCategoryIcon(event.category);
-                return()
-                  <motion.div
+                return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -574,8 +583,7 @@ export default function Events(...args: any[]): any {
                     <div className="flex items-start justify-between mb-4">"
                       <div className="flex items-center gap-3">"
                         <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">"
-                          <CategoryIcon className="w-6 h-6 text-white" />
-                        </div>
+                          <CategoryIcon className="w-6 h-6 text-white" />                        </div>
                         <div>"
                           <h3 className="text-xl font-bold text-white mb-1">{event.title}</h3>"
                           <div className="flex items-center gap-2">
@@ -624,8 +632,7 @@ export default function Events(...args: any[]): any {
                         <span>{event.location}</span>
                       </div>"
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                        <Users className="w-4 h-4" />
-                        <span>{event.attendees} attendees</span>
+                        <Users className="w-4 h-4" />                        <span>{event.attendees} attendees</span>
                       </div>
                     </div>
                     "
@@ -636,8 +643,7 @@ export default function Events(...args: any[]): any {
                       "
                       <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-1 flex items-center gap-2">
                         Register Now"
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
+                        <ArrowRight className="w-4 h-4" />                      </button>
                     </div>
                   </div>
                 </motion.div>;) ) }
@@ -655,8 +661,7 @@ export default function Events(...args: any[]): any {
                 {/* Categories */}"
                 <div className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6">"
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">"
-                    <Filter className="w-5 h-5 text-zion-cyan" />
-                    Categories
+                    <Filter className="w-5 h-5 text-zion-cyan" />                    Categories
                   </h3>"
                   <div className="space-y-2">
                     {categories.map((category) => (
@@ -687,8 +692,7 @@ export default function Events(...args: any[]): any {
               {pastEvents.map((event, index)  => {
 
                 const CategoryIcon = getCategoryIcon(event.category);
-                return()
-                  <motion.div
+                return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -707,7 +711,6 @@ export default function Events(...args: any[]): any {
                   <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-1">
                     Load More Events
                   </button>
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 const Events: React.FC = () => {

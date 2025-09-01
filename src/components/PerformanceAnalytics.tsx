@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -38,6 +39,10 @@ const PerformanceAnalytics: React.FC = () => {;
   const generateMockData = useCallback ( () : PerformanceData => {;
     const now = Date.now () ;
     const metrics: PerformanceMetric[] = [
+=======
+import React, { useState, useEffect, useCallback } from 'react';'
+import { motion } from 'framer-motion';    const metrics: PerformanceMetric[] = [
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {
 
         name: 'Page Load Time',
@@ -101,10 +106,16 @@ const PerformanceAnalytics: React.FC = () => {;
       'Error rate spike detected in last 5 minutes';
     ];
 
+<<<<<<< HEAD
     const recommendations = [;
       'Consider implementing lazy loading for images',;
       'Optimize database queries for better performance',;
       'Enable CDN for static assets delivery';
+=======
+    const recommendations = [;'
+      'Consider implementing lazy loading for images',;'
+      'Optimize database queries for better performance',;'      'Enable CDN for static assets delivery';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ];
 
     return {
@@ -115,7 +126,6 @@ const PerformanceAnalytics: React.FC = () => {;
       recommendations
     };
   }, []) ;
-
   useEffect ( () => {
     if (isMonitoring) {
 
@@ -161,7 +171,6 @@ const PerformanceAnalytics: React.FC = () => {;
   const stopMonitoring = () => {;
     setIsMonitoring (false) ;
   };
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">"
       <div className="max-w-7xl mx-auto">
@@ -222,8 +231,7 @@ const PerformanceAnalytics: React.FC = () => {;
                   : 'bg-green-600 hover:bg-green-700 text-white'`
               }`}
             >"
-              <Activity className="w-5 h-5" />
-              Start Monitoring
+              <Activity className="w-5 h-5" />              Start Monitoring
             </button>
             <button
               onClick={stopMonitoring}
@@ -235,8 +243,7 @@ const PerformanceAnalytics: React.FC = () => {;
                   : 'bg-red-600 hover:bg-red-700 text-white'`
               }`}
             >"
-              <Monitor className="w-5 h-5" />
-              Stop Monitoring
+              <Monitor className="w-5 h-5" />              Stop Monitoring
             </button>
           </div>
 
@@ -328,8 +335,7 @@ const PerformanceAnalytics: React.FC = () => {;
             {/* Alerts */}"
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
               <div className="flex items-center gap-3 mb-4">"
-                <AlertTriangle className="w-6 h-6 text-yellow-400" />"
-                <h3 className="text-xl font-semibold text-white">Active Alerts</h3>
+                <AlertTriangle className="w-6 h-6 text-yellow-400" />"                <h3 className="text-xl font-semibold text-white">Active Alerts</h3>
               </div>"
               <div className="space-y-3">
                 {performanceData.alerts.map((alert, index) => ("
@@ -344,8 +350,7 @@ const PerformanceAnalytics: React.FC = () => {;
             {/* Recommendations */}"
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
               <div className="flex items-center gap-3 mb-4">"
-                <CheckCircle className="w-6 h-6 text-green-400" />"
-                <h3 className="text-xl font-semibold text-white">Recommendations</h3>
+                <CheckCircle className="w-6 h-6 text-green-400" />"                <h3 className="text-xl font-semibold text-white">Recommendations</h3>
               </div>"
               <div className="space-y-3">
                 {performanceData.recommendations.map((recommendation, index) => ("
@@ -385,8 +390,7 @@ const PerformanceAnalytics: React.FC = () => {;
           </p>
           {isMonitoring && ("
             <div className="mt-4 text-sm text-green-400">"
-              <Activity className="w-4 h-4 inline mr-2 animate-pulse" />
-              Monitoring Active
+              <Activity className="w-4 h-4 inline mr-2 animate-pulse" />              Monitoring Active
             </div>) }
         </motion.div>
 

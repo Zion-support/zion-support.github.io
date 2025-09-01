@@ -7,8 +7,7 @@ import {
   Search,
   Shield,
   Zap,
-  CheckCircle,
-  ArrowRight,
+  CheckCircle,  ArrowRight,
   Clock,
   DollarSign,
   Users,
@@ -131,11 +130,18 @@ const AILegalDocumentAnalyzer = () => {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
         title="AI Legal Document Analyzer - Zion Tech Group"
         description="Transform legal document analysis with AI-powered insights, risk assessment, and compliance monitoring. Streamline your legal practice with cutting-edge technology."
         keywords="AI legal document analysis, legal tech, contract review, compliance monitoring, risk assessment, legal automation"
         canonical="https://ziontechgroup.com/services/ai-legal-document-analyzer"
       />
+=======
+        title="AI Legal Document Analyzer - Zion Tech Group""
+        description="Transform legal document analysis with AI-powered insights, risk assessment, and compliance monitoring. Streamline your legal practice with cutting-edge technology.""
+        keywords="AI legal document analysis, legal tech, contract review, compliance monitoring, risk assessment, legal automation""        canonical="https://ziontechgroup.com/services/ai-legal-document-analyzer"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -148,8 +154,7 @@ const AILegalDocumentAnalyzer = () => {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Legal Technology
+              <Brain className="w-4 h-4 mr-2" />              AI-Powered Legal Technology
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -171,8 +176,7 @@ const AILegalDocumentAnalyzer = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 View Pricing"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200"
@@ -324,8 +328,7 @@ const AILegalDocumentAnalyzer = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -377,8 +380,7 @@ const AILegalDocumentAnalyzer = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
                 <Phone className="w-8 h-8 text-white" />
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"
-              <p className="text-slate-300">+1 302 464 0950</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"              <p className="text-slate-300">+1 302 464 0950</p>
             </motion.div>
 
             <motion.div"
@@ -393,8 +395,7 @@ const AILegalDocumentAnalyzer = () => {
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Email Us
-              </h3>"
-              <p className="text-slate-300">kleber@ziontechgroup.com</p>
+              </h3>"              <p className="text-slate-300">kleber@ziontechgroup.com</p>
             </motion.div>
 
             <motion.div"
@@ -414,8 +415,7 @@ const AILegalDocumentAnalyzer = () => {
                 364 E Main St STE 1008
                 <br />
                 Middletown DE 19709
-              </p>
-            </motion.div>
+              </p>            </motion.div>
           </div>
 
           <motion.div"
@@ -430,14 +430,12 @@ const AILegalDocumentAnalyzer = () => {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Request Demo"
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
+              <ArrowRight className="ml-2 w-5 h-5" />            </a>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AILegalDocumentAnalyzer;
 '"`

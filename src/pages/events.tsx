@@ -3,8 +3,7 @@ import { motion } from 'framer-motion.ts';
 import { Link } from 'react-router-dom.ts';
 import {
 
-  Calendar,
-  Clock,
+  Calendar,  Clock,
   MapPin,
   Users,
   Video,
@@ -149,10 +148,22 @@ const events = [
 
 const eventTypes = ['All',Conference',Workshop',Webinar',Symposium'];
 const categories = ['
+<<<<<<< HEAD
   'All',AI & ML',Cybersecurity',Cloud & DevOps',Data Analytics',IoT & Edge',Digital Transformation',
 ];
 const statuses = ['All',upcoming',past'];
 
+=======
+  'All','
+  'AI & ML','
+  'Cybersecurity','
+  'Cloud & DevOps','
+  'Data Analytics','
+  'IoT & Edge','
+  'Digital Transformation',
+];'
+const statuses = ['All', 'upcoming', 'past'];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function Events(...args: any[]): any {
 
   const [selectedType, setSelectedType] = useState('All');
@@ -230,8 +241,7 @@ export default function Events(...args: any[]): any {
           Past
         </span>
       );
-    }
-  };
+    }  };
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -245,8 +255,7 @@ export default function Events(...args: any[]): any {
             className="text-center"
           >"
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">"
-              <Calendar className="w-5 h-5" />"
-              <span className="font-medium">Events & Webinars</span>
+              <Calendar className="w-5 h-5" />"              <span className="font-medium">Events & Webinars</span>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Join Our Events
@@ -270,8 +279,12 @@ export default function Events(...args: any[]): any {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
                   <input"
+<<<<<<< HEAD
                     type="text"
                     placeholder="Search events..."
+=======
+                    type="text""                    placeholder="Search events..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -355,8 +368,7 @@ export default function Events(...args: any[]): any {
               {upcomingEvents.map((event, index) => {
 
                 const CategoryIcon = getCategoryIcon(event.category);
-                return()
-                  <motion.div
+                return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -368,8 +380,7 @@ export default function Events(...args: any[]): any {
                     <div className="flex items-start justify-between mb-4">"
                       <div className="flex items-center gap-3">"
                         <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">"
-                          <CategoryIcon className="w-6 h-6 text-white" />
-                        </div>
+                          <CategoryIcon className="w-6 h-6 text-white" />                        </div>
                         <div>"
                           <h3 className="text-xl font-bold text-white mb-1">
                             {event.title}
@@ -407,8 +418,7 @@ export default function Events(...args: any[]): any {
                         <span>{event.location}</span>
                       </div>"
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                        <Users className="w-4 h-4" />
-                        <span>{event.attendees} attendees</span>
+                        <Users className="w-4 h-4" />                        <span>{event.attendees} attendees</span>
                       </div>
                     </div>
 
@@ -428,8 +438,7 @@ export default function Events(...args: any[]): any {
                             key={idx}"
                             className="flex items-center gap-2 text-sm text-zion-slate-light"
                           >"
-                            <CheckCircle className="w-3 h-3 text-green-400" />
-                            <span>{highlight}</span>
+                            <CheckCircle className="w-3 h-3 text-green-400" />                            <span>{highlight}</span>
                           </div>) ) }
                       </div>
                     </div>
@@ -469,8 +478,7 @@ export default function Events(...args: any[]): any {
                       </div>
                     </div>
                   </motion.div>) ;
-              }) }
-            </div>
+              }) }            </div>
           </div>
         </section>) }
 
@@ -497,8 +505,7 @@ export default function Events(...args: any[]): any {
               {pastEvents.map((event, index) => {
 
                 const CategoryIcon = getCategoryIcon(event.category);
-                return()
-                  <motion.div
+                return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -510,8 +517,7 @@ export default function Events(...args: any[]): any {
                     <div className="flex items-start justify-between mb-4">"
                       <div className="flex items-center gap-3">"
                         <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">"
-                          <CategoryIcon className="w-6 h-6 text-white" />
-                        </div>
+                          <CategoryIcon className="w-6 h-6 text-white" />                        </div>
                         <div>"
                           <h3 className="text-xl font-bold text-white mb-1">
                             {event.title}
@@ -533,8 +539,7 @@ export default function Events(...args: any[]): any {
                         <span>{formatDate(event.date)}</span>
                       </div>"
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                        <MapPin className="w-4 h-4" />
-                        <span>{event.location}</span>
+                        <MapPin className="w-4 h-4" />                        <span>{event.location}</span>
                       </div>
                     </div>
 
@@ -562,8 +567,7 @@ export default function Events(...args: any[]): any {
                       </div>
                     </div>
                   </motion.div>) ;
-              }) }
-            </div>
+              }) }            </div>
           </div>
         </section>) }
 
@@ -590,8 +594,7 @@ export default function Events(...args: any[]): any {
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
               >
                 Partner With Us"
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+                <ArrowRight className="ml-2 h-5 w-5" />              </Link>
               <Link"
                 href="/services"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"

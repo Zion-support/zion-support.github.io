@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { motion  } from 'framer-motion.ts';
@@ -67,6 +68,11 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
       period: "/month","
       features["Up to 1,000 customers", "Basic churn predictions", "Email alerts", "Standard support"],;
       popular: false
+=======
+import React from 'react.ts';'
+import { SEO  } from '@/components/SEO';'
+import { motion  } from 'framer-motion.ts';      popular: false
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 "
@@ -82,18 +88,24 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
       price: "Custom",;"
       period: "",;"
       features: ["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],;
-      popular: false;
-    };
+      popular: false};
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO "
+<<<<<<< HEAD
         title="AI Customer Churn Prediction Platform - Zion Tech Group"
         description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform."
         keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success"
         canonical="https://ziontechgroup.com/services/ai-customer-churn-prediction"
       />
+=======
+        title="AI Customer Churn Prediction Platform - Zion Tech Group""
+        description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform.""
+        keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success""        canonical="https://ziontechgroup.com/services/ai-customer-churn-prediction"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -126,8 +138,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
             className="mb-8"
 "
             <div className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6">"
-              <TrendingDown className="w-4 h-4 mr-2" />
-              Churn Prevention Platform
+              <TrendingDown className="w-4 h-4 mr-2" />              Churn Prevention Platform
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
               AI Customer Churn Prediction
@@ -145,8 +156,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
                 95%+ Accuracy
               </div>"
               <div className="flex items-center text-blue-400 font-semibold">"
-                <Clock className="w-5 h-5 mr-2" />
-                Real-time Updates
+                <Clock className="w-5 h-5 mr-2" />                Real-time Updates
               </div>
             </div>
           </motion.div>
@@ -322,8 +332,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 "
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
                   <CheckCircle className="w-6 h-6 text-white" />
-                </div>"
-                <p className="text-slate-300 font-medium">{benefit}</p>
+                </div>"                <p className="text-slate-300 font-medium">{benefit}</p>
               </motion.div>;
             ))}
           </div>
@@ -517,8 +526,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-slate-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -578,8 +586,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
                 className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
 
                 Start Free Trial"
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
+                <ArrowRight className="w-5 h-5 ml-2" />              </a>
               <a"
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
@@ -609,8 +616,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
               </div>
               <div>"
                 <Shield className="w-6 h-6 text-blue-400 mx-auto mb-2" />"
-                <p className="font-semibold">Enterprise Security</p>"
-                <p className="text-sm">SOC 2, GDPR, HIPAA compliant</p>
+                <p className="font-semibold">Enterprise Security</p>"                <p className="text-sm">SOC 2, GDPR, HIPAA compliant</p>
               </div>
             </div>"
             <div className="mt-8 p-6 bg-slate-800 rounded-xl border border-slate-700">"
@@ -625,7 +631,6 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default AICustomerChurnPrediction;}}}'"`

@@ -8,8 +8,7 @@ import {
   VolumeX,
   Type,
   Contrast,
-  ZoomIn,
-  ZoomOut,
+  ZoomIn,  ZoomOut,
   Accessibility,
   Keyboard,
   MousePointer,
@@ -24,7 +23,6 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean;
   focusIndicators: boolean;
   zoomLevel: number;
-
   const [isVisible, setIsVisible] = useState (false) ;
 
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -100,7 +98,6 @@ interface AccessibilitySettings {
       applySettings(parsedSettings);
     }
   }, [enabled, applySettings]);
-
   // Screen reader announcements
   const announceToScreenReader = useCallback((message: string) => {
     if (!settings.screenReader) return;
@@ -130,22 +127,26 @@ interface AccessibilitySettings {
       const currentIndex = Array.from(focusableElements).findIndex()
         el => el === document.activeElement
       );
-
       switch (event.key) {
 
         case 'ArrowDown':'
         case 'ArrowRight':
           event.preventDefault();
-          const nextIndex = (currentIndex + 1) % focusableElements.length;
+          
           (focusableElements[nextIndex] as HTMLElement)?.focus();
           break;
         case 'ArrowUp':'
         case 'ArrowLeft':
           event.preventDefault();
           const prevIndex =
+<<<<<<< HEAD
             currentIndex <= 0 ? focusableElements.length - 1 : currentIndex - 1;
           (focusableElements[prevIndex] as HTMLElement)?.focus();
           break;
+=======
+            currentIndex <= 0 ? focusableElements.length - 1 : currentIndex - 1;          (focusableElements[prevIndex] as HTMLElement)?.focus();
+          break;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         case 'Home':
           event.preventDefault();
           (focusableElements[0] as HTMLElement)?.focus();
@@ -184,10 +185,16 @@ interface AccessibilitySettings {
 
         target.style.outline = '';
         target.style.outlineOffset = '';
+<<<<<<< HEAD
       }
     };
 
     document.addEventListener('focusin', handleFocusChange);
+=======
+      }    };
+'
+    document.addEventListener('focusin', handleFocusChange);'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     document.addEventListener('focusout', handleFocusOut);
 
     return () => {
@@ -245,7 +252,6 @@ interface AccessibilitySettings {
   // Zoom controls
   const adjustZoom = useCallback('
     (direction: 'in' | 'out') => {
-
       const newZoom ='
         direction === 'in'
           ? Math.min(settings.zoomLevel + 25, 200)
@@ -270,8 +276,7 @@ interface AccessibilitySettings {
         aria-label="Toggle accessibility options"
         title="Accessibility Options"
       >"
-        <Accessibility className="w-5 h-5" />
-      </motion.button>
+        <Accessibility className="w-5 h-5" />      </motion.button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
@@ -284,16 +289,14 @@ interface AccessibilitySettings {
             {/* Header */}"
             <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
               <div className="flex items-center space-x-2">"
-                <Accessibility className="w-5 h-5" />"
-                <h3 className="font-semibold">Accessibility</h3>
+                <Accessibility className="w-5 h-5" />"                <h3 className="font-semibold">Accessibility</h3>
               </div>
               <button
                 onClick={() => setIsVisible(false)}"
                 className="p-1 hover:bg-white/20 rounded transition-colors"
                 aria-label="Close accessibility panel"
               >"
-                <EyeOff className="w-4 h-4" />
-              </button>
+                <EyeOff className="w-4 h-4" />              </button>
             </div>
 
             {/* Content */}"
@@ -309,8 +312,7 @@ interface AccessibilitySettings {
                     <Contrast className="w-4 h-4 text-slate-600 dark:text-slate-400" />"
                     <span className="text-sm text-slate-700 dark:text-slate-300">
                       High Contrast
-                    </span>
-                  </div>
+                    </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('highContrast')}`
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -335,8 +337,7 @@ interface AccessibilitySettings {
                     <Type className="w-4 h-4 text-slate-600 dark:text-slate-400" />"
                     <span className="text-sm text-slate-700 dark:text-slate-300">
                       Large Text
-                    </span>
-                  </div>
+                    </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('largeText')}`
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -359,8 +360,7 @@ interface AccessibilitySettings {
                     <Eye className="w-4 h-4 text-slate-600 dark:text-slate-400" />"
                     <span className="text-sm text-slate-700 dark:text-slate-300">
                       Focus Indicator
-                    </span>
-                  </div>
+                    </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('focusIndicator')}`
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -392,8 +392,7 @@ interface AccessibilitySettings {
                     <Keyboard className="w-4 h-4 text-slate-600 dark:text-slate-400" />"
                     <span className="text-sm text-slate-700 dark:text-slate-300">
                       Keyboard Navigation
-                    </span>
-                  </div>
+                    </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('keyboardNavigation')}`
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -420,8 +419,7 @@ interface AccessibilitySettings {
                     <MousePointer className="w-4 h-4 text-slate-600 dark:text-slate-400" />"
                     <span className="text-sm text-slate-700 dark:text-slate-300">
                       Reduced Motion
-                    </span>
-                  </div>
+                    </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('reducedMotion')}`
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -465,15 +463,13 @@ interface AccessibilitySettings {
                       className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                       aria-label="Zoom out"
                     >"
-                      <ZoomOut className="w-4 h-4" />
-                    </button>
+                      <ZoomOut className="w-4 h-4" />                    </button>
                     <button'
                       onClick={() => adjustZoom('in')}"
                       className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                       aria-label="Zoom in"
                     >"
-                      <ZoomIn className="w-4 h-4" />
-                    </button>
+                      <ZoomIn className="w-4 h-4" />                    </button>
                   </div>
                 </div>
                 
@@ -579,17 +575,14 @@ interface AccessibilitySettings {
 
           font-size: 1.2em;
         }
-
         .reduced-motion * {
 
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
-        }`
-      `}</style>
+        }`      `}</style>
     </>
-  );
-};
+  )};
 
 export default EnhancedAccessibilityEnhancer;
 '"`

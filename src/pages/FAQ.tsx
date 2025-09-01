@@ -17,7 +17,6 @@ import {
   Mail,
   Globe} from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 interface FAQItem {
 
   id: string;
@@ -26,7 +25,6 @@ interface FAQItem {
   category: string;
   icon: React.ComponentType < any>;
 }
-
 }
 ;
 const faqData: FAQItem[] = [
@@ -123,6 +121,7 @@ const faqData: FAQItem[] = [
 const categories = ['
   'All',AI Services',Security',Cloud',Support',General',
 ];
+<<<<<<< HEAD
 
 export default function FAQ() {
   const [activeItem, setActiveItem] = useState<string | null>(null);
@@ -144,6 +143,8 @@ export default function FAQ() {
     setActiveItem(activeItem === id ? null : id);
   };
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">"
       <div className="container mx-auto px-4 py-24">
@@ -174,8 +175,12 @@ export default function FAQ() {
           <div className="relative mb-8">"
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input"
+<<<<<<< HEAD
               type="text"
               placeholder="Search questions..."
+=======
+              type="text""              placeholder="Search questions..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}"
               className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
@@ -237,8 +242,7 @@ export default function FAQ() {
                   {activeItem === faq.id ? ("
                     <ChevronUp className="w-6 h-6 text-cyan-400" />
                   ) : ("
-                    <ChevronDown className="w-6 h-6 text-gray-400" />
-                  )}
+                    <ChevronDown className="w-6 h-6 text-gray-400" />                  )}
                 </button>
 
                 <AnimatePresence>
@@ -289,8 +293,7 @@ export default function FAQ() {
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center space-x-3 text-gray-300">"
-                <Globe className="w-5 h-5 text-cyan-400" />
-                <span>24/7 Support</span>
+                <Globe className="w-5 h-5 text-cyan-400" />                <span>24/7 Support</span>
               </div>
             </div>
 "

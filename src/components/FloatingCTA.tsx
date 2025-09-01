@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 } from 'lucide-react';
@@ -50,6 +51,10 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
   if (!isVisible) return null;
 import { Link } from 'react-router-dom';
 
+=======
+import React, { useState } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [isExpanded, setIsExpanded] = useState (false) ;
 
   return()

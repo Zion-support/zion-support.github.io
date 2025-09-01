@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
 
   Brain,
@@ -53,6 +54,8 @@ import {
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function ServicesShowcasePage() {
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -241,8 +244,7 @@ export function ServicesShowcasePage() {
         return 'text-green-400';
       default:'
         return 'text-gray-400';
-    }
-  };
+    }  };
 
   return()
     <div className="min-h-screen py-8">"
@@ -273,8 +275,7 @@ export function ServicesShowcasePage() {
                 <span>Proven ROI</span>
               </div>"
               <div className="flex items-center space-x-2 text-purple-400">"
-                <ZapIcon className="w-5 h-5" />
-                <span>Fast Implementation</span>
+                <ZapIcon className="w-5 h-5" />                <span>Fast Implementation</span>
               </div>
             </div>
           </motion.div>
@@ -287,8 +288,12 @@ export function ServicesShowcasePage() {
             <div className="relative">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
+<<<<<<< HEAD
                 type="text"
                 placeholder="Search services..."
+=======
+                type="text""                placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
@@ -392,8 +397,7 @@ export function ServicesShowcasePage() {
                       key={idx}"
                       className="flex items-center space-x-2 text-sm text-gray-400"
                     >"
-                      <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />"
-                      <span className="line-clamp-1">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />"                      <span className="line-clamp-1">{feature}</span>
                     </div>
                   ))}
                   {service.features.length > 3 && ("
@@ -463,8 +467,7 @@ export function ServicesShowcasePage() {
                     <span>{service.contactInfo.email}</span>
                   </div>"
                   <div className="flex items-center space-x-2">"
-                    <Globe className="w-3 h-3" />
-                    <span>{service.contactInfo.website}</span>
+                    <Globe className="w-3 h-3" />                    <span>{service.contactInfo.website}</span>
                   </div>
                 </div>
               </div>
@@ -506,6 +509,5 @@ export function ServicesShowcasePage() {
       </div>
     </div>) ;
 }
-
 export default ServicesShowcasePage;
 '"`

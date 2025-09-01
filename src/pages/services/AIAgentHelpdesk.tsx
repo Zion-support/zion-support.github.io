@@ -6,6 +6,7 @@ import {
   MessageSquare,
   Headphones,
   Zap,
+<<<<<<< HEAD
   PieChart,
   CheckCircle2} from 'lucide-react.ts';
 
@@ -66,6 +67,10 @@ export default function AIAgentHelpdesk(...args: any[]): any {
             AI Agent Helpdesk
           </h1>"
           <p className="text-responsive text-zion-blue-light/80 max-w-2xl mt-4">
+=======
+  PieChart,'
+  CheckCircle2} from 'lucide-react.ts';          <p className="text-responsive text-zion-blue-light/80 max-w-2xl mt-4">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             Reduce response times and scale support with production-grade AI
             agents.
           </p>"

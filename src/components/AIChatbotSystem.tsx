@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -61,6 +62,10 @@ showHeader:  true,;
 }) => {;
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
+=======
+import React, { useState, useEffect, useRef } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, setInputValue] = useState('');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [isTyping, setIsTyping] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showSettingsPanel, setShowSettingsPanel] = useState(false);
@@ -75,7 +80,6 @@ showHeader:  true,;
   const [isListening, setIsListening] = useState (false) ;
   const [chatHistory, setChatHistory] = useState < any> ([]) ;
   const messagesEndRef = useRef < HTMLDivElement> (null) ;
-
   // Sample welcome message
   useEffect ( () => {
     if (isOpen && messages.length = == 0) {
@@ -101,7 +105,6 @@ showHeader:  true,;
       };
       setMessages ([welcomeMessage]) }
   }, [isOpen, messages.length]) ;
-
   // Auto-scroll to bottom
   useEffect(() => {
     if (autoScroll && messagesEndRef.current) {
@@ -121,7 +124,6 @@ showHeader:  true,;
     ];
 
     const randomResponse = responses[Math.floor (Math.random () * responses.length) ];
-
     const botMessage: ChatMessage = {
 
   id: Date.now().toString(),
@@ -170,7 +172,6 @@ showHeader:  true,;
   const clearChat = () => {;
     setMessages ([]) ;
     setChatHistory ([]) };
-
   return()
     <>
       {/* Chat Toggle Button */}
@@ -181,8 +182,7 @@ showHeader:  true,;
         whileTap={{ scale: 0.95 }}"
         aria-label="Toggle AI chatbot"
 "
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
-      </motion.button>
+        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}      </motion.button>
 
       {/* Chat Window */}
       <AnimatePresence>
@@ -224,8 +224,7 @@ showHeader:  true,;
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center gap-3">"
                     <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">"
-                      <Bot className="w-5 h-5 text-white" />
-                    </div>
+                      <Bot className="w-5 h-5 text-white" />                    </div>
                     <div>"
                       <h3 className="font-semibold text-white">Zion AI Assistant</h3>"
                       <div className="flex items-center gap-2 text-xs text-zinc-400">"
@@ -242,16 +241,14 @@ showHeader:  true,;
                         className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                         aria-label="Chat settings"
 "
-                        <Settings className="w-4 h-4" />
-                      </button>;
+                        <Settings className="w-4 h-4" />                      </button>;
                     )}
                     <button
                       onClick={clearChat}"
                       className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                       aria-label="Clear chat"
 "
-                      <RefreshCw className="w-4 h-4" />
-                    </button>
+                      <RefreshCw className="w-4 h-4" />                    </button>
                   </div>
                 </div>;
               </div>) }
@@ -307,8 +304,7 @@ showHeader:  true,;
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'`
                         }`}
 "
-                        {settings.voiceEnabled ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
-                      </button>
+                        {settings.voiceEnabled ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}                      </button>
                     </div>
 "
                     <div className="flex items-center justify-between">"
@@ -332,8 +328,7 @@ showHeader:  true,;
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'`
                         }`}
 "
-                        <CheckCircle className="w-4 h-4" />
-                      </button>
+                        <CheckCircle className="w-4 h-4" />                      </button>
                     </div>;
                   </div>
                 </motion.div>) }
@@ -430,8 +425,7 @@ showHeader:  true,;
                             className="p-1 text-zinc-400 hover:text-green-400 transition-colors"
                             aria-label="Rate response positively"
 "
-                            <ThumbsUp className="w-3 h-3" />
-                          </button>
+                            <ThumbsUp className="w-3 h-3" />                          </button>
                           <button
                             onClick = {
 
@@ -446,8 +440,7 @@ showHeader:  true,;
                             className="p-1 text-zinc-400 hover:text-red-400 transition-colors"
                             aria-label="Rate response negatively"
 "
-                            <ThumbsDown className="w-3 h-3" />
-                          </button>;
+                            <ThumbsDown className="w-3 h-3" />                          </button>;
                         </div>) }
                     </div>
                   </div>
@@ -463,8 +456,7 @@ showHeader:  true,;
                       </div>
                     ) : ("
                       <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">"
-                        <Bot className="w-4 h-4 text-white" />
-                      </div>
+                        <Bot className="w-4 h-4 text-white" />                      </div>
                     )}
                   </div>
                 </motion.div>) ) }
@@ -509,8 +501,7 @@ showHeader:  true,;
                       className="hidden"
                       accept="image/*,.pdf,.doc,.docx,.txt"
                     />"
-                    <Paperclip className="w-4 h-4 text-zinc-400 hover:text-zinc-300 transition-colors" />
-                  </label>
+                    <Paperclip className="w-4 h-4 text-zinc-400 hover:text-zinc-300 transition-colors" />                  </label>
                 </div>
 
                 {/* Voice Input */}
@@ -526,8 +517,7 @@ showHeader:  true,;
                     }`}"
                     aria-label="Voice input"
 "
-                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
-                  </button>
+                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}                  </button>
                 )}
 
                 {/* Send Button */}
@@ -548,8 +538,7 @@ showHeader:  true,;
                   <span>Powered by Zion AI</span>
                 </div>"
                 <div className="flex items-center gap-1">"
-                  <Clock className="w-3 h-3" />
-                  <span>24/7 Available</span>
+                  <Clock className="w-3 h-3" />                  <span>24/7 Available</span>
                 </div>
               </div>
             </div>;

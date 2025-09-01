@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '../../components/SEO';
@@ -172,6 +173,11 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
         "On-premise deployment",;"
         "SLA guarantees",;"
         "24/7 support";
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { SEO  } from '../../components/SEO';        "24/7 support";
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false;
@@ -210,10 +216,8 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
       icon: Settings;
     },;
     {;"
-      industry: "Finance",;"
-      description: "Track financial advisor performance, client satisfaction, and investment portfolio management",;
-      icon: DollarSign;
-    };
+      industry: "Finance",;"      description: "Track financial advisor performance, client satisfaction, and investment portfolio management",;
+      icon: DollarSign};
   ];
 
   const integrations = [
@@ -293,15 +297,19 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
     {;"
       category: "Growth Metrics",;"
       indicators: ["Skill Development", "Learning Progress", "Career Advancement", "Certifications"];
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
         title="AI Employee Performance Analytics - Zion Tech Group"
         description="Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance."
       />
+=======
+        title="AI Employee Performance Analytics - Zion Tech Group""        description="Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -334,8 +342,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">"
-              <Users className="w-4 h-4 mr-2" />
-              AI-Powered Analytics
+              <Users className="w-4 h-4 mr-2" />              AI-Powered Analytics
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Employee Performance"
@@ -353,8 +360,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
                 Start Free Trial
               </button>"
               <button className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />
-                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -606,8 +612,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
                 <ul className="space-y-2">
                   {category.indicators.map((indicator, indicatorIndex) => ("
                     <li key={indicatorIndex} className="flex items-center text-gray-300 text-sm">"
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                      {indicator}
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />                      {indicator}
                     </li>
                   ))}
                 </ul>
@@ -823,8 +828,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />"
-                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -1081,8 +1085,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Star className="w-5 h-5 mr-2" />                Start Free Trial
               </button>"
               <button className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { User, 
@@ -137,6 +138,10 @@ const Profile: React.FC = () => {;
     setIsLoading(true);
     setError('');
     setSuccess('');
+=======
+import React, { useState } from 'react.ts';'
+import { motion  } from 'framer-motion.ts';    setSuccess('');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     try {
       // Simulate API call
@@ -151,8 +156,12 @@ const Profile: React.FC = () => {;
   };
 
   const handlePasswordChange = async () => {;
+<<<<<<< HEAD
     if (!currentPassword || !newPassword || !confirmPassword) {;
       setError('Please fill in all password fields');
+=======
+    if (!currentPassword || !newPassword || !confirmPassword) {;'      setError('Please fill in all password fields');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       return}
     if (newPassword.length < 8) {
 
@@ -292,8 +301,7 @@ setNotifications (prev: > ({;
               </div>"
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>"
               <div className="text-slate-400 text-sm">{stat.label}</div>
-            </motion.div>;
-          ))}
+            </motion.div>;          ))}
         </div>
       </div>
 
@@ -306,8 +314,7 @@ setNotifications (prev: > ({;
             <label className="block text-white font-medium mb-2">First Name</label>"
             <div className="relative">"
               <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <input"
-                type="text"
+              <input"                type="text"
                 value={profile.firstName}
                 onChange = {
 
@@ -330,8 +337,7 @@ setNotifications (prev: > ({;
             <label className="block text-white font-medium mb-2">Last Name</label>"
             <div className="relative">"
               <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <input"
-                type="text"
+              <input"                type="text"
                 value={profile.lastName}
                 onChange = {
 
@@ -356,8 +362,7 @@ setNotifications (prev: > ({;
             <label className="block text-white font-medium mb-2">Email Address</label>"
             <div className="relative">"
               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <input"
-                type="email"
+              <input"                type="email"
                 value={profile.email}
                 onChange = {
 
@@ -380,8 +385,7 @@ setNotifications (prev: > ({;
             <label className="block text-white font-medium mb-2">Phone Number</label>"
             <div className="relative">"
               <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <input"
-                type="tel"
+              <input"                type="tel"
                 value={profile.phone}
                 onChange = {
 
@@ -406,8 +410,7 @@ setNotifications (prev: > ({;
             <label className="block text-white font-medium mb-2">Company</label>"
             <div className="relative">"
               <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <input"
-                type="text"
+              <input"                type="text"
                 value={profile.company}
                 onChange = {
 
@@ -452,8 +455,7 @@ setNotifications (prev: > ({;
           <div>"
             <label className="block text-white font-medium mb-2">Industry</label>"
             <div className="relative">"
-              <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <select
+              <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />              <select
                 value={profile.industry}
                 onChange = {
 
@@ -478,8 +480,7 @@ setNotifications (prev: > ({;
             <label className="block text-white font-medium mb-2">Location</label>"
             <div className="relative">"
               <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <input"
-                type="text"
+              <input"                type="text"
                 value={profile.location}
                 onChange = {
 
@@ -503,8 +504,7 @@ setNotifications (prev: > ({;
           <label className="block text-white font-medium mb-2">Website</label>"
           <div className="relative">"
             <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-            <input"
-              type="url"
+            <input"              type="url"
               value={profile.website}
               onChange = {
 
@@ -553,8 +553,7 @@ setNotifications (prev: > ({;
                 </>
               ) : (
                 <>"
-                  <Save className="w-5 h-5" />
-                  Save Changes
+                  <Save className="w-5 h-5" />                  Save Changes
                 </>) }
             </button>
           </div>;) }
@@ -607,8 +606,7 @@ setNotifications (prev: > ({;
               </p>
               {achievement.earned && (;"
                 <div className="mt-3 flex items-center gap-2 text-yellow-400 text-sm">"
-                  <CheckCircle className="w-4 h-4" />
-                  Earned
+                  <CheckCircle className="w-4 h-4" />                  Earned
                 </div>;) };
             </motion.div>;) ) };
         </div>;
@@ -762,7 +760,6 @@ setNotifications (prev: > ({;
               </button>
             </div>
           </div>;
-
           <button
             onClick={handlePasswordChange}
             disabled={isLoading}"
@@ -775,8 +772,7 @@ setNotifications (prev: > ({;
               </>
             ) : (
               <>"
-                <Key className="w-5 h-5" />
-                Change Password
+                <Key className="w-5 h-5" />                Change Password
               </>) }
           </button>
         </div>
@@ -914,8 +910,7 @@ setNotifications (prev: > ({;
                   onChange={() => handleNotificationToggle(key as keyof NotificationSettings)}"
                   className="sr-only peer"
                 />'"
-                <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500"></div>;
-              </label>;
+                <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500"></div>;              </label>;
             </div>;) ) };
         </div>;
       </div>;
@@ -1005,8 +1000,7 @@ setNotifications (prev: > ({;
             <div>"
               <h4 className="font-medium text-red-400 mb-1">Delete Account</h4>"
               <p className="text-red-400/70 text-sm">Permanently delete your account and all data</p>;
-            </div>;"
-            <Trash2 className="w-5 h-5 text-red-400" />;
+            </div>;"            <Trash2 className="w-5 h-5 text-red-400" />;
           </button>;
         </div>;
       </div>;
@@ -1057,8 +1051,7 @@ setNotifications (prev: > ({;
 }}"
             className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3 text-red-400"
 "
-            <AlertCircle className="w-5 h-5" />
-            {error}
+            <AlertCircle className="w-5 h-5" />            {error}
           </motion.div>) }
 
         {success && (<motion.div
@@ -1081,18 +1074,24 @@ setNotifications (prev: > ({;
 }}"
             className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 text-green-400"
 "
-            <CheckCircle className="w-5 h-5" />
-            {success}
+            <CheckCircle className="w-5 h-5" />            {success}
           </motion.div>) }
 
         {/* Navigation Tabs */}"
         <div className="flex flex-wrap gap-2 mb-8">
           {['"
+<<<<<<< HEAD
             { key: 'profile', label: 'Profile', icon: <User className="w-5 h-5" /> },"
             { key: 'security', label: 'Security', icon: <Shield className="w-5 h-5" /> },"
             { key: 'notifications', label: 'Notifications', icon: <Bell className="w-5 h-5" /> },"
             { key: 'preferences', label: 'Preferences', icon: <Settings className="w-5 h-5" /> }
           ].map((tab) => (
+=======
+            { key: 'profile', label: 'Profile', icon: <User className="w-5 h-5" /> },'"
+            { key: 'security', label: 'Security', icon: <Shield className="w-5 h-5" /> },'"
+            { key: 'notifications', label: 'Notifications', icon: <Bell className="w-5 h-5" /> },'"
+            { key: 'preferences', label: 'Preferences', icon: <Settings className="w-5 h-5" /> }          ].map((tab) => (
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key as )}`

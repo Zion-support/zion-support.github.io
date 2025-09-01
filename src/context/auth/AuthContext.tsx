@@ -1,4 +1,3 @@
-import React, { createContext, useContext } from 'react.ts';
 
 interface User {
   id: string;

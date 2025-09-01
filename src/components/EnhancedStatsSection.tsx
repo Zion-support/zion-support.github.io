@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+<<<<<<< HEAD
 import {
 
   Users,
@@ -96,6 +97,8 @@ export default function EnhancedStatsSection(...args[]):  {
     triggerOnce: true
   }) ;
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect(() => {
     if (inView) {
 
@@ -135,7 +138,6 @@ setCountedValues (prev:  > ({;
       });
     }
   }, [inView]) ;
-
   return()
     <section className = "py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Background decoration */}"
@@ -291,8 +293,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
   { opacity: 0,
   y: 30 ;
 
-}}
-          animate={controls}
+}}          animate={controls}
           variants = {
 
   {
@@ -306,8 +307,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                 duration: 0.6,
   delay: 0.6;
 
-}
-            }
+}            }
           }}"
           className="mt-16"
 "
@@ -317,8 +317,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
 "
-              <Award className="w-10 h-10 text-white" />
-            </motion.div>
+              <Award className="w-10 h-10 text-white" />            </motion.div>
 "
             <h3 className="text-3xl font-bold text-white mb-4">
               Industry Recognition & Awards

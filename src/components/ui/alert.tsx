@@ -1,15 +1,5 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
-
-interface AlertProps {
-  // Add your props here
-
-
-  children: React.ReactNode;
-  className?: string;
-
-}
-
 interface AlertTitleProps {
   // Add your props here
 
@@ -18,7 +8,6 @@ interface AlertTitleProps {
   className?: string;
 
 }
-
 interface AlertDescriptionProps {
   // Add your props here
 
@@ -26,8 +15,12 @@ interface AlertDescriptionProps {
   children: React.ReactNode;
   className?: string;
 }
+<<<<<<< HEAD
 
 export function Alert({ children, className = '' }: AlertProps) {
+=======
+'export function Alert({ children, className = '' }: AlertProps) {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return ('
     <div className={cn('relative w-full rounded-lg border p-4', className)}>
@@ -35,8 +28,12 @@ export function Alert({ children, className = '' }: AlertProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 
 export function AlertTitle({ children, className = '' }: AlertTitleProps) {
+=======
+'export function AlertTitle({ children, className = '' }: AlertTitleProps) {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <h5'
@@ -44,8 +41,7 @@ export function AlertTitle({ children, className = '' }: AlertTitleProps) {
     >
       {children}
     </h5>
-  );
-}
+  )}
 
 export function AlertDescription({
 

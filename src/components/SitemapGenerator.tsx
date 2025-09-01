@@ -13,8 +13,7 @@ import {
   ShoppingCart,
   BookOpen,
   MessageCircle,
-  HelpCircle,
-  Star,
+  HelpCircle,  Star,
   Atom,
   Network,
   Eye,
@@ -49,7 +48,6 @@ interface SitemapSection {
   routes: SitemapRoute[];
   featured?: boolean;
 }
-
 interface SitemapRoute {
   path: string;
   name: string;
@@ -59,7 +57,6 @@ interface SitemapRoute {
   featured?: boolean;
   external?: boolean;
 }
-
 export const SitemapGenerator: React.FC = (): JSX.Element => {
 
   const [sitemapData, setSitemapData] = useState<any>([]);
@@ -67,8 +64,7 @@ export const SitemapGenerator: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   useEffect(() => {
-    generateSitemap();
-  }, []);
+    generateSitemap()}, []);
 
   const generateSitemap = () => {
     const sitemap: SitemapSection[] = [
@@ -782,7 +778,6 @@ ${sitemapData
     document.body.removeChild (a) ;
     URL.revokeObjectURL (url) ;
   };
-
   return ("
     <div className="max-w-7xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-lg p-6">"
@@ -801,15 +796,13 @@ ${sitemapData
               onClick={exportSitemap}"
               className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
             >"
-              <Download className="w-4 h-4 mr-2" />
-              Export XML
+              <Download className="w-4 h-4 mr-2" />              Export XML
             </button>
             <button
               onClick={exportCSV}"
               className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
             >"
-              <Download className="w-4 h-4 mr-2" />
-              Export CSV
+              <Download className="w-4 h-4 mr-2" />              Export CSV
             </button>
           </div>
         </div>
@@ -856,8 +849,7 @@ ${sitemapData
                   {section.title}
                   {section.featured && ("
                     <Star className="w-5 h-5 text-yellow-500 ml-2 inline" />
-                  )}
-                </h2>
+                  )}                </h2>
               </div>"
               <p className="text-gray-600 mb-4">{section.description}</p>
 "
@@ -895,8 +887,7 @@ ${sitemapData
                         <p className="text-sm text-gray-600 mb-2 line-clamp-2">
                           {route.description}
                         </p>"
-                        <div className="flex items-center justify-between">"
-                          <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                        <div className="flex items-center justify-between">"                          <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
                             {route.category}
                           </span>
                           <Link
@@ -968,6 +959,5 @@ const Home = () => <Globe className="w-4 h-4" />;"
 const Calendar = () => <BookOpen className="w-4 h-4" />;"
 const Video = () => <MessageCircle className="w-4 h-4" />;"
 const Code = () => <Settings className="w-4 h-4" />;
-
 export default SitemapGenerator;
 '"`

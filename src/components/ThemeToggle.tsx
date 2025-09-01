@@ -11,9 +11,14 @@ interface ThemeToggleProps {
 
   className?: string;
 }
+<<<<<<< HEAD
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
   const [theme, setTheme] = useState<Theme>('system');
+=======
+'
+export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;'  const [theme, setTheme] = useState<Theme>('system');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -24,7 +29,6 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       setTheme(savedTheme);
     }
   }, []) ;
-
   useEffect ( () => {
     if (!mounted) return;
 
@@ -33,13 +37,11 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     '
     localStorage.setItem('theme', theme);
   }, [theme, mounted]);
-
   if (!mounted) {
 
     return()
       <div className="w-32 h-10 rounded-lg bg-gray-200 dark:bg-gray-700 animate-pulse" />
-    );
-  }
+    )}
 
   const themes: { value: Theme; label: string; icon: React.ComponentType<any> }[] = ['
     { value: 'light', label: 'Light', icon: Sun },
@@ -72,8 +74,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
                 onClick={ () => {
                   setTheme (themeOption.value) ;
                   setIsOpen (false) ;
-                }}
-                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
+                }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
 
                   theme === themeOption.value'
                     ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400''
@@ -90,8 +91,12 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     const root = document.documentElement;
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)).matches ? 'dark' : 'light';
     const effectiveTheme = theme === 'system' ? systemTheme : theme;
+<<<<<<< HEAD
 
     root.classList.remove('light',dark');
+=======
+'    root.classList.remove('light', 'dark');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     root.classList.add(effectiveTheme);
     
     // Update CSS custom properties for smooth transitions'
@@ -116,7 +121,6 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
 
     setTheme(newTheme);
   };
-
   const themes: { value: Theme; label: string; icon: React.ComponentType<any> }[] = ['
     { value: 'light', label: 'Light theme', icon: Sun },
     { value: 'dark', label: 'Dark theme', icon: Moon },
@@ -127,8 +131,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
 
     return()`
       <div className={`w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse ${className}`} />
-    );
-  }
+    )}
 
   return()`
     <div className={`relative ${className}`}>
@@ -141,8 +144,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
         {themes.map((themeOption) => {
 
           const Icon = themeOption.icon;
-          const isActive = theme === themeOption.value;
-          
+          const isActive = theme === themeOption.value;          
           return()
             <motion.button
               key={themeOption.value}
@@ -158,8 +160,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
               aria - label={themeOption.label}
               title={themeOption.label}
             >"
-              <Icon className="w-4 h-4" />
-              {isActive && (
+              <Icon className="w-4 h-4" />              {isActive && (
                 <motion.div"
                   className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500"
                   layoutId="activeTheme"
@@ -170,6 +171,5 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       </motion.div>
     </div>) ;
 };
-
 export default ThemeToggle;
 '"`

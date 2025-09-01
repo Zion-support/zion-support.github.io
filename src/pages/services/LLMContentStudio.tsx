@@ -1,8 +1,7 @@
 import React from 'react.ts';
 import SEO from '@/components/SEO';
 ;
-export { function };
-export default function LLMContentStudio(...args: []):  {
+export { function };export default function LLMContentStudio(...args: []):  {
 
   return()
     <div className = "min-h-screen bg-futuristic text-white">;
@@ -10,8 +9,7 @@ export default function LLMContentStudio(...args: []):  {
         title="LLM Content Studio | Zion Tech Group"
         description="Plan, generate, and distribute on-brand content with AI. Multichannel support, approvals, and analytics."
       />"
-      <section className="container-responsive py-16">"
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+      <section className="container-responsive py-16">"        <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
           LLM Content Studio
         </h1>"
         <p className="text-zion-slate-light max-w-3xl">

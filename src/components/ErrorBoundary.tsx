@@ -1,6 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 export default ErrorBoundary;
 import {
+<<<<<<< HEAD
 
 import {
 
@@ -18,6 +19,8 @@ interface Props {
   fallback?: ReactNode;
 }
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface State {
 
   hasError: boolean;
@@ -28,7 +31,6 @@ interface State {
 
   errorId: string;
   showDetails: boolean;
-
 class ErrorBoundary extends Component<Props, State> {
 
   constructor(props: Props) {
@@ -43,7 +45,6 @@ class ErrorBoundary extends Component<Props, State> {
       errorId: '',
       showDetails: false};
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
 
     return {
@@ -53,7 +54,6 @@ class ErrorBoundary extends Component<Props, State> {
 
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 
     this.setState({
@@ -91,7 +91,6 @@ class ErrorBoundary extends Component<Props, State> {
       console.error('Failed to log error to service:', logError);
     }
   }
-
   handleRetry = () => {
     this.setState({
 
@@ -107,7 +106,6 @@ class ErrorBoundary extends Component<Props, State> {
 
     window.location.href = '/';
   };
-
   handleReportError = : unknown {
     const { error, errorInfo, errorId } = this.state;
     const errorReport = {
@@ -151,7 +149,6 @@ Component Stack: ${this.state.errorInfo.componentStack}
       });
     }
   };
-
   render () {
     if (this.state.hasError) {
 
@@ -165,8 +162,7 @@ Component Stack: ${this.state.errorInfo.componentStack}
               <div className="text-center mb-6">"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-red-500/20 rounded-full mb-4">"
                   <AlertTriangle className="w-8 h-8 text-red-400" />
-                </div>"
-                <h1 className="text-2xl font-bold text-white mb-2">
+                </div>"                <h1 className="text-2xl font-bold text-white mb-2">
                   Oops! Something went wrong
                 </h1>"
                 <p className="text-gray-300">
@@ -203,24 +199,21 @@ Component Stack: ${this.state.errorInfo.componentStack}
                   onClick={this.handleRetry}"
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-cyan hover:bg-zion-cyan-dark text-white rounded-lg font-medium transition-colors"
                 >"
-                  <RefreshCw className="w-4 h-4" />
-                  Try Again
+                  <RefreshCw className="w-4 h-4" />                  Try Again
                 </button>
 
                 <button
                   onClick={this.handleGoHome}"
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors"
                 >"
-                  <Home className="w-4 h-4" />
-                  Go Home
+                  <Home className="w-4 h-4" />                  Go Home
                 </button>
 
                 <button
                   onClick={this.handleReportError}"
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors"
                 >"
-                  <Mail className="w-4 h-4" />
-                  Report Error
+                  <Mail className="w-4 h-4" />                  Report Error
                 </button>
               </div>
 
@@ -230,8 +223,12 @@ Component Stack: ${this.state.errorInfo.componentStack}
                   onClick={this.toggleDetails}"
                   className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
                 >"
+<<<<<<< HEAD
                   <Bug className="w-4 h-4" />
                   {showDetails ? 'Hide' : 'Show'} Technical Details
+=======
+                  <Bug className="w-4 h-4" />'                  {showDetails ? 'Hide' : 'Show'} Technical Details
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 </button>
               </div>
 
@@ -265,8 +262,7 @@ Component Stack: ${this.state.errorInfo.componentStack}
               <div className="mt-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">"
                 <div className="flex items-start gap-3">"
                   <Shield className="w-5 h-5 text-blue-400 mt-0.5" />
-                  <div>"
-                    <h4 className="text-sm font-medium text-blue-300 mb-1">
+                  <div>"                    <h4 className="text-sm font-medium text-blue-300 mb-1">
                       Need Help?
                     </h4>"
                     <p className="text-xs text-blue-200/80">
@@ -282,9 +278,7 @@ Component Stack: ${this.state.errorInfo.componentStack}
         </div>
       );
     }
-
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default ErrorBoundary;

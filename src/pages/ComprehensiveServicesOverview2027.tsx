@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -184,6 +185,11 @@ const pricingModels = [;
   { id: 'yearly', name: 'Yearly' },;
   { id: 'one-time', name: 'One-time' },;
   { id: 'usage-based', name: 'Usage-based' };
+=======
+import React, { useState, useEffect } from 'react';'
+import { motion } from 'framer-motion';'
+import { Link } from 'react-router-dom';  { id: 'usage-based', name: 'Usage-based' };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 export default function ComprehensiveServicesOverview2027(...args[]):  {
 
@@ -203,14 +209,13 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
 
       filtered = filtered.filter(service => service.pricingModel === selectedPricing)};
     if (searchQuery.trim()) {;
-      const query = searchQuery.toLowerCase();
+      
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(query) ||;
         service.description.toLowerCase().includes(query) ||;
         service.tags.some(tag => tag.toLowerCase().includes(query)) ||;
         service.subcategory?.toLowerCase().includes(query);
-      );
-    }
+      )}
     filtered.sort((a, b) => {
 
       switch (sortBy) {
@@ -363,8 +368,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
         >
           <Link to={service.href}>;
             Learn More;"
-            <ArrowRight className="ml-2 w-4 h-4" />;
-          </Link>;
+            <ArrowRight className="ml-2 w-4 h-4" />;          </Link>;
         </Button>;
       </div>;
     </motion.div>;) ;
@@ -378,8 +382,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
       />
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />"
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />"        <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -428,8 +431,12 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search services..."
+=======
+                  type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="pl-10 pr-4 py-2 bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
@@ -442,16 +449,14 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                   onClick={() => setViewMode('grid')}
                   className={viewMode === 'grid' ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
                 >"
-                  <Grid className="w-4 h-4" />
-                </Button>
+                  <Grid className="w-4 h-4" />                </Button>
                 <Button'
                   variant={viewMode === 'list' ? 'default' : 'outline'}"
                   size="sm"'
                   onClick={() => setViewMode('list')}
                   className={viewMode === 'list' ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
                 >"
-                  <List className="w-4 h-4" />
-                </Button>
+                  <List className="w-4 h-4" />                </Button>
               </div>
               <select
                 value={sortBy}
@@ -476,8 +481,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               <div className="flex-1 max-w-md">"
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-                  <Input"
-                    placeholder="Search services..."
+                  <Input"                    placeholder="Search services..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"
                     className="pl-10 bg-zion-slate-dark/50 border-zion-blue-light/20 text-white placeholder-zion-slate-light"
@@ -492,16 +496,14 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                     onClick={() => setViewMode('grid')}"
                     className="bg-zion-cyan hover:bg-zion-cyan-light"
 "
-                    <Grid className="w-4 h-4" />
-                  </Button>
+                    <Grid className="w-4 h-4" />                  </Button>
                   <Button'
                     variant={viewMode === 'list' ? 'default' : 'outline'}"
                     size="sm"'
                     onClick={() => setViewMode('list')}"
                     className="bg-zion-cyan hover:bg-zion-cyan-light"
 "
-                    <List className="w-4 h-4" />
-                  </Button>
+                    <List className="w-4 h-4" />                  </Button>
                 </div>
                 <select
                   value={sortBy}
@@ -551,7 +553,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               : 'grid-cols-1'`
           }`}>
             {filteredServices.map((service) => (;
-              <ServiceCard key={service.id} service={service} />
+              <ServiceCard key={service.id} service={service}  />
             ))}
           </div>"
           <div className="flex flex-wrap gap-4">
@@ -575,8 +577,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             : 'grid-cols-1'`
         }`}>
           {filteredServices.map ( (service) => (;
-            <ServiceCard key={service.id} service={service} />) ) };
-        </div>;
+            <ServiceCard key={service.id} service={service} />) ) };        </div>;
         {filteredServices.length === 0 && (;"
           <div className="text-center py-16">;"
             <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>;
@@ -585,8 +586,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                 setSelectedCategory('all');
                 setSelectedPricing('all');
                 setSearchQuery('');
-              }}"
-              className = "bg-zion-cyan hover:bg-zion-cyan-light"
+              }}"              className = "bg-zion-cyan hover:bg-zion-cyan-light"
             >
               Clear Filters
             </Button>
@@ -606,8 +606,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-light hover:to-zion-blue-light">"
               <Link to="/contact">
                 Schedule Consultation"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
             </Button>"
             <Button asChild variant="outline" size="lg" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">"
               <a href="tel:+13024640950">

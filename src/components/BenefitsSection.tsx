@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
@@ -22,6 +23,12 @@ const benefits: Benefit[] = [;
     color: "from-zion-cyan to-zion-cyan-dark","
     bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20","
     stats: "95% Match Rate",
+=======
+import React, { useState } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';'
+import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';'
+import { GradientHeading } from './ui/GradientHeading';    stats: "95% Match Rate",
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     features: ["
       "Intelligent service matching","
       "Real-time availability","
@@ -36,8 +43,7 @@ const benefits: Benefit[] = [;
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.","
     icon: <Globe className="w-8 h-8" />,"
     color: "from-zion-purple to-zion-purple-dark","
-    bgColor: "from-zion-purple/20 to-zion-purple-dark/20","
-    stats: "150+ Countries",
+    bgColor: "from-zion-purple/20 to-zion-purple-dark/20","    stats: "150+ Countries",
     features: ["
       "Worldwide talent pool","
       "24/7 availability","
@@ -51,8 +57,7 @@ const benefits: Benefit[] = [;
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.","
     icon: <Clock className="w-8 h-8" />,"
     color: "from-zion-blue to-zion-blue-dark","
-    bgColor: "from-zion-blue/20 to-zion-blue-dark/20","
-    stats: "99.9% Uptime",
+    bgColor: "from-zion-blue/20 to-zion-blue-dark/20","    stats: "99.9% Uptime",
     features: ["
       "Round-the-clock assistance","
       "Expert technical support","
@@ -66,8 +71,7 @@ const benefits: Benefit[] = [;
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.","
     icon: <TrendingDown className="w-8 h-8" />,"
     color: "from-zion-green to-zion-green-dark","
-    bgColor: "from-zion-green/20 to-zion-green-dark/20","
-    stats: "40% Cost Savings",
+    bgColor: "from-zion-green/20 to-zion-green-dark/20","    stats: "40% Cost Savings",
     features: ["
       "Direct provider connections","
       "Competitive pricing","
@@ -108,8 +112,7 @@ const benefits: Benefit[] = [;
     { value: "500+", label: "Projects Delivered", icon: <Rocket className="w-6 h-6" /> },"
     { value: "50+", label: "Expert Team Members", icon: <Users className="w-6 h-6" /> },"
     { value: "99.9%", label: "Client Satisfaction", icon: <Star className="w-6 h-6" /> },"
-    { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6" /> }
-  ];
+    { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6" /> }  ];
 
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">;

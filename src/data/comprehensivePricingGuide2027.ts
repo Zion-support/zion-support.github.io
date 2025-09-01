@@ -1,6 +1,5 @@
 import { ProductListing } from "@/types/listings";
-;
-export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
+;export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
   // AI-Powered Micro SAAS Services
   {
 "
@@ -650,12 +649,20 @@ export const getComprehensivePricingGuide2027ByCategory = category: string
   comprehensivePricingGuide2027.filter(item => item.category === category);
 export const getComprehensivePricingGuide2027ById = id: string
   comprehensivePricingGuide2027.find(item => item.id === id);
+<<<<<<< HEAD
 export const pricingCategories2027 = [;
   'Metaverse Solutions',;
   'Web3 Solutions',;
   'Sustainable Tech',;
   'NeuroTech Solutions',;
   'Fusion Energy Solutions';
+=======
+export const pricingCategories2027 = [;'
+  'Metaverse Solutions',;'
+  'Web3 Solutions',;'
+  'Sustainable Tech',;'
+  'NeuroTech Solutions',;'  'Fusion Energy Solutions';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 export const pricingSubcategories2027 = {
 '"

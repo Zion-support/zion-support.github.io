@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 import {
 
@@ -231,6 +232,8 @@ export default function Careers() {
     setExpandedJob(expandedJob === jobId ? null : jobId);
   };
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">"
       <div className="container mx-auto px-4 py-24">
@@ -267,8 +270,7 @@ export default function Careers() {
               onChange={e => setSearchTerm(e.target.value)}"
               className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
             />"
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-          </div>
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />          </div>
 
           {/* Filters */}"
           <div className="grid md:grid-cols-2 gap-6">
@@ -337,8 +339,7 @@ export default function Careers() {
               </h3>"
               <p className="text-gray-400">
                 Try adjusting your search terms or filters.
-              </p>
-            </div>
+              </p>            </div>
           ) : (
             filteredJobs.map((job, index) => (
               <motion.div
@@ -375,8 +376,7 @@ export default function Careers() {
                             <span>{job.type}</span>
                           </div>"
                           <div className="flex items-center space-x-1">"
-                            <DollarSign className="w-4 h-4" />
-                            <span>{job.salary}</span>
+                            <DollarSign className="w-4 h-4" />                            <span>{job.salary}</span>
                           </div>
                         </div>
                       </div>
@@ -388,8 +388,7 @@ export default function Careers() {
                       {expandedJob === job.id ? ("
                         <ChevronUp className="w-6 h-6" />
                       ) : ("
-                        <ChevronDown className="w-6 h-6" />
-                      )}
+                        <ChevronDown className="w-6 h-6" />                      )}
                     </button>
                   </div>
 
@@ -408,8 +407,7 @@ export default function Careers() {
                       {/* Requirements */}
                       <div>"
                         <h4 className="text-lg font-semibold text-white mb-3 flex items-center">"
-                          <CheckCircle className="w-5 h-5 text-cyan-400 mr-2" />
-                          Requirements
+                          <CheckCircle className="w-5 h-5 text-cyan-400 mr-2" />                          Requirements
                         </h4>"
                         <ul className="space-y-2">
                           {job.requirements.map((req, idx) => (
@@ -417,8 +415,7 @@ export default function Careers() {
                               key={idx}"
                               className="flex items-start space-x-2 text-gray-300"
                             >"
-                              <Star className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
-                              <span>{req}</span>
+                              <Star className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />                              <span>{req}</span>
                             </li>) ) }
                         </ul>
                       </div>
@@ -426,8 +423,7 @@ export default function Careers() {
                       {/* Benefits */}
                       <div>"
                         <h4 className="text-lg font-semibold text-white mb-3 flex items-center">"
-                          <Heart className="w-5 h-5 text-cyan-400 mr-2" />
-                          Benefits
+                          <Heart className="w-5 h-5 text-cyan-400 mr-2" />                          Benefits
                         </h4>"
                         <ul className="space-y-2">
                           {job.benefits.map((benefit, idx) => (
@@ -435,8 +431,7 @@ export default function Careers() {
                               key={idx}"
                               className="flex items-start space-x-2 text-gray-300"
                             >"
-                              <Star className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
-                              <span>{benefit}</span>
+                              <Star className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />                              <span>{benefit}</span>
                             </li>) ) }
                         </ul>
                       </div>
@@ -528,8 +523,7 @@ export default function Careers() {
               <p className="text-gray-300">
                 Continuous learning opportunities and clear career progression
                 paths for ambitious professionals.
-              </p>
-            </div>
+              </p>            </div>
           </div>
         </motion.div>
 
@@ -556,8 +550,7 @@ export default function Careers() {
                 <span>careers@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center space-x-3 text-gray-300">"
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span>+1 302 464 0950</span>
+                <Phone className="w-5 h-5 text-cyan-400" />                <span>+1 302 464 0950</span>
               </div>
             </div>
 "

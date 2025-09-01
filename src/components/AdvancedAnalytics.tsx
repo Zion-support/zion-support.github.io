@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-
   BarChart3, 
   TrendingUp, 
   Users, 
@@ -43,16 +42,13 @@ interface AnalyticsData {
     loadTime: number;
     firstPaint: number;
     firstContentfulPaint: number;
-    largestContentfulPaint: number;
-  };
+    largestContentfulPaint: number};
   interactions: {
 
     clicks: number;
     scrolls: number;
     formSubmissions: number;
-    errors: number;
-  };
-}
+    errors: number}}
 
 interface AdvancedAnalyticsProps {
   // Add your props here
@@ -63,7 +59,6 @@ interface AdvancedAnalyticsProps {
   enableHeatmap?: boolean;
   enableSessionRecording?: boolean;
   enableAITesting?: boolean;
-
 export function AdvancedAnalytics({
 
   enabled, 
@@ -108,14 +103,12 @@ export function AdvancedAnalytics({
   
   const trackingRef = useRef<{
 
-    pageViews: number;
-    clicks: number;
+    pageViews: number;    clicks: number;
     scrolls: number;
     formSubmissions: number;
     errors: number;
     startTime: number;
   }>({
-
     pageViews: 1,
     clicks: 0,
     scrolls: 0,
@@ -151,8 +144,7 @@ export function AdvancedAnalytics({
       timezone: Intl.DateTimeFormat () .resolvedOptions () .timeZone
     };
 
-    // Send to analytics service'
-    this.sendAnalyticsData('pageview', pageViewData);
+    // Send to analytics service'    this.sendAnalyticsData('pageview', pageViewData);
     
     // Update local state
     setAnalyticsData(prev => ({
@@ -177,7 +169,6 @@ export function AdvancedAnalytics({
       element: data?.target?.tagName || 'unknown',
       position: data?.position || null
     };
-
     // Update tracking ref
     switch (type) {
 
@@ -192,8 +183,7 @@ export function AdvancedAnalytics({
         break;
       case 'error':
         trackingRef.current.errors++;
-        break;
-    }
+        break}
 
     // Send to analytics service'
     this.sendAnalyticsData('interaction', interactionData);
@@ -229,7 +219,6 @@ export function AdvancedAnalytics({
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
         largestContentfulPaint: 0, // Will be updated by observer
         timestamp: new Date () .toISOString () };
-
       // Update local state
       setAnalyticsData(prev => ({
 
@@ -247,7 +236,6 @@ export function AdvancedAnalytics({
       this.sendAnalyticsData('performance', performanceData);
     }
   }, [enabled, userSession]) ;
-
   // Setup event listeners
   useEffect ( () => {
     if (!enabled) return;
@@ -265,20 +253,17 @@ export function AdvancedAnalytics({
 
       const target = e.target as HTMLElement;
       const position = { x: e.clientX, y: e.clientY };
-      '
-      trackInteraction('click', { target, position });
+      '      trackInteraction('click', { target, position });
       
       // Add to heatmap data
       if (enableHeatmap) {
 
         setHeatmapData(prev => [...prev, { x: position.x, y: position.y, type: 'click' }]);
-      }
-    };
+      }    };
 
     // Setup scroll tracking
     let scrollTimeout: NodeJS.Timeout;
-    const handleScroll = () => {
-      clearTimeout(scrollTimeout);
+    
       scrollTimeout = setTimeout(() => {
 
         trackInteraction('scroll', {
@@ -321,8 +306,7 @@ export function AdvancedAnalytics({
 
         message: e.reason?.message || 'Unhandled Promise Rejection',
         reason: e.reason
-      }) ;
-    };
+      }) ;    };
 
     // Add event listeners'
     document.addEventListener('click', handleClick);
@@ -336,8 +320,7 @@ export function AdvancedAnalytics({
       if (document.hidden) {
 
         // Page hidden - track session end
-        const sessionDuration = Date.now() - sessionStart;
-        setAnalyticsData(prev => ({
+        const sessionDuration = Date.now() - sessionStart;        setAnalyticsData(prev => ({
 
           ...prev,
           sessionDuration: sessionDuration / 1000 // Convert to seconds
@@ -346,9 +329,14 @@ export function AdvancedAnalytics({
 
         // Page visible - track session resume
         setSessionStart (Date.now () ) ;
+<<<<<<< HEAD
       }
     };
 
+=======
+      }    };
+'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
     // Cleanup
@@ -363,7 +351,6 @@ export function AdvancedAnalytics({
       clearTimeout(scrollTimeout);
     };
   }, [enabled, trackPageView, trackPerformance, trackInteraction, sessionStart, enableHeatmap]) ;
-
   // Setup performance observer for LCP
   useEffect(() => {
 
@@ -373,8 +360,7 @@ export function AdvancedAnalytics({
       const lcpObserver = new PerformanceObserver((list) => {
 
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
+        const lastEntry = entries[entries.length - 1];        if (lastEntry) {
 
           setAnalyticsData(prev => ({
 
@@ -385,9 +371,14 @@ export function AdvancedAnalytics({
               largestContentfulPaint: lastEntry.startTime
             }
           }) ) ;
+<<<<<<< HEAD
         }
       });
 
+=======
+        }      });
+'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       return () => lcpObserver.disconnect () ;
@@ -412,9 +403,14 @@ export function AdvancedAnalytics({
         sessionId: userSession
       };
 
+<<<<<<< HEAD
       // Send to analytics endpoint'
       await fetch('/api/analytics', {
 
+=======
+      // Send to analytics endpoint'      await fetch('/api/analytics', {
+'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         method: 'POST',
         headers: {
 
@@ -425,7 +421,6 @@ export function AdvancedAnalytics({
       // console.warn('Failed to send analytics data:', error);
     }
   }, [trackingId, userSession]) ;
-
   // Generate mock data for demonstration
   useEffect ( () => {
     if (!enabled) return;
@@ -473,7 +468,6 @@ export function AdvancedAnalytics({
 
     setAnalyticsData (mockData) ;
   }, [enabled]) ;
-
   if (!enabled) return null;
 
   return()
@@ -520,32 +514,28 @@ export function AdvancedAnalytics({
             <div className="grid grid-cols-2 gap-4 mb-6">"
               <div className="bg-blue-50 p-3 rounded-lg">"
                 <div className="flex items-center gap-2 mb-1">"
-                  <Eye className="w-4 h-4 text-blue-500" />"
-                  <span className="text-xs text-blue-600">Page Views</span>
+                  <Eye className="w-4 h-4 text-blue-500" />"                  <span className="text-xs text-blue-600">Page Views</span>
                 </div>"
                 <div className="text-lg font-bold text-blue-700">{analyticsData.pageViews.toLocaleString()}</div>
               </div>
               "
               <div className="bg-green-50 p-3 rounded-lg">"
                 <div className="flex items-center gap-2 mb-1">"
-                  <Users className="w-4 h-4 text-green-500" />"
-                  <span className="text-xs text-green-600">Visitors</span>
+                  <Users className="w-4 h-4 text-green-500" />"                  <span className="text-xs text-green-600">Visitors</span>
                 </div>"
                 <div className="text-lg font-bold text-green-700">{analyticsData.uniqueVisitors.toLocaleString()}</div>
               </div>
               "
               <div className="bg-purple-50 p-3 rounded-lg">"
                 <div className="flex items-center gap-2 mb-1">"
-                  <Clock className="w-4 h-4 text-purple-500" />"
-                  <span className="text-xs text-purple-600">Session</span>
+                  <Clock className="w-4 h-4 text-purple-500" />"                  <span className="text-xs text-purple-600">Session</span>
                 </div>"
                 <div className="text-lg font-bold text-purple-700">{Math.round(analyticsData.sessionDuration)}s</div>
               </div>
               "
               <div className="bg-orange-50 p-3 rounded-lg">"
                 <div className="flex items-center gap-2 mb-1">"
-                  <Target className="w-4 h-4 text-orange-500" />"
-                  <span className="text-xs text-orange-600">Conversion</span>
+                  <Target className="w-4 h-4 text-orange-500" />"                  <span className="text-xs text-orange-600">Conversion</span>
                 </div>"
                 <div className="text-lg font-bold text-orange-700">{analyticsData.conversionRate.toFixed(1)}%</div>
               </div>
@@ -554,8 +544,7 @@ export function AdvancedAnalytics({
             {/* Performance Metrics */}"
             <div className="mb-6">"
               <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">"
-                <Zap className="w-4 h-4 text-yellow-500" />
-                Performance
+                <Zap className="w-4 h-4 text-yellow-500" />                Performance
               </h3>"
               <div className="space-y-2 text-xs">"
                 <div className="flex justify-between">
@@ -599,8 +588,7 @@ export function AdvancedAnalytics({
                     {device.device === 'Desktop' && <Monitor className="w-3 h-3 text-blue-500" />}'"
                     {device.device === 'Mobile' && <Smartphone className="w-3 h-3 text-green-500" />}'"
                     {device.device === 'Tablet' && <Tablet className="w-3 h-3 text-purple-500" />}"
-                    <span className="flex-1">{device.device}</span>"
-                    <span className="font-mono text-gray-600">{device.count}</span>
+                    <span className="flex-1">{device.device}</span>"                    <span className="font-mono text-gray-600">{device.count}</span>
                   </div>
                 ))}
               </div>
@@ -617,8 +605,7 @@ export function AdvancedAnalytics({
                   onClick={() => window.location.reload()}"
                   className="text-blue-500 hover:text-blue-600"
                 >"
-                  <RefreshCw className="w-3 h-3" />
-                </button>
+                  <RefreshCw className="w-3 h-3" />                </button>
               </div>
             </div>
           </motion.div>) }

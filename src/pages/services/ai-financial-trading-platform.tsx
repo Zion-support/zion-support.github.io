@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -160,14 +161,31 @@ export default function AIFinancialTradingPlatform(...args: []):  {
     { metric: '2.5x', label: 'Sharpe Ratio' },;
     { metric: '15%', label: 'Max Drawdown' },;
     { metric: '24/7', label: 'Uptime' };
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { SEO  } from '@/components/SEO';      description: 'AI-driven insights for gold, oil, and other commodity markets',;
+      icon: BarChart3};
+  ];
+
+  const performanceMetrics = [;'
+    { metric: '95%', label: 'Win Rate' },;'
+    { metric: '2.5x', label: 'Sharpe Ratio' },;'
+    { metric: '15%', label: 'Max Drawdown' },;'    { metric: '24/7', label: 'Uptime' };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="AI Financial Trading Platform - Zion Tech Group"
         description="Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month."
       />
+=======
+        title="AI Financial Trading Platform - Zion Tech Group""        description="Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -198,8 +216,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-medium mb-6">"
-              <TrendingUp className="w-4 h-4 mr-2" />
-              AI-Powered Trading
+              <TrendingUp className="w-4 h-4 mr-2" />              AI-Powered Trading
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -645,8 +662,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>

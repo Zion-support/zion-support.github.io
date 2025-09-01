@@ -13,8 +13,7 @@ import {
   Server,
   Database,
   Globe,
-  Rocket,
-  Star,
+  Rocket,  Star,
   CheckCircle,
   ArrowRight,
   Phone,
@@ -231,8 +230,7 @@ const AICybersecurityPlatform: React.FC = () => {
       description: 'Platform availability and reliability'},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -243,8 +241,7 @@ const AICybersecurityPlatform: React.FC = () => {
             className="mb-8"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-300 text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2" />
-              Enterprise-Grade Security
+              <Shield className="w-4 h-4 mr-2" />              Enterprise-Grade Security
             </div>"
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI-Powered Cybersecurity Platform
@@ -266,15 +263,13 @@ const AICybersecurityPlatform: React.FC = () => {
               to="/contact"
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
             >"
-              <Shield className="w-5 h-5 mr-2" />
-              Secure Your Business
+              <Shield className="w-5 h-5 mr-2" />              Secure Your Business
             </Link>
             <Link"
               to="#demo"
               className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-300"
             >"
-              <Eye className="w-5 h-5 mr-2" />
-              Security Demo
+              <Eye className="w-5 h-5 mr-2" />              Security Demo
             </Link>
           </motion.div>
         </div>
@@ -381,8 +376,7 @@ const AICybersecurityPlatform: React.FC = () => {
                 className="bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20"
               >"
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">"
-                  <Shield className="w-6 h-6 mr-3 text-red-400" />
-                  {module.name}
+                  <Shield className="w-6 h-6 mr-3 text-red-400" />                  {module.name}
                 </h3>"
                 <div className="space-y-3">
                   {module.features.map((feature, featureIndex) => (
@@ -390,8 +384,7 @@ const AICybersecurityPlatform: React.FC = () => {
                       key={featureIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />                      {feature}
                     </div>
                   ))}
                 </div>
@@ -471,8 +464,7 @@ const AICybersecurityPlatform: React.FC = () => {
                       key={featureIndex}"
                       className="flex items-start text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />"
-                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -564,8 +556,7 @@ const AICybersecurityPlatform: React.FC = () => {
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center text-gray-300">"
-                <MapPin className="w-5 h-5 mr-2 text-red-400" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <MapPin className="w-5 h-5 mr-2 text-red-400" />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
 "
@@ -574,23 +565,20 @@ const AICybersecurityPlatform: React.FC = () => {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
               >"
-                <Shield className="w-5 h-5 mr-2" />
-                Get Security Assessment
+                <Shield className="w-5 h-5 mr-2" />                Get Security Assessment
               </Link>
               <Link"
                 to="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-300"
               >"
-                <Globe className="w-5 h-5 mr-2" />
-                Visit Our Website
+                <Globe className="w-5 h-5 mr-2" />                Visit Our Website
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AICybersecurityPlatform;
 '"`

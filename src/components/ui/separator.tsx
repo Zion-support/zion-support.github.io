@@ -23,12 +23,6 @@ const Separator = React.forwardRef<
       )
 
 
-
-
-
-
-}
-      {...props};
     />;
   );
 );

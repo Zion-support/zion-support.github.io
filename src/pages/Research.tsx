@@ -39,7 +39,6 @@ import {
   Eye,
   Star as StarIcon} from 'lucide-react';
 import { SEO } from '../components/SEO';
-
 const Research: React.FC = () => {
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -291,7 +290,6 @@ const Research: React.FC = () => {
 
     return matchesSearch && matchesCategory && matchesStatus && matchesType;
   }) ;
-
   // Update counts
   categories.forEach(cat => {
 
@@ -305,7 +303,6 @@ const Research: React.FC = () => {
       ).length;
     }
   }) ;
-
   statuses.forEach(status => {
 
     if (status.id === 'all') {
@@ -318,14 +315,12 @@ const Research: React.FC = () => {
       ).length;
     }
   }) ;
-
   types.forEach(type => {
 
     if (type.id === 'all') {
 
       type.count = researchProjects.length;
     } else {
-
       type.count = researchProjects.filter()
         project => project.type === type.id
       ).length;
@@ -339,8 +334,7 @@ const Research: React.FC = () => {
         description="Explore our cutting-edge research projects, publications, and innovations in AI, quantum computing, cybersecurity, and emerging technologies."
         keywords="research, development, AI, quantum computing, cybersecurity, publications, patents, Zion Tech Group"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}"
         <section className="pt-32 pb-16 px-4">"
           <div className="max-w-7xl mx-auto text-center">
@@ -351,8 +345,7 @@ const Research: React.FC = () => {
             >"
               <div className="flex items-center justify-center space-x-3 mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">"
-                  <Microscope className="w-8 h-8 text-white" />
-                </div>
+                  <Microscope className="w-8 h-8 text-white" />                </div>
               </div>"
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Research & Development
@@ -374,8 +367,12 @@ const Research: React.FC = () => {
               <div className="relative mb-6">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search research projects..."
+=======
+                  type="text""                  placeholder="Search research projects..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -477,8 +474,7 @@ const Research: React.FC = () => {
                   <div className="flex items-start justify-between mb-4">"
                     <div className="flex items-center gap-3">"
                       <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">"
-                        <Microscope className="w-5 h-5 text-white" />
-                      </div>
+                        <Microscope className="w-5 h-5 text-white" />                      </div>
                       <div>"
                         <h3 className="text-white font-semibold text-lg">
                           {project.title}
@@ -534,8 +530,7 @@ const Research: React.FC = () => {
                       <span>{project.team.length} researchers</span>
                     </div>"
                     <div className="flex items-center gap-1">"
-                      <DollarSign className="w-4 h-4" />
-                      <span>${(project.funding / 1000000).toFixed(1)}M</span>
+                      <DollarSign className="w-4 h-4" />                      <span>${(project.funding / 1000000).toFixed(1)}M</span>
                     </div>
                   </div>
 
@@ -579,8 +574,7 @@ const Research: React.FC = () => {
                       View Details
                     </button>"
                     <button className="px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg hover:bg-slate-600/50 transition-colors">"
-                      <Download className="w-4 h-4" />
-                    </button>
+                      <Download className="w-4 h-4" />                    </button>
                   </div>
                 </motion.div>) ) }
             </div>
@@ -593,14 +587,12 @@ const Research: React.FC = () => {
                 </h3>"
                 <p className="text-gray-400">
                   Try adjusting your search criteria or filters.
-                </p>
-              </div>
+                </p>              </div>
             )}
           </div>
         </section>
       </div>
     </>) ;
 };
-
 export default Research;
 '"`

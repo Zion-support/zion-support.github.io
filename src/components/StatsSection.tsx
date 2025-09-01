@@ -1,19 +1,6 @@
 import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import { LucideIcon } from 'lucide-react.ts';
-
-interface Stat {
-  number: string;
-  label: string;
-  icon: LucideIcon;
-  description: string;
-}
-
-interface StatsSectionProps extends React.PropsWithChildren<{}> {
-
-  stats: Stat[];
-}
-
 export function StatsSection(...args: any[]): any {
 
   return()
@@ -54,6 +41,5 @@ export function StatsSection(...args: any[]): any {
       </div>
     </section>) ;
 }
-
 export default StatsSection;
 '"

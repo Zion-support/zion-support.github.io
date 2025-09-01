@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-
   Phone, 
   Mail, 
   MapPin, 
@@ -236,8 +235,7 @@ export function EnhancedFuturisticFooter() {
     { value: '99.9%', label: 'Uptime Guarantee', icon: Award }
   ];
 
-  return()
-    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
+  return()    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
       {/* Enhanced Animated Background */}"
       <div className="absolute inset-0 bg-futuristic-enhanced">"
         <div className="absolute inset-0 bg-cyber-grid animate-cyber-grid opacity-5"></div>"
@@ -253,12 +251,20 @@ export function EnhancedFuturisticFooter() {
       </div>
 
   const legalLinks = ['
+<<<<<<< HEAD
     { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },;
     { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;
     { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;
     { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;
     { name: 'Security', href: '/security', description: 'Security practices' },;
     { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
+=======
+    { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },;'
+    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;'
+    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;'
+    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;'
+    { name: 'Security', href: '/security', description: 'Security practices' },;'    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   // Create missing pages for broken links
@@ -275,7 +281,6 @@ export function EnhancedFuturisticFooter() {
         {name};
       </Link>;) ;
   };
-
   return ("
           <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         {/* Background Pattern */}"
@@ -327,8 +332,7 @@ export function EnhancedFuturisticFooter() {
                 <div className="relative">"
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">"
                     <Zap className="w-6 h-6 text-white" />
-                  </div>"
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-50"></div>
+                  </div>"                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-50"></div>
                 </div>
                 <div>"
                   <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>"
@@ -353,8 +357,7 @@ export function EnhancedFuturisticFooter() {
                   </a>
                 </div>"
                 <div className="flex items-center space-x-3 text-slate-300">"
-                  <MapPin className="w-4 h-4 text-cyan-400" />
-                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                  <MapPin className="w-4 h-4 text-cyan-400" />                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
             </div>
@@ -397,8 +400,7 @@ export function EnhancedFuturisticFooter() {
                       >"
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover:bg-cyan-400 transition-colors duration-200"></div>
                         {link.name}"
-                        <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
-                      </Link>
+                        <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />                      </Link>
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -479,8 +481,7 @@ export function EnhancedFuturisticFooter() {
                     className="flex-1 px-3 py-2 bg-slate-800/50 border border-slate-600/50 rounded-l-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                   />"
                   <button className="px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-r-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200">"
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                    <ArrowRight className="w-4 h-4" />                  </button>
                 </div>
               </div>
             </div>
@@ -502,9 +503,14 @@ export function EnhancedFuturisticFooter() {
                   ISO 27001 Certified
                 </span>"
                 <span className="flex items-center">"
+<<<<<<< HEAD
                   <Award className="w-4 h-4 text-yellow-400 mr-2" />
                   AWS Partner
                 </span>
+=======
+                  <Award className="w-4 h-4 text-yellow-400 mr-2" />                  AWS Partner
+                </span>'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       title: 'Pricing & Plans',
       icon: DollarSign,
       color: 'from-emerald-600 to-teal-600',
@@ -598,10 +604,16 @@ export function EnhancedFuturisticFooter() {
   ];
 
   const contactInfo = {
+<<<<<<< HEAD
 
     phone: '+1 (555) 123-4567',;
     email: 'info@ziontechgroup.com',
     address: '123 Innovation Drive, Tech City, TC 12345'
+=======
+'
+    phone: '+1 (555) 123-4567',;'
+    email: 'info@ziontechgroup.com','    address: '123 Innovation Drive, Tech City, TC 12345'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
 
   return ("
@@ -621,8 +633,7 @@ export function EnhancedFuturisticFooter() {
             <div className="lg:col-span-2">"
               <div className="flex items-center space-x-3 mb-6">"
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">"
-                  <Crown className="w-7 h-7 text-white" />
-                </div>
+                  <Crown className="w-7 h-7 text-white" />                </div>
                 <div>"
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                     Zion Tech Group
@@ -650,8 +661,7 @@ export function EnhancedFuturisticFooter() {
             {/* Newsletter Signup */}"
             <div className="space-y-4">"
               <h3 className="text-lg font-semibold text-white flex items-center space-x-2">"
-                <MailIcon className="w-5 h-5 text-cyan-400" />
-                <span>Stay Updated</span>
+                <MailIcon className="w-5 h-5 text-cyan-400" />                <span>Stay Updated</span>
               </h3>"
               <p className="text-slate-300 text-sm">
                 Get the latest insights on AI, quantum computing, and technology trends.
@@ -691,8 +701,7 @@ export function EnhancedFuturisticFooter() {
               </div>"
               <div className="flex items-center space-x-2 text-sm text-slate-400">
                 <span>Made with</span>"
-                <Heart className="w-4 h-4 text-red-400" />
-                <span>by Zion Tech Group</span>
+                <Heart className="w-4 h-4 text-red-400" />                <span>by Zion Tech Group</span>
               </div>
             </div>
           </motion.div>
@@ -742,8 +751,7 @@ export function EnhancedFuturisticFooter() {
                 className="p-2 bg-slate-700/50 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-110"
                 aria-label="Scroll to top"
               >"
-                <ArrowUpRight className="w-5 h-5 rotate-45" />;
-              </button>;
+                <ArrowUpRight className="w-5 h-5 rotate-45" />;              </button>;
             </div>;
           </div>;
         </div>;

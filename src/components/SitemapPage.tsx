@@ -41,6 +41,7 @@ export function SitemapPage(...args: any[]): any {
 
       title: 'Resources',
       links: ['
+<<<<<<< HEAD
         { name: 'Case Studies', url: '/case-studies' },;
         { name: 'White Papers', url: '/white-papers' },;
         { name: 'Webinars', url: '/webinars' },;
@@ -48,6 +49,13 @@ export function SitemapPage(...args: any[]): any {
         { name: 'API Reference', url: '/api' },;
       ];
     };
+=======
+        { name: 'Case Studies', url: '/case-studies' },;'
+        { name: 'White Papers', url: '/white-papers' },;'
+        { name: 'Webinars', url: '/webinars' },;'
+        { name: 'Documentation', url: '/docs' },;'        { name: 'API Reference', url: '/api' },;
+      ]};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -58,8 +66,7 @@ export function SitemapPage(...args: any[]): any {
       />
       "
       <div className="container mx-auto px-4 max-w-6xl">"
-        <div className="text-center mb-16">"
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+        <div className="text-center mb-16">"          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Sitemap
           </h1>"
           <p className="text-xl text-zinc-300 max-w-3xl mx-auto">

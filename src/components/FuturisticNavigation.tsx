@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -195,6 +196,15 @@ export const FuturisticNavigation: React.FC = () => {;
     setActiveDropdown(null);
   }, [location.pathname]);
   const handleSearch = (e: React.FormEvent) => {;
+=======
+import React, { useState, useEffect } from 'react';'
+import { Link, useLocation } from 'react-router-dom';'
+import { motion, AnimatePresence } from 'framer-motion';'
+import { MobileSidebarToggle } from './MobileSidebarToggle';    return () => window.removeEventListener('scroll', handleScroll)}, []);
+  useEffect(() => {
+    setActiveDropdown(null)}, [location.pathname]);
+  
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     e.preventDefault();
     if (searchQuery.trim()) {
 
@@ -213,6 +223,7 @@ export const FuturisticNavigation: React.FC = () => {;
       name: "AI & Machine Learning",
       icon: Brain,
       color: 'from-zion-cyan to-zion-blue',
+<<<<<<< HEAD
       dropdown[;
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },
@@ -222,6 +233,16 @@ export const FuturisticNavigation: React.FC = () => {;
         { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },
         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
+=======
+      dropdown[;'
+        { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },'
+        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },'
+        { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },'
+        { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },'
+        { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },'
+        { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },'
+        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },'        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
@@ -274,8 +295,7 @@ export const FuturisticNavigation: React.FC = () => {;
         { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
         { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;
         { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' };
-      ];
-    };
+      ]};
   ];
   return()
     <>`
@@ -347,8 +367,7 @@ export const FuturisticNavigation: React.FC = () => {;
                   to="/about"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
 "
-                  <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"
-                  <span className="font-medium">About</span>
+                  <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"                  <span className="font-medium">About</span>
                 </Link>
               </motion.div>
               <motion.div
@@ -375,8 +394,7 @@ export const FuturisticNavigation: React.FC = () => {;
                   to="/partners"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
 "
-                  <Handshake className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"
-                  <span className="font-medium">Partners</span>
+                  <Handshake className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"                  <span className="font-medium">Partners</span>
                 </Link>
               </motion.div>
               {/* Service Categories */}
@@ -414,8 +432,7 @@ export const FuturisticNavigation: React.FC = () => {;
                     <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${
 
                       activeDropdown === category.name ? 'rotate-180' : ''`
-                    }`} />
-                  </motion.button>
+                    }`} />                  </motion.button>
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === category.name && ;
@@ -476,8 +493,7 @@ export const FuturisticNavigation: React.FC = () => {;
                                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
                                     <Brain className="w-4 h-4 text-zion-cyan" /> {/* Using Brain icon for consistency */}
                                   </div>"
-                                  <div className="flex-1">"
-                                    <h4 className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-300">
+                                  <div className="flex-1">"                                    <h4 className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-300">
                                       {service.name}
                                     </h4>
                                   </div>
@@ -501,8 +517,7 @@ export const FuturisticNavigation: React.FC = () => {;
                     onChange={(e) => setSearchQuery(e.target.value)}"
                     className="w-64 px-4 py-2 pl-10 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300"
                   />"
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
-                </div>
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />                </div>
               </form>
               {/* User actions */}"
               <div className="flex items-center space-x-2">;
@@ -511,25 +526,22 @@ export const FuturisticNavigation: React.FC = () => {;
                   whileTap={{ scale: 0.95 }}"
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-                  <Bell className="w-5 h-5" />
-                </motion.button>
+                  <Bell className="w-5 h-5" />                </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-                  <User className="w-5 h-5" />
-                </motion.button>
+                  <User className="w-5 h-5" />                </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-                  <ShoppingCart className="w-5 h-5" />
-                </motion.button>
+                  <ShoppingCart className="w-5 h-5" />                </motion.button>
               </div>
               {/* Mobile Sidebar Toggle */}
-              <MobileSidebarToggle />
+              <MobileSidebarToggle  />
             </div>;
           </div>;
         </div>;

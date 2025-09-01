@@ -4,6 +4,7 @@ import {
   Activity,
   Zap,
   Clock,
+<<<<<<< HEAD
   TrendingUp,
   AlertTriangle} from 'lucide-react.ts';
 
@@ -107,6 +108,10 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
     const averageScore = metricCount > 0 ? totalScore / metricCount : 0;
     
+=======
+  TrendingUp,'
+  AlertTriangle} from 'lucide-react.ts';    
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     let grade: 'A' | 'B' | 'C' | 'D' | 'F';
     let color: string;
 
@@ -132,7 +137,6 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     },
     []
   );
-
   // Measure Core Web Vitals
   useEffect(() => {
 
@@ -167,8 +171,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       // First Input Delay
       const fidObserver = new PerformanceObserver(list => {
 
-        const entries = list.getEntries();
-        entries.forEach(entry => {
+        const entries = list.getEntries();        entries.forEach(entry => {
 
           if (entry.processingStart && entry.startTime) {
 
@@ -182,8 +185,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       // Layout Shift
       const clsObserver = new PerformanceObserver(list => {
 
-        let clsValue = 0;
-        list.getEntries().forEach((entry: any) => {
+        let clsValue = 0;        list.getEntries().forEach((entry: any) => {
 
           if (!entry.hadRecentInput) {
 
@@ -191,15 +193,17 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           }
         });
         setMetrics(prev => ({ ...prev, cls: clsValue }));
+<<<<<<< HEAD
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
+=======
+      });'      clsObserver.observe({ entryTypes: ['layout-shift'] });
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       return () => {
         lcpObserver.disconnect();
         fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
-    }
+        clsObserver.disconnect()}}
   }, []);
 
   // Measure other performance metrics
@@ -234,7 +238,6 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   const getMetricRating = (metric: string, value: number | null): string => {
 
     if (value === null) return 'N/A';
-
     switch (metric) {
 
       case 'fcp':
@@ -263,8 +266,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
             : '🔴 Poor';
       default:'
         return 'N/A';
-    }
-  };
+    }  };
 
   if (!isVisible) {
 
@@ -274,17 +276,14 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50"
         aria-label="Open Performance Monitor"
       >"
-        <Activity className="w-6 h-6" />
-      </button>
-    );
-  }
+        <Activity className="w-6 h-6" />      </button>
+    )}
 
   return ("
     <div className="fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm">"
       <div className="flex items-center justify-between mb-4">"
         <h3 className="text-lg font-bold text-white flex items-center">"
-          <Zap className="w-5 h-5 mr-2 text-zion-cyan" />
-          Performance Monitor
+          <Zap className="w-5 h-5 mr-2 text-zion-cyan" />          Performance Monitor
         </h3>
         <button
           onClick={() => setIsVisible(false)}"
@@ -374,8 +373,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       {overallScore.rating !== 'good' && ("
         <div className="mt-4 p-3 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">"
           <div className="flex items-center text-yellow-400 mb-2">"
-            <AlertTriangle className="w-4 h-4 mr-2" />"
-            <span className="text-sm font-medium">Recommendations</span>
+            <AlertTriangle className="w-4 h-4 mr-2" />"            <span className="text-sm font-medium">Recommendations</span>
           </div>"
           <ul className="text-xs text-yellow-300 space-y-1">
             {metrics.lcp && metrics.lcp > 2500 && (
@@ -391,6 +389,5 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         </div>) }
     </div>) ;
 };
-
 export default AdvancedPerformanceMonitor;
 '"`

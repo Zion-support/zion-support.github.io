@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { motion  } from 'framer-motion.ts';
@@ -82,6 +83,11 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
       period: "/month","
       features["Up to 10K transactions/month", "Basic fraud detection", "Email alerts", "Standard support"],;
       popular: false
+=======
+import React from 'react.ts';'
+import { SEO  } from '@/components/SEO';'
+import { motion  } from 'framer-motion.ts';      popular: false
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 "
@@ -97,18 +103,24 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
       price: "Custom",;"
       period: "",;"
       features: ["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],;
-      popular: false;
-    };
+      popular: false};
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO "
+<<<<<<< HEAD
         title="AI Financial Fraud Detection Platform - Zion Tech Group"
         description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance."
         keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics"
         canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
       />
+=======
+        title="AI Financial Fraud Detection Platform - Zion Tech Group""
+        description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance.""
+        keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics""        canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -141,8 +153,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             className="mb-8"
 "
             <div className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2" />
-              Fraud Prevention Platform
+              <Shield className="w-4 h-4 mr-2" />              Fraud Prevention Platform
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
               AI Financial Fraud Detection
@@ -160,8 +171,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 99.2% Accuracy
               </div>"
               <div className="flex items-center text-blue-400 font-semibold">"
-                <Clock className="w-5 h-5 mr-2" />
-                Real-time Detection
+                <Clock className="w-5 h-5 mr-2" />                Real-time Detection
               </div>
             </div>
           </motion.div>
@@ -339,8 +349,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 "
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
                   <CheckCircle className="w-6 h-6 text-white" />
-                </div>"
-                <p className="text-slate-300 font-medium">{benefit}</p>
+                </div>"                <p className="text-slate-300 font-medium">{benefit}</p>
               </motion.div>;
             ))}
           </div>
@@ -427,8 +436,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 "
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
                   <Target className="w-6 h-6 text-white" />
-                </div>"
-                <p className="text-slate-300 font-medium">{useCase}</p>
+                </div>"                <p className="text-slate-300 font-medium">{useCase}</p>
               </motion.div>;
             ))}
           </div>
@@ -631,8 +639,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-slate-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -692,8 +699,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
 
                 Start Free Trial"
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
+                <ArrowRight className="w-5 h-5 ml-2" />              </a>
               <a"
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
@@ -723,8 +729,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               </div>
               <div>"
                 <Shield className="w-6 h-6 text-blue-400 mx-auto mb-2" />"
-                <p className="font-semibold">Enterprise Security</p>"
-                <p className="text-sm">PCI DSS, SOC 2, GDPR compliant</p>
+                <p className="font-semibold">Enterprise Security</p>"                <p className="text-sm">PCI DSS, SOC 2, GDPR compliant</p>
               </div>
             </div>"
             <div className="mt-8 p-6 bg-slate-800 rounded-xl border border-slate-700">"
@@ -739,7 +744,6 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default AIFinancialFraudDetection;}}}'"`

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -84,6 +85,12 @@ const API: React.FC = () => {
       description: 'Live data synchronization across all endpoints';
     };
   ];
+=======
+import React from 'react';'
+import SEO from '../components/SEO';'
+import { motion } from 'framer-motion';'
+import { Link } from 'react-router-dom';  ];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 url = "https://api.ziontechgroup.com/v1/ai/text/analyze"
 headers = {"Authorization": "Bearer YOUR_API_KEY"}
@@ -119,8 +126,12 @@ const createInstance = async () => {
         region: 'us-east-1'
     });
     return response.data;`
+<<<<<<< HEAD
 };`,
     category: 'Cloud & DevOps'
+=======
+};`,'    category: 'Cloud & DevOps'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   },
   {
 
@@ -152,9 +163,14 @@ export default function API() {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="API Reference - Zion Tech Group"
         description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools."
       />
+=======
+        title="API Reference - Zion Tech Group""        description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -179,8 +195,7 @@ export default function API() {
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full border border-blue-400/30 mb-6">"
-              <Code className="w-5 h-5 text-blue-400 mr-2" />"
-              <span className="text-blue-300 font-medium">API Reference</span>
+              <Code className="w-5 h-5 text-blue-400 mr-2" />"              <span className="text-blue-300 font-medium">API Reference</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -420,8 +435,7 @@ export default function API() {
                     Download
                   </button>"
                   <button className="px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg hover:bg-slate-600/50 transition-colors text-sm">"
-                    <BookOpen className="w-4 h-4 inline mr-1" />
-                    Docs
+                    <BookOpen className="w-4 h-4 inline mr-1" />                    Docs
                   </button>
                 </div>
               </motion.div>) ) }
@@ -467,6 +481,5 @@ export default function API() {
       </section>;
     </div>;) ;
 };
-
 export default API;
 '"`

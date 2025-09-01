@@ -28,9 +28,7 @@ export const isAuthenticated = (): boolean => {
   } catch (error) {
 
     // console.error('Error checking authentication status:', error);
-
-    return false;
-  }
+    return false}
 };
 
 export const getAuthToken = (): string | null => {

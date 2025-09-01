@@ -120,8 +120,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     integrations["AWS Quantum", "Azure Quantum", "Google Quantum", "IBM Quantum"],;"
     useCases["Drug discovery", "Financial modeling", "Climate prediction", "Logistics optimization"],;"
     roiMetrics["1000x faster ML training", "90% cost reduction", "3x faster time-to-market"];
-  },;
-  // Blockchain & Web3 Solutions
+  },;  // Blockchain & Web3 Solutions
   {
 "
     id: "decentralized-identity-platform","
@@ -174,8 +173,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     integrations["MetaMask", "WalletConnect", "Ledger", "Trezor"],;"
     useCases["KYC/AML compliance", "Healthcare records", "Academic credentials", "Professional certifications"],;"
     roiMetrics["99% fraud reduction", "80% compliance cost savings", "60% faster onboarding"];
-  },;
-  // IoT & Edge Computing Services
+  },;  // IoT & Edge Computing Services
   {
 "
     id: "smart-city-iot-platform","
@@ -228,8 +226,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],;"
     useCases["Traffic management", "Energy optimization", "Public safety", "Environmental monitoring"],;"
     roiMetrics["30% infrastructure cost reduction", "25% energy savings", "40% faster emergency response"];
-  },;
-  // Advanced Cybersecurity Solutions
+  },;  // Advanced Cybersecurity Solutions
   {
 "
     id: "ai-threat-hunting-platform","
@@ -282,8 +279,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     integrations["Splunk", "QRadar", "ELK Stack", "CrowdStrike", "SentinelOne"],;"
     useCases["Enterprise security", "Financial fraud detection", "Healthcare data protection", "Government security"],;"
     roiMetrics["10x faster threat detection", "80% false positive reduction", "60% incident response time improvement"];
-  },;
-  // Green Tech & Sustainability Services
+  },;  // Green Tech & Sustainability Services
   {
 "
     id: "carbon-footprint-tracker","
@@ -336,8 +332,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     integrations["ERP Systems", "Supply Chain Platforms", "Energy Management Systems"],;"
     useCases["Manufacturing sustainability", "Retail carbon reduction", "Logistics optimization", "Office sustainability"],;"
     roiMetrics["25-40% carbon footprint reduction", "15% operational cost savings", "20% brand value increase"];
-  },;
-  // Healthcare Tech Solutions
+  },;  // Healthcare Tech Solutions
   {
 "
     id: "ai-medical-diagnosis-platform","
@@ -390,8 +385,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     integrations["Epic", "Cerner", "Allscripts", "PACS Systems"],;"
     useCases["Radiology diagnostics", "Pathology analysis", "Cardiology screening", "Oncology detection"],;"
     roiMetrics["30% diagnostic accuracy improvement", "50% faster diagnosis", "25% healthcare cost reduction"];
-  },;
-  // FinTech & RegTech Services
+  },;  // FinTech & RegTech Services
   {
 "
     id: "ai-fraud-detection-engine","
@@ -444,8 +438,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     integrations["Stripe", "PayPal", "Square", "Banking APIs", "Payment Gateways"],;"
     useCases["Credit card fraud", "Banking fraud", "E-commerce fraud", "Insurance fraud"],;"
     roiMetrics["90% fraud loss reduction", "99.9% fraud detection accuracy", "60% compliance cost savings"];
-  },;
-  // AR/VR & Metaverse Solutions
+  },;  // AR/VR & Metaverse Solutions
   {
 "
     id: "enterprise-ar-platform","
@@ -498,8 +491,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     integrations["Microsoft HoloLens", "Magic Leap", "Oculus", "HTC Vive"],;"
     useCases["Employee training", "Equipment maintenance", "Design collaboration", "Remote assistance"],;"
     roiMetrics["40% training cost reduction", "30% maintenance efficiency improvement", "50% collaboration enhancement"];
-  },;
-  // Advanced Analytics & Business Intelligence
+  },;  // Advanced Analytics & Business Intelligence
   {
 "
     id: "predictive-analytics-platform","

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Shield, 
@@ -44,6 +45,10 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
     address: '364 E Main St STE 1008 Middletown DE 19709',;
   ;
   ;
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   website: 'https://ziontechgroup.com';
@@ -110,9 +115,20 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
       price: '$499',
       period: '/month',
       description: 'Perfect for small financial institutions',
+<<<<<<< HEAD
       features[;
         'Up to 1,000 transactions/month',Basic compliance monitoring',Standard regulatory updates',Email support',Basic reporting',Up to 5 user licenses',Core compliance frameworks'
       ],;
+=======
+      features[;'
+        'Up to 1,000 transactions/month','
+        'Basic compliance monitoring','
+        'Standard regulatory updates','
+        'Email support','
+        'Basic reporting','
+        'Up to 5 user licenses','        'Core compliance frameworks'
+      ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
@@ -201,20 +217,32 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
       description: 'State and federal insurance regulation compliance',
       icon: Shield;
     },;
+<<<<<<< HEAD
     {;
       title: 'Fintech Startups',;
       description: 'Rapid compliance scaling for growing financial technology companies',;
       icon: Zap;
     };
+=======
+    {;'
+      title: 'Fintech Startups',;'      description: 'Rapid compliance scaling for growing financial technology companies',;
+      icon: Zap};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="AI Financial Compliance Assistant | Zion Tech Group"
         description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy."
         keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
       />
+=======
+        title="AI Financial Compliance Assistant | Zion Tech Group""
+        description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy.""        keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -245,8 +273,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100/10 border border-blue-200/20 text-blue-200 text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Financial Compliance
+              <Shield className="w-4 h-4 mr-2" />              AI-Powered Financial Compliance
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -529,8 +556,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
                 viewport={{ once: true }}"
                 className="flex items-start space-x-3"
 "
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"
-                <span className="text-slate-300 text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"                <span className="text-slate-300 text-lg">{benefit}</span>
               </motion.div>;
             ))}
           </div>
@@ -729,8 +755,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />"
-                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -850,8 +875,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
               </div>"
               <div className="flex flex-col items-center">"
                 <MapPin className="w-8 h-8 text-blue-400 mb-3" />"
-                <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"
-                <p className="text-slate-300">{contactInfo.address}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"                <p className="text-slate-300">{contactInfo.address}</p>
               </div>
             </div>
 
@@ -860,8 +884,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
 
               Get in Touch"
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>;
+              <ArrowRight className="w-5 h-5 ml-2" />            </a>;
           </motion.div>;
         </div>;
       </section>;

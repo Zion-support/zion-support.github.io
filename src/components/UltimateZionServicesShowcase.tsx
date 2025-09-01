@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
@@ -44,11 +45,14 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
 ;
 },;
     visible: {
+=======
+import React, { useState } from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';    visible: {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       opacity: 1,;
       y: 0,;
-      transition: { duration: 0.5 };
-    };
-  };
+      transition: { duration: 0.5 }}};
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -390,5 +394,4 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
       </section>;
     </div>;) ;
 };
-
 export default UltimateZionServicesShowcase;'"`

@@ -1,6 +1,5 @@
 import React from 'react.ts';
-;
-const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
+;const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
@@ -140,6 +139,5 @@ const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
 export default AIPoweredEmailResponder;
 '"

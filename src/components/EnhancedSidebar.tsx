@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -138,6 +139,11 @@ export const EnhancedSidebar: React.FC = () => {;
         { name: "Contact", href: "/contact", icon: MessageCircle },"
         { name: "Careers", href: "/careers", icon: Briefcase },"
         { name: "Partners", href: "/partners", icon: Handshake }
+=======
+import React, { useState } from 'react';'
+import { Link, useLocation } from 'react-router-dom';'
+import { motion, AnimatePresence } from 'framer-motion';        { name: "Partners", href: "/partners", icon: Handshake }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
@@ -182,21 +188,18 @@ export const EnhancedSidebar: React.FC = () => {;
   ];
 
   return ("
-    <div className = "w-64 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 h-screen overflow-y-auto">"
-      <div className="p-6">
+    <div className = "w-64 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 h-screen overflow-y-auto">"      <div className="p-6">
         {/* Logo */}"
         <div className="mb-8">;"
         { name: "Sitemap", href: "/sitemap", icon: Globe },;"
         { name: "Dashboard", href: "/dashboard", icon: BarChart3 },;"
         { name: "Login", href: "/login", icon: User };
-      ];
-    };
+      ]};
   ];
 
   const quickActions = [;"
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;"
-    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },;"
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
+    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },;"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
   ];
 
   return ("
@@ -222,8 +225,7 @@ export const EnhancedSidebar: React.FC = () => {;
           <Link to="/" className="flex items-center space-x-3 group">"
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
               <Zap className="w-6 h-6 text-white" />
-            </div>"
-            <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+            </div>"            <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
               Zion Tech Group
             </h1>
           </Link>
@@ -275,8 +277,7 @@ export const EnhancedSidebar: React.FC = () => {;
 
 }}
               >
-                <Link
-                  to={action.href}
+                <Link to={action.href}
                   className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
 
                     action.variant === 'primary''
@@ -284,8 +285,7 @@ export const EnhancedSidebar: React.FC = () => {;
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'`
                   }`}
 "
-                  <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"
-                  <span className="font-medium">{action.name}</span>
+                  <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"                  <span className="font-medium">{action.name}</span>
                 </Link>
               </motion.div>;) ) }
           </div>
@@ -327,10 +327,16 @@ export const EnhancedSidebar: React.FC = () => {;
                 </div>
                 <ChevronDown `
                   className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
+<<<<<<< HEAD
 
                     expandedSections.has(section.title) ? 'rotate-180' : ''`
                   }`} 
                 />
+=======
+'
+                    expandedSections.has(section.title) ? 'rotate-180' : ''`                  }`} 
+                 />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               </button>
 
               <AnimatePresence>
@@ -423,8 +429,7 @@ export const EnhancedSidebar: React.FC = () => {;
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className = "flex items-center space-x-2">"
-              <MapPin className="w-3 h-3" />;
-              <span>Middletown, DE</span>;
+              <MapPin className="w-3 h-3" />;              <span>Middletown, DE</span>;
             </div>;
           </div>;
         </motion.div>;

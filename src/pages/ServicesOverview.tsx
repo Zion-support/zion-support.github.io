@@ -13,8 +13,7 @@ import {
   CheckCircle,
   Star,
   TrendingUp,
-  Users,
-  Target,
+  Users,  Target,
   Globe,
   Lock,
   Cpu,
@@ -75,7 +74,6 @@ const categoryIcons: Record<string, React.ReactNode> = {
   Automation: <Zap className="w-6 h-6" />,"
   Innovation: <Lightbulb className="w-6 h-6" />,"
   'Emerging Tech': <Sparkles className="w-6 h-6" />};
-
 const categoryColors: Record<string, string> = {
 
   'AI & Analytics': 'from-purple-600 to-pink-600',AI & Sales': 'from-blue-600 to-cyan-600',AI & Support': 'from-green-600 to-emerald-600',AI & Finance': 'from-yellow-600 to-orange-600',AI & Operations': 'from-indigo-600 to-purple-600',AI & HR': 'from-pink-600 to-rose-600',AI & Management': 'from-cyan-600 to-blue-600',AI & Marketing': 'from-orange-600 to-red-600',AI & Education': 'from-emerald-600 to-green-600',AI & Legal': 'from-violet-600 to-purple-600',AI & Healthcare': 'from-red-600 to-pink-600',
@@ -148,6 +146,7 @@ const serviceCategories = [
     description: 'Healthcare technology and life sciences solutions',
     count: 0},
 ];
+<<<<<<< HEAD
 
 export default function ServicesOverview() {
 
@@ -228,6 +227,9 @@ export default function ServicesOverview() {
   const filteredServices = useMemo ( () => {
     let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
+=======
+  
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // Filter by search query
     if (searchQuery) {
 
@@ -242,9 +244,9 @@ export default function ServicesOverview() {
           )
       );
     }
-
     // Filter by category'
     if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory)}
 
       filtered = filtered.filter()
         service => service.category === selectedCategory
@@ -257,9 +259,14 @@ export default function ServicesOverview() {
 
       filtered = filtered.filter(service => {
 
+<<<<<<< HEAD
         const price = service.price;
         switch (priceRange) {
 
+=======
+        const price = service.price;        switch (priceRange) {
+'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           case 'low':
             return price <= 1000;
           case 'medium':
@@ -271,7 +278,6 @@ export default function ServicesOverview() {
         }
       }) ;
     }
-
     // Sort services
     filtered.sort((a, b) => {
 
@@ -303,9 +309,14 @@ export default function ServicesOverview() {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
         title="Services Overview - Zion Tech Group"
         description="Comprehensive overview of all our innovative services including AI solutions, cybersecurity, cloud services, IoT, and emerging technologies. Transform your business with our cutting-edge solutions."
       />
+=======
+        title="Services Overview - Zion Tech Group""        description="Comprehensive overview of all our innovative services including AI solutions, cybersecurity, cloud services, IoT, and emerging technologies. Transform your business with our cutting-edge solutions."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -337,8 +348,7 @@ export default function ServicesOverview() {
                 <span>8 Service Categories</span>
               </div>"
               <div className="flex items-center space-x-2 text-gray-300">"
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>Enterprise Ready</span>
+                <CheckCircle className="w-5 h-5 text-green-400" />                <span>Enterprise Ready</span>
               </div>
             </div>
           </motion.div>
@@ -365,8 +375,7 @@ export default function ServicesOverview() {
             </div>"
             <div className="flex items-center space-x-3">"
               <Globe className="w-5 h-5" />
-              <div>"
-                <p className="text-sm text-blue-100">Website</p>
+              <div>"                <p className="text-sm text-blue-100">Website</p>
                 <a
                   href={contactInfo.website}"
                   className="font-semibold hover:underline"
@@ -380,8 +389,7 @@ export default function ServicesOverview() {
             <div className="flex items-center space-x-3">"
               <MapPin className="w-5 h-5" />
               <div>"
-                <p className="text-sm text-blue-100">Address</p>"
-                <p className="font-semibold text-sm">{contactInfo.address}</p>
+                <p className="text-sm text-blue-100">Address</p>"                <p className="font-semibold text-sm">{contactInfo.address}</p>
               </div>
             </div>
           </div>
@@ -457,8 +465,12 @@ export default function ServicesOverview() {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search services..."
+=======
+                  type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -573,8 +585,7 @@ export default function ServicesOverview() {
                             <Star className="w-5 h-5 text-white" />
                           )}
                         </div>"
-                        <div className="text-right">"
-                          <div className="text-2xl font-bold text-white">
+                        <div className="text-right">"                          <div className="text-2xl font-bold text-white">
                             ${service.price.toLocaleString()}
                           </div>"
                           <div className="text-sm text-gray-300">per month</div>
@@ -612,8 +623,7 @@ export default function ServicesOverview() {
                             key={idx}"
                             className="flex items-center space-x-2 text-xs text-gray-300"
                           >"
-                            <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />"
-                            <span className="line-clamp-1">{feature}</span>
+                            <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />"                            <span className="line-clamp-1">{feature}</span>
                           </div>
                         ))}
                         {service.features.length > 3 && ("
@@ -649,14 +659,12 @@ export default function ServicesOverview() {
                         className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <span>Get Quote</span>"
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
+                        <ArrowRight className="w-4 h-4" />                      </a>
                       <a`
                         href={`tel:${contactInfo.phone}`}"
                         className="px-4 py-2 border border-white/30 text-white rounded-lg text-sm font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
                       >"
-                        <Phone className="w-4 h-4" />
-                      </a>
+                        <Phone className="w-4 h-4" />                      </a>
                     </div>
                   </div>
 
@@ -668,8 +676,7 @@ export default function ServicesOverview() {
                           <span>{service.estimatedDelivery}</span>
                         </div>"
                         <div className="flex items-center space-x-1">"
-                          <Award className="w-3 h-3" />
-                          <span>{service.innovationLevel}</span>
+                          <Award className="w-3 h-3" />                          <span>{service.innovationLevel}</span>
                         </div>
                       </div>
                     </div>
@@ -704,8 +711,7 @@ export default function ServicesOverview() {
                           <p className="text-gray-300 mb-3">
                             {service.description}
                           </p>"
-                          <div className="flex flex-wrap gap-2 mb-3">"
-                            <span className="px-3 py-1 bg-blue-600/20 text-blue-300 text-sm rounded-full">
+                          <div className="flex flex-wrap gap-2 mb-3">"                            <span className="px-3 py-1 bg-blue-600/20 text-blue-300 text-sm rounded-full">
                               {service.category}
                             </span>
                             {service.subcategory && ("
@@ -749,14 +755,12 @@ export default function ServicesOverview() {
                         className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <span>Get Quote</span>"
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
+                        <ArrowRight className="w-4 h-4" />                      </a>
                       <a`
                         href={`tel:${contactInfo.phone}`}"
                         className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
                       >"
-                        <Phone className="w-4 h-4" />
-                        <span>Call Now</span>
+                        <Phone className="w-4 h-4" />                        <span>Call Now</span>
                       </a>
                     </div>
                   </div>
@@ -776,8 +780,7 @@ export default function ServicesOverview() {
                   setSearchQuery('');
                   setSelectedCategory('all');
                   setPriceRange('all');
-                }}"
-                className="text-blue-400 hover:text-blue-300 underline"
+                }}"                className="text-blue-400 hover:text-blue-300 underline"
               >
                 Clear all filters
               </button>
@@ -812,8 +815,7 @@ export default function ServicesOverview() {
                   Speak directly with our experts
                 </p>
                 <a`
-                  href={`tel:${contactInfo.phone}`}"
-                  className="text-blue-400 hover:text-blue-300 font-semibold"
+                  href={`tel:${contactInfo.phone}`}"                  className="text-blue-400 hover:text-blue-300 font-semibold"
                 >
                   {contactInfo.phone}
                 </a>
@@ -828,8 +830,7 @@ export default function ServicesOverview() {
                   Get detailed information and quotes
                 </p>
                 <a`
-                  href={`mailto:${contactInfo.email}`}"
-                  className="text-purple-400 hover:text-purple-300 font-semibold"
+                  href={`mailto:${contactInfo.email}`}"                  className="text-purple-400 hover:text-purple-300 font-semibold"
                 >
                   {contactInfo.email}
                 </a>
@@ -839,8 +840,7 @@ export default function ServicesOverview() {
                 <Globe className="w-12 h-12 text-green-400 mx-auto mb-4" />"
                 <h3 className="text-xl font-semibold text-white mb-2">
                   Visit Website
-                </h3>"
-                <p className="text-gray-300 mb-3">Explore our full portfolio</p>
+                </h3>"                <p className="text-gray-300 mb-3">Explore our full portfolio</p>
                 <a
                   href={contactInfo.website}"
                   target="_blank"
@@ -848,8 +848,7 @@ export default function ServicesOverview() {
                   className="text-green-400 hover:text-green-300 font-semibold flex items-center justify-center space-x-1"
                 >
                   <span>Visit Site</span>"
-                  <ExternalLink className="w-4 h-4" />
-                </a>
+                  <ExternalLink className="w-4 h-4" />                </a>
               </div>
             </div>
 "

@@ -1,17 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-
-interface VirtualScrollProps<T> {
-
-  items: anyT[];
-  height: number;
-  itemHeight: number;
-  renderItem: (item: T, index: number) => React.ReactNode;
-  overscan?: number;
-  className?: string;
-  onScroll?: (scrollTop: anynumber) => void;
-}
-
 export function VirtualScroll<T>({
 
   items,
@@ -29,14 +17,12 @@ export function VirtualScroll<T>({
   const visibleRange = useMemo ( () => {;
     const start = Math.floor (scrollTop / itemHeight) ;
     const visibleCount = Math.ceil (height / itemHeight) ;
-    const end = start + visibleCount + overscan;
-    
+    const end = start + visibleCount + overscan;    
     return {
 
       start: Math.max(0, start - overscan),
       end: Math.min(items.length, end)
-    };
-  }, [scrollTop, itemHeight, height, overscan, items.length]);
+    }}, [scrollTop, itemHeight, height, overscan, items.length]);
 
   // Calculate total height and transform
   const transform = `translateY (${visibleRange.start * itemHeight}px) `;
@@ -58,7 +44,6 @@ export function VirtualScroll<T>({
   const scrollToTop = useCallback ( () => {;
     scrollToItem (0) ;
   }, [scrollToItem]) ;
-
   // Auto - scroll to specific item on mount if needed
   useEffect ( () => {
     if (items.length > 0 && containerRef.current) {
@@ -150,7 +135,6 @@ export function VirtualScroll<T>({
       </div>;
     </div>;) ;
 }
-
 // Specialized virtual scroll for service cards
 interface ServiceCard {
   id: anystring;
@@ -161,7 +145,6 @@ interface ServiceCard {
 
 
 }
-
 interface ServiceVirtualScrollProps extends React.PropsWithChildren<{}> {
 
   services: ServiceCard[];
@@ -194,8 +177,7 @@ export function ServiceVirtualScroll(...args: any[]): any {
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
               {service.description}
             </p>"
-            <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">;
-              {service.category};
+            <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">;              {service.category};
             </span>;
           </div>;
         </div>;
@@ -204,8 +186,7 @@ export function ServiceVirtualScroll(...args: any[]): any {
 
   return()
     <VirtualScroll
-      items = {services};
-      height={height};
+      items = {services};      height={height};
       itemHeight={120};
       renderItem={renderServiceCard};
       overscan={3};

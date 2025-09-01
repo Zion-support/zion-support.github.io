@@ -1,5 +1,4 @@
 import { specializedIndustrySolutions2026 } from '@/data/2026-specialized-industry-solutions';
-
 // Interface for the existing service structure
 export interface Service {
   id: string;
@@ -24,20 +23,17 @@ export interface Service {
 
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
 
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
-  compliance?: string[];
-}
+  compliance?: string[]}
 
 // Map 2026 services to existing service structure
 export function map2026ServicesToExistingStructure(): Service[] {

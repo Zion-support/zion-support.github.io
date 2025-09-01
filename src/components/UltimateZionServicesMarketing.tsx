@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
@@ -87,6 +88,11 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+=======
+import React, { useState } from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -280,7 +286,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
         <section className="py-12 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">;
             {(() => {;
-              const category = categories.find(c => c.id === selectedCategory);
+              
               if (!category) return null;
               
               return()
@@ -320,8 +326,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
                     </div>;
                   </div>;
                 </motion.div>;) ;
-            }) () }
-          </div>
+            }) () }          </div>
         </section>) }
 
       {/* Services Grid */}"
@@ -550,5 +555,4 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
       </section>;
     </div>;) ;
 };
-
 export default UltimateZionServicesMarketing;'"`

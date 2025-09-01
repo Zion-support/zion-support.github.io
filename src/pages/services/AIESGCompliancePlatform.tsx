@@ -71,8 +71,7 @@ export default function AIESGCompliancePlatform() {
           </div>"
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             AI ESG Compliance Platform
-          </h1>"
-          <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+          </h1>"          <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
             Streamline your ESG compliance with AI-driven data collection,
             automated reporting, and real-time sustainability monitoring. Meet
             regulatory requirements while driving positive environmental and
@@ -117,8 +116,7 @@ export default function AIESGCompliancePlatform() {
             <ul className="space-y-4">
               {features.map((feature, index) => ("
                 <li key={index} className="flex items-start">"
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"
-                  <span className="text-gray-700">{feature}</span>
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"                  <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -134,8 +132,7 @@ export default function AIESGCompliancePlatform() {
                   key={index}"
                   className="flex items-center p-3 bg-gray-50 rounded-lg"
                 >"
-                  <Award className="w-4 h-4 text-green-500 mr-3" />"
-                  <span className="text-gray-700">{category}</span>
+                  <Award className="w-4 h-4 text-green-500 mr-3" />"                  <span className="text-gray-700">{category}</span>
                 </div>
               ))}
             </div>
@@ -164,8 +161,7 @@ export default function AIESGCompliancePlatform() {
               >"
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">"
                   <TrendingUp className="w-6 h-6 text-green-600" />
-                </div>"
-                <p className="text-gray-700 font-medium">{benefit}</p>
+                </div>"                <p className="text-gray-700 font-medium">{benefit}</p>
               </div>
             ))}
           </div>
@@ -191,8 +187,7 @@ export default function AIESGCompliancePlatform() {
             >"
               <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-4">"
                 <Database className="w-5 h-5 text-green-600" />
-              </div>"
-              <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
+              </div>"              <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
             </div>
           ))}
         </div>
@@ -240,8 +235,7 @@ export default function AIESGCompliancePlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-700">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -357,8 +351,7 @@ export default function AIESGCompliancePlatform() {
             <a"
               href="mailto:kleber@ziontechgroup.com"
               className="text-green-600 hover:text-green-700 font-semibold"
-            >
-              kleber@ziontechgroup.com
+            >              kleber@ziontechgroup.com
             </a>
           </div>
         </div>
@@ -376,8 +369,7 @@ export default function AIESGCompliancePlatform() {
             rel="noreferrer"
             className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
           >"
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />          </a>
         </div>
       </section>
     </div>

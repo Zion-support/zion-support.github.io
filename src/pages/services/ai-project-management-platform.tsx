@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -153,14 +154,25 @@ export default function AIProjectManagementPlatform(...args: []):  {
       description: 'Streamline event coordination with AI-driven task management and vendor coordination',;
       icon: Calendar;
     };
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { SEO  } from '@/components/SEO';      description: 'Streamline event coordination with AI-driven task management and vendor coordination',;
+      icon: Calendar};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="AI Project Management Platform - Zion Tech Group"
         description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month."
       />
+=======
+        title="AI Project Management Platform - Zion Tech Group""        description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -191,8 +203,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Project Management
+              <Brain className="w-4 h-4 mr-2" />              AI-Powered Project Management
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -587,8 +598,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>

@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 
 import { useState } from "react";"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
@@ -96,8 +95,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-10T15:10:00Z",;"
     lastUpdated: "2023-12-13T11:25:00Z",;"
     category: "profile";
-  };
-];
+  };];
 
 export default function SupportRequests() {
 "
@@ -115,8 +113,7 @@ export default function SupportRequests() {
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
 
-      return false;
-    }
+      return false;    }
 
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -135,9 +132,7 @@ export default function SupportRequests() {
 
       return false;
     }
-
-    return true;
-  });
+    return true});
 
   // Count by status for the summary dashboard'
   const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
@@ -147,19 +142,16 @@ export default function SupportRequests() {
 
   const resetFilters = () => {
 "
-    setSearchQuery("");
-    setStatusFilter(null);
+    setSearchQuery("");    setStatusFilter(null);
     setPriorityFilter(null);
-    setCategoryFilter(null);
-  };
+    setCategoryFilter(null)};
 
   return()
       <SEO"
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
       />"
-      <div className="container mx-auto px-4 py-8">"
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
+      <div className="container mx-auto px-4 py-8">"        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
           <div>"
             <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Support Requests
@@ -220,8 +212,7 @@ export default function SupportRequests() {
             <div className="flex flex-col md:flex-row gap-4 mb-6">"
               <div className="relative flex-1">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                <Input"
-                  placeholder="Search by ID, user or issue..."
+                <Input"                  placeholder="Search by ID, user or issue..."
                   value={searchQuery}
                   onChange={(e: ) => setSearchQuery(e.target.value)}"
                   className="pl-10"
@@ -230,8 +221,7 @@ export default function SupportRequests() {
 "
               <Select value={statusFilter || ""} onValueChange={(value: string) => setStatusFilter(value || null)}>"
                 <SelectTrigger className="w-[180px]">"
-                  <SelectValue placeholder="Status" />
-                </SelectTrigger>
+                  <SelectValue placeholder="Status" />                </SelectTrigger>
                 <SelectContent>"
                   <SelectItem value="">All Statuses</SelectItem>"
                   <SelectItem value="open">Open</SelectItem>"
@@ -242,8 +232,7 @@ export default function SupportRequests() {
 "
               <Select value={priorityFilter || ""} onValueChange={(value: string) => setPriorityFilter(value || null)}>"
                 <SelectTrigger className="w-[180px]">"
-                  <SelectValue placeholder="Priority" />
-                </SelectTrigger>
+                  <SelectValue placeholder="Priority" />                </SelectTrigger>
                 <SelectContent>"
                   <SelectItem value="">All Priorities</SelectItem>"
                   <SelectItem value="high">High</SelectItem>"
@@ -254,8 +243,7 @@ export default function SupportRequests() {
 "
               <Select value={categoryFilter || ""} onValueChange={(value: string) => setCategoryFilter(value || null)}>"
                 <SelectTrigger className="w-[180px]">"
-                  <SelectValue placeholder="Category" />
-                </SelectTrigger>
+                  <SelectValue placeholder="Category" />                </SelectTrigger>
                 <SelectContent>"
                   <SelectItem value="">All Categories</SelectItem>"
                   <SelectItem value="authentication">Authentication</SelectItem>"
@@ -268,8 +256,7 @@ export default function SupportRequests() {
               </Select>
 "
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">"
-                <Filter className="h-4 w-4 mr-2" /> Reset Filters
-              </Button>
+                <Filter className="h-4 w-4 mr-2" /> Reset Filters              </Button>
             </div>
 
             {/* Support Requests Table */}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -104,6 +105,11 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
         "Email support","
         "Basic reporting","
         "5 user licenses"
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { SEO  } from '@/components/SEO';        "5 user licenses"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Start Free Trial",
       popular: false
@@ -145,8 +151,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
         "On-premise option";
       ],;"
       cta: "Contact Sales",;
-      popular: false;
-    };
+      popular: false};
   ];
 
   const benefits = [
@@ -254,15 +259,19 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       description: "Protect trade secrets and proprietary data with advanced classification",;
       icon: Cpu,;"
       color: "from-orange-500 to-red-500";
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="AI Data Governance - Zion Tech Group"
         description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
       />
+=======
+        title="AI Data Governance - Zion Tech Group""        description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -295,8 +304,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               transition={{ duration: 0.8 }}
 "
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">"
-                <Shield className="w-4 h-4 mr-2" />
-                AI-Powered Data Protection
+                <Shield className="w-4 h-4 mr-2" />                AI-Powered Data Protection
               </div>
 "
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
@@ -658,8 +666,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -724,7 +731,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default AIDataGovernance;}}}}}}'"`

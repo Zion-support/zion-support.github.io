@@ -95,8 +95,7 @@ export default function GreenIT(...args: any[]): any {
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10"></div>"
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -104,8 +103,7 @@ export default function GreenIT(...args: any[]): any {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6">"
-              <Globe className="w-4 h-4 mr-2" />
-              Sustainable Technology
+              <Globe className="w-4 h-4 mr-2" />              Sustainable Technology
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Green IT Solutions
@@ -236,8 +234,7 @@ export default function GreenIT(...args: any[]): any {
               <div className="grid grid-cols-1 gap-4">
                 {benefits.map((benefit, index) => ("
                   <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-                    <span className="text-slate-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"                    <span className="text-slate-300">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -256,8 +253,7 @@ export default function GreenIT(...args: any[]): any {
                   </div>"
                   <h3 className="text-2xl font-bold text-white mb-4">
                     Go Green Today
-                  </h3>"
-                  <p className="text-slate-300 mb-6">
+                  </h3>"                  <p className="text-slate-300 mb-6">
                     Start your sustainability journey with our expert Green IT
                     consultants.
                   </p>"

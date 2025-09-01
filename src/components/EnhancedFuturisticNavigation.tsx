@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -226,6 +227,11 @@ import {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
+=======
+import React, { useState, useEffect } from 'react';'
+import { Link, useLocation } from 'react-router-dom';'
+import { motion, AnimatePresence } from 'framer-motion';    return () => window.removeEventListener('scroll', handleScroll)}, []);
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   useEffect ( () => {
     setMobileMenuOpen (false) ;
@@ -253,6 +259,7 @@ import {
       href: '/ai-services',
       icon: Brain,
       color: 'from-zion-purple to-zion-pink',
+<<<<<<< HEAD
       dropdown[;
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
         { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
@@ -260,6 +267,14 @@ import {
         { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },
         { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },
         { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
+=======
+      dropdown[;'
+        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },'
+        { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },'
+        { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },'
+        { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },'
+        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },'        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
@@ -350,8 +365,7 @@ import {
       href: '/contact',;
       icon: Phone,;
       color: 'from-zion-cyan to-zion-purple',;
-      isMain: true;
-    };
+      isMain: true};
   ];
 
   return()
@@ -403,16 +417,14 @@ import {
                       }`} />
                     </button>;) : (;
                     <Link
-                      to={item.href}`
-                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
+                      to={item.href}`                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
 
                         location.pathname === item.href'
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                           : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'`
                       }`}
 "
-                      {item.icon && <item.icon className="w-4 h-4" />}
-                      <span>{item.name}</span>
+                      {item.icon && <item.icon className="w-4 h-4" />}                      <span>{item.name}</span>
                     </Link>) }
 
                   {/* Dropdown Menu */}
@@ -472,8 +484,12 @@ import {
               <form onSubmit={handleSearch} className="relative">;"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search services..."
+=======
+                  type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-64 pl-10 pr-4 py-2 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
@@ -486,8 +502,7 @@ import {
                   <Bell className="w-5 h-5" />
                 </button>"
                 <button className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200">"
-                  <User className="w-5 h-5" />
-                </button>
+                  <User className="w-5 h-5" />                </button>
               </div>
             </div>
           </div>
@@ -522,8 +537,7 @@ import {
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}"
                 className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
 "
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}              </button>
             </div>
           </div>
         </div>
@@ -557,8 +571,12 @@ import {
                 <form onSubmit={handleSearch} className="relative mb-6">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                   <input"
+<<<<<<< HEAD
                     type="text"
                     placeholder="Search services..."
+=======
+                    type="text""                    placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
@@ -587,8 +605,7 @@ import {
                             <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
 
                               activeDropdown === item.name ? 'rotate-180' : ''`
-                            }`} />
-                          </button>
+                            }`} />                          </button>
 
                           {/* Mobile Dropdown */}
                           <AnimatePresence>

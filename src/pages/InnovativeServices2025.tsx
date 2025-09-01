@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
@@ -441,12 +442,17 @@ export default function InnovativeServices2025(...args: any[]): any {
         return parseFloat(b.price.replace(/[^0-9.]/g,)) - parseFloat(a.price.replace(/[^0-9.]/g,));
       case 'rating':
         return b.rating - a.rating;
+=======
+import React, { useState, useEffect } from 'react.ts';'
+import { Link  } from 'react-router-dom.ts';'
+import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
+        return b.rating - a.rating;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'popularity':
       default:
         return b.reviews - a.reviews;
     }
   }) ;
-
   return()
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
@@ -504,8 +510,7 @@ export default function InnovativeServices2025(...args: any[]): any {
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center gap-2">"
-              <MapPin className="w-5 h-5" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <MapPin className="w-5 h-5" />              <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>
@@ -546,8 +551,7 @@ export default function InnovativeServices2025(...args: any[]): any {
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full sm:w-64 px-4 py-2 pl-10 bg-zion-slate text-white rounded-lg border border-zion-slate-light focus:border-zion-blue focus:outline-none"
                 />"
-                <Search className="absolute left-3 top-2.5 w-4 h-4 text-zion-blue-light" />
-              </div>
+                <Search className="absolute left-3 top-2.5 w-4 h-4 text-zion-blue-light" />              </div>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}"
@@ -632,14 +636,13 @@ export default function InnovativeServices2025(...args: any[]): any {
                       <div className="flex items-center gap-1 mb-1">
                         {[...Array(5)].map((_, i) => (
                           <Star
-                            key={i}`
-                            className={`w-4 h-4 ${
+                            key={i}`                            className={`w-4 h-4 ${
 
                               i < Math.floor(service.rating)
                                 ? 'text-yellow-400 fill-current''
                                 : 'text-zion-slate-light'`
                             }`}
-                          />
+                           />
                         ))}
                       </div>"
                       <div className="text-xs text-zion-blue-light">
@@ -656,8 +659,7 @@ export default function InnovativeServices2025(...args: any[]): any {
                     className="w-full bg-gradient-to-r from-zion-blue to-zion-blue-light text-white py-3 px-6 rounded-xl font-semibold hover:from-zion-blue-light hover:to-zion-blue transition-all duration-300 text-center block group-hover:shadow-lg group-hover:shadow-zion-blue/25"
                   >
                     Learn More"
-                    <ArrowRight className="inline-block w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
+                    <ArrowRight className="inline-block w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />                  </Link>
                 </motion.div>) ) }
             </motion.div>
           </AnimatePresence>

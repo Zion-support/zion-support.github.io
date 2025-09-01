@@ -39,14 +39,11 @@ const AuthRoutes = () => {
 
       <Route"
         path="/settings"
-        element={;
-          <ProtectedRoute>;
+        element={;          <ProtectedRoute>;
             <div>Settings</div>;
-          </ProtectedRoute>;
-        };
+          </ProtectedRoute>};
       />;
     </Routes>;
-  );
-};
+  )};
 
 export default AuthRoutes;}}}'"

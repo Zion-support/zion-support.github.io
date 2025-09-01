@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-
   Search, 
   Filter, 
   X, 
@@ -50,7 +49,6 @@ interface SearchResult {
   lastUpdated: string;
   icon: unknown;
   featured?: boolean;
-
 export default function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
@@ -240,8 +238,7 @@ export default function SearchPage() {
 
   const performSearch = async () => {
     setIsSearching (true) ;
-    
-    // Simulate API call delay
+        // Simulate API call delay
     await new Promise (resolve => setTimeout (resolve, 800) ) ;
     
     let filtered = mockSearchResults.filter(result => {
@@ -256,7 +253,6 @@ export default function SearchPage() {
       
       return matchesQuery && matchesFilters;
     }) ;
-
     // Sort results
     filtered.sort((a, b) => {
 
@@ -298,13 +294,11 @@ export default function SearchPage() {
   // Handle search
   const handleSearch = (e: React.FormEvent) => {
 
-    e.preventDefault();
-    if (searchQuery.trim()) {
+    e.preventDefault();    if (searchQuery.trim()) {
 
       setSearchParams({ q: searchQuery.trim() });
       setIsSearching(true);
-      setTimeout(() => setIsSearching(false), 1000);
-    }
+      setTimeout(() => setIsSearching(false), 1000)}
   };
 
   const toggleFilter = (filterId: string) => {
@@ -324,14 +318,20 @@ export default function SearchPage() {
   const clearFilters = () => {
 
     setSelectedCategory('all');
+<<<<<<< HEAD
     setSelectedTags([]);
     setSearchQuery('');
     setSearchParams({});
   };
+=======
+    setSelectedTags([]);'    setSearchQuery('');
+    setSearchParams({})};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   const getResultIcon = (type: string) => {
 
     switch (type) {
+<<<<<<< HEAD
 
       case 'service': return Zap;
       case 'page': return FileText;
@@ -340,6 +340,14 @@ export default function SearchPage() {
       case 'documentation': return Code;
       default: return FileText;
     }
+=======
+'
+      case 'service': return Zap;'
+      case 'page': return FileText;'
+      case 'blog': return BookOpen;'
+      case 'case-study': return FileText;'      case 'documentation': return Code;
+      default: return FileText}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
 
   const getResultColor = (type: string) => {
@@ -351,8 +359,7 @@ export default function SearchPage() {
       case 'case-study': return 'from-purple-500 to-pink-500';
       case 'documentation': return 'from-orange-500 to-red-500';
       default: return 'from-gray-500 to-slate-500';
-    }
-  };
+    }  };
 
   // Calculate filter counts
   filterOptions.forEach(filter => {
@@ -360,8 +367,7 @@ export default function SearchPage() {
     filter.count = mockSearchResults.filter(result =>
       result.category.toLowerCase().replace(/\s+/g,-') === filter.id ||
       result.type === filter.id
-    ).length;
-  });
+    ).length});
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -393,8 +399,7 @@ export default function SearchPage() {
           <form onSubmit={handleSearch} className="max-w-3xl mx-auto">"
             <div className="relative">"
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400" />
-              <input"
-                type="text"
+              <input"                type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}"
                 placeholder="Search for services, solutions, documentation, or insights..."
@@ -497,8 +502,7 @@ export default function SearchPage() {
                         <result.icon className="w-6 h-6 text-cyan-400" />
                       </div>
                       {result.featured && ("
-                        <Star className="w-5 h-5 text-yellow-400" />
-                      )}
+                        <Star className="w-5 h-5 text-yellow-400" />                      )}
                     </div>
                     "
                     <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
@@ -513,8 +517,7 @@ export default function SearchPage() {
                       <span className="text-xs text-slate-500 bg-slate-700/50 px-2 py-1 rounded">
                         {result.category}
                       </span>"
-                      <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors" />
-                    </div>
+                      <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors" />                    </div>
                   </Link>
                 </motion.div>) ) }
             </AnimatePresence>
@@ -527,8 +530,7 @@ export default function SearchPage() {
               className="text-center py-12"
             >"
               <div className="w-16 h-16 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Search className="w-8 h-8 text-slate-400" />
-              </div>
+                <Search className="w-8 h-8 text-slate-400" />              </div>
             )}
           </div>
         </div>;

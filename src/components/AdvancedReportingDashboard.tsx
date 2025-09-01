@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-
   BarChart3, 
   TrendingUp, 
   Download, 
@@ -58,8 +57,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 showMetrics:  true,;
   showFilters = true,;
   showCharts = true,;
-  maxReports = 15;
-}) => {;
+  maxReports = 15}) => {;
   const [reports, setReports] = useState<ReportData[]>([]);
   const [filteredReports, setFilteredReports] = useState<ReportData[]>([]);
   const [selectedType, setSelectedType] = useState<string>('all');
@@ -87,6 +85,7 @@ showMetrics:  true,;
           revenue: 2500000,
           expenses: 1800000,
           profit: 700000,
+<<<<<<< HEAD
           growth: 15.5,
           keyMetrics['Revenue Growth',Profit Margin',Cost Efficiency'];
         },;
@@ -96,6 +95,16 @@ showMetrics:  true,;
         tags['Finance',Q4',Performance',Analysis'],;
         description: 'Comprehensive analysis of Q4 financial performance including revenue, expenses, and profit margins',
         author: 'Sarah Johnson',
+=======
+          growth: 15.5,'
+          keyMetrics['Revenue Growth', 'Profit Margin', 'Cost Efficiency'];
+        },;'
+        lastUpdated: '2024-01-15','
+        status: 'active','
+        priority: 'high','
+        tags['Finance', 'Q4', 'Performance', 'Analysis'],;'
+        description: 'Comprehensive analysis of Q4 financial performance including revenue, expenses, and profit margins','        author: 'Sarah Johnson',
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         views: 245,
         downloads: 89,
         rating: 4.8
@@ -111,6 +120,7 @@ showMetrics:  true,;
           accuracy: 94.2,
           responseTime: 1.8,
           uptime: 99.9,
+<<<<<<< HEAD
           userSatisfaction: 4.6,
           keyMetrics['Accuracy',Response Time',Uptime',User Satisfaction'];
         },;
@@ -120,6 +130,16 @@ showMetrics:  true,;
         tags['AI',Performance',Metrics',Machine Learning'],;
         description: 'Detailed performance metrics for AI services including accuracy, response time, and uptime',
         author: 'Michael Chen',
+=======
+          userSatisfaction: 4.6,'
+          keyMetrics['Accuracy', 'Response Time', 'Uptime', 'User Satisfaction'];
+        },;'
+        lastUpdated: '2024-01-14','
+        status: 'active','
+        priority: 'critical','
+        tags['AI', 'Performance', 'Metrics', 'Machine Learning'],;'
+        description: 'Detailed performance metrics for AI services including accuracy, response time, and uptime','        author: 'Michael Chen',
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         views: 189,
         downloads: 67,
         rating: 4.9
@@ -134,6 +154,7 @@ showMetrics:  true,;
 
           threatsDetected: 156,
           incidentsResolved: 154,
+<<<<<<< HEAD
           responseTime: 2.3,
           riskLevel: 'Medium',
           keyMetrics['Threats Detected',Incidents Resolved',Response Time',Risk Level'];
@@ -144,6 +165,17 @@ showMetrics:  true,;
         tags['Security',Threats',Assessment',Risk Management'],;
         description: 'Comprehensive assessment of cybersecurity threats and incident response metrics',
         author: 'David Kim',
+=======
+          responseTime: 2.3,'
+          riskLevel: 'Medium','
+          keyMetrics['Threats Detected', 'Incidents Resolved', 'Response Time', 'Risk Level'];
+        },;'
+        lastUpdated: '2024-01-13','
+        status: 'active','
+        priority: 'high','
+        tags['Security', 'Threats', 'Assessment', 'Risk Management'],;'
+        description: 'Comprehensive assessment of cybersecurity threats and incident response metrics','        author: 'David Kim',
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         views: 312,
         downloads: 134,
         rating: 4.7
@@ -159,6 +191,7 @@ showMetrics:  true,;
           cpuUtilization: 78.5,
           memoryUsage: 82.3,
           storageUsage: 65.8,
+<<<<<<< HEAD
           networkTraffic: 45.2,
           keyMetrics['CPU Utilization',Memory Usage',Storage Usage',Network Traffic'];
         },;
@@ -168,6 +201,16 @@ showMetrics:  true,;
         tags['Cloud',Infrastructure',Utilization',Monitoring'],;
         description: 'Real-time monitoring of cloud infrastructure utilization and performance metrics',
         author: 'Lisa Thompson',
+=======
+          networkTraffic: 45.2,'
+          keyMetrics['CPU Utilization', 'Memory Usage', 'Storage Usage', 'Network Traffic'];
+        },;'
+        lastUpdated: '2024-01-12','
+        status: 'active','
+        priority: 'medium','
+        tags['Cloud', 'Infrastructure', 'Utilization', 'Monitoring'],;'
+        description: 'Real-time monitoring of cloud infrastructure utilization and performance metrics','        author: 'Lisa Thompson',
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         views: 167,
         downloads: 56,
         rating: 4.5
@@ -182,6 +225,7 @@ showMetrics:  true,;
 
           overallSatisfaction: 4.6,
           netPromoterScore: 72,
+<<<<<<< HEAD
           responseRate: 89.5,
           topConcerns['Response Time',Documentation',Support Quality'],;
           keyMetrics['Overall Satisfaction',NPS',Response Rate',Top Concerns'];
@@ -192,6 +236,17 @@ showMetrics:  true,;
         tags['Customer',Satisfaction',Survey',NPS'],;
         description: 'Analysis of customer satisfaction survey results and net promoter score metrics',
         author: 'Alex Wong',
+=======
+          responseRate: 89.5,'
+          topConcerns['Response Time', 'Documentation', 'Support Quality'],;'
+          keyMetrics['Overall Satisfaction', 'NPS', 'Response Rate', 'Top Concerns'];
+        },;'
+        lastUpdated: '2024-01-11','
+        status: 'active','
+        priority: 'medium','
+        tags['Customer', 'Satisfaction', 'Survey', 'NPS'],;'
+        description: 'Analysis of customer satisfaction survey results and net promoter score metrics','        author: 'Alex Wong',
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         views: 203,
         downloads: 78,
         rating: 4.6
@@ -228,8 +283,7 @@ showMetrics:  true,;
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      );
-    }
+      )}
 
     // Sort reports
     filtered.sort((a, b) => {
@@ -253,16 +307,14 @@ showMetrics:  true,;
         case 'priority':
           const priorityOrder = {
 
-  low: 1, medium: 2, high: 3,;
-  ;
+  low: 1, medium: 2, high: 3,;  ;
   ;
   ;
   ;
   ;
   critical: 4 ;
 
-};
-          aValue = priorityOrder[a.priority as keyof typeof priorityOrder];
+};          aValue = priorityOrder[a.priority as keyof typeof priorityOrder];
           bValue = priorityOrder[b.priority as keyof typeof priorityOrder];
           break;
         case 'title':;
@@ -280,7 +332,6 @@ showMetrics:  true,;
         return aValue < bValue ? 1 : -1;
       }
     }) ;
-
     setFilteredReports (filtered.slice (0, maxReports) ) }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]) ;
 
   // Calculate report metrics

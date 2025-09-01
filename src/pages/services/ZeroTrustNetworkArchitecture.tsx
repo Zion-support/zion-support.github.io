@@ -79,6 +79,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
     };
   ];
 
+<<<<<<< HEAD
   const benefits = [;
     { name: 'Enhanced Security', icon: Shield, description: 'Reduce attack surface and improve threat detection' },;
     { name: 'Compliance', icon: CheckCircle, description: 'Meet regulatory requirements and industry standards' },;
@@ -86,14 +87,27 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
     { name: 'User Experience', icon: Users, description: 'Seamless access while maintaining security' },;
     { name: 'Scalability', icon: Cloud, description: 'Security that grows with your business' },;
     { name: 'Visibility', icon: Eye, description: 'Complete visibility into network activities' };
+=======
+  const benefits = [;'
+    { name: 'Enhanced Security', icon: Shield, description: 'Reduce attack surface and improve threat detection' },;'
+    { name: 'Compliance', icon: CheckCircle, description: 'Meet regulatory requirements and industry standards' },;'
+    { name: 'Cost Reduction', icon: TrendingUp, description: 'Lower security costs and reduce breach impact' },;'
+    { name: 'User Experience', icon: Users, description: 'Seamless access while maintaining security' },;'
+    { name: 'Scalability', icon: Cloud, description: 'Security that grows with your business' },;'    { name: 'Visibility', icon: Eye, description: 'Complete visibility into network activities' };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="Zero Trust Network Architecture - Zion Tech Group"
         description="Transform your security with Zero Trust Network Architecture. Never trust, always verify with our comprehensive security solutions."
       />
+=======
+        title="Zero Trust Network Architecture - Zion Tech Group""        description="Transform your security with Zero Trust Network Architecture. Never trust, always verify with our comprehensive security solutions."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -127,8 +141,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 "
             <div className="flex justify-center mb-6">"
               <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center">"
-                <Shield className="w-10 h-10 text-white" />
-              </div>
+                <Shield className="w-10 h-10 text-white" />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Zero Trust"

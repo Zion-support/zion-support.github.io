@@ -2,30 +2,6 @@ import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 import SEO from "@/components/SEO";
 import { Link } from 'react-router-dom';
-import {
-
-  Brain,
-  Zap,
-  Shield,
-  Database,
-  Users,
-  TrendingUp,
-  Globe,
-  Lock,
-  Cloud,
-  Briefcase,
-  Scale,
-  Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Search'
-import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
-
 export default function UltimateServicesShowcase2025() {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -46,14 +22,19 @@ export default function UltimateServicesShowcase2025() {
       <span className = "text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : ;"
       <Rocket className="w-6 h-6" />;
   };
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="Ultimate Innovative Services 2025 | Zion Tech Group"
         description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
         keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group"
       />
+=======
+        title="Ultimate Innovative Services 2025 | Zion Tech Group""
+        description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology.""        keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
@@ -77,15 +58,13 @@ export default function UltimateServicesShowcase2025() {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 "
-                <Rocket className="w-5 h-5 mr-2" />
-                Get Started Today
+                <Rocket className="w-5 h-5 mr-2" />                Get Started Today
               </Link>
               <a"
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
 "
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now
+                <Phone className="w-5 h-5 mr-2" />                Call Now
               </a>
             </div>
           </div>
@@ -99,8 +78,7 @@ export default function UltimateServicesShowcase2025() {
             <div className="flex items-center justify-center space-x-3">"
               <Phone className="w-5 h-5 text-blue-400" />
               <div>"
-                <p className="text-sm text-gray-300">Phone</p>"
-                <a href="tel:+13024640950" className="text-blue-400 font-semibold hover:text-blue-300">
+                <p className="text-sm text-gray-300">Phone</p>"                <a href="tel:+13024640950" className="text-blue-400 font-semibold hover:text-blue-300">
                   +1 302 464 0950
                 </a>
               </div>
@@ -108,8 +86,7 @@ export default function UltimateServicesShowcase2025() {
             <div className="flex items-center justify-center space-x-3">"
               <Mail className="w-5 h-5 text-purple-400" />
               <div>"
-                <p className="text-sm text-gray-300">Email</p>"
-                <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 font-semibold hover:text-purple-300">
+                <p className="text-sm text-gray-300">Email</p>"                <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 font-semibold hover:text-purple-300">
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -117,8 +94,7 @@ export default function UltimateServicesShowcase2025() {
             <div className="flex items-center justify-center space-x-3">"
               <MapPin className="w-5 h-5 text-pink-400" />
               <div>"
-                <p className="text-sm text-gray-300">Address</p>"
-                <p className="text-pink-400 font-semibold">
+                <p className="text-sm text-gray-300">Address</p>"                <p className="text-pink-400 font-semibold">
                   364 E Main St STE 1008<br />Middletown DE 19709
                 </p>
               </div>
@@ -142,8 +118,7 @@ export default function UltimateServicesShowcase2025() {
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
                 />"
                 <div className="absolute right-3 top-3 text-gray-400">"
-                  <Search className="w-5 h-5" />
-                </div>
+                  <Search className="w-5 h-5" />                </div>
               </div>
             </div>
 
@@ -186,8 +161,7 @@ export default function UltimateServicesShowcase2025() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-green-600/20 rounded-full mb-4">"
                 <MapPin className="w-8 h-8 text-green-400" />
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>"
-              <p className="text-gray-300 text-sm">{ULTIMATE_CONTACT_INFO_2025.address}</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>"              <p className="text-gray-300 text-sm">{ULTIMATE_CONTACT_INFO_2025.address}</p>
             </div>
           </div>
         </div>
@@ -206,8 +180,12 @@ export default function UltimateServicesShowcase2025() {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600/20 rounded-lg mb-4">"
                   <CheckCircle className="w-6 h-6 text-green-400" />
                 </div>"
+<<<<<<< HEAD
                 <h3 className="text-lg font-semibold text-white mb-2 capitalize">
                   {key.replace(/([A-Z])/g, $1').trim()}
+=======
+                <h3 className="text-lg font-semibold text-white mb-2 capitalize">'                  {key.replace(/([A-Z])/g, ' $1').trim()}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 </h3>"
                 <p className="text-gray-300 text-sm">{value}</p>
               </div>
@@ -232,8 +210,7 @@ export default function UltimateServicesShowcase2025() {
                 <ul className="space-y-3 mb-8">
                   {details.features.map((feature, index) => ("
                     <li key={index} className="flex items-center space-x-2">"
-                      <CheckCircle className="w-4 h-4 text-green-400" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-green-400" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -337,8 +314,7 @@ export default function UltimateServicesShowcase2025() {
                     <span>{service.contactInfo.email}</span>
                   </div>"
                   <div className="flex items-center space-x-2">"
-                    <MapPin className="w-4 h-4 text-blue-400" />"
-                    <span className="text-xs">{service.contactInfo.address}</span>
+                    <MapPin className="w-4 h-4 text-blue-400" />"                    <span className="text-xs">{service.contactInfo.address}</span>
                   </div>
                 </div>
               </div>
@@ -350,16 +326,14 @@ export default function UltimateServicesShowcase2025() {
                   className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group"
 
                   Learn More"
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />                </Link>
                 <a
                   href={service.contactInfo.website}"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-4 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
 "
-                  <ExternalLink className="w-4 h-4" />
-                </a>
+                  <ExternalLink className="w-4 h-4" />                </a>
               </div>
 
               {/* Contact Information */}"
@@ -371,15 +345,13 @@ export default function UltimateServicesShowcase2025() {
                       href="tel:+13024640950"
                       className="inline-flex items-center justify-center px-3 py-2 bg-green-600/20 text-green-300 rounded-md border border-green-400/30 hover:bg-green-600/30 transition-colors"
 "
-                      <Phone className="w-3 h-3 mr-1" />
-                      Call Now
+                      <Phone className="w-3 h-3 mr-1" />                      Call Now
                     </a>
                     <a"
                       href="mailto:kleber@ziontechgroup.com"
                       className="inline-flex items-center justify-center px-3 py-2 bg-blue-600/20 text-blue-300 rounded-md border border-blue-400/30 hover:bg-blue-600/30 transition-colors"
 "
-                      <Mail className="w-3 h-3 mr-1" />
-                      Email Us
+                      <Mail className="w-3 h-3 mr-1" />                      Email Us
                     </a>
                   </div>
                 </div>
@@ -397,8 +369,7 @@ export default function UltimateServicesShowcase2025() {
               onClick={() => {;
                 setSearchTerm('');
                 setSelectedCategory('all');
-              }}"
-              className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              }}"              className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               Clear Filters
             </button>
@@ -421,15 +392,13 @@ export default function UltimateServicesShowcase2025() {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 "
-                <Rocket className="w-5 h-5 mr-2" />
-                Start Your Transformation
+                <Rocket className="w-5 h-5 mr-2" />                Start Your Transformation
               </Link>
               <a"
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
 "
-                <Phone className="w-5 h-5 mr-2" />
-                Speak with an Expert
+                <Phone className="w-5 h-5 mr-2" />                Speak with an Expert
               </a>
             </div>
           </div>
@@ -449,8 +418,7 @@ export default function UltimateServicesShowcase2025() {
               </p>"
               <div className="flex space-x-4">"
                 <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 transition-colors">"
-                  <ExternalLink className="w-5 h-5" />
-                </a>
+                  <ExternalLink className="w-5 h-5" />                </a>
               </div>
             </div>
 
@@ -478,8 +446,7 @@ export default function UltimateServicesShowcase2025() {
                   <span>{ULTIMATE_CONTACT_INFO_2025.email}</span>
                 </div>"
                 <div className="flex items-center space-x-2">"
-                  <MapPin className="w-4 h-4 text-blue-400" />"
-                  <span className="text-xs">{ULTIMATE_CONTACT_INFO_2025.address}</span>
+                  <MapPin className="w-4 h-4 text-blue-400" />"                  <span className="text-xs">{ULTIMATE_CONTACT_INFO_2025.address}</span>
                 </div>
               </div>
             </div>
@@ -503,8 +470,7 @@ export default function UltimateServicesShowcase2025() {
 
 // Search icon component
 const Search = ({ className }: { className?: string }) => (;"
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;"
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />;
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;"    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />;
   </svg>;
 );
 '"`

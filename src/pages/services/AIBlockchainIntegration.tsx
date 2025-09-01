@@ -8,8 +8,7 @@ import {
   TrendingUp,
   CheckCircle,
   Star,
-  Users,
-  Globe,
+  Users,  Globe,
   Lock,
   Cpu,
   Database,
@@ -92,16 +91,14 @@ export default function AIBlockchainIntegration(...args: any[]): any {
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>"
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>"        <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >"
             <div className="flex items-center justify-center mb-6">"
-              <Brain className="w-12 h-12 text-cyan-400 mr-3" />"
-              <h1 className="text-4xl md:text-6xl font-bold text-white">
+              <Brain className="w-12 h-12 text-cyan-400 mr-3" />"              <h1 className="text-4xl md:text-6xl font-bold text-white">
                 AI Blockchain Integration
               </h1>
             </div>"
@@ -198,8 +195,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
                 transition={{ duration: 0.8, delay: index * 0.1 }}"
                 className="flex items-start space-x-3"
               >"
-                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />"
-                <span className="text-gray-300 text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />"                <span className="text-gray-300 text-lg">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -261,8 +257,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>

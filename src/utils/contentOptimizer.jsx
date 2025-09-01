@@ -218,8 +218,7 @@ export class ContentOptimizer {
     }
 
     return optimizedContent;
-  }
-}
+  }}
 
 export default ContentOptimizer;
 '"`

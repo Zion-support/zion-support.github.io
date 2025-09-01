@@ -10,8 +10,7 @@ import {
   Users,
   Zap,
   Globe,
-  Lock,
-  Eye,
+  Lock,  Eye,
   Star,
   Cpu,
   Database,
@@ -283,8 +282,7 @@ export default function AISupplyChainOptimization() {
       />
 
       {/* Hero Section */}"
-      <section className="relative overflow-hidden py-20 lg:py-32">"
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-transparent to-red-900/20"></div>
+      <section className="relative overflow-hidden py-20 lg:py-32">"        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-transparent to-red-900/20"></div>
 "
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -294,8 +292,7 @@ export default function AISupplyChainOptimization() {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 text-orange-400 rounded-full text-sm font-medium mb-6">"
-              <Truck className="w-4 h-4 mr-2" />
-              AI-Powered Optimization
+              <Truck className="w-4 h-4 mr-2" />              AI-Powered Optimization
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Supply Chain"
@@ -315,8 +312,7 @@ export default function AISupplyChainOptimization() {
                 Start Free Trial
               </button>"
               <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />
-                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -441,8 +437,7 @@ export default function AISupplyChainOptimization() {
                       key={areaIndex}"
                       className="flex items-center text-gray-300 text-sm"
                     >"
-                      <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />
-                      {area}
+                      <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />                      {area}
                     </li>
                   ))}
                 </ul>
@@ -566,8 +561,7 @@ export default function AISupplyChainOptimization() {
                       key={featureIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />"
-                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -708,8 +702,7 @@ export default function AISupplyChainOptimization() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Star className="w-5 h-5 mr-2" />                Start Free Trial
               </button>"
               <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />

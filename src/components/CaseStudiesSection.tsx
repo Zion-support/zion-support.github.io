@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -65,6 +66,11 @@ const caseStudies = [
     color: "from-green-500 to-emerald-500";
   };
 ];
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';'
+import { Link } from 'react-router-dom';];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function CaseStudiesSection() {
   return ("
@@ -146,8 +152,7 @@ export function CaseStudiesSection() {
                 <ul className="space-y-2">
                   {study.results.map((result, resultIndex) => ("
                     <li key={resultIndex} className="flex items-center text-sm text-gray-700">"
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                      {result}
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />                      {result}
                     </li>) ) }
                 </ul>
               </div>
@@ -155,8 +160,7 @@ export function CaseStudiesSection() {
               <div className="flex items-center justify-between">"
                 <div className="flex items-center text-sm text-gray-600">"
                   <Star className="h-4 w-4 text-yellow-500 mr-1" />
-                  <span>5.0</span>"
-                  <span className="mx-2">•</span>
+                  <span>5.0</span>"                  <span className="mx-2">•</span>
                   <span>Verified Results</span>
                 </div>
               </div>
@@ -206,8 +210,7 @@ export function CaseStudiesSection() {
                 className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200"
 
                 View All Case Studies"
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+                <ArrowRight className="ml-2 h-5 w-5" />              </Link>
             </div>
           </div>
         </motion.div>;
@@ -221,7 +224,6 @@ export default CaseStudiesSection;"
       </div>;
     </section>;) ;
 }
-
 export default CaseStudiesSection;
 export default CaseStudiesSection;
 '"`

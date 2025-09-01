@@ -103,8 +103,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     },;"
     competitors["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "D-Wave"],;"
     marketSize: "$1.7 billion by 2027","
-    demoUrl: "https://ziontechgroup.com/demo/quantum-ai-orchestrator","
-    documentationUrl: "https://ziontechgroup.com/docs/quantum-ai-orchestrator"
+    demoUrl: "https://ziontechgroup.com/demo/quantum-ai-orchestrator","    documentationUrl: "https://ziontechgroup.com/docs/quantum-ai-orchestrator"
   },
 
   // Autonomous AI Agents
@@ -173,8 +172,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     },;"
     competitors["OpenAI", "Anthropic", "Microsoft", "Google"],;"
     marketSize: "$15.7 billion by 2028","
-    demoUrl: "https://ziontechgroup.com/demo/autonomous-ai-agents","
-    documentationUrl: "https://ziontechgroup.com/docs/autonomous-ai-agents"
+    demoUrl: "https://ziontechgroup.com/demo/autonomous-ai-agents","    documentationUrl: "https://ziontechgroup.com/docs/autonomous-ai-agents"
   },
 
   // Edge AI Computing Platform
@@ -243,8 +241,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     },;"
     competitors["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],;"
     marketSize: "$12.3 billion by 2027","
-    demoUrl: "https://ziontechgroup.com/demo/edge-ai-platform","
-    documentationUrl: "https://ziontechgroup.com/docs/edge-ai-platform"
+    demoUrl: "https://ziontechgroup.com/demo/edge-ai-platform","    documentationUrl: "https://ziontechgroup.com/docs/edge-ai-platform"
   },
 
   // Blockchain AI Integration Platform
@@ -313,8 +310,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     },;"
     competitors["Chainlink", "Ocean Protocol", "Fetch.ai", "SingularityNET"],;"
     marketSize: "$8.9 billion by 2028","
-    demoUrl: "https://ziontechgroup.com/demo/blockchain-ai-platform","
-    documentationUrl: "https://ziontechgroup.com/docs/blockchain-ai-platform"
+    demoUrl: "https://ziontechgroup.com/demo/blockchain-ai-platform","    documentationUrl: "https://ziontechgroup.com/docs/blockchain-ai-platform"
   },
 
   // Cybersecurity AI Platform
@@ -383,8 +379,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     },;"
     competitors["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],;"
     marketSize: "$45.8 billion by 2027","
-    demoUrl: "https://ziontechgroup.com/demo/cybersecurity-ai","
-    documentationUrl: "https://ziontechgroup.com/docs/cybersecurity-ai"
+    demoUrl: "https://ziontechgroup.com/demo/cybersecurity-ai","    documentationUrl: "https://ziontechgroup.com/docs/cybersecurity-ai"
   },
 
   // Healthcare AI Platform
@@ -453,8 +448,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     },;"
     competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare"],;"
     marketSize: "$67.4 billion by 2028","
-    demoUrl: "https://ziontechgroup.com/demo/healthcare-ai","
-    documentationUrl: "https://ziontechgroup.com/docs/healthcare-ai"
+    demoUrl: "https://ziontechgroup.com/demo/healthcare-ai","    documentationUrl: "https://ziontechgroup.com/docs/healthcare-ai"
   },
 
   // Financial AI Trading Platform
@@ -523,8 +517,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     },;"
     competitors["Bloomberg", "Thomson Reuters", "FactSet", "Refinitiv"],;"
     marketSize: "$23.4 billion by 2027","
-    demoUrl: "https://ziontechgroup.com/demo/financial-ai-trading","
-    documentationUrl: "https://ziontechgroup.com/docs/financial-ai-trading"
+    demoUrl: "https://ziontechgroup.com/demo/financial-ai-trading","    documentationUrl: "https://ziontechgroup.com/docs/financial-ai-trading"
   },
 
   // Manufacturing AI Platform
@@ -593,8 +586,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     },;"
     competitors["Siemens", "GE Digital", "Rockwell Automation", "ABB Ability"],;"
     marketSize: "$16.7 billion by 2027","
-    demoUrl: "https://ziontechgroup.com/demo/manufacturing-ai","
-    documentationUrl: "https://ziontechgroup.com/docs/manufacturing-ai"
+    demoUrl: "https://ziontechgroup.com/demo/manufacturing-ai","    documentationUrl: "https://ziontechgroup.com/docs/manufacturing-ai"
   },
 
   // Retail AI Platform
@@ -663,8 +655,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     },;"
     competitors["Salesforce Commerce Cloud", "Adobe Commerce", "Shopify Plus", "Oracle Commerce"],;"
     marketSize: "$19.9 billion by 2027","
-    demoUrl: "https://ziontechgroup.com/demo/retail-ai","
-    documentationUrl: "https://ziontechgroup.com/docs/retail-ai"
+    demoUrl: "https://ziontechgroup.com/demo/retail-ai","    documentationUrl: "https://ziontechgroup.com/docs/retail-ai"
 
 ];
 

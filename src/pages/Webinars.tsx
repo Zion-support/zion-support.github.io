@@ -8,8 +8,7 @@ import {
   Cloud,
   Rocket,
   Heart,
-  Zap,
-  Globe,
+  Zap,  Globe,
   Video,
   Database,
   Target,
@@ -27,7 +26,6 @@ import {
   ArrowRight,
   CheckCircle} from 'lucide-react';
 import { SEO } from '../components/SEO';
-
 const Webinars: React.FC = () => {
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -157,7 +155,6 @@ const Webinars: React.FC = () => {
 
   const filteredWebinars = [...upcomingWebinars, ...onDemandWebinars].filter()
     webinar => {
-
       const matchesSearch =
         webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         webinar.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -176,8 +173,7 @@ const Webinars: React.FC = () => {
         description="Join our expert-led webinars on AI, cloud computing, cybersecurity, and emerging technologies. Learn from industry leaders and stay ahead of the curve."
         keywords="webinars, AI, machine learning, cloud computing, cybersecurity, digital transformation, Zion Tech Group"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}"
         <section className="pt-32 pb-16 px-4">"
           <div className="max-w-7xl mx-auto text-center">
@@ -188,8 +184,7 @@ const Webinars: React.FC = () => {
             >"
               <div className="flex items-center justify-center space-x-3 mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">"
-                  <Video className="w-8 h-8 text-white" />
-                </div>
+                  <Video className="w-8 h-8 text-white" />                </div>
               </div>"
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Expert Webinars
@@ -211,8 +206,12 @@ const Webinars: React.FC = () => {
               <div className="relative mb-6">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search webinars..."
+=======
+                  type="text""                  placeholder="Search webinars..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -292,9 +291,14 @@ const Webinars: React.FC = () => {
                     </div>
                     {webinar.featured && ("
                       <div className="absolute top-3 left-3">"
+<<<<<<< HEAD
                         <Star className="w-5 h-5 text-yellow-400 fill-current" />
                       </div>
                     )}
+=======
+                        <Star className="w-5 h-5 text-yellow-400 fill-current" />                      </div>
+                    )}'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     {webinar.type === 'live' && ("
                       <div className="absolute top-3 right-3 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
                         LIVE
@@ -335,10 +339,16 @@ const Webinars: React.FC = () => {
 
                     {/* Speakers */}"
                     <div className="flex items-center gap-2 mb-4">"
+<<<<<<< HEAD
                       <Users className="w-4 h-4 text-gray-400" />"
                       <span className="text-gray-400 text-sm">
                         {Array.isArray(webinar.speakers)
                           ? webinar.speakers.join(',)
+=======
+                      <Users className="w-4 h-4 text-gray-400" />"                      <span className="text-gray-400 text-sm">
+                        {Array.isArray(webinar.speakers)'
+                          ? webinar.speakers.join(', ')
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                           : webinar.speakers}
                       </span>
                     </div>
@@ -358,9 +368,14 @@ const Webinars: React.FC = () => {
                     <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
                       {webinar.type === 'upcoming' ? (
                         <>"
+<<<<<<< HEAD
                           <Calendar className="w-4 h-4" />
                           Register Now
                         </>
+=======
+                          <Calendar className="w-4 h-4" />                          Register Now
+                        </>'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                       ) : webinar.type === 'on-demand' ? (
                         <>"
                           <Play className="w-4 h-4" />
@@ -368,8 +383,7 @@ const Webinars: React.FC = () => {
                         </>
                       ) : (
                         <>"
-                          <Eye className="w-4 h-4" />
-                          Join Live
+                          <Eye className="w-4 h-4" />                          Join Live
                         </>) }
                     </button>
                   </div>
@@ -384,14 +398,12 @@ const Webinars: React.FC = () => {
                 </h3>"
                 <p className="text-gray-400">
                   Try adjusting your search criteria or filters.
-                </p>
-              </div>
+                </p>              </div>
             )}
           </div>
         </section>
       </div>
     </>) ;
 };
-
 export default Webinars;
 '"`

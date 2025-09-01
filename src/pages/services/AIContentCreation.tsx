@@ -6,8 +6,7 @@ import {
   PenTool,
   Brain,
   Image,
-  Video,
-  FileText,
+  Video,  FileText,
   CheckCircle,
   ArrowRight,
   Star,
@@ -98,8 +97,7 @@ export default function AIContentCreation(...args: any[]): any {
       <section className="relative overflow-hidden py-20">"
         <div className="absolute inset-0">"
           <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>"
-          <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>"
-          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>"          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
         </div>
 "
         <div className="relative z-10 container mx-auto px-4">
@@ -110,8 +108,7 @@ export default function AIContentCreation(...args: any[]): any {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6">"
-              <PenTool className="w-4 h-4 mr-2" />
-              AI Content Creation
+              <PenTool className="w-4 h-4 mr-2" />              AI Content Creation
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -133,8 +130,7 @@ export default function AIContentCreation(...args: any[]): any {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
               >
                 Start Creating"
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+                <ArrowRight className="w-5 h-5 ml-2" />              </Link>
               <Link"
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"
@@ -229,8 +225,7 @@ export default function AIContentCreation(...args: any[]): any {
                       key={featureIndex}"
                       className="flex items-center text-slate-300"
                     >"
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -267,8 +262,7 @@ export default function AIContentCreation(...args: any[]): any {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-purple-400/30 transition-all duration-200"
               >"
-                <Sparkles className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />"
-                <span className="text-white text-sm">{tech}</span>
+                <Sparkles className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />"                <span className="text-white text-sm">{tech}</span>
               </motion.div>
             ))}
           </div>
@@ -297,8 +291,7 @@ export default function AIContentCreation(...args: any[]): any {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
               >
                 Start Creating Today"
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+                <ArrowRight className="w-5 h-5 ml-2" />              </Link>
               <Link"
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"

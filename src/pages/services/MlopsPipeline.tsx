@@ -5,8 +5,7 @@ const MlopsPipeline: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">"
     <SEO title="MLOps Pipeline - Zion Tech Group" description="Automated training, evaluation, deployment, and monitoring for ML models." />"
     <section className="container mx-auto px-4 py-12">"
-      <h1 className="text-4xl font-bold mb-4">MLOps Pipeline</h1>"
-      <p className="text-slate-300 max-w-3xl">Production-grade pipelines with CI/CD, feature stores, model registry, and drift monitoring. Works on AWS, GCP, and Azure.</p>
+      <h1 className="text-4xl font-bold mb-4">MLOps Pipeline</h1>"      <p className="text-slate-300 max-w-3xl">Production-grade pipelines with CI/CD, feature stores, model registry, and drift monitoring. Works on AWS, GCP, and Azure.</p>
     </section>"
     <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">"
       <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">"

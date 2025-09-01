@@ -1,7 +1,6 @@
 interface MimeTypeMapping {
   [key: string]: string;
 }
-
 class MimeTypeFallback {
   private mimeTypes: MimeTypeMapping = {
 
@@ -13,8 +12,7 @@ class MimeTypeFallback {
   ];
 
   constructor() {
-    this.setupFallbackUrls();
-  }
+    this.setupFallbackUrls()}
 
   private setupFallbackUrls() {
     // Map problematic URLs to CDN fallbacks
@@ -45,11 +43,17 @@ class MimeTypeFallback {
   }
 
   private getFileExtension(filename: string): string {
+<<<<<<< HEAD
 
     const lastDot = filename.lastIndexOf('.');
     if (lastDot === -1) return '';
     return filename.substring(lastDot).toLowerCase();
   }
+=======
+'
+    const lastDot = filename.lastIndexOf('.');'    if (lastDot === -1) return '';
+    return filename.substring(lastDot).toLowerCase()}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   async checkAndFixMimeType(url: string): Promise<any> {
 
@@ -75,7 +79,6 @@ class MimeTypeFallback {
         contentType.includes(expectedType) ||'
         contentType.includes('application/octet-stream')
       ) {
-
         return true; // MIME type is correct or generic
       }
 `
@@ -93,7 +96,6 @@ class MimeTypeFallback {
   private async tryFallbackUrl(originalUrl: string): Promise<any> {
 
     const fallbackUrl = this.fallbackUrls.get(originalUrl);
-
     if (fallbackUrl) {
 `
       // console.log(`Trying fallback URL: ${fallbackUrl}`);
@@ -105,22 +107,18 @@ class MimeTypeFallback {
 
           const contentType = response.headers.get('content-type');
           const expectedType = this.getMimeType(originalUrl);
-
           if (contentType && contentType.includes(expectedType)) {
 `
             // console.log(`Fallback URL has correct MIME type: ${fallbackUrl}`);
             this.replaceResource(originalUrl, fallbackUrl);
-            return true;
-          }
+            return true}
         }
       } catch (error) {
 `
         // console.error(`Fallback URL failed: ${fallbackUrl}`, error);
-      }
-    }
+      }    }
 
-    return false;
-  }
+    return false}
 
   private replaceResource(originalUrl: string, fallbackUrl: string) {
 
@@ -148,11 +146,10 @@ class MimeTypeFallback {
     ];
 
     // console.log('🔍 Preloading critical resources...');
-
     for (const resource of criticalResources) {
 
       try {
-        const isValid = await this.checkAndFixMimeType(resource);
+        
         if (!isValid) {
 `
           // console.warn(`Critical resource has MIME type issues: ${resource}`);
@@ -160,8 +157,7 @@ class MimeTypeFallback {
       } catch (error) {
 `
         // console.error(`Error preloading resource: ${resource}`, error);
-      }
-    }
+      }    }
   }
 
   createResourceElement()
@@ -170,6 +166,7 @@ class MimeTypeFallback {
   ): HTMLElement {
 
     if (type === 'script') {
+<<<<<<< HEAD
 
       const script = document.createElement('script');
       script.src = url;
@@ -181,9 +178,19 @@ class MimeTypeFallback {
       const link = document.createElement('link');
       link.rel = 'stylesheet';
       link.href = url;
+=======
+'
+      const script = document.createElement('script');      script.src = url;
+      script.async = true;'
+      script.type = 'text/javascript';
+      return script;
+    } else {
+'
+      const link = document.createElement('link');'      link.rel = 'stylesheet';
+      link.href = url;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       link.type = 'text/css';
-      return link;
-    }
+      return link}
   }
 
   injectResource(url: anystring, type: 'script' | 'stylesheet'): Promise<any> {
@@ -212,11 +219,9 @@ class MimeTypeFallback {
         document.head.appendChild(element);
       }
     });
-  }
-}
+  }}
 
 // Create singleton instance
-const mimeTypeFallback = new MimeTypeFallback();
 
 export default mimeTypeFallback;
 '"`

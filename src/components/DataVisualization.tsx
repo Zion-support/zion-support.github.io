@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -55,6 +56,11 @@ title:  "Data Analytics Dashboard",;
 }) => {;
   const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
   const [isLoading, setIsLoading] = useState(false);
+=======
+import React, { useState, useEffect } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';  const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
+  const [isLoading, setIsLoading] = useState(false);'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [activeChart, setActiveChart] = useState<any>('bar');
 
   // Sample data - in a real app, this would come from an API
@@ -78,8 +84,12 @@ title:  "Data Analytics Dashboard",;
       value: '$2.4M',
       change: 12.5,
       changeType: 'increase',"
+<<<<<<< HEAD
       icon: <DollarSign className = "w-5 h-5" />,
       color: 'text-green-400'
+=======
+      icon: <DollarSign className = "w-5 h-5" />,'      color: 'text-green-400'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
@@ -87,8 +97,12 @@ title:  "Data Analytics Dashboard",;
       value: '45.2K',
       change: 8.1,
       changeType: 'increase',"
+<<<<<<< HEAD
       icon: <Users className="w-5 h-5" />,
       color: 'text-blue-400'
+=======
+      icon: <Users className="w-5 h-5" />,'      color: 'text-blue-400'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
@@ -96,8 +110,12 @@ title:  "Data Analytics Dashboard",;
       value: '3.24%',
       change: -2.4,
       changeType: 'decrease',"
+<<<<<<< HEAD
       icon: <Target className="w-5 h-5" />,
       color: 'text-yellow-400'
+=======
+      icon: <Target className="w-5 h-5" />,'      color: 'text-yellow-400'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
@@ -112,8 +130,7 @@ title:  "Data Analytics Dashboard",;
 
   // Simulate data refresh
   const refreshData = async () => {;
-    setIsLoading (true) ;
-    // Simulate API call
+    setIsLoading (true) ;    // Simulate API call
     await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
     // Update chart data with new random values
@@ -124,7 +141,6 @@ setChartData (prev:  > ({;
         data: prev.datasets[0].data.map ( () => Math.floor (Math.random () * 100) + 20) ;
       }];
     }) ) ;
-
     // Update metrics with new random values
     setMetrics(prev => prev.map(metric => ({
 
@@ -157,7 +173,6 @@ setChartData (prev:  > ({;
 
 }];
   };
-
   // Generate line chart data
   const lineChartData = {
 '"

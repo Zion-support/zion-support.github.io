@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
 
   Star,
@@ -105,6 +106,8 @@ export default function EnhancedTestimonialsSection(...args[]):  {
       setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) ;
     }, 8000) ;
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     return () => clearInterval (interval) }, [isAutoPlaying, testimonials.length]) ;
 
   const nextTestimonial = () => {;
@@ -114,7 +117,6 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   const prevTestimonial = () => {;
     setCurrentTestimonial ( (prev) => (prev - 1 + testimonials.length) % testimonials.length) ;
     setIsAutoPlaying (false) };
-
                   animate = {
 
   { rotate: [0,
@@ -128,8 +130,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 }}
                 >
-                  <Quote className="w - 8 h - 8 text - zion - cyan" />
-                </motion.div>
+                  <Quote className="w - 8 h - 8 text - zion - cyan" />                </motion.div>
 "
                 <div className="relative z-10">
                   {/* Rating */}"
@@ -141,8 +142,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                         animate={{ scale: 1 }}
                         transition={{ delay: index * 0.1 }}
 "
-                        <Star className="w-6 h-6 text-yellow-400 fill-current" />
-                      </motion.div>;
+                        <Star className="w-6 h-6 text-yellow-400 fill-current" />                      </motion.div>;
                     ))}
                   </div>
 
@@ -189,8 +189,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                         <p className="text-zion-cyan">{currentTestimonialData.position}</p>"
                         <p className="text-gray-300">{currentTestimonialData.comp}</p>"
                         <div className="flex items-center space-x-2 mt-1">"
-                          <Building className="w-4 h-4 text-zion-cyan" />"
-                          <span className="text-sm text-gray-400">{currentTestimonialData.industry}</span>
+                          <Building className="w-4 h-4 text-zion-cyan" />"                          <span className="text-sm text-gray-400">{currentTestimonialData.industry}</span>
                         </div>
                       </div>
                     </div>
@@ -208,8 +207,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
 "
-              <ChevronLeft className="w-6 h-6 text-white" />
-            </motion.button>
+              <ChevronLeft className="w-6 h-6 text-white" />            </motion.button>
 "
             <div className="flex space-x-2">
               {testimonials.map((_, index) => (
@@ -232,8 +230,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
 "
-              <ChevronRight className="w-6 h-6 text-white" />
-            </motion.button>
+              <ChevronRight className="w-6 h-6 text-white" />            </motion.button>
           </div>
         </div>
 
@@ -244,14 +241,12 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   { opacity: 0,
   y: 30 ;
 
-}}
-          whileInView = {
+}}          whileInView = {
 
   { opacity: 1,
   y: 0 ;
 
-}}
-          viewport={{ once: true }}
+}}          viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
@@ -262,8 +257,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 
 
-}}"
-          className="mt-20"
+}}"          className="mt-20"
 "
           <div className="text-center">;"
             <h3 className="text-2xl font-bold text-white mb-8">
@@ -321,14 +315,12 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   { opacity: 0,
   y: 30 ;
 
-}}
-          whileInView = {
+}}          whileInView = {
 
   { opacity: 1,
   y: 0 ;
 
-}}
-          viewport={{ once: true }}
+}}          viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
@@ -339,8 +331,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 
 
-}}"
-          className="text-center mt-16"
+}}"          className="text-center mt-16"
 "
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 max-w-4xl mx-auto">;"
             <h3 className="text-3xl font-bold text-white mb-4">

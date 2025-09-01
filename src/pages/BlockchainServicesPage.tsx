@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -74,6 +75,10 @@ import {
                 <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
               </motion.div>;
             ))}
+=======
+import React, { useState } from 'react';'
+import { motion } from 'framer-motion';            ))}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </div>
         </div>
       </section>

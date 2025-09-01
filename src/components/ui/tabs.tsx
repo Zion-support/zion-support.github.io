@@ -1,4 +1,3 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react.ts';
 
 interface TabsContextType {
   activeTab: string;
@@ -8,6 +7,7 @@ interface TabsContextType {
   setActiveTab: tab: string void
 }
 ;
+<<<<<<< HEAD
 const TabsContext = createContext<TabsContextType | null>(null);
 
 interface TabsProps extends React.PropsWithChildren<{}> {
@@ -77,3 +77,6 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
   );
 }
 '`
+=======
+const TabsContext = createContext<TabsContextType | null>(null);
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

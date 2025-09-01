@@ -3,7 +3,6 @@ import { ReactNode } from 'react';
 import React, { useState } from 'react';
 export default React.memo (function Layout (...args[]) :  {
 
-
 interface LayoutProps {
   // Add your props here
 
@@ -40,7 +39,6 @@ export default function Layout(...args[]):  {
   const toggleSidebarDropdown = (label: string) => {;
     setSidebarDropdownOpen (sidebarDropdownOpen === label ? null : label) ;
   };
-
   return()
     <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Header */}"
@@ -104,8 +102,7 @@ export default function Layout(...args[]):  {
                         <ChevronRight className={`w-4 h-4 transition-transform ${
 
                           sidebarDropdownOpen === item.label ? 'rotate-90' : ''`
-                        }`} />
-                      </button>
+                        }`} />                      </button>
                       {sidebarDropdownOpen === item.label && (;"
                         <div className="ml-4 mt-2 space-y-1">
                           {item.children.map((child) => (

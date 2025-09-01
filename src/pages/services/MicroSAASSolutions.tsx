@@ -67,8 +67,7 @@ export default function MicroSAASSolutions() {
   ];
 
   return()
-    <div className="min-h-screen bg-slate-900 text-white pt-20">"
-      <div className="container mx-auto px-4 py-12">
+    <div className="min-h-screen bg-slate-900 text-white pt-20">"      <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
-  Brain,
-  Atom,
+  Brain,  Atom,
   Shield,
   Cloud,
   Rocket,
@@ -554,8 +553,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
   const categories = [...new Set (newServices.map (service => service.category) ) ];
 
   return()
-    <div className="min-h-screen py-8">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-8">"      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}"
         <div className="text-center mb-16">
           <motion.div
@@ -670,8 +668,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
                             <span>{feature}</span>
                           </div>
                         ))}
-                      {service.features.length > 3 && ("
-                        <div className="text-sm text-gray-500 text-center">
+                      {service.features.length > 3 && ("                        <div className="text-sm text-gray-500 text-center">
                           +{service.features.length - 3} more features
                         </div>) }
                     </div>
@@ -759,8 +756,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <span>Get Started Today</span>"
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+                <ArrowRight className="w-5 h-5" />              </Link>
               <Link"
                 to="/request-quote"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
@@ -790,8 +786,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center space-x-3 text-gray-300">"
-                <MapPin className="w-5 h-5 text-cyan-400" />
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <MapPin className="w-5 h-5 text-cyan-400" />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>"
             <div className="mt-6">
@@ -801,8 +796,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
               >"
-                <Globe className="w-5 h-5" />
-                <span>Visit our website</span>
+                <Globe className="w-5 h-5" />                <span>Visit our website</span>
               </a>
             </div>
           </motion.div>

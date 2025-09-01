@@ -1,4 +1,3 @@
-import { MarketplaceItem   } from '@/data/marketplaceData';
 
 const sampleTitles = ['
   'AI-Powered Analytics Platform',Cybersecurity Assessment Tool',Cloud Migration Service',IoT Edge Computing Solution',;
@@ -33,6 +32,7 @@ const sampleTags = ['
   ['Network',Security',Threat Detection'];
 ];
 
+<<<<<<< HEAD
 const sampleImages = [;
   'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;
   'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
@@ -40,6 +40,14 @@ const sampleImages = [;
   'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
   'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
   'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
+=======
+const sampleImages = [;'
+  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;'
+  'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;'
+  'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;'
+  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;'
+  'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;'  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 const categories: Array<any> = ['
@@ -55,6 +63,7 @@ const locations = [;
 ];
 
 const sellerNames = ['
+<<<<<<< HEAD
   'TechCorp Solutions',SecureNet Professionals',;
   'QuantumTech Labs',;
   'CloudMasters Inc',;
@@ -62,6 +71,15 @@ const sellerNames = ['
   'DataGenius Consulting',;
   'Innovation Labs',;
   'FutureTech Systems';
+=======
+  'TechCorp Solutions','
+  'SecureNet Professionals',;'
+  'QuantumTech Labs',;'
+  'CloudMasters Inc',;'
+  'IoT Solutions Pro',;'
+  'DataGenius Consulting',;'
+  'Innovation Labs',;'  'FutureTech Systems';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 export function generateRandomListing(): MarketplaceItem {
@@ -71,7 +89,6 @@ export function generateRandomListing(): MarketplaceItem {
   const price = priceRanges[Math.floor(Math.random() * priceRanges.length)];
   const location = locations[Math.floor(Math.random() * locations.length)];
   const sellerName = sellerNames[Math.floor(Math.random() * sellerNames.length)];
-
   return {
 
     id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
@@ -97,7 +114,6 @@ export function generateRandomListing(): MarketplaceItem {
     deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,;'`
     warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`;
   };
-
 export function generateRandomListings(count: number): MarketplaceItem[] {
 
   const listings: MarketplaceItem[] = [];

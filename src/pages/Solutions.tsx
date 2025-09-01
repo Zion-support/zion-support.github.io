@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
@@ -25,6 +26,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+=======
+import React from 'react';'
+import { SEO } from '@/components/SEO';'
+import { Link } from 'react-router-dom';import {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   Brain,
   Cloud,
@@ -104,6 +110,7 @@ const solutionCategories = [
     description: 'Modernize your business processes and customer experience',
     color: 'from-indigo-500 to-purple-600',
     solutions: ['
+<<<<<<< HEAD
       'Process Automation',Customer Experience',;
       'Legacy Modernization',;
       'Digital Strategy',;
@@ -111,6 +118,14 @@ const solutionCategories = [
       'Technology Consulting';
     ];
   };
+=======
+      'Process Automation','
+      'Customer Experience',;'
+      'Legacy Modernization',;'
+      'Digital Strategy',;'
+      'Change Management',;'      'Technology Consulting';
+    ]};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 ;
 const industrySolutions = [
@@ -384,7 +399,6 @@ const featuredSolutions = [
   const filteredSolutions = activeIndustry === 'all' 
     ? solutions 
     : solutions.filter(solution => solution.industry === activeIndustry);
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}"
@@ -408,8 +422,7 @@ const featuredSolutions = [
           >"
             <div className="flex items-center justify-center space-x-3 mb-6">"
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-500/50">"
-                <Target className="w-8 h-8 text-white" />
-              </div>
+                <Target className="w-8 h-8 text-white" />              </div>
               <div>
       </section>
 
@@ -473,8 +486,7 @@ const featuredSolutions = [
             {solutionCategories.map((category, index) => {
 
               const IconComponent = category.icon;
-              return()
-                <motion.div
+              return()                <motion.div
                   key={category.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -504,8 +516,7 @@ const featuredSolutions = [
                     </div>
                   </Link>
                 </motion.div>) ;
-            }) }
-          </div>
+            }) }          </div>
         </div>
       </section>
 
@@ -527,8 +538,7 @@ const featuredSolutions = [
             {industrySolutions.map((industry, index) => {
 
               const IconComponent = industry.icon;
-              return()
-                <motion.div
+              return()                <motion.div
                   key={industry.industry}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -543,8 +553,7 @@ const featuredSolutions = [
                   <div className="space-y-2">
                     {industry.solutions.slice(0, 4).map((solution, idx) => ("
                       <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                        <CheckCircle className="w-3 h-3 text-green-400" />
-                        <span>{solution}</span>
+                        <CheckCircle className="w-3 h-3 text-green-400" />                        <span>{solution}</span>
                       </div>
                     ))}
                   </div>"
@@ -558,8 +567,7 @@ const featuredSolutions = [
                     </Link>
                   </div>
                 </motion.div>) ;
-            }) }
-          </div>
+            }) }          </div>
         </div>
       </section>
 
@@ -581,8 +589,7 @@ const featuredSolutions = [
             {filteredSolutions.map((solution, index) => {
 
               const IconComponent = solution.icon;
-              return()
-                <motion.div
+              return()                <motion.div
                   key={solution.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -594,8 +601,7 @@ const featuredSolutions = [
                   <div className="flex items-start justify-between mb-4">"
                     <div className="flex items-center gap-3">`
                       <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-2xl flex items-center justify-center`}>"
-                        <IconComponent className="w-8 h-8 text-white" />
-                      </div>
+                        <IconComponent className="w-8 h-8 text-white" />                      </div>
                       <div>"
                         <h3 className="text-xl font-bold text-white mb-1">{solution.name}</h3>"
                         <span className="text-sm text-zion-cyan">{solution.category}</span>
@@ -616,8 +622,7 @@ const featuredSolutions = [
                     <div className="grid grid-cols-1 gap-1">
                       {solution.features.slice(0, 4).map((feature, idx) => ("
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                          <CheckCircle className="w-3 h-3 text-green-400" />
-                          <span>{feature}</span>
+                          <CheckCircle className="w-3 h-3 text-green-400" />                          <span>{feature}</span>
                         </div>) ) }
                     </div>
                   </div>
@@ -628,8 +633,7 @@ const featuredSolutions = [
                     <div className="grid grid-cols-1 gap-1">
                       {solution.benefits.map((benefit, idx) => ("
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                          <Star className="w-3 h-3 text-yellow-400" />
-                          <span>{benefit}</span>
+                          <Star className="w-3 h-3 text-yellow-400" />                          <span>{benefit}</span>
                         </div>) ) }
                     </div>
                   </div>
@@ -638,8 +642,7 @@ const featuredSolutions = [
                   <div className="flex items-center justify-between">"
                     <div className="text-sm text-zion-slate-light">"
                       <span className="flex items-center gap-1">"
-                        <Clock className="w-4 h-4" />
-                        Implementation: {solution.implementation}
+                        <Clock className="w-4 h-4" />                        Implementation: {solution.implementation}
                       </span>
                     </div>
                     <Link`
@@ -651,8 +654,7 @@ const featuredSolutions = [
                     </Link>
                   </div>
                 </motion.div>) ;
-            }) }
-          </div>
+            }) }          </div>
         </div>
       </section>
 
@@ -679,8 +681,7 @@ const featuredSolutions = [
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
               >
                 Get Started Today"
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+                <ArrowRight className="ml-2 h-5 w-5" />              </Link>
               <Link"
                 to="/case-studies"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
@@ -718,8 +719,7 @@ const featuredSolutions = [
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {solutionCategories.map((category, index) => {;
               const IconComponent = category.icon;
-              return()
-                <motion.div
+              return()                <motion.div
                   key = {category.id}
                   initial = {
 
@@ -764,8 +764,7 @@ const featuredSolutions = [
                     </div>;
                   </Link>;
                 </motion.div>;) ;
-            }) }
-          </div>
+            }) }          </div>
         </div>
       </section>
 
@@ -796,8 +795,7 @@ const featuredSolutions = [
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {industrySolutions.map((industry, index) => {;
               const IconComponent = industry.icon;
-              return()
-                <motion.div
+              return()                <motion.div
                   key = {industry.industry}
                   initial = {
 
@@ -827,8 +825,7 @@ const featuredSolutions = [
                   <div className="space-y-2">
                     {industry.solutions.slice(0, 4).map((solution, idx) => ("
                       <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                        <CheckCircle className="w-3 h-3 text-green-400" />
-                        <span>{solution}</span>
+                        <CheckCircle className="w-3 h-3 text-green-400" />                        <span>{solution}</span>
                       </div>
                     ))}
                   </div>"
@@ -842,8 +839,7 @@ const featuredSolutions = [
                     </Link>;
                   </div>;
                 </motion.div>;) ;
-            }) }
-          </div>
+            }) }          </div>
         </div>
       </section>;
 
@@ -874,8 +870,7 @@ const featuredSolutions = [
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredSolutions.map((solution, index) => {;
               const IconComponent = solution.icon;
-              return()
-                <motion.div
+              return()                <motion.div
                   key = {solution.id}
                   initial = {
 
@@ -911,8 +906,7 @@ const featuredSolutions = [
                     <div className="grid grid-cols-2 gap-2">
                       {solution.features.slice(0, 4).map((feature, idx) => ("
                         <div key={idx} className="flex items-center space-x-2 text-gray-300 text-sm">"
-                          <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                          <span>{feature}</span>
+                          <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />                          <span>{feature}</span>
                         </div>) ) }
                     </div>
                   </div>
@@ -934,8 +928,7 @@ const featuredSolutions = [
                     <div className="flex space-x-2">
                       {solution.demo && ("
                         <button className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-500 transition-colors duration-300">"
-                          <Play className="w-4 h-4 mr-1 inline" />
-                          Demo
+                          <Play className="w-4 h-4 mr-1 inline" />                          Demo
                         </button>
                       )}
                       {solution.trial && ("
@@ -952,8 +945,7 @@ const featuredSolutions = [
                     </Link>;
                   </div>;
                 </motion.div>;) ;
-            }) }
-          </div>
+            }) }          </div>
         </motion.div>
 
       {/* CTA Section */}"

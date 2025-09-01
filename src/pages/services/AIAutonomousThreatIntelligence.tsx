@@ -6,8 +6,7 @@ import {
   Eye,
   AlertTriangle,
   Target,
-  CheckCircle,
-  Star,
+  CheckCircle,  Star,
   BarChart3,
   Users,
   Globe,
@@ -146,8 +145,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
       ]},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 text-white">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 text-white">
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="absolute inset-0">"
@@ -163,8 +161,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
           >"
             <div className="flex justify-center mb-6">"
               <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-full">"
-                <Shield className="h-8 w-8 text-white" />
-              </div>
+                <Shield className="h-8 w-8 text-white" />              </div>
             </div>
 "
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
@@ -238,8 +235,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, idx) => ("
                     <li key={idx} className="flex items-center text-gray-200">"
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                      {benefit}
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -296,8 +292,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                       key={idx}"
                       className="flex items-center text-gray-200 text-sm"
                     >"
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -358,8 +353,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-gray-200">"
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -439,8 +433,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 364 E Main St STE 1008
                 <br />
                 Middletown DE 19709
-              </p>
-            </div>
+              </p>            </div>
           </div>
         </div>
       </section>

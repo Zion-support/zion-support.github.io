@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -98,6 +99,11 @@ const complianceFeatures = [
       "Automated compliance reporting";
     ];
   };
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';      "Automated compliance reporting";
+    ]};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 export function SecurityComplianceSection() {
@@ -157,8 +163,7 @@ export function SecurityComplianceSection() {
                 <div className="flex justify-center mb-4">"
                   <div className="p-3 bg-blue-600 rounded-full">"
                     <IconComponent className="h-8 w-8 text-white" />
-        {/* Security Certifications */}"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {/* Security Certifications */}"        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {securityFeatures.map((feature, index) => (
             <motion.div
               key={feature.title}"
@@ -335,8 +340,7 @@ export function SecurityComplianceSection() {
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
                 Compliance Review"
-                <FileText className="ml-2 h-5 w-5" />
-              </button>
+                <FileText className="ml-2 h-5 w-5" />              </button>
             </div>
           </div>
         </motion.div>
@@ -350,7 +354,6 @@ export default SecurityComplianceSection;"
       </div>;
     </section>;) ;
 }
-
 export default SecurityComplianceSection;
 export default SecurityComplianceSection;
 '"`

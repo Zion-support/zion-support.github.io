@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Helmet  } from 'react-helmet-async.ts';
+<<<<<<< HEAD
 import { Search, 
 
 
@@ -29,6 +30,8 @@ import { Search,
  } from 'lucide-react.ts';
 import { comprehensivePricingGuide2025, ServicePricing  } from '../data/comprehensive-pricing-guide-2025';
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
 
     const [searchTerm, setSearchTerm] = useState('');
@@ -48,7 +51,6 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
 
     const filteredServices = useMemo ( () => {
         let filtered = comprehensivePricingGuide2025;
-
         if (searchTerm) {
 
             filtered = filtered.filter(service =>
@@ -89,7 +91,6 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
         };"
         return icons[category] || <Globe className="w-5 h-5" />;
     };
-
     return ("
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
             <Helmet>
@@ -124,8 +125,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                 <span>Multiple Tiers</span>
                             </div>"
                             <div className="flex items-center space-x-2 text-white">"
-                                <Zap className="w-5 h-5 text-blue-400" />
-                                <span>Flexible Plans</span>
+                                <Zap className="w-5 h-5 text-blue-400" />                                <span>Flexible Plans</span>
                             </div>
                         </div>
                     </motion.div>
@@ -146,8 +146,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                 <span>kleber@ziontechgroup.com</span>
                             </div>"
                             <div className="flex items-center space-x-2 text-gray-600">"
-                                <MapPin className="w-4 h-4" />
-                                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                                <MapPin className="w-4 h-4" />                                <span>364 E Main St STE 1008, Middletown DE 19709</span>
                             </div>
                         </div>
                         <a"
@@ -157,8 +156,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                             className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium"
                         >
                             <span>Visit Our Website</span>"
-                            <ExternalLink className="w-4 h-4" />
-                        </a>
+                            <ExternalLink className="w-4 h-4" />                        </a>
                     </div>
                 </div>
             </section>
@@ -172,8 +170,12 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                             <div className="relative">"
                                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                                 <input"
+<<<<<<< HEAD
                                     type="text"
                                     placeholder="Search services..."
+=======
+                                    type="text""                                    placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}"
                                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -202,8 +204,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                     {filteredServices.length === 0 ? ("
                         <div className="text-center py-12">"
                             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />"
-                            <h3 className="text-xl font-semibold text-gray-600 mb-2">No services found</h3>"
-                            <p className="text-gray-500">Try adjusting your search or filter criteria</p>
+                            <h3 className="text-xl font-semibold text-gray-600 mb-2">No services found</h3>"                            <p className="text-gray-500">Try adjusting your search or filter criteria</p>
                         </div>
                     ) : ("
                         <div className="space-y-12">
@@ -237,8 +238,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                 <span className="text-sm">ROI: {service.roi}</span>
                                             </div>"
                                             <div className="flex items-center space-x-2">"
-                                                <Users className="w-4 h-4" />"
-                                                <span className="text-sm">Market: {service.marketPosition}</span>
+                                                <Users className="w-4 h-4" />"                                                <span className="text-sm">Market: {service.marketPosition}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -260,8 +260,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                     {tier.popular && ("
                                                         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">"
                                                             <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center space-x-1">"
-                                                                <Crown className="w-4 h-4" />
-                                                                <span>Most Popular</span>
+                                                                <Crown className="w-4 h-4" />                                                                <span>Most Popular</span>
                                                             </span>
                                                         </div>
                                                     )}
@@ -282,8 +281,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                     <ul className="space-y-3 mb-6">
                                                         {tier.features.map((feature, featureIndex) => ("
                                                             <li key={featureIndex} className="flex items-start space-x-3">"
-                                                                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />"
-                                                                <span className="text-gray-700">{feature}</span>
+                                                                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />"                                                                <span className="text-gray-700">{feature}</span>
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -293,8 +291,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                         className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 flex items-center justify-center space-x-2"
                                                     >
                                                         <span>Get Started</span>"
-                                                        <ArrowRight className="w-4 h-4" />
-                                                    </button>
+                                                        <ArrowRight className="w-4 h-4" />                                                    </button>
                                                 </div>) ) }
                                         </div>
 
@@ -302,27 +299,23 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                                             <div>"
                                                 <h5 className="text-lg font-semibold text-gray-800 mb-4 flex items-center space-x-2">"
-                                                    <Sparkles className="w-5 h-5 text-blue-600" />
-                                                    <span>Key Features</span>
+                                                    <Sparkles className="w-5 h-5 text-blue-600" />                                                    <span>Key Features</span>
                                                 </h5>"
                                                 <ul className="space-y-2">
                                                     {service.features.slice(0, 6).map((feature, idx) => ("
                                                         <li key={idx} className="flex items-center space-x-2 text-gray-600">"
-                                                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                                                            <span>{feature}</span>
+                                                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />                                                            <span>{feature}</span>
                                                         </li>) ) }
                                                 </ul>
                                             </div>
                                             <div>"
                                                 <h5 className="text-lg font-semibold text-gray-800 mb-4 flex items-center space-x-2">"
-                                                    <TrendingUp className="w-5 h-5 text-green-600" />
-                                                    <span>Key Benefits</span>
+                                                    <TrendingUp className="w-5 h-5 text-green-600" />                                                    <span>Key Benefits</span>
                                                 </h5>"
                                                 <ul className="space-y-2">
                                                     {service.benefits.map((benefit, idx) => ("
                                                         <li key={idx} className="flex items-center space-x-2 text-gray-600">"
-                                                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                                                            <span>{benefit}</span>
+                                                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />                                                            <span>{benefit}</span>
                                                         </li>) ) }
                                                 </ul>
                                             </div>
@@ -358,15 +351,13 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                             href="tel:+13024640950"
                             className="inline-flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
                         >"
-                            <Phone className="w-5 h-5" />
-                            <span>Call +1 302 464 0950</span>
+                            <Phone className="w-5 h-5" />                            <span>Call +1 302 464 0950</span>
                         </a>
                         <a"
                             href="mailto:kleber@ziontechgroup.com"
                             className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
                         >"
-                            <Mail className="w-5 h-5" />
-                            <span>Email Us</span>
+                            <Mail className="w-5 h-5" />                            <span>Email Us</span>
                         </a>
                     </div>
                 </div>
@@ -411,5 +402,4 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
             </footer>
         </div>) ;
 };
-
 export default ComprehensivePricingShowcase2025;'"`

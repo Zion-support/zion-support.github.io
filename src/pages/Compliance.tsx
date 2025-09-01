@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -177,6 +178,10 @@ import {
                 Compliance & Security
               </span>
             </div>
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';            </div>
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 "
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-green-600 bg-clip-text text-transparent">
@@ -297,8 +302,7 @@ import {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />"
                           <span className="text-gray-300 text-sm">
                             {benefit}
-                          </span>
-                        </li>
+                          </span>                        </li>
                       ))}
                     </ul>
                   </div>
@@ -380,8 +384,7 @@ import {
                 <ul className="space-y-3">
                   {category.measures.map((measure, measureIndex) => ("
                     <li key={measureIndex} className="flex items-start">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300 text-sm">{measure}</span>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300 text-sm">{measure}</span>
                     </li>
                   ))}
                 </ul>
@@ -430,8 +433,7 @@ import {
                       <Clock className="w-5 h-5 text-blue-400 mr-3" />"
                       <span className="text-gray-300">
                         Response time: {contact.responseTime}
-                      </span>
-                    </div>
+                      </span>                    </div>
                   </div>
                 </motion.div>) ) }
             </div>

@@ -54,6 +54,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
     };
   ];
 
+<<<<<<< HEAD
   const benefits = [;
     'Reduce unplanned downtime by up to 75%',;
     'Extend equipment lifespan and reliability',;
@@ -61,14 +62,27 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
     'Improve safety and compliance standards',;
     'Optimize spare parts inventory management',;
     'Increase overall operational efficiency';
+=======
+  const benefits = [;'
+    'Reduce unplanned downtime by up to 75%',;'
+    'Extend equipment lifespan and reliability',;'
+    'Lower maintenance costs and labor requirements',;'
+    'Improve safety and compliance standards',;'
+    'Optimize spare parts inventory management',;'    'Increase overall operational efficiency';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="AI Predictive Maintenance Services - Zion Tech Group"
         description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
       />
+=======
+        title="AI Predictive Maintenance Services - Zion Tech Group""        description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="pt-20 pb-16 px-4">"
@@ -100,8 +114,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">"
-              <Wrench className="w-5 h-5 text-orange-400 mr-2" />"
-              <span className="text-orange-300 font-medium">AI Predictive Maintenance</span>
+              <Wrench className="w-5 h-5 text-orange-400 mr-2" />"              <span className="text-orange-300 font-medium">AI Predictive Maintenance</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -372,8 +385,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <li key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -464,7 +476,6 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default AIPredictiveMaintenance;}}}'"

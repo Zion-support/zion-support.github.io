@@ -7,8 +7,7 @@ import {
   Users,
   Zap,
   Shield,
-  Brain,
-  CheckCircle,
+  Brain,  CheckCircle,
   ArrowRight,
   Star,
   Award,
@@ -166,8 +165,7 @@ export default function AICustomerSupportAutomation() {
       ]},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
       <section className="relative overflow-hidden pt-32 pb-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -178,8 +176,7 @@ export default function AICustomerSupportAutomation() {
             className="text-center"
           >"
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6">"
-              <Bot className="w-4 h-4" />
-              <span>AI-Powered Customer Support</span>
+              <Bot className="w-4 h-4" />              <span>AI-Powered Customer Support</span>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Customer Support Automation
@@ -196,8 +193,7 @@ export default function AICustomerSupportAutomation() {
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300"
               >
                 Start Free Trial"
-                <ArrowRight className="inline ml-2 w-5 h-5" />
-              </motion.button>
+                <ArrowRight className="inline ml-2 w-5 h-5" />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
@@ -271,8 +267,7 @@ export default function AICustomerSupportAutomation() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-start"
               >"
-                <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />"
-                <span className="text-gray-300 text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />"                <span className="text-gray-300 text-lg">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -316,8 +311,7 @@ export default function AICustomerSupportAutomation() {
                 <ul className="space-y-3">
                   {channel.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300 text-sm">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -364,8 +358,7 @@ export default function AICustomerSupportAutomation() {
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />"
                       <span className="text-gray-300 text-sm">
                         {application}
-                      </span>
-                    </li>
+                      </span>                    </li>
                   ))}
                 </ul>
               </motion.div>
@@ -398,8 +391,7 @@ export default function AICustomerSupportAutomation() {
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300"
               >
                 Get Started Now"
-                <ArrowRight className="inline ml-2 w-5 h-5" />
-              </motion.button>
+                <ArrowRight className="inline ml-2 w-5 h-5" />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"

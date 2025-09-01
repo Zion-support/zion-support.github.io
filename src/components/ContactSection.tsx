@@ -24,8 +24,7 @@ export function ContactSection(...args[]):  {
       title: "Address",;"
       value: "364 E Main St STE 1008 Middletown DE 19709",;"
       link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";
-    };
-  ];
+    };  ];
   return ("
     <section className = "py-16 px-4 sm:px-6 lg:px-8">"
       <div className="max-w-7xl mx-auto">
@@ -117,7 +116,6 @@ export function ContactSection(...args[]):  {
       </div>;
     </section>;) ;
 }
-
 export default ContactSection;
 export default ContactSection;
 export default ContactSection;

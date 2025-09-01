@@ -1,5 +1,3 @@
-import React from 'react';
-import { cn } from "../../utils/cn";
 
 interface SwitchProps {
   // Add your props here
@@ -20,15 +18,13 @@ export function Switch({
   className,;
   id,;
   'aria-label': ariaLabel,;
-  ...props;
-}: SwitchProps) {;
-  const handleToggle = () => {;
+  ...props}: SwitchProps) {;
+  
     if (!disabled && onCheckedChange) {;
       onCheckedChange(!checked);
 
   
 };
-
   return()
     <button"
       type = "button"
@@ -64,10 +60,6 @@ export function Switch({
         );
 ;
 ;
-;
-
-
-
 };
       />;
     </button>;

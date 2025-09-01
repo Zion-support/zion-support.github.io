@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-
   Atom, 
   Zap, 
   Brain, 
@@ -209,10 +208,16 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="Quantum Computing Solutions - Zion Tech Group"
         description="Harness the power of quantum computing for exponential performance gains. Solve complex problems 1000x faster with our quantum solutions."
         keywords="quantum computing, quantum algorithms, quantum AI, quantum optimization, quantum simulation, quantum security"
       />
+=======
+        title="Quantum Computing Solutions - Zion Tech Group""
+        description="Harness the power of quantum computing for exponential performance gains. Solve complex problems 1000x faster with our quantum solutions.""        keywords="quantum computing, quantum algorithms, quantum AI, quantum optimization, quantum simulation, quantum security"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -224,8 +229,7 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">"
-              <Atom className="w-4 h-4 mr-2" />
-              Quantum Technology
+              <Atom className="w-4 h-4 mr-2" />              Quantum Technology
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Quantum Computing Solutions
@@ -241,8 +245,7 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
                 className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </motion.button>
+                <ArrowRight className="ml-2 w-5 h-5" />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
@@ -328,8 +331,7 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
                     <ul className="space-y-2">
                       {capability.benefits.map((benefit, benefitIndex) => ("
                         <li key={benefitIndex} className="flex items-center text-gray-300">"
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />                          {benefit}
                         </li>
                       ))}
                     </ul>
@@ -436,8 +438,7 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                      {feature}
                     </li>
                   ))}
                 </ul>

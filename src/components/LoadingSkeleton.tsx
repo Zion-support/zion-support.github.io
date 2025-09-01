@@ -1,15 +1,5 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-
-
-interface SkeletonProps extends React.PropsWithChildren<{}> {
-  className?: string;
-  height?: string;
-  width?: string;
-  rounded?: boolean;
-  animated?: boolean;
-}
-
 const Skeleton: React.FC<SkeletonProps> = ({
 
   className = '',
@@ -25,8 +15,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
   if (!animated) {
 
     return <div className={classes} />;
-  }
-  
+  }  
   return()
     <motion.div
       className={classes}
@@ -41,14 +30,12 @@ const Skeleton: React.FC<SkeletonProps> = ({
       }}
     />) ;
 };
-
 interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {
 
   type?: 'card' | 'list' | 'hero' | 'table' | 'form';
   count?: number;
   className?: string;
 }
-
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
 
   type = 'card', 
@@ -82,8 +69,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               <Skeleton height="h-4" width="w-2/3" />"
               <div className="flex justify-between items-center pt-2">"
                 <Skeleton height="h-8" width="w-20" />"
-                <Skeleton height="h-8" width="w-24" />
-              </div>
+                <Skeleton height="h-8" width="w-24" />              </div>
             </div>
           </div>
         );
@@ -98,8 +84,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
                   <Skeleton height="h-4" width="w-3/4" />"
                   <Skeleton height="h-3" width="w-1/2" />
                 </div>"
-                <Skeleton height="h-8" width="w-20" />
-              </div>
+                <Skeleton height="h-8" width="w-20" />              </div>
             ))}
           </div>
         );
@@ -110,15 +95,13 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
             {/* Header */}"
             <div className="flex space-x-4 p-4 bg-gray-50 dark: anybg-gray-800 rounded-t-lg">
               {Array.from({ length: 4 }).map((_, index)  => ("
-                <Skeleton key={index} height="h-4" width="w-24" />
-              ))}
+                <Skeleton key={index} height="h-4" width="w-24" />              ))}
             </div>
             {/* Rows */}
             {Array.from({ length: anycount }).map((_, index)  => ("
               <div key={index} className="flex space-x-4 p-4 border-b">
                 {Array.from({ length: any4 }).map((_, cellIndex)  => ("
-                  <Skeleton key={cellIndex} height="h-4" width="w-24" />
-                ))}
+                  <Skeleton key={cellIndex} height="h-4" width="w-24" />                ))}
               </div>
             ))}
           </div>
@@ -138,32 +121,27 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
             </div>"
             <div className="flex space-x-4 pt-4">"
               <Skeleton height="h-10" width="w-24" />"
-              <Skeleton height="h-10" width="w-24" />
-            </div>
+              <Skeleton height="h-10" width="w-24" />            </div>
           </div>) ;
 
       default:
         return < Skeleton />;
-    }
-  };
+    }  };
 
   return()`
     <div className={`animate-pulse ${className}`}>
       {renderSkeleton()}
     </div>
-  );
-};
+  )};
 
 // Specialized skeleton components
 export const HeroSkeleton: React.FC = (): JSX.Element => ("
-  <LoadingSkeleton type="hero" />
-);
+  <LoadingSkeleton type="hero" />);
 
 export const CardSkeleton: React.FC<{ count?: number }> = ({ count = 3 }) => ("
   <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
     {Array.from({ length: count }).map((_, index)  => ("
-      <LoadingSkeleton key={index} type="card" />
-    ))}
+      <LoadingSkeleton key={index} type="card" />    ))}
   </div>
 );
 
@@ -172,7 +150,6 @@ export const TableSkeleton: React.FC<{ count?: number }> = ({ count = 5 }) => ("
 );
 
 export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => ("
-  <LoadingSkeleton type="form" count={count} />
-);
+  <LoadingSkeleton type="form" count={count} />);
 
 export default LoadingSkeleton;'"`

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '../../components/SEO';
@@ -190,13 +191,23 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
       description: "AI-driven property valuation, market analysis, and investment optimization.";
     };
   ];
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { SEO  } from '../../components/SEO';  ];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="AI Autonomous Business Intelligence | Zion Tech Group"
         description="Transform your business with AI-powered autonomous intelligence systems. Get real-time insights, predictive analytics, and autonomous decision-making capabilities."
       />
+=======
+        title="AI Autonomous Business Intelligence | Zion Tech Group""        description="Transform your business with AI-powered autonomous intelligence systems. Get real-time insights, predictive analytics, and autonomous decision-making capabilities."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"

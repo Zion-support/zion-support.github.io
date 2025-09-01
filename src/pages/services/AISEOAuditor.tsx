@@ -5,6 +5,7 @@ import {
   DollarSign,
   CheckCircle2,
   ExternalLink,
+<<<<<<< HEAD
   Phone,
   Mail} from 'lucide-react.ts';
 
@@ -22,6 +23,10 @@ const AISEOAuditor: React.FC = (): JSX.Element => {
           AI SEO Auditor
         </h1>"
         <p className="mt-4 max-w-3xl text-slate-300">
+=======
+  Phone,'
+  Mail} from 'lucide-react.ts';        <p className="mt-4 max-w-3xl text-slate-300">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           Identify SEO issues, generate prioritized fixes, and ship updates
           automatically with guardrails. Nightly crawls, Core Web Vitals checks,
           structured data validation, and content suggestions.
@@ -44,8 +49,7 @@ const AISEOAuditor: React.FC = (): JSX.Element => {
         <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-6">"
           <div className="flex items-center gap-2 text-slate-200 font-semibold">"
             <DollarSign className="h-4 w-4" /> Pricing
-          </div>"
-          <ul className="mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm">
+          </div>"          <ul className="mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm">
             <li>Starter: $49/mo for up to 500 pages</li>
             <li>Growth: $149/mo for up to 5k pages</li>
             <li>Enterprise: Custom; SSO, SLOs, multi-brand</li>
@@ -71,14 +75,12 @@ const AISEOAuditor: React.FC = (): JSX.Element => {
               className="inline-flex items-center gap-2 hover:text-cyan-200"
             >"
               <Mail className="h-4 w-4" /> kleber@ziontechgroup.com
-            </a>
-          </div>
+            </a>          </div>
         </div>
       </section>
     </div>
   );
 };
 ;
-export { AISEOAuditor };
-export default AISEOAuditor;
+export { AISEOAuditor };export default AISEOAuditor;
 '"

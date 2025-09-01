@@ -22,10 +22,8 @@ const QuantumTechnology = () => {
     {;"
       title: "Quantum Cryptography",;"
       description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",;"
-      price: "From $42,000/month",;"
-      features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],;
-      icon: Shield;
-    };
+      price: "From $42,000/month",;"      features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],;
+      icon: Shield};
   ];
 
   const quantumTechnologies = [
@@ -56,8 +54,7 @@ const QuantumTechnology = () => {
     "Unbreakable encryption and enhanced security",;"
     "Advanced machine learning and AI capabilities",;"
     "Revolutionary breakthroughs in scientific research",;"
-    "Competitive advantage in technology innovation",;"
-    "Future-proof solutions for emerging challenges";
+    "Competitive advantage in technology innovation",;"    "Future-proof solutions for emerging challenges";
   ];
 
   return ("
@@ -67,8 +64,7 @@ const QuantumTechnology = () => {
         <div className="max-w-7xl mx-auto text-center">"
           <div className="mb-8">"
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">"
-              <Box className="w-4 h-4 mr-2"/>
-              Quantum Technology
+              <Box className="w-4 h-4 mr-2"/>              Quantum Technology
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Quantum"
@@ -121,8 +117,7 @@ const QuantumTechnology = () => {
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-500/30">"
               <div className="text-center">"
                 <Cpu className="h-24 w-24 text-purple-400 mx-auto mb-4"/>"
-                <h3 className="text-2xl font-bold mb-2">Quantum Advantage</h3>"
-                <p className="text-gray-300">
+                <h3 className="text-2xl font-bold mb-2">Quantum Advantage</h3>"                <p className="text-gray-300">
                   Solve problems in minutes that would take classical computers thousands of years
                 </p>
               </div>
@@ -225,8 +220,7 @@ const QuantumTechnology = () => {
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">"
               <div className="text-center">"
                 <Rocket className="w-24 h-24 text-purple-400 mx-auto mb-4"/>"
-                <h3 className="text-2xl font-bold text-white mb-2">Quantum Innovation</h3>"
-                <p className="text-gray-300 mb-6">
+                <h3 className="text-2xl font-bold text-white mb-2">Quantum Innovation</h3>"                <p className="text-gray-300 mb-6">
                   Our team is at the forefront of quantum technology research
                   and development.
                 </p>"
@@ -262,7 +256,6 @@ const QuantumTechnology = () => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default QuantumTechnology;}}}'"

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import { api, ApiResponse  } from '@/services/api';
+<<<<<<< HEAD
 
 interface User {
   id: number;
@@ -53,6 +54,8 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
   const handleCreateUser = async (e: anyReact.FormEvent) => {;
     e.preventDefault () ;
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     if (!newUser.name.trim() || !newUser.email.trim()) {
 
       setError('Name and email are required');
@@ -76,7 +79,6 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
       setLoading(false);
 
   };
-
   return()
     <div className = "max-w-4xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-md p-6">"

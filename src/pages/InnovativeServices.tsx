@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -37,6 +38,12 @@ const InnovativeServices: React.FC = (): JSX.Element => {
         'Intelligent workflow automation',Predictive analytics integration',Real-time decision making',Scalable AI infrastructure'
       ],;
       benefits['300% efficiency increase',24/7 autonomous operation',Cost reduction up to 60%'],;
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';        'Scalable AI infrastructure'
+      ],;'
+      benefits['300% efficiency increase', '24/7 autonomous operation', 'Cost reduction up to 60%'],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       color: 'from-zion-cyan to-zion-purple'
     },
     {
@@ -126,11 +133,18 @@ const InnovativeServices: React.FC = (): JSX.Element => {
     };
   ];
 
+<<<<<<< HEAD
   const stats = [;
     { label: 'Innovation Projects', value: '500+', icon: Rocket },;
     { label: 'AI Models Deployed', value: '1000+', icon: Brain },;
     { label: 'Quantum Breakthroughs', value: '50+', icon: Atom },;
     { label: 'Client Success Rate', value: '99.8%', icon: Award };
+=======
+  const stats = [;'
+    { label: 'Innovation Projects', value: '500+', icon: Rocket },;'
+    { label: 'AI Models Deployed', value: '1000+', icon: Brain },;'
+    { label: 'Quantum Breakthroughs', value: '50+', icon: Atom },;'    { label: 'Client Success Rate', value: '99.8%', icon: Award };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -311,8 +325,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
                     <ul className="space-y-2">
                       {innovation.benefits.map((benefit, idx) => ("
                         <li key={idx} className="flex items-center text-zion-slate-light">"
-                          <TrendingUp className="w-4 h-4 text-zion-green mr-3" />
-                          {benefit}
+                          <TrendingUp className="w-4 h-4 text-zion-green mr-3" />                          {benefit}
                         </li>) ) }
                     </ul>
                   </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SEO } from "../components/SEO";"
 import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from "../data/advancedMicroSaasServices2025";"
 import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";"
+<<<<<<< HEAD
 import { ADVANCED_AI_SERVICES_2025 } from "../data/advancedAIServices2025";
 
 const AdvancedServicesShowcase2025: React.FC = () => {;
@@ -25,14 +26,22 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
     { id: 'Micro SaaS', name: 'Micro SaaS', count: ADVANCED_MICRO_SAAS_SERVICES_2025.length },;
     { id: 'IT Services', name: 'IT Services', count: SPECIALIZED_IT_SERVICES_2025.length },;
     { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length };
+=======
+import { ADVANCED_AI_SERVICES_2025 } from "../data/advancedAIServices2025";    { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="Advanced Services Showcase 2025 - Zion Tech Group"
         description="Explore our comprehensive portfolio of advanced micro SaaS, IT services, and AI solutions designed for the future of business technology."
       />
+=======
+        title="Advanced Services Showcase 2025 - Zion Tech Group""        description="Explore our comprehensive portfolio of advanced micro SaaS, IT services, and AI solutions designed for the future of business technology."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
@@ -254,8 +263,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
               onClick={() => {;
                 setSearchTerm('');
                 setSelectedCategory('all');
-              }}"
-              className = "text-blue-400 hover:text-blue-300 underline"
+              }}"              className = "text-blue-400 hover:text-blue-300 underline"
             >
               Clear filters
             </button>
@@ -323,5 +331,4 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
       </div>;
     </div>;) ;
 };
-
 export default AdvancedServicesShowcase2025;'"`

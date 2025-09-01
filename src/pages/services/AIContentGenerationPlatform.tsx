@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from "../../components/SEO";
 import {
-
   PenTool, 
   FileText, 
   Brain, 
@@ -155,9 +154,19 @@ export default function AIContentGenerationPlatform(...args[]):  {
       price: '$99',
       period: '/month',
       description: 'Perfect for small businesses and individual creators',
+<<<<<<< HEAD
       features[;
         '10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output'
       ],;
+=======
+      features[;'
+        '10,000 words per month','
+        '100 AI-generated images','
+        '5 video generations','
+        'Basic templates','
+        'Email support','        'Standard quality output'
+      ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
@@ -185,16 +194,20 @@ export default function AIContentGenerationPlatform(...args[]):  {
         'SLA guarantees';
       ],;
       cta: 'Contact Sales',;
-      popular: false;
-    };
+      popular: false};
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="AI Content Generation Platform - Zion Tech Group"
         description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology."
       />
+=======
+        title="AI Content Generation Platform - Zion Tech Group""        description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -227,8 +240,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 "
             <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-8">"
               <PenTool className="w-10 h-10 text-white" />
-            </div>"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            </div>"            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered"
               <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">
                 {' '}Content Generation
@@ -245,15 +257,13 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
 
                 <span>Start Free Trial</span>"
-                <ArrowRight className="w-5 h-5" />
-              </a>
+                <ArrowRight className="w-5 h-5" />              </a>
               <a"
                 href="#pricing"
                 className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
 
                 <span>View Pricing</span>"
-                <ArrowRight className="w-5 h-5" />
-              </a>
+                <ArrowRight className="w-5 h-5" />              </a>
             </div>
           </motion.div>;
 
@@ -262,25 +272,11 @@ export default function AIContentGenerationPlatform(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 30 ;
-
-
-
-
-
-
-}}
+  y: 30 }}
             animate = {
 
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
             transition = {
 
   { duration: 0.8,
@@ -291,8 +287,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
-}}"
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+}}"            className="grid grid-cols-2 md:grid-cols-4 gap-8"
 "
             <div className="text-center">;"
               <div className="text-3xl font-bold text-white mb-2">80-90%</div>"
@@ -402,8 +397,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => ("
                     <li key={idx} className="flex items-center space-x-2 text-sm">"
-                      <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />"
-                      <span className="text-slate-300">{benefit}</span>
+                      <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />"                      <span className="text-slate-300">{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -503,8 +497,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                   <h4 className="text-white font-semibold">Key Results: any</h4>
                   {useCase.metrics.map((metric, idx)  => ("
                     <div key={idx} className="flex items-center space-x-2 text-sm">"
-                      <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />"
-                      <span className="text-slate-300">{metric}</span>
+                      <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />"                      <span className="text-slate-300">{metric}</span>
                     </div>
                   ))}
                 </div>
@@ -795,8 +788,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />"
-                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -862,15 +854,13 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
 
                 <span>Start Free Trial</span>"
-                <ArrowRight className="w-5 h-5" />
-              </a>
+                <ArrowRight className="w-5 h-5" />              </a>
               <a"
                 href="tel:+13024640950"
                 className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
 
                 <span>Call +1 302 464 0950</span>"
-                <ArrowRight className="w-5 h-5" />
-              </a>
+                <ArrowRight className="w-5 h-5" />              </a>
             </div>"
             <div className="mt-6 text-slate-400">"
               <p>Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">kleber@ziontechgroup.com</a></p>"

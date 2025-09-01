@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
-
   CheckCircle,
   X,
   Star,
@@ -44,7 +43,6 @@ import {
   BookOpen,
   Truck} from 'lucide-react';
 import { COMPREHENSIVE_PRICING_GUIDE_2031 } from '../data/comprehensivePricingGuide2031';
-
 const ComprehensivePricingGuide2031: React.FC = () => {
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -66,7 +64,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
 
   const filteredServices = useMemo ( () => {
     let filtered = COMPREHENSIVE_PRICING_GUIDE_2031;
-
+  
     if (searchQuery) {
 
       filtered = filtered.filter()
@@ -124,7 +122,6 @@ const ComprehensivePricingGuide2031: React.FC = () => {
       Enterprise: 'from-orange-500 to-red-500'};
     return colorMap[tierName] || 'from-gray-500 to-slate-500';
   };
-
   return()
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
@@ -156,8 +153,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                 <span>40%+ Annual Growth</span>
               </div>"
               <div className="flex items-center gap-2">"
-                <DollarSign className="w-5 h-5 text-blue-400" />
-                <span>Competitive Pricing</span>
+                <DollarSign className="w-5 h-5 text-blue-400" />                <span>Competitive Pricing</span>
               </div>
             </div>
           </motion.div>
@@ -178,8 +174,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center gap-2">"
-                <MapPin className="w-5 h-5 text-cyan-400" />
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <MapPin className="w-5 h-5 text-cyan-400" />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
             <a"
@@ -189,8 +184,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
               className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <span>Visit Website</span>"
-              <Globe className="w-4 h-4" />
-            </a>
+              <Globe className="w-4 h-4" />            </a>
           </div>
         </div>
       </section>
@@ -203,8 +197,12 @@ const ComprehensivePricingGuide2031: React.FC = () => {
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
+<<<<<<< HEAD
                 type="text"
                 placeholder="Search services..."
+=======
+                type="text""                placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent"
@@ -259,8 +257,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                 service.pricingTiers.find(tier => tier.name === selectedTier) ||
                 service.pricingTiers[1];
 
-              return()
-                <motion.div
+              return()                <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -274,8 +271,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                         <div`
                           className={`p-2 rounded-lg bg-gradient-to-r ${getInnovationColor(service.innovationLevel)}`}
                         >"
-                          <CategoryIcon className="w-6 h-6 text-white" />
-                        </div>
+                          <CategoryIcon className="w-6 h-6 text-white" />                        </div>
                         <div>"
                           <span className="inline-block px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full mb-2">
                             {service.innovationLevel}
@@ -292,8 +288,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                         {expandedService === service.id ? ("
                           <ChevronUp className="w-5 h-5" />
                         ) : ("
-                          <ChevronDown className="w-5 h-5" />
-                        )}
+                          <ChevronDown className="w-5 h-5" />                        )}
                       </button>
                     </div>
 "
@@ -371,8 +366,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                         {/* Features */}
                         <div>"
                           <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">"
-                            <CheckCircle className="w-5 h-5 text-green-400" />
-                            Features - {selectedPricingTier.name} Tier
+                            <CheckCircle className="w-5 h-5 text-green-400" />                            Features - {selectedPricingTier.name} Tier
                           </h4>"
                           <div className="grid grid-cols-1 gap-2">
                             {selectedPricingTier.features.map()
@@ -392,8 +386,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                         {/* Limitations */}
                         <div>"
                           <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">"
-                            <X className="w-5 h-5 text-red-400" />
-                            Limitations - {selectedPricingTier.name} Tier
+                            <X className="w-5 h-5 text-red-400" />                            Limitations - {selectedPricingTier.name} Tier
                           </h4>"
                           <div className="grid grid-cols-1 gap-2">
                             {selectedPricingTier.limitations.map()
@@ -443,8 +436,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                         {/* Competitors */}
                         <div>"
                           <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">"
-                            <Target className="w-5 h-5 text-purple-400" />
-                            Market Competitors
+                            <Target className="w-5 h-5 text-purple-400" />                            Market Competitors
                           </h4>"
                           <div className="flex flex-wrap gap-2">
                             {service.competitors.map((competitor, index) => (
@@ -472,8 +464,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                       </div>
                     </motion.div>) }
                 </motion.div>) ;
-            }) }
-          </div>
+            }) }          </div>
 
           {filteredServices.length === 0 && ("
             <div className="text-center py-20">"
@@ -512,14 +503,12 @@ const ComprehensivePricingGuide2031: React.FC = () => {
               >"
                 <Mail className="w-5 h-5" />
                 <span>Get Custom Quote</span>"
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />              </a>
               <a"
                 href="tel:+13024640950"
                 className="bg-white/10 border border-cyan-400/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >"
-                <Phone className="w-5 h-5" />
-                <span>Call Now</span>
+                <Phone className="w-5 h-5" />                <span>Call Now</span>
               </a>
             </div>
           </motion.div>
@@ -527,6 +516,5 @@ const ComprehensivePricingGuide2031: React.FC = () => {
       </section>
     </div>) ;
 };
-
 export default ComprehensivePricingGuide2031;
 '"`

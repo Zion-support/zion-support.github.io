@@ -6,8 +6,7 @@ import {
   Cog,
   Bot,
   TrendingUp,
-  Shield,
-  Zap,
+  Shield,  Zap,
   BarChart3,
   Network,
   Eye,
@@ -98,8 +97,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
       icon: Brain},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}"
       <div className="relative overflow-hidden">"
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -113,8 +111,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
           >"
             <div className="flex justify-center mb-6">"
               <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">"
-                <Factory className="w-10 h-10 text-white" />
-              </div>
+                <Factory className="w-10 h-10 text-white" />              </div>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Manufacturing Solutions
@@ -216,8 +213,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
                       key={idx}"
                       className="text-sm text-gray-400 flex items-center space-x-2"
                     >"
-                      <Star className="w-3 h-3 text-cyan-400" />
-                      <span>{feature}</span>
+                      <Star className="w-3 h-3 text-cyan-400" />                      <span>{feature}</span>
                     </li>) ) }
                 </ul>
               </div>
@@ -258,6 +254,5 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
       </div>
     </div>) ;
 };
-
 export default ManufacturingSolutions;
 '"

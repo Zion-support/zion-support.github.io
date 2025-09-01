@@ -40,6 +40,7 @@ import {
   Clock,
   ArrowRight,
   ChevronDown,
+<<<<<<< HEAD
   CheckCircle,
   ExternalLink} from 'lucide-react.ts';
 import { SEO } from '@/components/SEO';
@@ -99,6 +100,15 @@ export default function Services2028(...args: any[]): any {
         return a.price - b.price;
       case 'price-high':
         return b.price - a.price;
+=======
+  CheckCircle,'
+  ExternalLink} from 'lucide-react.ts';'
+import { SEO } from '@/components/SEO';'
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';'
+import { COMPREHENSIVE_IT_SERVICES_2028 } from '../data/comprehensiveITServices2028';'
+import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide2028';      case 'price-high':
+        return b.price - a.price;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'rating':
         return b.rating - a.rating;
       case 'name':
@@ -115,8 +125,7 @@ export default function Services2028(...args: any[]): any {
     website: 'https://ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'};
 
-  return()
-    <div className="min-h-screen bg-cyber-black">
+  return()    <div className="min-h-screen bg-cyber-black">
       {/* Futuristic Background */}"
       <div className="futuristic-bg">
         {[...Array(15)].map((_, i) => (
@@ -146,10 +155,16 @@ export default function Services2028(...args: any[]): any {
       </div>
 
       <SEO"
+<<<<<<< HEAD
         title="2028 Services - Zion Tech Group | Revolutionary AI & IT Solutions"
         description="Discover our comprehensive 2028 services including AI Business Intelligence, Quantum Computing, Blockchain & Web3, Edge Computing, and enterprise IT solutions. Transform your business with cutting-edge technology."
         keywords="2028 services, AI business intelligence, quantum computing, blockchain, web3, edge computing, IT services, Zion Tech Group"
       />
+=======
+        title="2028 Services - Zion Tech Group | Revolutionary AI & IT Solutions""
+        description="Discover our comprehensive 2028 services including AI Business Intelligence, Quantum Computing, Blockchain & Web3, Edge Computing, and enterprise IT solutions. Transform your business with cutting-edge technology.""        keywords="2028 services, AI business intelligence, quantum computing, blockchain, web3, edge computing, IT services, Zion Tech Group"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -178,8 +193,7 @@ export default function Services2028(...args: any[]): any {
                 <span>Enterprise Grade</span>
               </div>"
               <div className="flex items-center space-x-2 text-neon-purple">"
-                <CheckCircle className="w-5 h-5" />
-                <span>24/7 Support</span>
+                <CheckCircle className="w-5 h-5" />                <span>24/7 Support</span>
               </div>
             </div>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -210,8 +224,12 @@ export default function Services2028(...args: any[]): any {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neon-cyan" />
                   <input"
+<<<<<<< HEAD
                     type="text"
                     placeholder="Search services..."
+=======
+                    type="text""                    placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-cyber-black/70 border border-neon-cyan/30 rounded-lg text-white placeholder-neon-cyan/50 focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all duration-300"
@@ -302,8 +320,7 @@ export default function Services2028(...args: any[]): any {
                   </div>
                   {service.featured && ("
                     <div className="flex items-center space-x-1 text-neon-yellow">"
-                      <Sparkles className="w-4 h-4" />"
-                      <span className="text-xs font-semibold">FEATURED</span>
+                      <Sparkles className="w-4 h-4" />"                      <span className="text-xs font-semibold">FEATURED</span>
                     </div>
                   )}
                 </div>
@@ -339,8 +356,7 @@ export default function Services2028(...args: any[]): any {
                       <Star className="w-4 h-4 text-neon-yellow fill-current" />"
                       <span className="text-neon-cyan/70 text-sm">
                         ({service.reviews})
-                      </span>
-                    </div>
+                      </span>                    </div>
                   </div>
                 </div>
 
@@ -355,8 +371,7 @@ export default function Services2028(...args: any[]): any {
                         key={idx}"
                         className="flex items-center space-x-2 text-sm"
                       >"
-                        <CheckCircle className="w-4 h-4 text-neon-green flex-shrink-0" />"
-                        <span className="text-white/80">{feature}</span>
+                        <CheckCircle className="w-4 h-4 text-neon-green flex-shrink-0" />"                        <span className="text-white/80">{feature}</span>
                       </div>
                     ))}
                     {service.features.length > 3 && ("
@@ -441,8 +456,7 @@ export default function Services2028(...args: any[]): any {
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-2">
                   24/7 Support
-                </h3>"
-                <p className="text-neon-cyan/70">Always here to help</p>
+                </h3>"                <p className="text-neon-cyan/70">Always here to help</p>
               </div>
             </div>
 "

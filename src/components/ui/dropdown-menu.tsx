@@ -1,4 +1,3 @@
-import React, { createContext, useContext, useState } from 'react';
 const DropdownMenu({ children }) {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -6,7 +5,6 @@ const DropdownMenu({ children }) {
 
   { isOpen,
   setIsOpen 
-;
 ;
 ;
 }}>;
@@ -17,8 +15,12 @@ const DropdownMenu({ children }) {
 };
 export function DropdownMenuTrigger(...args: unknown[]): unknown {;
     const context = useContext(DropdownMenuContext);
+<<<<<<< HEAD
     if (!context)
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
+=======
+    if (!context)'        throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     if (asChild) {
 
       </div>)}
@@ -36,8 +38,12 @@ export function DropdownMenuContent(...args[]):  {;
 }
 export function DropdownMenuContent({ children, align = 'start', className = '' }) {;
     const context = useContext(DropdownMenuContext);
+<<<<<<< HEAD
     if (!context)
         throw new Error('DropdownMenuContent must be used within DropdownMenu');
+=======
+    if (!context)'        throw new Error('DropdownMenuContent must be used within DropdownMenu');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     if (!context.isOpen)
         return null;
     const alignClasses = {

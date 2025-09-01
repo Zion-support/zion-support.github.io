@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -122,12 +123,16 @@ interface NavigationLink {
   const isActive = link: NavigationLink link.matches(location.pathname);
 
               </div>;
+=======
+import React, { useState, useRef, useEffect } from 'react';'
+import { Link, useLocation } from 'react-router-dom';'
+import { motion, AnimatePresence } from 'framer-motion';              </div>;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             </motion.div>;
           )};
         </AnimatePresence>;
       </div>;
-    );
-  };
+    )};
 
   return()
     <nav className = {`${className}`}>
@@ -163,8 +168,7 @@ interface NavigationLink {
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}"
         className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
 "
-        {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
+        {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}      </button>
 
       {/* Mobile Navigation */}
       <AnimatePresence>
@@ -213,8 +217,7 @@ interface NavigationLink {
                   onClick={() => setIsMobileMenuOpen(false)}"
                   className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
 "
-                  <X className="w-6 h-6" />
-                </button>
+                  <X className="w-6 h-6" />                </button>
               </div>
 "
               <div className="space-y-2">
@@ -231,8 +234,7 @@ interface NavigationLink {
                           }`}
 
                           {link.name}'`
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`} />
-                        </button>
+                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`} />                        </button>
 
                         {activeDropdown === link.key && (;"
                           <div className="ml-4 mt-2 space-y-1">

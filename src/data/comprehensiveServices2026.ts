@@ -699,8 +699,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     innovationLevel: "Revolutionary","
     marketSize: "$3.5 billion by 2026","
     compliance["GDPR", "HIPAA", "SOX", "Quantum-safe standards"];
-  },;
-  {
+  },;  {
 
     id: 102,"
     name: "Edge AI Infrastructure","
@@ -744,8 +743,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     innovationLevel: "Advanced","
     marketSize: "$2.8 billion by 2026","
     compliance["GDPR", "HIPAA", "Industry 4.0"];
-  }
-];
+  }];
 
 // Revolutionary AI Services 2026;
 export const revolutionaryAIServices2026: AIService[] = [
@@ -794,8 +792,7 @@ export const revolutionaryAIServices2026: AIService[] = [
     innovationLevel: "Revolutionary","
     marketSize: "$4.2 billion by 2026","
     ethicalAI["Bias detection", "Transparency", "Accountability", "Fairness"];
-  },;
-  {
+  },;  {
 
     id: 202,"
     name: "Quantum AI Platform","
@@ -844,8 +841,7 @@ export const revolutionaryAIServices2026: AIService[] = [
 ];
 
 // Export all services;
-export const ALL_REVOLUTIONARY_SERVICES_2026 = [;
-  ...revolutionaryMicroSaasServices2026,;
+export const ALL_REVOLUTIONARY_SERVICES_2026 = [;  ...revolutionaryMicroSaasServices2026,;
   ...revolutionaryITInfrastructureServices2026,;
   ...revolutionaryAIServices2026;
 ];

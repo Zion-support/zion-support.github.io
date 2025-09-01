@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';
@@ -25,6 +26,12 @@ import { Link, useLocation  } from 'react-router-dom.ts';
         { name: "Contact", href: "/contact", icon: MessageCircle },"
         { name: "Partners", href: "/partners", icon: Users },"
         { name: "Careers", href: "/careers", icon: Briefcase }
+=======
+import React, { useState } from 'react.ts';'
+import { motion, AnimatePresence  } from 'framer-motion.ts';'
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';'
+import { Link, useLocation  } from 'react-router-dom.ts';        { name: "Careers", href: "/careers", icon: Briefcase }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
@@ -58,14 +65,12 @@ import { Link, useLocation  } from 'react-router-dom.ts';
         { name: "API Reference", href: "/api", icon: FileText },;"
         { name: "Developer Portal", href: "/developer", icon: Server },;"
         { name: "Support Center", href: "/support", icon: HelpCircle };
-      ];
-    };
+      ]};
   ];
 
   const quickActions = [;"
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;"
-    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;"
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
+    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
   ];
 
   return()
@@ -77,8 +82,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
         onClick={() => setIsOpen(!isOpen)}"
         className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </motion.button>
+        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}      </motion.button>
 
       {/* Mobile Sidebar Overlay */}
       <AnimatePresence>
@@ -129,8 +133,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                     onClick={() => setIsOpen(false)}"
                     className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-                    <X className="w-5 h-5" />
-                  </button>
+                    <X className="w-5 h-5" />                  </button>
                 </div>
 
                 {/* Quick Actions */}"
@@ -211,8 +214,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                         {expandedSections.has(section.title) ? ("
                           <ChevronDown className="w-4 h-4 transition-transform duration-300" />
                         ) : ("
-                          <ChevronRight className="w-4 h-4 transition-transform duration-300" />
-                        )}
+                          <ChevronRight className="w-4 h-4 transition-transform duration-300" />                        )}
                       </button>
 
                       <AnimatePresence>

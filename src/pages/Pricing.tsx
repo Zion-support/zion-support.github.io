@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
 import {
-
   Check, 
   Star, 
   Zap, 
@@ -85,9 +84,14 @@ import {
       icon: Users
     }
   ];
+<<<<<<< HEAD
 
   const savings = billingCycle === 'annual' ? 20 : 0;
 interface PricingTier {
+=======
+'
+  const savings = billingCycle === 'annual' ? 20 : 0;interface PricingTier {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   name: string;
   description: string;
@@ -99,7 +103,6 @@ interface PricingTier {
   icon: unknown;
   cta: string;
   ctaLink: string;
-
 }
 ;
 const pricingTiers: PricingTier[] = [
@@ -194,13 +197,11 @@ const servicePricing = [
     ]
   }
 ];
-
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="Pricing - Zion Tech Group"'"
-        description="Transparent pricing for Zion Tech Group's AI, cloud, and technology services. Choose the plan that fits your business needs."
-      />
+        title="Pricing - Zion Tech Group"'"        description="Transparent pricing for Zion Tech Group's AI, cloud, and technology services. Choose the plan that fits your business needs."
+       />
       
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -326,8 +327,7 @@ const servicePricing = [
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center text-gray-300">"
-                        <Check className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
+                        <Check className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />                        {feature}
                       </li>) ) }
                   </ul>
 
@@ -382,8 +382,7 @@ const servicePricing = [
                 <ul className="space-y-2 mb-6">
                   {pkg.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">"
-                      <Check className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      <Check className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />                      {feature}
                     </li>) ) }
                 </ul>
 
@@ -392,8 +391,7 @@ const servicePricing = [
                   className="inline-flex items-center w-full justify-center py-2 px-4 border border-cyan-400 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
                 >
                   Get Quote"
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
+                  <ArrowRight className="w-4 h-4 ml-2" />                </Link>
               </motion.div>) ) }
           </div>
         </div>
@@ -508,8 +506,7 @@ const servicePricing = [
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start gap-3">"
-                      <Check className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300 text-sm">{feature}</span>
+                      <Check className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -524,8 +521,7 @@ const servicePricing = [
                   }`}
                 >
                   {tier.cta}"
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                  <ArrowRight className="w-4 h-4" />                </Link>
               </div>
             </motion.div>) ) }
         </div>
@@ -610,8 +606,7 @@ const servicePricing = [
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">"
               <Lock className="w-8 h-8 text-white" />
             </div>"
-            <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>"
-            <p className="text-gray-400">Bank-level security with SOC 2, ISO 27001, and GDPR compliance.</p>
+            <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>"            <p className="text-gray-400">Bank-level security with SOC 2, ISO 27001, and GDPR compliance.</p>
           </div>
         </motion.div>
 
@@ -693,8 +688,7 @@ const servicePricing = [
                   Standard integrations
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  Email support
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                  Email support
                 </li>
               </ul>
               <Link"
@@ -737,8 +731,7 @@ const servicePricing = [
                   GDPR & CCPA compliance
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  Standard access control
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                  Standard access control
                 </li>
               </ul>
               <Link"
@@ -781,8 +774,7 @@ const servicePricing = [
                   Standard reporting
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  Email support
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                  Email support
                 </li>
               </ul>
               <Link"
@@ -797,6 +789,5 @@ const servicePricing = [
       </div>
     </div>) ;
 }
-
 export default Pricing;
 '"`

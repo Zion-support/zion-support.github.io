@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Check, Star, Users, Zap, Shield, Brain, Rocket, Globe, Cpu, TrendingUp, Target, BarChart3, Code, Truck, Car, Plane, Dna, Atom, Link, Box, Crown, Sparkles  } from 'lucide-react.ts';
@@ -137,6 +138,15 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
         title="Comprehensive Pricing Guide 2029 - Zion Tech Group"
         description="Complete pricing information for our revolutionary 2029 AI, quantum computing, space technology, and emerging tech services."
       />
+=======
+import React, { useState } from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { Check, Star, Users, Zap, Shield, Brain, Rocket, Globe, Cpu, TrendingUp, Target, BarChart3, Code, Truck, Car, Plane, Dna, Atom, Link, Box, Crown, Sparkles  } from 'lucide-react.ts';'
+import { SEO  } from '@/components/SEO';'
+import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES  } from '../../data/revolutionary-2029-cutting-edge-services';'
+import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data/revolutionary-2029-emerging-tech-services';        description="Complete pricing information for our revolutionary 2029 AI, quantum computing, space technology, and emerging tech services."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
@@ -198,8 +208,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
               {plan.popular && ("
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                   <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">"
-                    <Crown className="w-4 h-4" />
-                    Most Popular
+                    <Crown className="w-4 h-4" />                    Most Popular
                   </span>
                 </div>
               )}
@@ -226,8 +235,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
                 <div className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <div key={idx} className="flex items-center gap-3">"
-                      <Check className="w-5 h-5 text-green-400 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <Check className="w-5 h-5 text-green-400 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -293,8 +301,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
                           <span className="text-gray-400 text-sm">{service.period}</span>
                         </div>"
                         <div className="flex items-center gap-1 text-sm text-gray-400">"
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span>{service.rating}</span>
+                          <Star className="w-4 h-4 text-yellow-400 fill-current" />                          <span>{service.rating}</span>
                         </div>
                       </div>
 "

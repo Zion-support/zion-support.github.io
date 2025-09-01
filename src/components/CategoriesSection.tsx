@@ -88,7 +88,6 @@ const itemVariants = {
     }
   }
 };
-
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
 
   return ("
@@ -172,8 +171,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"
 
             View All Services"
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-        
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />        
         <motion.div "
           className="mt-12 flex justify-center"
           initial={{ opacity: 0, y: 20 }}

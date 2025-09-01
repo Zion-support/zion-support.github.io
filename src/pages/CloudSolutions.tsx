@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -107,11 +108,13 @@ export default function CloudSolutions(...args[]):  {
 ;
 },;
     visible: {
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';    visible: {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       opacity: 1,;
       y: 0,;
-      transition: { duration: 0.6 };
-    };
-  };
+      transition: { duration: 0.6 }}};
 
   return ("
     <div className = "min-h-screen bg-futuristic">
@@ -176,15 +179,13 @@ export default function CloudSolutions(...args[]):  {
                 whileTap={{ scale: 0.95 }}
 
                 Get Started"
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />              </motion.button>
               <motion.button"
                 className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
 "
-                <Play className="w-5 h-5" />
-                Watch Demo
+                <Play className="w-5 h-5" />                Watch Demo
               </motion.button>
             </motion.div>
           </motion.div>
@@ -249,8 +250,7 @@ export default function CloudSolutions(...args[]):  {
                 <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light text-sm">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />                      {feature}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }

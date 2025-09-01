@@ -35,19 +35,11 @@ const zionContact = {
 
   phone: "+1 302 464 0950","
   email: "kleber@ziontechgroup.com","
-  website: "https://ziontechgroup.com",;
-  ;
+  website: "https://ziontechgroup.com",;  ;
   ;
   ;
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709";
-;
-
-
-
-
-
-
 };
 ;
 export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
@@ -94,8 +86,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Emergency radiology"
     ],;"
     technologies["Deep Learning", "Computer Vision", "Medical Imaging", "Clinical AI"];
-  },;
-  {
+  },;  {
 
     id: 2,"
     name: "GenomicAI Platform","
@@ -138,8 +129,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Population genomics"
     ],;"
     technologies["Machine Learning", "Bioinformatics", "Cloud Computing", "Data Analytics"];
-  },;
-  {
+  },;  {
 
     id: 3,"
     name: "HealthTech Analytics Suite","
@@ -182,8 +172,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Operational efficiency"
     ],;"
     technologies["Data Analytics", "Machine Learning", "Business Intelligence", "Cloud Computing"];
-  },;
-  {
+  },;  {
 
     id: 4,"
     name: "TeleMed AI Platform","
@@ -226,8 +215,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Chronic disease management"
     ],;"
     technologies["AI/ML", "Video Conferencing", "Mobile Apps", "Cloud Computing"];
-  },;
-  {
+  },;  {
 
     id: 5,"
     name: "PharmaAI Research Platform","
@@ -270,8 +258,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Safety assessment"
     ],;"
     technologies["Machine Learning", "Molecular Modeling", "Predictive Analytics", "High-Performance Computing"];
-  },;
-  {
+  },;  {
 
     id: 6,"
     name: "MentalHealth AI Companion","

@@ -1,14 +1,16 @@
+<<<<<<< HEAD
 import React, { useEffect, useMemo } from 'react';
+=======
+import React from 'react';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 import { Helmet } from 'react-helmet-async';
 
-interface SEOProps {
-  // Add your props here
-
-
+type SEOProps = {
   title?: string;
   description?: string;
-  keywords?: string;
+  url?: string;
   image?: string;
+<<<<<<< HEAD
   url?: string;
   type?: 'website' | 'article' | 'product' | 'service';
   author?: string;
@@ -103,9 +105,20 @@ export function SEO({
       target: 'https://ziontechgroup.com/search?q={search_term_string},query-input': 'required name=search_term_string'}};
 
   return()
+=======
+};
+
+export function SEO({
+  title = 'Zion Tech Group - Technology Solutions',
+  description = 'Zion Tech Group delivers AI, cloud, cybersecurity and digital transformation services.',
+  url = 'https://ziontechgroup.com',
+  image = '/og-image.jpg'
+}: SEOProps) {
+  return (
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     <Helmet>
-      {/* Basic HTML tags */}
       <title>{title}</title>
+<<<<<<< HEAD
       <html lang={language} />
 
       {/* Meta tags */}
@@ -220,3 +233,19 @@ export function SEO({
     </Helmet>) ;
 }
 '"`
+=======
+      <meta name="description" content={description} />
+      <link rel="canonical" href={url} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+    </Helmet>
+  );
+}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

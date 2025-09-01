@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Search, 
 import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServicesByPriceRange, searchServices  } from '../data / zionTechGroup2025ComprehensiveServices';
 
@@ -26,26 +27,27 @@ import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServi
 
 const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
   const [searchQuery, setSearchQuery] = useState('');
+=======
+const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
+  const [searchQuery, setSearchQuery] = useState('');'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [priceRange, setPriceRange] = useState<any>([0, 10000]);
   const [sortBy, setSortBy] = useState<any>('name');
   const [expandedService, setExpandedService] = useState<any>(null);
 
-  const filteredServices = useMemo ( () => {;
-    let services = zionTechGroup2025Services;
+  const filteredServices = useMemo ( () => {;    let services = zionTechGroup2025Services;
 
     // Apply search filter
     if (searchQuery) {
 
       services = searchServices(searchQuery);
     }
-
     // Apply category filter'
     if (selectedCategory !== 'all') {
 
       services = getServicesByCategory(selectedCategory as ZionService['category']);
     }
-
     // Apply price filter
     services = getServicesByPriceRange (priceRange[0], priceRange[1]) ;
 
@@ -88,7 +90,6 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.color || 'bg-gray-500';
   };
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}"
@@ -184,8 +185,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center space-x-2 text-white bg-green-600/20 backdrop-blur-sm rounded-full px-6 py-3 border border-green-400/30">"
-              <MapPin className="w-5 h-5" />
-              <span>Middletown DE 19709</span>
+              <MapPin className="w-5 h-5" />              <span>Middletown DE 19709</span>
             </div>
           </motion.div>
         </div>
@@ -200,8 +200,12 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search services..."
+=======
+                  type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -221,8 +225,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                     </option>
                   ))}
                 </select>"
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
-              </div>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />              </div>
 
               {/* Price Range */}"
               <div className="flex space-x-2">
@@ -273,8 +276,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                   <option value="price">Sort by Price</option>"
                   <option value="category">Sort by Category</option>
                 </select>"
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
-              </div>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />              </div>
             </div>
           </div>
         </div>
@@ -346,8 +348,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                     <div className="space-y-1">
                       {service.features.slice(0, 3).map((feature, idx) => ("
                         <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">"
-                          <CheckCircle className="w-4 h-4 text-green-400" />
-                          <span>{feature}</span>
+                          <CheckCircle className="w-4 h-4 text-green-400" />                          <span>{feature}</span>
                         </div>
                       ))}
                       {service.features.length > 3 && ("
@@ -363,8 +364,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                     <div className="space-y-1">
                       {service.benefits.slice(0, 2).map((benefit, idx) => ("
                         <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">"
-                          <TrendingUp className="w-4 h-4 text-blue-400" />
-                          <span>{benefit}</span>
+                          <TrendingUp className="w-4 h-4 text-blue-400" />                          <span>{benefit}</span>
                         </div>) ) }
                     </div>
                   </div>
@@ -397,8 +397,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                         <span>{service.contactInfo.mobile}</span>
                       </div>"
                       <div className="flex items-center space-x-1">"
-                        <Mail className="w-3 h-3" />
-                        <span>{service.contactInfo.email}</span>
+                        <Mail className="w-3 h-3" />                        <span>{service.contactInfo.email}</span>
                       </div>
                     </div>
                   </div>
@@ -433,8 +432,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
                             {service.features.map((feature, idx)  => ("
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">"
-                                <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                                <span>{feature}</span>
+                                <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />                                <span>{feature}</span>
                               </div>) ) }
                           </div>
                         </div>
@@ -445,8 +443,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
                             {service.benefits.map((benefit, idx)  => ("
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">"
-                                <TrendingUp className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                                <span>{benefit}</span>
+                                <TrendingUp className="w-4 h-4 text-blue-400 flex-shrink-0" />                                <span>{benefit}</span>
                               </div>) ) }
                           </div>
                         </div>
@@ -457,8 +454,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
                             {service.useCases.map((useCase, idx)  => ("
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">"
-                                <Target className="w-4 h-4 text-orange-400 flex-shrink-0" />
-                                <span>{useCase}</span>
+                                <Target className="w-4 h-4 text-orange-400 flex-shrink-0" />                                <span>{useCase}</span>
                               </div>) ) }
                           </div>
                         </div>
@@ -480,8 +476,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                               <span>{service.contactInfo.address}</span>
                             </div>"
                             <div className="flex items-center space-x-2">"
-                              <ExternalLink className="w-4 h-4 text-purple-400" />
-                              <a 
+                              <ExternalLink className="w-4 h-4 text-purple-400" />                              <a 
                                 href={service.contactInfo.website} "
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -524,8 +519,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
 
 
 
-}}"
-                className = "bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
+}}"                className = "bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
               >
                 Clear Filters
               </button>
@@ -549,15 +543,13 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                 href="tel:+13024640950"
                 className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
               >"
-                <Phone className="w-5 h-5" />
-                <span>Call Now: +1 302 464 0950</span>
+                <Phone className="w-5 h-5" />                <span>Call Now: +1 302 464 0950</span>
               </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="flex items-center justify-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
               >"
-                <Mail className="w-5 h-5" />
-                <span>Email Us</span>
+                <Mail className="w-5 h-5" />                <span>Email Us</span>
               </a>
             </div>"
             <div className="mt-8 text-gray-400">
@@ -569,5 +561,4 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
       </section>;
     </div>;) ;
 };
-
 export default ZionTechGroup2025ComprehensiveShowcase;'"`

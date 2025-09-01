@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Brain, 
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 
@@ -51,6 +52,8 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
  } from 'lucide-react.ts';
 import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025  } from '@/data/innovativeServices2025';
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -74,8 +77,10 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
   const sortedServices = [...filteredServices].sort((a, b) => {
 
-    let aValue, bValue;
-    
+    let aValue, bValue;    
+    return matchesCategory && matchesSearch});
+
+  
     switch (sortBy) {
 
       case 'price':
@@ -132,7 +137,6 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
     setShowModal (false) ;
     setSelectedService (null) ;
   };
-
   return ("
     <div className="min-h-screen futuristic-bg">
       {/* Matrix Rain Background Effect */}"
@@ -167,8 +171,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                 className="futuristic-btn inline-flex items-center px-8 py-4"'
                 onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
               >"
-                <Rocket className="w-5 h-5 mr-2" />
-                Explore Services
+                <Rocket className="w-5 h-5 mr-2" />                Explore Services
               </motion.button>
               <motion.a
                 href={`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`}
@@ -176,8 +179,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >"
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now
+                <Phone className="w-5 h-5 mr-2" />                Call Now
               </motion.a>
             </div>
           </motion.div>
@@ -205,8 +207,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
             <div className="flex items-center justify-center space-x-3">"
               <MapPin className="w-5 h-5 text-cyan-400" />
               <div>"
-                <p className="text-sm text-gray-300">Address</p>"
-                <p className="text-cyan-400 font-semibold">{INNOVATIVE_CONTACT_INFO_2025.address}</p>
+                <p className="text-sm text-gray-300">Address</p>"                <p className="text-cyan-400 font-semibold">{INNOVATIVE_CONTACT_INFO_2025.address}</p>
               </div>
             </div>
           </div>
@@ -222,8 +223,12 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
+<<<<<<< HEAD
                 type="text"
                 placeholder="Search services..."
+=======
+                type="text""                placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
@@ -262,8 +267,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                     viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'`
                   }`}
                 >"
-                  <Grid className="w-5 h-5" />
-                </button>
+                  <Grid className="w-5 h-5" />                </button>
                                   <button'
                     onClick={() => setViewMode('list')}`
                     className={`p-2 rounded-md transition-all duration-300 ${
@@ -271,8 +275,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                       viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'`
                     }`}
                   >"
-                  <List className="w-5 h-5" />
-                </button>
+                  <List className="w-5 h-5" />                </button>
               </div>
 
               <select`
@@ -282,8 +285,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                   const [newSortBy, newSortOrder] = e.target.value.split('-');
                   setSortBy(newSortBy as );
                   setSortOrder(newSortOrder as );
-                }}"
-                className="px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
+                }}"                className="px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               >"
                 <option value="name-desc">Name (A-Z)</option>"
                 <option value="name-asc">Name (Z-A)</option>"
@@ -322,8 +324,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                       </div>"
                       <div className="flex items-center gap-2">"
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />"
-                        <span className="text-sm text-gray-300">{service.rating}</span>"
-                        <span className="text-xs text-gray-500">({service.reviewCount})</span>
+                        <span className="text-sm text-gray-300">{service.rating}</span>"                        <span className="text-xs text-gray-500">({service.reviewCount})</span>
                       </div>
                     </div>
 "
@@ -381,8 +382,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                         <h3 className="text-xl font-bold text-white">{service.title}</h3>"
                         <span className="text-sm text-gray-400 capitalize">{service.category}</span>"
                         <div className="flex items-center gap-1">"
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />"
-                          <span className="text-sm text-gray-300">{service.rating}</span>
+                          <Star className="w-4 h-4 text-yellow-400 fill-current" />"                          <span className="text-sm text-gray-300">{service.rating}</span>
                         </div>
                       </div>"
                       <p className="text-gray-300 mb-3">{service.description}</p>"
@@ -451,8 +451,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                         <span className="capitalize">{selectedService.subcategory}</span>
                         <span>•</span>"
                         <div className="flex items-center gap-1">"
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span>{selectedService.rating}</span>
+                          <Star className="w-4 h-4 text-yellow-400 fill-current" />                          <span>{selectedService.rating}</span>
                           <span> ({selectedService.reviewCount} reviews) </span>
                         </div>
                       </div>
@@ -462,8 +461,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                     onClick={closeModal}"
                     className="text-gray-400 hover:text-white transition-colors"
                   >"
-                    <X className="w-6 h-6" />
-                  </button>
+                    <X className="w-6 h-6" />                  </button>
                 </div>
 "
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -548,8 +546,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                       <div className="space-y-2">
                         {selectedService.integrations.map((integration: anystring)  => ("
                           <div key={integration} className="flex items-center gap-2 text-gray-300">"
-                            <CheckCircle className="w-4 h-4 text-green-400" />"
-                            <span className="text-sm">{integration}</span>
+                            <CheckCircle className="w-4 h-4 text-green-400" />"                            <span className="text-sm">{integration}</span>
                           </div>
                         ))}
                       </div>
@@ -560,8 +557,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                       <div className="space-y-2">
                         {selectedService.competitors.map((competitor: anystring)  => ("
                           <div key={competitor} className="flex items-center gap-2 text-gray-300">"
-                            <Target className="w-4 h-4 text-red-400" />"
-                            <span className="text-sm">{competitor}</span>
+                            <Target className="w-4 h-4 text-red-400" />"                            <span className="text-sm">{competitor}</span>
                           </div>
                         ))}
                       </div>
@@ -590,8 +586,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">"
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>"
-              <h3 className="text-xl font-bold text-white mb-3">{key}</h3>"
-              <p className="text-gray-300">{value}</p>
+              <h3 className="text-xl font-bold text-white mb-3">{key}</h3>"              <p className="text-gray-300">{value}</p>
             </motion.div>
           ))}
         </div>
@@ -612,8 +607,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
               whileTap={{ scale: 0.95 }}"
               className="futuristic-btn inline-flex items-center px-8 py-4"
             >"
-              <Phone className="w-5 h-5 mr-2" />
-              Call {INNOVATIVE_CONTACT_INFO_2025.phone}
+              <Phone className="w-5 h-5 mr-2" />              Call {INNOVATIVE_CONTACT_INFO_2025.phone}
             </motion.a>
             
             <motion.a`
@@ -622,8 +616,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
               whileTap={{ scale: 0.95 }}"
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >"
-              <Mail className="w-5 h-5 mr-2" />
-              Email Us
+              <Mail className="w-5 h-5 mr-2" />              Email Us
             </motion.a>
           </div>
           "

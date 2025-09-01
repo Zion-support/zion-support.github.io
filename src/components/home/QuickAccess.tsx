@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -159,6 +160,11 @@ const QuickAccess: React.FC = (): JSX.Element => {
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },;"
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';'
+import { Link } from 'react-router-dom';    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
@@ -246,18 +252,10 @@ const QuickAccess: React.FC = (): JSX.Element => {
       scale: 1.02,
       transition: {
 
-        duration: 0.3,;"
-  ease: "easeOut";
+        duration: 0.3,;"  ease: "easeOut";
       ;
 ;
-;
-
-
-
-
-};
-    };
-  };
+}}};
 
   return ("
     <section className = "py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
@@ -366,8 +364,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
                   animate={{ rotate: hoveredCategory === link.title ? 90 : 0 }}
                   transition={{ duration: 0.3 }}
                 >"
-                  <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-zion-cyan transition-colors" />
-                </motion.div>
+                  <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-zion-cyan transition-colors" />                </motion.div>
               </div>
 
               {/* Content */}"
@@ -489,8 +486,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
                   className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}
                 >
                   Explore {link.title}"
-                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />                </Link>
               </motion.div>
             </motion.div>
           ))}
@@ -562,25 +558,11 @@ const QuickAccess: React.FC = (): JSX.Element => {
           initial = {
 
   { opacity: 0,
-  y: 30 ;
-
-
-
-
-
-
-}}
+  y: 30 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
           transition = {
 
   { duration: 0.8,
@@ -592,8 +574,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
 
 
 }}
-          viewport={{ once: true }}"
-          className="text-center"
+          viewport={{ once: true }}"          className="text-center"
         >"
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">'"
             <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>"
@@ -620,6 +601,5 @@ const QuickAccess: React.FC = (): JSX.Element => {
     </section>;
   );
 };
-;
-export { QuickAccess };
+;export { QuickAccess };
 '"`

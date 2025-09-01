@@ -8,23 +8,21 @@ export interface CartItem {
 
 export const calculateCartTotal = (items: CartItem[]): number => {
 
-  return items.reduce((total, item) => total + item.price * item.quantity, 0);
-};
+  return items.reduce((total, item) => total + item.price * item.quantity, 0);};
 
-export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {
-
-  const existingItem = cart.find(cartItem => cartItem.id === item.id);
-
+export 
   if (existingItem) {
 
     return cart.map(cartItem =>
       cartItem.id === item.id
         ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
         : cartItem
-    );
-  }
+    )}
 
-  return [...cart, item];
+  return [...cart, item]};
+
+
+export 
 };
 
 export const removeFromCart = (

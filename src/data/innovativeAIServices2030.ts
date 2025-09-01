@@ -42,19 +42,11 @@ const zionContact = {
 
   phone: "+1 302 464 0950","
   email: "kleber@ziontechgroup.com","
-  website: "https://ziontechgroup.com",;
-  ;
+  website: "https://ziontechgroup.com",;  ;
   ;
   ;
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709";
-;
-
-
-
-
-
-
 };
 
 // Innovative AI Services 2030
@@ -532,8 +524,7 @@ export const innovativeAIServices2030: InnovativeAIService[] = [
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500",;"
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true;
-  };
+    trending: true};
 ];
 
 export default innovativeAIServices2030;}}"

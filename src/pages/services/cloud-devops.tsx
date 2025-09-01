@@ -3,8 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
 ;
-export { function };
-export default function CloudDevOps(...args: []):  {
+export { function };export default function CloudDevOps(...args: []):  {
 
   return()
     <>
@@ -21,8 +20,7 @@ export default function CloudDevOps(...args: []):  {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center">"
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">"
-                <Cloud className="w-4 h-4 mr-2" />
-                Cloud-Native DevOps
+                <Cloud className="w-4 h-4 mr-2" />                Cloud-Native DevOps
               </div>
 "
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -44,8 +42,7 @@ export default function CloudDevOps(...args: []):  {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>"
                 <button className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200">"
-                  <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
+                  <Play className="mr-2 w-5 h-5" />                  Watch Demo
                 </button>
               </div>
             </div>
@@ -183,8 +180,7 @@ export default function CloudDevOps(...args: []):  {
                   <ul className="space-y-1">
                     {area.benefits.map((benefit, benefitIndex) => ("
                       <li key={benefitIndex} className="text-sm text-cyan-400 flex items-center">"
-                        <CheckCircle className="w-3 h-3 mr-2" />
-                        {benefit}
+                        <CheckCircle className="w-3 h-3 mr-2" />                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -263,8 +259,7 @@ export default function CloudDevOps(...args: []):  {
                   <ul className="space-y-1">
                     {tech.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="text-sm text-cyan-400 flex items-center">"
-                        <CheckCircle className="w-3 h-3 mr-2" />
-                        {feature}
+                        <CheckCircle className="w-3 h-3 mr-2" />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -308,8 +303,7 @@ export default function CloudDevOps(...args: []):  {
                     "Better resource utilization and cost optimization"
                   ].map((benefit, index) => ("
                     <div key={index} className="flex items-start space-x-3">"
-                      <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0" />"
-                      <span className="text-slate-300">{benefit}</span>
+                      <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0" />"                      <span className="text-slate-300">{benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -404,8 +398,7 @@ export default function CloudDevOps(...args: []):  {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
 
                 Schedule a Consultation"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"

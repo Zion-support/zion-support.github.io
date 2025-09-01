@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -78,6 +79,10 @@ const successStories = [
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400";
   };
 ];
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function ClientSuccessStoriesSection() {
   return ("
@@ -135,8 +140,7 @@ export function ClientSuccessStoriesSection() {
               <div key = {metric.label} className="text-center">"
                 <div className="flex justify-center mb-4">"
                   <div className="p-3 bg-green-100 rounded-full">"
-                    <IconComponent className="h-8 w-8 text-green-600" />
-                  </div>
+                    <IconComponent className="h-8 w-8 text-green-600" />                  </div>
                 </div>"
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   {metric.value}
@@ -325,8 +329,7 @@ export function ClientSuccessStoriesSection() {
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-medium transition-colors duration-200">
                 View All Case Studies"
-                <Award className="ml-2 h-5 w-5" />
-              </button>
+                <Award className="ml-2 h-5 w-5" />              </button>
             </div>
           </div>
         </motion.div>
@@ -340,7 +343,6 @@ export default ClientSuccessStoriesSection;"
       </div>;
     </section>;) ;
 }
-
 export default ClientSuccessStoriesSection;
 export default ClientSuccessStoriesSection;
 '"

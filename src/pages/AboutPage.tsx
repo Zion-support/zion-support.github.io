@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
-  Users,
-  Target,
+  Users,  Target,
   Zap,
   Star,
   Award,
@@ -138,8 +137,7 @@ export function AboutPage(...args: any[]): any {
   ];
 
   return ("
-    <div className="min-h-screen py-8">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-8">"      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}"
         <div className="text-center mb-16">
           <motion.div
@@ -169,8 +167,7 @@ export function AboutPage(...args: any[]): any {
             <div className="flex items-center space-x-4 mb-6">"
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">"
                 <Target className="w-8 h-8 text-white" />
-              </div>"
-              <h2 className="text-3xl font-bold text-white">Our Mission</h2>
+              </div>"              <h2 className="text-3xl font-bold text-white">Our Mission</h2>
             </div>"
             <p className="text-gray-300 text-lg leading-relaxed">
               To democratize advanced technology and empower businesses of all
@@ -188,8 +185,7 @@ export function AboutPage(...args: any[]): any {
             <div className="flex items-center space-x-4 mb-6">"
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">"
                 <Rocket className="w-8 h-8 text-white" />
-              </div>"
-              <h2 className="text-3xl font-bold text-white">Our Vision</h2>
+              </div>"              <h2 className="text-3xl font-bold text-white">Our Vision</h2>
             </div>"
             <p className="text-gray-300 text-lg leading-relaxed">
               To be the global leader in next-generation technology solutions,
@@ -288,8 +284,7 @@ export function AboutPage(...args: any[]): any {
                       key={skillIndex}"
                       className="flex items-center space-x-2 text-sm text-gray-300"
                     >"
-                      <CheckCircle className="w-4 h-4 text-cyan-400" />
-                      <span>{skill}</span>
+                      <CheckCircle className="w-4 h-4 text-cyan-400" />                      <span>{skill}</span>
                     </div>) ) }
                 </div>
               </motion.div>) ) }
@@ -361,8 +356,7 @@ export function AboutPage(...args: any[]): any {
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <span>Get in Touch</span>"
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+                <ArrowRight className="w-5 h-5" />              </Link>
               <Link"
                 to="/careers"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
@@ -382,8 +376,7 @@ export function AboutPage(...args: any[]): any {
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
-                <MapPin className="w-5 h-5" />
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <MapPin className="w-5 h-5" />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
 

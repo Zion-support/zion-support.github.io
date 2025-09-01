@@ -8,8 +8,7 @@ import {
   EyeOff,
   AlertTriangle,
   CheckCircle,
-  XCircle,
-  Info,
+  XCircle,  Info,
   Settings,
   X,
   RefreshCw,
@@ -46,7 +45,6 @@ interface SecurityStatus {
   permissionsPolicy: boolean;
 
 }
-
 interface SecurityEvent {
   id: string;
   type: 'info' | 'warning' | 'error' | 'success';
@@ -57,7 +55,6 @@ interface SecurityEvent {
   details?: string;
 
 }
-
 interface SecurityMetrics {
 
   totalRequests: number;
@@ -66,7 +63,6 @@ interface SecurityMetrics {
   lastScan: Date;
   vulnerabilities: number;
   complianceScore: number;
-
 export function SecurityEnhancer() {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -93,13 +89,11 @@ export function SecurityEnhancer() {
   const initializeSecurityMonitoring = useCallback ( () => {
     // Set up security headers
     setSecurityHeaders();
-
     // Initialize event listeners for security monitoring
     setupSecurityEventListeners();
 
     // Start periodic security checks
-    const interval = setInterval(() => {
-      checkSecurityStatus();
+    
     }, 30000); // Check every 30 seconds
 
     return () => clearInterval(interval);
@@ -108,8 +102,12 @@ export function SecurityEnhancer() {
   // Set security headers
   const setSecurityHeaders = useCallback(() => {
     // Content Security Policy'
+<<<<<<< HEAD
     const cspMeta = document.createElement('meta');
     cspMeta.httpEquiv = 'Content-Security-Policy';
+=======
+    const cspMeta = document.createElement('meta');'    cspMeta.httpEquiv = 'Content-Security-Policy';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     cspMeta.content = ['
       "default-src 'self'","
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com","
@@ -132,7 +130,6 @@ export function SecurityEnhancer() {
 
       existingCSP.remove();
     }
-
     document.head.appendChild(cspMeta);
 
     // Add security-related meta tags
@@ -254,7 +251,6 @@ export function SecurityEnhancer() {
   // Run security scan
   const runSecurityScan = useCallback(async () => {
     setIsScanning(true);
-
     try {
       // Simulate security scan
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -339,8 +335,7 @@ export function SecurityEnhancer() {
         return 'border-blue-500 bg-blue-50 dark:bg-blue-900/20';
       default:'
         return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20';
-    }
-  };
+    }  };
 
   return()
     <>
@@ -353,8 +348,7 @@ export function SecurityEnhancer() {
         title="Security Panel"
         aria-label="Open security panel"
       >"
-        <Shield className="w-6 h-6" />
-      </motion.button>
+        <Shield className="w-6 h-6" />      </motion.button>
 
       {/* Security Panel */}
       <AnimatePresence>
@@ -370,8 +364,7 @@ export function SecurityEnhancer() {
               {/* Header */}"
               <div className="flex items-center justify-between mb-6">"
                 <div className="flex items-center space-x-2">"
-                  <Shield className="w-6 h-6 text-zion-blue" />"
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <Shield className="w-6 h-6 text-zion-blue" />"                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                     Security
                   </h2>
                 </div>"
@@ -385,15 +378,13 @@ export function SecurityEnhancer() {
                       <ChevronUp className="w-4 h-4" />
                     ) : ("
                       <ChevronDown className="w-4 h-4" />
-                    )}
-                  </button>
+                    )}                  </button>
                   <button
                     onClick={() => setIsVisible(false)}"
                     className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                     aria-label="Close security panel"
                   >"
-                    <X className="w-5 h-5" />
-                  </button>
+                    <X className="w-5 h-5" />                  </button>
                 </div>
               </div>
 
@@ -488,8 +479,7 @@ export function SecurityEnhancer() {
                       </>
                     ) : (
                       <>"
-                        <ShieldCheck className="w-4 h-4" />
-                        <span>Scan</span>
+                        <ShieldCheck className="w-4 h-4" />                        <span>Scan</span>
                       </>
                     )}
                   </button>
@@ -507,8 +497,7 @@ export function SecurityEnhancer() {
                               ? prev.filter(t => t !== type)
                               : [...prev, type]
                           );
-                        }}`
-                        className={`px-2 py-1 text-xs rounded ${
+                        }}`                        className={`px-2 py-1 text-xs rounded ${
 
                           activeFilters.includes(type)
                             ? 'bg-zion-blue text-white''
@@ -581,8 +570,7 @@ export function SecurityEnhancer() {
                     }"
                     className="flex items-center justify-center space-x-2 p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors"
                   >"
-                    <Activity className="w-4 h-4" />"
-                    <span className="text-sm">Check Status</span>
+                    <Activity className="w-4 h-4" />"                    <span className="text-sm">Check Status</span>
                   </button>
 
                   <button

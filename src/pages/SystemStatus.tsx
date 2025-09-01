@@ -16,6 +16,7 @@ import {
   BarChart3,
   TrendingUp,
   RefreshCw} from 'lucide-react';
+<<<<<<< HEAD
 
 interface ServiceStatus {
 
@@ -29,6 +30,8 @@ interface ServiceStatus {
   icon: React.ComponentType < any>;
 }
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface Incident {
 
   id: string;
@@ -39,7 +42,6 @@ interface Incident {
   startTime: string;
   endTime?: string;
   affectedServices: string[];
-
 }
 ;
 const services: ServiceStatus[] = [
@@ -202,8 +204,7 @@ const SystemStatus: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10">"
           <div className="text-center max-w-4xl mx-auto">"
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-full border border-blue-400/30 mb-6">"
-              <Activity className="w-5 h-5 text-blue-400 mr-2" />"
-              <span className="text-blue-300 font-medium">System Status</span>
+              <Activity className="w-5 h-5 text-blue-400 mr-2" />"              <span className="text-blue-300 font-medium">System Status</span>
             </div>
 "
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">"
@@ -233,8 +234,7 @@ const SystemStatus: React.FC = () => {
 
             {/* Last Updated */}"
             <div className="flex items-center justify-center text-gray-400 text-sm">"
-              <Clock className="w-4 h-4 mr-2" />
-              Last updated: {lastUpdated.toLocaleString()}
+              <Clock className="w-4 h-4 mr-2" />              Last updated: {lastUpdated.toLocaleString()}
               <button
                 onClick={refreshData}
                 disabled={isRefreshing}"
@@ -242,8 +242,7 @@ const SystemStatus: React.FC = () => {
               >
                 <RefreshCw'`
                   className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}
-                />
-              </button>
+                />              </button>
             </div>
           </div>
         </div>
@@ -343,8 +342,7 @@ const SystemStatus: React.FC = () => {
               <div className="text-3xl font-bold text-white mb-2">99.97%</div>"
               <h3 className="text-lg font-semibold text-white mb-1">
                 Average Uptime
-              </h3>"
-              <p className="text-gray-400 text-sm">Last 30 days</p>
+              </h3>"              <p className="text-gray-400 text-sm">Last 30 days</p>
             </motion.div>
 
             <motion.div
@@ -359,8 +357,7 @@ const SystemStatus: React.FC = () => {
               <div className="text-3xl font-bold text-white mb-2">127ms</div>"
               <h3 className="text-lg font-semibold text-white mb-1">
                 Average Response
-              </h3>"
-              <p className="text-gray-400 text-sm">Global average</p>
+              </h3>"              <p className="text-gray-400 text-sm">Global average</p>
             </motion.div>
 
             <motion.div
@@ -391,8 +388,7 @@ const SystemStatus: React.FC = () => {
               <div className="text-3xl font-bold text-white mb-2">0</div>"
               <h3 className="text-lg font-semibold text-white mb-1">
                 Active Incidents
-              </h3>"
-              <p className="text-gray-400 text-sm">Current issues</p>
+              </h3>"              <p className="text-gray-400 text-sm">Current issues</p>
             </motion.div>
           </div>
         </div>
@@ -437,8 +433,7 @@ const SystemStatus: React.FC = () => {
                         {incident.description}
                       </p>"
                       <div className="flex items-center text-gray-400 text-sm">"
-                        <Clock className="w-4 h-4 mr-1" />
-                        Started: {new Date(incident.startTime).toLocaleString()}
+                        <Clock className="w-4 h-4 mr-1" />                        Started: {new Date(incident.startTime).toLocaleString()}
                         {incident.endTime && (
                           <>"
                             <span className="mx-2">•</span>
@@ -468,8 +463,7 @@ const SystemStatus: React.FC = () => {
 
                           const service = services.find()
                             s => s.id === serviceId
-                          );
-                          return service ? (
+                          );                          return service ? (
                             <span
                               key={serviceId}"
                               className="inline-flex items-center px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300"
@@ -477,8 +471,7 @@ const SystemStatus: React.FC = () => {
                               <service.icon className="w-3 h-3 mr-1" />
                               {service.name}
                             </span>) : null;
-                        }) }
-                      </div>
+                        }) }                      </div>
                     </div>) }
                 </motion.div>) ) }
             </div>
@@ -506,9 +499,14 @@ const SystemStatus: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-4">
                 Technical Support
               </h3>"
+<<<<<<< HEAD
               <p className="text-gray-300 mb-6">
                 If you're experiencing issues not reflected in our status page,
                 please contact our technical support team.
+=======
+              <p className="text-gray-300 mb-6">'
+                If you're experiencing issues not reflected in our status page,                please contact our technical support team.
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               </p>"
               <div className="space-y-2 text-gray-400">
                 <p>Email: support@ziontechgroup.com</p>
@@ -521,6 +519,5 @@ const SystemStatus: React.FC = () => {
       </section>
     </div>) ;
 };
-
 export default SystemStatus;
 '"`

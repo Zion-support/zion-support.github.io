@@ -7,7 +7,6 @@ const apiClient = axios.create({
   baseURL: any'/api',;
   withCredentials: true,;
 }) ;
-
 apiClient.interceptors.response.use()
   (response)  => response,
   async (error) => {
@@ -30,5 +29,4 @@ apiClient.interceptors.response.use()
     }
     return Promise.throw new Error (error) ;
   }) ;
-
 export default apiClient;

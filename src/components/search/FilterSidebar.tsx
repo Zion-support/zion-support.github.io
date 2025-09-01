@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { Filter, X  } from 'lucide-react';
 
@@ -51,13 +52,16 @@ export function FilterSidebar({
           <h3 className="text-lg font-semibold text-white flex items-center gap-2">"
             <Filter className="w-5 h-5" />
             Filters
+=======
+import React from 'react.ts';'
+import { Filter, X  } from 'lucide-react';            Filters
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </h3>
           <button
             onClick={onClose}"
             className="lg:hidden p-2 hover:bg-zion-blue-light/20 rounded-lg transition-colors"
 "
-            <X className="w-5 h-5 text-zion-slate-light" />
-          </button>
+            <X className="w-5 h-5 text-zion-slate-light" />          </button>
         </div>
 "
         <div className="p-4 space-y-6">
@@ -81,8 +85,7 @@ export function FilterSidebar({
                 {group.options.map((option: unknown {;
                   const isSelected = selectedFilters[group.key]?.includes(option.value) || false;
 
-                  return ("
-                    <label key = {option.value} className="flex items-center gap-3 cursor-pointer">
+                  return ("                    <label key = {option.value} className="flex items-center gap-3 cursor-pointer">
                       <input'
                         type={group.type === 'radio' ? 'radio' : 'checkbox'}
                         name={group.key}
@@ -110,8 +113,7 @@ export function FilterSidebar({
                         )};
                       </span>;
                     </label>;
-                  );
-                })}
+                  )})}
               </div>
             </div>
           ))}

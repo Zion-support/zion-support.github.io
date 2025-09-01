@@ -56,11 +56,8 @@ self.addEventListener('install', (event) => {
       .catch((error) => {
         // // // // // // // console.error('Error in service worker install:', error);
 
-=======
-=======
     caches.open(STATIC_CACHE)
       .then((cache) => {
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
         console.log('Caching static files');
         return cache.addAll(STATIC_FILES);
       })
@@ -71,8 +68,18 @@ self.addEventListener('install', (event) => {
   );
 
   self.skipWaiting();
+<<<<<<< HEAD
 =======
   '/about',/contact',/offline',/manifest.json',/favicon.ico',/icons/icon-192x192.png',/icons/icon-512x512.png'
+=======
+  '/about',
+  '/contact',
+  '/offline',
+  '/manifest.json',
+  '/favicon.ico',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 // API routes to cache;
@@ -98,7 +105,6 @@ self.addEventListener('install', (event) => {
         console.error('[SW] Failed to cache static files:', error);
       })
   );
->>>>>>> origin/auto/autonomy-17187611596
 });
 
 // Activate event - clean up old caches
@@ -111,9 +117,7 @@ self.addEventListener('activate', (event) => {
 
               // // // // // // // console.log('Deleting old cache:', cacheName);
 
-=======
               console.log('[SW] Deleting old cache:', cacheName);
->>>>>>> origin/auto/autonomy-17187611596
               return caches.delete(cacheName);
 
           })
@@ -123,12 +127,9 @@ self.addEventListener('activate', (event) => {
 
         // // // // // // // console.log('Service Worker activated');
 
-=======
         console.log('[SW] Service worker activated');
->>>>>>> origin/auto/autonomy-17187611596
         return self.clients.claim();
       })
-=======
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
@@ -141,7 +142,6 @@ self.addEventListener('activate', (event) => {
         })
       );
     })
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 
 
@@ -216,18 +216,14 @@ self.addEventListener('activate', (event) => {
           });
       })
   );
-=======
   }
   
-=======
 
-=======
 // Fetch event - handle network requests
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
   
->>>>>>> origin/auto/autonomy-17187611596
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
@@ -254,7 +250,6 @@ self.addEventListener('fetch', (event) => {
 async function cacheFirst(request, cacheName) {
   try {
 
-=======
   
   // Handle different types of requests
   if (url.pathname.startsWith('/api/')) {
@@ -286,7 +281,6 @@ async function handleApiRequest(request) {
     }
     
     // If network fails, try cache
->>>>>>> origin/auto/autonomy-17187611596
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
       return cachedResponse;
@@ -335,7 +329,6 @@ async function handlePageRequest(request) {
 
 // Network first strategy
 async function networkFirst(request, cacheName) {
-=======
 
   try {
     // Try network first
@@ -358,7 +351,6 @@ async function networkFirst(request, cacheName) {
 
     return new Response('Network error', { status: 503 });
 
-=======
     return networkResponse;
   } catch (error) {
     console.log('[SW] Network failed for page request, trying cache:', request.url);
@@ -411,7 +403,6 @@ async function handleCacheFirst(request) {
   } catch (error) {
     console.error('[SW] Failed to fetch resource:', request.url, error);
     throw error;
->>>>>>> origin/auto/autonomy-17187611596
   }
 }
 
@@ -422,19 +413,13 @@ self.addEventListener('sync', (event) => {
 
     );
 
-=======
     event.waitUntil(doBackgroundSync());
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-=======
-=======
   console.log('[SW] Background sync triggered:', event.tag);
   
->>>>>>> origin/auto/autonomy-17187611596
   if (event.tag === 'background-sync') {
     event.waitUntil(doBackgroundSync());
   }
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
 });
 
 // Handle background sync
@@ -458,19 +443,16 @@ async function doBackgroundSync() {
   } catch (error) {
     console.log('Background sync failed:', error);
 
-=======
     
     console.log('[SW] Background sync completed');
   } catch (error) {
     console.error('[SW] Background sync failed:', error);
->>>>>>> origin/auto/autonomy-17187611596
   }
 }
 
 // Handle push notifications
 self.addEventListener('push', (event) => {
 
-=======
   console.log('[SW] Push notification received:', event);
   
 
@@ -482,7 +464,6 @@ self.addEventListener('push', (event) => {
         }
 
       ]
-=======
       body: data.body || 'New notification from Zion Tech Group',
       icon: '/icons/icon-192x192.png',
       badge: '/icons/icon-72x72.png',
@@ -491,7 +472,6 @@ self.addEventListener('push', (event) => {
       actions: data.actions || [],
       requireInteraction: data.requireInteraction || false,
       silent: data.silent || false
->>>>>>> origin/auto/autonomy-17187611596
     };
     
     event.waitUntil(
@@ -508,14 +488,10 @@ self.addEventListener('push', (event) => {
     self.registration.showNotification('Zion Tech Group', options)
   );
 
-=======
       self.registration.showNotification(data.title, options)
-=======
       self.registration.showNotification(data.title || 'Zion Tech Group', options)
->>>>>>> origin/auto/autonomy-17187611596
     );
   }
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
 });
 
 // Handle notification clicks
@@ -536,7 +512,6 @@ self.addEventListener('notificationclick', (event) => {
 
 self.addEventListener('message', (event) => {
   console.log('Message received in service worker:', event.data);
-=======
   console.log('[SW] Notification clicked:', event);
   
   event.notification.close();
@@ -582,7 +557,6 @@ self.addEventListener('notificationclose', (event) => {
 // Handle message events from main thread
 self.addEventListener('message', (event) => {
   console.log('[SW] Message received:', event.data);
->>>>>>> origin/auto/autonomy-17187611596
   
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
@@ -636,9 +610,7 @@ self.addEventListener('error', (event) => {
 
   // // // // // // // console.error('Service Worker error:', event.error);
 
-=======
   console.error('[SW] Service worker error:', event.error);
->>>>>>> origin/auto/autonomy-17187611596
 });
 
 // Unhandled rejection handling
@@ -648,16 +620,12 @@ self.addEventListener('unhandledrejection', (event) => {
 
 });
 }}}}}}}}}}}}}}
-=======
   console.error('Service Worker error:', event.error)});
 
 // Unhandled rejection handling
 self.addEventListener('unhandledrejection', (event) => {
   console.error('Service Worker unhandled rejection:', event.reason)});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-=======
   console.error('[SW] Unhandled promise rejection:', event.reason);
 });
 
 console.log('[SW] Service worker script loaded');
->>>>>>> origin/auto/autonomy-17187611596

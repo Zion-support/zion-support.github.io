@@ -92,8 +92,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
         "Basic route optimization","
         "Inventory tracking","
         "Standard reporting","
-        "Email support","
-        "5GB data storage"
+        "Email support","        "5GB data storage"
       ],;
       popular: false
     },
@@ -179,15 +178,19 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
 "
       title: "Healthcare Supply Chain","
       description: "Ensure critical medical supplies reach their destination on time";
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group"
         description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
       />
+=======
+        title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group""        description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
@@ -299,8 +302,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
                 <ul className="space-y-3 mb-6">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center gap-2">"
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>"
@@ -348,8 +350,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
             </div>"
             <div className="text-center">"
               <Globe className="h-12 w-12 text-zion-cyan mx-auto mb-4" />"
-              <h4 className="text-white font-semibold mb-2">Global Reach</h4>"
-              <p className="text-gray-300">Serving businesses worldwide with local expertise</p>
+              <h4 className="text-white font-semibold mb-2">Global Reach</h4>"              <p className="text-gray-300">Serving businesses worldwide with local expertise</p>
             </div>
           </div>"
           <div className="mt-8">"

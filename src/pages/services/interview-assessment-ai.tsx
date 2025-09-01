@@ -113,8 +113,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10"></div>"
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -125,8 +124,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
               <Users className="w-5 h-5 text-purple-400 mr-2" />"
               <span className="text-purple-300 font-medium">
                 AI Interview Assessment
-              </span>
-            </div>
+              </span>            </div>
 "
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">
@@ -148,16 +146,14 @@ export default function InterviewAssessmentAI(...args: any[]): any {
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"
               >"
-                <Rocket className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Rocket className="w-5 h-5 mr-2" />                Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300 flex items-center justify-center"
               >"
-                <Video className="w-5 h-5 mr-2" />
-                Watch Demo
+                <Video className="w-5 h-5 mr-2" />                Watch Demo
               </motion.button>
             </div>
           </motion.div>
@@ -233,8 +229,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4"
               >"
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />"
-                <span className="text-white font-medium">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />"                <span className="text-white font-medium">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -273,8 +268,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
                 </h3>"
                 <p className="text-gray-300 mb-4">{assessment.description}</p>"
                 <div className="flex items-center text-sm text-gray-400 mb-3">"
-                  <Clock className="w-4 h-4 mr-2" />
-                  {assessment.duration}
+                  <Clock className="w-4 h-4 mr-2" />                  {assessment.duration}
                 </div>"
                 <div className="text-2xl font-bold text-purple-400 mb-4">
                   {assessment.price}
@@ -321,8 +315,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
                 </div>"
                 <span className="text-white font-medium text-sm">
                   {industry}
-                </span>
-              </motion.div>
+                </span>              </motion.div>
             ))}
           </div>
         </div>
@@ -349,16 +342,14 @@ export default function InterviewAssessmentAI(...args: any[]): any {
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Start Your Free Trial
+                <ArrowRight className="w-5 h-5 mr-2" />                Start Your Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300 flex items-center justify-center"
               >"
-                <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+                <Phone className="w-5 h-5 mr-2" />                Call +1 302 464 0950
               </motion.button>
             </div>
           </motion.div>

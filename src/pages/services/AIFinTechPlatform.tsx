@@ -20,6 +20,7 @@ import {
   Target,
   Users,
   Database,
+<<<<<<< HEAD
   Lock,
   PieChart} from 'lucide-react.ts';
 
@@ -39,6 +40,10 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
             <Badge variant="secondary" className="mb-4">"
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered FinTech
+=======
+  Lock,'
+  PieChart} from 'lucide-react.ts';              AI-Powered FinTech
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             </Badge>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-400 bg-clip-text text-transparent">
               AI FinTech Platform
@@ -125,8 +130,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
               <p className="text-gray-300">
                 AI-driven insights and automation deliver exceptional returns on
                 investment
-              </p>
-            </Card>
+              </p>            </Card>
           </div>
         </div>
       </section>
@@ -241,8 +245,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
                   <p className="text-gray-300">
                     Global financial operations with real-time currency
                     conversion and hedging
-                  </p>
-                </div>
+                  </p>                </div>
               </div>
             </div>
           </div>
@@ -280,8 +283,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
               <p className="text-gray-300">
                 Real-time fraud detection and prevention across all financial
                 transactions
-              </p>
-            </Card>
+              </p>            </Card>
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4">"
@@ -329,8 +331,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
               </h3>"
               <p className="text-gray-300">
                 AI-powered financial planning and portfolio management services
-              </p>
-            </Card>
+              </p>            </Card>
           </div>
         </div>
       </section>
@@ -368,8 +369,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
                   Standard reporting
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Email support
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                  Email support
                 </li>
               </ul>"
               <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
@@ -409,8 +409,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
                   Priority support
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  API access
+                  <CheckCircle className="w-5 h-5 text-white mr-3" />                  API access
                 </li>
               </ul>"
               <Button className="w-full bg-white text-emerald-600 hover:bg-gray-100">
@@ -445,8 +444,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
                   24/7 dedicated support
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  White-label options
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                  White-label options
                 </li>
               </ul>"
               <Button className="w-full bg-teal-600 hover:bg-teal-700">
@@ -510,8 +508,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <Globe className="w-5 h-5 text-emerald-400" />
-              <span>ziontechgroup.com</span>
+              <Globe className="w-5 h-5 text-emerald-400" />              <span>ziontechgroup.com</span>
             </div>
           </div>
 "
@@ -540,8 +537,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIFinTechPlatform;
 '"

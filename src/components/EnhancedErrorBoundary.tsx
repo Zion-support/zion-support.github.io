@@ -8,16 +8,6 @@ import {
   ArrowLeft,
   Bug,
   Send} from 'lucide-react';
-
-interface Props {
-
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: error: Error, errorInfo: ErrorInfo void;
-  showReportButton?: boolean;
-
-}
-
 interface State {
 
   hasError: boolean;
@@ -26,7 +16,6 @@ interface State {
   errorId: string | null;
   isReporting: boolean;
   reportSent: boolean;
-
 export class EnhancedErrorBoundary extends Component<Props, State> {
 
   constructor(props: Props) {
@@ -41,7 +30,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       isReporting: false,
       reportSent: false};
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
 
     return {
@@ -50,7 +38,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`};
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 
     this.setState({ errorInfo });
@@ -67,7 +54,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     // Send error to error reporting service
     this.reportError (error, errorInfo) ;
   }
-
   private async reportError(error: Error, errorInfo: ErrorInfo) {
 
     try {
@@ -87,17 +73,22 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         timestamp: new Date().toISOString(),
         errorId: this.state.errorId};
 
+<<<<<<< HEAD
       // Send to your error reporting endpoint'
       await fetch('/api/error-report', {
 
         method: 'POST',
+=======
+      // Send to your error reporting endpoint'      await fetch('/api/error-report', {
+'
+        method: 'POST','
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(errorReport)});
     } catch (reportError) {
 
       // console.error('Failed to report error:', reportError);
-    }
-  }
+    }  }
 
   private handleRetry = () => {
     this.setState({
@@ -117,7 +108,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   private handleGoBack = () => {
     window.history.back () ;
   };
-
   private handleReportError = async () => {
     this.setState({ isReporting: true });
 
@@ -135,8 +125,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     } finally {
 
       this.setState({ isReporting: false });
-    }
-  };
+    }  };
 
   private handleRetry = () => {
     this.setState({
@@ -156,7 +145,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
     window.location.href = '/';
   };
-
   private handleCopyError = async : unknown {
     if (this.state.error) {
 `
@@ -169,21 +157,18 @@ Error ID: ${this.state.errorId}
 URL: ${window.location.href}
 Timestamp: ${new Date().toISOString()}`
       `;
-
       try {
         await navigator.clipboard.writeText (errorText) ;
         // You could show a toast notification here
       } catch (err) {
 
         // console.error('Failed to copy error details:', err);
-      }
-    }
+      }    }
   };
 
   private toggleDetails = () => {
     this.setState (prev => ({ showDetails: !prev.showDetails }) ) ;
   };
-
   render () {
     if (this.state.hasError) {
 
@@ -192,7 +177,6 @@ Timestamp: ${new Date().toISOString()}`
 
         return this.props.fallback;
       }
-
       return()
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -207,8 +191,7 @@ Timestamp: ${new Date().toISOString()}`
               transition={{ delay: 0.2, type: 'spring' }}"
               className="mx-auto w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mb-6"
             >"
-              <AlertTriangle className="w-10 h-10 text-red-400" />
-            </motion.div>
+              <AlertTriangle className="w-10 h-10 text-red-400" />            </motion.div>
 
             {/* Error Message */}
             <motion.h1
@@ -270,24 +253,21 @@ Timestamp: ${new Date().toISOString()}`
                 onClick={this.handleRetry}"
                 className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2"
               >"
-                <RefreshCw className="w-5 h-5" />
-                <span>Try Again</span>
+                <RefreshCw className="w-5 h-5" />                <span>Try Again</span>
               </button>
 
               <button
                 onClick={this.handleGoBack}"
                 className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2"
               >"
-                <ArrowLeft className="w-5 h-5" />
-                <span>Go Back</span>
+                <ArrowLeft className="w-5 h-5" />                <span>Go Back</span>
               </button>
 
               <button
                 onClick={this.handleGoHome}"
                 className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2"
               >"
-                <Home className="w-5 h-5" />
-                <span>Go Home</span>
+                <Home className="w-5 h-5" />                <span>Go Home</span>
               </button>
             </motion.div>
 
@@ -315,15 +295,13 @@ Timestamp: ${new Date().toISOString()}`
                       </>
                     ) : (
                       <>"
-                        <Bug className="w-5 h-5" />
-                        <span>Report Error</span>
+                        <Bug className="w-5 h-5" />                        <span>Report Error</span>
                       </>
                     )}
                   </button>
                 ) : ("
                   <div className="flex items-center justify-center space-x-2 text-green-400">"
-                    <Send className="w-5 h-5" />
-                    <span>Error reported successfully!</span>
+                    <Send className="w-5 h-5" />                    <span>Error reported successfully!</span>
                   </div>
                 )}
               </motion.div>
@@ -349,8 +327,6 @@ Timestamp: ${new Date().toISOString()}`
           </div>
         </motion.div>) ;
     }
-
-    return this.props.children;
-  }
+    return this.props.children}
 }
 '"`

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion   } from 'framer-motion.ts';
 import { Link   } from 'react-router-dom.ts';
@@ -56,6 +57,12 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
       title: 'Secure Operations',
       description: 'Enterprise-grade security with role-based access control and audit trails for all operations.';
     };
+=======
+import React from 'react.ts';'
+import { motion   } from 'framer-motion.ts';'
+import { Link   } from 'react-router-dom.ts';    };
+  ]};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const useCases = [
@@ -116,8 +123,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
       role: 'CEO, HealthTech Solutions',
       content: 'The AI-powered automation has streamlined our healthcare operations while maintaining the highest standards of care.',
       rating: 5;
-    };
-  ];
+    };  ];
 
   return()
     <>
@@ -133,8 +139,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
           <div className="max-w-7xl mx-auto text-center">"
             <div className="mb-8">"
               <div className="inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">"
-                <Bot className="w-4 h-4 mr-2"/>
-                Autonomous Operations
+                <Bot className="w-4 h-4 mr-2"/>                Autonomous Operations
               </div>"
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI-Powered Autonomous"
@@ -153,8 +158,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
                   Start Free Trial
                 </button>"
                 <button className="px-8 py-4 border border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/20 transition-all duration-300 flex items-center">"
-                  <ArrowRight className="w-5 h-5 mr-2"/>
-                  Schedule Demo
+                  <ArrowRight className="w-5 h-5 mr-2"/>                  Schedule Demo
                 </button>
               </div>
             </div>
@@ -291,8 +295,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
 }}"
                   className="flex items-start space-x-3"
                 >"
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"
-                  <span className="text-gray-300">{benefit}</span>
+                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"                  <span className="text-gray-300">{benefit}</span>
                 </motion.div>
               ))}
             </div>
@@ -380,8 +383,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
                 >"
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => ("
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />                    ))}
                   </div>
                   "
                   <p className="text-gray-300 italic mb-4">"{testimonial.content}"</p>
@@ -412,8 +414,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
                   Start Free Trial
                 </button>"
                 <button className="px-8 py-4 border border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/20 transition-all duration-300 flex items-center">"
-                  <ArrowRight className="w-5 h-5 mr-2"/>
-                  Schedule Demo
+                  <ArrowRight className="w-5 h-5 mr-2"/>                  Schedule Demo
                 </button>
               </div>
               "

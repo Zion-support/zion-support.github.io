@@ -5,8 +5,7 @@ import {
   Users,
   Brain,
   Target,
-  BarChart3,
-  CheckCircle,
+  BarChart3,  CheckCircle,
   ArrowRight,
   Star,
   Globe,
@@ -69,8 +68,7 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
     'Improve recruitment efficiency by 80%',Reduce hiring time by 70%',Enhance employee retention by 60%',Automate HR processes',24/7 autonomous operation',Real-time HR insights',
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -80,8 +78,7 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 text-violet-400 text-sm font-medium mb-6">"
-              <Users className="w-4 h-4 mr-2" />
-              AI-Powered Autonomous HR
+              <Users className="w-4 h-4 mr-2" />              AI-Powered Autonomous HR
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -184,8 +181,7 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-violet-400 flex-shrink-0" />"
-                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-violet-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -241,8 +237,7 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIAutonomousHR;
 '"

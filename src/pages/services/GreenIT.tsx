@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -141,13 +142,22 @@ export default function GreenIT(...args: unknown[]): unknown {
       description: 'Enhance brand image through commitment to sustainability';
     };
   ];
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';  ];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
         title="Green IT Services - Zion Tech Group"
         description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
       />
+=======
+        title="Green IT Services - Zion Tech Group""        description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -180,8 +190,7 @@ export default function GreenIT(...args: unknown[]): unknown {
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 bg-green-400/20 text-green-400 rounded-full text-sm font-medium mb-6">"
-              <Leaf className="w-4 h-4 mr-2" />
-              Sustainable Technology
+              <Leaf className="w-4 h-4 mr-2" />              Sustainable Technology
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Green IT"
@@ -328,8 +337,7 @@ export default function GreenIT(...args: unknown[]): unknown {
                 <div className="flex items-start space-x-3">"
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                   <div>"
-                    <h3 className="text-white font-semibold">Waste Reduction</h3>"
-                    <p className="text-gray-300 text-sm">Minimize electronic waste through proper lifecycle management</p>
+                    <h3 className="text-white font-semibold">Waste Reduction</h3>"                    <p className="text-gray-300 text-sm">Minimize electronic waste through proper lifecycle management</p>
                   </div>
                 </div>
               </div>
@@ -372,8 +380,7 @@ export default function GreenIT(...args: unknown[]): unknown {
                       <Gauge className="w-4 h-4" />
                     </button>"
                     <button className="p-2 bg-yellow-500/20 text-yellow-400 rounded-lg">"
-                      <Sun className="w-4 h-4" />
-                    </button>
+                      <Sun className="w-4 h-4" />                    </button>
                   </div>
                 </div>"
                 <div className="space-y-4">"
@@ -571,8 +578,7 @@ export default function GreenIT(...args: unknown[]): unknown {
                 <div className="space-y-2">
                   {solution.benefits.map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center text-sm text-gray-400">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                      {benefit}
                     </div>
                   ))}
                 </div>
@@ -669,8 +675,7 @@ export default function GreenIT(...args: unknown[]): unknown {
                 <div className="space-y-2">
                   {useCase.metrics.map((metric, metricIndex) => ("
                     <div key={metricIndex} className="flex items-center text-sm text-gray-400">"
-                      <Target className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {metric}
+                      <Target className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                      {metric}
                     </div>
                   ))}
                 </div>

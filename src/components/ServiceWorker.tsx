@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Download, Wifi, WifiOff, CheckCircle, AlertCircle  } from 'lucide-react.ts';
-
-interface ServiceWorkerState {
-  isInstalled: boolean;
-  isOnline: boolean;
-  hasUpdate: boolean;
-  isInstalling: boolean;
-
-
 export function ServiceWorker(...args: any[]): any {
 
   const [swState, setSwState] = useState<any>({
@@ -20,8 +12,7 @@ export function ServiceWorker(...args: any[]): any {
   }) ;
 
   useEffect(() => {
-    // Check if service worker is supported'
-    if ('serviceWorker' in navigator) {
+    // Check if service worker is supported'    if ('serviceWorker' in navigator) {
 
       // Register service worker
       navigator.serviceWorker'
@@ -33,8 +24,7 @@ export function ServiceWorker(...args: any[]): any {
 
           // Check for updates'
           registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if (newWorker) {
+            const newWorker = registration.installing;            if (newWorker) {
 
               setSwState(prev => ({ ...prev, isInstalling: anytrue }));
               '
@@ -80,8 +70,7 @@ setSwState (prev: > ({ ;
       navigator.serviceWorker.ready.then((registration) => {;
         registration.waiting?.postMessage({ type: 'SKIP_WAITING' });
       });
-    }
-  };
+    }  };
 
   if (!swState.isInstalled) return null;
 
@@ -114,8 +103,7 @@ setSwState (prev: > ({ ;
               {swState.isOnline ? ("
                 <Wifi className="h-5 w-5 text-green-500" />
               ) : ("
-                <WifiOff className="h-5 w-5 text-red-500" />
-              )}
+                <WifiOff className="h-5 w-5 text-red-500" />              )}
             </div>"
             <div className="flex-1 min-w-0">"
               <p className="text-sm font-medium text-gray-900 dark:text-white">

@@ -9,8 +9,7 @@ import {
   Users,
   Clock,
   DollarSign,
-  CheckCircle,
-  Star,
+  CheckCircle,  Star,
   ArrowRight,
   Globe,
   Target,
@@ -80,8 +79,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
       'Full quantum trading capabilities',Unlimited trading volume',Priority support',Custom integrations',Advanced analytics',
     ]};
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
+  return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       {/* Futuristic Animated Background */}"
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {/* Animated grid with neon effect */}"
@@ -152,8 +150,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
             className="mb-8"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 text-purple-400 text-sm font-medium mb-6">"
-              <Atom className="w-4 h-4 mr-2" />
-              Revolutionary Quantum Trading Platform
+              <Atom className="w-4 h-4 mr-2" />              Revolutionary Quantum Trading Platform
             </div>"
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Quantum AI Hybrid Trading Platform
@@ -206,8 +203,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
               Start Trading Today
             </button>"
             <button className="px-8 py-4 border-2 border-purple-400/50 hover:border-purple-400 rounded-2xl font-semibold text-purple-400 hover:bg-purple-400/10 transition-all duration-300 flex items-center">"
-              <Eye className="w-5 h-5 mr-2" />
-              Watch Demo
+              <Eye className="w-5 h-5 mr-2" />              Watch Demo
             </button>
           </motion.div>
         </div>
@@ -303,8 +299,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                       <Atom className="w-24 h-24 text-purple-400 mx-auto mb-6" />"
                       <h3 className="text-2xl font-bold text-white mb-4">
                         Quantum Trading Revolution
-                      </h3>"
-                      <p className="text-gray-300 mb-6">
+                      </h3>"                      <p className="text-gray-300 mb-6">
                         Experience the future of algorithmic trading
                       </p>"
                       <div className="grid grid-cols-2 gap-4 text-sm">"
@@ -360,8 +355,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                       </div>"
                       <h3 className="text-lg font-semibold text-white mb-2">
                         {feature}
-                      </h3>"
-                      <p className="text-gray-400 text-sm">
+                      </h3>"                      <p className="text-gray-400 text-sm">
                         Revolutionary quantum-powered capability that transforms
                         trading methodology
                       </p>
@@ -407,8 +401,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                             key={index}"
                             className="flex items-center text-gray-300"
                           >"
-                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                            {feature}
+                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                            {feature}
                           </li>
                         ))}
                       </ul>"
@@ -441,8 +434,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                             key={index}"
                             className="flex items-center text-gray-300"
                           >"
-                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                            {feature}
+                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                            {feature}
                           </li>
                         ))}
                       </ul>"
@@ -476,8 +468,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                           Dedicated support
                         </li>"
                         <li className="flex items-center text-gray-300">"
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          SLA guarantees
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                          SLA guarantees
                         </li>
                       </ul>"
                       <button className="w-full py-3 border-2 border-blue-400 hover:bg-blue-400/10 rounded-xl font-semibold text-blue-400 transition-all duration-300">
@@ -512,8 +503,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                   <div className="space-y-6">"
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-6 backdrop-blur-sm">"
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">"
-                        <Cpu className="w-6 h-6 text-purple-400 mr-3" />
-                        Technology Stack
+                        <Cpu className="w-6 h-6 text-purple-400 mr-3" />                        Technology Stack
                       </h3>"
                       <div className="grid grid-cols-2 gap-3">
                         {technicalSpecs.technology.map((tech, index) => (
@@ -529,8 +519,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
 "
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-6 backdrop-blur-sm">"
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">"
-                        <Network className="w-6 h-6 text-purple-400 mr-3" />
-                        Integrations
+                        <Network className="w-6 h-6 text-purple-400 mr-3" />                        Integrations
                       </h3>"
                       <div className="space-y-2">
                         {technicalSpecs.integrations.map()
@@ -551,8 +540,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                   <div className="space-y-6">"
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-6 backdrop-blur-sm">"
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">"
-                        <Shield className="w-6 h-6 text-purple-400 mr-3" />
-                        Security & Performance
+                        <Shield className="w-6 h-6 text-purple-400 mr-3" />                        Security & Performance
                       </h3>"
                       <div className="space-y-4">"
                         <div className="flex justify-between items-center">"
@@ -578,8 +566,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
 "
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-6 backdrop-blur-sm">"
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">"
-                        <Lock className="w-6 h-6 text-purple-400 mr-3" />
-                        Security Standards
+                        <Lock className="w-6 h-6 text-purple-400 mr-3" />                        Security Standards
                       </h3>"
                       <div className="space-y-2">
                         {technicalSpecs.security.map((standard, index) => (
@@ -587,8 +574,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                             key={index}"
                             className="flex items-center text-gray-300"
                           >"
-                            <ShieldCheck className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {standard}
+                            <ShieldCheck className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                            {standard}
                           </div>
                         ))}
                       </div>
@@ -642,8 +628,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                           364 E Main St STE 1008
                           <br />
                           Middletown DE 19709
-                        </span>
-                      </div>
+                        </span>                      </div>
                     </div>
                   </div>
 "

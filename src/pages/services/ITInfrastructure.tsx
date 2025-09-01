@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -78,6 +79,10 @@ const ITInfrastructure = () => {
 
   return ("
     <div className="min-h-screen bg-zion-slate-dark">
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';    <div className="min-h-screen bg-zion-slate-dark">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">"
         <div className="container mx-auto px-4 text-center">
@@ -89,8 +94,7 @@ const ITInfrastructure = () => {
           >"
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-8">"
               <Server className="w-12 h-12 text-white" />
-            </div>"
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            </div>"            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               IT Infrastructure"
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
                 Solutions
@@ -193,8 +197,7 @@ const ITInfrastructure = () => {
                 >"
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">"
                     <Check className="w-4 h-4 text-white" />
-                  </div>"
-                  <span className="text-white font-medium">{benefit}</span>
+                  </div>"                  <span className="text-white font-medium">{benefit}</span>
                 </motion.div>
               ))}
             </div>
@@ -234,6 +237,5 @@ const ITInfrastructure = () => {
   );
 };
 ;
-export { ITInfrastructure };
-export default ITInfrastructure;
+export { ITInfrastructure };export default ITInfrastructure;
 '"

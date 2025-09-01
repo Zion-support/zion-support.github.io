@@ -37,8 +37,7 @@ const AiLeadScoring: React.FC = (): JSX.Element => {
               <li className="flex items-center gap-2"><PlugZap className="h-4 w-4 text-cyan-300"/> Salesforce, HubSpot, Pipedrive</li>"
               <li className="flex items-center gap-2"><Database className="h-4 w-4 text-cyan-300"/> Snowflake, BigQuery, Postgres</li>"
               <li className="flex items-center gap-2"><Database className="h-4 w-4 text-cyan-300"/> Secure S3/GCS data syncs</li>
-            </ul>"
-            <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $199–$799/month</div>
+            </ul>"            <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $199–$799/month</div>
           </div>
         </div>"
         <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">"

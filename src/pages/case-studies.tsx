@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -122,6 +123,11 @@ const CaseStudies = () => {
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+=======
+import React, { useState } from 'react';'
+import { motion } from 'framer-motion';'
+import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -181,8 +187,7 @@ const CaseStudies = () => {
               >"
                 <div className="flex items-center gap-4 mb-6">"
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white">"
-                    <Award className="w-8 h-8" />
-                  </div>
+                    <Award className="w-8 h-8" />                  </div>
                   <div>"
                     <h3 className="text-2xl font-bold text-white">
                       {study.title}
@@ -231,8 +236,7 @@ const CaseStudies = () => {
                   </span>"
                   <button className="inline-flex items-center gap-2 text-blue-400 hover:text-white transition-colors duration-300">"
                     <span className="text-sm font-medium">View Details</span>"
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                    <ArrowRight className="w-4 h-4" />                  </button>
                 </div>
               </motion.div>) ) }
           </div>
@@ -275,6 +279,5 @@ const CaseStudies = () => {
       </section>
     </div>) ;
 };
-
 export default CaseStudies;
 '"`

@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import {
-
   Shield, 
   CheckCircle, 
   AlertTriangle, 
@@ -189,9 +188,14 @@ export default function AIComplianceAssistant() {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
         title="AI Compliance Assistant - Zion Tech Group"
         description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
       />
+=======
+        title="AI Compliance Assistant - Zion Tech Group""        description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -204,8 +208,7 @@ export default function AIComplianceAssistant() {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Compliance
+              <Shield className="w-4 h-4 mr-2" />              AI-Powered Compliance
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Compliance"
@@ -223,8 +226,7 @@ export default function AIComplianceAssistant() {
                 Start Free Trial
               </button>"
               <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />
-                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -465,8 +467,7 @@ export default function AIComplianceAssistant() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />
-                Get Started Today
+                <Star className="w-5 h-5 mr-2" />                Get Started Today
               </button>"
               <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />
@@ -476,8 +477,7 @@ export default function AIComplianceAssistant() {
             <ul className="space-y-3">
               {features.map((f) => ("
                 <li key={f} className="flex items-center text-slate-300">"
-                  <CheckCircle className="h-5 w-5 text-rose-400 mr-3" />
-                  {f}
+                  <CheckCircle className="h-5 w-5 text-rose-400 mr-3" />                  {f}
                 </li>
               ))}
             </ul>
@@ -487,8 +487,7 @@ export default function AIComplianceAssistant() {
             <div className="flex items-center mb-4">"
               <div className="p-3 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg">"
                 <Scale className="h-8 w-8 text-white" />
-              </div>"
-              <h3 className="ml-3 text-xl font-semibold text-white">Frameworks</h3>
+              </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Frameworks</h3>
             </div>"
             <div className="flex flex-wrap gap-2">
               {frameworks.map((fw) => ("
@@ -501,8 +500,7 @@ export default function AIComplianceAssistant() {
             <div className="flex items-center mb-4">"
               <div className="p-3 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg">"
                 <BookOpen className="h-8 w-8 text-white" />
-              </div>"
-              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
+              </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
             </div>"
             <ul className="space-y-3 text-slate-300">
               {pricing.map((p) => (<li key={p}>{p}</li>))}
@@ -516,7 +514,6 @@ export default function AIComplianceAssistant() {
         </div>
       </section>;
     </div>
-  );
-}
+  )}
 
 '"

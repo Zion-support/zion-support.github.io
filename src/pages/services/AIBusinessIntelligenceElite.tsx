@@ -8,8 +8,7 @@ import {
   Shield,
   Zap,
   Users,
-  Globe,
-  Database,
+  Globe,  Database,
   Cpu,
   Network,
   Lock,
@@ -119,8 +118,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
         'Process optimization, resource allocation, and performance monitoring'},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+  return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -131,8 +129,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
           >"
             <div className="flex justify-center mb-6">"
               <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full">"
-                <Brain className="h-12 w-12 text-white" />
-              </div>
+                <Brain className="h-12 w-12 text-white" />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Business Intelligence Elite
@@ -149,14 +146,12 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today"
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+                <ArrowRight className="ml-2 h-5 w-5" />              </a>
               <a"
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300"
               >"
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
+                <Phone className="mr-2 h-5 w-5" />                Call Now
               </a>
             </div>
           </motion.div>
@@ -268,8 +263,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-white">{feature}</span>
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -349,8 +343,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
             <div className="text-center">"
               <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4">"
                 <Phone className="h-8 w-8 text-white" />
-              </div>"
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+              </div>"              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
               <a"
                 href="tel:+13024640950"
                 className="text-zion-slate-light hover:text-white transition-colors duration-300"
@@ -367,8 +360,12 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
                 Email Us
               </h3>
               <a"
+<<<<<<< HEAD
                 href="mailto:kleber@ziontechgroup.com"
                 className="text-zion-slate-light hover:text-white transition-colors duration-300"
+=======
+                href="mailto:kleber@ziontechgroup.com""                className="text-zion-slate-light hover:text-white transition-colors duration-300"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 kleber@ziontechgroup.com
               </a>
@@ -380,8 +377,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Visit Us
-              </h3>"
-              <p className="text-zion-slate-light">
+              </h3>"              <p className="text-zion-slate-light">
                 364 E Main St STE 1008
                 <br />
                 Middletown, DE 19709
@@ -395,8 +391,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
             >
               Schedule a Demo"
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+              <ArrowRight className="ml-2 h-5 w-5" />            </a>
           </div>
         </div>
       </section>
@@ -413,8 +408,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
             >
               Visit Website"
-              <ExternalLink className="inline ml-1 h-4 w-4" />
-            </a>
+              <ExternalLink className="inline ml-1 h-4 w-4" />            </a>
             <a"
               href="https://ziontechgroup.com/privacy"
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
@@ -431,8 +425,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
         </div>
       </footer>
     </div>
-  );
-};
+  )};
 
 export default AIBusinessIntelligenceElite;
 '"`

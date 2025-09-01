@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -48,6 +49,10 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       route: '/ultimate-services-2025',
       features['AI-Powered Solutions',Quantum Computing',Blockchain Innovation',Edge Computing'],;
       stats: { services: 10, avgROI: '500%', innovation: 'Revolutionary' }
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';      stats: { services: 10, avgROI: '500%', innovation: 'Revolutionary' }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
@@ -139,7 +144,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       };
     };
   };
-
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -295,8 +299,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
           {serviceCategories.map((category) => {;
             const IconComponent = category.icon;
-            return()
-              <motion.div
+            return()              <motion.div
                 key = {category.id}"
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
                 variants={itemVariants}
@@ -311,8 +314,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color}`}>"
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>"
-                  <div className="flex-1">"
-                    <h3 className="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors mb-2">
+                  <div className="flex-1">"                    <h3 className="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors mb-2">
                       {category.title}
                     </h3>"
                     <p className="text-slate-300 leading-relaxed">
@@ -357,8 +359,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
                   <ArrowRight className="w-5 h-5" />;
                 </a>;
               </motion.div>;) ;
-          }) }
-        </div>
+          }) }        </div>
       </motion.div>
 
       {/* Featured Services */}
@@ -408,8 +409,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 }}
             >"
               <div className="flex items-center gap-2 mb-3">"
-                <Star className="w-5 h-5 text-yellow-400 fill-current" />"
-                <span className="text-sm text-yellow-400 font-medium">Featured</span>
+                <Star className="w-5 h-5 text-yellow-400 fill-current" />"                <span className="text-sm text-yellow-400 font-medium">Featured</span>
               </div>
 "
               <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>"
@@ -449,14 +449,12 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 50 ;
 
-}}
-        animate = {
+}}        animate = {
 
   { opacity: 1,
   y: 0 ;
 
-}}
-        transition = {
+}}        transition = {
 
   { duration: 0.8,
   delay: 1.6 ;
@@ -464,8 +462,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 }}
       >"
         <div className="container mx-auto px-4 py-20">"
-          <div className="text-center mb-12">"
-            <h2 className="text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-12">"            <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>"
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -478,8 +475,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">"
               <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />"
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>"
-              <p className="text-slate-300 mb-3">Speak directly with our experts</p>"
-              <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 font-medium">
+              <p className="text-slate-300 mb-3">Speak directly with our experts</p>"              <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 font-medium">
                 +1 (302) 464-0950
               </a>
             </div>
@@ -487,8 +483,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">"
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />"
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>"
-              <p className="text-slate-300 mb-3">Send us a detailed message</p>"
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 font-medium">
+              <p className="text-slate-300 mb-3">Send us a detailed message</p>"              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 font-medium">
                 kleber@ziontechgroup.com
               </a>
             </div>
@@ -496,8 +491,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">"
               <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />"
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>"
-              <p className="text-slate-300 mb-3">Come see our innovation center</p>"
-              <p className="text-green-400 font-medium">
+              <p className="text-slate-300 mb-3">Come see our innovation center</p>"              <p className="text-green-400 font-medium">
                 364 E Main St STE 1008<br />
                 Middletown, DE 19709
               </p>
@@ -512,8 +506,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25"
 
               Visit Our Website"
-              <ExternalLink className="w-5 h-5" />
-            </a>;
+              <ExternalLink className="w-5 h-5" />            </a>;
           </div>;
         </div>;
       </motion.div>;

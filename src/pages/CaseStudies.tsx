@@ -11,8 +11,7 @@ import {
   ChevronDown,
   ChevronUp,
   Filter,
-  Search,
-  Star,
+  Search,  Star,
   Award,
   CheckCircle,
   Zap,
@@ -168,7 +167,6 @@ export default function CaseStudies() {
       featured: false,
       image: '/api/placeholder/600/400'},
   ];
-
   // Calculate counts
   industries.forEach(industry => {
 
@@ -182,7 +180,6 @@ export default function CaseStudies() {
       ).length;
     }
   }) ;
-
   services.forEach(service => {
 
     if (service.id === 'all') {
@@ -216,8 +213,7 @@ export default function CaseStudies() {
     { label: 'Time to Value', value: '6 months', icon: Clock },
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}"
       <div className="bg-white border-b border-gray-200">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">"
@@ -232,8 +228,7 @@ export default function CaseStudies() {
               </div>"
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
                 Customer Success Stories
-              </h1>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              </h1>"              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how organizations across industries are transforming'
                 their business with Zion Tech Group's innovative solutions.
               </p>
@@ -250,8 +245,12 @@ export default function CaseStudies() {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search case studies..."
+=======
+                  type="text""                  placeholder="Search case studies..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -434,8 +433,7 @@ export default function CaseStudies() {
                           <Download className="w-4 h-4" />
                         </button>
                       </div>
-                    </div>
-                  </div>
+                    </div>                  </div>
                 </motion.article>
               ))}
           </div>
@@ -449,8 +447,7 @@ export default function CaseStudies() {
               </h3>"
               <p className="text-gray-600">
                 Try adjusting your search terms or filters.
-              </p>
-            </div>
+              </p>            </div>
           )}
         </div>
 
@@ -475,8 +472,7 @@ export default function CaseStudies() {
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-colors"
               >
                 Schedule a Consultation"
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
+                <ArrowRight className="ml-2 h-4 w-4" />              </a>
               <a"
                 href="/services"
                 className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"

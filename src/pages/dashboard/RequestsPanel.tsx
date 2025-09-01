@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 
 import { useState } from "react";"
 import { Header } from "@/components/Header";"
@@ -8,7 +7,6 @@ import { useAuth } from "@/hooks/useAuth";"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
 import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import {
-
   RequestsHeader,
   QuoteRequestsList"
 } from "@/components/quotes";"
@@ -38,26 +36,22 @@ export default function RequestsPanel(...args[]):  {
   } = useTalentQuotes();
 
     if (quote.status = == 'new') {;
-      markAsViewed(quote.id);
-
-  };
+      markAsViewed(quote.id)};
 
   // Filter quotes by archive status
   const archivedQuotes = quotes.filter(q: QuoteRequest q.is_archived);
 
-  return()
-    <ProtectedRoute>
+  return()    <ProtectedRoute>
       <div>
 "
         <div className="min-h-screen bg-zion-blue px-4 py-8">"
           <div className="container mx-auto">
-            <RequestsHeader
-              unreadCount={unreadCount}
+            <RequestsHeader unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
-            />
+             />
 
             {/* Main Content */}"
             <Tabs defaultValue="active" className="mb-6">"
@@ -67,25 +61,23 @@ export default function RequestsPanel(...args[]):  {
               </TabsList>
 "
               <TabsContent value="active">
-                <QuoteRequestsList
-                  quotes={activeQuotes}
+                <QuoteRequestsList quotes={activeQuotes}
                   isLoading={isLoading}
                   isArchived={false}
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-                />
+                 />
               </TabsContent>
 "
               <TabsContent value="archived">
-                <QuoteRequestsList
-                  quotes={archivedQuotes}
+                <QuoteRequestsList quotes={archivedQuotes}
                   isLoading={isLoading}
                   isArchived={true}
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-                />
+                 />
               </TabsContent>
             </Tabs>
           </div>

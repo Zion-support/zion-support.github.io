@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -85,6 +86,11 @@ export default function AIEducationPlatform(...args[]):  {
         "Progress tracking","
         "Email support","
         "Up to 50 teachers"
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { SEO  } from '@/components/SEO';        "Up to 50 teachers"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Start Free Trial",
       popular: false
@@ -123,16 +129,20 @@ export default function AIEducationPlatform(...args[]):  {
         "Unlimited users";
       ],;"
       cta: "Contact Sales",;
-      popular: false;
-    };
+      popular: false};
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="AI Education Platform - Zion Tech Group"
         description="Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student."
       />
+=======
+        title="AI Education Platform - Zion Tech Group""        description="Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -163,8 +173,7 @@ export default function AIEducationPlatform(...args[]):  {
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal-600 to-cyan-600 text-white text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Education
+              <Brain className="w-4 h-4 mr-2" />              AI-Powered Education
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Education"
@@ -274,8 +283,7 @@ export default function AIEducationPlatform(...args[]):  {
 "
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">"
                   <CheckCircle className="w-6 h-6 text-white" />
-                </div>"
-                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
+                </div>"                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>;
             ))}
           </div>
@@ -360,8 +368,7 @@ export default function AIEducationPlatform(...args[]):  {
 "
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <TrendingUp className="w-10 h-10 text-white" />
-                </div>"
-                <p className="text-lg text-white font-medium">{benefit}</p>
+                </div>"                <p className="text-lg text-white font-medium">{benefit}</p>
               </motion.div>;
             ))}
           </div>
@@ -446,8 +453,7 @@ export default function AIEducationPlatform(...args[]):  {
 "
                 <div className="w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
                   <GraduationCap className="w-8 h-8 text-white" />
-                </div>"
-                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
+                </div>"                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
               </motion.div>;
             ))}
           </div>
@@ -555,8 +561,7 @@ export default function AIEducationPlatform(...args[]):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>

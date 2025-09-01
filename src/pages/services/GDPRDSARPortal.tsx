@@ -10,7 +10,6 @@ import {
 import { Link } from 'react-router-dom.ts';
 
 export default function GDPRDSARPortal(...args: any[]): any {
-
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">"
@@ -50,8 +49,7 @@ export default function GDPRDSARPortal(...args: any[]): any {
                 >"
                   <div className="flex items-center gap-2 text-cyan-300 font-semibold">"
                     <CheckCircle className="w-4 h-4" /> {f.title}
-                  </div>"
-                  <div className="mt-1 text-sm text-slate-300">{f.desc}</div>
+                  </div>"                  <div className="mt-1 text-sm text-slate-300">{f.desc}</div>
                 </div>
               ))}
             </div>
@@ -76,8 +74,7 @@ export default function GDPRDSARPortal(...args: any[]): any {
                 href="https://transcend.io/pricing/"
                 target="_blank"
                 rel="noreferrer"
-              >"
-                Transcend pricing <ExternalLink className="w-3 h-3" />
+              >"                Transcend pricing <ExternalLink className="w-3 h-3" />
               </a>
             </div>
 "
@@ -112,8 +109,7 @@ export default function GDPRDSARPortal(...args: any[]): any {
               className="mt-3 inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200"
             >"
               Go to DSAR Portal <ExternalLink className="w-3 h-3" />
-            </Link>"
-            <div className="mt-6 text-xs text-slate-400">
+            </Link>"            <div className="mt-6 text-xs text-slate-400">
               364 E Main St STE 1008, Middletown DE 19709
             </div>
           </div>

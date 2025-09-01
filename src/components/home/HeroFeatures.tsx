@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 
@@ -105,3 +106,7 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
 };
 
 export default HeroFeatures;}}'"`
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

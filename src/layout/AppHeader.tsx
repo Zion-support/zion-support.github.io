@@ -11,7 +11,6 @@ interface AppHeaderProps {
 
   onSidebarToggle?: : unknown void;
   isSidebarOpen?: boolean;
-
 export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -35,8 +34,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
 
   const handleSearch = async (e: React.FormEvent) => {
 
-    e.preventDefault();
-    if (searchQuery.trim()) {
+    e.preventDefault();    if (searchQuery.trim()) {
 
       setIsSearching(true);
       try {
@@ -444,8 +442,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     if (nav.hasDropdown) {
 
       setActiveNav(nav);
-      // Close other dropdowns'
-      if (nav.name === 'Services') {
+      // Close other dropdowns'      if (nav.name === 'Services') {
 
         setServicesDropdownOpen(true);
         setSolutionsDropdownOpen(false);
@@ -458,7 +455,6 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
         setCompanyDropdownOpen(false);
         setResourcesDropdownOpen(false);
       } else if (nav.name === 'Pricing') {
-
         // Use the same dropdown state as solutions for pricing
         setSolutionsDropdownOpen(true);
         setServicesDropdownOpen(false);
@@ -471,29 +467,24 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
         setSolutionsDropdownOpen(false);
         setResourcesDropdownOpen(false);
       } else if (nav.name === 'Resources') {
-
         setResourcesDropdownOpen(true);
         setServicesDropdownOpen(false);
         setSolutionsDropdownOpen(false);
-        setCompanyDropdownOpen(false);
-      }
+        setCompanyDropdownOpen(false)}
     } else {
 
       setActiveNav(null);
       setServicesDropdownOpen(false);
       setSolutionsDropdownOpen(false);
       setCompanyDropdownOpen(false);
-      setResourcesDropdownOpen(false);
-    }
+      setResourcesDropdownOpen(false)}
   };
 
   const closeAllDropdowns = (...args: unknown[]): unknown => {
-    setServicesDropdownOpen(false);
-    setSolutionsDropdownOpen(false);
+    setServicesDropdownOpen(false);    setSolutionsDropdownOpen(false);
     setCompanyDropdownOpen(false);
     setResourcesDropdownOpen(false);
-    setActiveNav(null);
-  };
+    setActiveNav(null)};
 
   return()
     <>`
@@ -512,8 +503,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                   <div className="relative">"
                     <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
                       <Zap className="w-6 h-6 text-white" />
-                    </div>"
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                    </div>"                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
                   </div>"
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
                     Zion Tech Group
@@ -554,8 +544,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                         className="flex items-center space-x-1 text-slate-300 hover:text-cyan-400 transition-colors duration-200 group"
                       >"
                         <span className="font-medium">{item.name}</span>"
-                        <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-200" />
-                      </button>
+                        <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-200" />                      </button>
 
                       {/* Services Dropdown */}
                       {item.name === 'Services' && servicesDropdownOpen && ("
@@ -586,8 +575,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                                         <p className="text-xs text-slate-400">{service.description}</p>
                                       </div>
                                       {service.featured && ("
-                                        <Star className="w-3 h-3 text-yellow-400" />
-                                      )}
+                                        <Star className="w-3 h-3 text-yellow-400" />                                      )}
                                     </Link>
                                   ))}
                                 </div>
@@ -601,8 +589,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                                 className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                               >
                                 <span>View All Services</span>"
-                                <ArrowRight className="w-4 h-4" />
-                              </Link>
+                                <ArrowRight className="w-4 h-4" />                              </Link>
                               <Link"
                                 to="/pricing"
                                 className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200"
@@ -635,8 +622,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                                   <p className="text-xs text-slate-400">{solution.description}</p>
                                 </div>
                                 {solution.featured && ("
-                                  <Star className="w-3 h-3 text-yellow-400" />
-                                )}
+                                  <Star className="w-3 h-3 text-yellow-400" />                                )}
                               </Link>
                             ))}
                           </div>"
@@ -646,8 +632,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                               className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                             >
                               <span>View All Solutions</span>"
-                              <ArrowRight className="w-4 h-4" />
-                            </Link>
+                              <ArrowRight className="w-4 h-4" />                            </Link>
                           </div>
                         </div>
                       )}
@@ -673,8 +658,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                                   <p className="text-xs text-slate-400">{resource.description}</p>
                                 </div>
                                 {resource.featured && ("
-                                  <Star className="w-3 h-3 text-yellow-400" />
-                                )}
+                                  <Star className="w-3 h-3 text-yellow-400" />                                )}
                               </Link>
                             ))}
                           </div>"
@@ -684,8 +668,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                               className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                             >
                               <span>View All Resources</span>"
-                              <ArrowRight className="w-4 h-4" />
-                            </Link>
+                              <ArrowRight className="w-4 h-4" />                            </Link>
                           </div>
                         </div>
                       )}
@@ -734,14 +717,12 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
               <button className="flex items-center space-x-2 p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
                 <User className="w-5 h-5" />
                 <span className="text-sm font-medium">Account</span>
-              </button>
-              {/* CTA Button */}
+              </button>              {/* CTA Button */}
               <Link"
                 to="/contact"
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
               >"
-                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-              </button>
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}              </button>
             </div>
           </div>
         </div>
@@ -767,8 +748,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                     {isSearching ? ("
                       <div className="w-4 h-4 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
                     ) : ("
-                      <Search className="w-4 h-4" />
-                    )}
+                      <Search className="w-4 h-4" />                    )}
                   </button>
                 </form>
 
@@ -814,8 +794,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                       <span className="text-sm">{contactInfo.phone}</span>
                     </div>"
                     <div className="flex items-center space-x-2 text-slate-300">"
-                      <Mail className="w-4 h-4" />"
-                      <span className="text-sm">{contactInfo.email}</span>
+                      <Mail className="w-4 h-4" />"                      <span className="text-sm">{contactInfo.email}</span>
                     </div>
                   </div>
                 </div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -38,16 +39,29 @@ export default function CustomDevelopment(...args[]):  {
       icon: Globe,
       features['Responsive Design',Progressive Web Apps',E-commerce Solutions',Content Management Systems'];
     },;
+=======
+import React from 'react';'
+import { Link } from 'react-router-dom';'
+import { motion } from 'framer-motion';    },;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     {
 
       title: 'Mobile Applications',
       description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',
+<<<<<<< HEAD
       icon: Smartphone,
       features['iOS Development',Android Development',Cross-platform Apps',App Store Optimization'];
     },;
     {
 
       title: 'API Development',
+=======
+      icon: Smartphone,'
+      features['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization'];
+    },;    {
+'
+      title: 'API Development','
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       description: 'Robust and scalable APIs that enable seamless integration between systems and services.',
       icon: Network,
       features['RESTful APIs',GraphQL APIs',API Documentation',Integration Support'];
@@ -68,6 +82,7 @@ export default function CustomDevelopment(...args[]):  {
 
       title: 'Frontend',
       description: 'Modern frontend frameworks and libraries for responsive and interactive user interfaces.',
+<<<<<<< HEAD
       icon: Monitor,
       stack['React',Vue.js',Angular',TypeScript',Tailwind CSS'];
     },;
@@ -81,6 +96,19 @@ export default function CustomDevelopment(...args[]):  {
     {
 
       title: 'Mobile',
+=======
+      icon: Monitor,'
+      stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS'];
+    },;    {
+'
+      title: 'Backend','
+      description: 'Robust backend technologies for scalable and secure applications.',
+      icon: Cpu, // Changed from Server to Cpu'
+      stack['Node.js', 'Python', 'Java', 'C#', 'Go'];
+    },;    {
+'
+      title: 'Mobile','
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       description: 'Cross-platform and native mobile development technologies.',
       icon: Smartphone,
       stack['React Native',Flutter',Swift',Kotlin',Xamarin'];
@@ -115,6 +143,7 @@ export default function CustomDevelopment(...args[]):  {
       description: 'Enterprise-grade security measures built into every application.',
       icon: Shield;
     },;
+<<<<<<< HEAD
     {;
       title: 'Support & Maintenance',;
       description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
@@ -124,6 +153,14 @@ export default function CustomDevelopment(...args[]):  {
 
   const industries = [;
     'Healthcare',Finance',Manufacturing',Retail',Government',Education',Transportation',Energy';
+=======
+    {;'
+      title: 'Support & Maintenance',;'      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
+      icon: Settings};
+  ];
+
+  const industries = [;'    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -275,8 +312,7 @@ export default function CustomDevelopment(...args[]):  {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">"
-                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />                        {feature}
                       </li>
                     ))}
                   </ul>

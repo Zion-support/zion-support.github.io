@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '../../components/SEO';
@@ -172,6 +173,11 @@ export default function AIInventoryManagement(...args: any[]): any {
         "On-premise deployment",;"
         "SLA guarantees",;"
         "24/7 support";
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { SEO  } from '../../components/SEO';        "24/7 support";
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false;
@@ -210,10 +216,8 @@ export default function AIInventoryManagement(...args: any[]): any {
       icon: Package;
     },;
     {;"
-      industry: "Automotive",;"
-      description: "Track spare parts, manage service inventory, and optimize supply chain for dealerships",;
-      icon: Truck;
-    };
+      industry: "Automotive",;"      description: "Track spare parts, manage service inventory, and optimize supply chain for dealerships",;
+      icon: Truck};
   ];
 
   const integrations = [
@@ -271,15 +275,19 @@ export default function AIInventoryManagement(...args: any[]): any {
       metric: "3x",;"
       label: "Faster Processing",;"
       description: "Improved inventory processing speed";
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
         title="AI Inventory Management - Zion Tech Group"
         description="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts."
       />
+=======
+        title="AI Inventory Management - Zion Tech Group""        description="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -312,8 +320,7 @@ export default function AIInventoryManagement(...args: any[]): any {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">"
-              <Package className="w-4 h-4 mr-2" />
-              AI-Powered Inventory
+              <Package className="w-4 h-4 mr-2" />              AI-Powered Inventory
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Inventory"
@@ -331,8 +338,7 @@ export default function AIInventoryManagement(...args: any[]): any {
                 Start Free Trial
               </button>"
               <button className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />
-                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -706,8 +712,7 @@ export default function AIInventoryManagement(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -964,8 +969,7 @@ export default function AIInventoryManagement(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Star className="w-5 h-5 mr-2" />                Start Free Trial
               </button>"
               <button className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />

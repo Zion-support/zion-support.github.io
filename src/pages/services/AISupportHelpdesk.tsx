@@ -95,8 +95,7 @@ export default function AISupportHelpdesk(...args[]):  {
         "Basic AI chatbot","
         "Email & chat support","
         "Standard reporting","
-        "Mobile app access","
-        "Email support"
+        "Mobile app access","        "Email support"
       ],;
       popular: false
     },
@@ -197,8 +196,7 @@ export default function AISupportHelpdesk(...args[]):  {
       icon: Users,;"
       title: "Social Media",;"
       description: "Monitor and respond to support requests across social platforms";
-    };
-  ];
+    };  ];
 
   return()
     <>
@@ -207,8 +205,7 @@ export default function AISupportHelpdesk(...args[]):  {
         description="Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service."
         canonical="/services/ai-support-helpdesk"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+"      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 overflow-hidden">"
           <div className="absolute inset-0 bg-gradient-to-r from-teal-600/20 to-cyan-600/20"></div>"
@@ -593,8 +590,7 @@ export default function AISupportHelpdesk(...args[]):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center space-x-3">"
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"
-                        <span className="text-gray-300">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -671,5 +667,4 @@ export default function AISupportHelpdesk(...args[]):  {
     </>
   );
 }
-
 '"`

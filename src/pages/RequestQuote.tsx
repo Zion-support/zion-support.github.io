@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import {
-
   Calculator, 
   FileText, 
   Clock, 
@@ -269,8 +268,7 @@ export default function RequestQuote() {
 
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault () ;
-    setSubmitting (true) ;
-    
+    setSubmitting (true) ;    
     // Simulate API call
     await new Promise (resolve => setTimeout (resolve, 2000) ) ;
     
@@ -298,15 +296,13 @@ export default function RequestQuote() {
     setFormStep (1) ;
     setSubmitted (false) ;
   };
-
   if (submitted) {
 
     return()
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
         <SEO "
-          title="Quote Requested - Zion Tech Group"'"
-          description="Thank you for your quote request. We'll get back to you soon with a detailed proposal."
-        />
+          title="Quote Requested - Zion Tech Group"'"          description="Thank you for your quote request. We'll get back to you soon with a detailed proposal."
+         />
         
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -315,8 +311,7 @@ export default function RequestQuote() {
           className="text-center max-w-2xl mx-auto px-6"
         >"
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full mb-8">"
-            <CheckCircle className="w-10 h-10 text-green-400" />
-          </div>
+            <CheckCircle className="w-10 h-10 text-green-400" />          </div>
           "
           <h1 className="text-4xl font-bold text-white mb-6">
             Quote Request Submitted!
@@ -372,13 +367,17 @@ export default function RequestQuote() {
         </motion.div>
       </div>) ;
   }
-
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="Request Quote - Zion Tech Group"
         description="Get a custom quote for your technology project. Our team will provide detailed pricing and timelines for your specific needs."
       />
+=======
+        title="Request Quote - Zion Tech Group""        description="Get a custom quote for your technology project. Our team will provide detailed pricing and timelines for your specific needs."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -393,8 +392,7 @@ export default function RequestQuote() {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">"
               <Calculator className="w-10 h-10 text-green-400" />
             </div>"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
-              Get Your <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Custom Quote</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"              Get Your <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Custom Quote</span>
             </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Tell us about your project and we'll provide a detailed quote with pricing, 
@@ -781,8 +779,7 @@ export default function RequestQuote() {
                               {expandedService === service.id ? ("
                                 <ChevronUp className="w-4 h-4 text-gray-400" />
                               ) : ("
-                                <ChevronDown className="w-4 h-4 text-gray-400" />
-                              )}
+                                <ChevronDown className="w-4 h-4 text-gray-400" />                              )}
                             </div>
                           </button>
                           
@@ -798,8 +795,7 @@ export default function RequestQuote() {
                               <div className="space-y-2">
                                 {service.features.map((feature, index) => ("
                                   <div key={index} className="flex items-center text-gray-300 text-sm">"
-                                    <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                                    {feature}
+                                    <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />                                    {feature}
                                   </div>
                                 ))}
                               </div>"
@@ -838,8 +834,7 @@ export default function RequestQuote() {
                       <div className="flex items-start">"
                         <TrendingUp className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                         <div>"
-                          <div className="text-white font-medium text-sm">Proven Results</div>"
-                          <div className="text-gray-300 text-xs">Track record of successful projects</div>
+                          <div className="text-white font-medium text-sm">Proven Results</div>"                          <div className="text-gray-300 text-xs">Track record of successful projects</div>
                         </div>
                       </div>
                     </div>
@@ -872,8 +867,7 @@ export default function RequestQuote() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl mb-4">"
                   <Mail className="w-8 h-8 text-blue-400" />
                 </div>"
-                <h3 className="text-lg font-bold text-white mb-2">Email Us</h3>"
-                <p className="text-gray-300 text-sm mb-3">Get a quick response</p>
+                <h3 className="text-lg font-bold text-white mb-2">Email Us</h3>"                <p className="text-gray-300 text-sm mb-3">Get a quick response</p>
                 <a"
                   href="mailto:info@ziontechgroup.com"
                   className="text-green-400 hover:text-green-300 transition-colors duration-200"
@@ -886,8 +880,7 @@ export default function RequestQuote() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl mb-4">"
                   <Phone className="w-8 h-8 text-green-400" />
                 </div>"
-                <h3 className="text-lg font-bold text-white mb-2">Call Us</h3>"
-                <p className="text-gray-300 text-sm mb-3">Speak with an expert</p>
+                <h3 className="text-lg font-bold text-white mb-2">Call Us</h3>"                <p className="text-gray-300 text-sm mb-3">Speak with an expert</p>
                 <a"
                   href="tel:+13024640950"
                   className="text-green-400 hover:text-green-300 transition-colors duration-200"
@@ -901,8 +894,7 @@ export default function RequestQuote() {
                   <Headphones className="w-8 h-8 text-purple-400" />
                 </div>"
                 <h3 className="text-lg font-bold text-white mb-2">Live Chat</h3>"
-                <p className="text-gray-300 text-sm mb-3">Instant support</p>"
-                <button className="text-green-400 hover:text-green-300 transition-colors duration-200">
+                <p className="text-gray-300 text-sm mb-3">Instant support</p>"                <button className="text-green-400 hover:text-green-300 transition-colors duration-200">
                   Start Chat
                 </button>
               </div>

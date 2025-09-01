@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-
   Eye, 
   EyeOff, 
   Type, 
@@ -27,7 +26,6 @@ interface AccessibilitySettings {
   letterSpacing: number;
 
 }
-
 interface AccessibilityEnhancerProps {
   // Add your props here
 
@@ -39,40 +37,45 @@ interface AccessibilityEnhancerProps {
 
   // Keyboard navigation support
   useEffect ( () => {
-    const handleKeyDown = (event: KeyboardEvent) => {;
-      // Skip if not in keyboard navigation mode;
+    const handleKeyDown = (event: KeyboardEvent) => {;      // Skip if not in keyboard navigation mode;
       if (!settings.keyboardNavigation) return;
 
-      const target = event.target as HTMLElement;
       
       // Tab navigation enhancement'
       if (event.key = == 'Tab') {
 
+<<<<<<< HEAD
         const focusableElements = document.querySelectorAll(;
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
+=======
+        const focusableElements = document.querySelectorAll(;'          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         );
         
-        const firstElement = focusableElements[0] as HTMLElement;
-        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
+        
+        
         if (event.shiftKey && target = == firstElement) {;
           event.preventDefault () ;
           lastElement.focus () ;
         } else if (!event.shiftKey && target = == lastElement) {;
           event.preventDefault () ;
           firstElement.focus () ;
-        }
-      }
+        }      }
 
       // Arrow key navigation for custom components'
+<<<<<<< HEAD
       if (['ArrowUp',ArrowDown',ArrowLeft',ArrowRight'].includes(event.key)) {
 
         const currentElement = target.closest('[data-navigation-group]');
         if (currentElement) {
+=======
+      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+'
+        const currentElement = target.closest('[data-navigation-group]');        if (currentElement) {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
           event.preventDefault();
-          navigateWithArrows(currentElement, event.key);
-        }
+          navigateWithArrows(currentElement, event.key)}
       }
 
       // Enter/Space for interactive elements'
@@ -81,8 +84,7 @@ interface AccessibilityEnhancerProps {
         if (target.getAttribute('role') === 'button' || target.classList.contains('interactive')) {
 
           event.preventDefault();
-          target.click();
-        }
+          target.click()}
       }
     };
 
@@ -97,8 +99,7 @@ interface AccessibilityEnhancerProps {
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
     )).filter(el => !(el as HTMLElement).hidden);
 
-    const currentIndex = focusableElements.findIndex (el => el === document.activeElement) ;
-    let nextIndex = currentIndex;
+    const currentIndex = focusableElements.findIndex (el => el === document.activeElement) ;    let nextIndex = currentIndex;
 
     switch (direction) {
 
@@ -114,10 +115,16 @@ interface AccessibilityEnhancerProps {
   };
 
   // Screen reader announcements'
+<<<<<<< HEAD
   const announcement = document.createElement('div');
       announcement.setAttribute('aria-live',polite');
       announcement.setAttribute('aria-atomic',true');
       announcement.className = 'sr-only';
+=======
+  const announcement = document.createElement('div');'
+      announcement.setAttribute('aria-live', 'polite');'
+      announcement.setAttribute('aria-atomic', 'true');'      announcement.className = 'sr-only';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       announcement.textContent = message;
       
       document.body.appendChild (announcement) ;
@@ -137,10 +144,16 @@ interactiveElements.forEach (element:  > {;
       const el = element as HTMLElement;
       
       // Add role if missing'
+<<<<<<< HEAD
       if (el.tagName = == 'BUTTON' && !el.getAttribute('role')) {;
         el.setAttribute('role',button');
       }
       
+=======
+      if (el.tagName = == 'BUTTON' && !el.getAttribute('role')) {;'
+        el.setAttribute('role', 'button');
+      }      
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // Add aria-label for elements without text'
       if (!el.textContent?.trim() && !el.getAttribute('aria-label')) {
 
@@ -148,8 +161,7 @@ interactiveElements.forEach (element:  > {;
         if (title) {
 
           el.setAttribute('aria-label', title);
-        }
-      }
+        }      }
       
       // Add focus indicator
       if (settings.focusIndicator) {
@@ -172,14 +184,12 @@ interactiveElements.forEach (element:  > {;
         --bg - secondary: #1f2937 ! important;
         --accent: #ffff00 ! important;
         --border: #ffffff ! important;
-      }
-      
+      }      
       .high-contrast * {
 
         color: var(--text-primary) !important;
         background-color: var(--bg-primary) !important;
-        border-color: var(--border) !important;
-      }
+        border-color: var(--border) !important}
       
       /* Large text mode */
       .large-text {
@@ -190,8 +200,7 @@ interactiveElements.forEach (element:  > {;
       .large - text h1 { font - size: 2.5em ! important; }
       .large - text h2 { font - size: 2em ! important; }
       .large - text h3 { font - size: 1.75em ! important; }
-      .large - text p { font - size: 1.3em ! important; }
-      
+      .large - text p { font - size: 1.3em ! important; }      
       /* Reduced motion */
       .reduced-motion *,
       .reduced-motion *::before,
@@ -200,21 +209,18 @@ interactiveElements.forEach (element:  > {;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
+        scroll-behavior: auto !important}
       
       /* Focus indicators */
       .focus-visible:focus {
 
         outline: 3px solid #3b82f6 !important;
-        outline-offset: 2px !important;
-      }
+        outline-offset: 2px !important}
       
       .focus-visible:focus:not(:focus-visible) {
 
         outline: none !important;
-      }
-      
+      }      
       /* Screen reader only */
       .sr-only {
 
@@ -226,8 +232,7 @@ interactiveElements.forEach (element:  > {;
         overflow: hidden !important;
         clip: rect(0, 0, 0, 0) !important;
         white-space: nowrap !important;
-        border: 0 !important;
-      }
+        border: 0 !important}
       
       /* Skip to main content link */
       .skip-link {
@@ -245,8 +250,7 @@ interactiveElements.forEach (element:  > {;
       .skip-link:focus {
 
         top: 6px;
-      }`
-    `;
+      }`    `;
     document.head.appendChild (style) ;
 
     return () => {
@@ -289,9 +293,14 @@ interactiveElements.forEach (element:  > {;
       root.style.setProperty('--animation-duration',0.1s');
       root.style.setProperty('--transition-duration',0.1s');
     } else {
+<<<<<<< HEAD
 
       root.style.removeProperty('--animation-duration');
       root.style.removeProperty('--transition-duration');
+=======
+'
+      root.style.removeProperty('--animation-duration');'      root.style.removeProperty('--transition-duration');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // High saturation
     if (newSettings.highSaturation) {
@@ -310,11 +319,17 @@ interactiveElements.forEach (element:  > {;
 
   // Save settings to localStorage
   const saveSettings = (newSettings: AccessibilitySettings) => {
+<<<<<<< HEAD
 
     localStorage.setItem('zion-accessibility-settings', JSON.stringify(newSettings));
     setSettings(newSettings);
     applySettings(newSettings);
   };
+=======
+'
+    localStorage.setItem('zion-accessibility-settings', JSON.stringify(newSettings));    setSettings(newSettings);
+    applySettings(newSettings)};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   // Update individual setting
   const updateSetting = <K extends keyof AccessibilitySettings>(
@@ -326,12 +341,14 @@ interactiveElements.forEach (element:  > {;
     saveSettings (newSettings) ;
     
     // Show notification'`
+<<<<<<< HEAD
     const notification = `Updated ${key.replace(/([A-Z])/g, $1').toLowerCase()}`;
     setNotifications(prev => [...prev, notification]);
+=======
+    const notification = `Updated ${key.replace(/([A-Z])/g, ' $1').toLowerCase()}`;    setNotifications(prev => [...prev, notification]);
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     setTimeout(() => {
-      setNotifications(prev => prev.filter(n => n !== notification));
-    }, 3000);
-  };
+      setNotifications(prev => prev.filter(n => n !== notification))}, 3000)};
 
   // Reset to default settings
   const resetSettings = (...args: unknown[]): unknown => {
@@ -397,7 +414,6 @@ interactiveElements.forEach (element:  > {;
     const timer = setTimeout ( () => setIsVisible (true) , 3000) ;
     return () => clearTimeout (timer) ;
   }, []) ;
-
   if (!enabled || !isVisible) return null;
 
   return()
@@ -414,8 +430,7 @@ interactiveElements.forEach (element:  > {;
           aria-label="Accessibility settings"
           title="Accessibility Settings"
         >"
-          <Settings className="w-6 h-6" />
-        </motion.button>
+          <Settings className="w-6 h-6" />        </motion.button>
       </div>
 
       {/* Accessibility Panel */}
@@ -431,16 +446,14 @@ interactiveElements.forEach (element:  > {;
               {/* Header */}"
               <div className="flex items-center justify-between mb-6">"
                 <h2 className="text-2xl font-bold text-cyan-400 flex items-center gap-2">"
-                  <Settings className="w-6 h-6" />
-                  Accessibility
+                  <Settings className="w-6 h-6" />                  Accessibility
                 </h2>
                 <button
                   onClick={() => setIsExpanded(false)}"
                   className="p-2 hover:bg-cyan-400/20 text-cyan-400 rounded-lg transition-colors"
                   aria-label="Close accessibility panel"
                 >"
-                  <X className="w-5 h-5" />
-                </button>
+                  <X className="w-5 h-5" />                </button>
               </div>
 
               {/* Quick Actions */}"
@@ -471,8 +484,7 @@ interactiveElements.forEach (element:  > {;
               <div className="mb-6">"
                 <h3 className="text-lg font-semibold text-white mb-4">Font Size</h3>"
                 <div className="flex items-center space-x-2">"
-                  <ZoomOut className="w-5 h-5 text-cyan-400" />"
-                  <div className="flex-1 grid grid-cols-4 gap-2">
+                  <ZoomOut className="w-5 h-5 text-cyan-400" />"                  <div className="flex-1 grid grid-cols-4 gap-2">
                     {fontSizes.map((size) => (
                       <button
                         key={size}
@@ -488,8 +500,7 @@ interactiveElements.forEach (element:  > {;
                       </button>
                     ))}
                   </div>"
-                  <ZoomIn className="w-5 h-5 text-cyan-400" />
-                </div>
+                  <ZoomIn className="w-5 h-5 text-cyan-400" />                </div>
               </div>
 
               {/* Line Height Control */}"
@@ -544,8 +555,7 @@ interactiveElements.forEach (element:  > {;
               {/* WCAG Compliance Info */}"
               <div className="mt-6 p-4 bg-cyan-500/10 border border-cyan-400/20 rounded-lg">"
                 <h4 className="font-semibold text-cyan-400 mb-2 flex items-center gap-2">"
-                  <CheckCircle className="w-4 h-4" />
-                  WCAG 2.1 AA Compliant
+                  <CheckCircle className="w-4 h-4" />                  WCAG 2.1 AA Compliant
                 </h4>"
                 <p className="text-sm text-gray-300">
                   This website meets Web Content Accessibility Guidelines 2.1 Level AA standards for accessibility.
@@ -583,8 +593,7 @@ interactiveElements.forEach (element:  > {;
                          issue.type === 'warning' ? <AlertTriangle className="w-3 h-3 text-yellow-400 mt-0.5" /> :"
                          <Info className="w-3 h-3 text-blue-400 mt-0.5" />}
                         <div>"
-                          <div className="font-medium text-white">{issue.element}</div>"
-                          <div className="text-gray-300">{issue.description}</div>
+                          <div className="font-medium text-white">{issue.element}</div>"                          <div className="text-gray-300">{issue.description}</div>
                         </div>
                       </div>
                     </div>) ) }
@@ -592,8 +601,7 @@ interactiveElements.forEach (element:  > {;
 
               {issues.length === 0 && !isScanning && ("
                 <div className="text-center py-4 text-gray-400 text-sm">"
-                  <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-400" />
-                  No accessibility issues found
+                  <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-400" />                  No accessibility issues found
                 </div>) }
             </div>
 
@@ -622,8 +630,7 @@ interactiveElements.forEach (element:  > {;
             className="w-14 h-14 bg-green-600 hover:bg-green-700 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-200"
             aria-label="Accessibility Settings"
           >"
-            <Eye className="w-6 h-6" />
-          </motion.button>
+            <Eye className="w-6 h-6" />          </motion.button>
         )}
       </AnimatePresence>
 
@@ -649,9 +656,14 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'navigation'>('general');
 
   useEffect(() => {
+<<<<<<< HEAD
 
     const savedSettings = localStorage.getItem('zion-accessibility-settings');
     if (savedSettings) {
+=======
+'
+    const savedSettings = localStorage.getItem('zion-accessibility-settings');    if (savedSettings) {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       try {
         const parsed = JSON.parse (savedSettings) ;
@@ -660,8 +672,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       } catch (error) {
 
         // console.warn('Failed to parse accessibility settings:', error);
-      }
-    }
+      }    }
   }, []) ;
 
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
@@ -671,8 +682,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // Apply font size'`
     root.style.setProperty('--zion-font-size-base', `${newSettings.fontSize}px`);'`
     root.style.setProperty('--zion-font-size-sm', `${newSettings.fontSize * 0.875}px`);'`
-    root.style.setProperty('--zion-font-size-lg', `${newSettings.fontSize * 1.125}px`);'`
-    root.style.setProperty('--zion-font-size-xl', `${newSettings.fontSize * 1.25}px`);
+    root.style.setProperty('--zion-font-size-lg', `${newSettings.fontSize * 1.125}px`);'`    root.style.setProperty('--zion-font-size-xl', `${newSettings.fontSize * 1.25}px`);
     
     // Apply high contrast
     if (newSettings.highContrast) {
@@ -723,19 +733,28 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
 
+<<<<<<< HEAD
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
+=======
+    const newSettings = { ...settings, [key]: value };    setSettings(newSettings);
+    applySettings(newSettings);'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     localStorage.setItem('zion-accessibility-settings', JSON.stringify(newSettings));
-    onSettingsChange?.(newSettings);
-  }, [settings, applySettings, onSettingsChange]);
+    onSettingsChange?.(newSettings)}, [settings, applySettings, onSettingsChange]);
 
   const resetSettings = useCallback(() => {
     setSettings(DEFAULT_SETTINGS);
+<<<<<<< HEAD
     applySettings(DEFAULT_SETTINGS);
     localStorage.removeItem('zion-accessibility-settings');
     onSettingsChange?.(DEFAULT_SETTINGS);
   }, [applySettings, onSettingsChange]);
+=======
+    applySettings(DEFAULT_SETTINGS);'    localStorage.removeItem('zion-accessibility-settings');
+    onSettingsChange?.(DEFAULT_SETTINGS)}, [applySettings, onSettingsChange]);
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   const increaseFontSize = useCallback(() => {
     const newSize = Math.min(settings.fontSize + 2, 24);
@@ -773,9 +792,14 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [settings.focusIndicator, updateSetting]);
 
   const tabs = ['
+<<<<<<< HEAD
     { id: 'general', label: 'General', icon: Settings },;
     { id: 'visual', label: 'Visual', icon: Eye },;
     { id: 'navigation', label: 'Navigation', icon: Keyboard }
+=======
+    { id: 'general', label: 'General', icon: Settings },;'
+    { id: 'visual', label: 'Visual', icon: Eye },;'    { id: 'navigation', label: 'Navigation', icon: Keyboard }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ] as const;
 
   return()
@@ -789,8 +813,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         aria-label="Open accessibility settings"
         aria-expanded={isOpen}
       >"
-        <Accessibility className="w-6 h-6" />
-      </motion.button>
+        <Accessibility className="w-6 h-6" />      </motion.button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
@@ -813,8 +836,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               {/* Header */}"
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">"
                 <div className="flex items-center space-x-3">"
-                  <Accessibility className="w-6 h-6 text-cyan-500" />"
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <Accessibility className="w-6 h-6 text-cyan-500" />"                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                     Accessibility
                   </h2>
                 </div>
@@ -823,8 +845,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
                   aria-label="Close accessibility panel"
                 >"
-                  <X className="w-5 h-5 text-gray-500" />
-                </button>
+                  <X className="w-5 h-5 text-gray-500" />                </button>
               </div>
 
               {/* Tabs */}"
@@ -832,8 +853,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                 {tabs.map((tab) => {
 
                   const Icon = tab.icon;
-                  const isActive = activeTab === tab.id;
-                  
+                  const isActive = activeTab === tab.id;                  
                   return()
                     <button
                       key={tab.id}
@@ -848,8 +868,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                       <Icon className="w-4 h-4" />
                       <span>{tab.label}</span>
                     </button>) ;
-                }) }
-              </div>
+                }) }              </div>
 
               {/* Content */}"
               <div className="p-6 max-h-[60vh] overflow-y-auto">"
@@ -874,8 +893,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                             aria-label="Decrease font size"
                           >"
                             <Minus className="w-4 h-4" />
-                          </button>"
-                          <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                          </button>"                          <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                             <div"
                               className="bg-cyan-500 h-2 rounded-full transition-all duration-300"`
                               style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}
@@ -886,8 +904,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                             className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                             aria-label="Increase font size"
                           >"
-                            <Plus className="w-4 h-4" />
-                          </button>
+                            <Plus className="w-4 h-4" />                          </button>
                         </div>
                       </div>
 
@@ -936,8 +953,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                       <div className="flex items-center justify-between">"
                         <div className="flex items-center space-x-3">"
                           <Contrast className="w-5 h-5 text-gray-500" />
-                          <div>"
-                            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                          <div>"                            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
                               High Contrast
                             </label>"
                             <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -967,8 +983,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                       <div className="flex items-center justify-between">"
                         <div className="flex items-center space-x-3">"
                           <MousePointer className="w-5 h-5 text-gray-500" />
-                          <div>"
-                            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                          <div>"                            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
                               Reduced Motion
                             </label>"
                             <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -1008,8 +1023,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                       <div className="flex items-center justify-between">"
                         <div className="flex items-center space-x-3">"
                           <Keyboard className="w-5 h-5 text-gray-500" />
-                          <div>"
-                            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                          <div>"                            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
                               Enhanced Keyboard Navigation
                             </label>"
                             <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -1039,8 +1053,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                       <div className="flex items-center justify-between">"
                         <div className="flex items-center space-x-3">"
                           <Eye className="w-5 h-5 text-gray-500" />
-                          <div>"
-                            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                          <div>"                            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
                               Focus Indicators
                             </label>"
                             <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -1083,8 +1096,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       </AnimatePresence>
     </>) ;
 };
-      {/* Notifications */}"
-      <div className="fixed top-4 right-4 z-50 space-y-2">
+      {/* Notifications */}"      <div className="fixed top-4 right-4 z-50 space-y-2">
         <AnimatePresence>
           {notifications.map ( (notification, index) => (<motion.div
               key={index}
@@ -1093,8 +1105,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               exit={{ opacity: 0, x: 100, scale: 0.9 }}"
               className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2"
             >"
-              <CheckCircle className="w-4 h-4" />"
-              <span className="text-sm">{notification}</span>
+              <CheckCircle className="w-4 h-4" />"              <span className="text-sm">{notification}</span>
             </motion.div>
           ))}
         </AnimatePresence>

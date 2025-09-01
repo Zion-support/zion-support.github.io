@@ -1,8 +1,7 @@
 import React from 'react';
 import SEO from '@/components/SEO';
 ;
-export { function };
-export default function CustomerFeedbackSurveys(...args[]):  {
+export { function };export default function CustomerFeedbackSurveys(...args[]):  {
 
   return()
     <div className = "min-h-screen bg-futuristic text-white">;
@@ -10,8 +9,7 @@ export default function CustomerFeedbackSurveys(...args[]):  {
         title="Mobile-First Customer Feedback Surveys | Zion Tech Group"
         description="Create branded, mobile-friendly surveys with AI insights, NPS, CSAT, churn predictors, and real-time dashboards."
       />"
-      <section className="container-responsive py-16">"
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+      <section className="container-responsive py-16">"        <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
           Mobile-First Feedback Surveys
         </h1>"
         <p className="text-zion-slate-light max-w-3xl">
@@ -52,7 +50,6 @@ export default function CustomerFeedbackSurveys(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 
 '"

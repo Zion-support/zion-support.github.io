@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-
   Zap, 
   Brain, 
   Shield, 
@@ -78,7 +77,6 @@ import {
   X'
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
 interface Service {
 
   id: string;
@@ -99,8 +97,7 @@ interface Service {
   link: string;
   status: 'available' | 'coming-soon' | 'beta';
 }
-;
-const services: Service[] = [
+;const services: Service[] = [
   // AI Services
   {
 
@@ -339,6 +336,7 @@ const categories = ['
   { id: 'security', name: 'Security', icon: Shield, count: services.filter(s => s.category.includes('Security')).length },
   { id: 'healthcare', name: 'Healthcare', icon: Heart, count: services.filter(s => s.category.includes('Healthcare')).length }
 ];
+<<<<<<< HEAD
 
 export default function ComprehensiveServicesShowcase2025() {
 
@@ -371,6 +369,14 @@ export default function ComprehensiveServicesShowcase2025() {
         description="Explore our comprehensive portfolio of AI, IT, and Micro SAAS services. Discover innovative solutions designed to transform your business in 2025 and beyond."
         keywords="AI services, IT services, Micro SAAS, cybersecurity, healthcare AI, quantum computing, cloud DevOps, business intelligence"
       />
+=======
+  return()
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO "
+        title="Comprehensive Services Showcase 2025 | Zion Tech Group""
+        description="Explore our comprehensive portfolio of AI, IT, and Micro SAAS services. Discover innovative solutions designed to transform your business in 2025 and beyond.""        keywords="AI services, IT services, Micro SAAS, cybersecurity, healthcare AI, quantum computing, cloud DevOps, business intelligence"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -418,8 +424,12 @@ export default function ComprehensiveServicesShowcase2025() {
               <div className="relative max-w-2xl mx-auto">"
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-zion-slate-light" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search for services, features, or use cases..."
+=======
+                  type="text""                  placeholder="Search for services, features, or use cases..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-12 pr-4 py-4 bg-zion-blue-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"
@@ -608,16 +618,14 @@ export default function ComprehensiveServicesShowcase2025() {
                   <span className="text-zion-cyan text-sm font-medium group-hover:text-zion-cyan-light transition-colors">
                     Learn More
                   </span>"
-                  <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform duration-300" />
-                </div>
+                  <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform duration-300" />                </div>
               </motion.div>) ) }
           </div>
 
           {filteredServices.length === 0 && ("
             <div className="text-center py-16">"
               <Search className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />"
-              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>"
-              <p className="text-zion-slate-light">
+              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>"              <p className="text-zion-slate-light">
                 Try adjusting your search or filter criteria.
               </p>
             </div>) }
@@ -685,8 +693,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   onClick={closeModal}"
                   className="text-zion-slate-light hover:text-white transition-colors"
                 >"
-                  <X className="w-6 h-6" />
-                </button>
+                  <X className="w-6 h-6" />                </button>
               </div>
 
               {/* Service Description */}"
@@ -701,8 +708,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   <ul className="space-y-3">
                     {selectedService.features.map((feature, index) => ("
                       <li key={index} className="flex items-center space-x-3">"
-                        <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />"
-                        <span className="text-zion-slate-light">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />"                        <span className="text-zion-slate-light">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -714,8 +720,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   <ul className="space-y-3">
                     {selectedService.benefits.map((benefit, index) => ("
                       <li key={index} className="flex items-center space-x-3">"
-                        <Star className="w-5 h-5 text-zion-cyan flex-shrink-0" />"
-                        <span className="text-zion-slate-light">{benefit}</span>
+                        <Star className="w-5 h-5 text-zion-cyan flex-shrink-0" />"                        <span className="text-zion-slate-light">{benefit}</span>
                       </li>
                     ))}
                   </ul>

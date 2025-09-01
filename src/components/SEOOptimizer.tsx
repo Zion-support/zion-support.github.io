@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
 
   Search,
@@ -165,6 +166,8 @@ autoAnalyze:  true,;
   const analyzeSEO = useCallback (async () => {;
     setIsAnalyzing (true) ;
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // Simulate analysis delay
     await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
@@ -188,8 +191,12 @@ autoAnalyze:  true,;
   };
 
   // Filter issues by category
+<<<<<<< HEAD
   const filteredIssues = useMemo(() => {;
     if (selectedCategory === 'all') return analysis?.issues || [];
+=======
+  const filteredIssues = useMemo(() => {;'    if (selectedCategory === 'all') return analysis?.issues || [];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     return analysis?.issues.filter (issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
 
   // Filter suggestions by priority
@@ -198,8 +205,7 @@ autoAnalyze:  true,;
 
       const priorityOrder = {
 
-  high: 3, medium: 2,;
-  ;
+  high: 3, medium: 2,;  ;
   ;
   ;
   ;
@@ -215,8 +221,7 @@ autoAnalyze:  true,;
 
     return()
       <div className = "text-center py-8">"
-        <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4" />"
-        <p className="text-zion-slate/60">No SEO analysis available</p>
+        <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4" />"        <p className="text-zion-slate/60">No SEO analysis available</p>
         <button
           onClick={analyzeSEO}"
           className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors";
@@ -225,15 +230,13 @@ autoAnalyze:  true,;
         </button>;
       </div>;) ;
   }
-
   return ("
     <div className = "bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
       {/* Header */}"
       <div className="flex items-center justify-between mb-6">"
         <div className="flex items-center space-x-3">"
           <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">"
-            <Search className="w-6 h-6 text-white" />
-          </div>
+            <Search className="w-6 h-6 text-white" />          </div>
           <div>"
             <h3 className="text-xl font-semibold text-zion-slate-dark">SEO Optimizer</h3>"
             <p className="text-sm text-zion-slate/60">Performance & optimization insights</p>
@@ -246,8 +249,7 @@ autoAnalyze:  true,;
             className="p-2 hover:bg-zion-slate/10 rounded-lg transition-colors"
             title="Advanced settings"
 "
-            <Settings className="w-5 h-5 text-zion-slate" />
-          </button>
+            <Settings className="w-5 h-5 text-zion-slate" />          </button>
 
           <button
             onClick={analyzeSEO}
@@ -261,8 +263,7 @@ autoAnalyze:  true,;
               </>
             ) : (
               <>"
-                <RefreshCw className="w-4 h-4" />
-                <span>Refresh</span>
+                <RefreshCw className="w-4 h-4" />                <span>Refresh</span>
               </>
             )}
           </button>
@@ -421,8 +422,7 @@ autoAnalyze:  true,;
                       ) : issue.type === 'warning' ? ("
                         <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5" />
                       ) : ("
-                        <Info className="w-5 h-5 text-blue-500 mt-0.5" />
-                      )}
+                        <Info className="w-5 h-5 text-blue-500 mt-0.5" />                      )}
 "
                       <div className="flex-1">"
                         <div className="flex items-center justify-between mb-2">"
@@ -481,8 +481,7 @@ autoAnalyze:  true,;
                     </div>
 "
                     <button className="p-2 hover:bg-zion-cyan/10 rounded-lg transition-colors">"
-                      <ArrowUpRight className="w-4 h-4 text-zion-cyan" />
-                    </button>
+                      <ArrowUpRight className="w-4 h-4 text-zion-cyan" />                    </button>
                   </div>
                 </motion.div>;) ) }
             </div>
@@ -541,16 +540,14 @@ autoAnalyze:  true,;
         </>
       ) : null};
     </div>;
-  );
-};
+  )};
 
 // Hook for using SEO optimization
   const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ;
   const [isOptimizing, setIsOptimizing] = useState (false) ;
 
   const optimizePage = useCallback (async () => {;
-    setIsOptimizing (true) ;
-    // Implement actual optimization logic here
+    setIsOptimizing (true) ;    // Implement actual optimization logic here
     await new Promise (resolve => setTimeout (resolve, 3000) ) ;
     setIsOptimizing (false) }, []) ;
 

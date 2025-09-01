@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
+<<<<<<< HEAD
 import { Search, 
   Filter, 
   Star, 
@@ -30,6 +31,8 @@ import { Search,
  } from 'lucide-react.ts';
 import { INNOVATIVE_SERVICES_2028  } from '../data/innovativeServices2028';
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -57,9 +60,14 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
       switch (sortBy) {
 
         case 'price':
+<<<<<<< HEAD
           return a.price - b.price;
         case 'category':
           return a.category.localeCompare(b.category);
+=======
+          return a.price - b.price;'        case 'category':
+          return a.category.localeCompare(b.category);'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         case 'innovation':'
           return a.innovationLevel === 'revolutionary' ? 1 : -1;
         case 'name':
@@ -127,8 +135,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
     }
   };
 
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+  return ("    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Futuristic Animated Background */}"
       <div className="fixed inset-0 overflow-hidden pointer-events-none">"
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>"
@@ -183,8 +190,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                 <span className="text-purple-400 font-medium">Quantum Technology</span>
               </div>"
               <div className="flex items-center gap-2 bg-green-500/20 border border-green-400/30 rounded-full px-4 py-2">"
-                <Brain className="w-5 h-5 text-green-400" />"
-                <span className="text-green-400 font-medium">AI-Powered Solutions</span>
+                <Brain className="w-5 h-5 text-green-400" />"                <span className="text-green-400 font-medium">AI-Powered Solutions</span>
               </div>
             </div>
           </motion.div>
@@ -200,8 +206,12 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
               <div className="flex-1 relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search services, features, or categories..."
+=======
+                  type="text""                  placeholder="Search services, features, or categories..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
@@ -221,8 +231,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                     </option>
                   ))}
                 </select>"
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
-              </div>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />              </div>
 
               {/* Sort */}"
               <div className="relative">
@@ -236,8 +245,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                   <option value="category">Sort by Category</option>"
                   <option value="innovation">Sort by Innovation</option>
                 </select>"
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
-              </div>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />              </div>
 
               {/* View Mode Toggle */}"
               <div className="flex bg-slate-700/50 border border-slate-600/50 rounded-xl p-1">
@@ -324,8 +332,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                         <span>Delivery: {service.estimatedDelivery}</span>
                       </div>"
                       <div className="flex items-center gap-2 text-sm text-gray-400">"
-                        <Award className="w-4 h-4" />
-                        <span>Support: {service.supportLevel}</span>
+                        <Award className="w-4 h-4" />                        <span>Support: {service.supportLevel}</span>
                       </div>
                     </div>
 "
@@ -345,15 +352,13 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center gap-1"
                       >
                         {expandedService === service.id ? 'Show Less' : 'Learn More'}'`
-                        <ChevronDown className={`w-4 h-4 transition-transform ${expandedService === service.id ? 'rotate-180' : ''}`} />
-                      </button>
+                        <ChevronDown className={`w-4 h-4 transition-transform ${expandedService === service.id ? 'rotate-180' : ''}`} />                      </button>
                       <Link`
                         to={`/services/${service.id}`}"
                         className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
                       >
                         Get Started"
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
+                        <ArrowRight className="w-4 h-4" />                      </Link>
                     </div>
 
                     {/* Expanded Content */}
@@ -372,8 +377,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                               <ul className="space-y-1">
                                 {service.features.slice(0, 5).map((feature, index) => ("
                                   <li key={index} className="flex items-start gap-2 text-sm text-gray-300">"
-                                    <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                                    {feature}
+                                    <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />                                    {feature}
                                   </li>
                                 ))}
                               </ul>
@@ -383,8 +387,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                               <ul className="space-y-1">
                                 {service.benefits.slice(0, 3).map((benefit, index) => ("
                                   <li key={index} className="flex items-start gap-2 text-sm text-gray-300">"
-                                    <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                                    {benefit}
+                                    <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />                                    {benefit}
                                   </li>
                                 ))}
                               </ul>
@@ -450,8 +453,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                         className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
                       >
                         Get Started"
-                        <ArrowRight className="w-5 h-5" />
-                      </Link>
+                        <ArrowRight className="w-5 h-5" />                      </Link>
                     </div>
                   </div>) }
               </motion.div>) ) }
@@ -480,15 +482,13 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                 href="tel:+13024640950"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
               >"
-                <Phone className="w-5 h-5" />
-                +1 302 464 0950
+                <Phone className="w-5 h-5" />                +1 302 464 0950
               </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg hover:bg-slate-600/50 transition-all duration-200 font-medium"
               >"
-                <Mail className="w-5 h-5" />
-                kleber@ziontechgroup.com
+                <Mail className="w-5 h-5" />                kleber@ziontechgroup.com
               </a>
             </div>"
             <div className="mt-6 text-sm text-gray-400">
@@ -500,6 +500,5 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
       </section>
     </div>) ;
 };
-
 export default UltimateServicesShowcase2028;
 '"`

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -199,15 +200,25 @@ export default function Community() {
       color: 'from-orange-500 to-red-500';
     };
   ];
+=======
+import React from 'react';'
+import { Link } from 'react-router-dom';'
+import { motion } from 'framer-motion';  ];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export default function Community(...args[]):  {
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO "
+<<<<<<< HEAD
         title="Community - Zion Tech Group"
         description="Join our community of technology professionals and enthusiasts. Share knowledge, get help, and connect with peers."
       />
+=======
+        title="Community - Zion Tech Group""        description="Join our community of technology professionals and enthusiasts. Share knowledge, get help, and connect with peers."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Header */}"
       <div className="bg-slate-800/50 border-b border-slate-700">;"
@@ -230,8 +241,7 @@ export default function Community(...args[]):  {
 "
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">"
               <Users className="w-10 h-10 text-white" />
-            </div>"
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            </div>"            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Join Our Community
             </h1>"
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -240,7 +250,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Users, MessageCircle, TrendingUp, Star, Clock, Search, Filter, Plus, Heart, Share2, Bookmark, MoreHorizontal, User, Calendar, Tag, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 interface CommunityPost {
 
   id: string;
@@ -253,16 +262,14 @@ interface CommunityPost {
     role: string;
     verified: boolean;
   
-};
-  category: string;
+};  category: string;
   tags: string[];
   likes: number;
   replies: number;
   views: number;
   createdAt: string;
   isPinned: boolean;
-  isFeatured: boolean;
-}
+  isFeatured: boolean}
 
 interface CommunityCategory {
 
@@ -273,7 +280,6 @@ interface CommunityCategory {
   color: string;
   postCount: number;
   topics: string[];
-
 const Community: React.FC = () => {
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -465,9 +471,14 @@ const Community: React.FC = () => {
     switch (sortBy) {
 
       case 'latest':
+<<<<<<< HEAD
         return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
       case 'popular':
         return b.likes - a.likes;
+=======
+        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();'      case 'popular':
+        return b.likes - a.likes;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'most-replied':
         return b.replies - a.replies;
       case 'most-viewed':
@@ -488,7 +499,6 @@ const Community: React.FC = () => {
     const category = communityCategories.find(cat => cat.id === categoryId);
     return category ? category.name : 'Unknown';
   };
-
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header Section */}"
@@ -503,8 +513,7 @@ const Community: React.FC = () => {
           >"
             <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">"
               <Users className="w-10 h-10 text-white" />
-            </div>"
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            </div>"            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Community
             </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -624,8 +633,7 @@ const Community: React.FC = () => {
                       <span>{event.location}</span>
                     </div>"
                     <div className="flex items-center space-x-2 text-sm text-slate-300">"
-                      <Users className="w-4 h-4" />
-                      <span>{event.attendees} attendees</span>
+                      <Users className="w-4 h-4" />                      <span>{event.attendees} attendees</span>
                     </div>
                   </div>
 "
@@ -746,8 +754,12 @@ const Community: React.FC = () => {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search community posts..."
+=======
+                  type="text""                  placeholder="Search community posts..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -831,8 +843,7 @@ const Community: React.FC = () => {
                 {/* Author Avatar */}"
                 <div className="flex-shrink-0">"
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">"
-                    <User className="w-6 h-6 text-white" />
-                  </div>
+                    <User className="w-6 h-6 text-white" />                  </div>
                 </div>
 
                 {/* Post Content */}"
@@ -854,8 +865,7 @@ const Community: React.FC = () => {
                       )}
                     </div>"
                     <button className="text-gray-400 hover:text-white transition-colors">"
-                      <MoreHorizontal className="w-5 h-5" />
-                    </button>
+                      <MoreHorizontal className="w-5 h-5" />                    </button>
                   </div>
 "
                   <p className="text-gray-300 mb-3 line-clamp-2">{post.content}</p>
@@ -881,8 +891,7 @@ const Community: React.FC = () => {
                   <div className="flex items-center justify-between">"
                     <div className="flex items-center space-x-4 text-sm text-gray-400">"
                       <div className="flex items-center space-x-1">"
-                        <User className="w-4 h-4" />"
-                        <span className="text-white">{post.author.name}</span>
+                        <User className="w-4 h-4" />"                        <span className="text-white">{post.author.name}</span>
                         {post.author.verified && ("
                           <span className="px-1.5 py-0.5 bg-blue-500/20 text-blue-300 text-xs rounded-full">
                             Verified
@@ -894,8 +903,7 @@ const Community: React.FC = () => {
                         <span>{post.createdAt}</span>
                       </div>"
                       <div className="flex items-center space-x-1">"
-                        <Tag className="w-4 h-4" />`
-                        <span className={`px-2 py-1 bg-gradient-to-r ${getCategoryColor(post.category)} text-white text-xs rounded-full`}>
+                        <Tag className="w-4 h-4" />`                        <span className={`px-2 py-1 bg-gradient-to-r ${getCategoryColor(post.category)} text-white text-xs rounded-full`}>
                           {getCategoryName(post.category)}
                         </span>
                       </div>
@@ -917,8 +925,7 @@ const Community: React.FC = () => {
                       <button className="text-gray-400 hover:text-yellow-400 transition-colors">"
                         <Bookmark className="w-4 h-4" />
                       </button>"
-                      <button className="text-gray-400 hover:text-purple-400 transition-colors">"
-                        <Share2 className="w-4 h-4" />
+                      <button className="text-gray-400 hover:text-purple-400 transition-colors">"                        <Share2 className="w-4 h-4" />
                       </button>
                     </div>
                   </div>
@@ -931,8 +938,7 @@ const Community: React.FC = () => {
         {sortedPosts.length === 0 && ("
           <div className="text-center py-12">"
             <Users className="w-16 h-16 text-gray-400 mx-auto mb-4" />"
-            <h3 className="text-xl font-semibold text-white mb-2">No posts found</h3>"
-            <p className="text-gray-400">Try adjusting your search terms or category filter.</p>
+            <h3 className="text-xl font-semibold text-white mb-2">No posts found</h3>"            <p className="text-gray-400">Try adjusting your search terms or category filter.</p>
           </div>
         )}
       </div>
@@ -950,15 +956,13 @@ const Community: React.FC = () => {
           "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <button className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors">"
-              <Plus className="w-5 h-5 mr-2" />
-              Create New Post
+              <Plus className="w-5 h-5 mr-2" />              Create New Post
             </button>
             <Link"
               to="/community-guidelines"
               className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
             >"
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Community Guidelines
+              <MessageCircle className="w-5 h-5 mr-2" />              Community Guidelines
             </Link>
           </div>
         </div>
@@ -987,8 +991,7 @@ const Community: React.FC = () => {
           "
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center">"
             <Star className="w-12 h-12 text-yellow-400 mx-auto mb-4" />"
-            <div className="text-3xl font-bold text-white mb-2">1,234</div>"
-            <p className="text-gray-300">Featured Posts</p>
+            <div className="text-3xl font-bold text-white mb-2">1,234</div>"            <p className="text-gray-300">Featured Posts</p>
           </div>
         </div>
       </section>

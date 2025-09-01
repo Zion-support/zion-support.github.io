@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -56,6 +57,10 @@ export function EnhancedContact(...args[]):  {
 
   const validateForm = () : boolean => {;
     const newErrors: ContactFormErrors = {};
+=======
+import React, { useState } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';    const newErrors: ContactFormErrors = {};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     if (!formData.name.trim()) {
 
@@ -80,9 +85,14 @@ export function EnhancedContact(...args[]):  {
     } finally {
 
       setIsSubmitting(false);
+<<<<<<< HEAD
     }
       })} catch (error) {
 
+=======
+    }      })} catch (error) {
+'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false)}
@@ -115,8 +125,7 @@ export function EnhancedContact(...args[]):  {
       title: 'Business Hours',;
       value: 'Mon-Fri: 9AM-6PM EST',;
       description: 'Available during these hours';
-    };
-  ];
+    };  ];
 
   if (isSubmitted) {
 
@@ -153,8 +162,7 @@ export function EnhancedContact(...args[]):  {
 }}"
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
           >"
-            <CheckCircle className="w-10 h-10 text-white" />
-          </motion.div>
+            <CheckCircle className="w-10 h-10 text-white" />          </motion.div>
 
           <motion.h2
             initial = {
@@ -216,7 +224,6 @@ export function EnhancedContact(...args[]):  {
         </div>;
       </motion.div>;) ;
   }
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -414,8 +421,12 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
+<<<<<<< HEAD
                       <AlertCircle className="w-4 h-4 mr-1" />
                       {errors['name']}
+=======
+                      <AlertCircle className="w-4 h-4 mr-1" />'                      {errors['name']}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -476,8 +487,12 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
+<<<<<<< HEAD
                       <AlertCircle className="w-4 h-4 mr-1" />
                       {errors['email']}
+=======
+                      <AlertCircle className="w-4 h-4 mr-1" />'                      {errors['email']}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -614,8 +629,12 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
+<<<<<<< HEAD
                       <AlertCircle className="w-4 h-4 mr-1" />
                       {errors['message']}
+=======
+                      <AlertCircle className="w-4 h-4 mr-1" />'                      {errors['message']}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -635,8 +654,7 @@ export function EnhancedContact(...args[]):  {
                   </>
                 ) : (
                   <>"
-                    <Send className="w-5 h-5" />
-                    <span>Send Message</span>
+                    <Send className="w-5 h-5" />                    <span>Send Message</span>
                   </>
                 )}
               </motion.button>

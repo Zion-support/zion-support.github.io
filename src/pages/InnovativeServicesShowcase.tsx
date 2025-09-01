@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 export default InnovativeServicesShowcase;}}}}}
+<<<<<<< HEAD
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../data / innovativeServices2025";
 
 
@@ -23,10 +24,12 @@ const InnovativeServicesShowcase: React.FC = () => {;
     { label: 'Highest AI Score', value: 'aiScore' },;
     { label: 'Lowest Price', value: 'price' },;
     { label: 'Newest Launch', value: 'launchDate' };
+=======
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../data / innovativeServices2025";    { label: 'Newest Launch', value: 'launchDate' };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
-  const filtered = INNOVATIVE_SERVICES_2025;
-
+  
     // Filter by search term
     if (searchTerm) {
 
@@ -34,8 +37,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      );
-    }
+      )}
 
     // Filter by category'
     if (selectedCategory !== 'all') {
@@ -50,8 +52,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
       } else {
 
         filtered = filtered.filter(service => service.price >= min && service.price <= max);
-      }
-    }
+      }    }
 
     // Sort services
     switch (sortBy) {
@@ -249,7 +250,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
         {/* Services Grid */}"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service)  => (
-            <ServiceCard key={service.id} service={service} />
+            <ServiceCard key={service.id} service={service}  />
           ))}
         </div>
 

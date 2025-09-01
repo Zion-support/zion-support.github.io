@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { useNavigate, Link  } from 'react-router-dom.ts';
 import { Badge  } from '@/components/ui/badge';
@@ -43,6 +44,19 @@ import { addItem } from '@/store/cartSlice';
 
   return()
     <div
+=======
+import React, { useState } from 'react.ts';'
+import { useNavigate, Link  } from 'react-router-dom.ts';'
+import { Badge  } from '@/components/ui/badge';'
+import { Button  } from '@/components/ui/button';'
+import { ProductListing  } from '@/types/listings';'
+import { DollarSign  } from 'lucide-react';'
+import { RatingStars  } from '@/components/RatingStars';'
+import { FavoriteButton  } from '@/components/FavoriteButton';'
+import { useDispatch  } from 'react-redux.ts';'
+import type { AppDispatch } from '@/store';'
+import { addItem } from '@/store/cartSlice';    <div
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       data-testid = "equipment-link";'`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
       onClick={handleViewListing};
@@ -78,8 +92,7 @@ import { addItem } from '@/store/cartSlice';
               Featured
             </Badge>
           )}"
-          <FavoriteButton itemId={listing.id} itemType="product" />
-        </div>
+          <FavoriteButton itemId={listing.id} itemType="product" />        </div>
       </div>
 
       {/* Content */}'`
@@ -90,8 +103,7 @@ import { addItem } from '@/store/cartSlice';
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
               {listing.category}
             </Badge>
-            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount} />) }
-          </div>
+            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount} />) }          </div>
 
           {/* Title & Description */}"
           <div onClick={handleViewListing} className="block">"
@@ -121,8 +133,7 @@ import { addItem } from '@/store/cartSlice';
           <div className="text-sm font-medium">
             {listing.price !== null ? ("
               <div className="flex items-center text-primary">"
-                <DollarSign className="h-4 w-4 mr-1" />
-                {formatPrice()}
+                <DollarSign className="h-4 w-4 mr-1" />                {formatPrice()}
               </div>
             ) : ("
               <span className="text-foreground/80">
@@ -139,8 +150,7 @@ import { addItem } from '@/store/cartSlice';
 
                 e.stopPropagation();`
                 router(`${detailBasePath}/${listing.id}`);
-              }}
-              disabled = {loading}
+              }}              disabled = {loading}
             >
               {loading ? (
                 <>"
@@ -168,7 +178,6 @@ import { addItem } from '@/store/cartSlice';
       </div>;
     </div>;) ;
 }
-
 export default React.memo(ProductListingCard);
 
 export default ProductListingCard;

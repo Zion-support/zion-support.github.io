@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-
   Workflow, 
   Zap, 
   Brain, 
@@ -191,10 +190,16 @@ export default function AIWorkflowAutomation(...args[]):  {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="AI Workflow Automation - Zion Tech Group"
         description="Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%."
         keywords="AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization"
       />
+=======
+        title="AI Workflow Automation - Zion Tech Group""
+        description="Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%.""        keywords="AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -206,8 +211,7 @@ export default function AIWorkflowAutomation(...args[]):  {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">"
-              <Workflow className="w-4 h-4 mr-2" />
-              AI-Powered Automation
+              <Workflow className="w-4 h-4 mr-2" />              AI-Powered Automation
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Workflow Automation
@@ -223,8 +227,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </motion.button>
+                <ArrowRight className="ml-2 w-5 h-5" />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
@@ -310,8 +313,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                     <ul className="space-y-2">
                       {capability.benefits.map((benefit, benefitIndex) => ("
                         <li key={benefitIndex} className="flex items-center text-gray-300">"
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />                          {benefit}
                         </li>
                       ))}
                     </ul>
@@ -420,8 +422,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -538,8 +539,7 @@ export default function AIWorkflowAutomation(...args[]):  {
               <h3 className="text-xl font-semibold text-white mb-2">Website</h3>"
               <a href="https://ziontechgroup.com" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
                 ziontechgroup.com"
-                <ExternalLink className="w-4 h-4" />
-              </a>
+                <ExternalLink className="w-4 h-4" />              </a>
             </div>
           </div>
         </div>

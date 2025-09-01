@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -448,6 +449,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
   const filteredServices = allServices.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+=======
+import React, { useState, useEffect } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
+  ];
+
+  
+    
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -457,25 +466,40 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   }) ;
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
+<<<<<<< HEAD
     switch (sortBy) {;
       case 'price':;
         return a.price - b.price;
+=======
+    switch (sortBy) {;'      case 'price':;
+        return a.price - b.price;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'name':;
         return a.title.localeCompare(b.title);
       case 'innovation':;
         const innovationOrder = {
+<<<<<<< HEAD
 
   'Advanced': 1,Cutting-edge': 2,;
   ;
   ;
+=======
+'
+  'Advanced': 1, 'Cutting-edge': 2,;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   'Revolutionary': 3 ;
 
+<<<<<<< HEAD
 };
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);
+=======
+};        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
+               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'category':;
         return a.category.localeCompare (b.category) ;
       default:;
@@ -534,7 +558,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
       default: return <Star className="w-4 h-4 text-gray-400" />;
 
   };
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       {/* Animated Background */}"
@@ -616,8 +639,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
             <div className="relative mb-6">"
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5" />
               <input"
+<<<<<<< HEAD
                 type="text"
                 placeholder="Search services, categories, or features..."
+=======
+                type="text""                placeholder="Search services, categories, or features..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan"
@@ -639,8 +666,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                     </option>
                   ))}
                 </select>"
-                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none" />
-              </div>
+                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none" />              </div>
 
               {/* Innovation Level Filter */}"
               <div className="relative">
@@ -655,8 +681,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                     </option>
                   ))}
                 </select>"
-                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none" />
-              </div>
+                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none" />              </div>
 
               {/* Sort By */}"
               <div className="relative">
@@ -670,8 +695,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   <option value="innovation">Sort by Innovation</option>"
                   <option value="category">Sort by Category</option>
                 </select>"
-                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none" />
-              </div>
+                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none" />              </div>
 
               {/* View Mode Toggle */}"
               <div className="flex bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl p-1">;
@@ -684,8 +708,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       : 'text-zion-slate-400 hover:text-white'`
                   }`}
 "
-                  <Grid className="w-4 h-4 mx-auto" />
-                </button>
+                  <Grid className="w-4 h-4 mx-auto" />                </button>
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
@@ -695,8 +718,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       : 'text-zion-slate-400 hover:text-white'`
                   }`}
 "
-                  <List className="w-4 h-4 mx-auto" />
-                </button>
+                  <List className="w-4 h-4 mx-auto" />                </button>
               </div>
             </div>
 
@@ -825,16 +847,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       </div>
 "
                       <div className="flex items-center gap-2 text-sm text-zion-slate-400">"
-                        <Shield className="w-4 h-4" />
-                        <span>{service.supportLevel}</span>
+                        <Shield className="w-4 h-4" />                        <span>{service.supportLevel}</span>
                       </div>
                     </div>
 
                     {/* CTA Button */}"
                     <button className="w-full mt-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2">
                       Learn More"
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
+                      <ArrowRight className="w-4 h-4" />                    </button>
                   </>) : (;
                   // List View
                   <>"
@@ -874,8 +894,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       <div className="text-sm text-zion-slate-400">/month</div>"
                       <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 flex items-center gap-2">
                         Learn More"
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
+                        <ArrowRight className="w-4 h-4" />                      </button>
                     </div>
                   </>) }
               </motion.div>) ) }
@@ -910,8 +929,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
-}}"
-                className = "bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
+}}"                className = "bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
               >
                 Clear All Filters;
               </button>
@@ -974,8 +992,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                     onClick={closeModal}"
                     className="text-zion-slate-400 hover:text-white transition-colors"
 "
-                    <X className="w-6 h-6" />
-                  </button>
+                    <X className="w-6 h-6" />                  </button>
                 </div>
 
                 {/* Price and Key Info */}"
@@ -1004,8 +1021,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <CheckCircle className="w-5 h-5 text-zion-green" />
-                      Key Features
+                      <CheckCircle className="w-5 h-5 text-zion-green" />                      Key Features
                     </h3>"
                     <ul className="space-y-2">
                       {selectedService.features.map((feature, index) => ("
@@ -1017,8 +1033,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   </div>
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <TrendingUp className="w-5 h-5 text-zion-green" />
-                      Benefits
+                      <TrendingUp className="w-5 h-5 text-zion-green" />                      Benefits
                     </h3>"
                     <ul className="space-y-2">
                       {selectedService.benefits.map((benefit, index) => ("
@@ -1034,8 +1049,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <Target className="w-5 h-5 text-zion-cyan" />
-                      Use Cases
+                      <Target className="w-5 h-5 text-zion-cyan" />                      Use Cases
                     </h3>"
                     <ul className="space-y-2">
                       {selectedService.useCases.map((useCase, index) => ("
@@ -1047,8 +1061,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   </div>
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <Users className="w-5 h-5 text-zion-purple" />
-                      Target Audience
+                      <Users className="w-5 h-5 text-zion-purple" />                      Target Audience
                     </h3>"
                     <ul className="space-y-2">
                       {selectedService.targetAudience.map((audience, index) => ("
@@ -1064,8 +1077,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                 {selectedService.technicalSpecs && ("
                   <div className="mb-8">"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <Code className="w-5 h-5 text-zion-cyan" />
-                      Technical Specifications
+                      <Code className="w-5 h-5 text-zion-cyan" />                      Technical Specifications
                     </h3>"
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>"

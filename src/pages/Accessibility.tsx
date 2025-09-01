@@ -5,8 +5,7 @@ import {
   CheckCircle,
   Monitor,
   Volume2,
-  Mouse,
-  Smartphone,
+  Mouse,  Smartphone,
   Contrast,
   ZoomIn,
   Type,
@@ -155,8 +154,7 @@ const Accessibility: React.FC = () => {
         description="Our commitment to inclusive, accessible experiences that meet WCAG 2.1 AA standards and ensure equal access for all users."
         keywords="accessibility, WCAG, ADA, Section 508, inclusive design, assistive technology, Zion Tech Group"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}"
         <section className="pt-32 pb-16 px-4">"
           <div className="max-w-7xl mx-auto text-center">
@@ -167,8 +165,7 @@ const Accessibility: React.FC = () => {
             >"
               <div className="flex items-center justify-center space-x-3 mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">"
-                  <Accessibility className="w-8 h-8 text-white" />
-                </div>
+                  <Accessibility className="w-8 h-8 text-white" />                </div>
               </div>"
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Accessibility
@@ -348,8 +345,7 @@ const Accessibility: React.FC = () => {
                   <ul className="space-y-3">
                     {category.features.map((feature, idx) => ("
                       <li key={idx} className="flex items-start gap-3">"
-                        <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />"
-                        <span className="text-gray-300 text-sm">{feature}</span>
+                        <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />"                        <span className="text-gray-300 text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -371,8 +367,7 @@ const Accessibility: React.FC = () => {
               <Heart className="w-16 h-16 text-red-400 mx-auto mb-6" />"
               <h2 className="text-3xl font-bold text-white mb-4">
                 We Value Your Feedback
-              </h2>"
-              <p className="text-gray-300 mb-6">
+              </h2>"              <p className="text-gray-300 mb-6">
                 If you encounter any accessibility barriers or have suggestions
                 for improvement, please contact us. We are committed to making
                 our services accessible to everyone.
@@ -397,6 +392,5 @@ const Accessibility: React.FC = () => {
       </div>
     </>) ;
 };
-
 export default Accessibility;
 '"`

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { motion  } from 'framer-motion.ts';
@@ -156,14 +157,18 @@ import { motion  } from 'framer - motion.ts';
           {isLoading ? (;
             <>"
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+=======
+import React, { useState } from 'react.ts';'
+import { Link  } from 'react-router-dom.ts';'
+import { motion  } from 'framer-motion.ts';              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               Sending Code...
             </>
           ) : (
             <>
               Send Verification Code;"
               <ArrowRight className="w-5 h-5" />;
-            </>
-          )};
+            </>          )};
         </button>;
       </form>;
     </motion.div>;) ;
@@ -239,15 +244,13 @@ import { motion  } from 'framer - motion.ts';
             className="flex-1 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
 
             {isLoading ? (;
-              <>"
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+              <>"                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
                 Verifying...
               </>
             ) : (
               <>
                 Verify Code"
-                <ArrowRight className="w-5 h-5" />
-              </>
+                <ArrowRight className="w-5 h-5" />              </>
             )}
           </button>
         </div>;
@@ -368,8 +371,7 @@ import { motion  } from 'framer - motion.ts';
           </div>
         </div>;
 
-        <button"
-          type="submit"
+        <button"          type="submit"
           disabled={isLoading}"
           className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg shadow-green-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
 
@@ -382,8 +384,7 @@ import { motion  } from 'framer - motion.ts';
             <>
               Reset Password;"
               <ArrowRight className="w-5 h-5" />;
-            </>
-          )};
+            </>          )};
         </button>;
       </form>;
     </motion.div>;) ;
@@ -411,8 +412,7 @@ import { motion  } from 'framer - motion.ts';
             className="mb-8"
 "
             <Link to="/login" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200">"
-              <ArrowLeft className="w-5 h-5" />
-              Back to Login
+              <ArrowLeft className="w-5 h-5" />              Back to Login
             </Link>
           </motion.div>
 
@@ -437,8 +437,7 @@ import { motion  } from 'framer - motion.ts';
 }}"
               className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3 text-red-400"
 "
-              <AlertCircle className="w-5 h-5" />
-              {error}
+              <AlertCircle className="w-5 h-5" />              {error}
             </motion.div>) }
 
           {success && (<motion.div
@@ -461,8 +460,7 @@ import { motion  } from 'framer - motion.ts';
 }}"
               className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 text-green-400"
 "
-              <CheckCircle className="w-5 h-5" />
-              {success}
+              <CheckCircle className="w-5 h-5" />              {success}
             </motion.div>) }
 
           {/* Form Container */}"
@@ -579,8 +577,7 @@ import { motion  } from 'framer - motion.ts';
                   <Cloud className="w-8 h-8 text-white" />
                 </div>"
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center">"
-                  <Rocket className="w-8 h-8 text-white" />
-                </div>
+                  <Rocket className="w-8 h-8 text-white" />                </div>
               </div>
             </motion.div>
 
@@ -708,8 +705,7 @@ import { motion  } from 'framer - motion.ts';
               className="p-6 bg-white/10 border border-slate-600/30 rounded-xl backdrop-blur-md"
 "
               <div className="flex items-center gap-3 mb-3">"
-                <Shield className="w-6 h-6 text-cyan-400" />"
-                <h3 className="text-lg font-semibold text-white">
+                <Shield className="w-6 h-6 text-cyan-400" />"                <h3 className="text-lg font-semibold text-white">
                   Your Security is Our Priority
                 </h3>
               </div>"

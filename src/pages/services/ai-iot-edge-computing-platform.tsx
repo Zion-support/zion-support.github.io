@@ -1,8 +1,7 @@
 import React from 'react.ts';
 import { SEO   } from '../../components/SEO';
 import { motion   } from 'framer-motion.ts';
-;
-const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
+;const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 
   return()
     <>
@@ -12,8 +11,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
         keywords="AI IoT, edge computing, real-time processing, distributed computing, hybrid cloud, edge intelligence, IoT analytics, edge AI"
         canonical="https://ziontechgroup.com/services/ai-iot-edge-computing-platform"
       />
-      "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-7xl mx-auto text-center">
@@ -617,5 +615,4 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
     </>
   );
 };
-
 export default AIIoTEdgeComputingPlatform;'"`

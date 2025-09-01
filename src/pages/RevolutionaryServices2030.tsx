@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import {
 
   Brain,
@@ -52,6 +53,8 @@ import {
 } from 'lucide-react';
 import { allRevolutionaryServices2030 } from '../data/revolutionaryServices2030';
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function RevolutionaryServices2030() {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -73,16 +76,24 @@ export default function RevolutionaryServices2030() {
     { id: 'enterprise', name: 'Enterprise', range: '$25,000+' };
   ];
 
+<<<<<<< HEAD
   const sortOptions = [;
     { id: 'featured', name: 'Featured' },;
     { id: 'price-low', name: 'Price: Low to High' },;
     { id: 'price-high', name: 'Price: High to Low' },;
     { id: 'innovation', name: 'Innovation Level' },;
     { id: 'market-size', name: 'Market Size' };
+=======
+  const sortOptions = [;'
+    { id: 'featured', name: 'Featured' },;'
+    { id: 'price-low', name: 'Price: Low to High' },;'
+    { id: 'price-high', name: 'Price: High to Low' },;'
+    { id: 'innovation', name: 'Innovation Level' },;'    { id: 'market-size', name: 'Market Size' };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   // Combine all revolutionary services
-  const allServices = [;
+  
     ...REVOLUTIONARY_SERVICES_2030,;
     ...EMERGING_TECH_SERVICES_2030;
   ];
@@ -100,7 +111,6 @@ export default function RevolutionaryServices2030() {
 
 // Service Card Component'
 const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 'itService' | 'aiService' }) => {
-
   const [isExpanded, setIsExpanded] = useState(false);
 
   const getIcon = (category: string) => {
@@ -120,8 +130,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
 
   const IconComponent = getIcon (service.category) ;
 
-  return()
-    <motion.div
+  return()    <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -136,8 +145,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
           <div className="flex items-start justify-between mb-4">"
             <div className="flex items-center space-x-3">"
               <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl">"
-                <IconComponent className="w-6 h-6 text-white" />
-              </div>
+                <IconComponent className="w-6 h-6 text-white" />              </div>
               <div>"
                 <h3 className="text-xl font-bold text-white mb-1">{service.name}</h3>"
                 <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
@@ -149,8 +157,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
               onClick={() => setIsExpanded(!isExpanded)}"
               className="p-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >"
-              {isExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
-            </button>
+              {isExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}            </button>
           </div>
 "
           <p className="text-slate-300 mb-4 leading-relaxed">{service.description}</p>
@@ -159,8 +166,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
           <div className="grid grid-cols-2 gap-4 mb-4">"
             <div className="bg-slate-700/50 rounded-lg p-3">"
               <div className="flex items-center space-x-2 mb-1">"
-                <DollarSign className="w-4 h-4 text-cyan-400" />"
-                <span className="text-slate-400 text-sm">Pricing</span>
+                <DollarSign className="w-4 h-4 text-cyan-400" />"                <span className="text-slate-400 text-sm">Pricing</span>
               </div>"
               <p className="text-white font-semibold">
                 {type === 'microSaas' ? `$${service.price.toLocaleString()}/month` : '`
@@ -171,8 +177,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
             "
             <div className="bg-slate-700/50 rounded-lg p-3">"
               <div className="flex items-center space-x-2 mb-1">"
-                <TrendingUp className="w-4 h-4 text-green-400" />"
-                <span className="text-slate-400 text-sm">ROI</span>
+                <TrendingUp className="w-4 h-4 text-green-400" />"                <span className="text-slate-400 text-sm">ROI</span>
               </div>"
               <p className="text-white font-semibold">
                 {type === 'microSaas' ? service.roi : '
@@ -185,14 +190,12 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
           {/* Features Preview */}"
           <div className="mb-4">"
             <h4 className="text-cyan-400 font-semibold mb-2 flex items-center">"
-              <Sparkles className="w-4 h-4 mr-2" />
-              Key Features
+              <Sparkles className="w-4 h-4 mr-2" />              Key Features
             </h4>"
             <div className="grid grid-cols-1 gap-2">
               {service.features.slice(0, 3).map((feature: string, index: number) => ("
                 <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">"
-                  <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                  <span>{feature}</span>
+                  <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />                  <span>{feature}</span>
                 </div>) ) }
             </div>
           </div>
@@ -214,8 +217,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
                     <div className="grid grid-cols-1 gap-2">
                       {service.features.map((feature: string, index: number) => ("
                         <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">"
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          <span>{feature}</span>
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />                          <span>{feature}</span>
                         </div>) ) }
                     </div>
                   </div>
@@ -226,8 +228,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
                     <div className="grid grid-cols-1 gap-2">
                       {service.benefits.map((benefit: string, index: number) => ("
                         <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">"
-                          <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
-                          <span>{benefit}</span>
+                          <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />                          <span>{benefit}</span>
                         </div>) ) }
                     </div>
                   </div>
@@ -265,14 +266,12 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
               className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
             >
               Get Started"
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
+              <ArrowRight className="w-5 h-5 ml-2" />            </Link>
           </div>
         </div>
       </div>
     </motion.div>) ;
 };
-
 // Main Component
 export default function RevolutionaryServices2030() {
 
@@ -291,27 +290,38 @@ export default function RevolutionaryServices2030() {
       case 'microSaas':'
         return allRevolutionaryServices2030.microSaas.map(service => ({ service, type: 'microSaas' as const }));
       case 'itServices':'
+<<<<<<< HEAD
         return allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const }));
       case 'aiServices':'
         return allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }));
+=======
+        return allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const }));'
+      case 'aiServices':'        return allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }));
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       default:
         return = ['
           ...allRevolutionaryServices2030.microSaas.map(service => ({ service, type: 'microSaas' as const })),
           ...allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const })),
           ...allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }))
-        ];
-    }
+        ]}
   };
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
         title="Revolutionary Services 2030 - Zion Tech Group"'"
+<<<<<<< HEAD
         description="Discover the future of technology with Zion Tech Group's revolutionary micro SAAS, IT, and AI services for 2030. Cutting-edge solutions with proven ROI and rapid deployment."
         keywords="revolutionary services 2030, micro SAAS, AI services, IT solutions, quantum computing, blockchain, cybersecurity, Zion Tech Group"
         image="https://ziontechgroup.com/images/revolutionary-services-2030.jpg"
         url="https://ziontechgroup.com/revolutionary-services-2030"
       />
+=======
+        description="Discover the future of technology with Zion Tech Group's revolutionary micro SAAS, IT, and AI services for 2030. Cutting-edge solutions with proven ROI and rapid deployment.""
+        keywords="revolutionary services 2030, micro SAAS, AI services, IT solutions, quantum computing, blockchain, cybersecurity, Zion Tech Group""
+        image="https://ziontechgroup.com/images/revolutionary-services-2030.jpg""        url="https://ziontechgroup.com/revolutionary-services-2030"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -323,8 +333,7 @@ export default function RevolutionaryServices2030() {
             className="text-center"
           >"
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full px-6 py-2 mb-6">"
-              <StarIcon className="w-5 h-5 text-cyan-400" />"
-              <span className="text-cyan-400 font-semibold">Revolutionary Services 2030</span>
+              <StarIcon className="w-5 h-5 text-cyan-400" />"              <span className="text-cyan-400 font-semibold">Revolutionary Services 2030</span>
             </div>
             "
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"
@@ -388,8 +397,7 @@ export default function RevolutionaryServices2030() {
                   <span>kleber@ziontechgroup.com</span>
                 </div>"
                 <div className="flex items-center space-x-2 text-cyan-400">"
-                  <Globe className="w-5 h-5" />
-                  <span>ziontechgroup.com</span>
+                  <Globe className="w-5 h-5" />                  <span>ziontechgroup.com</span>
                 </div>
               </div>
             </div>
@@ -421,8 +429,7 @@ export default function RevolutionaryServices2030() {
                 const IconComponent = getServiceIcon (service.category) ;
                 const colorClass = getServiceColor (service.category) ;
 
-                return()
-                  <motion.div
+                return()                  <motion.div
                     key = {service.id}
                     initial = {
 
@@ -529,8 +536,7 @@ export default function RevolutionaryServices2030() {
                     <div className="space-y-3 mb-6">"
                       <div className="flex items-center text-sm text-gray-300">"
                         <DollarSign className="mr-2 h-4 w-4 text-zion-green" />"
-                        <span className="font-medium">${service.pricing.monthly.toLocaleString()}/month</span>"
-                        <span className="text-gray-500 ml-2">({service.pricing.marketPrice})</span>
+                        <span className="font-medium">${service.pricing.monthly.toLocaleString()}/month</span>"                        <span className="text-gray-500 ml-2">({service.pricing.marketPrice})</span>
                       </div>
 "
                       <div className="flex items-center text-sm text-gray-300">"
@@ -544,8 +550,7 @@ export default function RevolutionaryServices2030() {
                       </div>
 "
                       <div className="flex items-center text-sm text-gray-300">"
-                        <Gauge className="mr-2 h-4 w-4 text-zion-purple" />
-                        <span>Innovation: {service.innovationLevel}</span>
+                        <Gauge className="mr-2 h-4 w-4 text-zion-purple" />                        <span>Innovation: {service.innovationLevel}</span>
                       </div>
                     </div>
                   </div>
@@ -603,8 +608,7 @@ export default function RevolutionaryServices2030() {
                       <span className="text-gray-300">Enterprise-grade security</span>
                     </div>"
                     <div className="flex items-center space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-green-400" />"
-                      <span className="text-gray-300">Custom solutions and integration</span>
+                      <CheckCircle className="w-5 h-5 text-green-400" />"                      <span className="text-gray-300">Custom solutions and integration</span>
                     </div>
                   </div>
                 </div>
@@ -618,21 +622,18 @@ export default function RevolutionaryServices2030() {
                           to="/contact"
                           className="flex-1 bg-gray-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium hover:bg-gray-600 transition-all duration-300"
 "
-                          <Phone className="inline mr-1 h-3 w-3" />
-                          Contact
+                          <Phone className="inline mr-1 h-3 w-3" />                          Contact
                         </Link>
                         <Link
                           to={service.website}"
                           className="flex-1 bg-gray-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium hover:bg-gray-600 transition-all duration-300"
                         >;"
-                          <Globe className="inline mr-1 h-3 w-3" />;
-                          Website;
+                          <Globe className="inline mr-1 h-3 w-3" />;                          Website;
                         </Link>;
                       </div>;
                     </div>;
                   </motion.div>;) ;
-              }) }
-            </AnimatePresence>
+              }) }            </AnimatePresence>
           </div > Clear all filters;
               </button>
             </div>) }
@@ -686,8 +687,7 @@ export default function RevolutionaryServices2030() {
               </div>"
               <div className="text-center">"
                 <MapPin className="h-8 w-8 text-zion-orange mx-auto mb-4" />"
-                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>"
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>"                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
 "
@@ -696,8 +696,7 @@ export default function RevolutionaryServices2030() {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
               >"
-                <Mail className="mr-2 h-5 w-5" />
-                Get Started Today
+                <Mail className="mr-2 h-5 w-5" />                Get Started Today
               </Link>
               <Link"
                 to="/pricing"
@@ -708,8 +707,7 @@ export default function RevolutionaryServices2030() {
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
               >
                 Start Your Journey"
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </Link>
+                <ArrowRight className="w-5 h-5 ml-2 inline" />              </Link>
               <Link"
                 to="/request-quote"
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
@@ -723,8 +721,7 @@ export default function RevolutionaryServices2030() {
                 {contactInfo.address}
               </p>"
               <p className="flex items-center justify-center gap-2">"
-                <Globe className="w-5 h-5" />"
-                <a href={contactInfo.website} className="hover:underline">
+                <Globe className="w-5 h-5" />"                <a href={contactInfo.website} className="hover:underline">
                   {contactInfo.website}
                 </a>
               </p>
@@ -737,8 +734,7 @@ export default function RevolutionaryServices2030() {
 
 export default RevolutionaryServices2030;
               >"
-                <DollarSign className="mr-2 h-5 w-5" />
-                View Pricing
+                <DollarSign className="mr-2 h-5 w-5" />                View Pricing
               </Link>
             </div>
           </motion.div>

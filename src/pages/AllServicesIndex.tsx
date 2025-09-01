@@ -2,6 +2,7 @@ import React, { useState } from 'react.ts';
 import { SEO   } from '../components/SEO';
 import { motion   } from 'framer-motion.ts';
 import { Link   } from 'react-router-dom.ts';
+<<<<<<< HEAD
 
 const AllServicesIndex: React.FC = (): JSX.Element => {;
   const [searchTerm, setSearchTerm] = useState('');
@@ -183,6 +184,8 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory}) ;
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   return()
     <>
       <SEO
@@ -191,8 +194,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
         keywords="Zion Tech Group services, AI services, cloud services, data analytics, cybersecurity, micro SAAS, business solutions, service directory"
         canonical="https://ziontechgroup.com/all-services"
       />
-      "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-7xl mx-auto text-center">

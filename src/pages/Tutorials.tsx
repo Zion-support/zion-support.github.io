@@ -144,7 +144,6 @@ const Tutorials = () => {
   }) ;
 
   const sortedTutorials = [...filteredTutorials].sort((a, b) => {
-
     switch (sortBy) {
 
       case 'rating':
@@ -191,8 +190,12 @@ const Tutorials = () => {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search tutorials..."
+=======
+                  type="text""                  placeholder="Search tutorials..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -262,8 +265,7 @@ const Tutorials = () => {
               <div className="relative h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600">"
                 <div className="absolute inset-0 flex items-center justify-center">"
                   <Play className="w-16 h-16 text-slate-400" />
-                </div>"
-                <div className="absolute top-3 right-3">
+                </div>"                <div className="absolute top-3 right-3">
                   <span`
                     className={`px-2 py-1 text-xs font-medium rounded-full ${
 
@@ -297,8 +299,7 @@ const Tutorials = () => {
                     <span>{tutorial.duration}</span>
                   </div>"
                   <div className="flex items-center gap-2">"
-                    <Users className="w-4 h-4" />
-                    <span>{tutorial.students}</span>
+                    <Users className="w-4 h-4" />                    <span>{tutorial.students}</span>
                   </div>
                 </div>
 
@@ -334,8 +335,7 @@ const Tutorials = () => {
                   <button className="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">"
                     <Heart className="w-5 h-5" />
                   </button>"
-                  <button className="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">"
-                    <Share2 className="w-5 h-5" />
+                  <button className="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">"                    <Share2 className="w-5 h-5" />
                   </button>
                 </div>
               </div>
@@ -353,8 +353,7 @@ const Tutorials = () => {
         {/* Empty State */}
         {sortedTutorials.length === 0 && ("
           <div className="text-center py-16">"
-            <BookOpen className="w-16 h-16 text-slate-400 mx-auto mb-4" />"
-            <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+            <BookOpen className="w-16 h-16 text-slate-400 mx-auto mb-4" />"            <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
               No tutorials found
             </h3>"
             <p className="text-slate-600 dark:text-slate-400 mb-6">
@@ -367,8 +366,7 @@ const Tutorials = () => {
                 setSearchTerm('');
                 setSelectedCategory('all');
                 setSortBy('popular');
-              }}"
-              className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+              }}"              className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
             >
               Clear Filters
             </button>
@@ -376,6 +374,5 @@ const Tutorials = () => {
       </div>
     </div>) ;
 };
-
 export default Tutorials;
 '"`

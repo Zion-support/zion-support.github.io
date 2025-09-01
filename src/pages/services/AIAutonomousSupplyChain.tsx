@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Truck, 
@@ -184,6 +185,10 @@ const AIAutonomousSupplyChain = (...args: unknown[]): unknown => {
       color: "from-green-500 to-emerald-500";
     };
   ];
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';  ];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -217,8 +222,7 @@ const AIAutonomousSupplyChain = (...args: unknown[]): unknown => {
             transition={{ duration: 0.8 }}
           >"
             <div className="flex items-center justify-center mb-6">"
-              <Truck className="w-12 h-12 text-blue-400 mr-3" />"
-              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 bg-clip-text text-transparent">
+              <Truck className="w-12 h-12 text-blue-400 mr-3" />"              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 bg-clip-text text-transparent">
                 AI Autonomous Supply Chain
               </h1>
             </div>"
@@ -232,8 +236,7 @@ const AIAutonomousSupplyChain = (...args: unknown[]): unknown => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
               >
                 Optimize Supply Chain"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
                 href="#demo"
                 className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
@@ -614,8 +617,7 @@ const AIAutonomousSupplyChain = (...args: unknown[]): unknown => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -678,14 +680,12 @@ const AIAutonomousSupplyChain = (...args: unknown[]): unknown => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
-                <Phone className="mr-2 w-5 h-5" />
-                Call Now
+                <Phone className="mr-2 w-5 h-5" />                Call Now
               </a>
             </div>
           </motion.div>
@@ -713,14 +713,12 @@ const AIAutonomousSupplyChain = (...args: unknown[]): unknown => {
             </div>"
             <div className="flex flex-col items-center">"
               <MapPin className="w-8 h-8 text-blue-400 mb-4" />"
-              <p className="text-gray-300">Address</p>;"
-              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
+              <p className="text-gray-300">Address</p>;"              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </div>;
           </div>;
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default AIAutonomousSupplyChain;'"`

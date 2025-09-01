@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import {
+import React from 'react';
 
+<<<<<<< HEAD
   Activity,
   Zap,
   TrendingUp,
@@ -360,7 +360,13 @@ const PerformanceOptimizer: React.FC = () => {
           </div>
         </div>) }
     </div>) ;
+=======
+const PerformanceOptimizer: React.FC<{ enabled?: boolean }> = ({ enabled = true }) => {
+  if (!enabled) return null;
+  return (
+    <div className="hidden" aria-hidden="true" />
+  );
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 };
 
 export default PerformanceOptimizer;
-'"`

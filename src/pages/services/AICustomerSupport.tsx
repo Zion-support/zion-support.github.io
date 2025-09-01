@@ -161,10 +161,16 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group"
         description="Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today."
         keywords="AI customer support, chatbot, customer service automation, AI support, customer service software"
       />
+=======
+        title="AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group""
+        description="Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.""        keywords="AI customer support, chatbot, customer service automation, AI support, customer service software"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -367,8 +373,7 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-white">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>

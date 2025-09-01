@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -52,6 +53,14 @@ export default function InnovativeServices2028(...args[]):  {
         return a.price - b.price;
       case 'roi':;
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
+=======
+import React, { useState, useEffect } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';'
+import { Link } from 'react-router-dom';      case 'price':;
+        return a.price - b.price;'
+      case 'roi':;'
+        return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'name':;
         return a.name.localeCompare (b.name) ;
       default:;

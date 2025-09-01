@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Brain, 
 import { innovativeAIServices2030 } from "../data / innovativeAIServices2030";
 import { innovativeCloudDevOpsServices2030 } from "../data / innovativeCloudDevOpsServices2030";
@@ -29,9 +30,13 @@ import { innovativeCloudDevOpsServices2030 } from "../data/innovativeCloudDevOps
 
 const InnovativeServicesShowcase2030: React.FC = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
+=======
+const InnovativeServicesShowcase2030: React.FC = () => {;'
+  const [activeCategory, setActiveCategory] = useState('all');'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [searchTerm, setSearchTerm] = useState('');
 
-  const allServices = [;
+  
     ...innovativeAIServices2030,;
     ...innovativeCybersecurityServices2030,;
     ...innovativeCloudDevOpsServices2030;
@@ -43,11 +48,18 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                          service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch}) ;
 
+<<<<<<< HEAD
   const categories = [;
     { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
     { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
+=======
+  const categories = [;'
+    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;'
+    { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;'
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;'    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
@@ -107,8 +119,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
               <span className="font-semibold">kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center gap-2">"
-              <MapPin className="w-5 h-5" />"
-              <span className="font-semibold">364 E Main St STE 1008, Middletown DE 19709</span>
+              <MapPin className="w-5 h-5" />"              <span className="font-semibold">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>
@@ -127,8 +138,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                   onChange={(e) => setSearchTerm(e.target.value)}"
                   className="w-full px-4 py-3 pl-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />"
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 w-5 h-5" />
-              </div>
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 w-5 h-5" />              </div>
             </div>"
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
@@ -192,8 +202,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                       {service.title}
                     </h3>"
                     <div className="flex items-center gap-1">"
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />"
-                      <span className="text-white text-sm">{service.rating}</span>
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />"                      <span className="text-white text-sm">{service.rating}</span>
                     </div>
                   </div>"
                   <p className="text-gray-300 text-sm leading-relaxed">
@@ -215,8 +224,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 {/* Features */}"
                 <div className="mb-4">"
                   <h4 className="text-white font-semibold mb-2 flex items-center gap-2">"
-                    <CheckCircle className="w-4 h-4 text-green-400" />
-                    Key Features
+                    <CheckCircle className="w-4 h-4 text-green-400" />                    Key Features
                   </h4>"
                   <div className="space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => ("
@@ -235,8 +243,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 {/* Benefits */}"
                 <div className="mb-4">"
                   <h4 className="text-white font-semibold mb-2 flex items-center gap-2">"
-                    <TrendingUp className="w-4 h-4 text-blue-400" />
-                    Benefits
+                    <TrendingUp className="w-4 h-4 text-blue-400" />                    Benefits
                   </h4>"
                   <div className="space-y-1">
                     {service.benefits.slice(0, 2).map((benefit, idx) => ("
@@ -264,15 +271,13 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 <div className="grid grid-cols-2 gap-3 mb-4 text-xs">"
                   <div className="text-gray-400">"
                     <div className="flex items-center gap-1 mb-1">"
-                      <Users className="w-3 h-3" />
-                      <span>Target:</span>
+                      <Users className="w-3 h-3" />                      <span>Target:</span>
                     </div>"
                     <div className="text-white">{service.targetAudience[0]}</div>
                   </div>"
                   <div className="text-gray-400">"
                     <div className="flex items-center gap-1 mb-1">"
-                      <Clock className="w-3 h-3" />
-                      <span>Response:</span>
+                      <Clock className="w-3 h-3" />                      <span>Response:</span>
                     </div>"
                     <div className="text-white">{service.responseTime}</div>
                   </div>
@@ -286,8 +291,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                     rel="noopener noreferrer"
                     className="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-center py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
 "
-                    <ExternalLink className="w-4 h-4" />
-                    Learn More
+                    <ExternalLink className="w-4 h-4" />                    Learn More
                   </a>
                   <a`
                     href={`mailto:${service.contactEmail}?subject=Inquiry about ${service.title}`}"
@@ -306,8 +310,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 onClick={() => {;
                   setSearchTerm('');
                   setActiveCategory('all');
-                }}"
-                className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
+                }}"                className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
               >
                 Clear Filters
               </button>
@@ -433,15 +436,13 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center justify-center gap-2"
 "
-                <Mail className="w-5 h-5" />
-                Get Started Today
+                <Mail className="w-5 h-5" />                Get Started Today
               </a>
               <a"
                 href="tel:+13024640950"
                 className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors border border-white/20 flex items-center justify-center gap-2"
 "
-                <Phone className="w-5 h-5" />
-                Call Now
+                <Phone className="w-5 h-5" />                Call Now
               </a>
             </div>
           </motion.div>
@@ -464,8 +465,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                   <span>kleber@ziontechgroup.com</span>
                 </div>"
                 <div className="flex items-center gap-2">"
-                  <MapPin className="w-4 h-4 text-purple-400" />
-                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                  <MapPin className="w-4 h-4 text-purple-400" />                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
             </div>

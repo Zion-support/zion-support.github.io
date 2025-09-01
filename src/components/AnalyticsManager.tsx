@@ -7,8 +7,7 @@ import {
   Eye,
   MousePointer,
   Clock,
-  TrendingUp,
-  Activity,
+  TrendingUp,  Activity,
   Zap,
   Target,
   Globe,
@@ -34,7 +33,6 @@ interface AnalyticsData {
   };
   events: { name: string; count: number; timestamp: string }[];
 }
-
 interface UserSession {
 
   id: string;
@@ -44,8 +42,7 @@ interface UserSession {
   events: { name: string; timestamp: number; data?: unknown 
 }[];
   userAgent: string;
-  referrer: string;
-}
+  referrer: string}
 
 export function AnalyticsManager() {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(
@@ -60,16 +57,19 @@ export function AnalyticsManager() {
   // Initialize analytics tracking
   useEffect(() => {
     initializeAnalytics();
-    return () => cleanupAnalytics();
-  }, []);
+    return () => cleanupAnalytics()}, []);
 
   const initializeAnalytics = useCallback(() => {
     setIsTracking(true);
 
     // Create or retrieve session
     const sessionId ='
+<<<<<<< HEAD
       localStorage.getItem('zion_session_id') || generateSessionId();
     localStorage.setItem('zion_session_id', sessionId);
+=======
+      localStorage.getItem('zion_session_id') || generateSessionId();'    localStorage.setItem('zion_session_id', sessionId);
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     const session: UserSession = {
 
@@ -94,7 +94,6 @@ export function AnalyticsManager() {
 
       trackReferrer(document.referrer);
     }
-
     // Set up event listeners
     setupEventListeners();
 
@@ -109,9 +108,14 @@ export function AnalyticsManager() {
 
   const cleanupAnalytics = useCallback(() => {
     // Clean up event listeners'
+<<<<<<< HEAD
     document.removeEventListener('click', handleClick);
     document.removeEventListener('scroll', handleScroll);
     window.removeEventListener('beforeunload', handleBeforeUnload);
+=======
+    document.removeEventListener('click', handleClick);'
+    document.removeEventListener('scroll', handleScroll);'    window.removeEventListener('beforeunload', handleBeforeUnload);
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Save session data
     if (currentSession) {
@@ -139,9 +143,14 @@ export function AnalyticsManager() {
 
     const target = event.target as HTMLElement;
 
+<<<<<<< HEAD
     // Track button clicks'
     if (target.tagName === 'BUTTON' || target.closest('button')) {
 
+=======
+    // Track button clicks'    if (target.tagName === 'BUTTON' || target.closest('button')) {
+'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       trackEvent('button_click', {
 
         text: target.textContent || target.innerText,
@@ -155,13 +164,16 @@ export function AnalyticsManager() {
       const link ='
         target.tagName === 'A'
           ? target'
+<<<<<<< HEAD
           : (target.closest('a') as HTMLAnchorElement);
       trackEvent('link_click', {
+=======
+          : (target.closest('a') as HTMLAnchorElement);'      trackEvent('link_click', {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         href: link.href,
         text: link.textContent || link.innerText});
     }
-
     // Track form interactions
     if ('
       target.tagName === 'INPUT' ||'
@@ -246,8 +258,7 @@ export function AnalyticsManager() {
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver(list => {
 
-        let clsValue = 0;
-        for (const entry of list.getEntries()) {
+        let clsValue = 0;        for (const entry of list.getEntries()) {
 
           if (!entry.hadRecentInput) {
 
@@ -390,7 +401,6 @@ export function AnalyticsManager() {
       ['form_submit',button_click',link_click'].includes(e.name)
     );
     const conversionRate = (conversionEvents.length / events) * 100;
-
     return {
 
       pageViews,
@@ -428,8 +438,7 @@ export function AnalyticsManager() {
     } else {
 
       return 'Desktop';
-    }
-  };
+    }  };
 
   // Update analytics data when session changes
   useEffect ( () => {
@@ -439,7 +448,6 @@ export function AnalyticsManager() {
       setAnalyticsData(report);
     }
   }, [currentSession, generateAnalyticsReport]) ;
-
   if (!showAnalytics) {
 
     return()
@@ -452,8 +460,7 @@ export function AnalyticsManager() {
       >"
         <BarChart3 className="w-6 h-6" />
       </motion.button>
-    );
-  }
+    )}
 
   return()
     <motion.div
@@ -511,15 +518,18 @@ export function AnalyticsManager() {
             {analyticsData.userAgents[0]?.device === 'Mobile' ? ("
               <Smartphone className="w-4 h-4 text-purple-400" />
             ) : ("
-              <Monitor className="w-4 h-4 text-cyan-400" />
-            )}
+              <Monitor className="w-4 h-4 text-cyan-400" />            )}
             <span>Device: {analyticsData.userAgents[0]?.device}</span>
           </div>
 
           {/* Tracking Status */}"
           <div className="flex items-center space-x-2">"
+<<<<<<< HEAD
             <Zap className="w-4 h-4 text-orange-400" />
             <span>Tracking: {isTracking ? 'Active' : 'Inactive'}</span>
+=======
+            <Zap className="w-4 h-4 text-orange-400" />'            <span>Tracking: {isTracking ? 'Active' : 'Inactive'}</span>
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </div>
         </div>
       )}
@@ -531,8 +541,7 @@ export function AnalyticsManager() {
 
               saveSessionData(currentSession);
             }
-          }}"
-          className="w-full px-3 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-xs rounded transition-colors duration-200"
+          }}"          className="w-full px-3 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-xs rounded transition-colors duration-200"
         >
           Save Session Data
         </button>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -162,14 +163,33 @@ export default function AICybersecurityThreatDetection(...args: []):  {
     'HIPAA',;
     'PCI DSS',;
     'NIST Cybersecurity Framework';
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { SEO  } from '@/components/SEO';      description: 'Behavioral analysis detects unusual user activities and data access patterns',;
+      icon: Users};
+  ];
+
+  const complianceFrameworks = [;'
+    'SOC 2 Type II',;'
+    'ISO 27001',;'
+    'GDPR',;'
+    'HIPAA',;'
+    'PCI DSS',;'    'NIST Cybersecurity Framework';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
         title="AI Cybersecurity Threat Detection - Zion Tech Group"
         description="Advanced AI-powered cybersecurity platform with 99.9% threat detection rate. Real-time monitoring, automated response, and zero-day attack prevention. Start from $499/month."
       />
+=======
+        title="AI Cybersecurity Threat Detection - Zion Tech Group""        description="Advanced AI-powered cybersecurity platform with 99.9% threat detection rate. Real-time monitoring, automated response, and zero-day attack prevention. Start from $499/month."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -200,8 +220,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-600 to-orange-600 text-white text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Cybersecurity
+              <Shield className="w-4 h-4 mr-2" />              AI-Powered Cybersecurity
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -571,8 +590,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 viewport={{ once: true }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-red-500 transition-all duration-300"
 "
-                <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />"
-                <p className="text-white font-medium text-sm">{framework}</p>
+                <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />"                <p className="text-white font-medium text-sm">{framework}</p>
               </motion.div>;
             ))}
           </div>
@@ -682,8 +700,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>

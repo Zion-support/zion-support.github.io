@@ -114,8 +114,7 @@ export default function AIProjectManagement(...args: any[]): any {
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>"
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -126,8 +125,7 @@ export default function AIProjectManagement(...args: any[]): any {
               <Target className="w-5 h-5 text-orange-400 mr-2" />"
               <span className="text-orange-300 font-medium">
                 AI Project Management
-              </span>
-            </div>
+              </span>            </div>
 "
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
@@ -150,16 +148,14 @@ export default function AIProjectManagement(...args: any[]): any {
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center"
               >"
-                <Rocket className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Rocket className="w-5 h-5 mr-2" />                Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center"
               >"
-                <Video className="w-5 h-5 mr-2" />
-                Watch Demo
+                <Video className="w-5 h-5 mr-2" />                Watch Demo
               </motion.button>
             </div>
           </motion.div>
@@ -234,8 +230,7 @@ export default function AIProjectManagement(...args: any[]): any {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4"
               >"
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />"
-                <span className="text-white font-medium">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />"                <span className="text-white font-medium">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -281,8 +276,7 @@ export default function AIProjectManagement(...args: any[]): any {
                       key={featureIndex}"
                       className="flex items-center space-x-3"
                     >"
-                      <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -331,8 +325,7 @@ export default function AIProjectManagement(...args: any[]): any {
                 </div>"
                 <span className="text-white font-medium text-sm">
                   {projectType}
-                </span>
-              </motion.div>
+                </span>              </motion.div>
             ))}
           </div>
         </div>
@@ -359,16 +352,14 @@ export default function AIProjectManagement(...args: any[]): any {
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Start Your Free Trial
+                <ArrowRight className="w-5 h-5 mr-2" />                Start Your Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center"
               >"
-                <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+                <Phone className="w-5 h-5 mr-2" />                Call +1 302 464 0950
               </motion.button>
             </div>
           </motion.div>

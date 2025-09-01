@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { AlertTriangle, RefreshCw  } from 'lucide-react';
 interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
@@ -14,6 +15,10 @@ export default function LoginErrorFallback(...args[]):  {
           <AlertTriangle className="w-8 h-8 text-red-400" />
         </div>"
         <h2 className="text-2xl font-bold text-white mb-4">
+=======
+import React from 'react.ts';'
+import { AlertTriangle, RefreshCw  } from 'lucide-react';        <h2 className="text-2xl font-bold text-white mb-4">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           Something went wrong
         </h2>"
         <p className="text-zion-slate-light mb-6">
@@ -33,8 +38,7 @@ export default function LoginErrorFallback(...args[]):  {
           onClick={resetErrorBoundary}"
           className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
         >"
-          <RefreshCw className="w-4 h-4" />;
-          Try Again;
+          <RefreshCw className="w-4 h-4" />;          Try Again;
         </button>;
       </div>;
     </div>;

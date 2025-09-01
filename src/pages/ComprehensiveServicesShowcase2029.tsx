@@ -9,8 +9,7 @@ import {
   Shield,
   Cloud,
   Database,
-  Network,
-  Cpu,
+  Network,  Cpu,
   CheckCircle,
   Star,
   TrendingUp,
@@ -38,7 +37,6 @@ import {
   serviceCategories,
   pricingTiers,
   Service} from '../data/innovativeServices2029';
-
 export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -292,10 +290,16 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <SEO"
+<<<<<<< HEAD
         title="Comprehensive Services Showcase 2029 | Zion Tech Group"
         description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
         keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, 2029 services"
       />
+=======
+        title="Comprehensive Services Showcase 2029 | Zion Tech Group""
+        description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology.""        keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, 2029 services"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -310,8 +314,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl mb-8 border border-cyan-400/30">"
               <Rocket className="w-10 h-10 text-cyan-400" />
             </div>"
-            <h1 className="text-5xl md:text-7xl font-bold mb-8">"
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8">"              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Comprehensive Services
               </span>
               <br />"
@@ -330,15 +333,13 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >"
-                <Phone className="w-5 h-5 mr-2" />
-                Get Started Today
+                <Phone className="w-5 h-5 mr-2" />                Get Started Today
               </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >"
-                <Mail className="w-5 h-5 mr-2" />
-                Contact Us
+                <Mail className="w-5 h-5 mr-2" />                Contact Us
               </a>
             </div>
           </motion.div>
@@ -353,8 +354,12 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input"
+<<<<<<< HEAD
                 type="text"
                 placeholder="Search services..."
+=======
+                type="text""                placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20"
@@ -461,8 +466,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
 "
                     <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">"
                       <span className="font-semibold">Learn More</span>"
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                    </div>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />                    </div>
                   </div>
                 </Link>
               </motion.div>) ) }
@@ -487,8 +491,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
 
                   setSearchTerm('');
                   setSelectedCategory('all');
-                }}"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+                }}"                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
               >
                 Clear Filters
               </button>
@@ -526,8 +529,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">"
                 <Phone className="w-8 h-8 text-cyan-400" />
               </div>"
-              <h3 className="text-xl font-bold text-white mb-2">Phone</h3>"
-              <p className="text-gray-300 mb-4">+1 302 464 0950</p>
+              <h3 className="text-xl font-bold text-white mb-2">Phone</h3>"              <p className="text-gray-300 mb-4">+1 302 464 0950</p>
               <a"
                 href="tel:+13024640950"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
@@ -546,8 +548,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">"
                 <Mail className="w-8 h-8 text-cyan-400" />
               </div>"
-              <h3 className="text-xl font-bold text-white mb-2">Email</h3>"
-              <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
+              <h3 className="text-xl font-bold text-white mb-2">Email</h3>"              <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
@@ -571,10 +572,16 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
                 364 E Main St STE 1008, Middletown DE 19709
               </p>
               <a"
+<<<<<<< HEAD
                 href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+=======
+                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709""
+                target="_blank""
+                rel="noopener noreferrer""                className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 View on Map
               </a>
@@ -585,6 +592,5 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
     </div>
   );
 }
-
 export default ComprehensiveServicesShowcase2029;
 '"`

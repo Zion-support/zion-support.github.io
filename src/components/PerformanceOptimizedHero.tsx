@@ -1,53 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-
-  ArrowRight,
-  Play,
-  Star,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  CheckCircle,
-  TrendingUp,
-  Users,
-  Globe,
-  Rocket
-interface HeroProps {
-  // Add your props here
-
-
-  title?: string;
-  subtitle?: string;
-  description?: string;
-  ctaText?: string;
-  ctaLink?: string;
-  features?: Array<{
-
-    icon: React.ComponentType<any>;
-    text: string;
-    color: string;
-  }>;
-
-const PerformanceOptimizedHero: React.FC<HeroProps> = ({
-
-  title = "Revolutionary AI & Technology Solutions","
-  subtitle = "2025-2026 Innovation Hub","
-  description = "Transform your business with cutting-edge AI, quantum computing, and next-generation technology solutions. Experience the future of digital transformation.","
-  ctaText = "Explore Our Services","
-  ctaLink = "/services",
-  features = [;"
-    { icon: Brain, text: "AI-Powered Solutions", color: "from-purple-500 to-pink-500" },;"
-    { icon: Cloud, text: "Cloud Infrastructure", color: "from-blue-500 to-cyan-500" },;"
-    { icon: Shield, text: "Cybersecurity", color: "from-green-500 to-emerald-500" },;"
-    { icon: Zap, text: "Digital Transformation", color: "from-yellow-500 to-orange-500" };
-  ];
-}) => {;
-  const [currentFeature, setCurrentFeature] = useState (0) ;
-  const [isVisible, setIsVisible] = useState (false) ;
-
   useEffect ( () => {
     setIsVisible (true) ;
     
@@ -72,14 +25,10 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 },
     visible: {
 
-      opacity: 1,;
-      y: 0,;
+      opacity: 1,;      y: 0,;
       transition: {
         duration: 0.8,;
-        staggerChildren: 0.2;
-      };
-    };
-  };
+        staggerChildren: 0.2}}};
 
   const itemVariants = {
 
@@ -88,10 +37,8 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   y: 30 ;
 ;
 ;
-
 },;
-    visible: { opacity: 1, y: 0 };
-  };
+    visible: { opacity: 1, y: 0 }};
 
   const featureVariants = {
 
@@ -100,10 +47,8 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   scale: 0.8 ;
 ;
 ;
-
 },;
-    visible: { opacity: 1, scale: 1 };
-  };
+    visible: { opacity: 1, scale: 1 }};
 
   return ("
     <section className = "relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -126,8 +71,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
           className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-8"
           variants={itemVariants}
 "
-          <Star className="w-4 h-4 mr-2" />
-          {subtitle}
+          <Star className="w-4 h-4 mr-2" />          {subtitle}
         </motion.div>
 
         {/* Main title */}
@@ -164,8 +108,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
           </Link>
 "
           <button className="group inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-full text-lg hover:bg-cyan-500/10 transition-all duration-300">"
-            <Play className="mr-2 w-5 h-5" />
-            Watch Demo
+            <Play className="mr-2 w-5 h-5" />            Watch Demo
           </button>
         </motion.div>
 
@@ -250,11 +193,3 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 ;
 ;
 ;
-
-}};
-        />;
-      </AnimatePresence>;
-    </section>;) ;
-</div></div></div></div>};
-
-export default React.memo(PerformanceOptimizedHero);}}}</motion.div>}'"`

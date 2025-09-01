@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion   } from 'framer-motion.ts';
 import { Link   } from 'react-router-dom.ts';
@@ -70,6 +71,11 @@ const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
         "Standard monitoring","
         "Up to 100 endpoints","
         "Basic reporting"
+=======
+import React from 'react.ts';'
+import { motion   } from 'framer-motion.ts';'
+import { Link   } from 'react-router-dom.ts';        "Basic reporting"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -139,17 +145,22 @@ const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
     "Network Security","
     "Endpoint Protection","
     "Cloud Security","
-    "Real-time Analytics",;"
-    "Predictive Modeling";
+    "Real-time Analytics",;"    "Predictive Modeling";
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO "
+<<<<<<< HEAD
         title="AI-Powered Cyber Threat Intelligence | Zion Tech Group"
         description="Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets."
         keywords="AI Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI"
       />
+=======
+        title="AI-Powered Cyber Threat Intelligence | Zion Tech Group""
+        description="Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets.""        keywords="AI Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -184,8 +195,7 @@ const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
               >
                 Secure Your Digital Assets"
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>"
-              <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
+              </Link>"              <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
@@ -334,8 +344,7 @@ const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
                 <ul className="space-y-4 mb-8">
                   {service.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-zion-slate-light">"
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -350,8 +359,7 @@ const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
                   }`}
                 >
                   Get Started"
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
+                  <ArrowRight className="ml-2 w-4 h-4" />                </Link>
               </motion.div>
             ))}
           </div>
@@ -412,15 +420,13 @@ const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
               >"
                 <div className="flex items-center mb-6">"
-                  <Target className="w-8 h-8 text-zion-cyan mr-3" />"
-                  <h3 className="text-2xl font-bold text-white">{useCase.industry}</h3>
+                  <Target className="w-8 h-8 text-zion-cyan mr-3" />"                  <h3 className="text-2xl font-bold text-white">{useCase.industry}</h3>
                 </div>"
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{useCase.description}</p>"
                 <div className="space-y-2">
                   {useCase.benefits.map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center text-zion-slate-light">"
-                      <TrendingUp className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                      {benefit}
+                      <TrendingUp className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />                      {benefit}
                     </div>
                   ))}
                 </div>
@@ -485,8 +491,7 @@ const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
               >"
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">"
                   <Activity className="w-6 h-6 text-white" />
-                </div>"
-                <p className="text-white font-medium">{tech}</p>
+                </div>"                <p className="text-white font-medium">{tech}</p>
               </motion.div>
             ))}
           </div>
@@ -527,8 +532,7 @@ const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
                 >
                   Start Your Security Transformation"
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>"
-                <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                </Link>"                <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                   Book a Security Assessment
                 </button>
               </div>
@@ -551,8 +555,7 @@ const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
               <span>+1 302 464 0950</span>
             </div>"
             <div className="flex items-center">"
-              <Lock className="w-5 h-5 text-zion-cyan mr-2" />
-              <span>kleber@ziontechgroup.com</span>
+              <Lock className="w-5 h-5 text-zion-cyan mr-2" />              <span>kleber@ziontechgroup.com</span>
             </div>
           </div>"
           <p className="text-zion-slate-light mt-4">

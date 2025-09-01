@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -248,6 +249,10 @@ export default function ITConsulting(...args: []):  {
       description: 'Industry 4.0 and smart manufacturing IT';
     };
   ];
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';  ];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -263,8 +268,7 @@ export default function ITConsulting(...args: []):  {
             className="text-center"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">"
-              <Briefcase className="w-4 h-4 mr-2" />
-              IT Consulting Services
+              <Briefcase className="w-4 h-4 mr-2" />              IT Consulting Services
             </div>
             "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -367,8 +371,7 @@ export default function ITConsulting(...args: []):  {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">"
-                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -638,6 +641,5 @@ export default function ITConsulting(...args: []):  {
     </div>
   );
 };
-;
-export default ITConsulting;
+;export default ITConsulting;
 '"

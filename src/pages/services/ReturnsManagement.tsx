@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '@/components/SEO';
 
@@ -11,6 +12,10 @@ function ReturnsManagement() {
       <section className="container-responsive section-padding">"
         <h1 className="heading-responsive text-gradient">E‑commerce Returns Management</h1>"
         <p className="mt-4 max-w-3xl text-zion-slate-light text-responsive">
+=======
+import React from 'react';'
+import SEO from '@/components/SEO';        <p className="mt-4 max-w-3xl text-zion-slate-light text-responsive">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           Reduce support workload and increase customer satisfaction with a self‑serve, branded
           returns portal that automates labels, RMAs, inspections, and refunds while syncing
           with your e‑commerce and shipping providers.

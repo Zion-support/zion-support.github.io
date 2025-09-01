@@ -19,9 +19,14 @@ import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
 
       // // // // // // // // console.log('PrimaryNav search submit:', query);
+<<<<<<< HEAD
       router.push(`/search/${slugify(query)}`);
       setQuery('');
 
+=======
+      router.push(`/search/${slugify(query)}`);'      setQuery('');
+'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // // // // // console.log('PrimaryNav search submit:', query);`
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
@@ -29,8 +34,7 @@ import type { RootState } from '@/store';
 const ModeToggle = (...args: unknown[]): unknown => {;
   const [isDark, setIsDark] = useState<typeof false>(false);
 
-  const toggleTheme = (...args: unknown[]): unknown => {;
-    setIsDark(!isDark);
+  const toggleTheme = (...args: unknown[]): unknown => {;    setIsDark(!isDark);
     // Add theme switching logic here
   };
 
@@ -43,11 +47,11 @@ const ModeToggle = (...args: unknown[]): unknown => {;
         data-testid="header"
 "
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
-          <Logo />
+          <Logo  />
 
           {/* Navigation - hidden on mobile, shown on desktop */}"
           <div className="hidden md:block order-1 flex-shrink-0">
-            <ResponsiveNavigation />
+            <ResponsiveNavigation  />
           </div>
 
                   // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
@@ -92,7 +96,7 @@ const ModeToggle = (...args: unknown[]): unknown => {;
 
             {/* Compact actions group */}"
             <div className="flex items-center gap-1">
-              <PointsBadge />
+              <PointsBadge  />
               <HoverCard openDelay={100}>
                 <HoverCardTrigger asChild>
                   <Link"
@@ -105,8 +109,7 @@ const ModeToggle = (...args: unknown[]): unknown => {;
 }
                   >"
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
-                    {cartCount > 0 && ("
-                      <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
+                    {cartCount > 0 && ("                      <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
                         {cartCount}
                       </span>
                     )}
@@ -122,8 +125,8 @@ const ModeToggle = (...args: unknown[]): unknown => {;
 
             {/* Compact controls group */}"
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
-              <ModeToggle />
-              <LanguageSelector />
+              <ModeToggle  />
+              <LanguageSelector  />
             </div>
 
             {/* Auth links - flex wrap for very small screens */}"
@@ -145,7 +148,7 @@ const ModeToggle = (...args: unknown[]): unknown => {;
                   </Link>
                 </>
               )}
-              {isLoggedIn && <UserMenu />}
+              {isLoggedIn && <UserMenu  />}
             </div>
           </div>
           
@@ -154,8 +157,7 @@ const ModeToggle = (...args: unknown[]): unknown => {;
             onClick={() => setIsOpen(!isOpen)}"
             className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
           >"
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}          </button>
         </div>
 
         {/* Mobile Navigation */}

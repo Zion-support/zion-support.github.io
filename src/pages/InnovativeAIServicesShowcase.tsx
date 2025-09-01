@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -82,13 +83,23 @@ import SEO from '@/components/SEO';
       route: '/services/ai-supply-chain-optimization';
     };
   ];
+=======
+import React from 'react';'
+import { Link } from 'react-router-dom';'
+import { motion } from 'framer-motion';  ];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO "
+<<<<<<< HEAD
         title="Innovative AI Services Showcase - Zion Tech Group"
         description="Discover our comprehensive suite of AI-powered business solutions including project management, content marketing, financial analytics, HR talent management, and supply chain optimization."
       />
+=======
+        title="Innovative AI Services Showcase - Zion Tech Group""        description="Discover our comprehensive suite of AI-powered business solutions including project management, content marketing, financial analytics, HR talent management, and supply chain optimization."
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 sm:py-24">"
@@ -109,8 +120,7 @@ import SEO from '@/components/SEO';
             transition={{ duration: 0.6 }}"
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold mb-6"
 "
-            <Sparkles className="w-4 h-4 mr-2" />
-            Innovative AI-Powered Solutions
+            <Sparkles className="w-4 h-4 mr-2" />            Innovative AI-Powered Solutions
           </motion.div>
           
           <motion.h1 
@@ -226,8 +236,7 @@ import SEO from '@/components/SEO';
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-start text-xs text-slate-300">"
-                        <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />                        {feature}
                       </li>) ) }
                   </ul>
                 </div>
@@ -251,8 +260,7 @@ import SEO from '@/components/SEO';
                   to={service.route}"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-semibold group-hover:translate-x-1 transition-all duration-300"
 "
-                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>;
+                  Learn More <ArrowRight className="w-4 h-4 ml-1" />                </Link>;
               </motion.div>) ) }
           </div>
         </div>
@@ -287,8 +295,7 @@ import SEO from '@/components/SEO';
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <Zap className="w-8 h-8 text-white" />
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge AI</h3>"
-              <p className="text-slate-300">Latest AI technologies and continuous innovation in all our solutions</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge AI</h3>"              <p className="text-slate-300">Latest AI technologies and continuous innovation in all our solutions</p>
             </div>
           </div>
         </div>
@@ -339,8 +346,7 @@ import SEO from '@/components/SEO';
               rel="noreferrer"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold rounded-lg hover:from-cyan-300 hover:to-blue-400 transition-all duration-300"
             >;"
-              Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
-            </a>;
+              Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;            </a>;
           </div>;
         </div>;
       </section>;

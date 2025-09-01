@@ -63,7 +63,6 @@ export const sanitizeInput = {
 
   // Remove potentially dangerous HTML tags
   html: (input: string): string => {
-
     return input'
       .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,)
       .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi,)
@@ -86,7 +85,6 @@ export const sanitizeInput = {
       .replace(/<script/gi,)
       .replace(/<\/script>/gi,);
   },
-
   // General sanitization
   general: (input: string): string => {
 
@@ -158,6 +156,5 @@ export const securityMiddleware = {
     rateLimit: false,
     session: false,
     validation: true})};
-
 export default securityConfig;
 '"`

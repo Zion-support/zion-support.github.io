@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'react';
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 export function UserExperienceOptimizer ({
+<<<<<<< HEAD
 import {
 
   Users,
@@ -49,6 +50,8 @@ interface UserBehavior {
 
 }
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface UXMetric {
 
   id: string;
@@ -61,7 +64,6 @@ interface UXMetric {
   category: 'engagement' | 'performance' | 'conversion' | 'satisfaction';
 
 }
-
 interface OptimizationSuggestion {
 
   id: string;
@@ -75,7 +77,6 @@ interface OptimizationSuggestion {
   implementation: string;
 
 }
-
 interface UserExperienceOptimizerProps {
   // Add your props here
 
@@ -84,7 +85,6 @@ interface UserExperienceOptimizerProps {
   showRealTime?: boolean;
   autoAnalyze?: boolean;
   onOptimizationComplete?: suggestions: OptimizationSuggestion[] void;
-
 export function UserExperienceOptimizer({
 
   enabled = true,
@@ -111,8 +111,7 @@ export function UserExperienceOptimizer({
   const [overallScore, setOverallScore] = useState(0);
   const [targetScore, setTargetScore] = useState(90);
 
-  const analysisIntervalRef = useRef<NodeJS.Timeout | null>(null);
-
+  
   // Generate sample user behaviors
   const generateUserBehaviors = useCallback(() => {
     const actions = ['
@@ -266,10 +265,8 @@ export function UserExperienceOptimizer({
 
     setOptimizationSuggestions(suggestions);
   }, []);
-
   // Start UX analysis
-  const startUXAnalysis = useCallback(() => {
-    setIsAnalyzing(true);
+  
     setAnalysisComplete(false);
 
     // Simulate analysis process
@@ -290,7 +287,6 @@ export function UserExperienceOptimizer({
               : Math.max(0, metric.value - metric.change);
           return sum + (normalizedValue / metric.target) * 100;
         }, 0) / uxMetrics.length;
-
       setOverallScore(Math.round(avgMetrics));
 
       if (onOptimizationComplete) {
@@ -306,7 +302,6 @@ export function UserExperienceOptimizer({
     optimizationSuggestions,
     onOptimizationComplete,
   ]);
-
   // Auto - analyze when component opens
   useEffect ( () => {
     if (autoAnalyze && isOpen && !analysisComplete) {
@@ -314,7 +309,6 @@ export function UserExperienceOptimizer({
       startUXAnalysis();
     }
   }, [autoAnalyze, isOpen, analysisComplete, startUXAnalysis]) ;
-
   // Setup real - time updates
   useEffect ( () => {
     if (showRealTime && isOpen && analysisComplete) {
@@ -358,11 +352,9 @@ export function UserExperienceOptimizer({
       <div`
         className={`flex items-center space-x-1 ${colors[trend as keyof typeof colors]}`}
       >
-        {icons[trend as keyof typeof icons]}"
-        <span className="text-sm font-medium">+{change.toFixed(1)}</span>
+        {icons[trend as keyof typeof icons]}"        <span className="text-sm font-medium">+{change.toFixed(1)}</span>
       </div>
-    );
-  };
+    )};
 
   // Get impact color
   const getImpactColor = (impact: string) => {
@@ -400,7 +392,6 @@ export function UserExperienceOptimizer({
         now - behavior.timestamp.getTime() <= timeframes[selectedTimeframe]
     );
   };
-
   if (!enabled) return null;
 
   return()
@@ -415,8 +406,7 @@ export function UserExperienceOptimizer({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.1 }}
       >"
-        <Users className="w-6 h-6" />"
-        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+        <Users className="w-6 h-6" />"        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
       </motion.button>
 
       {/* UX Optimizer Modal */}
@@ -442,8 +432,7 @@ export function UserExperienceOptimizer({
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20">"
                 <div className="flex items-center space-x-3">"
                   <Users className="w-8 h-8 text-green-600" />
-                  <div>"
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  <div>"                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                       User Experience Optimizer
                     </h2>"
                     <p className="text-gray-600 dark:text-gray-400">
@@ -460,8 +449,7 @@ export function UserExperienceOptimizer({
                   >
                     <RefreshCw'`
                       className={`w-5 h-5 ${isAnalyzing ? 'animate-spin' : ''}`}
-                    />
-                  </button>
+                    />                  </button>
 
                   <button
                     onClick={() => setIsFullscreen(!isFullscreen)}"
@@ -478,8 +466,7 @@ export function UserExperienceOptimizer({
                     onClick={() => setIsOpen(false)}"
                     className="p-2 text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors"
                   >"
-                    <X className="w-5 h-5" />
-                  </button>
+                    <X className="w-5 h-5" />                  </button>
                 </div>
               </div>
 
@@ -503,8 +490,7 @@ export function UserExperienceOptimizer({
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           Overall UX Score
                         </h3>"
-                        <Users className="w-6 h-6 text-green-600" />
-                      </div>
+                        <Users className="w-6 h-6 text-green-600" />                      </div>
 "
                       <div className="flex items-center space-x-6">"
                         <div className="text-center">
@@ -584,8 +570,7 @@ export function UserExperienceOptimizer({
                           }`}
                         >"
                           <Icon className="w-4 h-4" />
-                          <span>{label}</span>"
-                          <span className="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-full text-xs">
+                          <span>{label}</span>"                          <span className="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-full text-xs">
                             {count}
                           </span>
                         </button>) ) }
@@ -719,8 +704,7 @@ export function UserExperienceOptimizer({
                                           Location: {behavior.location}
                                         </span>
                                       </div>
-                                    </div>
-                                  </div>
+                                    </div>                                  </div>
 "
                                   <div className="text-right text-sm text-gray-500 dark:text-gray-400">
                                     <div>
@@ -825,8 +809,7 @@ export function UserExperienceOptimizer({
                       </button>
 "
                       <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">"
-                        <Lightbulb className="w-4 h-4" />
-                        <span>Apply All Suggestions</span>
+                        <Lightbulb className="w-4 h-4" />                        <span>Apply All Suggestions</span>
                       </button>
 "
                       <button className="flex items-center space-x-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">"
@@ -837,8 +820,7 @@ export function UserExperienceOptimizer({
                   </div>
                 ) : ("
                   <div className="text-center py-12">"
-                    <Users className="w-16 h-16 text-green-600 mx-auto mb-4" />"
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    <Users className="w-16 h-16 text-green-600 mx-auto mb-4" />"                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                       Ready to optimize user experience?
                     </h3>"
                     <p className="text-gray-600 dark:text-gray-400 mb-6">

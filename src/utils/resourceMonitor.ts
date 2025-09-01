@@ -4,7 +4,6 @@ interface ResourceError {
   error: string;
   timestamp: number;
 }
-
 class ResourceMonitor {
   private errors: ResourceError[] = [];
   private isMonitoring = false;
@@ -69,7 +68,6 @@ class ResourceMonitor {
       }
     });
   }
-
   private setupResourceObservers() {
     // Monitor DOM changes for new resources
     if (window.MutationObserver) {
@@ -88,10 +86,8 @@ class ResourceMonitor {
           });
         });
       });
-
       observer.observe(document.head, { childList: true, subtree: true });
-      observer.observe(document.body, { childList: true, subtree: true });
-    }
+      observer.observe(document.body, { childList: true, subtree: true })}
   }
 
   private monitorElement(element: HTMLElement) {
@@ -137,7 +133,6 @@ class ResourceMonitor {
       this.checkResourceHealth(resource);
     });
   }
-
   private async checkResourceHealth(url: string) {
 
     try {
@@ -152,6 +147,7 @@ class ResourceMonitor {
         );
         return;
       }
+<<<<<<< HEAD
 
       const contentType = response.headers.get('content-type');
       if (!contentType) {
@@ -159,9 +155,18 @@ class ResourceMonitor {
         this.handleResourceError(url,other',No content-type header');
         return;
       }
+=======
+'
+      const contentType = response.headers.get('content-type');      if (!contentType) {
+'
+        this.handleResourceError(url, 'other', 'No content-type header');
+        return}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Check for MIME type issues'
       if (url.endsWith('.js') && !contentType.includes('javascript')) {
+        this.handleResourceError(url, 'script', `Incorrect MIME type: ${contentType} (expected javascript)`)} else if (url.endsWith('.css') && !contentType.includes('css')) {
+        this.handleResourceError(url, 'stylesheet', `Incorrect MIME type: ${contentType} (expected css)`)}
 
         this.handleResourceError()
           url,script',`
@@ -176,9 +181,14 @@ class ResourceMonitor {
       }
     } catch (error) {
 '`
+<<<<<<< HEAD
       this.handleResourceError(url,other', `Fetch error: ${error}`);
     }
   }
+=======
+      this.handleResourceError(url, 'other', `Fetch error: ${error}`);
+    }  }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   private handleResourceError()
     url: string,
@@ -220,9 +230,14 @@ class ResourceMonitor {
         this.retryResource(url, type);
       },
       Math.pow(2, attempts) * 1000
+<<<<<<< HEAD
     ); // Exponential backoff
   }
 
+=======
+    ); // Exponential backoff  }
+'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   private retryResource(url: string, type: ResourceError['type']) {
 `
     // console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`);
@@ -269,7 +284,6 @@ class ResourceMonitor {
     };
     document.head.appendChild(link);
   }
-
   private reportError(error: ResourceError) {
 
     // In production, send to monitoring service'
@@ -277,9 +291,14 @@ class ResourceMonitor {
 
       // Example: Sentry, LogRocket, etc.'
       // console.log('📊 Reporting error to monitoring service:', error);
+<<<<<<< HEAD
     }
   }
 
+=======
+    }  }
+'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   private getResourceType(element: HTMLElement): ResourceError['type'] {
 
     if (element.tagName === 'SCRIPT') return 'script';
@@ -301,11 +320,9 @@ class ResourceMonitor {
 
     return [...this.errors];
   }
-
   clearErrors() {
     this.errors = [];
-    this.retryAttempts.clear();
-  }
+    this.retryAttempts.clear()}
 
   getErrorSummary() {
     const summary = {
@@ -319,13 +336,10 @@ class ResourceMonitor {
 
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
     });
-
-    return summary;
-  }
+    return summary}
 }
 
 // Create singleton instance
-const resourceMonitor = new ResourceMonitor();
 
 export default resourceMonitor;
 '`

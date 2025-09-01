@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -184,6 +185,10 @@ const TermsOfService = () => {;
       description: 'As a last resort, resolve disputes through binding arbitration';
     };
   ];
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';  ];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <>
@@ -214,8 +219,7 @@ const TermsOfService = () => {;
               className="text-center"
             >"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Info className="w-8 h-8 text-zion-cyan" />
-                Agreement to Terms
+                <Info className="w-8 h-8 text-zion-cyan" />                Agreement to Terms
               </h2>"
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>"
@@ -237,8 +241,7 @@ const TermsOfService = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Shield className="w-8 h-8 text-zion-cyan" />
-                Description of Services
+                <Shield className="w-8 h-8 text-zion-cyan" />                Description of Services
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -263,8 +266,7 @@ const TermsOfService = () => {;
                     Software development and consulting
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Technology strategy and advisory services
+                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Technology strategy and advisory services
                   </li>
                 </ul>
                 <p > We reserve the right to modify, suspend, or discontinue any part of our services at any time without notice.
@@ -281,8 +283,7 @@ const TermsOfService = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Users className="w-8 h-8 text-zion-cyan" />
-                User Accounts and Responsibilities
+                <Users className="w-8 h-8 text-zion-cyan" />                User Accounts and Responsibilities
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -303,8 +304,7 @@ const TermsOfService = () => {;
                     Notifying us immediately of any unauthorized use
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Ensuring your account information is up to date
+                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Ensuring your account information is up to date
                   </li>
                 </ul>
                 <p>
@@ -322,8 +322,7 @@ const TermsOfService = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Shield className="w-8 h-8 text-zion-cyan" />
-                Acceptable Use Policy
+                <Shield className="w-8 h-8 text-zion-cyan" />                Acceptable Use Policy
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -352,8 +351,7 @@ const TermsOfService = () => {;
                     Interfere with the proper functioning of our services
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Use our services for commercial purposes without authorization
+                    <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Use our services for commercial purposes without authorization
                   </li>
                 </ul>
                 <p > Violation of this policy may result in termination of your access to our services.
@@ -370,8 +368,7 @@ const TermsOfService = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Lock className="w-8 h-8 text-zion-cyan" />
-                Intellectual Property Rights
+                <Lock className="w-8 h-8 text-zion-cyan" />                Intellectual Property Rights
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -392,8 +389,7 @@ const TermsOfService = () => {;
                     Patents and trade secrets
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Copyrighted materials and designs
+                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Copyrighted materials and designs
                   </li>
                 </ul>
                 <p > You may not copy, reproduce, distribute, or create derivative works from our content without our express written permission.
@@ -412,8 +408,7 @@ const TermsOfService = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Eye className="w-8 h-8 text-zion-cyan" />
-                Privacy and Data Protection
+                <Eye className="w-8 h-8 text-zion-cyan" />                Privacy and Data Protection
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -436,8 +431,7 @@ const TermsOfService = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Shield className="w-8 h-8 text-zion-cyan" />
-                Limitation of Liability
+                <Shield className="w-8 h-8 text-zion-cyan" />                Limitation of Liability
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -458,8 +452,7 @@ const TermsOfService = () => {;
                     Security breaches or data loss
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Third-party actions or content
+                    <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Third-party actions or content
                   </li>
                 </ul>
                 <p > Our total liability to you for any claims arising from these Terms or your use of our services shall not exceed the amount you paid us in the 12 months preceding the claim.
@@ -476,8 +469,7 @@ const TermsOfService = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Info className="w-8 h-8 text-zion-cyan" />
-                Disclaimers
+                <Info className="w-8 h-8 text-zion-cyan" />                Disclaimers
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -501,8 +493,7 @@ const TermsOfService = () => {;
                     Our services are free of viruses or other harmful components
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    The results obtained from using our services will be accurate or reliable
+                    <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    The results obtained from using our services will be accurate or reliable
                   </li>
                 </ul>
                 <p > We disclaim all warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non - infringement.
@@ -519,8 +510,7 @@ const TermsOfService = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Shield className="w-8 h-8 text-zion-cyan" />
-                Indemnification
+                <Shield className="w-8 h-8 text-zion-cyan" />                Indemnification
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -541,8 +531,7 @@ const TermsOfService = () => {;
                     Your violation of any third-party rights
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Any content you submit or transmit through our services
+                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Any content you submit or transmit through our services
                   </li>
                 </ul>
               </div>
@@ -557,8 +546,7 @@ const TermsOfService = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Calendar className="w-8 h-8 text-zion-cyan" />
-                Termination
+                <Calendar className="w-8 h-8 text-zion-cyan" />                Termination
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -581,8 +569,7 @@ const TermsOfService = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Globe className="w-8 h-8 text-zion-cyan" />
-                Governing Law and Dispute Resolution
+                <Globe className="w-8 h-8 text-zion-cyan" />                Governing Law and Dispute Resolution
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -605,8 +592,7 @@ const TermsOfService = () => {;
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Calendar className="w-8 h-8 text-zion-cyan" />
-                Changes to These Terms
+                <Calendar className="w-8 h-8 text-zion-cyan" />                Changes to These Terms
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -628,8 +614,7 @@ const TermsOfService = () => {;
               viewport={{ once: true }}
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Mail className="w-8 h-8 text-zion-cyan" />
-                Contact Information
+                <Mail className="w-8 h-8 text-zion-cyan" />                Contact Information
               </h2>
 "
               <p className="text-zion-slate-light mb-6">
@@ -658,8 +643,7 @@ const TermsOfService = () => {;
                   </div>
                 </div>"
                 <button className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">"
-                  <Download className="w-4 h-4" />
-                  Download PDF
+                  <Download className="w-4 h-4" />                  Download PDF
                 </button>
               </div>
 "
@@ -731,8 +715,7 @@ const TermsOfService = () => {;
                       <section.icon className="w-4 h-4 text-purple-600" />
                     </div>"
                     <span className="font-medium text-slate-900">{section.title}</span>"
-                    <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
-                  </motion.a>
+                    <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />                  </motion.a>
                 ))}
               </div>
             </motion.div>
@@ -951,8 +934,7 @@ const TermsOfService = () => {;
                   <span>legal@ziontechgroup.com</span>
                 </div>"
                 <div className="flex items-center justify-center gap-3 text-white">"
-                  <Phone className="w-5 h-5" />
-                  <span>+1 (555) 123-4567</span>
+                  <Phone className="w-5 h-5" />                  <span>+1 (555) 123-4567</span>
                 </div>
               </div>
               "

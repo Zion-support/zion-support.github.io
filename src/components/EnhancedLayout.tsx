@@ -6,6 +6,7 @@ import { EnhancedSidebar } from "./EnhancedSidebar";"
 import { FuturisticAnimatedBackground } from "./FuturisticAnimatedBackground";
 import { FuturisticFooter } from "./FuturisticFooter";
 import { FuturisticNavigation } from "./FuturisticNavigation";
+<<<<<<< HEAD
 
 
   children: ReactNode;
@@ -41,3 +42,5 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
     </div>;) ;
 };
 '"`
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

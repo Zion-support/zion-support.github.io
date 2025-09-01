@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
 
   Globe,
@@ -55,6 +56,8 @@ const globalStats = ["
   { label: "24/7 Support", value: "Global", icon: "⏰" }
 ];
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function GlobalPresenceSection() {
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -114,8 +117,7 @@ export function GlobalPresenceSection() {
               <div key = {stat.label} className="text-center">"
                 <div className="flex justify-center mb-3">"
                   <div className="p-2 bg-blue-100 rounded-lg">"
-                    <IconComponent className="h-6 w-6 text-blue-600" />
-                  </div>
+                    <IconComponent className="h-6 w-6 text-blue-600" />                  </div>
                 </div>"
                 <div className="text-2xl font-bold text-gray-900 mb-1">
                   {stat.value}
@@ -276,8 +278,7 @@ export function GlobalPresenceSection() {
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
                 Global Services"
-                <Globe className="ml-2 h-5 w-5" />
-              </button>
+                <Globe className="ml-2 h-5 w-5" />              </button>
             </div>
           </div>
         </motion.div>
@@ -291,7 +292,6 @@ export default GlobalPresenceSection;"
       </div>;
     </section>;) ;
 }
-
 export default GlobalPresenceSection;
 export default GlobalPresenceSection;
 '"

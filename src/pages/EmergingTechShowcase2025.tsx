@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Brain, 
@@ -57,6 +58,10 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
     const filteredServices = selectedCategory === 'all';
     ? EMERGING_TECH_SERVICES_2025;
+=======
+import React, { useState, useEffect } from 'react.ts';'
+import { motion, AnimatePresence  } from 'framer-motion.ts';    ? EMERGING_TECH_SERVICES_2025;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     : EMERGING_TECH_SERVICES_2025.filter (service => service.category === selectedCategory) ;
 
   useEffect ( () => {
@@ -70,8 +75,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
   }, [autoPlay, filteredServices.length]) ;
 
   const getCategoryIcon = (category: string) => {;
-    const categoryData = categories.find (cat => cat.id === category) ;
-    return categoryData ? categoryData.icon : Globe};
+    const categoryData = categories.find (cat => cat.id === category) ;    return categoryData ? categoryData.icon : Globe};
 
           "
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -125,8 +129,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
                     <span>{service.marketSize}</span>
                   </div>"
                   <div className="flex items-center gap-2 text-sm text-gray-400">"
-                    <Users className="w-4 h-4" />
-                    <span>{service.targetAudience}</span>
+                    <Users className="w-4 h-4" />                    <span>{service.targetAudience}</span>
                   </div>
                 </div>
 
@@ -153,8 +156,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
           <div className="grid md:grid-cols-3 gap-8 mb-8">"
             <div className="flex flex-col items-center gap-3">"
               <div className="p-4 bg-white/10 rounded-full">"
-                <Phone className="w-6 h-6 text-blue-400" />
-              </div>
+                <Phone className="w-6 h-6 text-blue-400" />              </div>
               <div>"
                 <h3 className="font-semibold text-white mb-1">Phone</h3>"
                 <p className="text-gray-300">+1 302 464 0950</p>
@@ -163,8 +165,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
 "
             <div className="flex flex-col items-center gap-3">"
               <div className="p-4 bg-white/10 rounded-full">"
-                <Mail className="w-6 h-6 text-purple-400" />
-              </div>
+                <Mail className="w-6 h-6 text-purple-400" />              </div>
               <div>"
                 <h3 className="font-semibold text-white mb-1">Email</h3>"
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
@@ -173,8 +174,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
 "
             <div className="flex flex-col items-center gap-3">"
               <div className="p-4 bg-white/10 rounded-full">"
-                <MapPin className="w-6 h-6 text-green-400" />
-              </div>
+                <MapPin className="w-6 h-6 text-green-400" />              </div>
               <div>"
                 <h3 className="font-semibold text-white mb-1">Address</h3>"
                 <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -227,8 +227,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
               onClick={(e) => e.stopPropagation()};
             >;
               { ( () => {;
-                const service = EMERGING_TECH_SERVICES_2025.find (s => s.id === selectedService) ;
-                if (!service) return null;
+                const service = EMERGING_TECH_SERVICES_2025.find (s => s.id === selectedService) ;                if (!service) return null;
 
                 return()
                   <div>"
@@ -247,8 +246,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
                         onClick={() => setSelectedService(null)}"
                         className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all"
 "
-                        <ChevronLeft className="w-6 h-6 text-white" />
-                      </button>
+                        <ChevronLeft className="w-6 h-6 text-white" />                      </button>
                     </div>
 "
                     <h2 className="text-3xl font-bold text-white mb-4">{service.title}</h2>"
@@ -314,8 +312,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
                       </motion.button>;
                     </div>;
                   </div>;) ;
-              }) () }
-            </motion.div>
+              }) () }            </motion.div>
           </motion.div>) }
       </AnimatePresence>
     </div>

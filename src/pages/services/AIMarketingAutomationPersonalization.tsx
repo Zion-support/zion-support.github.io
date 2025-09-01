@@ -54,6 +54,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
   ];
 
   const stack = ['
+<<<<<<< HEAD
     { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },
     { name: 'TensorFlow', url: 'https://www.tensorflow.org/' },;
     { name: 'Scikit-learn', url: 'https://scikit-learn.org/' },;
@@ -62,6 +63,15 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
     { name: 'Redis', url: 'https://redis.io/' },;
     { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },;
     { name: 'Elasticsearch', url: 'https://www.elastic.co/' },;
+=======
+    { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },'
+    { name: 'TensorFlow', url: 'https://www.tensorflow.org/' },;'
+    { name: 'Scikit-learn', url: 'https://scikit-learn.org/' },;'
+    { name: 'Apache Spark', url: 'https://spark.apache.org/' },;'
+    { name: 'Kubernetes', url: 'https://kubernetes.io/' },;'
+    { name: 'Redis', url: 'https://redis.io/' },;'
+    { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },;'    { name: 'Elasticsearch', url: 'https://www.elastic.co/' },;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -80,8 +90,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
                 Get Marketing Demo"
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>"
-              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
+              </Link>"              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Visit Site
               </a>
             </div>
@@ -100,14 +109,12 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
             <div className="flex items-center mb-4">"
               <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">"
                 <Brain className="h-8 w-8 text-white" />
-              </div>"
-              <h3 className="ml-3 text-xl font-semibold text-white">AI Features</h3>
+              </div>"              <h3 className="ml-3 text-xl font-semibold text-white">AI Features</h3>
             </div>"
             <ul className="space-y-3">
               {features.slice(0, 4).map((item) => ("
                 <li key={item} className="flex items-center text-slate-300">"
-                  <CheckCircle className="h-5 w-5 text-cyan-400 mr-3" />
-                  {item}
+                  <CheckCircle className="h-5 w-5 text-cyan-400 mr-3" />                  {item}
                 </li>
               ))}
             </ul>
@@ -117,14 +124,12 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
             <div className="flex items-center mb-4">"
               <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg">"
                 <Target className="h-8 w-8 text-white" />
-              </div>"
-              <h3 className="ml-3 text-xl font-semibold text-white">Marketing Channels</h3>
+              </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Marketing Channels</h3>
             </div>"
             <ul className="space-y-3">
               {marketingChannels.slice(0, 5).map((item) => ("
                 <li key={item} className="flex items-center text-slate-300">"
-                  <CheckCircle className="h-5 w-5 text-purple-400 mr-3" />
-                  {item}
+                  <CheckCircle className="h-5 w-5 text-purple-400 mr-3" />                  {item}
                 </li>
               ))}
             </ul>
@@ -134,8 +139,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
             <div className="flex items-center mb-4">"
               <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg">"
                 <Zap className="h-8 w-8 text-white" />
-              </div>"
-              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
+              </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
             </div>"
             <ul className="space-y-3 text-slate-300">
               <li>Starter: $299/month (up to 10,000 contacts)</li>
@@ -176,8 +180,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
               <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center">"
                 <TrendingUp className="h-6 w-6 text-white" />
               </div>"
-              <h4 className="text-lg font-semibold text-white mb-2">Automation</h4>"
-              <p className="text-slate-300 text-sm">
+              <h4 className="text-lg font-semibold text-white mb-2">Automation</h4>"              <p className="text-slate-300 text-sm">
                 Intelligent campaign orchestration and nurturing sequences
               </p>
             </div>"
@@ -240,8 +243,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
             <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
               Start Free Trial"
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>"
-            <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
+            </Link>"            <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
               Call +1 302 464 0950
             </a>
           </div>;"

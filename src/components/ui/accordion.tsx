@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { ChevronDown  } from 'lucide-react';
 
@@ -28,11 +29,14 @@ export function Accordion({
     } else {
 
       setOpenItems(prev =>
+=======
+import React, { useState } from 'react.ts';'
+import { ChevronDown  } from 'lucide-react';      setOpenItems(prev =>
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         prev.includes(value)
           ? prev.filter(item => item !== value)
           [...prev, value];
-      )};
-  };
+      )}};
 
   return()
     <div className = {`space-y-1 ${className}`}>
@@ -51,8 +55,7 @@ export function Accordion({
   children, ;
   className = '', ;
   type = 'single',;
-  defaultValue ;
-}: AccordionProps) {;
+  defaultValue }: AccordionProps) {;
   const [openItems, setOpenItems] = useState<string[]>(;
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];
   );
@@ -61,14 +64,11 @@ export function Accordion({
     if (type === 'single') {;
       setOpenItems(openItems.includes(value) ? [] : [value]);
     } else {
-
       setOpenItems(prev = > ;
         prev.includes(value) ;
           ? prev.filter(item => item !== value);
           : [...prev, value];
-      );
-
-  };
+      )};
 
   return()`
     <div className={`space-y-1 ${className}`}>
@@ -82,8 +82,7 @@ export function Accordion({
             onToggle: : unknown handleToggle(child.props.value)
           });
 
-        return child;
-      })}
+        return child})}
     </div>
   )}
 
@@ -102,14 +101,12 @@ export function AccordionItem({
   isOpen = false,;
   onToggle;
 }: AccordionItemProps) {;
-  return (;`
-    <div className={`border-b border-gray-200 ${className}`}>;
+  return (;`    <div className={`border-b border-gray-200 ${className}`}>;
       {React.Children.map(children: unknown, (child: unknown {;
         if (React.isValidElement(child)) {;
           return React.cloneElement(child, { isOpen, onToggle });
 
-        return child;
-      })}
+        return child})}
     </div>
   )}
 
@@ -136,21 +133,25 @@ export function AccordionTrigger({
       {children}
       <ChevronDown`
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
+<<<<<<< HEAD
 
           isOpen ? 'rotate-180' : ''`
         }`}
       />
+=======
+'
+          isOpen ? 'rotate-180' : ''`        }`}
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     </button>
   )}
 
 interface AccordionContentProps extends React.PropsWithChildren<{}> {;`
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;
           isOpen ? 'rotate-180' : '';`
-        }`} ;
-      />;
+        }`} ;      />;
     </button>;
-  );
-}
+  )}
 
   children: React.ReactNode;
   className?: string;
@@ -173,8 +174,7 @@ export function AccordionContent({
 export function AccordionContent({ ;
   children, ;
   className = '',;
-  isOpen = false;
-}: AccordionContentProps) {;
+  isOpen = false}: AccordionContentProps) {;
   if (!isOpen) return null;
 
   return()`

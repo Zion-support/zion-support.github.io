@@ -1,6 +1,7 @@
 import { RecommendedRole  } from '@/types';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
+<<<<<<< HEAD
 import { TalentCardPreview  } from "./TalentCardPreview";
 import { Users, DollarSign, Clock, Briefcase  } from 'lucide-react'; // Added Briefcase
 
@@ -52,5 +53,9 @@ export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
         )}
       </CardContent>;
     </Card>;
+=======
+import { TalentCardPreview  } from "./TalentCardPreview";'
+import { Users, DollarSign, Clock, Briefcase  } from 'lucide-react'; // Added Briefcase    </Card>;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   )};
 '"`

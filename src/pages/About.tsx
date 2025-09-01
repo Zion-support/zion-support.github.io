@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -179,6 +180,11 @@ import {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">"
       <div className="container mx-auto px-4 py-24">
+=======
+import React from 'react';'
+import { Link } from 'react-router-dom';'
+import { motion } from 'framer-motion';      <div className="container mx-auto px-4 py-24">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -234,8 +240,7 @@ import {
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mb-6">"
               <Target className="w-8 h-8 text-white" />
             </div>"
-            <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>"
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>"            <p className="text-gray-300 text-lg leading-relaxed">
               To democratize advanced technology and empower organizations with
               AI-powered solutions that drive innovation, efficiency, and
               competitive advantage in the digital age.
@@ -246,8 +251,7 @@ import {
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-6">"
               <Rocket className="w-8 h-8 text-white" />
             </div>"
-            <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>"
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>"            <p className="text-gray-300 text-lg leading-relaxed">
               To be the global leader in AI-powered technology solutions,
               shaping the future of business through innovation, sustainability,
               and human-centric design.
@@ -348,8 +352,7 @@ import {
                 <p className="text-cyan-400 font-semibold mb-3">
                   {member.role}
                 </p>"
-                <p className="text-gray-300 text-sm mb-4">{member.bio}</p>"
-                <div className="space-y-1">
+                <p className="text-gray-300 text-sm mb-4">{member.bio}</p>"                <div className="space-y-1">
                   {member.expertise.map((skill, skillIndex) => (
                     <div
                       key={skillIndex}"

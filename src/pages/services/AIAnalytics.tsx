@@ -49,11 +49,17 @@ export default function AIAnalytics(...args[]):  {
       description: 'Text analysis and language understanding systems',
       icon: Database;
     },;
+<<<<<<< HEAD
     {;
       title: 'Computer Vision',;
       description: 'Image and video analysis with AI',;
       icon: Eye;
     };
+=======
+    {;'
+      title: 'Computer Vision',;'      description: 'Image and video analysis with AI',;
+      icon: Eye};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -89,8 +95,7 @@ export default function AIAnalytics(...args[]):  {
             className="text-center max-w-4xl mx-auto"
 "
             <div className="inline-flex items-center space-x-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-4 py-2 mb-6">"
-              <Brain className="w-5 h-5 text-indigo-400" />"
-              <span className="text-indigo-400 font-medium">AI & Analytics</span>
+              <Brain className="w-5 h-5 text-indigo-400" />"              <span className="text-indigo-400 font-medium">AI & Analytics</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -107,8 +112,7 @@ export default function AIAnalytics(...args[]):  {
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start AI Project"
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </button>"
-              <button className="btn-outline px-8 py-4 text-lg">
+              </button>"              <button className="btn-outline px-8 py-4 text-lg">
                 Learn More
               </button>
             </div>

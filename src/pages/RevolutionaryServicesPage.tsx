@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
-  Brain,
-  Shield,
+  Brain,  Shield,
   Cpu,
   Rocket,
   Zap,
@@ -134,7 +133,6 @@ import {
   ScrewdriverIcon5} from 'lucide-react.ts';
 import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data/revolutionaryMicroSaasServices2025';
 import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
-
 export function RevolutionaryServicesPage(...args: any[]): any {
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -267,9 +265,14 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     switch (sortBy) {
 
       case 'name':
+<<<<<<< HEAD
         return a.title.localeCompare(b.title);
       case 'price-low':
         return a.price - b.price;
+=======
+        return a.title.localeCompare(b.title);'      case 'price-low':
+        return a.price - b.price;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'price-high':
         return b.price - a.price;
       case 'category':
@@ -365,8 +368,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
         return 'bg-green-500/20';
       default:'
         return 'bg-gray-500/20';
-    }
-  };
+    }  };
 
   return()
     <div className="min-h-screen py-8">"
@@ -380,8 +382,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
           >"
             <div className="flex justify-center mb-6">"
               <div className="w-24 h-24 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-2xl flex items-center justify-center">"
-                <Sparkles className="w-12 h-12 text-white" />
-              </div>
+                <Sparkles className="w-12 h-12 text-white" />              </div>
             </div>"
             <h1 className="text-5xl font-bold text-white mb-6">
               Revolutionary Micro SAAS Services
@@ -424,8 +425,12 @@ export function RevolutionaryServicesPage(...args: any[]): any {
             <div className="relative">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
+<<<<<<< HEAD
                 type="text"
                 placeholder="Search services..."
+=======
+                type="text""                placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -544,8 +549,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                         key={idx}"
                         className="flex items-center space-x-2 text-sm text-gray-400"
                       >"
-                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                        <span>{feature}</span>
+                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />                        <span>{feature}</span>
                       </div>
                     ))}
                     {service.features.length > 3 && ("
@@ -566,8 +570,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                         key={idx}"
                         className="flex items-center space-x-2 text-sm text-gray-400"
                       >"
-                        <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
-                        <span>{benefit}</span>
+                        <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />                        <span>{benefit}</span>
                       </div>) ) }
                   </div>
                 </div>
@@ -617,8 +620,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                       <span>{service.contactInfo.phone}</span>
                     </div>"
                     <div className="flex items-center space-x-2">"
-                      <Mail className="w-3 h-3" />
-                      <span>{service.contactInfo.email}</span>
+                      <Mail className="w-3 h-3" />                      <span>{service.contactInfo.email}</span>
                     </div>
                   </div>
                 </div>
@@ -689,8 +691,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                         key={idx}"
                         className="flex items-center space-x-2 text-sm text-gray-400"
                       >"
-                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                        <span>{feature}</span>
+                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />                        <span>{feature}</span>
                       </div>) ) }
                   </div>
                 </div>
@@ -740,8 +741,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
             <div className="text-center">"
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <Globe className="w-8 h-8 text-white" />
-              </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">Website</h3>
+              </div>"              <h3 className="text-lg font-semibold text-white mb-2">Website</h3>
               <a
                 href={CONTACT_INFORMATION.website}"
                 className="text-green-400 hover:text-green-300 transition-colors"
@@ -757,8 +757,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
               <h3 className="text-lg font-semibold text-white mb-2">Support</h3>"
               <p className="text-yellow-400">
                 {CONTACT_INFORMATION.supportHours}
-              </p>
-            </div>
+              </p>            </div>
           </div>
 "
           <div className="text-center">"

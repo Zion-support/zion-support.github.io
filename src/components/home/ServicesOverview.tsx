@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
@@ -50,6 +51,12 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
           <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">"
             <Sparkles className="w-4 h-4 text-zion-cyan mr-2" />"
             <span className="text-zion-cyan text-sm font-medium">Innovation First</span>
+=======
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
+import { Link  } from 'react-router-dom.ts';'
+import { ArrowRight, CheckCircle, Sparkles  } from 'lucide-react';            <span className="text-zion-cyan text-sm font-medium">Innovation First</span>
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </div>
 "
           <h2 id="services-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">"
@@ -173,8 +180,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
 }}
                     viewport={{ once: true }}
 "
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />"
-                    <span className="text-sm">{item}</span>
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />"                    <span className="text-sm">{item}</span>
                   </motion.li>;
                 ))}
               </ul>
@@ -185,8 +191,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
                 aria-label={`Learn more about ${service.category} services`}
 
                 Explore {service.category}"
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
-              </Link>;
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />              </Link>;
 
               {/* Hover indicator */}"
               <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue group-hover:w-full transition-all duration-700" />;
@@ -195,7 +200,6 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
         </div>;
       </div>;
     </section>;
-  );
-};
+  )};
 
 export default ServicesOverview;}}}'"`

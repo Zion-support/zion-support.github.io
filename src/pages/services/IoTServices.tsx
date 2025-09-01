@@ -22,10 +22,8 @@ const IoTServices = () => {
     {;"
       title: "IoT Data Management",;"
       description: "Comprehensive data collection, processing, and analytics for IoT devices.",;"
-      price: "From $6,500/month",;"
-      features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],;
-      icon: Database;
-    };
+      price: "From $6,500/month",;"      features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],;
+      icon: Database};
   ];
 
   const iotTechnologies = [
@@ -56,8 +54,7 @@ const IoTServices = () => {
     "Improved operational efficiency and automation",;"
     "Enhanced data collection and insights",;"
     "Reduced operational costs and manual work",;"
-    "Scalable and flexible IoT infrastructure",;"
-    "Better decision-making with real-time data";
+    "Scalable and flexible IoT infrastructure",;"    "Better decision-making with real-time data";
   ];
 
   return ("
@@ -67,8 +64,7 @@ const IoTServices = () => {
         <div className="max-w-7xl mx-auto text-center">"
           <div className="mb-8">"
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">"
-              <Cog className="w-4 h-4 mr-2"/>
-              IoT Services
+              <Cog className="w-4 h-4 mr-2"/>              IoT Services
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Internet of Things"
@@ -184,8 +180,7 @@ const IoTServices = () => {
             <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-8 border border-blue-500/30">"
               <div className="text-center">"
                 <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4"/>"
-                <h3 className="text-2xl font-bold text-white mb-2">IoT Expertise</h3>"
-                <p className="text-gray-300 mb-6">
+                <h3 className="text-2xl font-bold text-white mb-2">IoT Expertise</h3>"                <p className="text-gray-300 mb-6">
                   Our team has extensive experience building and deploying
                   IoT solutions across various industries.
                 </p>"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { LinkChecker, LinkInfo, PageInfo  } from '../utils/linkChecker';
 import { CheckCircle, 
@@ -16,17 +17,19 @@ import { LinkChecker, LinkInfo, PageInfo  } from '../utils / linkChecker';
 
 interface AnalysisResult {
 summary: {
+=======
+import React, { useState, useEffect } from 'react.ts';'
+import { LinkChecker, LinkInfo, PageInfo  } from '../utils/linkChecker';summary: {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     totalLinks: number;
     brokenLinks: number;
     missingPages: number;
     externalLinks: number;
   
 
-};
-  pages: PageInfo[];
+};  pages: PageInfo[];
   brokenLinks: LinkInfo[];
-  missingPages: string[];
-}
+  missingPages: string[]}
 
 export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
 
@@ -43,8 +46,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     setIsAnalyzing(true);
     setProgress(0);
     '
-    const linkChecker = new LinkChecker('https://ziontechgroup.com');
-    const results: PageInfo[] = [];
+    const linkChecker = new LinkChecker('https://ziontechgroup.com');    const results: PageInfo[] = [];
     const allBrokenLinks: LinkInfo[] = [];
     const allMissingPages: string[] = [];
 
@@ -71,7 +73,9 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
       const summary = linkChecker.getSummary () ;
       const brokenLinks = linkChecker.getBrokenLinks () ;
       const missingPages = linkChecker.getMissingPages () ;
-
+      
+      
+      
       setAnalysisResult({
 
         summary,
@@ -105,13 +109,16 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
+<<<<<<< HEAD
     a.href = url;
     a.download = 'zion-website-analysis.json';
+=======
+    a.href = url;'    a.download = 'zion-website-analysis.json';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
+    URL.revokeObjectURL(url)};
 
   const getStatusIcon = (status: anystring)  => {
 
@@ -144,8 +151,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
         return 'text-blue-600 bg-blue-100';
       default:'
         return 'text-gray-600 bg-gray-100';
-    }
-  };
+    }  };
 
   return ("
     <div className="max-w-7xl mx-auto p-6 space-y-6">"
@@ -167,16 +173,19 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                 <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
               ) : ("
                 <Search className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
               )}
               {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}
+=======
+              )}'              {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             </button>
             {analysisResult && (
               <button
                 onClick={exportReport}"
                 className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
               >"
-                <Download className="w-4 h-4 mr-2" />
-                Export Report
+                <Download className="w-4 h-4 mr-2" />                Export Report
               </button>) }
           </div>
         </div>
@@ -209,8 +218,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                 <div className="flex items-center">"
                   <LinkIcon className="w-8 h-8 text-blue-600 mr-3" />
                   <div>"
-                    <p className="text-2xl font-bold text-blue-900">{analysisResult.summary.totalLinks}</p>"
-                    <p className="text-sm text-blue-700">Total Links</p>
+                    <p className="text-2xl font-bold text-blue-900">{analysisResult.summary.totalLinks}</p>"                    <p className="text-sm text-blue-700">Total Links</p>
                   </div>
                 </div>
               </div>
@@ -218,8 +226,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
               <div className="bg-green-50 p-4 rounded-lg border border-green-200">"
                 <div className="flex items-center">"
                   <CheckCircle className="w-8 h-8 text-green-600 mr-3" />
-                  <div>"
-                    <p className="text-2xl font-bold text-green-900">
+                  <div>"                    <p className="text-2xl font-bold text-green-900">
                       {analysisResult.summary.totalLinks - analysisResult.summary.brokenLinks - analysisResult.summary.missingPages}
                     </p>"
                     <p className="text-sm text-green-700">Working Links</p>
@@ -231,8 +238,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                 <div className="flex items-center">"
                   <XCircle className="w-8 h-8 text-red-600 mr-3" />
                   <div>"
-                    <p className="text-2xl font-bold text-red-900">{analysisResult.summary.brokenLinks}</p>"
-                    <p className="text-sm text-red-700">Broken Links</p>
+                    <p className="text-2xl font-bold text-red-900">{analysisResult.summary.brokenLinks}</p>"                    <p className="text-sm text-red-700">Broken Links</p>
                   </div>
                 </div>
               </div>
@@ -241,8 +247,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                 <div className="flex items-center">"
                   <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3" />
                   <div>"
-                    <p className="text-2xl font-bold text-yellow-900">{analysisResult.summary.missingPages}</p>"
-                    <p className="text-sm text-yellow-700">Missing Pages</p>
+                    <p className="text-2xl font-bold text-yellow-900">{analysisResult.summary.missingPages}</p>"                    <p className="text-sm text-yellow-700">Missing Pages</p>
                   </div>
                 </div>
               </div>
@@ -252,8 +257,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
             {analysisResult.brokenLinks.length > 0 && ("
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">"
                 <h3 className="text-lg font-semibold text-red-900 mb-3 flex items-center">"
-                  <XCircle className="w-5 h-5 mr-2" />
-                  Broken Links Found
+                  <XCircle className="w-5 h-5 mr-2" />                  Broken Links Found
                 </h3>"
                 <div className="space-y-2">
                   {analysisResult.brokenLinks.map((link, index) => ("
@@ -273,8 +277,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
             {analysisResult.missingPages.length > 0 && ("
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">"
                 <h3 className="text-lg font-semibold text-yellow-900 mb-3 flex items-center">"
-                  <AlertTriangle className="w-5 h-5 mr-2" />
-                  Missing Pages
+                  <AlertTriangle className="w-5 h-5 mr-2" />                  Missing Pages
                 </h3>"
                 <div className="space-y-2">
                   {analysisResult.missingPages.map((page, index) => ("
@@ -292,8 +295,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
             {/* Page Analysis */}"
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">"
               <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">"
-                <FileText className="w-5 h-5 mr-2" />
-                Page Analysis
+                <FileText className="w-5 h-5 mr-2" />                Page Analysis
               </h3>"
               <div className="space-y-3">
                 {analysisResult.pages.map((page, index) => ("
@@ -324,5 +326,4 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
       </div>
     </div>) ;
 };
-
 export default WebsiteAnalyzer;'"`

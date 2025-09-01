@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
 
   CheckCircle,
@@ -24,6 +25,8 @@ import {
   TrendingUp as TrendingUpIcon} from 'lucide-react';
 import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function PricingPage() {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -91,7 +94,6 @@ export function PricingPage() {
     if (price <= 3000) return 'text-yellow-400';
     return 'text-red-400';
   };
-
   return()
     <div className="min-h-screen py-8">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,8 +122,7 @@ export function PricingPage() {
                 <span>Proven ROI</span>
               </div>"
               <div className="flex items-center space-x-2 text-purple-400">"
-                <Rocket className="w-5 h-5" />
-                <span>Fast Implementation</span>
+                <Rocket className="w-5 h-5" />                <span>Fast Implementation</span>
               </div>
             </div>
           </motion.div>
@@ -187,8 +188,7 @@ export function PricingPage() {
                     <span>Delivery: {service.estimatedDelivery}</span>
                   </div>"
                   <div className="flex items-center space-x-2">"
-                    <Users className="w-4 h-4" />
-                    <span>Support: {service.supportLevel}</span>
+                    <Users className="w-4 h-4" />                    <span>Support: {service.supportLevel}</span>
                   </div>
                 </div>
               </div>
@@ -239,8 +239,7 @@ export function PricingPage() {
                           <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />"
                           <span className="text-gray-300 text-sm">
                             {feature}
-                          </span>
-                        </div>
+                          </span>                        </div>
                       ))}
                     </div>
 
@@ -297,8 +296,7 @@ export function PricingPage() {
                       <span>{service.contactInfo.email}</span>
                     </div>"
                     <div className="flex items-center space-x-2">"
-                      <Globe className="w-4 h-4" />
-                      <span>{service.contactInfo.website}</span>
+                      <Globe className="w-4 h-4" />                      <span>{service.contactInfo.website}</span>
                     </div>
                   </div>
                 </div>
@@ -341,6 +339,5 @@ export function PricingPage() {
       </div>
     </div>) ;
 }
-
 export default PricingPage;
 '"`

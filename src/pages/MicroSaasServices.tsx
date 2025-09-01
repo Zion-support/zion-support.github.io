@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 const MicroSaasServices: React.FC = (): JSX.Element => {
@@ -30,4 +31,8 @@ const MicroSaasServices: React.FC = (): JSX.Element => {
 	);
 };
 export default MicroSaasServices;
+=======
+import React from 'react.ts';'
+import { Helmet  } from 'react-helmet-async.ts';export default MicroSaasServices;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 '"

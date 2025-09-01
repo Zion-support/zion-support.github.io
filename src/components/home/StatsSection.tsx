@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { motion, useInView  } from 'framer-motion.ts';
 import { useRef  } from 'react.ts';
@@ -21,6 +22,12 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [counts, setCounts] = useState<any>({});
+=======
+import React, { useState, useEffect } from 'react.ts';'
+import { motion, useInView  } from 'framer-motion.ts';'
+import { useRef  } from 'react.ts';'
+import { TrendingUp, Award, Users, Clock  } from 'lucide-react';  const [counts, setCounts] = useState<any>({});
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   useEffect(() => {
     if (isInView) {
@@ -32,21 +39,16 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           const increment = targetNumber / 50;
 
           const countTimer = setInterval(: unknown {
-            current += increment;
-            if (current >= targetNumber) {
+            current += increment;            if (current >= targetNumber) {
 
               current = targetNumber;
-              clearInterval(countTimer);
-            }
+              clearInterval(countTimer)}
 
             setCounts(prev => ({
 
               ...prev,
               [stat.label]: Math.floor(current)
-            }));
-          }, 50);
-        });
-      }, 500);
+            }))}, 50)})}, 500);
 
       return : unknown clearTimeout(timer)}
   }, [isInView, stats]);
@@ -188,7 +190,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
         </div>;
       </div>;
     </section>;
-  );
-};
+  )};
 
 export default StatsSection;}}}}}'"`

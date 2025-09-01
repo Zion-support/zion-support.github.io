@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
@@ -432,6 +433,13 @@ export default function ComprehensiveServices() {
         keywords="AI services, micro SAAS, IT services, quantum computing, blockchain, IoT, green technology, space technology, comprehensive solutions"
         canonicalUrl="https://ziontechgroup.com/comprehensive-services"
       />
+=======
+import React, { useState } from 'react';'
+import { motion } from 'framer-motion';'
+import { SEO } from '@/components/SEO';'
+import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgroup.com/comprehensive-services"
+       />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-28 pb-16 overflow-hidden">"
@@ -491,8 +499,7 @@ export default function ComprehensiveServices() {
 
             {/* Category Filter */}"
             <div className="relative">"
-              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <select
+              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />              <select
                 value={activeCategory}
                 onChange={e => setActiveCategory(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 appearance-none cursor-pointer"
@@ -508,8 +515,7 @@ export default function ComprehensiveServices() {
 
             {/* Price Range Filter */}"
             <div className="relative">"
-              <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <select
+              <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />              <select
                 value={priceRange}
                 onChange={e => setPriceRange(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 appearance-none cursor-pointer"
@@ -546,8 +552,7 @@ export default function ComprehensiveServices() {
                   setSearchQuery('');
                   setActiveCategory('all');
                   setPriceRange('all');
-                }}"
-                className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors duration-300"
+                }}"                className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors duration-300"
               >
                 Clear Filters
               </button>
@@ -651,8 +656,7 @@ export default function ComprehensiveServices() {
                             key={idx}"
                             className="flex items-center text-sm text-slate-400"
                           >"
-                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                            {feature}
+                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />                            {feature}
                           </div>) ) }
                       </div>
 
@@ -666,8 +670,7 @@ export default function ComprehensiveServices() {
                             key={idx}"
                             className="flex items-center text-sm text-slate-400"
                           >"
-                            <TrendingUp className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                            {benefit}
+                            <TrendingUp className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />                            {benefit}
                           </div>) ) }
                       </div>
 
@@ -677,8 +680,7 @@ export default function ComprehensiveServices() {
                         className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                       >
                         Get Started"
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                      </Link>
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />                      </Link>
                     </div>
                   </motion.div>) ) }
               </motion.div>
@@ -725,8 +727,7 @@ export default function ComprehensiveServices() {
                 Speak with our experts directly
               </p>
               <a`
-                href={`tel:${contactInfo.phone}`}"
-                className="text-2xl font-bold text-cyan-400 text-center block hover:text-cyan-300 transition-colors duration-300"
+                href={`tel:${contactInfo.phone}`}"                className="text-2xl font-bold text-cyan-400 text-center block hover:text-cyan-300 transition-colors duration-300"
               >
                 {contactInfo.phone}
               </a>
@@ -749,8 +750,7 @@ export default function ComprehensiveServices() {
                 Send us your requirements
               </p>
               <a`
-                href={`mailto:${contactInfo.email}`}"
-                className="text-lg font-semibold text-cyan-400 text-center block hover:text-cyan-300 transition-colors duration-300 break-all"
+                href={`mailto:${contactInfo.email}`}"                className="text-lg font-semibold text-cyan-400 text-center block hover:text-cyan-300 transition-colors duration-300 break-all"
               >
                 {contactInfo.email}
               </a>
@@ -771,8 +771,7 @@ export default function ComprehensiveServices() {
               </h3>"
               <p className="text-slate-300 text-center mb-4">
                 Our headquarters location
-              </p>"
-              <p className="text-slate-300 text-center text-sm leading-relaxed">
+              </p>"              <p className="text-slate-300 text-center text-sm leading-relaxed">
                 {contactInfo.address}
               </p>
             </motion.div>

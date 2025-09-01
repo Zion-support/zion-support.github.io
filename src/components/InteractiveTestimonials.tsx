@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
 
   Star,
@@ -78,13 +79,14 @@ const testimonials = [
 "
 const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"];
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function InteractiveTestimonials() {
 "
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
 "
-  const filteredTestimonials = selectedCategory === "All" ;
-    ? testimonials ;
+  const filteredTestimonials = selectedCategory === "All" ;    ? testimonials ;
     : testimonials.filter (t => t.category === selectedCategory) ;
 
   const currentTestimonial = filteredTestimonials[selectedTestimonial];
@@ -98,7 +100,6 @@ export function InteractiveTestimonials() {
     setSelectedTestimonial ( (prev) => ;
       prev === 0 ? filteredTestimonials.length - 1 : prev - 1;) ;
   };
-
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
@@ -140,8 +141,7 @@ export function InteractiveTestimonials() {
               onClick={ () => {
                 setSelectedCategory (category) ;
                 setSelectedTestimonial (0) ;
-              }}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              }}              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
 
                 selectedCategory === category'
                   ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25''
@@ -158,8 +158,7 @@ export function InteractiveTestimonials() {
                 <div className="text-6xl mb-4">{currentTestimonial.avatar}</div>"
                 <div className="flex justify-center mb-4">
                   {[...Array(currentTestimonial.rating)].map((_, i) => ("
-                    <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
-                  ))}
+                    <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />                  ))}
                 </div>"
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {currentTestimonial.name}
@@ -172,16 +171,14 @@ export function InteractiveTestimonials() {
                     {currentTestimonial.industry}
                   </span>"
                   <span className="flex items-center">"
-                    <TrendingUp className="h-4 w-4 mr-1" />
-                    {currentTestimonial.projectDuration}
+                    <TrendingUp className="h-4 w-4 mr-1" />                    {currentTestimonial.projectDuration}
                   </span>
                 </div>
               </div>
 "
               <blockquote className="text-center mb-8">"
                 <Quote className="h-12 w-12 text-blue-200 mx-auto mb-4" />"
-                <p className="text-xl text-gray-700 italic leading-relaxed">"
-                  "{currentTestimonial.quote}"
+                <p className="text-xl text-gray-700 italic leading-relaxed">"                  "{currentTestimonial.quote}"
                 </p>
               </blockquote>
 "
@@ -204,14 +201,12 @@ export function InteractiveTestimonials() {
             onClick={previousTestimonial}"
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
           >"
-            <ChevronLeft className="h-6 w-6 text-gray-600" />
-          </button>
+            <ChevronLeft className="h-6 w-6 text-gray-600" />          </button>
           <button
             onClick={nextTestimonial}"
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
           >"
-            <ChevronRight className="h-6 w-6 text-gray-600" />
-          </button>
+            <ChevronRight className="h-6 w-6 text-gray-600" />          </button>
         </div>
 
         {/* Testimonial Indicators */}"
@@ -242,8 +237,7 @@ export function InteractiveTestimonials() {
               </>
             ) : (
               <>"
-                <Play className="h-4 w-4 mr-2" />
-                Play
+                <Play className="h-4 w-4 mr-2" />                Play
               </>) }
           </button>
         </div>
@@ -253,15 +247,11 @@ export function InteractiveTestimonials() {
           initial = {
 
   { opacity: 0,
-  y: 20 ;
-
-}}
+  y: 20 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 ;
-
-}}
+  y: 0 }}
         {/* Category Filter */}
         <motion.div "
           className="flex flex-wrap justify-center gap-3 mb-12"
@@ -295,8 +285,7 @@ export function InteractiveTestimonials() {
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
                 Schedule Consultation"
-                <Users className="ml-2 h-5 w-5" />
-              </button>
+                <Users className="ml-2 h-5 w-5" />              </button>
             </div>
           </div>
         </motion.div>
@@ -310,7 +299,6 @@ export default InteractiveTestimonials;"
       </div>;
     </section>;) ;
 }
-
 export default InteractiveTestimonials;
 export default InteractiveTestimonials;
 '"`

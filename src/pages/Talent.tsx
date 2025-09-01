@@ -12,8 +12,7 @@ import {
   Star,
   MapPin,
   Clock,
-  DollarSign,
-  Briefcase,
+  DollarSign,  Briefcase,
   GraduationCap,
   Award,
   CheckCircle,
@@ -471,7 +470,7 @@ export default function Talent() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedExperience, setSelectedExperience] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedTalent, setExpandedTalent] = useState<string | null>(null);
+  const [expandedTalent, setExpandedTalent] = useState<string | null>(null)};
 
   const categories = ['
     { id: 'all', name: 'All Categories', count: 45 },
@@ -727,7 +726,6 @@ export default function Talent() {
         }`}
       />) ) ;
   };
-
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
@@ -737,8 +735,7 @@ export default function Talent() {
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10"></div>"
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10"></div>"        <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -754,8 +751,7 @@ export default function Talent() {
                 Talent'
               </span>{' '}
               Pool
-            </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            </h1>"            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Access our curated network of top-tier technology professionals.
               Find skilled developers, engineers, and specialists ready to
               elevate your projects.
@@ -774,8 +770,12 @@ export default function Talent() {
                 <div className="relative">"
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input"
+<<<<<<< HEAD
                     type="text"
                     placeholder="Search by name, skills, or expertise..."
+=======
+                    type="text""                    placeholder="Search by name, skills, or expertise..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}"
                     className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
@@ -824,8 +824,7 @@ export default function Talent() {
                       : 'bg-slate-800/50 text-gray-400 hover:text-white'`
                   }`}
                 >"
-                  <Grid className="w-5 h-5" />
-                </button>
+                  <Grid className="w-5 h-5" />                </button>
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`p-2 rounded-lg transition-all duration-200 ${
@@ -835,8 +834,7 @@ export default function Talent() {
                       : 'bg-slate-800/50 text-gray-400 hover:text-white'`
                   }`}
                 >"
-                  <List className="w-5 h-5" />
-                </button>
+                  <List className="w-5 h-5" />                </button>
               </div>
             </div>
           </div>
@@ -896,8 +894,7 @@ export default function Talent() {
                         </span>"
                         <span className="px-3 py-1 rounded-full text-xs font-medium bg-yellow-500/20 text-yellow-400">
                           Featured
-                        </span>
-                      </div>
+                        </span>                      </div>
 "
                       <div className="flex items-center gap-4 mb-4">
                         <img
@@ -934,8 +931,7 @@ export default function Talent() {
                                 className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded"
                               >
                                 {skill}
-                              </span>
-                            ))}
+                              </span>                            ))}
                         </div>
                       </div>
 "

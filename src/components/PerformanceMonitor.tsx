@@ -8,7 +8,6 @@ import {
   TrendingUp,
   AlertTriangle,
   CheckCircle} from 'lucide-react';
-
 interface PerformanceMetrics {
   fcp: number;
   lcp: number;
@@ -37,7 +36,6 @@ interface PerformanceMonitorProps {
   
 };
 }
-
 export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   showDetails = false,
@@ -132,7 +130,6 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     },
     []
   );
-
   useEffect(() => {
 
     if ('PerformanceObserver' in window) {
@@ -151,8 +148,12 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             prev ? { ...prev, fcp: fcpEntry.startTime } : null
           );
         }
+<<<<<<< HEAD
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
+=======
+      });'      fcpObserver.observe({ entryTypes: ['paint'] });
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   const generatePerformanceTips = (currentMetrics: PerformanceMetrics) => {
     const tips: string[] = [];
@@ -167,8 +168,12 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             prev ? { ...prev, lcp: lcpEntry.startTime } : null
           );
         }
+<<<<<<< HEAD
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+=======
+      });'      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Observe FID
 
@@ -184,8 +189,12 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               : null
           );
         }
+<<<<<<< HEAD
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
+=======
+      });'      fidObserver.observe({ entryTypes: ['first-input'] });
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     if (tips.length === 0) {
       tips.push('Great performance! Keep monitoring for any regressions');
@@ -193,8 +202,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       const clsObserver = new PerformanceObserver(list => {
 
-        let clsValue = 0;
-        for (const entry of list.getEntries()) {
+        let clsValue = 0;        for (const entry of list.getEntries()) {
 
           if (!entry.hadRecentInput) {
 
@@ -226,8 +234,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.disconnect () ;
         clsObserver.disconnect () ;
       };
-    }
-  }, []);
+    }  }, []);
 
   useEffect(() => {
     if (metrics) {
@@ -236,13 +243,11 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       setPerformanceScore(score);
     }
   }, [metrics, calculatePerformanceScore]) ;
-
   useEffect ( () => {
     // Show monitor after 3 seconds
     const timer = setTimeout ( () => setIsVisible (true) , 3000) ;
     return () => clearTimeout (timer) ;
   }, []) ;
-
   if (!isVisible || !showDetails) return null;
 
   return()
@@ -253,8 +258,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     >"
       <div className="flex items-center justify-between mb-3">"
         <div className="flex items-center space-x-2">"
-          <Activity className="w-5 h-5 text-cyan-400" />"
-          <span className="text-sm font-semibold text-white">Performance</span>
+          <Activity className="w-5 h-5 text-cyan-400" />"          <span className="text-sm font-semibold text-white">Performance</span>
         </div>"
         <div className="flex items-center space-x-2">
           <div
@@ -362,6 +366,5 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       </div>
     </motion.div>) ;
 };
-
 export default PerformanceMonitor;
 '"`

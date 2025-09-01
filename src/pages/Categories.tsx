@@ -16,8 +16,7 @@ import {
   Lock,
   BarChart3,
   Globe,
-  Smartphone,
-  Palette,
+  Smartphone,  Palette,
   ArrowRight,
   Search,
   Filter,
@@ -25,7 +24,6 @@ import {
   Settings,
   TrendingUp} from 'lucide-react';
 import { SEO } from '../components/SEO';
-
 const Categories: React.FC = () => {
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -251,7 +249,6 @@ const Categories: React.FC = () => {
     ]};
 
   const filteredCategories = categories.filter(category => {
-
     const matchesSearch =
       category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       category.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -267,8 +264,7 @@ const Categories: React.FC = () => {
         description="Explore our comprehensive technology categories including AI, cloud computing, cybersecurity, data analytics, software development, and IoT solutions."
         keywords="technology categories, AI, cloud computing, cybersecurity, data analytics, software development, IoT, Zion Tech Group"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}"
         <section className="pt-32 pb-16 px-4">"
           <div className="max-w-7xl mx-auto text-center">
@@ -279,8 +275,7 @@ const Categories: React.FC = () => {
             >"
               <div className="flex items-center justify-center space-x-3 mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">"
-                  <Target className="w-8 h-8 text-white" />
-                </div>
+                  <Target className="w-8 h-8 text-white" />                </div>
               </div>"
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Technology Categories
@@ -301,8 +296,12 @@ const Categories: React.FC = () => {
               <div className="relative mb-6">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search categories..."
+=======
+                  type="text""                  placeholder="Search categories..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -437,8 +436,7 @@ const Categories: React.FC = () => {
                   {/* Action Button */}"
                   <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
                     Explore {category.name}"
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                    <ArrowRight className="w-4 h-4" />                  </button>
                 </motion.div>) ) }
             </div>
 
@@ -450,14 +448,12 @@ const Categories: React.FC = () => {
                 </h3>"
                 <p className="text-gray-400">
                   Try adjusting your search criteria or filters.
-                </p>
-              </div>
+                </p>              </div>
             )}
           </div>
         </section>
       </div>
     </>) ;
 };
-
 export default Categories;
 '"`

@@ -267,7 +267,6 @@ export default function WhitePapers() {
     }
     return downloads.toString () ;
   };
-
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
@@ -275,8 +274,7 @@ export default function WhitePapers() {
         <div className="container mx-auto px-4 text-center">"
           <div className="flex justify-center mb-6">"
             <div className="p-4 bg-zion-cyan/20 rounded-full">"
-              <FileText className="w-16 h-16 text-zion-cyan" />
-            </div>
+              <FileText className="w-16 h-16 text-zion-cyan" />            </div>
           </div>"
           <h1 className="text-5xl font-bold text-white mb-6">
             White Papers & Research
@@ -296,8 +294,7 @@ export default function WhitePapers() {
             {/* Search Bar */}"
             <div className="relative mb-8">"
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-              <input"
-                type="text"
+              <input"                type="text"
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
                 placeholder="Search white papers..."
@@ -355,8 +352,12 @@ export default function WhitePapers() {
             <div className="relative w-full lg:w-96">"
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
               <input"
+<<<<<<< HEAD
                 type="text"
                 placeholder="Search white papers..."
+=======
+                type="text""                placeholder="Search white papers..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 rounded-lg bg-slate-800 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
@@ -413,8 +414,7 @@ export default function WhitePapers() {
                   className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium text-sm"
                 >
                   Read More"
-                  <ArrowRight className="w-4 h-4" />
-                </a>
+                  <ArrowRight className="w-4 h-4" />                </a>
               </div>) ) }
           </div>
         </div>
@@ -449,8 +449,7 @@ export default function WhitePapers() {
                       )}
                     </div>"
                     <div className="flex items-center gap-2 text-zion-slate-light text-sm">"
-                      <Calendar className="w-4 h-4" />
-                      {formatDate(paper.publishDate)}
+                      <Calendar className="w-4 h-4" />                      {formatDate(paper.publishDate)}
                     </div>
                   </div>
 "
@@ -501,8 +500,7 @@ export default function WhitePapers() {
                     </div>
 "
                     <button className="bg-zion-cyan text-zion-slate-dark px-6 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors inline-flex items-center gap-2">"
-                      <Download className="w-4 h-4" />
-                      Download
+                      <Download className="w-4 h-4" />                      Download
                     </button>
                   </div>
                 </div>
@@ -513,8 +511,7 @@ export default function WhitePapers() {
               <FileText className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />"
               <h3 className="text-xl font-semibold text-white mb-2">
                 No white papers found
-              </h3>"
-              <p className="text-zion-slate-light">
+              </h3>"              <p className="text-zion-slate-light">
                 Try adjusting your search terms or browse all categories
               </p>
             </div>) }

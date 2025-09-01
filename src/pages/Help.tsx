@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-
   Search, 
   BookOpen, 
   MessageCircle, 
@@ -157,8 +156,7 @@ export default function Help() {
     article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
-  return()
-    <div className="min-h-screen bg-slate-900 text-white">
+  return()    <div className="min-h-screen bg-slate-900 text-white">
       {/* Header */}"
       <div className="bg-slate-800/50 border-b border-slate-700">"
         <div className="container mx-auto px-4 py-12">"
@@ -175,8 +173,12 @@ export default function Help() {
               <div className="relative">"
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                 <input"
+<<<<<<< HEAD
                   type="text"
                   placeholder="Search for help articles, guides, and solutions..."
+=======
+                  type="text""                  placeholder="Search for help articles, guides, and solutions..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-slate-600 rounded-lg focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
@@ -264,8 +266,7 @@ export default function Help() {
                   }`}
                 >"
                   <div className="flex items-center space-x-3">'`
-                    <Clock className={`w-5 h-5 ${schedule.available ? 'text-green-400' : 'text-orange-400'}`} />"
-                    <span className="text-white font-medium">{schedule.day}</span>
+                    <Clock className={`w-5 h-5 ${schedule.available ? 'text-green-400' : 'text-orange-400'}`} />"                    <span className="text-white font-medium">{schedule.day}</span>
                   </div>"
                   <div className="text-right">'`
                     <span className={`text-sm ${schedule.available ? 'text-gray-300' : 'text-orange-400'}`}>
@@ -320,8 +321,7 @@ export default function Help() {
                     {expandedCategory === category.id ? ("
                       <ChevronDown className="w-6 h-6 text-cyan-400" />
                     ) : ("
-                      <ChevronRight className="w-6 h-6 text-cyan-400" />
-                    )}
+                      <ChevronRight className="w-6 h-6 text-cyan-400" />                    )}
                   </div>
                 </button>
               </div>
