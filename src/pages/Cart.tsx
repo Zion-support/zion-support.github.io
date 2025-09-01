@@ -1,29 +1,33 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
+import { useCart } from '../../context'; // Import useCart
+import { CartItem } from '../../types/cart'; // Import CartItem type
 
-interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-}
+export default function CartPage() {
+  const navigate = useNavigate();
+  const { cartState, dispatch } = useCart(); // Use CartContext
+  const { items } = cartState; // Get items from cartState
 
-export default function Cart() {
-  const [items, setItems] = useState<CartItem[]>([]);
+  const updateQuantity = (id: string | number, qty: number) => {
+    // Ensure quantity is at least 1, reducer also handles this but good for immediate UI feedback if needed
+    const newQuantity = Math.max(1, qty); 
+    dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity: newQuantity } });
+  };
 
-  useEffect(() => {
-    const stored = localStorage.getItem('cart');
-    if (stored) {
-      try {
-        const parsed = JSON.parse(stored) as CartItem[];
-        setItems(parsed);
-      } catch {
-        // ignore
-      }
-    }
-  }, []);
+  const removeItem = (id: string | number) => {
+    dispatch({ type: 'REMOVE_ITEM', payload: { id } });
+  };
 
-  const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+
+  if (items.length === 0) {
+    return (
+      <div className="container py-10 text-center">
+        <p>Your cart is empty.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen p-6">

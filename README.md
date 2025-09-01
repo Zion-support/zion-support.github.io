@@ -1,10 +1,10 @@
 # Zion Tech Group - Advanced Technology Solutions Platform
 
-# Welcome to your Lovable project
+# Welcome to the project
 
 Zion Tech Group is a comprehensive technology solutions platform offering cutting-edge AI, cybersecurity, cloud services, and digital transformation solutions. Built with modern web technologies, the platform provides an intuitive user experience with advanced accessibility features, real-time analytics, and performance monitoring.
 
-**URL**: https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32
+**Maintained by**: Jules, Codex, and Kleber Alcatrao
 
 ### 🎯 Core Functionality
 
@@ -12,12 +12,6 @@ Zion Tech Group is a comprehensive technology solutions platform offering cuttin
 - **Cybersecurity Suite**: Advanced threat detection and compliance tools
 - **Cloud & DevOps**: Scalable infrastructure and deployment solutions
 - **Digital Transformation**: Business process optimization and modernization
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
@@ -139,15 +133,7 @@ npm run test:coverage
 
 ### Development build
 
-Simply open [Lovable](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Deployment instructions to be updated.
 
 ### Production build
 
