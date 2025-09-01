@@ -11,7 +11,8 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "axios": ["./src/lib/axios"]
     },
     "types": ["vite/client", "react"],
 
