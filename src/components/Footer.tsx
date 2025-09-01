@@ -231,6 +231,36 @@ export function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Pricing */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white flex items-center">
+              <TrendingUp className="w-5 h-5 mr-2 text-zion-cyan" />
+              Pricing
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/pricing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Standard Pricing
+                </Link>
+              </li>
+              <li>
+                <Link to="/enhanced-pricing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Enhanced Pricing with ROI Calculator
+                </Link>
+              </li>
+              <li>
+                <Link to="/solutions/enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Enterprise Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Custom Quotes
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Additional Sections */}

@@ -15,6 +15,8 @@ const SimplePage = lazy(() => import('./pages/SimplePage').then(module => ({ def
 const SettingsPage = lazy(() => import('./pages/SettingsPage').then(module => ({ default: module.default })));
 const AnalyticsDashboard = lazy(() => import('./components/dashboard/AnalyticsDashboard').then(module => ({ default: module.default })));
 const PerformanceMonitor = lazy(() => import('./components/monitoring/PerformanceMonitor').then(module => ({ default: module.default })));
+const EnhancedHomePage = lazy(() => import('./pages/EnhancedHomePage').then(module => ({ default: module.default })));
+const EnhancedPricingPage = lazy(() => import('./pages/EnhancedPricingPage').then(module => ({ default: module.default })));
 
 // Loading component
 const PageLoader = () => (
@@ -37,6 +39,8 @@ function App() {
                   <Route path="/services" element={<ServicesPage />} />
                   <Route path="/services/*" element={<ServicesPage />} />
                   <Route path="/pricing" element={<ComprehensivePricing />} />
+                  <Route path="/enhanced-pricing" element={<EnhancedPricingPage />} />
+                  <Route path="/enhanced-home" element={<EnhancedHomePage />} />
                   <Route path="/comprehensive-services" element={<SimplePage />} />
                   <Route path="/solutions" element={<SimplePage />} />
                   <Route path="/solutions/*" element={<SimplePage />} />

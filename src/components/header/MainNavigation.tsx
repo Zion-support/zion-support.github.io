@@ -114,6 +114,22 @@ export function MainNavigation({ className = '' }) {
       ]
     },
     {
+      name: 'Pricing',
+      href: '/pricing',
+      icon: TrendingUp,
+      submenu: [
+        {
+          title: 'Pricing Options',
+          items: [
+            { name: 'Standard Pricing', href: '/pricing' },
+            { name: 'Enhanced Pricing with ROI Calculator', href: '/enhanced-pricing' },
+            { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+            { name: 'Custom Quotes', href: '/contact' }
+          ]
+        }
+      ]
+    },
+    {
       name: 'Resources',
       href: '/resources',
       icon: FileText,
