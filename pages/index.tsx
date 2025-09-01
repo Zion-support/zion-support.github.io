@@ -1038,7 +1038,7 @@ export default function HomePage() {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <Link href="/services" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Explore Redundancy Systems →
                 </Link>
               </div>
@@ -1052,7 +1052,7 @@ export default function HomePage() {
                   <li>• Autonomous Agents</li>
                   <li>• Innovation Systems</li>
                 </ul>
-                <Link href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/README_ULTIMATE_REDUNDANCY_AUTOMATION.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Explore AI Systems →
                 </Link>
               </div>
@@ -1066,7 +1066,7 @@ export default function HomePage() {
                   <li>• Performance Optimization</li>
                   <li>• Quality Assurance</li>
                 </ul>
-                <Link href="/services" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/README_GITHUB_ACTIONS.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Explore Build Systems →
                 </Link>
               </div>
@@ -2063,11 +2063,11 @@ export default function HomePage() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">📖 Core Resources</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <Link href="/about" className="text-blue-400 hover:text-blue-300">About</Link> - Mission and vision</li>
-                  <li>• <Link href="/services" className="text-blue-400 hover:text-blue-300">Services</Link> - What we offer</li>
-                  <li>• <Link href="/resources" className="text-blue-400 hover:text-blue-300">Resources</Link> - Tools and docs</li>
-                  <li>• <Link href="/privacy" className="text-blue-400 hover:text-blue-300">Privacy</Link> - Policy overview</li>
-                  <li>• <Link href="/contact" className="text-blue-400 hover:text-blue-300">Contact</Link> - Get in touch</li>
+                  <li>• <a href="/README.md" className="text-blue-400 hover:text-blue-300">Main README</a> - Project overview</li>
+                  <li>• <a href="/DEPLOYMENT.md" className="text-blue-400 hover:text-blue-300">Deployment Guide</a> - Setup instructions</li>
+                  <li>• <a href="/CONTRIBUTING.md" className="text-blue-400 hover:text-blue-300">Contributing Guide</a> - Development workflow</li>
+                  <li>• <a href="/SECURITY.md" className="text-blue-400 hover:text-blue-300">Security Guide</a> - Protection measures</li>
+                  <li>• <a href="/TESTING.md" className="text-blue-400 hover:text-blue-300">Testing Guide</a> - Quality assurance</li>
                 </ul>
                 <Link href="/automation" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Explore Redundancy →
@@ -2077,11 +2077,11 @@ export default function HomePage() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">🔧 Automation & CI/CD</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <Link href="/services" className="text-purple-400 hover:text-purple-300">Redundancy Systems</Link> - System overview</li>
-                  <li>• <Link href="/services" className="text-purple-400 hover:text-purple-300">Comprehensive Redundancy</Link> - Advanced features</li>
-                  <li>• <Link href="/services" className="text-purple-400 hover:text-purple-300">PM2 Redundancy</Link> - Process management</li>
-                  <li>• <Link href="/resources" className="text-purple-400 hover:text-purple-300">GitHub Actions</Link> - CI/CD automation</li>
-                  <li>• <Link href="/resources" className="text-purple-400 hover:text-purple-300">Continuous Operation</Link> - Zero-downtime</li>
+                  <li>• <a href="/README_ULTIMATE_REDUNDANCY_V2.md" className="text-purple-400 hover:text-purple-300">Ultimate Redundancy V2</a> - System overview</li>
+                  <li>• <a href="/README_COMPREHENSIVE_REDUNDANCY.md" className="text-purple-400 hover:text-purple-300">Comprehensive Redundancy</a> - Advanced features</li>
+                  <li>• <a href="/README_PM2_REDUNDANCY_COMPLETE.md" className="text-purple-400 hover:text-purple-300">PM2 Redundancy</a> - Process management</li>
+                  <li>• <a href="/README_GITHUB_ACTIONS.md" className="text-purple-400 hover:text-purple-300">GitHub Actions</a> - CI/CD automation</li>
+                  <li>• <a href="/README_CONTINUOUS_OPERATION.md" className="text-purple-400 hover:text-purple-300">Continuous Operation</a> - Zero-downtime</li>
                 </ul>
                 <Link href="/automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Explore AI Systems →
@@ -2091,11 +2091,11 @@ export default function HomePage() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🚀 Resources & Policies</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <Link href="/resources" className="text-green-400 hover:text-green-300">Security</Link> - Protection measures</li>
-                  <li>• <Link href="/resources" className="text-green-400 hover:text-green-300">Testing</Link> - Quality assurance</li>
-                  <li>• <Link href="/services" className="text-green-400 hover:text-green-300">Service Generation</Link> - Auto-creation</li>
-                  <li>• <Link href="/services" className="text-green-400 hover:text-green-300">Automation</Link> - System details</li>
-                  <li>• <Link href="/blog" className="text-green-400 hover:text-green-300">Growth Automation</Link> - Scaling systems</li>
+                  <li>• <a href="/SERVICE_GENERATION_README.md" className="text-green-400 hover:text-green-300">Service Generation</a> - Auto-creation</li>
+                  <li>• <a href="/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" className="text-green-400 hover:text-green-300">Automation README</a> - System details</li>
+                  <li>• <a href="/EXPONENTIAL_GROWTH_AUTOMATION.md" className="text-green-400 hover:text-green-300">Growth Automation</a> - Scaling systems</li>
+                  <li>• <a href="/PERFORMANCE.md" className="text-green-400 hover:text-green-300">Performance Guide</a> - Optimization</li>
+                  <li>• <a href="/AUTOMATION_COMPLETION_REPORT.md" className="text-green-400 hover:text-green-300">Automation Report</a> - System status</li>
                 </ul>
                 <Link href="/automation" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Explore Build Systems →
@@ -2451,7 +2451,9 @@ export default function HomePage() {
                   <li>• Threat detection & response</li>
                   <li>• Data protection</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">View Security Guide →</a>
+                <a href="/SECURITY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View Security Guide →
+                </a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -2463,7 +2465,9 @@ export default function HomePage() {
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">View Testing Guide →</a>
+                <a href="/TESTING.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  View Testing Guide →
+                </a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -2475,7 +2479,9 @@ export default function HomePage() {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">View Performance Guide →</a>
+                <a href="/PERFORMANCE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View Performance Guide →
+                </a>
               </div>
             </div>
           </section>
