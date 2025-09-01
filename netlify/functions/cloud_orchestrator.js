@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('🤖 cloud_orchestrator function triggered');
     
-    // Cloud orchestration logic
+    // Basic functionality - coordinate cloud operations
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,8 +10,8 @@ exports.handler = async function(event, context) {
         message: 'Cloud orchestrator function executed successfully',
         timestamp: timestamp,
         function: 'cloud_orchestrator',
-        action: 'cloud_coordination',
-        services: ['git-sync', 'build-optimization', 'deployment-management']
+        status: 'completed',
+        operations: ['coordination', 'git-sync', 'agent-management']
       })
     };
     

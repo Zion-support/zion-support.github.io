@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('🤖 homepage_advertiser function triggered');
     
-    // Simple homepage advertising logic
+    // Basic functionality - advertise homepage features
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,7 +10,7 @@ exports.handler = async function(event, context) {
         message: 'Homepage advertiser function executed successfully',
         timestamp: timestamp,
         function: 'homepage_advertiser',
-        action: 'homepage_promotion'
+        status: 'completed'
       })
     };
     

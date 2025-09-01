@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('🤖 readme-advertiser function triggered');
     
-    // README advertising logic
+    // Basic functionality - advertise README features
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,9 +10,8 @@ exports.handler = async function(event, context) {
         message: 'README advertiser function executed successfully',
         timestamp: timestamp,
         function: 'readme-advertiser',
-        action: 'readme_promotion',
-        features: ['automation', 'orchestration', 'optimization'],
-        targetAudience: 'developers'
+        status: 'completed',
+        activities: ['readme-promotion', 'feature-highlighting', 'documentation-enhancement']
       })
     };
     

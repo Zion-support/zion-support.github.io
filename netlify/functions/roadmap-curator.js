@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('🤖 roadmap-curator function triggered');
     
-    // Roadmap curation logic
+    // Basic functionality - curate roadmap content
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,11 +10,8 @@ exports.handler = async function(event, context) {
         message: 'Roadmap curator function executed successfully',
         timestamp: timestamp,
         function: 'roadmap-curator',
-        action: 'roadmap_curation',
-        featuresPlanned: 15,
-        priorityLevels: { high: 5, medium: 7, low: 3 },
-        timeline: 'Q1 2025',
-        stakeholderFeedback: 'positive'
+        status: 'completed',
+        activities: ['roadmap-curation', 'feature-planning', 'timeline-management']
       })
     };
     

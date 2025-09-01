@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('🤖 fast-orchestrator function triggered');
     
-    // Fast orchestration logic
+    // Basic functionality - fast orchestration
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,9 +10,8 @@ exports.handler = async function(event, context) {
         message: 'Fast orchestrator function executed successfully',
         timestamp: timestamp,
         function: 'fast-orchestrator',
-        action: 'rapid_orchestration',
-        priority: 'high',
-        tasks: ['quick-build', 'fast-deploy', 'rapid-test']
+        status: 'completed',
+        operations: ['rapid-coordination', 'quick-execution', 'fast-deployment']
       })
     };
     

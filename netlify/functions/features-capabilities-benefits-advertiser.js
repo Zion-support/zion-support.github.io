@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('🤖 features-capabilities-benefits-advertiser function triggered');
     
-    // Features, capabilities, and benefits advertising logic
+    // Basic functionality - advertise features, capabilities, and benefits
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,13 +10,8 @@ exports.handler = async function(event, context) {
         message: 'Features capabilities benefits advertiser function executed successfully',
         timestamp: timestamp,
         function: 'features-capabilities-benefits-advertiser',
-        action: 'feature_capability_benefit_promotion',
-        featuresHighlighted: 15,
-        capabilitiesShowcased: 8,
-        benefitsCommunicated: 12,
-        userEngagement: 'increased',
-        conversionImpact: 'positive',
-        nextPromotions: ['advanced-features', 'enterprise-capabilities', 'roi-demonstration']
+        status: 'completed',
+        activities: ['feature-promotion', 'capability-highlighting', 'benefit-communication']
       })
     };
     

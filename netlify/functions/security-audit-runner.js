@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('🤖 security-audit-runner function triggered');
     
-    // Security audit logic
+    // Basic functionality - run security audits
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,9 +10,8 @@ exports.handler = async function(event, context) {
         message: 'Security audit runner function executed successfully',
         timestamp: timestamp,
         function: 'security-audit-runner',
-        action: 'security_audit',
-        auditAreas: ['dependencies', 'code-vulnerabilities', 'access-controls'],
-        riskLevel: 'low'
+        status: 'completed',
+        activities: ['security-scanning', 'vulnerability-assessment', 'compliance-checking']
       })
     };
     

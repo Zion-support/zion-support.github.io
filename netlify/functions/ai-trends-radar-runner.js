@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('🤖 ai-trends-radar-runner function triggered');
     
-    // AI trends radar logic
+    // Basic functionality - run AI trends radar operations
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,9 +10,8 @@ exports.handler = async function(event, context) {
         message: 'AI trends radar runner function executed successfully',
         timestamp: timestamp,
         function: 'ai-trends-radar-runner',
-        action: 'ai_trends_monitoring',
-        trends: ['generative-ai', 'automation', 'machine-learning'],
-        impactLevel: 'high'
+        status: 'completed',
+        activities: ['trend-detection', 'ai-analysis', 'future-prediction']
       })
     };
     

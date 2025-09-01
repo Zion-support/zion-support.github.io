@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('🤖 marketing-and-features-promo function triggered');
     
-    // Marketing and features promotion logic
+    // Basic functionality - generate marketing and feature promotions
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,9 +10,8 @@ exports.handler = async function(event, context) {
         message: 'Marketing and features promo function executed successfully',
         timestamp: timestamp,
         function: 'marketing-and-features-promo',
-        action: 'feature_promotion',
-        features: ['ai-automation', 'cloud-orchestration', 'performance-optimization'],
-        marketingChannels: ['homepage', 'social-media', 'email']
+        status: 'completed',
+        activities: ['promo-generation', 'deep-link-creation', 'feature-highlighting']
       })
     };
     

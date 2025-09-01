@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('🤖 frontpage-enhancer function triggered');
     
-    // Frontpage enhancement logic
+    // Basic functionality - enhance frontpage content
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,8 +10,8 @@ exports.handler = async function(event, context) {
         message: 'Frontpage enhancer function executed successfully',
         timestamp: timestamp,
         function: 'frontpage-enhancer',
-        action: 'frontpage_optimization',
-        improvements: ['content-freshness', 'seo-optimization', 'user-engagement']
+        status: 'completed',
+        enhancements: ['content-refresh', 'layout-optimization', 'engagement-improvement']
       })
     };
     

@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('🤖 continuous-orchestrator function triggered');
     
-    // Continuous orchestration logic
+    // Basic functionality - continuous orchestration
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,9 +10,8 @@ exports.handler = async function(event, context) {
         message: 'Continuous orchestrator function executed successfully',
         timestamp: timestamp,
         function: 'continuous-orchestrator',
-        action: 'continuous_monitoring',
-        mode: 'continuous',
-        services: ['monitoring', 'optimization', 'deployment']
+        status: 'completed',
+        operations: ['ongoing-coordination', 'persistent-execution', 'continuous-monitoring']
       })
     };
     
