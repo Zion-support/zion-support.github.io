@@ -4,7 +4,6 @@ export default PricingComparison;
 import { motion   } from 'framer - motion.ts';
 import { SEO   } from '../components / SEO';
 
-
 const PricingComparison: React.FC = () : JSX.Element => {;
   const [selectedPlan, setSelectedPlan] = useState ('monthly') ;
 
@@ -344,7 +343,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
         keywords="Zion Tech Group pricing, AI services pricing, cloud services pricing, data analytics pricing, cybersecurity pricing, micro SAAS pricing, business solutions pricing"
         canonical="https://ziontechgroup.com / pricing"
       />
-      
+
       <div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900">
         {/* Hero Section */}
         <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">
@@ -352,12 +351,12 @@ const PricingComparison: React.FC = () : JSX.Element => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -366,10 +365,10 @@ const PricingComparison: React.FC = () : JSX.Element => {;
                 Transparent Pricing
               </h1>
               <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">
-                Choose the perfect plan for your business. All our AI - powered micro SAAS services 
+                Choose the perfect plan for your business. All our AI - powered micro SAAS services
                 come with a 14 - day free trial and flexible pricing options.
               </p>
-              
+
               {/* Billing Toggle */}
               <div role="button" className="flex items - center justify - center gap - 4 mb - 8">
                 <span className={`text - lg ${selectedPlan === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>
@@ -401,17 +400,17 @@ const PricingComparison: React.FC = () : JSX.Element => {;
                 key={category.category}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.8,
-  delay: categoryIndex * 0.2 
+  delay: categoryIndex * 0.2
 
 }}
                 viewport={{ once: true }}
@@ -430,17 +429,17 @@ const PricingComparison: React.FC = () : JSX.Element => {;
                       key={service.name}
                       initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                       whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                       transition = {
   { duration: 0.6,
-  delay: serviceIndex * 0.1 
+  delay: serviceIndex * 0.1
 
 }}
                       viewport={{ once: true }}
@@ -461,17 +460,17 @@ const PricingComparison: React.FC = () : JSX.Element => {;
                               key = {plan.name}
                               initial = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }}
                               whileInView = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
                               transition = {
   { duration: 0.5,
-  delay: planIndex * 0.1 
+  delay: planIndex * 0.1
 
 }}
                               viewport={{ once: true }}
@@ -541,12 +540,12 @@ const PricingComparison: React.FC = () : JSX.Element => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -558,7 +557,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               <p className="text - xl text - gray - 300 mb - 12">
                 Our AI - powered solutions deliver measurable business impact with transparent pricing.
               </p>
-              
+
               <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12">
                 <div role="button" className="text - center">
                   <div role="button" className="text - 4xl mb - 4">🚀</div>
@@ -576,7 +575,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
                   <p className="text - gray - 300">Our clients see measurable improvements within 30 days</p>
                 </div>
               </div>
-              
+
               <div role="button" className="bg - white / 10 backdrop - blur - sm rounded - lg p - 8 border border - white / 20">
                 <h3 className="text - 2xl font - bold text - white mb - 4">Need a Custom Solution?</h3>
                 <p className="text - gray - 300 mb - 6">
@@ -607,12 +606,12 @@ const PricingComparison: React.FC = () : JSX.Element => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -624,7 +623,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
               <p className="text - xl text - gray - 300 mb - 8">
                 Our team is here to help you choose the right plan and get you up and running quickly.
               </p>
-              
+
               <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8">
                 <div role="button" className="bg - white / 10 backdrop - blur - sm rounded - lg p - 6 border border - white / 20">
                   <h3 className="text - xl font - semibold text - white mb - 3">📱 Phone Support</h3>
@@ -642,7 +641,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
                   <p className="text - sm text - gray - 400">Middletown DE 19709</p>
                 </div>
               </div>
-              
+
               <div role="button" className="text - gray - 300">
                 <p > Visit our website: <a href="https://ziontechgroup.com" className="text - blue - 400 hover:underline">https://ziontechgroup.com</a></p>
               </div>

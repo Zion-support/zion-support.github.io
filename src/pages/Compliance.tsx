@@ -3,7 +3,6 @@ export default React.memo (function Compliance () {
 import {
 import { motion } from 'framer - motion';
 
-
   Shield,
   CheckCircle,
   Award,

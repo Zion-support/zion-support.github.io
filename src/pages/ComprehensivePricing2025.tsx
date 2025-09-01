@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 export default ComprehensivePricing2025;
 
-
 const ComprehensivePricing2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState ('All') ;
   const [selectedIndustry, setSelectedIndustry] = useState ('All') ;

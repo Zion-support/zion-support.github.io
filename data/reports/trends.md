@@ -3,6 +3,7 @@
 Generated: 2025-08-24T10:40:51.368Z
 
 ## Hacker News Front Page
+
 - [Turning Claude Code into My Best Design Partner](https://betweentheprompts.com/design-partner/) — score 62
 - [How to build a coding agent](https://ghuntley.com/agent/) — score 210
 - [Valve Software handbook for new employees [pdf]](https://cdn.akamai.steamstatic.com/apps/valve/Valve_NewEmployeeHandbook.pdf) — score 98
@@ -25,6 +26,7 @@ Generated: 2025-08-24T10:40:51.368Z
 - [Show HN: Port Kill – A lightweight macOS status bar development port monitor](https://github.com/kagehq/port-kill) — score 65
 
 ## GitHub Trending (last 7 days)
+
 - [openai/agents.md](https://github.com/openai/agents.md) (TypeScript) — ⭐ 3221
 - [automazeio/ccpm](https://github.com/automazeio/ccpm) (Shell) — ⭐ 1623
 - [karpathy/rendergit](https://github.com/karpathy/rendergit) (Python) — ⭐ 1137

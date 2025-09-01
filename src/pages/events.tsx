@@ -4,7 +4,6 @@ export default React.memo (function Events (...args: any[]) : any {
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Calendar,
   Clock,
   MapPin,

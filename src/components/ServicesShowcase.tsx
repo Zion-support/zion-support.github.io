@@ -1,15 +1,14 @@
-import { Link } from 'react - router - dom';
-import React from 'react';
-export /**
 import {
+<<<<<<< HEAD
 import { motion } from 'framer - motion';
-
 
  * ServicesShowcase function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */
 function ServicesShowcase () {
+=======
+>>>>>>> main
 
   Brain,
   Cloud,
@@ -24,255 +23,151 @@ function ServicesShowcase () {
   BookOpen,
   DollarSign,
   Gauge,
-  HelpCircle,
-} from 'lucide - react';
+  HelpCircle} from 'lucide-react';
 
-  const services = [
-    {
-      icon: Brain,
-      title: 'AI & Analytics',
-      description: 'Machine Learning & Data Science solutions',
-      href: '/services / ai - business - intelligence',
-      category: 'AI',
-      color: 'from - purple - 500 to - pink - 600',
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud & DevOps',
-      description: 'Infrastructure & Automation',
-      href: '/services / cloud - devops',
-      category: 'Infrastructure',
-      color: 'from - blue - 500 to - cyan - 600',
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'AI - Powered Security solutions',
-      href: '/services',
-      category: 'Security',
-      color: 'from - red - 500 to - orange - 600',
-    },
-    {
-      icon: Cpu,
-      title: 'IoT & Edge',
-      description: 'Smart Devices & Networks',
-      href: '/services',
-      category: 'IoT',
-      color: 'from - green - 500 to - emerald - 600',
-    },
-    {
-      icon: Lock,
-      title: 'Blockchain',
-      description: 'DeFi & Smart Contracts',
-      href: '/services',
-      category: 'Blockchain',
-      color: 'from - yellow - 500 to - orange - 600',
-    },
-    {
-      icon: Users,
-      title: 'Healthcare Tech',
-      description: 'AI Medicine & Diagnostics',
-      href: '/services',
-      category: 'Healthcare',
-      color: 'from - pink - 500 to - rose - 600',
-    },
-    {
-      icon: Globe,
-      title: 'Sustainability',
-      description: 'Green IT Solutions',
-      href: '/services',
-      category: 'Green IT',
-      color: 'from - emerald - 500 to - teal - 600',
-    },
-    {
-      icon: ShoppingCart,
-      title: 'Micro SaaS',
-      description: 'Productized SaaS for niches',
-      href: '/services / micro - saas - solutions',
-      category: 'SaaS',
-      color: 'from - indigo - 500 to - purple - 600',
-    },
-    {
-      icon: MessageCircle,
-      title: 'AI Auto Email',
-      description: 'Faster replies, CRM logging',
-      href: '/services / ai - auto - email - responder',
-      category: 'Automation',
-      color: 'from - cyan - 500 to - blue - 600',
-    },
-    {
-      icon: Users,
-      title: 'Mobile Surveys',
-      description: 'NPS / CSAT with AI insights',
-      href: '/services / mobile - survey',
-      category: 'Analytics',
-      color: 'from - teal - 500 to - green - 600',
-    },
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
-  return (<section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <div className="container mx - auto px - 6">
+  
+  
+  
+  return()
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <div className="container mx-auto px-6">
         {/* Header */}
-        <motion.div
-          className="text - center mb - 16"
+        <motion.div"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-        >
-          <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">
-            Our Comprehensive < span className="bg - gradient - to - r from - cyan - 400 to - blue - 600 bg - clip - text text - transparent">
+        >"
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our Comprehensive"
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
               {' '}
               Services
             </span>
-          </h2>
-          <p className="text - xl text - zion - slate - light max - w-4xl mx - auto leading - relaxed">
-            Discover our extensive collection of cutting - edge micro SAAS
-            solutions designed to transform your business. From AI - powered
+          </h2>"
+          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+            Discover our extensive collection of cutting-edge micro SAAS
+            solutions designed to transform your business. From AI-powered
             analytics to quantum computing, we offer innovative solutions across
             all major technology domains.
           </p>
 
-          {/* Quick Stats */}
-          <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto mt - 12">
-            <motion.div
-              className="text - center"
+          {/* Quick Stats */}"
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
+            <motion.div"
+              className="text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <div className="text - 4xl font - bold text - zion - cyan mb - 2">
+            >"
+              <div className="text-4xl font-bold text-zion-cyan mb-2">
                 {services.length}+
-              </div>
-              <div className="text - zion - slate - light">Total Services</div>
+              </div>"
+              <div className="text-zion-slate-light">Total Services</div>
             </motion.div>
-            <motion.div
-              className="text - center"
+            <motion.div"
+              className="text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="text - 4xl font - bold text - zion - purple mb - 2">6</div>
-              <div className="text - zion - slate - light">Technology Categories</div>
+            >"
+              <div className="text-4xl font-bold text-zion-purple mb-2">6</div>"
+              <div className="text-zion-slate-light">Technology Categories</div>
             </motion.div>
-            <motion.div
-              className="text - center"
+            <motion.div"
+              className="text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <div className="text - 4xl font - bold text - zion - blue mb - 2">
+            >"
+              <div className="text-4xl font-bold text-zion-blue mb-2">
                 99.9%
-              </div>
-              <div className="text - zion - slate - light">Uptime Guarantee</div>
+              </div>"
+              <div className="text-zion-slate-light">Uptime Guarantee</div>
             </motion.div>
-            <motion.div
-              className="text - center"
+            <motion.div"
+              className="text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <div className="text - 4xl font - bold text - zion - green mb - 2">
-                24 / 7
-              </div>
-              <div className="text - zion - slate - light">Support Available</div>
+            >"
+              <div className="text-4xl font-bold text-zion-green mb-2">
+                24/7
+              </div>"
+              <div className="text-zion-slate-light">Support Available</div>
             </motion.div>
           </div>
         </motion.div>
 
         {/* Services Grid */}
         <motion.div
-          variants={containerVariants}
+          variants={containerVariants}"
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-50px' }}
-          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6"
+          whileInView="visible"'
+          viewport={{ once: true, margin: '-50px' }}"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
           {services.map ( (service, index) => (<motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ y: -8, scale: 1.02 }}
+              whileHover={{ y: -8, scale: 1.02 }}"
               className="group relative"
             >
-              <Link to={service.href || `/services/${service.id}`}>
-                <div className="relative overflow - hidden bg - white / 5 backdrop - blur - sm rounded - 2xl p - 6 border border - white / 10 hover:border - white / 20 transition - all duration - 300 hover:shadow - 2xl hover:shadow - cyan - 500 / 10">
+              <Link to={service.href || `/services/${service.id}`}>"
+                <div className="relative overflow-hidden bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10">
                   {/* Background Gradient */}
-                  <div
-                    className={`absolute inset - 0 bg - gradient - to - br ${getCategoryColor (service.category) } opacity - 0 group - hover:opacity - 10 transition - opacity duration - 300`}
+                  <div`
+                    className={`absolute inset-0 bg-gradient-to-br ${getCategoryColor(service.category)} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
                   />
 
                   {/* Icon */}
-                  <div
-                    className={`relative z - 10 w - 16 h - 16 bg - gradient - to - br ${getCategoryColor (service.category) } rounded - 2xl flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration - 300`}
-                  >
-                    <service.icon className="w - 8 h - 8 text - white" />
+                  <div`
+                    className={`relative z-10 w-16 h-16 bg-gradient-to-br ${getCategoryColor(service.category)} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  >"
+                    <service.icon className="w-8 h-8 text-white" />
                   </div>
 
-                  {/* Content */}
-                  <div className="relative z - 10">
-                    <div className="flex items - center justify - between mb - 2">
-                      <h3 className="text - lg font - semibold text - white group - hover:text - cyan - 400 transition - colors duration - 300">
+                  {/* Content */}"
+                  <div className="relative z-10">"
+                    <div className="flex items-center justify-between mb-2">"
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
                         {service.title}
-                      </h3>
-                      <span className="text - xs px - 2 py - 1 bg - white / 10 text - gray - 400 rounded - full">
+                      </h3>"
+                      <span className="text-xs px-2 py-1 bg-white/10 text-gray-400 rounded-full">
                         {service.category}
                       </span>
-                    </div>
-                    <p className="text - gray - 400 text - sm leading - relaxed group - hover:text - gray - 300 transition - colors duration - 300">
+                    </div>"
+                    <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                       {service.description}
                     </p>
                   </div>
 
-                  {/* Hover Effect */}
-                  <div className="absolute inset - 0 bg - gradient - to - br from - cyan - 500 / 5 to - blue - 500 / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 rounded - 2xl" />
+                  {/* Hover Effect */}"
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 </div>
               </Link>
             </motion.div>) ) }
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div
-          className="text - center mt - 16"
+        <motion.div"
+          className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <div className="inline - block p - 1 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - 2xl">
-            <div className="px - 8 py - 6 bg - zion - blue - dark rounded - xl">
-              <p className="text - white text - lg mb - 4">
+        >"
+          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">"
+            <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">"
+              <p className="text-white text-lg mb-4">
                 Ready to transform your business with our services?
-              </p>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center gap - 3 bg - gradient - to - r from - zion - cyan to - zion - purple hover:from - zion - cyan - dark hover:to - zion - purple - dark text - white px - 8 py - 3 rounded - xl font - semibold transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - zion - cyan / 25">
-                Get Started Today < ArrowRight className="w - 5 h - 5" />
-              </button>
+              </p>"
+              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                Get Started Today"
+                <ArrowRight className="w-5 h-5"  />              </button>
             </div>
           </div>
         </motion.div>
       </div>
-    </section>) ;
-}
+    </section>) }
+'"`

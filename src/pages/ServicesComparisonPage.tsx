@@ -3,7 +3,6 @@ import React from 'react';
 export default React.memo (function ServicesComparisonPage () {
 import { motion } from 'framer - motion';
 
-
   const services = [
     {
       name: 'AI Business Intelligence',
@@ -122,7 +121,7 @@ import { motion } from 'framer - motion';
               Need Help Choosing?
             </h2>
             <p className="text - slate - 300 mb - 6 max - w-2xl mx - auto">
-              Our experts are here to help you find the perfect service for your business requirements. 
+              Our experts are here to help you find the perfect service for your business requirements.
               Get personalized recommendations and pricing.
             </p>
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">

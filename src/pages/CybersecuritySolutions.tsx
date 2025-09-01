@@ -3,7 +3,6 @@ export default React.memo (function CybersecuritySolutions (...args[]) :  {
 import {
 import { motion } from 'framer - motion';
 
-
   Shield,
   Lock,
   Eye,
@@ -199,7 +198,7 @@ import { motion } from 'framer - motion';
 
   const itemVariants = {
   hidden: { opacity: 0,
-  y: 20 
+  y: 20
 
 ;
 },;
@@ -226,12 +225,12 @@ import { motion } from 'framer - motion';
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -276,12 +275,12 @@ import { motion } from 'framer - motion';
             className="text - center mb - 16"
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -310,7 +309,7 @@ import { motion } from 'framer - motion';
                 variants={itemVariants}
                 whileHover = {
   { y: -5,
-  scale: 1.02 
+  scale: 1.02
 
 }}
               >
@@ -339,12 +338,12 @@ import { motion } from 'framer - motion';
             className="text - center mb - 16"
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -371,7 +370,7 @@ import { motion } from 'framer - motion';
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 ;
 ;
@@ -410,7 +409,7 @@ import { motion } from 'framer - motion';
                 variants={itemVariants}
                 whileHover = {
   { y: -5,
-  scale: 1.02 
+  scale: 1.02
 
 }}
               >
@@ -453,12 +452,12 @@ import { motion } from 'framer - motion';
             className="text - center mb - 16"
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -487,7 +486,7 @@ import { motion } from 'framer - motion';
                 variants={itemVariants}
                 whileHover = {
   { y: -5,
-  scale: 1.02 
+  scale: 1.02
 
 }}
               >
@@ -519,12 +518,12 @@ import { motion } from 'framer - motion';
             className="text - center mb - 16"
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -569,12 +568,12 @@ import { motion } from 'framer - motion';
             className="text - center mb - 16"
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -651,12 +650,12 @@ import { motion } from 'framer - motion';
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}

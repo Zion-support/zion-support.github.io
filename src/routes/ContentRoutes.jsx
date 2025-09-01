@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import Home from '@/pages/Home';
 import About from '@/pages/About';
@@ -25,73 +24,75 @@ import AIServices from '@/pages/AIServices';
 import ITServices from '@/pages/ITServices';
 import MicroSaaS from '@/pages/MicroSaaS';
 const ContentRoutes = () => {
-  return (
+  return()
     <Routes>
       {/* Content Routes */}
-      <Route path="/" element={<Home />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="/" element={<Home />} />"
+      <Route path="/home" element={<Home />} />"
+      <Route path="/about" element={<About />} />"
+      <Route path="/contact" element={<Contact />} />"
       <Route path="/services" element={<Services />} />
-      <Route
+      <Route"
         path="/comprehensive-services"
         element={<ComprehensiveServices />}
       />
-      {/* Dedicated Services Pages */}
-      <Route path="/ai-services" element={<AIServices />} />
-      <Route path="/it-services" element={<ITServices />} />
+      {/* Dedicated Services Pages */}"
+      <Route path="/ai-services" element={<AIServices />} />"
+      <Route path="/it-services" element={<ITServices />} />"
       <Route path="/micro-saas" element={<MicroSaaS />} />
-      {/* Back-compat for CTA link */}
-      <Route path="/services/micro-saas-solutions" element={<MicroSaaS />} />
-      <Route path="/privacy" element={<Privacy />} />
+      {/* Back-compat for CTA link */}"
+      <Route path="/services/micro-saas-solutions" element={<MicroSaaS />} />"
+      <Route path="/privacy" element={<Privacy />} />"
       <Route path="/cookies" element={<Cookies />} />
 
-      {/* Help Center Routes */}
-      <Route path="/help" element={<HelpCenterPage />} />
-      <Route path="/support" element={<HelpCenterPage />} />
+      {/* Help Center Routes */}"
+      <Route path="/help" element={<HelpCenterPage />} />"
+      <Route path="/support" element={<HelpCenterPage />} />"
       <Route path="/faq" element={<FAQ />} />
 
-      {/* Blog Routes */}
-      <Route path="/blog" element={<Blog />} />
+      {/* Blog Routes */}"
+      <Route path="/blog" element={<Blog />} />"
       <Route path="/blog/:slug" element={<BlogPost />} />
-      {/* Legacy paths for older links */}
-      <Route path="/content/blog" element={<Blog />} />
+      {/* Legacy paths for older links */}"
+      <Route path="/content/blog" element={<Blog />} />"
       <Route path="/content/blog/:slug" element={<BlogPost />} />
 
-      {/* Green IT Route */}
+      {/* Green IT Route */}"
       <Route path="/green-it" element={<GreenIT />} />
 
-      {/* Careers Route */}
+      {/* Careers Route */}"
       <Route path="/careers" element={<Careers />} />
 
-      {/* Enterprise Route */}
+      {/* Enterprise Route */}"
       <Route path="/enterprise" element={<Enterprise />} />
 
-      {/* Legal Pages */}
+      {/* Legal Pages */}"
       <Route path="/terms" element={<Terms />} />
 
-      {/* Account Settings */}
+      {/* Account Settings */}"
       <Route path="/settings/account" element={<AccountSettings />} />
 
-      {/* Project Room */}
+      {/* Project Room */}"
       <Route path="/project-room/:projectId" element={<ProjectRoom />} />
 
-      {/* Video Call */}
+      {/* Video Call */}"
       <Route path="/video-call/:roomId" element={<VideoCall />} />
 
-      {/* Global Search Route */}
+      {/* Global Search Route */}"
       <Route path="/search" element={<SearchPage />} />
 
       {/* API Documentation Redirect */}
-      <Route
+      <Route"
         path="/api-docs"
         element={<Navigate to="/developers/docs" replace />}
       />
 
-      {/* Sitemap Pages */}
-      <Route path="/sitemap" element={<Sitemap />} />
+      {/* Sitemap Pages */}"
+      <Route path="/sitemap" element={<Sitemap />} />"
       <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
   );
 };
+export { ContentRoutes };
 export default ContentRoutes;
+'"

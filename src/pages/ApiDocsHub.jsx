@@ -13,7 +13,6 @@ export default ApiDocsHub;
 export function ApiDocsHub () {
 import Link from "next / link";
 
-
     const sections = [
         {
             title: "Getting Started",

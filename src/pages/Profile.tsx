@@ -1,17 +1,16 @@
 import React, { useState } from 'react.ts';
 export default Profile;}}}}}}}}}
 import { motion  } from 'framer - motion.ts';
-import { User, 
+import { User,
 
-
-  Mail, 
-  Phone, 
-  Building, 
-  Globe, 
-  MapPin, 
-  Camera, 
-  Save, 
-  Edit, 
+  Mail,
+  Phone,
+  Building,
+  Globe,
+  MapPin,
+  Camera,
+  Save,
+  Edit,
   X,
   Shield,
   Bell,
@@ -209,12 +208,12 @@ setNotifications (prev: > ({;
   const renderProfileTab = () => (<motion.div
       initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
       transition={{ duration: 0.6 }}
@@ -252,17 +251,17 @@ setNotifications (prev: > ({;
               key={stat.label}
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 + index * 0.1 
+  delay: 0.1 + index * 0.1
 
 }}
               className="text - center p - 4 bg - white / 5 rounded - xl border border - slate - 600 / 30"
@@ -291,7 +290,7 @@ setNotifications (prev: > ({;
                 type="text"
                 value={profile.firstName}
                 onChange = { (e) => setProfile (prev => ({ ...prev,
-  firstName: e.target.value 
+  firstName: e.target.value
 
 }) ) }
                 disabled={!isEditing}
@@ -308,7 +307,7 @@ setNotifications (prev: > ({;
                 type="text"
                 value={profile.lastName}
                 onChange = { (e) => setProfile (prev => ({ ...prev,
-  lastName: e.target.value 
+  lastName: e.target.value
 
 }) ) }
                 disabled={!isEditing}
@@ -327,7 +326,7 @@ setNotifications (prev: > ({;
                 type="email"
                 value={profile.email}
                 onChange = { (e) => setProfile (prev => ({ ...prev,
-  email: e.target.value 
+  email: e.target.value
 
 }) ) }
                 disabled={!isEditing}
@@ -344,7 +343,7 @@ setNotifications (prev: > ({;
                 type="tel"
                 value={profile.phone}
                 onChange = { (e) => setProfile (prev => ({ ...prev,
-  phone: e.target.value 
+  phone: e.target.value
 
 }) ) }
                 disabled={!isEditing}
@@ -363,7 +362,7 @@ setNotifications (prev: > ({;
                 type="text"
                 value={profile.company}
                 onChange = { (e) => setProfile (prev => ({ ...prev,
-  company: e.target.value 
+  company: e.target.value
 
 }) ) }
                 disabled={!isEditing}
@@ -378,7 +377,7 @@ setNotifications (prev: > ({;
               type="text"
               value={profile.position}
               onChange = { (e) => setProfile (prev => ({ ...prev,
-  position: e.target.value 
+  position: e.target.value
 
 }) ) }
               disabled={!isEditing}
@@ -395,7 +394,7 @@ setNotifications (prev: > ({;
               <select
                 value={profile.industry}
                 onChange = { (e) => setProfile (prev => ({ ...prev,
-  industry: e.target.value 
+  industry: e.target.value
 
 }) ) }
                 disabled={!isEditing}
@@ -414,7 +413,7 @@ setNotifications (prev: > ({;
                 type="text"
                 value={profile.location}
                 onChange = { (e) => setProfile (prev => ({ ...prev,
-  location: e.target.value 
+  location: e.target.value
 
 }) ) }
                 disabled={!isEditing}
@@ -432,7 +431,7 @@ setNotifications (prev: > ({;
               type="url"
               value={profile.website}
               onChange = { (e) => setProfile (prev => ({ ...prev,
-  website: e.target.value 
+  website: e.target.value
 
 }) ) }
               disabled={!isEditing}
@@ -446,7 +445,7 @@ setNotifications (prev: > ({;
           <textarea
             value={profile.bio}
             onChange = { (e) => setProfile (prev => ({ ...prev,
-  bio: e.target.value 
+  bio: e.target.value
 
 }) ) }
             disabled={!isEditing}
@@ -479,17 +478,17 @@ setNotifications (prev: > ({;
               key={achievement.title}
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.1 + index * 0.1 
+  delay: 0.1 + index * 0.1
 
 }}
               className={`p - 4 rounded - xl border ${
@@ -522,12 +521,12 @@ setNotifications (prev: > ({;
   const renderSecurityTab = () => (<motion.div
       initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
       transition={{ duration: 0.6 }}
@@ -551,7 +550,7 @@ setNotifications (prev: > ({;
               />
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                 onClick = { () => setShowPasswords (prev => ({ ...prev,
-  current: !prev.current 
+  current: !prev.current
 
 }) ) }
                 className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 hover:text - white transition - colors duration - 200"
@@ -574,7 +573,7 @@ setNotifications (prev: > ({;
               />
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                 onClick = { () => setShowPasswords (prev => ({ ...prev,
-  new: !prev.new 
+  new: !prev.new
 
 }) ) }
                 className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 hover:text - white transition - colors duration - 200"
@@ -613,7 +612,7 @@ setNotifications (prev: > ({;
               />
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                 onClick = { () => setShowPasswords (prev => ({ ...prev,
-  confirm: !prev.confirm 
+  confirm: !prev.confirm
 
 }) ) }
                 className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 hover:text - white transition - colors duration - 200"
@@ -653,7 +652,7 @@ setNotifications (prev: > ({;
                 type="checkbox"
                 checked={security.twoFactorEnabled}
                 onChange = { (e) => setSecurity (prev => ({ ...prev,
-  twoFactorEnabled: e.target.checked 
+  twoFactorEnabled: e.target.checked
 
 }) ) }
                 className="sr - only peer"
@@ -712,12 +711,12 @@ setNotifications (prev: > ({;
   const renderNotificationsTab = () => (<motion.div
       initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
       transition={{ duration: 0.6 }}
@@ -758,12 +757,12 @@ setNotifications (prev: > ({;
   const renderPreferencesTab = () => (<motion.div
       initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
       transition={{ duration: 0.6 }}
@@ -850,12 +849,12 @@ setNotifications (prev: > ({;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.6 }}
@@ -869,12 +868,12 @@ setNotifications (prev: > ({;
         {error && (<motion.div
             initial = {
   { opacity: 0,
-  y: 10 
+  y: 10
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             className="mb - 6 p - 4 bg - red - 500 / 20 border border - red - 500 / 30 rounded - lg flex items - center gap - 3 text - red - 400"
@@ -886,12 +885,12 @@ setNotifications (prev: > ({;
         {success && (<motion.div
             initial = {
   { opacity: 0,
-  y: 10 
+  y: 10
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             className="mb - 6 p - 4 bg - green - 500 / 20 border border - green - 500 / 30 rounded - lg flex items - center gap - 3 text - green - 400"

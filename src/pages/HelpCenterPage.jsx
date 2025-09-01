@@ -7,7 +7,6 @@ import { Input } from '@/components / ui / input';
 import SEO from '@/components / SEO';
 export default function HelpCenterPage () {
 
-
     const helpCategories = [
         {
             icon: <User className="w - 8 h - 8 text - zion - cyan"/>,

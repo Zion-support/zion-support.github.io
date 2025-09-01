@@ -1,6 +1,7 @@
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Link  } from 'react-router-dom.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail               } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
 
 export default function AIEnterpriseOrchestrator(...args: []):  {
   return (
@@ -10,7 +11,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
         <meta name = "description" content="Transform your enterprise with AI-powered workflow orchestration, multi-agent coordination, and intelligent process automation." />
         <meta name="keywords" content="AI enterprise orchestrator, workflow automation, multi-agent AI, business process automation, enterprise AI" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -21,22 +21,18 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 <Brain className="w-4 h-4 mr-2" />
                 AI-Powered Enterprise Orchestration
               </div>
-
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Enterprise
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Orchestrator</span>
               </h1>
-
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Orchestrate your entire enterprise with intelligent AI agents that coordinate workflows,
                 automate processes, and optimize operations across all departments and systems.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -48,9 +44,8 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
-        <section className="py-20">;
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -62,7 +57,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -106,9 +101,8 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* How It Works Section */}
-        <section className="py-20 bg-slate-800/30">;
+        <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -120,7 +114,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -154,9 +148,8 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
-        <section className="py-20">;
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -166,7 +159,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 Experience unprecedented efficiency and intelligence across your entire organization.
               </p>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
@@ -185,16 +177,15 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                   ))}
                 </div>
               </div>
-
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Key Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: "40%", label: "Cost Reduction" },
+                    { metric: anyanyanyanyanyanyanyanyanyanyanyanyany"40%", label: "Cost Reduction" },
                     { metric: "60%", label: "Efficiency Improvement" },
                     { metric: "24/7", label: "Operation Availability" },
                     { metric: "99.9%", label: "Uptime Reliability" }
-                  ].map((item, index)  => (
+                  ].map((item, index)               => (
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-slate-300">{item.label}</span>
                       <span className="text-2xl font-bold text-cyan-400">{item.metric}</span>
@@ -205,9 +196,8 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-600/10">;
+        <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-600/10">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Orchestrate Your Enterprise?
@@ -219,7 +209,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>

@@ -7,7 +7,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import SEO from "@/components / SEO";
 export default function CybersecurityServices () {
 
-
     const securitySolutions = [
         {
             title: "Network Security",

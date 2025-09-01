@@ -1,13 +1,13 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
+;
 class AutoCommitFixes {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log');
+    this.logFile = path.join(this.projectRoot,logs/pm2/auto-commit-fixes.log');
     this.startTime = Date.now();
     this.commitsMade = 0;
     this.filesChanged = 0;
@@ -146,7 +146,7 @@ class AutoCommitFixes {
     if (changes.other.length > 0) {
       messages.push(`Other changes in ${changes.other.length} file(s)`);
 
-    return messages.join(', ');
+    return messages.join(',);
 
   async run() {
     this.log('🚀 Starting Auto Commit Fixes...');
@@ -214,7 +214,7 @@ class AutoCommitFixes {
 
 
 
-// Run the auto commit fixes
+// Run the auto commit fixes;
 const autoCommit = new AutoCommitFixes();
 autoCommit.run().catch(error => {
   process.exit(1);

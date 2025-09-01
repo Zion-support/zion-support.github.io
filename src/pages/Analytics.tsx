@@ -5,7 +5,6 @@ import {
 import { motion } from 'framer - motion';
 import SEO from '../components / SEO';
 
-
   BarChart3,
   TrendingUp,
   PieChart,
@@ -121,7 +120,7 @@ const Analytics: React.FC = () => {
   ];
 
   return (<div className = "min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="Analytics - Zion Tech Group"
         description="Transform your data into actionable insights with our comprehensive analytics solutions. Real - time monitoring, AI - powered analysis, and custom dashboards."
         keywords="analytics, business intelligence, data analysis, AI analytics, Zion Tech Group"
@@ -134,12 +133,12 @@ const Analytics: React.FC = () => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -189,17 +188,17 @@ const Analytics: React.FC = () => {
                 key={index}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="text - center"
@@ -221,12 +220,12 @@ const Analytics: React.FC = () => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -246,17 +245,17 @@ const Analytics: React.FC = () => {
                 key={index}
                 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 6 hover:border - cyan - 400 / 30 transition - all duration - 300 hover:scale - 105"
@@ -278,12 +277,12 @@ const Analytics: React.FC = () => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -303,17 +302,17 @@ const Analytics: React.FC = () => {
                 key={index}
                 initial = {
   { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30 
+  x: index % 2 === 0 ? -30 : 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - slate - 700 / 30 border border - slate - 600 / 30 rounded - xl p - 8 hover:border - cyan - 400 / 30 transition - all duration - 300"
@@ -349,12 +348,12 @@ const Analytics: React.FC = () => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -374,17 +373,17 @@ const Analytics: React.FC = () => {
                 key={index}
                 initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
                 whileInView = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 6 text - center hover:border - cyan - 400 / 30 transition - all duration - 300 hover:scale - 105"
@@ -403,12 +402,12 @@ const Analytics: React.FC = () => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}

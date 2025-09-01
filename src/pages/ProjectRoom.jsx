@@ -8,7 +8,6 @@ import SEO from '@/components / SEO';
 export default function ProjectRoom () {
 import { toast } from 'sonner';
 
-
     const { projectId } = useParams () ;
     const [activeTab, setActiveTab] = useState ('chat') ;
     const [isInCall, setIsInCall] = useState (false) ;
@@ -197,5 +196,5 @@ import { toast } from 'sonner';
           </TabsContent>
         </Tabs>
       </main>
-      
+
     </>) }

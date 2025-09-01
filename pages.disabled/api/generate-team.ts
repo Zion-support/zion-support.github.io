@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-
+;
 export type TeamRoleRecommendation = {
   role: string;
   description: string;
@@ -10,14 +10,14 @@ export type TeamRoleRecommendation = {
   preferredLocations?: string[];
   requiredSkills?: string[];
 };
-
+;
 export type TeamRecommendationResponse = {
   team: TeamRoleRecommendation[];
   assumptions: string[];
   weeklyBurnUsd: number;
   estimatedProjectTotalUsd: number;
 };
-
+;
 const SYSTEM_PROMPT = `You are a senior CTO staffing assistant for Zion AI Marketplace.
 Given a project brief, propose an ideal team structure. Return ONLY valid JSON with this exact shape:
 {
@@ -41,7 +41,7 @@ Guidelines:
 - If budget is locked, keep weeklyBurnUsd within that budget divided by expected weeks. If timeline is locked, adjust team composition to meet schedule.
 - Choose realistic hourly ranges based on market rates for senior talent.
 - Ensure the JSON is parseable; do not include extra commentary.`;
-
+;
 function computeWeeksFromTimeline(timeline?: string): number | undefined {
   if (!timeline) return undefined;
   const matches = timeline.match(/(\d+)\s*(week|weeks)/i);
@@ -50,8 +50,8 @@ function computeWeeksFromTimeline(timeline?: string): number | undefined {
   if (quarter) return 12;
   return undefined;
 }
-
-function fallbackRecommendation(input: any): TeamRecommendationResponse {
+;
+function fallbackRecommendation(input: unknown): TeamRecommendationResponse {
   const weeks = computeWeeksFromTimeline(input?.timeline) || 12;
   const team: TeamRoleRecommendation[] = [
     {
@@ -60,7 +60,7 @@ function fallbackRecommendation(input: any): TeamRecommendationResponse {
       hourlyRangeUsd: { min: 90, max: 130 },
       estimatedWeeklyHours: 20,
       quantity: 1,
-      requiredSkills: ['Agile', 'Roadmapping']
+      requiredSkills: ['Agile',Roadmapping']
     },
     {
       role: 'Fullstack Engineer',
@@ -68,7 +68,7 @@ function fallbackRecommendation(input: any): TeamRecommendationResponse {
       hourlyRangeUsd: { min: 85, max: 120 },
       estimatedWeeklyHours: 35,
       quantity: 2,
-      requiredSkills: ['Next.js', 'TypeScript', 'PostgreSQL']
+      requiredSkills: ['Next.js',TypeScript',PostgreSQL']
     },
     {
       role: 'DevOps Engineer',
@@ -76,7 +76,7 @@ function fallbackRecommendation(input: any): TeamRecommendationResponse {
       hourlyRangeUsd: { min: 100, max: 140 },
       estimatedWeeklyHours: 12,
       quantity: 1,
-      requiredSkills: ['AWS', 'Kubernetes', 'Terraform']
+      requiredSkills: ['AWS',Kubernetes',Terraform']
     },
     {
       role: 'QA Engineer',
@@ -84,22 +84,21 @@ function fallbackRecommendation(input: any): TeamRecommendationResponse {
       hourlyRangeUsd: { min: 60, max: 90 },
       estimatedWeeklyHours: 15,
       quantity: 1,
-      requiredSkills: ['Playwright', 'Cypress']
+      requiredSkills: ['Playwright',Cypress']
     }
   ];
 
-  const weeklyBurn = team.reduce((sum, r) => sum + ((r.hourlyRangeUsd.min + r.hourlyRangeUsd.max) / 2) * r.estimatedWeeklyHours * r.quantity, 0);
+  const weeklyBurn = team.reduce(sum: unknown, r: unknown sum + ((r.hourlyRangeUsd.min + r.hourlyRangeUsd.max) / 2) * r.estimatedWeeklyHours * r.quantity, 0);
   return {
     team,
-    assumptions: ['Fallback response used (no OPENAI_API_KEY).', 'Based on standard marketplace web app.'],
+    assumptions: ['Fallback response used (no OPENAI_API_KEY).',Based on standard marketplace web app.'],
     weeklyBurnUsd: Math.round(weeklyBurn),
     estimatedProjectTotalUsd: Math.round(weeklyBurn * weeks)
   };
 }
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse
-
-export default function Generate-teamPage() {
+;
+export { async };
+export default async function handler(...args: unknown[]): unknown {
   return (
     <TeamRecommendationResponse | { error: string }>) {
   if (req.method !== 'POST') {
@@ -117,7 +116,7 @@ export default function Generate-teamPage() {
     timeline,
     budget: isNaN(budgetNumber) ? undefined : budgetNumber,
     techAreas,
-    constraints: { lockBudget: !!lockBudget, lockTimeline: !!lockTimeline, expectedWeeks },
+    constraints: { lockBudget: !!lockBudget, lockTimeline: !!lockTimeline, expectedWeeks }
   };
 
   if (!process.env.OPENAI_API_KEY) {
@@ -134,10 +133,10 @@ export default function Generate-teamPage() {
         { role: 'system', content: SYSTEM_PROMPT },
         { role: 'user', content: JSON.stringify(userPrompt) }
       ],
-      response_format: { type: 'json_object' as const },
+      response_format: { type: 'json_object' as const }
     });
 
-    const content = completion.choices?.[0]?.message?.content || '{}';
+    const content = completion.choices?.[0]?.message?.content || '{};
     const parsed = JSON.parse(content) as TeamRecommendationResponse;
 
     if (!parsed.team || !Array.isArray(parsed.team)) {
@@ -145,7 +144,7 @@ export default function Generate-teamPage() {
     }
 
     // Safety: compute weekly burn if missing based on roles
-    const weeklyBurnFallback = parsed.team.reduce((acc, r) => {
+    const weeklyBurnFallback = parsed.team.reduce(acc: unknown, r: unknown {
       const avgRate = ((r.hourlyRangeUsd?.min ?? 80) + (r.hourlyRangeUsd?.max ?? 120)) / 2;
       return acc + (avgRate * (r.estimatedWeeklyHours || 0) * (r.quantity || 1));
     }, 0);
@@ -157,11 +156,11 @@ export default function Generate-teamPage() {
     const finalResponse: TeamRecommendationResponse = {
       ...parsed,
       weeklyBurnUsd,
-      estimatedProjectTotalUsd,
+      estimatedProjectTotalUsd
     };
 
     res.status(200).json(finalResponse);
-  } catch (e: any) {
+  } catch (e: unknown) {
     console.error('generate-team error', e?.message || e);
     res.status(500).json({ error: 'Failed to generate team' });
   }

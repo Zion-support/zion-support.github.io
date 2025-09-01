@@ -1,27 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/button';
 export const InstallPrompt = () => {
 export default InstallPrompt;
-
 
     const [deferred, setDeferred] = useState (null) ;
     useEffect ( () => {
         const handler = (e) => {
-            e.preventDefault () ;
-            setDeferred (e) };
-        window.addEventListener ('beforeinstallprompt', handler) ;
-        return () => window.removeEventListener ('beforeinstallprompt', handler) }, []) ;
-    if (!deferred) return null;
+
+            e.preventDefault();
+            setDeferred(e)};
+        window.addEventListener('beforeinstallprompt', handler);
+        return () => window.removeEventListener('beforeinstallprompt', handler)}, []);
+    if (!deferred)
+        return null;
     const onClick = async () => {
-        deferred.prompt () ;
+        deferred.prompt();
         const result = await deferred.userChoice;
         if (result.outcome !== 'accepted') {
+
             // keep for later
             setDeferred (deferred) }
         else {
-            setDeferred (null) }
+
+            setDeferred(null)}
     };
     return (<div className="fixed bottom - 4 right - 4 z - 50">
       <Button onClick={onClick}>Install App</Button>
-    </div>) };
-}}
+    </div>)};
+export default InstallPrompt;
+}}'"

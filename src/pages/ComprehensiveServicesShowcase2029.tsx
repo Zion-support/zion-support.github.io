@@ -7,7 +7,6 @@ import {
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Brain,
   Zap,
   Shield,

@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import MicroSAASSolutions from './MicroSAASSolutions';
 
-
 describe ('MicroSAASSolutions', () => {
   it ('renders without crashing', () => {
     render (<MicroSAASSolutions />) ;

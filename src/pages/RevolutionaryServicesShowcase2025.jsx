@@ -3,7 +3,6 @@ export default RevolutionaryServicesShowcase2025;
 import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data / emerging - tech - 2025 - specialized - services';
 import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data / revolutionary - 2025 - advanced - services';
 
-
 const RevolutionaryServicesShowcase2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [searchTerm, setSearchTerm] = useState ('') ;

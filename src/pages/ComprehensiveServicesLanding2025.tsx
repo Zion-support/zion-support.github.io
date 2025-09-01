@@ -6,7 +6,6 @@ import { INNOVATIVE_SERVICES_2025 } from '../data / innovativeServices2025';
 import { motion } from 'framer - motion';
 import SEO from '../components / SEO';
 
-
   Search,
   Filter,
   Star,
@@ -115,7 +114,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
   }, 0) / totalServices;
 
   return (<div className = "min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="Comprehensive Services Landing 2025 - Zion Tech Group"
         description="Discover our complete portfolio of innovative technology services. From AI and Quantum Computing to IoT and Blockchain solutions - transform your business with cutting - edge technology."
       />
@@ -126,12 +125,12 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -204,17 +203,17 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 key={categoryData.category}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="group"
@@ -261,17 +260,17 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 key={category.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.5,
-  delay: index * 0.05 
+  delay: index * 0.05
 
 }}
                 className="group bg - slate - 800 / 40 backdrop - blur border border - slate - 700 / 30 hover:border - cyan - 400 / 30 transition - all duration - 300 rounded - xl p - 5 hover:shadow - lg hover:shadow - cyan - 400 / 5"
@@ -280,7 +279,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                   <div className={`w - 12 h - 12 bg - gradient - to - br ${category.color} rounded - lg flex items - center justify - center flex - shrink - 0`}>
                     <category.icon className="w - 6 h - 6 text - white" />
                   </div>
-                  
+
                   <div className="flex - 1 min - w-0">
                     <h3 className="font - semibold mb - 2 group - hover:text - cyan - 300 transition - colors">
                       {category.title}
@@ -328,17 +327,17 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 key={service.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - slate - 800 / 50 backdrop - blur - sm rounded - 2xl p - 6 border border - slate - 700 / 50 hover:border - blue - 500 / 50 transition - all duration - 300 hover:shadow - xl hover:shadow - blue - 500 / 10 group"
@@ -448,17 +447,17 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 key={index}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="text - center"
@@ -479,12 +478,12 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}

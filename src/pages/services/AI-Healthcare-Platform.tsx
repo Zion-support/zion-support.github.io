@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  Heart,
-  Stethoscope,
-  Brain,
-  Zap,
-  Shield,
-  BarChart3,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Globe,
-  Rocket,
+import { 
+  Heart, 
+  Stethoscope, 
+  Brain, 
+  Zap, 
+  Shield, 
+  BarChart3, 
+  Cpu, 
+  Database, 
+  Network, 
+  Lock, 
+  Globe, 
+  Rocket, 
   Star,
   CheckCircle,
   ArrowRight,
@@ -65,7 +65,7 @@ import {
   Microscope,
   Flask,
   TestTube,
-  Beaker,
+  Beaker
 } from 'lucide-react';
 
 const AIHealthcarePlatform: React.FC = () => {
@@ -80,96 +80,60 @@ const AIHealthcarePlatform: React.FC = () => {
     {
       icon: Brain,
       title: 'AI Diagnostic Assistant',
-      description:
-        'Advanced AI algorithms for accurate disease diagnosis and treatment recommendations',
+      description: 'Advanced AI algorithms for accurate disease diagnosis and treatment recommendations'
     },
     {
       icon: Heart,
       title: 'Predictive Healthcare',
-      description:
-        'Predict patient outcomes and identify health risks before they become critical',
+      description: 'Predict patient outcomes and identify health risks before they become critical'
     },
     {
       icon: Stethoscope,
       title: 'Virtual Health Monitoring',
-      description:
-        'Real-time health monitoring with AI-powered insights and alerts',
+      description: 'Real-time health monitoring with AI-powered insights and alerts'
     },
     {
       icon: Shield,
       title: 'HIPAA Compliant Security',
-      description:
-        'Enterprise-grade security ensuring patient data privacy and compliance',
+      description: 'Enterprise-grade security ensuring patient data privacy and compliance'
     },
     {
       icon: BarChart3,
       title: 'Healthcare Analytics',
-      description:
-        'Comprehensive analytics for population health and treatment effectiveness',
+      description: 'Comprehensive analytics for population health and treatment effectiveness'
     },
     {
       icon: Zap,
       title: 'Automated Workflows',
-      description:
-        'Streamlined healthcare processes with intelligent automation',
-    },
+      description: 'Streamlined healthcare processes with intelligent automation'
+    }
   ];
 
   const healthcareModules = [
     {
       name: 'Clinical Decision Support',
-      features: [
-        'Evidence-based recommendations',
-        'Drug interaction checking',
-        'Treatment protocols',
-        'Clinical guidelines',
-      ],
+      features: ['Evidence-based recommendations', 'Drug interaction checking', 'Treatment protocols', 'Clinical guidelines']
     },
     {
       name: 'Medical Imaging AI',
-      features: [
-        'Radiology analysis',
-        'Pathology detection',
-        'Image enhancement',
-        'Automated reporting',
-      ],
+      features: ['Radiology analysis', 'Pathology detection', 'Image enhancement', 'Automated reporting']
     },
     {
       name: 'Patient Management',
-      features: [
-        'Electronic health records',
-        'Appointment scheduling',
-        'Patient portals',
-        'Care coordination',
-      ],
+      features: ['Electronic health records', 'Appointment scheduling', 'Patient portals', 'Care coordination']
     },
     {
       name: 'Telemedicine Platform',
-      features: [
-        'Video consultations',
-        'Remote monitoring',
-        'Secure messaging',
-        'Mobile apps',
-      ],
+      features: ['Video consultations', 'Remote monitoring', 'Secure messaging', 'Mobile apps']
     },
     {
       name: 'Population Health',
-      features: [
-        'Disease surveillance',
-        'Risk stratification',
-        'Preventive care',
-        'Health trends',
-      ],
+      features: ['Disease surveillance', 'Risk stratification', 'Preventive care', 'Health trends']
     },
     {
       name: 'Research & Analytics',
-      features: [
-        'Clinical trials',
-        'Data mining',
-        'Outcome analysis',
-        'Research insights',
-      ],
-    },
+      features: ['Clinical trials', 'Data mining', 'Outcome analysis', 'Research insights']
+    }
   ];
 
   const pricingTiers = [
@@ -185,11 +149,11 @@ const AIHealthcarePlatform: React.FC = () => {
         'HIPAA Compliance',
         'Email Support',
         'Standard Analytics',
-        'Mobile App Access',
+        'Mobile App Access'
       ],
       marketPrice: '$4,500',
       savings: '22%',
-      popular: false,
+      popular: false
     },
     {
       name: 'Hospital',
@@ -205,11 +169,11 @@ const AIHealthcarePlatform: React.FC = () => {
         'Priority Support',
         'Custom Integration',
         'Advanced Security',
-        'Training & Certification',
+        'Training & Certification'
       ],
       marketPrice: '$11,000',
       savings: '23%',
-      popular: true,
+      popular: true
     },
     {
       name: 'Enterprise',
@@ -226,95 +190,61 @@ const AIHealthcarePlatform: React.FC = () => {
         'White-label Solutions',
         'Custom Development',
         'Compliance Consulting',
-        'Staff Training',
+        'Staff Training'
       ],
       marketPrice: '$24,000',
       savings: '25%',
-      popular: false,
-    },
+      popular: false
+    }
   ];
 
   const benefits = [
     {
       title: 'Improved Patient Outcomes',
-      description:
-        'AI-powered diagnostics improve accuracy by 30% and reduce diagnostic errors by 50%',
-      icon: Heart,
+      description: 'AI-powered diagnostics improve accuracy by 30% and reduce diagnostic errors by 50%',
+      icon: Heart
     },
     {
       title: 'Cost Reduction',
-      description:
-        'Reduce healthcare costs by 25% through automation and predictive care',
-      icon: TrendingUp,
+      description: 'Reduce healthcare costs by 25% through automation and predictive care',
+      icon: TrendingUp
     },
     {
       title: 'Enhanced Efficiency',
-      description:
-        'Streamline workflows and reduce administrative burden by 40%',
-      icon: Zap,
+      description: 'Streamline workflows and reduce administrative burden by 40%',
+      icon: Zap
     },
     {
       title: 'Better Care Coordination',
       description: 'Seamless integration across departments and care teams',
-      icon: Users,
-    },
+      icon: Users
+    }
   ];
 
   const healthcareStats = [
-    {
-      metric: 'Diagnostic Accuracy',
-      value: '95%',
-      description: 'AI-powered diagnostic accuracy rate',
-    },
-    {
-      metric: 'Response Time',
-      value: '< 2 minutes',
-      description: 'Average time for AI diagnosis',
-    },
-    {
-      metric: 'Cost Savings',
-      value: '25%',
-      description: 'Average reduction in healthcare costs',
-    },
-    {
-      metric: 'Patient Satisfaction',
-      value: '94%',
-      description: 'Patient satisfaction with AI-enhanced care',
-    },
+    { metric: 'Diagnostic Accuracy', value: '95%', description: 'AI-powered diagnostic accuracy rate' },
+    { metric: 'Response Time', value: '< 2 minutes', description: 'Average time for AI diagnosis' },
+    { metric: 'Cost Savings', value: '25%', description: 'Average reduction in healthcare costs' },
+    { metric: 'Patient Satisfaction', value: '94%', description: 'Patient satisfaction with AI-enhanced care' }
   ];
 
   const useCases = [
     {
       industry: 'Primary Care',
-      applications: [
-        'Preventive Care',
-        'Chronic Disease Management',
-        'Screening Programs',
-        'Health Education',
-      ],
+      applications: ['Preventive Care', 'Chronic Disease Management', 'Screening Programs', 'Health Education']
     },
     {
       industry: 'Specialty Medicine',
-      applications: ['Oncology', 'Cardiology', 'Neurology', 'Radiology'],
+      applications: ['Oncology', 'Cardiology', 'Neurology', 'Radiology']
     },
     {
       industry: 'Emergency Care',
-      applications: [
-        'Triage',
-        'Critical Care',
-        'Trauma Assessment',
-        'Emergency Response',
-      ],
+      applications: ['Triage', 'Critical Care', 'Trauma Assessment', 'Emergency Response']
     },
     {
       industry: 'Research & Development',
-      applications: [
-        'Clinical Trials',
-        'Drug Discovery',
-        'Medical Research',
-        'Population Studies',
-      ],
-    },
+      applications: ['Clinical Trials', 'Drug Discovery', 'Medical Research', 'Population Studies']
+    }
   ];
 
   return (
@@ -336,9 +266,8 @@ const AIHealthcarePlatform: React.FC = () => {
               AI-Powered Healthcare Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Revolutionary healthcare technology that combines artificial
-              intelligence with medical expertise to deliver superior patient
-              care, accurate diagnostics, and improved health outcomes.
+              Revolutionary healthcare technology that combines artificial intelligence with medical expertise 
+              to deliver superior patient care, accurate diagnostics, and improved health outcomes.
             </p>
           </motion.div>
 
@@ -385,12 +314,8 @@ const AIHealthcarePlatform: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.1 * index }}
                 className="text-center bg-gradient-to-br from-green-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-6 border border-green-500/20"
               >
-                <div className="text-3xl font-bold text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-lg font-semibold text-green-300 mb-2">
-                  {stat.metric}
-                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-lg font-semibold text-green-300 mb-2">{stat.metric}</div>
                 <div className="text-sm text-gray-300">{stat.description}</div>
               </motion.div>
             ))}
@@ -411,8 +336,7 @@ const AIHealthcarePlatform: React.FC = () => {
               Advanced Healthcare Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive healthcare solutions powered by cutting-edge AI
-              technology
+              Comprehensive healthcare solutions powered by cutting-edge AI technology
             </p>
           </motion.div>
 
@@ -428,12 +352,8 @@ const AIHealthcarePlatform: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {feature.description}
-                </p>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -453,8 +373,7 @@ const AIHealthcarePlatform: React.FC = () => {
               Comprehensive Healthcare Modules
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Modular healthcare solutions that adapt to your specific medical
-              needs
+              Modular healthcare solutions that adapt to your specific medical needs
             </p>
           </motion.div>
 
@@ -473,10 +392,7 @@ const AIHealthcarePlatform: React.FC = () => {
                 </h3>
                 <div className="space-y-3">
                   {module.features.map((feature, featureIndex) => (
-                    <div
-                      key={featureIndex}
-                      className="flex items-center text-gray-300"
-                    >
+                    <div key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
                       {feature}
                     </div>
@@ -510,10 +426,7 @@ const AIHealthcarePlatform: React.FC = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{
-                  opacity: isVisible ? 1 : 0,
-                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20,
-                }}
+                animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : index % 2 === 0 ? -20 : 20 }}
                 transition={{ duration: 0.8, delay: 0.2 * index }}
                 className="bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20"
               >
@@ -523,10 +436,7 @@ const AIHealthcarePlatform: React.FC = () => {
                 </h3>
                 <div className="space-y-3">
                   {useCase.applications.map((app, appIndex) => (
-                    <div
-                      key={appIndex}
-                      className="flex items-center text-gray-300"
-                    >
+                    <div key={appIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
                       {app}
                     </div>
@@ -563,8 +473,8 @@ const AIHealthcarePlatform: React.FC = () => {
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
                 className={`relative bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${
-                  tier.popular
-                    ? 'border-green-500 scale-105'
+                  tier.popular 
+                    ? 'border-green-500 scale-105' 
                     : 'border-green-500/20'
                 }`}
               >
@@ -577,13 +487,9 @@ const AIHealthcarePlatform: React.FC = () => {
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    {tier.name}
-                  </h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-white">
-                      {tier.price}
-                    </span>
+                    <span className="text-4xl font-bold text-white">{tier.price}</span>
                     <span className="text-gray-400">{tier.period}</span>
                   </div>
                   <p className="text-gray-300 text-sm">{tier.description}</p>
@@ -591,9 +497,7 @@ const AIHealthcarePlatform: React.FC = () => {
 
                 <div className="mb-8">
                   <div className="flex items-center justify-center mb-4">
-                    <span className="text-gray-400 line-through mr-2">
-                      {tier.marketPrice}
-                    </span>
+                    <span className="text-gray-400 line-through mr-2">{tier.marketPrice}</span>
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-sm font-semibold">
                       Save {tier.savings}
                     </span>
@@ -602,10 +506,7 @@ const AIHealthcarePlatform: React.FC = () => {
 
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="flex items-start text-gray-300"
-                    >
+                    <li key={featureIndex} className="flex items-start text-gray-300">
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />
                       <span className="text-sm">{feature}</span>
                     </li>
@@ -650,22 +551,15 @@ const AIHealthcarePlatform: React.FC = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{
-                  opacity: isVisible ? 1 : 0,
-                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20,
-                }}
+                animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : index % 2 === 0 ? -20 : 20 }}
                 transition={{ duration: 0.8, delay: 0.2 * index }}
                 className="bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {benefit.description}
-                </p>
+                <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -686,7 +580,7 @@ const AIHealthcarePlatform: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join the healthcare revolution with AI-powered medical technology
             </p>
-
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <div className="flex items-center text-gray-300">
                 <Phone className="w-5 h-5 mr-2 text-green-400" />

@@ -1,7 +1,6 @@
-import React from 'react';
 
-import { Route, Routes  } from 'react-router-dom.ts';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { Route, Routes               } from 'react-router-dom.ts';
+import { ProtectedRoute               } from '@/components/ProtectedRoute';
 import Dashboard from "@/pages/Dashboard";
 import ClientDashboard from "@/pages/ClientDashboard";
 import TalentDashboard from "@/pages/TalentDashboard";
@@ -24,10 +23,9 @@ import OrdersPage from "@/pages/Orders";
 import OrderDetailPage from "@/pages/OrderDetail";
 import ContractBuilder from "@/pages/ContractBuilder";
 import Projects from "@/pages/Projects";
-
 const DashboardRoutes = () => {
   return (
-    <Routes>
+    <>
       {/* Dashboard Routes */}
       <Route
         path="/dashboard"
@@ -51,7 +49,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
-
       />
       <Route
         path="/creator-dashboard"
@@ -83,7 +80,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectDetails />
           </ProtectedRoute>
-
       />
       <Route
         path="/project/:id/room"
@@ -91,7 +87,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>
-
       />
       <Route
         path="/messages"
@@ -110,34 +105,42 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path="/payments"
+        path="/orders"
         element={
           <ProtectedRoute>
-            <Payments />
+            <Orders />
           </ProtectedRoute>
         }
       />
       <Route
-        path="/interviews"
+        path="/order/:id"
         element={
           <ProtectedRoute>
-            <Interviews />
+            <OrderDetail />
           </ProtectedRoute>
         }
       />
       <Route
-        path="/notifications"
+        path="/profile"
         element={
           <ProtectedRoute>
-            <Notifications />
+            <Profile />
           </ProtectedRoute>
         }
       />
       <Route
-        path="/applications/track"
+        path="/account-settings"
         element={
           <ProtectedRoute>
-            <ApplicationStatusTracker />
+            <AccountSettings />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/saved-talents"
+        element={
+          <ProtectedRoute>
+            <SavedTalents />
           </ProtectedRoute>
         }
       />
@@ -147,7 +150,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <HiringTracker />
           </ProtectedRoute>
-
       />
       <Route
         path="/projects"
@@ -155,7 +157,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Projects />
           </ProtectedRoute>
-
       />
       <Route
         path="/portfolio-builder"
@@ -179,7 +180,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
-
       />
       <Route
         path="/wallet"
@@ -187,7 +187,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Wallet Page</div>
           </ProtectedRoute>
-
       />
       <Route
         path="/orders"
@@ -195,7 +194,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <OrdersPage />
           </ProtectedRoute>
-
       />
       <Route
         path="/orders/:orderId"
@@ -203,7 +201,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <OrderDetailPage />
           </ProtectedRoute>
-
       />
       <Route
         path="/dashboard/api-access"
@@ -221,9 +218,40 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-    </Routes>;
+      <Route
+        path="/dispute-management"
+        element={
+          <ProtectedRoute>
+            <DisputeManagement />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/disputes"
+        element={
+          <ProtectedRoute>
+            <DisputesPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/dispute/:id"
+        element={
+          <ProtectedRoute>
+            <DisputeDetailPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/requests"
+        element={
+          <ProtectedRoute>
+            <RequestsPanel />
+          </ProtectedRoute>
+        }
+      />
+    </>
   );
 };
-
 export default DashboardRoutes;
-}}}}
+}}}}}}}}}}}}}}}}}}}}}}}}

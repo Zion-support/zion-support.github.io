@@ -12,10 +12,10 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
     const [searchHistory, setSearchHistory] = useState([]);
     const [savedSearches, setSavedSearches] = useState([]);
     const [filters, setFilters] = useState({
-        category[],;
-        priceRange[0, 10000],;
+        category[],
+        priceRange[0, 10000],
         rating: 0,
-        location[],;
+        location[],
         verified: false,
         featured: false
     });
@@ -63,7 +63,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 title: 'AI-Powered Business Intelligence Platform',
                 description: 'Advanced analytics and insights powered by machine learning algorithms',
                 category: 'AI & Analytics',
-                tags['Business Intelligence', 'Machine Learning', 'Analytics', 'Dashboard'],;
+                tags['Business Intelligence', 'Machine Learning', 'Analytics', 'Dashboard'],
                 relevance: 0.95,
                 rating: 4.8,
                 reviews: 1247,
@@ -80,7 +80,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 title: 'Senior AI Engineer - Remote',
                 description: 'Experienced AI engineer specializing in deep learning and NLP',
                 category: 'Talent',
-                tags['AI Engineer', 'Deep Learning', 'NLP', 'Remote'],;
+                tags['AI Engineer', 'Deep Learning', 'NLP', 'Remote'],
                 relevance: 0.92,
                 rating: 4.9,
                 reviews: 89,
@@ -97,7 +97,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 title: 'Quantum Computing Solutions Inc.',
                 description: 'Leading provider of quantum computing services and consulting',
                 category: 'Quantum Technology',
-                tags['Quantum Computing', 'Consulting', 'Research', 'Enterprise'],;
+                tags['Quantum Computing', 'Consulting', 'Research', 'Enterprise'],
                 relevance: 0.88,
                 rating: 4.7,
                 reviews: 456,

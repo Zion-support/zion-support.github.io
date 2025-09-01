@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
 import { 
   Heart, 
   Activity, 
@@ -320,7 +320,7 @@ import {
   CloudHail10,
   CloudSnow10,
   CloudSleet10
-} from 'lucide-react';
+             } from 'lucide-react.ts';
 
 const AIHealthcareAnalyticsPlatform = () => {
   const features = [
@@ -355,7 +355,6 @@ const AIHealthcareAnalyticsPlatform = () => {
       description: 'Comprehensive analytics for population health management and public health'
     }
   ];
-
   const benefits = [
     'Improve patient outcomes by 35%',
     'Reduce readmission rates by 40%',
@@ -364,7 +363,6 @@ const AIHealthcareAnalyticsPlatform = () => {
     'Streamline administrative processes by 60%',
     'Ensure 99.9% HIPAA compliance'
   ];
-
   const useCases = [
     {
       industry: 'Hospitals & Health Systems',
@@ -383,7 +381,6 @@ const AIHealthcareAnalyticsPlatform = () => {
       description: 'Risk assessment, fraud detection, and population health management'
     }
   ];
-
   const pricing = [
     {
       plan: 'Starter',
@@ -424,7 +421,6 @@ const AIHealthcareAnalyticsPlatform = () => {
       ]
     }
   ];
-
   const integrations = [
     'Epic EHR',
     'Cerner',
@@ -439,7 +435,6 @@ const AIHealthcareAnalyticsPlatform = () => {
     'Kareo',
     'Webhook APIs'
   ];
-
   const keyMetrics = [
     {
       metric: '35%',
@@ -458,7 +453,6 @@ const AIHealthcareAnalyticsPlatform = () => {
       label: 'Decision Enhancement'
     }
   ];
-
   const complianceStandards = [
     'HIPAA',
     'HITECH',
@@ -473,7 +467,6 @@ const AIHealthcareAnalyticsPlatform = () => {
     'MIPS',
     'APMs'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -524,8 +517,8 @@ const AIHealthcareAnalyticsPlatform = () => {
       {/* Key Metrics Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {keyMetrics.map((item, index) => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {keyMetrics.map((item, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -540,7 +533,6 @@ const AIHealthcareAnalyticsPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -558,8 +550,8 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -577,7 +569,6 @@ const AIHealthcareAnalyticsPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
@@ -595,8 +586,8 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -611,7 +602,6 @@ const AIHealthcareAnalyticsPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -629,8 +619,8 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -645,7 +635,6 @@ const AIHealthcareAnalyticsPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Compliance Standards Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
@@ -663,8 +652,8 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {complianceStandards.map((standard, index) => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-4">
+            {complianceStandards.map((standard, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -678,7 +667,6 @@ const AIHealthcareAnalyticsPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -696,8 +684,8 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -734,7 +722,6 @@ const AIHealthcareAnalyticsPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
@@ -752,8 +739,8 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -767,7 +754,6 @@ const AIHealthcareAnalyticsPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -803,7 +789,6 @@ const AIHealthcareAnalyticsPlatform = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -854,5 +839,4 @@ const AIHealthcareAnalyticsPlatform = () => {
     </div>
   );
 };
-
 export default AIHealthcareAnalyticsPlatform;}}}}}

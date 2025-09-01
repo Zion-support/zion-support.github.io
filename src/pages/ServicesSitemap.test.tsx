@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import ServicesSitemap from './ServicesSitemap';
 
-
 describe ('ServicesSitemap', () => {
   it ('renders without crashing', () => {
     render (<ServicesSitemap />) ;

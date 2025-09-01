@@ -8,7 +8,6 @@ import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/dat
 import SEO from '@/components / SEO';
 export default function ServicesPricingPage () {
 
-
     // Group services by category for pricing table
     const servicesByCategory = SERVICE_CATEGORIES.reduce ( (acc, category) => {
         const categoryServices = COMPREHENSIVE_SERVICES.filter (service => service.category === category) ;

@@ -3,7 +3,6 @@ export default StartupSolutions;
 import {
 import { motion } from 'framer - motion';
 
-
   Rocket,
   Brain,
   Cloud,

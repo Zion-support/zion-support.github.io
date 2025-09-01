@@ -3,7 +3,6 @@ export default function Dashboard () {
 export default React.memo (function Dashboard (...args[]) :  {
 import { motion } from 'framer - motion';
 
-
   DollarSign,
   Activity,
   DollarSign,
@@ -180,14 +179,14 @@ import { motion } from 'framer - motion';
             </button>
             <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zion - slate - light hover:text - white transition - colors">
               <Settings className="h - 6 w - 6" />
-            </button > import { 
-  BarChart3, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Zap, 
+            </button > import {
+  BarChart3,
+  Users,
+  TrendingUp,
+  Shield,
+  Cloud,
+  Brain,
+  Zap,
   Star,
   Activity,
   DollarSign,
@@ -288,28 +287,28 @@ import { motion } from 'framer - motion';
         </div>
       </div > initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
               key={stat.name}
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: index * 0.1 }}
@@ -355,17 +354,17 @@ import { motion } from 'framer - motion';
             </motion.div>) ) }
         </div > initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
               animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
               transition = {
   { duration: 0.5,
-  delay: 0.4 
+  delay: 0.4
 
 }}
             >
@@ -381,12 +380,12 @@ import { motion } from 'framer - motion';
                     key={service.name}
                     initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                     animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
         <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">
@@ -411,17 +410,17 @@ import { motion } from 'framer - motion';
                       <service.icon className="h - 5 w - 5 text - white" />
                     </div > initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }}
               animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
               transition = {
   { duration: 0.5,
-  delay: 0.6 
+  delay: 0.6
 
 }}
             >
@@ -431,12 +430,12 @@ import { motion } from 'framer - motion';
                     key={action.name}
                     initial = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }}
                     animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
                     transition={{ delay: index * 0.1 }}
@@ -454,17 +453,17 @@ import { motion } from 'framer - motion';
               className="bg - zion - blue - dark border border - zion - purple / 20 rounded - lg p - 6";
               initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }}
               animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
               transition = {
   { duration: 0.5,
-  delay: 0.8 
+  delay: 0.8
 
 }}
             >
@@ -483,7 +482,7 @@ import { motion } from 'framer - motion';
                     <div className="text - right">
                       <div className="text - sm font - medium text - gray - 900">{service.usage}</div>
                       <div className="w - 20 bg - gray - 200 rounded - full h - 2 mt - 1">
-                        <div 
+                        <div
                           className="bg - gradient - to - r from - blue - 500 to - purple - 500 h - 2 rounded - full"
                           style={{ width: service.usage }}
                         ></div>
@@ -521,12 +520,12 @@ import { motion } from 'framer - motion';
                     key={event.title}
                     initial = {
   { opacity: 0,
-  y: 10 
+  y: 10
 
 }}
                     animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     transition={{ delay: index * 0.1 }}
@@ -551,17 +550,17 @@ import { motion } from 'framer - motion';
                   </motion.div>) ) }
               </div > initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }}
               animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
               transition = {
   { duration: 0.5,
-  delay: 1 
+  delay: 1
 
 }}
             >
@@ -609,7 +608,7 @@ import { motion } from 'framer - motion';
               </div>
             </div>
           </div>
-          
+
           {/* Placeholder for chart */}
           <div className="h - 64 bg - gray - 50 rounded - lg flex items - center justify - center">;
             <div className="text - center">
@@ -631,7 +630,7 @@ import { motion } from 'framer - motion';
               </div>
             </div>
           </div>
-          
+
           {/* Placeholder for chart */}
           <div className="h - 64 bg - gray - 50 rounded - lg flex items - center justify - center">
             <div className="text - center">

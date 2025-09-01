@@ -5,7 +5,6 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data / innovativeMicroSa
 import { motion, AnimatePresence } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
-
   Brain,
   Shield,
   Cloud,

@@ -1,18 +1,17 @@
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export default Pricing;
-import { 
+import {
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
-
-  Check, 
-  Star, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Rocket, 
+  Check,
+  Star,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Rocket,
   ArrowRight,
   Users,
   Clock,
@@ -226,11 +225,11 @@ const servicePricing = [
 ];
 
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="Pricing - Zion Tech Group"
         description="Transparent pricing for Zion Tech Group's AI, cloud, and technology services. Choose the plan that fits your business needs."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py - 20 overflow - hidden">
         <div role="button" className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10"></div>
@@ -245,7 +244,7 @@ const servicePricing = [
               Simple, <span className="bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">Transparent</span > Pricing
             </h1>
             <p className="text - xl text - gray - 300 max - w-3xl mx - auto leading - relaxed">
-              Choose the perfect plan for your business. All plans include our core features 
+              Choose the perfect plan for your business. All plans include our core features
               with flexible options to scale as you grow.
             </p>
           </motion.div>
@@ -491,33 +490,33 @@ const servicePricing = [
                 <p className="text - gray - 300 leading - relaxed">{faq.answer}</p>
               </motion.div>) ) }
           </div>) }
-              
+
               <div role="button" className={`p - 8 bg - white / 5 backdrop - blur - sm rounded - 2xl border ${
-                tier.popular 
-                  ? 'border - zion - cyan / 40 ring - 2 ring - zion - cyan / 20' 
+                tier.popular
+                  ? 'border - zion - cyan / 40 ring - 2 ring - zion - cyan / 20'
                   : 'border - zion - cyan / 20'
               } hover:border - zion - cyan / 40 transition - all duration - 300 h - full`}>
                 <div role="button" className={`w - 16 h - 16 bg - gradient - to - r ${tier.color} rounded - 2xl flex items - center justify - center mx - auto mb - 6`}>
                   <tier.icon className="w - 8 h - 8 text - white" />
                 </div>
-                
+
                 <h3 className="text - 2xl font - bold text - white mb - 2">{tier.name}</h3>
                 <p className="text - gray - 400 mb - 6">{tier.description}</p>
-                
+
                 <div role="button" className="mb - 8">
                   <div role="button" className="flex items - baseline justify - center">
                     <span className="text - 4xl font - bold text - white">{tier.price}</span>
                     <span className="text - gray - 400 ml - 1">{tier.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space - y-4 mb - 8">
                   {tier.features.map ( (feature, featureIndex) => (<li key={featureIndex} className="flex items - start gap - 3">
                       <Check className="w - 5 h - 5 text - zion - cyan mt - 0.5 flex - shrink - 0" />
                       <span className="text - gray - 300 text - sm">{feature}</span>
                     </li>) ) }
                 </ul>
-                
+
                 <Link
                   to={tier.ctaLink}
                   className={`w - full py - 3 px - 6 rounded - lg font - semibold transition - all duration - 300 flex items - center justify - center gap - 2 ${
@@ -559,7 +558,7 @@ const servicePricing = [
                 </div>
                 <h3 className="text - 2xl font - bold text - white">{category.category}</h3>
               </div>
-              
+
               <div role="button" className="grid gap - 6 md:grid - cols - 2 lg:grid - cols - 4">
                 {category.services.map ( (service, serviceIndex) => (<motion.div
                     key={service.name}
@@ -598,7 +597,7 @@ const servicePricing = [
             <h3 className="text - xl font - bold text - white mb - 2">30 - Day Free Trial</h3>
             <p className="text - gray - 400">Try our Professional plan free for 30 days with no commitment.</p>
           </div>
-          
+
           <div role="button" className="text - center p - 6">
             <div role="button" className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - cyan - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">
               <Globe className="w - 8 h - 8 text - white" />
@@ -606,7 +605,7 @@ const servicePricing = [
             <h3 className="text - xl font - bold text - white mb - 2">Global Support</h3>
             <p className="text - gray - 400">24 / 7 support available across all time zones for Enterprise customers.</p>
           </div>
-          
+
           <div role="button" className="text - center p - 6">
             <div role="button" className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 to - pink - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">
               <Lock className="w - 8 h - 8 text - white" />

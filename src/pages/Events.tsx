@@ -4,7 +4,6 @@ export default React.memo (function Events (...args: any[]) : any {
 import { Calendar,
 import { motion  } from 'framer - motion.ts';
 
-
   Clock,
   MapPin,
   Users,
@@ -378,7 +377,7 @@ const statuses = ['All', 'upcoming', 'past'];
                          event.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
     const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory;
     const matchesType = selectedType === 'all' || event.type === selectedType;
-    
+
     return matchesSearch && matchesCategory && matchesType;
   }) ;
 
@@ -387,11 +386,11 @@ const statuses = ['All', 'upcoming', 'past'];
 
   const formatDate = (dateString: anystring) => {
     const date = new Date (dateString) ;
-    return date.toLocaleDateString ('en - US', { 
+    return date.toLocaleDateString ('en - US', {
       weekday: 'long',
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
     }) ;
   };
 
@@ -431,10 +430,10 @@ const statuses = ['All', 'upcoming', 'past'];
               </span>
             </h1>
             <p className="text - xl text - zion - slate - light mb - 8 max - w-3xl mx - auto">
-              Connect with industry experts, learn cutting - edge technologies, and network with 
+              Connect with industry experts, learn cutting - edge technologies, and network with
               professionals at our curated events, webinars, and conferences.
             </p>
-            
+
             {/* Search Bar */}
             <div role="button" className="max - w-2xl mx - auto mb - 8">
               <div role="button" className="relative">
@@ -581,7 +580,7 @@ const statuses = ['All', 'upcoming', 'past'];
 
                     </div>
                   </div>
-                  
+
                   <div role="button" className="p - 6">
                     <div role="button" className="flex items - center gap - 2 mb - 3">
                       <span className="px - 3 py - 1 bg - zion - cyan / 20 text - zion - cyan text - xs font - medium rounded - full">
@@ -591,15 +590,15 @@ const statuses = ['All', 'upcoming', 'past'];
                         {getCategoryName (event.category) }
                       </span>
                     </div>
-                    
+
                     <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - zion - cyan transition - colors">
                       {event.title}
                     </h3>
-                    
+
                     <p className="text - zion - slate - light mb - 4 line - clamp - 3">
                       {event.description}
                     </p>
-                    
+
                     <div role="button" className="space - y-2 mb - 4">
                       <div role="button" className="flex items - center gap - 2 text - sm text - zion - slate - light">
                         <Calendar className="w - 4 h - 4" />
@@ -618,12 +617,12 @@ const statuses = ['All', 'upcoming', 'past'];
                         <span>{event.attendees} attendees</span>
                       </div>
                     </div>
-                    
+
                     <div role="button" className="flex items - center justify - between">
                       <div role="button" className="text - zion - cyan font - semibold">
                         {event.isFree ? 'Free' : event.price}
                       </div>
-                      
+
                       <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 4 py - 2 rounded - lg font - medium hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 hover:-translate - y-1 flex items - center gap - 2">
                         Register Now < ArrowRight className="w - 4 h - 4" />
                       </button>
@@ -707,7 +706,7 @@ const statuses = ['All', 'upcoming', 'past'];
             <p className="text - zion - slate - light text - lg mb - 8 max - w-2xl mx - auto">
               Have an idea for an event, webinar, or workshop? We'd love to collaborate ! Let's create amazing learning experiences together.
             </p>
-            
+
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 8 py - 4 rounded - lg font - semibold hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 hover:-translate - y-1">
                 Propose an Event

@@ -1,689 +1,530 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { Shield, 
+import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+import { 
+  Shield, 
   Database, 
   Lock, 
   Eye, 
-  Search, 
   FileText, 
   Users, 
   CheckCircle,
-  AlertTriangle,
-  BarChart3,
-  Zap,
+  ArrowRight,
+  Star,
+  TrendingUp,
   Globe,
   Cpu,
-  Key,
-  Fingerprint,
-  ShieldCheck,
-  FileCheck,
-  UserCheck,
-  Clock,
-  TrendingUp,
+  Brain,
+  Target,
+  Rocket,
   DollarSign,
-  Building,
-  Server,
-  Cloud,
-  Network,
-  Monitor,
-  Settings,
-  RefreshCw,
-  Download,
-  Upload,
-  Trash2,
-  Archive,
-  Copy,
-  Move,
-  Link,
-  Unlink,
-  EyeOff,
-  EyeOn,
-  LockOpen,
-  LockClosed
- } from 'lucide-react';
+  ExternalLink,
+  Search,
+  Filter,
+  BarChart3,
+  Zap,
+  AlertTriangle,
+  Clock,
+  Key,
+  Fingerprint
+} from 'lucide-react';
 
-const AIDataGovernance: React.FC = (): JSX.Element => {
+export default function AIDataGovernance() {
   const features = [
     {
       icon: Shield,
-      title: "AI-Powered Data Classification",
-      description: "Automatically identify and categorize sensitive data using machine learning algorithms",
-      color: "from-blue-500 to-cyan-500"
+      title: 'Intelligent Data Classification',
+      description: 'AI-powered automatic classification of sensitive data with context-aware labeling and risk assessment',
+      benefits: ['Automated PII detection', 'Context-aware classification', 'Risk scoring', 'Real-time updates']
     },
     {
       icon: Lock,
-      title: "Advanced Access Control",
-      description: "Role-based permissions with AI-driven anomaly detection and threat prevention",
-      color: "from-green-500 to-emerald-500"
+      title: 'Advanced Access Control',
+      description: 'Dynamic access management with behavioral analytics and just-in-time permissions',
+      benefits: ['Behavioral analytics', 'Just-in-time access', 'Role-based permissions', 'Audit trails']
     },
     {
       icon: Eye,
-      title: "Real-time Data Monitoring",
-      description: "Continuous surveillance of data access patterns and compliance violations",
-      color: "from-purple-500 to-pink-500"
+      title: 'Privacy Compliance Automation',
+      description: 'Automated GDPR, CCPA, and HIPAA compliance with intelligent data subject request handling',
+      benefits: ['Automated compliance', 'Data subject requests', 'Consent management', 'Regulatory reporting']
     },
     {
-      icon: Search,
-      title: "Intelligent Data Discovery",
-      description: "AI algorithms that automatically find and map data across your entire infrastructure",
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      icon: FileText,
-      title: "Automated Compliance Reporting",
-      description: "Generate regulatory reports automatically with AI-powered accuracy and completeness",
-      color: "from-indigo-500 to-purple-500"
-    },;
-    {;
-      icon: Users,;
-      title: "Data Lineage Tracking",;
-      description: "Complete audit trail showing data origins, transformations, and usage patterns",;
-      color: "from-yellow-500 to-orange-500";
-    };
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Foundation",
-      price: "$499",
-      period: "/month",
-      description: "Essential data governance for small to medium organizations",
-      features[;
-        "Up to 10TB data management",
-        "Basic AI classification",
-        "Standard access controls",
-        "Compliance templates",
-        "Email support",
-        "Basic reporting",
-        "5 user licenses"
-      ],;
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$1,299",
-      period: "/month",
-      description: "Advanced data governance for growing enterprises",
-      features[;
-        "Up to 100TB data management",
-        "Advanced AI classification",
-        "Custom access policies",
-        "Multi-compliance support",
-        "Priority support",
-        "Advanced analytics",
-        "Unlimited users",
-        "API access",
-        "Custom integrations"
-      ],;
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$3,999",
-      period: "/month",
-      description: "Comprehensive data governance for large organizations",
-      features[;
-        "Unlimited data management",
-        "Custom AI models",
-        "Advanced security features",
-        "Multi-tenant support",
-        "Dedicated support team",
-        "Custom development",;
-        "SLA guarantees",;
-        "On-premise option";
-      ],;
-      cta: "Contact Sales",;
-      popular: false;
-    };
-  ];
-
-  const benefits = [
-    {
-      icon: Shield,
-      title: "99.9% Data Security",
-      description: "Enterprise-grade protection with AI-powered threat detection",
-      metric: "99.9%"
-    },
-    {
-      icon: Zap,
-      title: "10x Faster Compliance",
-      description: "Automate regulatory reporting and reduce manual effort",
-      metric: "10x"
-    },
-    {
-      icon: TrendingUp,
-      title: "40% Cost Reduction",
-      description: "Eliminate manual data governance processes and reduce risks",
-      metric: "40%"
-    },;
-    {;
-      icon: Clock,;
-      title: "Real-time Monitoring",;
-      description: "Instant alerts and proactive threat prevention",;
-      metric: "24/7";
-    };
+      icon: Database,
+      title: 'Data Lineage & Quality',
+      description: 'End-to-end data lineage tracking with quality monitoring and impact analysis',
+      benefits: ['Data lineage mapping', 'Quality monitoring', 'Impact analysis', 'Change tracking']
+    }
   ];
 
   const complianceFrameworks = [
     {
-      name: "GDPR",
-      description: "European data protection and privacy regulation",
-      icon: Globe,
-      color: "from-blue-500 to-cyan-500"
+      name: 'GDPR',
+      description: 'General Data Protection Regulation compliance with automated data subject rights management',
+      features: ['Right to be forgotten', 'Data portability', 'Consent management', 'Breach notification']
     },
     {
-      name: "CCPA",
-      description: "California Consumer Privacy Act compliance",
-      icon: ShieldCheck,
-      color: "from-green-500 to-emerald-500"
+      name: 'CCPA/CPRA',
+      description: 'California Consumer Privacy Act compliance with automated consumer rights fulfillment',
+      features: ['Consumer rights', 'Opt-out mechanisms', 'Data disclosure', 'Financial incentives']
     },
     {
-      name: "HIPAA",
-      description: "Healthcare data protection and privacy standards",
-      icon: FileCheck,
-      color: "from-purple-500 to-pink-500"
+      name: 'HIPAA',
+      description: 'Health Insurance Portability and Accountability Act compliance for healthcare data',
+      features: ['PHI protection', 'Access controls', 'Audit logging', 'Breach prevention']
     },
     {
-      name: "SOX",
-      description: "Sarbanes-Oxley financial reporting compliance",
-      icon: Building,
-      color: "from-orange-500 to-red-500"
+      name: 'SOC 2 Type II',
+      description: 'Service Organization Control 2 compliance for cloud service providers',
+      features: ['Security controls', 'Availability monitoring', 'Processing integrity', 'Confidentiality']
+    }
+  ];
+
+  const pricing = [
+    {
+      name: 'Foundation',
+      price: '$3,500',
+      period: '/month',
+      description: 'Essential data governance for small to medium organizations',
+      features: [
+        'Up to 10TB data management',
+        'Basic AI classification',
+        'Standard compliance reports',
+        'Email support',
+        'Basic audit trails'
+      ],
+      cta: 'Get Started',
+      popular: false
     },
     {
-      name: "ISO 27001",
-      description: "Information security management system",
-      icon: Lock,
-      color: "from-indigo-500 to-purple-500"
-    },;
-    {;
-      name: "SOC 2",;
-      description: "Service Organization Control 2 compliance",;
-      icon: CheckCircle,;
-      color: "from-yellow-500 to-orange-500";
-    };
+      name: 'Professional',
+      price: '$8,500',
+      period: '/month',
+      description: 'Advanced data governance for growing enterprises',
+      features: [
+        'Up to 100TB data management',
+        'Advanced AI classification',
+        'Custom compliance frameworks',
+        'Priority support',
+        'Advanced analytics',
+        'Multi-tenant support'
+      ],
+      cta: 'Start Free Trial',
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$18,000',
+      period: '/month',
+      description: 'Comprehensive data governance for large enterprises',
+      features: [
+        'Unlimited data management',
+        'Custom AI models',
+        'White-label solution',
+        'Dedicated support',
+        'Custom integrations',
+        'On-premise option',
+        'SLA guarantees'
+      ],
+      cta: 'Contact Sales',
+      popular: false
+    }
   ];
 
   const useCases = [
     {
-      industry: "Healthcare",
-      title: "Patient Data Protection",
-      description: "Secure PHI management with HIPAA compliance and AI-powered access controls",
-      icon: Users,
-      color: "from-blue-500 to-cyan-500"
+      title: 'Financial Services',
+      description: 'Comprehensive data governance for banks, insurance, and fintech companies',
+      benefits: ['Regulatory compliance', 'Fraud detection', 'Risk management', 'Customer privacy']
     },
     {
-      industry: "Finance",
-      title: "Financial Data Security",
-      description: "SOX compliance with automated audit trails and real-time monitoring",
-      icon: DollarSign,
-      color: "from-green-500 to-emerald-500"
+      title: 'Healthcare & Life Sciences',
+      description: 'HIPAA-compliant data governance with patient privacy protection',
+      benefits: ['Patient data security', 'Clinical research', 'Drug development', 'Compliance automation']
     },
     {
-      industry: "Retail",
-      title: "Customer Privacy",
-      description: "GDPR and CCPA compliance with automated consent management",
-      icon: ShieldCheck,
-      color: "from-purple-500 to-pink-500"
+      title: 'E-commerce & Retail',
+      description: 'Customer data protection with personalized marketing compliance',
+      benefits: ['Customer privacy', 'Marketing compliance', 'Fraud prevention', 'Data monetization']
     },
-    {;
-      industry: "Technology",;
-      title: "Intellectual Property",;
-      description: "Protect trade secrets and proprietary data with advanced classification",;
-      icon: Cpu,;
-      color: "from-orange-500 to-red-500";
-    };
+    {
+      title: 'Government & Public Sector',
+      description: 'Secure data governance for sensitive government information',
+      benefits: ['National security', 'Public records', 'Compliance automation', 'Audit readiness']
+    }
+  ];
+
+  const integrations = [
+    'Snowflake', 'Databricks', 'AWS Glue', 'Azure Purview', 'Google Cloud Data Catalog',
+    'Tableau', 'Power BI', 'Looker', 'Qlik', 'Apache Atlas', 'Collibra', 'Informatica',
+    'Okta', 'Azure AD', 'AWS IAM', 'Google Workspace', 'Slack', 'Microsoft Teams'
   ];
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-slate-900">
       <SEO 
-        title="AI Data Governance - Zion Tech Group"
-        description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
+        title="AI-Powered Data Governance - Zion Tech Group"
+        description="Transform your data governance with AI-powered classification, compliance automation, and intelligent access control. Ensure data privacy and regulatory compliance."
+        keywords="AI data governance, data privacy, compliance automation, GDPR, CCPA, HIPAA, data classification, access control"
+        canonical="https://ziontechgroup.com/services/ai-data-governance"
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-green-900/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition={{ duration: 0.8 }}
-
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
-                <Shield className="w-4 h-4 mr-2" />
-                AI-Powered Data Protection
-              </div>
-
-              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-                AI Data
-                <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent"> Governance</span>
-              </h1>
-
-              <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Protect your most valuable asset with intelligent data governance.
-                AI-powered classification, access control, and compliance management for the modern enterprise.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </button>
-                <button className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
-                  Watch Demo
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>;
-
-      {/* Features Section */}
-      <section className="py-20">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Comprehensive Data Protection
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to secure, classify, and govern your data with AI intelligence
-            </p>
-          </div>
+      <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"></div>
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.div 
+            className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-slate-900/50 px-4 py-2 text-cyan-300 mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Shield className="h-4 w-4" />
+            <span className="text-sm font-semibold">AI DATA GOVERNANCE</span>
+          </motion.div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
-              <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                className="group"
-
-                <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              </motion.div>;
-            ))}
-          </div>
+          <motion.h1 
+            className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            AI-Powered Data Governance
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Transform your data governance with intelligent AI classification, automated compliance, and advanced access control. Ensure data privacy, regulatory compliance, and operational efficiency.
+          </motion.p>
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <Link 
+              to="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Start Free Trial
+            </Link>
+            <Link 
+              to="/request-quote" 
+              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Request Demo
+            </Link>
+          </motion.div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/50">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Proven Results Across Industries
+      {/* Key Features */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Intelligent Data Governance
             </h2>
-            <p className="text-xl text-gray-300">
-              See how AI Data Governance transforms data security and compliance
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Leverage AI to automate data classification, ensure compliance, and maintain data quality across your organization
             </p>
-          </div>
+          </motion.div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid lg:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
               <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  scale: 0.9 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  scale: 1 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                className="text-center"
-
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                key={feature.title}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-4xl font-bold text-white mb-2">{benefit.metric}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </motion.div>;
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Compliance Frameworks Section */}
-      <section className="py-20">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Industry Compliance Support
-            </h2>
-            <p className="text-xl text-gray-300">
-              Built-in compliance for major regulatory frameworks and industry standards
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index)  => (
-              <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                className="group"
-
-                <div className={`p-6 rounded-xl bg-gradient-to-br ${framework.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${framework.color} mb-4`}>
-                    <framework.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{framework.name}</h3>
-                  <p className="text-gray-300">{framework.description}</p>
-                </div>
-              </motion.div>;
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/50">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Industry-Specific Solutions
-            </h2>
-            <p className="text-xl text-gray-300">
-              Tailored data governance for your industry's unique requirements
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
-              <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                className="group"
-
-                <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
-                  <div className="flex items-start space-x-4">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color}`}>
-                      <useCase.icon className="w-6 h-6 text-white" />
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-slate-300 mb-6">{feature.description}</p>
+                <div className="space-y-3">
+                  {feature.benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-center text-sm text-slate-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
+                      {benefit}
                     </div>
-                    <div className="flex-1">
-                      <div className="text-sm font-medium text-blue-300 mb-2">{useCase.industry}</div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
-                      <p className="text-gray-300">{useCase.description}</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
-              </motion.div>;
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
+      {/* Compliance Frameworks */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+              Compliance Frameworks
             </h2>
-            <p className="text-xl text-gray-300">
-              Choose the plan that fits your data governance needs
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Automated compliance with major regulatory frameworks and industry standards
             </p>
-          </div>
+          </motion.div>
           
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+          <div className="grid md:grid-cols-2 gap-8">
+            {complianceFrameworks.map((framework, index) => (
               <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
+                key={framework.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700"
+              >
+                <h3 className="text-2xl font-bold text-white mb-4">{framework.name}</h3>
+                <p className="text-slate-300 mb-6">{framework.description}</p>
+                <div className="grid grid-cols-2 gap-3">
+                  {framework.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center text-sm text-slate-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      {/* Use Cases */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              See how AI-powered data governance transforms operations across industries
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={useCase.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700"
+              >
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
+                <p className="text-slate-300 mb-6">{useCase.description}</p>
+                <div className="grid grid-cols-2 gap-3">
+                  {useCase.benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-center text-sm text-slate-300">
+                      <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                className={`relative rounded-xl p-8 ${
-                  plan.popular
-                    ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50'
-                    : 'bg-slate-800/50 border border-slate-700/50'
+      {/* Pricing */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Transparent Pricing
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Choose the plan that fits your organization's data governance needs
+            </p>
+          </motion.div>
+          
+          <div className="grid lg:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border-2 ${
+                  plan.popular 
+                    ? 'border-cyan-500 shadow-2xl shadow-cyan-500/20' 
+                    : 'border-slate-700'
                 }`}
-
-                {plan.popular && (;
+              >
+                {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
-
+                
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-4">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-slate-400 ml-1">{plan.period}</span>
                   </div>
-                  <p className="text-gray-300">{plan.description}</p>
+                  <p className="text-slate-300">{plan.description}</p>
                 </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-slate-300">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
-
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600'
-                    : 'bg-slate-700 text-white hover:bg-slate-600'
-                }`}>
+                
+                <Link 
+                  to={plan.cta === 'Contact Sales' ? '/contact' : '/contact'}
+                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
+                      : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
+                  }`}
+                >
                   {plan.cta}
-                </button>
-              </motion.div>;
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-slate-800/50">;
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+      {/* Integrations */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Secure Your Data?
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+              Seamless Integrations
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations already using AI Data Governance to protect their most valuable assets
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Connect with your existing data platforms and tools through our extensive integration ecosystem
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
-                Schedule Demo
-              </button>
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
-  );
-};
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-3 md:grid-cols-6 gap-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            {integrations.map((integration, index) => (
+              <div
+                key={integration}
+                className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-center hover:border-cyan-500 transition-all duration-300"
+              >
+                <span className="text-sm text-slate-300 font-medium">{integration}</span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
-export default AIDataGovernance;}}}}}}
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
+        <div className="container mx-auto px-4 text-center">
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold mb-6 text-white"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            Ready to Transform Your Data Governance?
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Join organizations already ensuring data privacy and compliance with AI-powered governance
+          </motion.p>
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <Link 
+              to="/contact" 
+              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+            >
+              Start Free Trial
+            </Link>
+            <Link 
+              to="/request-quote" 
+              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
+            >
+              Schedule Demo
+            </Link>
+          </motion.div>
+          
+          <motion.div 
+            className="mt-8 text-sm text-cyan-100"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <p>Contact us: <a href="tel:+13024640950" className="underline">+1 302 464 0950</a> | <a href="mailto:kleber@ziontechgroup.com" className="underline">kleber@ziontechgroup.com</a></p>
+            <p className="mt-2">364 E Main St STE 1008, Middletown DE 19709</p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

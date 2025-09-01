@@ -1,16 +1,10 @@
-import { render, screen } from '@testing - library / react';
-import React from 'react';
-import ProjectManagementTimeline from './ProjectManagementTimeline';
-
 
 describe ('ProjectManagementTimeline', () => {
   it ('renders without crashing', () => {
-    render (<ProjectManagementTimeline />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
-  }) ;
+    render (<ProjectManagementTimeline  />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
   it ('displays expected content', () => {
-    render (<ProjectManagementTimeline />) ;
+    render (<ProjectManagementTimeline  />) ;
     // Add specific test assertions based on component content
-  }) ;
-}) ;
+  }) }) ;

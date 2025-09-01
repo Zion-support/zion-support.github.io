@@ -189,7 +189,7 @@ export default function FuturisticHero() {
 
 }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <motion.div animate = {
-  { y[0, 10,;
+  { y[0, 10,
   0] 
 
 }} transition = {
@@ -198,7 +198,7 @@ export default function FuturisticHero() {
 
 }} className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
             <motion.div animate = {
-  { y[0, 12,;
+  { y[0, 12,
   0] 
 
 }} transition = {
@@ -221,8 +221,8 @@ export default function FuturisticHero() {
 
 }} animate = {
   {
-                y[0, -100],;
-                opacity[0, 1, 0],;
+                y[0, -100],
+                opacity[0, 1, 0],
   
 
 }} transition = {

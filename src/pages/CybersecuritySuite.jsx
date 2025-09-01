@@ -6,7 +6,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import SEO from "@/components / SEO";
 export default function CybersecuritySuite () {
 
-
     const features = [
         "24 / 7 threat monitoring and detection",
         "Real - time security incident response",

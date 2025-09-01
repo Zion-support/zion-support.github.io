@@ -1,5 +1,4 @@
 export interface Listing {
-
   id: string;
   title: string;
   description: string;
@@ -9,44 +8,51 @@ export interface Listing {
   subcategory?: string;
   tags: string[];
   images: string[];
-seller: {;
+seller: {
     id: string;
     name: string;
     rating: number;
+<<<<<<< HEAD
     reviews: number;
-  
+
 };
   location: string;
+=======
+    reviews: number};  location: string;
+>>>>>>> main
   createdAt: string;
   updatedAt: string;
   status: 'active' | 'inactive' | 'sold' | 'pending';
   views: number;
   likes: number;
-  shares: number;
-}
+  shares: number}
+;export interface ProductListing extends Listing {
 
-export interface ProductListing extends Listing {
   brand?: string;
   model?: string;
   condition: 'new' | 'used' | 'refurbished';
   warranty?: string;
   shipping: {
+
     cost: number;
     method: string;
-    estimatedDays: number;
-  };
-}
-
+    estimatedDays: number}}
+<<<<<<< HEAD
+;
 export interface ServiceListing extends Listing {
+
+=======
+;export interface ServiceListing extends Listing {
+'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;
   availability: string[];
   experience: number;
   certifications: string[];
-  portfolio?: string[];
-}
+  portfolio?: string[]}
+;export interface TalentListing extends Listing {
 
-export interface TalentListing extends Listing {
   skills: string[];
   experience: number;
   education: string[];
@@ -55,26 +61,17 @@ export interface TalentListing extends Listing {
   availability: string[];
   hourlyRate: number;
   portfolio?: string[];
-  references?: string[];
-}
-
-export interface CartItem {
-
+  references?: string[]}
+;export interface CartItem {
   id: string;
   title: string;
   price: number;
   quantity: number;
   type: 'product' | 'service' | 'talent';
-  image?: string;
-
-}
-
-export interface WishlistItem {
-
+  image?: string}
+;export interface WishlistItem {
   id: string;
   userId: string;
   listingId: string;
   type: 'product' | 'service' | 'talent';
-  addedAt: string;
-
-}
+  addedAt: string}

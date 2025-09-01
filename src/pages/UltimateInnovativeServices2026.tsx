@@ -6,7 +6,6 @@ export default React.memo (function UltimateInnovativeServices2026 (...args[]) :
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Brain,
   Cloud,
   Shield,
@@ -119,12 +118,12 @@ import { motion, AnimatePresence } from 'framer - motion';
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -248,22 +247,22 @@ import { motion, AnimatePresence } from 'framer - motion';
                   key={service.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className="group relative"
@@ -341,17 +340,17 @@ import { motion, AnimatePresence } from 'framer - motion';
                       {expandedService === service.id && (<motion.div
                           initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                           animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }}
                           exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                           transition={{ duration: 0.3 }}
@@ -435,12 +434,12 @@ import { motion, AnimatePresence } from 'framer - motion';
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}

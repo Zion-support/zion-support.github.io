@@ -3,7 +3,6 @@ import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide - react';
 import React from 'react';
 export default Leadership;
 
-
 const Leadership = () => {
     const leadershipTeam = [
         {
@@ -157,7 +156,7 @@ const Leadership = () => {
             Leadership Team
           </h1>
           <p className="text - xl md:text - 2xl text - blue - 100 mb - 8 max - w-4xl mx - auto">
-            Meet the visionary leaders who guide our comp's mission and drive 
+            Meet the visionary leaders who guide our comp's mission and drive
             innovation in technology and business transformation.
           </p>
           <div className="flex flex - col sm:flex - row gap - 4 justify - center">

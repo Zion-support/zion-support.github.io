@@ -1,178 +1,220 @@
-import { DollarSign } from 'lucide - react';
-import { useNavigate } from 'react - router - dom';
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { FavoriteButton } from '@/components / FavoriteButton';
 import { RatingStars } from '@/components / RatingStars';
 export function ProductListingCard ({
 
-
+=======
+import { useNavigate } from 'react-router-dom';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { DollarSign } from 'lucide-react';
+import { RatingStars } from '@/components/RatingStars';
+import { FavoriteButton } from '@/components/FavoriteButton';
+>>>>>>> main
 // Using regular img tag instead of Next.js Image
+export function ProductListingCard({
+
   listing,
   view = 'grid',
   onRequestQuote,
-  detailBasePath = '/marketplace / listing',
-}) {
+  detailBasePath = '/marketplace/listing'}) {
+
   const isGrid = view === 'grid';
-  const navigate = useNavigate () ;
-  const [loading, setLoading] = useState (false) ;
-  const [imageSrc, setImageSrc] = useState (listing.images && listing.images.length > 0
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [imageSrc, setImageSrc] = useState()
+    listing.images && listing.images.length > 0
       ? listing.images[0]
-      : '/placeholder.svg') ;
-  const [imageError, setImageError] = useState (false) ;
+      : '/placeholder.svg'
+  );
+  const [imageError, setImageError] = useState(false);
   const formatPrice = () => {
+
     if (listing.price === null) return 'Custom pricing';
-    return `${listing.currency}${listing.price.toLocaleString () }`;
+    return `${listing.currency}${listing.price.toLocaleString()}`;
   };
   const handleImageError = () => {
     if (!imageError) {
-      // Prevent infinite loops if placeholder also fails
-      setImageSrc ('/placeholder.svg') ;
-      setImageError (true) ;
+
+      // Prevent infinite loops if placeholder also fails'
+      setImageSrc('/placeholder.svg');
+      setImageError(true);
     }
   };
   const handleRequestQuote = e => {
-    e.preventDefault () ;
-    e.stopPropagation () ;
+
+    e.preventDefault();
+    e.stopPropagation();
     if (onRequestQuote) {
-      onRequestQuote (listing.id) ;
+
+      onRequestQuote(listing.id);
     } else {
-      router (`/request - quote?listing=${listing.id}`) ;
+`
+      router(`/request-quote?listing=${listing.id}`);
     }
   };
-  const imageContainerClasses = isGrid ? 'h - 48' : 'h - 32 w - 48';
-  return (<div
-      data - testid="equipment - link"
-      className={`bg - card / 70 backdrop - blur - md border border - primary / 10 sm:border - primary / 20 rounded - lg overflow - hidden flex ${isGrid ? 'flex - col' : 'flex - row'} cursor - pointer focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary hover:animate - glowing - border transition - all duration - 300`}
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
+  return()
+    <div
+      data-testid="equipment-link"'`
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
-      tabIndex={0}
+      tabIndex={0}"
       role="button"
       onKeyDown={e => {
+
         if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault () ;
-          handleViewListing () ;
+
+          e.preventDefault();
+          handleViewListing();
         }
       }}
     >
       {/* Image */}
-      <div
-        className={isGrid ? 'block w - full' : 'block w - 48 flex - shrink - 0'}
-        onClick={handleViewListing} // Keep existing onClick for navigation
+      <div'
+        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+        onClick={handleViewListing} // Keep existing onClick for navigation"
         role="button"
         tabIndex={-1} // Remove from tab order as parent is focusable
         onKeyDown={e => {
+
           if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault () ;
-            handleViewListing () ;
+
+            e.preventDefault();
+            handleViewListing();
           }
         }}
-      >
+      >`
         <div className={`relative ${imageContainerClasses}`}>
           {' '}
           {/* Ensure this container has dimensions */}
           <img
             src={imageSrc}
-            alt={listing.title}
-            className="w - full h - full object - cover"
+            alt={listing.title}"
+            className="w-full h-full object-cover"
             onError={handleImageError}
           />
-          {listing.featured && (<Badge className="absolute top - 2 right - 2 bg - primary text - primary - foreground border - none">
+          {listing.featured && ("
+            <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
               Featured
-            </Badge>) }
+            </Badge>
+          )}"
           <FavoriteButton itemId={listing.id} itemType="product" />
         </div>
       </div>
 
       {/* Content */}
-      <div
-        className={`flex flex - col justify - between ${isGrid ? 'p - 4 flex - 1' : 'p - 4 flex - 1'}`}
+      <div'`
+        className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}
       >
         <div>
-          {/* Category & Rating */}
-          <div className="flex justify - between items - center mb - 2">
-            <Badge
+          {/* Category & Rating */}"
+          <div className="flex justify-between items-center mb-2">
+            <Badge"
               variant="outline"
-              className="bg - background text - foreground / 80 border - primary / 10"
+              className="bg-background text-foreground/80 border-primary/10"
             >
               {listing.category}
             </Badge>
-            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount} />) }
+            {listing.rating && (
+              <RatingStars value={listing.rating} count={listing.reviewCount} />
+            )}
           </div>
 
-          {/* Title & Description */}
-          <div onClick={handleViewListing} className="block">
-            <h3 className="font - semibold text - foreground mb - 2 hover:text - primary transition - colors text-[clamp (1rem,2.5vw,1.125rem) ]">
+          {/* Title & Description */}"
+          <div onClick={handleViewListing} className="block">"
+            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
-          </div>
-          <p className="text - foreground / 80 line - clamp - 2 mb - 4 text-[clamp (0.875rem,2vw,1rem) ]">
+          </div>"
+          <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">
             {listing.description}
           </p>
 
           {/* Tags */}
-          {listing.tags && listing.tags.length > 0 && (<div className="flex flex - wrap gap - 1 mb - 4">
-              {listing.tags.map ( (tag, idx) => (<span
-                  key={idx}
-                  className="text - xs text - foreground / 70 bg - background / 50 px - 2 py - 1 rounded - full"
+          {listing.tags && listing.tags.length > 0 && ("
+            <div className="flex flex-wrap gap-1 mb-4">
+              {listing.tags.map((tag, idx) => (
+                <span
+                  key={idx}"
+                  className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
                   {tag}
-                </span>) ) }
-            </div>) }
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
-        {/* Footer with price and button */}
-        <div className="flex items - center justify - between mt - auto pt - 3 border - t border - primary / 10 sm:border - primary / 20">
-          <div className="text - sm font - medium">
-            {listing.price !== null ? (<div className="flex items - center text - primary">
-                <DollarSign className="h - 4 w - 4 mr - 1" />
-                {formatPrice () }
-              </div>) : (<span className="text - foreground / 80">{formatPrice () }</span>) }
+        {/* Footer with price and button */}"
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">"
+          <div className="text-sm font-medium">
+            {listing.price !== null ? ("
+              <div className="flex items-center text-primary">"
+                <DollarSign className="h-4 w-4 mr-1" />
+                {formatPrice()}
+              </div>
+            ) : ("
+              <span className="text-foreground/80">{formatPrice()}</span>
+            )}
           </div>
-
-          <div className="flex gap - 2">
-            <Button
+"
+          <div className="flex gap-2">
+            <Button"
               size="sm"
-              className="bg - primary hover:bg - primary / 80 text - primary - foreground"
+              className="bg-primary hover:bg-primary/80 text-primary-foreground"
               onClick={e => {
-                e.stopPropagation () ;
-                router (`${detailBasePath}/${listing.id}`) ;
+
+                e.stopPropagation();`
+                router(`${detailBasePath}/${listing.id}`);
               }}
               disabled={loading}
             >
-              {loading ? (<>
-                  <svg
-                    className="animate - spin - ml - 1 mr - 3 h - 5 w - 5 text - white"
-                    xmlns="http://www.w3.org / 2000 / svg"
+              {loading ? (
+                <>
+                  <svg"
+                    className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                   >
-                    <circle
-                      className="opacity - 25"
+                    <circle"
+                      className="opacity-25"
                       cx="12"
                       cy="12"
                       r="10"
                       stroke="currentColor"
                       strokeWidth="4"
                     ></circle>
-                    <path
-                      className="opacity - 75"
+                    <path"
+                      className="opacity-75"
                       fill="currentColor"
-                      d="M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                     ></path>
-                  </svg > Loading...
-                </>) : ('Add to Cart') }
+                  </svg>
+                  Loading...
+                </>
+              ) : ('
+                'Add to Cart'
+              )}
             </Button>
-            {onRequestQuote && (<Button
+            {onRequestQuote && (
+              <Button"
                 size="sm"
                 variant="outline"
-                onClick={handleRequestQuote}
-                className="border - primary text - primary hover:bg - primary / 10 hover:text - primary - foreground"
+                onClick={handleRequestQuote}"
+                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
               >
                 Request Quote
-              </Button>) }
+              </Button>
+            )}
           </div>
         </div>
       </div>
-    </div>) ;
+    </div>
+  );
 }
+'"`

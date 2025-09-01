@@ -13,9 +13,9 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
         canvas.height = window.innerHeight;
         const particles = [];
         const colors = {
-  cyberpunk['#ff0080', '#00ffff', '#ffff00', '#ff00ff'],;
-            holographic['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4'],;
-            quantum['#00ffff', '#ff00ff', '#ffff00',;
+  cyberpunk['#ff0080', '#00ffff', '#ffff00', '#ff00ff'],
+            holographic['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4'],
+            quantum['#00ffff', '#ff00ff', '#ffff00',
   '#00ff00']
         
 

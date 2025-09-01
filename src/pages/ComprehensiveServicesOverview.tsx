@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react.ts';
 import { Brain,
 import { motion  } from 'framer - motion.ts';
 
-
   Cloud,
   Shield,
   Server,

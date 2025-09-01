@@ -1,6 +1,7 @@
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Link  } from 'react-router-dom.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket               } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
 
 export default function MicroSAASSolutions(...args: []):  {
   return (
@@ -10,7 +11,6 @@ export default function MicroSAASSolutions(...args: []):  {
         <meta name = "description" content="Build and scale your micro SaaS business with our comprehensive solutions. From development to deployment and growth strategies." />
         <meta name="keywords" content="micro SaaS, software as a service, SaaS development, SaaS marketing, SaaS growth, subscription business" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -21,22 +21,18 @@ export default function MicroSAASSolutions(...args: []):  {
                 <ShoppingCart className="w-4 h-4 mr-2" />
                 Micro SaaS Solutions
               </div>
-
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Micro SaaS
                 <span className="bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent"> Solutions</span>
               </h1>
-
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Build, launch, and scale your micro SaaS business with our comprehensive solutions.
                 From development to marketing, we help you create profitable subscription businesses.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -48,9 +44,8 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
-        <section className="py-20">;
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -62,7 +57,7 @@ export default function MicroSAASSolutions(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Rocket,
@@ -106,9 +101,8 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* SaaS Categories Section */}
-        <section className="py-20 bg-slate-800/30">;
+        <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -119,7 +113,7 @@ export default function MicroSAASSolutions(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Business Tools",
@@ -177,9 +171,8 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Development Process Section */}
-        <section className="py-20">;
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -190,7 +183,7 @@ export default function MicroSAASSolutions(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -224,9 +217,8 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Technology Stack Section */}
-        <section className="py-20 bg-slate-800/30">;
+        <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -236,7 +228,6 @@ export default function MicroSAASSolutions(...args: []):  {
                 Built on cutting-edge technologies for maximum performance, scalability, and reliability.
               </p>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
@@ -255,16 +246,15 @@ export default function MicroSAASSolutions(...args: []):  {
                   ))}
                 </div>
               </div>
-
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Key Features</h3>
                 <div className="space-y-4">
                   {[
-                    { feature: "Responsive Design", icon: Globe, color: "from-blue-500 to-cyan-500" },
+                    { feature: anyanyanyanyanyanyanyanyanyanyanyanyany"Responsive Design", icon: Globe, color: "from-blue-500 to-cyan-500" },
                     { feature: "API Integration", icon: Settings, color: "from-purple-500 to-pink-500" },
                     { feature: "Real-time Updates", icon: Zap, color: "from-green-500 to-emerald-500" },
                     { feature: "Mobile Apps", icon: Rocket, color: "from-orange-500 to-red-500" }
-                  ].map((item, index)  => (
+                  ].map((item, index)               => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
                         <item.icon className="w-4 h-4 text-white" />
@@ -277,9 +267,8 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Growth Strategies Section */}
-        <section className="py-20">;
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -289,7 +278,6 @@ export default function MicroSAASSolutions(...args: []):  {
                 Proven strategies to acquire customers, increase revenue, and scale your micro SaaS business.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
               <div>
                 <h3 className="text-2xl font-semibold text-white mb-6">Customer Acquisition</h3>
@@ -309,7 +297,6 @@ export default function MicroSAASSolutions(...args: []):  {
                   ))}
                 </div>
               </div>
-
               <div>
                 <h3 className="text-2xl font-semibold text-white mb-6">Revenue Optimization</h3>
                 <div className="space-y-4">
@@ -331,9 +318,8 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Success Metrics Section */}
-        <section className="py-20 bg-slate-800/30">;
+        <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -344,7 +330,7 @@ export default function MicroSAASSolutions(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   metric: "MRR",
@@ -378,9 +364,8 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-violet-500/10 to-purple-600/10">;
+        <section className="py-20 bg-gradient-to-r from-violet-500/10 to-purple-600/10">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Build Your Micro SaaS?
@@ -392,7 +377,6 @@ export default function MicroSAASSolutions(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200"
-
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>

@@ -5,7 +5,6 @@ import { SEO } from "@/components / SEO";
 export default function ServicesOverview () {
 import { motion } from 'framer - motion';
 
-
     const stats = [
         { label: "Services Offered", value: "50+", icon: Target },
         { label: "Industries Served", value: "15+", icon: Users },
@@ -22,7 +21,7 @@ import { motion } from 'framer - motion';
     };
     const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {

@@ -4,7 +4,6 @@ export default React.memo (function DataAnalytics (...args: any[]) : any {
 import {
 import { motion } from 'framer - motion.ts';
 
-
   BarChart3,
   TrendingUp,
   Database,

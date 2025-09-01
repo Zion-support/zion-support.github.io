@@ -7,7 +7,6 @@ import EnhancedSEO from '@/components / EnhancedSEO';
   import {
 export default function RequestQuote () {
 
-
     Card,
     CardContent,
     CardDescription,

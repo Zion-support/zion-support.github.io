@@ -4,7 +4,6 @@ export default ServicesShowcase;
 import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
 import { motion } from 'framer - motion';
 
-
     const services = [
         {
             category: "AI & Machine Learning",
@@ -137,7 +136,7 @@ import { motion } from 'framer - motion';
     };
     const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -155,11 +154,11 @@ import { motion } from 'framer - motion';
         <div className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 pt - 32 pb - 20">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text - center">
             <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">
@@ -232,11 +231,11 @@ import { motion } from 'framer - motion';
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text - center">
             <h2 className="text - 4xl font - bold text - white mb - 6">

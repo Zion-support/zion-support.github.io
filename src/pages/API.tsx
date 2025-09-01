@@ -1,11 +1,10 @@
 import { Link } from 'react - router - dom';
-import React from 'react';
+import React, { useState } from 'react';
 export default API;
 export default React.memo (function API () {
 import {
 import { motion } from 'framer - motion';
 import SEO from '../components / SEO';
-
 
   Code,
   Search,
@@ -134,7 +133,7 @@ def check_threat (ip_address) :;
   const [selectedCategory, setSelectedCategory] = useState ('All') ;
 
   return (<div className = "min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="API Reference - Zion Tech Group"
         description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools."
       />
@@ -148,12 +147,12 @@ def check_threat (ip_address) :;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -192,12 +191,12 @@ def check_threat (ip_address) :;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -216,17 +215,17 @@ def check_threat (ip_address) :;
                 key={feature.title}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 6 hover:border - blue - 400 / 30 transition - all duration - 200 hover:scale - 105"
@@ -247,12 +246,12 @@ def check_threat (ip_address) :;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -271,17 +270,17 @@ def check_threat (ip_address) :;
                 key={endpoint.path}
                 initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                 whileInView = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 6 hover:border - blue - 400 / 30 transition - all duration - 200"
@@ -316,12 +315,12 @@ def check_threat (ip_address) :;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -340,17 +339,17 @@ def check_threat (ip_address) :;
                 key={sdk.name}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 6 hover:border - blue - 400 / 30 transition - all duration - 200 hover:scale - 105"
@@ -378,12 +377,12 @@ def check_threat (ip_address) :;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}

@@ -16,7 +16,6 @@ import { Search,
 import { SEOHead  } from '../components / seo / SEOHead';
 import { Shield,
 
-
   Lock,
   Eye,
   AlertTriangle,

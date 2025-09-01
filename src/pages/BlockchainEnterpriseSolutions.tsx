@@ -3,7 +3,6 @@ export default React.memo (function BlockchainEnterpriseSolutions (...args[]) : 
 import {
 import { motion } from 'framer - motion';
 
-
   Brain,
   Zap,
   Shield,
@@ -514,12 +513,12 @@ const blockchainBenefits = [
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -528,17 +527,17 @@ const blockchainBenefits = [
             <motion.div
               initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
               animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               className="inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl mb - 8"
@@ -579,12 +578,12 @@ const blockchainBenefits = [
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -601,17 +600,17 @@ const blockchainBenefits = [
                 key={benefit.title}
                 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 8 hover:border - zion - cyan / 40 transition - all duration - 300"
@@ -641,12 +640,12 @@ const blockchainBenefits = [
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -663,17 +662,17 @@ const blockchainBenefits = [
                 key={technology.name}
                 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 6 text - center hover:border - zion - cyan / 40 transition - all duration - 300"
@@ -706,12 +705,12 @@ const blockchainBenefits = [
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -728,17 +727,17 @@ const blockchainBenefits = [
                 key={step.step}
                 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="text - center"
@@ -768,12 +767,12 @@ const blockchainBenefits = [
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -804,17 +803,17 @@ const blockchainBenefits = [
                 key={solution.id}
                 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 6 hover:border - zion - cyan / 40 transition - all duration - 300 cursor - pointer"
@@ -868,12 +867,12 @@ const blockchainBenefits = [
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -890,17 +889,17 @@ const blockchainBenefits = [
                 key={story.id}
                 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 6 hover:border - zion - cyan / 40 transition - all duration - 300"
@@ -945,12 +944,12 @@ const blockchainBenefits = [
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}

@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
 import { 
   Settings, 
   Brain, 
@@ -25,9 +25,9 @@ import {
   Shield,
   Users,
   Workflow
-} from 'lucide-react';
+             } from 'lucide-react.ts';
 
-const AIAutonomousBusinessOperations: React.FC = () => {
+const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -60,7 +60,6 @@ const AIAutonomousBusinessOperations: React.FC = () => {
       description: 'Continuous monitoring and improvement of operational efficiency'
     }
   ];
-
   const benefits = [
     'Increase operational efficiency by 40%',
     'Reduce operational costs by 30%',
@@ -69,7 +68,6 @@ const AIAutonomousBusinessOperations: React.FC = () => {
     '24/7 autonomous operation',
     'Real-time performance monitoring'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -84,17 +82,14 @@ const AIAutonomousBusinessOperations: React.FC = () => {
               <Settings className="w-4 h-4 mr-2" />
               AI-Powered Autonomous Business Operations
             </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your Business Operations with
               <span className="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Revolutionize your business operations with our AI-powered autonomous platform. 
               Optimize processes, automate workflows, and maximize operational efficiency.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-lg font-semibold hover:from-teal-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -106,7 +101,6 @@ const AIAutonomousBusinessOperations: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -125,7 +119,7 @@ const AIAutonomousBusinessOperations: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -145,7 +139,6 @@ const AIAutonomousBusinessOperations: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -181,7 +174,6 @@ const AIAutonomousBusinessOperations: React.FC = () => {
                 ))}
               </div>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -200,7 +192,6 @@ const AIAutonomousBusinessOperations: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -230,5 +221,4 @@ const AIAutonomousBusinessOperations: React.FC = () => {
     </div>
   );
 };
-
 export default AIAutonomousBusinessOperations;}}}}}

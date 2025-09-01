@@ -1,6 +1,6 @@
-import React from 'react';
+import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, TrendingUp, BarChart3, Clock, Zap, FolderOpen              } from 'lucide-react.ts';
 
-export default function AIProjectManagementPlatform() {
+export default function AIProjectManagementPlatform(...args: any[]): any {
   const features = [
     'AI-powered project planning and scheduling optimization',
     'Intelligent resource allocation and workload balancing',
@@ -13,7 +13,6 @@ export default function AIProjectManagementPlatform() {
     'Mobile app for on-the-go project management',
     'Advanced project portfolio management'
   ];
-
   const benefits = [
     'Complete projects 20-40% faster',
     'Reduce project costs by 15-30%',
@@ -22,7 +21,6 @@ export default function AIProjectManagementPlatform() {
     'Better resource utilization',
     'Enhanced stakeholder communication'
   ];
-
   const useCases = [
     'Software development projects',
     'Construction and engineering projects',
@@ -31,7 +29,6 @@ export default function AIProjectManagementPlatform() {
     'Product development and launch',
     'Research and development projects'
   ];
-
   const tiers = [
     { 
       name: 'Team', 
@@ -49,7 +46,6 @@ export default function AIProjectManagementPlatform() {
       details: ['Unlimited team members', 'Custom AI models', 'Dedicated support', 'White-label solution'] 
     },
   ];
-
   const projectTools = [
     'Task Management',
     'Resource Planning',
@@ -58,7 +54,6 @@ export default function AIProjectManagementPlatform() {
     'Budget Management',
     'Reporting & Analytics'
   ];
-
   const aiCapabilities = [
     'Predictive scheduling',
     'Resource optimization',
@@ -67,7 +62,6 @@ export default function AIProjectManagementPlatform() {
     'Automated reporting',
     'Smart notifications'
   ];
-
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700 py-20 text-center">
@@ -79,7 +73,6 @@ export default function AIProjectManagementPlatform() {
           <p className="text-indigo-100 text-xl">Streamline your projects with intelligent planning, automated optimization, and predictive insights.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -98,8 +91,8 @@ export default function AIProjectManagementPlatform() {
           </div>
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Project Plans</h3>
-            <div className="grid md:grid-cols-1 gap-4">
-              {tiers.map((t) => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-1 gap-4">
+              {tiers.map((t)              => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-indigo-600 mb-2">{t.price}</div>
@@ -119,7 +112,6 @@ export default function AIProjectManagementPlatform() {
             </div>
           </div>
         </div>
-
         <div className="mt-12 grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Project Benefits</h3>
@@ -144,11 +136,10 @@ export default function AIProjectManagementPlatform() {
             </ul>
           </div>
         </div>
-
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">Project Management Tools</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {projectTools.map((t) => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+            {projectTools.map((t)              => (
               <div key={t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <FolderOpen className="w-6 h-6 text-indigo-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{t}</div>
@@ -156,11 +147,10 @@ export default function AIProjectManagementPlatform() {
             ))}
           </div>
         </div>
-
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">AI-Powered Capabilities</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {aiCapabilities.map((c) => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+            {aiCapabilities.map((c)              => (
               <div key={c} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <Brain className="w-6 h-6 text-indigo-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{c}</div>
@@ -168,7 +158,6 @@ export default function AIProjectManagementPlatform() {
             ))}
           </div>
         </div>
-
         <div className="mt-12 bg-gradient-to-r from-indigo-50 to-indigo-100 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">Project Management Workflow</h3>
           <div className="grid md:grid-cols-4 gap-4 text-center">
@@ -194,7 +183,6 @@ export default function AIProjectManagementPlatform() {
             </div>
           </div>
         </div>
-
         <div className="mt-12 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">Project Success Metrics</h3>
           <div className="grid md:grid-cols-3 gap-6">
@@ -215,7 +203,6 @@ export default function AIProjectManagementPlatform() {
             </div>
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-zion-slate-light mb-2">Ready to transform your project management?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

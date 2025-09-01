@@ -2,7 +2,6 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database, Zap, Lock export default function FinancialSolutions () {
 
-
     const solutions = [
         {
             icon: Brain,

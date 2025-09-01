@@ -5,7 +5,6 @@ import AdminLayout from '@/components / admin / AdminLayout';
   import {
 export default function ProductsAdminPage () {
 
-
     Table,
     TableHead,
     TableHeader,

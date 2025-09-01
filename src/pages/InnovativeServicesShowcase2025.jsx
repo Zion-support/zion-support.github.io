@@ -2,7 +2,6 @@ import React from 'react';
 export default InnovativeServicesShowcase2025;
 import EnhancedComprehensiveServicesShowcase from '../components / EnhancedComprehensiveServicesShowcase';
 
-
 const InnovativeServicesShowcase2025 = () => {
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white">
       {/* Hero Section */}

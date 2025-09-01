@@ -6,7 +6,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import SEO from "@/components / SEO";
 export default function CloudCostOptimizer () {
 
-
     const features = [
         "AI - driven cost optimization algorithms",
         "Multi - cloud support (AWS, Azure, GCP) ",

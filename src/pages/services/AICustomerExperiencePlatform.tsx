@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
+import { SEO               } from '../../components/SEO';
+import { motion               } from 'framer-motion.ts';
 import { Users, 
   Brain, 
   MessageSquare, 
@@ -26,9 +26,9 @@ import { Users,
   MessageCircle,
   Bot,
   Headphones
- } from 'lucide-react';
+              } from 'lucide-react.ts';
 
-export default function AICustomerExperiencePlatform(...args[]):  {
+export default function AICustomerExperiencePlatform(...args[]: any):  {
   const features = [
     'AI-powered sentiment analysis and emotion detection',
     'Real-time customer journey mapping and optimization',;
@@ -39,27 +39,25 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     'Automated customer feedback analysis',;
     'Integration with major CRM and marketing platforms';
   ];
-
   const services = [
     {
       title: 'Customer Experience Assessment',
       description: 'Comprehensive analysis of current customer journey and experience optimization opportunities',
       price: 'From $4,500',
-      features['Journey mapping', 'Pain point identification', 'Optimization strategy', 'ROI analysis'];
-    },;
+      features['Journey mapping', 'Pain point identification', 'Optimization strategy', 'ROI analysis']
+    },
     {
       title: 'AI Platform Implementation',
       description: 'Full implementation of AI-powered customer experience platform',
       price: 'From $12,000',
-      features['Platform setup', 'AI model training', 'Integration configuration', 'Team training'];
-    },;
+      features['Platform setup', 'AI model training', 'Integration configuration', 'Team training']
+    },
     { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited interactions', 'Unlimited team members', 'Custom AI models', '24/7 dedicated support'] ;
     },;
   ];
-
   const useCases = [;
     'E-commerce customer experience optimization',;
     'SaaS product user engagement tracking',;
@@ -68,7 +66,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     'Retail customer satisfaction enhancement',;
     'B2B customer relationship management';
   ];
-
   const benefits = [;
     'Increase customer satisfaction scores by 25-40%',;
     'Improve customer retention rates by 30-50%',;
@@ -77,7 +74,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     'Enhance brand loyalty and advocacy',;
     'Gain actionable insights for product development';
   ];
-
   const metrics = [;
     'Customer Satisfaction Score (CSAT)',;
     'Net Promoter Score (NPS)',;
@@ -86,7 +82,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     'Customer Churn Rate',;
     'First Response Time';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-pink-600 via-rose-600 to-red-600 py-20 text-center">
@@ -98,7 +93,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           <p className="text-rose-100 text-xl">Revolutionize your customer experience with AI-powered insights, personalization, and automation that delights customers and drives business growth.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -117,8 +111,8 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              {tiers.map((t) => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
+              {tiers.map((t)              => (
                 <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-pink-300 transition-colors">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-pink-600 mb-2">{t.price}</div>
@@ -139,24 +133,23 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           </div>
         </div>
 
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['25-40% CSAT improvement', 'Real-time insights', 'AI personalization'].map((t) => (
+        <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+          {['25-40% CSAT improvement', 'Real-time insights', 'AI personalization'].map((t)              => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-pink-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map((useCase) => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
+            {useCases.map((useCase)              => (
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">
                 <MessageCircle className="w-5 h-5 text-pink-600 mr-3" />
                 <span className="text-gray-700">{useCase}</span>
               </div>
-            </div>;
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Customer Experience Platform
             </h1>
@@ -181,21 +174,18 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             </div>
           </motion.div>
         </div>
-      </section>;
-
+      </section>
       {/* Features Section */}
-      <section className="py-20">;
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -208,24 +198,21 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-500 transition-all duration-300"
               >
@@ -238,7 +225,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             ))}
           </div>
         </div>
-
       {/* Services & Pricing Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-4">
@@ -246,12 +232,10 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -264,24 +248,21 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-2 gap-8">
-            {services.map((service, index)  => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)               => (
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
@@ -300,7 +281,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             ))}
           </div>
         </div>
-
       {/* Use Cases Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -308,12 +288,10 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -326,24 +304,21 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)               => (
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
@@ -361,7 +336,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             ))}
           </div>
         </div>
-
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-4">
@@ -369,12 +343,10 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -387,24 +359,21 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-2 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)               => (
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >

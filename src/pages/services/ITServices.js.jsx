@@ -1,44 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-  ComputerDesktopIcon,
-  ServerIcon,
-  ShieldCheckIcon,
-  CogIcon,
-  WrenchScrewdriverIcon,
-  CloudIcon,
-} from '@heroicons/react/24/outline';
+import { ComputerDesktopIcon, ServerIcon, ShieldCheckIcon, CogIcon, WrenchScrewdriverIcon, CloudIcon } from '@heroicons/react/24/outline';
 const ITServices = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-blue-600/20 rounded-full">
-                <ComputerDesktopIcon className="h-12 w-12 text-blue-400" />
+                <ComputerDesktopIcon className="h-12 w-12 text-blue-400"/>
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               IT Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive IT solutions that keep your business running
-              smoothly. From infrastructure management to cybersecurity, we
-              provide end-to-end IT support for modern enterprises.
+              Comprehensive IT solutions that keep your business running smoothly. From infrastructure 
+              management to cybersecurity, we provide end-to-end IT support for modern enterprises.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
-              >
+              <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
                 Get IT Support
               </Link>
-              <Link
-                to="/case-studies"
-                className="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
-              >
+              <Link to="/case-studies" className="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
                 View Success Stories
               </Link>
             </div>
@@ -55,16 +40,13 @@ const ITServices = () => {
                 Complete IT Infrastructure Solutions
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Zion Tech Group delivers enterprise-grade IT services designed
-                to optimize your technology infrastructure, enhance security,
-                and drive operational efficiency. Our team of certified
-                professionals ensures your IT systems are always up-to-date,
-                secure, and performing at peak levels.
+                Zion Tech Group delivers enterprise-grade IT services designed to optimize your technology 
+                infrastructure, enhance security, and drive operational efficiency. Our team of certified 
+                professionals ensures your IT systems are always up-to-date, secure, and performing at peak levels.
               </p>
               <p className="text-lg text-gray-300 mb-6">
-                Whether you need ongoing IT support, infrastructure upgrades, or
-                strategic technology consulting, we provide scalable solutions
-                that grow with your business.
+                Whether you need ongoing IT support, infrastructure upgrades, or strategic technology 
+                consulting, we provide scalable solutions that grow with your business.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center space-x-2">
@@ -90,35 +72,27 @@ const ITServices = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                      <ServerIcon className="h-5 w-5 text-white" />
+                      <ServerIcon className="h-5 w-5 text-white"/>
                     </div>
-                    <span className="text-lg font-semibold">
-                      Infrastructure Management
-                    </span>
+                    <span className="text-lg font-semibold">Infrastructure Management</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                      <ShieldCheckIcon className="h-5 w-5 text-white" />
+                      <ShieldCheckIcon className="h-5 w-5 text-white"/>
                     </div>
-                    <span className="text-lg font-semibold">
-                      Security & Compliance
-                    </span>
+                    <span className="text-lg font-semibold">Security & Compliance</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                      <CloudIcon className="h-5 w-5 text-white" />
+                      <CloudIcon className="h-5 w-5 text-white"/>
                     </div>
-                    <span className="text-lg font-semibold">
-                      Cloud Services
-                    </span>
+                    <span className="text-lg font-semibold">Cloud Services</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                      <WrenchScrewdriverIcon className="h-5 w-5 text-white" />
+                      <WrenchScrewdriverIcon className="h-5 w-5 text-white"/>
                     </div>
-                    <span className="text-lg font-semibold">
-                      Technical Support
-                    </span>
+                    <span className="text-lg font-semibold">Technical Support</span>
                   </div>
                 </div>
               </div>
@@ -136,14 +110,12 @@ const ITServices = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
-                <ServerIcon className="h-8 w-8 text-blue-400" />
+                <ServerIcon className="h-8 w-8 text-blue-400"/>
               </div>
-              <h3 className="text-xl font-semibold mb-3">
-                Infrastructure Management
-              </h3>
+              <h3 className="text-xl font-semibold mb-3">Infrastructure Management</h3>
               <p className="text-gray-300 mb-4">
-                Comprehensive management of your IT infrastructure including
-                servers, networks, storage, and data centers.
+                Comprehensive management of your IT infrastructure including servers, networks, storage, 
+                and data centers.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li>• Server administration & maintenance</li>
@@ -155,12 +127,12 @@ const ITServices = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
-                <ShieldCheckIcon className="h-8 w-8 text-green-400" />
+                <ShieldCheckIcon className="h-8 w-8 text-green-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Cybersecurity</h3>
               <p className="text-gray-300 mb-4">
-                Advanced security solutions to protect your business from cyber
-                threats and ensure compliance with industry standards.
+                Advanced security solutions to protect your business from cyber threats and ensure 
+                compliance with industry standards.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li>• Threat detection & prevention</li>
@@ -172,12 +144,12 @@ const ITServices = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                <CloudIcon className="h-8 w-8 text-purple-400" />
+                <CloudIcon className="h-8 w-8 text-purple-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Cloud Services</h3>
               <p className="text-gray-300 mb-4">
-                Strategic cloud solutions to modernize your infrastructure and
-                improve scalability and cost efficiency.
+                Strategic cloud solutions to modernize your infrastructure and improve scalability 
+                and cost efficiency.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li>• Cloud migration & strategy</li>
@@ -189,12 +161,12 @@ const ITServices = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">
-                <WrenchScrewdriverIcon className="h-8 w-8 text-orange-400" />
+                <WrenchScrewdriverIcon className="h-8 w-8 text-orange-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Technical Support</h3>
               <p className="text-gray-300 mb-4">
-                Round-the-clock technical support to resolve issues quickly and
-                keep your systems running smoothly.
+                Round-the-clock technical support to resolve issues quickly and keep your systems 
+                running smoothly.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li>• 24/7 help desk support</li>
@@ -206,14 +178,12 @@ const ITServices = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4">
-                <CogIcon className="h-8 w-8 text-cyan-400" />
+                <CogIcon className="h-8 w-8 text-cyan-400"/>
               </div>
-              <h3 className="text-xl font-semibold mb-3">
-                System Administration
-              </h3>
+              <h3 className="text-xl font-semibold mb-3">System Administration</h3>
               <p className="text-gray-300 mb-4">
-                Expert administration of your critical systems including user
-                management, updates, and performance optimization.
+                Expert administration of your critical systems including user management, updates, 
+                and performance optimization.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li>• User & access management</li>
@@ -225,12 +195,11 @@ const ITServices = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4">
-                <ComputerDesktopIcon className="h-8 w-8 text-pink-400" />
+                <ComputerDesktopIcon className="h-8 w-8 text-pink-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Desktop Support</h3>
               <p className="text-gray-300 mb-4">
-                Comprehensive desktop and end-user support to ensure
-                productivity across your organization.
+                Comprehensive desktop and end-user support to ensure productivity across your organization.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li>• Hardware & software support</li>
@@ -251,13 +220,10 @@ const ITServices = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
-              <h3 className="text-2xl font-semibold mb-4 text-blue-400">
-                Enterprise IT
-              </h3>
+              <h3 className="text-2xl font-semibold mb-4 text-blue-400">Enterprise IT</h3>
               <p className="text-gray-300 mb-6">
-                Scalable IT solutions designed for large enterprises with
-                complex infrastructure needs. Our enterprise-grade solutions
-                ensure reliability, security, and performance at scale.
+                Scalable IT solutions designed for large enterprises with complex infrastructure needs. 
+                Our enterprise-grade solutions ensure reliability, security, and performance at scale.
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start space-x-3">
@@ -280,13 +246,10 @@ const ITServices = () => {
             </div>
 
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
-              <h3 className="text-2xl font-semibold mb-4 text-green-400">
-                Green IT
-              </h3>
+              <h3 className="text-2xl font-semibold mb-4 text-green-400">Green IT</h3>
               <p className="text-gray-300 mb-6">
-                Sustainable IT solutions that reduce environmental impact while
-                improving efficiency and reducing costs. Our green IT
-                initiatives help businesses meet sustainability goals.
+                Sustainable IT solutions that reduce environmental impact while improving efficiency 
+                and reducing costs. Our green IT initiatives help businesses meet sustainability goals.
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start space-x-3">
@@ -309,13 +272,10 @@ const ITServices = () => {
             </div>
 
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
-              <h3 className="text-2xl font-semibold mb-4 text-purple-400">
-                IoT Services
-              </h3>
+              <h3 className="text-2xl font-semibold mb-4 text-purple-400">IoT Services</h3>
               <p className="text-gray-300 mb-6">
-                Internet of Things solutions that connect devices and systems to
-                create intelligent, automated environments. Our IoT expertise
-                drives innovation and operational efficiency.
+                Internet of Things solutions that connect devices and systems to create intelligent, 
+                automated environments. Our IoT expertise drives innovation and operational efficiency.
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start space-x-3">
@@ -338,13 +298,10 @@ const ITServices = () => {
             </div>
 
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
-              <h3 className="text-2xl font-semibold mb-4 text-orange-400">
-                Mobile Services
-              </h3>
+              <h3 className="text-2xl font-semibold mb-4 text-orange-400">Mobile Services</h3>
               <p className="text-gray-300 mb-6">
-                Mobile-first IT solutions that enable your workforce to be
-                productive where, time. Our mobile services ensure secure,
-                seamless access to business resources.
+                Mobile-first IT solutions that enable your workforce to be productive where, time. 
+                Our mobile services ensure secure, seamless access to business resources.
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start space-x-3">
@@ -382,9 +339,8 @@ const ITServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Assessment</h3>
               <p className="text-gray-300">
-                Comprehensive evaluation of your current IT infrastructure,
-                identifying areas for improvement and optimization
-                opportunities.
+                Comprehensive evaluation of your current IT infrastructure, identifying areas for 
+                improvement and optimization opportunities.
               </p>
             </div>
 
@@ -394,9 +350,8 @@ const ITServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Strategy</h3>
               <p className="text-gray-300">
-                Development of a customized IT strategy aligned with your
-                business objectives, including technology roadmap and
-                implementation plan.
+                Development of a customized IT strategy aligned with your business objectives, 
+                including technology roadmap and implementation plan.
               </p>
             </div>
 
@@ -406,8 +361,8 @@ const ITServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Implementation</h3>
               <p className="text-gray-300">
-                Expert execution of your IT strategy with minimal disruption,
-                ensuring smooth transitions and optimal system performance.
+                Expert execution of your IT strategy with minimal disruption, ensuring smooth 
+                transitions and optimal system performance.
               </p>
             </div>
 
@@ -417,9 +372,8 @@ const ITServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Support</h3>
               <p className="text-gray-300">
-                Ongoing support and maintenance to ensure your IT systems
-                continue to perform optimally and adapt to changing business
-                needs.
+                Ongoing support and maintenance to ensure your IT systems continue to perform 
+                optimally and adapt to changing business needs.
               </p>
             </div>
           </div>
@@ -439,13 +393,10 @@ const ITServices = () => {
                   <span className="text-white font-bold">✓</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    Certified Expertise
-                  </h3>
+                  <h3 className="text-xl font-semibold mb-2">Certified Expertise</h3>
                   <p className="text-gray-300">
-                    Our team holds industry-leading certifications and stays
-                    current with the latest technology trends and best
-                    practices.
+                    Our team holds industry-leading certifications and stays current with the latest 
+                    technology trends and best practices.
                   </p>
                 </div>
               </div>
@@ -455,12 +406,10 @@ const ITServices = () => {
                   <span className="text-white font-bold">✓</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    Proactive Approach
-                  </h3>
+                  <h3 className="text-xl font-semibold mb-2">Proactive Approach</h3>
                   <p className="text-gray-300">
-                    We don't just fix problems - we prevent them through
-                    proactive monitoring, maintenance, and strategic planning.
+                    We don't just fix problems - we prevent them through proactive monitoring, 
+                    maintenance, and strategic planning.
                   </p>
                 </div>
               </div>
@@ -470,12 +419,10 @@ const ITServices = () => {
                   <span className="text-white font-bold">✓</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    Scalable Solutions
-                  </h3>
+                  <h3 className="text-xl font-semibold mb-2">Scalable Solutions</h3>
                   <p className="text-gray-300">
-                    Our IT services grow with your business, providing flexible
-                    solutions that adapt to changing needs and requirements.
+                    Our IT services grow with your business, providing flexible solutions that 
+                    adapt to changing needs and requirements.
                   </p>
                 </div>
               </div>
@@ -489,9 +436,8 @@ const ITServices = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
                   <p className="text-gray-300">
-                    Round-the-clock support ensures your IT systems are always
-                    running smoothly, with rapid response times for critical
-                    issues.
+                    Round-the-clock support ensures your IT systems are always running smoothly, 
+                    with rapid response times for critical issues.
                   </p>
                 </div>
               </div>
@@ -501,12 +447,10 @@ const ITServices = () => {
                   <span className="text-white font-bold">✓</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    Cost Optimization
-                  </h3>
+                  <h3 className="text-xl font-semibold mb-2">Cost Optimization</h3>
                   <p className="text-gray-300">
-                    Strategic IT planning and implementation that reduces costs
-                    while improving efficiency and system reliability.
+                    Strategic IT planning and implementation that reduces costs while improving 
+                    efficiency and system reliability.
                   </p>
                 </div>
               </div>
@@ -516,12 +460,10 @@ const ITServices = () => {
                   <span className="text-white font-bold">✓</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    Business Alignment
-                  </h3>
+                  <h3 className="text-xl font-semibold mb-2">Business Alignment</h3>
                   <p className="text-gray-300">
-                    IT solutions that are directly aligned with your business
-                    objectives, driving growth and competitive advantage.
+                    IT solutions that are directly aligned with your business objectives, driving 
+                    growth and competitive advantage.
                   </p>
                 </div>
               </div>
@@ -537,26 +479,19 @@ const ITServices = () => {
             Ready to Optimize Your IT Infrastructure?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let Zion Tech Group transform your IT operations with comprehensive,
-            reliable, and cost-effective solutions that drive business success.
+            Let Zion Tech Group transform your IT operations with comprehensive, reliable, and 
+            cost-effective solutions that drive business success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
-            >
+            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
               Get IT Support Today
             </Link>
-            <Link
-              to="/pricing"
-              className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
-            >
+            <Link to="/pricing" className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
               View Pricing Plans
             </Link>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
 export default ITServices;

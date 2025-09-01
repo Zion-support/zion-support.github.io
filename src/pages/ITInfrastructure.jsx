@@ -3,7 +3,6 @@ export default ITInfrastructure;
 import {
 import { motion } from 'framer - motion';
 
-
   Brain,
   Zap,
   Shield,

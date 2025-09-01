@@ -13,7 +13,6 @@ export default function JobDetails () {
 import { formatDistanceToNow } from 'date - fns';
 import { toast } from 'sonner';
 
-
     // Cast to specify the expected route param type since useParams may be untyped
     const { jobId } = useParams () ;
     const { job, isLoading, error } = useJobDetails (jobId) ;
@@ -33,7 +32,7 @@ import { toast } from 'sonner';
           <p className="mb - 8">The job you're looking for doesn't exist or has been removed.</p>
           <Button onClick={ () => router ('/jobs') }>View All Jobs</Button>
         </div>
-        
+
       </>) }
     const handleApply = () => {
         if (!isAuthenticated) {
@@ -56,7 +55,7 @@ import { toast } from 'sonner';
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description = {
   job.description.substring (0,
   160) }/>
-      
+
       <main className="container mx - auto px - 4 py - 8">
         <div className="mb - 6">
           <Button variant="outline" size="sm" onClick={ () => router ('/jobs') }>

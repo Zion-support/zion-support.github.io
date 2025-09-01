@@ -4,7 +4,6 @@ export function BlogPage (...args: any[]) : any {
 import {
 import { motion } from 'framer - motion';
 
-
   FileText,
   Calendar,
   User,

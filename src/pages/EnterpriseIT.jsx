@@ -3,7 +3,6 @@ import React from 'react';
 import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight export default function EnterpriseIT () {
 import { motion } from 'framer - motion';
 
-
     return (<div className="min - h-screen bg - gradient - to - br from - black via - gray - 900 to - blue - 900 text - white">
       {/* Hero Section */}
       <section className="relative pt - 32 pb - 20 px - 4 sm:px - 6 lg:px - 8 overflow - hidden">
@@ -33,11 +32,11 @@ import { motion } from 'framer - motion';
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.5 }} className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 6 border border - cyan - 500 / 30">
               <div className="w - 12 h - 12 bg - cyan - 500 / 20 rounded - lg flex items - center justify - center mb - 4">
@@ -51,15 +50,15 @@ import { motion } from 'framer - motion';
 
             <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.5,
-  delay: 0.1 
+  delay: 0.1
 
 }} className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 6 border border - cyan - 500 / 30">
               <div className="w - 12 h - 12 bg - cyan - 500 / 20 rounded - lg flex items - center justify - center mb - 4">
@@ -73,15 +72,15 @@ import { motion } from 'framer - motion';
 
             <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.5,
-  delay: 0.2 
+  delay: 0.2
 
 }} className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 6 border border - cyan - 500 / 30">
               <div className="w - 12 h - 12 bg - cyan - 500 / 20 rounded - lg flex items - center justify - center mb - 4">
@@ -95,15 +94,15 @@ import { motion } from 'framer - motion';
 
             <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.5,
-  delay: 0.3 
+  delay: 0.3
 
 }} className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 6 border border - cyan - 500 / 30">
               <div className="w - 12 h - 12 bg - cyan - 500 / 20 rounded - lg flex items - center justify - center mb - 4">
@@ -117,15 +116,15 @@ import { motion } from 'framer - motion';
 
             <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.5,
-  delay: 0.4 
+  delay: 0.4
 
 }} className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 6 border border - cyan - 500 / 30">
               <div className="w - 12 h - 12 bg - cyan - 500 / 20 rounded - lg flex items - center justify - center mb - 4">
@@ -139,15 +138,15 @@ import { motion } from 'framer - motion';
 
             <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.5,
-  delay: 0.5 
+  delay: 0.5
 
 }} className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 6 border border - cyan - 500 / 30">
               <div className="w - 12 h - 12 bg - cyan - 500 / 20 rounded - lg flex items - center justify - center mb - 4">

@@ -5,7 +5,6 @@ import {
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Search,
   Filter,
   Grid3X3,
@@ -133,12 +132,12 @@ import { motion, AnimatePresence } from 'framer - motion';
             <motion.h1
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -151,17 +150,17 @@ import { motion, AnimatePresence } from 'framer - motion';
             <motion.p
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               className="text - xl text - gray - 600 dark:text - gray - 300 mb - 8 max - w-3xl mx - auto"
@@ -174,17 +173,17 @@ import { motion, AnimatePresence } from 'framer - motion';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4
 
 }}
               className="bg - white dark:bg - slate - 800 rounded - 2xl shadow - xl p - 6 inline - block"

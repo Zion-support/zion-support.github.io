@@ -8,7 +8,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components / ui / ta
 import { TransactionHistory } from "@/components / transactions / TransactionHistory";
 export default function Payments () {
 
-
     return (<>
 
       <div className="min - h-screen bg - zion - blue py - 12 px - 4">
@@ -87,7 +86,7 @@ export default function Payments () {
           </Tabs>
         </div>
       </div>
-      
+
     </>) }
 // Import UI components for Payment Settings tab
 }

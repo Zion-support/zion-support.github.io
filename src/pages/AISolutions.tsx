@@ -2,7 +2,6 @@ import React from 'react';
 import { SEO } from '@/components / SEO';
 export default React.memo (function AiSolutions () {
 
-
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 text - white">
       <SEO
         title="AI Solutions - Zion Tech Group"

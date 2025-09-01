@@ -4,9 +4,9 @@ import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  root: '.',
-  base: '/',
+  plugins: [
+    react()
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -21,51 +21,40 @@ export default defineConfig({
       '@data': resolve(__dirname, 'src/data'),
       '@services': resolve(__dirname, 'src/services'),
       '@context': resolve(__dirname, 'src/context'),
-      '@constants': resolve(__dirname, 'src/constants')
-    }
+      '@constants': resolve(__dirname, 'src/constants'),
+    },
   },
   build: {
-    target: 'esnext',
-    minify: 'terser',
+    target: 'es2020',
+    minify: 'esbuild',
     sourcemap: false,
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
-      }
-    },
     rollupOptions: {
-      input: {
-        main: './index.html'
-      },
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
           'router-vendor': ['react-router-dom'],
           'ui-vendor': ['framer-motion', 'lucide-react'],
           'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod']
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
+          const info = assetInfo.name?.split('.') || [];
           const ext = info[info.length - 1];
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp/i.test(ext)) {
             return `images/[name]-[hash][extname]`;
           }
-          if (/css/i.test(ext)) {
-            return `css/[name]-[hash][extname]`;
+          if (/\.(css)$/.test(assetInfo.name || '')) {
+            return `css/[name]-[hash].${ext}`;
           }
-          return `assets/[name]-[hash][extname]`;
-        }
-      }
+          return `assets/[name]-[hash].${ext}`;
+        },
+      },
     },
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 800,
+    reportCompressedSize: true,
   },
-
-
   optimizeDeps: {
     include: [
       'react',
@@ -74,8 +63,13 @@ export default defineConfig({
       'framer-motion',
       'lucide-react',
       'clsx',
-      'tailwind-merge'
+      'tailwind-merge',
+      'class-variance-authority',
+      'react-hook-form',
+      '@hookform/resolvers',
+      'zod'
     ],
+    exclude: ['@vite/client', '@vite/env'],
   },
   server: {
     port: 3000,
@@ -83,7 +77,7 @@ export default defineConfig({
     open: true,
     cors: true,
     hmr: {
-      overlay: false
+      overlay: false,
     },
     proxy: {
       '/api': {
@@ -100,12 +94,19 @@ export default defineConfig({
     open: true
   },
   css: {
-    devSourcemap: true,
-    postcss: './postcss.config.js'
+    devSourcemap: true
   },
-
   define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
-    __BUILD_TIME__: JSON.stringify(new Date().toISOString())
-  }
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
+  },
+  esbuild: {
+    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+    pure: process.env.NODE_ENV === 'production' ? ['console.log', 'console.info'] : [],
+  },
+  worker: {
+    format: 'es',
+  },
 })

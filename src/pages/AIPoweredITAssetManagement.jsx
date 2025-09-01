@@ -5,7 +5,6 @@ export default AIPoweredITAssetManagement;
 import { motion } from 'framer - motion';
 import SEOHead from "../components / SEOHead";
 
-
 const AIPoweredITAssetManagement = () => {
   const features = [
     {
@@ -73,15 +72,15 @@ const AIPoweredITAssetManagement = () => {
       {/* Hero Section */}
       <section className="pt - 24 pb - 16 px - 4 sm:px - 6 lg:px - 8">
         <div className="max - w-7xl mx - auto text - center">
-          <motion.div 
+          <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -91,42 +90,42 @@ const AIPoweredITAssetManagement = () => {
               <Server className="h - 12 w - 12 text - blue - 400"/>
             </div>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
             className="text - 4xl md:text - 6xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 to - cyan - 400 bg - clip - text text - transparent"
 
             AI - Powered IT Asset Management
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
             className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto"
@@ -134,21 +133,21 @@ const AIPoweredITAssetManagement = () => {
             Intelligent monitoring, security, and optimization of your entire IT infrastructure
             with AI - driven insights and predictive maintenance.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}
             className="flex flex - col sm:flex - row gap - 4 justify - center"
@@ -172,15 +171,15 @@ const AIPoweredITAssetManagement = () => {
       {/* Features Section */}
       <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">
-          <motion.h2 
+          <motion.h2
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -195,17 +194,17 @@ const AIPoweredITAssetManagement = () => {
                 key={index}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 viewport={{ once: true }}
@@ -226,15 +225,15 @@ const AIPoweredITAssetManagement = () => {
       {/* Capabilities Section */}
       <section className="py - 16 px - 4 sm:px - 6 lg:px - 8 bg - white / 5">;
         <div className="max - w-7xl mx - auto">
-          <motion.h2 
+          <motion.h2
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -249,17 +248,17 @@ const AIPoweredITAssetManagement = () => {
                 key={index}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 viewport={{ once: true }}
@@ -280,15 +279,15 @@ const AIPoweredITAssetManagement = () => {
       {/* CTA Section */}
       <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto text - center">
-          <motion.div 
+          <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}

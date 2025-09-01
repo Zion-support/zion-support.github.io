@@ -8,7 +8,6 @@ import {
 import { cuttingEdgeComprehensiveServices2027 } from '../../data / 2027 - cutting - edge - comprehensive - services';
 import { specializedInnovativeServices2027 } from '../../data / 2027 - specialized - innovative - services';
 
-
   Card,
   CardContent,
   CardDescription,

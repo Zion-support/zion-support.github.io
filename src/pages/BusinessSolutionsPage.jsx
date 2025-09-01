@@ -1,11 +1,10 @@
 import { Link } from 'react - router - dom';
-import React from 'react';
+import React, { useState } from 'react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 export default function BusinessSolutionsPage () {
 import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare, Shield, DollarSign, Search, Lightbulb, Star, Leaf const BusinessSolutions = [;
-
 
     {
         title: "Business Strategy Consulting",

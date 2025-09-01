@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
 import { Label } from '@/components / ui / label';
@@ -10,7 +10,6 @@ import { Wallet, Database, Save import { Card, CardContent, CardDescription, Car
 import SEO from '@/components / SEO';
 export default function AccountSettings () {
 import { toast } from 'sonner';
-
 
     const { user } = useAuth () ;
     const [displayWeb3, setDisplayWeb3] = useState (false) ;
@@ -164,5 +163,5 @@ import { toast } from 'sonner';
           </Card>
         </div>
       </main>
-      
+
     </>) }

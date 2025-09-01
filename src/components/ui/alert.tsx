@@ -1,14 +1,19 @@
 import React from 'react';
-import { cn } from '../../lib/utils';
 
-interface AlertProps {
+interface AlertProps extends React.PropsWithChildren<{
+}> {
+
   children: React.ReactNode;
-  className?: string;
+  className?: string}
+
 }
 
 interface AlertTitleProps {
   children: React.ReactNode;
   className?: string;
+=======
+  className?: string}
+
 }
 
 interface AlertDescriptionProps {
@@ -26,17 +31,16 @@ export function Alert({ children, className = '' }: AlertProps) {
 
 export function AlertTitle({ children, className = '' }: AlertTitleProps) {
   return (
-    <h5
-      className={cn('mb-1 font-medium leading-none tracking-tight', className)}
-    >
+    <h5 className={cn('mb-1 font-medium leading-none tracking-tight', className)}>
       {children}
     </h5>
   );
 }
 
-export function AlertDescription({
-  children,
-  className = '',
-}: AlertDescriptionProps) {
-  return <div className={cn('text-sm', className)}>{children}</div>;
+export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {
+  return (
+    <div className={cn('text-sm', className)}>
+      {children}
+    </div>
+  );
 }

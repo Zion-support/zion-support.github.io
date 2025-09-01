@@ -1,6 +1,6 @@
 import { useNavigate } from "react - router - dom";
 import { useState, useEffect } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components / ui / button";
 import { GradientHeading } from "@/components / GradientHeading";
 import { Input } from "@/components / ui / input";
@@ -12,9 +12,8 @@ import { Skeleton } from "@/components / ui / skeleton";
 import { Slider } from "@/components / ui / slider";
 export function DynamicListingPage ({ title, description, categorySlug, listings: allListings, categoryFilters, initialPrice = {
 
-
   min: 0,
-  max: 10000 
+  max: 10000
 
 }, detailBasePath = '/marketplace / listing' }) {
     const navigate = useNavigate () ;
@@ -152,7 +151,7 @@ export function DynamicListingPage ({ title, description, categorySlug, listings
                 </div>
               </div>
             // // // // // // // console.log ("Resetting filters") ;
-              
+
               <Button variant="outline" className="w - full border - zion - purple text - zion - purple hover:bg - zion - purple / 10" onClick = { () => {
             console.log ("Resetting filters") ;
             setSearchQuery ("") ;

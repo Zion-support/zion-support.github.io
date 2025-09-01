@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react - router - dom";
 import { useState } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Badge } from "@/components / ui / badge";
 import { Button } from "@/components / ui / button";
 import { EQUIPMENT_DETAILS } from "@/data / equipmentDetails";
@@ -10,7 +10,6 @@ import { ShoppingCart, Star, Truck, Shield, RotateCcw import { toast } from "@/h
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components / ui / tabs";
 import { useAuth } from "@/hooks / useAuth";
 export default function EquipmentDetail () {
-
 
     const { equipmentId } = useParams () ;
     const navigate = useNavigate () ;

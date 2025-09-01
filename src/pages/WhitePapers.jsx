@@ -3,7 +3,6 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default WhitePapers;
 
-
 const WhitePapers = () => {
   const whitePapers = [
     {

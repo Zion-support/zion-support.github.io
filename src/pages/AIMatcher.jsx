@@ -4,7 +4,6 @@ export default AIMatcher;
 import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight const AIMatcher = () => {
 import { motion } from 'framer - motion';
 
-
     const [currentStep, setCurrentStep] = useState (1) ;
     const [answers, setAnswers] = useState ({ /* empty */ }) ;
     const [recommendations, setRecommendations] = useState ([]) ;
@@ -162,11 +161,11 @@ import { motion } from 'framer - motion';
         <div className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 pt - 32 pb - 20">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text - center">
             <div className="inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - r from - blue - 600 to - cyan - 600 rounded - full mb - 6">
@@ -189,15 +188,15 @@ import { motion } from 'framer - motion';
       <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 pb - 20">
         {currentStep <= questions.length ? (<motion.div key={currentStep} initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }} animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} exit = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }} transition={{ duration: 0.3 }} className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl border border - slate - 700 / 50 p - 8">
             {/* Progress Bar */}
@@ -244,11 +243,11 @@ import { motion } from 'framer - motion';
           </motion.div>) : (/* Results Section */
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="space - y-8">
             <div className="text - center mb - 12">
@@ -264,15 +263,15 @@ import { motion } from 'framer - motion';
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
               {recommendations.map ( (solution, index) => (<motion.div key={solution.name} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl border border - slate - 700 / 50 p - 6 hover:border - blue - 500 / 50 transition - all duration - 300">
                   <div className="flex items - center mb - 4">
@@ -319,11 +318,11 @@ import { motion } from 'framer - motion';
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text - center">
             <h2 className="text - 4xl font - bold text - white mb - 6">

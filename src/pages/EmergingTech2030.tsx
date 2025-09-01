@@ -1,20 +1,19 @@
 import { Link  } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default React.memo (function EmergingTech2030 (...args[]) :  {
-import { Brain, 
+import { Brain,
 import { emergingTechServices2030 } from "../data / emergingTechServices2030";
 import { motion  } from 'framer - motion.ts';
 import { SEO } from "../components / SEO";
 
-
-  Rocket, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
+  Rocket,
+  Zap,
+  Shield,
+  Cloud,
+  Cpu,
+  ArrowRight,
+  Star,
+  TrendingUp,
   CheckCircle,
   Phone,
   Mail,
@@ -46,7 +45,7 @@ import { SEO } from "../components / SEO";
 
   const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {;
@@ -75,7 +74,7 @@ import { SEO } from "../components / SEO";
 };
 
   return (<>
-      <SEO 
+      <SEO
         title = "Emerging Technology Services 2030 - Zion Tech Group"
         description="Discover cutting - edge emerging technology services for 2030 including quantum computing, neuromorphic computing, synthetic biology, and more. Future - ready solutions for forward - thinking businesses."
         canonical="/emerging - tech - 2030"
@@ -224,7 +223,7 @@ import { SEO } from "../components / SEO";
 
         {/* Why Choose Zion Tech Group */}
         <section className = "py - 20 px - 4 bg - gradient - to - r from - slate - 900 / 50 to - slate - 800 / 50">;
-          <motion.div 
+          <motion.div
             className="container mx - auto max - w-6xl"
             variants={containerVariants}
             initial="hidden"

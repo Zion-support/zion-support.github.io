@@ -4,7 +4,6 @@ export default MicroSAASPage;
 import {
 import { motion } from 'framer - motion';
 
-
   Zap,
   Code,
   Database,
@@ -78,7 +77,7 @@ const MicroSAASPage = () => {
   };
   const itemVariants = {
   hidden: { opacity: 0,
-  y: 20 
+  y: 20
 
 },
     visible: {;
@@ -95,12 +94,12 @@ const MicroSAASPage = () => {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}
@@ -225,17 +224,17 @@ to: {`/micro - saas/${service.id}`}
                 key={benefit}
                 initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
                 animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
                 transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - zion - blue - dark / 20 border border - zion - cyan / 20 rounded - lg p - 4 text - center hover:border - zion - cyan / 40 transition - all duration - 300"

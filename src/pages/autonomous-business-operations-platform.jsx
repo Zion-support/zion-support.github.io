@@ -2,7 +2,6 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default AutonomousBusinessOperationsPlatform;
 
-
 const AutonomousBusinessOperationsPlatform = () => {
   return (<div className="min - h-screen bg - slate - 900 text - white">
       {/* Header Section */}

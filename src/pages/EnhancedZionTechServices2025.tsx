@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 export default EnhancedZionTechServices2025;}
 import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data / enhancedZionTechServices2025";
 
-
 const EnhancedZionTechServices2025: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState < string> ('All') ;
   const [searchTerm, setSearchTerm] = useState < string> ('') ;
   const [sortBy, setSortBy] = useState < string> ('name') ;
 
   const categories = ['All', ...getEnhancedServiceCategories () ];
-  
+
   const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter (service => {;
     const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                          service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;

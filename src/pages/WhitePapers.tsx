@@ -3,7 +3,6 @@ import SEO from '@/components / SEO';
 export default React.memo (function WhitePapers () {
 import {
 
-
   FileText,
   Download,
   Search,

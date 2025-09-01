@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 // removed duplicate old section
 
 import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { ShoppingCart, Sparkles, CheckCircle, BarChart3  } from 'lucide-react';
+import { SEO               } from '@/components/SEO';
+import { ShoppingCart, Sparkles, CheckCircle, BarChart3               } from 'lucide-react.ts';
 
 const EcommercePersonalization: React.FC = (): JSX.Element => {
   return (
@@ -19,7 +20,6 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {
         </div>
         <h1 className="text-4xl font-bold">Turn browsers into buyers with AI personalization</h1>
         <p className="mt-3 text-slate-300 max-w-2xl">Realtime product recommendations, cross‑sells, and bundles that adapt to user behavior and inventory. Built‑in experimentation and guardrails.</p>
-
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="mb-2 font-semibold">Capabilities</div>
@@ -46,7 +46,5 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {
     </div>;
   );
 };
-
 export default EcommercePersonalization;
-
 }

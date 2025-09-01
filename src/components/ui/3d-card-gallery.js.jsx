@@ -7,9 +7,9 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const [selectedItem, setSelectedItem] = useState(null);
     const [viewMode, setViewMode] = useState('grid');
     const [filters, setFilters] = useState({
-        category[],;
-        status[],;
-        complexity[],;
+        category[],
+        status[],
+        complexity[],
         verified: false,
         featured: false
     });
@@ -191,7 +191,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                     category: prev.category.includes(category)
                         ? prev.category.filter(c => c !== category)
                         [...prev.category,
-  category];
+  category]
                 
 
 }))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>

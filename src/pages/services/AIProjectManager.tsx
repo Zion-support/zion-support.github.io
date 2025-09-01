@@ -1,8 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone              } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
 
-export default function AIProjectManager() {
+export default function AIProjectManager(...args: any[]): any {
   const features = [
     {
       title: "AI-Powered Task Prioritization",
@@ -41,7 +42,6 @@ export default function AIProjectManager() {
       color: "from-teal-500 to-cyan-500"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -89,9 +89,7 @@ export default function AIProjectManager() {
       ],
       cta: "Contact Sales",
       popular: false
-
   ];
-
   const benefits = [
     {
       title: "30% Faster Project Delivery",
@@ -112,7 +110,6 @@ export default function AIProjectManager() {
       metric: "90%"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -120,12 +117,10 @@ export default function AIProjectManager() {
         description="Transform your project management with AI-powered task prioritization, resource optimization, and predictive analytics. Start free trial today."
         keywords="AI project management, project management software, AI task prioritization, resource optimization, project analytics"
       />
-
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20" />
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
-        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 
             className="text-center"
@@ -150,7 +145,6 @@ export default function AIProjectManager() {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -169,8 +163,8 @@ export default function AIProjectManager() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
@@ -209,8 +203,8 @@ export default function AIProjectManager() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -230,7 +224,6 @@ export default function AIProjectManager() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -249,8 +242,8 @@ export default function AIProjectManager() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)              => (
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
@@ -278,7 +271,6 @@ export default function AIProjectManager() {
                   </div>
                   <p className="text-zion-slate-light">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -287,7 +279,6 @@ export default function AIProjectManager() {
                     </li>
                   ))}
                 </ul>
-
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
@@ -300,7 +291,6 @@ export default function AIProjectManager() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

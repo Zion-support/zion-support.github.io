@@ -10,7 +10,6 @@ import { useWhitelabel  } from '@/context / WhitelabelContext';
 export default React.memo (function CompWorkspace (...args[]) :  {
 import SEOHead from "../components / SEOHead.jsx";
 
-
     const { compSlug } = useParams () ;
     const { user } = useAuth () ;
     const { comp, isLoading, error } = useCompWorkspace (compSlug) ;

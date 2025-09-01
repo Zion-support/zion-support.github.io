@@ -1,8 +1,7 @@
 // Specialized Financial AI Services 2025 - Zion Tech Group
 // Advanced AI-powered financial technology solutions
-
+;
 export interface FinancialAIService {
-
   id: number;
   name: string;
   category: string;
@@ -24,32 +23,36 @@ export interface FinancialAIService {
   useCases: string[];
   technologies: string[];
 contactInfo: {
+
     phone: string;
     email: string;
     website: string;
-    address: string}}
+    address: string
+}}
 
-// Zion Tech Group Contact Information
+// Zion Tech Group Contact Information;
 const zionContact = {
-  phone: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",;
+
+  phone: "+1 302 464 0950","
+  email: "kleber@ziontechgroup.com","
+  website: "https://ziontechgroup.com",;  ;
   ;
   ;
+<<<<<<< HEAD
   ;
   ;
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
 
-
-
-
-
-
 };
 
+=======
+  ;"
+  address: "364 E Main St STE 1008 Middletown DE 19709"};
+"
+>>>>>>> main
     technologies["AI/ML", "Robo-advisory", "Portfolio Optimization", "Financial Planning"]
   }
 ];
 
-export default specializedFinancialAIServices2025;}}
+export default specializedFinancialAIServices2025}}"

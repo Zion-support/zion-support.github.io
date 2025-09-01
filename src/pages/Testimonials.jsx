@@ -3,7 +3,6 @@ export default function Testimonials () {
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Star,
   Quote,
   User,

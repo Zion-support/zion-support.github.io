@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react.ts';
 export default ServicesComparisonMatrix2025;
-import { Brain, 
+import { Brain,
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data / innovativeMicroSaasServices2025';
 import { motion  } from 'framer - motion.ts';
 
-
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  BarChart3, 
-  Globe, 
-  Cpu, 
-  Database, 
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  BarChart3,
+  Globe,
+  Cpu,
+  Database,
   Workflow,
   Phone,
   Mail,
@@ -138,7 +137,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
   const selectedServicesData = selectedServices.map (id => ;
     INNOVATIVE_MICRO_SAAS_SERVICES_2025.find (service => service.id === id) ;) .filter (Boolean) ;
 
-  const allFeatures = Array.from (new Set (selectedServicesData.flatMap (service => 
+  const allFeatures = Array.from (new Set (selectedServicesData.flatMap (service =>
       service ? [...service.features, ...service.benefits] : [];) ;) ) ;
 
   return (<div role="button" className = "min - h-screen bg - gradient - to - br from - slate - 50 via - blue - 50 to - indigo - 100">
@@ -149,12 +148,12 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -164,7 +163,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
               Services Comparison Matrix 2025
             </h1>
             <p className="text - xl md:text - 2xl mb - 8 text - blue - 100 max - w-4xl mx - auto">
-              Compare our innovative AI - powered micro SAAS solutions side by side. 
+              Compare our innovative AI - powered micro SAAS solutions side by side.
               Find the perfect service for your business needs with detailed feature comparisons.
             </p>
             <div role="button" className="flex flex - wrap justify - center gap - 4 mb - 8">
@@ -244,7 +243,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
                 />
               </div>
             </div>
-            
+
             <div role="button" className="flex items - center gap - 4">
               <select
                 value={selectedCategory}
@@ -254,7 +253,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
                 {categories.map (category  => (<option key={category.id} value={category.id}>
                     {category.name} ({category.count}) </option>) ) }
               </select>
-              
+
               <select
                 value={sortBy}
                 onChange={ (e) => setSortBy (e.target.value as 'name' | 'price' | 'innovation' | 'roi') }
@@ -269,8 +268,8 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
               <div role="button" className="flex items - center gap - 2">
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('matrix') }
                   className={`p - 2 rounded - lg transition - colors ${
-                    viewMode === 'matrix' 
-                      ? 'bg - blue - 100 text - blue - 600' 
+                    viewMode === 'matrix'
+                      ? 'bg - blue - 100 text - blue - 600'
                       : 'bg - gray - 100 text - gray - 600 hover:bg - gray - 200'
                   }`}
                 >
@@ -278,8 +277,8 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
                 </button>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - lg transition - colors ${
-                    viewMode === 'list' 
-                      ? 'bg - blue - 100 text - blue - 600' 
+                    viewMode === 'list'
+                      ? 'bg - blue - 100 text - blue - 600'
                       : 'bg - gray - 100 text - gray - 600 hover:bg - gray - 200'
                   }`}
                 >
@@ -324,12 +323,12 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
                 key={service.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition={{ duration: 0.3 }}
@@ -352,7 +351,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
                     {selectedServices.includes (service.id) ? (<Minus className="w - 4 h - 4 text - blue - 600" />) : (<Plus className="w - 4 h - 4 text - gray - 400" />) }
                   </div>
                 </div>
-                
+
                 <div role="button" className="flex items - center justify - between text - xs">
                   <span className="font - semibold text - green - 600">
                     ${service.price.toLocaleString () }/mo
@@ -520,17 +519,17 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
                   key={service?.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className="bg - white rounded - xl shadow - lg border border - gray - 200"
@@ -627,12 +626,12 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -642,7 +641,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
               Need Help Choosing?
             </h2>
             <p className="text - xl text - blue - 100 mb - 8 max - w-3xl mx - auto">
-              Our expert team is here to help you select the perfect service for your business needs. 
+              Our expert team is here to help you select the perfect service for your business needs.
               Get personalized recommendations and custom quotes.
             </p>
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
@@ -672,7 +671,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
             <div role="button" className="md:col - span - 2">
               <h3 className="text - 2xl font - bold mb - 4">Zion Tech Group</h3>
               <p className="text - gray - 300 mb - 4">
-                Leading provider of innovative AI - powered micro SAAS solutions, helping businesses 
+                Leading provider of innovative AI - powered micro SAAS solutions, helping businesses
                 transform their operations with cutting - edge technology and intelligent automation.
               </p>
               <div role="button" className="flex items - center gap - 4">
@@ -686,7 +685,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
                 </a>
               </div>
             </div>
-            
+
             <div>
               <h4 className="text - lg font - semibold mb - 4">Contact Info</h4>
               <div role="button" className="space - y-2 text - gray - 300">
@@ -696,7 +695,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
                 <p > Middletown DE 19709</p>
               </div>
             </div>
-            
+
             <div>
               <h4 className="text - lg font - semibold mb - 4">Quick Links</h4>
               <div role="button" className="space - y-2">

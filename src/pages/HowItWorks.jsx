@@ -6,7 +6,6 @@ import { GradientHeading } from "@/components / GradientHeading";
 import SEO from "@/components / SEO";
 import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield export default function HowItWorks () {
 
-
     const clientSteps = [
         {
             icon: Search,

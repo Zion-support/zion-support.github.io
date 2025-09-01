@@ -3,8 +3,7 @@ export const comprehensiveServices = [
     id: 1,
     name: 'IT Infrastructure Management',
     category: 'Infrastructure',
-    description:
-      'Complete IT infrastructure setup, maintenance, and optimization',
+    description: 'Complete IT infrastructure setup, maintenance, and optimization',
     basePrice: 2500,
     pricingModel: 'monthly',
     features: [
@@ -15,7 +14,7 @@ export const comprehensiveServices = [
       '24/7 monitoring and alerting',
       'Performance optimization',
       'Security hardening',
-      'Compliance management',
+      'Compliance management'
     ],
     included: [
       'Unlimited support tickets',
@@ -23,18 +22,18 @@ export const comprehensiveServices = [
       'Quarterly security audits',
       'Annual infrastructure review',
       'Emergency response (4hr)',
-      'Remote and on-site support',
+      'Remote and on-site support'
     ],
     notIncluded: [
       'Hardware procurement',
       'Software licensing',
       'Custom development',
-      'Staff training',
+      'Staff training'
     ],
     popular: true,
     icon: '🏗️',
     responseTime: '4 hours',
-    sla: '99.9% uptime',
+    sla: '99.9% uptime'
   },
   {
     id: 2,
@@ -51,7 +50,7 @@ export const comprehensiveServices = [
       'Incident response planning',
       'Compliance monitoring',
       'Security policy development',
-      'Regular security updates',
+      'Regular security updates'
     ],
     included: [
       '24/7 security monitoring',
@@ -59,18 +58,18 @@ export const comprehensiveServices = [
       'Quarterly penetration tests',
       'Annual security audits',
       'Emergency incident response',
-      'Compliance documentation',
+      'Compliance documentation'
     ],
     notIncluded: [
       'Hardware security appliances',
       'Third-party security tools',
       'Legal compliance fees',
-      'Insurance requirements',
+      'Insurance requirements'
     ],
     popular: false,
     icon: '🛡️',
     responseTime: '2 hours',
-    sla: '99.95% threat detection',
+    sla: '99.95% threat detection'
   },
   {
     id: 3,
@@ -87,7 +86,7 @@ export const comprehensiveServices = [
       'Performance monitoring',
       'Security configuration',
       'Backup and recovery',
-      'Auto-scaling setup',
+      'Auto-scaling setup'
     ],
     included: [
       'Cloud architecture design',
@@ -95,18 +94,18 @@ export const comprehensiveServices = [
       'Ongoing optimization',
       'Monthly cost analysis',
       'Performance reports',
-      'Security reviews',
+      'Security reviews'
     ],
     notIncluded: [
       'Cloud platform costs',
       'Third-party tools',
       'Data transfer fees',
-      'Custom development',
+      'Custom development'
     ],
     popular: false,
     icon: '☁️',
     responseTime: '8 hours',
-    sla: '99.9% availability',
+    sla: '99.9% availability'
   },
   {
     id: 4,
@@ -123,7 +122,7 @@ export const comprehensiveServices = [
       'Compliance reporting',
       'Performance optimization',
       'Disaster recovery planning',
-      'Regular testing and validation',
+      'Regular testing and validation'
     ],
     included: [
       'Unlimited data backup',
@@ -131,18 +130,18 @@ export const comprehensiveServices = [
       'Monthly recovery testing',
       'Quarterly disaster recovery drills',
       'Annual compliance audits',
-      '24/7 emergency recovery',
+      '24/7 emergency recovery'
     ],
     notIncluded: [
       'Storage hardware',
       'Cloud storage costs',
       'Data transfer fees',
-      'Legal compliance review',
+      'Legal compliance review'
     ],
     popular: false,
     icon: '💾',
     responseTime: '6 hours',
-    sla: '99.99% data integrity',
+    sla: '99.99% data integrity'
   },
   {
     id: 5,
@@ -159,7 +158,7 @@ export const comprehensiveServices = [
       'Performance monitoring',
       'Troubleshooting support',
       'Capacity planning',
-      'Documentation and training',
+      'Documentation and training'
     ],
     included: [
       'Network health monitoring',
@@ -167,18 +166,18 @@ export const comprehensiveServices = [
       'Quarterly capacity reviews',
       'Annual network audits',
       'Emergency troubleshooting',
-      'Hardware warranty support',
+      'Hardware warranty support'
     ],
     notIncluded: [
       'Network hardware',
       'ISP services',
       'Third-party licenses',
-      'Custom network tools',
+      'Custom network tools'
     ],
     popular: true,
     icon: '🌐',
     responseTime: '4 hours',
-    sla: '99.9% network uptime',
+    sla: '99.9% network uptime'
   },
   {
     id: 6,
@@ -195,7 +194,7 @@ export const comprehensiveServices = [
       'Hardware support',
       'Account management',
       'Password resets',
-      'Basic troubleshooting',
+      'Basic troubleshooting'
     ],
     included: [
       'Unlimited support tickets',
@@ -203,19 +202,19 @@ export const comprehensiveServices = [
       'Remote desktop assistance',
       'Knowledge base access',
       'Monthly support reports',
-      'User satisfaction surveys',
+      'User satisfaction surveys'
     ],
     notIncluded: [
       'On-site visits',
       'Hardware repairs',
       'Software licensing',
-      'Advanced training',
+      'Advanced training'
     ],
     popular: false,
     icon: '🎧',
     responseTime: '2 hours',
-    sla: '95% first-call resolution',
-  },
+    sla: '95% first-call resolution'
+  }
 ];
 
 export const serviceCategories = [
@@ -223,40 +222,38 @@ export const serviceCategories = [
     name: 'Infrastructure',
     description: 'Core IT infrastructure services',
     icon: '🏗️',
-    services: comprehensiveServices.filter(
-      s => s.category === 'Infrastructure'
-    ),
+    services: comprehensiveServices.filter(s => s.category === 'Infrastructure')
   },
   {
     name: 'Security',
     description: 'Cybersecurity and compliance services',
     icon: '🛡️',
-    services: comprehensiveServices.filter(s => s.category === 'Security'),
+    services: comprehensiveServices.filter(s => s.category === 'Security')
   },
   {
     name: 'Cloud',
     description: 'Cloud computing and migration services',
     icon: '☁️',
-    services: comprehensiveServices.filter(s => s.category === 'Cloud'),
+    services: comprehensiveServices.filter(s => s.category === 'Cloud')
   },
   {
     name: 'Data',
     description: 'Data management and recovery services',
     icon: '💾',
-    services: comprehensiveServices.filter(s => s.category === 'Data'),
+    services: comprehensiveServices.filter(s => s.category === 'Data')
   },
   {
     name: 'Networking',
     description: 'Network infrastructure services',
     icon: '🌐',
-    services: comprehensiveServices.filter(s => s.category === 'Networking'),
+    services: comprehensiveServices.filter(s => s.category === 'Networking')
   },
   {
     name: 'Support',
     description: 'Help desk and user support services',
     icon: '🎧',
-    services: comprehensiveServices.filter(s => s.category === 'Support'),
-  },
+    services: comprehensiveServices.filter(s => s.category === 'Support')
+  }
 ];
 
 export const pricingTiers = [
@@ -269,13 +266,13 @@ export const pricingTiers = [
       'Email and file sharing',
       'Basic security',
       'Monthly reports',
-      'Phone support',
+      'Phone support'
     ],
     limitations: [
       'Up to 10 users',
       'Basic monitoring',
-      'Standard response time',
-    ],
+      'Standard response time'
+    ]
   },
   {
     name: 'Professional',
@@ -287,13 +284,13 @@ export const pricingTiers = [
       'Cloud backup',
       'Network monitoring',
       'Priority support',
-      'Quarterly reviews',
+      'Quarterly reviews'
     ],
     limitations: [
       'Up to 50 users',
       'Business hours support',
-      '4-hour response time',
-    ],
+      '4-hour response time'
+    ]
   },
   {
     name: 'Enterprise',
@@ -305,63 +302,67 @@ export const pricingTiers = [
       'Custom solutions',
       'Dedicated team',
       'Advanced analytics',
-      'Strategic consulting',
+      'Strategic consulting'
     ],
-    limitations: ['Unlimited users', 'Custom SLAs', '1-hour response time'],
-  },
+    limitations: [
+      'Unlimited users',
+      'Custom SLAs',
+      '1-hour response time'
+    ]
+  }
 ];
+
+export const getServiceById = (id) => {
+  return comprehensiveServices.find(service => service.id === id);
+};
+
+export const getServicesByCategory = (category) => {
+  return comprehensiveServices.filter(service => service.category === category);
+};
 
 export const getPopularServices = () => {
   return comprehensiveServices.filter(service => service.popular);
 };
 
-export const calculateServiceCost = (
-  serviceId,
-  months = 1,
-  customizations = []
-) => {
+export const calculateServiceCost = (serviceId, months = 1, customizations = []) => {
   const service = getServiceById(serviceId);
   if (!service) return 0;
-
+  
   let baseCost = service.basePrice * months;
-
+  
   // Add customization costs
   customizations.forEach(customization => {
     if (customization.type === 'addon') {
       baseCost += customization.price * months;
     } else if (customization.type === 'oneTime') {
       baseCost += customization.price;
-    }
+})
   });
-
+  
   return baseCost;
 };
 
 export const getServiceRecommendations = (businessSize, industry, budget) => {
   let recommendations = comprehensiveServices;
-
+  
   // Filter by business size
   if (businessSize === 'small') {
-    recommendations = recommendations.filter(service =>
+    recommendations = recommendations.filter(service => 
       ['Support', 'Data'].includes(service.category)
     );
   } else if (businessSize === 'medium') {
-    recommendations = recommendations.filter(service =>
+    recommendations = recommendations.filter(service => 
       ['Support', 'Data', 'Networking', 'Security'].includes(service.category)
     );
   }
-
+  
   // Filter by budget
   if (budget === 'low') {
-    recommendations = recommendations.filter(
-      service => service.basePrice <= 1500
-    );
+    recommendations = recommendations.filter(service => service.basePrice <= 1500);
   } else if (budget === 'medium') {
-    recommendations = recommendations.filter(
-      service => service.basePrice <= 3000
-    );
+    recommendations = recommendations.filter(service => service.basePrice <= 3000);
   }
-
+  
   return recommendations;
 };
 
@@ -374,7 +375,7 @@ export const SERVICE_CATEGORIES = [
   { label: 'Data', value: 'data' },
   { label: 'Networking', value: 'networking' },
   { label: 'Development', value: 'development' },
-  { label: 'Consulting', value: 'consulting' },
+  { label: 'Consulting', value: 'consulting' }
 ];
 
 // Alias exports for backward compatibility

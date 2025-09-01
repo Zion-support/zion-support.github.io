@@ -1,8 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { CheckCircle, MessageCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Globe, Smartphone, Headphones, Bot              } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
 
-export default function AICustomerSupport() {
+export default function AICustomerSupport(...args: any[]): any {
   const features = [
     {
       title: "24/7 AI Chat Support",
@@ -41,7 +42,6 @@ export default function AICustomerSupport() {
       color: "from-teal-500 to-cyan-500"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -91,7 +91,6 @@ export default function AICustomerSupport() {
       popular: false
     }
   ];
-
   const benefits = [
     {
       title: "90% Faster Response Time",
@@ -112,7 +111,6 @@ export default function AICustomerSupport() {
       metric: "95%"
     }
   ];
-
   const integrations = [
     {
       name: "Slack",
@@ -139,7 +137,6 @@ export default function AICustomerSupport() {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -147,12 +144,10 @@ export default function AICustomerSupport() {
         description="Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today."
         keywords="AI customer support, chatbot, customer service automation, AI support, customer service software"
       />
-
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20" />
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
-        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 
             className="text-center"
@@ -177,7 +172,6 @@ export default function AICustomerSupport() {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -196,8 +190,8 @@ export default function AICustomerSupport() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
@@ -236,8 +230,8 @@ export default function AICustomerSupport() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -257,7 +251,6 @@ export default function AICustomerSupport() {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -276,8 +269,8 @@ export default function AICustomerSupport() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {integrations.map((integration, index)              => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -296,7 +289,6 @@ export default function AICustomerSupport() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -315,8 +307,8 @@ export default function AICustomerSupport() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)              => (
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
@@ -344,7 +336,6 @@ export default function AICustomerSupport() {
                   </div>
                   <p className="text-zion-slate-light">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -353,7 +344,6 @@ export default function AICustomerSupport() {
                     </li>
                   ))}
                 </ul>
-
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700'
@@ -366,7 +356,6 @@ export default function AICustomerSupport() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

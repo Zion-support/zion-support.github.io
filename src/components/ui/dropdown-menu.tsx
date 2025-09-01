@@ -3,7 +3,7 @@ const DropdownMenu({ children }) {
     const [isOpen, setIsOpen] = useState(false);
     return (<DropdownMenuContext.Provider value = {
   { isOpen,
-  setIsOpen 
+  setIsOpen
 ;
 ;
 ;

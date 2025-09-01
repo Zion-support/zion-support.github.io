@@ -7,7 +7,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import SEO from '@/components / SEO';
 export default function ServicesPricing () {
 
-
 const pricingTiers = [
     {
         name: "Starter",

@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
+;
 class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/performance-monitor.log');
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/performance-report.json');
+    this.logFile = path.join(this.projectRoot,logs/pm2/performance-monitor.log');
+    this.reportFile = path.join(this.projectRoot,logs/pm2/performance-report.json');
     this.startTime = Date.now();
 
   log(message) {
@@ -101,7 +101,7 @@ class PerformanceMonitor {
           if (stat.isDirectory()) {
             analyzeDirectory(fullPath);
           } else {
-            const relativePath = fullPath.replace(this.projectRoot + '/dist/', '');
+            const relativePath = fullPath.replace(this.projectRoot + '/dist/',);
             const fileInfo = {
               path: relativePath,
               size: stat.size,
@@ -141,13 +141,13 @@ class PerformanceMonitor {
     try {
       this.log('📦 Analyzing dependencies...');
 
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.json',utf8'));
       const dependencies = Object.keys(packageJson.dependencies || { /* empty */ });
       const devDependencies = Object.keys(packageJson.devDependencies || { /* empty */ });
 
       // Check for large packages
       const largePackages = [];
-      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
+      const nodeModulesPath = path.join(this.projectRoot,node_modules');
 
       if (fs.existsSync(nodeModulesPath)) {
         dependencies.forEach(dep => {
@@ -220,7 +220,7 @@ class PerformanceMonitor {
     try {
       this.log('📈 Checking bundle analyzer availability...');
 
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.json',utf8'));
       const hasAnalyzer = packageJson.devDependencies &&
         (packageJson.devDependencies['webpack-bundle-analyzer'] ||
          packageJson.devDependencies['@next/bundle-analyzer']);
@@ -371,7 +371,7 @@ class PerformanceMonitor {
 
 
 
-// Run the performance monitor
+// Run the performance monitor;
 const monitor = new PerformanceMonitor();
 monitor.run().catch(error => {
   process.exit(1);

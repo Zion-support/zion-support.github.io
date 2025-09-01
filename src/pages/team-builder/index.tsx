@@ -1,21 +1,21 @@
-// import { NextPage   } from 'next.ts'; // Removed
-import React from 'react.ts'; // Ensure React is imported if not already for FC type
-import { AppLayout   } from '@/layout/AppLayout'; // Assuming a general AppLayout exists
-import { Button   } from '@/components/ui/button';
-import { Input   } from '@/components/ui/input';
-import { Textarea   } from '@/components/ui/textarea';
-import { Label   } from '@/components/ui/label';
-import { Switch   } from '@/components/ui/switch'; // Added for new fields
-import { useForm, Controller, type SubmitHandler   } from 'react-hook-form.ts';
-import { zodResolver   } from '@hookform/resolvers/zod';
+// import { NextPage  } from 'next.ts'; // Removed
+import React from 'react'; // Ensure React is imported if not already for FC type
+import { AppLayout  } from '@/layout/AppLayout'; // Assuming a general AppLayout exists
+import { Button  } from '../components/ui/button';
+import { Input  } from '../components/ui/input';
+import { Textarea  } from '../components/ui/textarea';
+import { Label  } from '../components/ui/label';
+import { Switch  } from '../components/ui/switch'; // Added for new fields
+import { useForm, Controller, type SubmitHandler  } from 'react-hook-form.ts';
+import { zodResolver  } from '@hookform/resolvers/zod';
 import * as z from 'zod.ts';
-import { Steps, Step   } from '@/components/ui/steps'; // Assuming this is how steps are imported
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter   } from '@/components/ui/card';
-import { useState   } from 'react.ts';
-import { ProjectBrief, TeamRecommendation   } from '@/types'; // Import from barrel file
-import { toast   } from 'sonner.ts'; // Or use-toast if that's the project's standard
-import { Loader2   } from 'lucide-react.ts';
-import { TeamRecommendationDisplay   } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
+import { Steps, Step  } from '../components/ui/steps'; // Assuming this is how steps are imported
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '../components/ui/card';
+import { useState  } from 'react';
+import { ProjectBrief, TeamRecommendation  } from '@/types'; // Import from barrel file
+import { toast  } from 'sonner.ts'; // Or use-toast if that's the project's standard
+import { Loader2  } from 'lucide-react';
+import { TeamRecommendationDisplay  } from '../components/team-builder/TeamRecommendationDisplay'; // New import
 
 // Define Zod schema for form validation
 const projectBriefSchema = z.object({
@@ -28,13 +28,14 @@ const projectBriefSchema = z.object({
   lockBudget: z.boolean().optional(),
   talentFilters: z.object({ // New
     verifiedOnly: z.boolean().optional(),
-    regions: z.string().optional(), // Comma-separated string for now;
-  }).optional(),;
+    regions: z.string().optional(), // Comma-separated string for now
+  }).optional(),
 });
 
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
-// const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type for inference;
+// const TeamBuilderPage: NextPage = () => { // Old
+const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type for inference
   const [currentStep, setCurrentStep] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [teamRecommendation, setTeamRecommendation] = useState<any>(null);
@@ -60,11 +61,11 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
   const steps = [
     { name: 'Project Basics', fields: ['projectName', 'goals'] },
-    { name: 'Details', fields: ['timeline', 'budget', 'techStack'] },;
-    { name: 'Review & Submit', fields: [] }, // No fields, just review;
+    { name: 'Details', fields: ['timeline', 'budget', 'techStack'] },
+    { name: 'Review & Submit', fields: [] }, // No fields, just review
   ];
 
-  const handleNextStep = async () => {;
+  const handleNextStep = async () => {
     const currentStepFields = steps[currentStep].fields as (keyof ProjectBriefFormData)[];
     const isValid = await trigger(currentStepFields);
     if (isValid) {
@@ -72,7 +73,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     }
   };
 
-  const handlePreviousStep = () => {;
+  const handlePreviousStep = () => {
     setCurrentStep((prev) => prev - 1);
   };
 
@@ -81,24 +82,22 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     setTeamRecommendation(null);
 
     const projectBriefData: ProjectBrief = {
-  userId: any'current-user-id',;
+      userId: 'current-user-id',
       createdAt: new Date().toISOString(),
       ...data,
-      techStack: data.techStack?.split(',').map(s   => s.trim()).filter(s => s) || [],
-      talentFilters: any{ // Ensure talentFilters is structured correctly;
-        verifiedOnly: data.talentFilters?.verifiedOnly,;
-        regions: data.talentFilters?.regions?.split(',').map(r   => r.trim()).filter(r => r) || [],;
-  
-;
-};
+      techStack: data.techStack?.split(',').map(s  => s.trim()).filter(s => s) || [],
+      talentFilters: { // Ensure talentFilters is structured correctly
+        verifiedOnly: data.talentFilters?.verifiedOnly,
+        regions: data.talentFilters?.regions?.split(',').map(r  => r.trim()).filter(r => r) || [],
+      }
     };
     setProjectBriefSubmitted(projectBriefData);
 
     try {
       const response = await fetch('/api/team-builder/generate', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify(projectBriefData),;
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(projectBriefData),
       });
 
       if (!response.ok) {
@@ -118,32 +117,29 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     }
   };
 
-  const handleInviteTalent = async (talentId: anystring, roleTitle: string)   => {;
-    if (!projectBriefSubmitted) {;
+  const handleInviteTalent = async (talentId: string, roleTitle: string)  => {
+    if (!projectBriefSubmitted) {
       toast.error("Cannot send invite without a project context.");
       return;
     }
 
     // Assuming projectBriefSubmitted has an 'id' if it's saved, or we generate one
-    // For now, let's assume projectBriefSubmitted.id might be null if not saved.
+    // For now, let's assume projectBriefSubmitted.id might be undefined if not saved.
     // The API and DB table are designed to handle nullable project_brief_id.
 
     const invitePayload = {
-  talentId: talentId,
+      talentId: talentId,
       roleTitle: roleTitle,
       projectBriefId: projectBriefSubmitted.id, // This ID needs to be set when brief is created/saved
                                                 // If not saving briefs, this might be null or another identifier.
-      // teamRecommendationId: teamRecommendation?.id,
-  // If recommendations are saved and have an ID;
-    ;
-
-};
+      // teamRecommendationId: teamRecommendation?.id, // If recommendations are saved and have an ID
+    };
 
     try {
       const response = await fetch('/api/team-builder/invite', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify(invitePayload),;
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(invitePayload),
       });
 
       if (!response.ok) {
@@ -160,14 +156,14 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     }
   };
 
-  const renderRecommendation = () => {;
+  const renderRecommendation = () => {
     if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available
     return (
       <TeamRecommendationDisplay
-        recommendation = {teamRecommendation}
+        recommendation={teamRecommendation}
         projectBrief={projectBriefSubmitted}
-        onInviteTalent={handleInviteTalent};
-      />;
+        onInviteTalent={handleInviteTalent}
+      />
     );
   };
 
@@ -177,7 +173,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
   return (
     <AppLayout>
-      <div className = "container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-4xl"> {/* Increased max-width */}
+      <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-4xl"> {/* Increased max-width */}
         <Card className="mb-8">
           <CardHeader>
             <CardTitle className="text-2xl font-bold tracking-tight sm:text-3xl">Team Builder</CardTitle>
@@ -366,8 +362,8 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
             </form>
           </Card>
         )}
-      </div>;
-    </AppLayout>;
+      </div>
+    </AppLayout>
   );
 };
 

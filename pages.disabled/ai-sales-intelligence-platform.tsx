@@ -5,15 +5,16 @@ import {
   TrendingUp, Brain, Zap, Target, Award, Clock, Users, Eye,
   Shield, Star, CheckCircle, Database, MessageSquare, DollarSign
 } from 'lucide-react';
-
-const AISalesIntelligencePlatform: React.FC = () => {
+;
+const AISalesIntelligencePlatform: React.FC = props {
   const platformFeatures = [
     {
       title: "Intelligent Lead Scoring",
       icon:
-
+;
+export { function };
 export default function Ai-sales-intelligence-platformPage() {
-  return (
+  return 
     <Brain className="w-8 h-8 text-purple-400" />,
       description: "AI-powered lead scoring that identifies the most promising sales opportunities",
       features: [
@@ -111,7 +112,7 @@ export default function Ai-sales-intelligence-platformPage() {
               </p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {platformFeatures.map((feature, index) => (
+              {platformFeatures.map((feature, index 
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -126,7 +127,7 @@ export default function Ai-sales-intelligence-platformPage() {
               </div>
         <p className="text-white/70 mb-6">{feature.description}</p>
         <ul className="space-y-2">
-                    {feature.features.map((feat, featureIndex) => (
+                    {feature.features.map((feat, featureIndex (
                       <li key={featureIndex} className="flex items-center text-white/80">
         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {feat}
@@ -174,7 +175,7 @@ export default function Ai-sales-intelligence-platformPage() {
                   title: "Better Conversion Rates",
                   description: "Improve conversion rates through targeted approaches and predictive analytics."
                 }
-              ].map((benefit, index) => (
+              ].map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

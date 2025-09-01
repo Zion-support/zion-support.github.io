@@ -1,13 +1,12 @@
 import { useNavigate } from "react - router - dom";
 import { useParams, Link } from "react - router - dom";
 import { useState, useEffect, useRef } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase import { MARKETPLACE_LISTINGS } from "@/data / listingData";
 import { GradientHeading } from "@/components / GradientHeading";
 import { ProductListingCard } from "@/components / ProductListingCard";
 import { toast } from "@/hooks / use - toast";
 export default function CategoryDetail () {
-
 
 const AUTO_SERVICE_TITLES = [
     "AI - Powered Customer Support",
@@ -214,5 +213,5 @@ function generateInnovationListing (index) {
             </div>) }
         </div>
       </div>
-      
+
     </>) }

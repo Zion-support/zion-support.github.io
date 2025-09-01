@@ -6,7 +6,6 @@ import { INNOVATIVE_NEW_SERVICES_2025 } from "../data / innovativeNewServices202
 import { SEOHead } from "../components / SEOHead";
 import { SPECIALIZED_IT_SERVICES_2025 } from "../data / specializedITServices2025";
 
-
 const InnovativeNewServices2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState ('all') ;
     const [selectedPriceRange, setSelectedPriceRange] = useState ('all') ;

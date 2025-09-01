@@ -5,7 +5,6 @@ import SEO from "@/components / SEO";
 export default function UltimateHomepage2025 () {
 import ultimateInnovativeServices2025 from "../../data / 2025 - ultimate - innovative - services - expansion";
 
-
     const [currentServiceIndex, setCurrentServiceIndex] = useState (0) ;
     const [isVisible, setIsVisible] = useState (false) ;
     useEffect ( () => {

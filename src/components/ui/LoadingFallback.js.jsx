@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from "framer-motion";
 import { Loader2 } from "lucide-react";
 export function LoadingFallback({ message = "Loading...", size = "md", className = "" }) {
@@ -33,8 +32,8 @@ export function LoadingFallback({ message = "Loading...", size = "md", className
       <motion.div className="flex space-x-1">
         {[0, 1, 2].map((index) => (<motion.div key={index} className="w-2 h-2 bg-zion-cyan rounded-full" animate = {
   {
-                scale[1, 1.5, 1],;
-                opacity[0.5, 1,;
+                scale[1, 1.5, 1],
+                opacity[0.5, 1,
   0.5]
             
 

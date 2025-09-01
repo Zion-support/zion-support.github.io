@@ -1,15 +1,14 @@
 import { Link  } from 'react - router - dom.ts';
 import React, { useState } from 'react.ts';
 export default ForgotPassword;}}}}}}}}}}
-import { Mail, 
+import { Mail,
 import { motion  } from 'framer - motion.ts';
 
-
-  ArrowLeft, 
-  CheckCircle, 
-  AlertCircle, 
-  Shield, 
-  Lock, 
+  ArrowLeft,
+  CheckCircle,
+  AlertCircle,
+  Shield,
+  Lock,
   Zap,
   Brain,
   Cloud,
@@ -97,12 +96,12 @@ import { motion  } from 'framer - motion.ts';
   const renderEmailStep = () => (<motion.div
       initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
       transition={{ duration: 0.6 }}
@@ -155,12 +154,12 @@ import { motion  } from 'framer - motion.ts';
   const renderVerificationStep = () => (<motion.div
       initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
       transition={{ duration: 0.6 }}
@@ -232,12 +231,12 @@ import { motion  } from 'framer - motion.ts';
   const renderResetStep = () => (<motion.div
       initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
       animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
       transition={{ duration: 0.6 }}
@@ -340,12 +339,12 @@ import { motion  } from 'framer - motion.ts';
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -361,12 +360,12 @@ import { motion  } from 'framer - motion.ts';
           {error && (<motion.div
               initial = {
   { opacity: 0,
-  y: 10 
+  y: 10
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               className="mb - 6 p - 4 bg - red - 500 / 20 border border - red - 500 / 30 rounded - lg flex items - center gap - 3 text - red - 400"
@@ -378,12 +377,12 @@ import { motion  } from 'framer - motion.ts';
           {success && (<motion.div
               initial = {
   { opacity: 0,
-  y: 10 
+  y: 10
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               className="mb - 6 p - 4 bg - green - 500 / 20 border border - green - 500 / 30 rounded - lg flex items - center gap - 3 text - green - 400"
@@ -403,17 +402,17 @@ import { motion  } from 'framer - motion.ts';
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
             className="mt - 8 space - y-4"
@@ -423,17 +422,17 @@ import { motion  } from 'framer - motion.ts';
                 key={feature.title}
                 initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                 animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: 0.6 + index * 0.1 
+  delay: 0.6 + index * 0.1
 
 }}
                 className="flex items - center gap - 3 text - slate - 300"
@@ -459,17 +458,17 @@ import { motion  } from 'framer - motion.ts';
             <motion.div
               initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
               animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4
 
 }}
               className="mb - 8"
@@ -490,17 +489,17 @@ import { motion  } from 'framer - motion.ts';
             <motion.h2
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.6 
+  delay: 0.6
 
 }}
               className="text - 4xl font - bold text - white mb - 6"
@@ -511,17 +510,17 @@ import { motion  } from 'framer - motion.ts';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.8 
+  delay: 0.8
 
 }}
               className="space - y-6 mb - 8"
@@ -531,17 +530,17 @@ import { motion  } from 'framer - motion.ts';
                   key={benefit.title}
                   initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }}
                   animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                   transition = {
   { duration: 0.6,
-  delay: 1.0 + index * 0.1 
+  delay: 1.0 + index * 0.1
 
 }}
                   className="flex items - center gap - 4 text - left"
@@ -563,17 +562,17 @@ import { motion  } from 'framer - motion.ts';
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 1.2 
+  delay: 1.2
 
 }}
               className="p - 6 bg - white / 10 border border - slate - 600 / 30 rounded - xl backdrop - blur - md"

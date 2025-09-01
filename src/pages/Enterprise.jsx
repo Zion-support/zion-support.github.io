@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import SEO from '@/components / SEO';
 import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default function Enterprise () {
 
-
     const features = [
         {
             icon: <Users className="h - 8 w - 8 text - zion - cyan"/>,

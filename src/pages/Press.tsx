@@ -3,7 +3,6 @@ export default React.memo (function Press () {
 import {
 import { motion } from 'framer - motion';
 
-
   Newspaper,
   Calendar,
   User,

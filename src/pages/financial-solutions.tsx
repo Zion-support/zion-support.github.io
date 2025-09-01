@@ -4,7 +4,6 @@ export default FinancialSolutions;
 import {
 import { motion } from 'framer - motion.ts';
 
-
   DollarSign,
   TrendingUp,
   Shield,

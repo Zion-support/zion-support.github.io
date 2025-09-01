@@ -5,7 +5,6 @@ import {
 import { INNOVATIVE_SERVICES } from '../data / servicesData';
 import { motion } from 'framer - motion';
 
-
   Brain,
   Shield,
   Zap,
@@ -243,17 +242,17 @@ import { motion } from 'framer - motion';
                 key={service.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="group bg - slate - 900 / 60 backdrop - blur border border - cyan - 400 / 15 hover:border - cyan - 400 / 40 transition - all duration - 300 rounded - 2xl p - 6 hover:shadow - 2xl hover:shadow - cyan - 400 / 10"
@@ -402,12 +401,12 @@ import { motion } from 'framer - motion';
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}

@@ -2,21 +2,20 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default ComprehensivePricingGuide2027;
 export default React.memo (function ComprehensivePricingGuide2027 () {
-import { 
+import {
 import { ADVANCED_AI_SERVICES_2025 } from '../data / advancedAIServices2025';
 import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data / innovativeBlockchainWeb3Services2025';
 import { INNOVATIVE_IT_INFRASTRUCTURE_2025 } from '../data / innovativeITInfrastructure2025';
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
-
-  Brain, 
-  GitFork, 
-  Shield, 
-  Users, 
-  BarChart3, 
-  Eye, 
-  CheckCircle, 
+  Brain,
+  GitFork,
+  Shield,
+  Users,
+  BarChart3,
+  Eye,
+  CheckCircle,
   ArrowRight,
   Play,
   Clock,
@@ -343,16 +342,16 @@ import { SEO } from '../components / SEO';
                 <DollarSign className="w - 4 h - 4 mr - 2" />
                 Comprehensive Pricing Guide 2027
               </div>
-              
+
               <h1 className="text - 5xl md:text - 7xl font - bold text - white mb - 6 bg - gradient - to - r from - zion - cyan via - zion - purple to - zion - cyan bg - clip - text text - transparent">
                 Transparent Pricing Guide
               </h1>
-              
+
               <p className="text - xl md:text - 2xl text - zion - slate - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">
-                Discover our competitive pricing for cutting - edge AI and technology services. 
+                Discover our competitive pricing for cutting - edge AI and technology services.
                 Compare our transparent pricing with market rates and see how much you can save.
               </p>
-              
+
               <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -389,7 +388,7 @@ import { SEO } from '../components / SEO';
                 Service Category Pricing
               </h2>
               <p className="text - xl text - zion - slate - 300 max - w-3xl mx - auto">
-                Explore our comprehensive pricing across all service categories with transparent, 
+                Explore our comprehensive pricing across all service categories with transparent,
                 competitive rates designed for businesses of all sizes.
               </p>
             </motion.div>
@@ -426,21 +425,21 @@ import { SEO } from '../components / SEO';
                             Most Popular
                           </span>
                         </div>) }
-                      
+
                       <div className="text - center mb - 6">
                         <h4 className="text - xl font - bold text - white mb - 3">{service.name}</h4>
                         <p className="text - zion - slate - 300 mb - 4">{service.description}</p>
                         <div className="text - 3xl font - bold text - zion - cyan mb - 2">{service.price}</div>
                         <div className="text - zion - slate - 400">{service.period}</div>
                       </div>
-                      
+
                       <ul className="space - y-3 mb - 6">
                         {service.features.map ( (feature, idx) => (<li key={idx} className="flex items - center text - zion - slate - 300">
                             <CheckCircle className="w - 4 h - 4 text - zion - cyan mr - 3 flex - shrink - 0" />
                             {feature}
                           </li>) ) }
                       </ul>
-                      
+
                       <Link to={service.link}>
                         <motion.button
                           whileHover={{ scale: 1.02 }}
@@ -486,8 +485,8 @@ import { SEO } from '../components / SEO';
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative bg - zion - slate - 800 / 50 backdrop - blur - sm border rounded - xl p - 8 ${
-                    pkg.popular 
-                      ? 'border - zion - cyan / 50 bg - zion - cyan / 5' 
+                    pkg.popular
+                      ? 'border - zion - cyan / 50 bg - zion - cyan / 5'
                       : 'border - zion - slate - 600 / 50'
                   }`}
                 >
@@ -496,7 +495,7 @@ import { SEO } from '../components / SEO';
                         Most Popular
                       </span>
                     </div>) }
-                  
+
                   <div className="text - center mb - 8">
                     <h3 className="text - 2xl font - bold text - white mb - 4">{pkg.name}</h3>
                     <div className="mb - 4">
@@ -505,14 +504,14 @@ import { SEO } from '../components / SEO';
                     </div>
                     <p className="text - zion - slate - 300">{pkg.description}</p>
                   </div>
-                  
+
                   <ul className="space - y-4 mb - 8">
                     {pkg.features.map ( (feature, idx) => (<li key={idx} className="flex items - center text - zion - slate - 300">
                         <CheckCircle className="w - 5 h - 5 text - zion - cyan mr - 3 flex - shrink - 0" />
                         {feature}
                       </li>) ) }
                   </ul>
-                  
+
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -587,10 +586,10 @@ import { SEO } from '../components / SEO';
                 Ready to Save on Premium Services?
               </h2>
               <p className="text - xl text - zion - slate - 300 mb - 8">
-                Join thousands of organizations that have already discovered the value and savings 
+                Join thousands of organizations that have already discovered the value and savings
                 of our transparent pricing model.
               </p>
-              
+
               <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}

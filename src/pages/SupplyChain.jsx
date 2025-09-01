@@ -3,7 +3,6 @@ export default SupplyChain;
 import {
 import { motion } from 'framer - motion';
 
-
   Truck,
   Zap,
   Shield,

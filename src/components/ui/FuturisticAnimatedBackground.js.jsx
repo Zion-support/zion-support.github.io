@@ -76,10 +76,10 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         }
         function getParticleColor() {
             const colors = {
-  cyberpunk['#00ffff', '#ff00ff', '#ffff00', '#ff0080', '#00ff80'],;
-                quantum['#4facfe', '#00f2fe', '#43e97b', '#38f9d7', '#fa709a'],;
-                neon['#ff006e', '#8338ec', '#3a86ff', '#06ffa5', '#ffbe0b'],;
-                matrix['#00ff41', '#00ff00', '#39ff14', '#7fff00',;
+  cyberpunk['#00ffff', '#ff00ff', '#ffff00', '#ff0080', '#00ff80'],
+                quantum['#4facfe', '#00f2fe', '#43e97b', '#38f9d7', '#fa709a'],
+                neon['#ff006e', '#8338ec', '#3a86ff', '#06ffa5', '#ffbe0b'],
+                matrix['#00ff41', '#00ff00', '#39ff14', '#7fff00',
   '#bfff00']
             
 
@@ -188,7 +188,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                     : variant === 'quantum'
                         ? 'linear-gradient(45deg, #000428 0%, #004e92 50%, #000428 100%)'
                         : 'linear-gradient(180deg, #000000 0%, #1a0033 50%,
-  #000000 100%)';
+  #000000 100%)'
         
 
 }}/>
@@ -206,8 +206,8 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30" animate = {
   {
             rotate: 360,
-            scale[1, 1.2, 1],;
-            opacity[0.3, 0.6,;
+            scale[1, 1.2, 1],
+            opacity[0.3, 0.6,
   0.3]
         
 
@@ -221,8 +221,8 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
 }}/>
         <motion.div className="absolute top-40 right-32 w-24 h-24 border border-pink-400/30 rounded-full" animate = {
   {
-            y[0, -20, 0],;
-            opacity[0.2, 0.5,;
+            y[0, -20, 0],
+            opacity[0.2, 0.5,
   0.2]
         
 
@@ -236,8 +236,8 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
 }}/>
         <motion.div className="absolute bottom-32 left-1/3 w-20 h-20 border border-yellow-400/30 transform rotate-45" animate = {
   {
-            rotate[0, 180, 360],;
-            scale[1, 1.1,;
+            rotate[0, 180, 360],
+            scale[1, 1.1,
   1]
         
 

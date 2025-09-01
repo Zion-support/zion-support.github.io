@@ -8,7 +8,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import SEO from '@/components / SEO';
 export default function ServicesComparisonPage () {
 
-
 // Service comparison data
 const SERVICE_COMPARISONS = [
     {

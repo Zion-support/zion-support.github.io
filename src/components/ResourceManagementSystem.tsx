@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-export const ResourceManagementSystem: React.FC < ResourceManagementSystemProps> = ({
 import {
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
-
+=======
+>>>>>>> main
 
   Users,
   Calendar,
@@ -42,13 +42,12 @@ import { motion, AnimatePresence } from 'framer - motion';
   Server,
   Database,
   Lock,
-  Unlock
- } from 'lucide - react';
+  Unlock'
+ } from 'lucide-react';
 
   utilization: number}
 
 interface ResourceStats {
-
   totalResources: number;
   availableResources: number;
   allocatedResources: number;
@@ -65,25 +64,27 @@ interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
   showCharts?: boolean;
   maxResources?: number}
 
-showStats: true,;
+export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
+
+showStats:  true,;
   showFilters = true,;
   showCharts = true,;
-  maxResources = 20;
-}) => {;
-  const [resources, setResources] = useState < Resource[]> ([]) ;
-  const [filteredResources, setFilteredResources] = useState < Resource[]> ([]) ;
-  const [selectedType, setSelectedType] = useState < string> ('all') ;
-  const [selectedStatus, setSelectedStatus] = useState < string> ('all') ;
-  const [selectedPriority, setSelectedPriority] = useState < string> ('all') ;
-  const [searchQuery, setSearchQuery] = useState ('') ;
-  const [viewMode, setViewMode] = useState < any> ('grid') ;
-  const [showResourceForm, setShowResourceForm] = useState (false) ;
-  const [editingResource, setEditingResource] = useState < any> (null) ;
+  maxResources = 20}) => {;
+  const [resources, setResources] = useState<Resource[]>([]);
+  const [filteredResources, setFilteredResources] = useState<Resource[]>([]);
+  const [selectedType, setSelectedType] = useState<string>('all');
+  const [selectedStatus, setSelectedStatus] = useState<string>('all');
+  const [selectedPriority, setSelectedPriority] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [showResourceForm, setShowResourceForm] = useState(false);
+  const [editingResource, setEditingResource] = useState<any>(null);
 
   // Sample resource data
   useEffect ( () => {
     const sampleResources: Resource[] = [
       {
+
         id: '1',
         name: 'AI Development Team',
         type: 'human',
@@ -95,13 +96,14 @@ showStats: true,;
         location: 'San Francisco',
         department: 'Engineering',
         cost: 250000,
-        lastUpdated: '2024 - 01 - 15',
-        tags['AI', 'Machine Learning', 'Development'],;
+        lastUpdated: '2024-01-15',
+        tags['AI',Machine Learning',Development'],;
         description: 'Expert team specializing in AI and machine learning development',
         manager: 'Sarah Johnson',
         utilization: 80
       },
       {
+
         id: '2',
         name: 'Cloud Infrastructure Cluster',
         type: 'infrastructure',
@@ -110,16 +112,17 @@ showStats: true,;
         priority: 'critical',
         capacity: 1000,
         currentUsage: 750,
-        location: 'AWS US - East - 1',
+        location: 'AWS US-East-1',
         department: 'IT Operations',
         cost: 50000,
-        lastUpdated: '2024 - 01 - 14',
-        tags['Cloud', 'AWS', 'Infrastructure'],;
-        description: 'High - performance cloud computing cluster for enterprise applications',
+        lastUpdated: '2024-01-14',
+        tags['Cloud',AWS',Infrastructure'],;
+        description: 'High-performance cloud computing cluster for enterprise applications',
         manager: 'Michael Chen',
         utilization: 75
       },
       {
+
         id: '3',
         name: 'Cybersecurity Suite',
         type: 'software',
@@ -131,13 +134,14 @@ showStats: true,;
         location: 'Corporate Network',
         department: 'Security',
         cost: 75000,
-        lastUpdated: '2024 - 01 - 13',
-        tags['Security', 'Threat Detection', 'Monitoring'],;
+        lastUpdated: '2024-01-13',
+        tags['Security',Threat Detection',Monitoring'],;
         description: 'Comprehensive cybersecurity monitoring and threat detection system',
         manager: 'David Kim',
         utilization: 85
       },
       {
+
         id: '4',
         name: 'Data Center Facility',
         type: 'facility',
@@ -149,13 +153,14 @@ showStats: true,;
         location: 'Austin, TX',
         department: 'Facilities',
         cost: 2000000,
-        lastUpdated: '2024 - 01 - 12',
-        tags['Data Center', 'Facility', 'Infrastructure'],;
+        lastUpdated: '2024-01-12',
+        tags['Data Center',Facility',Infrastructure'],;
         description: 'Primary data center facility with redundant power and cooling',
         manager: 'Lisa Thompson',
         utilization: 0
       },
       {
+
         id: '5',
         name: 'DevOps Tools Suite',
         type: 'software',
@@ -167,8 +172,8 @@ showStats: true,;
         location: 'Cloud Platform',
         department: 'Engineering',
         cost: 30000,
-        lastUpdated: '2024 - 01 - 11',
-        tags['DevOps', 'CI / CD', 'Automation'],;
+        lastUpdated: '2024-01-11',
+        tags['DevOps',CI/CD',Automation'],;
         description: 'Complete DevOps toolchain for continuous integration and deployment',
         manager: 'Alex Wong',
         utilization: 90
@@ -179,30 +184,35 @@ showStats: true,;
     setFilteredResources (sampleResources) }, []) ;
 
   // Filter resources
-  useEffect ( () => {
+  useEffect(() => {
     let filtered = resources;
 
     if (selectedType !== 'all') {
-      filtered = filtered.filter (r => r.type === selectedType) }
+
+      filtered = filtered.filter(r => r.type === selectedType)}
 
     if (selectedStatus !== 'all') {
-      filtered = filtered.filter (r => r.status === selectedStatus) }
+
+      filtered = filtered.filter(r => r.status === selectedStatus)}
 
     if (selectedPriority !== 'all') {
-      filtered = filtered.filter (r => r.priority === selectedPriority) }
+
+      filtered = filtered.filter(r => r.priority === selectedPriority)}
 
     if (searchQuery) {
-      filtered = filtered.filter (r =>
-        r.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
-        r.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
-        r.department.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
-        r.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ) };
-      filtered = filtered.filter (r => ;
-        r.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
-        r.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
-        r.department.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
-        r.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ;) ;
-    }
+
+      filtered = filtered.filter(r =>
+        r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      )};
+      filtered = filtered.filter(r => ;
+        r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      )}
 
     setFilteredResources (filtered.slice (0, maxResources) ) }, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]) ;
 

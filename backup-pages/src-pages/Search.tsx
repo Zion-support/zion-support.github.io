@@ -1,0 +1,313 @@
+import {
+
+  Search as SearchIcon,
+  Filter,
+  Server,
+  Users,  Building,
+  Star,
+  MapPin,
+  Clock,
+  DollarSign,
+  ArrowUpDown,
+  Calendar,
+  Eye,
+  Bookmark,
+  Share2} from 'lucide-react';
+const Search: React.FC = () => {
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('relevance');
+  const [results, setResults] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
+
+  
+  
+  
+  useEffect ( () => {
+    if (searchQuery) {
+
+      performSearch()}
+  }, [searchQuery, activeCategory, sortBy]) ;
+
+  const performSearch = async () => {
+    setLoading (true) ;    // Simulate API call delay
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    // Filter results based on search query and category
+    let filteredResults = mockResults.filter(result => {
+
+      
+      
+      return matchesQuery && matchesCategory}) ;
+    // Sort results
+    filteredResults.sort((a, b) => {
+
+      switch (sortBy) {
+
+        case 'newest':
+          return new Date(b.date).getTime() - new Date(a.date).getTime();
+        case 'rating':
+          return b.rating - a.rating;
+        case 'price-low':
+          return ('
+            parseFloat(a.price.replace(/[^0-9.]/g,)) -'
+            parseFloat(b.price.replace(/[^0-9.]/g,))
+          );
+        case 'price-high':
+          return ('
+            parseFloat(b.price.replace(/[^0-9.]/g,)) -'
+            parseFloat(a.price.replace(/[^0-9.]/g,))
+          );
+        default:
+          return 0}
+    }) ;
+
+    setResults (filteredResults) ;
+    setLoading (false) };
+
+  
+    if (searchQuery.trim()) {
+
+      performSearch()}
+  };
+
+  
+      case 'talent':"
+        return <Users className="w-5 h-5 text-purple-400"  />;
+      case 'equipment':"
+        return <Building className="w-5 h-5 text-orange-400"  />;
+      default:"
+        return <SearchIcon className="w-5 h-5 text-gray-400"  />}
+  };
+
+  
+      case 'talent':'
+        return 'Talent';
+      case 'equipment':'
+        return 'Equipment';
+      default:'
+        return 'Unknown'}  };
+
+  return()
+    <>
+      <SEO"
+        title="Search - Zion Tech Group"'"
+        description="Search for services, talent, equipment, and companies across Zion Tech Group's comprehensive technology marketplace."
+        keywords="search, services, talent, equipment, companies, technology marketplace, Zion Tech Group"
+      />
+"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        {/* Search Header */}"
+        <section className="pt-32 pb-16 px-4">"
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}"
+              className="text-center mb-8"
+            >"
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
+                Search Zion Tech Group
+              </h1>"
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Find the perfect services, talent, equipment, and companies for
+                your technology needs.
+              </p>
+            </motion.div>
+
+            {/* Search Form */}"
+            <form onSubmit={handleSearch} className="max-w-4xl mx-auto">"
+              <div className="relative">"
+                <SearchIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6"  />
+                <input"                  type="text"
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}"
+                  placeholder="Search for services, talent, equipment, companies..."
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+                />
+                <button"
+                  type="submit"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-md font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        {/* Filters and Results */}"
+        <section className="py-8 px-4">"
+          <div className="max-w-7xl mx-auto">"
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+              {/* Filters Sidebar */}"
+              <div className="lg:col-span-1">"
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">"
+                  <h3 className="text-white font-semibold text-lg mb-4 flex items-center gap-2">"
+                    <Filter className="w-5 h-5"  />                    Filters
+                  </h3>
+
+                  {/* Categories */}"
+                  <div className="mb-6">"
+                    <h4 className="text-white font-medium mb-3">Categories</h4>"
+                    <div className="space-y-2">
+                      {categories.map(category => (
+                        <button
+                          key={category.id}
+                          onClick={() => setActiveCategory(category.id)}
+                          className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
+
+                            activeCategory === category.id'
+                              ? 'bg-blue-500 text-white''
+                              : 'text-gray-300 hover:bg-slate-700/50'`
+                          }`}
+                        >
+                          {category.name}"
+                          <span className="float-right text-xs opacity-75">
+                            ({category.count})
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Sort Options */}
+                  <div>"
+                    <h4 className="text-white font-medium mb-3">Sort By</h4>"
+                    <div className="space-y-2">
+                      {sortOptions.map(option => (
+                        <button
+                          key={option.id}
+                          onClick={() => setSortBy(option.id)}`
+                          className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
+
+                            sortBy === option.id'
+                              ? 'bg-purple-500 text-white''
+                              : 'text-gray-300 hover:bg-slate-700/50'`
+                          }`}
+                        >
+                          {option.name}
+                        </button>) ) }
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Results */}"
+              <div className="lg:col-span-3">
+                {loading ? ("
+                  <div className="text-center py-12">"
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>"
+                    <p className="text-gray-400">Searching...</p>
+                  </div>
+                ) : results.length > 0 ? ("
+                  <div className="space-y-6">
+                    {results.map((result, index) => (
+                      <motion.div
+                        key={result.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}"
+                        className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
+                      >"
+                        <div className="flex items-start justify-between mb-4">"
+                          <div className="flex items-center gap-3">
+                            {getTypeIcon(result.type)}
+                            <div>"
+                              <span className="inline-block px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
+                                {getTypeLabel(result.type)}
+                              </span>
+                              {result.featured && ("
+                                <span className="inline-block px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded ml-2">
+                                  Featured
+                                </span>) }
+                            </div>
+                          </div>"
+                          <div className="flex items-center gap-2">"
+                            <Star className="w-4 h-4 text-yellow-400 fill-current"  />"
+                            <span className="text-white text-sm">
+                              {result.rating}
+                            </span>"
+                            <span className="text-gray-400 text-sm">
+                              ({result.reviews})
+                            </span>
+                          </div>
+                        </div>
+"
+                        <h3 className="text-white font-semibold text-xl mb-2">
+                          {result.title}
+                        </h3>"
+                        <p className="text-gray-300 mb-4">
+                          {result.description}
+                        </p>
+"
+                        <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">"
+                          <div className="flex items-center gap-1">"
+                            <MapPin className="w-4 h-4"  />
+                            {result.location}
+                          </div>"
+                          <div className="flex items-center gap-1">"
+                            <DollarSign className="w-4 h-4"  />
+                            {result.price}
+                          </div>"
+                          <div className="flex items-center gap-1">"
+                            <Calendar className="w-4 h-4"  />                            {new Date(result.date).toLocaleDateString()}
+                          </div>
+                        </div>
+"
+                        <div className="flex items-center justify-between">"
+                          <div className="flex flex-wrap gap-2">
+                            {result.tags
+                              .slice(0, 3)
+                              .map((tag: string, idx: number) => (
+                                <span
+                                  key={idx}"
+                                  className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                          </div>"
+                          <div className="flex items-center gap-2">"
+                            <button className="p-2 text-gray-400 hover:text-white transition-colors">"
+                              <Bookmark className="w-4 h-4"  />
+                            </button>"
+                            <button className="p-2 text-gray-400 hover:text-white transition-colors">"                              <Share2 className="w-4 h-4" />
+                            </button>"
+                            <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+                              View Details
+                            </button>
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                ) : searchQuery ? ("
+                  <div className="text-center py-12">"
+                    <SearchIcon className="w-16 h-16 text-gray-400 mx-auto mb-4"  />"
+                    <h3 className="text-white text-xl font-semibold mb-2">
+                      No results found
+                    </h3>"
+                    <p className="text-gray-400">
+                      Try adjusting your search terms or filters.
+                    </p>
+                  </div>
+                ) : ("
+                  <div className="text-center py-12">"
+                    <SearchIcon className="w-16 h-16 text-gray-400 mx-auto mb-4"  />"
+                    <h3 className="text-white text-xl font-semibold mb-2">
+                      Start your search
+                    </h3>"
+                    <p className="text-gray-400">
+                      Enter a search term to find services, talent, equipment,
+                      and companies.
+                    </p>                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>) };
+export default Search;
+'"`

@@ -4,7 +4,6 @@ export default React.memo (function Leadership () {
 import {
 import SEO from '../components / SEO';
 
-
   Users,
   Award,
   Star,
@@ -116,7 +115,7 @@ import SEO from '../components / SEO';
   ];
 
   return (<div className = "min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="Leadership - Zion Tech Group"
         description="Meet the visionary leaders driving innovation at Zion Tech Group. Our experienced team is committed to transforming businesses through cutting - edge AI and technology solutions."
       />

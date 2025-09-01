@@ -3,7 +3,6 @@ export default InnovativeServices;}}
 import {
 import { motion } from 'framer - motion';
 
-
   Brain,
   Atom,
   Lock,
@@ -158,12 +157,12 @@ const InnovativeServices: React.FC = () : JSX.Element => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -203,17 +202,17 @@ const InnovativeServices: React.FC = () : JSX.Element => {
                 key={stat.label}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="text - center"
@@ -234,12 +233,12 @@ const InnovativeServices: React.FC = () : JSX.Element => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -259,17 +258,17 @@ const InnovativeServices: React.FC = () : JSX.Element => {
                 key={innovation.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="group relative"
@@ -326,12 +325,12 @@ const InnovativeServices: React.FC = () : JSX.Element => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}

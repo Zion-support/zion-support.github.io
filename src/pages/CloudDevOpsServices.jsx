@@ -2,7 +2,6 @@ import { Search, Zap, Cloud, Shield, Server, Code, GitFork, Phone, Mail, MapPin 
 import React, { useState } from 'react';
 export default CloudDevOpsServices;
 
-
 const CloudDevOpsServices = () => {
     const [searchTerm, setSearchTerm] = useState ('') ;
     const [selectedCategory, setSelectedCategory] = useState ('all') ;

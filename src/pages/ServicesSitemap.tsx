@@ -4,7 +4,6 @@ export default ServicesSitemap;
 import { motion   } from 'framer - motion.ts';
 import { SEO   } from '../components / SEO';
 
-
 const ServicesSitemap: React.FC = () : JSX.Element => {
   const allServices = [
     {
@@ -166,7 +165,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
         keywords="Zion Tech Group services, AI services, cloud services, data analytics, cybersecurity, micro SAAS, business solutions, service directory"
         canonical="https://ziontechgroup.com / services - sitemap"
       />
-      
+
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900">
         {/* Hero Section */}
         <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">
@@ -174,12 +173,12 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -188,17 +187,17 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
                 Complete Services Directory
               </h1>
               <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">
-                Discover our comprehensive portfolio of AI - powered micro SAAS, cloud infrastructure, 
+                Discover our comprehensive portfolio of AI - powered micro SAAS, cloud infrastructure,
                 data analytics, security, and specialized business solutions.
               </p>
               <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-                <Link 
+                <Link
                   to="/ai - services - showcase"
                   className="bg - gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700 text - white font - semibold py - 3 px - 8 rounded - lg transition - all duration - 300 transform hover:scale - 105"
                 >
                   Explore AI Services
                 </Link>
-                <Link 
+                <Link
                   to="/contact"
                   className="border - 2 border - white text - white font - semibold py - 3 px - 8 rounded - lg hover:bg - white hover:text - gray - 900 transition - all duration - 300"
                 >
@@ -215,12 +214,12 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -240,17 +239,17 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
                   key={link.title}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   viewport={{ once: true }}
@@ -277,12 +276,12 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -302,17 +301,17 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
                   key={category.category}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.6,
-  delay: categoryIndex * 0.1 
+  delay: categoryIndex * 0.1
 
 }}
                   viewport={{ once: true }}
@@ -332,17 +331,17 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
                         key={service.title}
                         initial = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }}
                         whileInView = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
                         transition = {
   { duration: 0.5,
-  delay: serviceIndex * 0.1 
+  delay: serviceIndex * 0.1
 
 }}
                         viewport={{ once: true }}
@@ -356,11 +355,11 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
                             {service.pricing}
                           </span>
                         </div>
-                        
+
                         <p className="text - gray - 300 mb - 4 leading - relaxed">
                           {service.description}
                         </p>
-                        
+
                         <div className="mb - 4">
                           <h5 className="text - sm font - semibold text - white mb - 2">Key Features:</h5>
                           <ul className="space - y-1">
@@ -370,7 +369,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
                               </li>) ) }
                           </ul>
                         </div>
-                        
+
                         <Link
                           to={service.url}
                           className="inline - block w - full bg - gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700 text - white font - semibold py - 3 px - 6 rounded - lg transition - all duration - 300 text - center"
@@ -390,12 +389,12 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -407,7 +406,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
               <p className="text - xl text - gray - 300 mb - 8">
                 Our experts are here to help you find the perfect solution for your business needs.
               </p>
-              
+
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 8">
                 <div className="bg - white / 10 backdrop - blur - sm rounded - lg p - 6 border border - white / 20">
                   <h3 className="text - xl font - semibold text - white mb - 3">Contact Information</h3>
@@ -417,7 +416,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
                     <p>📍 <span className="text - white">364 E Main St STE 1008, Middletown DE 19709</span></p>
                   </div>
                 </div>
-                
+
                 <div className="bg - white / 10 backdrop - blur - sm rounded - lg p - 6 border border - white / 20">
                   <h3 className="text - xl font - semibold text - white mb - 3">Quick Actions</h3>
                   <div className="space - y-3">
@@ -433,7 +432,7 @@ const ServicesSitemap: React.FC = () : JSX.Element => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="text - gray - 300">
                 <p > Visit our website: <a href="https://ziontechgroup.com" className="text - blue - 400 hover:underline">https://ziontechgroup.com</a></p>
               </div>

@@ -5,7 +5,6 @@ export default React.memo (function InnovativeServicesShowcase2028 () {
 import {
 import { motion } from 'framer - motion';
 
-
   Brain,
   Shield,
   Cloud,

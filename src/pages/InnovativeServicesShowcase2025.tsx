@@ -2,10 +2,9 @@ import { Link } from 'react - router - dom';
 import React, { useState, useMemo } from 'react';
 import { SEO } from '@/components / SEO';
 export default React.memo (function InnovativeServicesShowcase2025 () {
-import { 
+import {
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
-
 
   Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
   ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check
@@ -217,14 +216,14 @@ import { SEO } from '../components / SEO';
   const categories = [...new Set (services.map (service => service.category) ) ];
 
   return (<div className="min - h-screen bg - white">
-      <SEO 
+      <SEO
         title="Innovative AI Services Showcase 2025 - Zion Tech Group"
         description="Discover our cutting - edge AI - powered micro SAAS services and solutions. From workflow orchestration to quantum machine learning, transform your business with intelligent technology."
       />
-      
+
       <section className="bg - gradient - to - br from - zion - blue - dark via - zion - blue to - zion - slate - dark py - 20 text - center">
         <div className="max - w-5xl mx - auto px - 6">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -232,7 +231,7 @@ import { SEO } from '../components / SEO';
           >
             <Brain className="w - 4 h - 4 mr - 2" /> Innovative AI Services 2025
           </motion.div>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -240,7 +239,7 @@ import { SEO } from '../components / SEO';
           >
             Innovative AI Services Showcase 2025
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -279,10 +278,10 @@ import { SEO } from '../components / SEO';
                   </span>
                 </div>
               </div>
-              
+
               <h3 className="text - xl font - bold text - zion - slate - dark mb - 3">{service.title}</h3>
               <p className="text - zion - slate - light mb - 4">{service.description}</p>
-              
+
               <div className="mb - 4">
                 <div className="text - 2xl font - bold text - zion - cyan mb - 2">{service.price}</div>
                 <div className="text - sm text - zion - slate - light">Starting price</div>
@@ -309,8 +308,8 @@ import { SEO } from '../components / SEO';
               </div>
 
               <div className="flex flex - col gap - 2">
-                <a 
-                  href={service.path} 
+                <a
+                  href={service.path}
                   className="w - full px - 4 py - 3 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan - dark transition - colors text - center font - medium inline - flex items - center justify - center"
                 >
                   Learn More < ArrowRight className="w - 4 h - 4 ml - 2" />

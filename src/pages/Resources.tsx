@@ -1,8 +1,7 @@
 import { Link } from 'react - router - dom';
-import React from 'react';
+import React, { useState } from 'react';
 import {
 import { motion } from 'framer - motion';
-
 
   BookOpen,
   FileText,
@@ -288,12 +287,12 @@ const Resources: React.FC = () : JSX.Element => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -322,7 +321,7 @@ const Resources: React.FC = () : JSX.Element => {;
             </div>
           </motion.div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute inset - 0 overflow - hidden pointer - events - none">
           <div className="absolute top - 20 left - 10 w - 72 h - 72 bg - cyan - 500 / 10 rounded - full blur - 3xl"></div>
@@ -383,12 +382,12 @@ const Resources: React.FC = () : JSX.Element => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -405,17 +404,17 @@ const Resources: React.FC = () : JSX.Element => {;
                     key = {resource.id}
                     initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                     animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                     className="group"
@@ -484,12 +483,12 @@ const Resources: React.FC = () : JSX.Element => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -509,17 +508,17 @@ const Resources: React.FC = () : JSX.Element => {;
                 key={category.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 viewport={{ once: true }}
@@ -535,7 +534,7 @@ const Resources: React.FC = () : JSX.Element => {;
                   <p className="text - gray - 300 mb - 6 leading - relaxed">
                     {category.description}
                   </p>
-                  
+
                   <div className="space - y-3 mb - 6">
                     {category.items.slice (0, 2) .map ( (item, idx) => (<div key={idx} className="flex items - center justify - between p - 3 bg - white / 5 rounded - lg">
                         <div className="flex - 1">
@@ -580,12 +579,12 @@ const Resources: React.FC = () : JSX.Element => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -607,17 +606,17 @@ const Resources: React.FC = () : JSX.Element => {;
                 id={category.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.05 
+  delay: index * 0.05
 
 }}
                 viewport={{ once: true }}
@@ -632,7 +631,7 @@ const Resources: React.FC = () : JSX.Element => {;
                 <p className="text - gray - 400 mb - 4 text - sm leading - relaxed">
                   {category.description}
                 </p>
-                
+
                 <div className="space - y-2 mb - 4">
                   {category.items.slice (0, 3) .map ( (item, idx) => (<div key={idx} className="flex items - center justify - between text - sm">
                       <span className="text - gray - 300">{item.title}</span>
@@ -641,7 +640,7 @@ const Resources: React.FC = () : JSX.Element => {;
                       </span>
                     </div>) ) }
                 </div>
-                
+
                 <div className="flex items - center justify - between">
                   <span className="text - xs text - gray - 500">
                     {category.items.length} resources
@@ -659,12 +658,12 @@ const Resources: React.FC = () : JSX.Element => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -685,17 +684,17 @@ const Resources: React.FC = () : JSX.Element => {;
                 id={resource.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 viewport={{ once: true }}
@@ -704,15 +703,15 @@ const Resources: React.FC = () : JSX.Element => {;
                 <div className={`w - 16 h - 16 bg - gradient - to - br ${resource.color} rounded - xl flex items - center justify - center mx - auto mb - 4 group - hover:scale - 110 transition - transform duration - 300`}>
                   <resource.icon className="w - 8 h - 8 text - white" />
                 </div>
-                
+
                 <h3 className="text - lg font - semibold text - white mb - 3 group - hover:text - cyan - 400 transition - colors">
                   {resource.title}
                 </h3>
-                
+
                 <p className="text - gray - 400 mb - 4 text - sm leading - relaxed">
                   {resource.description}
                 </p>
-                
+
                 <Link
                   to={resource.href}
                   className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300 transition - colors font - medium text - sm"
@@ -730,12 +729,12 @@ const Resources: React.FC = () : JSX.Element => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -747,10 +746,10 @@ const Resources: React.FC = () : JSX.Element => {;
                 Need More Resources?
               </h2>
               <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">
-                Can't find what you're looking for? Our team is here to help you access 
+                Can't find what you're looking for? Our team is here to help you access
                 the right resources and support for your needs.
               </p>
-              
+
               {/* Contact Information */}
               <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 8">
                 <div className="text - center">
@@ -762,7 +761,7 @@ const Resources: React.FC = () : JSX.Element => {;
                     {contactInfo.phone}
                   </a>
                 </div>
-                
+
                 <div className="text - center">
                   <div className="w - 12 h - 12 bg - gradient - to - br from - purple - 500 to - pink - 500 rounded - lg flex items - center justify - center mx - auto mb - 4">
                     <Mail className="w - 6 h - 6 text - white" />
@@ -772,7 +771,7 @@ const Resources: React.FC = () : JSX.Element => {;
                     {contactInfo.email}
                   </a>
                 </div>
-                
+
                 <div className="text - center">
                   <div className="w - 12 h - 12 bg - gradient - to - br from - green - 500 to - teal - 500 rounded - lg flex items - center justify - center mx - auto mb - 4">
                     <MapPin className="w - 6 h - 6 text - white" />
@@ -783,7 +782,7 @@ const Resources: React.FC = () : JSX.Element => {;
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex flex - wrap justify - center gap - 4">
                 <Link
                   to="/contact"

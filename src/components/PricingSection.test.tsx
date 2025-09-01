@@ -1,16 +1,10 @@
-import { render, screen } from '@testing - library / react';
-import React from 'react';
-import PricingSection from './PricingSection';
-
 
 describe ('PricingSection', () => {
   it ('renders without crashing', () => {
-    render (<PricingSection />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
-  }) ;
+    render (<PricingSection  />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
   it ('displays expected content', () => {
-    render (<PricingSection />) ;
+    render (<PricingSection  />) ;
     // Add specific test assertions based on component content
-  }) ;
-}) ;
+  }) }) ;

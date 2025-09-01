@@ -1,6 +1,6 @@
 import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap } from "lucide - react";
 import {Link} from 'react - router - dom';
-import React from 'react';
+import React, { useState } from 'react';
 import {Badge} from '@/components / ui / badge';
 import {Button} from '@/components / ui / button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components / ui / card';
@@ -9,13 +9,11 @@ import {Header} from '@/components / Header';
 import {SEO} from '@/components / SEO';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
 export default function MicroSAASServicesPage () {
-export default function MicroSaasServicesPage () { /* empty */ }
 import { Badge } from "../ui / badge";
 import { Button } from "../ui / button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui / card";
 import {MICRO_SAAS_SERVICES,
 import {Star,
-
 
     const microSAASServices = [
         {
@@ -868,7 +866,7 @@ import {Star,
             Micro SAAS Services
           </h1>
           <p className="text - xl md:text - 2xl text - zion - slate - light mb - 8 max - w-4xl mx - auto">
-            Powerful, affordable software solutions designed for modern businesses. From CRM to project management, 
+            Powerful, affordable software solutions designed for modern businesses. From CRM to project management,
             our micro SAAS services help you grow without breaking the bank.
           </p>
           <div className="flex flex - wrap justify - center gap - 4">
@@ -994,7 +992,7 @@ import {Star,
             Ready to Transform Your Business with Micro SAAS?
           </h2>
           <p className="text - xl text - zion - slate - light mb - 8 max - w-3xl mx - auto">
-            Start with a free trial and see how our micro SAAS solutions can streamline your operations, 
+            Start with a free trial and see how our micro SAAS solutions can streamline your operations,
             improve productivity, and drive growth. No long - term contracts, cancel time.
           </p>
           <div className="flex flex - wrap justify - center gap - 4">

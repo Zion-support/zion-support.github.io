@@ -1,9 +1,8 @@
 import React from 'react';
 import SEO from '@/components / SEO';
 
-
 const MicroSAASServicesPage = () => {
-  return (<>
+  return (<React.Fragment>
       <SEO
         title="Micro SAAS Services - Zion Tech Group"
         description="Specialized micro SAAS solutions for niche business needs and targeted industry solutions."

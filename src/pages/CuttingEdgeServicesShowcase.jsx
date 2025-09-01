@@ -3,7 +3,6 @@ export default CuttingEdgeServicesShowcase;
 import { cuttingEdgeInnovations2025 } from "../data / 2025 - cutting - edge - innovations";
 import { specializedIndustrySolutions2025 } from "../data / 2025 - specialized - industry - solutions";
 
-
 const CuttingEdgeServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState ('All') ;
     const [selectedIndustry, setSelectedIndustry] = useState ('All') ;
@@ -20,6 +19,31 @@ const CuttingEdgeServicesShowcase = () => {
         return categoryMatch && industryMatch && searchMatch}) ;
     const formatPrice = (price, model) => {
         if (model === 'percentage of revenue') {
+<<<<<<< HEAD
+            return `${price}% of revenue`;
+
+        else if (model === 'per device per day') {
+            return `$${price.toFixed(2)}/device/day`;
+
+        else if (model === 'per kWh managed') {
+            return `$${price.toFixed(3)}/kWh`;
+
+        else if (model === 'per acre') {
+            return `$${price.toFixed(2)}/acre/month`;
+
+        else if (model === 'per inference') {
+            return `$${price.toFixed(3)}/inference`;
+
+        else if (model === 'monthly per student') {
+            return `$${price}/student/month`;
+
+        else if (model === 'monthly per attorney') {
+            return `$${price}/attorney/month`;
+
+        else {
+            return `$${price}/${model}`;
+
+=======
             return `${price}% of revenue`}
         else if (model === 'per device per day') {
             return `$${price.toFixed (2) }/device / day`}
@@ -35,6 +59,7 @@ const CuttingEdgeServicesShowcase = () => {
             return `$${price}/attorney / month`}
         else {
             return `$${price}/${model}`}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 pt - 32">
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20">

@@ -1,7 +1,6 @@
-import { Link } from 'react - router - dom';
+import { Link } from 'react-router-dom';
 import React from 'react';
 export default Sitemap;
-
 
 const Sitemap = () => {
   const sitemapSections = [

@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const summarizeButton = document.getElementById('ai-summarize-button');
     if (summarizeButton) {
         summarizeButton.addEventListener('click', function() {
+            const lessonTitleElement = document.querySelector('.lesson-content h2');
             const lessonTitle = lessonTitleElement ? lessonTitleElement.textContent : 'this lesson';
 
             // Get or create the summary output area

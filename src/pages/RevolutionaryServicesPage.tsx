@@ -6,7 +6,6 @@ import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data / comprehensivePricing
 import { motion } from 'framer - motion.ts';
 import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data / revolutionaryMicroSaasServices2025';
 
-
   Brain,
   Shield,
   Cpu,

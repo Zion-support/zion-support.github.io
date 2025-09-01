@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 export default GetStarted;
 import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock const GetStarted = () => {
 
-
     const [currentStep, setCurrentStep] = useState (1) ;
     const services = [
         {

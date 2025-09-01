@@ -1,6 +1,6 @@
 import { useNavigate } from "react - router - dom";
 import { useState } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components / ui / button";
 import { ProfileSetup } from "@/components / onboarding / ProfileSetup";
 import { Steps, Step } from "@/components / ui / steps";
@@ -9,7 +9,6 @@ import { toast } from "@/hooks / use - toast";
 import { useAuth } from "@/hooks / useAuth";
 import { UserTypeSelection } from "@/components / onboarding / UserTypeSelection";
 export default function Onboarding () {
-
 
     const { user, updateProfile, isLoading } = useAuth () ;
     const [currentStep, setCurrentStep] = useState (0) ;
@@ -127,5 +126,5 @@ export default function Onboarding () {
           </div>
         </div>
       </div>
-      
+
     </>) }

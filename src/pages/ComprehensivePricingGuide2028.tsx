@@ -4,7 +4,6 @@ export default ComprehensivePricingGuide2028;
 import {
 import { motion } from 'framer - motion';
 
-
   Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
   Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
@@ -342,17 +341,17 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
                 key={`${service.type}-${service.name}`}
                 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="group relative bg - zion - slate / 30 backdrop - blur - sm border border - zion - slate / 40 rounded - 2xl p - 8 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - zion - cyan / 20"

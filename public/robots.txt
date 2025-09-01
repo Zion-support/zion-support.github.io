@@ -1,34 +1,22 @@
 User-agent: *
 Allow: /
 
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
-Disallow: /server/
-Disallow: /temp_working/
-Disallow: /broken_files_backup/
-Disallow: /automation/
-Disallow: /scripts/
-Disallow: /hooks/
-Disallow: /utils/
-Disallow: /types/
-Disallow: /lib/
-Disallow: /context/
-Disallow: /hoc/
-Disallow: /mobile/
-Disallow: /stories/
-Disallow: /__tests__/
-Disallow: /tests/
-Disallow: /tests.disabled/
-Disallow: /components.disabled/
-Disallow: /src.broken/
-Disallow: /styles_backup/
-Disallow: /zion-os.disabled/
+Disallow: /_next/
+Disallow: /static/
 
+# Allow important pages
+Allow: /services/
+Allow: /about/
+Allow: /contact/
+Allow: /blog/
+Allow: /resources/
 
-# Crawl-delay
+# Crawl delay
 Crawl-delay: 1
-
-
-

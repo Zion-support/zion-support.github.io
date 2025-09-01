@@ -3,7 +3,6 @@ export default SystemStatus;
 import {
 import { motion } from 'framer - motion';
 
-
   CheckCircle,
   AlertTriangle,
   XCircle,

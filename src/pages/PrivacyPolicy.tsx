@@ -3,7 +3,6 @@ export default PrivacyPolicy;}
 import {
 import { motion } from 'framer - motion';
 
-
   Shield,
   Lock,
   Eye,
@@ -21,7 +20,7 @@ import { motion } from 'framer - motion';
 
 const PrivacyPolicy = () => {;
   const lastUpdated = '2025 - 01 - 15';
-  
+
   const sections = [
     {
       id: 'overview',
@@ -171,12 +170,12 @@ const PrivacyPolicy = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ duration: 0.6 }}
@@ -609,24 +608,24 @@ const PrivacyPolicy = () => {;
                 <Eye className="w - 8 h - 8 text - zion - cyan" />
                 How We Use Your Information
               </h2>
-              
+
               <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4">
                 {sections.map ( (section, index) => (<motion.a
                     key={section.id}
                     href={`#${section.id}`}
                     initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                     animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     transition = {
   { duration: 0.6,
-  delay: 0.1 * index 
+  delay: 0.1 * index
 
 }}
                     className="flex items - center gap - 3 p - 4 bg - slate - 50 rounded - lg hover:bg - slate - 100 transition - colors border border - slate - 200 hover:border - slate - 300"
@@ -648,17 +647,17 @@ const PrivacyPolicy = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
             >
@@ -669,7 +668,7 @@ const PrivacyPolicy = () => {;
                     </div>
                     <h2 className="text - 2xl font - bold text - slate - 900">{section.title}</h2>
                   </div>
-                  
+
                   <div className="prose prose - slate max - w-none">
                     <p className="text - lg text - slate - 700 leading - relaxed">{section.content}</p>
                   </div>
@@ -684,46 +683,46 @@ const PrivacyPolicy = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 }}
             >
               <h2 className="text - 3xl font - bold text - slate - 900 text - center mb - 12">
                 Data Categories and Retention
               </h2>
-              
+
               <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">
                 {dataCategories.map ( (category, index) => (<motion.div
                     key={category.category}
                     initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                     animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     transition = {
   { duration: 0.6,
-  delay: 0.1 * index 
+  delay: 0.1 * index
 
 }}
                     className="bg - slate - 50 rounded - xl p - 6 border border - slate - 200"
                   >
                     <h3 className="text - xl font - semibold text - slate - 900 mb - 4">{category.category}</h3>
-                    
+
                     <div className="space - y-4">
                       <div>
                         <h4 className="font - medium text - slate - 700 mb - 2">Examples:</h4>
@@ -731,12 +730,12 @@ const PrivacyPolicy = () => {;
                           {category.examples.map ( (example, idx) => (<li key={idx}>{example}</li>) ) }
                         </ul>
                       </div>
-                      
+
                       <div>
                         <h4 className="font - medium text - slate - 700 mb - 2">Purpose:</h4>
                         <p className="text - slate - 600">{category.purpose}</p>
                       </div>
-                      
+
                       <div>
                         <h4 className="font - medium text - slate - 700 mb - 2">Retention Period:</h4>
                         <p className="text - slate - 600">{category.retention}</p>
@@ -754,40 +753,40 @@ const PrivacyPolicy = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.8 
+  delay: 0.8
 
 }}
             >
               <h2 className="text - 3xl font - bold text - slate - 900 text - center mb - 12">
                 Data Security Measures
               </h2>
-              
+
               <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">
                 {securityMeasures.map ( (measure, index) => (<motion.div
                     key={measure.measure}
                     initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                     animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     transition = {
   { duration: 0.6,
-  delay: 0.1 * index 
+  delay: 0.1 * index
 
 }}
                     className="bg - white rounded - xl p - 6 shadow - sm hover:shadow - lg transition - all duration - 300 border border - slate - 100 hover:border - green - 200"
@@ -809,17 +808,17 @@ const PrivacyPolicy = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 1.0 
+  delay: 1.0
 
 }}
             >
@@ -829,7 +828,7 @@ const PrivacyPolicy = () => {;
               <p className="text - xl text - green - 100 mb - 8">
                 Our privacy team is here to help. Contact us with any questions about your data or our privacy practices.
               </p>
-              
+
               <ul className="space - y-3 text - zion - slate - light ml - 6">
                 <li className="flex items - start gap - 2">
                   <CheckCircle className="w - 4 h - 4 text - zion - cyan mt - 0.5 flex - shrink - 0" />
@@ -865,17 +864,17 @@ const PrivacyPolicy = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.3 
+  delay: 0.3
 
 }}
               viewport={{ once: true }}
@@ -885,7 +884,7 @@ const PrivacyPolicy = () => {;
                 <Share className="w - 8 h - 8 text - zion - cyan" />
                 Information Sharing and Disclosure
               </h2>
-              
+
               <p className="text - zion - slate - light mb - 4">
                 We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
               </p>
@@ -914,17 +913,17 @@ const PrivacyPolicy = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4
 
 }}
               viewport={{ once: true }}
@@ -967,17 +966,17 @@ const PrivacyPolicy = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.5 
+  delay: 0.5
 
 }}
               viewport={{ once: true }}
@@ -1189,7 +1188,7 @@ const PrivacyPolicy = () => {;
                   </div>
                 </div>
               </div>
-              
+
               <div className = "mt - 8">
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - white text - green - 600 font - semibold rounded - lg hover:bg - green - 50 transition - colors">
                   Contact Privacy Team

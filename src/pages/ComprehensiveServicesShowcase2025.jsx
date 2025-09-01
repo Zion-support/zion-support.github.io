@@ -5,7 +5,6 @@ import { CUTTING_EDGE_SERVICES_2025 } from '../data / enhanced - 2025 - cutting 
 import { motion } from 'framer - motion';
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data / specialized - industry - solutions - 2025';
 
-
   Sparkles,
   ArrowRight,
   CheckCircle,

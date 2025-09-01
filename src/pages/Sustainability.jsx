@@ -3,7 +3,6 @@ export default Sustainability;
 import {
 import { motion } from 'framer - motion';
 
-
   Leaf,
   Zap,
   Shield,

@@ -1,7 +1,7 @@
 import { Link } from 'react - router - dom';
 import { Link } from 'react - router - dom';
 import { Users, MessageCircle, TrendingUp, Star, Clock, Search, Filter, Plus, Heart, Share2, Bookmark, MoreHorizontal, User, Calendar, Tag, Eye } from 'lucide - react';
-import React from 'react';
+import React, { useState } from 'react';
 import React, { useState } from 'react';
 export default function Community () {
 export default React.memo (function Community (...args[]) :  {
@@ -9,7 +9,6 @@ import {
 import { motion } from 'framer - motion';
 import { motion } from 'framer - motion';
 import { SEO } from "../components / SEO";
-
 
   Users,
   MessageCircle,
@@ -190,23 +189,23 @@ import { SEO } from "../components / SEO";
   ];
 
   return (<div role="button" className = "min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">;
-      <SEO 
+      <SEO
         title="Community - Zion Tech Group"
         description="Join our community of technology professionals and enthusiasts. Share knowledge, get help, and connect with peers."
       />
-      
+
       {/* Header */}
       <div role="button" className="bg - slate - 800 / 50 border - b border - slate - 700">;
         <div role="button" className="container mx - auto px - 4 py - 16">
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -462,7 +461,7 @@ const Community: React.FC = () => {
               Community
             </h1>
             <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
-              Connect with fellow developers, share knowledge, and get support from the 
+              Connect with fellow developers, share knowledge, and get support from the
               Zion Tech Group community of technology professionals.
             </p>
           </motion.div>
@@ -474,17 +473,17 @@ const Community: React.FC = () => {
         <motion.h2
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition = {
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 }}
           className="text - 3xl font - bold text - white text - center mb - 12"
@@ -497,17 +496,17 @@ const Community: React.FC = () => {
               key={event.title}
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.6 + index * 0.1 
+  delay: 0.6 + index * 0.1
 
 }}
               className="group"
@@ -565,17 +564,17 @@ const Community: React.FC = () => {
           <motion.h2
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.6,
-  delay: 0.7 
+  delay: 0.7
 
 }}
             className="text - 3xl font - bold text - white text - center mb - 12"
@@ -588,17 +587,17 @@ const Community: React.FC = () => {
                 key={discussion.title}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: 0.8 + index * 0.1 
+  delay: 0.8 + index * 0.1
 
 }}
                 className="group"
@@ -829,10 +828,10 @@ const Community: React.FC = () => {
             Share Your Knowledge
           </h2>
           <p className="text - gray - 300 mb - 8 max - w-2xl mx - auto">
-            Have a question, want to share your experience, or contribute to the community? 
+            Have a question, want to share your experience, or contribute to the community?
             Create a new post and start a discussion!
           </p>
-          
+
           <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
             <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - semibold rounded - xl transition - colors">
               <Plus className="w - 5 h - 5 mr - 2" />
@@ -857,19 +856,19 @@ const Community: React.FC = () => {
             <div role="button" className="text - 3xl font - bold text - white mb - 2">15,432</div>
             <p className="text - gray - 300">Community Members</p>
           </div>
-          
+
           <div role="button" className="bg - white / 10 backdrop - blur - lg rounded - 2xl p - 6 text - center">
             <MessageCircle className="w - 12 h - 12 text - purple - 400 mx - auto mb - 4" />
             <div role="button" className="text - 3xl font - bold text - white mb - 2">8,945</div>
             <p className="text - gray - 300">Total Posts</p>
           </div>
-          
+
           <div role="button" className="bg - white / 10 backdrop - blur - lg rounded - 2xl p - 6 text - center">
             <TrendingUp className="w - 12 h - 12 text - green - 400 mx - auto mb - 4" />
             <div role="button" className="text - 3xl font - bold text - white mb - 2">23,567</div>
             <p className="text - gray - 300">Total Replies</p>
           </div>
-          
+
           <div role="button" className="bg - white / 10 backdrop - blur - lg rounded - 2xl p - 6 text - center">
             <Star className="w - 12 h - 12 text - yellow - 400 mx - auto mb - 4" />
             <div role="button" className="text - 3xl font - bold text - white mb - 2">1,234</div>

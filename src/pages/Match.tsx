@@ -5,7 +5,6 @@ import {
 import { motion } from 'framer - motion';
 import SEO from '../components / SEO';
 
-
   Sparkles,
   Users,
   Target,
@@ -145,7 +144,7 @@ const Match: React.FC = () => {;
   }) ;
 
   return (<div role="button" className = "min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="AI Service Matcher - Zion Tech Group"
         description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs."
         keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"
@@ -158,12 +157,12 @@ const Match: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -248,12 +247,12 @@ const Match: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -273,17 +272,17 @@ const Match: React.FC = () => {;
                 key={service.id}
                 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className={`bg - slate - 800 / 50 border rounded - xl p - 6 hover:border - cyan - 400 / 50 transition - all duration - 300 hover:scale - 105 ${
@@ -381,12 +380,12 @@ const Match: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -426,17 +425,17 @@ const Match: React.FC = () => {;
                 key={index}
                 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="text - center"
@@ -458,12 +457,12 @@ const Match: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}

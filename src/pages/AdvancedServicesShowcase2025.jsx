@@ -5,7 +5,6 @@ import { motion } from 'framer - motion';
 import { specializedITServices2025 } from "../data / 2025 - specialized - it - ai - services";
 import SEOHead from "../components / SEOHead";
 
-
 const AdvancedServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState ('all') ;
     const [searchTerm, setSearchTerm] = useState ('') ;

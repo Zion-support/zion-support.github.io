@@ -1,14 +1,15 @@
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Link  } from 'react-router-dom.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server               } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
 
-export default function CloudDevOps(...args: []):  {
   return (
     <>
       <Helmet>
         <title>Cloud DevOps - Zion Tech Group</title>
-        <meta name = "description" content="Streamline your development and operations with cloud-native DevOps solutions. Automate deployments, improve collaboration, and accelerate delivery." />
+        <meta name="description" content="Streamline your development and operations with cloud-native DevOps solutions. Automate deployments, improve collaboration, and accelerate delivery." />
         <meta name="keywords" content="cloud devops, CI/CD, cloud infrastructure, automation, containerization, kubernetes, aws, azure, google cloud" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/cloud-devops" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -36,7 +37,7 @@ export default function CloudDevOps(...args: []):  {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-
+                >
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -50,7 +51,7 @@ export default function CloudDevOps(...args: []):  {
         </section>
 
         {/* Features Section */}
-        <section className="py-20">;
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -62,7 +63,7 @@ export default function CloudDevOps(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: GitBranch,
@@ -99,8 +100,8 @@ export default function CloudDevOps(...args: []):  {
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                  <p className="text-slate-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-slate-400">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -108,7 +109,7 @@ export default function CloudDevOps(...args: []):  {
         </section>
 
         {/* DevOps Areas Section */}
-        <section className="py-20 bg-slate-800/30">;
+        <section className="py-20 bg-slate-800/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -119,7 +120,7 @@ export default function CloudDevOps(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Continuous Integration",
@@ -162,9 +163,9 @@ export default function CloudDevOps(...args: []):  {
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
-                  <p className="text-slate-300 mb-4">{area.description}</p>
-                  <ul className="space-y-1">
+                  <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
+                  <p className="text-slate-400 mb-4">{area.description}</p>
+                  <ul className="space-y-2">
                     {area.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-cyan-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
@@ -179,7 +180,7 @@ export default function CloudDevOps(...args: []):  {
         </section>
 
         {/* Technology Stack Section */}
-        <section className="py-20">;
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -190,7 +191,7 @@ export default function CloudDevOps(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "CI/CD Tools",
@@ -233,9 +234,9 @@ export default function CloudDevOps(...args: []):  {
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <tech.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{tech.title}</h3>
-                  <p className="text-slate-300 mb-4">{tech.description}</p>
-                  <ul className="space-y-1">
+                  <h3 className="text-xl font-semibold text-white mb-3">{tech.title}</h3>
+                  <p className="text-slate-400 mb-4">{tech.description}</p>
+                  <ul className="space-y-2">
                     {tech.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-sm text-cyan-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
@@ -250,7 +251,7 @@ export default function CloudDevOps(...args: []):  {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/30">;
+        <section className="py-20 bg-slate-800/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -264,14 +265,7 @@ export default function CloudDevOps(...args: []):  {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
-                  {[
-                    "50-80% faster deployment frequency",
-                    "60-90% reduction in lead time",
-                    "40-70% improvement in recovery time",
-                    "Enhanced team collaboration and communication",
-                    "Improved code quality and reliability",
-                    "Better resource utilization and cost optimization"
-                  ].map((benefit, index) => (
+                  {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{benefit}</span>
@@ -280,15 +274,15 @@ export default function CloudDevOps(...args: []):  {
                 </div>
               </div>
 
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
+              <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">DevOps Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: "50-80%", label: "Deployment Speed", description: "Faster delivery" },
+                    { metric: anyanyanyanyanyanyanyanyanyanyanyanyany"50-80%", label: "Deployment Speed", description: "Faster delivery" },
                     { metric: "60-90%", label: "Lead Time", description: "Reduction" },
                     { metric: "40-70%", label: "Recovery Time", description: "Improvement" },
                     { metric: "99.9%+", label: "Uptime", description: "Availability" }
-                  ].map((item, index)  => (
+                  ].map((item, index)               => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-cyan-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -302,7 +296,7 @@ export default function CloudDevOps(...args: []):  {
         </section>
 
         {/* Implementation Process Section */}
-        <section className="py-20">;
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -313,7 +307,7 @@ export default function CloudDevOps(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -349,7 +343,7 @@ export default function CloudDevOps(...args: []):  {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-600/10">;
+        <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-600/10">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your DevOps?
@@ -361,7 +355,7 @@ export default function CloudDevOps(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-
+              >
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -369,12 +363,12 @@ export default function CloudDevOps(...args: []):  {
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
               >
-                Explore All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
+                Explore All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
-}}}}}}
+}

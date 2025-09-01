@@ -1,16 +1,17 @@
-import React from 'react.ts';
+import React from 'react';
 
-interface CheckboxProps extends React.PropsWithChildren<{}> {
+interface CheckboxProps extends React.PropsWithChildren<{
+}> {
 
-  checked: boolean;
-  onChange: (checked: boolean)  => void;
+  checked: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  onChange: (checked: boolean)                => void;
   label?: string;
   disabled?: boolean;
   className?: string}
 
-export function Checkbox(...args[]):  {
+export function Checkbox(...args[]: any):  {
   return (
-    <label className = {`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>;
+    <label className = {`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>
       <input
         type="checkbox"
         checked={checked}

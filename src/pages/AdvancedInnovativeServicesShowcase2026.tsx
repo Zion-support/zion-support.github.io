@@ -4,7 +4,6 @@ import {
 import { ADVANCED_INNOVATIVE_SERVICES_2026 } from "../data / advancedInnovativeServices2026";
 import { motion } from 'framer - motion';
 
-
   Brain,
   Zap,
   Globe,
@@ -80,7 +79,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
   const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {;
@@ -106,17 +105,17 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
             className="text - 5xl md:text - 7xl font - bold text - white mb - 6"
             initial = {
   { y: -50,
-  opacity: 0 
+  opacity: 0
 
 }}
             animate = {
   { y: 0,
-  opacity: 1 
+  opacity: 1
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
           >
@@ -126,17 +125,17 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
             className="text - xl md:text - 2xl text - blue - 100 max - w-4xl mx - auto mb - 8"
             initial = {
   { y: 50,
-  opacity: 0 
+  opacity: 0
 
 }}
             animate = {
   { y: 0,
-  opacity: 1 
+  opacity: 1
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4
 
 }}
           >
@@ -146,17 +145,17 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
             className="flex flex - wrap justify - center gap - 4 text - sm"
             initial = {
   { scale: 0.8,
-  opacity: 0 
+  opacity: 0
 
 }}
             animate = {
   { scale: 1,
-  opacity: 1 
+  opacity: 1
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.6 
+  delay: 0.6
 
 }}
           >
@@ -181,17 +180,17 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
         className="container mx - auto px - 4 py - 8"
         initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
         animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
         transition = {
   { duration: 0.6,
-  delay: 0.8 
+  delay: 0.8
 
 }}
       >
@@ -255,7 +254,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
               variants={itemVariants}
               whileHover = {
   { y: -5,
-  scale: 1.02 
+  scale: 1.02
 
 }}
             >

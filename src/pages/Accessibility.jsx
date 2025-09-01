@@ -2,7 +2,6 @@ import React from 'react';
   import {
 export default function Accessibility () {
 
-
     Accessibility as AccessibilityIcon,
     Eye,
     Ear,

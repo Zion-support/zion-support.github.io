@@ -1,7 +1,7 @@
 import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide - react";
 import { Link } from 'react - router - dom';
 import { useState } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { AdvancedOnboardingSteps } from "@/components / onboarding / AdvancedOnboardingSteps";
 import { Avatar } from "@/components / ui / avatar";
 import { Badge } from "@/components / ui / badge";
@@ -21,7 +21,6 @@ import { useOnboardingStatus } from "@/hooks / useOnboardingStatus";
 import SEO from "@/components / SEO";
 export default function TalentDashboard () {
 import Link from "next / link";
-
 
 function TalentDashboardContent () {
     const { user } = useAuth () ;
@@ -183,7 +182,7 @@ function TalentDashboardContent () {
           </div>
         </div>
       </main>
-      
+
     </>) }
     return (<ProtectedRoute>
       <TalentDashboardContent />

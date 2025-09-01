@@ -5,7 +5,6 @@ export default React.memo (function InnovativeAIServicesShowcase () {
 import {
 import { motion } from 'framer - motion';
 
-
   Zap, Sparkles, TrendingUp, Route, Users, PenTool,
   CheckCircle, ArrowRight, ExternalLink, Phone, Mail,
   BarChart3, Shield, Briefcase, Package, Target
@@ -95,7 +94,7 @@ import { motion } from 'framer - motion';
   ];
 
   return (<div className = "min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white">
-      <SEO 
+      <SEO
         title="Innovative AI Services Showcase - Zion Tech Group"
         description="Discover our comprehensive suite of AI - powered business solutions including project management, content marketing, financial analytics, HR talent management, and supply chain optimization."
       />
@@ -103,15 +102,15 @@ import { motion } from 'framer - motion';
       {/* Hero Section */}
       <section className="relative py - 20 sm:py - 24">
         <div className="container mx - auto px - 4 text - center">
-          <motion.div 
+          <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -120,21 +119,21 @@ import { motion } from 'framer - motion';
             <Sparkles className="w - 4 h - 4 mr - 2" />
             Innovative AI - Powered Solutions
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}
             className="text - 4xl sm:text - 6xl font - extrabold tracking - tight mb - 6"
@@ -143,21 +142,21 @@ import { motion } from 'framer - motion';
               Transform Business
             </span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
             className="text - xl text - slate - 300 max - w-3xl mx - auto mb - 8"
@@ -176,17 +175,17 @@ import { motion } from 'framer - motion';
                 key={service.id}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="group bg - slate - 900 / 60 backdrop - blur border border - cyan - 400 / 15 hover:border - cyan - 400 / 40 transition - all duration - 300 rounded - 2xl p - 6 hover:shadow - 2xl hover:shadow - cyan - 500 / 10"

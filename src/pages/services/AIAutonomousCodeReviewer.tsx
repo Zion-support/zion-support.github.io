@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Code, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Code, 
   CheckCircle, 
   Shield, 
   Zap, 
@@ -41,7 +40,7 @@ import {
   Github,
   Gitlab,
   Bitbucket
-} from 'lucide-react';
+             } from 'lucide-react.ts';
 
 const AIAutonomousCodeReviewer = () => {
   const features = [
@@ -76,7 +75,6 @@ const AIAutonomousCodeReviewer = () => {
       description: 'Built-in code review workflows, comments, and approval systems for development teams'
     }
   ];
-
   const benefits = [
     'Reduce code review time by 70%',
     'Catch 90% of bugs before production',
@@ -85,7 +83,6 @@ const AIAutonomousCodeReviewer = () => {
     'Reduce technical debt',
     'Ensure consistent coding standards'
   ];
-
   const services = [
     {
       icon: Server,
@@ -108,7 +105,6 @@ const AIAutonomousCodeReviewer = () => {
       description: 'SQL query optimization, database schema analysis, and performance tuning recommendations'
     }
   ];
-
   const useCases = [
     {
       industry: 'Software Development',
@@ -127,7 +123,6 @@ const AIAutonomousCodeReviewer = () => {
       description: 'Maintaining high coding standards and reducing technical debt in large codebases'
     }
   ];
-
   const pricing = [
     {
       name: 'Starter',
@@ -182,7 +177,6 @@ const AIAutonomousCodeReviewer = () => {
       popular: false
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -198,17 +192,14 @@ const AIAutonomousCodeReviewer = () => {
               <Code className="w-4 h-4 mr-2" />
               AI-Powered Code Review
             </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous
               <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"> Code Reviewer</span>
             </h1>
-            
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Revolutionize your code review process with AI-powered analysis that catches bugs, 
               improves security, and maintains code quality automatically.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
@@ -241,8 +232,8 @@ const AIAutonomousCodeReviewer = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -260,7 +251,6 @@ const AIAutonomousCodeReviewer = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -279,8 +269,8 @@ const AIAutonomousCodeReviewer = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -302,7 +292,6 @@ const AIAutonomousCodeReviewer = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -319,7 +308,6 @@ const AIAutonomousCodeReviewer = () => {
               Experience measurable improvements in code quality, security, and development efficiency.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
@@ -371,8 +359,8 @@ const AIAutonomousCodeReviewer = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -391,7 +379,6 @@ const AIAutonomousCodeReviewer = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -400,7 +387,6 @@ const AIAutonomousCodeReviewer = () => {
                     <span className="text-gray-400">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
@@ -409,7 +395,6 @@ const AIAutonomousCodeReviewer = () => {
                     </li>
                   ))}
                 </ul>
-
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
@@ -422,7 +407,6 @@ const AIAutonomousCodeReviewer = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -441,8 +425,8 @@ const AIAutonomousCodeReviewer = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -460,7 +444,6 @@ const AIAutonomousCodeReviewer = () => {
           </div>
         </div>
       </section>
-
       {/* Market Information Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -477,7 +460,6 @@ const AIAutonomousCodeReviewer = () => {
               Understand the market landscape and potential return on investment for AI-powered code review solutions.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -489,7 +471,6 @@ const AIAutonomousCodeReviewer = () => {
               <h3 className="text-2xl font-bold text-white mb-2">$2.8B</h3>
               <p className="text-gray-300">Global Market Size 2024</p>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -500,7 +481,6 @@ const AIAutonomousCodeReviewer = () => {
               <h3 className="text-2xl font-bold text-white mb-2">24.3%</h3>
               <p className="text-gray-300">Annual Growth Rate</p>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -511,7 +491,6 @@ const AIAutonomousCodeReviewer = () => {
               <h3 className="text-2xl font-bold text-white mb-2">300%</h3>
               <p className="text-gray-300">Average ROI</p>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -525,7 +504,6 @@ const AIAutonomousCodeReviewer = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -550,7 +528,6 @@ const AIAutonomousCodeReviewer = () => {
                 Contact Sales
               </button>
             </div>
-            
             <div className="mt-8 text-center">
               <p className="text-gray-400 mb-4">Ready to get started? Contact our team:</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300">
@@ -574,5 +551,4 @@ const AIAutonomousCodeReviewer = () => {
     </div>
   );
 };
-
 export default AIAutonomousCodeReviewer;}}}}

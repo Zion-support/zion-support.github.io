@@ -4,7 +4,6 @@ export default EmergingTech;
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Atom,
   Brain,
   Network,

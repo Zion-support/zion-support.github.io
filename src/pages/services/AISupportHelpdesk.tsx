@@ -1,9 +1,10 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { SEO  } from '@/components/SEO';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone               } from 'lucide-react.ts';
+import { SEO               } from '@/components/SEO';
 
-export default function AISupportHelpdesk(...args[]):  {
+export default function AISupportHelpdesk(...args[]: any):  {
   const features = [
     {
       icon: Brain,
@@ -36,7 +37,6 @@ export default function AISupportHelpdesk(...args[]):  {
       description: "Multi-language support with localization and timezone-aware routing for global teams.";
     };
   ];
-
   const aiCapabilities = [
     {
       icon: Brain,
@@ -69,21 +69,20 @@ export default function AISupportHelpdesk(...args[]):  {
       description: "Continuous learning from interactions to improve responses";
     };
   ];
-
   const pricingPlans = [
     {
       name: "Support Starter",
       price: "$79",
       period: "/month",
       description: "Perfect for small teams starting with AI support",
-      features[;
+      features[
         "Up to 5 agents",
         "Basic AI chatbot",
         "Email & chat support",
         "Standard reporting",
         "Mobile app access",
         "Email support"
-      ],;
+      ],
       popular: false
     },
     {
@@ -91,7 +90,7 @@ export default function AISupportHelpdesk(...args[]):  {
       price: "$199",
       period: "/month",
       description: "Ideal for growing support teams with advanced needs",
-      features[;
+      features[
         "Up to 20 agents",
         "Advanced AI capabilities",
         "Multi-channel support",
@@ -99,7 +98,7 @@ export default function AISupportHelpdesk(...args[]):  {
         "Priority support",
         "API access",
         "Custom integrations"
-      ],;
+      ],
       popular: true
     },
     {
@@ -107,7 +106,7 @@ export default function AISupportHelpdesk(...args[]):  {
       price: "$499",
       period: "/month",
       description: "For large organizations with complex support requirements",
-      features[;
+      features[
         "Unlimited agents",
         "Custom AI models",
         "White-label solutions",
@@ -119,7 +118,6 @@ export default function AISupportHelpdesk(...args[]):  {
       popular: false;
     };
   ];
-
   const benefits = [
     {
       title: "Reduce Support Costs",
@@ -142,7 +140,6 @@ export default function AISupportHelpdesk(...args[]):  {
       icon: BarChart3;
     };
   ];
-
   const supportChannels = [
     {
       icon: MessageCircle,
@@ -175,7 +172,6 @@ export default function AISupportHelpdesk(...args[]):  {
       description: "Monitor and respond to support requests across social platforms";
     };
   ];
-
   return (
     <>
       <SEO 
@@ -183,7 +179,6 @@ export default function AISupportHelpdesk(...args[]):  {
         description="Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service."
         canonical="/services/ai-support-helpdesk"
       />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -194,25 +189,12 @@ export default function AISupportHelpdesk(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition={{ duration: 0.6 }}
-
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-400 bg-clip-text text-transparent">
                     AI Support Helpdesk
@@ -226,13 +208,11 @@ export default function AISupportHelpdesk(...args[]):  {
                   <Link
                     to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-
                     Start Free Trial
                   </Link>
                   <Link
                     to="/contact"
                     className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
-
                     Schedule Demo
                   </Link>
                 </div>
@@ -240,9 +220,8 @@ export default function AISupportHelpdesk(...args[]):  {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
-        <section className="py-20">;
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -253,55 +232,35 @@ export default function AISupportHelpdesk(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)               => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
-
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </motion.div>;
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
-
         {/* AI Capabilities Section */}
-        <section className="py-20 bg-slate-800/30">;
+        <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -312,55 +271,35 @@ export default function AISupportHelpdesk(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiCapabilities.map((capability, index)  => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {aiCapabilities.map((capability, index)               => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300"
-
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <capability.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{capability.title}</h3>
                   <p className="text-gray-300">{capability.description}</p>
-                </motion.div>;
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Support Channels Section */}
-        <section className="py-20">;
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -371,55 +310,35 @@ export default function AISupportHelpdesk(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {supportChannels.map((channel, index)  => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {supportChannels.map((channel, index)               => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
-
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <channel.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{channel.title}</h3>
                   <p className="text-gray-300">{channel.description}</p>
-                </motion.div>;
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/30">;
+        <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -430,42 +349,23 @@ export default function AISupportHelpdesk(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)               => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="flex items-start space-x-4"
-
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -473,14 +373,13 @@ export default function AISupportHelpdesk(...args[]):  {
                     <h3 className="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
                     <p className="text-gray-300">{benefit.description}</p>
                   </div>
-                </motion.div>;
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
-        <section className="py-20">;
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -491,54 +390,34 @@ export default function AISupportHelpdesk(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)               => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                     plan.popular
                       ? 'border-teal-500 ring-2 ring-teal-500/20'
                       : 'border-slate-700'
                   }`}
-
-                  {plan.popular && (;
+                  {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
                   )}
-
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
                     <div className="mb-4">
@@ -547,7 +426,6 @@ export default function AISupportHelpdesk(...args[]):  {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
@@ -556,7 +434,6 @@ export default function AISupportHelpdesk(...args[]):  {
                       </li>
                     ))}
                   </ul>
-
                   <Link
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -564,41 +441,26 @@ export default function AISupportHelpdesk(...args[]):  {
                         ? 'bg-gradient-to-r from-teal-500 to-cyan-600 text-white hover:from-teal-600 hover:to-cyan-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-
                     Get Started
-                  </Link>;
+                  </Link>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-teal-600/20 to-cyan-600/20">;
+        <section className="py-20 bg-gradient-to-r from-teal-600/20 to-cyan-600/20">
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
-
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Support?
               </h2>
@@ -609,13 +471,11 @@ export default function AISupportHelpdesk(...args[]):  {
                 <Link
                   to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-
                   Start Free Trial
                 </Link>
                 <Link
                   to="/contact"
                   className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
-
                   Contact Sales
                 </Link>
               </div>
@@ -626,4 +486,3 @@ export default function AISupportHelpdesk(...args[]):  {
     </>;
   );
 }
-

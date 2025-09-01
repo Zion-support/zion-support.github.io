@@ -4,7 +4,6 @@ import {
 import { innovativeMicroSAASServices2029 } from '../../data / innovative - micro - saas - 2029';
 import { motion, AnimatePresence } from 'framer - motion.ts';
 
-
   Brain,
   Shield,
   Cloud,

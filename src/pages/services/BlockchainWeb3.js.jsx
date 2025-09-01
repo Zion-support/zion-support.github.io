@@ -6,37 +6,37 @@ const BlockchainWeb3 = () => {
             icon: LinkIcon,
             title: "Smart Contract Development",
             description: "Custom smart contracts for DeFi, NFTs, DAOs, and enterprise blockchain solutions",
-            features["Solidity & Rust development", "Security auditing", "Gas optimization", "Multi-chain deployment"];
-        },;
+            features["Solidity & Rust development", "Security auditing", "Gas optimization", "Multi-chain deployment"]
+        },
         {
             icon: Shield,
             title: "DeFi Protocol Development",
             description: "Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions",
-            features["AMM algorithms", "Liquidity management", "Risk assessment", "Regulatory compliance"];
-        },;
+            features["AMM algorithms", "Liquidity management", "Risk assessment", "Regulatory compliance"]
+        },
         {
             icon: Users,
             title: "DAO & Governance Systems",
             description: "Decentralized autonomous organizations with voting mechanisms and governance frameworks",
-            features["Token-weighted voting", "Proposal management", "Treasury management", "Multi-sig wallets"];
-        },;
+            features["Token-weighted voting", "Proposal management", "Treasury management", "Multi-sig wallets"]
+        },
         {
             icon: Database,
             title: "NFT Marketplace Development",
             description: "Complete NFT ecosystems with minting, trading, and marketplace functionality",
-            features["ERC-721/ERC-1155 standards", "Royalty systems", "Metadata management", "Cross-chain bridges"];
-        },;
+            features["ERC-721/ERC-1155 standards", "Royalty systems", "Metadata management", "Cross-chain bridges"]
+        },
         {
             icon: Network,
             title: "Cross-Chain Solutions",
             description: "Interoperability solutions connecting different blockchain networks seamlessly",
-            features["Bridge development", "Cross-chain messaging", "Asset transfers", "Liquidity aggregation"];
-        },;
+            features["Bridge development", "Cross-chain messaging", "Asset transfers", "Liquidity aggregation"]
+        },
         {
             icon: Lock,
             title: "Enterprise Blockchain",
             description: "Private and consortium blockchain solutions for enterprise applications",
-            features["Hyperledger Fabric", "Permissioned networks", "Identity management", "Supply chain tracking"];
+            features["Hyperledger Fabric", "Permissioned networks", "Identity management", "Supply chain tracking"]
         }
     ];
     const web3Technologies = [

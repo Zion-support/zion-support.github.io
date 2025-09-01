@@ -4,7 +4,6 @@ export default CaseStudies;
 import {
 import { motion } from 'framer - motion';
 
-
   CheckCircle,
   TrendingUp,
   Users,

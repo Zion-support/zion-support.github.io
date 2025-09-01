@@ -1,7 +1,7 @@
 import { Link, Navigate, useNavigate } from 'react - router - dom';
 import { useForm } from 'react - hook - form';
 import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 import { Alert, AlertDescription } from '@/components / ui / alert';
 import { Button } from '@/components / ui / button';
 import { Checkbox } from '@/components / ui / checkbox';
@@ -15,7 +15,6 @@ export default function Signup () {
 import {
 import {
 import { z } from 'zod';
-
 
   User,
   Mail,

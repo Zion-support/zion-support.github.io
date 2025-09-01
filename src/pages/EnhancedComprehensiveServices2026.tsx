@@ -5,7 +5,6 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
 import { ultimateInnovativeServices2026 } from "../data / ultimateInnovativeServices2026";
 import { zion2026ComprehensiveServices } from "../data / zion2026ComprehensiveServices";
 
-
   Cloud,
   Shield,
   Server,
@@ -186,12 +185,12 @@ pricing: {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -302,17 +301,17 @@ pricing: {
                   key={service.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   whileHover={{ y: -5 }}
@@ -390,17 +389,17 @@ pricing: {
                   key={service.id}
                   initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                   animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20 hover:border - purple - 400 / 50 transition - all duration - 300 cursor - pointer"
@@ -469,17 +468,17 @@ pricing: {
             <motion.div
               initial = {
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 }}
               animate = {
   { scale: 1,
-  opacity: 1 
+  opacity: 1
 
 }}
               exit = {
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 }}
               className="bg - slate - 800 rounded - 2xl max - w-4xl w - full max - h-[90vh] overflow - y-auto"

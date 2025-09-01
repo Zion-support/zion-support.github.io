@@ -8,7 +8,6 @@ import { TrustedBySection } from '@/components / TrustedBySection';
 import SEO from '@/components / SEO';
 export default function AllServicesLandingPage () {
 
-
     const getCategoryIcon = (category) => {
         switch (category) {
             case 'AI Services': return '🤖';

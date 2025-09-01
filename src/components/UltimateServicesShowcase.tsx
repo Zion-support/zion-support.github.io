@@ -161,9 +161,9 @@ const patentStatusColors = {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {;
+    visible: {
       opacity: 1,;
-      transition: {;
+      transition: {
         staggerChildren: 0.1,;
         delayChildren: 0.2;
       };
@@ -178,7 +178,7 @@ const patentStatusColors = {
     visible: {
       opacity: 1,;
       y: 0,;
-      transition: {;
+      transition: {
         duration: 0.6,;
         ease: "easeOut";
       };

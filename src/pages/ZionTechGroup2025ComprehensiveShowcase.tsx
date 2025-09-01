@@ -1,16 +1,15 @@
 import React, { useState, useMemo } from 'react.ts';
 export default ZionTechGroup2025ComprehensiveShowcase;
 import { motion, AnimatePresence  } from 'framer - motion.ts';
-import { Search, 
+import { Search,
 import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServicesByPriceRange, searchServices  } from '../data / zionTechGroup2025ComprehensiveServices';
 
-
-  Filter, 
-  Star, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Zap, 
+  Filter,
+  Star,
+  Shield,
+  Cloud,
+  Brain,
+  Zap,
   Globe,
   Phone,
   Mail,
@@ -91,15 +90,15 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
       <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">
         <div role="button" className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20"></div>
         <div role="button" className="relative max - w-7xl mx - auto text - center">
-          <motion.h1 
+          <motion.h1
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -113,42 +112,42 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
               2025 Comprehensive Services
             </span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
             className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto"
           >
-            Discover our cutting - edge suite of AI - powered micro SAAS solutions, 
-            enterprise - grade cybersecurity, and innovative emerging technology services 
+            Discover our cutting - edge suite of AI - powered micro SAAS solutions,
+            enterprise - grade cybersecurity, and innovative emerging technology services
             designed to transform your business and drive innovation.
           </motion.p>
-          <motion.div 
+          <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4
 
 }}
             className="flex flex - col sm:flex - row gap - 4 justify - center items - center"
@@ -248,22 +247,22 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
                   key={service.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className="bg - white / 10 backdrop - blur - sm rounded - 2xl p - 6 border border - white / 20 hover:border - white / 40 transition - all duration - 300 hover:transform hover:scale - 105"
@@ -352,17 +351,17 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
                     {expandedService === service.id && (<motion.div
                         initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                         animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }}
                         exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                         transition={{ duration: 0.3 }}
@@ -419,9 +418,9 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
                             </div>
                             <div role="button" className="flex items - center space - x-2">
                               <ExternalLink className="w - 4 h - 4 text - purple - 400" />
-                              <a 
-                                href={service.contactInfo.website} 
-                                target="_blank" 
+                              <a
+                                href={service.contactInfo.website}
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="text - blue - 400 hover:text - blue - 300 underline"
                               >
@@ -471,7 +470,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
               Ready to Transform Your Business?
             </h2>
             <p className="text - xl text - gray - 300 mb - 8">
-              Let's discuss how our innovative services can drive your business forward. 
+              Let's discuss how our innovative services can drive your business forward.
               Contact us today for a personalized consultation and demo.
             </p>
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">

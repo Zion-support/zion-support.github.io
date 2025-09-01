@@ -5,7 +5,6 @@ import SEO from "@/components / SEO";
 export default React.memo (function UltimateServicesShowcase2025 () {
 import {
 
-
   Brain,
   Zap,
   Shield,
@@ -41,13 +40,13 @@ import {
 
   const getCategoryIcon = (category: string) => {;
     if (category === 'all') return < Rocket className="w - 6 h - 6" />;
-    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
+    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ?
       <span className = "text - 2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : ;
       <Rocket className="w - 6 h - 6" />;
   };
 
   return (<div role="button" className = "min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900">
-      <SEO 
+      <SEO
         title="Ultimate Innovative Services 2025 | Zion Tech Group"
         description="Discover our revolutionary AI - powered, quantum - secure, and autonomous business solutions. Transform your business with cutting - edge technology."
         keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group"

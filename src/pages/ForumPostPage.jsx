@@ -1,6 +1,6 @@
 import { useParams, Link } from "react - router - dom";
 import { useState } from "react";
-import React from 'react';
+import React, { useState } from 'react';
 import { Alert, AlertDescription } from "@/components / ui / alert";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components / ui / avatar";
 import { Badge } from "@/components / ui / badge";
@@ -13,7 +13,6 @@ import ReplyForm from "@/components / community / ReplyForm";
 import SEO from "@/components / SEO";
 export default function ForumPostPage () {
 import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Pin, Lock, CheckCircle import { formatDistanceToNow, format } from "date - fns";
-
 
 // Mock data for a forum post
 const mockPost = {
@@ -242,7 +241,7 @@ const mockReplies = [
   ') ;
 
 }`} canonical={`https://ziontechgroup.com / community / post/${post.id}`}/>;
-      
+
       <div className="container py - 8">
         <div className="flex items - center gap - 3 mb - 6">
           <Link to="/community" className="text - sm text - muted - foreground hover:text - foreground">

@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Target, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Target, 
   TrendingUp, 
   Users, 
   Clock, 
@@ -21,8 +20,8 @@ import {
   Cpu,
   Heart,
   Eye
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+             } from 'lucide-react.ts';
+import { SEO              } from '../../components/SEO';
 
 const AIMarketingAutomation = () => {
   const features = [
@@ -69,7 +68,6 @@ const AIMarketingAutomation = () => {
       features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom integrations', 'Advanced reporting'];
     };
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -113,7 +111,6 @@ const AIMarketingAutomation = () => {
       popular: false
     }
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -136,14 +133,12 @@ const AIMarketingAutomation = () => {
       description: "Every customer receives relevant, personalized content"
     }
   ];
-
   return (
     <>
       <SEO 
         title="AI Marketing Automation - Zion Tech Group"
         description="Revolutionary AI-powered marketing automation platform that personalizes campaigns, optimizes performance, and delivers exceptional ROI through intelligent automation."
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 px-4">
@@ -190,7 +185,6 @@ const AIMarketingAutomation = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-7xl">
@@ -208,8 +202,8 @@ const AIMarketingAutomation = () => {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index)              => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -227,7 +221,6 @@ const AIMarketingAutomation = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="container mx-auto max-w-7xl">
@@ -245,8 +238,8 @@ const AIMarketingAutomation = () => {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)              => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -265,7 +258,6 @@ const AIMarketingAutomation = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-7xl">
@@ -283,8 +275,8 @@ const AIMarketingAutomation = () => {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)              => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -303,7 +295,6 @@ const AIMarketingAutomation = () => {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
@@ -312,7 +303,6 @@ const AIMarketingAutomation = () => {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -338,7 +328,6 @@ const AIMarketingAutomation = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="container mx-auto max-w-4xl text-center">
@@ -377,5 +366,4 @@ const AIMarketingAutomation = () => {
     </>
   );
 };
-
 export default AIMarketingAutomation;

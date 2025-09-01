@@ -3,7 +3,6 @@ export default InnovationServicesMarketing;
 import { cuttingEdgeInnovations2025 } from "../data / 2025 - cutting - edge - innovations";
 import { specializedIndustrySolutions2025 } from "../data / 2025 - specialized - industry - solutions";
 
-
 const InnovationServicesMarketing = () => {
     const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
     const categories = Array.from (new Set (allServices.map (service => service.category) ) ) ;

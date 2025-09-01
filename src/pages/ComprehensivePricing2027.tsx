@@ -6,7 +6,6 @@ export default React.memo (function ComprehensivePricing2027 (...args[]) :  {
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
   Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
   ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign
@@ -43,7 +42,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
   const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {
@@ -58,7 +57,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
   const cardVariants = {
   hidden: { scale: 0.8,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {
@@ -101,17 +100,17 @@ import { motion, AnimatePresence } from 'framer - motion';
             className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto"
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4
 
 }}
           >
@@ -124,17 +123,17 @@ import { motion, AnimatePresence } from 'framer - motion';
             className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mt - 16"
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.6 
+  delay: 0.6
 
 }}
           >
@@ -248,17 +247,17 @@ import { motion, AnimatePresence } from 'framer - motion';
                 key={viewMode}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 exit = {
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                 transition={{ duration: 0.3 }}
@@ -343,17 +342,17 @@ import { motion, AnimatePresence } from 'framer - motion';
                           {expandedService === service.id && (<motion.div
                               initial = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                               animate = {
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }}
                               exit = {
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                               className="mt - 4 pt - 4 border - t border - zion - purple / 20"

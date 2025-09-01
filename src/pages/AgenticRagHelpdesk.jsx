@@ -2,7 +2,6 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight, CheckCircle export default function AgenticRagHelpdesk () {
 
-
     const features = [
         {
             icon: Brain,

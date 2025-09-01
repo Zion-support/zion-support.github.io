@@ -6,7 +6,6 @@ import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STA
 import { motion  } from 'framer - motion.ts';
 import { SEO } from "../components / SEO";
 
-
   Brain,
   Cloud,
   Database,

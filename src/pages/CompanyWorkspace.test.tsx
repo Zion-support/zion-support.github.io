@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import CompanyWorkspace from './CompanyWorkspace';
 
-
 describe ('CompanyWorkspace', () => {
   it ('renders without crashing', () => {
     render (<CompanyWorkspace />) ;

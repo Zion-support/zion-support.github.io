@@ -7,7 +7,6 @@ import { Button } from "../ui / button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui / card";
 import { TrustedBySection } from "../TrustedBySection";
 
-
 const blockchainBenefits = [
     {
         title: "Transparency",

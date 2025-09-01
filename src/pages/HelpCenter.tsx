@@ -5,7 +5,6 @@ export function HelpCenter () {
 import {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
   Search,
   HelpCircle,
   MessageCircle,
@@ -328,8 +327,8 @@ const faqData: FAQItem[] = [
     setFilteredFAQs (filtered) ;
   };
 
-  const filteredFAQ = selectedCategory === 'All' 
-    ? faqData 
+  const filteredFAQ = selectedCategory === 'All'
+    ? faqData
     : faqData.filter (item => item.category === selectedCategory) ;
 
   const categories = ['All', ...Array.from (new Set (faqData.map (item => item.category) ) ) ];
@@ -480,7 +479,7 @@ const faqData: FAQItem[] = [
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <h2 className="text - 2xl font - bold text - white mb - 6">Help Articles & Tutorials</h2>
-              
+
               <div role="button" className="space - y-6">
                 {helpSections.map ( (section, index) => (<motion.div
                     key={section.id}
@@ -583,7 +582,7 @@ const faqData: FAQItem[] = [
           className="mt - 16"
         >
           <h2 className="text - 2xl font - bold text - white mb - 6">Frequently Asked Questions</h2>
-          
+
           <div role="button" className="grid gap - 4">
             {filteredFAQ.map ( (faq, index) => (<motion.div
                 key={faq.question}

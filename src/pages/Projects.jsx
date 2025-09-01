@@ -8,7 +8,6 @@ import SEO from "@/components / SEO";
 export default function Projects () {
 import { Clock, Briefcase function ProjectsContent () {
 
-
     const { projects, isLoading } = useProjects () ;
     return (<>
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects."/>
@@ -46,6 +45,6 @@ import { Clock, Briefcase function ProjectsContent () {
               </Card>) ) }
           </div>) }
       </main>
-      
+
     </>) }
     return < ProjectsContent />}

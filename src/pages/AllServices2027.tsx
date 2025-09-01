@@ -6,7 +6,6 @@ import {
 import { motion } from 'framer - motion';
 import SEO from "../components / SEOHead";
 
-
   Brain,
   Shield,
   Zap,
@@ -88,7 +87,7 @@ const AllServices2027: React.FC = () => {;
 
   const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {;
@@ -116,12 +115,12 @@ const AllServices2027: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}

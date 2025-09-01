@@ -2,7 +2,6 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default ResearchDevelopment;
 
-
 const ResearchDevelopment = () => {
     const researchAreas = [
         {

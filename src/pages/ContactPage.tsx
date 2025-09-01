@@ -3,7 +3,6 @@ export function ContactPage (...args: any[]) : any {
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Phone,
   Mail,
   MapPin,

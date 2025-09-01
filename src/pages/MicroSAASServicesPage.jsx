@@ -14,10 +14,8 @@ import {Header} from '@/components / Header';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
 import SEO from '@/components / SEO';
 export default function MicroSaasServicesPage () {
-export default function MicroSaasServicesPage () { /* empty */ }
 import {MICRO_SAAS_SERVICES,
 import {Star,
-
 
 const categories = [
     { id: 'all', name: 'All Services', icon: <Globe className="w - 5 h - 5"/>, count: MICRO_SAAS_SERVICES.length },

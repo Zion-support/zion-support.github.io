@@ -1,0 +1,444 @@
+name: Enhanced Link Checker
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Weekly on Monday at 6 AM
+  workflow_dispatch:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: enhanced-link-checker
+  cancel-in-progress: false
+
+jobs:
+  check-links:
+    name: Check External Links
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install linkinator
+        run: npm install -g linkinator
+        
+      - name: Validate configuration
+        run: |
+          echo "🔍 Validating external links configuration..."
+          
+          if [ ! -f "config/external-links.json" ]; then
+            echo "❌ Configuration file not found: config/external-links.json"
+            exit 1
+          fi
+          
+          # Validate JSON format
+          if ! jq empty config/external-links.json 2>/dev/null; then
+            echo "❌ Invalid JSON format in config/external-links.json"
+            exit 1
+          fi
+          
+          # Extract URLs from config
+          jq -r '.links[].url' config/external-links.json > external_links.txt
+          
+          link_count=$(wc -l < external_links.txt)
+          echo "✅ Configuration validated successfully"
+          echo "📊 Found $link_count links to check"
+          echo ""
+          echo "Links to be checked:"
+          cat external_links.txt
+          echo ""
+          
+      - name: Check external links
+        run: |
+          echo "🔗 Starting external link health check..."
+          echo "⏱️  Timeout: 30 seconds per link"
+          echo "🔄 Retry attempts: 3"
+          echo "🚀 Concurrency: 10"
+          echo ""
+          
+          # Run linkinator with enhanced options
+          linkinator external_links.txt \
+            --format json \
+            --concurrency 10 \
+            --timeout 30000 \
+            --retry \
+            --retry-errors \
+            --retry-status-codes 408,429,500,502,503,504 \
+            --skip '.*(logout|signout|admin).*' \
+            > link_report.json || true
+          
+          echo "✅ Link check completed. Generating comprehensive report..."
+          
+      - name: Generate comprehensive report
+        run: |
+          if [ -f link_report.json ]; then
+            echo "📝 Generating comprehensive link health report..."
+            
+            # Parse the JSON report and create a detailed markdown summary
+            echo "# 🔗 External Link Health Report" > LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "**Generated on:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> LINK_REPORT.md
+            echo "**Repository:** ${{ github.repository }}" >> LINK_REPORT.md
+            echo "**Branch:** ${{ github.ref_name }}" >> LINK_REPORT.md
+            echo "**Workflow Run:** [${{ github.workflow }} #${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            
+            # Count different types of links
+            total_links=$(jq '.links | length' link_report.json 2>/dev/null || echo "0")
+            working_links=$(jq '.links[] | select(.state=="OK") | length' link_report.json 2>/dev/null || echo "0")
+            broken_links=$(jq '.links[] | select(.state=="BROKEN") | length' link_report.json 2>/dev/null || echo "0")
+            timeout_links=$(jq '.links[] | select(.state=="TIMEOUT") | length' link_report.json 2>/dev/null || echo "0")
+            error_links=$(jq '.links[] | select(.state=="ERROR") | length' link_report.json 2>/dev/null || echo "0")
+            
+            # Calculate health score
+            if [ "$total_links" -gt 0 ]; then
+              health_score=$(( (working_links * 100) / total_links ))
+            else
+              health_score=0
+            fi
+            
+            # Health grade
+            if [ "$health_score" -ge 95 ]; then
+              grade="🟢 A+"
+              status="Excellent"
+            elif [ "$health_score" -ge 90 ]; then
+              grade="🟢 A"
+              status="Good"
+            elif [ "$health_score" -ge 80 ]; then
+              grade="🟡 B"
+              status="Fair"
+            elif [ "$health_score" -ge 70 ]; then
+              grade="🟠 C"
+              status="Poor"
+            else
+              grade="🔴 F"
+              status="Critical"
+            fi
+            
+            echo "## 📊 Executive Summary" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "| Metric | Value |" >> LINK_REPORT.md
+            echo "|--------|-------|" >> LINK_REPORT.md
+            echo "| 🏆 **Health Score** | **$health_score%** |" >> LINK_REPORT.md
+            echo "| 📊 **Grade** | **$grade** |" >> LINK_REPORT.md
+            echo "| 📈 **Status** | **$status** |" >> LINK_REPORT.md
+            echo "| 🔗 **Total Links** | $total_links |" >> LINK_REPORT.md
+            echo "| ✅ **Working Links** | $working_links |" >> LINK_REPORT.md
+            echo "| ❌ **Broken Links** | $broken_links |" >> LINK_REPORT.md
+            echo "| ⏰ **Timeout Links** | $timeout_links |" >> LINK_REPORT.md
+            echo "| 🔴 **Error Links** | $error_links |" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            
+            # Overall status with emojis
+            if [ "$broken_links" -eq 0 ] && [ "$timeout_links" -eq 0 ] && [ "$error_links" -eq 0 ]; then
+              echo "## 🎉 Status: Perfect Health!" >> LINK_REPORT.md
+              echo "✅ All external links are working perfectly!" >> LINK_REPORT.md
+              echo "🚀 Your website's external link health is excellent." >> LINK_REPORT.md
+            elif [ "$health_score" -ge 80 ]; then
+              echo "## 🟡 Status: Good Health with Minor Issues" >> LINK_REPORT.md
+              echo "⚠️  Most links are working, but some issues need attention." >> LINK_REPORT.md
+              echo "🔧 Quick fixes recommended to maintain optimal performance." >> LINK_REPORT.md
+            else
+              echo "## 🔴 Status: Health Issues Detected" >> LINK_REPORT.md
+              echo "🚨 Multiple link issues detected that require immediate attention." >> LINK_REPORT.md
+              echo "🔧 Prioritize fixing broken links to improve user experience." >> LINK_REPORT.md
+            fi
+            
+            echo "" >> LINK_REPORT.md
+            
+            # Detailed breakdown by status with categories
+            if [ "$broken_links" -gt 0 ]; then
+              echo "## ❌ Broken Links (Priority: High)" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+              echo "| URL | Status Code | Error Message | Category |" >> LINK_REPORT.md
+              echo "|-----|-------------|---------------|----------|" >> LINK_REPORT.md
+              
+              # Get category for each broken link
+              while IFS= read -r url; do
+                if [ -n "$url" ]; then
+                  status=$(jq -r --arg u "$url" '.links[] | select(.url==$u) | .status // "unknown"' link_report.json 2>/dev/null)
+                  error=$(jq -r --arg u "$url" '.links[] | select(.url==$u) | .error // "No error message"' link_report.json 2>/dev/null)
+                  category=$(jq -r --arg u "$url" '.links[] | select(.url==$u) | .category // "unknown"' config/external-links.json 2>/dev/null)
+                  echo "| $url | $status | $error | $category |" >> LINK_REPORT.md
+                fi
+              done < <(jq -r '.links[] | select(.state=="BROKEN") | .url' link_report.json 2>/dev/null)
+              echo "" >> LINK_REPORT.md
+            fi
+            
+            if [ "$timeout_links" -gt 0 ]; then
+              echo "## ⏰ Timeout Links (Priority: Medium)" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+              echo "| URL | Category |" >> LINK_REPORT.md
+              echo "|-----|----------|" >> LINK_REPORT.md
+              while IFS= read -r url; do
+                if [ -n "$url" ]; then
+                  category=$(jq -r --arg u "$url" '.links[] | select(.url==$u) | .category // "unknown"' config/external-links.json 2>/dev/null)
+                  echo "| $url | $category |" >> LINK_REPORT.md
+                fi
+              done < <(jq -r '.links[] | select(.state=="TIMEOUT") | .url' link_report.json 2>/dev/null)
+              echo "" >> LINK_REPORT.md
+            fi
+            
+            if [ "$error_links" -gt 0 ]; then
+              echo "## 🔴 Error Links (Priority: Medium)" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+              echo "| URL | Error Message | Category |" >> LINK_REPORT.md
+              echo "|-----|---------------|----------|" >> LINK_REPORT.md
+              while IFS= read -r url; do
+                if [ -n "$url" ]; then
+                  error=$(jq -r --arg u "$url" '.links[] | select(.url==$u) | .error // "No error message"' link_report.json 2>/dev/null)
+                  category=$(jq -r --arg u "$url" '.links[] | select(.url==$u) | .category // "unknown"' config/external-links.json 2>/dev/null)
+                  echo "| $url | $error | $category |" >> LINK_REPORT.md
+                fi
+              done < <(jq -r '.links[] | select(.state=="ERROR") | .url' link_report.json 2>/dev/null)
+              echo "" >> LINK_REPORT.md
+            fi
+            
+            # Working links summary by category
+            if [ "$working_links" -gt 0 ]; then
+              echo "## ✅ Working Links by Category" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+              
+              # Group working links by category
+              jq -r '.links[] | select(.state=="OK") | .url' link_report.json 2>/dev/null | while IFS= read -r url; do
+                if [ -n "$url" ]; then
+                  category=$(jq -r --arg u "$url" '.links[] | select(.url==$u) | .category // "unknown"' config/external-links.json 2>/dev/null)
+                  status=$(jq -r --arg u "$url" '.links[] | select(.url==$u) | .status // "unknown"' link_report.json 2>/dev/null)
+                  response_time=$(jq -r --arg u "$url" '.links[] | select(.url==$u) | .responseTime // "unknown"' link_report.json 2>/dev/null)
+                  echo "$category|$url|$status|$response_time" >> working_links_by_category.txt
+                fi
+              done
+              
+              if [ -f working_links_by_category.txt ]; then
+                echo "| Category | URL | Status | Response Time |" >> LINK_REPORT.md
+                echo "|----------|-----|--------|---------------|" >> LINK_REPORT.md
+                sort working_links_by_category.txt | while IFS='|' read -r category url status response_time; do
+                  echo "| $category | $url | $status | ${response_time}ms |" >> LINK_REPORT.md
+                done
+                rm working_links_by_category.txt
+              fi
+              echo "" >> LINK_REPORT.md
+            fi
+            
+            # Actionable recommendations
+            echo "## 💡 Actionable Recommendations" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            
+            if [ "$broken_links" -gt 0 ]; then
+              echo "### 🔧 Immediate Actions Required:" >> LINK_REPORT.md
+              echo "- **Fix broken links**: Update or remove links that return 4xx/5xx status codes" >> LINK_REPORT.md
+              echo "- **Check redirects**: Ensure old URLs redirect properly to new locations" >> LINK_REPORT.md
+              echo "- **Update content**: Remove references to broken external resources" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+            fi
+            
+            if [ "$timeout_links" -gt 0 ]; then
+              echo "### ⏱️ Performance Improvements:" >> LINK_REPORT.md
+              echo "- **Investigate slow responses**: Check if external services are experiencing issues" >> LINK_REPORT.md
+              echo "- **Consider alternatives**: Find faster alternatives for consistently slow links" >> LINK_REPORT.md
+              echo "- **Monitor trends**: Track response times over time to identify patterns" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+            fi
+            
+            if [ "$error_links" -gt 0 ]; then
+              echo "### 🔍 Technical Investigation:" >> LINK_REPORT.md
+              echo "- **Check network connectivity**: Verify server can reach external domains" >> LINK_REPORT.md
+              echo "- **Review error logs**: Analyze specific error messages for root causes" >> LINK_REPORT.md
+              echo "- **Test manually**: Verify links work from different locations" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+            fi
+            
+            echo "### 📈 Long-term Improvements:" >> LINK_REPORT.md
+            echo "- **Regular monitoring**: Set up alerts for when link health degrades" >> LINK_REPORT.md
+            echo "- **Link validation**: Implement link checking in your content management workflow" >> LINK_REPORT.md
+            echo "- **Performance tracking**: Monitor response times and set performance budgets" >> LINK_REPORT.md
+            echo "- **Update configuration**: Keep the external-links.json file current with your actual links" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            
+            # Configuration info
+            echo "## ⚙️ Configuration Details" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "| Setting | Value |" >> LINK_REPORT.md
+            echo "|---------|-------|" >> LINK_REPORT.md
+            echo "| Check Frequency | Weekly (Monday 6 AM UTC) |" >> LINK_REPORT.md
+            echo "| Timeout | 30 seconds per link |" >> LINK_REPORT.md
+            echo "| Retry Attempts | 3 |" >> LINK_REPORT.md
+            echo "| Concurrency | 10 parallel checks |" >> LINK_REPORT.md
+            echo "| Retry Status Codes | 408, 429, 500, 502, 503, 504 |" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            
+            echo "---" >> LINK_REPORT.md
+            echo "*This report was generated automatically by the Enhanced Link Checker workflow*" >> LINK_REPORT.md
+            echo "*Last updated: $(date -u '+%Y-%m-%d %H:%M:%S UTC')*" >> LINK_REPORT.md
+            
+            echo "✅ Comprehensive report generated successfully!"
+            echo "📊 Health Score: $health_score% ($grade)"
+            echo "🔗 Total: $total_links, Working: $working_links, Issues: $((broken_links + timeout_links + error_links))"
+            
+          else
+            echo "# ❌ Link Check Report Generation Failed" > LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "**Generated on:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "## 🚨 Error" >> LINK_REPORT.md
+            echo "Failed to generate link report. The linkinator command may have failed." >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "## 🔍 Troubleshooting Steps" >> LINK_REPORT.md
+            echo "1. Check if linkinator is properly installed" >> LINK_REPORT.md
+            echo "2. Verify the external_links.txt file was created" >> LINK_REPORT.md
+            echo "3. Check GitHub Actions logs for detailed error messages" >> LINK_REPORT.md
+            echo "4. Verify the configuration file format is correct" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "## 📋 Next Steps" >> LINK_REPORT.md
+            echo "- Review the workflow logs for specific error messages" >> LINK_REPORT.md
+            echo "- Verify the external-links.json configuration file" >> LINK_REPORT.md
+            echo "- Test linkinator locally if possible" >> LINK_REPORT.md
+          fi
+          
+      - name: Create issue for broken links
+        if: |
+          always() && 
+          (contains(fromJson('${{ toJSON(steps.generate-comprehensive-report.outputs) }}'), 'broken_links') || 
+           contains(fromJson('${{ toJSON(steps.generate-comprehensive-report.outputs) }}'), 'timeout_links') ||
+           contains(fromJson('${{ toJSON(steps.generate-comprehensive-report.outputs) }}'), 'error_links'))
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "🔗 External Link Health Check - Issues Detected (Score: ${{ steps.generate-comprehensive-report.outputs.health_score }}%)"
+          content-filepath: LINK_REPORT.md
+          labels: |
+            link-check
+            automated
+            broken-links
+            maintenance
+            health-monitoring
+          assignees: ''
+          body: |
+            ## 🔗 External Link Health Check
+            
+            This issue was automatically created by the Enhanced Link Checker workflow.
+            
+            **Workflow Run:** [${{ github.workflow }} #${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+            
+            Please review the attached comprehensive report and take appropriate action to fix any broken or problematic external links.
+            
+            ### 🎯 Quick Actions:
+            - [ ] Review broken links (Priority: High)
+            - [ ] Check timeout links (Priority: Medium)
+            - [ ] Investigate error links (Priority: Medium)
+            - [ ] Update or remove problematic URLs
+            - [ ] Test fixes
+            - [ ] Close this issue when resolved
+            
+            ### 📊 Health Score: ${{ steps.generate-comprehensive-report.outputs.health_score }}%
+            
+      - name: Upload comprehensive report
+        uses: actions/upload-artifact@v4
+        with:
+          name: enhanced-link-check-report-${{ github.run_number }}
+          path: |
+            LINK_REPORT.md
+            link_report.json
+            external_links.txt
+            config/external-links.json
+          retention-days: 90
+          
+      - name: Comment on PR with summary
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('LINK_REPORT.md', 'utf8');
+            
+            // Extract health score and summary
+            const healthScoreMatch = report.match(/🏆 \*\*Health Score\*\* \| \*\*(\d+)%\*\* \|/);
+            const healthScore = healthScoreMatch ? healthScoreMatch[1] : 'Unknown';
+            
+            const gradeMatch = report.match(/📊 \*\*Grade\*\* \| \*\*([^|]+)\*\* \|/);
+            const grade = gradeMatch ? gradeMatch[1].trim() : 'Unknown';
+            
+            const summaryMatch = report.match(/## 📊 Executive Summary[\s\S]*?(?=##|$)/);
+            const summary = summaryMatch ? summaryMatch[0] : '## 📊 Executive Summary\n\nLink check completed. See full report in artifacts.';
+            
+            const hasIssues = report.includes('❌ Broken Links') || report.includes('⏰ Timeout Links') || report.includes('🔴 Error Links');
+            
+            const comment = `## 🔗 External Link Health Check Results
+            
+            ${summary}
+            
+            **Full Report:** Available in workflow artifacts
+            **Status:** ${hasIssues ? '⚠️ Issues Detected' : '✅ All Good!'}
+            **Health Score:** ${healthScore}% ${grade}
+            
+            *This comment was automatically generated by the Enhanced Link Checker workflow*`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+            
+      - name: Set workflow status and outputs
+        id: workflow-status
+        run: |
+          if [ -f link_report.json ]; then
+            broken_count=$(jq '.links[] | select(.state=="BROKEN") | length' link_report.json 2>/dev/null || echo "0")
+            timeout_count=$(jq '.links[] | select(.state=="TIMEOUT") | length' link_report.json 2>/dev/null || echo "0")
+            error_count=$(jq '.links[] | select(.state=="ERROR") | length' link_report.json 2>/dev/null || echo "0")
+            total_count=$(jq '.links | length' link_report.json 2>/dev/null || echo "0")
+            
+            if [ "$total_count" -gt 0 ]; then
+              health_score=$(( (total_count - broken_count - timeout_count - error_count) * 100 / total_count ))
+            else
+              health_score=0
+            fi
+            
+            echo "health_score=$health_score" >> $GITHUB_OUTPUT
+            echo "total_links=$total_count" >> $GITHUB_OUTPUT
+            echo "broken_links=$broken_count" >> $GITHUB_OUTPUT
+            echo "timeout_links=$timeout_count" >> $GITHUB_OUTPUT
+            echo "error_links=$error_count" >> $GITHUB_OUTPUT
+            
+            if [ "$broken_count" -gt 0 ] || [ "$timeout_count" -gt 0 ] || [ "$error_count" -gt 0 ]; then
+              echo "::warning::External link check found issues: $broken_count broken, $timeout_count timeout, $error_count error (Health Score: $health_score%)"
+              echo "status=warning" >> $GITHUB_OUTPUT
+              exit 1
+            else
+              echo "::notice::External link check passed - all links are healthy (Health Score: $health_score%)"
+              echo "status=success" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          else
+            echo "::error::Failed to generate link report"
+            echo "status=error" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+          
+      - name: Success notification
+        if: steps.workflow-status.outputs.status == 'success'
+        run: |
+          echo "🎉 External link health check completed successfully!"
+          echo "🏆 Health Score: ${{ steps.workflow-status.outputs.health_score }}%"
+          echo "✅ All external links are healthy and working correctly."
+          
+      - name: Warning notification
+        if: steps.workflow-status.outputs.status == 'warning'
+        run: |
+          echo "⚠️  External link health check completed with warnings!"
+          echo "🏆 Health Score: ${{ steps.workflow-status.outputs.health_score }}%"
+          echo "🔧 Some links have issues that need attention."
+          echo "📋 Review the generated report for details."

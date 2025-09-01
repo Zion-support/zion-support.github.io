@@ -10,7 +10,6 @@ import React from 'react';
   import SEO from '../components / SEO';
 export const MobileLaunchPage = () => {
 
-
   // import { Header } from '../components / header / Header';
 
   return (<>

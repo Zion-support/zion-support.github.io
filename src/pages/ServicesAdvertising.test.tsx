@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import ServicesAdvertising from './ServicesAdvertising';
 
-
 describe ('ServicesAdvertising', () => {
   it ('renders without crashing', () => {
     render (<ServicesAdvertising />) ;

@@ -1,24 +1,23 @@
 import { Link  } from 'react - router - dom.ts';
 import React, { useState, useMemo } from 'react.ts';
 export default ComprehensivePricingGuide2030;}}
-import { CheckCircle, 
+import { CheckCircle,
 import { innovativeAIServices2030 } from "../data / innovativeAIServices2030";
 import { innovativeCloudDevOpsServices2030 } from "../data / innovativeCloudDevOpsServices2030";
 import { innovativeCybersecurityServices2030 } from "../data / innovativeCybersecurityServices2030";
 import { motion  } from 'framer - motion.ts';
 
-
-  Star, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Brain, 
-  Server, 
-  Globe, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  Brain,
+  Server,
+  Globe,
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
   ExternalLink,
   DollarSign,
   CreditCard,
@@ -167,12 +166,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -263,12 +262,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -281,17 +280,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 key={index}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 viewport={{ once: true }}
@@ -316,22 +315,22 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             {filteredServices.map ( (service, index) => {;
               const CategoryIcon = getCategoryIcon (service.category) ;
               const categoryColor = getCategoryColor (service.category) ;
-              
+
               return (<motion.div
                   key = {service.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                   className="bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - xl p - 6 hover:bg - white / 10 transition - all group"
@@ -433,12 +432,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -490,17 +489,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 key={index}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 viewport={{ once: true }}
@@ -518,9 +517,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   <div role="button" className="text - slate - 300">Cost Reduction</div>
                 </div>
               </div>;
-              
-              <Link 
-                to="/contact" 
+
+              <Link
+                to="/contact"
                 className="inline - flex items - center px - 8 py - 4 rounded - xl bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold hover:opacity - 90 transition - opacity"
               >
                 Get Personalized ROI Analysis < ArrowRight className="ml - 2 h - 5 w - 5" />
@@ -536,12 +535,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -550,42 +549,42 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <h2 className="text - 3xl md:text - 5xl font - bold text - white mb - 6">
               Ready to Get Started?
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               className="text - xl text - slate - 300 mb - 8"
             >
-              Our team of experts is ready to help you choose the right services and pricing plan. 
+              Our team of experts is ready to help you choose the right services and pricing plan.
               Get in touch today for a personalized consultation.
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4
 
 }}
               className="grid md:grid - cols - 3 gap - 8 mb - 12"
@@ -593,8 +592,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               <div role="button" className="flex flex - col items - center">
                 <Phone className="w - 8 h - 8 text - cyan - 400 mb - 4" />
                 <div role="button" className="text - white font - semibold mb - 2">Call Us</div>
-                <a 
-                  href="tel:+13024640950" 
+                <a
+                  href="tel:+13024640950"
                   className="text - cyan - 400 hover:text - cyan - 300 transition - colors"
                 >
                   +1 302 464 0950
@@ -603,8 +602,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               <div role="button" className="flex flex - col items - center">
                 <Mail className="w - 8 h - 8 text - cyan - 400 mb - 4" />
                 <div role="button" className="text - white font - semibold mb - 2">Email Us</div>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
                   className="text - cyan - 400 hover:text - cyan - 300 transition - colors"
                 >
                   kleber@ziontechgroup.com
@@ -620,32 +619,32 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.6 
+  delay: 0.6
 
 }}
               className="flex flex - wrap justify - center gap - 4"
             >
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="inline - flex items - center px - 8 py - 4 rounded - xl bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold hover:opacity - 90 transition - opacity"
               >
                 Schedule a Consultation < ArrowRight className="ml - 2 h - 5 w - 5" />
               </Link>
-              <Link 
-                to="/request - quote" 
+              <Link
+                to="/request - quote"
                 className="inline - flex items - center px - 8 py - 4 rounded - xl border border - cyan - 400 / 30 text - cyan - 400 font - semibold hover:bg - cyan - 400 / 10 transition - colors"
               >
                 Request a Quote
@@ -662,9 +661,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <div role="button" className="text - slate - 300 mb - 6">
               <strong > Zion Tech Group</strong> - Your partner in digital transformation and innovation.
               Visit us at{' '}
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text - cyan - 400 hover:text - cyan - 300 transition - colors"
               >

@@ -4,7 +4,6 @@ import {
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2031 } from '../data / innovativeMicroSaasServices2031';
 import { motion } from 'framer - motion';
 
-
   Brain,
   Shield,
   Cloud,

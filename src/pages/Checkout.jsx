@@ -8,7 +8,6 @@ import { getStripe } from '@/utils / getStripe';
 import { safeStorage } from '@/utils / safeStorage';
 export default function CheckoutPage () {
 
-
     const navigate = useNavigate () ;
     const { t } = useTranslation () ;
     const [items, setItems] = useState ([]) ;

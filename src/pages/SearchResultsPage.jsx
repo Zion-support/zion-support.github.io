@@ -1,12 +1,11 @@
 import { useInfiniteQuery } from "@tanstack / react - query";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from 'react - router - dom';
-import React from 'react';
+import React, { useState } from 'react';
 import { generateSearchSuggestions } from "@/data / marketplaceData";
 import { SearchBar } from "@/components / SearchBar";
 import { SearchResultCard } from "@/components / search / SearchResultCard";
 export default function SearchResultsPage () {
-
 
 const LIMIT = 20;
     const router = useNavigate () ;

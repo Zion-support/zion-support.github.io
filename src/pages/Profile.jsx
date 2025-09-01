@@ -7,7 +7,6 @@ export default function Profile () {
 export default Profile;
 import { toast } from "sonner";
 
-
     const { user, isLoading, logout } = useAuth () ;
     const navigate = useNavigate () ;
     useEffect ( () => {
@@ -22,7 +21,7 @@ import { toast } from "sonner";
         <div className="min - h-screen bg - zion - blue flex items - center justify - center">
           <div className="animate - pulse text - white">Loading profile...</div>
         </div>
-        
+
       </>) }
     if (!user) {
         return (<>
@@ -36,7 +35,7 @@ import { toast } from "sonner";
             </Button>
           </div>
         </div>
-        
+
       </>) }
     return (<>
 
@@ -64,7 +63,7 @@ import { toast } from "sonner";
           </div>
         </div>
       </div>
-      
+
     </>) }
 ;
 }}}}

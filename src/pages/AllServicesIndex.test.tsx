@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import AllServicesIndex from './AllServicesIndex';
 
-
 describe ('AllServicesIndex', () => {
   it ('renders without crashing', () => {
     render (<AllServicesIndex />) ;

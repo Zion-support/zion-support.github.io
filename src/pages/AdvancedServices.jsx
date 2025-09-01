@@ -3,7 +3,6 @@ export default AdvancedServices;
 import { FuturisticServicesShowcase } from "../components / FuturisticServicesShowcase";
 import { motion } from 'framer - motion';
 
-
 const AdvancedServices = () => {
     return (<div className="min - h-screen bg - gradient - to - br from - black via - gray - 900 to - blue - 900">
       {/* Hero Section */}
@@ -22,11 +21,11 @@ const AdvancedServices = () => {
         <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
           <motion.div initial = {
   { opacity: 0,
-  y: 50 
+  y: 50
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }}>
             <h1 className="text - 5xl lg:text - 7xl font - bold mb - 6">
@@ -58,15 +57,15 @@ const AdvancedServices = () => {
             }
         ].map ( (benefit, index) => (<motion.div key={index} initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.6,
-  delay: index * 0.2 
+  delay: index * 0.2
 
 }} className="bg - gradient - to - br from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10 rounded - xl p - 6 border border - cyan - 500 / 30 backdrop - blur - sm">
                   <div className="text - 4xl mb - 4">{benefit.icon}</div>
@@ -97,11 +96,11 @@ const AdvancedServices = () => {
         <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div initial = {
   { opacity: 0,
-  y: 50 
+  y: 50
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text - center mb - 16">
             <h2 className="text - 4xl lg:text - 5xl font - bold text - white mb - 6">
@@ -122,15 +121,15 @@ const AdvancedServices = () => {
             { name: "Security", icon: "🔒", color: "from - red - 400 to - pink - 500" }
         ].map ( (tech, index) => (<motion.div key={index} initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} whileInView = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} viewport={{ once: true }} className="text - center group">
                 <div className={`w - 20 h - 20 mx - auto mb - 4 bg - gradient - to - br ${tech.color} rounded - 2xl flex items - center justify - center text - white text - 3xl shadow - lg group - hover:shadow - xl transition - all duration - 300 transform group - hover:scale - 110`}>
@@ -148,11 +147,11 @@ const AdvancedServices = () => {
         <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div initial = {
   { opacity: 0,
-  y: 50 
+  y: 50
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text - center mb - 16">
             <h2 className="text - 4xl lg:text - 5xl font - bold text - white mb - 6">
@@ -203,15 +202,15 @@ const AdvancedServices = () => {
             }
         ].map ( (feature, index) => (<motion.div key={index} initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} viewport={{ once: true }} className="bg - gradient - to - br from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10 rounded - xl p - 6 border border - cyan - 500 / 30 backdrop - blur - sm hover:border - cyan - 400 / 50 transition - all duration - 300">
                 <div className="text - 4xl mb - 4">{feature.icon}</div>
@@ -229,11 +228,11 @@ const AdvancedServices = () => {
         <div className="relative z - 10 max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
           <motion.div initial = {
   { opacity: 0,
-  y: 50 
+  y: 50
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="bg - gradient - to - r from - cyan - 500 / 20 via - blue - 500 / 20 to - purple - 500 / 20 rounded - 2xl p - 12 border border - cyan - 500 / 40 backdrop - blur - sm">
             <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6">

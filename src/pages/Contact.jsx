@@ -3,7 +3,6 @@ export default function Contact () {
 import {
 import { motion } from 'framer - motion';
 
-
   Mail,
   Phone,
   MapPin,

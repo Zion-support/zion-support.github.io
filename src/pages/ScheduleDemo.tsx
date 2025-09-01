@@ -4,7 +4,6 @@ export default ScheduleDemo;}}}}
 import { motion } from 'framer - motion';
 import { SEO } from "../components / SEO";
 
-
 interface DemoFormData {
 
   firstName: string;
@@ -69,12 +68,12 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
         <motion.div
           initial = {
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }}
           animate = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
           className="max - w-2xl mx - auto text - center p - 8"
@@ -140,12 +139,12 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -185,17 +184,17 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
               <motion.div
                 initial = {
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                 animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
                 className="bg - slate - 800 / 50 backdrop - blur - xl rounded - 2xl border border - slate - 700 / 50 p - 8"
@@ -214,7 +213,7 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
                         required
                         value={formData.firstName}
                         onChange = { (e) => setFormData (prev => ({ ...prev,
-  firstName: e.target.value 
+  firstName: e.target.value
 
 }) ) }
                         className="w - full px - 4 py - 3 bg - slate - 700 / 50 border border - slate - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent"
@@ -230,7 +229,7 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
                         required
                         value={formData.lastName}
                         onChange = { (e) => setFormData (prev => ({ ...prev,
-  lastName: e.target.value 
+  lastName: e.target.value
 
 }) ) }
                         className="w - full px - 4 py - 3 bg - slate - 700 / 50 border border - slate - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent"
@@ -249,7 +248,7 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
                         required
                         value={formData.email}
                         onChange = { (e) => setFormData (prev => ({ ...prev,
-  email: e.target.value 
+  email: e.target.value
 
 }) ) }
                         className="w - full px - 4 py - 3 bg - slate - 700 / 50 border border - slate - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent"
@@ -265,7 +264,7 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
                         required
                         value={formData.company}
                         onChange = { (e) => setFormData (prev => ({ ...prev,
-  company: e.target.value 
+  company: e.target.value
 
 }) ) }
                         className="w - full px - 4 py - 3 bg - slate - 700 / 50 border border - slate - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent"
@@ -282,7 +281,7 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
                       type="tel"
                       value={formData.phone}
                       onChange = { (e) => setFormData (prev => ({ ...prev,
-  phone: e.target.value 
+  phone: e.target.value
 
 }) ) }
                       className="w - full px - 4 py - 3 bg - slate - 700 / 50 border border - slate - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent"
@@ -301,7 +300,7 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
                         required
                         value={formData.preferredDate}
                         onChange = { (e) => setFormData (prev => ({ ...prev,
-  preferredDate: e.target.value 
+  preferredDate: e.target.value
 
 }) ) }
                         className="w - full px - 4 py - 3 bg - slate - 700 / 50 border border - slate - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent"
@@ -316,7 +315,7 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
                         required
                         value={formData.preferredTime}
                         onChange = { (e) => setFormData (prev => ({ ...prev,
-  preferredTime: e.target.value 
+  preferredTime: e.target.value
 
 }) ) }
                         className="w - full px - 4 py - 3 bg - slate - 700 / 50 border border - slate - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent"
@@ -334,7 +333,7 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
                     <select
                       value={formData.attendees}
                       onChange = { (e) => setFormData (prev => ({ ...prev,
-  attendees: e.target.value 
+  attendees: e.target.value
 
 }) ) }
                       className="w - full px - 4 py - 3 bg - slate - 700 / 50 border border - slate - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent"
@@ -374,7 +373,7 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
                     <textarea
                       value={formData.message}
                       onChange = { (e) => setFormData (prev => ({ ...prev,
-  message: e.target.value 
+  message: e.target.value
 
 }) ) }
                       rows={4}
@@ -404,17 +403,17 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
               <motion.div
                 initial = {
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }}
                 animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
                 className="space - y-6"

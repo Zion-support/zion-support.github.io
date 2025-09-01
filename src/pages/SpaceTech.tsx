@@ -4,7 +4,6 @@ export default React.memo (function SpaceTech (...args: any[]) : any {
 import {
 import { motion } from 'framer - motion.ts';
 
-
   Rocket,
   Satellite,
   Globe,

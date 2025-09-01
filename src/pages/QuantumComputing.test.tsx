@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import QuantumComputing from './QuantumComputing';
 
-
 describe ('QuantumComputing', () => {
   it ('renders without crashing', () => {
     render (<QuantumComputing />) ;

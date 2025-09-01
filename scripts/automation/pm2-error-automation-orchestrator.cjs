@@ -1,497 +1,322 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync, spawn } = require('child_process');
-
-class PM2ErrorAutomationOrchestrator {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation/logs/pm2-error-orchestrator.log');
-    this.configFile = path.join(this.projectRoot, 'ecosystem.error-automation.config.cjs');
-    this.startTime = Date.now();
-    
-    // Ensure logs directory exists
-    const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
-    }
-  }
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    
-    // Append to log file
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
-
-  async run() {
-    this.log('🚀 Starting PM2 Error Automation Orchestrator');
-    
-    try {
-      // Step 1: Create enhanced PM2 ecosystem configuration
-      await this.createEnhancedEcosystemConfig();
-      
-      // Step 2: Install required dependencies
-      await this.installDependencies();
-      
-      // Step 3: Start PM2 processes
-      await this.startPM2Processes();
-      
-      // Step 4: Set up monitoring and alerts
-      await this.setupMonitoring();
-      
-      // Step 5: Generate automation report
-      await this.generateReport();
-      
-      this.log('✅ PM2 Error Automation Orchestrator completed successfully');
-      
-    } catch (error) {
-      this.log(`❌ Error in PM2 Error Automation Orchestrator: ${error.message}`, 'ERROR');
-    }
-  }
-
-  async createEnhancedEcosystemConfig() {
-    this.log('🔧 Creating enhanced PM2 ecosystem configuration...');
-    
-    const ecosystemConfig = `module.exports = {
-  apps: [
-    // Enhanced Project Error Fixer - runs every 10 minutes (HIGHEST PRIORITY)
-    {
-      name: 'enhanced-project-error-fixer',
-      script: './scripts/automation/enhanced-project-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
-      },
-      cron_restart: '*/10 * * * *', // Every 10 minutes
-      log_file: './automation/logs/enhanced-error-fixer.log',
-      error_file: './automation/logs/enhanced-error-fixer-error.log',
-      out_file: './automation/logs/enhanced-error-fixer-out.log'
-    },
-
-    // TypeScript Error Monitor - runs every 15 minutes
-    {
-      name: 'typescript-error-monitor',
-      script: './scripts/automation/typescript-error-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      },
-      cron_restart: '*/15 * * * *', // Every 15 minutes
-      log_file: './automation/logs/typescript-monitor.log',
-      error_file: './automation/logs/typescript-monitor-error.log',
-      out_file: './automation/logs/typescript-monitor-out.log'
-    },
-
-    // ESLint Error Cleaner - runs every 20 minutes
-    {
-      name: 'eslint-error-cleaner',
-      script: './scripts/automation/eslint-error-cleaner.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1200000' // 20 minutes
-      },
-      cron_restart: '*/20 * * * *', // Every 20 minutes
-      log_file: './automation/logs/eslint-cleaner.log',
-      error_file: './automation/logs/eslint-cleaner-error.log',
-      out_file: './automation/logs/eslint-cleaner-out.log'
-    },
-
-    // Build Error Detector - runs every 30 minutes
-    {
-      name: 'build-error-detector',
-      script: './scripts/automation/build-error-detector.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
-      },
-      cron_restart: '*/30 * * * *', // Every 30 minutes
-      log_file: './automation/logs/build-detector.log',
-      error_file: './automation/logs/build-detector-error.log',
-      out_file: './automation/logs/build-detector-out.log'
-    },
-
-    // Dependency Error Resolver - runs every hour
-    {
-      name: 'dependency-error-resolver',
-      script: './scripts/automation/dependency-error-resolver.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      },
-      cron_restart: '0 * * * *', // Every hour
-      log_file: './automation/logs/dependency-resolver.log',
-      error_file: './automation/logs/dependency-resolver-error.log',
-      out_file: './automation/logs/dependency-resolver-out.log'
-    },
-
-    // Configuration Error Fixer - runs every 2 hours
-    {
-      name: 'config-error-fixer',
-      script: './scripts/automation/config-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      },
-      cron_restart: '0 */2 * * *', // Every 2 hours
-      log_file: './automation/logs/config-fixer.log',
-      error_file: './automation/logs/config-fixer-error.log',
-      out_file: './automation/logs/config-fixer-out.log'
-    },
-
-    // Enhanced Error Fixer - runs every 45 minutes
-    {
-      name: 'enhanced-error-fixer',
-      script: './scripts/automation/enhanced-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '2700000' // 45 minutes
-      },
-      cron_restart: '*/45 * * * *', // Every 45 minutes
-      log_file: './automation/logs/enhanced-fixer.log',
-      error_file: './automation/logs/enhanced-fixer-error.log',
-      out_file: './automation/logs/enhanced-fixer-out.log'
-    },
-
-    // Error Prevention Monitor - runs every 15 minutes
-    {
-      name: 'error-prevention-monitor',
-      script: './scripts/automation/error-prevention-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      },
-      cron_restart: '*/15 * * * *', // Every 15 minutes
-      log_file: './automation/logs/error-prevention.log',
-      error_file: './automation/logs/error-prevention-error.log',
-      out_file: './automation/logs/error-prevention-out.log'
-    },
-
-    // Critical Error Alert System - runs every 5 minutes
-    {
-      name: 'critical-error-alert-system',
-      script: './scripts/automation/critical-error-alert-system.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
-      },
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      log_file: './automation/logs/critical-alerts.log',
-      error_file: './automation/logs/critical-alerts-error.log',
-      out_file: './automation/logs/critical-alerts-out.log'
-    },
-
-    // Auto Recovery Manager - runs every 10 minutes
-    {
-      name: 'auto-recovery-manager',
-      script: './scripts/automation/auto-recovery-manager.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
-      },
-      cron_restart: '*/10 * * * *', // Every 10 minutes
-      log_file: './automation/logs/auto-recovery.log',
-      error_file: './automation/logs/auto-recovery-error.log',
-      out_file: './automation/logs/auto-recovery-out.log'
-    },
-
-    // Error Analytics Dashboard - runs every hour
-    {
-      name: 'error-analytics-dashboard',
-      script: './scripts/automation/error-analytics-dashboard.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      },
-      cron_restart: '0 * * * *', // Every hour
-      log_file: './automation/logs/error-analytics.log',
-      error_file: './automation/logs/error-analytics-error.log',
-      out_file: './automation/logs/error-analytics-out.log'
-    },
-
-    // Code Quality Automation - runs every 2 hours
-    {
-      name: 'code-quality-automation',
-      script: './scripts/automation/code-quality-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      },
-      cron_restart: '0 */2 * * *', // Every 2 hours
-      log_file: './automation/logs/code-quality.log',
-      error_file: './automation/logs/code-quality-error.log',
-      out_file: './automation/logs/code-quality-out.log'
-    },
-
-    // AI Code Review Automation - runs every 4 hours
-    {
-      name: 'ai-code-review-automation',
-      script: './scripts/automation/ai-code-review-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '14400000' // 4 hours
-      },
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      log_file: './automation/logs/ai-code-review.log',
-      error_file: './automation/logs/ai-code-review-error.log',
-      out_file: './automation/logs/ai-code-review-out.log'
-    },
-
-    // Predictive Issue Detection - runs every 3 hours
-    {
-      name: 'predictive-issue-detection',
-      script: './scripts/automation/predictive-issue-detection.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '10800000' // 3 hours
-      },
-      cron_restart: '0 */3 * * *', // Every 3 hours
-      log_file: './automation/logs/predictive-detection.log',
-      error_file: './automation/logs/predictive-detection-error.log',
-      out_file: './automation/logs/predictive-detection-out.log'
-    },
-
-    // Intelligent Automation Orchestrator - runs every 6 hours
-    {
-      name: 'intelligent-automation-orchestrator',
-      script: './scripts/automation/intelligent-automation-orchestrator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      log_file: './automation/logs/intelligent-orchestrator.log',
-      error_file: './automation/logs/intelligent-orchestrator-error.log',
-      out_file: './automation/logs/intelligent-orchestrator-out.log'
-    }
-  ],
-
-  deploy: {
-    production: {
-      user: 'root',
-      host: 'localhost',
-      ref: 'origin/main',
-      repo: 'git@github.com:your-username/bolt.new.zion.app.git',
-      path: '/workspace/production',
-      'pre-deploy-local': '',
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.error-automation.config.cjs --env production',
-      'pre-setup': ''
-    }
-  }
-};`;
-
-    fs.writeFileSync(this.configFile, ecosystemConfig);
-    this.log('✅ Enhanced PM2 ecosystem configuration created');
-  }
-
-  async installDependencies() {
-    this.log('📦 Installing required dependencies...');
-    
-    try {
-      // Install glob for file pattern matching
-      execSync('npm install --save-dev glob', { cwd: this.projectRoot, stdio: 'inherit' });
-      
-      // Install additional PM2 modules
-      execSync('pm2 install pm2-logrotate', { stdio: 'inherit' });
-      execSync('pm2 set pm2-logrotate:max_size 10M', { stdio: 'inherit' });
-      execSync('pm2 set pm2-logrotate:retain 30', { stdio: 'inherit' });
-      execSync('pm2 set pm2-logrotate:compress true', { stdio: 'inherit' });
-      
-      this.log('✅ Dependencies installed successfully');
-      
-    } catch (error) {
-      this.log(`Warning: Could not install some dependencies: ${error.message}`, 'WARN');
-    }
-  }
-
-  async startPM2Processes() {
-    this.log('🚀 Starting PM2 error automation processes...');
-    
-    try {
-      // Stop any existing processes
-      try {
-        execSync('pm2 stop ecosystem.error-automation.config.cjs', { stdio: 'pipe' });
-        execSync('pm2 delete ecosystem.error-automation.config.cjs', { stdio: 'pipe' });
-      } catch (error) {
-        // Ignore errors if processes don't exist
-      }
-      
-      // Start the new processes
-      execSync('pm2 start ecosystem.error-automation.config.cjs --update-env', { stdio: 'inherit' });
-      
-      // Save PM2 configuration
-      execSync('pm2 save', { stdio: 'inherit' });
-      
-      // Set up PM2 to start on system boot
-      execSync('pm2 startup', { stdio: 'inherit' });
-      
-      this.log('✅ PM2 error automation processes started successfully');
-      
-    } catch (error) {
-      this.log(`Error starting PM2 processes: ${error.message}`, 'ERROR');
-      throw error;
-    }
-  }
-
-  async setupMonitoring() {
-    this.log('📊 Setting up monitoring and alerts...');
-    
-    try {
-      // Create monitoring script
-      const monitoringScript = path.join(this.projectRoot, 'scripts/automation/monitoring-setup.cjs');
-      
-      const monitoringCode = `#!/usr/bin/env node
-
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-// Monitor PM2 processes and send alerts if needed
-setInterval(() => {
-  const { execSync } = require('child_process');
-  
+console.log('🎯 Starting PM2 Error Automation Orchestrator...');
+
+// Get automation interval from environment variable (default: 15 minutes)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000; // 15 minutes
+
+async function runErrorAutomationOrchestrator() {
   try {
-    const status = execSync('pm2 status --json', { encoding: 'utf8' });
-    const processes = JSON.parse(status);
-    
-    processes.forEach(process => {
-      if (process.pm2_env.status !== 'online') {
-        console.log(\`⚠️  Process \${process.name} is not online: \${process.pm2_env.status}\`);
-        
-        // Restart the process
-        try {
-          execSync(\`pm2 restart \${process.name}\`, { stdio: 'pipe' });
-          console.log(\`✅ Restarted \${process.name}\`);
-        } catch (error) {
-          console.log(\`❌ Failed to restart \${process.name}: \${error.message}\`);
-        }
-      }
-    });
+    console.log(
+      `🎯 Running PM2 Error Automation Orchestrator at ${new Date().toISOString()}`
+    );
+
+    let totalFixes = 0;
+    let totalErrors = 0;
+
+    // 1. Detect all errors
+    console.log('🔍 Step 1: Detecting all errors...');
+    const errors = await detectAllErrors();
+    totalErrors =
+      errors.typescript.length +
+      errors.linting.length +
+      errors.build.length +
+      errors.dependencies.length +
+      errors.syntax.length;
+
+    console.log(`📊 Found ${totalErrors} total errors:`);
+    console.log(`   - ${errors.typescript.length} TypeScript errors`);
+    console.log(`   - ${errors.linting.length} linting errors`);
+    console.log(`   - ${errors.build.length} build errors`);
+    console.log(`   - ${errors.dependencies.length} dependency issues`);
+    console.log(`   - ${errors.syntax.length} syntax errors`);
+
+    // 2. Apply intelligent fixes
+    if (totalErrors > 0) {
+      console.log('🔧 Step 2: Applying intelligent fixes...');
+      totalFixes = await applyIntelligentFixes(errors);
+    }
+
+    // 3. Verify fixes
+    console.log('✅ Step 3: Verifying fixes...');
+    const remainingErrors = await verifyFixes();
+
+    // 4. Generate comprehensive report
+    console.log('📊 Step 4: Generating comprehensive report...');
+    await generateComprehensiveReport(errors, totalFixes, remainingErrors);
+
+    // 5. Update PM2 status
+    console.log('🔄 Step 5: Updating PM2 status...');
+    await updatePM2Status(totalErrors, totalFixes, remainingErrors);
+
+    console.log(`🎉 PM2 Error Automation Orchestrator completed successfully!`);
+    console.log(`   - Initial errors: ${totalErrors}`);
+    console.log(`   - Fixes applied: ${totalFixes}`);
+    console.log(`   - Remaining errors: ${remainingErrors.length}`);
+
+    return {
+      initialErrors: totalErrors,
+      fixesApplied: totalFixes,
+      remainingErrors: remainingErrors.length,
+      success: true,
+    };
   } catch (error) {
-    console.log(\`Error monitoring PM2 processes: \${error.message}\`);
+    console.error(
+      '❌ PM2 Error Automation Orchestrator failed:',
+      error.message
+    );
+    return {
+      initialErrors: 0,
+      fixesApplied: 0,
+      remainingErrors: 0,
+      success: false,
+      error: error.message,
+    };
   }
-}, 60000); // Check every minute
+}
 
-console.log('🔍 PM2 monitoring started');
-`;
+async function detectAllErrors() {
+  try {
+    // Import and run the enhanced error detector
+    const { detectAllErrors } = require('./enhanced-error-detector.cjs');
+    return await detectAllErrors();
+  } catch (error) {
+    console.error('❌ Error detection failed:', error.message);
+    return {
+      typescript: [],
+      linting: [],
+      build: [],
+      dependencies: [],
+      syntax: [],
+      timestamp: new Date().toISOString(),
+    };
+  }
+}
 
-      fs.writeFileSync(monitoringScript, monitoringCode);
-      
-      // Start monitoring process
-      execSync('pm2 start scripts/automation/monitoring-setup.cjs --name pm2-monitor', { stdio: 'inherit' });
-      
-      this.log('✅ Monitoring and alerts setup completed');
-      
+async function applyIntelligentFixes(errors) {
+  try {
+    // Import and run the intelligent error fixer
+    const { fixAllErrors } = require('./intelligent-error-fixer.cjs');
+    return await fixAllErrors();
+  } catch (error) {
+    console.error('❌ Intelligent fixes failed:', error.message);
+    return 0;
+  }
+}
+
+async function verifyFixes() {
+  try {
+    // Run a quick verification to check remaining errors
+    const remainingErrors = [];
+
+    // Check TypeScript errors
+    try {
+      execSync('npx tsc --noEmit', { stdio: 'pipe' });
     } catch (error) {
-      this.log(`Warning: Could not setup monitoring: ${error.message}`, 'WARN');
+      const tsOutput = error.stdout || error.stderr || '';
+      const tsErrors = parseTypeScriptErrors(tsOutput);
+      remainingErrors.push(...tsErrors);
+    }
+
+    // Check build errors
+    try {
+      execSync('npm run build', { stdio: 'pipe' });
+    } catch (error) {
+      const buildOutput = error.stdout || error.stderr || '';
+      const buildErrors = parseBuildErrors(buildOutput);
+      remainingErrors.push(...buildErrors);
+    }
+
+    return remainingErrors;
+  } catch (error) {
+    console.error('❌ Fix verification failed:', error.message);
+    return [];
+  }
+}
+
+function parseTypeScriptErrors(output) {
+  const errors = [];
+  const lines = output.split('\n');
+
+  for (const line of lines) {
+    if (line.includes('error TS')) {
+      const match = line.match(/(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/);
+      if (match) {
+        errors.push({
+          file: match[1].trim(),
+          line: parseInt(match[2]),
+          column: parseInt(match[3]),
+          message: match[4].trim(),
+          type: 'typescript',
+        });
+      }
     }
   }
 
-  async generateReport() {
-    const endTime = Date.now();
-    const duration = endTime - this.startTime;
-    
-    const report = {
+  return errors;
+}
+
+function parseBuildErrors(output) {
+  const errors = [];
+  const lines = output.split('\n');
+
+  for (const line of lines) {
+    if (
+      line.includes('Failed to compile') ||
+      line.includes('Type error') ||
+      line.includes('Cannot find module')
+    ) {
+      errors.push({
+        message: line.trim(),
+        type: 'build',
+      });
+    }
+  }
+
+  return errors;
+}
+
+async function generateComprehensiveReport(
+  initialErrors,
+  fixesApplied,
+  remainingErrors
+) {
+  const report = {
+    timestamp: new Date().toISOString(),
+    summary: {
+      initialErrors: {
+        typescript: initialErrors.typescript.length,
+        linting: initialErrors.linting.length,
+        build: initialErrors.build.length,
+        dependencies: initialErrors.dependencies.length,
+        syntax: initialErrors.syntax.length,
+        total:
+          initialErrors.typescript.length +
+          initialErrors.linting.length +
+          initialErrors.build.length +
+          initialErrors.dependencies.length +
+          initialErrors.syntax.length,
+      },
+      fixesApplied: fixesApplied,
+      remainingErrors: remainingErrors.length,
+      successRate:
+        fixesApplied > 0
+          ? (
+              (fixesApplied / (fixesApplied + remainingErrors.length)) *
+              100
+            ).toFixed(2) + '%'
+          : '0%',
+    },
+    details: {
+      initialErrors: initialErrors,
+      remainingErrors: remainingErrors,
+    },
+    status: 'completed',
+  };
+
+  const reportPath = path.join(
+    process.cwd(),
+    'pm2-error-automation-report.json'
+  );
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  console.log(`📊 Comprehensive report saved to: ${reportPath}`);
+}
+
+async function updatePM2Status(initialErrors, fixesApplied, remainingErrors) {
+  try {
+    // Create a status file for PM2 monitoring
+    const status = {
       timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      status: 'completed',
-      processes: [
-        'enhanced-project-error-fixer',
-        'typescript-error-monitor',
-        'eslint-error-cleaner',
-        'build-error-detector',
-        'dependency-error-resolver',
-        'config-error-fixer',
-        'enhanced-error-fixer',
-        'error-prevention-monitor',
-        'critical-error-alert-system',
-        'auto-recovery-manager',
-        'error-analytics-dashboard',
-        'code-quality-automation',
-        'ai-code-review-automation',
-        'predictive-issue-detection',
-        'intelligent-automation-orchestrator'
-      ],
-      summary: {
-        totalProcesses: 15,
-        monitoringEnabled: true,
-        autoRecoveryEnabled: true,
-        alertsEnabled: true
-      }
+      initialErrors: initialErrors,
+      fixesApplied: fixesApplied,
+      remainingErrors: remainingErrors.length,
+      successRate:
+        fixesApplied > 0
+          ? (
+              (fixesApplied / (fixesApplied + remainingErrors.length)) *
+              100
+            ).toFixed(2) + '%'
+          : '0%',
+      status: remainingErrors.length === 0 ? 'clean' : 'has_errors',
     };
-    
-    const reportFile = path.join(this.projectRoot, 'pm2-error-automation-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
-    this.log('📊 PM2 Error Automation Report generated');
-    this.log(`✅ Started ${report.processes.length} automation processes`);
-    this.log('🔍 Monitoring and auto-recovery enabled');
-    this.log('🚨 Critical error alerts enabled');
+
+    const statusPath = path.join(
+      process.cwd(),
+      'pm2-error-automation-status.json'
+    );
+    fs.writeFileSync(statusPath, JSON.stringify(status, null, 2));
+
+    // Update PM2 logs
+    console.log(
+      `📈 PM2 Status Updated: ${status.status} (${status.successRate} success rate)`
+    );
+  } catch (error) {
+    console.error('❌ PM2 status update failed:', error.message);
+  }
+}
+
+// Continuous monitoring loop
+async function startContinuousMonitoring() {
+  console.log(
+    `🔄 Starting continuous error monitoring (interval: ${AUTOMATION_INTERVAL / 1000}s)`
+  );
+
+  while (true) {
+    try {
+      await runErrorAutomationOrchestrator();
+
+      // Wait for next cycle
+      console.log(
+        `⏰ Waiting ${AUTOMATION_INTERVAL / 1000} seconds until next check...`
+      );
+      await new Promise(resolve => setTimeout(resolve, AUTOMATION_INTERVAL));
+    } catch (error) {
+      console.error('❌ Continuous monitoring cycle failed:', error.message);
+
+      // Wait before retrying
+      await new Promise(resolve => setTimeout(resolve, 60000)); // 1 minute
+    }
   }
 }
 
 // Run the orchestrator
-const orchestrator = new PM2ErrorAutomationOrchestrator();
-orchestrator.run().catch(console.error);
+if (require.main === module) {
+  const isContinuous =
+    process.argv.includes('--continuous') ||
+    process.env.CONTINUOUS_MODE === 'true';
+
+  if (isContinuous) {
+    startContinuousMonitoring().catch(error => {
+      console.error('❌ Continuous monitoring failed:', error);
+      process.exit(1);
+    });
+  } else {
+    runErrorAutomationOrchestrator()
+      .then(result => {
+        if (result.success) {
+          console.log(
+            '✅ PM2 Error Automation Orchestrator completed successfully'
+          );
+          process.exit(0);
+        } else {
+          console.log(
+            '⚠️  PM2 Error Automation Orchestrator completed with issues'
+          );
+          process.exit(1);
+        }
+      })
+      .catch(error => {
+        console.error('❌ PM2 Error Automation Orchestrator failed:', error);
+        process.exit(1);
+      });
+  }
+}
+
+module.exports = {
+  runErrorAutomationOrchestrator,
+  startContinuousMonitoring,
+};

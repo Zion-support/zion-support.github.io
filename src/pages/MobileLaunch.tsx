@@ -5,7 +5,6 @@ import {
 import { motion } from 'framer - motion';
 import SEO from '../components / SEO';
 
-
   Smartphone,
   Download,
   Zap,
@@ -132,7 +131,7 @@ const MobileLaunch: React.FC = () => {
   ];
 
   return (<div className = "min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <SEO 
+      <SEO
         title="Mobile App - Zion Tech Group"
         description="Take Zion Tech Group with you on the go ! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere."
         keywords="mobile app, iOS app, Android app, Zion Tech Group mobile, business app"
@@ -146,12 +145,12 @@ const MobileLaunch: React.FC = () => {
             <motion.div
               initial = {
   { opacity: 0,
-  x: -30 
+  x: -30
 
 }}
               animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
               transition={{ duration: 0.8 }}
@@ -194,17 +193,17 @@ const MobileLaunch: React.FC = () => {
             <motion.div
               initial = {
   { opacity: 0,
-  x: 30 
+  x: 30
 
 }}
               animate = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
               className="relative"
@@ -272,12 +271,12 @@ const MobileLaunch: React.FC = () => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -297,17 +296,17 @@ const MobileLaunch: React.FC = () => {
                 key={index}
                 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 6 hover:border - cyan - 400 / 30 transition - all duration - 300 hover:scale - 105"
@@ -329,12 +328,12 @@ const MobileLaunch: React.FC = () => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -353,17 +352,17 @@ const MobileLaunch: React.FC = () => {
                 key={index}
                 initial = {
   { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30 
+  x: index % 2 === 0 ? -30 : 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - slate - 700 / 30 border border - slate - 600 / 30 rounded - xl p - 8 hover:border - cyan - 400 / 30 transition - all duration - 300"
@@ -392,12 +391,12 @@ const MobileLaunch: React.FC = () => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -416,17 +415,17 @@ const MobileLaunch: React.FC = () => {
                 key={index}
                 initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
                 whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className={`bg - slate - 800 / 50 border rounded - xl p - 8 text - center hover:border - cyan - 400 / 50 transition - all duration - 300 hover:scale - 105 ${
@@ -460,12 +459,12 @@ const MobileLaunch: React.FC = () => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -484,17 +483,17 @@ const MobileLaunch: React.FC = () => {
                 key={index}
                 initial = {
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
                 whileInView = {
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 className="bg - slate - 700 / 30 border border - slate - 600 / 30 rounded - xl p - 6 text - center hover:border - cyan - 400 / 30 transition - all duration - 300"
@@ -512,12 +511,12 @@ const MobileLaunch: React.FC = () => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}

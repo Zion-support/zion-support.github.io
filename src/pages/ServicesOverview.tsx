@@ -5,7 +5,6 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data / innovativeMicroSa
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
-
   Search,
   Filter,
   Brain,

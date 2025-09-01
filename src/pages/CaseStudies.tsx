@@ -3,7 +3,6 @@ export default React.memo (function CaseStudies () {
 import {
 import { motion } from 'framer - motion';
 
-
   FileText,
   Building,
   Users,

@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 import { PortfolioBuilder as PortfolioSection } from '@/components / resume - builder / portfolio / PortfolioBuilder';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { ResumeWizard } from '@/components / resume - builder / ResumeWizard';
 import SEO from '@/components / SEO';
   import {
 export default function PortfolioBuilder () {
-
 
     Tabs,
     TabsContent,

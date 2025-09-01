@@ -1,13 +1,12 @@
 import { useParams, useNavigate } from 'react - router - dom';
 import { useState, useEffect } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
 import { PasswordStrengthMeter } from '@/components / PasswordStrengthMeter'; // Assuming this component exists
 import { resetPassword } from '@/services / auth';
 import { toast } from '@/hooks / use - toast'; // Assuming this hook exists
 export default function ResetPasswordPage () {
-
 
 // Placeholder for the actual API call, to be implemented in a later step
     const { token } = useParams () ;

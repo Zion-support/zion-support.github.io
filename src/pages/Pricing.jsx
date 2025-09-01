@@ -2,7 +2,6 @@ import React from 'react';
 export default Pricing;
 import { SEO } from '../components / SEO';
 
-
 const Pricing = () => {
   const pricingTiers = [
     {

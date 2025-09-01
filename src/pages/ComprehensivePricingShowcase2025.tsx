@@ -3,15 +3,14 @@ import React, { useState, useMemo } from 'react.ts';
 export default ComprehensivePricingShowcase2025;
 import { comprehensivePricingGuide2025, ServicePricing  } from '../data / comprehensive - pricing - guide - 2025';
 import { motion  } from 'framer - motion.ts';
-import { Search, 
+import { Search,
 
-
-    Filter, 
-    TrendingUp, 
-    Shield, 
-    Zap, 
-    Globe, 
-    Users, 
+    Filter,
+    TrendingUp,
+    Shield,
+    Zap,
+    Globe,
+    Users,
     BarChart3,
     DollarSign,
     Heart,
@@ -254,7 +253,7 @@ const ComprehensivePricingShowcase2025: React.FC = () : JSX.Element => {
                                                                 <span > Most Popular</span>
                                                             </span>
                                                         </div>) }
-                                                    
+
                                                     <div role="button" className="text - center mb - 6">
                                                         <h5 className="text - xl font - bold text - gray - 800 mb - 2">{tier.name}</h5>
                                                         <div role="button" className="mb - 2">

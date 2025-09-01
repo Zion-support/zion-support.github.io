@@ -4,7 +4,6 @@ export default EmergingTech;
 import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech = () => {
 import { motion } from 'framer - motion';
 
-
     const technologies = [
         {
             category: "Quantum Computing",
@@ -169,7 +168,7 @@ import { motion } from 'framer - motion';
     };
     const itemVariants = {
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -200,11 +199,11 @@ import { motion } from 'framer - motion';
         <div className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 pt - 32 pb - 20">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.8 }} className="text - center">
             <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">
@@ -282,11 +281,11 @@ import { motion } from 'framer - motion';
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20">
           <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text - center mb - 16">
             <h2 className="text - 4xl font - bold text - white mb - 6">
@@ -301,15 +300,15 @@ import { motion } from 'framer - motion';
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
             {researchAreas.map ( (area, index) => (<motion.div key={area.title} initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl border border - slate - 700 / 50 p - 6">
                 <div className="flex items - center justify - between mb - 4">
@@ -337,11 +336,11 @@ import { motion } from 'framer - motion';
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20">;
         <motion.div initial = {
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text - center">
           <h2 className="text - 4xl font - bold text - white mb - 6">
