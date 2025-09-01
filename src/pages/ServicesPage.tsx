@@ -228,9 +228,9 @@ export default function ServicesPage() {
 
   useEffect(() => {
     async function load() {
-      // Endpoint defined in `pages/api/services.ts` -> baseURL `/api` so final URL is `/api/services`
       try {
-        const res = await apiClient.get('/services');
+        // /api/services returns the list of service offerings
+        const res = await apiClient.get('/api/services');
         setListings(res.data as ProductListing[]);
       } catch (err) {
         console.error('Failed to fetch services', err);
