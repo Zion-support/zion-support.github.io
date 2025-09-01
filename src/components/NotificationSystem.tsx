@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   CheckCircle,
   AlertTriangle,
@@ -227,19 +231,19 @@ enableSound:  true,;
             initial = {
 
   { opacity: 0, scale: 0.9,
-  y: -10 
+  y: -10
 
 }}
             animate = {
 
   { opacity: 1, scale: 1,
-  y: 0 
+  y: 0
 
 }}
             exit = {
 
   { opacity: 0, scale: 0.9,
-  y: -10 
+  y: -10
 
 
 
@@ -315,19 +319,19 @@ enableSound:  true,;
             initial = {
 
   { opacity: 0, scale: 0.9,
-  y: -10 
+  y: -10
 
 }}
             animate = {
 
   { opacity: 1, scale: 1,
-  y: 0 
+  y: 0
 
 }}
             exit = {
 
   { opacity: 0, scale: 0.9,
-  y: -10 
+  y: -10
 
 
 
@@ -365,19 +369,19 @@ enableSound:  true,;
                       initial = {
 
   { opacity: 0,
-  x: 50 
+  x: 50
 
 }}
                       animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                       exit = {
 
   { opacity: 0, x: -50,
-  height: 0 
+  height: 0
 
 }}
                       layout

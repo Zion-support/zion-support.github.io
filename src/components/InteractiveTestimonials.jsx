@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2 const testimonials = [
 
-
     {
 
         id: '1',
@@ -122,7 +121,7 @@ export function InteractiveTestimonials() {
     const itemVariants = {
 
   hidden: { opacity: 0, y: 20,
-  scale: 0.95 
+  scale: 0.95
 
 },
         visible: {
@@ -150,12 +149,12 @@ export function InteractiveTestimonials() {
         <motion.div className="text-center mb-16" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -184,17 +183,17 @@ export function InteractiveTestimonials() {
         <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 
 
@@ -207,17 +206,17 @@ export function InteractiveTestimonials() {
                 : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-white/20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}>
               {category}
@@ -230,17 +229,17 @@ export function InteractiveTestimonials() {
             <motion.div key={currentIndex} initial = {
 
   { opacity: 0,
-  x: 100 
+  x: 100
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} exit = {
 
   { opacity: 0,
-  x: -100 
+  x: -100
 
 
 
@@ -339,7 +338,7 @@ export function InteractiveTestimonials() {
 
                 y: -8,
                 scale: 1.02,
-  transition: { duration: 0.2 
+  transition: { duration: 0.2
 
 
 
@@ -390,17 +389,17 @@ export function InteractiveTestimonials() {
         <motion.div className="text-center mt-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 
 

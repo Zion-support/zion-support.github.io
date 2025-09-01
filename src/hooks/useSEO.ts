@@ -264,7 +264,15 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
   ;
   ;
   ;
+<<<<<<< HEAD
+  ;
+  loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
+        ;
+
+};
+=======
   loadComplete: navigation.loadEventEnd - navigation.loadEventStart};
+>>>>>>> main
 
         // Track to analytics
         if (window.gtag) {

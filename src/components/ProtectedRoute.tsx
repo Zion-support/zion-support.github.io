@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+import { Navigate, useLocation  } from 'react - router - dom.ts';
+import React from 'react.ts';
+import { useAuth  } from '@/hooks / useAuth';
+export function ProtectedRoute (...args: any[]) : any {;
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
 

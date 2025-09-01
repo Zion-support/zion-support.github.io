@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD:src/pages/Talents.jsx
+export default Talents;
+
+=======
 import { Helmet } from 'react-helmet-async';
+>>>>>>> main:backup-pages/src-pages/Talents.jsx
 const Talents = () => {
   return()
     <>

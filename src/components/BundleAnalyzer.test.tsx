@@ -1,5 +1,4 @@
 
-
 describe ('BundleAnalyzer', () => {
   it ('renders without crashing', () => {
     render (<BundleAnalyzer  />) ;

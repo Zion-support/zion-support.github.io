@@ -150,11 +150,6 @@ export const useVirtualScroll = (items, options) => {
             overflow: 'auto',
             position: 'relative',
   willChange: state.isScrolling ? 'scroll-position' : 'auto'
-        
-
-
-
-
 
 
 },
@@ -169,11 +164,14 @@ export const useVirtualScroll = (items, options) => {
             position: 'relative',
   transform: `translateY(${virtualScrollParams.offsetY
 
+<<<<<<< HEAD
+=======
 
 
 
 
 `
+>>>>>>> main
 }px)`
         }
     };

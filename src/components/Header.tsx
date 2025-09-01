@@ -1,5 +1,20 @@
 import {
 
+<<<<<<< HEAD
+ * Header function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function Header ({ className }: HeaderProps) {
+
+  Menu,
+  X,
+  Search,
+  User,
+  Bell,
+  Settings,
+  LogOut,
+=======
   Menu, 
   X, 
   Search, 
@@ -7,6 +22,7 @@ import {
   Bell, 
   Settings, 
   LogOut, 
+>>>>>>> main
   ChevronDown,
   Globe,
   Sun,

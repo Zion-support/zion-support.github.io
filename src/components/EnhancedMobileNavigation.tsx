@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+import { Link, useLocation } from 'react - router - dom';
+import React, { useState, useEffect, useRef } from 'react';
+export const EnhancedMobileNavigation: React.FC = () => {
+import {
+import { motion, AnimatePresence } from 'framer - motion';
+
+  Menu,
+  X,
+  ChevronDown,
+  Home,
+  Users,
+  Briefcase,
+  Phone,
+  Info,
+  Settings,
+  HelpCircle,
+=======
 import {
   Menu, 
   X, 
@@ -6,6 +24,7 @@ import {
   Home,
   Briefcase,
   Users,
+>>>>>>> main
   FileText,
   Phone,
   Settings,
@@ -35,8 +54,20 @@ interface NavigationItem {
 
   label: string;
   path: string;
+<<<<<<< HEAD
+  icon: React.ComponentType<{ size?: number; className?: string
+}>;
+} from 'lucide - react';
+
+interface NavigationItem {
+  label: string;
+  path: string;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
+  children?: NavigationItem[];
+=======
   icon: React.ComponentType<{ size?: number; className?: string 
 }>;  children?: NavigationItem[];
+>>>>>>> main
   description?: string}
 ;
 const navigationItems: NavigationItem[] = [
@@ -303,25 +334,25 @@ export default function EnhancedMobileNavigation() {
                 initial = {
 
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
                 animate = {
 
   { height: 'auto',
-  opacity: 1 
+  opacity: 1
 
 }}
                 exit = {
 
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
                 transition = {
 
   { duration: 0.3,
-  ease: 'easeInOut' 
+  ease: 'easeInOut'
 
 
 
@@ -365,7 +396,7 @@ export default function EnhancedMobileNavigation() {
               transition = {
 
   { duration: 0.3,
-  ease: 'easeOut' 
+  ease: 'easeOut'
 
 
 

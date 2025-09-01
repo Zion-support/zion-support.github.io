@@ -1,5 +1,4 @@
 
-
 describe ('ProductListingCard', () => {
   it ('renders without crashing', () => {
     render (<ProductListingCard  />) ;

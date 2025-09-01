@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 export default ContentQualityAnalyzer;
 import { motion } from 'framer - motion';
 
-
         const averageSeoScore = Math.round (pageMetrics.reduce ( (sum, page) => sum + page.seoScore, 0) / totalPages) ;
         const pagesWithIssues = pageMetrics.filter (page => page.issues.length > 0) .length;
         // Collect all issues and count frequency
@@ -73,13 +72,13 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
 
   const analyzeContent = async () => {
     setIsAnalyzing (true) ;
-    
+
     // Simulate analysis process
     setTimeout ( () => {
       const wordCount = content.split (/\s+/) .length;
       const sentenceCount = content.split (/[.!?]+/) .length;
       const paragraphCount = content.split (/\n\s*\n/) .length;
-      
+
       const analysisResult = {
 
   wordCount,
@@ -90,7 +89,7 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
   suggestions: []
 
 };
-      
+
       // Generate suggestions based on analysis
       if (wordCount < 300) {
 
@@ -104,10 +103,10 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
 
         analysisResult.suggestions.push('Add more paragraphs to improve content structure');
       }
-      
+
       setAnalysis (analysisResult) ;
       setIsAnalyzing (false) ;
-      
+
       if (onAnalysisComplete) {
 
         onAnalysisComplete(analysisResult);
@@ -124,18 +123,18 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
       >
         {isAnalyzing ? 'Analyzing...' : 'Analyze Content Quality'}
       </button>
-      
+
       {analysis && (<motion.div
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -163,6 +162,14 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
               <div className="text-sm text-gray-600">Readability</div>
             </div>
           </div>
+<<<<<<< HEAD
+
+          {analysis.suggestions.length > 0 && (<div>
+              <h3 className="text - lg font - semibold mb - 2">Suggestions:</h3>
+              <ul className="space - y-2">
+                {analysis.suggestions.map ( (suggestion, index) => (<li key={index} className="flex items - start space - x-2">
+                    <span className="text - green - 500 mt - 1">•</span>
+=======
           
           {analysis.suggestions.length > 0 && (
             <div>"
@@ -171,6 +178,7 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
                 {analysis.suggestions.map((suggestion, index) => ("
                   <li key={index} className="flex items-start space-x-2">"
                     <span className="text-green-500 mt-1">•</span>
+>>>>>>> main
                     <span>{suggestion}</span>
                   </li>) ) }
               </ul>

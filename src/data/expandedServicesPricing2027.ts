@@ -309,7 +309,6 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
       website: 'https://ziontechgroup.com/ai-compliance-automator',
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
-
 ];
 
 // 2. DATA ANALYTICS SERVICES PRICING;
@@ -428,7 +427,6 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/predictive-insights-engine',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-
 
 ];
 
@@ -549,7 +547,6 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
       website: 'https://ziontechgroup.com/multi-cloud-orchestrator',
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
-
 ];
 
 // 4. IOT & EDGE COMPUTING SERVICES PRICING;
@@ -668,7 +665,6 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/industrial-iot-intelligence',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-
 
 ];
 
@@ -789,7 +785,6 @@ export const finTechPricing: ExpandedServicePricing[] = [
       website: 'https://ziontechgroup.com/quantum-financial-modeling',
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
-
 ];
 
 // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING;
@@ -908,7 +903,6 @@ export const healthcarePricing: ExpandedServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-diagnostic-assistant',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-
 
 ];
 

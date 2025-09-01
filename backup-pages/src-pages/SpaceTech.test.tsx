@@ -1,5 +1,4 @@
 
-
 describe ('SpaceTech', () => {
   it ('renders without crashing', () => {
     render (<SpaceTech  />) ;

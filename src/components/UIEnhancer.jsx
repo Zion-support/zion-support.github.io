@@ -2,11 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true, enableScrollEffects = true }) => {
 
+<<<<<<< HEAD
+    const [theme, setTheme] = useState ('dark') ;
+    const [isParticleMode, setIsParticleMode] = useState (enableParticles) ;
+    const [showScrollToTop, setShowScrollToTop] = useState (false) ;
+    const [deviceType, setDeviceType] = useState ('desktop') ;
+    useEffect ( () => {
+=======
     const [theme, setTheme] = useState('dark');
     const [isParticleMode, setIsParticleMode] = useState(enableParticles);
     const [showScrollToTop, setShowScrollToTop] = useState(false);
     const [deviceType, setDeviceType] = useState('desktop');
     useEffect(() => {
+>>>>>>> main
         // Detect device type
         const detectDevice = () => {
             const width = window.innerWidth;
@@ -92,12 +100,12 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
           <motion.div initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 
 
@@ -114,17 +122,17 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         {showScrollToTop && enableScrollEffects && (<motion.button initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} exit = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 
 
@@ -186,12 +194,12 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 

@@ -3,7 +3,11 @@ import { useLocation } from 'react-router-dom';
 
 export const PerformanceOptimizer = ({ children }) => {
 
+<<<<<<< HEAD
+  const location = useLocation () ;
+=======
   const location = useLocation();
+>>>>>>> main
 
   // Preload critical resources
   useEffect(() => {

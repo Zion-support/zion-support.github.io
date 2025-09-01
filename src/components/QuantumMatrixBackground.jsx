@@ -2,9 +2,15 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = true, showGrid = true, showHolograms = true }) => {
 
+<<<<<<< HEAD
+    const canvasRef = useRef (null) ;
+    const particlesRef = useRef (null) ;
+    useEffect ( () => {
+=======
     const canvasRef = useRef(null);
     const particlesRef = useRef(null);
     useEffect(() => {
+>>>>>>> main
         const canvas = canvasRef.current;
         if (!canvas)
             return;

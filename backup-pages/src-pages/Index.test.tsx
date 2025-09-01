@@ -1,5 +1,4 @@
 
-
 describe ('Index', () => {
   it ('renders without crashing', () => {
     render (<Index  />) ;

@@ -1,5 +1,4 @@
 
-
 describe ('ServicesPage', () => {
   it ('renders without crashing', () => {
     render (<ServicesPage  />) ;

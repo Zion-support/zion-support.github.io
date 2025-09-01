@@ -8,6 +8,14 @@ interface InteractiveSearchProps {
   className?: string;
 
 const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
+<<<<<<< HEAD:src/components/ui/InteractiveSearch.tsx
+  placeholder = "Search...", ;
+  onSearch, ;
+  className = "" ;
+}) => {;
+  const [query, setQuery] = useState('');
+=======
+>>>>>>> main:backup-pages/ui/InteractiveSearch.tsx
 
   placeholder = "Search...", ;
   onSearch, ;"

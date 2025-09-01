@@ -1,5 +1,4 @@
 
-
 describe ('industry - solutions', () => {
   it ('renders without crashing', () => {
     render (<industry - solutions />) ;

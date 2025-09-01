@@ -1,8 +1,17 @@
 
+<<<<<<< HEAD
+const apiClient = axios.create ({
+  baseURL: any'/api',;
+  withCredentials: true,;
+}) ;
+
+apiClient.interceptors.response.use ( (response) => response,
+=======
 
   withCredentials: true,}) ;
 apiClient.interceptors.response.use()
   (response)  => response,
+>>>>>>> main
   async (error) => {
 
     if (error.response?.status = == 401) {;

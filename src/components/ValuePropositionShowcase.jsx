@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+=======
+>>>>>>> main
 
   TrendingUp,
   Target,
@@ -158,7 +162,7 @@ const successStories = [
   const itemVariants = {
 
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {
@@ -175,7 +179,7 @@ const successStories = [
   const cardVariants = {
 
   hidden: { scale: 0.95,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {
@@ -198,13 +202,13 @@ const successStories = [
           initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.6 }}

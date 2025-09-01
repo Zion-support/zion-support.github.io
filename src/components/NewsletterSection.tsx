@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+      description: "Get exclusive access to tech trends and analysis";
+    },;
+=======
       description: "Get exclusive access to tech trends and analysis"},;
+>>>>>>> main
     {;
       icon: Zap,;"
       title: "Early Access",;"
@@ -18,13 +23,13 @@
             initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
             animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
             transition={{ duration: 0.5 }}"
@@ -60,13 +65,13 @@
             initial = {
 
   { opacity: 0,
-  x: -30 
+  x: -30
 
 }}
             whileInView = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -86,19 +91,19 @@
                   initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                   whileInView = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                   transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -128,19 +133,19 @@
             initial = {
 
   { opacity: 0,
-  x: 30 
+  x: 30
 
 }}
             whileInView = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
             transition = {
 
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
           >"

@@ -4,6 +4,17 @@ import { sendMessage } from "../services/messages";
 import { toast } from '@/hooks/use-toast';
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {
 
+<<<<<<< HEAD
+    const [subject, setSubject] = useState ('') ;
+    const [message, setMessage] = useState ('') ;
+    const [error, setError] = useState ('') ;
+    const [isLoading, setIsLoading] = useState (false) ; // New loading state
+    const firstInputRef = useRef (null) ;
+    const modalRef = useRef (null) ;
+    useEffect ( () => {
+        if (!isOpen) return;
+        function handleKeyDown (e) {
+=======
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
     const [error, setError] = useState('');
@@ -15,6 +26,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             return;
         function handleKeyDown(e) {
 
+>>>>>>> main
             if (e.key === 'Escape') {
 
                 e.preventDefault();

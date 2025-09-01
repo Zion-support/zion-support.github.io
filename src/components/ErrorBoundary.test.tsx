@@ -1,5 +1,4 @@
 
-
 describe ('ErrorBoundary', () => {
   it ('renders without crashing', () => {
     render (<ErrorBoundary  />) ;

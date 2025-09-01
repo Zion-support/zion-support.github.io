@@ -3,10 +3,17 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, onToggle }) => {
 
+<<<<<<< HEAD
+    const [activeDropdown, setActiveDropdown] = useState (null) ;
+    const [searchQuery, setSearchQuery] = useState ('') ;
+    const location = useLocation () ;
+    const menuRef = useRef (null) ;
+=======
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
     const location = useLocation();
     const menuRef = useRef(null);
+>>>>>>> main
     // Close menu when route changes
     useEffect ( () => {
         onToggle () }, [location.pathname]) ;

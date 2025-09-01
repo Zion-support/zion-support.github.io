@@ -1,5 +1,4 @@
 
-
 describe ('accessibility - auditor', () => {
   it ('renders without crashing', () => {
     render (<accessibility - auditor />) ;

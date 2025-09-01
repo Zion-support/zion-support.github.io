@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+=======
+>>>>>>> main
 
   Phone,
   Mail,
@@ -106,13 +110,13 @@ export const FuturisticFooter: React.FC = () => {;
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 viewport={{ once: true }}
@@ -155,20 +159,20 @@ export const FuturisticFooter: React.FC = () => {;
                   initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   viewport={{ once: true }}
                   transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 >"
@@ -197,20 +201,20 @@ export const FuturisticFooter: React.FC = () => {;
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             viewport={{ once: true }}
             transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 
 

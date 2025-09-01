@@ -1,11 +1,32 @@
 export function Testimonials(...args: any[]): any {
 
+<<<<<<< HEAD
+  interface Testimonial {
+    quote: string;
+    author: string;
+    role: string;
+    company: string;
+    rating: number;
+    avatar: string;
+  }
+
+  interface TestimonialsProps extends React.PropsWithChildren<{}> {
+    testimonials: Testimonial[];
+  }
+
+  return (<section className="py - 20 bg - gray - 800">
+      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
+        <div className="text - center mb - 16">
+          <motion.h2
+            className="text - 4xl font - bold text - white mb - 4"
+=======
   return()
     <section className="py-20 bg-gray-800">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="text-center mb-16">
           <motion.h2"
             className="text-4xl font-bold text-white mb-4"
+>>>>>>> main
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}

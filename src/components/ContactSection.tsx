@@ -1,6 +1,22 @@
 export function ContactSection(...args[]):  {
 
+<<<<<<< HEAD
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: "Phone",
+      value: "+1 302 464 0950",
+      link: "tel:+13024640950"
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      value: "kleber@ziontechgroup.com",
+      link: "mailto:kleber@ziontechgroup.com"
+    },;
+=======
   
+>>>>>>> main
     {;
       icon: MapPin,;"
       title: "Address",;"
@@ -13,13 +29,13 @@ export function ContactSection(...args[]):  {
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}
@@ -40,19 +56,19 @@ export function ContactSection(...args[]):  {
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
               viewport={{ once: true }}"
@@ -73,13 +89,13 @@ export function ContactSection(...args[]):  {
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}

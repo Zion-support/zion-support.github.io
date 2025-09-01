@@ -7,11 +7,6 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
   sm: 'w-6 h-6',
         md: 'w-8 h-8',
   lg: 'w-12 h-12'
-    
-
-
-
-
 
 
 };
@@ -20,16 +15,17 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
   sm: 'text-sm',
         md: 'text-base',
   lg: 'text-lg'
-    
-
-
-
-
 
 
 };
     return (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
       <motion.div animate={{ rotate: 360 }} transition = {
+<<<<<<< HEAD:src/components/ui/loading-fallback.jsx
+  { duration: 1, repeat: Infinity,
+  ease: "linear"
+
+}} className={`${sizeClasses[size]} text-zion-purple`}>
+=======
 
   { duration: 1, repeat: Infinity,"
   ease: "linear" 
@@ -40,32 +36,31 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 
 `
 }} className={`${sizeClasses[size]} text-zion-purple`}>"
+>>>>>>> main:backup-pages/ui/loading-fallback.jsx
         <Loader2 className="w-full h-full"/>
       </motion.div>
-      
+
       <motion.p initial = {
 
   { opacity: 0,
-  y: 10 
-
-
-
-
-
+  y: 10
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition = {
 
   { delay: 0.2,
+<<<<<<< HEAD:src/components/ui/loading-fallback.jsx
+  duration: 0.3
+
+}} className={`${textSizes[size]} text-zion-slate-light text-center`}>
+        {message}
+      </motion.p>
+
+=======
   duration: 0.3 
 
 
@@ -77,15 +72,11 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
         {message}
       </motion.p>
       "
+>>>>>>> main:backup-pages/ui/loading-fallback.jsx
       <motion.div className="flex space-x-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
 
   { delay: 0.4,
-  duration: 0.3 
-
-
-
-
-
+  duration: 0.3
 
 }}>"
         {[0, 1, 2].map((i) => (<motion.div key={i} className="w-2 h-2 bg-zion-purple rounded-full" animate = {
@@ -95,11 +86,6 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
                 scale: [1, 1.2, 1],
                 opacity: [0.5, 1,
   0.5]
-            
-
-
-
-
 
 
 }} transition = {
@@ -109,11 +95,6 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
                 duration: 1.5,
                 repeat: Infinity,
   delay: i * 0.2
-            
-
-
-
-
 
 
 }}/>))}
@@ -130,6 +111,12 @@ export function InlineLoading({ message = "Loading..." }) {
 "
     return (<div className="flex items-center space-x-2 text-zion-slate-light">
       <motion.div animate={{ rotate: 360 }} transition = {
+<<<<<<< HEAD:src/components/ui/loading-fallback.jsx
+  { duration: 1, repeat: Infinity,
+  ease: "linear"
+
+}} className="w-4 h-4 text-zion-purple">
+=======
 
   { duration: 1, repeat: Infinity,"
   ease: "linear" 
@@ -140,6 +127,7 @@ export function InlineLoading({ message = "Loading..." }) {
 
 "
 }} className="w-4 h-4 text-zion-purple">"
+>>>>>>> main:backup-pages/ui/loading-fallback.jsx
         <Loader2 className="w-full h-full"/>
       </motion.div>"
       <span className="text-sm">{message}</span>

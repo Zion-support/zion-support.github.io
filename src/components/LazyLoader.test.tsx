@@ -1,5 +1,4 @@
 
-
 describe ('LazyLoader', () => {
   it ('renders without crashing', () => {
     render (<LazyLoader  />) ;

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+export default LoadingSpinner;
+
+=======
+>>>>>>> main
 const LoadingSpinner = ({
 
   size = 'md',

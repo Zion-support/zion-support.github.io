@@ -1,5 +1,4 @@
 
-
 describe ('Testimonials', () => {
   it ('renders without crashing', () => {
     render (<Testimonials  />) ;

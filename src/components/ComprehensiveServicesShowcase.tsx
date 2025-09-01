@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { EMERGING_TECH_SERVICES_2025 } from "../data / emergingTechServices2025";
+import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data / expandedInnovativeServices2025";
+import { motion } from 'framer - motion';
+=======
+>>>>>>> main
 
   Brain,
   Cpu,
@@ -261,19 +267,19 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 

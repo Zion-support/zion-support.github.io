@@ -1,5 +1,4 @@
 
-
 describe ('PerformanceOptimizer', () => {
   it ('renders without crashing', () => {
     render (<PerformanceOptimizer  />) ;

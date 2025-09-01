@@ -71,6 +71,11 @@ export function MobileBottomNav({ unreadCount = 0 }) {
                 ? "text-zion-cyan"
                 : "text-white/70 hover:text-white")
 
+<<<<<<< HEAD
+}>
+            <div className="relative">
+              <item.icon className="h-5 w-5 mb-1"/>
+=======
 
 
 
@@ -79,6 +84,7 @@ export function MobileBottomNav({ unreadCount = 0 }) {
 }>"
             <div className="relative">"
               <item.icon className="h-5 w-5 mb-1"/>"
+>>>>>>> main
               {item.badge && item.badge > 0 && (<span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>)}

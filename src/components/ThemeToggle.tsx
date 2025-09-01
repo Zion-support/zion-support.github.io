@@ -27,9 +27,18 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   useEffect ( () => {
     if (!mounted) return;
 
+<<<<<<< HEAD
+      root.classList.toggle ('dark', theme === 'dark') ;
+    }
+
+    localStorage.setItem ('theme', theme) ;
+  }, [theme, mounted]) ;
+
+=======
       root.classList.toggle('dark', theme === 'dark')}
     '
     localStorage.setItem('theme', theme)}, [theme, mounted]);
+>>>>>>> main
   if (!mounted) {
 
     return()
@@ -78,6 +87,18 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
               </button>) ) }
           </motion.div>) }
       </AnimatePresence>
+<<<<<<< HEAD
+    </div>) ;
+};
+    const root = document.documentElement;
+    const systemTheme = window.matchMedia (' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
+    const effectiveTheme = theme === 'system' ? systemTheme : theme;
+
+    root.classList.remove ('light', 'dark') ;
+    root.classList.add (effectiveTheme) ;
+
+    // Update CSS custom properties for smooth transitions
+=======
     </div>) };
     
     
@@ -91,6 +112,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     root.classList.add(effectiveTheme);
     
     // Update CSS custom properties for smooth transitions'
+>>>>>>> main
     if (effectiveTheme === 'dark') {
 
       root.style.setProperty('--zion-bg-primary',#0f172a');
@@ -124,12 +146,20 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
       >
+<<<<<<< HEAD
+        {themes.map ( (themeOption) => {
+          const Icon = themeOption.icon;
+          const isActive = theme === themeOption.value;
+
+          return (<motion.button
+=======
         {themes.map((themeOption) => {
 
           
           
           return()
             <motion.button
+>>>>>>> main
               key={themeOption.value}
               onClick={() => handleThemeChange(themeOption.value)}`
               className={`relative p-2 rounded-lg transition-all duration-200 ${

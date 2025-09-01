@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
+>>>>>>> main
 import { useState, useEffect } from 'react';
 import { DragDropContext } from '@hello-pangea/dnd';
 import { useJobApplications } from '@/hooks/useJobApplications';

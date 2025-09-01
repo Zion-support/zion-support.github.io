@@ -1,5 +1,4 @@
 
-
 describe ('AdvancedReportingDashboard', () => {
   it ('renders without crashing', () => {
     render (<AdvancedReportingDashboard  />) ;

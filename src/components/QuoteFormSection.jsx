@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = () => {
   const [formData, setFormData] = useState({
 
+<<<<<<< HEAD
+  const [formData, setFormData] = useState ({
+=======
+>>>>>>> main
     name: '',
     email: '',
     phone: '',

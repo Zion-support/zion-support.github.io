@@ -1,5 +1,4 @@
 
-
 describe ('FuturisticNavigation', () => {
   it ('renders without crashing', () => {
     render (<FuturisticNavigation  />) ;

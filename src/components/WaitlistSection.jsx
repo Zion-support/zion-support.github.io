@@ -2,6 +2,18 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 export function WaitlistSection() {
 
+<<<<<<< HEAD
+    const [email, setEmail] = useState ('') ;
+    const handleSubmit = (e) => {
+        e.preventDefault () ;
+        // Handle waitlist signup
+        // // // // // // // console.log ('Waitlist signup:', email) ;
+    };
+        console.log ('Waitlist signup:', email) };
+    return (<section className="py - 16 bg - gradient - to - r from - zion - purple to - zion - cyan">
+      <div className="container mx - auto px - 4 text - center">
+        <h2 className="text - 3xl font - bold text - white mb - 4">
+=======
   const [email, setEmail] = useState('');
   const handleSubmit = e => {
 
@@ -14,6 +26,7 @@ export function WaitlistSection() {
     <section className="py-16 bg-gradient-to-r from-zion-purple to-zion-cyan">"
       <div className="container mx-auto px-4 text-center">"
         <h2 className="text-3xl font-bold text-white mb-4">
+>>>>>>> main
           Join the Waitlist
         </h2>"
         <p className="text-xl text-white/90 mb-8">

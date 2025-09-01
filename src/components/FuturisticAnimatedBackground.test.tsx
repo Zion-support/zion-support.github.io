@@ -1,5 +1,4 @@
 
-
 describe ('FuturisticAnimatedBackground', () => {
   it ('renders without crashing', () => {
     render (<FuturisticAnimatedBackground  />) ;

@@ -1,5 +1,4 @@
 
-
 describe ('EnhancedInnovativeServicesShowcase2027', () => {
   it ('renders without crashing', () => {
     render (<EnhancedInnovativeServicesShowcase2027 />) ;

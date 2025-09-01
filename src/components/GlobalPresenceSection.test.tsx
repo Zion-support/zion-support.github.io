@@ -1,5 +1,4 @@
 
-
 describe ('GlobalPresenceSection', () => {
   it ('renders without crashing', () => {
     render (<GlobalPresenceSection  />) ;

@@ -32,11 +32,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                     element: element,
                     fixable: false,
   suggestedFix: ''
-                
-
-
-
-
 
 
 };
@@ -277,26 +272,20 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         {isOpen && (<motion.div initial = {
 
   { opacity: 0, scale: 0.8,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} animate = {
 
   { opacity: 1, scale: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} exit = {
 
   { opacity: 0, scale: 0.8,
+<<<<<<< HEAD
+  y: 20
+
+=======
   y: 20 
 
 
@@ -304,6 +293,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
 
 "
+>>>>>>> main
 }} className="fixed bottom-32 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
             {/* Header */}"
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"
@@ -484,11 +474,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                                 error: link.error,
                                 lastChecked: link.lastChecked.toISOString(),
   fixable: link.fixable
-                            
-
-
-
-
 
 
 }))
@@ -515,11 +500,11 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
           outline-offset: 2px !important;
           background-color: rgba(249, 115, 22, 0.1) !important;
           transition: all 0.3s ease !important}
-        
+
         .link-target-placeholder {
 
           animation: pulse 2s infinite}
-        
+
         @keyframes pulse {
 
           0%, 100% { opacity: 1}

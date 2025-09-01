@@ -1,5 +1,4 @@
 
-
 describe ('FooterNewsletter', () => {
   it ('renders without crashing', () => {
     render (<FooterNewsletter  />) ;

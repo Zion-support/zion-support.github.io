@@ -1,5 +1,4 @@
 
-
 describe ('EnhancedLoading', () => {
   it ('renders without crashing', () => {
     render (<EnhancedLoading  />) ;

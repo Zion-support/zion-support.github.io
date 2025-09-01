@@ -5,6 +5,10 @@ import { useAnalytics } from "../hooks/useAnalytics";
 export const EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({
 
+<<<<<<< HEAD
+    const { trackEvent } = useAnalytics ({
+=======
+>>>>>>> main
         enableTracking: true,
         enableUserBehaviorTracking: true
     });
@@ -310,17 +314,17 @@ export const EnterpriseDashboard = () => {
           {activeTab === 'overview' && (<motion.div key="overview" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
 
@@ -333,12 +337,12 @@ export const EnterpriseDashboard = () => {
                 {systemMetrics.map((metric) => (<motion.div key={metric.id} initial = {
 
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }} animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 
 
@@ -449,17 +453,17 @@ export const EnterpriseDashboard = () => {
           {activeTab === 'performance' && (<motion.div key="performance" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
 
@@ -504,17 +508,17 @@ export const EnterpriseDashboard = () => {
           {activeTab === 'security' && (<motion.div key="security" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
 
@@ -541,12 +545,12 @@ export const EnterpriseDashboard = () => {
                 {filteredSecurityAlerts.map((alert) => (<motion.div key={alert.id} initial = {
 
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 
 
@@ -601,17 +605,17 @@ export const EnterpriseDashboard = () => {
           {activeTab === 'users' && (<motion.div key="users" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
 
@@ -637,12 +641,12 @@ export const EnterpriseDashboard = () => {
                 {filteredUserActivities.map((activity) => (<motion.div key={activity.id} initial = {
 
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 
 
@@ -692,17 +696,17 @@ export const EnterpriseDashboard = () => {
           {activeTab === 'services' && (<motion.div key="services" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
 
@@ -725,12 +729,12 @@ export const EnterpriseDashboard = () => {
                 {serviceStatuses.map((service) => (<motion.div key={service.id} initial = {
 
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }} animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 
 
@@ -783,17 +787,17 @@ export const EnterpriseDashboard = () => {
           {activeTab === 'analytics' && (<motion.div key="analytics" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
 

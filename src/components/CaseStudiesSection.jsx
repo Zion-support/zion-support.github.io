@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, Users, ArrowRight, Star, Building, Globe, Zap, Shield const caseStudies = [
 
-
     {
 
         id: 'healthcare-ai',
@@ -137,7 +136,7 @@ const industries = ['"
     const itemVariants = {
 
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -164,12 +163,12 @@ const industries = ['"
         <motion.div className="text-center mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -190,17 +189,17 @@ const industries = ['"
             {industries.map((industry, index) => (<motion.div key={industry.name} initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} whileInView = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -222,7 +221,7 @@ const industries = ['"
           {caseStudies.map((caseStudy, index) => (<motion.div key={caseStudy.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
 "
   { type: "spring",
-  stiffness: 300 
+  stiffness: 300
 
 
 
@@ -299,17 +298,17 @@ const industries = ['"
                   {selectedCase === caseStudy.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
 "
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 
 
@@ -322,12 +321,12 @@ const industries = ['"
                         {caseStudy.results.map((result, idx) => (<motion.div key={idx} className="p-3 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/20" initial = {
 
   { opacity: 0,
-  x: -10 
+  x: -10
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 
 
@@ -366,17 +365,17 @@ const industries = ['"
         <motion.div className="text-center" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 
 

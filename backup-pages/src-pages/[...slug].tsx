@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD:src/pages/[...slug].tsx
+  const { '*': slug } = useParams () ;
+  const slugParts = slug ? slug.split ('/') .filter (Boolean) : [];
+  const path = '/' + slugParts.join ('/') ;
+  const title = slugParts.length === 0
+      ? 'Page'
+      : slugParts
+          .map (s => s.replace (/-/g, ' ') ) .map (s => s.charAt (0) .toUpperCase () + s.slice (1) ) .join (' / ') ;
+  const canonical = `https://ziontechgroup.com${path.endsWith ('/') ? path : path + '/'}`;
+
+  return (<main
+=======
 export default function GenericPage() {
 
   const { '*': slug } = useParams();
@@ -8,6 +20,7 @@ export default function GenericPage() {
   
   return()
     <main
+>>>>>>> main:backup-pages/src-pages/[...slug].tsx
       style={{
 
         padding: 20,

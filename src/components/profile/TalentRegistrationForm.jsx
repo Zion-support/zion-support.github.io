@@ -106,7 +106,6 @@ export function TalentRegistrationForm() {
                         skills: skillTags,
                         location: formData.location
 
-
             });
             if (error) {
 
@@ -229,7 +228,6 @@ export function TalentRegistrationForm() {
                                 bio: values.bio,
                                 skills: skillTags,
                                 location: values.location
-
 
                     });
                     if (aiData) {

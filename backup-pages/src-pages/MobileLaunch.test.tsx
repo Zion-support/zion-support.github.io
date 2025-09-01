@@ -1,5 +1,4 @@
 
-
 describe ('MobileLaunch', () => {
   it ('renders without crashing', () => {
     render (<MobileLaunch  />) ;

@@ -2,7 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+
+    const popularPages = [
+=======
     const popularPages = ['
+>>>>>>> main
         { path: '/', label: 'Home', description: 'Main landing page' },
         { path: '/services', label: 'Services', description: 'All our services' },
         { path: '/about', label: 'About Us', description: 'Learn about Zion Tech Group' },
@@ -20,24 +26,24 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {
       <motion.div className="max-w-4xl mx-auto text-center" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.5 }}>
         {/* 404 Icon */}"
         <motion.div className="mb-8" animate = {
 
   { scale: [1, 1.1,
-  1] 
+  1]
 
 }} transition = {
 
   { duration: 2,
-  repeat: Infinity 
+  repeat: Infinity
 
 
 
@@ -77,12 +83,12 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {
             {popularPages.map((page, index) => (<motion.div key={page.path} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -112,12 +118,12 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {
             {servicePages.map((service, index) => (<motion.div key={service.path} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 

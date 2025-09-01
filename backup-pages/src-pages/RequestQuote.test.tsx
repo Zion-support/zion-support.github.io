@@ -1,5 +1,4 @@
 
-
 describe ('RequestQuote', () => {
   it ('renders without crashing', () => {
     render (<RequestQuote  />) ;

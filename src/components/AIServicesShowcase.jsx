@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+export function AIServicesShowcase () {
+import { motion, AnimatePresence } from 'framer - motion';
+
+=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { Link } from 'react-router-dom';
+>>>>>>> main
 const aiServices = [
     {
 
@@ -113,9 +119,14 @@ export function AIServicesShowcase() {
     const getStatusBadge = (status) => {
 
         const statusConfig = {
+<<<<<<< HEAD
+  active: { color: 'bg - green - 500',
+  text: 'Active'
+=======
 
   active: { color: 'bg-green-500',
   text: 'Active' 
+>>>>>>> main
 
 
 
@@ -145,7 +156,7 @@ export function AIServicesShowcase() {
     const itemVariants = {
 
   hidden: { opacity: 0, y: 20,
-  scale: 0.95 
+  scale: 0.95
 
 },
         visible: {
@@ -173,12 +184,12 @@ export function AIServicesShowcase() {
         <motion.div className="text-center mb-16" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -210,17 +221,17 @@ export function AIServicesShowcase() {
         <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 
 
@@ -233,17 +244,17 @@ export function AIServicesShowcase() {
                 : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-white/20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}>
               {category}
@@ -259,7 +270,7 @@ export function AIServicesShowcase() {
 
                 y: -8,
                 scale: 1.02,
-  transition: { duration: 0.2 
+  transition: { duration: 0.2
 
 
 

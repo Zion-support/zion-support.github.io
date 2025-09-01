@@ -1,3 +1,45 @@
+<<<<<<< HEAD
+import { Link } from 'react - router - dom';
+import React, { useState } from 'react';
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
+export function UltimateServicesShowcase (...args[]) :  {
+import {
+import { enterpriseITInfrastructureServices2025 } from "../../data / 2025 - enterprise - it - infrastructure - services";
+import { innovativeMicroSaasSolutions2025 } from "../../data / 2025 - innovative - micro - saas - solutions";
+import { motion } from 'framer - motion';
+import { ultimateInnovativeServices2025 } from "../../data / 2025 - ultimate - innovative - services - expansion";
+
+  Brain,
+  Cloud,
+  Shield,
+  Globe,
+  Code,
+  BarChart3,
+  Users,
+  ShoppingCart,
+  MessageSquare,
+  FileText,
+  Settings,
+  Zap,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin
+ } from 'lucide - react';
+
+// Import the new services
+
+=======
+>>>>>>> main
 interface Service {
   id: string;
   name: string;
@@ -120,7 +162,17 @@ export function UltimateServicesShowcase(...args[]):  {
         staggerChildren: 0.1,;
         delayChildren: 0.2}}};
 
+<<<<<<< HEAD
+  const itemVariants = {
+  hidden: { opacity: 0,
+  y: 20
+
+},
+    visible: {
+      opacity: 1,;
+=======
   
+>>>>>>> main
       y: 0,;
       transition: {
         duration: 0.6,;"
@@ -134,13 +186,13 @@ export function UltimateServicesShowcase(...args[]):  {
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}
@@ -179,19 +231,19 @@ export function UltimateServicesShowcase(...args[]):  {
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition = {
 
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 }}
         >

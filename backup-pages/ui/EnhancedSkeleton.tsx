@@ -27,7 +27,13 @@ variant:  'default',;
   ;
   card: 'w-full h-32 rounded-lg'};
 
+<<<<<<< HEAD:src/components/ui/EnhancedSkeleton.tsx
+};
+
+  const skeletonClasses = cn(;
+=======
   
+>>>>>>> main:backup-pages/ui/EnhancedSkeleton.tsx
     baseClasses,;
     variants[variant],;
     className;
@@ -47,22 +53,12 @@ variant:  'default',;
   index === lines - 1 ? 'w-3/4' : 'w-full'
             )
 
-
-
-
-
-
 }
             initial={animated ? { opacity: 0.5 } : {}}
             animate = {
 
   animated ? { opacity: [0.5, 1,
-  0.5] 
-
-
-
-
-
+  0.5]
 
 } : {}}
             transition = {
@@ -73,9 +69,15 @@ variant:  'default',;
               repeat: Infinity,
               ease: 'easeInOut',
   delay: index * 0.1
-            
+
 
 ;
+<<<<<<< HEAD:src/components/ui/EnhancedSkeleton.tsx
+;
+;
+
+=======
+>>>>>>> main:backup-pages/ui/EnhancedSkeleton.tsx
 }};
           />;
         ))};
@@ -94,12 +96,7 @@ variant:  'default',;
       animate = {
 
   animated ? { opacity: [0.5, 1,
-  0.5] 
-
-
-
-
-
+  0.5]
 
 } : {}}
       transition = {
@@ -110,6 +107,12 @@ variant:  'default',;
         repeat: Infinity,;
   ease: 'easeInOut';
       ;
+<<<<<<< HEAD:src/components/ui/EnhancedSkeleton.tsx
+;
+;
+
+=======
+>>>>>>> main:backup-pages/ui/EnhancedSkeleton.tsx
 }};
     />;
   )};
@@ -121,6 +124,16 @@ export const CardSkeleton: React.FC<{ className?: string }> = { className }: unk
   cn('p-6 space-y-4',
   className)
 
+<<<<<<< HEAD:src/components/ui/EnhancedSkeleton.tsx
+}>
+    <Skeleton variant="rectangular" height={24} width="60%" />
+    <Skeleton variant="text" lines={3} />;
+    <div className="flex space-x-2">;
+      <Skeleton variant="circular" width={32} height={32} />;
+      <Skeleton variant="circular" width={32} height={32} />;
+      <Skeleton variant="circular" width={32} height={32} />;
+    </div>;
+=======
 
 
 
@@ -133,6 +146,7 @@ export const CardSkeleton: React.FC<{ className?: string }> = { className }: unk
       <Skeleton variant="circular" width={32} height={32}  />;"
       <Skeleton variant="circular" width={32} height={32}  />;"
       <Skeleton variant="circular" width={32} height={32}  />;    </div>;
+>>>>>>> main:backup-pages/ui/EnhancedSkeleton.tsx
   </div>;
 );
 
@@ -146,11 +160,6 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
 
   cn('space-y-3',
   className)
-
-
-
-
-
 
 }>
     {/* Header */}"
@@ -177,11 +186,6 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
 
   cn('space-y-4',
   className)
-
-
-
-
-
 
 }>
     {Array.from({ length: items }).map((_, index) => ("
@@ -210,11 +214,6 @@ export const GridSkeleton: React.FC<{
 
   cn('grid gap-4',
   className)
-
-
-
-
-
 
 } style={{
 `

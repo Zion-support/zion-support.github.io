@@ -11,6 +11,13 @@ export const AdvancedServiceComparison = () => {
     const [selectedServices, setSelectedServices] = useState([]);
     const [filters, setFilters] = useState({
 
+<<<<<<< HEAD
+const COMPLEXITY_LEVELS = ['Basic', 'Intermediate', 'Advanced', 'Enterprise'];
+const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
+    const [selectedServices, setSelectedServices] = useState ([]) ;
+    const [filters, setFilters] = useState ({
+=======
+>>>>>>> main
         category: 'all',
         complexity: 'all',
         priceRange: 'all',
@@ -128,12 +135,12 @@ export const AdvancedServiceComparison = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -153,13 +160,21 @@ export const AdvancedServiceComparison = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
+<<<<<<< HEAD
+}} transition={{ delay: 0.1 }} className="bg - white rounded - lg shadow - lg p - 6 mb - 8">
+        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 5 gap - 4">
+          <div>
+            <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Category</label>
+            <select value={filters.category} onChange = { (e) => setFilters (prev => ({ ...prev,
+  category: e.target.value
+=======
 
 
 
@@ -173,6 +188,7 @@ export const AdvancedServiceComparison = () => {
 
   (e) => setFilters(prev => ({ ...prev,
   category: e.target.value 
+>>>>>>> main
 
 
 
@@ -188,12 +204,19 @@ export const AdvancedServiceComparison = () => {
             </select>
           </div>
 
+<<<<<<< HEAD
+          <div>
+            <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Complexity</label>
+            <select value={filters.complexity} onChange = { (e) => setFilters (prev => ({ ...prev,
+  complexity: e.target.value
+=======
           <div>"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Complexity</label>
             <select value={filters.complexity} onChange = {
 
   (e) => setFilters(prev => ({ ...prev,
   complexity: e.target.value 
+>>>>>>> main
 
 
 
@@ -206,12 +229,19 @@ export const AdvancedServiceComparison = () => {
             </select>
           </div>
 
+<<<<<<< HEAD
+          <div>
+            <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Price Range</label>
+            <select value={filters.priceRange} onChange = { (e) => setFilters (prev => ({ ...prev,
+  priceRange: e.target.value
+=======
           <div>"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Price Range</label>
             <select value={filters.priceRange} onChange = {
 
   (e) => setFilters(prev => ({ ...prev,
   priceRange: e.target.value 
+>>>>>>> main
 
 
 
@@ -224,12 +254,19 @@ export const AdvancedServiceComparison = () => {
             </select>
           </div>
 
+<<<<<<< HEAD
+          <div>
+            <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Technology</label>
+            <select value={filters.technology} onChange = { (e) => setFilters (prev => ({ ...prev,
+  technology: e.target.value
+=======
           <div>"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology</label>
             <select value={filters.technology} onChange = {
 
   (e) => setFilters(prev => ({ ...prev,
   technology: e.target.value 
+>>>>>>> main
 
 
 
@@ -270,12 +307,12 @@ export const AdvancedServiceComparison = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -286,12 +323,12 @@ export const AdvancedServiceComparison = () => {
         {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -387,12 +424,12 @@ export const AdvancedServiceComparison = () => {
       {selectedServices.length > 0 && (<motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -445,12 +482,12 @@ export const AdvancedServiceComparison = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 

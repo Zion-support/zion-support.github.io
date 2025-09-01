@@ -1,5 +1,29 @@
 <<<<<<< HEAD
+import { DollarSign  } from 'lucide - react';
+import { useDispatch  } from 'react - redux.ts';
+import { useNavigate, Link  } from 'react - router - dom.ts';
+import React, { useState } from 'react.ts';
+import { addItem } from '@/store / cartSlice';
+import { Badge  } from '@/components / ui / badge';
+import { Button  } from '@/components / ui / button';
+import { FavoriteButton  } from '@/components / FavoriteButton';
+import { ProductListing  } from '@/types / listings';
+import { RatingStars  } from '@/components / RatingStars';
+import type { AppDispatch } from '@/store';
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default React.memo (ProductListingCard) ;
+
+// Regular img tag will be used instead of next / image
+=======
+<<<<<<< HEAD
 // Regular img tag will be used instead of next/image
+>>>>>>> main
 
   listing: ProductListing;
   view?: 'grid' | 'list';

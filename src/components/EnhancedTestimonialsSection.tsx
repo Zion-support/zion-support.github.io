@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Star,
   Quote,
@@ -117,7 +121,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                   animate = {
 
   { rotate: [0,
-  360] 
+  360]
 
 }}
                   transition = {
@@ -154,13 +158,13 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                         initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                         animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                         transition={{ delay: 0.3 + index * 0.1 }}"
@@ -258,20 +262,20 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                   initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   viewport={{ once: true }}
                   transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 

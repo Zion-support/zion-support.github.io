@@ -1,5 +1,4 @@
 
-
 describe ('TermsOfService', () => {
   it ('renders without crashing', () => {
     render (<TermsOfService  />) ;

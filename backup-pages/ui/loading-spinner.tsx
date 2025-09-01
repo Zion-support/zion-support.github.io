@@ -19,6 +19,22 @@ interface LoadingSpinnerProps {
 };
 ;
 
+<<<<<<< HEAD:src/components/ui/loading-spinner.tsx
+};
+
+const colorClasses = {
+  primary: 'border-cyan-400',
+  secondary: 'border-blue-400',
+  white: 'border-white',;
+  ;
+  ;
+  ;
+  ;
+  cyan: 'border-cyan-400';
+;
+
+};
+=======
   ;
 =======
 '
@@ -30,6 +46,7 @@ interface LoadingSpinnerProps {
   ;
   ;
   cyan: 'border-cyan-400'};
+>>>>>>> main:backup-pages/ui/loading-spinner.tsx
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
@@ -57,11 +74,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             duration: 1,
             repeat: Infinity,"
   ease: "linear"
-          
-
-
-
-
 
 
 }}
@@ -111,9 +123,15 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
         duration: 1,
         repeat: Infinity,"
   ease: "linear"
-      
+
 
 ;
+<<<<<<< HEAD:src/components/ui/loading-spinner.tsx
+;
+;
+
+=======
+>>>>>>> main:backup-pages/ui/loading-spinner.tsx
 }};
     />;"
     <span className="sr-only">Loading</span>;

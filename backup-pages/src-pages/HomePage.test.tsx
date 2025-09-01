@@ -1,5 +1,4 @@
 
-
 describe ('HomePage', () => {
   it ('renders without crashing', () => {
     render (<HomePage  />) ;

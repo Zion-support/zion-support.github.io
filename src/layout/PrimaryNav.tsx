@@ -148,34 +148,19 @@
               initial = {
 
   { opacity: 0,
-  height: 0 
-
-
-
-
-
+  height: 0
 
 }}
               animate = {
 
   { opacity: 1,
-  height: 'auto' 
-
-
-
-
-
+  height: 'auto'
 
 }}
               exit = {
 
   { opacity: 0,
-  height: 0 
-
-
-
-
-
+  height: 0
 
 }}
               transition={{ duration: 0.3 }}"
@@ -201,30 +186,48 @@
                     </div>
                   </div>
                 ))}
+<<<<<<< HEAD
+
+                <div className="pt-4 border-t border-white/10 space-y-2">
+                  <Link
+=======
                 "
                 <div className="pt-4 border-t border-white/10 space-y-2">
                   <Link "
+>>>>>>> main
                     to="/solutions"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Solutions
                   </Link>
+<<<<<<< HEAD
+                  <Link
+=======
                   <Link "
+>>>>>>> main
                     to="/about"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     About
                   </Link>
+<<<<<<< HEAD
+                  <Link
+=======
                   <Link "
+>>>>>>> main
                     to="/blog"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Blog
                   </Link>
+<<<<<<< HEAD
+                  <Link
+=======
                   <Link "
+>>>>>>> main
                     to="/contact"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}

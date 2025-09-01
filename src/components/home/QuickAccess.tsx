@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+=======
+<<<<<<< HEAD
+>>>>>>> main
 import {
 
   Brain,
@@ -159,17 +165,33 @@ const QuickAccess: React.FC = (): JSX.Element => {
       transition: {
         staggerChildren: 0.1}}};
 
+<<<<<<< HEAD
+  const itemVariants = {
+  hidden: { opacity: 0, y: 20,
+  scale: 0.95
+
+},
+    visible: {
+      opacity: 1,
+      y: 0, ;
+=======
   
+>>>>>>> main
       scale: 1,;
       transition: {
         duration: 0.5,;"
         ease: "easeOut"}}};
 
   const hoverVariants = {
+<<<<<<< HEAD
+  hover: {
+      y: -8,
+=======
 
   hover: {
 
       y: -8, 
+>>>>>>> main
       scale: 1.02,
       transition: {
 
@@ -177,7 +199,15 @@ const QuickAccess: React.FC = (): JSX.Element => {
       ;
 }}};
 
+<<<<<<< HEAD
+};
+    };
+  };
+
+  return (
+=======
   return ("
+>>>>>>> main
     <section className = "py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
       {/* Background Elements */}"
       <div className="absolute inset-0 opacity-30">"
@@ -192,23 +222,13 @@ const QuickAccess: React.FC = (): JSX.Element => {
           initial = {
 
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}
@@ -221,12 +241,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
             transition = {
 
   { duration: 0.6,
-  delay: 0.2 
-
-
-
-
-
+  delay: 0.2
 
 }}
             viewport={{ once: true }}"
@@ -234,23 +249,23 @@ const QuickAccess: React.FC = (): JSX.Element => {
           >
             Quick Access to Our Services
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
 
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}"
             className="text-lg text-gray-300 max-w-2xl mx-auto"
@@ -279,7 +294,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
                 >"
                   <link.icon className="w-6 h-6 text-white" />
                 </motion.div>
-                
+
                 <motion.div
                   animate={{ rotate: hoveredCategory === link.title ? 90 : 0 }}
                   transition={{ duration: 0.3 }}
@@ -306,34 +321,19 @@ const QuickAccess: React.FC = (): JSX.Element => {
                       initial = {
 
   { opacity: 0,
-  x: -10 
-
-
-
-
-
+  x: -10
 
 }}
                       whileInView = {
 
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }}
                       transition = {
 
   { duration: 0.4,
-  delay: 0.1 + idx * 0.1 
-
-
-
-
-
+  delay: 0.1 + idx * 0.1
 
 }}
                       viewport={{ once: true }}"
@@ -355,34 +355,19 @@ const QuickAccess: React.FC = (): JSX.Element => {
                       initial = {
 
   { opacity: 0,
-  scale: 0.8 
-
-
-
-
-
+  scale: 0.8
 
 }}
                       whileInView = {
 
   { opacity: 1,
-  scale: 1 
-
-
-
-
-
+  scale: 1
 
 }}
                       transition = {
 
   { duration: 0.4,
-  delay: 0.2 + idx * 0.1 
-
-
-
-
-
+  delay: 0.2 + idx * 0.1
 
 }}
                       viewport={{ once: true }}"
@@ -478,24 +463,51 @@ const QuickAccess: React.FC = (): JSX.Element => {
           initial = {
 
   { opacity: 0,
+<<<<<<< HEAD
+  y: 30 ;
+
+}}
+=======
   y: 30 }}
+>>>>>>> main
           whileInView = {
 
   { opacity: 1,
+<<<<<<< HEAD
+  y: 0 ;
+
+}}
+=======
   y: 0 }}
+>>>>>>> main
           transition = {
 
   { duration: 0.8,
+<<<<<<< HEAD
+  delay: 0.4 ;
+
+}}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
+            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>
+=======
   delay: 0.4 }}
           viewport={{ once: true }}"          className="text-center"
         >"
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">'"
             <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>"
+>>>>>>> main
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+              <Link
+=======
               <Link "
+>>>>>>> main
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
 

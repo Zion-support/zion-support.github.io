@@ -9,7 +9,7 @@ import { FuturisticCard } from '@/components/ui/futuristic-card';
 import { NeonText } from '@/components/ui/neon-text';
 export function ServicesShowcase() {
     const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
-    
+
     const emergingServices = [
         {
 "

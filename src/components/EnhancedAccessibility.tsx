@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import {
+import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Volume2,
   VolumeX,
@@ -9,6 +15,17 @@ import {
   MousePointer,
   Accessibility,
   Settings,
+<<<<<<< HEAD
+  X
+ } from 'lucide - react';
+  Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  ZoomIn,
+  ZoomOut,
+  Sun,
+=======
   X'
  } from 'lucide-react';
 
@@ -21,6 +38,7 @@ import {
   ZoomIn, 
   ZoomOut, 
   Sun, 
+>>>>>>> main
   Moon,
   Accessibility,
   Keyboard,
@@ -351,20 +369,38 @@ modals.forEach(modal:  > {;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       announcement.textContent = message;
       document.body.appendChild (announcement) ;
-      
+
       setTimeout ( () => {
         document.body.removeChild (announcement) }, 1000) }
   };
 
   
     setSettings (prev => ({ ...prev, [key]: newValue }) ) ;
-    
+
     // Announce changes to screen readers
+<<<<<<< HEAD
+    const settingNames = {
+      highContrast: 'High contrast',
+      largeText: 'Large text',
+      reducedMotion: 'Reduced motion',
+      screenReader: 'Screen reader',
+      keyboardNavigation: 'Keyboard navigation',
+      focusIndicator: 'Focus indicator',
+      colorBlindness: 'Color blindness',
+      fontSize: 'Font size'
+    };
+
+    announceToScreenReader (`${settingNames[key]} ${newValue ? 'enabled' : 'disabled'}`) ;
+  };
+
+  return (<>
+=======
     
     '`
     announceToScreenReader(`${settingNames[key]} ${newValue ? 'enabled' : 'disabled'}`)};
   return()
     <>
+>>>>>>> main
       {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}"
@@ -453,9 +489,15 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <h3 className="font-semibold text-zion-cyan flex items-center">"
                   <Eye className="w-4 h-4 mr-2"  />                  Visual
                 </h3>
+<<<<<<< HEAD
+
+                <label className="flex items - center space - x-3 cursor - pointer">
+                  <input
+=======
                 "
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
+>>>>>>> main
                     type="checkbox"
                     checked={settings.highContrast}
                     onChange={() => toggleSetting('highContrast')}"
@@ -508,9 +550,15 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <h3 className="font-semibold text-zion-cyan flex items-center">"
                   <MousePointer className="w-4 h-4 mr-2"  />                  Motion
                 </h3>
+<<<<<<< HEAD
+
+                <label className="flex items - center space - x-3 cursor - pointer">
+                  <input
+=======
                 "
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
+>>>>>>> main
                     type="checkbox"
                     checked={settings.reducedMotion}
                     onChange={() => toggleSetting('reducedMotion')}"
@@ -525,9 +573,15 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <h3 className="font-semibold text-zion-cyan flex items-center">"
                   <Keyboard className="w-4 h-4 mr-2"  />                  Navigation
                 </h3>
+<<<<<<< HEAD
+
+                <label className="flex items - center space - x-3 cursor - pointer">
+                  <input
+=======
                 "
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
+>>>>>>> main
                     type="checkbox"
                     checked={settings.keyboardNavigation}
                     onChange={() => toggleSetting('keyboardNavigation')}"
@@ -553,9 +607,15 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                   <Volume2 className="w-4 h-4 mr-2" />
                   Screen Reader
                 </h3>
+<<<<<<< HEAD
+
+                <label className="flex items - center space - x-3 cursor - pointer">
+                  <input
+=======
                 "
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
+>>>>>>> main
                     type="checkbox"
                     checked={settings.screenReader}
                     onChange={() => toggleSetting('screenReader')}"

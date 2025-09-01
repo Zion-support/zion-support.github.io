@@ -135,20 +135,22 @@ export const AuthProvider = ({ children }) => {
                             }
                             // --- END MODIFICATION ---
 
-
                     else if (error) {
 "
                         // // // // // // // // console.error("Error fetching user profile:", error);
                         setUser(null);
-
 
                 catch (error) {
 "
                     // // // // // // // // console.error("Error fetching user profile:", error);
                     setUser(null);
 
+<<<<<<< HEAD
+                        console.error("Error fetching user profile:", error);
+=======
 "
                         // console.error("Error fetching user profile:", error);
+>>>>>>> main
                         setUser(null)}
                 }
                 catch (error) {
@@ -185,11 +187,6 @@ export const AuthProvider = ({ children }) => {
         setUser,
         onboardingStep,
   tokens
-    
-
-
-
-
 
 
 };

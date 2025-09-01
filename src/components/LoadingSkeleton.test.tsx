@@ -1,5 +1,4 @@
 
-
 describe ('LoadingSkeleton', () => {
   it ('renders without crashing', () => {
     render (<LoadingSkeleton  />) ;

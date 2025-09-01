@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+export default AdvancedServiceRecommendation;
+import { Badge } from "./ui / badge";
+import { Button } from "./ui / button";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui / card";
+import { motion } from 'framer - motion';
+
+=======
 import { motion } from 'framer-motion';
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";"
 import { Button } from "./ui/button";"
 import { Badge } from "./ui/badge";
+>>>>>>> main
 const AdvancedServiceRecommendation = () => {
     const [clientProfile, setClientProfile] = useState({
 
@@ -207,12 +216,12 @@ const AdvancedServiceRecommendation = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -233,12 +242,12 @@ const AdvancedServiceRecommendation = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -256,8 +265,16 @@ const AdvancedServiceRecommendation = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
             <select value={clientProfile.industry} onChange = {
 
+<<<<<<< HEAD
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">
+          <div>
+            <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Industry</label>
+            <select value={clientProfile.industry} onChange = { (e) => setClientProfile (prev => ({ ...prev,
+  industry: e.target.value
+=======
   (e) => setClientProfile(prev => ({ ...prev,
   industry: e.target.value 
+>>>>>>> main
 
 
 
@@ -270,12 +287,19 @@ const AdvancedServiceRecommendation = () => {
             </select>
           </div>
 
+<<<<<<< HEAD
+          <div>
+            <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Company Size</label>
+            <select value={clientProfile.companySize} onChange = { (e) => setClientProfile (prev => ({ ...prev,
+  companySize: e.target.value
+=======
           <div>"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>
             <select value={clientProfile.companySize} onChange = {
 
   (e) => setClientProfile(prev => ({ ...prev,
   companySize: e.target.value 
+>>>>>>> main
 
 
 
@@ -288,12 +312,19 @@ const AdvancedServiceRecommendation = () => {
             </select>
           </div>
 
+<<<<<<< HEAD
+          <div>
+            <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Budget Range</label>
+            <select value={clientProfile.budget} onChange = { (e) => setClientProfile (prev => ({ ...prev,
+  budget: e.target.value
+=======
           <div>"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>
             <select value={clientProfile.budget} onChange = {
 
   (e) => setClientProfile(prev => ({ ...prev,
   budget: e.target.value 
+>>>>>>> main
 
 
 
@@ -306,12 +337,19 @@ const AdvancedServiceRecommendation = () => {
             </select>
           </div>
 
+<<<<<<< HEAD
+          <div>
+            <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Implementation Timeline</label>
+            <select value={clientProfile.timeline} onChange = { (e) => setClientProfile (prev => ({ ...prev,
+  timeline: e.target.value
+=======
           <div>"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>
             <select value={clientProfile.timeline} onChange = {
 
   (e) => setClientProfile(prev => ({ ...prev,
   timeline: e.target.value 
+>>>>>>> main
 
 
 
@@ -324,12 +362,19 @@ const AdvancedServiceRecommendation = () => {
             </select>
           </div>
 
+<<<<<<< HEAD
+          <div>
+            <label className="block text - sm font - medium text - zion - slate - dark mb - 2">Technology Maturity Level</label>
+            <select value={clientProfile.technologyMaturity} onChange = { (e) => setClientProfile (prev => ({ ...prev,
+  technologyMaturity: e.target.value
+=======
           <div>"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>
             <select value={clientProfile.technologyMaturity} onChange = {
 
   (e) => setClientProfile(prev => ({ ...prev,
   technologyMaturity: e.target.value 
+>>>>>>> main
 
 
 
@@ -352,9 +397,14 @@ const AdvancedServiceRecommendation = () => {
   (e) => {
 
                 if (e.target.checked) {
+<<<<<<< HEAD
+                    setClientProfile (prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
+  goal]
+=======
 
                     setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
   goal] 
+>>>>>>> main
 
 }) ) ;
                 }
@@ -376,9 +426,14 @@ const AdvancedServiceRecommendation = () => {
   (e) => {
 
                 if (e.target.checked) {
+<<<<<<< HEAD
+                    setClientProfile (prev => ({ ...prev, challenges: [...prev.challenges,
+  challenge]
+=======
 
                     setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,
   challenge] 
+>>>>>>> main
 
 }) ) ;
                 }
@@ -408,12 +463,12 @@ const AdvancedServiceRecommendation = () => {
       {showResults && (<motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -429,12 +484,12 @@ const AdvancedServiceRecommendation = () => {
             {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 
 
@@ -540,12 +595,12 @@ const AdvancedServiceRecommendation = () => {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 

@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight const testimonials = [;
 import { motion, AnimatePresence } from 'framer - motion';
 
-
     {
 
         id: 1,
@@ -110,12 +109,12 @@ import { motion, AnimatePresence } from 'framer - motion';
         <motion.div className="text-center mb-16" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -139,15 +138,19 @@ import { motion, AnimatePresence } from 'framer - motion';
   {
 "
             x: { type: "spring", stiffness: 300,
-  damping: 30 
+  damping: 30
 
 },
             opacity: { duration: 0.2 }"
         }} drag="x" dragConstraints = {
 
   { left: 0,
-  right: 0 
+  right: 0
 
+<<<<<<< HEAD
+}} dragElastic={1} onDragEnd = { (e, { offset,
+  velocity
+=======
 
 
 
@@ -157,6 +160,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
   (e, { offset,
   velocity 
+>>>>>>> main
 
 }) => {
 
@@ -238,17 +242,17 @@ import { motion, AnimatePresence } from 'framer - motion';
         <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 
 

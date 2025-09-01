@@ -9,7 +9,14 @@ const defaultContent = {
 
         icon: <ShoppingCart className="w-16 h-16 text-gray-500"/>,
         title: 'No Products Available',
+<<<<<<< HEAD
+        description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!',
+
+
+},
+=======
         description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!'},
+>>>>>>> main
     categories: {
 "
         icon: <Lightbulb className="w-16 h-16 text-gray-500"/>,
@@ -104,12 +111,7 @@ export function CategoriesEmptyState({ onRetry }) {
     return (<EmptyState type="categories" action = {
 
   onRetry ? { label: 'Refresh Categories',
-  onClick: onRetry 
-
-
-
-
-
+  onClick: onRetry
 
 } : null}/>);
 };
@@ -118,12 +120,7 @@ export function TalentEmptyState({ onRetry }) {
     return (<EmptyState type="talent" action = {
 
   onRetry ? { label: 'Reset Filters',
-  onClick: onRetry 
-
-
-
-
-
+  onClick: onRetry
 
 } : null}/>);
 };
@@ -132,12 +129,7 @@ export function EquipmentEmptyState({ onRetry }) {
     return (<EmptyState type="equipment" action = {
 
   onRetry ? { label: 'Refresh Listings',
-  onClick: onRetry 
-
-
-
-
-
+  onClick: onRetry
 
 } : null}/>);
 };
@@ -146,12 +138,7 @@ export function SearchEmptyState({ onRetry }) {
     return (<EmptyState type="search" action = {
 
   onRetry ? { label: 'Clear Search',
-  onClick: onRetry 
-
-
-
-
-
+  onClick: onRetry
 
 } : null}/>);
 };
@@ -160,12 +147,7 @@ export function NetworkErrorState({ onRetry }) {
     return (<EmptyState type="network" action = {
 
   onRetry ? { label: 'Try Again',
-  onClick: onRetry 
-
-
-
-
-
+  onClick: onRetry
 
 } : null}/>);
 };
@@ -174,12 +156,7 @@ export function ServerErrorState({ onRetry }) {
     return (<EmptyState type="error" action = {
 
   onRetry ? { label: 'Retry',
-  onClick: onRetry 
-
-
-
-
-
+  onClick: onRetry
 
 } : null}/>);
 }

@@ -1,5 +1,4 @@
 
-
 describe ('InteractiveUserExperience', () => {
   it ('renders without crashing', () => {
     render (<InteractiveUserExperience  />) ;

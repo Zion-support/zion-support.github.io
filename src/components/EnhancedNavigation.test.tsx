@@ -1,5 +1,4 @@
 
-
 describe ('EnhancedNavigation', () => {
   it ('renders without crashing', () => {
     render (<EnhancedNavigation  />) ;

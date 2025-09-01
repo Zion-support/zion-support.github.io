@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp, Users, Star, Globe, Shield, Cpu, Network const researchAreas = [
 import { motion, AnimatePresence } from 'framer - motion';
 
-
     {
 
         id: 1,
@@ -200,7 +199,7 @@ const researchLabs = [
     const itemVariants = {
 
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -227,12 +226,12 @@ const researchLabs = [
         <motion.div className="text-center mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -253,17 +252,17 @@ const researchLabs = [
             {innovationStats.map((stat, index) => (<motion.div key={index} initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} whileInView = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -284,17 +283,17 @@ const researchLabs = [
         <motion.div className="mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 
 
@@ -310,17 +309,17 @@ const researchLabs = [
             {researchAreas.map((area, index) => (<motion.div key={area.id} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -384,17 +383,17 @@ const researchLabs = [
                     {selectedResearch === area.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
 "
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 
 
@@ -444,17 +443,17 @@ const researchLabs = [
         <motion.div className="mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 
 
@@ -470,17 +469,17 @@ const researchLabs = [
             {researchLabs.map((lab, index) => (<motion.div key={index} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -518,17 +517,17 @@ const researchLabs = [
         <motion.div className="text-center" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 
 

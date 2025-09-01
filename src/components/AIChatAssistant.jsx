@@ -39,7 +39,21 @@ export function AIChatAssistant() {
   timestamp: new Date()
         
 
+<<<<<<< HEAD
+    MessageCircle,
+    Mic,
+    MicOff,
+    Send,
+    Bot,
+    User,
+    Sparkles,
+    X,
+    Minimize2,
+    Maximize2,
+  } from 'lucide - react';
+=======
 
+>>>>>>> main
 
 
 

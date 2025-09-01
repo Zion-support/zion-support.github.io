@@ -22,23 +22,13 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
           initial = {
 
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}
@@ -68,46 +58,26 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
               initial = {
 
   { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30 
-
-
-
-
-
+  x: index % 2 === 0 ? -30 : 30
 
 }}
               whileInView = {
 
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }}
               transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
-
-
-
-
-
+  delay: index * 0.1
 
 }}
               viewport={{ once: true }}
               whileHover={{
 
                 y: -5,
-  transition: { duration: 0.3 
-
-
-
-
-
+  transition: { duration: 0.3
 
 }
               }}
@@ -140,34 +110,19 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
                     initial = {
 
   { opacity: 0,
-  x: -20 
-
-
-
-
-
+  x: -20
 
 }}
                     whileInView = {
 
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }}
                     transition = {
 
   { duration: 0.5,
-  delay: itemIndex * 0.1 
-
-
-
-
-
+  delay: itemIndex * 0.1
 
 }}
                     viewport={{ once: true }}

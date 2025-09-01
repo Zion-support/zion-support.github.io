@@ -20,7 +20,14 @@ const initialState: WishlistState = {
   ;
   ;
   ;
+<<<<<<< HEAD
+  ;
+  ;
+
+};
+=======
   };
+>>>>>>> main
 
 <<<<<<< HEAD
 const wishlistSlice:  createSlice({;

@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+import { Link } from 'react - router - dom';
+import React from 'react';
+export const EnhancedFuturisticFooter: React.FC = () => {
+export const EnhancedFuturisticFooter: React.FC = () => {
+import {
+import { motion } from 'framer - motion';
+
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
+  Facebook,
+=======
 import {
   Phone, 
   Mail, 
@@ -6,6 +22,7 @@ import {
   Linkedin, 
   Twitter, 
   Facebook, 
+>>>>>>> main
   Instagram,
   Youtube,
   Github,
@@ -165,6 +182,15 @@ export function EnhancedFuturisticFooter() {
         <div className="absolute inset-0 opacity-30">"
           <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>
         </div>
+<<<<<<< HEAD
+
+      <div role="button" className="relative">
+        {/* Main Footer Content */}
+        <div role="button" className="container - responsive py - 16">
+          {/* Stats Section */}
+          <motion.div
+            className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16"
+=======
       "
       <div className="relative">
         {/* Main Footer Content */}"
@@ -172,6 +198,7 @@ export function EnhancedFuturisticFooter() {
           {/* Stats Section */}
           <motion.div "
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+>>>>>>> main
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -197,11 +224,19 @@ export function EnhancedFuturisticFooter() {
             ))}
           </motion.div>
 
+<<<<<<< HEAD
+          {/* Main Footer Grid */}
+          <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 8 mb - 12">
+            {/* Company Info */}
+            <div role="button" className="lg:col - span - 2">
+              <motion.div
+=======
           {/* Main Footer Grid */}"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">
             {/* Company Info */}"
             <div className="lg:col-span-2">
               <motion.div 
+>>>>>>> main
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}"
@@ -216,9 +251,15 @@ export function EnhancedFuturisticFooter() {
                   <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>"
                   <p className="text-slate-400 text-sm">Future Technology Solutions</p>
                 </div>
+<<<<<<< HEAD
+              </div>
+              <p className="text - slate - 300 mb - 6 leading - relaxed">
+                Leading provider of cutting - edge AI solutions, cloud services, cybersecurity, and digital transformation expertise.
+=======
               </div>"
               <p className="text-slate-300 mb-6 leading-relaxed">
                 Leading provider of cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. 
+>>>>>>> main
                 We help businesses innovate and thrive in the digital age.
               </p>"
               <div className="space-y-3">"
@@ -256,9 +297,15 @@ export function EnhancedFuturisticFooter() {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+
+            <p className="text - gray - 300 mb - 6 max - w-md">
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,
+=======
             "
             <p className="text-gray-300 mb-6 max-w-md">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
+>>>>>>> main
               and digital transformation services. Transforming businesses with cutting - edge technology.
             </p>
 
@@ -581,6 +628,15 @@ export function EnhancedFuturisticFooter() {
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
+
+            {/* Additional Contact Methods */}
+            <div role="button" className="mt - 12 pt - 8 border - t border - slate - 700">
+              <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6 text - center">
+                <div>
+                  <h4 className="text - sm font - semibold text - slate - 400 mb - 2">Emergency Support</h4>
+                  <p className="text - sm text - slate - 500">Critical issues: +1 302 464 0950</p>
+=======
             
             {/* Additional Contact Methods */}"
             <div className="mt-12 pt-8 border-t border-slate-700">"
@@ -588,6 +644,7 @@ export function EnhancedFuturisticFooter() {
                 <div>"
                   <h4 className="text-sm font-semibold text-slate-400 mb-2">Emergency Support</h4>"
                   <p className="text-sm text-slate-500">Critical issues: +1 302 464 0950</p>
+>>>>>>> main
                 </div>
                 <div>"
                   <h4 className="text-sm font-semibold text-slate-400 mb-2">Business Hours</h4>"
@@ -617,6 +674,16 @@ export function EnhancedFuturisticFooter() {
               <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>"
               <Link to="/cookies" className="hover:text-cyan-400 transition-colors">Cookie Policy</Link>
             </div>
+<<<<<<< HEAD
+
+            <div role="button" className="flex items - center space - x-4">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={scrollToTop}
+                className="p - 2 bg - slate - 700 / 50 rounded - lg text - gray - 400 hover:text - cyan - 400 hover:bg - slate - 600 / 50 transition - all duration - 300 transform hover:scale - 110"
+                aria - label="Scroll to top"
+              >
+                <ArrowUpRight className="w - 5 h - 5 rotate - 45" />;
+              </button>;
+=======
             "
             <div className="flex items-center space-x-4">
               <button
@@ -625,6 +692,7 @@ export function EnhancedFuturisticFooter() {
                 aria-label="Scroll to top"
               >"
                 <ArrowUpRight className="w-5 h-5 rotate-45"  />;              </button>;
+>>>>>>> main
             </div>;
           </div>;
         </div>;

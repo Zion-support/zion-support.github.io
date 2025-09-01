@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthChecker = ({ links, className = '' }) => {
 
+<<<<<<< HEAD
+    const [linkStatuses, setLinkStatuses] = useState ([]) ;
+    const [isChecking, setIsChecking] = useState (false) ;
+=======
     const [linkStatuses, setLinkStatuses] = useState([]);
     const [isChecking, setIsChecking] = useState(false);
+>>>>>>> main
     const checkLinkHealth = async (url) => {
 
         const startTime = Date.now();

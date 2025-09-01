@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import {
+  Menu,
+  X,
+  ChevronDown,
+=======
 import {
   Menu, 
   X, 
   ChevronDown, 
+>>>>>>> main
   ChevronRight,
   Home,
   Zap,
@@ -55,7 +64,21 @@ interface SidebarItem {
 
 export function MainSidebar() {
   const [isOpen, setIsOpen] = useState(false);
+<<<<<<< HEAD
+  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
+  const location = useLocation();
+
+  const toggleSection = (section: string) => {
+    setExpandedSections(prev =>
+      prev.includes(section)
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
+    );
+  };
+
+=======
   const [expandedSections, setExpandedSections] = useState<string[]>(['services'])};
+>>>>>>> main
   const navigation: SidebarItem[] = [
     {
 
@@ -308,10 +331,16 @@ export function MainSidebar() {
             <button
               onClick={(: unknown toggleSection(item.name.toLowerCase())}
               className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
+<<<<<<< HEAD
+                level === 0
+                  ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'
+                  : 'text-slate-400 hover:text-slate-300'
+=======
 
                 level === 0 '
                   ? 'text-slate-300 hover:text-white hover:bg-slate-700/50' '
                   : 'text-slate-400 hover:text-slate-300'`
+>>>>>>> main
               }`}
             >"
               <div className="flex items-center space-x-3">"
@@ -326,8 +355,13 @@ export function MainSidebar() {
               ) : ("
                 <ChevronRight className="w-4 h-4"  />              )}
             </button>
+<<<<<<< HEAD
+
+            {isExpanded && (
+=======
             
             {isExpanded && ("
+>>>>>>> main
               <div className="ml-6 mt-2 space-y-1">
                 {item.children!.map(child => renderSidebarItem(child, level + 1))}
               </div>

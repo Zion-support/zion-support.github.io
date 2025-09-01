@@ -1,9 +1,12 @@
 
+<<<<<<< HEAD
+=======
 import {
   Smartphone, 
   Tablet, 
   Monitor, 
 
+>>>>>>> main
   Smartphone,
   Tablet,
   Monitor,
@@ -208,6 +211,28 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     
     if (viewport) {
 
+<<<<<<< HEAD
+    // Add touch - action CSS for better touch handling
+    const style = document.createElement ('style') ;
+    style.textContent = `
+      .mobile - device * {
+        touch - action: manipulation;
+        -webkit - tap - highlight - color: transparent;
+      }
+
+      .mobile - device button,
+      .mobile - device [role="button"] {
+        min - height: 44px;
+        min - width: 44px;
+      }
+
+      .mobile - device input,
+      .mobile - device select,
+      .mobile - device textarea {
+        font - size: 16px;
+      }
+    `;
+=======
       viewport.setAttribute('content',width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')}
 
     // Add touch-action CSS for better touch handling'
@@ -228,6 +253,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       .mobile-device textarea {
 
         font-size: 16px}`    `;
+>>>>>>> main
     document.head.appendChild (style) ;
 
     return () => {

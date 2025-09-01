@@ -1,6 +1,5 @@
 export default authService;
 
-
 // Mock authentication service
 // In a real application, this would connect to your backend API
 ;

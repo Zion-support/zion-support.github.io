@@ -1,4 +1,23 @@
 <<<<<<< HEAD
+import { Link } from "react - router - dom";
+import React, { useState } from 'react';
+import { Badge } from "@/components / ui / badge";
+import { Button } from "@/components / ui / button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components / ui / card";
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
+export function ComprehensiveServicesShowcase2027 (...args[]) :  {
+import { cuttingEdgeComprehensiveServices2027 } from "../../data / 2027 - cutting - edge - comprehensive - services";
+import { specializedInnovativeServices2027 } from "../../data / 2027 - specialized - innovative - services";
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 const categoryColors: { [key: string]: string } = {
 

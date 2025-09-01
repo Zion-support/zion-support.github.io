@@ -182,14 +182,14 @@ const metricsRef:  useRef<PerformanceMetrics>({;
     }}, []);
 
   // Debounced function utility
-    
+
     return (...args: Parameters<T>)  => {
 
       clearTimeout(timeoutId);
       timeoutId = setTimeout(: unknown func(...args), delay)}}, []);
 
   // Throttled function utility
-    
+
     return (...args: Parameters<T>)  => {
 :src/hooks/usePerformanceOptimization.tsx
 

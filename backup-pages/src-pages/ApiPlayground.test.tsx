@@ -1,5 +1,4 @@
 
-
 describe ('ApiPlayground', () => {
   it ('renders without crashing', () => {
     render (<ApiPlayground  />) ;

@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react';
+export default PerformanceOptimizer;
+import {
+
+=======
 
 <<<<<<< HEAD
+>>>>>>> main
   Activity,
   Zap,
   TrendingUp,

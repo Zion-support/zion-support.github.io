@@ -1,5 +1,4 @@
 
-
 describe ('UltimateZionServicesShowcase', () => {
   it ('renders without crashing', () => {
     render (<UltimateZionServicesShowcase  />) ;

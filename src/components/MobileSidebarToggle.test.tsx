@@ -1,5 +1,4 @@
 
-
 describe ('MobileSidebarToggle', () => {
   it ('renders without crashing', () => {
     render (<MobileSidebarToggle  />) ;

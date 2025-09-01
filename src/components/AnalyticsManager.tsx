@@ -1,4 +1,14 @@
 import {
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+
+ * AnalyticsManager function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function AnalyticsManager () {
+=======
+>>>>>>> main
 
   BarChart3,
   Users,

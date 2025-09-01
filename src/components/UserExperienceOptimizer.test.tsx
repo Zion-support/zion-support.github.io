@@ -1,5 +1,4 @@
 
-
 describe ('UserExperienceOptimizer', () => {
   it ('renders without crashing', () => {
     render (<UserExperienceOptimizer  />) ;

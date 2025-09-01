@@ -124,6 +124,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
   cn("w-full pl-3 text-left font-normal","
   !field.value && "text-muted-foreground")
 
+<<<<<<< HEAD
+}>
+                        {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}
+=======
 
 
 
@@ -131,6 +135,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
 
 }>"
                         {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}"
+>>>>>>> main
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50"/>
                       </Button>
                     </FormControl>
@@ -141,11 +146,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
   (date) => date < new Date() || date > addDays(new Date(),
   90)
 
+<<<<<<< HEAD
+=======
 
 
 
 
 "
+>>>>>>> main
 } initialFocus className="p-3 pointer-events-auto"/>
                   </PopoverContent>
                 </Popover>

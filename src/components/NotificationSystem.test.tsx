@@ -1,5 +1,4 @@
 
-
 describe ('NotificationSystem', () => {
   it ('renders without crashing', () => {
     render (<NotificationSystem  />) ;

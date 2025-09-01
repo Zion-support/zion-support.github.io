@@ -1,4 +1,14 @@
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+
+ * EnhancedAccessibilityPanel function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function EnhancedAccessibilityPanel () {
+=======
+>>>>>>> main
 
   Accessibility,
   Eye,

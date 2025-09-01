@@ -14,10 +14,18 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";"
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles // Define the form schema with zod
+<<<<<<< HEAD
+import z from "zod";
+
+const productSchema = z.object ({
+    title: z.string () .min (3, "Title must be at least 3 characters") ,
+    description: z.string () .min (10, "Description must be at least 10 characters") ,
+=======
 const productSchema = z.object({
 "
     title: z.string().min(3, "Title must be at least 3 characters"),"
     description: z.string().min(10, "Description must be at least 10 characters"),
+>>>>>>> main
     price: z
         .string()
         .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {

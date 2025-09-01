@@ -4,6 +4,10 @@ import { motion } from 'framer-motion';
 export const PerformanceMonitor = () => {
   const [metrics, setMetrics] = useState({
 
+<<<<<<< HEAD
+  const [metrics, setMetrics] = useState ({
+=======
+>>>>>>> main
     fcp: null,
     lcp: null,
     fid: null,
@@ -160,13 +164,13 @@ export const PerformanceMonitor = () => {
       initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
       animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
       className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-zinc-700 rounded-lg p-4 text-white text-sm max-w-xs z-50"
@@ -177,6 +181,17 @@ export const PerformanceMonitor = () => {
           {score}
         </div>
       </div>
+<<<<<<< HEAD
+
+      <div className="text - xs text - zinc - 300 mb - 2">
+        {getScoreLabel (score) } • Core Web Vitals
+      </div>
+
+      <div className="space - y-1 text - xs">
+        {metrics.fcp && (<div className="flex justify - between">
+            <span > FCP:</span>
+            <span className={metrics.fcp <= 1800 ? 'text - green - 400' : 'text - yellow - 400'}>
+=======
       "
       <div className="text-xs text-zinc-300 mb-2">
         {getScoreLabel(score)} • Core Web Vitals
@@ -187,6 +202,7 @@ export const PerformanceMonitor = () => {
           <div className="flex justify-between">
             <span>FCP:</span>
             <span className={metrics.fcp <= 1800 ? 'text-green-400' : 'text-yellow-400'}>
+>>>>>>> main
               {metrics.fcp}ms
             </span>
           </div>

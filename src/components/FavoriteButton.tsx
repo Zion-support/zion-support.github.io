@@ -1,4 +1,16 @@
 <<<<<<< HEAD
+import { Heart  } from 'lucide - react';
+import React, { useState } from 'react.ts';
+export /**
+
+ * FavoriteButton function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function FavoriteButton ({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
 

@@ -24,7 +24,13 @@ declare namespace JSX {
 }
   interface IntrinsicElements {
 
+<<<<<<< HEAD
+    [elemName: string]: ;
+
+}
+=======
     [elemName: string]: }
+>>>>>>> main
 }
 
 declare module 'react-dom' {
@@ -71,7 +77,6 @@ declare module 'zod' {
   const z: ;
   export { z };
   export default z}
-
 
 export default useEffect;
 export default useRef;

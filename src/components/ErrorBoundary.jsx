@@ -2,6 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
 
+<<<<<<< HEAD
+        AlertTriangle,
+        RefreshCw,
+        Home,
+        ArrowLeft,
+        Bug,
+        Shield,
+        Zap,
+      } from 'lucide - react';
+=======
   AlertTriangle,
   RefreshCw,
   Home,
@@ -12,6 +22,7 @@ import {
 import { Link, useNavigate } from 'react-router-dom';
 
 function ErrorFallback({ error, resetError, retryCount = 0 }) {
+>>>>>>> main
 
   const navigate = useNavigate();
   const maxRetries = 3;

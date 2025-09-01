@@ -1,5 +1,4 @@
 
-
 describe ('PricingGuide', () => {
   it ('renders without crashing', () => {
     render (<PricingGuide  />) ;

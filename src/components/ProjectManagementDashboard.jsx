@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 export function ProjectManagementDashboard () {
 import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X const mockProjects = [;
 
-
     {
 
         id: '1',

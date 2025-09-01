@@ -3,8 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
+=======
 export function FloatingCTA({
 
+>>>>>>> main
   variant = 'default',
   position = 'bottom-right'}) {
 

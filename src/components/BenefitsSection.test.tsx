@@ -1,5 +1,4 @@
 
-
 describe ('BenefitsSection', () => {
   it ('renders without crashing', () => {
     render (<BenefitsSection  />) ;

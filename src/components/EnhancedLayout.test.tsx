@@ -1,5 +1,4 @@
 
-
 describe ('EnhancedLayout', () => {
   it ('renders without crashing', () => {
     render (<EnhancedLayout  />) ;

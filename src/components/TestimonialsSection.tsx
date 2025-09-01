@@ -1,8 +1,20 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+export const TestimonialsSection: React.FC = () => {
+import {
+import { motion, AnimatePresence } from 'framer - motion';
+
+  Star,
+  Quote,
+  ChevronLeft,
+  ChevronRight,
+=======
 import {
   Star, 
   Quote, 
   ChevronLeft, 
   ChevronRight, 
+>>>>>>> main
   CheckCircle,
   Award,
   TrendingUp,
@@ -226,6 +238,20 @@ export const TestimonialsSection: React.FC = props {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />
                     ))}
                   </div>
+<<<<<<< HEAD
+
+                  <Quote className="w - 8 h - 8 text - cyan - 400 mb - 4" />
+
+                  <blockquote className="text - lg md:text - xl text - white mb - 6 leading - relaxed">
+                    "{current.content}"
+                  </blockquote>
+
+                  <div role="button" className="space - y-3">
+                    <h4 className="text - xl font - semibold text - white">{current.name}</h4>
+                    <p className="text - cyan - 400">{current.position}</p>
+                    <p className="text - gray - 300">{current.company}</p>
+                    <p className="text - sm text - gray - 400">{current.industry} Industry</p>
+=======
                   "
                   <Quote className="w-8 h-8 text-cyan-400 mb-4"  />
                   "
@@ -237,6 +263,7 @@ export const TestimonialsSection: React.FC = props {
                     <p className="text-cyan-400">{current.position}</p>"
                     <p className="text-gray-300">{current.company}</p>"
                     <p className="text-sm text-gray-400">{current.industry} Industry</p>
+>>>>>>> main
                   </div>
                 </div>
 

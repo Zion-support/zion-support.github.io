@@ -54,16 +54,17 @@ export default function AIBiomedicalResearch() {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
+<<<<<<< HEAD:src/pages/AIServices/AIBiomedicalResearch.jsx
+  y: 0
+
+}} transition={{ duration: 0.8 }} className="text-center">
+            <div className="inline-flex items-center gap-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-4 py-2 text-zion-cyan text-sm font-medium mb-6">
+=======
   y: 0 
 
 
@@ -73,6 +74,7 @@ export default function AIBiomedicalResearch() {
 "
 }} transition={{ duration: 0.8 }} className="text-center">"
             <div className="inline-flex items-center gap-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-4 py-2 text-zion-cyan text-sm font-medium mb-6">"
+>>>>>>> main:backup-pages/src-pages/AIServices/AIBiomedicalResearch.jsx
               <Brain className="w-4 h-4"/>
               AI-Powered Biomedical Research
             </div>
@@ -108,16 +110,16 @@ export default function AIBiomedicalResearch() {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
+<<<<<<< HEAD:src/pages/AIServices/AIBiomedicalResearch.jsx
+  y: 0
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
+=======
   y: 0 
 
 
@@ -126,6 +128,7 @@ export default function AIBiomedicalResearch() {
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
+>>>>>>> main:backup-pages/src-pages/AIServices/AIBiomedicalResearch.jsx
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Intelligent Biomedical Research Features
             </h2>"
@@ -141,26 +144,20 @@ export default function AIBiomedicalResearch() {
             return (<motion.div key={feature.title} initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
+<<<<<<< HEAD:src/pages/AIServices/AIBiomedicalResearch.jsx
+  delay: index * 0.1
+
+=======
   delay: index * 0.1 
 
 
@@ -168,6 +165,7 @@ export default function AIBiomedicalResearch() {
 
 
 "
+>>>>>>> main:backup-pages/src-pages/AIServices/AIBiomedicalResearch.jsx
 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}>"
                     <IconComponent className="w-8 h-8"/>
@@ -185,16 +183,16 @@ export default function AIBiomedicalResearch() {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
+<<<<<<< HEAD:src/pages/AIServices/AIBiomedicalResearch.jsx
+  y: 0
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
+=======
   y: 0 
 
 
@@ -203,6 +201,7 @@ export default function AIBiomedicalResearch() {
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
+>>>>>>> main:backup-pages/src-pages/AIServices/AIBiomedicalResearch.jsx
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Why Choose AI Biomedical Research?
             </h2>"
@@ -215,26 +214,22 @@ export default function AIBiomedicalResearch() {
             {benefits.map((benefit, index) => (<motion.div key={benefit} initial = {
 
   { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
+  x: index % 2 === 0 ? -20 : 20
 
 }} whileInView = {
 
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }} transition = {
 
   { duration: 0.6,
+<<<<<<< HEAD:src/pages/AIServices/AIBiomedicalResearch.jsx
+  delay: index * 0.1
+
+}} className="flex items-start gap-3">
+                <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"/>
+=======
   delay: index * 0.1 
 
 
@@ -244,6 +239,7 @@ export default function AIBiomedicalResearch() {
 "
 }} className="flex items-start gap-3">"
                 <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"/>"
+>>>>>>> main:backup-pages/src-pages/AIServices/AIBiomedicalResearch.jsx
                 <span className="text-zion-slate-light">{benefit}</span>
               </motion.div>))}
           </div>
@@ -256,22 +252,12 @@ export default function AIBiomedicalResearch() {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition={{ duration: 0.8 }}>"
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">

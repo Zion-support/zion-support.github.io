@@ -1,10 +1,18 @@
 
 <<<<<<< HEAD
+  Plus,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+=======
+<<<<<<< HEAD
   Plus, 
   MessageCircle, 
   Phone, 
   Mail, 
   MapPin, 
+>>>>>>> main
   ArrowUp,
   X,
   Settings,

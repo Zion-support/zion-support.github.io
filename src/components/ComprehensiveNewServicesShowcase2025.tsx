@@ -1,5 +1,16 @@
 <<<<<<< HEAD
+import React, { useState } from 'react.ts';
+export default ComprehensiveNewServicesShowcase2025;
+export function ComprehensiveNewServicesShowcase2025 (...args: any[]) : any {
+import {
+import { comprehensiveNewServices2025 } from '../data / comprehensiveNewServices2025';
+import { motion } from 'framer - motion.ts';
+
+  Search,
+=======
+<<<<<<< HEAD
 import { Search,
+>>>>>>> main
   Filter,
   Star,
   TrendingUp,

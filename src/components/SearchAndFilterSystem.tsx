@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Search,
   Filter,
@@ -274,25 +278,25 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
             initial = {
 
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
             animate = {
 
   { height: 'auto',
-  opacity: 1 
+  opacity: 1
 
 }}
             exit = {
 
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
             transition = {
 
   { duration: 0.3,
-  ease: 'easeOut' 
+  ease: 'easeOut'
 
 
 
@@ -381,13 +385,13 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 

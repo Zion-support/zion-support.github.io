@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Mail,
   Phone,
@@ -105,13 +109,13 @@ export function EnhancedContact(...args[]):  {
         initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
         animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
         className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center py-20"
@@ -121,9 +125,14 @@ export function EnhancedContact(...args[]):  {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition = {
+<<<<<<< HEAD
+  { delay: 0.2,
+  type: "spring"
+=======
 
   { delay: 0.2,"
   type: "spring" 
+>>>>>>> main
 
 
 
@@ -139,13 +148,13 @@ export function EnhancedContact(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ delay: 0.3 }}"
@@ -158,13 +167,13 @@ export function EnhancedContact(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ delay: 0.4 }}"
@@ -177,13 +186,13 @@ export function EnhancedContact(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ delay: 0.5 }}
@@ -202,13 +211,13 @@ export function EnhancedContact(...args[]):  {
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -233,13 +242,13 @@ export function EnhancedContact(...args[]):  {
             initial = {
 
   { opacity: 0,
-  x: -50 
+  x: -50
 
 }}
             animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
             transition={{ delay: 0.2 }}
@@ -253,13 +262,13 @@ export function EnhancedContact(...args[]):  {
                   initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                   animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                   transition={{ delay: 0.3 + index * 0.1 }}"
@@ -281,13 +290,13 @@ export function EnhancedContact(...args[]):  {
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.6 }}"
@@ -320,13 +329,13 @@ export function EnhancedContact(...args[]):  {
             initial = {
 
   { opacity: 0,
-  x: 50 
+  x: 50
 
 }}
             animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
             transition={{ delay: 0.3 }}"
@@ -369,19 +378,19 @@ export function EnhancedContact(...args[]):  {
                       initial = {
 
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
                       animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                       exit = {
 
   { opacity: 0,
-  y: -10 
+  y: -10
 
 
 
@@ -435,19 +444,19 @@ export function EnhancedContact(...args[]):  {
                       initial = {
 
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
                       animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                       exit = {
 
   { opacity: 0,
-  y: -10 
+  y: -10
 
 
 
@@ -577,19 +586,19 @@ export function EnhancedContact(...args[]):  {
                       initial = {
 
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
                       animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                       exit = {
 
   { opacity: 0,
-  y: -10 
+  y: -10
 
 
 

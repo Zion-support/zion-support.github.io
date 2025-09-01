@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React, { useEffect, useState, useCallback } from 'react';
+export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({
+export default PerformanceMonitor;
+import { motion, AnimatePresence } from 'framer - motion';
+
+=======
 import {
 
   Activity,
@@ -6,6 +13,7 @@ import {
   TrendingUp,
   AlertTriangle,
   CheckCircle} from 'lucide-react';
+>>>>>>> main
 interface PerformanceMetrics {
   fcp: number;
   lcp: number;

@@ -1,7 +1,15 @@
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
+<<<<<<< HEAD
+export function PerformanceOptimizations () {
+import { LoadingSpinner } from "./ui / loading - spinner";
+
+// Lazy load heavy components
+const LazyExpensiveComponent = lazy ( () => import ('./ExpensiveComponent') ) ;
+=======
 import { LoadingSpinner } from './ui/loading-spinner';
 // Lazy load heavy components'
 const LazyExpensiveComponent = lazy(() => import('./ExpensiveComponent'));
+>>>>>>> main
 // Memoized component for expensive calculations
 const MemoizedDataGrid = memo(({ data, onItemClick }) => {
 
@@ -42,6 +50,33 @@ const MemoizedDataGrid = memo(({ data, onItemClick }) => {
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists;
 const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
+<<<<<<< HEAD
+    const [scrollTop, setScrollTop] = React.useState (0) ;
+    const visibleItems = useMemo ( () => {
+        const startIndex = Math.floor (scrollTop / itemHeight) ;
+        const endIndex = Math.min (startIndex + Math.ceil (containerHeight / itemHeight) + 1, items.length) ;
+        return items.slice (startIndex, endIndex) .map ( (item, index) => ({
+            ...item,
+            index: startIndex + index,
+            style: {
+                position: 'absolute',
+                top: (startIndex + index) * itemHeight,
+                height: itemHeight,
+                width: '100%'
+            }
+        }) ) }, [items, scrollTop, itemHeight, containerHeight]) ;
+    const handleScroll = useCallback ( (e) => {
+        setScrollTop (e.currentTarget.scrollTop) ;
+    }, []) ;
+    return (<div style = {
+  { height: containerHeight,
+  overflow: 'auto'
+
+}} onScroll={handleScroll} className="border border - zion - slate / 20 rounded - lg">
+      <div style = {
+  { height: items.length * itemHeight,
+  position: 'relative'
+=======
 
   const [scrollTop, setScrollTop] = React.useState(0);
   const visibleItems = useMemo(() => {
@@ -51,6 +86,7 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
       items.length
     );
     return items.slice(startIndex, endIndex).map((item, index) => ({
+>>>>>>> main
 
       ...item,
       index: startIndex + index,

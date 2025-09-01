@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Star,
   MessageCircle,
@@ -273,13 +277,13 @@ showStats:  true,;
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -297,13 +301,13 @@ showStats:  true,;
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ delay: 0.1 }}"
@@ -327,13 +331,13 @@ showStats:  true,;
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ delay: 0.2 }}"
@@ -347,13 +351,13 @@ showStats:  true,;
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ delay: 0.3 }}"
@@ -375,13 +379,13 @@ showStats:  true,;
                 initial = {
 
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }}
                 animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
                 transition={{ delay: index * 0.1 }}"
@@ -451,19 +455,19 @@ showStats:  true,;
             initial = {
 
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
             animate = {
 
   { height: 'auto',
-  opacity: 1 
+  opacity: 1
 
 }}
             exit = {
 
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
             transition={{ duration: 0.3 }}"
@@ -474,6 +478,14 @@ showStats:  true,;
 "
               <div className="space-y-4">
                 {/* Rating */}
+<<<<<<< HEAD
+                <div>
+                  <label className="block text - sm font - medium text - zinc - 300 mb - 2">Rating</label>
+                  <div role="button" className="flex gap - 2">
+                    {[1, 2, 3, 4, 5].map ( (star) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={star}
+                        onClick = { () => setNewFeedback (prev => ({ ...prev,
+  rating: star
+=======
                 <div>"
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Rating</label>"
                   <div className="flex gap-2">
@@ -484,6 +496,7 @@ showStats:  true,;
 
   () => setNewFeedback(prev => ({ ...prev,
   rating: star 
+>>>>>>> main
 
 
 
@@ -507,10 +520,15 @@ showStats:  true,;
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>
                   <select
                     value={newFeedback.category}
+<<<<<<< HEAD
+                    onChange = { (e) => setNewFeedback (prev => ({ ...prev,
+  category: e.target.value as Feedback['category']
+=======
                     onChange = {
 
   (e) => setNewFeedback(prev => ({ ...prev,
   category: e.target.value as Feedback['category'] 
+>>>>>>> main
 
 
 
@@ -532,10 +550,15 @@ showStats:  true,;
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Your Feedback</label>
                   <textarea
                     value={newFeedback.comment}
+<<<<<<< HEAD
+                    onChange = { (e) => setNewFeedback (prev => ({ ...prev,
+  comment: e.target.value
+=======
                     onChange = {
 
   (e) => setNewFeedback(prev => ({ ...prev,
   comment: e.target.value 
+>>>>>>> main
 
 
 
@@ -578,13 +601,13 @@ showStats:  true,;
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ delay: index * 0.1 }}"

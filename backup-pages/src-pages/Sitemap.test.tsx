@@ -1,5 +1,4 @@
 
-
 describe ('Sitemap', () => {
   it ('renders without crashing', () => {
     render (<Sitemap  />) ;

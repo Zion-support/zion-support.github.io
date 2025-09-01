@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Users,
   MessageCircle,
@@ -125,8 +129,12 @@ interface Message {
   timestamp: string;
   type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[];
+<<<<<<< HEAD
+  reactions: { type: string; count: number
+=======
   reactions: { type: string; count: number 
 
+>>>>>>> main
 }[];
   isRead: boolean}
 
@@ -290,13 +298,13 @@ showProjects:  true,;
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -312,13 +320,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -336,13 +344,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.1 }}"
@@ -358,13 +366,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.2 }}"
@@ -380,13 +388,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.3 }}"
@@ -407,13 +415,13 @@ showProjects:  true,;
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition={{ delay: index * 0.1 }}"
@@ -507,13 +515,13 @@ showProjects:  true,;
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -529,13 +537,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -553,13 +561,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.1 }}"
@@ -575,13 +583,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.2 }}"
@@ -597,13 +605,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.3 }}"
@@ -624,13 +632,13 @@ showProjects:  true,;
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition={{ delay: index * 0.1 }}"
@@ -681,7 +689,7 @@ showProjects:  true,;
                       transition = {
 
   { duration: 1,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -744,13 +752,13 @@ showProjects:  true,;
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -766,13 +774,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -790,13 +798,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.1 }}"
@@ -812,13 +820,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.2 }}"
@@ -839,13 +847,13 @@ showProjects:  true,;
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition={{ delay: index * 0.1 }}`
@@ -938,13 +946,13 @@ showProjects:  true,;
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -960,13 +968,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -984,13 +992,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.1 }}"
@@ -1006,13 +1014,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.2 }}"
@@ -1028,13 +1036,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition={{ delay: 0.3 }}"
@@ -1055,13 +1063,13 @@ showProjects:  true,;
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                 animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                 transition={{ delay: index * 0.1 }}"

@@ -2,9 +2,13 @@ import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
 import { mutate } from 'swr';
+<<<<<<< HEAD
+import { RefreshCcw, AlertCircle function MarketplaceErrorFallback ({ error, resetErrorBoundary }) {
+=======
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
+>>>>>>> main
 
     const handleRetry = async () => {
         try {

@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { useEffect, useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Card } from "@/components/ui/card";
+import { Search import { ListingScoreCard } from "@/components/ListingScoreCard";
+import { captureException } from "@/utils/sentry";
+import { Skeleton } from "@/components/ui/skeleton";
+import { useDebounce } from "@/hooks/useDebounce";
+=======
 import { useEffect, useState } from "react";"
 import { Input } from "@/components/ui/input";"
 import { Card } from "@/components/ui/card";"
@@ -5,6 +15,7 @@ import { Search import { ListingScoreCard } from "@/components/ListingScoreCard"
 import { captureException } from "@/utils/sentry";"
 import { Skeleton } from "@/components/ui/skeleton";"
 import { useDebounce } from "@/hooks/useDebounce";"
+>>>>>>> main
 import { z } from "zod";
 const listingsSchema = z.array(listingSchema);
 export function ServiceTypeStep({ formData, updateFormData }) {
@@ -51,8 +62,6 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                     else {
 
                         await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
-
-
 
                     return}
                 catch (err) {

@@ -1,6 +1,10 @@
 import { GradientHeading } from './GradientHeading';
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+=======
 import { Link } from 'react-router-dom';
 import {
+>>>>>>> main
 
   Briefcase,
   HardDrive,

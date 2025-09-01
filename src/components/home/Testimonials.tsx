@@ -6,23 +6,13 @@
           initial = {
 
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}
@@ -49,34 +39,19 @@
               initial = {
 
   { opacity: 0,
-  x: 100 
-
-
-
-
-
+  x: 100
 
 }}
               animate = {
 
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }}
               exit = {
 
   { opacity: 0,
-  x: -100 
-
-
-
-
-
+  x: -100
 
 }}
               transition={{ duration: 0.5 }}"
@@ -157,15 +132,33 @@
           initial = {
 
   { opacity: 0,
+<<<<<<< HEAD
+  y: 20 ;
+
+}}
+=======
   y: 20 }}
+>>>>>>> main
           whileInView = {
 
   { opacity: 1,
+<<<<<<< HEAD
+  y: 0 ;
+
+}}
+=======
   y: 0 }}
+>>>>>>> main
           transition = {
 
   { duration: 0.8,
+<<<<<<< HEAD
+  delay: 0.4 ;
+
+}}
+=======
   delay: 0.4 }}
+>>>>>>> main
           viewport={{ once: true }}
 "
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>"

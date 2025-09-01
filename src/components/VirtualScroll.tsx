@@ -1,4 +1,21 @@
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react.ts';
+export function ServiceVirtualScroll (...args: any[]) : any {
+export function VirtualScroll < T> ({
+import { motion, AnimatePresence  } from 'framer - motion.ts';
+
+interface VirtualScrollProps < T> {
+  items: anyT[];
+  height: number;
+  itemHeight: number;
+  renderItem: (item: T, index: number) => React.ReactNode;
+  overscan?: number;
+  className?: string;
+  onScroll?: (scrollTop: anynumber) => void;
+}
+=======
 export function VirtualScroll<T>({
+>>>>>>> main
 
   items,
   height,
@@ -10,10 +27,18 @@ export function VirtualScroll<T>({
   const [scrollTop, setScrollTop] = useState (0) ;
   
   // Calculate visible range
+<<<<<<< HEAD
+  const visibleRange = useMemo ( () => {;
+    const start = Math.floor (scrollTop / itemHeight) ;
+    const visibleCount = Math.ceil (height / itemHeight) ;
+    const end = start + visibleCount + overscan;
+
+=======
   
     
     
     
+>>>>>>> main
     return {
 
       start: Math.max(0, start - overscan),
@@ -52,19 +77,19 @@ export function VirtualScroll<T>({
           initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
           animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
           exit = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
           onClick={scrollToTop}
@@ -86,7 +111,7 @@ export function VirtualScroll<T>({
         <div style = {
 
   { height: totalHeight,
-  position: 'relative' 
+  position: 'relative'
 
 }}>
           <div role="button" style={{ transform }}>
@@ -96,19 +121,19 @@ export function VirtualScroll<T>({
                   initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                   animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                   exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                   transition={{ duration: 0.2 }}

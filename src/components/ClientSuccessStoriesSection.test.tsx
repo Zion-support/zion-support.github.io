@@ -1,5 +1,4 @@
 
-
 describe ('ClientSuccessStoriesSection', () => {
   it ('renders without crashing', () => {
     render (<ClientSuccessStoriesSection  />) ;

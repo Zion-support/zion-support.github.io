@@ -1,4 +1,8 @@
 import {
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+=======
+>>>>>>> main
 
   AlertTriangle,
   RefreshCw,

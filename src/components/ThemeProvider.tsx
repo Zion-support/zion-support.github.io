@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+import React, { createContext, useContext, useEffect, useState } from 'react.ts';
+export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {
+export const useTheme = () => {;
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 type Theme = 'light' | 'dark' | 'system';
 =======
@@ -47,6 +53,21 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [isDark, setIsDark] = useState (false) ;
 
   useEffect ( () => {
+<<<<<<< HEAD
+    const root = window.document.documentElement;
+
+    const updateTheme = () => {;
+      let effectiveTheme: 'light' | 'dark';
+
+      if (theme = == 'system') {;
+        effectiveTheme = window.matchMedia (' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
+      } else {
+        effectiveTheme = theme;
+      }
+
+      setIsDark (effectiveTheme === 'dark') ;
+
+=======
     
     
       let effectiveTheme: 'light' | 'dark';
@@ -57,6 +78,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
         effectiveTheme = theme}
       '      setIsDark(effectiveTheme === 'dark');
       '
+>>>>>>> main
       if (effectiveTheme = == 'dark') {;
         root.classList.add('dark');
         root.classList.remove('light')} else {
@@ -65,9 +87,14 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
         root.classList.remove('dark')}
     };
 
+<<<<<<< HEAD
+    updateTheme () ;
+
+=======
     updateTheme();
     '
 <<<<<<< HEAD
+>>>>>>> main
     if (theme = == 'system') {;
       
       mediaQuery.addEventListener('change', updateTheme);

@@ -1,5 +1,4 @@
 
-
 describe ('FloatingActionButton', () => {
   it ('renders without crashing', () => {
     render (<FloatingActionButton  />) ;

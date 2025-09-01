@@ -56,12 +56,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                   <Checkbox id="autoCreateContacts" checked={syncSettings.autoCreateContacts} onCheckedChange = {
 
   (checked) => setSyncSettings({ ...syncSettings,
-  autoCreateContacts: checked 
-
-
-
-
-
+  autoCreateContacts: checked
 
 })}/>"
                   <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
@@ -71,12 +66,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                   <Checkbox id="pushNotes" checked={syncSettings.pushNotes} onCheckedChange = {
 
   (checked) => setSyncSettings({ ...syncSettings,
-  pushNotes: checked 
-
-
-
-
-
+  pushNotes: checked
 
 })}/>"
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
@@ -86,12 +76,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                   <Checkbox id="syncJobDetails" checked={syncSettings.syncJobDetails} onCheckedChange = {
 
   (checked) => setSyncSettings({ ...syncSettings,
-  syncJobDetails: checked 
-
-
-
-
-
+  syncJobDetails: checked
 
 })}/>"
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
@@ -101,12 +86,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                   <Checkbox id="syncApplicantData" checked={syncSettings.syncApplicantData} onCheckedChange = {
 
   (checked) => setSyncSettings({ ...syncSettings,
-  syncApplicantData: checked 
-
-
-
-
-
+  syncApplicantData: checked
 
 })}/>"
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>

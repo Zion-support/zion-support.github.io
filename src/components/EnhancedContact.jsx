@@ -6,6 +6,10 @@ import { Textarea } from '@/components/ui/Textarea';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe export const EnhancedContact = () => {
     const [formData, setFormData] = useState({
 
+<<<<<<< HEAD
+    const [formData, setFormData] = useState ({
+=======
+>>>>>>> main
         name: '',
         email: '',
         comp: '',
@@ -66,7 +70,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
     const itemVariants = {
 
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -82,7 +86,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
     const cardVariants = {
 
   hidden: { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -138,12 +142,12 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
         return (<motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex items-center justify-center" initial = {
 
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }} animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 
 

@@ -1,5 +1,4 @@
 
-
 describe ('GradientHeading', () => {
   it ('renders without crashing', () => {
     render (<GradientHeading  />) ;

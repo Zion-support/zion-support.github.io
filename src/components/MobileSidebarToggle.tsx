@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
       newExpanded.delete(section)} else {
 
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
 
+>>>>>>> main
       newExpanded.delete (section) } else {
       newExpanded.add (section) }
     setExpandedSections (newExpanded) };
@@ -96,7 +99,7 @@
               transition = {
 
   { duration: 0.3,
-  ease: 'easeOut' 
+  ease: 'easeOut'
 
 
 
@@ -137,19 +140,19 @@
                         initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                         animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                         transition = {
 
   { duration: 0.3,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                       >
@@ -178,19 +181,19 @@
                       initial = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                       animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                       transition = {
 
   { duration: 0.5,
-  delay: sectionIndex * 0.1 
+  delay: sectionIndex * 0.1
 
 }}
                     >
@@ -213,19 +216,19 @@
                             initial = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                             animate = {
 
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }}
                             exit = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                             transition={{ duration: 0.3 }}"
@@ -237,19 +240,19 @@
                                 initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                                 animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                                 transition = {
 
   { duration: 0.2,
-  delay: itemIndex * 0.05 
+  delay: itemIndex * 0.05
 
 }}
                               >

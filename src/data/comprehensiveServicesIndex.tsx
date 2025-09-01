@@ -119,7 +119,14 @@ export
   ;
   ;
   ;
+<<<<<<< HEAD
+  Middletown DE 19709';
+;
+
+};
+=======
   Middletown DE 19709'};
+>>>>>>> main
 
 :src/data/comprehensiveServicesIndex.tsx
 // Service Statistics;
@@ -140,7 +147,10 @@ export
 export 
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)};
 
+<<<<<<< HEAD
+=======
 export 
+>>>>>>> main
 };
 ;
 export 

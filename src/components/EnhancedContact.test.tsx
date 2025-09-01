@@ -1,5 +1,4 @@
 
-
 describe ('EnhancedContact', () => {
   it ('renders without crashing', () => {
     render (<EnhancedContact  />) ;

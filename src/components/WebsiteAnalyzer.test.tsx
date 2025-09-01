@@ -1,5 +1,4 @@
 
-
 describe ('WebsiteAnalyzer', () => {
   it ('renders without crashing', () => {
     render (<WebsiteAnalyzer  />) ;

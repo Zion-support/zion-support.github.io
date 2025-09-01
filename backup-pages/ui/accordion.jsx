@@ -8,6 +8,10 @@ const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (<Accor
   cn("border-b",
   className)
 
+<<<<<<< HEAD:src/components/ui/accordion.jsx
+} {...props}/>));
+AccordionItem.displayName = "AccordionItem";
+=======
 
 
 
@@ -15,16 +19,12 @@ const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (<Accor
 
 } {...props}/>));"
 AccordionItem.displayName = "AccordionItem";"
+>>>>>>> main:backup-pages/ui/accordion.jsx
 const AccordionTrigger = React.forwardRef(({ className, children, ...props }, ref) => (<AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger ref={ref} className = {
 "
   cn("flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
   className)
-
-
-
-
-
 
 } {...props}>
       {children}"
@@ -37,11 +37,6 @@ const AccordionContent = React.forwardRef(({ className, children, ...props }, re
 "
   cn("pb-4 pt-0",
   className)
-
-
-
-
-
 
 }>{children}</div>
   </AccordionPrimitive.Content>));

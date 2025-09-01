@@ -5,11 +5,17 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
+<<<<<<< HEAD
+  const getFilteredServices = () => {;
+    let services: any[] = [];
+
+=======
   
     let services: unknown[] = [];
     
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+>>>>>>> main
     switch (activeTab) {
 
       case 'microsaas':
@@ -40,8 +46,14 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
 ;
     return services};
 
+<<<<<<< HEAD
+  const getCategories = () => {;
+    let services: any[] = [];
+
+=======
   
     let services: unknown[] = [];    
+>>>>>>> main
     switch (activeTab) {
 
       case 'microsaas':

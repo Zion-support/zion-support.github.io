@@ -1,5 +1,4 @@
 
-
 describe ('EnhancedStatsSection', () => {
   it ('renders without crashing', () => {
     render (<EnhancedStatsSection  />) ;

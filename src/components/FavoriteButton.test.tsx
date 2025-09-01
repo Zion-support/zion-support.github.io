@@ -1,5 +1,4 @@
 
-
 describe ('FavoriteButton', () => {
   it ('renders without crashing', () => {
     render (<FavoriteButton  />) ;

@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+export default InteractiveServiceShowcase;
+import { motion, AnimatePresence } from 'framer - motion';
+
+=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+>>>>>>> main
 const InteractiveServiceShowcase = () => {
 
     const [activeCategory, setActiveCategory] = useState('all');
@@ -131,7 +137,7 @@ const InteractiveServiceShowcase = () => {
     const itemVariants = {
 
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -147,7 +153,7 @@ const InteractiveServiceShowcase = () => {
     const categoryVariants = {
 
   hidden: { scale: 0.8,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -167,12 +173,12 @@ const InteractiveServiceShowcase = () => {
         <motion.div className="text-center mb-20" initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -196,12 +202,12 @@ const InteractiveServiceShowcase = () => {
         <motion.div className="flex flex-wrap justify-center gap-4 mb-16" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${activeCategory === category.id'
@@ -279,17 +285,17 @@ const InteractiveServiceShowcase = () => {
         <motion.div className="text-center mt-20" initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 
 

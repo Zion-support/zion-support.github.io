@@ -105,8 +105,13 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
           clsValue += layoutShiftEntry.value;
 
+<<<<<<< HEAD
+      setMetrics(prev => ({ ...prev, cls: clsValue }));
+    });
+=======
 
       setMetrics(prev => ({ ...prev, cls: clsValue }))});
+>>>>>>> main
     // Start observing
     try {
 <<<<<<< HEAD
@@ -326,14 +331,19 @@ export function usePerformance(options: PerformanceOptions = {}) {
   // Start monitoring
   
     setIsMonitoring(true);
-    
+
     // Monitor Web Vitals
     monitorWebVitals();
-    
+
     // Monitor First Input
     monitorFirstInput();
+<<<<<<< HEAD
+
+    // Get initial metrics after page load
+=======
     
     // Get initial metrics after page load'
+>>>>>>> main
     if (document.readyState === 'complete') {
 
       getNavigationTiming();
@@ -363,6 +373,11 @@ export function usePerformance(options: PerformanceOptions = {}) {
   }, [isMonitoring, monitorWebVitals, monitorFirstInput, getNavigationTiming, getResourceTiming]);
 
   // Stop monitoring
+<<<<<<< HEAD
+  const stopMonitoring = useCallback(() => {
+    setIsMonitoring(false);
+
+=======
   
       document.addEventListener('DOMContentLoaded', getNavigationTiming)} else {
       getNavigationTiming()}
@@ -370,16 +385,29 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
   // Stop monitoring
   
+>>>>>>> main
     if (observerRef.current) {
 
       observerRef.current.disconnect();
+<<<<<<< HEAD
+      observerRef.current = null;
+    }
+
+=======
       observerRef.current = null}
     
+>>>>>>> main
     if (lcpObserverRef.current) {
 
       lcpObserverRef.current.disconnect();
+<<<<<<< HEAD
+      lcpObserverRef.current = null;
+    }
+
+=======
       lcpObserverRef.current = null}
     
+>>>>>>> main
     if (clsObserverRef.current) {
 
       clsObserverRef.current.disconnect();
@@ -387,37 +415,69 @@ export function usePerformance(options: PerformanceOptions = {}) {
   }, []);
 
   // Get performance score
+<<<<<<< HEAD
+  const getPerformanceScore = useCallback(() => {
+    let score = 100;
+
+=======
 :src/hooks/usePerformance.tsx
   
+>>>>>>> main
     // FCP scoring (0-100)
     if (metrics.fcp !== null) {
 
       if (metrics.fcp < 1800) score -= 0;
       else if (metrics.fcp < 3000) score -= 10;
+<<<<<<< HEAD
+      else score -= 25;
+    }
+
+=======
       else score -= 25}
     
+>>>>>>> main
     // LCP scoring (0-100)
     if (metrics.lcp !== null) {
 
       if (metrics.lcp < 2500) score -= 0;
       else if (metrics.lcp < 4000) score -= 10;
+<<<<<<< HEAD
+      else score -= 25;
+    }
+
+=======
       else score -= 25}
     
+>>>>>>> main
     // FID scoring (0-100)
     if (metrics.fid !== null) {
 
       if (metrics.fid < 100) score -= 0;
       else if (metrics.fid < 300) score -= 10;
+<<<<<<< HEAD
+      else score -= 25;
+    }
+
+=======
       else score -= 25}
     
+>>>>>>> main
     // CLS scoring (0-100)
     if (metrics.cls !== null) {
 
       if (metrics.cls < 0.1) score -= 0;
       else if (metrics.cls < 0.25) score -= 10;
+<<<<<<< HEAD
+      else score -= 25;
+    }
+
+    return Math.max(0, score);
+  }, [metrics]);
+=======
       else score -= 25}
     
     return Math.max(0, score)}, [metrics]);
+>>>>>>> main
 
   // Send metrics to analytics
 :src/hooks/usePerformance.tsx
@@ -534,7 +594,7 @@ export function useComponentPerformance(componentName: string) {
       
       
       setRenderTime(totalTime);
-      
+
       // Log slow components
       if (totalTime > 16) { // 16ms = 60fps threshold
         console.warn(`Slow component render: ${componentName} took ${totalTime.toFixed(2)}ms`)}

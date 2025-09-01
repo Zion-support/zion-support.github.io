@@ -12,7 +12,14 @@ seller: {
     id: string;
     name: string;
     rating: number;
+<<<<<<< HEAD
+    reviews: number;
+
+};
+  location: string;
+=======
     reviews: number};  location: string;
+>>>>>>> main
   createdAt: string;
   updatedAt: string;
   status: 'active' | 'inactive' | 'sold' | 'pending';

@@ -14,7 +14,6 @@ export function Skeleton({ className, width, height, rounded = 'md', animated = 
 
 
 
-
     const roundedClasses = {
   none: '',
         sm: 'rounded - sm',

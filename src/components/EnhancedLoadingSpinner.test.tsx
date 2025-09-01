@@ -1,5 +1,4 @@
 
-
 describe ('EnhancedLoadingSpinner', () => {
   it ('renders without crashing', () => {
     render (<EnhancedLoadingSpinner  />) ;

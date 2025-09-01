@@ -35,6 +35,23 @@ export function Button({
   };
   
   ;
+<<<<<<< HEAD:src/components/ui/button.tsx
+
+};
+  const sizeClasses = {
+  sm: 'px-3 py-1.5 text-sm',
+    md: 'px-4 py-2 text-sm',
+    lg: 'px-6 py-3 text-base',;
+  ;
+  ;
+  ;
+  ;
+  icon: 'w-10 h-10 p-0';
+  ;
+
+};
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+=======
 =======
 '
   sm: 'px-3 py-1.5 text-sm','
@@ -46,6 +63,7 @@ export function Button({
   ;
   icon: 'w-10 h-10 p-0'};
   
+>>>>>>> main:backup-pages/ui/button.tsx
   if (asChild) {
 
     return <span className = {classes}>{children}</span>}
@@ -71,5 +89,15 @@ export
   ;
   ;
   ;
+<<<<<<< HEAD:src/components/ui/button.tsx
+  ;
+  link: 'text-zion-cyan hover:underline focus:ring-zion-cyan';
+;
+
+};
+export type { ButtonProps };
+}}}
+=======
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan'};
 export type { ButtonProps }}}}'`
+>>>>>>> main:backup-pages/ui/button.tsx

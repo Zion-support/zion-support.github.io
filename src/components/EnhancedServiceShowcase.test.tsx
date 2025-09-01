@@ -1,5 +1,4 @@
 
-
 describe ('EnhancedServiceShowcase', () => {
   it ('renders without crashing', () => {
     render (<EnhancedServiceShowcase  />) ;

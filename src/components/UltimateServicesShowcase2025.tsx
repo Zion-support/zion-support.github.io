@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+import { Link } from 'react - router - dom';
+import React, { useState } from 'react';
+import { SEO } from "@/components / SEO";
+import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data / ultimateRealServices2025';
+export default React.memo (/**
+export default UltimateServicesShowcase2025;
+import {
+
+ * UltimateServicesShowcase2025 function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function UltimateServicesShowcase2025 () {
+
+  Brain,
+  Zap,
+  Shield,
+  Database,
+  Users,
+  TrendingUp,
+  Globe,
+=======
 import {
   Brain, 
   Zap, 
@@ -6,6 +29,7 @@ import {
   Users, 
   TrendingUp, 
   Globe, 
+>>>>>>> main
   Lock,
   Cloud,
   Briefcase,
@@ -34,6 +58,21 @@ export default function UltimateServicesShowcase2025() {
     
     return matchesCategory && matchesSearch}) ;
 
+<<<<<<< HEAD
+  const getCategoryIcon = (category: string) => {
+    if (category === 'all') return < Rocket className="w - 6 h - 6" />;
+    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ?
+      <span className="text - 2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> :
+      <Rocket className="w - 6 h - 6" />;
+  };
+
+  return (<div role="button" className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light text - white relative overflow - hidden">
+      {/* Animated Background */}
+      <div role="button" className="absolute inset - 0">
+        <div role="button" className="absolute inset - 0 bg-[linear - gradient (rgba (34,221,210,0.03) _1px,transparent_1px) ,linear - gradient (90deg,rgba (34,221,210,0.03) _1px,transparent_1px) ] bg-[size:100px_100px] animate - pulse" />
+        <div role="button" className="absolute inset - 0 bg - gradient - to - br from - zion - purple / 5 via - transparent to - zion - cyan / 5" />
+        <div role="button" className="absolute top - 0 left - 0 w - full h - full bg - gradient - radial from - zion - cyan / 10 via - transparent to - transparent" />
+=======
   
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? "
       <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : "
@@ -45,6 +84,7 @@ export default function UltimateServicesShowcase2025() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.03)_1px,transparent_1px)] bg-[size:100px_100px] animate-pulse" />"
         <div className="absolute inset-0 bg-gradient-to-br from-zion-purple/5 via-transparent to-zion-cyan/5" />"
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-zion-cyan/10 via-transparent to-transparent" />
+>>>>>>> main
       </div>
 
       {/* Header Section */}"
@@ -65,11 +105,17 @@ export default function UltimateServicesShowcase2025() {
               Discover our revolutionary portfolio of cutting-edge micro SAAS solutions, AI-powered innovations, and quantum computing services designed to transform your business and drive competitive advantage in the digital age
             </p>
           </motion.div>
-          
+
           {/* Key Statistics */}
+<<<<<<< HEAD
+          <motion.div
+            className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-5xl mx - auto mb - 12"
+            variants={containerVariants}
+=======
           <motion.div "
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12"
             variants={containerVariants}"
+>>>>>>> main
             initial="hidden"
             animate="visible"
           >"
@@ -92,8 +138,13 @@ export default function UltimateServicesShowcase2025() {
           </motion.div>
 
           {/* Search and Filter */}
+<<<<<<< HEAD
+          <motion.div
+            className="max - w-4xl mx - auto mb - 8"
+=======
           <motion.div "
             className="max-w-4xl mx-auto mb-8"
+>>>>>>> main
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -123,6 +174,15 @@ export default function UltimateServicesShowcase2025() {
                   <option value="name">Name</option>
                 </select>
               </div>
+<<<<<<< HEAD
+
+              <div role="button" className="flex items - center gap - 2">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                  className={`p - 2 rounded - lg transition - colors ${viewMode === 'grid' ? 'bg - zion - cyan text - white' : 'glass text - gray - 300 hover:text - white'}`}
+                >
+                  <svg className="w - 5 h - 5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M5 3a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2V5a2 2 0 00 - 2-2H5zM5 11a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2v - 2a2 2 0 00 - 2-2H5zM11 5a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2V5zM11 13a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2v - 2z" />
+=======
               "
               <div className="flex items-center gap-2">
                 <button'
@@ -131,6 +191,7 @@ export default function UltimateServicesShowcase2025() {
                 >"
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">"
                     <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+>>>>>>> main
                   </svg>
                 </button>
                 <button'
@@ -147,6 +208,15 @@ export default function UltimateServicesShowcase2025() {
         </div>
       </section>;
 
+<<<<<<< HEAD
+      {/* Services Grid / List */}
+      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div role="button" className="max - w-7xl mx - auto">
+          <motion.div
+            className={viewMode === 'grid'
+              ? "grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"
+              : "space - y-6"
+=======
       {/* Services Grid/List */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
@@ -154,6 +224,7 @@ export default function UltimateServicesShowcase2025() {
             className={viewMode === 'grid' "
               ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               : "space-y-6"
+>>>>>>> main
             }
             variants={containerVariants}"
             initial="hidden"
@@ -162,9 +233,15 @@ export default function UltimateServicesShowcase2025() {
             {sortedServices.map ( (service, index) => (<motion.div
                 key={service.id}
                 variants={itemVariants}
+<<<<<<< HEAD
+                className={viewMode === 'grid'
+                  ? "glass rounded - 2xl p - 6 border border - white / 20 hover:border - zion - cyan / 40 transition - all duration - 500 hover:transform hover:scale - 105 cursor - pointer group"
+                  : "glass rounded - 2xl p - 6 border border - white / 20 hover:border - zion - cyan / 40 transition - all duration - 500 cursor - pointer group"
+=======
                 className={viewMode === 'grid' "
                   ? "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer group"
                   : "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 cursor-pointer group"
+>>>>>>> main
                 }
                 onClick={ () => handleServiceClick (service) }
                 whileHover={{ y: -5 }}
@@ -177,12 +254,21 @@ export default function UltimateServicesShowcase2025() {
                     ))}"                    <span className="text-sm text-gray-400 ml-1">({service.reviews})</span>
                   </div>
                 </div>
+<<<<<<< HEAD
+
+                <h3 className="text - xl font - semibold text - white mb - 3 group - hover:text - zion - cyan transition - colors duration - 300">{service.name}</h3>
+                <p className="text - gray - 300 mb - 4 line - clamp - 3 leading - relaxed">{service.description}</p>
+
+                <div role="button" className="mb - 4">
+                  <span className="inline - block px - 3 py - 1 bg - zion - purple / 20 text - zion - purple text - sm rounded - full border border - zion - purple / 30">
+=======
 "
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">{service.name}</h3>"
                 <p className="text-gray-300 mb-4 line-clamp-3 leading-relaxed">{service.description}</p>
                 "
                 <div className="mb-4">"
                   <span className="inline-block px-3 py-1 bg-zion-purple/20 text-zion-purple text-sm rounded-full border border-zion-purple/30">
+>>>>>>> main
                     {service.category}
                   </span>
                 </div>
@@ -223,11 +309,19 @@ export default function UltimateServicesShowcase2025() {
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Why Choose Zion Tech Group */}
+      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8 bg - white / 5">;
+        <div role="button" className="max - w-7xl mx - auto">
+          <motion.div
+            className="text - center mb - 16"
+=======
       {/* Why Choose Zion Tech Group */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white/5">;"
         <div className="max-w-7xl mx-auto">
           <motion.div "
             className="text-center mb-16"
+>>>>>>> main
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -240,10 +334,17 @@ export default function UltimateServicesShowcase2025() {
               We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results and competitive advantage
             </p>
           </motion.div>
+<<<<<<< HEAD
+
+          <motion.div
+            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"
+            variants={containerVariants}
+=======
           
           <motion.div "
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
+>>>>>>> main
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -253,6 +354,19 @@ export default function UltimateServicesShowcase2025() {
               <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>"
               <p className="text-gray-300">We stay ahead of the curve with the latest technologies and methodologies, ensuring your business always has a competitive edge.</p>
             </motion.div>
+<<<<<<< HEAD
+
+            <motion.div variants={itemVariants} className="glass rounded - xl p - 6 border border - white / 20 hover:border - zion - cyan / 30 transition - all duration - 300 group">
+              <div role="button" className="text - 4xl mb - 4 group - hover:scale - 110 transition - transform duration - 300">🎯</div>
+              <h3 className="text - xl font - semibold text - white mb - 3">Results Driven</h3>
+              <p className="text - gray - 300">Our solutions are designed to deliver measurable business outcomes, from increased efficiency to improved customer satisfaction.</p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="glass rounded - xl p - 6 border border - white / 20 hover:border - zion - cyan / 30 transition - all duration - 300 group">
+              <div role="button" className="text - 4xl mb - 4 group - hover:scale - 110 transition - transform duration - 300">🤝</div>
+              <h3 className="text - xl font - semibold text - white mb - 3">Partnership Approach</h3>
+              <p className="text - gray - 300">We work as an extension of your team, providing ongoing support and collaboration to ensure long - term success.</p>
+=======
             "
             <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 group">"
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>"
@@ -264,6 +378,7 @@ export default function UltimateServicesShowcase2025() {
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🤝</div>"
               <h3 className="text-xl font-semibold text-white mb-3">Partnership Approach</h3>"
               <p className="text-gray-300">We work as an extension of your team, providing ongoing support and collaboration to ensure long-term success.</p>
+>>>>>>> main
             </motion.div>
           </motion.div>
         </div>
@@ -310,6 +425,15 @@ export default function UltimateServicesShowcase2025() {
                       </li>) ) }
                   </ul>
                 </div>
+<<<<<<< HEAD
+
+                <div>
+                  <h3 className="text - lg font - semibold text - zion - purple mb - 3">Benefits</h3>
+                  <ul className="space - y-2">
+                    {selectedService.benefits.map ( (benefit, idx) => (<li key={idx} className="text - gray - 300 flex items - center">
+                        <TrendingUp className="w - 4 h - 4 text - zion - green mr - 2 flex - shrink - 0" />
+                        {benefit}
+=======
                 
                 <div>"
                   <h3 className="text-lg font-semibold text-zion-purple mb-3">Benefits</h3>"
@@ -317,6 +441,7 @@ export default function UltimateServicesShowcase2025() {
                     {selectedService.benefits.map((benefit, idx) => ("
                       <li key={idx} className="text-gray-300 flex items-center">"
                         <TrendingUp className="w-4 h-4 text-zion-green mr-2 flex-shrink-0"  />                        {benefit}
+>>>>>>> main
                       </li>) ) }
                   </ul>
                 </div>

@@ -32,15 +32,22 @@ export function Accordion({
       {React.Children.map(children, (child) => {
 
         if (React.isValidElement(child)) {
+<<<<<<< HEAD:src/components/ui/accordion.tsx
+          return React.cloneElement(child, {
+=======
 
           return React.cloneElement(child, {
 
+>>>>>>> main:backup-pages/ui/accordion.tsx
             isOpen: openItems.includes(child.props.value),
             onToggle: : unknown handleToggle(child.props.value)
           })}
         return child})}
 export function Accordion({
+<<<<<<< HEAD:src/components/ui/accordion.tsx
+=======
 
+>>>>>>> main:backup-pages/ui/accordion.tsx
   children, ;
   className = '', ;
   type = 'single',;

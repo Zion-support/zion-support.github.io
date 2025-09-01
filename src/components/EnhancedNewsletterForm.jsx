@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import { useState, useRef } from "react";
+import React, { useState } from 'react';
+import { Button } from "@/components / ui / button";
+import { Input } from "@/components / ui / input";
+import { Mail import { useToast } from "@/hooks / use - toast";
+export function EnhancedNewsletterForm () {
+
+    const [email, setEmail] = useState ("") ;
+    const [isSubmitting, setIsSubmitting] = useState (false) ;
+    const [isSubmitted, setIsSubmitted] = useState (false) ;
+    const { toast } = useToast () ;
+=======
 import { Button } from "@/components/ui/button";"
 import { Input } from "@/components/ui/input";"
 import { useState, useRef } from "react";"
@@ -8,6 +21,7 @@ export function EnhancedNewsletterForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const { toast } = useToast();
+>>>>>>> main
     const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const lastSubmit = useRef (0) ;
     const handleSubmit = async (e) => {

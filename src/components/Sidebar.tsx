@@ -50,8 +50,73 @@ import {
   Package,
   User} from 'lucide-react';
 
+<<<<<<< HEAD
+    Menu,
+    X,
+    Home,
+    Settings,
+    Brain,
+    Cloud,
+    Shield,
+    Rocket,
+    Heart,
+    Globe,
+    ShoppingCart,
+    BookOpen,
+    MessageCircle,
+    HelpCircle,
+    DollarSign,
+    Gauge,
+    Workflow,
+    Atom,
+    Star,
+    Building,
+    BookOpen,
+    HelpCircle,
+    ChevronRight,
+    Menu,
+    X,
+    Users,
+    Briefcase,
+    DollarSign,
+    FileText,
+    Calendar,
+    MessageCircle,
+    TrendingUp,
+    Award,
+    Zap,
+    Lock,
+    Cpu,
+    Database,
+    Smartphone,
+    Target,
+    BarChart3,
+    Search,
+    PhoneCall,
+    Mail,
+    ExternalLink,
+    ChevronDown,
+    Plus,
+    Scale,
+    GraduationCap,
+    Package,
+    User,
+  } from 'lucide - react';
+
+  interface SidebarProps {
+    isOpen: boolean;
+    onToggle: () => void;
+  }
+
+  const location = useLocation () ;
+  const [expandedSections, setExpandedSections] = useState < string[]> ([
+    'main',
+    'services',
+  ]) ;
+=======
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
+>>>>>>> main
 
   
   const [expandedSections, setExpandedSections] = useState<string[]>(['

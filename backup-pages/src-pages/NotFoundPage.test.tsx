@@ -1,5 +1,4 @@
 
-
 describe ('NotFoundPage', () => {
   it ('renders without crashing', () => {
     render (<NotFoundPage  />) ;

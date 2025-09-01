@@ -1,6 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
+<<<<<<< HEAD
+export default ContentQualityDashboard;
+import ContentQualityAnalyzer from "../utils / contentQualityAnalyzer";
+
+=======
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
 import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer";
+>>>>>>> main
 const ContentQualityDashboard = ({ className = '' }) => {
 
     const [isOpen, setIsOpen] = useState(false);

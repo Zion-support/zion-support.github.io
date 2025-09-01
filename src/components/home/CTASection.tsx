@@ -23,23 +23,13 @@ const CTASection: React.FC = (): JSX.Element => {
             initial = {
 
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
             whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -56,34 +46,19 @@ const CTASection: React.FC = (): JSX.Element => {
             initial = {
 
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
             whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
             transition = {
 
   { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
+  delay: 0.2
 
 }}
             viewport={{ once: true }}"
@@ -96,34 +71,19 @@ const CTASection: React.FC = (): JSX.Element => {
             initial = {
 
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
             whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
             transition = {
 
   { duration: 0.8,
-  delay: 0.4 
-
-
-
-
-
+  delay: 0.4
 
 }}
             viewport={{ once: true }}"
@@ -139,15 +99,33 @@ const CTASection: React.FC = (): JSX.Element => {
           initial = {
 
   { opacity: 0,
+<<<<<<< HEAD
+  y: 30 ;
+
+}}
+=======
   y: 30 }}
+>>>>>>> main
           whileInView = {
 
   { opacity: 1,
+<<<<<<< HEAD
+  y: 0 ;
+
+}}
+=======
   y: 0 }}
+>>>>>>> main
           transition = {
 
   { duration: 0.8,
+<<<<<<< HEAD
+  delay: 0.6 ;
+
+}}
+=======
   delay: 0.6 }}
+>>>>>>> main
           viewport={{ once: true }}
         >
           {features.map((feature, index (;
@@ -157,34 +135,19 @@ const CTASection: React.FC = (): JSX.Element => {
               initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
               transition = {
 
   { duration: 0.6,
-  delay: 0.6 + index * 0.1 
-
-
-
-
-
+  delay: 0.6 + index * 0.1
 
 }}
               viewport={{ once: true }}
@@ -205,15 +168,33 @@ const CTASection: React.FC = (): JSX.Element => {
           initial = {
 
   { opacity: 0,
+<<<<<<< HEAD
+  y: 30 ;
+
+}}
+=======
   y: 30 }}
+>>>>>>> main
           whileInView = {
 
   { opacity: 1,
+<<<<<<< HEAD
+  y: 0 ;
+
+}}
+=======
   y: 0 }}
+>>>>>>> main
           transition = {
 
   { duration: 0.8,
+<<<<<<< HEAD
+  delay: 0.8 ;
+
+}}
+=======
   delay: 0.8 }}
+>>>>>>> main
           viewport={{ once: true }}
 
           <Link"
@@ -240,7 +221,13 @@ const CTASection: React.FC = (): JSX.Element => {
           transition = {
 
   { duration: 1,
+<<<<<<< HEAD
+  delay: 1 ;
+
+}}
+=======
   delay: 1 }}
+>>>>>>> main
           viewport={{ once: true }}
 "
           <p className="text-zion-slate-light text-sm mb-4">Trusted by industry leaders worldwide</p>"

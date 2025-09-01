@@ -4,6 +4,13 @@ import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
 import { Button } from '@/components/ui/button';
 import {
+<<<<<<< HEAD
+import { useMediaQuery } from 'usehooks - ts';
+import { useRouter } from 'next / router';
+import Image from 'next / image';
+import Link from 'next / link';
+=======
+>>>>>>> main
 
   Tooltip,
   TooltipContent,

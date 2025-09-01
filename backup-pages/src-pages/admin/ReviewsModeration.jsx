@@ -1,9 +1,19 @@
+<<<<<<< HEAD:src/pages/admin/ReviewsModeration.jsx
+import React, { useState } from 'react';
+import SEO from "@/components/SEO";
+import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { useState, useEffect } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+=======
 import SEO from "@/components/SEO";"
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";"
 import { ProtectedRoute } from "@/components/ProtectedRoute";"
 import { useState, useEffect } from "react";"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
+>>>>>>> main:backup-pages/src-pages/admin/ReviewsModeration.jsx
 import { Star, AlertTriangle import { toast } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {
 "
@@ -77,9 +87,14 @@ function ReviewsModerationContent() {
           </CardContent>
         </Card>
       </main>
+<<<<<<< HEAD:src/pages/admin/ReviewsModeration.jsx
+
+    </>)}
+=======
       
     </>)};
 export { function };
+>>>>>>> main:backup-pages/src-pages/admin/ReviewsModeration.jsx
 export default function ReviewsModeration() {
     return (<ProtectedRoute>
       <ReviewsModerationContent />

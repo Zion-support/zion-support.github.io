@@ -69,11 +69,6 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
                     confidence: 0.85 + Math.random() * 0.1,
   suggestions: randomResponse.suggestions
-                
-
-
-
-
 
 
 }
@@ -93,11 +88,6 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             content: inputValue.trim(),
             timestamp: new Date(),
   status: 'sending'
-        
-
-
-
-
 
 
 };
@@ -145,34 +135,23 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             <motion.div className={`absolute bottom-4 right-4 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl overflow-hidden ${isMinimized ? 'w-80 h-16' : 'w-96 h-[600px]'}`} initial = {
 
   { opacity: 0, y: 20,
-  scale: 0.95 
-
-
-
-
-
+  scale: 0.95
 
 }} animate = {
 
   { opacity: 1, y: 0,
-  scale: 1 
-
-
-
-
-
+  scale: 1
 
 }} exit = {
 
   { opacity: 0, y: 20,
-  scale: 0.95 
-
-
-
-
-
+  scale: 0.95
 
 }} transition = {
+<<<<<<< HEAD:src/components/ui/ai-chat-assistant.jsx
+  { duration: 0.3,
+  ease: "easeOut"
+=======
 
   { duration: 0.3,"
   ease: "easeOut" 
@@ -181,6 +160,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
 
 
+>>>>>>> main:backup-pages/ui/ai-chat-assistant.jsx
 
 }}>
               {/* Header */}"
@@ -218,32 +198,17 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                 {showSettings && !isMinimized && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {
 
   { height: 0,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 }} animate = {
 
   { height: 'auto',
-  opacity: 1 
-
-
-
-
-
+  opacity: 1
 
 }} exit = {
 
   { height: 0,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 }} transition={{ duration: 0.2 }}>"
                     <div className="space-y-3">"
@@ -268,22 +233,12 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                   {messages.map((message) => (<motion.div key={message.id} className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`} initial = {
 
   { opacity: 0,
-  y: 10 
-
-
-
-
-
+  y: 10
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition={{ duration: 0.3 }}>'"
                       {message.type === 'assistant' && (<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center flex-shrink-0">"
@@ -328,22 +283,12 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                   {isTyping && (<motion.div className="flex gap-3" initial = {
 
   { opacity: 0,
-  y: 10 
-
-
-
-
-
+  y: 10
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition={{ duration: 0.3 }}>"
                       <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">"
@@ -373,9 +318,15 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 "
                     <div className="flex-1 relative">"
                         <input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyPress={handleKeyPress} placeholder="Ask me thing..." className="w-full px-4 py-3 bg-zion-blue/20 border border-zion-blue-light/30 text-white placeholder-zinc-400 pr-20 rounded-lg focus:outline-none focus:border-zion-cyan/50 transition-colors duration-200" disabled={isTyping}/>
+<<<<<<< HEAD:src/components/ui/ai-chat-assistant.jsx
+
+                        {/* Voice input indicator */}
+                        {isRecording && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+=======
                         
                         {/* Voice input indicator */}"
                         {isRecording && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">"
+>>>>>>> main:backup-pages/ui/ai-chat-assistant.jsx
                             <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"/>
                           </div>)}
                       </div>

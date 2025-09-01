@@ -1,5 +1,4 @@
 
-
 describe ('financial - solutions', () => {
   it ('renders without crashing', () => {
     render (<financial - solutions />) ;

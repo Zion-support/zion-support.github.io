@@ -1,8 +1,20 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+export const AdvancedReportingDashboard: React.FC < AdvancedReportingDashboardProps> = ({
+import {
+import { motion, AnimatePresence } from 'framer - motion';
+
+  BarChart3,
+  TrendingUp,
+  Download,
+  Share2,
+=======
 import {
   BarChart3, 
   TrendingUp, 
   Download, 
   Share2, 
+>>>>>>> main
   Users,
   DollarSign,
   Activity,

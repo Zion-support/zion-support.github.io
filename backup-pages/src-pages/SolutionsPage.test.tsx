@@ -1,5 +1,4 @@
 
-
 describe ('SolutionsPage', () => {
   it ('renders without crashing', () => {
     render (<SolutionsPage  />) ;

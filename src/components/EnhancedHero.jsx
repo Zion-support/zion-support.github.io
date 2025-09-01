@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const EnhancedHero = () => {
 import { motion, AnimatePresence } from 'framer - motion';
 
-
     const [currentSlide, setCurrentSlide] = useState (0) ;
     const [isPlaying, setIsPlaying] = useState (true) ;
     const [isMuted, setIsMuted] = useState (false) ;
@@ -77,17 +76,17 @@ import { motion, AnimatePresence } from 'framer - motion';
             <motion.div key={currentSlide} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
 
@@ -99,17 +98,17 @@ import { motion, AnimatePresence } from 'framer - motion';
               <motion.div initial = {
 
   { scale: 0,
-  rotate: -180 
+  rotate: -180
 
 }} animate = {
 
   { scale: 1,
-  rotate: 0 
+  rotate: 0
 
 }} transition = {
 
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 
 
@@ -124,17 +123,17 @@ import { motion, AnimatePresence } from 'framer - motion';
               <motion.h1 initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 
 
@@ -149,17 +148,17 @@ import { motion, AnimatePresence } from 'framer - motion';
               <motion.h2 initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 
 
@@ -174,17 +173,17 @@ import { motion, AnimatePresence } from 'framer - motion';
               <motion.p initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 
 
@@ -199,17 +198,17 @@ import { motion, AnimatePresence } from 'framer - motion';
               <motion.div initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 
 
@@ -222,12 +221,12 @@ import { motion, AnimatePresence } from 'framer - motion';
                   <motion.div animate = {
 
   { x: [0, 5,
-  0] 
+  0]
 
 }} transition = {
 
   { duration: 1.5,
-  repeat: Infinity 
+  repeat: Infinity
 
 
 

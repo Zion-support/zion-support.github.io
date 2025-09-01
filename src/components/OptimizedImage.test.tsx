@@ -1,5 +1,4 @@
 
-
 describe ('OptimizedImage', () => {
   it ('renders without crashing', () => {
     render (<OptimizedImage  />) ;

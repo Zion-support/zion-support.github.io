@@ -1,5 +1,4 @@
 
-
 describe ('PerformanceOptimizedHero', () => {
   it ('renders without crashing', () => {
     render (<PerformanceOptimizedHero  />) ;

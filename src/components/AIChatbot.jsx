@@ -1,11 +1,16 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
-import { useAnalytics } from "../hooks/useAnalytics";'"
+import { useAnalytics } from "../hooks/useAnalytics";
+
+<<<<<<< HEAD
+    const { trackEvent } = useAnalytics ({
+=======
 export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
 
     const { trackEvent } = useAnalytics({
 
+>>>>>>> main
         enableTracking: true,
         enableUserBehaviorTracking: true
     });
@@ -24,10 +29,10 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 
                 intent: 'greeting',
                 confidence: 1.0,
-                suggestions[;"
-                    "Tell me about your services","
-                    "How can I get a quote?","
-                    "What technologies do you use?","
+                suggestions: [
+                    "Tell me about your services",
+                    "How can I get a quote?",
+                    "What technologies do you use?",
                     "Contact information"
                 ]
             })}
@@ -138,10 +143,10 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 
                 intent: 'response',
                 confidence: 0.9,
-                suggestions[;"
-                    "Tell me more","
-                    "Get a quote","
-                    "View services","
+                suggestions: [
+                    "Tell me more",
+                    "Get a quote",
+                    "View services",
                     "Contact sales"
                 ]
             });
@@ -203,12 +208,12 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
 
   { opacity: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -234,17 +239,17 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         {isOpen && (<motion.div initial = {
 
   { opacity: 0, scale: 0.9,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1, scale: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0, scale: 0.9,
-  y: 20 
+  y: 20
 
 
 
@@ -281,12 +286,12 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                   {messages.map((message) => (<motion.div key={message.id} initial = {
 
   { opacity: 0,
-  x: message.type === 'user' ? 20 : -20 
+  x: message.type === 'user' ? 20 : -20
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 
 

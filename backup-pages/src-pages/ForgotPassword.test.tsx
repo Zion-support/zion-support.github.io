@@ -1,5 +1,4 @@
 
-
 describe ('ForgotPassword', () => {
   it ('renders without crashing', () => {
     render (<ForgotPassword  />) ;

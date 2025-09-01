@@ -1,4 +1,16 @@
 <<<<<<< HEAD
+import { useNavigate } from 'react - router - dom';
+import { useNavigate } from 'react - router - dom';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useDebounce } from '@/hooks / useDebounce';
+export function EnhancedSearch ({
+export function EnhancedSearch ({
+import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 interface SearchResult {
   id: string;
@@ -139,7 +151,7 @@ export function EnhancedSearch({
   }) ;
   const [showFilters, setShowFilters] = useState (false) ;
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
-  
+
 // Mock suggestions
 const mockSuggestions: SearchSuggestion[] = ['
   { text: 'AI compliance assistant', type: 'recent' },
@@ -168,6 +180,28 @@ export function EnhancedSearch({
     category: [],
     tags: []
   }) ;
+<<<<<<< HEAD
+
+  const searchRef = useRef < HTMLDivElement> (null) ;
+  const inputRef = useRef < HTMLInputElement> (null) ;
+  const navigate = useNavigate () ;
+
+  // Handle keyboard navigation
+  useEffect ( () => {
+    const handleKeyDown = (event: anyKeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsOpen (false) ;
+        setSelectedIndex (-1) ;
+      } else if (event.key === 'ArrowDown') {
+        event.preventDefault () ;
+        setSelectedIndex (prev =>
+          prev < results.length - 1 ? prev + 1 : prev) ;
+      } else if (event.key === 'ArrowUp') {
+        event.preventDefault () ;
+        setSelectedIndex (prev => prev > 0 ? prev - 1 : -1) ;
+      } else if (event.key === 'Enter' && selectedIndex >= 0) {
+        event.preventDefault () ;
+=======
   
   
   
@@ -186,6 +220,7 @@ export function EnhancedSearch({
         setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)} else if (event.key === 'Enter' && selectedIndex >= 0) {
 
         event.preventDefault();
+>>>>>>> main
         if (results[selectedIndex]) {
 
           handleResultClick(results[selectedIndex])}      }
@@ -202,6 +237,18 @@ export function EnhancedSearch({
       setResults([]);
       return}
 
+<<<<<<< HEAD
+    const searchResults = searchData
+      .filter (item => {
+        const matchesQuery = item.title.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ||;
+                           item.description.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ||;
+                           item.tags.some (tag => tag.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ) ;
+
+        const matchesFilters = filters.type.length === 0 || filters.type.includes (item.type) &&;
+                              filters.category.length === 0 || filters.category.includes (item.category) &&;
+                              filters.tags.length === 0 || filters.tags.some (tag => item.tags.includes (tag) ) ;
+
+=======
     
       .filter(item => {
 
@@ -212,6 +259,7 @@ export function EnhancedSearch({
         
                               filters.category.length === 0 || filters.category.includes (item.category) &&;
                               filters.tags.length === 0 || filters.tags.some (tag => item.tags.includes (tag) ) ;        
+>>>>>>> main
         return matchesQuery && matchesFilters}) .sort ( (a, b) => b.relevance - a.relevance) .slice (0, 10) ;
 
     setResults (searchResults) }, [debouncedQuery, filters]) ;
@@ -302,7 +350,7 @@ export function EnhancedSearch({
   
     if (!query.trim () ) return;
     setIsLoading (true) ;
-    
+
     // Simulate API call delay
     await new Promise (resolve => setTimeout (resolve, 300) ) ;
 
@@ -311,7 +359,7 @@ export function EnhancedSearch({
       
                           result.description.toLowerCase () .includes (query.toLowerCase () ) ||;
                           result.tags.some (tag => tag.toLowerCase () .includes (query.toLowerCase () ) ) ;
-      
+
       const matchesFilters = (filters.type.length === 0 || filters.type.includes (result.type) ) &&; (filters.category.length === 0 || filters.category.includes (result.category) ) &&; (filters.tags.length === 0 || filters.tags.some (tag => result.tags.includes (tag) ) ) ;
 
       return matchesQuery && matchesFilters}) ;
@@ -420,19 +468,19 @@ setFilters (prev: > ({;
             initial = {
 
   { opacity: 0,
-  y: -10 
+  y: -10
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             exit = {
 
   { opacity: 0,
-  y: -10 
+  y: -10
 
 
 
@@ -465,19 +513,19 @@ setFilters (prev: > ({;
                   initial = {
 
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 }}
                   animate = {
 
   { height: 'auto',
-  opacity: 1 
+  opacity: 1
 
 }}
                   exit = {
 
   { height: 0,
-  opacity: 0 
+  opacity: 0
 
 
 

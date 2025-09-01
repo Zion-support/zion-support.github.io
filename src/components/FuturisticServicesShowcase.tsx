@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
 	Rocket,
 	Brain,
@@ -171,19 +175,19 @@ export default function FuturisticServicesShowcase(...args[]):  {
 							initial = {
 
   { opacity: 0,
-  x: 100 
+  x: 100
 
 }}
 							animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
 							exit = {
 
   { opacity: 0,
-  x: -100 
+  x: -100
 
 }}
 							transition={{ duration: 0.5 }}"
@@ -217,13 +221,13 @@ export default function FuturisticServicesShowcase(...args[]):  {
 													initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
 													animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
 													transition={{ delay: index * 0.1 }}"
@@ -286,19 +290,19 @@ export default function FuturisticServicesShowcase(...args[]):  {
 								initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
 								whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
 								transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 

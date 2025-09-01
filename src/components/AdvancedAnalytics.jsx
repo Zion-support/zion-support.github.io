@@ -3,6 +3,10 @@ import { motion } from 'framer-motion';
 export function AdvancedAnalytics() {
   const [analyticsData, setAnalyticsData] = useState({
 
+<<<<<<< HEAD
+  const [analyticsData, setAnalyticsData] = useState ({
+=======
+>>>>>>> main
     visitors: 0,
     conversions: 0,
     revenue: 0,

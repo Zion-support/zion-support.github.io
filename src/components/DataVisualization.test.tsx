@@ -1,5 +1,4 @@
 
-
 describe ('DataVisualization', () => {
   it ('renders without crashing', () => {
     render (<DataVisualization  />) ;

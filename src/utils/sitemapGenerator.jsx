@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
+  outputPath: './public / sitemap.xml',
+=======
   outputPath: './public/sitemap.xml',
+>>>>>>> main
   ...config
 
 };
@@ -50,14 +54,14 @@ Sitemap: ${baseUrl}/sitemap.xml
 
   const generateSitemap = async () => {
     setIsGenerating (true) ;
-    
+
     // Simulate sitemap generation
     setTimeout ( () => {
       const sitemap = {
 
   pages: ['
           { url: '/', priority: '1.0',
-  changefreq: 'daily' 
+  changefreq: 'daily'
 
 
 
@@ -79,10 +83,10 @@ Sitemap: ${baseUrl}/sitemap.xml
         ],
         totalUrls: 10,
         generatedAt: new Date () .toISOString () };
-      
+
       setSitemapData (sitemap) ;
       setIsGenerating (false) ;
-      
+
       if (onGenerate) {
 
         onGenerate(sitemap);
@@ -99,18 +103,18 @@ Sitemap: ${baseUrl}/sitemap.xml
       >
         {isGenerating ? 'Generating...' : 'Generate Sitemap'}
       </button>
-      
+
       {sitemapData && (<motion.div
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -135,6 +139,26 @@ Sitemap: ${baseUrl}/sitemap.xml
 };
             </div>
           </div>
+<<<<<<< HEAD
+
+          <div>
+            <h4 className="font - medium mb - 2">Main Pages:</h4>
+            <div className="space - y-1 text - sm">
+              {sitemapData.pages.map ( (page, index) => (<div key={index} className="flex justify - between items - center">
+                  <span className="text - gray - 700">{page.url}</span>
+                  <span className="text - gray - 500">Priority: {page.priority}</span>
+                </div>) ) }
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font - medium mb - 2">Service Pages:</h4>
+            <div className="space - y-1 text - sm">
+              {sitemapData.services.map ( (service, index) => (<div key={index} className="flex justify - between items - center">
+                  <span className="text - gray - 700">{service.url}</span>
+                  <span className="text - gray - 500">Priority: {service.priority}</span>
+                </div>) ) }
+=======
           
           <div>"
             <h4 className="font-medium mb-2">Main Pages:</h4>"
@@ -157,6 +181,7 @@ Sitemap: ${baseUrl}/sitemap.xml
                   <span className="text-gray-500">Priority: {service.priority}</span>
                 </div>
               ))}
+>>>>>>> main
             </div>
           </div>
         </motion.div>) }

@@ -158,7 +158,14 @@ export
         if (tier.id === 'budget') return service.price <= 1000;
         if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
         if (tier.id === 'enterprise') return service.price > 5000;
+<<<<<<< HEAD
+        return false;
+
+
+}).length
+=======
         return false}).length
+>>>>>>> main
     })),;
     innovationLevels: INNOVATION_LEVELS.map(level = > ({
 

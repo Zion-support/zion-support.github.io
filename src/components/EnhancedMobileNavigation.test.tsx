@@ -1,5 +1,4 @@
 
-
 describe ('EnhancedMobileNavigation', () => {
   it ('renders without crashing', () => {
     render (<EnhancedMobileNavigation  />) ;

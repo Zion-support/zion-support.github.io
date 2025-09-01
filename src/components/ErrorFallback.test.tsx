@@ -1,5 +1,4 @@
 
-
 describe ('ErrorFallback', () => {
   it ('renders without crashing', () => {
     render (<ErrorFallback  />) ;

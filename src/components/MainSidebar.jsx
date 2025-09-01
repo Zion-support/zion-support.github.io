@@ -1,8 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
+import { cn } from '@/lib / utils';
+import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap export function MainSidebar () {
+
+    const location = useLocation () ;
+=======
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap export function MainSidebar() {
     const location = useLocation();
+>>>>>>> main
     const sidebarSections = [
         {
 

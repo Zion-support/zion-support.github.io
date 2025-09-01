@@ -1,5 +1,15 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+
+ * InteractiveTestimonials function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function InteractiveTestimonials () {
+=======
+>>>>>>> main
 
   Star,
   Quote,
@@ -92,22 +102,32 @@ export function InteractiveTestimonials() {
 
   
     setSelectedTestimonial ( (prev) => ;
+<<<<<<< HEAD
+      prev === 0 ? filteredTestimonials.length - 1 : prev - 1;) ;
+  };
+
+  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
+      <div role="button" className="max - w-7xl mx - auto px - 6">
+        <motion.div
+          className="text - center mb - 16"
+=======
       prev === 0 ? filteredTestimonials.length - 1 : prev - 1;) };
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -245,18 +265,23 @@ export function InteractiveTestimonials() {
   { opacity: 1,
   y: 0 }}
         {/* Category Filter */}
+<<<<<<< HEAD
+        <motion.div
+          className="flex flex - wrap justify - center gap - 3 mb - 12"
+=======
         <motion.div "
           className="flex flex-wrap justify-center gap-3 mb-12"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}

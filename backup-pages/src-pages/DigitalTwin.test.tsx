@@ -1,5 +1,4 @@
 
-
 describe ('DigitalTwin', () => {
   it ('renders without crashing', () => {
     render (<DigitalTwin  />) ;

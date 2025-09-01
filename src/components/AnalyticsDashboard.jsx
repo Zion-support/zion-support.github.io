@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import {
+<<<<<<< HEAD
+import { useAnalytics } from '../hooks / useAnalytics';
+=======
+>>>>>>> main
 
   BarChart3,
   TrendingUp,

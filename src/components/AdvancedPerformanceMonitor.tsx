@@ -1,5 +1,7 @@
 import {
 
+<<<<<<< HEAD
+=======
   Activity,
   Zap,
   Clock,
@@ -7,6 +9,7 @@ import {
   TrendingUp,
   AlertTriangle} from 'lucide-react.ts';
 
+>>>>>>> main
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;

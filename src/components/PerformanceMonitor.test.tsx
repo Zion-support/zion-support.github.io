@@ -1,5 +1,4 @@
 
-
 describe ('PerformanceMonitor', () => {
   it ('renders without crashing', () => {
     render (<PerformanceMonitor  />) ;

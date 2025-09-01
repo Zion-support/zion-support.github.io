@@ -1,12 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = () => {
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+
+    const [isOpen, setIsOpen] = useState (false) ;
+    const [isAnalyzing, setIsAnalyzing] = useState (false) ;
+    const [contentIssues, setContentIssues] = useState ([]) ;
+    const [report, setReport] = useState (null) ;
+    const [selectedFilter, setSelectedFilter] = useState ('all') ;
+    const [searchTerm, setSearchTerm] = useState ('') ;
+=======
     const [isOpen, setIsOpen] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [contentIssues, setContentIssues] = useState([]);
     const [report, setReport] = useState(null);
     const [selectedFilter, setSelectedFilter] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
+>>>>>>> main
     // Sample data based on the analysis report
     const sampleIssues = [
         {
@@ -152,17 +163,17 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
           <motion.div initial = {
 
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 }} animate = {
 
   { scale: 1,
-  opacity: 1 
+  opacity: 1
 
 }} exit = {
 
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 
 

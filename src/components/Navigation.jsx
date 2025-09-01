@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const Navigation = () => {
+<<<<<<< HEAD
+
+    const [isOpen, setIsOpen] = useState (false) ;
+    const [isServicesOpen, setIsServicesOpen] = useState (false) ;
+    const location = useLocation () ;
+    const navigationItems = [
+=======
     const [isOpen, setIsOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const location = useLocation();
     const navigationItems = ['
+>>>>>>> main
         { name: 'Home', href: '/', icon: Globe },
         { name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap },
         { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Brain },

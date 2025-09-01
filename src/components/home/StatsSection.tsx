@@ -51,23 +51,13 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           initial = {
 
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}
@@ -89,46 +79,26 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               initial = {
 
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
+  delay: index * 0.1
 
 }}
               viewport={{ once: true }}
               whileHover={{
 
                 y: -8,
-  transition: { duration: 0.3 
-
-
-
-
-
+  transition: { duration: 0.3
 
 }
               }}
@@ -151,12 +121,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
                 transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 + 0.5 
-
-
-
-
-
+  delay: index * 0.1 + 0.5
 
 }}
                 viewport={{ once: true }}

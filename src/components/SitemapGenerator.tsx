@@ -1,5 +1,47 @@
 import {
 
+<<<<<<< HEAD
+    FileText,
+    Download,
+    Globe,
+    Zap,
+    Brain,
+    Shield,
+    Cloud,
+    Users,
+    ShoppingCart,
+    BookOpen,
+    MessageCircle,
+    HelpCircle,
+    Star,
+    Atom,
+    Network,
+    Eye,
+    PenTool,
+    TrendingUp,
+    Rocket,
+    Heart,
+    Crown,
+    Sparkles,
+    Flame,
+    DollarSign,
+    Workflow,
+    Settings,
+    Lock,
+    BarChart3,
+    Cpu,
+    Building,
+    Server,
+    Activity,
+    GraduationCap,
+    Newspaper,
+    Target,
+    Briefcase,
+    Phone,
+    MapPin,
+    Mail,
+  } from 'lucide - react.ts';
+=======
   FileText,
   Download,
   Globe,
@@ -54,6 +96,7 @@ interface SitemapRoute {
   featured?: boolean;
   external?: boolean}
 export const SitemapGenerator: React.FC = (): JSX.Element => {
+>>>>>>> main
 
   const [sitemapData, setSitemapData] = useState<any>([]);
   const [searchQuery, setSearchQuery] = useState('');

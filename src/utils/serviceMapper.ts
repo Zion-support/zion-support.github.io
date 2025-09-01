@@ -20,6 +20,43 @@ export interface Service {
   innovationLevel: string;
   contactInfo: {
 
+<<<<<<< HEAD
+    // Interface for the existing service structure
+    id: string;
+    title: string;
+    description: string;
+    category: string;
+    subcategory: string;
+    price: number;
+    currency: string;
+    pricingModel: string;
+    features: string[];
+    benefits: string[];
+    useCases: string[];
+    targetAudience: string[];
+    tags: string[];
+    estimatedDelivery: string;
+    supportLevel: string;
+    marketPrice: string;
+    roi: string;
+    innovationLevel: string;
+    contactInfo: {
+      phone: string;
+      email: string;
+      website: string;
+    };
+    technicalSpecs?: {
+      technology: string[];
+      integrations: string[];
+      apiEndpoints: number;
+      uptime: string;
+      security: string[];
+    };
+    competitors?: string[];
+    marketSize?: string;
+    compliance?: string[];
+  }
+=======
     phone: string;
     email: string;
     website: string};
@@ -38,6 +75,7 @@ export interface Service {
 export function map2026ServicesToExistingStructure(): Service[] {
 
   return specializedIndustrySolutions2026.map(service => ({
+>>>>>>> main
 
     id: service.id,
     title: service.name,

@@ -1,10 +1,20 @@
 import React, { useState, useMemo } from 'react';
+<<<<<<< HEAD
+export default AdvancedServicePortfolioDashboard;
+import { Badge } from "./ui / badge";
+import { Button } from "./ui / button";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui / card";
+import { Input } from "./ui / input";
+import { motion } from 'framer - motion';
+
+=======
 import { motion } from 'framer-motion';
 import { BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";"
 import { Button } from "./ui/button";"
 import { Badge } from "./ui/badge";"
 import { Input } from "./ui/input";
+>>>>>>> main
 const AdvancedServicePortfolioDashboard = () => {
 
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -188,12 +198,12 @@ const AdvancedServicePortfolioDashboard = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -226,12 +236,12 @@ const AdvancedServicePortfolioDashboard = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -340,12 +350,12 @@ const AdvancedServicePortfolioDashboard = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -408,12 +418,12 @@ const AdvancedServicePortfolioDashboard = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -453,12 +463,12 @@ const AdvancedServicePortfolioDashboard = () => {
                   {filteredPortfolio.map((service, index) => (<motion.tr key={service.id} initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 
 
@@ -519,12 +529,12 @@ const AdvancedServicePortfolioDashboard = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -545,12 +555,12 @@ const AdvancedServicePortfolioDashboard = () => {
               {categories.filter(cat => cat.id !== 'all').map((category, index) => (<motion.div key={category.id} initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 
 
@@ -629,12 +639,12 @@ const AdvancedServicePortfolioDashboard = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 

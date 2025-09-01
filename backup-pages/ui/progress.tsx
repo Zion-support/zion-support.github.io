@@ -16,10 +16,14 @@ const Progress: React.FC<ProgressProps> = { value: unknown, max = 100: unknown, 
   cn("w-full bg-slate-700 rounded-full h-2",
   className)
 
+<<<<<<< HEAD:src/components/ui/progress.tsx
+;
+=======
 
 
 
 
+>>>>>>> main:backup-pages/ui/progress.tsx
 }>;
       <div;"
         className="h-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full transition-all duration-300";

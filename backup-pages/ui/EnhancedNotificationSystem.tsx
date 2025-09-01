@@ -63,9 +63,15 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     <NotificationContext.Provider value = {
 
   { notifications, addNotification, removeNotification,
-  clearAll 
+  clearAll
 
 ;
+<<<<<<< HEAD:src/components/ui/EnhancedNotificationSystem.tsx
+;
+;
+
+=======
+>>>>>>> main:backup-pages/ui/EnhancedNotificationSystem.tsx
 }}>;
       {children};
       <NotificationContainer  />;
@@ -91,11 +97,6 @@ const NotificationContainer: React.FC = props {;  const { notifications, removeN
               delay: index * 0.1,"
               type: "spring",
   stiffness: 200
-            
-
-
-
-
 
 
 }}"
@@ -111,23 +112,13 @@ const NotificationContainer: React.FC = props {;  const { notifications, removeN
           initial = {
 
   { opacity: 0,
-  y: 10 
-
-
-
-
-
+  y: 10
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           onClick={clearAll}"
@@ -193,6 +184,30 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
     </motion.div>;
   )};
 
+<<<<<<< HEAD:src/components/ui/EnhancedNotificationSystem.tsx
+// Utility functions for easy notification creation
+export const notify = {
+  success: (title: string, message: string, options?: Partial<Notification>)  => {
+    // This would be used with the context
+    console.log('Success notification: ', { title, message,
+  ...options
+
+})},
+  error: (title: string, message: string, options?: Partial<Notification>)  => {
+    console.log('Error notification: ', { title, message, ...options })},
+  warning: (title: string, message: string, options?: Partial<Notification>)  => {
+    console.log('Warning notification: ', { title, message, ...options })},
+  info: (title: string, message: string, options?: Partial<Notification>)  => {
+    console.log('Info notification:', { title, message, ...options })};
+    console.log('Success notification:', { title, message,;
+  ;
+  ;
+  ;
+  ...options ;
+
+});
+  },
+=======
 // Utility functions for easy notification creation;
 export 
     // console.log('Success notification:', { title, message,;
@@ -204,6 +219,7 @@ export
   ;
   ;
   ...options })},
+>>>>>>> main:backup-pages/ui/EnhancedNotificationSystem.tsx
   error: (title: string, message: string, options?: Partial<Notification>) => {
 
     // // // // console.log('Error notification:', { title, message, ...options })},

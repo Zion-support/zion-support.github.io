@@ -1,11 +1,19 @@
 import { useState, useEffect, useCallback } from 'react';
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
 import { useAnalytics } from "../hooks/useAnalytics";
+>>>>>>> main
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
 
+<<<<<<< HEAD
+    const { trackEvent, trackConversion } = useAnalytics ({
+=======
     const { trackEvent, trackConversion } = useAnalytics({
 
+>>>>>>> main
         enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true
     }) ;
@@ -211,12 +219,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         return (<motion.div key={field.name} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -315,12 +323,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} animate = {
 
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 
 
@@ -336,12 +344,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         return (<motion.div initial = {
 
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }} animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 
 
@@ -361,12 +369,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     return (<motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -415,17 +423,17 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} animate = {
 
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }} exit = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 
 

@@ -1,7 +1,20 @@
 export function ServiceWorker(...args: any[]): any {
 
+<<<<<<< HEAD
+interface ServiceWorkerState {
+
+  isInstalled: boolean;
+  isOnline: boolean;
+  hasUpdate: boolean;
+  isInstalling: boolean;
+
+}
+
+  const [swState, setSwState] = useState < any> ({
+=======
   const [swState, setSwState] = useState<any>({
 
+>>>>>>> main
     isInstalled: anyfalse,
     isOnline: navigator.onLine,
     hasUpdate: false,
@@ -27,6 +40,16 @@ export function ServiceWorker(...args: any[]): any {
               '
               newWorker.addEventListener('statechange', () => {
 
+<<<<<<< HEAD
+          // Check for updates
+          registration.addEventListener ('updatefound', () => {
+            const newWorker = registration.installing;
+            if (newWorker) {
+              setSwState (prev => ({ ...prev, isInstalling: anytrue }) ) ;
+
+              newWorker.addEventListener ('statechange', () => {
+=======
+>>>>>>> main
                 if (newWorker.state = == 'installed') {;
 setSwState (prev: > ({ ;
                     ...prev, ;
@@ -66,19 +89,19 @@ setSwState (prev: > ({ ;
           initial = {
 
   { opacity: 0,
-  y: -50 
+  y: -50
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           exit = {
 
   { opacity: 0,
-  y: -50 
+  y: -50
 
 }}
           className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm"

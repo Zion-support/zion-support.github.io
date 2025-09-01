@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion, useAnimation } from 'framer - motion';
+=======
+>>>>>>> main
 
   Users,
   Globe,
@@ -145,7 +149,7 @@ setCountedValues (prev:  > ({;
           initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           animate={controls}
@@ -182,7 +186,7 @@ setCountedValues (prev:  > ({;
               initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               animate={controls}
@@ -247,7 +251,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                   transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 >"

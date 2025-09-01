@@ -1,5 +1,4 @@
 
-
 describe ('SEOOptimizer', () => {
   it ('renders without crashing', () => {
     render (<SEOOptimizer  />) ;

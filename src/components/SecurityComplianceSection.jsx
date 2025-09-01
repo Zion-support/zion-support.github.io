@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, Award const securityStandards = [
 
-
     {
 
         name: "ISO 27001","
@@ -124,7 +123,7 @@ const securityStats = ["
     const itemVariants = {
 
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -151,12 +150,12 @@ const securityStats = ["
         <motion.div className="text-center mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -177,17 +176,17 @@ const securityStats = ["
             {securityStats.map((stat, index) => (<motion.div key={index} initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} whileInView = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -208,17 +207,17 @@ const securityStats = ["
         <motion.div className="mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 
 
@@ -233,17 +232,17 @@ const securityStats = ["
             {securityStandards.map((standard, index) => (<motion.div key={standard.name} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -313,17 +312,17 @@ const securityStats = ["
                     {selectedStandard === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
 "
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} transition={{ duration: 0.3 }}>
                         {/* All Features */}"
@@ -360,17 +359,17 @@ const securityStats = ["
         <motion.div className="mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 
 
@@ -385,17 +384,17 @@ const securityStats = ["
             {complianceFrameworks.map((framework, index) => (<motion.div key={framework.name} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -465,17 +464,17 @@ const securityStats = ["
                     {selectedFramework === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
 "
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} transition={{ duration: 0.3 }}>
                         {/* All Controls */}"
@@ -512,17 +511,17 @@ const securityStats = ["
         <motion.div className="mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 
 
@@ -537,17 +536,17 @@ const securityStats = ["
             {securityFeatures.map((feature, index) => (<motion.div key={feature.title} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -594,17 +593,17 @@ const securityStats = ["
                     {selectedFeature === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
 "
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} transition={{ duration: 0.3 }}>
                         {/* All Features */}"
@@ -635,17 +634,17 @@ const securityStats = ["
         <motion.div className="text-center" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 
 

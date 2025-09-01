@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD:src/pages/Admin.jsx
+export default Admin;
+
+=======
 import { Helmet } from 'react-helmet-async';
+>>>>>>> main:backup-pages/src-pages/Admin.jsx
 const Admin = () => {
   return()
     <>

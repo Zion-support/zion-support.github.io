@@ -1,5 +1,4 @@
 
-
 describe ('EnhancedSEOManager', () => {
   it ('renders without crashing', () => {
     render (<EnhancedSEOManager  />) ;

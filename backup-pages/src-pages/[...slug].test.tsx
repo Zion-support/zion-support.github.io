@@ -1,5 +1,4 @@
 
-
 describe ('[...slug]', () => {
   it ('renders without crashing', () => {
     render (<[...slug] />) ;

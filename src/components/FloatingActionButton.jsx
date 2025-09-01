@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+export default FloatingActionButton;
+import { motion, AnimatePresence } from 'framer - motion';
+
+=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, X, MessageCircle, Phone, Mail } from 'lucide-react';
+>>>>>>> main
 const FloatingActionButton = ({ className = '' }) => {
 
   const [isOpen, setIsOpen] = useState(false);

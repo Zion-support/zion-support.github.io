@@ -1,10 +1,20 @@
 import React, { useState, useMemo } from 'react';
+<<<<<<< HEAD
+export default AdvancedServiceInnovationHub;
+import { Badge } from "./ui / badge";
+import { Button } from "./ui / button";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui / card";
+import { Input } from "./ui / input";
+import { motion } from 'framer - motion';
+
+=======
 import { motion } from 'framer-motion';
 import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";"
 import { Button } from "./ui/button";"
 import { Badge } from "./ui/badge";"
 import { Input } from "./ui/input";
+>>>>>>> main
 const AdvancedServiceInnovationHub = () => {
 
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -148,12 +158,12 @@ const AdvancedServiceInnovationHub = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -188,12 +198,12 @@ const AdvancedServiceInnovationHub = () => {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -243,12 +253,12 @@ const AdvancedServiceInnovationHub = () => {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -259,12 +269,12 @@ const AdvancedServiceInnovationHub = () => {
             {filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial = {
 
   { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
+  x: index % 2 === 0 ? -20 : 20
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 
 
@@ -350,12 +360,12 @@ const AdvancedServiceInnovationHub = () => {
       {viewMode === 'roadmap' && (<motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -366,12 +376,12 @@ const AdvancedServiceInnovationHub = () => {
           {futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 
 
@@ -460,12 +470,12 @@ const AdvancedServiceInnovationHub = () => {
       {viewMode === 'insights' && (<motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -616,12 +626,12 @@ const AdvancedServiceInnovationHub = () => {
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 

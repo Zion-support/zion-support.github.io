@@ -45,6 +45,13 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
 
   return { min, max }};
 
+<<<<<<< HEAD
+export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: BudgetStatusDisplayProps) => {;
+  const userBudget = parseBudget(projectBriefBudget);
+  const estimatedAvgCost = (estimatedCost.min + estimatedCost.max) / 2;
+
+  let status: 'good' | 'warning' | 'danger' | 'info' = 'info';
+=======
 ;
 export 
   
@@ -52,6 +59,7 @@ export
 <<<<<<< HEAD
 
   let status: 'good' | 'warning' | 'danger' | 'info' = 'info';"
+>>>>>>> main
   let message = "";
 =======
 '

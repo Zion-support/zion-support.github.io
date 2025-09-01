@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+import React, { useState, useEffect } from 'react.ts';
+import { api, ApiResponse  } from '@/services / api';
+export default ApiDemo;}}}}}}}
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 interface User {
   id: number;
@@ -84,10 +90,15 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 type="text"
                 placeholder="Name"
                 value={newUser.name}
+<<<<<<< HEAD
+                onChange = { (e) => setNewUser (prev => ({ ...prev,
+  name: e.target.value
+=======
                 onChange = {
 
   (e) => setNewUser(prev => ({ ...prev,
   name: e.target.value 
+>>>>>>> main
 
 
 
@@ -102,10 +113,15 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 type="email"
                 placeholder="Email"
                 value={newUser.email}
+<<<<<<< HEAD
+                onChange = { (e) => setNewUser (prev => ({ ...prev,
+  email: e.target.value
+=======
                 onChange = {
 
   (e) => setNewUser(prev => ({ ...prev,
   email: e.target.value 
+>>>>>>> main
 
 
 

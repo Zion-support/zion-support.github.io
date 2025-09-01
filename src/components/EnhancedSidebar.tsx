@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Home,
   Brain,
@@ -198,13 +202,13 @@ export const EnhancedSidebar: React.FC = () => {;
           initial = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.5 }}
@@ -224,19 +228,19 @@ export const EnhancedSidebar: React.FC = () => {;
           initial = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition = {
 
   { duration: 0.5,
-  delay: 0.1 
+  delay: 0.1
 
 }}
         >"
@@ -248,19 +252,19 @@ export const EnhancedSidebar: React.FC = () => {;
                 initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                 animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
 
   { duration: 0.3,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
               >
@@ -286,19 +290,19 @@ export const EnhancedSidebar: React.FC = () => {;
               initial = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
 
   { duration: 0.5,
-  delay: sectionIndex * 0.1 
+  delay: sectionIndex * 0.1
 
 }}
             >
@@ -312,6 +316,13 @@ export const EnhancedSidebar: React.FC = () => {;
                     {section.title}
                   </span>
                 </div>
+<<<<<<< HEAD
+                <ChevronDown
+                  className={`w - 4 h - 4 text - slate - 400 transition - transform duration - 200 ${
+                    expandedSections.has (section.title) ? 'rotate - 180' : ''
+                  }`}
+                />
+=======
                 <ChevronDown `
                   className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
 <<<<<<< HEAD
@@ -324,6 +335,7 @@ export const EnhancedSidebar: React.FC = () => {;
                     expandedSections.has(section.title) ? 'rotate-180' : ''`                  }`} 
                  />
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+>>>>>>> main
               </button>
 
               <AnimatePresence>
@@ -331,19 +343,19 @@ export const EnhancedSidebar: React.FC = () => {;
                     initial = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                     animate = {
 
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }}
                     exit = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                     transition={{ duration: 0.3 }}"
@@ -354,19 +366,19 @@ export const EnhancedSidebar: React.FC = () => {;
                         initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                         animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                         transition = {
 
   { duration: 0.2,
-  delay: itemIndex * 0.05 
+  delay: itemIndex * 0.05
 
 }}
                       >"
@@ -389,19 +401,19 @@ export const EnhancedSidebar: React.FC = () => {;
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition = {
 
   { duration: 0.5,
-  delay: 0.5 
+  delay: 0.5
 
 }}
         >"

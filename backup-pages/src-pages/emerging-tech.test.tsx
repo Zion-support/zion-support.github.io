@@ -1,5 +1,4 @@
 
-
 describe ('emerging - tech', () => {
   it ('renders without crashing', () => {
     render (<emerging - tech />) ;

@@ -1,8 +1,63 @@
+<<<<<<< HEAD
+import { Link } from 'react - router - dom';
+import React, { useState, useEffect, useCallback } from 'react';
+export default React.memo (PerformanceOptimizedHero) ;}}}</motion.div>}
+import {
+import { motion, AnimatePresence } from 'framer - motion';
+
+  ArrowRight,
+  Play,
+  Star,
+  Shield,
+  Zap,
+  Brain,
+  Cloud,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  Globe,
+  Rocket
+interface HeroProps {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  features?: Array<{
+    icon: React.ComponentType < any>;
+    text: string;
+    color: string;
+  }>;
+
+const PerformanceOptimizedHero: React.FC < HeroProps> = ({
+  title = "Revolutionary AI & Technology Solutions",
+  subtitle = "2025 - 2026 Innovation Hub",
+  description = "Transform your business with cutting - edge AI, quantum computing, and next - generation technology solutions. Experience the future of digital transformation.",
+  ctaText = "Explore Our Services",
+  ctaLink = "/services",
+  features = [;
+    { icon: Brain, text: "AI - Powered Solutions", color: "from - purple - 500 to - pink - 500" },;
+    { icon: Cloud, text: "Cloud Infrastructure", color: "from - blue - 500 to - cyan - 500" },;
+    { icon: Shield, text: "Cybersecurity", color: "from - green - 500 to - emerald - 500" },;
+    { icon: Zap, text: "Digital Transformation", color: "from - yellow - 500 to - orange - 500" };
+  ];
+}) => {;
+  const [currentFeature, setCurrentFeature] = useState (0) ;
+  const [isVisible, setIsVisible] = useState (false) ;
+
+  useEffect ( () => {
+    setIsVisible (true) ;
+
+    const interval = setInterval ( () => {;
+      setCurrentFeature ( (prev) => (prev + 1) % features.length) ;
+    }, 3000) ;
+=======
   useEffect ( () => {
     setIsVisible (true) ;
     
     
       setCurrentFeature ( (prev) => (prev + 1) % features.length) }, 3000) ;
+>>>>>>> main
 
     return () => clearInterval(interval)}, [features.length]);
 
@@ -14,7 +69,7 @@
   const containerVariants = {
 
   hidden: { opacity: 0,
-  y: 50 
+  y: 50
 
 },
     visible: {

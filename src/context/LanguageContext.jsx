@@ -9,12 +9,7 @@ const LanguageProvider({ children }) {
     return (<LanguageContext.Provider value = {
 
   { language, setLanguage, t,
-  isRTL 
-
-
-
-
-
+  isRTL
 
 }}>
       {children}

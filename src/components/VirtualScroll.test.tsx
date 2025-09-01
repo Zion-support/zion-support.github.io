@@ -1,5 +1,4 @@
 
-
 describe ('VirtualScroll', () => {
   it ('renders without crashing', () => {
     render (<VirtualScroll  />) ;

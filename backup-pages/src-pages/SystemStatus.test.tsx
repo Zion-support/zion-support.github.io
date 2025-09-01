@@ -1,5 +1,4 @@
 
-
 describe ('SystemStatus', () => {
   it ('renders without crashing', () => {
     render (<SystemStatus  />) ;

@@ -1,5 +1,4 @@
 
-
 describe ('SearchAndFilterSystem', () => {
   it ('renders without crashing', () => {
     render (<SearchAndFilterSystem  />) ;

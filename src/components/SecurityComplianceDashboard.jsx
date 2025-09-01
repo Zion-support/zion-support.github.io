@@ -1,6 +1,12 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+import { useAnalytics } from '../hooks / useAnalytics';
+import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
+=======
+>>>>>>> main
 
   Shield,
   AlertTriangle,

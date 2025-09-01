@@ -1,5 +1,4 @@
 
-
 describe ('AISolutions', () => {
   it ('renders without crashing', () => {
     render (<AISolutions  />) ;

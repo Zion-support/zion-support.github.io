@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { FavoriteButton } from '@/components / FavoriteButton';
+import { RatingStars } from '@/components / RatingStars';
+export function ProductListingCard ({
+
+=======
 import { useNavigate } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { DollarSign } from 'lucide-react';
 import { RatingStars } from '@/components/RatingStars';
 import { FavoriteButton } from '@/components/FavoriteButton';
+>>>>>>> main
 // Using regular img tag instead of Next.js Image
 export function ProductListingCard({
 

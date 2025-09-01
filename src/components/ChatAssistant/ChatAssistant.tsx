@@ -19,7 +19,13 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
   ;
   ;
   ;
+<<<<<<< HEAD
+  ;
+
+};
+=======
   };
+>>>>>>> main
     setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
 =======
@@ -34,6 +40,15 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
         timestamp: new Date(),;
   ;
   ;
+<<<<<<< HEAD
+  ;
+  ;
+
+};
+      setMessages(prev => [...prev, aiMessage]);
+    }, 1000);
+=======
+>>>>>>> main
   };
   
     e.preventDefault();

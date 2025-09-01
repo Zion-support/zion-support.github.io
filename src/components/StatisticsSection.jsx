@@ -2,7 +2,6 @@ import React from 'react';
 export function StatisticsSection () {
 import { Users, Globe, TrendingUp, Award const stats = [;
 
-
     {
 
         icon: <Users className="w-8 h-8"/>,"

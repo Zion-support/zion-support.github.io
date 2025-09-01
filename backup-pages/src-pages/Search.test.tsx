@@ -1,5 +1,4 @@
 
-
 describe ('Search', () => {
   it ('renders without crashing', () => {
     render (<Search  />) ;

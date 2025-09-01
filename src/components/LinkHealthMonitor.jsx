@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = () => {
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+
+    const [isOpen, setIsOpen] = useState (false) ;
+    const [isMonitoring, setIsMonitoring] = useState (false) ;
+    const [linkStatuses, setLinkStatuses] = useState ([]) ;
+    const [report, setReport] = useState (null) ;
+    const [selectedFilter, setSelectedFilter] = useState ('all') ;
+=======
     const [isOpen, setIsOpen] = useState(false);
     const [isMonitoring, setIsMonitoring] = useState(false);
     const [linkStatuses, setLinkStatuses] = useState([]);
     const [report, setReport] = useState(null);
     const [selectedFilter, setSelectedFilter] = useState('all');
+>>>>>>> main
     // Sample data based on the analysis report
     const sampleLinks = [
         {
@@ -114,17 +124,17 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
           <motion.div initial = {
 
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 }} animate = {
 
   { scale: 1,
-  opacity: 1 
+  opacity: 1
 
 }} exit = {
 
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 
 

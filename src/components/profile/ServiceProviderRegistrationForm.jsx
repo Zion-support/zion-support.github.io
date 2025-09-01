@@ -107,7 +107,6 @@ export function ServiceProviderRegistrationForm() {
                         services: serviceTags,
                         location: formData.location
 
-
             });
             if (error) {
 
@@ -178,7 +177,6 @@ export function ServiceProviderRegistrationForm() {
                                 services: serviceTags,
                                 location: values.location
 
-
                     });
                     if (aiData) {
 
@@ -191,7 +189,6 @@ export function ServiceProviderRegistrationForm() {
 "
                     // // // // // // // // console.error("Error enhancing profile:", error);
                     // Continue with submission even if enhancement fails
-
 
             else if (generatedContent) {
 
@@ -261,7 +258,6 @@ export function ServiceProviderRegistrationForm() {
 "
                     // // // // // // // // console.error("Failed to send notification email:", emailError);
                     // Continue with submission even if email fails
-
 
             toast({
 "

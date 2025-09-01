@@ -1,5 +1,4 @@
 
-
 describe ('BlogSection', () => {
   it ('renders without crashing', () => {
     render (<BlogSection  />) ;

@@ -1,5 +1,4 @@
 
-
 describe ('CloudSolutions', () => {
   it ('renders without crashing', () => {
     render (<CloudSolutions  />) ;

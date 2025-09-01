@@ -1,4 +1,14 @@
 import {
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+
+ * ServicesShowcase function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function ServicesShowcase () {
+=======
+>>>>>>> main
 
   Brain,
   Cloud,

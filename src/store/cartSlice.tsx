@@ -22,7 +22,14 @@ const initialState: CartState = {
   ;
   ;
   ;
+<<<<<<< HEAD
+  ;
+  ;
+
+};
+=======
   };
+>>>>>>> main
 
 <<<<<<< HEAD
 const cartSlice:  createSlice({;

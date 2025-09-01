@@ -1,5 +1,4 @@
 
-
 describe ('ThemeProvider', () => {
   it ('renders without crashing', () => {
     render (<ThemeProvider  />) ;

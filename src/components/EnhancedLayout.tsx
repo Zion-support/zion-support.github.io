@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 
-
   children: ReactNode;
   showSidebar?: boolean}
 

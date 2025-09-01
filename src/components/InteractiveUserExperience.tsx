@@ -1,5 +1,13 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { Badge } from './ui / badge';
+import { Button } from './ui / button';
+import { Card, CardContent, CardHeader, CardTitle } from './ui / card';
+import { Progress } from './ui / progress';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui / tabs';
+=======
+>>>>>>> main
 
   User,
   Settings,

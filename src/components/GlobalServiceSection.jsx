@@ -1,7 +1,6 @@
 import React from 'react';
 import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServiceSection = () => {
 
-
   const globalServices = [
     {
 

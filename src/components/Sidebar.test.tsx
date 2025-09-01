@@ -1,5 +1,4 @@
 
-
 describe ('Sidebar', () => {
   it ('renders without crashing', () => {
     render (<Sidebar  />) ;

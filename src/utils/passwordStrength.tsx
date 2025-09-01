@@ -12,7 +12,6 @@ export const PASSWORD_STRENGTH = {
 export const validatePassword = password => {
 export default {
 
-
 // Password strength utility functions
 
 /**

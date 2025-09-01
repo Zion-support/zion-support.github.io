@@ -1,12 +1,20 @@
 import { useState, useMemo, useCallback } from 'react';
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
 import { useVirtualScroll } from "../hooks/useVirtualScroll";"
 import { useAnalytics } from "../hooks/useAnalytics";
+>>>>>>> main
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
 
+<<<<<<< HEAD
+    const { trackEvent } = useAnalytics ({
+=======
     const { trackEvent } = useAnalytics({
 
+>>>>>>> main
         enableTracking: true,
         enableUserBehaviorTracking: true
     });
@@ -216,17 +224,17 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
           {showFilters && (<motion.div initial = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} animate = {
 
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }} exit = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 
 
@@ -292,12 +300,12 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             {virtualItems.map((item, index) => (<motion.div key={String(item.id || index)} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} className={`flex items - center px - 4 py - 3 border - b border - gray - 100 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700 transition - colors ${onRowClick ? 'cursor - pointer' : ''} ${selectedItems.has (String (item.id || JSON.stringify (item) ) ) ? 'bg - blue - 50 dark:bg - blue - 900 / 20' : ''}`} onClick = { () => onRowClick?. (item,
   index) }>
@@ -388,6 +396,11 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
                     {page}
                   </button>) }) }
+<<<<<<< HEAD
+
+              <button onClick = { () => setCurrentPage (prev => Math.min (totalPages,
+  prev + 1) ) } disabled={currentPage === totalPages} className="px - 3 py - 1 text - sm border border - gray - 300 dark:border - gray - 600 rounded hover:bg - gray - 100 dark:hover:bg - gray - 600 disabled:opacity - 50 disabled:cursor - not - allowed transition - colors">
+=======
               
               <button onClick = {
 
@@ -400,6 +413,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
 "
 } disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+>>>>>>> main
                 Next
               </button>
             </div>

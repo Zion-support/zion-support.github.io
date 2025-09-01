@@ -1,5 +1,4 @@
 
-
 describe ('EnhancedHeader', () => {
   it ('renders without crashing', () => {
     render (<EnhancedHeader  />) ;

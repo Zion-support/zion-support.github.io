@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Search,
   TrendingUp,
@@ -378,19 +382,19 @@ autoAnalyze:  true,;
                     initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                     animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
 
@@ -442,13 +446,13 @@ autoAnalyze:  true,;
                   initial = {
 
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }}
                   animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 
 
@@ -482,19 +486,19 @@ autoAnalyze:  true,;
                 initial = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                 animate = {
 
   { opacity: 1,
-  height: 'auto' 
+  height: 'auto'
 
 }}
                 exit = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 
 

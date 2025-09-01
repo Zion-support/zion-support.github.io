@@ -31,9 +31,7 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
     <TabsContext.Provider value = {
 
   { activeTab,
-  setActiveTab: handleTabChange 
-
-
+  setActiveTab: handleTabChange
 
 ;
 }}>;

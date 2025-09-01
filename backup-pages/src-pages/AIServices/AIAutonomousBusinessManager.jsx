@@ -96,16 +96,17 @@ export default function AIAutonomousBusinessManager() {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
+<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessManager.jsx
+  y: 0
+
+}} transition={{ duration: 0.8 }} className="text-center">
+            <div className="inline-flex items-center gap-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-4 py-2 text-zion-cyan text-sm font-medium mb-6">
+=======
   y: 0 
 
 
@@ -115,6 +116,7 @@ export default function AIAutonomousBusinessManager() {
 "
 }} transition={{ duration: 0.8 }} className="text-center">"
             <div className="inline-flex items-center gap-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-4 py-2 text-zion-cyan text-sm font-medium mb-6">"
+>>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessManager.jsx
               <Brain className="w-4 h-4"/>
               AI-Powered Business Management
             </div>
@@ -150,16 +152,16 @@ export default function AIAutonomousBusinessManager() {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
+<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessManager.jsx
+  y: 0
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
+=======
   y: 0 
 
 
@@ -168,6 +170,7 @@ export default function AIAutonomousBusinessManager() {
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
+>>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessManager.jsx
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Intelligent Business Management
             </h2>"
@@ -183,26 +186,20 @@ export default function AIAutonomousBusinessManager() {
             return (<motion.div key={feature.title} initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
+<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessManager.jsx
+  delay: index * 0.1
+
+=======
   delay: index * 0.1 
 
 
@@ -210,6 +207,7 @@ export default function AIAutonomousBusinessManager() {
 
 
 "
+>>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessManager.jsx
 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}>"
                     <IconComponent className="w-8 h-8"/>
@@ -227,16 +225,16 @@ export default function AIAutonomousBusinessManager() {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
+<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessManager.jsx
+  y: 0
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
+=======
   y: 0 
 
 
@@ -245,6 +243,7 @@ export default function AIAutonomousBusinessManager() {
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
+>>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessManager.jsx
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Why Choose AI Autonomous Business Manager?
             </h2>"
@@ -257,26 +256,22 @@ export default function AIAutonomousBusinessManager() {
             {benefits.map((benefit, index) => (<motion.div key={benefit} initial = {
 
   { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
+  x: index % 2 === 0 ? -20 : 20
 
 }} whileInView = {
 
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }} transition = {
 
   { duration: 0.6,
+<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessManager.jsx
+  delay: index * 0.1
+
+}} className="flex items-start gap-3">
+                <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"/>
+=======
   delay: index * 0.1 
 
 
@@ -286,6 +281,7 @@ export default function AIAutonomousBusinessManager() {
 "
 }} className="flex items-start gap-3">"
                 <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"/>"
+>>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessManager.jsx
                 <span className="text-zion-slate-light">{benefit}</span>
               </motion.div>))}
           </div>
@@ -298,16 +294,16 @@ export default function AIAutonomousBusinessManager() {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
+<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessManager.jsx
+  y: 0
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
+=======
   y: 0 
 
 
@@ -316,6 +312,7 @@ export default function AIAutonomousBusinessManager() {
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
+>>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessManager.jsx
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Perfect For Every Business
             </h2>"
@@ -331,26 +328,22 @@ export default function AIAutonomousBusinessManager() {
             return (<motion.div key={useCase.title} initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
+<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessManager.jsx
+  delay: index * 0.1
+
+}} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-4 flex items-center justify-center">
+=======
   delay: index * 0.1 
 
 
@@ -360,6 +353,7 @@ export default function AIAutonomousBusinessManager() {
 "
 }} className="text-center">"
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-4 flex items-center justify-center">"
+>>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessManager.jsx
                     <IconComponent className="w-8 h-8 text-white"/>
                   </div>"
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>"
@@ -375,16 +369,16 @@ export default function AIAutonomousBusinessManager() {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
+<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessManager.jsx
+  y: 0
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
+=======
   y: 0 
 
 
@@ -393,6 +387,7 @@ export default function AIAutonomousBusinessManager() {
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
+>>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessManager.jsx
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               What Our Clients Say
             </h2>"
@@ -405,26 +400,22 @@ export default function AIAutonomousBusinessManager() {
             {testimonials.map((testimonial, index) => (<motion.div key={testimonial.name} initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
+<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessManager.jsx
+  delay: index * 0.1
+
+}} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">
+                <div className="flex gap-1 mb-4">
+=======
   delay: index * 0.1 
 
 
@@ -434,6 +425,7 @@ export default function AIAutonomousBusinessManager() {
 "
 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">"
                 <div className="flex gap-1 mb-4">"
+>>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessManager.jsx
                   {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-zion-cyan fill-current"/>))}
                 </div>"
                 <p className="text-zion-slate-light mb-6 leading-relaxed italic">"
@@ -454,22 +446,12 @@ export default function AIAutonomousBusinessManager() {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition={{ duration: 0.8 }}>"
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">

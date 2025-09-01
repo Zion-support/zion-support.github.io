@@ -2,6 +2,16 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, Globe, Cpu, Database, Cloud export function MicroSaasShowcase() {
 
+<<<<<<< HEAD
+    const [activeCategory, setActiveCategory] = useState ('all') ;
+    const categories = [
+        { id: 'all', name: 'All Services', icon: <Sparkles className="h - 5 w - 5"/> },
+        { id: 'ai - ml', name: 'AI & ML', icon: <Cpu className="h - 5 w - 5"/> },
+        { id: 'security', name: 'Security', icon: <Shield className="h - 5 w - 5"/> },
+        { id: 'analytics', name: 'Analytics', icon: <BarChart3 className="h - 5 w - 5"/> },
+        { id: 'automation', name: 'Automation', icon: <Zap className="h - 5 w - 5"/> },
+        { id: 'cloud', name: 'Cloud', icon: <Cloud className="h - 5 w - 5"/> }
+=======
     const [activeCategory, setActiveCategory] = useState('all');
     const categories = ['
         { id: 'all', name: 'All Services', icon: <Sparkles className="h-5 w-5"/> },"
@@ -10,6 +20,7 @@ import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, 
         { id: 'analytics', name: 'Analytics', icon: <BarChart3 className="h-5 w-5"/> },"
         { id: 'automation', name: 'Automation', icon: <Zap className="h-5 w-5"/> },"
         { id: 'cloud', name: 'Cloud', icon: <Cloud className="h-5 w-5"/> }
+>>>>>>> main
     ];
     const microSaasServices = [
         {

@@ -1,5 +1,4 @@
 
-
 describe ('MicroSAASPage', () => {
   it ('renders without crashing', () => {
     render (<MicroSAASPage  />) ;

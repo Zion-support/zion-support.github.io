@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+=======
+>>>>>>> main
 
   Mail,
   Phone,

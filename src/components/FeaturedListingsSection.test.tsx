@@ -1,5 +1,4 @@
 
-
 describe ('FeaturedListingsSection', () => {
   it ('renders without crashing', () => {
     render (<FeaturedListingsSection  />) ;

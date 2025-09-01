@@ -1,5 +1,4 @@
 
-
 describe ('FloatingCTA', () => {
   it ('renders without crashing', () => {
     render (<FloatingCTA  />) ;

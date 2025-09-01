@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+export default EnhancedScrollToTop;
+import { motion, AnimatePresence } from 'framer - motion';
+
+=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUpIcon } from '@heroicons/react/24/outline';
+>>>>>>> main
 const EnhancedScrollToTop = () => {
     const [isVisible, setIsVisible] = useState (false) ;
     useEffect ( () => {
@@ -24,17 +30,17 @@ const EnhancedScrollToTop = () => {
       {isVisible && (<motion.button initial = {
 
   { opacity: 0, scale: 0.8,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1, scale: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0, scale: 0.8,
-  y: 20 
+  y: 20
 
 
 

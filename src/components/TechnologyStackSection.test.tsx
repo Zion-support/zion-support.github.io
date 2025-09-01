@@ -1,5 +1,4 @@
 
-
 describe ('TechnologyStackSection', () => {
   it ('renders without crashing', () => {
     render (<TechnologyStackSection  />) ;

@@ -1,5 +1,16 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { innovativeServices2025 } from '../data / innovativeServices2025';
+import { motion, AnimatePresence } from 'framer - motion';
+
+ * EnhancedHeader function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function EnhancedHeader () {
+=======
+>>>>>>> main
 
   Menu,
   X,

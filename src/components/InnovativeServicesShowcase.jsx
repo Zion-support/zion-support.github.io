@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+export default InnovativeServicesShowcase;
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data / innovativeMicroSaasServices2025";
+import { innovativeAIServices2025 } from "../data / innovativeAIServices2025";
+import { innovativeITServices2025 } from "../data / innovativeITServices2025";
+
+=======
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";"
 import { innovativeITServices2025 } from "../data/innovativeITServices2025";"
 import { innovativeAIServices2025 } from "../data/innovativeAIServices2025";
+>>>>>>> main
 const InnovativeServicesShowcase = () => {
 
     const [activeTab, setActiveTab] = useState('microsaas');

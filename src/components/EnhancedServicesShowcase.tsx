@@ -1,5 +1,20 @@
 <<<<<<< HEAD
+import { Link } from 'react - router - dom';
+import React, { useState } from 'react';
+export const EnhancedServicesShowcase: React.FC = () => {
+export default React.memo (/**
 import {
+import { motion } from 'framer - motion';
+
+ * EnhancedServicesShowcase function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function EnhancedServicesShowcase () {
+=======
+<<<<<<< HEAD
+import {
+>>>>>>> main
 
   Brain,
   Shield,
@@ -123,13 +138,13 @@ export default function EnhancedServicesShowcase() {
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -144,6 +159,16 @@ export default function EnhancedServicesShowcase() {
           </p>
         </motion.div>
 
+<<<<<<< HEAD
+        <motion.div
+          className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport = {
+  { once: true,
+  margin: "-100px"
+=======
         <motion.div "
           className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
           variants={containerVariants}"
@@ -153,6 +178,7 @@ export default function EnhancedServicesShowcase() {
 
   { once: true,"
   margin: "-100px" 
+>>>>>>> main
 
 }}
         >
@@ -369,20 +395,20 @@ export default function EnhancedServicesShowcase() {
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               viewport={{ once: true }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
             >
@@ -402,9 +428,16 @@ export default function EnhancedServicesShowcase() {
       </div>;
     </section>;) };
             >
+<<<<<<< HEAD
+              View All Services;
+              <ArrowRight className="ml - 2 w - 5 h - 5" />;
+            </Link>
+            <a
+=======
               View All Services;"
               <ArrowRight className="ml-2 w-5 h-5"  />;            </Link>
             <a "
+>>>>>>> main
               href="tel:+13024640950"
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >

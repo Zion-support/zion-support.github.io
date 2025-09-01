@@ -1,7 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
+export function HomepagePromotion () {
+import { motion } from 'framer - motion';
+
+=======
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 export function HomepagePromotion() {
+>>>>>>> main
     const featuredServices = [
         {
 
@@ -62,7 +68,7 @@ export function HomepagePromotion() {
     const itemVariants = {
 
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -89,12 +95,12 @@ export function HomepagePromotion() {
         <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -182,12 +188,12 @@ export function HomepagePromotion() {
         <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 

@@ -1,4 +1,8 @@
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Eye,
   EyeOff,

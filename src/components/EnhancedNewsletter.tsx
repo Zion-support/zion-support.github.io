@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer - motion.ts';
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 interface NewsletterFormData {
   email: string;
@@ -55,9 +60,15 @@ interface NewsletterFormData {
       // Here you would typically send the data to your newsletter service'
       // // // // // // // // console.log('Newsletter subscription:', formData);
 
+<<<<<<< HEAD
+      console.log ('Newsletter subscription: ', formData) ;
+
+      setStatus ('success') ;
+=======
       // console.log('Newsletter subscription: ', formData);
       '
       setStatus('success');
+>>>>>>> main
 
       // Reset form after successful submission
       setTimeout(() => {
@@ -107,13 +118,13 @@ interface NewsletterFormData {
         initial = {
 
   { opacity: 0,
-  scale: 0.95 
+  scale: 0.95
 
 }}
         animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
         className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-8 text-center border border-green-200 dark:border-green-800"
@@ -138,7 +149,7 @@ interface NewsletterFormData {
           transition = {
 "
   { delay: 0.1, type: "spring",
-  bounce: 0.4 
+  bounce: 0.4
 
 
 
@@ -154,13 +165,13 @@ interface NewsletterFormData {
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ delay: 0.2 }}"
@@ -173,13 +184,13 @@ interface NewsletterFormData {
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ delay: 0.3 }}"
@@ -193,13 +204,13 @@ interface NewsletterFormData {
         initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
         animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
         transition={{ delay: 0.4 }}
@@ -391,13 +402,13 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
             initial = {
 
   { opacity: 0,
-  y: 10 
+  y: 10
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 

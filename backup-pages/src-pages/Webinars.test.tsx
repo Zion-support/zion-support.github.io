@@ -1,5 +1,4 @@
 
-
 describe ('Webinars', () => {
   it ('renders without crashing', () => {
     render (<Webinars  />) ;

@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+import { Link  } from 'react - router - dom.ts';
+import { Link } from 'react - router - dom';
+import React, { useState } from 'react';
+import React, { useState } from 'react.ts';
+export /**
+import { motion } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer - motion.ts';
+
+ * FeaturedListingsSection function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function FeaturedListingsSection () {
+=======
+>>>>>>> main
 
 const featuredListings = [
   {
@@ -59,22 +75,29 @@ const featuredListings = [
     reviews: 178};
 ];
 
+<<<<<<< HEAD
+  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
+      <div className="max - w-7xl mx - auto px - 6">
+        <motion.div
+          className="text - center mb - 16"
+=======
 export function FeaturedListingsSection() {
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -99,6 +122,15 @@ export function FeaturedListingsSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >"
               <div className="relative">
+<<<<<<< HEAD
+                <img
+                  src={listing.image}
+                  alt={listing.title}
+                  className="w - full h - 48 object - cover"
+                />
+                <div className="absolute top - 3 left - 3">
+                  <span className="px - 3 py - 1 bg - blue - 600 text - white text - xs font - semibold rounded - full">
+=======
                 <img 
                   src={listing.image} 
                   alt={listing.title}"
@@ -106,6 +138,7 @@ export function FeaturedListingsSection() {
                 />"
                 <div className="absolute top-3 left-3">"
                   <span className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+>>>>>>> main
                     {listing.category}
                   </span>
                 </div>
@@ -155,29 +188,38 @@ export function FeaturedListingsSection() {
             </motion.div>) ) }
         </div>
 
+<<<<<<< HEAD
+        <motion.div
+          className="mt - 16 text - center"
+=======
         <motion.div "
           className="mt-16 text-center"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
         >
+<<<<<<< HEAD
+          <Link
+=======
           <Link "
+>>>>>>> main
             to="/services"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
           >

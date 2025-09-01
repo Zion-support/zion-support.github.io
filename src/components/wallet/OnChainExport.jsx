@@ -1,8 +1,14 @@
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+=======
 import React, { useState } from "react";"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
 import { Button } from "@/components/ui/button";"
 import { Wallet, Info, Check, ArrowUpRight import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";"
 import { useToast } from "@/hooks/use-toast";"import { useAuth } from "@/hooks/useAuth";
+>>>>>>> main
 export function OnChainExport() {
     const [isConnected, setIsConnected] = useState(false);
     const [isExporting, setIsExporting] = useState(false);

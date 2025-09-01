@@ -16,6 +16,17 @@ export function HeroSection () {
 import { motion, useScroll, useTransform } from 'framer - motion';
 import { motion, useScroll, useTransform } from "framer - motion";
 
+<<<<<<< HEAD
+    const { t } = useTranslation () ;
+    const containerRef = useRef (null) ;
+    const { scrollYProgress } = useScroll ({
+        target: containerRef,
+        offset: ["start start", "end start"]
+    }) ;
+    const y = useTransform (scrollYProgress, [0, 1], ["0%", "50%"]) ;
+    const opacity = useTransform (scrollYProgress, [0, 0.5], [1, 0]) ;
+
+=======
 
 export function HeroSection() {
     const { t } = useTranslation();
@@ -28,6 +39,7 @@ export function HeroSection() {
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
     
+>>>>>>> main
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -41,7 +53,7 @@ export function HeroSection() {
             }
         }
     };
-    
+
     const itemVariants = {
 
         hidden: { y: 30, opacity: 0 },
@@ -56,7 +68,7 @@ export function HeroSection() {
             }
         }
     };
-    
+
     const floatingVariants = {
 
         animate: {
@@ -71,7 +83,7 @@ export function HeroSection() {
             }
         }
     };
-    
+
     const pulseVariants = {
 
         animate: {
@@ -86,7 +98,7 @@ export function HeroSection() {
             }
         }
     };
-    
+
     const particleVariants = {
 
         animate: {
@@ -117,11 +129,15 @@ export function HeroSection() {
   };
 
   const itemVariants = {
+<<<<<<< HEAD
+    hidden: {
+=======
 
     hidden: {
 
+>>>>>>> main
       y: 30,
-      opacity: 0 
+      opacity: 0
     },
     visible: {
 
@@ -199,11 +215,19 @@ export function HeroSection() {
     { value: "99.9%", label: "Uptime Guarantee" }
   ];
 
+<<<<<<< HEAD
+                {/* New stats section */}
+                <motion.div variants={itemVariants} className="mt - 16 grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
+                    <motion.div
+                        className="text - center group"
+                        whileHover={{ y: -5 }}
+=======
                 {/* New stats section */}"
                 <motion.div variants={itemVariants} className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                     <motion.div "
                         className="text-center group" 
                         whileHover={{ y: -5 }} "
+>>>>>>> main
                         transition={{ type: "spring", stiffness: 400 }}
                     >"
                         <div className="text-4xl font-bold text-zion-cyan mb-2 group-hover:text-zion-cyan-light transition-colors">
@@ -211,10 +235,17 @@ export function HeroSection() {
                         </div>"
                         <div className="text-zion-slate-light">Active Users</div>
                     </motion.div>
+<<<<<<< HEAD
+
+                    <motion.div
+                        className="text - center group"
+                        whileHover={{ y: -5 }}
+=======
                     
                     <motion.div "
                         className="text-center group" 
                         whileHover={{ y: -5 }} "
+>>>>>>> main
                         transition={{ type: "spring", stiffness: 400 }}
                     >"
                         <div className="text-4xl font-bold text-zion-purple mb-2 group-hover:text-zion-purple-light transition-colors">
@@ -222,10 +253,17 @@ export function HeroSection() {
                         </div>"
                         <div className="text-zion-slate-light">AI Services</div>
                     </motion.div>
+<<<<<<< HEAD
+
+                    <motion.div
+                        className="text - center group"
+                        whileHover={{ y: -5 }}
+=======
                     
                     <motion.div "
                         className="text-center group" 
                         whileHover={{ y: -5 }} "
+>>>>>>> main
                         transition={{ type: "spring", stiffness: 400 }}
                     >"
                         <div className="text-4xl font-bold text-zion-cyan-light mb-2 group-hover:text-zion-cyan transition-colors">

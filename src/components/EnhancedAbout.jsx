@@ -5,7 +5,6 @@ import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } 
 export const EnhancedAbout = () => {
 import { motion } from 'framer - motion';
 
-
     const compValues = [
         {
 
@@ -117,7 +116,7 @@ import { motion } from 'framer - motion';
     const itemVariants = {
 
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -133,7 +132,7 @@ import { motion } from 'framer - motion';
     const cardVariants = {
 
   hidden: { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -159,7 +158,7 @@ import { motion } from 'framer - motion';
     const timelineVariants = {
 
   hidden: { opacity: 0,
-  x: -50 
+  x: -50
 
 },
         visible: {

@@ -1,5 +1,15 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+
+ * CaseStudiesSection function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function CaseStudiesSection () {
+=======
+>>>>>>> main
 
   TrendingUp,
   Users,
@@ -15,6 +25,12 @@ import {
 const caseStudies = [
   {
 
+<<<<<<< HEAD
+  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
+      <div className="max - w-7xl mx - auto px - 6">
+        <motion.div
+          className="text - center mb - 16"
+=======
     id: 1,
     title: "AI-Powered Supply Chain Optimization","
     company: "Global Manufacturing Corp","
@@ -70,16 +86,17 @@ export function CaseStudiesSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -102,20 +119,20 @@ export function CaseStudiesSection() {
               initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               viewport={{ once: true }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
             >"
@@ -159,25 +176,30 @@ export function CaseStudiesSection() {
             </motion.div>) ) }
         </div>
 
+<<<<<<< HEAD
+        <motion.div
+          className="mt - 16 text - center"
+=======
         <motion.div "
           className="mt-16 text-center"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
         >"

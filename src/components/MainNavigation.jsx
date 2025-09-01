@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Search, User, Bell } from 'lucide-react';
 import ThemeToggle from "./ThemeToggle";
 
-
     const [isOpen, setIsOpen] = useState (false) ;
     const [isScrolled, setIsScrolled] = useState (false) ;
     const [activeDropdown, setActiveDropdown] = useState (null) ;

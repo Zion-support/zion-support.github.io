@@ -1,5 +1,4 @@
 
-
 describe ('SecurityComplianceSection', () => {
   it ('renders without crashing', () => {
     render (<SecurityComplianceSection  />) ;

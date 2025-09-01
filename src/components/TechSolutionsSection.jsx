@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+export function TechSolutionsSection () {
+import { motion, AnimatePresence } from 'framer - motion';
+
+=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Cloud, Shield, Database, Globe, Smartphone, Cpu, Lock, TrendingUp, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
+>>>>>>> main
 const solutions = [
     {
 
@@ -143,7 +149,7 @@ const industries = ['"
     const itemVariants = {
 
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -160,7 +166,7 @@ const industries = ['"
     const cardVariants = {
 
   hidden: { scale: 0.95,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -187,19 +193,28 @@ const industries = ['"
         <motion.div className="text-center mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
+<<<<<<< HEAD
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <h2 className="text - 4xl md:text - 5xl lg:text - 6xl font - bold text - white mb - 6">
+            Technology < span className="bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent">Solutions</span>
+          </h2>
+          <p className="text - zion - slate - light text - lg md:text - xl max - w-4xl mx - auto leading - relaxed mb - 8">
+            Discover our comprehensive suite of cutting - edge technology solutions designed to transform your business
+=======
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>"
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">"
             Technology <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Solutions</span>
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             Discover our comprehensive suite of cutting-edge technology solutions designed to transform your business 
+>>>>>>> main
             and drive innovation across all industries.
           </p>
 
@@ -208,20 +223,27 @@ const industries = ['"
             {industries.map((industry, index) => (<motion.div key={industry.name} initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} whileInView = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
+<<<<<<< HEAD
+  delay: index * 0.1
+
+}} className="text - center p - 3 rounded - xl bg - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 20">
+                <div className="text - zion - cyan mb - 2 flex justify - center">
+=======
   delay: index * 0.1 
 "
 }} className="text-center p-3 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">"
                 <div className="text-zion-cyan mb-2 flex justify-center">
+>>>>>>> main
                   {industry.icon}
                 </div>"
                 <div className="text-white font-semibold text-sm mb-1">{industry.name}</div>"
@@ -235,6 +257,21 @@ const industries = ['"
           {solutions.map((solution, index) => (<motion.div key={solution.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
 "
   { type: "spring",
+<<<<<<< HEAD
+  stiffness: 300
+
+}} className="relative" onHoverStart={ () => setHoveredSolution (solution.id) } onHoverEnd={ () => setHoveredSolution (null) }>
+              <div className="h - full p - 8 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - zion - cyan / 20 group cursor - pointer" onClick={ () => setSelectedSolution (selectedSolution === solution.id ? null : solution.id) }>
+                {/* Header */}
+                <div className="text - center mb - 6">
+                  <div className={`inline - flex items - center justify - center w - 20 h - 20 rounded - 2xl bg - gradient - to - br ${solution.color} mb - 6 shadow - lg group - hover:shadow - xl transition - all duration - 300 group - hover:scale - 110`}>
+                    <div className="text - white">
+                      {solution.icon}
+                    </div>
+                  </div>
+
+                  <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - zion - cyan transition - colors">
+=======
   stiffness: 300 
 "
 }} className="relative" onHoverStart={() => setHoveredSolution(solution.id)} onHoverEnd={() => setHoveredSolution(null)}>"
@@ -248,6 +285,7 @@ const industries = ['"
                   </div>
                   "
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+>>>>>>> main
                     {solution.title}
                   </h3>"
                   <p className="text-zion-slate-light leading-relaxed mb-4">
@@ -295,17 +333,17 @@ const industries = ['"
                   {selectedSolution === solution.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
 "
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} transition={{ duration: 0.3 }}>"
                       <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Benefits:</h4>"
@@ -313,12 +351,12 @@ const industries = ['"
                         {solution.benefits.map((benefit, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial = {
 
   { opacity: 0,
-  x: -10 
+  x: -10
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} transition={{ delay: idx * 0.1 }}>"
                             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
@@ -331,12 +369,12 @@ const industries = ['"
                         {solution.useCases.map((useCase, idx) => (<motion.span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} transition={{ delay: idx * 0.1 }}>
                             {useCase}
@@ -352,17 +390,17 @@ const industries = ['"
         <motion.div className="text-center" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 }}>"
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">"

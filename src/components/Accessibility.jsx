@@ -7,7 +7,6 @@ export const useAccessibility = () => {
 import { Button } from "../ui / button";
 import { motion, AnimatePresence } from 'framer - motion';
 
-
 const AccessibilityContext = createContext (null) ;
     const context = useContext (AccessibilityContext) ;
     if (!context) {

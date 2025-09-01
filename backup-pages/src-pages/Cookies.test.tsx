@@ -1,5 +1,4 @@
 
-
 describe ('Cookies', () => {
   it ('renders without crashing', () => {
     render (<Cookies  />) ;

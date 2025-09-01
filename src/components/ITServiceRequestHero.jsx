@@ -1,9 +1,16 @@
 import React from 'react';
+<<<<<<< HEAD
+export function ITServiceRequestHero () {
+import { GradientHeading } from "../ui / GradientHeading";
+import { NeonGlow } from "../ui / NeonGlow";
+
+=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide-react';
 import { GradientHeading } from "../ui/GradientHeading";"
 import { NeonGlow } from "../ui/NeonGlow";
 export function ITServiceRequestHero() {
+>>>>>>> main
     const features = [
         {
 "

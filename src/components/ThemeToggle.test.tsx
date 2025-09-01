@@ -1,5 +1,4 @@
 
-
 describe ('ThemeToggle', () => {
   it ('renders without crashing', () => {
     render (<ThemeToggle  />) ;

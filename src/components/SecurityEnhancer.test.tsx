@@ -1,5 +1,4 @@
 
-
 describe ('SecurityEnhancer', () => {
   it ('renders without crashing', () => {
     render (<SecurityEnhancer  />) ;

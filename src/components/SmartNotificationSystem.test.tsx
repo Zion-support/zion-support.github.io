@@ -1,5 +1,4 @@
 
-
 describe ('SmartNotificationSystem', () => {
   it ('renders without crashing', () => {
     render (<SmartNotificationSystem  />) ;

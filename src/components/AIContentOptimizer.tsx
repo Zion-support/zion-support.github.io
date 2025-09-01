@@ -1,4 +1,9 @@
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+
+=======
+>>>>>>> main
   Brain,
   Zap,
   Target,

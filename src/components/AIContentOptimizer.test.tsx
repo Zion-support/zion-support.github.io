@@ -1,5 +1,4 @@
 
-
 describe ('AIContentOptimizer', () => {
   it ('renders without crashing', () => {
     render (<AIContentOptimizer  />) ;

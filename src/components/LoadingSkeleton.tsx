@@ -1,5 +1,17 @@
 const Skeleton: React.FC<SkeletonProps> = ({
 
+<<<<<<< HEAD
+interface SkeletonProps extends React.PropsWithChildren<{}> {
+  className?: string;
+  height?: string;
+  width?: string;
+  rounded?: boolean;
+  animated?: boolean;
+}
+
+const Skeleton: React.FC < SkeletonProps> = ({
+=======
+>>>>>>> main
   className = '',
   height = 'h-4',
   width = 'w-full', 

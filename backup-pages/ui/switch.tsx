@@ -39,11 +39,6 @@ export function Switch({
   className
       )
 
-
-
-
-
-
 }
       id={id}
       {...props}
@@ -56,6 +51,12 @@ export function Switch({
   checked ? 'translate-x-5' : 'translate-x-0'
         );
 ;
+<<<<<<< HEAD:src/components/ui/switch.tsx
+;
+;
+
+=======
+>>>>>>> main:backup-pages/ui/switch.tsx
 };
       />;
     </button>;

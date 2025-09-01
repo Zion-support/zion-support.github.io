@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+export const safeStorage = {
+export default safeStorage;
+
+// In - memory storage for fallback with optimizations
+=======
 // In-memory storage for fallback with optimizations
+>>>>>>> main
 const inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check
 let lastAvailabilityCheck = 0;

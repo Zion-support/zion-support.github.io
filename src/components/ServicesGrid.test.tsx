@@ -1,5 +1,4 @@
 
-
 describe ('ServicesGrid', () => {
   it ('renders without crashing', () => {
     render (<ServicesGrid  />) ;

@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+=======
+>>>>>>> main
 
   Brain,
   Shield,
@@ -53,13 +57,13 @@ export function ServicesOverview(...args[]):  {
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.6 }}
@@ -85,19 +89,19 @@ export function ServicesOverview(...args[]):  {
               initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
               whileHover={{ y: -10 }}
@@ -142,13 +146,13 @@ export function ServicesOverview(...args[]):  {
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.6 }}
@@ -165,19 +169,19 @@ export function ServicesOverview(...args[]):  {
                 initial = {
 
   { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30 
+  x: index % 2 === 0 ? -30 : 30
 
 }}
                 whileInView = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                 whileHover={{ y: -5 }}

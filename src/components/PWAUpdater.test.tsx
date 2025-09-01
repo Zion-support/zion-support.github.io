@@ -1,5 +1,4 @@
 
-
 describe ('PWAUpdater', () => {
   it ('renders without crashing', () => {
     render (<PWAUpdater  />) ;

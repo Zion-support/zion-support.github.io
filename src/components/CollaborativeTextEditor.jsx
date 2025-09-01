@@ -5,8 +5,12 @@ import { useRealTimeCollaboration } from "../hooks/useRealTimeCollaboration";"
 import { useAnalytics } from "../hooks/useAnalytics";
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
 
+<<<<<<< HEAD
+    const { trackEvent } = useAnalytics ({
+=======
     const { trackEvent } = useAnalytics({
 
+>>>>>>> main
         enableTracking: true,
         enableUserBehaviorTracking: true
     });
@@ -355,12 +359,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial = {
 
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 
 
@@ -455,17 +459,17 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {
 
   { opacity: 0,
-  scale: 0 
+  scale: 0
 
 }} animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} exit = {
 
   { opacity: 0,
-  scale: 0 
+  scale: 0
 
 
 

@@ -1,5 +1,4 @@
 
-
 describe ('Accessibility', () => {
   it ('renders without crashing', () => {
     render (<Accessibility  />) ;

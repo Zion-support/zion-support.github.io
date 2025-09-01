@@ -1,5 +1,4 @@
 
-
 describe ('SEO', () => {
   it ('renders without crashing', () => {
     render (<SEO  />) ;

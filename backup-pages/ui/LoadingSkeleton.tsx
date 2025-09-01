@@ -11,16 +11,28 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 
 export const Skeleton: React.FC<SkeletonProps> = ({
 
+<<<<<<< HEAD:src/components/ui/LoadingSkeleton.tsx
+export const Skeleton: React.FC<SkeletonProps> = ({
+  className = '',
+=======
   className = '', 
+>>>>>>> main:backup-pages/ui/LoadingSkeleton.tsx
   count = 1,
   height = 'h-4',
   width = 'w-full',
   rounded = 'rounded',
+<<<<<<< HEAD:src/components/ui/LoadingSkeleton.tsx
+  animated = true
+}) => {
+  const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`;
+
+=======
   animated = true}) => {
 
   
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+>>>>>>> main:backup-pages/ui/LoadingSkeleton.tsx
   if (animated) {
 
     return()
@@ -41,9 +53,16 @@ export const Skeleton: React.FC<SkeletonProps> = ({
           />
         ))}
       </>
+<<<<<<< HEAD:src/components/ui/LoadingSkeleton.tsx
+    );
+  }
+
+  return (
+=======
     )}
   
   return()
+>>>>>>> main:backup-pages/ui/LoadingSkeleton.tsx
     <>
       {Array.from({ length: count }).map(_: unknown, index: unknown (
         <div
@@ -111,15 +130,28 @@ export function TableSkeleton(...args: any[]): any {
             <Skeleton key={index} className="h-4 flex-1"  />          ))}
         </div>
       </div>
+<<<<<<< HEAD:src/components/ui/LoadingSkeleton.tsx
+
+      {/* Rows */}
+=======
       
       {/* Rows */}"
+>>>>>>> main:backup-pages/ui/LoadingSkeleton.tsx
       <div className="divide-y divide-gray-200 dark: anydivide-gray-600">
         {Array.from({ length: rows }).map((_, rowIndex)  => ("
           <div key={rowIndex} className="px-6 py-4">"
             <div className="flex space-x-4">
+<<<<<<< HEAD:src/components/ui/LoadingSkeleton.tsx
+              {Array.from({ length: anycolumns }).map((_, colIndex)  => (
+                <Skeleton
+                  key={colIndex}
+                  className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`}
+                />;
+=======
               {Array.from({ length: anycolumns }).map(_: unknown, colIndex: unknown (
                 <Skeleton key={colIndex} '`                  className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
                   />;
+>>>>>>> main:backup-pages/ui/LoadingSkeleton.tsx
               ))};
             </div>;
           </div>;
@@ -162,9 +194,16 @@ export function GridSkeleton(...args: any[]): any {
 
   return()`
     <div className={`grid grid-cols-1 sm: anygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
+<<<<<<< HEAD:src/components/ui/LoadingSkeleton.tsx
+      {Array.from({ length: items }).map((_, index)  => (
+        <CardSkeleton
+          key={index}
+        />
+=======
       {Array.from({ length: items }).map(_: unknown, index: unknown (
         <CardSkeleton key={index} 
          />
+>>>>>>> main:backup-pages/ui/LoadingSkeleton.tsx
       ))}
     </div>
   )}

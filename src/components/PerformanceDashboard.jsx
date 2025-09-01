@@ -16,8 +16,13 @@ import Info from 'lucide-react/dist/esm/icons/info';
 import { cn } from '@/lib/utils';
 export function PerformanceDashboard({ className, showDetails = false, onClose }) {
 
+<<<<<<< HEAD
+    const { metrics, observers, performanceScore, logMetrics } = usePerformance () ;
+    const [isExpanded, setIsExpanded] = useState (showDetails) ;
+=======
     const { metrics, observers, performanceScore, logMetrics } = usePerformance();
     const [isExpanded, setIsExpanded] = useState(showDetails);
+>>>>>>> main
     const getScoreColor = (score) => {
 
         if (score >= 90)

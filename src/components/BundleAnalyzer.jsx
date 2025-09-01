@@ -1,10 +1,19 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw export const BundleAnalyzer = () => {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+
+    const [isOpen, setIsOpen] = useState (false) ;
+    const [analysis, setAnalysis] = useState (null) ;
+    const [isAnalyzing, setIsAnalyzing] = useState (false) ;
+    const [activeTab, setActiveTab] = useState ('overview') ;
+=======
     const [isOpen, setIsOpen] = useState(false);
     const [analysis, setAnalysis] = useState(null);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [activeTab, setActiveTab] = useState('overview');
+>>>>>>> main
     // Analyze bundle size from build output
     const analyzeBundle = useCallback (async () => {
         setIsAnalyzing (true) ;
@@ -157,22 +166,22 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
         {isOpen && (<motion.div initial = {
 
   { opacity: 0, y: 20,
-  scale: 0.9 
+  scale: 0.9
 
 }} animate = {
 
   { opacity: 1, y: 0,
-  scale: 1 
+  scale: 1
 
 }} exit = {
 
   { opacity: 0, y: 20,
-  scale: 0.9 
+  scale: 0.9
 
 }} transition = {
 "
   { type: "spring", damping: 25,
-  stiffness: 300 
+  stiffness: 300
 
 
 

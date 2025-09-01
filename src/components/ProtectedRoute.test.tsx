@@ -1,5 +1,4 @@
 
-
 describe ('ProtectedRoute', () => {
   it ('renders without crashing', () => {
     render (<ProtectedRoute  />) ;

@@ -1,5 +1,4 @@
 
-
 describe ('AccessibilityProvider', () => {
   it ('renders without crashing', () => {
     render (<AccessibilityProvider  />) ;

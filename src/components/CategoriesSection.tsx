@@ -1,6 +1,60 @@
 
+<<<<<<< HEAD
+ * CategoriesSection function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function CategoriesSection ({ showTitle = true }: CategoriesSectionProps) {
+
+const categories = [
+  {
+    title: "AI Services",
+    description: "Cutting - edge AI solutions, chatbots, and machine learning",
+    icon: "🤖",
+    link: "/ai - services",
+    color: "from - purple - 500 to - indigo - 600",
+  },
+  {
+    title: "Micro SAAS",
+    description: "Cloud - based software solutions for modern businesses",
+    icon: "☁️",
+    link: "/micro - saas",
+    color: "from - cyan - 500 to - blue - 600",
+  },
+  {
+    title: "IT Services",
+    description: "Infrastructure, security, and technical consulting",
+    icon: "⚡",
+    link: "/all - services",
+    color: "from - amber - 500 to - orange - 600",
+  },
+  {
+    title: "Digital Transformation",
+    description: "Business modernization and digital strategy",
+    icon: "📈",
+    link: "/all - services",
+    color: "from - emerald - 500 to - green - 600",
+  },
+];
+
+const specialServices = [
+  {
+    title: "IT Onsite Services",
+    link: "/it - onsite - services"
+  },
+  {
+    title: "Comprehensive Services",
+    link: "/comprehensive - services"
+  },
+  {
+    title: "Services Comparison",
+    link: "/services - comparison"
+  }
+];
+=======
 
 ;
+>>>>>>> main
 
 interface CategoriesSectionProps {
   // Add your props here
@@ -23,11 +77,18 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           backgroundSize: '50px 50px'
         }}></div>
       </div>
+<<<<<<< HEAD
+
+      <div className="container mx - auto px - 4 relative z - 10">
+        {showTitle && (<motion.div
+            className="text - center mb - 16"
+=======
       "
       <div className="container mx-auto px-4 relative z-10">
         {showTitle && (
           <motion.div"
             className="text-center mb-16"
+>>>>>>> main
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -40,10 +101,17 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
             </p>
           </motion.div>;) }
+<<<<<<< HEAD
+
+        <motion.div
+          className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6"
+          variants={containerVariants}
+=======
         
         <motion.div "
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           variants={containerVariants}"
+>>>>>>> main
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -66,9 +134,15 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               </Link>
             </motion.div>) ) }
         </motion.div>
+<<<<<<< HEAD
+
+        <motion.div
+          className="mt - 12"
+=======
         
         <motion.div "
           className="mt-12"
+>>>>>>> main
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -93,18 +167,31 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             to="/services"
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"
 
+<<<<<<< HEAD
+            View All Services < ArrowRight className="w - 5 h - 5 ml - 2 group - hover:translate - x-1 transition - transform" />
+
+        <motion.div
+          className="mt - 12 flex justify - center"
+=======
             View All Services"
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />        
         <motion.div "
           className="mt-12 flex justify-center"
+>>>>>>> main
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
+<<<<<<< HEAD
+          <Link
+            to="/categories"
+            className="text - cyan - 400 border - b border - cyan - 400 hover:border - cyan - 300 transition - colors flex items - center gap - 2"
+=======
           <Link "
             to="/categories"
             className="text-cyan-400 border-b border-cyan-400 hover:border-cyan-300 transition-colors flex items-center gap-2"
+>>>>>>> main
           >
             View All Categories"
             <span className="text-sm group-hover:translate-x-1 transition-transform duration-300">→</span>

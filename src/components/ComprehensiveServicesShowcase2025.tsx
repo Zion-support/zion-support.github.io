@@ -1,5 +1,10 @@
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data / innovativeMicroSaasServices2025";
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Search,
   Filter,
@@ -489,6 +494,22 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
         return 0}) ;
 
     hidden: { opacity: 0 },;
+<<<<<<< HEAD
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
+  };
+
+  const itemVariants = {
+  hidden: { y: 20,
+  opacity: 0
+
+},
+=======
+>>>>>>> main
     visible: {
       opacity: 1,;
       transition: {
@@ -537,13 +558,13 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition={{ duration: 0.8 }}
@@ -576,19 +597,19 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
             transition = {
 
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 
 
@@ -905,19 +926,19 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               initial = {
 
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 }}
               animate = {
 
   { scale: 1,
-  opacity: 1 
+  opacity: 1
 
 }}
               exit = {
 
   { scale: 0.9,
-  opacity: 0 
+  opacity: 0
 
 
 

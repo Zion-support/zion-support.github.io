@@ -87,12 +87,16 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
   {
 
             background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
+<<<<<<< HEAD:src/components/ui/FuturisticMatrixBackground.jsx
+  #16213e 100%)';
+=======
   #16213e 100%);
         
 
 
 
 
+>>>>>>> main:backup-pages/ui/FuturisticMatrixBackground.jsx
 
 
 }}/>);

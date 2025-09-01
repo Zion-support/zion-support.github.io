@@ -1,4 +1,14 @@
 import {
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+
+ * SecurityEnhancer function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function SecurityEnhancer () {
+=======
+>>>>>>> main
 
   Shield,
   Lock,

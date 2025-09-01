@@ -6,6 +6,20 @@ import { Badge } from '@/components/ui/badge';
 import { Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSign, Link as LinkIcon, ArrowRight, Star, CheckCircle import { ENHANCED_SERVICES } from '@/data/enhancedServices';
 const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0, 6);
 const serviceIcons = {
+<<<<<<< HEAD
+  'AI Automation': Brain,
+    'Cloud Management': Cloud,
+    'Cybersecurity': Shield,
+    'Data Engineering': Database,
+    'Business Intelligence': TrendingUp,
+    'Developer Tools': Code,
+    'Digital Transformation': Zap,
+    'Healthcare Technology': Heart,
+    'Financial Technology': DollarSign,
+    'Blockchain': LinkIcon,
+
+=======
+>>>>>>> main
 
   'AI Automation': Brain,Cloud Management': Cloud,Cybersecurity': Shield,Data Engineering': Database,Business Intelligence': TrendingUp,Developer Tools': Code,Digital Transformation': Zap,Healthcare Technology': Heart,Financial Technology': DollarSign,Blockchain': LinkIcon};
 export function EnhancedServicesShowcase() {

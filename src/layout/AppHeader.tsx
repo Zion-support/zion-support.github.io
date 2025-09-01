@@ -39,6 +39,255 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
 
   
   // Organized Services Categories
+<<<<<<< HEAD
+  const servicesCategories = [
+    {
+      title: 'AI & Machine Learning',
+      icon: Brain,
+      color: 'from-purple-500 to-cyan-500',
+      services: [
+        {
+          name: 'AI Business Intelligence',
+          href: '/services/ai-business-intelligence',
+          icon: Brain,
+          description: 'Machine Learning & Data Science',
+          featured: true
+        },
+        {
+          name: 'AI Workflow Orchestrator',
+          href: '/services/ai-workflow-orchestrator',
+          icon: Workflow,
+          description: 'Intelligent Process Automation',
+          featured: true
+        },
+        {
+          name: 'AI Data Governance Platform',
+          href: '/services/ai-data-governance-platform',
+          icon: Shield,
+          description: 'Data Protection & Compliance',
+          featured: true
+        },
+        {
+          name: 'AI Customer Experience Analytics',
+          href: '/services/ai-customer-experience-analytics',
+          icon: Users,
+          description: 'Customer Insights & Analytics',
+          featured: true
+        },
+        {
+          name: 'AI Healthcare Analytics',
+          href: '/services/ai-healthcare-analytics',
+          icon: Heart,
+          description: 'Medical AI & Diagnostics',
+          featured: true
+        },
+        {
+          name: 'AI Financial Trading',
+          href: '/services/ai-financial-trading',
+          icon: TrendingUp,
+          description: 'FinTech AI Solutions',
+          featured: true
+        },
+        {
+          name: 'AI Supply Chain Optimization',
+          href: '/services/ai-supply-chain-optimization',
+          icon: Workflow,
+          description: 'Supply Chain AI',
+          featured: true
+        },
+        {
+          name: 'AI Content Creation',
+          href: '/services/ai-content-creation',
+          icon: PenTool,
+          description: 'AI-Powered Content Generation',
+          featured: true
+        },
+        {
+          name: 'AI HR Platform',
+          href: '/services/ai-hr-platform',
+          icon: Users,
+          description: 'Human Resources Automation',
+          featured: true
+        },
+        {
+          name: 'AI Marketing Automation',
+          href: '/services/ai-marketing-automation',
+          icon: Target,
+          description: 'Intelligent Marketing Solutions',
+          featured: true
+        },
+        {
+          name: 'AI Quantum Hybrid Platform',
+          href: '/services/ai-quantum-hybrid-platform',
+          icon: Atom,
+          description: 'Quantum-AI Integration',
+          featured: true
+        },
+        {
+          name: 'AI Autonomous Research Assistant',
+          href: '/services/ai-autonomous-research-assistant',
+          icon: Search,
+          description: 'Research Automation',
+          featured: true
+        },
+        {
+          name: 'AI Cybersecurity Threat Intelligence',
+          href: '/services/ai-cybersecurity-threat-intelligence',
+          icon: Shield,
+          description: 'AI-Powered Security',
+          featured: true
+        }
+      ]
+    },
+    {
+      title: 'Cloud & Infrastructure',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500',
+      services: [
+        {
+          name: 'Cloud & DevOps',
+          href: '/services/cloud-devops',
+          icon: Cloud,
+          description: 'DevOps & Infrastructure',
+          featured: true
+        },
+        {
+          name: 'IT Infrastructure',
+          href: '/services/it-infrastructure',
+          icon: Building,
+          description: 'Enterprise Infrastructure',
+          featured: true
+        },
+        {
+          name: 'Digital Twin Platform',
+          href: '/services/digital-twin',
+          icon: Globe,
+          description: 'Virtual Replicas & Simulation',
+          featured: true
+        },
+        {
+          name: 'IoT Edge Computing',
+          href: '/services/iot-edge-computing',
+          icon: Wifi,
+          description: 'Smart Device Networks',
+          featured: true
+        },
+        {
+          name: 'Data Analytics',
+          href: '/services/data-analytics',
+          icon: BarChart3,
+          description: 'Business Intelligence & Insights',
+          featured: true
+        }
+      ]
+    },
+    {
+      title: 'Security & Compliance',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      services: [
+        {
+          name: 'AI Cybersecurity Suite',
+          href: '/services/ai-cybersecurity-suite',
+          icon: Shield,
+          description: 'Advanced AI Security',
+          featured: true
+        },
+        {
+          name: 'Zero Trust Network Access',
+          href: '/services/zero-trust-network-access',
+          icon: Lock,
+          description: 'Modern Security Architecture',
+          featured: true
+        },
+        {
+          name: 'Security Headers & CSP',
+          href: '/services/security-headers-csp',
+          icon: Shield,
+          description: 'Web Security Hardening',
+          featured: true
+        },
+        {
+          name: 'DSR Privacy Portal',
+          href: '/services/dsr-portal',
+          icon: Lock,
+          description: 'GDPR/CCPA Compliance',
+          featured: true
+        }
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      icon: Atom,
+      color: 'from-indigo-500 to-purple-500',
+      services: [
+        {
+          name: 'Quantum Computing',
+          href: '/services/quantum-computing',
+          icon: Atom,
+          description: 'Next-Gen Computational Power',
+          featured: true
+        },
+        {
+          name: 'AI Quantum Hybrid Platform',
+          href: '/services/ai-quantum-hybrid-platform',
+          icon: Atom,
+          description: 'Quantum-AI Integration',
+          featured: true
+        },
+        {
+          name: 'Space Technology',
+          href: '/services/space-tech',
+          icon: Rocket,
+          description: 'Space-Based Solutions',
+          featured: true
+        },
+        {
+          name: 'Sustainable Technology',
+          href: '/services/sustainable-technology',
+          icon: Leaf,
+          description: 'Green Technology Solutions',
+          featured: true
+        }
+      ]
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      icon: ShoppingCart,
+      color: 'from-orange-500 to-red-500',
+      services: [
+        {
+          name: 'Micro SaaS Products',
+          href: '/services/micro-saas',
+          icon: ShoppingCart,
+          description: 'AI automations with transparent pricing',
+          featured: true
+        },
+        {
+          name: 'Micro CRM',
+          href: '/services/micro-crm',
+          icon: Users,
+          description: 'Customer Relationship Management',
+          featured: true
+        },
+        {
+          name: 'Helpdesk Platform',
+          href: '/services/helpdesk',
+          icon: HelpCircle,
+          description: 'Customer Support System',
+          featured: true
+        },
+        {
+          name: 'Website Analytics',
+          href: '/services/website-analytics',
+          icon: BarChart3,
+          description: 'Performance Tracking & Insights',
+          featured: true
+        }
+      ]
+    }
+  ];
+=======
   
   
   
@@ -50,6 +299,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
   
   
       // Close other dropdowns'      if (nav.name === 'Services') {
+>>>>>>> main
 
         setServicesDropdownOpen(true);
         setSolutionsDropdownOpen(false);
@@ -92,10 +342,16 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
   return()
     <>`
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+<<<<<<< HEAD
+        scrolled
+          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10'
+          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
+=======
 
         scrolled '
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' '
           : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'`
+>>>>>>> main
       }`}>
         <div className="container-responsive">"
           <div className="flex h-20 items-center justify-between">
@@ -117,8 +373,13 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                 </span>
               </Link>
             </div>
+<<<<<<< HEAD
+
+            {/* Desktop Navigation */}
+=======
             
             {/* Desktop Navigation */}"
+>>>>>>> main
             <nav className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => ("
                 <div key={item.name} className="relative">

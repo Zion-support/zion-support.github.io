@@ -1,5 +1,4 @@
 
-
 describe ('ChatAssistant', () => {
   it ('renders without crashing', () => {
     render (<ChatAssistant  />) ;

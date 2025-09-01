@@ -1,5 +1,4 @@
 
-
 describe ('EnhancedPricingComparison', () => {
   it ('renders without crashing', () => {
     render (<EnhancedPricingComparison  />) ;
