@@ -866,6 +866,14 @@ const HomePage = memo(function HomePage() {
                 <p className="text-white/70 text-sm">Advanced systems</p>
               </Link>
               
+              <Link href="/automation" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🤖</span>
+                </div>
+                <h3 className="text-lg font-semibold text-green-400 mb-2">Automation</h3>
+                <p className="text-white/70 text-sm">227+ systems</p>
+              </Link>
+              
               <Link href="/resources" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-blue-400/30 transition-all duration-300 text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-xl">📚</span>
@@ -949,6 +957,36 @@ const HomePage = memo(function HomePage() {
                   <li>• <Link href="/SECURITY.md" className="text-green-300 hover:text-green-200 underline">Security Guidelines</Link></li>
                   <li>• <Link href="/SERVICE_GENERATION_README.md" className="text-green-300 hover:text-green-200 underline">Service Generation</Link></li>
                 </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Additional Platform Features */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">⚡ Additional Platform Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-xl">🔍</span>
+                </div>
+                <h3 className="text-lg font-semibold text-indigo-400 mb-2">Search & Discovery</h3>
+                <p className="text-white/70 text-sm">Advanced search capabilities with AI-powered recommendations</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-xl">📱</span>
+                </div>
+                <h3 className="text-lg font-semibold text-teal-400 mb-2">Responsive Design</h3>
+                <p className="text-white/70 text-sm">Mobile-first approach with cross-platform compatibility</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-xl">⚡</span>
+                </div>
+                <h3 className="text-lg font-semibold text-rose-400 mb-2">Performance</h3>
+                <p className="text-white/70 text-sm">Optimized for speed with advanced caching strategies</p>
               </div>
             </div>
           </section>
@@ -2304,6 +2342,124 @@ const HomePage = memo(function HomePage() {
                   <li>• Intelligent Orchestration</li>
                   <li>• Predictive Maintenance</li>
                 </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Project Documentation & Resources */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📚 Project Documentation & Resources</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">📖 Comprehensive Guides</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Ultimate Redundancy Implementation</li>
+                  <li>• Comprehensive Automation Setup</li>
+                  <li>• PM2 Process Management</li>
+                  <li>• GitHub Actions Workflows</li>
+                  <li>• Netlify Functions Integration</li>
+                </ul>
+                <div className="text-xs text-white/60 text-center">
+                  <strong>Available:</strong> 15+ detailed guides
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🔧 Technical Resources</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• API Documentation</li>
+                  <li>• Architecture Overview</li>
+                  <li>• Security Guidelines</li>
+                  <li>• Testing Procedures</li>
+                  <li>• Deployment Strategies</li>
+                </ul>
+                <div className="text-xs text-white/60 text-center">
+                  <strong>Coverage:</strong> Full-stack documentation
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">📊 Reports & Analytics</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Performance Reports</li>
+                  <li>• Health Monitoring</li>
+                  <li>• Automation Coverage</li>
+                  <li>• Security Audits</li>
+                  <li>• ROI Analysis</li>
+                </ul>
+                <div className="text-xs text-white/60 text-center">
+                  <strong>Generated:</strong> Real-time insights
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Advanced Features Showcase */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🌟 Advanced Features & Capabilities</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">🔧</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-cyan-400 mb-2">Smart Build Orchestration</h3>
+                    <p className="text-white/80">Intelligent build management with automatic dependency resolution, parallel processing, and failure recovery.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">🤖</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Autonomous Content Factory</h3>
+                    <p className="text-white/80">AI-powered content generation system producing 2960+ pages with automatic SEO optimization and quality assurance.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">🔄</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-green-400 mb-2">Multi-Layer Redundancy</h3>
+                    <p className="text-white/80">15+ redundancy systems ensuring 99.99% uptime with automatic failover and geographic distribution.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">📊</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-yellow-400 mb-2">Predictive Analytics</h3>
+                    <p className="text-white/80">AI-driven insights with predictive maintenance, performance optimization, and automated decision-making.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">🔒</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-red-400 mb-2">Enterprise Security</h3>
+                    <p className="text-white/80">Comprehensive security with automated scanning, threat detection, compliance monitoring, and zero-trust architecture.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">🌍</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-purple-400 mb-2">Global Infrastructure</h3>
+                    <p className="text-white/80">Multi-region deployment with edge computing, global CDN, and geographic redundancy for optimal performance.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
