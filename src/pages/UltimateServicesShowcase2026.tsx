@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Star, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Star, 
   Rocket, 
   Brain, 
   Cloud, 
@@ -45,9 +44,9 @@ import {
   Newspaper,
   BookOpen,
   ExternalLink
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function UltimateServicesShowcase2026() {
+export default function UltimateServicesShowcase2026(...args: any[]): any {
   const services = [
     {
       category: 'AI & Machine Learning',
@@ -196,8 +195,8 @@ export default function UltimateServicesShowcase2026() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((category, categoryIndex) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((category, categoryIndex)  => (
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, y: 20 }}

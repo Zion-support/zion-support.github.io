@@ -1,4 +1,5 @@
-// // // // // // // console.log("main.tsx: Start");
+
+
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from "./App.tsx";
@@ -18,8 +19,7 @@ import { AppLayout } from '@/layout/AppLayout';
 import { AuthProvider } from "./context/auth/AuthProvider";
 import { NotificationProvider } from "./context/notifications/NotificationContext";
 // Import analytics provider
-import { AnalyticsProvider } from "./context/AnalyticsContext";
-import { ViewModeProvider } from "./context/ViewModeContext";
+
 
 import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
@@ -34,24 +34,11 @@ const queryClient = new QueryClient({
     },
 });
 
-}}>
-                      <ViewModeProvider>
-                        <AppLayout>
-                          <App />
-                        </AppLayout>
-                      </ViewModeProvider>
-                      <LanguageDetectionPopup />
-                    </LanguageProvider>
-                  </AnalyticsProvider>
-                </NotificationProvider>
-              </AuthProvider>
-            </Router>
-          </WhitelabelProvider>
-        </QueryClientProvider>
-      </HelmetProvider>
-    </React.StrictMode>);
 
-const renderApp() {
+const rootElement = document.getElementById('root');
+
+
+const renderApp = () => {
     const app = (
         <React.StrictMode>
             <HelmetProvider>
@@ -61,16 +48,10 @@ const renderApp() {
                             <AuthProvider>
                                 <NotificationProvider>
                                     <AnalyticsProvider>
-                                        <LanguageProvider authState = {
-  { isAuthenticated: false,
-  user: null 
-
-
-
-
-
-
-}}>
+                                        <LanguageProvider authState={{
+                                            isAuthenticated: false,
+                                            user: null
+                                        }}>
                                             <ViewModeProvider>
                                                 <AppLayout>
                                                     <App />
@@ -87,21 +68,21 @@ const renderApp() {
             </HelmetProvider>
         </React.StrictMode>
     );
-    
+
+
     if (rootElement?.hasChildNodes()) {
+        hydrateRoot(rootElement, app);
     } else if (rootElement) {
         createRoot(rootElement).render(app);
+    }
+};
 
-        hydrateRoot(rootElement, app)}
-    else if (rootElement) {
-        createRoot(rootElement).render(app)}
-}
 
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
-    // // // // // // // console.error('Global error caught in main.tsx:', error);
-    displayFatalError(error.message);
+
+
             <div style="padding:20px;text-align:center;font-family:sans-serif;">
                 <h1>Application Error</h1>
                 <p>${message}</p>
@@ -117,44 +98,8 @@ try {
 }
 
 window.addEventListener('error', (e) => {
-    // // // // // // // console.error('Unhandled error:', e.error || e.message);
+
+    console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
 });
-      </div>`}
-}
-try {
-    renderApp()}
-catch (error) {
-    console.error('Global error caught in main.tsx:', error);
-    displayFatalError(error.message)}
-window.addEventListener('error', (e) => {
-    console.error('Unhandled error:', e.error || e.message);
-    displayFatalError(e.message)});
-// Render the app with proper provider structure
-ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
-    <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <WhitelabelProvider>
-          <Router>
-            <AuthProvider>
-              <NotificationProvider>
-                <AnalyticsProvider>
-                  <LanguageProvider authState = {
-  { isAuthenticated: false,
-  user: null 
 
-}}>
-                    <AppLayout>
-                      <App />
-                    </AppLayout>
-                    <LanguageDetectionPopup />
-                  </LanguageProvider>
-                </AnalyticsProvider>
-              </NotificationProvider>
-            </AuthProvider>
-          </Router>
-        </WhitelabelProvider>
-      </QueryClientProvider>
-    </HelmetProvider>
-  </React.StrictMode>);
-}}}}}}}

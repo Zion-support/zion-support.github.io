@@ -16,11 +16,23 @@ export const securityConfig = {
     'upgrade-insecure-requests': true
   },
 
-  // Rate limiting configuration
+
+  // Security Headers
+  headers: {
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'X-XSS-Protection': '1; mode=block',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+  },
+
+  // Rate Limiting
+
   rateLimit: {
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100, // limit each IP to 100 requests per windowMs
-    message: 'Too m requests from this IP, please try again later.',
+    message: 'Too many requests from this IP, please try again later.',
     standardHeaders: true,
     legacyHeaders: false,
   },
@@ -38,15 +50,18 @@ export const securityConfig = {
     decimal: /^\d+(\.\d{1,2})?$/
   },
 
-  // Security headers
-  headers: {
-    'X-Content-Type-Options': 'nosniff',
-    'X-Frame-Options': 'DENY',
-    'X-XSS-Protection': '1; mode=block',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
-  }
+  // Session Configuration
+  session: {
+    secret: process.env.SESSION_SECRET || 'your-session-secret',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      secure: process.env.NODE_ENV === 'production',
+      httpOnly: true,
+      maxAge: 24 * 60 * 60 * 1000, // 24 hours
+      sameSite: 'strict',
+    },
+  },
 };
 
 // Input sanitization functions
@@ -59,122 +74,86 @@ export const sanitizeInput = {
                 .replace(/<embed\b[^<]*(?:(?!<\/embed>)<[^<]*)*<\/embed>/gi, '');
   },
 
-  // Sanitize SQL injection attempts
+
+  // Remove SQL injection patterns
   sql: (input: string): string => {
-    const dangerousPatterns = [
-      /(\b(union|select|insert|update|delete|drop|create|alter|exec|execute)\b)/gi,
-      /(--|#|\/\*|\*\/)/g,
-      /(\b(and|or)\b\s+\d+\s*[=<>])/gi,
-      /(\b(and|or)\b\s+['"][^'"]*['"]\s*[=<>])/gi
-    ];
-    
-    return dangerousPatterns.reduce((sanitized, pattern) => 
-      sanitized.replace(pattern, ''), input);
+    return input.replace(/['";\\]/g, '');
   },
 
-  // Sanitize XSS attempts
+  // Remove XSS patterns
   xss: (input: string): string => {
     return input.replace(/javascript:/gi, '')
                 .replace(/on\w+\s*=/gi, '')
-                .replace(/<script/gi, '&lt;script')
-                .replace(/<\/script>/gi, '&lt;/script&gt;');
+                .replace(/<script/gi, '')
+                .replace(/<\/script>/gi, '');
+
   },
 
   // General sanitization
   general: (input: string): string => {
-    return input.trim()
-                .replace(/\s+/g, ' ')
-                .replace(/[<>]/g, '');
+
+    return sanitizeInput.html(sanitizeInput.sql(sanitizeInput.xss(input)));
   }
 };
 
-// Validation functions
+// Helper function to generate CSP header string
+export const generateCSPHeader = (): string => {
+  return Object.entries(securityConfig.csp)
+    .map(([key, values]) => {
+      if (Array.isArray(values)) {
+        return `${key} ${values.join(' ')}`;
+      }
+      return `${key} ${values}`;
+    })
+    .join('; ');
+};
+
+// Validate input against patterns
+
 export const validateInput = {
-  email: (email: string): boolean => {
-    return securityConfig.validation.email.test(email);
-  },
-
-  phone: (phone: string): boolean => {
-    return securityConfig.validation.phone.test(phone);
-  },
-
-  name: (name: string): boolean => {
-    return securityConfig.validation.name.test(name);
-  },
-
-  username: (username: string): boolean => {
-    return securityConfig.validation.username.test(username);
-  },
-
-  password: (password: string): boolean => {
-    return securityConfig.validation.password.test(password);
-  },
-
-  url: (url: string): boolean => {
-    return securityConfig.validation.url.test(url);
-  },
-
-  alphanumeric: (input: string): boolean => {
-    return securityConfig.validation.alphanumeric.test(input);
-  },
-
-  numeric: (input: string): boolean => {
-    return securityConfig.validation.numeric.test(input);
-  },
-
-  decimal: (input: string): boolean => {
-    return securityConfig.validation.decimal.test(input);
-  }
+  email: (email: string): boolean => securityConfig.validation.email.test(email),
+  phone: (phone: string): boolean => securityConfig.validation.phone.test(phone),
+  name: (name: string): boolean => securityConfig.validation.name.test(name),
+  username: (username: string): boolean => securityConfig.validation.username.test(username),
+  password: (password: string): boolean => securityConfig.validation.password.test(password),
+  url: (url: string): boolean => securityConfig.validation.url.test(url),
+  alphanumeric: (text: string): boolean => securityConfig.validation.alphanumeric.test(text),
+  numeric: (num: string): boolean => securityConfig.validation.numeric.test(num),
+  decimal: (num: string): boolean => securityConfig.validation.decimal.test(num)
 };
 
-// CSRF protection utilities
-export const csrfProtection = {
-  generateToken: (): string => {
-    return Math.random().toString(36).substring(2) + Date.now().toString(36);
-  },
 
-  validateToken: (token: string, storedToken: string): boolean => {
-    return token === storedToken && token.length > 0;
-  }
+// Security middleware configuration
+export const securityMiddleware = {
+  // Enable all security features
+  enableAll: () => ({
+    csp: true,
+    headers: true,
+    rateLimit: true,
+    session: true,
+    validation: true
+  }),
+
+
+  // Enable only essential security features
+  enableEssential: () => ({
+    csp: true,
+    headers: true,
+    rateLimit: false,
+    session: true,
+    validation: true
+  }),
+
+  // Enable only basic security features
+  enableBasic: () => ({
+    csp: false,
+    headers: true,
+    rateLimit: false,
+    session: false,
+    validation: true
+  })
 };
 
-// Password strength checker
-export const passwordStrength = {
-  check: (password: string): {
-    score: number;
-    feedback: string[];
-    strength: 'weak' | 'medium' | 'strong' | 'very-strong';
-  } => {
-    const feedback: string[] = [];
-    let score = 0;
 
-    // Length check
-    if (password.length >= 8) score += 1;
-    else feedback.push('Password should be at least 8 characters long');
 
-    // Character variety checks
-    if (/[a-z]/.test(password)) score += 1;
-    else feedback.push('Include lowercase letters');
-
-    if (/[A-Z]/.test(password)) score += 1;
-    else feedback.push('Include uppercase letters');
-
-    if (/\d/.test(password)) score += 1;
-    else feedback.push('Include numbers');
-
-    if (/[@$!%*?&]/.test(password)) score += 1;
-    else feedback.push('Include special characters');
-
-    // Strength classification
-    let strength: 'weak' | 'medium' | 'strong' | 'very-strong';
-    if (score <= 2) strength = 'weak';
-    else if (score <= 3) strength = 'medium';
-    else if (score <= 4) strength = 'strong';
-    else strength = 'very-strong';
-
-    return { score, feedback, strength };
-  }
-};
-
-// Export default security configuration
 export default securityConfig;

@@ -1,7 +1,6 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { 
-  MessageCircle, 
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
+import { MessageCircle, 
   Brain, 
   Zap, 
   Users, 
@@ -11,9 +10,9 @@ import {
   BarChart3,
   Headphones,
   Bot
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AICustomerSupport() {
+export default function AICustomerSupport(...args: any[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO 

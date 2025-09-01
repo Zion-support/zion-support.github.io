@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Star, Zap, Shield, Globe, Code, Users, TrendingUp, CheckCircle, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
 import { MICRO_SAAS_SERVICES, getMicroSaasServicesByCategory } from '@/data/microSaasServices';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -87,14 +87,15 @@ export default function MicroSaasServicesPage() {
 import React, {useState} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
-import {SEO} from '@/components/SEO';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Badge} from '@/components/ui/badge';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {MICRO_SAAS_SERVICES,
             SERVICE_CATEGORIES,
-            type} MicroSaasService 
+
+            type} MicroSaasService
+
 } from '@/data/microSaasServices';
 import {Star,
             Clock,
@@ -112,12 +113,13 @@ import {Star,
             Sparkles} from 'lucide-react';
 import {Link} from 'react-router-dom';
 
-  const filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
-export default function MicroSaasServicesPage() {}
+
+export default function MicroSaasServicesPage() { /* empty */ }
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
+  const filteredServices = MICRO_SAAS_SERVICES.filter(service => { /* empty */ }
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -125,7 +127,9 @@ export default function MicroSaasServicesPage() {}
     return matchesCategory && matchesSearch;
   });
 
-  const formatPrice = (price: number, currency: string, model: string) => {}
+
+  const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
+
     if (model === 'monthly') return `${currency}${price}/month`;
     if (model === 'yearly') return `${currency}${price}/year`;
     if (model === 'one-time') return `${currency}${price}`;
@@ -135,7 +139,9 @@ export default function MicroSaasServicesPage() {}
   const ServiceCard = ({service}: {service}: MicroSaasService }) => (
     <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20">
       <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      
+
+
+
       <CardHeader className="relative z-10">
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
@@ -147,7 +153,9 @@ export default function MicroSaasServicesPage() {}
             </CardDescription>
           </div>
         </div>
-        
+
+
+
         <div className="flex items-center gap-2 mb-3">
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
             {service.category}
@@ -285,7 +293,9 @@ export default function MicroSaasServicesPage() {}
               Micro SAAS Services
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your business with our innovative micro SAAS solutions. From AI-powered automation to enterprise IT services, 
+
+              Transform your business with our innovative micro SAAS solutions. From AI-powered automation to enterprise IT services,
+
               we provide cutting-edge technology that drives growth and efficiency.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -298,25 +308,8 @@ export default function MicroSaasServicesPage() {}
                 kleber@ziontechgroup.com
               </Button>
             </div>
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-20"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
-            Micro SAAS Services
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Powerful, affordable software solutions designed for modern businesses. From CRM to project management, 
-            our micro SAAS services help you grow without breaking the bank.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
-              Explore SAAS Solutions
-            </Button>
-            <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
-              Start Free Trial
-            </Button>
+
+
           </div>
         </div>
       </div>
@@ -411,93 +404,8 @@ export default function MicroSaasServicesPage() {}
               {filteredServices.map((service) => (<ServiceCard key={service.id} service={service}/>))}
             </div>
           </>)}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (<Card key={service.id} className="group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:scale-105 border-zion-blue-light/20 bg-zion-blue-dark/50 backdrop-blur-sm">
-                <CardHeader className="pb-4">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="p-3 rounded-lg bg-zion-blue-dark/50 group-hover:bg-zion-purple/20 transition-colors">
-                      {service.icon}
-                    </div>
-                    {service.badge && (<Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
-                        {service.badge}
-                      </Badge>)}
-                  </div>
-                  <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-zion-slate-light text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pb-4">
-                  <div className="mb-4">
-                    <p className="text-sm text-zion-slate-light mb-3">{service.details}</p>
-                    <div className="grid grid-cols-2 gap-2 mb-4">
-                      {service.features.slice(0, 4).map((feature, index) => (<div key={index} className="flex items-center text-xs text-zion-cyan">
-                          <CheckCircle className="w-3 h-3 mr-2"/>
-                          {feature}
-                        </div>))}
-                    </div>
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-white mb-2">Pricing Plans:</h4>
-                      <div className="space-y-1">
-                        {Object.entries(service.pricing).map(([plan, price]) => (<div key={plan} className="flex justify-between text-xs">
-                            <span className="text-zion-slate-light capitalize">{plan}:</span>
-                            <span className="text-zion-cyan font-semibold">{String(price)}</span>
-                          </div>))}
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between text-sm text-zion-slate-light mb-3">
-                      <span>Free Trial:</span>
-                      <span className="text-zion-cyan font-semibold">{service.freeTrial}</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-1 mb-3">
-                      {[...Array(5)].map((_, i) => (<Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'}`}/>))}
-                      <span className="text-sm text-zion-slate-light ml-2">({service.reviewCount})</span>
-                    </div>
-                  </div>
-                  <div className="text-center mb-4">
-                    <span className="text-3xl font-bold text-zion-cyan">
-                      {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
-                    </span>
-                    <span className="text-zion-slate-light">
-                      {service.price === 0 ? '' : '/month'}
-                    </span>
-                  </div>
-                </CardContent>
-                <CardFooter className="pt-0">
-                  <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white group-hover:shadow-lg group-hover:shadow-zion-purple/25 transition-all">
-                    <a href={service.link} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4 mr-2"/>
-                      Start Free Trial
-                    </a>
-                  </Button>
-                </CardFooter>
-              </Card>))}
-          </div>
-        </div>
-      </div>
 
-      {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-white">
-            Ready to Transform Your Business with Micro SAAS?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Start with a free trial and see how our micro SAAS solutions can streamline your operations, 
-            improve productivity, and drive growth. No long-term contracts, cancel time.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
-              Start Free Trial
-            </Button>
-            <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
-              <Phone className="h-5 w-5 mr-2"/>
-              Call +1 302 464 0950
+
       </div>
 
       {/* CTA Section */}
@@ -507,7 +415,7 @@ export default function MicroSaasServicesPage() {}
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Our team of experts is ready to help you implement the perfect solution for your business needs. 
+            Our team of experts is ready to help you implement the perfect solution for your business needs.
             Get in touch today for a personalized consultation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

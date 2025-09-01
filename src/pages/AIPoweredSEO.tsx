@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Search, 
   TrendingUp, 
   Target, 
   BarChart3, 
@@ -52,9 +51,9 @@ import {
   Network,
   Rocket,
   Shield
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIPoweredSEO() {
+export default function AIPoweredSEO(...args: any[]): any {
   const features = [
     {
       icon: Search,
@@ -183,8 +182,8 @@ export default function AIPoweredSEO() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -222,8 +221,8 @@ export default function AIPoweredSEO() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -271,8 +270,8 @@ export default function AIPoweredSEO() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-5 gap-6">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
