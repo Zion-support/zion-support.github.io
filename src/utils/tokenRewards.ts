@@ -1,47 +1,35 @@
 import { apiClient } from '@/utils/apiClient';
 
-export async function rewardOnboarding(...args: any[]): any {
-<<<<<<< HEAD
+type EarnPayload = {
+  userId: string;
+  action: 'onboarding' | 'purchase' | 'referral';
+  amount?: number;
+  purchaseType?: string;
+  referredUserId?: string;
+};
 
-  await apiClient('/functions/v1/token-manager/earn', {
-
-=======
-'  await apiClient('/functions/v1/token-manager/earn', {
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+async function earnTokens(payload: EarnPayload): Promise<any> {
+  return apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    body: JSON.stringify({ userId, action, amount })});
+    body: JSON.stringify(payload),
+  });
+}
 
-  export async function earnTokensForPurchase()
-    userId: string,
-    purchaseAmount: number,
-    purchaseType: string
-  ): Promise<any> {
+export async function rewardOnboarding(userId: string, amount = 50): Promise<any> {
+  return earnTokens({ userId, action: 'onboarding', amount });
+}
 
-    await apiClient('/functions/v1/token-manager/earn', {
+export async function earnTokensForPurchase(
+  userId: string,
+  purchaseAmount: number,
+  purchaseType: string
+): Promise<any> {
+  return earnTokens({ userId, action: 'purchase', amount: purchaseAmount, purchaseType });
+}
 
-      method: 'POST',
-      body: JSON.stringify({
-
-        userId,
-        action: 'purchase',
-        amount: purchaseAmount,
-        purchaseType})});
-
-    export async function earnTokensForReferral()
-      userId: string,
-      referredUserId: string
-    ): Promise<any> {
-
-      await apiClient('/functions/v1/token-manager/earn', {
-
-        method: 'POST',
-        body: JSON.stringify({
-
-          userId,
-          action: 'referral',
-          referredUserId,
-          amount: 100})});
-    }
-  }
+export async function earnTokensForReferral(
+  userId: string,
+  referredUserId: string
+): Promise<any> {
+  return earnTokens({ userId, action: 'referral', referredUserId, amount: 100 });
 }
