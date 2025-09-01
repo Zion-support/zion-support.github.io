@@ -112,8 +112,8 @@
     "socket.io-client": "^4.7.5",
     "zod": "^3.22.4",
     "yup": "^1.2.0",
-    "next-seo": "^6.0.0",
-    "next-sitemap": "^5.4.1"
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
   },
   "devDependencies": {
     "@storybook/test-runner": "0.18.0",
