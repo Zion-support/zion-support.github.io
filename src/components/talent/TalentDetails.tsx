@@ -18,9 +18,14 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => (
       <h1 className="text-3xl font-bold">{talent.full_name}</h1>
       {talent.professional_title && <p className="text-zion-slate-light">{talent.professional_title}</p>}
 
-      {talent.bio && <p>{talent.bio}</p>}
+          {talent.bio && <p>{talent.bio}</p>}
+        </div>
+      </div>
 
-      {talent.skills && talent.skills.length > 0 && (
+      {/* Rest of the details */}
+
+      <div className="mt-8 space-y-6"> {/* Added a wrapper div with margin-top */}
+        {talent.skills && talent.skills.length > 0 && (
         <section>
           <h2 className="text-xl font-semibold mb-2">Skills</h2>
           <ul className="flex flex-wrap gap-2">
@@ -65,6 +70,7 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => (
       )}
 
       <Button className="bg-zion-purple text-white">Hire</Button>
+      </div> {/* Closing the wrapper div */}
     </div>
   </main>
 );

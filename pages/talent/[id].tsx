@@ -55,8 +55,10 @@ interface TalentPageProps {
   talent: (TalentProfile & { social?: Record<string, string> }) | null;
 }
 
-const TalentPage: React.FC<TalentPageProps> = ({ talent }) => {
-  const router = useRouter() as NextRouter & { isFallback?: boolean };
+  useEffect(() => {
+    if (!router.isReady) {
+      return;
+    }
 
   if ('isFallback' in router && router.isFallback) {
 main
