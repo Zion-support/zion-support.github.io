@@ -38,7 +38,25 @@ const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/Comprehen
 const ComprehensiveServicesLanding2030 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2030'));
 const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030'));
 
-// Service pages - only import existing ones
+// Innovative Services Showcase 2025
+const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+
+// Innovative Services Showcase 2030
+const InnovativeServicesShowcase2030 = React.lazy(() => import('./pages/InnovativeServicesShowcase2030'));
+
+// Innovative Services Showcase 2028
+const InnovativeServicesShowcase2028 = React.lazy(() => import('./pages/InnovativeServicesShowcase2028'));
+const ComprehensivePricingGuide2028 = React.lazy(() => import('./pages/ComprehensivePricingGuide2028'));
+const ComprehensiveServicesLanding2028 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2028'));
+
+// Service category pages
+const AIServices = React.lazy(() => import('./pages/AIServices'));
+const ITServices = React.lazy(() => import('./pages/ITServices'));
+const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
+const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
+const ServicesCatalog = React.lazy(() => import('./pages/ServicesCatalog'));
+
+// Individual service pages
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
@@ -201,6 +219,7 @@ function App() {
               <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
               <Route path="/emerging-tech-showcase-2025" element={<EmergingTechShowcase2025 />} />
               <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
+              <Route path="/innovative-services-showcase-2030" element={<InnovativeServicesShowcase2030 />} />
               <Route path="/pricing-guide-2028" element={<ComprehensivePricingGuide2028 />} />
               <Route path="/comprehensive-services-landing-2028" element={<ComprehensiveServicesLanding2028 />} />
               <Route path="/ai-services" element={<AIServices />} />

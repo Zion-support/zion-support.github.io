@@ -1,430 +1,579 @@
-import { ProductListing  } from '@/types/listings';
-import { COMPREHENSIVE_SERVICES_INDEX_2030  } from "./comprehensiveServicesIndex2030";
-
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
-// Complete pricing information for all services with market analysis and ROI projections
-;
+// Complete pricing information for all innovative services
+
 export interface PricingTier {
 
 
   name: string;
   price: number;
+  billing: string;
   features: string[];
-  bestFor: string;
-  setupTime: string;
-  support: string
+  recommended: boolean;
+  popular?: boolean;
 }
 ;
 export interface ServicePricing {
-
-
-  serviceId: string;
-  serviceName: string;
+  id: string;
+  name: string;
   category: string;
-  basePrice: number;
-  pricingTiers: PricingTier[];
-  marketPrice: string;
-  competitors: string[];
+  description: string;
+  pricing: PricingTier[];
+  marketComparison: string;
   roi: string;
   setupTime: string;
-  paymentOptions: string[];
-  volumeDiscounts: string[];
-  enterpriseFeatures: string[]
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+    address: string;
+  };
 }
-;
-export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
-  // AI-Powered Autonomous Research Assistant
-  {
-    serviceId: "ai-autonomous-research-assistant",
-    serviceName: "AI Autonomous Research Assistant",
-    category: "AI & Research",
-    basePrice: 8999,
-    pricingTiers[;
-      {
-        name: "Starter",
-        price: 8999,
-        features[;
-          "Basic research automation",
-          "Data analysis tools",
-          "Report generation",
-          "Email support",
-          "5 research projects/month"
-        ],;
-        bestFor: "Small research teams",
-        setupTime: "6-8 weeks",
-        support: "Email support"
-      },
-      {
-        name: "Professional",
-        price: 15999,
-        features[;
-          "Advanced research automation",
-          "AI-powered insights",
-          "Custom report templates",
-          "Priority support",
-          "Unlimited research projects",
-          "API access"
-        ],;
-        bestFor: "Medium research organizations",
-        setupTime: "6-8 weeks",
-        support: "Priority support + phone"
-      },
-      {
-        name: "Enterprise",
-        price: 29999,
-        features[;
-          "Full research automation",
-          "Custom AI models",
-          "White-label solutions",
-          "Dedicated support",
-          "On-premise deployment",
-          "Custom integrations"
-        ],;
-        bestFor: "Large research institutions",
-        setupTime: "8-10 weeks",
-        support: "Dedicated account manager"
 
-    ],;
-    marketPrice: "$7,000-15,000",
-    competitors["OpenAI Research", "Anthropic Claude", "Google DeepMind"],;
-    roi: "800% within 12 months",
-    setupTime: "6-8 weeks",
-    paymentOptions["One-time payment", "Annual subscription", "Monthly payment"],;
-    volumeDiscounts["10% off for 3+ licenses", "20% off for 10+ licenses", "Custom pricing for enterprise"],;
-    enterpriseFeatures["Custom AI models", "On-premise deployment", "Dedicated support", "White-label solutions"];
-  },;
-
-  // AI-Powered Metaverse Development Platform
-  {
-    serviceId: "ai-metaverse-development-platform",
-    serviceName: "AI Metaverse Development Platform",
-    category: "AI & Metaverse",
-    basePrice: 12999,
-    pricingTiers[;
-      {
-        name: "Creator",
-        price: 12999,
-        features[;
-          "Basic metaverse creation tools",
-          "3D environment builder",
-          "Asset library",
-          "Basic AI integration",
-          "Community support"
-        ],;
-        bestFor: "Individual creators",
-        setupTime: "8-10 weeks",
-        support: "Community support"
-      },
-      {
-        name: "Studio",
-        price: 24999,
-        features[;
-          "Advanced metaverse tools",
-          "AI-powered content generation",
-          "Multi-user environments",
-          "Analytics dashboard",
-          "Priority support"
-        ],;
-        bestFor: "Small studios",
-        setupTime: "8-10 weeks",
-        support: "Priority support"
-      },
-      {
-        name: "Enterprise",
-        price: 49999,
-        features[;
-          "Full metaverse platform",
-          "Custom AI models",
-          "Scalable infrastructure",
-          "White-label solutions",
-          "Dedicated support"
-        ],;
-        bestFor: "Large companies",
-        setupTime: "10-12 weeks",
-        support: "Dedicated support"
-
-    ],;
-    marketPrice: "$10,000-25,000",
-    competitors["Unity", "Unreal Engine", "Roblox Studio"],;
-    roi: "1000% within 18 months",
-    setupTime: "8-10 weeks",
-    paymentOptions["One-time payment", "Annual subscription", "Revenue sharing"],;
-    volumeDiscounts["15% off for 5+ licenses", "25% off for 20+ licenses", "Custom enterprise pricing"],;
-    enterpriseFeatures["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"];
-  },;
-
-  // Zero-Trust Network Access Platform
-  {
-    serviceId: "zero-trust-network-access-platform",
-    serviceName: "Zero-Trust Network Access Platform",
-    category: "IT Infrastructure",
-    basePrice: 12999,
-    pricingTiers[;
-      {
-        name: "Basic",
-        price: 12999,
-        features[;
-          "Basic zero-trust access",
-          "Identity verification",
-          "Access control",
-          "Basic monitoring",
-          "Email support"
-        ],;
-        bestFor: "Small businesses",
-        setupTime: "6-8 weeks",
-        support: "Email support"
-      },
-      {
-        name: "Professional",
-        price: 21999,
-        features[;
-          "Advanced zero-trust",
-          "Multi-factor authentication",
-          "Advanced monitoring",
-          "Compliance reporting",
-          "Priority support"
-        ],;
-        bestFor: "Medium enterprises",
-        setupTime: "6-8 weeks",
-        support: "Priority support"
-      },
-      {
-        name: "Enterprise",
-        price: 39999,
-        features[;
-          "Full zero-trust platform",
-          "Custom integrations",
-          "Advanced analytics",
-          "White-label solutions",
-          "Dedicated support"
-        ],;
-        bestFor: "Large enterprises",
-        setupTime: "8-10 weeks",
-        support: "Dedicated support"
-
-    ],;
-    marketPrice: "$10,000-25,000",
-    competitors["Okta", "Palo Alto Networks", "Cisco"],;
-    roi: "800% within 12 months",
-    setupTime: "6-8 weeks",
-    paymentOptions["One-time payment", "Annual subscription", "Per-user pricing"],;
-    volumeDiscounts["20% off for 100+ users", "30% off for 500+ users", "Custom enterprise pricing"],;
-    enterpriseFeatures["Custom integrations", "White-label solutions", "Enterprise support", "Custom compliance"];
-  },;
-
-  // AI-Powered Medical Imaging Analysis
-  {
-    serviceId: "ai-medical-imaging-analysis",
-    serviceName: "AI Medical Imaging Analysis Platform",
-    category: "AI & Healthcare",
-    basePrice: 24999,
-    pricingTiers[;
-      {
-        name: "Clinic",
-        price: 24999,
-        features[;
-          "Basic image analysis",
-          "Common diagnostic tools",
-          "Basic reporting",
-          "Email support",
-          "Up to 1000 images/month"
-        ],;
-        bestFor: "Small clinics",
-        setupTime: "10-12 weeks",
-        support: "Email support"
-      },
-      {
-        name: "Hospital",
-        price: 44999,
-        features[;
-          "Advanced image analysis",
-          "Full diagnostic suite",
-          "Advanced reporting",
-          "Priority support",
-          "Unlimited images",
-          "API access"
-        ],;
-        bestFor: "Medium hospitals",
-        setupTime: "10-12 weeks",
-        support: "Priority support"
-      },
-      {
-        name: "Medical Center",
-        price: 79999,
-        features[;
-          "Full medical imaging platform",
-          "Custom AI models",
-          "White-label solutions",
-          "Dedicated support",
-          "Custom integrations"
-        ],;
-        bestFor: "Large medical centers",
-        setupTime: "12-16 weeks",
-        support: "Dedicated support"
-
-    ],;
-    marketPrice: "$20,000-50,000",
-    competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare"],;
-    roi: "1000% within 20 months",
-    setupTime: "10-12 weeks",
-    paymentOptions["One-time payment", "Annual subscription", "Per-image pricing"],;
-    volumeDiscounts["25% off for 5+ licenses", "40% off for 20+ licenses", "Custom enterprise pricing"],;
-    enterpriseFeatures["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"];
-  },;
-
-  // AI-Powered Risk Assessment Platform
-  {
-    serviceId: "ai-risk-assessment-platform",
-    serviceName: "AI Risk Assessment Platform",
-    category: "AI & FinTech",
-    basePrice: 18999,
-    pricingTiers[;
-      {
-        name: "Basic",
-        price: 18999,
-        features[;
-          "Basic risk assessment",
-          "Portfolio analysis",
-          "Basic reporting",
-          "Email support",
-          "Up to 100 portfolios"
-        ],;
-        bestFor: "Small investment firms",
-        setupTime: "8-10 weeks",
-        support: "Email support"
-      },
-      {
-        name: "Professional",
-        price: 32999,
-        features[;
-          "Advanced risk assessment",
-          "Real-time monitoring",
-          "Advanced analytics",
-          "Priority support",
-          "Unlimited portfolios",
-          "API access"
-        ],;
-        bestFor: "Medium investment firms",
-        setupTime: "8-10 weeks",
-        support: "Priority support"
-      },
-      {
-        name: "Enterprise",
-        price: 59999,
-        features[;
-          "Full risk management platform",
-          "Custom risk models",
-          "White-label solutions",
-          "Dedicated support",
-          "Custom integrations"
-        ],;
-        bestFor: "Large financial institutions",
-        setupTime: "10-12 weeks",
-        support: "Dedicated support"
-
-    ],;
-    marketPrice: "$15,000-40,000",
-    competitors["Bloomberg Risk", "Reuters Risk", "S&P Global"],;
-    roi: "900% within 18 months",
-    setupTime: "8-10 weeks",
-    paymentOptions["One-time payment", "Annual subscription", "Per-portfolio pricing"],;
-    volumeDiscounts["20% off for 10+ licenses", "35% off for 50+ licenses", "Custom enterprise pricing"],;
-    enterpriseFeatures["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"];
-  }
-];
-
-// Pricing Analysis and Insights;
-export const PRICING_ANALYSIS_2030 = {
-  averagePrice: Math.roundCOMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum: unknown, service: unknown sum + service.basePrice, 0) / 
-    COMPREHENSIVE_PRICING_GUIDE_2030.length
-  ),
-  priceRange: {
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
-  max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
-  ;
-;
-;
-;
-
-},;
-  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce(acc: unknown, service: unknown {;
-    if (!acc[service.category]) {;
-      acc[service.category] = [];
-    }
-    acc[service.category].push(service.basePrice);
-    return acc;
-  }, {} as Record<string, number[]>),
-  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service = > ({;
-    serviceName: service.serviceName,;
-    roi: service.roi,;
-    setupTime: service.setupTime,;
-    price: service.basePrice;
-  }));
-};
-
-// Payment and Discount Information;
-export const PAYMENT_OPTIONS_2030 = {
-  paymentMethods["Credit Card", "Bank Transfer", "Wire Transfer", "Cryptocurrency"],;
-  installmentPlans["3-month plan", "6-month plan", "12-month plan"],;
-  volumeDiscounts[;
-    "5-10 licenses: 15% discount",
-    "11-25 licenses: 25% discount",
-    "26-50 licenses: 35% discount",
-    "51+ licenses: Custom pricing"
-  ],;
-  enterpriseFeatures[;
-    "Custom development",
-    "White-label solutions",
-    "Dedicated support",
-    "On-premise deployment",
-    "Custom integrations",;
-  ;
-  ;
-  ;
-  "SLA guarantees";
-  ];
-;
-
-
-
-
-
-
-};
-
-// Contact Information for Pricing Inquiries;
-export const PRICING_CONTACT_2030 = {
+// Zion Tech Group Contact Information
+const zionContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709",
-  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
-  ;
-  ;
-  ;
-  ;
-  responseTime: "Within 24 hours for pricing inquiries";
-;
-
-
-
-
-
-
+  address: "364 E Main St STE 1008 Middletown DE 19709"
 };
 
+export const comprehensivePricingGuide2030: ServicePricing[] = [
+  // Micro SaaS Services
+  {
+    id: "supply-chain-risk-intelligence",
+    name: "AI-Powered Supply Chain Risk Intelligence Platform",
+    category: "Micro SaaS",
+    description: "Real-time supply chain risk monitoring and predictive analytics platform that identifies potential disruptions before they occur.",
+    pricing: [
+      {
+        name: "Starter",
+        price: 599,
+        billing: "month",
+        features: [
+          "Up to 100 suppliers",
+          "Basic risk monitoring",
+          "Monthly reports",
+          "Email alerts",
+          "Standard support"
+        ],
+        recommended: false
+      },
+      {
+        name: "Professional",
+        price: 899,
+        billing: "month",
+        features: [
+          "Up to 500 suppliers",
+          "Advanced risk monitoring",
+          "Real-time alerts",
+          "Predictive analytics",
+          "API access",
+          "Priority support"
+        ],
+        recommended: true,
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 1499,
+        billing: "month",
+        features: [
+          "Unlimited suppliers",
+          "Full risk intelligence",
+          "Custom integrations",
+          "Dedicated account manager",
+          "24/7 support",
+          "Custom reporting"
+        ],
+        recommended: false
+      }
+    ],
+    marketComparison: "$750 - $1,200/month per organization",
+    roi: "300% within 8 months",
+    setupTime: "2-3 weeks",
+    contactInfo: zionContact
+  },
+  {
+    id: "quantum-financial-trading",
+    name: "Quantum-Enhanced Financial Trading Analytics Platform",
+    category: "Micro SaaS",
+    description: "Next-generation financial trading platform leveraging quantum computing principles for ultra-fast market analysis.",
+    pricing: [
+      {
+        name: "Professional",
+        price: 1499,
+        billing: "month",
+        features: [
+          "Up to 10 active traders",
+          "Quantum-inspired algorithms",
+          "Real-time market analysis",
+          "Basic risk assessment",
+          "Standard support"
+        ],
+        recommended: false
+      },
+      {
+        name: "Premium",
+        price: 2499,
+        billing: "month",
+        features: [
+          "Up to 50 active traders",
+          "Advanced quantum algorithms",
+          "Portfolio optimization",
+          "Automated trading signals",
+          "Priority support",
+          "Custom indicators"
+        ],
+        recommended: true,
+        popular: true
+      },
+      {
+        name: "Institutional",
+        price: 4999,
+        billing: "month",
+        features: [
+          "Up to 100 active traders",
+          "Full quantum platform",
+          "Custom algorithm development",
+          "Dedicated support team",
+          "White-label options",
+          "Advanced analytics"
+        ],
+        recommended: false
+      }
+    ],
+    marketComparison: "$1,200 - $2,000/month per trader",
+    roi: "500% within 12 months",
+    setupTime: "3-4 weeks",
+    contactInfo: zionContact
+  },
+  {
+    id: "ai-healthcare-analytics",
+    name: "AI-Powered Healthcare Predictive Analytics Platform",
+    category: "Healthcare Technology",
+    description: "Advanced healthcare analytics platform that predicts patient outcomes and optimizes treatment plans.",
+    pricing: [
+      {
+        name: "Basic",
+        price: 399,
+        billing: "month",
+        features: [
+          "Up to 50 healthcare professionals",
+          "Basic patient analytics",
+          "Standard reporting",
+          "Email support"
+        ],
+        recommended: false
+      },
+      {
+        name: "Professional",
+        price: 599,
+        billing: "month",
+        features: [
+          "Up to 200 healthcare professionals",
+          "Advanced predictive analytics",
+          "Treatment optimization",
+          "Clinical decision support",
+          "Priority support",
+          "API integrations"
+        ],
+        recommended: true,
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 999,
+        billing: "month",
+        features: [
+          "Unlimited users",
+          "Full AI platform",
+          "Custom integrations",
+          "Dedicated support",
+          "Compliance reporting",
+          "Research collaboration"
+        ],
+        recommended: false
+      }
+    ],
+    marketComparison: "$500 - $800/month per provider",
+    roi: "350% within 10 months",
+    setupTime: "4-6 weeks",
+    contactInfo: zionContact
+  },
+  {
+    id: "autonomous-cybersecurity",
+    name: "Autonomous Cybersecurity Threat Intelligence Platform",
+    category: "Cybersecurity",
+    description: "Self-learning cybersecurity platform that autonomously detects, analyzes, and responds to cyber threats.",
+    pricing: [
+      {
+        name: "Professional",
+        price: 999,
+        billing: "month",
+        features: [
+          "Up to 100 endpoints",
+          "Basic threat detection",
+          "Automated response",
+          "Standard reporting",
+          "Email support"
+        ],
+        recommended: false
+      },
+      {
+        name: "Enterprise",
+        price: 1299,
+        billing: "month",
+        features: [
+          "Up to 1000 endpoints",
+          "Advanced threat intelligence",
+          "Full automation",
+          "Behavioral analysis",
+          "Priority support",
+          "Custom integrations"
+        ],
+        recommended: true,
+        popular: true
+      },
+      {
+        name: "Government",
+        price: 2499,
+        billing: "month",
+        features: [
+          "Unlimited endpoints",
+          "Full platform access",
+          "Custom deployments",
+          "Dedicated SOC team",
+          "Compliance packages",
+          "White-label options"
+        ],
+        recommended: false
+      }
+    ],
+    marketComparison: "$1,000 - $1,500/month per organization",
+    roi: "400% within 6 months",
+    setupTime: "2-3 weeks",
+    contactInfo: zionContact
+  },
+  {
+    id: "sustainable-energy-management",
+    name: "Sustainable Energy Management & Optimization Platform",
+    category: "Green Technology",
+    description: "Comprehensive energy management platform that optimizes energy consumption and integrates renewable sources.",
+    pricing: [
+      {
+        name: "Basic",
+        price: 299,
+        billing: "month",
+        features: [
+          "Up to 10 facilities",
+          "Basic energy monitoring",
+          "Monthly reports",
+          "Email support"
+        ],
+        recommended: false
+      },
+      {
+        name: "Professional",
+        price: 399,
+        billing: "month",
+        features: [
+          "Up to 50 facilities",
+          "Advanced monitoring",
+          "Predictive maintenance",
+          "Renewable integration",
+          "Priority support",
+          "Mobile app access"
+        ],
+        recommended: true,
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 699,
+        billing: "month",
+        features: [
+          "Unlimited facilities",
+          "Full platform access",
+          "Custom integrations",
+          "Dedicated support",
+          "Advanced analytics",
+          "White-label options"
+        ],
+        recommended: false
+      }
+    ],
+    marketComparison: "$300 - $500/month per facility",
+    roi: "250% within 12 months",
+    setupTime: "3-4 weeks",
+    contactInfo: zionContact
+  },
+  // IT Services
+  {
+    id: "quantum-cloud-infrastructure",
+    name: "Quantum-Enhanced Cloud Infrastructure & DevOps Platform",
+    category: "IT Services",
+    description: "Next-generation cloud infrastructure platform leveraging quantum computing principles for ultra-fast deployment.",
+    pricing: [
+      {
+        name: "Professional",
+        price: 1999,
+        billing: "month",
+        features: [
+          "Up to 100 servers",
+          "Basic quantum optimization",
+          "Standard DevOps tools",
+          "Email support"
+        ],
+        recommended: false
+      },
+      {
+        name: "Enterprise",
+        price: 2500,
+        billing: "month",
+        features: [
+          "Up to 500 servers",
+          "Advanced quantum algorithms",
+          "Full DevOps automation",
+          "Multi-cloud orchestration",
+          "Priority support",
+          "Custom integrations"
+        ],
+        recommended: true,
+        popular: true
+      },
+      {
+        name: "Government",
+        price: 4999,
+        billing: "month",
+        features: [
+          "Unlimited infrastructure",
+          "Full quantum platform",
+          "Custom deployments",
+          "Dedicated team",
+          "Compliance packages",
+          "White-label options"
+        ],
+        recommended: false
+      }
+    ],
+    marketComparison: "$2,000 - $3,500/month per organization",
+    roi: "400% within 12 months",
+    setupTime: "6-8 weeks",
+    contactInfo: zionContact
+  },
+  {
+    id: "ai-digital-twin",
+    name: "AI-Powered Digital Twin & IoT Integration Platform",
+    category: "IT Services",
+    description: "Comprehensive digital twin platform creating real-time virtual replicas of physical assets.",
+    pricing: [
+      {
+        name: "Basic",
+        price: 599,
+        billing: "month",
+        features: [
+          "Up to 25 assets",
+          "Basic monitoring",
+          "Standard dashboard",
+          "Email support"
+        ],
+        recommended: false
+      },
+      {
+        name: "Professional",
+        price: 899,
+        billing: "month",
+        features: [
+          "Up to 100 assets",
+          "Advanced analytics",
+          "3D visualization",
+          "Predictive maintenance",
+          "Priority support",
+          "API access"
+        ],
+        recommended: true,
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 1499,
+        billing: "month",
+        features: [
+          "Unlimited assets",
+          "Full platform access",
+          "Custom integrations",
+          "Dedicated support",
+          "Advanced AI features",
+          "White-label options"
+        ],
+        recommended: false
+      }
+    ],
+    marketComparison: "$700 - $1,200/month per facility",
+    roi: "300% within 10 months",
+    setupTime: "8-12 weeks",
+    contactInfo: zionContact
+  },
+  // AI Solutions
+  {
+    id: "autonomous-ai-bi",
+    name: "Autonomous AI Business Intelligence & Decision Engine",
+    category: "AI Solutions",
+    description: "Self-learning AI platform that autonomously analyzes business data and makes strategic decisions.",
+    pricing: [
+      {
+        name: "Professional",
+        price: 2499,
+        billing: "month",
+        features: [
+          "Up to 50 users",
+          "Basic AI analytics",
+          "Standard reporting",
+          "Email support"
+        ],
+        recommended: false
+      },
+      {
+        name: "Enterprise",
+        price: 3200,
+        billing: "month",
+        features: [
+          "Up to 200 users",
+          "Advanced AI platform",
+          "Autonomous decision making",
+          "Predictive modeling",
+          "Priority support",
+          "Custom integrations"
+        ],
+        recommended: true,
+        popular: true
+      },
+      {
+        name: "Government",
+        price: 5999,
+        billing: "month",
+        features: [
+          "Unlimited users",
+          "Full AI platform",
+          "Custom deployments",
+          "Dedicated team",
+          "Compliance packages",
+          "White-label options"
+        ],
+        recommended: false
+      }
+    ],
+    marketComparison: "$2,500 - $4,000/month per organization",
+    roi: "450% within 10 months",
+    setupTime: "8-12 weeks",
+    contactInfo: zionContact
+  },
+  {
+    id: "quantum-ml-platform",
+    name: "Quantum-Enhanced Machine Learning & Neural Network Platform",
+    category: "AI Solutions",
+    description: "Breakthrough machine learning platform leveraging quantum computing principles for unprecedented AI capabilities.",
+    pricing: [
+      {
+        name: "Research",
+        price: 3499,
+        billing: "month",
+        features: [
+          "Up to 10 researchers",
+          "Basic quantum ML",
+          "Standard models",
+          "Email support"
+        ],
+        recommended: false
+      },
+      {
+        name: "Premium",
+        price: 4500,
+        billing: "month",
+        features: [
+          "Up to 50 researchers",
+          "Advanced quantum platform",
+          "Full ML capabilities",
+          "Custom model development",
+          "Priority support",
+          "API access"
+        ],
+        recommended: true,
+        popular: true
+      },
+      {
+        name: "Institutional",
+        price: 8999,
+        billing: "month",
+        features: [
+          "Unlimited researchers",
+          "Full quantum platform",
+          "Custom deployments",
+          "Dedicated team",
+          "Advanced research tools",
+          "White-label options"
+        ],
+        recommended: false
+      }
+    ],
+    marketComparison: "$3,500 - $6,000/month per organization",
+    roi: "600% within 15 months",
+    setupTime: "12-16 weeks",
+    contactInfo: zionContact
+  },
+  {
+    id: "ai-customer-experience",
+    name: "AI-Powered Autonomous Customer Experience Platform",
+    category: "AI Solutions",
+    description: "Intelligent customer experience platform that autonomously manages customer interactions and predicts needs.",
+    pricing: [
+      {
+        name: "Basic",
+        price: 599,
+        billing: "month",
+        features: [
+          "Up to 10,000 interactions/month",
+          "Basic chatbot",
+          "Standard analytics",
+          "Email support"
+        ],
+        recommended: false
+      },
+      {
+        name: "Professional",
+        price: 899,
+        billing: "month",
+        features: [
+          "Up to 100,000 interactions/month",
+          "Advanced AI platform",
+          "Full automation",
+          "Predictive analytics",
+          "Priority support",
+          "Custom integrations"
+        ],
+        recommended: true,
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 1499,
+        billing: "month",
+        features: [
+          "Unlimited interactions",
+          "Full platform access",
+          "Custom deployments",
+          "Dedicated support",
+          "Advanced features",
+          "White-label options"
+        ],
+        recommended: false
+      }
+    ],
+    marketComparison: "$700 - $1,200/month per organization",
+    roi: "320% within 8 months",
+    setupTime: "6-8 weeks",
+    contactInfo: zionContact
+  }
+];
 
-
-
-
-}
-
-
-
-}
-
-
-}
-
-}
-}
+export default comprehensivePricingGuide2030;
