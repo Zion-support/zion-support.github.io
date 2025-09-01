@@ -1,315 +1,235 @@
 import React from 'react';
-export default React.memo (function Compliance () {
-import {
-import { motion } from 'framer - motion';
-
-
-  Shield,
-  CheckCircle,
-  Award,
-  FileText,
-  Users,
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  Shield, 
+  CheckCircle, 
+  AlertTriangle, 
+  FileText, 
+  Lock, 
+  Users, 
+  Database, 
   Globe,
-  Lock,
-  Eye,
-  Database,
-  Clock,
-  AlertTriangle,
-  Info,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
   Zap,
   Brain,
   Cloud,
   Rocket,
-  Heart,
-  Cpu,
-  Network,
-  Server,
-  Key,
-  Fingerprint,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop,
-  ShieldCheck,
-  Gauge,
+  Award,
   TrendingUp,
-  BarChart3,
-} from 'lucide - react';
+  Eye,
+  Key,
+  Server,
+  Network,
+  CreditCard,
+  Cookie,
+  ChevronRight
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
 
   const complianceFrameworks = [
     {
-      name: 'ISO 27001',
-      description: 'Information Security Management System',
+      name: 'SOC 2 Type II',
+      icon: Shield,
+      color: 'from-green-600 to-emerald-600',
+      description: 'Service Organization Control 2 compliance for data security',
       status: 'Certified',
-      icon: FileText,
-      color: 'from - green - 500 to - emerald - 600',
-      details: 'International standard for information security management',
-      scope: 'Information security management system',
-      lastAudit: 'December 2024',
-      nextAudit: 'December 2025',
-      benefits: [
-        'Systematic approach to information security',
-        'Risk assessment and management',
-        'Continuous improvement process',
-        'International recognition',
-      ],
+      features: ['Data Security', 'Availability', 'Processing Integrity', 'Confidentiality', 'Privacy']
     },
     {
-      name: 'SOC 2 Type II',
-      description: 'Service Organization Control 2',
-      status: 'Compliant',
-      icon: Award,
-      color: 'from - blue - 500 to - cyan - 600',
-      details: 'AICPA trust services criteria compliance',
-      scope:
-        'Security, availability, processing integrity, confidentiality, privacy',
-      lastAudit: 'November 2024',
-      nextAudit: 'November 2025',
-      benefits: [
-        'Independent third - party validation',
-        'Trust services criteria compliance',
-        'Customer confidence and trust',
-        'Operational effectiveness',
-      ],
+      name: 'ISO 27001',
+      icon: Lock,
+      color: 'from-blue-600 to-cyan-600',
+      description: 'Information Security Management System certification',
+      status: 'Certified',
+      features: ['Risk Management', 'Security Controls', 'Continuous Improvement', 'Documentation']
     },
     {
       name: 'GDPR',
-      description: 'General Data Protection Regulation',
+      icon: Users,
+      color: 'from-purple-600 to-pink-600',
+      description: 'General Data Protection Regulation compliance',
       status: 'Compliant',
-      icon: Shield,
-      color: 'from - purple - 500 to - indigo - 600',
-      details: 'EU data protection and privacy regulation',
-      scope: 'Personal data processing and protection',
-      lastAudit: 'October 2024',
-      nextAudit: 'October 2025',
-      benefits: [
-        'Enhanced data protection',
-        'Individual privacy rights',
-        'Transparent data processing',
-        'Cross - border data transfer compliance',
-      ],
+      features: ['Data Privacy', 'User Rights', 'Data Processing', 'Breach Notification']
     },
     {
       name: 'HIPAA',
+      icon: Database,
+      color: 'from-red-600 to-pink-600',
       description: 'Health Insurance Portability and Accountability Act',
       status: 'Compliant',
-      icon: Heart,
-      color: 'from - red - 500 to - pink - 600',
-      details: 'Healthcare data protection and privacy',
-      scope: 'Protected health information (PHI) ',
-      lastAudit: 'September 2024',
-      nextAudit: 'September 2025',
-      benefits: [
-        'Healthcare data security',
-        'Patient privacy protection',
-        'Administrative safeguards',
-        'Technical safeguards',
-      ],
+      features: ['PHI Protection', 'Security Standards', 'Privacy Rules', 'Breach Protocol']
     },
+    {
+      name: 'PCI DSS',
+      icon: CreditCard,
+      color: 'from-orange-600 to-red-600',
+      description: 'Payment Card Industry Data Security Standard',
+      status: 'Compliant',
+      features: ['Card Data Security', 'Network Security', 'Access Control', 'Monitoring']
+    },
+    {
+      name: 'FedRAMP',
+      icon: Globe,
+      color: 'from-indigo-600 to-purple-600',
+      description: 'Federal Risk and Authorization Management Program',
+      status: 'In Progress',
+      features: ['Cloud Security', 'Government Standards', 'Risk Assessment', 'Continuous Monitoring']
+    }
   ];
 
-  const complianceMetrics = [
+  const securityFeatures = [
     {
-      metric: '99.9%',
-      label: 'Uptime',
-      description: 'System availability',
-      icon: Server,
-      trend: 'up',
-    },
-    {
-      metric: '100%',
-      label: 'Data Encryption',
-      description: 'At rest and in transit',
-      icon: Lock,
-      trend: 'stable',
-    },
-    {
-      metric: '< 1 hour',
-      label: 'Incident Response',
-      description: 'Average response time',
-      icon: AlertTriangle,
-      trend: 'down',
-    },
-    {
-      metric: '24 / 7',
-      label: 'Monitoring',
-      description: 'Security operations center',
-      icon: Monitor,
-      trend: 'stable',
-    },
-  ];
-
-  const securityMeasures = [
-    {
-      category: 'Access Control',
-      measures: [
-        'Multi - factor authentication (MFA) ',
-        'Role - based access control (RBAC) ',
-        'Single sign - on (SSO) integration',
-        'Privileged access management (PAM) ',
-        'Session management and timeout',
-      ],
-      icon: Key,
-    },
-    {
-      category: 'Data Protection',
-      measures: [
-        'End - to - end encryption (AES - 256) ',
-        'Data loss prevention (DLP) ',
-        'Backup and disaster recovery',
-        'Data classification and labeling',
-        'Secure data disposal',
-      ],
-      icon: Database,
-    },
-    {
-      category: 'Network Security',
-      measures: [
-        'Firewall and intrusion detection',
-        'Virtual private networks (VPN) ',
-        'DDoS protection and mitigation',
-        'Network segmentation',
-        'Regular security assessments',
-      ],
-      icon: Network,
-    },
-    {
-      category: 'Application Security',
-      measures: [
-        'Secure software development lifecycle',
-        'Regular vulnerability assessments',
-        'Penetration testing',
-        'Code security reviews',
-        'API security and monitoring',
-      ],
+      title: 'Zero Trust Architecture',
       icon: Shield,
-    },
-  ];
-
-  const contactInfo = [
-    {
-      title: 'Compliance Team',
-      email: 'compliance@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      responseTime: '24 - 48 hours',
+      description: 'Never trust, always verify security model',
+      features: ['Identity Verification', 'Device Trust', 'Network Segmentation', 'Continuous Monitoring']
     },
     {
-      title: 'Security Team',
-      email: 'security@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      responseTime: '2 - 4 hours',
+      title: 'AI-Powered Security',
+      icon: Brain,
+      description: 'Machine learning for threat detection and response',
+      features: ['Behavioral Analysis', 'Threat Intelligence', 'Automated Response', 'Risk Scoring']
     },
+    {
+      title: 'Data Encryption',
+      icon: Lock,
+      description: 'End-to-end encryption for data protection',
+      features: ['At Rest Encryption', 'In Transit Encryption', 'Key Management', 'Hardware Security']
+    },
+    {
+      title: 'Access Control',
+      icon: Key,
+      description: 'Multi-factor authentication and role-based access',
+      features: ['MFA', 'RBAC', 'SSO Integration', 'Privileged Access Management']
+    }
   ];
 
-  return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
+  const complianceTools = [
+    {
+      name: 'AI Compliance Copilot',
+      href: '/services/ai-compliance-copilot',
+      icon: Brain,
+      description: 'Automated compliance monitoring and reporting',
+      features: ['Real-time Monitoring', 'Automated Reports', 'Risk Assessment', 'Compliance Dashboards']
+    },
+    {
+      name: 'SOC 2 Compliance Tracker',
+      href: '/services/soc2-compliance-tracker',
+      icon: CheckCircle,
+      description: 'SOC 2 compliance management and tracking',
+      features: ['Control Monitoring', 'Evidence Collection', 'Audit Preparation', 'Compliance Scoring']
+    },
+    {
+      name: 'GDPR Cookie Compliance',
+      href: '/services/gdpr-cookie-compliance',
+      icon: Cookie,
+      description: 'Cookie consent and privacy management',
+      features: ['Consent Management', 'Cookie Tracking', 'Privacy Notices', 'Data Subject Rights']
+    },
+    {
+      name: 'Vendor Risk Management',
+      href: '/services/vendor-risk-management',
+      icon: Users,
+      description: 'Third-party vendor security assessment',
+      features: ['Risk Scoring', 'Compliance Monitoring', 'Contract Management', 'Performance Tracking']
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
+      <SEO 
+        title="Compliance - Zion Tech Group"
+        description="Learn about Zion Tech Group's compliance certifications, frameworks, and commitment to meeting industry standards and regulatory requirements."
+      />
+      
       {/* Hero Section */}
-      <section className="relative overflow - hidden py - 20 lg:py - 32">
-        <div className="absolute inset - 0 bg - gradient - to - r from - blue - 500 / 10 via - purple - 500 / 10 to - green - 500 / 10"></div>
-        <div className="container mx - auto px - 4 relative z - 10">
-          <div className="text - center max - w-4xl mx - auto">
-            <div className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - blue - 500 / 20 to - green - 500 / 20 rounded - full border border - blue - 400 / 30 mb - 6">
-              <Shield className="w - 5 h - 5 text - blue - 400 mr - 2" />
-              <span className="text - blue - 300 font - medium">
-                Compliance & Security
-              </span>
+      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center">
+                <Shield className="w-10 h-10 text-white" />
+              </div>
             </div>
-
-            <h1 className="text - 5xl lg:text - 7xl font - bold text - white mb - 6">
-              <span className="bg - gradient - to - r from - blue - 400 via - purple - 500 to - green - 600 bg - clip - text text - transparent">
-                Compliance
-              </span>
-              <br />
-              <span className="text - white">Framework</span>
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+              Compliance & Security
             </h1>
-
-            <p className="text - xl lg:text - 2xl text - gray - 300 mb - 8 max - w-3xl mx - auto">
-              We maintain the highest standards of compliance and security
-              across all our services, ensuring your data and operations are
-              protected by industry - leading frameworks and best practices.
+            <p className="text-xl text-slate-300 mb-8">
+              Enterprise-grade security and regulatory compliance for your business
             </p>
-          </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 transform hover:scale-105"
+              >
+                Get Compliance Report
+              </Link>
+              <Link
+                to="/services/ai-compliance-copilot"
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-slate-900 transition-colors"
+              >
+                Learn About AI Compliance
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Compliance Frameworks */}
-      <section className="py - 20">
-        <div className="container mx - auto px - 4">
-          <div className="text - center mb - 16">
-            <h2 className="text - 4xl lg:text - 5xl font - bold text - white mb - 6">
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
               Compliance Frameworks
             </h2>
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
-              Our platform adheres to internationally recognized compliance
-              standards to ensure the highest level of security and data
-              protection.
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              We maintain compliance with major industry standards and regulations
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">
-            {complianceFrameworks.map ( (framework, index) => (<motion.div
-                key={index}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {complianceFrameworks.map((framework, index) => (
+              <motion.div
+                key={framework.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 8 hover:border - blue - 400 / 30 transition - all duration - 300"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200"
               >
-                <div className="flex items - center mb - 6">
-                  <div
-                    className={`w - 16 h - 16 bg - gradient - to - r ${framework.color} rounded - lg flex items - center justify - center mr - 4`}
-                  >
-                    <framework.icon className="w - 8 h - 8 text - white" />
-                  </div>
-                  <div className="flex - 1">
-                    <div className="flex items - center justify - between">
-                      <h3 className="text - 2xl font - semibold text - white">
-                        {framework.name}
-                      </h3>
-                      <span className="px - 3 py - 1 bg - green - 500 / 20 text - green - 400 rounded - full text - sm font - medium">
-                        {framework.status}
-                      </span>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${framework.color} flex items-center justify-center`}>
+                      <framework.icon className="w-6 h-6 text-white" />
                     </div>
-                    <p className="text - gray - 400 mt - 1">
-                      {framework.description}
-                    </p>
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                      framework.status === 'Certified' ? 'bg-green-100 text-green-800' :
+                      framework.status === 'Compliant' ? 'bg-blue-100 text-blue-800' :
+                      'bg-yellow-100 text-yellow-800'
+                    }`}>
+                      {framework.status}
+                    </span>
                   </div>
-                </div>
-
-                <div className="space - y-4">
-                  <div>
-                    <h4 className="text - lg font - semibold text - white mb - 2">
-                      Details
-                    </h4>
-                    <p className="text - gray - 300 text - sm">{framework.details}</p>
-                  </div>
-
-                  <div>
-                    <h4 className="text - lg font - semibold text - white mb - 2">
-                      Scope
-                    </h4>
-                    <p className="text - gray - 300 text - sm">{framework.scope}</p>
-                  </div>
-
-                  <div className="grid grid - cols - 2 gap - 4">
-                    <div>
-                      <h4 className="text - sm font - semibold text - gray - 400 mb - 1">
-                        Last Audit
-                      </h4>
-                      <p className="text - white text - sm">
-                        {framework.lastAudit}
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="text - sm font - semibold text - gray - 400 mb - 1">
-                        Next Audit
-                      </h4>
-                      <p className="text - white text - sm">
-                        {framework.nextAudit}
-                      </p>
-                    </div>
+                  
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{framework.name}</h3>
+                  <p className="text-slate-600 mb-4">{framework.description}</p>
+                  
+                  <div className="space-y-2">
+                    {framework.features.map((feature) => (
+                      <div key={feature} className="flex items-center text-sm text-slate-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {feature}
+                      </div>
+                    ))}
                   </div>
 
                   <div>
@@ -331,32 +251,49 @@ import { motion } from 'framer - motion';
         </div>
       </section>
 
-      {/* Compliance Metrics */}
-      <section className="py - 20 bg - slate - 800 / 30">
-        <div className="container mx - auto px - 4">
-          <div className="text - center mb - 16">
-            <h2 className="text - 4xl lg:text - 5xl font - bold text - white mb - 6">
-              Compliance Metrics
+      {/* Security Features */}
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Security Features
             </h2>
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
-              Real - time metrics and performance indicators that demonstrate our
-              commitment to maintaining the highest compliance standards.
+            <p className="text-xl text-slate-600">
+              Advanced security measures to protect your data and systems
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
-            {complianceMetrics.map ( (metric, index) => (<motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {securityFeatures.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 6 hover:border - blue - 400 / 30 transition - all duration - 300"
+                className="bg-white rounded-2xl shadow-lg p-8 border border-slate-200"
               >
-                <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 / 20 to - green - 500 / 20 rounded - lg flex items - center justify - center mb - 4">
-                  <metric.icon className="w - 6 h - 6 text - blue - 400" />
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-slate-900">{feature.title}</h3>
+                    <p className="text-slate-600">{feature.description}</p>
+                  </div>
                 </div>
-                <div className="text - 3xl font - bold text - white mb - 2">
-                  {metric.metric}
+                
+                <div className="grid grid-cols-1 gap-3">
+                  {feature.features.map((item) => (
+                    <div key={item} className="flex items-center text-slate-700">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                      {item}
+                    </div>
+                  ))}
                 </div>
                 <h3 className="text - lg font - semibold text - white mb - 1">
                   {metric.label}
@@ -367,34 +304,59 @@ import { motion } from 'framer - motion';
         </div>
       </section>
 
-      {/* Security Measures */}
-      <section className="py - 20">
-        <div className="container mx - auto px - 4">
-          <div className="text - center mb - 16">
-            <h2 className="text - 4xl lg:text - 5xl font - bold text - white mb - 6">
-              Security Measures
+      {/* Compliance Tools */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Compliance Tools & Solutions
             </h2>
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
-              Comprehensive security measures and controls that protect your
-              data and ensure compliance with regulatory requirements.
+            <p className="text-xl text-slate-600">
+              AI-powered tools to automate and streamline your compliance processes
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
-            {securityMeasures.map ( (category, index) => (<motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {complianceTools.map((tool, index) => (
+              <motion.div
+                key={tool.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 8 hover:border - blue - 400 / 30 transition - all duration - 300"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200"
               >
-                <div className="flex items - center mb - 6">
-                  <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 / 20 to - green - 500 / 20 rounded - lg flex items - center justify - center mr - 4">
-                    <category.icon className="w - 6 h - 6 text - blue - 400" />
+                <div className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mr-4">
+                      <tool.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-slate-900">{tool.name}</h3>
+                      <p className="text-slate-600">{tool.description}</p>
+                    </div>
                   </div>
-                  <h3 className="text - xl font - semibold text - white">
-                    {category.category}
-                  </h3>
+                  
+                  <div className="space-y-3 mb-6">
+                    {tool.features.map((feature) => (
+                      <div key={feature} className="flex items-center text-slate-700">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <Link
+                    to={tool.href}
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
+                  >
+                    Learn More
+                    <ChevronRight className="w-4 h-4 ml-2" />
+                  </Link>
                 </div>
 
                 <ul className="space - y-3">
@@ -408,52 +370,38 @@ import { motion } from 'framer - motion';
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py - 20 bg - slate - 800 / 30">
-        <div className="container mx - auto px - 4">
-          <div className="text - center mb - 16">
-            <h2 className="text - 4xl lg:text - 5xl font - bold text - white mb - 6">
-              Compliance Support
+      {/* Call to Action */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-12 text-center text-white"
+          >
+            <h2 className="text-4xl font-bold mb-4">
+              Ready to Achieve Compliance?
             </h2>
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
-              Need assistance with compliance requirements or have questions
-              about our security measures? Our compliance team is here to help.
+            <p className="text-xl mb-8 text-green-100">
+              Let us help you navigate the complex world of regulatory compliance
             </p>
-          </div>
-
-          <div className="max - w-4xl mx - auto">
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
-              {contactInfo.map ( (contact, index) => (<motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 8 hover:border - blue - 400 / 30 transition - all duration - 300"
-                >
-                  <h3 className="text - xl font - semibold text - white mb - 6">
-                    {contact.title}
-                  </h3>
-
-                  <div className="space - y-4">
-                    <div className="flex items - center">
-                      <Mail className="w - 5 h - 5 text - blue - 400 mr - 3" />
-                      <span className="text - gray - 300">{contact.email}</span>
-                    </div>
-                    <div className="flex items - center">
-                      <Phone className="w - 5 h - 5 text - blue - 400 mr - 3" />
-                      <span className="text - gray - 300">{contact.phone}</span>
-                    </div>
-                    <div className="flex items - center">
-                      <Clock className="w - 5 h - 5 text - blue - 400 mr - 3" />
-                      <span className="text - gray - 300">
-                        Response time: {contact.responseTime}
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>) ) }
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-slate-100 transition-colors"
+              >
+                Schedule Consultation
+              </Link>
+              <Link
+                to="/services/ai-compliance-copilot"
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-green-600 transition-colors"
+              >
+                View Compliance Solutions
+              </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>
+  );
 }
