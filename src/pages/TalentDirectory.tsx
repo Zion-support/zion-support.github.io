@@ -65,14 +65,43 @@ export default function TalentDirectory() {
     );
   }
 
+  // Error check should come before "no results" check
   if (error) {
     return (
       <div className="container mx-auto px-4 py-8">
-        <ErrorBanner msg="Unable to load talent profiles." />
+        <ErrorBanner msg={error.message || "Unable to load talent profiles."} />
       </div>
     );
   }
 
+  // Condition for "Talent Directory Truly Empty"
+  if (
+    // !isLoading is implied as we passed the first check
+    filteredTalents.length === 0 &&
+    !searchTerm &&
+    selectedSkills.length === 0 &&
+    selectedAvailability.length === 0 &&
+    selectedRegions.length === 0 &&
+    priceRange[0] === 50 && // Assuming these are the correct initial default values
+    priceRange[1] === 200 && // from useFilterTalents
+    experienceRange[0] === 0 && // from useFilterTalents
+    experienceRange[1] === 15 // from useFilterTalents
+  ) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center py-16">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Talent Directory Currently Empty
+          </h2>
+          <p className="text-zion-slate-light max-w-md mx-auto">
+            No talent profiles are currently available. Please check back later.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // If none of the above, render the main content with results
   return (
     <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col space-y-8">

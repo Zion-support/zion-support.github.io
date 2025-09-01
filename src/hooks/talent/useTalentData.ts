@@ -8,16 +8,11 @@ async function fetchTalentProfiles(): Promise<TalentProfile[]> {
   return TALENT_PROFILES;
 }
 
-export function useTalentData() {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ['talent-profiles'],
-    queryFn: fetchTalentProfiles,
-    initialData: [] as TalentProfile[],
-  }) as {
-    data: TalentProfile[] | undefined;
-    isLoading: boolean;
-    error: unknown;
-  };
+export function useTalentData(page = 1, limit = 12) {
+  const { data, isLoading, error } = useQuery<TalentListResponse, Error>({
+    queryKey: ['talent-profiles', page, limit],
+    queryFn: () => fetchTalentProfiles(page, limit),
+  });
 
   return {
     talents: data ?? [],
