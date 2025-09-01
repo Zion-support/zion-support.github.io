@@ -2,8 +2,10 @@ name: YAML Auto-Fixer
 
 on:
 
-    inputs:
+
+  workflow_dispatch: inputs:
       fix_mode:
+
         description: 'Fix mode (aggressive, conservative, validate-only)'
         required: false
         default: 'conservative'
@@ -27,27 +29,31 @@ on:
 
 permissions:
 jobs:
-  auto-fix-yaml:
-    name: Auto-Fix YAML Syntax
+
+
+  auto-fix-yaml: name: Auto-Fix YAML Syntax
       - name: Checkout code
-        uses: actions/checkout@v4
-       with:
-         fetch-depth: 0
- with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+
+                
+          token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+
+
+                
           python-version: '3.11'
 
       - name: Install dependencies
-        run: |
+
+
+                
           pip install pyyaml
           pip install ruamel.yaml
 
       - name: Create YAML fixer script
-        run: |
+
+
+                
           cat > yaml_fixer.py << 'EOF'
           #!/usr/bin/env python3
           "
@@ -149,8 +155,7 @@ jobs:
               
               # Apply fixes if any were made
               if fixes_applied:
-                  try:
-                      with open(file_path, 'w', encoding='utf-8') as f:
+   try: with open(file_path, 'w', encoding='utf-8') as f:
                           f.write(content)
                       print(f"✅ Applied fixes: {', '.join(fixes_applied)}")
                       return True
@@ -175,13 +180,13 @@ jobs:
                   print("🔍 Validation mode - checking files only")
                   invalid_files = []
                   for file_path in yaml_files:
-                      try:
-                          import yaml
+   try: import yaml
                           with open(file_path, 'r') as f:
                               yaml.safe_load(f)
                           print(f"✅ {file_path} is valid")
                       except Exception as e:
-                          print(f"❌ {file_path} has errors: {str(e)[:100]}")
+                          print(f"❌ {file_path} has errors:
+   {str(e)[: 100]}")
                           invalid_files.append(str(file_path))
                   
                   if invalid_files:
@@ -213,28 +218,35 @@ jobs:
           EOF
 
       - name: Run YAML auto-fixer
-        env:
-          FIX_MODE: ${{ github.event.inputs.fix_mode || 'conservative' }}
+
+
+                
+
+          FIX_MODE: "${{ github.event.inputs.fix_mode || 'conservative' }}"
           python3 yaml_fixer.py
 
       - name: Validate fixed files
-        run: |
+
+
+                
           echo "🔍 Validating fixed files..."
           python3 yaml_fixer.py validate-only
 
       - name: Create fix report
-  if: always()
+
+
+          
           echo "📝 Creating fix report..."
           
           cat > yaml-fix-report.md << EOF
           # YAML Auto-Fix Report
           
           Generated: $(date -u)
-          Fix Mode: ${{ github.event.inputs.fix_mode || 'conservative' }}
+          Fix Mode: "${{ github.event.inputs.fix_mode || 'conservative' }}"
           
           ## Summary
           - **Files processed**: $(find . -name "*.yml" -o -name "*.yaml" | grep -v node_modules | grep -v .git | wc -l)
-          - **Fix mode**: ${{ github.event.inputs.fix_mode || 'conservative' }}
+          - **Fix mode**: "${{ github.event.inputs.fix_mode || 'conservative' }}"
           
           ## Status
           ✅ YAML auto-fix completed successfully
@@ -243,6 +255,8 @@ jobs:
           EOF
 
       - name: Upload fix report
-        uses: actions/upload-artifact@v3
+
+
+                
           name: yaml-fix-report
           path: yaml-fix-report.md

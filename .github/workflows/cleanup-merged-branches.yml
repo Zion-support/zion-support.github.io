@@ -10,8 +10,9 @@ n  - name: Setup Node.js
 permissions:
 
 on:
-schedule:
-    - cron: '0 4 * * 0'
+
+
+  schedule: - cron: '0 4 * * 0'
   workflow_dispatch: {}
 
 - name: Install dependencies
@@ -25,6 +26,9 @@ schedule:
     echo "Workflow completed successfully"
 
 concurrency:
+
+
+
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
 
@@ -32,9 +36,9 @@ concurrency:
 
 jobs:
 
-  cleanup:
-      - name: List open PR heads
-        id: list
+
+  cleanup: - name: List open PR heads
+           
           script: |
             const { data: prs } = await github.rest.pulls.list({
               owner: context.repo.owner,
@@ -47,12 +51,12 @@ jobs:
             fs.writeFileSync('open_pr_heads.txt', heads.join('\n'));
             core.info(`Open PR heads: ${heads.length}`);
       - name: Checkout repository
-        uses: actions/checkout@v4
-          with:
-            fetch-depth: 0
-fetch-depth: 0
+
+                
+          fetch-depth: 0
       - name: Prune merged branches
-        run: |
+
+                
           set -e
           git fetch --all --prune
           base="origin/main"

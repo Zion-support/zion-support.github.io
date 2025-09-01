@@ -2,15 +2,17 @@ name: Netlify Build Automation
 
 on:
 
-    branches: [ main, develop ]
+
+  push: branches: [ main, develop ]
   pull_request:
+
     branches: [ main ]
   schedule:
     # Run automation every 6 hours
     - cron: '0 0 * * *'
   workflow_dispatch:
-    inputs:
-      automation_type:
+
+    inputs: automation_type:
         description: 'Type of automation to run'
         required: true
         default: 'comprehensive'
@@ -23,6 +25,8 @@ on:
 
 permissions:
 concurrency:
+
+
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
 
@@ -33,34 +37,41 @@ concurrency:
   NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
 
 jobs:
-    
-        node-version: [18.x, 20.x]
+
+
+  node-version: [18.x, 20.x]
     
       - name: Checkout code
-        uses: actions/checkout@v4
-       with:
-         fetch-depth: 0
- with:
-          fetch-depth: 0
+
+    
+                
+      
       - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: \'20\'
-          cache: \'npm\'
-node-version: ${{ matrix.node-version }}"
+
+      
+                
+        node-version: "${{ matrix.node-version }}""
         cache: 'npm'
         
       - name: Install dependencies
-        run: npm ci
+
+        
+                
       
       - name: Run system diagnostics
-        run: node automation/netlify-continuous-monitor.cjs diagnostics
+
+      
+                
       
       - name: Run health check
-        run: npm run netlify:intelligent health
+
+      
+                
       
       - name: Run automation based on trigger
-        run: |
+
+      
+                
         if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
           npm run netlify:comprehensive ${{ github.event.inputs.automation_type }}
         elif [ "${{ github.event_name }}" = "schedule" ]; then
@@ -72,7 +83,9 @@ node-version: ${{ matrix.node-version }}"
         fi
         
       - name: Collect optimization results
-        run: |
+
+        
+                
         echo "=== OPTIMIZATION RESULTS ===" >> $GITHUB_STEP_SUMMARY
         echo "Build artifacts size:" >> $GITHUB_STEP_SUMMARY
         node -e "
@@ -110,7 +123,9 @@ node-version: ${{ matrix.node-version }}"
           console.log(\`Total: \${(totalSize / 1024 / 1024).toFixed(2)} MB\`);
         
       - name: Upload automation logs
-        uses: "actions/upload-artifact@v4
+
+        
+                
         name: automation-logs-${{ matrix.node-version }}
         path: |
           automation/logs/
@@ -119,7 +134,9 @@ node-version: ${{ matrix.node-version }}"
         retention-days: 7
         
       - name: Comment PR with results"
-  if: github.event_name == 'pull_request'
+
+        
+          
         script: |
           const fs = require('fs');
           
@@ -177,29 +194,33 @@ node-version: ${{ matrix.node-version }}"
   monitoring:
     
       - name: Checkout code
-        uses: actions/checkout@v4
-       with:
-         fetch-depth: 0
- with:
-          fetch-depth: 0
+
+    
+                
+      
       - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: \'20\'
-          cache: \'npm\'
-node-version: '20'
+
+      
+                
+        node-version: '20'
         cache: 'npm'
         
       - name: Install dependencies
-        run: npm ci
+
+        
+                
       
       - name: Start continuous monitoring
-        run: |
+
+      
+                
         echo "Starting continuous monitoring..."
         timeout 300 node automation/netlify-continuous-monitor.cjs start
         
       - name: Upload monitoring logs
-        uses: actions/upload-artifact@v4
+
+        
+                
         name: monitoring-logs
         path: automation/logs/
         retention-days: 7
@@ -207,7 +228,9 @@ node-version: '20'
   notification:
     
       - name: Check automation status
-        id: check-status
+
+    
+                
         if [ "${{ needs.automation.result }}" = "success" ]; then
           echo "status=success" >> $GITHUB_OUTPUT
           echo "message=✅ Netlify automation completed successfully" >> $GITHUB_OUTPUT
@@ -217,11 +240,13 @@ node-version: '20'
         fi
         
       - name: Create summary
-        run: |
+
+        
+                
         echo "## 🚀 Netlify Automation Summary" >> $GITHUB_STEP_SUMMARY
         echo " >> $GITHUB_STEP_SUMMARY
-        echo "**Status**: ${{ steps.check-status.outputs.status }}" >> $GITHUB_STEP_SUMMARY
-        echo "**Message**: ${{ steps.check-status.outputs.message }}" >> $GITHUB_STEP_SUMMARY
+        echo "**Status**: "${{ steps.check-status.outputs.status }}"" >> $GITHUB_STEP_SUMMARY
+        echo "**Message**: "${{ steps.check-status.outputs.message }}"" >> $GITHUB_STEP_SUMMARY
         echo " >> $GITHUB_STEP_SUMMARY
         echo "**Components**: All automation systems operational" >> $GITHUB_STEP_SUMMARY
         echo "**Performance**: Build artifacts optimized and monitored" >> $GITHUB_STEP_SUMMARY

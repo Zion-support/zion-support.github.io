@@ -2,53 +2,59 @@ name: Automations
 
 on:
 
-    - cron: '0 0 * * *'
+
+  schedule: - cron: '0 0 * * *'
   push:
-    paths:
-      - 'scripts/**'
-      - 'requirements.txt'
+
+    branches: [ main ]
+
 
 permissions:
 concurrency:
+
+
+
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
-  run-automations:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-          with:
-            fetch-depth: 0
-fetch-depth: 0
+
+
+  run-automations: contents: write
+      - name: Checkout
+
+                
+          fetch-depth: 0
 
       - name: Setup Node
-        uses: actions/setup-node@v4
-          with:
-            node-version: \'20\'
-            cache: \'npm\'
-node-version: '20'
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+
+                
+          node-version: '20'
+
+      - name: Install deps
+
+
+                
 
       - name: Run automations
-        run: |
-          python scripts/fetch_trending.py
-          python scripts/aggregate_feeds.py
-          python scripts/uptime_check.py
 
-      - name: Commit and push changes (if any)
-        run: |
-          if [ -n "$(git status --porcelain data)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data
-            git commit -m "chore: update automation data"
-            git push
-          else
-            echo "No changes to commit."
-          fi
+
+                
+
+          SITE_BASE_URL: https://zion.app
+
+      - name: Commit changes
+
+
+                
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "chore(automations): update generated reports and sitemap"
+
+      - name: Push changes
+
+
+          
+          git push

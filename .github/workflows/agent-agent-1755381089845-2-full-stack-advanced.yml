@@ -1,30 +1,34 @@
 name: "Agent: agent-1755381089845-2-full-stack-advanced"
 on:
 
-  schedule:
+  workflow_dispatch: schedule:
     - cron: '0 0 * * *'
 permissions:
 concurrency:
+
+
+
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
-  agent-execution:
-      - name: Checkout code
-        uses: actions/checkout@v4
-       with:
-         fetch-depth: 0
- with:
-          fetch-depth: 0
+
+
+  agent-execution: - name: Checkout code
+           
+        
       - name: Setup Node.js
-        uses: actions/setup-node@v4
-          with:
-            node-version: \'20\'
-            cache: \'npm\'
-node-version: 18
+
+        
+                
+          node-version: 18
           
       - name: Install dependencies
-        run: npm ci
+
+          
+                
         
       - name: Run agent
-        run: node automation/agents/agent-1755381089845-2-full-stack-advanced.cjs
+
+        
+                

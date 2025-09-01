@@ -2,37 +2,13 @@ name: Dependabot Auto Approve
 
 on:
 
-    uses: actions/checkout@v4
-   with:
-     fetch-depth: 0
- with:
-      fetch-depth: 0
 
-- name: Install dependencies
-
-  run: npm ci --no-audit --no-fund
-
-- name: Complete workflow
-
-  run: |
-
-    echo "Workflow completed successfully"
-
-permissions:
-  - name: Setup Node.js
-    uses: actions/setup-node@v4
-   with:
-     node-version: \'20\'
-     cache: \'npm\'
- with:
-      node-version: '20'
-      cache: 'npm'
-
-  
-  pull_request:
-    types: [opened, synchronize, reopened]
+  pull_request: types: [opened, synchronize, reopened]
 
 concurrency:
+
+
+
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
 
@@ -41,14 +17,15 @@ concurrency:
 
 jobs:
 
-  auto-approve:
-      - name: Auto-approve
-        uses: hmarr/auto-approve-action@v4
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  auto-approve: - name: Auto-approve
+           
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
 
   enable-automerge:
       - name: Enable Auto-merge
-        uses: peter-evans/enable-pull-request-automerge@v1
-          token: ${{ secrets.GITHUB_TOKEN }}
-          pull-request-number: ${{ github.event.pull_request.number }}
+
+                
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          pull-request-number: "${{ github.event.pull_request.number }}"
           merge-method: squash

@@ -2,72 +2,67 @@ name: 🤖 Autonomous Agent Orchestrator - Exponential Growth Manager
 
 on:
 
-    uses: actions/checkout@v4
-   with:
-     fetch-depth: 0
- with:
-      fetch-depth: 0
 
-- name: Install dependencies
-
-  run: npm ci --no-audit --no-fund
-
-- name: Complete workflow
-
-  run: |
-
-    echo "Workflow completed successfully"
-
-permissions:
-  schedule:
-    # Run every 2 hours to manage exponential growth
+  schedule: # Run every 2 hours to manage exponential growth
     - cron: '0 0 * * *'
   workflow_dispatch:
-    inputs:
-      orchestration_mode:
+
+    inputs: orchestration_mode:
         description: 'Orchestration mode (growth, optimize, replicate)'
         required: false
         default: 'growth'
       target_agents:
+
         description: 'Target number of agents to manage'
         required: false
         default: '100'
   push:
+
     branches: [main, develop]
     paths:
       - 'automation/**'
       - '.github/workflows/**'
 
-  "ORCHESTRATION_MODE: ${{ github.event.inputs.orchestration_mode || 'growth' }}"
+  "ORCHESTRATION_MODE: "${{ github.event.inputs.orchestration_mode || 'growth' }}""
   TARGET_AGENTS: "${{ github.event.inputs.target_agents || '100' }}"
   GROWTH_ALGORITHM: 'exponential'
   REPLICATION_THRESHOLD: 3
 
 concurrency:
+
+
+
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
-  agent-inventory:
-      total-agents: ${{ steps.count.outputs.total }}
-      active-factories: ${{ steps.factories.outputs.active }}
-      growth-capacity: ${{ steps.capacity.outputs.capacity }}
+
+
+  agent-inventory: total-agents: "${{ steps.count.outputs.total }}"
+      active-factories: "${{ steps.factories.outputs.active }}"
+      growth-capacity: "${{ steps.capacity.outputs.capacity }}"
       
       - name: Inventory all agents
-        id: count
+
+      
+                
           # Count all agents across all factories"
           TOTAL_AGENTS=$(find automation/factories/ -name "*.js" -exec grep -l "class.*Agent\|createAgent" {} \; | wc -l)
           echo "total=$TOTAL_AGENTS" >> $GITHUB_OUTPUT
           echo "📊 Total agents found: $TOTAL_AGENTS"
       
       - name: Count active factories
-        id: factories
+
+      
+                
           ACTIVE_FACTORIES=$(find automation/factories/ -name "factory-config.json" | wc -l)
           echo "active=$ACTIVE_FACTORIES" >> $GITHUB_OUTPUT
           echo "🏭 Active factories: $ACTIVE_FACTORIES"
       
       - name: Calculate growth capacity
-        id: capacity
+
+      
+                
           AGENTS=${{ steps.count.outputs.total }}
           FACTORIES=${{ steps.factories.outputs.active }}
           CAPACITY=$((AGENTS * FACTORIES * 2))  # Exponential growth factor"
@@ -75,18 +70,21 @@ jobs:
           echo "🚀 Growth capacity: $CAPACITY agents"
 
   exponential-growth-orchestrator:
-        growth-strategy: [replicate, optimize, diversify, accelerate]
+
+
+    growth-strategy: [replicate, optimize, diversify, accelerate]
       
       - name: Setup Node.js
-        uses: actions/setup-node@v4
-          with:
-            node-version: \'20\'
-            cache: \'npm\'
-node-version: '20'
+
+      
+                
+          node-version: '20'
           cache: 'npm'
       
       - name: Execute growth strategy
-        run: |
+
+      
+                
           STRATEGY="${{ matrix.growth-strategy }}"
           CURRENT_AGENTS="${{ needs.agent-inventory.outputs.total-agents }}"
           TARGET="${{ env.TARGET_AGENTS }}"
@@ -402,7 +400,9 @@ node-version: '20'
   growth-metrics-analyzer:
       
       - name: Analyze growth metrics
-        run: |
+
+      
+                
           echo "📊 Analyzing exponential growth metrics..."
           
           # Calculate growth projections
@@ -426,20 +426,22 @@ node-version: '20'
           done
       
       - name: Generate orchestration report
-        run: |
+
+      
+                
           mkdir -p automation/reports
           
           cat > automation/reports/orchestration-report-$(date +%Y%m%d-%H%M%S).md << EOF
           # Autonomous Agent Orchestration Report
           
           Generated: $(date -u)
-          Workflow: ${{ github.workflow }}
-          Run ID: ${{ github.run_id }}
+          Workflow: "${{ github.workflow }}"
+          Run ID: "${{ github.run_id }}"
           
           ## Current State
-          - Total Agents: ${{ needs.agent-inventory.outputs.total-agents }}
-          - Active Factories: ${{ needs.agent-inventory.outputs.active-factories }}
-          - Growth Capacity: ${{ needs.agent-inventory.outputs.growth-capacity }}
+          - Total Agents: "${{ needs.agent-inventory.outputs.total-agents }}"
+          - Active Factories: "${{ needs.agent-inventory.outputs.active-factories }}"
+          - Growth Capacity: "${{ needs.agent-inventory.outputs.growth-capacity }}"
           
           ## Growth Strategies Applied
           - Replication: ✅
@@ -449,8 +451,8 @@ node-version: '20'
           
           ## Exponential Growth Metrics
           - Base Growth Rate: 2.0x per cycle
-          - Replication Threshold: ${{ env.REPLICATION_THRESHOLD }}
-          - Target Agents: ${{ env.TARGET_AGENTS }}
+          - Replication Threshold: "${{ env.REPLICATION_THRESHOLD }}"
+          - Target Agents: "${{ env.TARGET_AGENTS }}"
           
           ## Next Actions
           - Continue exponential growth
@@ -470,7 +472,9 @@ node-version: '20'
   autonomous-decision-engine:
       
       - name: Execute autonomous decisions
-        run: |
+
+      
+                
           echo "🧠 Executing autonomous decisions for exponential growth..."
           
           # Create autonomous decision engine
@@ -630,7 +634,9 @@ node-version: '20'
           echo "✅ Autonomous decision engine created"
       
       - name: Execute autonomous decisions
-        run: |
+
+      
+                
           cd automation/orchestration/decisions
           node -e "
             const AutonomousDecisionEngine = require('./autonomous-decisions.js');
@@ -642,12 +648,13 @@ node-version: '20'
 
   notify-orchestration:
       - name: Orchestration completion notification
-        run: |
+
+                
           echo "🤖 Autonomous Agent Orchestration Complete!"
-          echo "📊 Total agents managed: ${{ needs.agent-inventory.outputs.total-agents }}"
-          echo "🏭 Active factories: ${{ needs.agent-inventory.outputs.active-factories }}"
-          echo "🚀 Growth capacity: ${{ needs.agent-inventory.outputs.growth-capacity }}"
-          echo "🎯 Target agents: ${{ env.TARGET_AGENTS }}"
+          echo "📊 Total agents managed: "${{ needs.agent-inventory.outputs.total-agents }}""
+          echo "🏭 Active factories: "${{ needs.agent-inventory.outputs.active-factories }}""
+          echo "🚀 Growth capacity: "${{ needs.agent-inventory.outputs.growth-capacity }}""
+          echo "🎯 Target agents: "${{ env.TARGET_AGENTS }}""
           echo "⏰ Next orchestration: In 2 hours"
           echo "
           echo "The system is now autonomously orchestrating exponential growth!"

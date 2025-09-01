@@ -2,7 +2,8 @@ name: Autonomous Keepalive
 
 on:
 
-    - cron: '17 3 * * *'
+
+  schedule: - cron: '17 3 * * *'
   workflow_dispatch: {}
 
 - name: Install dependencies
@@ -17,6 +18,9 @@ on:
 
 permissions:
 concurrency:
+
+
+
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
 
@@ -24,15 +28,15 @@ concurrency:
 
 jobs:
 
-  keepalive:
-      - name: Checkout
-        uses: actions/checkout@v4
-          with:
-            fetch-depth: 0
-fetch-depth: 0
+
+  keepalive: - name: Checkout
+           
+          fetch-depth: 0
 
       - name: Create keepalive commit if no changes today
-        run: |
+
+
+                
           if [ -z "$(git log --since=24.hours --oneline)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -1,28 +1,27 @@
 name: "Agent: agent-1755379759033-3-frontend-expert"
 on:
 
-  schedule:
+  workflow_dispatch: schedule:
     - cron: 0 */6 * * *
 permissions:
 concurrency:
+
+
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
-  agent-execution:
-      - name: Checkout code
-        uses: actions/checkout@v4
-       with:
-         fetch-depth: 0
- with:
-          fetch-depth: 0
+
+
+  agent-execution: - name: Checkout code
+           
       - name: Setup Node.js
-        uses: actions/setup-node@v4
-          with:
-            node-version: \'20\'
-            cache: \'npm\'
-node-version: 18
+
+                
+          node-version: 18
       - name: Install dependencies
-        run: npm ci
+
+                
       - name: Run agent
-        run: node automation/agents/frontend/agent-1755379759033-3-frontend-expert/index.cjs
+
+                

@@ -2,7 +2,8 @@ name: Update PR branches with main
 
 on:
 
-    branches: [ main ]
+
+  push: branches: [ main ]
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch: {}
@@ -19,6 +20,9 @@ on:
 
 permissions:
 concurrency:
+
+
+
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
 
@@ -27,8 +31,8 @@ concurrency:
 
 jobs:
 
-  list:
-      prs: ${{ steps.collect.outputs.prs }}
+
+  list: prs: "${{ steps.collect.outputs.prs }}"
           script: |
             const { data: prs } = await github.rest.pulls.list({
               owner: context.repo.owner,"
@@ -42,16 +46,20 @@ jobs:
             core.setOutput('prs', JSON.stringify(own));
 
   update:
-        include: ${{ fromJSON(needs.list.outputs.prs) }}
+
+
+    include: "${{ fromJSON(needs.list.outputs.prs) }}"
       - name: Checkout PR head
-        uses: actions/checkout@v4
-          with:
-            fetch-depth: 0
-          ref: ${{ matrix.headRef }}
+
+                
+          fetch-depth: 0
+          ref: "${{ matrix.headRef }}"
       - name: Merge main into PR branch
-        run: |
+
+                
           git fetch origin main
           git merge --no-edit origin/main || true
       - name: Push updated branch
-        run: |
-          git push origin HEAD:${{ matrix.headRef }} || echo "Push failed (likely fork)
+
+                
+          git push origin HEAD: "${{ matrix.headRef }}" || echo "Push failed (likely fork)

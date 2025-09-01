@@ -2,11 +2,15 @@ name: Automation Cleanup
 
 on:
 
-    - cron: '0 2 * * *' # Daily at 2 AM
+
+  schedule: - cron: '0 2 * * *' # Daily at 2 AM
   workflow_dispatch: {}
 
 permissions:
 concurrency:
+
+
+
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
 
@@ -14,26 +18,27 @@ concurrency:
 
 jobs:
 
-  cleanup:
-      - name: Checkout
-        uses: actions/checkout@v4
-          with:
-            fetch-depth: 0
-fetch-depth: 0
+
+  cleanup: - name: Checkout
+           
+          fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
-          with:
-            node-version: \'20\'
-            cache: \'npm\'
-node-version: 20
+
+
+                
+          node-version: 20
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+
+
+                
 
       - name: Clean up old automation artifacts
-        run: |
+
+
+                
           echo "Cleaning up old automation artifacts..."
           
           # Clean up old analytics files (keep last 7 days)
@@ -56,7 +61,9 @@ node-version: 20
           echo "Cleanup completed"
 
       - name: Commit cleanup changes
-        run: |
+
+
+                
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

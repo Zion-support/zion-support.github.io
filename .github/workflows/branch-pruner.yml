@@ -2,7 +2,8 @@ name: Branch Pruner
 
 on:
 
-    - cron: '7 3 * * 0'
+
+  schedule: - cron: '7 3 * * 0'
   workflow_dispatch: {}
 
 - name: Install dependencies
@@ -17,6 +18,9 @@ on:
 
 permissions:
 concurrency:
+
+
+
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
 
@@ -24,19 +28,20 @@ concurrency:
 
 jobs:
 
-  prune:
-      - name: Checkout
-        uses: actions/checkout@v4
-          with:
-            fetch-depth: 0
-fetch-depth: 0
+
+  prune: - name: Checkout
+           
+          fetch-depth: 0
       - name: Fetch all branches
-        run: |
-          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}"
+
+                
+          git remote set-url origin "https:
+   //x-access-token: ${GITHUB_TOKEN}@github.com/${{ github.repository }}"
           git fetch --all --prune
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: Delete merged remote branches older than 7 days
-        shell: bash
+
+                
           set -euo pipefail
           BASE=origin/main
           git fetch origin main"
@@ -55,4 +60,4 @@ fetch-depth: 0
               fi
             fi
           done
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
