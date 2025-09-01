@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { addToWishlist, loadWishlistFromDB, removeFromWishlist } from '@/store/wishlistSlice';
+import { addToWishlist, loadWishlistFromDB, removeFromWishlist, getApiUrl } from '@/store/wishlistSlice';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { toast } from 'sonner';
 
 export default function Wishlist() {
   const dispatch = useAppDispatch();
@@ -23,6 +22,9 @@ export default function Wishlist() {
 
   const handleRemove = (id: string) => {
     dispatch(removeFromWishlist({ id }));
+    fetch(`${getApiUrl()}/wishlist/${id}`, {
+      method: 'DELETE',
+    }).catch(() => {});
   };
 
   const pathForItem = (item: { id: string; type: string }) => {
