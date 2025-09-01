@@ -20,7 +20,6 @@ const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ d
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
 import { SEO } from './components/SEO';
 import FloatingActionButton from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
@@ -160,7 +159,6 @@ function App() {
 
           <FloatingActionButton enabled={true} />
           <PerformanceOptimizer enabled={true} />
-          <EnhancedAccessibilityEnhancer enabled={true} />
           <SmartNotificationSystem enabled={true} />
           <AdvancedAnalyticsDashboard enabled={true} />
           <AIContentOptimizer enabled={true} />
