@@ -39,6 +39,12 @@ const AIThreatIntelligence = lazy(() => import('./backup-pages/src-pages/service
 const BlockchainSupplyChain = lazy(() => import('./backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
 const AdvancedServicesShowcase = lazy(() => import('./backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
 
+// New Innovative Services
+const AIAutonomousBusinessIntelligence = lazy(() => import('./pages/services/ai-autonomous-business-intelligence-platform').then(module => ({ default: module.AIAutonomousBusinessIntelligencePlatform })));
+const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/ai-cybersecurity-threat-intelligence-platform').then(module => ({ default: module.AICybersecurityThreatIntelligencePlatform })));
+const QuantumAIHybridPlatform = lazy(() => import('./pages/services/quantum-ai-hybrid-platform').then(module => ({ default: module.QuantumAIHybridPlatform })));
+const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/comprehensive-services-showcase-2025').then(module => ({ default: module.ComprehensiveServicesShowcase2025 })));
+
 // Loading component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
@@ -67,7 +73,13 @@ function App() {
                 <Route path="/services/ai-threat-intelligence" element={<AIThreatIntelligence />} />
                 <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
                 <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
+                
+                {/* New Innovative Services */}
+                <Route path="/services/ai-autonomous-business-intelligence" element={<AIAutonomousBusinessIntelligence />} />
+                <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
+                <Route path="/services/quantum-ai-hybrid-platform" element={<QuantumAIHybridPlatform />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
+                <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                 <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
                 <Route path="/comprehensive-marketing-2026" element={<ComprehensiveMarketingPage2026 />} />
                 <Route path="/pricing" element={<PricingPage />} />
