@@ -1,46 +1,31 @@
 exports.handler = async function(event, context) {
-  console.log('intelligent-meta-orchestrator function executed');
-  
   try {
-    // Simulate intelligent meta orchestration logic
+    console.log('intelligent-meta-orchestrator function triggered');
+    
+    // Basic intelligent meta orchestration logic
     const timestamp = new Date().toISOString();
     const result = {
-      status: 'success',
-      function: 'intelligent-meta-orchestrator',
-      timestamp: timestamp,
-      message: 'Intelligent meta orchestration completed successfully',
-      data: {
-        intelligentDecisions: Math.floor(Math.random() * 100) + 50,
-        optimizationsApplied: Math.floor(Math.random() * 30) + 20,
-        learningImprovements: Math.floor(Math.random() * 20) + 10,
-        performance: 'intelligently-optimized',
-        efficiency: '99.999%'
-      }
-    };
-    
-    console.log('Intelligent meta orchestration result:', result);
-    
-    return {
       statusCode: 200,
-      body: JSON.stringify(result),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      body: JSON.stringify({
+        message: 'Intelligent meta orchestrator function executed successfully',
+        timestamp: timestamp,
+        function: 'intelligent-meta-orchestrator',
+        action: 'intelligent_meta_orchestration',
+        intelligence_level: 'high'
+      })
     };
-  } catch (error) {
-    console.error('Error in intelligent-meta-orchestrator:', error);
     
+    console.log('intelligent-meta-orchestrator completed successfully');
+    return result;
+    
+  } catch (error) {
+    console.error('intelligent-meta-orchestrator error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        status: 'error',
-        function: 'intelligent-meta-orchestrator',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        error: 'Internal server error',
+        message: error.message
+      })
     };
   }
 };

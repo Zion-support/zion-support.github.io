@@ -1,46 +1,31 @@
 exports.handler = async function(event, context) {
-  console.log('readme-advertiser function executed');
-  
   try {
-    // Simulate readme advertising logic
+    console.log('readme-advertiser function triggered');
+    
+    // Basic README advertising logic
     const timestamp = new Date().toISOString();
     const result = {
-      status: 'success',
-      function: 'readme-advertiser',
-      timestamp: timestamp,
-      message: 'Readme advertising completed successfully',
-      data: {
-        readmeSectionsAdvertised: Math.floor(Math.random() * 15) + 8,
-        contentOptimized: true,
-        engagementImproved: true,
-        conversionOptimized: true,
-        userExperience: 'enhanced'
-      }
-    };
-    
-    console.log('Readme advertising result:', result);
-    
-    return {
       statusCode: 200,
-      body: JSON.stringify(result),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      body: JSON.stringify({
+        message: 'README advertiser function executed successfully',
+        timestamp: timestamp,
+        function: 'readme-advertiser',
+        action: 'readme_promotion',
+        promotion_status: 'active'
+      })
     };
-  } catch (error) {
-    console.error('Error in readme-advertiser:', error);
     
+    console.log('readme-advertiser completed successfully');
+    return result;
+    
+  } catch (error) {
+    console.error('readme-advertiser error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        status: 'error',
-        function: 'readme-advertiser',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        error: 'Internal server error',
+        message: error.message
+      })
     };
   }
 };

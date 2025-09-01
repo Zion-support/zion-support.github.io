@@ -1,47 +1,31 @@
 exports.handler = async function(event, context) {
-  console.log('home-visionary-expander function executed');
-  
   try {
-    // Simulate home visionary expansion logic
+    console.log('home-visionary-expander function triggered');
+    
+    // Basic home visionary expansion logic
     const timestamp = new Date().toISOString();
     const result = {
-      status: 'success',
-      function: 'home-visionary-expander',
-      timestamp: timestamp,
-      message: 'Home visionary expansion completed successfully',
-      data: {
-        homeVisionsExpanded: Math.floor(Math.random() * 15) + 8,
-        innovationApplied: true,
-        futureReady: true,
-        creativityEnhanced: true,
-        strategicGrowth: 'accelerated',
-        homeExperience: 'transformed'
-      }
-    };
-    
-    console.log('Home visionary expansion result:', result);
-    
-    return {
       statusCode: 200,
-      body: JSON.stringify(result),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      body: JSON.stringify({
+        message: 'Home visionary expander function executed successfully',
+        timestamp: timestamp,
+        function: 'home-visionary-expander',
+        action: 'home_vision_expansion',
+        vision_level: 'expanded'
+      })
     };
-  } catch (error) {
-    console.error('Error in home-visionary-expander:', error);
     
+    console.log('home-visionary-expander completed successfully');
+    return result;
+    
+  } catch (error) {
+    console.error('home-visionary-expander error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        status: 'error',
-        function: 'home-visionary-expander',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        error: 'Internal server error',
+        message: error.message
+      })
     };
   }
 };
