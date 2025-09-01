@@ -1,5 +1,4 @@
 import { createClient } from '@supabase/supabase-js';
-import { captureException } from '@/lib/sentry';
 
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -8,11 +7,16 @@ if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables');
 }
 
-// Enhanced network connectivity check with multiple strategies
-export const checkOnline = async (): Promise<boolean> => {
-  // First check navigator.onLine
-  if (typeof navigator !== 'undefined' && !navigator.onLine) {
-    return false;
+// Create Supabase client with proper configuration
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    persistSession: true,
+    autoRefreshToken: true,
+  },
+  global: {
+    headers: {
+      'apikey': supabaseAnonKey
+    }
   }
 
   try {

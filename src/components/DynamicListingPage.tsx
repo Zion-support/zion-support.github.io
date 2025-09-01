@@ -10,6 +10,14 @@ import { Slider } from "@/components/ui/slider";
 import { ProductListing, ListingView } from "@/types/listings";
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 interface PriceRange {
   min: number;
@@ -44,6 +52,8 @@ export function DynamicListingPage({
   const [view, setView] = useState<ListingView>("grid");
   const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
+
+  const [currentPage, setCurrentPage] = useState(1);
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
 
@@ -84,6 +94,20 @@ export function DynamicListingPage({
     
     return matchesSearch && matchesCategory && matchesPrice && matchesRating;
   });
+
+  const totalPages = itemsPerPage
+    ? Math.ceil(filteredListings.length / itemsPerPage)
+    : 1;
+  const paginatedListings = itemsPerPage
+    ? filteredListings.slice(
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
+      )
+    : filteredListings;
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]);
 
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true);

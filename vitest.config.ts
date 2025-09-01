@@ -1,6 +1,15 @@
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+  define: {
+    'import.meta.env.VITE_SUPABASE_URL': JSON.stringify('http://localhost:54321'),
+    'import.meta.env.VITE_SUPABASE_ANON_KEY': JSON.stringify('test-anon-key-placeholder')
+  },
   test: {
     environment: 'jsdom',
     setupFiles: './tests/setup.ts',

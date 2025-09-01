@@ -6,6 +6,14 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useNavigate } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
+import {
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components/ui/form';
 
 interface CartItem {
   id: string;
@@ -14,9 +22,18 @@ interface CartItem {
   quantity: number;
 }
 
-export default function Checkout() {
+interface CheckoutForm {
+  name: string;
+  email: string;
+  address: string;
+  city: string;
+  country: string;
+}
+
+export default function CheckoutPage() {
   const navigate = useNavigate();
   const [items, setItems] = useState<CartItem[]>([]);
+  const form = useForm<CheckoutForm>({ defaultValues: { name: '', email: '', address: '', city: '', country: '' } });
 
   useEffect(() => {
     const stored = safeStorage.getItem('cart');
@@ -43,8 +60,16 @@ export default function Checkout() {
       });
       const { sessionId } = await response.json();
       const stripe = await getStripe();
-      if (stripe && sessionId) {
-        await stripe.redirectToCheckout({ sessionId });
+      if (stripe && result.clientSecret) {
+        const payment = await stripe.confirmCardPayment(result.clientSecret, {
+          payment_method: {
+            card: { token: 'tok_visa' },
+            billing_details: { name: data.name, email: data.email },
+          },
+        });
+        if (payment.error) throw payment.error;
+        safeStorage.removeItem('cart');
+        navigate(`/orders/${result.id}`);
       }
     } catch (err) {
       console.error('Checkout error', err);
@@ -55,7 +80,7 @@ export default function Checkout() {
 
   return (
     <div className="container max-w-2xl py-10">
-      <h1 className="text-3xl font-bold mb-6">{t('checkout.title')}</h1>
+      <h1 className="text-3xl font-bold mb-6">Checkout</h1>
       <div className="grid gap-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

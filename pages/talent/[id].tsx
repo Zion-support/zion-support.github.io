@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
-import type { TalentProfile as TalentProfileType } from '@/types/talent';
-import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
+import React from 'react';
+import type { GetStaticPaths, GetStaticProps } from 'next';
+import { TALENT_PROFILES } from '@/data/talentData';
+import type { TalentProfile } from '@/types/talent';
+import TalentDetails from '@/components/talent/TalentDetails';
+import NotFound from '@/components/NotFound';
 
-interface TalentProfileWithSocial extends TalentProfileType {
-  social?: Record<string, string>;
+interface TalentPageProps {
+  talent: TalentProfile | null;
 }
 
 const TalentProfilePage: React.FC = () => {
@@ -44,28 +45,23 @@ const TalentProfilePage: React.FC = () => {
   if (loading) return <ProfileLoadingState />;
   if (error || !profile) return <ProfileErrorState error={error} />;
 
-  return (
-    <main className="min-h-screen bg-zion-blue py-8 text-white">
-      <div className="container mx-auto px-4 space-y-4">
-        <h1 className="text-3xl font-bold" data-testid="profile-name">
-          {profile.full_name}
-        </h1>
-        {profile.skills && profile.skills.length > 0 && (
-          <div>
-            <h2 className="font-semibold">Skills</h2>
-            <ul className="list-disc ml-5">
-              {profile.skills.map(skill => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-        {profile.availability_type && (
-          <p>Availability: {profile.availability_type}</p>
-        )}
-      </div>
-    </main>
-  );
+  return <TalentDetails talent={talent} />;
 };
 
-export default TalentProfilePage;
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = TALENT_PROFILES.map((t) => ({ params: { id: t.id } }));
+  return { paths, fallback: 'blocking' };
+};
+
+export const getStaticProps: GetStaticProps<TalentPageProps> = async ({ params }) => {
+  const id = params?.id as string;
+  const talent = TALENT_PROFILES.find((t) => t.id === id) || null;
+
+  if (!talent) {
+    return { notFound: true };
+  }
+
+  return { props: { talent } };
+};
+
+export default TalentPage;

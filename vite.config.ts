@@ -30,7 +30,7 @@ export default defineConfig({
       output: {
         inlineDynamicImports: false,
       },
-      external: [],
+      external: [], 
     },
   },
   resolve: {

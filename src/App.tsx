@@ -7,7 +7,7 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import InstallPrompt from "./components/InstallPrompt";
+import PwaInstallButton from "./components/PwaInstallButton";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -54,6 +54,7 @@ const baseRoutes = [
   { path: '/product/:id', element: <ProductPage /> }, // Added ProductPage route
   { path: '/match', element: <AIMatcherPage /> },
   { path: '/login', element: <Login /> },
+  { path: '/register', element: <Signup /> },
   { path: '/signup', element: <Signup /> },
   { path: '/talent', element: <TalentDirectory /> },
   { path: '/talents', element: <TalentsPage /> },
@@ -66,14 +67,19 @@ const baseRoutes = [
   { path: '/new-services', element: <NewServicesPage /> },
   { path: '/analytics', element: <Analytics /> },
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
+  { path: '/open-app', element: <OpenAppRedirect /> },
   { path: '/community', element: <CommunityPage /> },
   { path: '/contact', element: <ContactPage /> },
   { path: '/partners', element: <PartnersPage /> },
+  { path: '/sitemap', element: <Sitemap /> },
   { path: '/zion-hire-ai', element: <ZionHireAI /> },
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
+  { path: '/wishlist', element: <WishlistPage /> },
+  { path: '/cart', element: <CartPage /> },
+  { path: '/checkout', element: <CheckoutPage /> },
 ];
 
 const App = () => {
@@ -100,13 +106,12 @@ const App = () => {
             <Route path="/community/*" element={<CommunityRoutes />} />
             <Route path="/developers/*" element={<DeveloperRoutes />} />
             <Route path="*" element={<ErrorRoutes />} />
-            </Routes>
-            </ErrorBoundary>
-          </Suspense>
-          <Toaster />
-          <SonnerToaster position="top-right" />
-          <PwaInstallButton />
-        </CartProvider> {/* Added CartProvider Wrapper */}
+          </Routes>
+          </ErrorBoundary>
+        </Suspense>
+        <Toaster />
+        <SonnerToaster position="top-right" />
+        <PwaInstallButton />
       </ThemeProvider>
     </WhitelabelProvider>
   );

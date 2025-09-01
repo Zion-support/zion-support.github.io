@@ -13,34 +13,31 @@ post: {
     views: number;
 author: {
 
-      name: string;
-      avatar: string}}}
-;
-export { function };
-export default function PostCard(...args[]):  {
-
-  return ()
-    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4 border border-white/20 hover:border-white/40 transition-all duration-300">;"
-      <div className="flex items-start space-x-4">
-        <img'
-          src={post.author?.avatar || '/default-avatar.png'}
-          alt={post.author?.name || post.authorName}"
-          className="w-10 h-10 rounded-full object-cover"
-        />"
-        <div className="flex-1">"
-          <h3 className="text-xl font-semibold text-white mb-2 hover:text-zion-cyan transition-colors duration-300">
-            {post.title}
-          </h3>"
-          <p className="text-zion-slate-light mb-3 line-clamp-3 leading-relaxed">
-            {post.content}
-          </p>
-"
-          <div className="flex items-center justify-between text-sm text-zion-slate-light mb-3">"
-            <span className="flex items-center gap-2">"
-              <span className="w-2 h-2 bg-zion-cyan rounded-full"></span>
-              By {post.author?.name || post.authorName}
-            </span>
-            <span>{new Date(post.createdAt).toLocaleDateString()}</span>
+  return (
+    <Card className={cn(
+      "transition-shadow hover:shadow-md",
+      post.isPinned && "border-zion-purple/50",
+      post.isFeatured && "bg-zion-purple/5"
+    )}>
+      <CardHeader className="flex flex-row items-start gap-4 space-y-0">
+        <Avatar className="h-10 w-10">
+          <AvatarImage src={post.authorAvatar} />
+          <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>
+        </Avatar>
+        <div className="flex-1">
+          <div className="flex items-center">
+            <Link to={`/community/post/${post.id}`} className="font-semibold text-lg hover:text-zion-purple transition-colors">
+              {post.title}
+            </Link>
+            {post.isAnswered && (
+              <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
+            )}
+            {post.isPinned && (
+              <Pin className="h-4 w-4 text-amber-500 ml-2" />
+            )}
+            {post.isLocked && (
+              <Lock className="h-4 w-4 text-red-500 ml-2" />
+            )}
           </div>
 "
           <div className="flex items-center space-x-6 text-sm text-zion-slate-light">"

@@ -74,32 +74,4 @@ function renderApp() {
   }
 }
 
-function displayFatalError(message: string) {
-  if (rootElement) {
-    rootElement.innerHTML = `
-      <div style="padding:20px;text-align:center;font-family:sans-serif;">
-        <h1>Application Error</h1>
-        <p>${message}</p>
-      </div>`;
-  }
-}
-
-try {
-  renderApp();
-} catch (error) {
-  console.error('Global error caught in main.tsx:', error);
-  displayFatalError((error as Error).message);
-}
-
-window.addEventListener('error', (e) => {
-  console.error('Unhandled error:', e.error || e.message);
-  displayFatalError(e.message);
-});
-
-window.addEventListener('unhandledrejection', (e) => {
-  const message = (e.reason && e.reason.message) || 'Unhandled promise rejection';
-  console.error('Unhandled rejection:', e.reason);
-  displayFatalError(message);
-});
-
 registerServiceWorker();

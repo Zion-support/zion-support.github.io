@@ -17,7 +17,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'authentication',
-    'promotions',
 ]
 
 MIDDLEWARE = [
@@ -72,9 +71,3 @@ EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
 SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
 
 PASSWORD_RESET_TIMEOUT = 900  # 15 minutes
-
-# Structured logging configuration
-LOGGING = LOGGING_CONFIG
-
-# Initialize metrics and DB instrumentation
-import backend.observability  # noqa: E402

@@ -44,6 +44,8 @@ export function FooterNewsletter() {
     <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
       <input"
         type="email"
+        placeholder="Enter your email"
+        className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
         value={email}
         onChange={e => setEmail(e.target.value)}"
         placeholder="Enter your email"

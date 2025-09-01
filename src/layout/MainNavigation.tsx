@@ -5,7 +5,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Heart } from "lucide-react";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useTranslation } from "react-i18next";
-import { useCart } from "../../context"; // Added useCart
 
 export default function Page() {
 , []);

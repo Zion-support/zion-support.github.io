@@ -3,12 +3,13 @@ import { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation';
 import { Logo } from '@/components/header/Logo';
-import { ModeToggle } from '@/components/ModeToggle';
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { ModeToggle } from "@/components/ModeToggle";
+import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { CartIcon } from '@/components/CartIcon';
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
@@ -60,7 +61,10 @@ import { CartIcon } from '@/components/CartIcon';
             </button>
           </div>
 
-          <ModeToggle />
+          <div className="flex items-center gap-2">
+            <LanguageSelector />
+            <ModeToggle />
+          </div>
         </div>
         {/* Mobile menu */}
         {mobileMenuOpen && ("

@@ -33,12 +33,43 @@ export default function Page() {
     return true;
   };
 
-  const handleSubmit = async(e: React.FormEvent) => {
-    e.preventDefault () ;
-    if(!validateForm () ) return;
+import { useAuth } from "@/hooks/useAuth";
+import { registerUser } from "@/services/authService";
+import { toast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import { safeStorage } from "@/utils/safeStorage";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 
-    setIsLoading(true) ;
-    setError('') ;
+// Form validation schema
+const signupSchema = z
+  .object({
+    displayName: z.string().min(2, "Name must be at least 2 characters"),
+    email: z.string().email("Please enter a valid email"),
+    password: z.string()
+      .min(8, "Password must be at least 8 characters")
+      .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+      .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+      .regex(/[0-9]/, "Password must contain at least one number"),
+    confirmPassword: z.string(),
+    termsAccepted: z.boolean().refine(val => val === true, {
+      message: "You must accept the terms and conditions",
+    }),
+  })
+  .refine(data => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
+  });
 
 type SignupFormValues = any;
 
@@ -69,13 +100,30 @@ export default function Signup() {
       // Simulate API call
       await new Promise(resolve => setTimeout (resolve, 2000) ) ;
 
-      // Mock successful signup
-      setSuccess('Account created successfully ! Welcome to Zion Tech Group.') ;
-      setTimeout(() => {
-        navigate('/dashboard') ;
-      }, 2000) ;
-    } catch(err) {
-      setError('Failed to create account.Please try again.') ;
+      if (res.status !== 201) {
+        const message = resData?.message || "Registration failed";
+        if (res.status === 409) {
+          form.setError("email", { message });
+        } else if (res.status === 400 && message.toLowerCase().includes("password")) {
+          form.setError("password", { message });
+        } else {
+          form.setError("root", { message });
+        }
+        toast.error(message);
+        return;
+      }
+
+      if (resData?.token) {
+        safeStorage.setItem("token", resData.token);
+      }
+
+      toast.success("Welcome to ZionAI 🎉");
+      navigate("/dashboard");
+    } catch (err: any) {
+      const message =
+        err?.response?.data?.message ?? err?.message ?? "Unexpected error";
+      form.setError("root", { message });
+      toast.error(message);
     } finally {
       setIsLoading(false) ;
     }
@@ -558,6 +606,8 @@ export default function Signup() {
                       </FormItem>
                     )}
                   />
+
+                  <PasswordStrengthMeter password={passwordValue} />
 
                   <FormField
                     control={form.control}

@@ -19,7 +19,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "axios": ["./src/lib/axios"]
+      "@/pages/*": ["./src/pages/*"]
     },
     "types": ["vite/client", "react", "react-router-dom", "storybook__react"]
   },

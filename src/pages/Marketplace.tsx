@@ -24,6 +24,14 @@ import { useNavigate } from "react-router-dom";
 import { SearchSuggestion } from "@/types/search";
 import styles from './Marketplace.module.css';
 import { useViewMode } from '@/context/ViewModeContext';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/ui/pagination';
 
 interface ProductContainerProps {
   listings: ProductListing[];
@@ -71,6 +79,8 @@ export default function Marketplace() {
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
   const [isLoading, setIsLoading] = useState(false);
   const { viewMode, setViewMode } = useViewMode();
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
 
   const filteredSolutions = solutions.filter(solution => {
     const matchesCategory = selectedCategory === 'all' || solution.category === selectedCategory;
@@ -200,20 +210,20 @@ export default function Marketplace() {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => setView('grid')}
-                aria-pressed={view === 'grid'}
+                onClick={() => setViewMode('grid')}
                 aria-label="Grid view"
-                className={view === 'grid' ? 'text-zion-purple' : 'text-zion-slate-light'}
+                aria-pressed={viewMode === 'grid'}
+                className="text-zion-slate-light"
               >
                 <Grid3X3 className="h-4 w-4" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => setView('list')}
-                aria-pressed={view === 'list'}
+                onClick={() => setViewMode('list')}
                 aria-label="List view"
-                className={view === 'list' ? 'text-zion-purple' : 'text-zion-slate-light'}
+                aria-pressed={viewMode === 'list'}
+                className="text-zion-slate-light"
               >
                 <ListFilter className="h-4 w-4" />
               </Button>
@@ -296,9 +306,9 @@ export default function Marketplace() {
               </div>
             ) : filteredListings.length > 0 ? (
               viewMode === 'grid' ? (
-                <ProductGrid listings={filteredListings} onRequestQuote={handleRequestQuote} />
+                <ProductGrid listings={paginatedListings} onRequestQuote={handleRequestQuote} />
               ) : (
-                <ProductList listings={filteredListings} onRequestQuote={handleRequestQuote} />
+                <ProductList listings={paginatedListings} onRequestQuote={handleRequestQuote} />
               )
             ) : (
               <div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'flex flex-col gap-6'}>

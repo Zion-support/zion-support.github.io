@@ -146,6 +146,11 @@ const heroSlides: HeroSlide[] = [=======
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]" />"
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]" />
       </div>
+      
+      <div className="container relative z-10 px-4 mx-auto text-center">
+        <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold drop-shadow-md">
+          {t('home.hero_title')}
+        </GradientHeading>
 
       {/* Hero Content */}"
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">"
@@ -167,119 +172,29 @@ const heroSlides: HeroSlide[] = [=======
                 <Star className="w-4 h-4 mr-2 text-yellow-400"  />                Leading Technology Solutions
               </motion.div>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}"
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
-              >"
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  {currentSlideData.title}
-                </span>
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}"
-                className="text-xl text-slate-300 leading-relaxed"
-              >
-                {currentSlideData.subtitle}
-              </motion.p>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.0 }}"
-                className="text-lg text-slate-400 leading-relaxed"
-              >
-                {currentSlideData.description}
-              </motion.p>
-            </div>
-
-            {/* Features */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.2 }}"
-              className="grid grid-cols-2 gap-3"
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <Button
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 transition-all duration-300 hover:shadow-[0_0_15px_2px_rgba(164,80,255,0.7)] focus:shadow-[0_0_15px_2px_rgba(164,80,255,0.7)]"
+            size="lg"
+            asChild
+          >
+            <Link
+              to="/signup"
+              role="button"
+              aria-label={t('auth.signup')}
+              tabIndex={0}
+              data-testid="hero-signup-btn"
             >
-              {currentSlideData.features.map((feature, index) => ("
-                <div key={feature} className="flex items-center space-x-2">"
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"  />"                  <span className="text-slate-300 text-sm">{feature}</span>
-                </div>
-              ))}
-            </motion.div>
-
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.4 }}"
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <Link
-                to={currentSlideData.path}"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
-              >
-                {currentSlideData.cta}"
-                <ArrowRight className="w-5 h-5 ml-2"  />              </Link>
-
-              <button
-                onClick={() => setIsAutoPlaying(!isAutoPlaying)}"
-                className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-cyan-400 font-medium rounded-lg transition-all duration-300"
-                aria-label={
-
-                  isAutoPlaying ? 'Pause slideshow' : 'Play slideshow'
-                }
-              >
-                {isAutoPlaying ? ("
-                  <Pause className="w-5 h-5"  />
-                ) : ("
-                  <Play className="w-5 h-5"  />
-                )}              </button>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.6 }}"
-              className="grid grid-cols-3 gap-6 pt-8"
-            >
-              {currentSlideData.stats.map((stat, index) => ("
-                <div key={stat.label} className="text-center">"
-                  <div className="text-2xl font-bold text-cyan-400 mb-1">
-                    {stat.value}
-                  </div>"
-                  <div className="text-sm text-slate-400">{stat.label}</div>
-                </div>
-              ))}
-            </motion.div>
-          </motion.div>
-
-          {/* Visual Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}"
-            className="relative"
-          >"
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 p-8">
-              <div
-                className={`w-24 h-24 bg-gradient-to-br ${currentSlideData.gradient} rounded-2xl flex items-center justify-center mb-6 mx-auto`}
-              >"
-                <currentSlideData.icon className="w-12 h-12 text-white" />
-              </div>
-"
-              <div className="text-center space-y-4">"
-                <h3 className="text-2xl font-bold text-white">
-                  {currentSlideData.title}
-                </h3>"
-                <p className="text-slate-300">{currentSlideData.subtitle}</p>
-              </div>
-            </div>
-          </motion.div>
+              {t('auth.signup')}
+            </Link>
+          </Button>
+          <Link
+            id="browse-marketplace"
+            to="/marketplace"
+            className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-4 rounded-md inline-flex items-center justify-center transition-all duration-300 hover:shadow-[0_0_15px_2px_rgba(0,255,255,0.6)] focus:shadow-[0_0_15px_2px_rgba(0,255,255,0.6)]"
+          >
+            {t('home.browse_marketplace')}
+          </Link>
         </div>
       </div>
 

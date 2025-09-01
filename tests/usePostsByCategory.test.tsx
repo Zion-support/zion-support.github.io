@@ -26,7 +26,7 @@ it('returns posts for slug', async () => {
     <div />
   );
 
-  const { result } = renderHook(() => usePostsByCategory('getting-hired', 1), { wrapper });
+  const { result } = renderHook(() => usePostsByCategory('getting-hired'), { wrapper });
 
   await waitFor(() => expect(result.current.data?.length).toBeGreaterThan(0));
 });

@@ -3,19 +3,18 @@ import useSWR from 'swr';
 import { Loader2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
 import { useRequestQuoteWizard } from '@/context';
 
 const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
 
-function StepIndicator({ step }: { step: WizardStep }) {
-  
-  return (<div data-testid="step-indicator" className="text-sm text-muted-foreground">
-      Step {index + 1} of {WIZARD_STEPS.length}
-    </div>
-  )}
+const fetcher = (url: string) => fetch(url).then(res => {
+  if (!res.ok) throw new Error('Failed');
+  return res.json();
+});
 
 export function QuoteWizard() {
-  const { step, selectService } = useRequestQuoteWizard();
+  const { step, selectService, submitQuote } = useRequestQuoteWizard();
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const { data, error } = useSWR<ServiceItem[]>('/api/services', fetcher, {
     onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
@@ -25,10 +24,11 @@ export function QuoteWizard() {
     },
   });
 
-  if(step === 'Services') {
-    
-    return (<div className="space-y-6">
-        <StepIndicator step={step}  />
+  if (step === 'Services') {
+    const loading = !data && !error;
+
+    return (
+      <div className="space-y-6">
         {loading && (
           <div className="flex justify-center py-12">
             <Loader2 className="h-6 w-6 animate-spin" />
@@ -71,4 +71,23 @@ export function QuoteWizard() {
     return <div data-testid="details-step">Step 2 Form</div>;
   }
 
-  return null}
+  if (step === 'Details') {
+    return (
+      <div data-testid="details-step" className="space-y-4">
+        <Textarea
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          data-testid="message-input"
+          placeholder="Your message"
+        />
+        <Button onClick={() => submitQuote(message)}>Submit</Button>
+      </div>
+    );
+  }
+
+  if (step === 'Success') {
+    return <div data-testid="success-step">Quote Submitted</div>;
+  }
+
+  return null;
+}

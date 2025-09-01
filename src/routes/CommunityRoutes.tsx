@@ -15,30 +15,9 @@ const CommunityRoutes = () => {
       {/* Public routes */}
       <Route path="/community" element={<CommunityPage />} />
       <Route path="/forum" element={<CommunityPage />} />
-      <Route
-        path="/community/category/:categoryId"
-        element={
-          <ErrorBoundary>
-            <ForumCategoryPage />
-          </ErrorBoundary>
-        }
-      />
-      <Route
-        path="/community/post/:postId"
-        element={
-          <ErrorBoundary>
-            <ForumPostPage />
-          </ErrorBoundary>
-        }
-      />
-      <Route
-        path="/community/profile/:userId"
-        element={
-          <ErrorBoundary>
-            <CommunityProfilePage />
-          </ErrorBoundary>
-        }
-      />
+      <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
+      <Route path="/community/post/:postId" element={<ForumPostPage />} />
+      <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
       
       {/* Protected routes */}
       <Route
