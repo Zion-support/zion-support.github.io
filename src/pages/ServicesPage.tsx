@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 import { useEffect, useState } from "react";
+import apiClient from "@/services/apiClient";
+import { toast } from "@/hooks/use-toast";
 
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
@@ -222,7 +224,22 @@ const SERVICE_FILTERS = [
 ];
 
 export default function ServicesPage() {
-  const [listings, setListings] = useState<ProductListing[]>(SERVICE_LISTINGS);
+  const [listings, setListings] = useState<ProductListing[]>(SERVICES);
+
+  useEffect(() => {
+    async function load() {
+      // Endpoint defined in `pages/api/services.ts` -> baseURL `/api` so final URL is `/api/services`
+      try {
+        const res = await apiClient.get('/services');
+        setListings(res.data as ProductListing[]);
+      } catch (err) {
+        console.error('Failed to fetch services', err);
+        toast.error('Failed to load services. Showing sample data.');
+        setListings(SERVICES);
+      }
+    }
+    load();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
