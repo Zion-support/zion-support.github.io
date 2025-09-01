@@ -1,4 +1,4 @@
-# Security Policy
+# ARCHITECTURE
 
 undefined
 
@@ -6,25 +6,33 @@ undefined
 
 
 - [Overview](#overview)
-- [Security Model](#security-model)
-- [Authentication](#authentication)
-- [Authorization](#authorization)
-- [Data Protection](#data-protection)
-- [Vulnerability Management](#vulnerability-management)
+- [System Design](#system-design)
+- [Components](#components)
+- [Data Flow](#data-flow)
+- [Security](#security)
+- [Scalability](#scalability)
       
 
 ## Overview
 
 
-Security is a top priority for Zion App. This document outlines our security practices and considerations.
+Zion App follows a modern, scalable architecture designed for performance and maintainability.
 
-## Security Model
+## System Design
 
-We follow the principle of defense in depth:
-- **Input Validation**: All user inputs are validated and sanitized
-- **Authentication**: Secure user authentication and session management
-- **Authorization**: Role-based access control for all features
-- **Data Protection**: Encryption for sensitive data at rest and in transit
+The application uses a layered architecture with clear separation of concerns:
+
+- **Presentation Layer**: React components and pages
+- **Business Logic Layer**: Services and utilities
+- **Data Layer**: API calls and data management
+- **Infrastructure Layer**: Configuration and deployment
+
+## Components
+
+- **Core Components**: Reusable UI components
+- **Page Components**: Route-specific page layouts
+- **Layout Components**: Page structure and navigation
+- **Utility Components**: Helper components for common tasks
       
 
 ## Getting Started
@@ -74,13 +82,13 @@ We follow the principle of defense in depth:
 
 ## Basic Example
 
-Here's a simple example of how to use SECURITY:
+Here's a simple example of how to use ARCHITECTURE:
 
 ```typescript
 // Example code here
-import { SECURITY } from './SECURITY';
+import { ARCHITECTURE } from './ARCHITECTURE';
 
-const example = new SECURITY();
+const example = new ARCHITECTURE();
 example.doSomething();
 ```
 
@@ -104,7 +112,7 @@ In a real application:
 ```typescript
 // Real-world usage example
 const app = new Application();
-app.configure(SECURITY);
+app.configure(ARCHITECTURE);
 app.start();
 ```
     

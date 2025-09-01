@@ -1,4 +1,4 @@
-# Security Policy
+# API
 
 undefined
 
@@ -6,25 +6,35 @@ undefined
 
 
 - [Overview](#overview)
-- [Security Model](#security-model)
 - [Authentication](#authentication)
-- [Authorization](#authorization)
-- [Data Protection](#data-protection)
-- [Vulnerability Management](#vulnerability-management)
+- [Endpoints](#endpoints)
+- [Error Handling](#error-handling)
+- [Rate Limiting](#rate-limiting)
+- [Examples](#examples)
       
 
 ## Overview
 
 
-Security is a top priority for Zion App. This document outlines our security practices and considerations.
+The Zion App API provides programmatic access to application features and data.
 
-## Security Model
+## Authentication
 
-We follow the principle of defense in depth:
-- **Input Validation**: All user inputs are validated and sanitized
-- **Authentication**: Secure user authentication and session management
-- **Authorization**: Role-based access control for all features
-- **Data Protection**: Encryption for sensitive data at rest and in transit
+Most API endpoints require authentication. Include your API key in the Authorization header:
+
+```
+Authorization: Bearer YOUR_API_KEY
+```
+
+## Base URL
+
+```
+https://api.zion.app/v1
+```
+
+## Rate Limiting
+
+API requests are limited to 1000 requests per hour per API key.
       
 
 ## Getting Started
@@ -74,13 +84,13 @@ We follow the principle of defense in depth:
 
 ## Basic Example
 
-Here's a simple example of how to use SECURITY:
+Here's a simple example of how to use API:
 
 ```typescript
 // Example code here
-import { SECURITY } from './SECURITY';
+import { API } from './API';
 
-const example = new SECURITY();
+const example = new API();
 example.doSomething();
 ```
 
@@ -104,7 +114,7 @@ In a real application:
 ```typescript
 // Real-world usage example
 const app = new Application();
-app.configure(SECURITY);
+app.configure(API);
 app.start();
 ```
     
