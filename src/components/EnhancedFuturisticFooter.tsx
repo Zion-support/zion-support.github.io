@@ -156,34 +156,11 @@ import { motion } from 'framer - motion';
       links: [
         { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
-        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
-        { name: 'AI Financial Fraud Detection', href: '/services/ai-financial-fraud-detection' },
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
-        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
-        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
-        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
-        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
-        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
-        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio' }
-      ]
-    },
-    {
-      title: 'Revolutionary Services 2030',
-      icon: Rocket,
-      color: 'from-indigo-600 to-purple-600',
-      links: [
-        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
-        { name: 'Space Mission Planning', href: '/services/ai-space-mission-planning' },
-        { name: 'Climate Prediction AI', href: '/services/ai-climate-prediction-platform' },
-        { name: 'Healthcare Predictive Analytics', href: '/services/ai-healthcare-predictive-analytics' },
-        { name: 'Financial Trading Risk Management', href: '/services/ai-financial-trading-risk-management' },
-        { name: 'Legal Document Automation', href: '/services/ai-legal-document-automation' }
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform' },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation' },
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
+        { name: 'AI Business Intelligence Platform', href: '/services/ai-business-intelligence-platform' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' }
       ]
     },
     {
@@ -191,10 +168,10 @@ import { motion } from 'framer - motion';
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
       links: [
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' }
       ]
     },
@@ -203,12 +180,12 @@ import { motion } from 'framer - motion';
       icon: Rocket,
       color: 'from - blue - 600 to - cyan - 600',
       links: [
-        { name: 'Services Overview', href: '/services - overview' },
-        { name: 'AI Services', href: '/ai - services' },
-        { name: 'IT Services', href: '/it - services' },
-        { name: 'Micro SaaS', href: '/micro - saas' },
-        { name: 'Services Catalog', href: '/services - catalog' },
-        { name: 'Services Comparison', href: '/services - comparison' }
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'Smart Contract Risk Scanner', href: '/services/smart-contract-risk-scanner' },
+        { name: 'Space Technology', href: '/services/space-tech' }
       ]
     },
     {
@@ -285,10 +262,16 @@ import { motion } from 'framer - motion';
         { name: 'About Us', href: '/about' },
         { name: 'Our Team', href: '/team' },
         { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Contact Us', href: '/contact' },
-        { name: 'Request Quote', href: '/request-quote' },
-        { name: 'Support Center', href: '/support' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Support', href: '/support' },
+        { name: 'Documentation', href: '/documentation' }
+      ]
+    },
+    {
+      title: 'Legal',
+      icon: Shield,
+      color: 'from-red-600 to-pink-600',
+      links: [
         { name: 'Privacy Policy', href: '/privacy' },
         { name: 'Terms of Service', href: '/terms' },
         { name: 'Cookie Policy', href: '/cookies' }
