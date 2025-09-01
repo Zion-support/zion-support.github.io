@@ -1,35 +1,14 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { createClient } from '@supabase/supabase-js';
-import bcrypt from 'bcryptjs';
+import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth';
+import { UserRole } from '../../../utils/messaging/types';
 
-const supabaseUrl = process.env.SUPABASE_URL as string;
-const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY as string;
-const supabase = createClient(supabaseUrl, serviceKey);
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).end();
-  }
-
-  const { email, password } = req.body as { email: string; password: string };
-
-  const { data, error } = await supabase.auth.signInWithPassword({
-    email,
-    password,
-  });
-
-  console.log('Supabase signIn response:', { data, error });
-
-  if (error || !data?.session) {
-    if (error?.status === 400 && /confirm/.test(error.message.toLowerCase())) {
-      res.status(400).json({ error: 'Please confirm your email' });
-      return;
-    }
-    res.status(401).json({ error: 'Invalid credentials' });
-    return;
-  }
-
-  const token = data.session.access_token;
-  res.setHeader('Set-Cookie', `token=${token}; HttpOnly; Path=/`);
-  res.status(200).json({ user: data.user, token });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { name, role } = req.body as { name: string; role: UserRole };
+  if (!name || !role) return res.status(400).json({ error: 'Missing name or role' });
+  ensureDemoUsers();
+  const user = generateUser(name, role);
+  upsertUser(user);
+  setUserCookie(res, user);
+  res.status(200).json({ user });
 }
