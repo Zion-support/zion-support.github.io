@@ -9,49 +9,42 @@ export default function Footer() {
     { name: 'Quantum Technology', href: '/quantum-services' },
     { name: 'Space Technology', href: '/space-technology' },
     { name: 'IT Solutions', href: '/it-services' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Platform', href: '/cloud-platform' },
+    { name: 'Specialized Solutions', href: '/solutions' },
     { name: 'View All Services', href: '/services' }
   ];
 
   const solutions = [
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
-    { name: 'Financial Solutions', href: '/solutions/financial' },
-    { name: 'Government Solutions', href: '/solutions/government' },
-    { name: 'Manufacturing Solutions', href: '/solutions/manufacturing' },
-    { name: 'Retail Solutions', href: '/solutions/retail' },
-    { name: 'Education Solutions', href: '/solutions/education' },
-    { name: 'Energy Solutions', href: '/solutions/energy' },
-    { name: 'Transportation Solutions', href: '/solutions/transportation' },
-    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'Services Showcase', href: '/comprehensive-services-showcase-2025' },
+    { name: 'Pricing Plans', href: '/pricing' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'Support', href: '/support' },
+    { name: 'Documentation', href: '/docs' }
   ];
 
   const company = [
     { name: 'About Us', href: '/about' },
-    { name: 'Mission', href: '/mission' },
-    { name: 'Values', href: '/values' },
-    { name: 'Team', href: '/team' },
-    { name: 'Leadership', href: '/leadership' },
-    { name: 'Culture', href: '/culture' },
-    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' },
     { name: 'Partners', href: '/partners' },
-    { name: 'Investors', href: '/investors' }
+    { name: 'Investors', href: '/investors' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' }
   ];
 
   const resources = [
     { name: 'Documentation', href: '/docs' },
-    { name: 'API Reference', href: '/api-docs' },
     { name: 'Blog', href: '/blog' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'About', href: '/about' },
-    { name: 'All Services', href: '/services' },
-    { name: 'Services Advertising', href: '/services-advertising' },
-    { name: 'Market Pricing', href: '/market-pricing' },
-    { name: 'RAG Evaluation Lab', href: '/rag-evaluation-lab/' },
-    { name: 'API Performance Testing', href: '/api-performance-testing/' }
+    { name: 'Support Center', href: '/support' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'Training', href: '/training' }
+  ];
+
+  const legal = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Security', href: '/security' }
   ];
 
   const socialLinks = [
@@ -90,16 +83,117 @@ export default function Footer() {
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300 -z-10" />
               </div>
-              <span className="text-2xl font-bold gradient-text-blue group-hover:from-blue-500 group-hover:to-emerald-500 transition-all duration-300">
-                Zion Tech
-              </span>
-            </Link>
-            <p className="text-gray-400 mb-8 max-w-md leading-relaxed">
-              The world&apos;s most advanced autonomous innovation hub delivering cutting-edge technology solutions, 
-              intelligent automation systems, and the future of cloud-native AI infrastructure.
+              <div>
+                <div className="text-2xl font-bold text-white">Zion Tech Group</div>
+                <div className="text-sm text-gray-400">Revolutionary Technology Solutions</div>
+              </div>
+            </div>
+            <p className="text-gray-300 mb-6 max-w-xs">
+              Pioneering the future of technology with innovative solutions that drive business transformation.
             </p>
             <div className="flex space-x-4">
-              {social.map((social) => (
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-cyan-500 transition-colors"
+                  aria-label={social.name}
+                >
+                  <social.icon className="w-5 h-5 text-gray-300 hover:text-white" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-6">Services</h3>
+            <ul className="space-y-3">
+              {services.map((service) => (
+                <li key={service.name}>
+                  <a
+                    href={service.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    {service.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-6">Solutions</h3>
+            <ul className="space-y-3">
+              {solutions.map((solution) => (
+                <li key={solution.name}>
+                  <a
+                    href={solution.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    {solution.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-6">Company</h3>
+            <ul className="space-y-3">
+              {company.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources & Legal */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-6">Resources</h3>
+            <ul className="space-y-3 mb-6">
+              {resources.map((resource) => (
+                <li key={resource.name}>
+                  <a
+                    href={resource.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    {resource.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <h3 className="text-lg font-semibold text-white mb-6">Legal</h3>
+            <ul className="space-y-3">
+              {legal.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Social Links & Newsletter */}
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <div className="flex flex-col lg:flex-row items-center justify-between">
+            {/* Social Links */}
+            <div className="flex items-center space-x-4 mb-6 lg:mb-0">
+              <span className="text-gray-400 text-sm mr-4">Follow Us:</span>
+              {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}

@@ -1,25 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Layout from './layout/Layout';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { 
-  ArrowRight, 
-  Star, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Zap,
-  Globe,
-  Rocket,
-  Brain,
-  Atom,
-  Cpu,
-  Target,
-  CheckCircle,
-  Play,
-  ChevronDown
-} from 'lucide-react';
-import Link from 'next/link';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 
 const Homepage2025: React.FC = () => {
@@ -90,6 +70,7 @@ const Homepage2025: React.FC = () => {
 
   return (
     <Layout>
+      {/* Main Content */}
       <main className="relative z-10">
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
@@ -426,71 +407,8 @@ const Homepage2025: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="py-24 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                Join hundreds of companies already leveraging our cutting-edge technology solutions to stay ahead of the competition.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Services</h4>
-              <ul className="text-gray-400 text-sm space-y-2">
-                <li><a href="#services" className="hover:text-cyan-400 transition-colors">Micro SAAS</a></li>
-                <li><a href="#ai" className="hover:text-cyan-400 transition-colors">AI Services</a></li>
-                <li><a href="#automation" className="hover:text-cyan-400 transition-colors">AI Automation</a></li>
-                <li><a href="#quantum" className="hover:text-cyan-400 transition-colors">Quantum Security</a></li>
-                <li><a href="#it" className="hover:text-cyan-400 transition-colors">IT Solutions</a></li>
-                <li><a href="#emerging" className="hover:text-cyan-400 transition-colors">Emerging Tech</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Company</h4>
-              <ul className="text-gray-400 text-sm space-y-2">
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">About Us</a></li>
-                <li><a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a></li>
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Careers</a></li>
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Blog</a></li>
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">News</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Connect</h4>
-              <ul className="text-gray-400 text-sm space-y-2">
-                <li><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464 0950</a></li>
-                <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a></li>
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Website</a></li>
-                <li><a href="/social/linkedin" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
-                <li><a href="/social/twitter" className="hover:text-cyan-400 transition-colors">Twitter</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-white/10 pt-8 text-center">
-            <p className="text-gray-400 text-sm">
-              © 2025 ZionTech Group. All rights reserved. | 
-              <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 ml-2">
-                https://ziontechgroup.com
-              </a>
-            </p>
-            <p className="text-gray-500 text-xs mt-2">
-              Revolutionizing technology, one breakthrough at a time.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </UltraFuturisticBackground2026>
+      </main>
+    </Layout>
   );
 };
 

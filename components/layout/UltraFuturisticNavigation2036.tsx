@@ -44,7 +44,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Services',
     href: '/services',
-    icon: <Play className="w-5 h-5" />,
+    icon: <Rocket className="w-5 h-5" />,
     description: 'Complete technology solutions',
     badge: 'Main',
     category: 'services',
@@ -53,7 +53,7 @@ const navigationItems: NavigationItem[] = [
         name: 'All Services', 
         href: '/services', 
         description: 'Complete services overview',
-        icon: <Calculator className="w-4 h-4" />,
+        icon: <Grid className="w-4 h-4" />,
         featured: true
       },
       { 
@@ -64,21 +64,9 @@ const navigationItems: NavigationItem[] = [
       },
       { 
         name: 'Quantum Technology', 
-        href: '/quantum-enhanced-cybersecurity-sentinel', 
+        href: '/quantum-services', 
         description: 'Quantum computing solutions',
         icon: <AtomIcon className="w-4 h-4" />
-      },
-      { 
-        name: 'Customer Success AI', 
-        href: '/ai-autonomous-customer-success-platform', 
-        description: 'Autonomous customer success management',
-        icon: <MessageCircle className="w-4 h-4" />
-      },
-      { 
-        name: 'Business Intelligence', 
-        href: '/autonomous-business-intelligence-engine', 
-        description: 'Self-driving business analytics',
-        icon: <BarChart3 className="w-4 h-4" />
       },
       { 
         name: 'Space Technology', 
@@ -110,45 +98,30 @@ const navigationItems: NavigationItem[] = [
     featured: true,
     children: [
       { 
-        name: 'Innovative 2027 Services', 
-        href: '/innovative-2027-services-showcase', 
-        description: 'Cutting-edge 2027 services showcase',
-        icon: <Star className="w-4 h-4" />,
-        featured: true,
-        badge: 'NEW'
-      },
-      { 
         name: 'Services Showcase', 
         href: '/comprehensive-services-showcase-2025', 
         description: 'Complete services overview',
-        icon: <Calculator className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'Innovative 2037 Services', 
-        href: '/innovative-2037-services-showcase', 
-        description: 'Cutting-edge 2037 services',
-        icon: <Sparkles className="w-4 h-4" />,
+        icon: <Grid className="w-4 h-4" />,
         featured: true
       },
       { 
         name: 'Pricing Plans', 
         href: '/pricing', 
         description: 'Service pricing information',
-        icon: <Play className="w-4 h-4" />
+        icon: <DollarSign className="w-4 h-4" />
       },
       { 
         name: 'Market Pricing', 
         href: '/market-pricing', 
         description: 'Market price references',
-        icon: <Play className="w-4 h-4" />
+        icon: <BarChart3 className="w-4 h-4" />
       }
     ]
   },
   {
     name: 'Company',
     href: '/about',
-    icon: <Play className="w-5 h-5" />,
+    icon: <Building className="w-5 h-5" />,
     description: 'About Zion Tech Group',
     category: 'company',
     children: [
@@ -156,7 +129,7 @@ const navigationItems: NavigationItem[] = [
         name: 'About Us', 
         href: '/about', 
         description: 'Company information',
-        icon: <Play className="w-4 h-4" />
+        icon: <Building className="w-4 h-4" />
       },
       { 
         name: 'Contact', 
@@ -168,7 +141,7 @@ const navigationItems: NavigationItem[] = [
         name: 'Partners', 
         href: '/partners', 
         description: 'Partnership opportunities',
-        icon: <Play className="w-4 h-4" />
+        icon: <Users className="w-4 h-4" />
       },
       { 
         name: 'Investors', 
@@ -181,7 +154,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Resources',
     href: '/resources',
-    icon: <Play className="w-5 h-5" />,
+    icon: <BookOpen className="w-5 h-5" />,
     description: 'Knowledge & support',
     category: 'resources',
     children: [
@@ -189,19 +162,19 @@ const navigationItems: NavigationItem[] = [
         name: 'Documentation', 
         href: '/docs', 
         description: 'Technical documentation',
-        icon: <Play className="w-4 h-4" />
+        icon: <FileText className="w-4 h-4" />
       },
       { 
         name: 'Blog', 
         href: '/blog', 
         description: 'Latest insights',
-        icon: <Play className="w-4 h-4" />
+        icon: <BookOpen className="w-4 h-4" />
       },
       { 
         name: 'Case Studies', 
         href: '/case-studies', 
         description: 'Success stories',
-        icon: <Play className="w-4 h-4" />
+        icon: <Award className="w-4 h-4" />
       },
       { 
         name: 'Support', 
