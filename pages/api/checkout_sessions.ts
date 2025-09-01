@@ -1,22 +1,8 @@
 import Stripe from 'stripe';
 
-// Basic request/response types so this handler works without Next.js
-type Req = {
-  method?: string;
-  body?: any;
-  headers: Record<string, any>;
-};
-
-interface JsonRes {
-  statusCode?: number;
-  setHeader: (name: string, value: string) => void;
-  end: (data?: any) => void;
-  status: (code: number) => JsonRes;
-  json: (data: any) => void;
-}
-
-const stripe = new Stripe(process.env.STRIPE_TEST_KEY || '', {
-  apiVersion: '2023-10-16',
+const stripe = new Stripe(process.env.STRIPE_TEST_SECRET_KEY || process.env.STRIPE_SECRET_KEY || '', {
+  apiVersion: '2025-05-28.basil', // Updated to the expected version
+  typescript: true,
 });
 
 export default async function handler(req: Req, res: JsonRes) {

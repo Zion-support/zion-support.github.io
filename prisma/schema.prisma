@@ -25,6 +25,11 @@ model ChatMessage {
   sender    User     @relation("UserMessages", fields: [senderId], references: [id])
   content   String
   createdAt DateTime @default(now())
+  emailVerified Boolean @default(false)
+  points Int @default(0)
+  reviews   ProductReview[] // Add this line
+  resetToken       String?   @unique
+  resetTokenExpiry DateTime?
 }
 
 model ChatMessage {

@@ -1,6 +1,19 @@
 import { renderHook, waitFor, act } from '@testing-library/react';
-export default function Page() {
->
+import { SWRConfig } from 'swr';
+import { useQuoteWizard, ServiceItem } from '../useQuoteWizard';
+
+// Mock Sentry's captureException
+jest.mock('@/utils/sentry', () => ({
+  captureException: jest.fn(),
+}));
+
+const mockFetcher = jest.fn();
+
+// Helper to wrap hook with SWRConfig and a clear cache
+const renderUseQuoteWizard = (category: string) => {
+  return renderHook(() => useQuoteWizard(category), {
+    wrapper: ({ children }) => (
+      <SWRConfig value={{ provider: () => new Map(), fetcher: mockFetcher }}>
         {children}
       </SWRConfig>
     ),

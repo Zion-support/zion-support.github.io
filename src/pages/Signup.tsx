@@ -100,17 +100,48 @@ export default function Signup() {
     
     setIsSubmitting(true);
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+      const { data: resData } = await registerUser( // `res` variable removed as it wasn't used
+        data.displayName,
+        data.email,
+        data.password
+      );
 
-      if (res.status !== 201) {
-        const message = resData?.message || "Registration failed";
-        if (res.status === 409) {
-          form.setError("email", { message });
-        } else if (res.status === 400 && message.toLowerCase().includes("password")) {
-          form.setError("password", { message });
-        } else {
-          form.setError("root", { message });
+      // The `registerUser` service is expected to handle the response from the API.
+      // If the API indicates an email already exists, `registerUser` should throw an error
+      // which will be caught by the catch block below.
+
+      if (resData?.emailVerificationRequired) {
+        setShowVerificationMessage(true);
+        // No navigation or session setting here. User needs to verify their email.
+        // Mailchimp subscription should also wait until the email is verified.
+      } else {
+        // This block means registration was successful and no immediate email verification is required.
+        // Supabase might have automatically created a session for the user if email verification is disabled project-wide.
+        // The AuthProvider's onAuthStateChange listener is responsible for detecting session changes
+        // and updating the application's auth state (user, isAuthenticated, tokens).
+        // We should not manually set session, tokens, or headers here.
+
+        toast.success("Account created successfully! Please log in to continue.");
+
+        // Redirect to the login page. If Supabase did auto-log in the user,
+        // the useAuth hook (via AuthProvider) will likely redirect from the login page
+        // to the appropriate authenticated route (e.g., dashboard or onboarding).
+        navigate("/login");
+
+        // Subscribe to Mailchimp if opted in, as the account is considered created.
+        // This happens regardless of whether Supabase auto-logged them in or they need to log in manually.
+        if (data.newsletterOptIn && mailchimpService) {
+          try {
+            await mailchimpService.addSubscriber({
+              email: data.email,
+              mergeFields: { FNAME: data.displayName }
+            });
+            await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
+          } catch (mailchimpError) {
+            console.error('Mailchimp subscription failed:', mailchimpError);
+            // This is a non-critical error, so we don't block the user flow
+            // or show a user-facing error message for this.
+          }
         }
         toast.error(message);
         return;
@@ -120,384 +151,54 @@ export default function Signup() {
         safeStorage.setItem("token", resData.token);
       }
 
-      // Subscribe user to Mailchimp if opted in
-      if (data.newsletterOptIn && mailchimpService) {
-        try {
-          await mailchimpService.addSubscriber({
-            email: data.email,
-            mergeFields: { FNAME: data.displayName }
-          });
-          await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
-        } catch (err) {
-          console.error('Mailchimp subscription failed', err);
-        }
-      }
-
-      toast.success("Welcome to ZionAI 🎉");
-      navigate("/dashboard");
-    } catch (err: any) {
-      const message =
-        err?.response?.data?.message ?? err?.message ?? "Unexpected error";
-      form.setError("root", { message });
-      toast.error(message);
-    } finally {
-      setIsLoading(false) ;
+  // Redirect if user is already logged in.
+  // This check runs on component mount and whenever isAuthenticated, user, or showVerificationMessage changes.
+  // It allows a user to remain on the signup page if showVerificationMessage is true (waiting for email verification),
+  // even if they somehow have an existing session (e.g., from a previous tab).
+  if (isAuthenticated && !showVerificationMessage) {
+    // If profile is complete, go to home/dashboard. Otherwise, to onboarding.
+    if (user && typeof user !== 'boolean' && user.profileComplete) {
+      return <Navigate to="/" />;
+    } else {
+      // User is authenticated but profile is not complete
+      return <Navigate to="/onboarding" />;
     }
-  };
+  }
 
-  const getPasswordStrength = (password: string) => {
-    if(password.length === 0) return { score: 0, label: '', color: '' };
-    if(password.length < 8) return { score: 1, label: 'Weak', color: 'text-red - 400' };
-    if(password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
-    if(password.length < 16) return { score: 3, label: 'Good', color: 'text-blue - 400' };
-    return { score: 4, label: 'Strong', color: 'text-green - 400' };
-  };
-
-  const passwordStrength = getPasswordStrength(formData.password) ;
-
-  const benefits = [{
-      icon: <Brain className="w-6 h-6" />,
-      title: 'AI - Powered Solutions',
-      description: 'Access cutting - edge AI and machine learning technologies',
-    },
-    {
-      icon: <Cloud className="w-6 h-6" />,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions for your business needs',
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Enterprise Security',
-      description: 'Bank - level security and compliance standards',
-    },
-    {
-      icon: <Rocket className="w-6 h-6" />,
-      title: 'Digital Transformation',
-      description: 'Transform your business with modern technology',
-    },
-  ];
-
-  const stats = [{ number: '500+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime' },
-    { number: '24 / 7', label: 'Support' },
-    { number: '50+', label: 'Services' },
-  ];
-
-  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900 flex">
-      {/* Left Side - Form */}
-      <div  className="flex - 1 flex items - center justify - center px-4 py-12">
-        <div  className="w-full max - w-2xl">
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-8"
-          >
-            <Link to="/" className="inline - block mb-6">
-              <div  className="flex items - center justify - center w-16 h-16 bg-gradient - to - br from - cyan - 500 to - blue - 600 rounded-2xl mx -auto">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-            </Link>
-            <h1 className="text-4xl font - bold text-white mb-4">
-              Join Zion Tech Group
-            </h1>
-            <p className="text-xl text-slate -300">
-              Transform your business with cutting - edge technology solutions
-            </p>
-          </motion.div>
-
-          {/* Error / Success Messages */}
-          {error && (<motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mb-6 p - 4 bg-red - 500 / 20 border border-red - 500 / 30 rounded-lg flex items - center gap-3 text-red -400"
-            >
-              <AlertCircle className="w-5 h-5" />
-              {error}
-            </motion.div>) }
-
-          {success && (<motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mb-6 p - 4 bg-green - 500 / 20 border border-green - 500 / 30 rounded-lg flex items - center gap-3 text-green -400"
-            >
-              <CheckCircle className="w-5 h-5" />
-              {success}
-            </motion.div>) }
-
-          {/* Signup Form */}
-          <motion.form
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            onSubmit={handleSubmit}
-            className="bg-white / 5 border border-slate - 600 / 30 rounded-2xl p - 8 backdrop - blur -md"
-          >
-            <div  className="grid grid - cols - 1 md:grid - cols - 2 gap-6 mb-6">
-              <div>
-                <label className="block text-white font - medium mb-2">
-                  First Name < span className="text-red -400">*</span>
-                </label>
-                <div  className="relative">
-                  <User className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-slate - 400 w-5 h-5" />
-                  <input
-                    type="text"
-                    value={formData.firstName}
-                    onChange={e =>
-                      handleInputChange('firstName', e.target.value) }
-                    className="w-full pl - 10 pr - 4 py-3 bg-white / 10 border border-slate - 600 / 30 rounded-lg text-white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border-transparent"
-                    placeholder="Enter your first name"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-white font - medium mb-2">
-                  Last Name < span className="text-red -400">*</span>
-                </label>
-                <div  className="relative">
-                  <User className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-slate - 400 w-5 h-5" />
-                  <input
-                    type="text"
-                    value={formData.lastName}
-                    onChange={e =>
-                      handleInputChange('lastName', e.target.value) }
-                    className="w-full pl - 10 pr - 4 py-3 bg-white / 10 border border-slate - 600 / 30 rounded-lg text-white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border-transparent"
-                    placeholder="Enter your last name"
-                    required
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div  className="grid grid - cols - 1 md:grid - cols - 2 gap-6 mb-6">
-              <div>
-                <label className="block text-white font - medium mb-2">
-                  Email Address < span className="text-red -400">*</span>
-                </label>
-                <div  className="relative">
-                  <Mail className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-slate - 400 w-5 h-5" />
-                  <input
-                    type="email"
-                    value={formData.email}
-                    onChange={e => handleInputChange('email', e.target.value) }
-                    className="w-full pl - 10 pr - 4 py-3 bg-white / 10 border border-slate - 600 / 30 rounded-lg text-white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border-transparent"
-                    placeholder="Enter your email"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-white font - medium mb-2">
-                  Phone Number
-                </label>
-                <div  className="relative">
-                  <Phone className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-slate - 400 w-5 h-5" />
-                  <input
-                    type="tel"
-                    value={formData.phone}
-                    onChange={e => handleInputChange('phone', e.target.value) }
-                    className="w-full pl - 10 pr - 4 py-3 bg-white / 10 border border-slate - 600 / 30 rounded-lg text-white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border-transparent"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div  className="grid grid - cols - 1 md:grid - cols - 2 gap-6 mb-6">
-              <div>
-                <label className="block text-white font - medium mb-2">
-                  Company Name < span className="text-red -400">*</span>
-                </label>
-                <div  className="relative">
-                  <Building className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-slate - 400 w-5 h-5" />
-                  <input
-                    type="text"
-                    value={formData.company}
-                    onChange={e => handleInputChange('company', e.target.value) }
-                    className="w-full pl - 10 pr - 4 py-3 bg-white / 10 border border-slate - 600 / 30 rounded-lg text-white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border-transparent"
-                    placeholder="Enter your company name"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-white font - medium mb-2">
-                  Industry
-                </label>
-                <div  className="relative">
-                  <Globe className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-slate - 400 w-5 h-5" />
-                  <select
-                    value={formData.industry}
-                    onChange={e =>
-                      handleInputChange('industry', e.target.value) }
-                    className="w-full pl - 10 pr - 4 py-3 bg-white / 10 border border-slate - 600 / 30 rounded-lg text-white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border-transparent"
-                  >
-                    <option value="">Select your industry</option>
-                    {industries.map(industry => (<option key={industry} value={industry}>
-                        {industry}
-                      </option>) ) }
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div  className="mb-6">
-              <label className="block text-white font - medium mb-2">
-                Company Size
-              </label>
-              <div  className="relative">
-                <Users className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-slate - 400 w-5 h-5" />
-                <select
-                  value={formData.companySize}
-                  onChange={e =>
-                    handleInputChange('companySize', e.target.value) }
-                  className="w-full pl - 10 pr - 4 py-3 bg-white / 10 border border-slate - 600 / 30 rounded-lg text-white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border-transparent"
-                >
-                  <option value="">Select company size</option>
-                  {companySizes.map(size => (<option key={size} value={size}>
-                      {size}
-                    </option>) ) }
-                </select>
-              </div>
-            </div>
-
-            <div  className="grid grid - cols - 1 md:grid - cols - 2 gap-6 mb-6">
-              <div>
-                <label className="block text-white font - medium mb-2">
-                  Password < span className="text-red -400">*</span>
-                </label>
-                <div  className="relative">
-                  <Lock className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-slate - 400 w-5 h-5" />
-                  <input
-                    type={showPassword ? 'text' : 'password'}
-                    value={formData.password}
-                    onChange={e =>
-                      handleInputChange('password', e.target.value) }
-                    className="w-full pl - 10 pr - 12 py-3 bg-white / 10 border border-slate - 600 / 30 rounded-lg text-white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border-transparent"
-                    placeholder="Create a password"
-                    required
-                  />
-                  <button     type="button"
-                    onClick={ () => setShowPassword(!showPassword) }
-                    className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text-slate - 400 hover:text-white transition - colors duration -200"
-                  >
-                    {showPassword ? (<EyeOff className="w-5 h-5" />) : (<Eye className="w-5 h-5" />) }
-                  </button>
-                </div>
-                {formData.password && (<div  className="mt-2">
-                    <div  className="flex gap-1 mb-1">
-                      {[1, 2, 3, 4].map(level => (<div  key={level}
-                          className={`h-1 flex - 1 rounded-full transition - all duration - 300 ${level <= passwordStrength.score
-                              ? passwordStrength.color.replace ('text-', 'bg-') : 'bg-slate - 600 / 30'
-                          }`}
-                        />) ) }
-                    </div>
-                    <p className={`text-xs ${passwordStrength.color}`}>
-                      {passwordStrength.label}
-                    </p>
-                  </div>) }
-              </div>
-
-              <div>
-                <label className="block text-white font - medium mb-2">
-                  Confirm Password < span className="text-red -400">*</span>
-                </label>
-                <div  className="relative">
-                  <Lock className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-slate - 400 w-5 h-5" />
-                  <input
-                    type={showConfirmPassword ? 'text' : 'password'}
-                    value={formData.confirmPassword}
-                    onChange={e =>
-                      handleInputChange('confirmPassword', e.target.value) }
-                    className="w-full pl - 10 pr - 12 py-3 bg-white / 10 border border-slate - 600 / 30 rounded-lg text-white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border-transparent"
-                    placeholder="Confirm your password"
-                    required
-                  />
-                  <button     type="button"
-                    onClick={ () => setShowConfirmPassword(!showConfirmPassword) }
-                    className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text-slate - 400 hover:text-white transition - colors duration -200"
-                  >
-                    {showConfirmPassword ? (<EyeOff className="w-5 h-5" />) : (<Eye className="w-5 h-5" />) }
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div  className="space - y-4 mb-8">
-              <label className="flex items - start gap-3 cursor -pointer">
-                <input
-                  type="checkbox"
-                  checked={formData.agreeToTerms}
-                  onChange={e =>
-                    handleInputChange('agreeToTerms', e.target.checked) }
-                  className="mt-1 w-4 h-4 text-cyan - 500 bg-slate - 700 border-slate - 600 rounded focus:ring - cyan - 500 focus:ring -2"
-                  required
-                />
-                <span className="text-slate - 300 text-sm">
-                  I agree to the{' '}
-                  <Link
-                    to="/terms"
-                    className="text-cyan - 400 hover:text-cyan -300"
-                  >
-                    Terms of Service
-                  </Link>{' '}
-                  and{' '}
-                  <Link
-                    to="/privacy"
-                    className="text-cyan - 400 hover:text-cyan -300"
-                  >
-                    Privacy Policy
-                  </Link>{' '}
-                  <span className="text-red -400">*</span>
-                </span>
-              </label>
-
-              <label className="flex items - start gap-3 cursor -pointer">
-                <input
-                  type="checkbox"
-                  checked={formData.agreeToMarketing}
-                  onChange={e =>
-                    handleInputChange('agreeToMarketing', e.target.checked) }
-                  className="mt-1 w-4 h-4 text-cyan - 500 bg-slate - 700 border-slate - 600 rounded focus:ring - cyan - 500 focus:ring -2"
-                />
-                <span className="text-slate - 300 text-sm">
-                  I agree to receive marketing communications about Zion Tech
-                  Group services and updates
-                </span>
-              </label>
-            </div>
-
-            <button     type="submit"
-              disabled={isLoading}
-              className="w-full py-4 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white font - medium rounded-lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 shadow-lg shadow-cyan - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center justify - center gap-3 text-lg"
-            >
-              {isLoading ? (<>
-                  <div  className="animate - spin rounded-full h-5 w-5 border-b-2 border-white"></div > Creating Account...
-                </>) : (<>
-                  Create Account < ArrowRight className="w-5 h-5" />
-                </>) }
-            </button>
-
-            <div  className="text-center mt-6">
-              <p className="text-slate -400">
-                Already have an account?{' '}
-                <Link
-                  to="/login"
-                  className="text-cyan - 400 hover:text-cyan - 300 font - medium transition - colors duration -200"
-                >
-                  Sign in here
+  return (
+    <>
+      <div className="flex min-h-screen bg-zion-blue">
+        <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+          <div className="mx-auto w-full max-w-sm lg:w-96">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold tracking-tight text-white">
+                Create your account
+              </h2>
+              <p className="mt-2 text-sm text-zion-slate-light">
+                Already have an account?{" "}
+                <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+                  Sign in
                 </Link>
               </p>
             </div>
 
             <div className="bg-zion-blue-dark rounded-lg p-6">
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" noValidate>
+                {form.formState.errors.root && !showVerificationMessage && (
+                  <Alert variant="destructive" className="mb-4">
+                    <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
+                  </Alert>
+                )}
+                {showVerificationMessage && (
+                  <Alert variant="default" className="mb-4 bg-blue-50 border-blue-200 text-blue-700">
+                    <Mail className="h-5 w-5 mr-2 !text-blue-700" />
+                    <AlertDescription>
+                      Registration successful! Please check your email to verify your account and complete the process.
+                    </AlertDescription>
+                  </Alert>
+                )}
+                <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6" noValidate>
+                  {/* Removed duplicated/malformed FormField and logic from here, it's handled in the onSubmit above */}
                   <FormField
                     control={form.control}
                     name="displayName"

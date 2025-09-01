@@ -5,7 +5,7 @@ import App from './App.tsx';
 import './index.css';
 // Removed feat/i18n-implementation and main markers
 import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n/index'; // Adjust the path if your i18n.js is elsewhere
+import i18n from './i18n'; // Adjust the path if your i18n.js is elsewhere
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
 import App from './App';
@@ -43,38 +43,50 @@ const queryClient = new QueryClient({
   },
 });
 
-const rootElement = document.getElementById('root');
-
-function renderApp() {
-  const app = (
+try {
+  console.log("main.tsx: Before ReactDOM.createRoot");
+  // Removed initGA() call as it's undefined and likely superseded by AnalyticsProvider
+  // Render the app with proper provider structure
+  ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-      <HelmetProvider>
-        <QueryClientProvider client={queryClient}>
-          <WhitelabelProvider>
-            <Router>
-              <AuthProvider>
-                <NotificationProvider>
-                  <AnalyticsProvider>
-                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                      <ViewModeProvider>
-                        <CartProvider>
-                          <ReferralMiddleware>
-                            <AppLayout>
-                              <App />
-                            </AppLayout>
-                          </ReferralMiddleware>
-                        </CartProvider>
-                      </ViewModeProvider>
-                      <LanguageDetectionPopup />
-                    </LanguageProvider>
-                  </AnalyticsProvider>
-                </NotificationProvider>
-              </AuthProvider>
-            </Router>
-          </WhitelabelProvider>
-        </QueryClientProvider>
-      </HelmetProvider>
-    </React.StrictMode>
+      <Provider store={store}>
+        <GlobalLoaderProvider>
+        <I18nextProvider i18n={i18n}>
+          <HelmetProvider>
+            <QueryClientProvider client={queryClient}>
+              <WhitelabelProvider>
+                <Router>
+                <AuthProvider>
+                  <NotificationProvider>
+                    <AnalyticsProvider>
+                      <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                        <ViewModeProvider>
+                          <CartProvider>
+                            <FavoritesProvider>
+                              <ReferralMiddleware>
+                                <ToastProvider>
+                                  <AppLayout>
+                                    <App />
+                                  </AppLayout>
+                                </ToastProvider>
+                              </ReferralMiddleware>
+                            </FavoritesProvider>
+                          </CartProvider>
+                        </ViewModeProvider>
+                        <LanguageDetectionPopup />
+                      </LanguageProvider>
+                    </AnalyticsProvider>
+                  </NotificationProvider>
+                </AuthProvider>
+              </Router>
+            </WhitelabelProvider>
+          </QueryClientProvider>
+        </HelmetProvider>
+        </I18nextProvider>
+        </GlobalLoaderProvider>
+      </Provider>
+      {/* Removed duplicate main marker */}
+    </React.StrictMode>,
   );
 
   if (rootElement?.hasChildNodes()) {

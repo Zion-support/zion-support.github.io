@@ -2,6 +2,8 @@
 export { Header } from './Header';
 export { Logo } from './Logo';
 export { MobileMenu, type MobileMenuProps } from './MobileMenu';
-export { UserMenu } from './UserMenu';
+// Removed UserMenu as it does not exist
+export { default as UserProfileDropdown } from './UserProfileDropdown'; // Correctly re-exporting default
+export { AvatarMenu } from './AvatarMenu';
 export { MainNavigation } from './MainNavigation';
 export { AvatarMenu } from './AvatarMenu';

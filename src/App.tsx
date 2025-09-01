@@ -134,6 +134,7 @@ const App = () => {
         <SupportChatbot />
         <PwaInstallButton />
       </ThemeProvider>
+        </WalletProvider> {/* Added WalletProvider closing tag */}
     </WhitelabelProvider>
   );
 }
