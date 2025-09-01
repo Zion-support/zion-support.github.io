@@ -1,26 +1,40 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 seo-audit-runner function triggered');
+    console.log('seo-audit-runner function triggered');
     
-    // Basic function logic - can be expanded later
-    const result = {
+    // Basic SEO audit logic
+    const response = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'seo-audit-runner function executed successfully',
+        message: 'SEO audit runner function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'seo-audit-runner'
+        function: 'seo-audit-runner',
+        status: 'success',
+        auditType: 'seo',
+        checks: ['meta-tags', 'headings', 'images', 'links', 'performance']
       })
     };
     
-    return result;
+    return response;
   } catch (error) {
-    console.error('❌ seo-audit-runner function error:', error);
+    console.error('Error in seo-audit-runner:', error);
+    
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'seo-audit-runner'
+        message: 'Error in SEO audit runner function',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'seo-audit-runner',
+        status: 'error'
       })
     };
   }

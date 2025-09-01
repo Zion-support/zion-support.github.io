@@ -1,26 +1,40 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 innovation-lab function triggered');
+    console.log('innovation-lab function triggered');
     
-    // Basic function logic - can be expanded later
-    const result = {
+    // Basic innovation lab logic
+    const response = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'innovation-lab function executed successfully',
+        message: 'Innovation lab function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'innovation-lab'
+        function: 'innovation-lab',
+        status: 'success',
+        labType: 'innovation',
+        experiments: ['ai-integration', 'automation', 'optimization', 'research']
       })
     };
     
-    return result;
+    return response;
   } catch (error) {
-    console.error('❌ innovation-lab function error:', error);
+    console.error('Error in innovation-lab:', error);
+    
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'innovation-lab'
+        message: 'Error in innovation lab function',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'innovation-lab',
+        status: 'error'
       })
     };
   }

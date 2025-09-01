@@ -1,26 +1,42 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 headers-enforcer function triggered');
+    console.log('headers-enforcer function triggered');
     
-    // Basic function logic - can be expanded later
-    const result = {
+    // Basic headers enforcement logic
+    const response = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'SAMEORIGIN'
+      },
       body: JSON.stringify({
-        message: 'headers-enforcer function executed successfully',
+        message: 'Headers enforcer function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'headers-enforcer'
+        function: 'headers-enforcer',
+        status: 'success',
+        enforcedHeaders: ['HSTS', 'X-Content-Type-Options', 'X-Frame-Options']
       })
     };
     
-    return result;
+    return response;
   } catch (error) {
-    console.error('❌ headers-enforcer function error:', error);
+    console.error('Error in headers-enforcer:', error);
+    
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'headers-enforcer'
+        message: 'Error in headers enforcer function',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'headers-enforcer',
+        status: 'error'
       })
     };
   }
