@@ -8,26 +8,22 @@ function runNode(relativePath, args = []) {
 }
 
 exports.config = {
-  schedule: '0 */6 * * *',
+  schedule: '*/7 * * * *',
 };
 
 exports.handler = async () => {
   const logs = [];
-  function step(name, rel, args = []) {
+  const step = (name, fn) => {
     logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = runNode(rel, args);
+    const { status, stdout, stderr } = fn();
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
     return status;
-  }
+  };
 
-  step('front-index:auto-advertiser', () => runNode('automation/front-index-auto-advertiser.cjs'));
-  step('front:futurizer', () => runNode('automation/front-futurizer.cjs'));
-  step('homepage:auto-advertiser', () => runNode('automation/homepage-auto-advertiser.cjs'));
-  step('homepage:updater', () => runNode('automation/homepage-updater.cjs'));
   step('opportunity-miner', () => runNode('automation/opportunity-miner.cjs'));
-  step('seo-audit', () => runNode('scripts/seo-audit.js'));
+  step('search:index', () => runNode('scripts/generate-search-index.js'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };

@@ -96,7 +96,48 @@ export default function FrontLanding() {
                 >
                   <div className="text-lg font-bold text-white">{k}</div>
                   <div className="text-xs text-white/70">{v}</div>
-                </motion.div>
+                </div>
+              ))}
+            </div>
+
+            {/* Futuristic marquee */}
+            <div className="relative mx-auto mt-8 max-w-5xl overflow-hidden">
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950/90 to-transparent" />
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-950/90 to-transparent" />
+              <div className="marquee">
+                <div className="marquee__track">
+                  {[
+                    'Autonomous Agents',
+                    'Repo Sync to Main',
+                    'Zero‑Ops Cloud',
+                    'Safety Guardrails',
+                    'A11y + Performance',
+                    'Observability',
+                    'SEO Automation',
+                    'Design Evolution',
+                  ].flatMap((label) => [label, label]).map((label, idx) => (
+                    <span key={`${label}-${idx}`} className="mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur">
+                      <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {label}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">
+              {[
+                ['Automation Hub', '/automation'],
+                ['SEO Audit', '/reports/seo'],
+                ['AI Trends', '/reports/ai-trends'],
+                ['Newsroom', '/newsroom'],
+                ['Site Health', '/site-health'],
+                ['Opportunity Miner', '/reports/opportunities'],
+                ['Run SEO Audit', '/.netlify/functions/seo-audit-scheduler'],
+              ].map(([label, href]) => (
+                <Link key={label as string} href={href as string}>
+                  <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">{label as string}</a>
+                </Link>
               ))}
             </div>
           </div>
