@@ -1,5 +1,4 @@
 // Ultimate Build Guardian Function
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 exports.handler = async function(_event, _context) {
   try {
     // Enhanced build health check with ultimate redundancy

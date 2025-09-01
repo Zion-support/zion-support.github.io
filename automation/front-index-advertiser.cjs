@@ -1,144 +1,143 @@
 #!/usr/bin/env node
 
-'use strict';
+/**
+ * Front Index Advertiser
+ * Manages and updates the front page index content
+ */
 
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = process.cwd();
-const FRONT_PAGE = path.join(ROOT, 'pages', 'main', 'front', 'index.tsx');
-const START_MARKER = '/* AUTO-GENERATED: FRONT_ADS_START */';
-const END_MARKER = '/* AUTO-GENERATED: FRONT_ADS_END */';
-
-function titleCase(slug) {
-  return slug
-    .replace(/[-_]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .split(' ')
-    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
-    .join(' ');
-}
-
-function discoverInternalPages() {
-  const pagesDir = path.join(ROOT, 'pages');
-  const results = [];
-
-  function push(href, label, tagline) {
-    results.push({ type: 'internal', href, label, tagline });
+class FrontIndexAdvertiser {
+  constructor() {
+    this.indexFile = 'pages/index.tsx';
+    this.reportsDir = 'pages/reports';
   }
 
-  // Priority pages
-  const priority = [
-    { href: '/automation', label: 'Automation Hub', tagline: 'Live agents & workflows' },
-    { href: '/site-health', label: 'Site Health', tagline: 'A11y, performance, links' },
-    { href: '/reports/seo', label: 'SEO Audit', tagline: 'Continuous improvements' },
-    { href: '/reports/ai-trends', label: 'AI Trends', tagline: 'Intelligence signals' },
-    { href: '/reports/freshness', label: 'Freshness Report', tagline: 'Stale pages & docs insights' },
-    { href: '/newsroom', label: 'Newsroom', tagline: 'Latest autonomous updates' },
-  ];
-  for (const p of priority) {
-    const check = p.href.startsWith('/reports/')
-      ? path.join(ROOT, 'pages', 'reports', p.href.split('/').pop() + '.tsx')
-      : p.href === '/automation'
-      ? path.join(ROOT, 'pages', 'automation', 'index.tsx')
-      : path.join(ROOT, 'pages', p.href.replace(/^\//, '') + '.tsx');
-    if (fs.existsSync(check)) push(p.href, p.label, p.tagline);
+  async advertise() {
+    console.log('📢 Starting front index advertisement...');
+    
+    try {
+      // Get latest reports
+      const latestReports = await this.getLatestReports();
+      
+      // Update the index file
+      await this.updateIndexFile(latestReports);
+      
+      console.log(`✅ Front index updated with ${latestReports.length} latest reports`);
+      return { success: true, reportsCount: latestReports.length };
+    } catch (error) {
+      console.error('❌ Error during front index advertisement:', error.message);
+      return { success: false, error: error.message };
+    }
   }
 
-  // Fallback discovery of other top-level pages
-  try {
-    const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
-    for (const entry of entries) {
-      if (entry.name.startsWith('_')) continue;
-      if (entry.isFile() && entry.name.endsWith('.tsx')) {
-        const base = entry.name.replace(/\.tsx$/, '');
-        if (['index', 'front'].includes(base)) continue;
-        push('/' + base, titleCase(base), 'Explore more');
-      }
-      if (entry.isDirectory()) {
-        const indexPath = path.join(pagesDir, entry.name, 'index.tsx');
-        if (fs.existsSync(indexPath)) {
-          push('/' + entry.name, titleCase(entry.name), entry.name === 'automation' ? 'Live agents & workflows' : 'Explore more');
+  async getLatestReports() {
+    const reports = [];
+    
+    try {
+      if (fs.existsSync(this.reportsDir)) {
+        const reportTypes = fs.readdirSync(this.reportsDir);
+        
+        for (const type of reportTypes) {
+          const typePath = path.join(this.reportsDir, type);
+          if (fs.statSync(typePath).isDirectory()) {
+            const typeReports = fs.readdirSync(typePath)
+              .filter(f => f.endsWith('.md'))
+              .map(f => ({ type, name: f, path: path.join(type, f) }))
+              .sort((a, b) => {
+                const aStats = fs.statSync(path.join(this.reportsDir, a.path));
+                const bStats = fs.statSync(path.join(this.reportsDir, b.path));
+                return bStats.mtime.getTime() - aStats.mtime.getTime();
+              })
+              .slice(0, 3); // Get top 3 most recent
+            
+            reports.push(...typeReports);
+          }
         }
       }
+    } catch (error) {
+      console.warn('Warning: Could not read reports directory:', error.message);
     }
-  } catch {}
+    
+    return reports;
+  }
 
-  // Unique by href, limit
-  const seen = new Set();
-  const unique = [];
-  for (const r of results) {
-    if (!seen.has(r.href)) {
-      seen.add(r.href);
-      unique.push(r);
+  async updateIndexFile(reports) {
+    try {
+      if (!fs.existsSync(this.indexFile)) {
+        console.warn('Index file not found, skipping update');
+        return;
+      }
+      
+      let content = fs.readFileSync(this.indexFile, 'utf8');
+      
+      // Find the auto-generated content section
+      const startMarker = '/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */';
+      const endMarker = '/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */';
+      
+      const startIndex = content.indexOf(startMarker);
+      const endIndex = content.indexOf(endMarker);
+      
+      if (startIndex === -1 || endIndex === -1) {
+        console.warn('Auto-generated content markers not found in index file');
+        return;
+      }
+      
+      // Generate new content
+      const newContent = this.generateLatestContent(reports);
+      
+      // Replace the content between markers
+      const beforeContent = content.substring(0, startIndex + startMarker.length);
+      const afterContent = content.substring(endIndex);
+      
+      content = beforeContent + '\n' + newContent + '\n          ' + afterContent;
+      
+      // Write back to file
+      fs.writeFileSync(this.indexFile, content, 'utf8');
+      
+    } catch (error) {
+      throw new Error(`Failed to update index file: ${error.message}`);
     }
   }
-  return unique.slice(0, 12);
+
+  generateLatestContent(reports) {
+    if (reports.length === 0) {
+      return `            <p className="text-center text-white/60">No recent reports available</p>`;
+    }
+    
+    let content = '';
+    
+    for (const report of reports) {
+      const reportName = report.name.replace('.md', '');
+      const displayName = reportName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      
+      content += `              <Link href="/reports/${report.path.replace('.md', '')}" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">${displayName}</h3>
+                <p className="mt-1 text-sm text-white/75">Latest ${report.type} report.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              </Link>`;
+      
+      if (reports.indexOf(report) < reports.length - 1) {
+        content += '\n              ';
+      }
+    }
+    
+    return content;
+  }
 }
 
-function discoverExternalLinks() {
-  const repoUrl = 'https://github.com/Zion-Holdings/zion.app';
-  return [
-    { type: 'external', href: repoUrl + '/actions', label: 'Live Pipelines', tagline: 'CI logs & artifacts' },
-    { type: 'external', href: repoUrl + '/tree/main/docs', label: 'Documentation', tagline: 'Technical notes & guides' },
-    { type: 'external', href: repoUrl + '/blob/main/docs/CHANGELOG_AI.md', label: 'AI Changelog', tagline: 'Summarized updates' },
-  ];
+// Run if called directly
+if (require.main === module) {
+  const advertiser = new FrontIndexAdvertiser();
+  advertiser.advertise().then(result => {
+    if (result.success) {
+      process.exit(0);
+    } else {
+      process.exit(1);
+    }
+  });
 }
 
-function buildCard(item) {
-  const common = 'group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo';
-  const inner = `\n  <div className=\"text-base font-semibold\">${item.label}</div>\n  <div className=\"mt-1 text-sm text-white/75\">${item.tagline || ''}</div>\n`;
-  if (item.type === 'external') {
-    return `              <a href=\"${item.href}\" target=\"_blank\" rel=\"noopener\" className=\"${common}\">${inner}  <div className=\"mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90\">Open <span aria-hidden>↗</span></div></a>`;
-  }
-  return `              <Link href=\"${item.href}\"><a className=\"${common}\">${inner}  <div className=\"mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90\">Open <span aria-hidden>→</span></div></a></Link>`;
-}
-
-function generateSection(items) {
-  return [
-    '<section id="auto-promoted" className="mx-auto max-w-7xl px-6 pb-14">',
-    '  <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Auto‑Promoted Features</h2>',
-    '  <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Continuously curated promos linking to live hubs, reports, docs, and new intelligence tools.</p>',
-    '  <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">',
-    items.map(buildCard).join('\n'),
-    '  </div>',
-    '</section>'
-  ].join('\n');
-}
-
-function replaceBetweenMarkers(source, startMarker, endMarker, replacement) {
-  const startIdx = source.indexOf(startMarker);
-  const endIdx = source.indexOf(endMarker);
-  if (startIdx === -1 || endIdx === -1 || endIdx < startIdx) {
-    throw new Error('Markers not found or invalid order in front index');
-  }
-  const before = source.slice(0, startIdx + startMarker.length);
-  const after = source.slice(endIdx);
-  return `${before}\n${replacement}\n${after}`;
-}
-
-(function main() {
-  if (!fs.existsSync(FRONT_PAGE)) {
-    console.log('Front page not found, skipping');
-    process.exit(0);
-  }
-  const internal = discoverInternalPages();
-  const external = discoverExternalLinks();
-  const combined = [...internal, ...external].slice(0, 12);
-  const block = generateSection(combined);
-  const original = fs.readFileSync(FRONT_PAGE, 'utf8');
-  let updated;
-  try {
-    updated = replaceBetweenMarkers(original, START_MARKER, END_MARKER, block);
-  } catch (e) {
-    console.log('Could not replace between markers:', e.message);
-    process.exit(0);
-  }
-  if (updated !== original) {
-    fs.writeFileSync(FRONT_PAGE, updated);
-    console.log('Front index auto‑promotions updated.');
-  } else {
-    console.log('No updates required.');
-  }
-})();
+module.exports = FrontIndexAdvertiser;

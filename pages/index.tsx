@@ -57,53 +57,21 @@ const HomePage = memo(function HomePage() {
             </div>
           </section>
 
-          {/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */}
+          {/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */
+            <p className="text-center text-white/60">No recent reports available</p>
+          /* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
+          
+          {/* Additional Content Section */}
           <section className="mx-auto max-w-7xl px-6 pb-14">
-            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>
-            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <Card href="/reports/updates/update-2025-08-15-0406" gradient>
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0406</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </Card>
-              <Card href="/reports/updates/update-2025-08-15-0405" gradient>
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0405</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </Card>
-              <Card href="/reports/updates/update-2025-08-15-0404" gradient>
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0404</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </Card>
-              <Card href="/reports/updates/update-2025-08-15-0111" gradient>
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0111</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </Card>
-              <Card href="/reports/updates/update-2025-08-15-0403" gradient>
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0403</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </Card>
-              <Card href="/reports/updates/update-2025-08-15-0402" gradient>
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0402</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </Card>
-            </div>
-          </section>
-          {/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
-
-          <section className="mx-auto max-w-7xl px-6 pb-14 mt-16">
-            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Quick Navigation</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <a href="/about" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-200">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">About Us</h3>
-                <p className="text-sm text-white/75">Learn about our mission and vision for autonomous technology.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Learn More <span aria-hidden>→</span></div>
-              </a>
+            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Explore Our Platform</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link href="/about" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🏢</span>
+                </div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2">About Us</h3>
+                <p className="text-white/70 text-sm">Learn about our mission and vision</p>
+              </Link>
               
               <a href="/services" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-200">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
