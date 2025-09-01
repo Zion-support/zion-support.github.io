@@ -11,8 +11,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      // Keep peer dependencies external to avoid missing module errors
-      external: ['react', 'react-dom', 'react-router-dom']
+      external: ['axios']
     }
   }
 })
