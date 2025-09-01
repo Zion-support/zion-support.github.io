@@ -99,21 +99,8 @@ CELERY_BEAT_SCHEDULE = {
 
 PASSWORD_RESET_TIMEOUT = 900  # 15 minutes
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'public_api.authentication.ApiKeyAuthentication',
-    ],
-    'DEFAULT_THROTTLE_CLASSES': [
-        'public_api.throttling.RedisDailyThrottle',
-    ],
-}
+# Structured logging configuration
+LOGGING = LOGGING_CONFIG
 
-SWAGGER_SETTINGS = {
-    'SECURITY_DEFINITIONS': {
-        'ApiKeyAuth': {
-            'type': 'apiKey',
-            'in': 'header',
-            'name': 'X-API-KEY'
-        }
-    }
-}
+# Initialize metrics and DB instrumentation
+import backend.observability  # noqa: E402
