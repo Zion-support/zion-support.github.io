@@ -21,8 +21,8 @@
   duration: 0.3 
 }}
         onClick={scrollToTop}
-        className="mb-4 w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center""
-""
+        className="mb-4 w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center""""
+""""
         <ArrowUp className="w-6 h-6 text-white"  />      </motion.button>
       {/* Main floating action button */}
       <motion.button
@@ -38,15 +38,15 @@
 }}
         transition = {
 
-  { delay: 0.6,
-  duration: 0.3 
-}}"
-        onClick={() => setIsOpen(!isOpen)}""
-        className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-110 flex items-center justify-center""
-""
-        <AnimatePresence mode="wait">
-          {isOpen ? ("
-            <motion.div""
+  { delay: 0.6,"
+  duration: 0.3 ""
+}}"""
+        onClick={() => setIsOpen(!isOpen)}""""
+        className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-110 flex items-center justify-center""""
+""""
+        <AnimatePresence mode="wait">""
+          {isOpen ? ("""
+            <motion.div""""
               key="close"
               initial = {
 
@@ -61,13 +61,13 @@
               exit = {
 
   { rotate: 90,
-  opacity: 0 
-}}
-              transition={{ duration: 0.2 }}"
-""
-              <X className="w-8 h-8 text-white"  />            </motion.div>;
-          ) : ("
-            <motion.div""
+  opacity: 0 "
+}}""
+              transition={{ duration: 0.2 }}"""
+""""
+              <X className="w-8 h-8 text-white"  />            </motion.div>;""
+          ) : ("""
+            <motion.div""""
               key="plus"
               initial = {
 
@@ -82,17 +82,17 @@
               exit = {
 
   { rotate: -90,
-  opacity: 0 
-}}
-              transition={{ duration: 0.2 }}"
-""
+  opacity: 0 "
+}}""
+              transition={{ duration: 0.2 }}"""
+""""
               <Plus className="w-8 h-8 text-white"  />            </motion.div>;
           )}
         </AnimatePresence>
-      </motion.button>
-      {/* Action buttons */}
-      <AnimatePresence>"
-        {isOpen && (""
+      </motion.button>"
+      {/* Action buttons */}""
+      <AnimatePresence>"""
+        {isOpen && (""""
           <div className="absolute bottom-20 right-0 space-y-3">
             {actions.map((action, index) => (
               <motion.a
@@ -102,17 +102,18 @@
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 exit={{ opacity: 0, x: 20, scale: 0.8 }}
                 transition={{
-
-                  duration: 0.3,"
-                  delay: action.delay,""
-                  type: "spring",
-  stiffness: 200"
-}}""
-                className="flex items-center space-x-3 w-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-3 hover:bg-white/20 transition-all duration-300 group"`
-`"`
-                <div className={`w-10 h-10 bg-gradient-to-r ${action.color} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>""
-                  <action.icon className="w-5 h-5 text-white" />"
-                </div>""
+"
+""
+                  duration: 0.3,"""
+                  delay: action.delay,""""
+                  type: "spring",""
+  stiffness: 200"""`
+}}"""`"`
+                className="flex items-center space-x-3 w-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-3 hover:bg-white/20 transition-all duration-300 group"`"`"`
+`"`"`"`
+                <div className={`w-10 h-10 bg-gradient-to-r ${action.color} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>""""
+                  <action.icon className="w-5 h-5 text-white" />"""
+                </div>""""
                 <span className="text-white font-medium whitespace-nowrap group-hover:text-zion-cyan transition-colors duration-300">
                   {action.label}
                 </span>
@@ -120,7 +121,7 @@
             ))};
           </div>;
         )};
-      </AnimatePresence>;
-    </div>;
-  )};'"`
-'"`'"`
+      </AnimatePresence>;'"`
+    </div>;'"`'"`
+  )};'"`'"`'"`
+'"`'"`'"`'"`

@@ -10,9 +10,9 @@ export class ContentQualityAnalyzer {
     return ContentQualityAnalyzer.instance;
   }
   analyzePageContent()
-    pageUrl,
-    title,
-    content,'
+    pageUrl,'
+    title,''
+    content,'''
     metaDescription = '',
     images = [],
     links = []
@@ -74,9 +74,9 @@ export class ContentQualityAnalyzer {
     if(!content) return 0;
     // Remove HTML tags and count words
     const cleanContent = content;
-      .replace(/<[^>]*>/g,)
-      .replace(/\s+/g,)
-      .trim();'
+      .replace(/<[^>]*>/g,)'
+      .replace(/\s+/g,)''
+      .trim();'''
     return cleanContent.split(' ').filter(word => word.length > 0).length;
   }
   countHeadings(content) {
@@ -86,12 +86,12 @@ export class ContentQualityAnalyzer {
     return headingMatches ? headingMatches.length : 0;
   }
   checkStructuredData(content) {
-
-    if (!content) return false;
-    // Check for JSON-LD, microdata, or RDFa'
-    return (''
-      content.includes('application/ld+json') ||''
-      content.includes('itemtype=') ||''
+'
+    if (!content) return false;''
+    // Check for JSON-LD, microdata, or RDFa'''
+    return (''''
+      content.includes('application/ld+json') ||''''
+      content.includes('itemtype=') ||''''
       content.includes('vocab=')
     );
   }
@@ -209,104 +209,137 @@ export class ContentQualityAnalyzer {
     const issues = [];
     if (!metrics.title || metrics.title.length < 30) {
 '
+''
+'''
       issues.push('Title is too short (should be 30-60 characters));
     } else if (metrics.title.length > 60) {
 '
+''
+'''
       issues.push('Title is too long (should be 30-60 characters));
     }
     if (metrics.wordCount < 300) {
 '
+''
+'''
       issues.push('Content is too short (should be at least 300 words));
     }
     if (metrics.headingCount < 2) {
 '
-      issues.push(''
+''
+'''
+      issues.push(''''
         'Insufficient heading structure (should have at least 2 headings)
       );
     }
     if (metrics.metaDescriptionLength < 120) {
 '
-      issues.push(''
+''
+'''
+      issues.push(''''
         'Meta description is too short (should be 120-160 characters)
       );
     } else if (metrics.metaDescriptionLength > 160) {
 '
-      issues.push(''
+''
+'''
+      issues.push(''''
         'Meta description is too long (should be 120-160 characters)
       );
     }
     if (metrics.imageCount === 0) {
 '
+''
+'''
       issues.push('No images found (consider adding relevant images));
     }
     if (metrics.linkCount < 2) {
 '
-      issues.push(''
+''
+'''
+      issues.push(''''
         'Insufficient internal linking (should have at least 2 internal links)
       );
     }
     if (!metrics.hasStructuredData) {
 '
-      issues.push(''
+''
+'''
+      issues.push(''''
         'No structured data found (consider adding JSON-LD or microdata)
       );
     }
     return issues;
   }
   generateRecommendations(issues) {
-
-    const recommendations = [];'
+'
+''
+    const recommendations = [];'''
     if (issues.some(issue => issue.includes('Content is too short'))) {
 '
-      recommendations.push(''
-        'Expand content with relevant information, examples, and detailed explanations'
-      );
-    }'
-    if (''
+''
+'''
+      recommendations.push(''''
+        'Expand content with relevant information, examples, and detailed explanations''
+      );''
+    }'''
+    if (''''
       issues.some(issue => issue.includes('Insufficient heading structure'))
     ) {
 '
-      recommendations.push(''
-        'Add H1, H2, and H3 headings to improve content structure and SEO'
-      );
-    }'
+''
+'''
+      recommendations.push(''''
+        'Add H1, H2, and H3 headings to improve content structure and SEO''
+      );''
+    }'''
     if (issues.some(issue => issue.includes('Meta description'))) {
 '
-      recommendations.push(''
-        'Write compelling meta descriptions that accurately describe the page content'
-      );
-    }'
+''
+'''
+      recommendations.push(''''
+        'Write compelling meta descriptions that accurately describe the page content''
+      );''
+    }'''
     if (issues.some(issue => issue.includes('No images'))) {
 '
-      recommendations.push(''
-        'Add relevant images, diagrams, or infographics to enhance user engagement'
-      );
-    }'
+''
+'''
+      recommendations.push(''''
+        'Add relevant images, diagrams, or infographics to enhance user engagement''
+      );''
+    }'''
     if (issues.some(issue => issue.includes('Insufficient internal linking'))) {
 '
-      recommendations.push(''
-        'Add internal links to related pages to improve navigation and SEO'
-      );
-    }'
+''
+'''
+      recommendations.push(''''
+        'Add internal links to related pages to improve navigation and SEO''
+      );''
+    }'''
     if (issues.some(issue => issue.includes('No structured data'))) {
 '
-      recommendations.push(''
-        'Implement structured data markup for better search engine understanding'
-      );
-    }'
+''
+'''
+      recommendations.push(''''
+        'Implement structured data markup for better search engine understanding''
+      );''
+    }'''
     if (issues.some(issue => issue.includes('Title'))) {
 '
-      recommendations.push(''
-        'Optimize page titles with relevant keywords and compelling copy'
-      );
-    }'
-    recommendations.push(''
-      'Ensure content is unique, valuable, and addresses user intent'
-    );'
-    recommendations.push(''
-      'Use bullet points and numbered lists for better readability'
-    );'
-    recommendations.push(''
+''
+'''
+      recommendations.push(''''
+        'Optimize page titles with relevant keywords and compelling copy''
+      );''
+    }'''
+    recommendations.push(''''
+      'Ensure content is unique, valuable, and addresses user intent'''
+    );'''
+    recommendations.push(''''
+      'Use bullet points and numbered lists for better readability'''
+    );'''
+    recommendations.push(''''
       'Include relevant keywords naturally throughout the content'
     );
     return recommendations;
@@ -321,9 +354,9 @@ export class ContentQualityAnalyzer {
         totalPages: 0,
         averageWordCount: 0,
         averageSeoScore: 0,
-        pagesWithIssues: 0,
-        topIssues: [],
-        pageMetrics: [],'
+        pagesWithIssues: 0,'
+        topIssues: [],''
+        pageMetrics: [],'''
         summary: 'No pages analyzed yet'};
     }
     const averageSeoScore = Math.round()
@@ -370,21 +403,29 @@ export class ContentQualityAnalyzer {
     if(excellentPages > 0) {
 `
 ``
+```
+````
       summary += `${excellentPages} pages have excellent content quality. `;
     }
     if(goodPages > 0) {
 `
 ``
+```
+````
       summary += `${goodPages} pages have good content quality. `;
     }
     if(poorPages > 0) {
 `
 ``
+```
+````
       summary += `${poorPages} pages need significant improvement. `;
     }
     if(topIssues.length > 0) {
 '`
 '`'`
+'`'`'`
+'`'`'`'`
       summary += `Top issues to address: ${topIssues.slice(0, 3).join(',)}.`;
     }
     return summary;
@@ -398,7 +439,7 @@ export class ContentQualityAnalyzer {
   }
   clearCache() {
     this.analyzedPages.clear();
-  }
-}
-export default ContentQualityAnalyzer;'`
-'`'`
+  }'`
+}'`'`
+export default ContentQualityAnalyzer;'`'`'`
+'`'`'`'`

@@ -2,12 +2,16 @@
 
 describe ('EnhancedZionTechServices2025', () => {
 '
+''
+'''
   it ('renders without crashing', () => {
-    render (<EnhancedZionTechServices2025 />) ;'
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
+''
+    render (<EnhancedZionTechServices2025 />) ;'''
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;''
+'''
   it ('displays expected content', () => {
     render (<EnhancedZionTechServices2025 />) ;
-    // Add specific test assertions based on component content
-  }) }) ;
-'
+    // Add specific test assertions based on component content'
+  }) }) ;''
+'''

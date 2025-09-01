@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';'
-import { safeStorage } from '@/utils/safeStorage';'
+import { useState, useEffect } from 'react';'''
+import { safeStorage } from '@/utils/safeStorage';'''
 import { useTranslation } from 'react-i18next';
 import {
 
@@ -7,10 +7,10 @@ import {
   AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,'
-  AlertDialogTitle} from '../components/ui/alert-dialog';'
+  AlertDialogDescription,'
+  AlertDialogFooter,''
+  AlertDialogHeader,'''
+  AlertDialogTitle} from '../components/ui/alert-dialog';'''
 import { useLanguage, SupportedLanguage, LanguageContextType } from '../context/LanguageContext';
 
 export default function Page() {
@@ -18,9 +18,11 @@ export default function Page() {
 
   useEffect(() => {
 '
-    const hasVisited = safeStorage.getItem('zion_has_visited');
-    if (hasVisited) return;
-'
+''
+'''
+    const hasVisited = safeStorage.getItem('zion_has_visited');'
+    if (hasVisited) return;''
+'''
     safeStorage.setItem('zion_has_visited', 'true');
     
     const browserLang = navigator.language.substring(0, 2) as SupportedLanguage;
@@ -46,27 +48,27 @@ export default function Page() {
 
   return()
     <AlertDialog open={open} onOpenChange={setOpen}>
-      <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">
-        <AlertDialogHeader>"
-          <AlertDialogTitle className="text-white">'
-            {t('language.switch_to_detected', { language: languageName })}
-          </AlertDialogTitle>"
-          <AlertDialogDescription className="text-zion-slate-light">'
+      <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">"'"
+        <AlertDialogHeader>"'"'"
+          <AlertDialogTitle className="text-white">'''"
+            {t('language.switch_to_detected', { language: languageName })}"'"
+          </AlertDialogTitle>"'"'"
+          <AlertDialogDescription className="text-zion-slate-light">'''
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>"
-          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">'
+          </AlertDialogDescription>"
+        </AlertDialogHeader>"'"
+        <AlertDialogFooter>"'"'"
+          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">'''
             {t('general.no')}
-          </AlertDialogCancel>
-          <AlertDialogAction 
-            onClick={handleAccept}"
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-          >'
+          </AlertDialogCancel>"
+          <AlertDialogAction ""
+            onClick={handleAccept}""'"
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark"''
+          >'''
             {t('general.yes')}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
-    </AlertDialog>
-  );
-}'"`
+    </AlertDialog>'"`
+  );'"`'"`
+}'"`'"`'"`

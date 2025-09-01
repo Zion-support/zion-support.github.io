@@ -10,26 +10,26 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
   enabled = true}) => {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [accentColor, setAccentColor] = useState('#0ea5e9');
-
-    const fontLink = document.createElement('link');'
-    fontLink.rel = 'preload';'
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';'    fontLink.as = 'style';
-    document.head.appendChild(fontLink) ;
-  '
-    // Add modern font loading''
-    const fontLink = document.createElement('link');''
-    fontLink.rel = 'preload';''
+  const [accentColor, setAccentColor] = useState('#0ea5e9');'
+''
+    const fontLink = document.createElement('link');'''
+    fontLink.rel = 'preload';'''
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';'    fontLink.as = 'style';'
+    document.head.appendChild(fontLink) ;''
+  '''
+    // Add modern font loading''''
+    const fontLink = document.createElement('link');''''
+    fontLink.rel = 'preload';''''
     fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';'    fontLink.as = 'style';
     document.head.appendChild (fontLink) ;
-
-    // Apply modern typography
-    '
-    root.style.setProperty('--font-family', "'Inter', -apple-system, BlinkMacSystemFont,Segoe UI', Roboto, sans-serif");'
-    root.style.setProperty('--font-weight-light',300');'
-    root.style.setProperty('--font-weight-normal',400');'
-    root.style.setProperty('--font-weight-medium',500');'
-    root.style.setProperty('--font-weight-semibold',600');'
+'
+    // Apply modern typography''
+    '''
+    root.style.setProperty('--font-family', "'Inter', -apple-system, BlinkMacSystemFont,Segoe UI', Roboto, sans-serif");'''
+    root.style.setProperty('--font-weight-light',300');'''
+    root.style.setProperty('--font-weight-normal',400');'''
+    root.style.setProperty('--font-weight-medium',500');'''
+    root.style.setProperty('--font-weight-semibold',600');'''
     root.style.setProperty('--font-weight-bold',700')}, [enabled]);
 
     // Modern color palette
@@ -37,6 +37,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     // Apply CSS custom properties
     Object.entries(colors).forEach(([key, value]) => {
 '
+''
+'''
       if (typeof value === 'string') {
 
         root.style.setProperty(`--color-${key}`, value)} else {
@@ -44,11 +46,13 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
         Object.entries(value).forEach(([shade, colorValue]) => {
 `
 ``
-          root.style.setProperty(`--color-${key}-${shade}`, colorValue)})}
-    }) ;
-'`
-    // Apply accent color variations'`'`
-    root.style.setProperty('--color-primary-light', `${accentColor}20`);'`'`
+```
+````
+          root.style.setProperty(`--color-${key}-${shade}`, colorValue)})}'`
+    }) ;'`'`
+'`'`'`
+    // Apply accent color variations'`'`'`'`
+    root.style.setProperty('--color-primary-light', `${accentColor}20`);'`'`'`'`
     root.style.setProperty('--color-primary-dark', `${accentColor}80`)}, [enabled, accentColor]);
 
     // Modern spacing scale(4px base unit)
@@ -56,6 +60,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     Object.entries(spacing).forEach(([key, value]) => {
 `
 ``
+```
+````
       root.style.setProperty(`--spacing-${key}`, value)})}, [enabled]);
 
     // Modern shadow system
@@ -63,6 +69,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     Object.entries(shadows).forEach(([key, value]) => {
 `
 ``
+```
+````
       root.style.setProperty(`--shadow-${key}`, value)})}, [enabled]);
 
     // Modern transition system
@@ -70,6 +78,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     Object.entries(transitions).forEach(([key, value]) => {
 `
 ``
+```
+````
       root.style.setProperty(`--transition-${key}`, value)})}, [enabled]);
 
     // Modern border radius system
@@ -77,60 +87,77 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     Object.entries(radius).forEach(([key, value]) => {
 `
 ``
+```
+````
       root.style.setProperty(`--radius-${key}`, value)})}, [enabled]);
 
   
     
     if (isDarkMode) {
 '
-      root.classList.add('dark');'
-      root.style.setProperty('--bg-primary',#0f172a');'
-      root.style.setProperty('--bg-secondary',#1e293b');'
-      root.style.setProperty('--text-primary',#f8fafc');'
-      root.style.setProperty('--text-secondary',#cbd5e1');'
+''
+'''
+      root.classList.add('dark');'''
+      root.style.setProperty('--bg-primary',#0f172a');'''
+      root.style.setProperty('--bg-secondary',#1e293b');'''
+      root.style.setProperty('--text-primary',#f8fafc');'''
+      root.style.setProperty('--text-secondary',#cbd5e1');'''
       root.style.setProperty('--border-color',#334155')} else {
 '
-      root.classList.remove('dark');'
-      root.style.setProperty('--bg-primary',#ffffff');'
-      root.style.setProperty('--bg-secondary',#f8fafc');'
-      root.style.setProperty('--text-primary',#0f172a');'
-      root.style.setProperty('--text-secondary',#475569');'
+''
+'''
+      root.classList.remove('dark');'''
+      root.style.setProperty('--bg-primary',#ffffff');'''
+      root.style.setProperty('--bg-secondary',#f8fafc');'''
+      root.style.setProperty('--text-primary',#0f172a');'''
+      root.style.setProperty('--text-secondary',#475569');'''
       root.style.setProperty('--border-color',#e2e8f0')}
-  }, [enabled, isDarkMode]) ;
-
+  }, [enabled, isDarkMode]) ;'
+''
     const buttons = document.querySelectorAll('button, .btn, []');    buttons.forEach((button) => {
 '
+''
+'''
       if(!button.classList.contains('modern-enhanced')) {
-
-        button.classList.add('modern-enhanced');`
-  '"
-    // Add modern button styles'"'"
+'`
+'`'"`
+        button.classList.add('modern-enhanced');`'"'"
+  '"'"'"
+    // Add modern button styles'"'"'"'"
     const buttons = document.querySelectorAll('button, .btn, [role="button"]');    buttons.forEach((button) => {
 '
 ''
+'''
+''''
       if (!button.classList.contains('modern-enhanced')) {
 '`
-        button.classList.add('modern-enhanced');``
+'`'`
+'`'`'`
+        button.classList.add('modern-enhanced');````
         button.style.cssText += `
-          border-radius: var(--radius-md);
-          transition: var(--transition-normal);
-          font-weight: var(--font-weight-medium);`
-          box-shadow: var(--shadow-sm);``
-        `}
-    }) ;
-'"
-    // Add modern card styles'"'"
+          border-radius: var(--radius-md);`
+          transition: var(--transition-normal);``
+          font-weight: var(--font-weight-medium);```
+          box-shadow: var(--shadow-sm);````
+        `}'"
+    }) ;'"'"
+'"'"'"
+    // Add modern card styles'"'"'"'"
     const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');    cards.forEach((card) => {
 '
 ''
+'''
+''''
       if (!card.classList.contains('modern-enhanced')) {
 '`
-        card.classList.add('modern-enhanced');``
+'`'`
+'`'`'`
+        card.classList.add('modern-enhanced');````
         card.style.cssText += `
-          border-radius: var(--radius-lg);
-          box-shadow: var(--shadow-md);
-          transition: var(--transition-normal);`
-          border: 1px solid var(--border-color);``
+          border-radius: var(--radius-lg);`
+          box-shadow: var(--shadow-md);``
+          transition: var(--transition-normal);```
+          border: 1px solid var(--border-color);````
         `}
     }) }, [enabled]) ;
   useEffect(() => {
@@ -151,9 +178,9 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     enhanceTransitions,
     enhanceBorderRadius,
     enhanceDarkMode,
-    enhanceComponents
-  ]);
-'
-  // Don't render anything - this is a utility component
-  return null};'"`
-'"`'"`
+    enhanceComponents'
+  ]);''
+'''"`
+  // Don't render anything - this is a utility component'"`'"`
+  return null};'"`'"`'"`
+'"`'"`'"`'"`

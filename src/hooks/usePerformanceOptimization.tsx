@@ -46,9 +46,13 @@ const metricsRef:  useRef<PerformanceMetrics>({;
       // Report to analytics if available
       if (window.gtag) {
 '
+''
+'''
         window.gtag('event',performance_metric', {
 '
-          event_category: 'performance','
+''
+'''
+          event_category: 'performance','''
           event_label: 'load_time',
           value: Math.round(loadTime)
         })}
@@ -81,9 +85,9 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
 :src/hooks/usePerformanceOptimization.tsx
 
-          // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}``
-          // console.warn(`Low FPS detected: ${fps}`)}`
-          // // // // // // // console.warn(`Low FPS detected: ${fps}`)}`
+          // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}````
+          // console.warn(`Low FPS detected: ${fps}`)}```
+          // // // // // // // console.warn(`Low FPS detected: ${fps}`)}```
           console.warn(`Low FPS detected: ${fps}`)}
       }
 
@@ -101,26 +105,26 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   // Memory management
   useEffect(: unknown {
 
-    if (!enableMemoryManagement) return;
-
-:src/hooks/usePerformanceOptimization.tsx'
-    const checkMemoryUsage = () => {;'
-    '
+    if (!enableMemoryManagement) return;'
+''
+:src/hooks/usePerformanceOptimization.tsx'''
+    const checkMemoryUsage = () => {;'''
+    '''
       if ('memory' in performance) {;
         
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
-
-        // Warn if memory usage is high
-:src/hooks/usePerformanceOptimization.tsx'
-        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB''
-          // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}'
+'
+        // Warn if memory usage is high''
+:src/hooks/usePerformanceOptimization.tsx'''
+        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB''''
+          // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}'''
           // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
       }
     };
-
-    return : unknown clearInterval(intervalId)}, [enableMemoryManagement]);
-        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB'
-          // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}'
+'
+    return : unknown clearInterval(intervalId)}, [enableMemoryManagement]);''
+        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB'''
+          // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}'''
           console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
       }
     };
@@ -147,22 +151,26 @@ const metricsRef:  useRef<PerformanceMetrics>({;
     if(observerRef.current) {
 
       observerRef.current.observe(element)}
-  }, [enableLazyLoading, createIntersectionObserver]);
-
-:src/hooks/usePerformanceOptimization.tsx'`
-  // Performance monitoring'`'`
-        // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}'`'`
-        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
-  // Performance monitoring'`
-        // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}'`
+  }, [enableLazyLoading, createIntersectionObserver]);'`
+'`'`
+:src/hooks/usePerformanceOptimization.tsx'`'`'`
+  // Performance monitoring'`'`'`'`
+        // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}'`'`'`'`
+        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}'`'`
+  // Performance monitoring'`'`'`
+        // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}'`'`'`
         console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
 
       // Report to analytics if available
       if (window.gtag) {
 '
+''
+'''
         window.gtag('event',performance_metric', {
 '
-          event_category: 'performance','
+''
+'''
+          event_category: 'performance','''
           event_label: 'render_time',
           value: Math.round(renderTime)
         })}
@@ -223,6 +231,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 declare global {
 
   interface Window {
-    gtag?: (...args[])  => void}
-}'`
-'`'`
+'`
+    gtag?: (...args[])  => void}'`'`
+}'`'`'`
+'`'`'`'`

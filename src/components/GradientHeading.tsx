@@ -1,5 +1,6 @@
-''
+''''
 GradientHeading.displayName = 'GradientHeading';
-
-export { GradientHeading };
 '
+export { GradientHeading };''
+''
+''

@@ -1,6 +1,6 @@
-import { useEffect, useState, useCallback } from 'react'; // Added useCallback'
-import { supabase } from '@/integrations/supabase/client';'
-import { useAuth } from '@/hooks/useAuth';'
+import { useEffect, useState, useCallback } from 'react'; // Added useCallback'''
+import { supabase } from '@/integrations/supabase/client';'''
+import { useAuth } from '@/hooks/useAuth';'''
 import type { PointsLedgerEntry } from '@/types/points';
 
 export function usePoints() {
@@ -17,12 +17,12 @@ export function usePoints() {
       setLoading(false);
       return;
     }
-
-    setLoading(true);
-    const { data, error } = await supabase'
-      .from('points_ledger')'
-      .select('*')'
-      .eq('user_id', user.id)'
+'
+    setLoading(true);''
+    const { data, error } = await supabase'''
+      .from('points_ledger')'''
+      .select('*')'''
+      .eq('user_id', user.id)'''
       .order('created_at', { ascending: false });
 
     if (!error && data) {
@@ -46,6 +46,6 @@ export function usePoints() {
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, [fetchLedger]); // Added fetchLedger to dependency array
 
-  return { ledger, balance, loading, fetchLedger };
-}
-'"
+  return { ledger, balance, loading, fetchLedger };'"
+}'"'"
+'"'"'"

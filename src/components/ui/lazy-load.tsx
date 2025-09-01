@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef, ReactNode } from "react";"
-import { cn } from "@/lib/utils";"
+import { useEffect, useState, useRef, ReactNode } from "react";"""
+import { cn } from "@/lib/utils";"""
 import { Skeleton } from "@/components/ui/skeleton";
 
 interface LazyLoadProps {
@@ -12,7 +12,9 @@ interface LazyLoadProps {
 
 export function LazyLoad({
 "
-  height = "200px","
+""
+"""
+  height = "200px","""
   width = "100%",
   children,
   loadingComponent,
@@ -35,6 +37,8 @@ export function LazyLoad({
       },
       {
 "
+""
+"""
         rootMargin: "200px", 
         threshold: 0.1}
     );
@@ -62,17 +66,17 @@ export function LazyLoad({
     }
   }, [isVisible]);
 
-  const defaultLoadingComponent = (
-    <Skeleton
-      style={{ height, width }}"
+  const defaultLoadingComponent = ("
+    <Skeleton""
+      style={{ height, width }}"""
       className="rounded-md bg-zion-blue-light/20"
     />
   );
 
-  return()
-    <div
-      ref={containerRef}"
-      className={cn("transition-opacity duration-500", "
+  return()"
+    <div""
+      ref={containerRef}"""
+      className={cn("transition-opacity duration-500", """
         isLoaded ? "opacity-100" : "opacity-0",
         className
       )}
@@ -86,6 +90,6 @@ export function LazyLoad({
         loadingComponent || defaultLoadingComponent
       )}
     </div>
-  );
-}
-"
+  );"
+}""
+"""

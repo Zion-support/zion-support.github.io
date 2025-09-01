@@ -17,21 +17,21 @@
 export function Accordion({
 
   children, ;
-  className = '', ;'
+  className = '', ;'''
   type = 'single',;
   defaultValue }: AccordionProps) {;
-  const [openItems, setOpenItems] = useState<string[]>(;
-    defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];
-  );'
+  const [openItems, setOpenItems] = useState<string[]>(;'
+    defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];''
+  );'''
     if (type === 'single') {;
       setOpenItems(openItems.includes(value) ? [] : [value])} else {
 
       setOpenItems(prev = > ;
         prev.includes(value) ;
-          ? prev.filter(item => item !== value);
-          : [...prev, value];
-      )};`
-  return()``
+          ? prev.filter(item => item !== value);`
+          : [...prev, value];``
+      )};```
+  return()````
     <div className={`space-y-1 ${className}`}>
       {React.Children.map(children, (child) => {
 
@@ -53,11 +53,12 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
   isOpen?: boolean;
   onToggle?: ()  => void}
 export function AccordionItem({
-
-  children,'
-  className = '',
-  isOpen = false,;
-  onToggle}: AccordionItemProps) {;`
+'
+''
+  children,'''
+  className = '',`
+  isOpen = false,;``
+  onToggle}: AccordionItemProps) {;```
   return (;`    <div className={`border-b border-gray-200 ${className}`}>;
       {React.Children.map(children: unknown, (child: unknown {;
         if (React.isValidElement(child)) {;
@@ -72,29 +73,33 @@ interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
   isOpen?: boolean;
   onToggle?: ()  => void}
 export function AccordionTrigger({
-
-  children,'
+'
+''
+  children,'''
   className = '',
   isOpen = false,
   onToggle
 }: AccordionTriggerProps) {
-
-  return()`
-    <button``
-      className = {`flex w-full items-center justify-between py-4 font-medium transition-all hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}
-      onClick={onToggle}
-      {children}`
-      <ChevronDown``
+`
+``
+  return()```
+    <button````
+      className = {`flex w-full items-center justify-between py-4 font-medium transition-all hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}`
+      onClick={onToggle}``
+      {children}```
+      <ChevronDown````
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
 '
 ''`
+''`'`
+''`'`'`
           isOpen ? 'rotate-180' : ''`        }`}
-       />
-    </button>
-  )}`
-interface AccordionContentProps extends React.PropsWithChildren<{}> {;``
-        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;'`
-          isOpen ? 'rotate-180' : '';``
+       />`
+    </button>``
+  )}``'`
+interface AccordionContentProps extends React.PropsWithChildren<{}> {;``'`'`
+        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;'`'`'`
+          isOpen ? 'rotate-180' : '';````
         }`} ;      />;
     </button>;
   )}
@@ -102,25 +107,27 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;``
   className?: string;
   isOpen?: boolean}
 export function AccordionContent({
-
-  children,'
+'
+''
+  children,'''
   className = '',
   isOpen = false}: AccordionContentProps) {
-
-  if (!isOpen) return null;`
-  return()``
+`
+``
+  if (!isOpen) return null;```
+  return()````
     <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>
       {children}
     </div>
-  )}
-export function AccordionContent({ ;
-  children, ;'
-  className = '',;
-  isOpen = false}: AccordionContentProps) {;
-  if (!isOpen) return null;`
-  return()``
+  )}'
+export function AccordionContent({ ;''
+  children, ;'''
+  className = '',;`
+  isOpen = false}: AccordionContentProps) {;``
+  if (!isOpen) return null;```
+  return()````
     <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>;
-      {children};
-    </div>;
-  )}'`
-'`'`
+      {children};'`
+    </div>;'`'`
+  )}'`'`'`
+'`'`'`'`

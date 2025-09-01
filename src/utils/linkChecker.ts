@@ -12,9 +12,9 @@ export interface PageInfo {
 export class LinkChecker {
   private baseUrl: string;
   private visitedUrls: Set<string> = new Set();
-  private brokenLinks: LinkInfo[] = [];
-  private missingPages: string[] = [];
-'
+  private brokenLinks: LinkInfo[] = [];'
+  private missingPages: string[] = [];''
+'''
   constructor(baseUrl: string = 'https://ziontechgroup.com') {
 
     this.baseUrl = baseUrl}
@@ -31,54 +31,65 @@ export class LinkChecker {
 
     try {
 '
+''
+'''
       if (url.startsWith('http')) {
-
-        return url}'
+'
+''
+        return url}'''
       if (url.startsWith('/')) {
-
-        return `${this.baseUrl}${url}`}'
+'
+''
+        return `${this.baseUrl}${url}`}'''
       if (url.startsWith('#')) {
 `
 ``
-        return `${this.baseUrl}${basePage}${url}`}``
+```
+````
+        return `${this.baseUrl}${basePage}${url}`}````
       return `${this.baseUrl}${basePage}/${url}`} catch {
 
       return url}  }
 
   // Extract all links from a page
   extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
-
-    const links: LinkInfo[] = [];
 '
-    // Extract href attributes from anchor tags''
+    const links: LinkInfo[] = [];''
+'''
+    // Extract href attributes from anchor tags''''
     const hrefRegex = /href=["']([^"']+)["']/g;    let match;
 
     while((match = hrefRegex.exec(pageContent)) !== null) {
-
-      if()'
-        url &&''
-        !url.startsWith('javascript:') &&''
-        !url.startsWith('mailto:') &&''
+'
+''
+      if()'''
+        url &&''''
+        !url.startsWith('javascript:') &&''''
+        !url.startsWith('mailto:') &&''''
         !url.startsWith('tel:')
       ) {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
-
-          url: normalizedUrl,'
-          status: 'working',
-          page: pagePath,'
-          anchor: url.startsWith('#') ? url : undefined})}
-    }
-'"
+'
+''
+          url: normalizedUrl,'''
+          status: 'working',''
+          page: pagePath,'''
+          anchor: url.startsWith('#') ? url : undefined})}'"
+    }'"'"
+'"'"'"
     // Extract src attributes from img, script, and link tags'"
     
     while ((match = srcRegex.exec(pageContent)) !== null) {
 '
+''
+'''
       if (url && !url.startsWith('data:') && !url.startsWith('blob:')) {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
-
-          url: normalizedUrl,'
+'
+''
+          url: normalizedUrl,'''
           status: 'working',
           page: pagePath})}    }
 
@@ -109,12 +120,18 @@ export class LinkChecker {
 
         if (exists) {
 '
+''
+'''
           link.status = 'working'} else {
 '
+''
+'''
 '          link.status = 'missing';
           this.missingPages.push(link.url)}
       } else {
 '
+''
+'''
         link.status = 'external'}
       checkedLinks.push(link)}
 
@@ -128,6 +145,8 @@ export class LinkChecker {
   // Extract page title
   private extractPageTitle(content: string): string {
 '
+''
+'''
     return titleMatch ? titleMatch[1].trim() : 'Untitled'}
   // Get analysis summary
   getSummary() {
@@ -148,7 +167,7 @@ export class LinkChecker {
   // Get all missing pages
   getMissingPages(): string[] {
 
-    return this.missingPages}}
-
-export default LinkChecker;'"`
+    return this.missingPages}}'"`
 '"`'"`
+export default LinkChecker;'"`'"`'"`
+'"`'"`'"`'"`

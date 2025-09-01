@@ -14,29 +14,33 @@ var __rest =
           Object.prototype.propertyIsEnumerable.call(s, p[i])
         )
           t[p[i]] = s[p[i]];
-      }
-    return t;
-  };'
-import { jsx as _jsx } from 'react/jsx-runtime';'
-import React from 'react';'
+      }'
+    return t;''
+  };'''
+import { jsx as _jsx } from 'react/jsx-runtime';'''
+import React from 'react';'''
 import { cn } from '@/lib/utils';
 const Separator = React.forwardRef((_a, ref) => {
 '
-  var { className, orientation = 'horizontal' } = _a,'
-    props = __rest(_a, ['className',orientation']);'
-  return _jsx(''
+''
+'''
+  var { className, orientation = 'horizontal' } = _a,'''
+    props = __rest(_a, ['className',orientation']);'''
+  return _jsx(''''
     'div',
     Object.assign() {
-        ref: ref,'
-        className: cn(''
-          'shrink-0 bg-border','
+'
+''
+        ref: ref,'''
+        className: cn(''''
+          'shrink-0 bg-border','''
           orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]',
           className
         )},
       props
-    )
-  );
-});'
-Separator.displayName = 'Separator';
-export { Separator };
-'
+    )'
+  );''
+});'''
+Separator.displayName = 'Separator';'
+export { Separator };''
+'''

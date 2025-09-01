@@ -43,6 +43,6 @@ export
 
       merged.push (newItem) }
   }) ;
-
-  return merged};
 '`
+  return merged};'`'`
+'`'`'`

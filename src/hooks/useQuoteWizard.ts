@@ -1,4 +1,4 @@
-import useSWR from 'swr';'
+import useSWR from 'swr';'''
 import { captureException } from '@/utils/sentry';
 
 export interface WizardResponse {
@@ -12,6 +12,8 @@ const fetcher = async (url: string): Promise<WizardResponse> => {
     const res = await fetch(url);
     if (!res.ok) {
 '
+''
+'''
       throw new Error('Failed');
     }
     const data = await res.json();
@@ -25,6 +27,8 @@ const fetcher = async (url: string): Promise<WizardResponse> => {
     return { items: data.items || [], total: data.total };
   } catch (err) {
 '
+''
+'''
     if (process.env.NODE_ENV === 'development') {
 
       console.error(err);
@@ -36,14 +40,15 @@ const fetcher = async (url: string): Promise<WizardResponse> => {
   }
 };
 
-export function useQuoteWizard()
-  category: string,
-  page = 1,'
+export function useQuoteWizard()'
+  category: string,''
+  page = 1,'''
   search = ''
 ) {
-
-  const params = new URLSearchParams({ page: String(page) });'
-  if (search) params.set('q', search);`
+'
+''`
+  const params = new URLSearchParams({ page: String(page) });''`'`
+  if (search) params.set('q', search);```
   return useSWR<WizardResponse>(`/api/${category}?${params.toString()}`, fetcher, {
 
     onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
@@ -52,6 +57,6 @@ export function useQuoteWizard()
       const timeout = Math.pow(2, retryCount) * 1000; // 1s, 2s, 4s
       setTimeout(() => revalidate({ retryCount: retryCount + 1 }), timeout);
     },
-    dedupingInterval: 600000});
-}
-'`
+    dedupingInterval: 600000});'`
+}'`'`
+'`'`'`

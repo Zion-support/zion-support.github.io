@@ -31,10 +31,10 @@ export default {
  */
 export const PASSWORD_STRENGTH = {
 
-  VERY_WEAK: 'very-weak','
-  WEAK: 'weak','
-  MEDIUM: 'medium','
-  STRONG: 'strong','
+  VERY_WEAK: 'very-weak','''
+  WEAK: 'weak','''
+  MEDIUM: 'medium','''
+  STRONG: 'strong','''
   VERY_STRONG: 'very-strong'};
 
 /**
@@ -42,10 +42,12 @@ export const PASSWORD_STRENGTH = {
  */
 export const PASSWORD_COLORS = {
 '
-  [PASSWORD_STRENGTH.VERY_WEAK]: 'bg-red-500','
-  [PASSWORD_STRENGTH.WEAK]: 'bg-orange-500','
-  [PASSWORD_STRENGTH.MEDIUM]: 'bg-yellow-500','
-  [PASSWORD_STRENGTH.STRONG]: 'bg-blue-500','
+''
+'''
+  [PASSWORD_STRENGTH.VERY_WEAK]: 'bg-red-500','''
+  [PASSWORD_STRENGTH.WEAK]: 'bg-orange-500','''
+  [PASSWORD_STRENGTH.MEDIUM]: 'bg-yellow-500','''
+  [PASSWORD_STRENGTH.STRONG]: 'bg-blue-500','''
   [PASSWORD_STRENGTH.VERY_STRONG]: 'bg-green-500'};
 
 /**
@@ -53,10 +55,12 @@ export const PASSWORD_COLORS = {
  */
 export const PASSWORD_LABELS = {
 '
-  [PASSWORD_STRENGTH.VERY_WEAK]: 'Very Weak','
-  [PASSWORD_STRENGTH.WEAK]: 'Weak','
-  [PASSWORD_STRENGTH.MEDIUM]: 'Medium','
-  [PASSWORD_STRENGTH.STRONG]: 'Strong','
+''
+'''
+  [PASSWORD_STRENGTH.VERY_WEAK]: 'Very Weak','''
+  [PASSWORD_STRENGTH.WEAK]: 'Weak','''
+  [PASSWORD_STRENGTH.MEDIUM]: 'Medium','''
+  [PASSWORD_STRENGTH.STRONG]: 'Strong','''
   [PASSWORD_STRENGTH.VERY_STRONG]: 'Very Strong'};
 
 /**
@@ -97,9 +101,13 @@ export const hasNumbers = password => {
 :src/utils/passwordStrength.jsx
 export const hasSpecialChars = password => {
 '
+''
+'''
   return /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
 export const hasSpecialChars = (password) => {
 '"
+'"'"
+'"'"'"
   return /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password);
 };
 
@@ -166,37 +174,51 @@ export const getPasswordFeedback = password => {
 
   if (!password) {
 '
+''
+'''
     feedback.push('Enter a password');
     return feedback;
   }
 
   if (password.length < 8) {
 '
+''
+'''
     feedback.push('Password should be at least 8 characters long');
   }
 
   if (!hasLowercase(password)) {
 '
+''
+'''
     feedback.push('Include lowercase letters');
   }
 
   if (!hasUppercase(password)) {
 '
+''
+'''
     feedback.push('Include uppercase letters');
   }
 
   if (!hasNumbers(password)) {
 '
+''
+'''
     feedback.push('Include numbers');
   }
 
   if (!hasSpecialChars(password)) {
 '
+''
+'''
     feedback.push('Include special characters');
   }
 
   if (feedback.length === 0) {
 '
+''
+'''
     feedback.push('Password is strong!');
   }
 
@@ -236,7 +258,7 @@ export default {
   hasSpecialChars,
   getLengthScore,
   calculatePasswordScore,
-  getPasswordStrength,
-  getPasswordFeedback,
-  validatePassword};'"
-'"'"
+  getPasswordStrength,'"
+  getPasswordFeedback,'"'"
+  validatePassword};'"'"'"
+'"'"'"'"

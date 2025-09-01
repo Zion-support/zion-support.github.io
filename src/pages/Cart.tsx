@@ -17,36 +17,36 @@ export default function CartPage() {
   if (items.length === 0) {
 
     return()
-      <div className="container py-10 text-center">"
-        <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" />
-        <p>Your cart is empty</p>"
-        <Button asChild className="mt-4">"
+      <div className="container py-10 text-center">"""
+        <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" />""
+        <p>Your cart is empty</p>"""
+        <Button asChild className="mt-4">"""
           <Link to="/marketplace">Browse Marketplace</Link>
         </Button>
       </div>
-    )}
-
-  return ("
-    <div className="container max-w-2xl py-10">"
-      <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"
+    )}"
+""
+  return ("""
+    <div className="container max-w-2xl py-10">"""
+      <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"""
       <ul className="space-y-4">
         {items.map(item => (
           <CartItemComponent key={item.id}
             item={item}
             onRemove={removeItem}
             onUpdateQuantity={updateQuantity}
-           />
-        ))}
-      </ul>"
+           />"
+        ))}""
+      </ul>"""
       <div className="flex justify-between mt-6 font-semibold">
         <span>Subtotal</span>
         <span>${subtotal.toFixed(2)}</span>
       </div>
       <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Button"
-              className="mt-4 w-full"'
+        <Tooltip>"
+          <TooltipTrigger asChild>"'"
+            <Button"'"'"
+              className="mt-4 w-full"'''
               onClick={() => isAuthenticated && navigate('/checkout')}
               disabled={!isAuthenticated}
             >
@@ -56,6 +56,6 @@ export default function CartPage() {
           {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>}
         </Tooltip>
       </TooltipProvider>
-    </div>
-  )}
-'"
+    </div>'"
+  )}'"'"
+'"'"'"

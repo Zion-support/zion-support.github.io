@@ -32,6 +32,8 @@ interface FormMessageProps extends React.PropsWithChildren<{}> {
 ;
 export function FormMessage(...args[]):  {
 `
-  if (!children) return null;``
-  return <p className = {`text-sm ${className}`}>{children}</p>};'"`
-'"`'"`
+``
+``'"`
+  if (!children) return null;``'"`'"`
+  return <p className = {`text-sm ${className}`}>{children}</p>};'"`'"`'"`
+'"`'"`'"`'"`

@@ -12,6 +12,6 @@
     )}
 );
 Badge.displayName = 'Badge';
-;
-export { Badge };
-'
+;'
+export { Badge };''
+'''

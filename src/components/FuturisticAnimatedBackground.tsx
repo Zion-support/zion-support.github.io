@@ -6,7 +6,6 @@ export default FuturisticAnimatedBackground;
     if (!canvas) return;
 
   useEffect(() => {
-    
     if(!canvas) return;
 
     if(!ctx) return;
@@ -16,23 +15,23 @@ export default FuturisticAnimatedBackground;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight};
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    const gridCanvas = document.createElement('canvas');'
+    window.addEventListener('resize', resizeCanvas);''
+    const gridCanvas = document.createElement('canvas');'''
     const gridCtx = gridCanvas.getContext('2d');    if(gridCtx) {
 
       gridCanvas.width = canvas.width;
-      gridCanvas.height = canvas.height;
-      
-      // Draw enhanced grid'
-'
-    // Add enhanced grid background''
-    const gridCanvas = document.createElement('canvas');''
+      gridCanvas.height = canvas.height;'
+      ''
+      // Draw enhanced grid'''
+'''
+    // Add enhanced grid background''''
+    const gridCanvas = document.createElement('canvas');''''
     const gridCtx = gridCanvas.getContext('2d');    if (gridCtx) {
 
-      gridCanvas.width = canvas.width;
-      gridCanvas.height = canvas.height;
-      '
-      // Draw enhanced grid''
+      gridCanvas.width = canvas.width;'
+      gridCanvas.height = canvas.height;''
+      '''
+      // Draw enhanced grid''''
       gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1);
       gridCtx.lineWidth = 1;
 
@@ -80,10 +79,10 @@ export default FuturisticAnimatedBackground;
         maxLife: Math.random () * 100 + 50
       }) };
 
-    // Update and draw particles
-    const animate = (...args: unknown[]): unknown => {;      time += 0.01;
-'
-      // Clear canvas with fade effect''
+    // Update and draw particles'
+    const animate = (...args: unknown[]): unknown => {;      time += 0.01;''
+'''
+      // Clear canvas with fade effect''''
       ctx.fillStyle = 'rgba(2, 6, 23, 0.1);
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -121,10 +120,10 @@ export default FuturisticAnimatedBackground;
         ctx.shadowBlur = 10;
         ctx.globalAlpha = alpha;
         ctx.beginPath () ;
-        ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2) ;
-        ctx.fill () ;
-'
-      // Draw grid pattern''
+        ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2) ;'
+        ctx.fill () ;''
+'''
+      // Draw grid pattern''''
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.1);
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.3;
@@ -144,9 +143,9 @@ export default FuturisticAnimatedBackground;
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
         ctx.stroke();
-
-      // Draw floating geometric shapes
-      ctx.globalAlpha = 0.1;'
+'
+      // Draw floating geometric shapes''
+      ctx.globalAlpha = 0.1;'''
       ctx.strokeStyle = 'rgba(168, 85, 247, 0.5);
       ctx.lineWidth = 2;
 
@@ -162,18 +161,18 @@ export default FuturisticAnimatedBackground;
       ctx.closePath () ;
       ctx.stroke () ;
       ctx.restore () ;
-
-      // Floating circle
-      '
+'
+      // Floating circle''
+      '''
 '      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
       ctx.beginPath();
       ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2);
       ctx.stroke();
 
-      // Reset global alpha
-      ctx.globalAlpha = 1;
-'
-      // Draw energy waves''
+      // Reset global alpha'
+      ctx.globalAlpha = 1;''
+'''
+      // Draw energy waves''''
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.2);
       ctx.lineWidth = 3;
 
@@ -190,6 +189,8 @@ export default FuturisticAnimatedBackground;
 
     return () => {
 '
+''
+'''
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationId)}}, []) ;
   return ()
@@ -198,11 +199,13 @@ export default FuturisticAnimatedBackground;
       className="fixed inset - 0 w-full h-full pointer - events - none z -0"
       style = {
 '
+''
+'''
   { background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03),;
   ;
   transparent 60%);
 ;
-}};
-    />;) };
-'"`
-export default FuturisticAnimatedBackground}}}}}}'"`'"`
+}};'"`
+    />;) };'"`'"`
+'"`'"`'"`
+export default FuturisticAnimatedBackground}}}}}}'"`'"`'"`'"`

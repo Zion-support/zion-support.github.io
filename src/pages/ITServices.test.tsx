@@ -2,12 +2,16 @@
 
 describe ('ITServices', () => {
 '
+''
+'''
   it ('renders without crashing', () => {
-    render (<ITServices  />) ;'
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
+''
+    render (<ITServices  />) ;'''
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;''
+'''
   it ('displays expected content', () => {
     render (<ITServices  />) ;
-    // Add specific test assertions based on component content
-  }) }) ;
-'
+    // Add specific test assertions based on component content'
+  }) }) ;''
+'''

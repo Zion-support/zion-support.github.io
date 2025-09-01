@@ -45,7 +45,7 @@ export
       merged[existingIndex].quantity += newItem.quantity} else {
 
       merged.push(newItem)}
-  });
-
-  return merged};'
-'`'`
+  });'
+''
+  return merged};'''
+'`'`'`'`

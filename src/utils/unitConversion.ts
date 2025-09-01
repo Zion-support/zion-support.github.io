@@ -23,14 +23,18 @@ export function formatDimensions()
   unit: UnitSystem
 ): string {
 '
+''
+'''
   if (unit === 'imperial') {
 
-    return `${w} x ${h} x ${d} in`}`
+    return `${w} x ${h} x ${d} in`}```
   return `${widthCm} x ${heightCm} x ${depthCm} cm`}
 
 export function formatWeight(weightKg: number, unit: UnitSystem): string {
 '
-  return unit === 'imperial'`
-    ? `${kgToLbs(weightKg).toFixed(1)} lb``
-    : `${weightKg} kg`}
-'`
+''`
+''`'`
+  return unit === 'imperial'```
+    ? `${kgToLbs(weightKg).toFixed(1)} lb```'`
+    : `${weightKg} kg`}'`'`
+'`'`'`

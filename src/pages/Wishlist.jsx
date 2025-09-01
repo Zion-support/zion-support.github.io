@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';'
-import { useFavorites } from '@/hooks/useFavorites';'
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';'
-import { TALENT_PROFILES } from '@/data/talentData';'
-import { ProductListingCard } from '@/components/ProductListingCard';'
-import { TalentCard } from '@/components/talent/TalentCard';'
-import { Button } from '@/components/ui/button';'
-import { useCart } from '@/context/CartContext';'
-import { useAuth } from '@/hooks/useAuth';'
-import { getCartKey } from '@/utils/cartUtils';'
-import { useNavigate } from 'react-router-dom';'
+import React, { useEffect } from 'react';'''
+import { useFavorites } from '@/hooks/useFavorites';'''
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';'''
+import { TALENT_PROFILES } from '@/data/talentData';'''
+import { ProductListingCard } from '@/components/ProductListingCard';'''
+import { TalentCard } from '@/components/talent/TalentCard';'''
+import { Button } from '@/components/ui/button';'''
+import { useCart } from '@/context/CartContext';'''
+import { useAuth } from '@/hooks/useAuth';'''
+import { getCartKey } from '@/utils/cartUtils';'''
+import { useNavigate } from 'react-router-dom';'''
 import { safeStorage } from '@/utils/safeStorage';
 
 export default function WishlistPage() {
@@ -18,13 +18,17 @@ export default function WishlistPage() {
 
   useEffect(() => {
 '
-    // Simulate loading favorites from localStorage''
+''
+'''
+    // Simulate loading favorites from localStorage''''
     const storedFavorites = localStorage.getItem('wishlist') || '[]';
     try {
       const parsedFavorites = JSON.parse(storedFavorites);
       setFavorites(parsedFavorites);
     } catch (error) {
 '
+''
+'''
       // console.error('Error parsing favorites:', error);
       setFavorites([]);
     }
@@ -40,17 +44,20 @@ export default function WishlistPage() {
     const stored = safeStorage.getItem(getCartKey(user?.id));
     const cart = stored ? JSON.parse(stored) : [];
     cart.push({
-
-      id: item.id,'
+'
+''
+      id: item.id,'''
       name: item.title || 'Item',
-      price: item.price || 0,
-      quantity: 1});
-    safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));'
+      price: item.price || 0,'
+      quantity: 1});''
+    safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));'''
     dispatch({ type: 'SET_ITEMS', payload: cart });
   };
 
   const addToCart = item => {
 '
+''
+'''
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
 
@@ -59,146 +66,146 @@ export default function WishlistPage() {
       existingItem.quantity += 1;
     } else {
 
-      cart.push({ ...item, quantity: 1 });
-    }
-'
-    localStorage.setItem('cart', JSON.stringify(cart));'
-    // You could add a toast notification here''
+      cart.push({ ...item, quantity: 1 });'
+    }''
+'''
+    localStorage.setItem('cart', JSON.stringify(cart));'''
+    // You could add a toast notification here''''
     alert('Item added to cart!');
   };
 
   if (loading) {
 
     return()
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 pt-24">""
-        <div className="container mx-auto px-4 py-8">""
-          <div className="flex items-center justify-center min-h-[400px]">""
-            <div className="text-center">""
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-600 mx-auto mb-4"></div>""
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 pt-24">""""
+        <div className="container mx-auto px-4 py-8">""""
+          <div className="flex items-center justify-center min-h-[400px]">""""
+            <div className="text-center">""""
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-600 mx-auto mb-4"></div>""""
               <p className="text-slate-600 dark:text-slate-400">Loading...</p>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
-"
-  return (""
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 pt-24">""
-      <div className="container mx-auto px-4 py-8">""
-        <div className="text-center mb-8">""
-          <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            My Wishlist"
-          </h1>""
+    );"
+  }""
+"""
+  return (""""
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 pt-24">""""
+      <div className="container mx-auto px-4 py-8">""""
+        <div className="text-center mb-8">""""
+          <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">""
+            My Wishlist"""
+          </h1>""""
           <p className="text-lg text-slate-600 dark:text-slate-400">
             Save and organize your favorite items and services
-          </p>
-        </div>
-"
-        {favorites.length === 0 ? (""
-          <div className="text-center py-16">""
-            <div className="text-6xl mb-6">💝</div>""
-            <h3 className="text-2xl font-semibold text-slate-700 dark:text-slate-300 mb-4">
-              Your wishlist is empty"
-            </h3>""
+          </p>"
+        </div>""
+"""
+        {favorites.length === 0 ? (""""
+          <div className="text-center py-16">""""
+            <div className="text-6xl mb-6">💝</div>""""
+            <h3 className="text-2xl font-semibold text-slate-700 dark:text-slate-300 mb-4">""
+              Your wishlist is empty"""
+            </h3>""""
             <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-md mx-auto">
-              Start exploring our marketplace and save items you love to your
-              wishlist
-            </p>'
-            <button''"
-              onClick={() => navigate('/marketplace')}""
+              Start exploring our marketplace and save items you love to your'
+              wishlist''"
+            </p>''"'"
+            <button''"'"'"
+              onClick={() => navigate('/marketplace')}""""
               className="px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg font-medium transition-colors"
             >
-              Browse Marketplace
-            </button>
-          </div>"
-        ) : (""
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {favorites.map(item => (
-              <div"
-                key={item.id}""
-                className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-lg transition-all duration-300"
-              >"
-                {/* Item Image */}""
+              Browse Marketplace"
+            </button>""
+          </div>"""
+        ) : (""""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">"
+            {favorites.map(item => (""
+              <div"""
+                key={item.id}""""
+                className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-lg transition-all duration-300"""
+              >"""
+                {/* Item Image */}""""
                 <div className="h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center">
-                  {item.image ? (
-                    <img
-                      src={item.image}"
-                      alt={item.title}""
-                      className="w-full h-full object-cover"
-                    />"
-                  ) : (""
-                    <div className="text-slate-400 text-4xl">'
+                  {item.image ? ("
+                    <img""
+                      src={item.image}"""
+                      alt={item.title}""""
+                      className="w-full h-full object-cover"""
+                    />""'"
+                  ) : (""'"'"
+                    <div className="text-slate-400 text-4xl">'''
                       {item.type === 'talent' ? '👤' : '📦'}
                     </div>
-                  )}
-                </div>
-"
-                {/* Item Content */}""
-                <div className="p-4">""
-                  <div className="flex items-start justify-between mb-2">""
+                  )}"
+                </div>""
+"""
+                {/* Item Content */}""""
+                <div className="p-4">""""
+                  <div className="flex items-start justify-between mb-2">""""
                     <h3 className="font-semibold text-slate-900 dark:text-white text-lg line-clamp-2">
-                      {item.title}
-                    </h3>
-                    <button"
-                      onClick={() => removeFromWishlist(item.id)}""
-                      className="text-red-500 hover:text-red-600 transition-colors ml-2""
-                    >""
-                      <Heart className="w-5 h-5 fill-current" />
-                    </button>
-                  </div>"
-""
+                      {item.title}"
+                    </h3>""
+                    <button"""
+                      onClick={() => removeFromWishlist(item.id)}""""
+                      className="text-red-500 hover:text-red-600 transition-colors ml-2""""
+                    >""""
+                      <Heart className="w-5 h-5 fill-current" />"
+                    </button>""
+                  </div>"""
+""""
                   <p className="text-slate-600 dark:text-slate-400 text-sm mb-3 line-clamp-2">
-                    {item.description}
-                  </p>
-"
-                  {/* Item Details */}""
-                  <div className="space-y-2 mb-4">"
-                    {item.price && (""
-                      <div className="text-lg font-bold text-cyan-600">
-                        ${item.price}'"
-                        {item.priceType === 'hourly' && (""
+                    {item.description}"
+                  </p>""
+"""
+                  {/* Item Details */}""""
+                  <div className="space-y-2 mb-4">"""
+                    {item.price && ("""'"
+                      <div className="text-lg font-bold text-cyan-600">'"'"
+                        ${item.price}'"'"'"
+                        {item.priceType === 'hourly' && (""""
                           <span className="text-sm text-slate-500">/hr</span>
                         )}
-                      </div>
-                    )}
-"
-                    {item.rating && (""
-                      <div className="flex items-center gap-1">""
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />""
+                      </div>"
+                    )}""
+"""
+                    {item.rating && (""""
+                      <div className="flex items-center gap-1">""""
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />""""
                         <span className="text-sm text-slate-600 dark:text-slate-400">
                           {item.rating}
                         </span>
-                      </div>
-                    )}
-"
-                    {item.location && (""
-                      <div className="flex items-center gap-1 text-sm text-slate-500">""
+                      </div>"
+                    )}""
+"""
+                    {item.location && (""""
+                      <div className="flex items-center gap-1 text-sm text-slate-500">""""
                         <MapPin className="w-4 h-4" />
                         <span>{item.location}</span>
-                      </div>
-                    )}
-"
-                    {item.availability && (""
-                      <div className="flex items-center gap-1 text-sm text-slate-500">""
+                      </div>"
+                    )}""
+"""
+                    {item.availability && (""""
+                      <div className="flex items-center gap-1 text-sm text-slate-500">""""
                         <Clock className="w-4 h-4" />
                         <span>{item.availability}</span>
                       </div>
-                    )}
-                  </div>
-"
-                  {/* Actions */}""
-                  <div className="flex gap-2">
-                    <button"
-                      onClick={() => addToCart(item)}""
-                      className="flex-1 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2""
-                    >""
+                    )}"
+                  </div>""
+"""
+                  {/* Actions */}""""
+                  <div className="flex gap-2">""
+                    <button"""
+                      onClick={() => addToCart(item)}""""
+                      className="flex-1 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2""""
+                    >""""
                       <ShoppingCart className="w-4 h-4" />
-                      Add to Cart
-                    </button>
-'"
-                    {item.type === 'talent' && (""
-                      <button className="px-4 py-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">""
+                      Add to Cart'"
+                    </button>'"'"
+'"'"'"
+                    {item.type === 'talent' && (""""
+                      <button className="px-4 py-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">""""
                         <MessageCircle className="w-4 h-4" />
                         Message
                       </button>
@@ -210,7 +217,7 @@ export default function WishlistPage() {
           </div>
         )}
       </div>
-    </div>
-  );
-}'"
-'"'"
+    </div>'"
+  );'"'"
+}'"'"'"
+'"'"'"'"

@@ -7,11 +7,17 @@ export function registerServiceWorker(): void {
       .register(swUrl)
       .then((registration) => {
 '
+''
+'''
         registration.addEventListener('updatefound', () => {
           if (newWorker) {
 '
+''
+'''
             newWorker.addEventListener('statechange', () => {
 '
+''
+'''
               if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
 
                 // New content available
@@ -19,6 +25,8 @@ export function registerServiceWorker(): void {
             })}
         })})
       .catch(() => {
+'
+''
         // console.error('SW registration failed')
         return undefined;
       });
@@ -28,6 +36,8 @@ export function registerServiceWorker(): void {
 
 export function unregisterServiceWorker(): void {
 '
+''
+'''
   if ('serviceWorker' in navigator) {
 
     navigator.serviceWorker.ready
@@ -35,10 +45,13 @@ export function unregisterServiceWorker(): void {
 
         registration.unregister()})
       .catch(() => {
+'
+''
         // console.error('Unregister failed')
         return false;
       });
   }
-  return Promise.resolve(undefined);
-}
-'
+  return Promise.resolve(undefined);'
+}''
+''
+''

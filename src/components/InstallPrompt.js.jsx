@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from 'react';'
+import React, { useEffect, useState } from 'react';'''
 import { Button } from '@/components/ui/button';
 
-      e.preventDefault();
-      setDeferred(e);
-    };'
-    window.addEventListener('beforeinstallprompt', handler);'
+      e.preventDefault();'
+      setDeferred(e);''
+    };'''
+    window.addEventListener('beforeinstallprompt', handler);'''
     return () => window.removeEventListener('beforeinstallprompt', handler);
   }, []);
   if (!deferred) return null;
   const onClick = async () => {
-    deferred.prompt();
-    const result = await deferred.userChoice;'
+'
+    deferred.prompt();''
+    const result = await deferred.userChoice;'''
     if (result.outcome !== 'accepted') {
 
       // keep for later
@@ -24,7 +25,7 @@ import { Button } from '@/components/ui/button';
     <div className="fixed bottom-4 right-4 z-50">
       <Button onClick={onClick}>Install App</Button>
     </div>
-  );
-};
-export default InstallPrompt;'"
-'"'"
+  );'"
+};'"'"
+export default InstallPrompt;'"'"'"
+'"'"'"'"

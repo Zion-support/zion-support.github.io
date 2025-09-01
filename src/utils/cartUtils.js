@@ -16,8 +16,10 @@ const SHIPPING_COST = 9.99;
  */
 export const validateCartItem = item => {
 '
-  if (!item || typeof item !== 'object') return false;
-'
+''
+'''
+  if (!item || typeof item !== 'object') return false;''
+'''
   const requiredFields = ['id',name',price',quantity'];
   return requiredFields.every()
     field =>
@@ -36,6 +38,8 @@ export const addToCart = (cart, newItem) => {
 
   if (!validateCartItem(newItem)) {
 '
+''
+'''
     // console.error('Invalid cart item:', newItem);
     return cart;
   }
@@ -177,19 +181,25 @@ export const calculateCartTotal = cart => {
 
 /**
  * Format price for display
- * @param {number} price - Price to format
- * @param {string} currency - Currency code (default: USD)
- * @returns {string} Formatted price'
- */''
+ * @param {number} price - Price to format'
+ * @param {string} currency - Currency code (default: USD)''
+ * @returns {string} Formatted price'''
+ */''''
 export const formatPrice = (price, currency = 'USD') => {
 '
+''
+'''
   if (typeof price !== 'number' || isNaN(price)) {
 '
-    return '$0.00';
-  }
-'
+''
+'''
+    return '$0.00';'
+  }''
+'''
   return new Intl.NumberFormat('en-US', {
 '
+''
+'''
     style: 'currency',
     currency: currency}).format(price);
 };
@@ -225,7 +235,9 @@ export const exportCartData = cart => {
     return JSON.stringify(cart, null, 2);
   } catch (error) {
 '
-    // console.error('Error exporting cart data:', error);'
+''
+'''
+    // console.error('Error exporting cart data:', error);'''
     return '[]';
   }
 };
@@ -246,6 +258,8 @@ export const importCartData = cartData => {
     return [];
   } catch (error) {
 '
+''
+'''
     // console.error('Error importing cart data:', error);
     return [];
   }
@@ -312,7 +326,7 @@ export const mergeCarts = (cart1, cart2) => {
  * @returns {Array} Merged cart
  */
 export const mergeCartItems = (cart1, cart2) => {
-
-  return mergeCarts(cart1, cart2);
-};'`
-'`'`
+'`
+  return mergeCarts(cart1, cart2);'`'`
+};'`'`'`
+'`'`'`'`

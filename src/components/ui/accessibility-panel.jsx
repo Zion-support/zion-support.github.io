@@ -1,14 +1,14 @@
-'use client';'
-import React, { useState, useCallback, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+'use client';'''
+import React, { useState, useCallback, useEffect } from 'react';'''
+import { motion, AnimatePresence } from 'framer-motion';'''
 import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const AccessibilityPanel = ({ enabled = true, defaultSettings = { /* empty */ }, onSettingsChange, className = '' }) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
 
-        highContrast: false,
-        largeText: false,
-        fontSize: 16,'
+        highContrast: false,'
+        largeText: false,''
+        fontSize: 16,'''
         colorBlindMode: 'none',
         reducedMotion: false,
         screenReader: false,
@@ -25,61 +25,82 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
         // High contrast mode
         if (settings.highContrast) {
 '
-            root.style.setProperty('--high-contrast',true');'
+''
+'''
+            root.style.setProperty('--high-contrast',true');'''
             root.classList.add('high-contrast')}
         else {
 '
-            root.style.removeProperty('--high-contrast');'
+''
+'''
+            root.style.removeProperty('--high-contrast');'''
             root.classList.remove('high-contrast')}
         // Large text mode
         if (settings.largeText) {
 '
-            root.style.setProperty('--large-text',true');'
+''
+'''
+            root.style.setProperty('--large-text',true');'''
             root.classList.add('large-text')}
         else {
 '
-            root.style.removeProperty('--large-text');'
-            root.classList.remove('large-text')}'
-        // Font size''
-        root.style.setProperty('--font-size', `${settings.fontSize}px`);'
-        // Color blind modes''
+''
+'''
+            root.style.removeProperty('--large-text');'''
+            root.classList.remove('large-text')}'''
+        // Font size''''
+        root.style.setProperty('--font-size', `${settings.fontSize}px`);'''
+        // Color blind modes''''
         root.style.setProperty('--color-blind-mode', settings.colorBlindMode);
         // Reduced motion
         if (settings.reducedMotion) {
 '
-            root.style.setProperty('--reduced-motion',true');'
+''
+'''
+            root.style.setProperty('--reduced-motion',true');'''
             root.classList.add('reduced-motion')}
         else {
 '
-            root.style.removeProperty('--reduced-motion');'
+''
+'''
+            root.style.removeProperty('--reduced-motion');'''
             root.classList.remove('reduced-motion')}
         // Focus indicator
         if (settings.focusIndicator) {
 '
-            root.style.setProperty('--focus-indicator',true');'
+''
+'''
+            root.style.setProperty('--focus-indicator',true');'''
             root.classList.add('focus-indicator')}
         else {
 '
-            root.style.removeProperty('--focus-indicator');'
+''
+'''
+            root.style.removeProperty('--focus-indicator');'''
             root.classList.remove('focus-indicator')}
         // Keyboard navigation
         if (settings.keyboardNavigation) {
 '
-            root.style.setProperty('--keyboard-navigation',true');'
+''
+'''
+            root.style.setProperty('--keyboard-navigation',true');'''
             root.classList.add('keyboard-navigation')}
         else {
 '
-            root.style.removeProperty('--keyboard-navigation');'
+''
+'''
+            root.style.removeProperty('--keyboard-navigation');'''
             root.classList.remove('keyboard-navigation')}
         // Notify parent component
         onSettingsChange?.(settings)}, [settings, enabled, onSettingsChange]);
     // Screen reader announcements
     useEffect(() => {
-        if (!enabled || !settings.screenReader)
-            return;'
-        const announcement = document.createElement('div');'
-            announcement.setAttribute('aria-live',polite');'
-            announcement.setAttribute('aria-atomic',true');'
+'
+        if (!enabled || !settings.screenReader)''
+            return;'''
+        const announcement = document.createElement('div');'''
+            announcement.setAttribute('aria-live',polite');'''
+            announcement.setAttribute('aria-atomic',true');'''
             announcement.className = 'sr-only';
             announcement.textContent = message;
             document.body.appendChild(announcement);
@@ -88,12 +109,18 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
         // Announce important changes
         if (settings.highContrast) {
 '
+''
+'''
             announce('High contrast mode enabled')}
         if (settings.largeText) {
 '
+''
+'''
             announce('Large text mode enabled')}
         if (settings.reducedMotion) {
 '
+''
+'''
             announce('Reduced motion enabled')}
     }, [settings.highContrast, settings.largeText, settings.reducedMotion, enabled, settings.screenReader]);
     const updateSetting = useCallback((key, value) => {
@@ -108,9 +135,11 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
             // Add notification
             const notification = {
 `
-  id: Date.now().toString(),`'`
-                message: `${key.replace(/([A-Z])/g, $1').toLowerCase()'`'`
-} ${value ? 'enabled' : 'disabled'}`,'
+`'`
+`'`'`
+  id: Date.now().toString(),`'`'`'`
+                message: `${key.replace(/([A-Z])/g, $1').toLowerCase()'`'`'`'`
+} ${value ? 'enabled' : 'disabled'}`,'''
                 type: 'success',
                 timestamp: Date.now()
             };
@@ -119,9 +148,9 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
     const resetToDefaults = useCallback(() => {
         const defaultSettings = {
 
-  highContrast: false,
-            largeText: false,
-            fontSize: 16,'
+  highContrast: false,'
+            largeText: false,''
+            fontSize: 16,'''
             colorBlindMode: 'none',
             reducedMotion: false,
             screenReader: false,
@@ -130,7 +159,8 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
 };
         setSettings(defaultSettings);
         const notification = {
-
-  id: Date.now().toString(),'
-            message: 'Accessibility settings reset to defaults','`
-            type: 'info',`'`
+'
+''`
+  id: Date.now().toString(),''`'`
+            message: 'Accessibility settings reset to defaults','`'`'`
+            type: 'info',`'`'`'`
