@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '@/data/additionalInnovativeServices2025';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '@/data/innovativeMicroSaasServices2025';
-import { ADVANCED_ENTERPRISE_SOLUTIONS_2025 } from '@/data/advancedEnterpriseSolutions2025';
-import { INNOVATIVE_AI_SERVICES_2025 } from '@/data/innovativeAIServices2025';
-import { CYBERSECURITY_SERVICES_2025 } from '@/data/cybersecurityServices2025';
-import { BLOCKCHAIN_WEB3_SERVICES_2025 } from '@/data/blockchainWeb3Services2025';
-import { IOT_EDGE_SERVICES_2025 } from '@/data/iotEdgeServices2025';
+import { EXPANDED_INNOVATIVE_SERVICES_2025 } from '@/data/expandedInnovativeServices2025';
+import { SPECIALIZED_MICRO_SAAS_SERVICES_2025 } from '@/data/specializedMicroSaasServices2025';
+import { INNOVATIVE_MICRO_SAAS_2025 } from '@/data/innovativeMicroSaas2025';
+import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025';
 import { SEO } from '@/components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import {
   Brain,
   Cloud,
   Shield,
@@ -40,7 +36,7 @@ import { motion, AnimatePresence } from 'framer-motion';
   MapPin,
   Building,
   Globe as GlobeIcon,
-  } from 'lucide-react';
+} from 'lucide-react';
 
 export default React.memo(function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -134,39 +130,44 @@ export default React.memo(function ServicesPage() {
 
   // Filter and sort services
   const allServices = [
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
-    ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
-    ...ADVANCED_ENTERPRISE_SOLUTIONS_2025,
-    ...INNOVATIVE_AI_SERVICES_2025,
-    ...CYBERSECURITY_SERVICES_2025,
-    ...BLOCKCHAIN_WEB3_SERVICES_2025,
-    ...IOT_EDGE_SERVICES_2025,
+    ...INNOVATIVE_MICRO_SAAS_2025,
+    ...ADVANCED_INNOVATIVE_SERVICES_2025,
+    ...EXPANDED_INNOVATIVE_SERVICES_2025,
+    ...SPECIALIZED_MICRO_SAAS_SERVICES_2025,
   ];
 
   const filteredServices = allServices.filter (service => {
     const title = service.title || service.name || '';
+    const description = service.description || '';
+    const tags = service.tags || [];
+    const category = service.category || '';
+    const price = typeof service.price === 'number' ? service.price : parseInt(service.price?.replace(/[^0-9]/g, '') || '0');
+    
     const matchesSearch = title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
-      service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || (service.tags &&
-        service.tags.some (tag =>
-          tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ) ;
+      description.toLowerCase () .includes (searchQuery.toLowerCase () ) || 
+      tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ;
 
     const matchesCategory = selectedCategory === 'all' ||
-      service.category.toLowerCase () .includes (selectedCategory) ;
+      category.toLowerCase () .includes (selectedCategory) ;
 
-    const matchesPrice = selectedPriceRange === 'all' || (selectedPriceRange === 'budget' && service.price <= 1000) || (selectedPriceRange === 'mid - range' &&
-        service.price > 1000 &&
-        service.price <= 5000) || (selectedPriceRange === 'enterprise' && service.price > 5000) ;
+    const matchesPrice = selectedPriceRange === 'all' || 
+      (selectedPriceRange === 'budget' && price <= 1000) || 
+      (selectedPriceRange === 'mid - range' && price > 1000 && price <= 5000) || 
+      (selectedPriceRange === 'enterprise' && price > 5000) ;
 
     return matchesSearch && matchesCategory && matchesPrice;
   }) ;
 
   // Sort services
   const sortedServices = [...filteredServices].sort ( (a, b) => {
+    const priceA = typeof a.price === 'number' ? a.price : parseInt(a.price?.replace(/[^0-9]/g, '') || '0');
+    const priceB = typeof b.price === 'number' ? b.price : parseInt(b.price?.replace(/[^0-9]/g, '') || '0');
+    
     switch (sortBy) {
       case 'price - low':
-        return a.price - b.price;
+        return priceA - priceB;
       case 'price - high':
-        return b.price - a.price;
+        return priceB - priceA;
       case 'newest':
         return (new Date (b.createdAt || '2025 - 01 - 01') .getTime () -
           new Date (a.createdAt || '2025 - 01 - 01') .getTime () ) ;
@@ -244,13 +245,10 @@ export default React.memo(function ServicesPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <div role="button" className="text-3xl font-bold text-zion-cyan mb-2">
-                  {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + 
-                   ADDITIONAL_INNOVATIVE_SERVICES_2025.length +
-                   ADVANCED_ENTERPRISE_SOLUTIONS_2025.length +
-                   INNOVATIVE_AI_SERVICES_2025.length +
-                   CYBERSECURITY_SERVICES_2025.length +
-                   BLOCKCHAIN_WEB3_SERVICES_2025.length +
-                   IOT_EDGE_SERVICES_2025.length}+
+                  {INNOVATIVE_MICRO_SAAS_2025.length + 
+                   ADVANCED_INNOVATIVE_SERVICES_2025.length +
+                   EXPANDED_INNOVATIVE_SERVICES_2025.length +
+                   SPECIALIZED_MICRO_SAAS_SERVICES_2025.length}+
                 </div>
                 <div role="button" className="text - zion - slate - light">Innovative Services</div>
               </motion.div>
@@ -345,7 +343,10 @@ export default React.memo(function ServicesPage() {
 
             <div role="button" className="text - zion - slate - light">
               Showing {sortedServices.length} of{' '}
-              {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
+              {INNOVATIVE_MICRO_SAAS_2025.length + 
+               ADVANCED_INNOVATIVE_SERVICES_2025.length +
+               EXPANDED_INNOVATIVE_SERVICES_2025.length +
+               SPECIALIZED_MICRO_SAAS_SERVICES_2025.length} services
             </div>
           </motion.div>
         </div>
@@ -380,9 +381,9 @@ export default React.memo(function ServicesPage() {
                               { className: 'w - 6 h - 6 text - white' }) }
                         </div>
                         <div role="button" className="text - right">
-                          <div role="button" className="text - 2xl font - bold text - zion - cyan">
-                            ${service.price.toLocaleString () }
-                          </div>
+                                                  <div role="button" className="text - 2xl font - bold text - zion - cyan">
+                          ${typeof service.price === 'number' ? service.price.toLocaleString() : service.price}
+                        </div>
                           <div role="button" className="text - sm text - zion - slate - light">
                             per month
                           </div>
@@ -390,7 +391,7 @@ export default React.memo(function ServicesPage() {
                       </div>
 
                       <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - zion - cyan transition - colors">
-                        {service.title}
+                        {service.title || service.name}
                       </h3>
 
                       <p className="text - zion - slate - light leading - relaxed">
@@ -407,12 +408,12 @@ export default React.memo(function ServicesPage() {
                         </span>
                         <span
                           className={`px - 2 py - 1 rounded - full text - xs font - medium ${
-                            service.innovationLevel === 'Cutting - edge'
+                            (service.innovationLevel || '').includes('Cutting - edge') || (service.innovationLevel || '').includes('Revolutionary')
                               ? 'bg - zion - cyan / 20 text - zion - cyan'
                               : 'bg - zion - purple / 20 text - zion - purple'
                           }`}
                         >
-                          {service.innovationLevel}
+                          {service.innovationLevel || 'Advanced'}
                         </span>
                       </div>
 
@@ -420,10 +421,10 @@ export default React.memo(function ServicesPage() {
                       <div role="button" className="flex items - center justify - between text - sm">
                         <div role="button" className="flex items - center gap - 1 text - zion - green">
                           <TrendingUp className="w - 4 h - 4" />
-                          <span > ROI: {service.roi}</span>
+                          <span > ROI: {service.roi || '200-400%'}</span>
                         </div>
                         <div role="button" className="text - zion - slate - light">
-                          Market: {service.marketPrice}
+                          Market: {service.marketPrice || `$${typeof service.price === 'number' ? service.price * 2 : service.price} - $${typeof service.price === 'number' ? service.price * 4 : service.price}`}
                         </div>
                       </div>
 
@@ -433,7 +434,7 @@ export default React.memo(function ServicesPage() {
                           Key Features:
                         </h4>
                         <div role="button" className="grid grid - cols - 1 gap - 1">
-                          {service.features.slice (0, 3) .map ( (feature, idx) => (<div role="button" key={idx}
+                          {(service.features || []).slice (0, 3) .map ( (feature, idx) => (<div role="button" key={idx}
                               className="flex items - center gap - 2 text - sm text - zion - slate - light"
                             >
                               <CheckCircle className="w - 3 h - 3 text - zion - cyan" />
@@ -448,11 +449,11 @@ export default React.memo(function ServicesPage() {
                       <div role="button" className="flex items - center gap - 4 text - sm text - zion - slate - light">
                         <div role="button" className="flex items - center gap - 1">
                           <Clock className="w - 4 h - 4" />
-                          <span>{service.estimatedDelivery}</span>
+                          <span>{service.estimatedDelivery || '4-8 weeks'}</span>
                         </div>
                         <div role="button" className="flex items - center gap - 1">
                           <Star className="w - 4 h - 4 text - zion - cyan" />
-                          <span>{service.supportLevel}</span>
+                          <span>{service.supportLevel || '24/7'}</span>
                         </div>
                       </div>
 
@@ -510,7 +511,7 @@ export default React.memo(function ServicesPage() {
           </motion.div>
 
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
-            {ADDITIONAL_INNOVATIVE_SERVICES_2025.map ( (service, index) => (<motion.div
+            {EXPANDED_INNOVATIVE_SERVICES_2025.slice(0, 8).map ( (service, index) => (<motion.div
                 key={service.id}
                 className="card - futuristic text - center group"
                 initial={{ opacity: 0, y: 30 }}
@@ -531,7 +532,7 @@ export default React.memo(function ServicesPage() {
                 </p>
 
                 <div role="button" className="text - zion - cyan font - bold mb - 4">
-                  {service.marketPrice}
+                  ${service.price.toLocaleString()}/month
                 </div>
 
                 <Link
