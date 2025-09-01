@@ -127,46 +127,21 @@ export function CategoriesSection({
           <div className="flex flex-wrap justify-center gap-4">
             {specialServices.map((service) => (
               <Link
-                key={service.title}
-                to={service.link}"
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 border border-blue-500/20 hover:border-blue-400/50 rounded-full text-white transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 flex items-center gap-2"
+                key={service.title} // Key was already here, ensure 'to' is used
+                to={service.link} // Changed href to to
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
                 {service.title}"
                 <span className="text-sm">→</span>
               </Link>
             ))}
           </div>
-        </motion.div>
-        >
-          <Link"
-            to="/services"
-            className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"
-
-<<<<<<< HEAD
-            View All Services < ArrowRight className="w-5 h-5 ml-2 group - hover:translate - x-1 transition -transform" />
-
-        <motion.div
-          className="mt-12 flex justify -center"
-=======
-            View All Services"
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />        
-        <motion.div "
-          className="mt-12 flex justify-center"
->>>>>>> main
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-<<<<<<< HEAD
+        </div>
+        
+        <div className="mt-12 flex justify-center">
           <Link
-            to="/categories"
-            className="text-cyan - 400 border-b border-cyan - 400 hover:border-cyan - 300 transition - colors flex items - center gap-2"
-=======
-          <Link "
-            to="/categories"
-            className="text-cyan-400 border-b border-cyan-400 hover:border-cyan-300 transition-colors flex items-center gap-2"
->>>>>>> main
+            to="/categories/all" // Changed href to to
+            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             View All Categories"
             <span className="text-sm group-hover:translate-x-1 transition-transform duration-300">→</span>
