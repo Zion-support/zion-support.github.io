@@ -99,12 +99,15 @@ module.exports = {
     {
       name: 'auto-fix-and-build',
       script: 'bash',
-      args: '-lc "npm install --silent && npm run lint || true && npm run type-check || true && npm run build"',
+      args: '-lc "export PATH=/home/ubuntu/.nvm/versions/node/v22.16.0/bin:$PATH && npm install --silent && npm run lint || true && npm run type-check || true && npm run build"',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
-      env: { NODE_ENV: 'production' },
+      env: { 
+        NODE_ENV: 'production',
+        PATH: '/home/ubuntu/.nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+      },
       cron_restart: '0 */6 * * *',
       log_file: 'logs/auto-fix-and-build.log',
       out_file: 'logs/auto-fix-and-build-out.log',
@@ -115,12 +118,15 @@ module.exports = {
     {
       name: 'dev-watch-build',
       script: 'bash',
-      args: '-lc "npm run build"',
+      args: '-lc "export PATH=/home/ubuntu/.nvm/versions/node/v22.16.0/bin:$PATH && npm run build"',
       instances: 1,
       watch: ['src', 'public', 'postcss.config.js', 'vite.config.ts'],
       ignore_watch: ['dist', 'node_modules', 'logs'],
       max_memory_restart: '1G',
-      env: { NODE_ENV: 'development' },
+      env: { 
+        NODE_ENV: 'development',
+        PATH: '/home/ubuntu/.nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+      },
       log_file: 'logs/dev-watch-build.log',
       out_file: 'logs/dev-watch-build-out.log',
       error_file: 'logs/dev-watch-build-error.log',
