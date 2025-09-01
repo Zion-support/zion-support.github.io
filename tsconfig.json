@@ -49,12 +49,31 @@
       "@context/*": ["src/context/*"],
       "@constants/*": ["src/constants/*"]
     },
-    "types": ["vite/client", "node"],
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules"
-      }
-    ]
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitReturns": false,
+    "allowJs": true,
+    "incremental": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+    "types": [
+      "node"
+    ],
+    "jsx": "preserve",
+    "noEmit": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true
+
   },
   "include": [
     "src/**/*",
@@ -63,15 +82,13 @@
   ],
   "exclude": [
     "node_modules",
-    "dist",
-    "build",
-    "coverage",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx"
-  ],
-  "references": [
-    { "path": "./tsconfig.node.json" }
+
+    "zion.app/recovered-content/**",
+    "services.disabled.temp/**",
+    "data.temp/**",
+    "src_backup/**",
+    "**/*.disabled",
+    "**/*.disabled/**"
+
   ]
 }

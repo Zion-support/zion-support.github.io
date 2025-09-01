@@ -39,22 +39,11 @@ import {
   Phone,
   Mail,
   MapPin,
-  Clock,
-  DollarSign,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  FileText,
-  MessageCircle,
-  Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette
-
+  ChevronUp,
+  MessageSquare,
+  HelpCircle,
+  Play,
+  Pause
 } from 'lucide-react';
 
 // Optimized futuristic animated background component
@@ -104,9 +93,113 @@ const FuturisticBackground = React.memo(() => {
 });
 
 
+<<<<<<< HEAD
 // Hero Section Component
 const HeroSection = () => {
+=======
+// Floating Action Button Component
+const FloatingActionButton = React.memo(() => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  return (
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0 }}
+          className="fixed bottom-6 right-6 z-50"
+        >
+          <div className="relative">
+            {/* Expanded menu */}
+            <AnimatePresence>
+              {isExpanded && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  className="absolute bottom-16 right-0 space-y-2"
+                >
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
+                    onClick={() => window.open('mailto:contact@ziontechgroup.com')}
+                    aria-label="Contact us via email"
+                  >
+                    <Mail className="h-5 w-5" />
+                  </motion.button>
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
+                    onClick={() => window.open('tel:+15551234567')}
+                    aria-label="Call us"
+                  >
+                    <Phone className="h-5 w-5" />
+                  </motion.button>
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
+                    onClick={() => window.open('/help', '_blank')}
+                    aria-label="Get help"
+                  >
+                    <HelpCircle className="h-5 w-5" />
+                  </motion.button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* Main FAB */}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="flex items-center justify-center w-14 h-14 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
+              onClick={() => setIsExpanded(!isExpanded)}
+              aria-label="Quick actions menu"
+            >
+              {isExpanded ? (
+                <ChevronUp className="h-6 w-6" />
+              ) : (
+                <MessageSquare className="h-6 w-6" />
+              )}
+            </motion.button>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+});
+
+FloatingActionButton.displayName = 'FloatingActionButton';
+
+// Enhanced hero section component
+const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
+>>>>>>> efd85e279c374efd3f42a37bc6b3e93d7053e172
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
   
   const heroSlides = [
     {
@@ -128,11 +221,50 @@ const HeroSection = () => {
       color: "from-blue-500 to-cyan-500"
     },
     {
+<<<<<<< HEAD
       title: "Cybersecurity Fortress",
       subtitle: "Protect your digital assets with military-grade security",
       description: "Advanced threat detection, zero-trust architecture, and compliance solutions for the modern enterprise.",
       cta: "Secure Your Business",
       link: "/services/cybersecurity",
+=======
+      name: 'AI Healthcare Analytics',
+      description: 'Predictive diagnostics and care optimization powered by AI',
+      icon: Heart,
+      href: '/services/ai-healthcare-analytics',
+      color: 'from-green-600 to-emerald-600',
+      features: ['Predictive analytics', 'Diagnostic support', 'Care optimization']
+    }
+  ], []);
+
+  // Auto-advance slides
+  useEffect(() => {
+    if (!isPlaying) return;
+    
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isPlaying, heroSlides.length]);
+
+  const togglePlayPause = () => setIsPlaying(!isPlaying);
+
+  const serviceCategories = [
+    {
+      name: 'AI & Analytics',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      services: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Content Generation', href: '/services/ai-content-generation-platform' },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' },
+        { name: 'AI Project Management', href: '/services/ai-project-management-platform' }
+      ]
+    },
+    {
+      name: 'Cybersecurity',
+>>>>>>> efd85e279c374efd3f42a37bc6b3e93d7053e172
       icon: Shield,
       color: "from-red-500 to-orange-500"
     }
@@ -144,6 +276,13 @@ const HeroSection = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, [heroSlides.length]);
+
+  const heroStats = [
+    { label: 'AI Solutions', value: '50+', icon: Brain, description: 'Cutting-edge AI services' },
+    { label: 'Micro SaaS', value: '25+', icon: Rocket, description: 'Innovative products' },
+    { label: 'Enterprise Clients', value: '100+', icon: Building, description: 'Trusted partnerships' },
+    { label: 'Success Rate', value: '99%', icon: CheckCircle, description: 'Proven results' }
+  ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -205,6 +344,7 @@ const HeroSection = () => {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Navigation Arrows */}
         <button
           onClick={() => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
@@ -219,6 +359,53 @@ const HeroSection = () => {
           <ChevronRight className="w-8 h-8" />
         </button>
 
+=======
+        {/* Enhanced Stats with animations */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
+        >
+          {heroStats.map((stat, index) => (
+            <motion.div 
+              key={stat.label} 
+              className="text-center"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="flex justify-center mb-3">
+                <div className="p-3 rounded-lg bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+                  <stat.icon className="h-8 w-8 text-blue-400" />
+                </div>
+              </div>
+              <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-gray-400">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Slide indicators */}
+        <div className="flex justify-center mt-8 space-x-2">
+          {heroSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-blue-400 scale-125' : 'bg-gray-600 hover:bg-gray-500'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+          <button
+            onClick={togglePlayPause}
+            className="ml-4 p-2 text-gray-400 hover:text-white transition-colors duration-200"
+            aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
+          >
+            {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+          </button>
+        </div>
+>>>>>>> efd85e279c374efd3f42a37bc6b3e93d7053e172
       </div>
     </section>
   );
@@ -427,17 +614,41 @@ const CTASection = () => {
 
 };
 
+<<<<<<< HEAD
 
 // Main Home Component
 const Home = () => {
+=======
+// Main Home component
+export default function Home() {
+>>>>>>> efd85e279c374efd3f42a37bc6b3e93d7053e172
   return (
 
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <HeroSection />
       <FeaturesSection />
       <StatsSection />
       <CTASection />
     </div>
+=======
+        {/* Services Showcase */}
+        <ServicesShowcase />
+
+        {/* Micro SaaS Products */}
+        <MicroSaaSProducts />
+
+        {/* Testimonials */}
+        <TestimonialsSection />
+
+        {/* CTA Section */}
+        <CTASection />
+
+        {/* Floating Action Button */}
+        <FloatingActionButton />
+      </div>
+    </>
+>>>>>>> efd85e279c374efd3f42a37bc6b3e93d7053e172
   );
 };
 

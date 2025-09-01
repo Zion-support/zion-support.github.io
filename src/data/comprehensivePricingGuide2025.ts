@@ -1,29 +1,24 @@
-export type PricingTier = {
+export interface PricingTier {
+  id: string;
   name: string;
-  price: string;
-  billing: 'month' | 'year' | 'project' | 'hour';
-  description: string;
+  price: number;
+  currency: string;
+  billingCycle: string;
   features: string[];
-  benefits: string[];
-  bestFor: string[];
+  bestFor: string;
   popular?: boolean;
-};
+}
 
-export type ServicePricing = {
+export interface ServicePricing {
   id: string;
   title: string;
   description: string;
   category: string;
   pricingTiers: PricingTier[];
-  marketComparison: {
-    averageMarketPrice: string;
-    ourPrice: string;
-    savings: string;
-    valueProposition: string;
-  };
-  features: string[];
-  benefits: string[];
-  useCases: string[];
+  marketPrice: string;
+  roi: string;
+  estimatedDelivery: string;
+  supportLevel: string;
   contactInfo: {
     mobile: string;
     email: string;
@@ -33,6 +28,601 @@ export type ServicePricing = {
   };
 };
 
+export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
+  {
+    id: "ai-business-intelligence-platform",
+    title: "AI Business Intelligence Platform",
+    description: "Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports.",
+    category: "AI & Analytics",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "AI-powered data analysis",
+          "Basic dashboard creation",
+          "Data integration (5 sources)",
+          "Email support",
+          "Mobile app access"
+        ],
+        bestFor: "Small businesses and startups"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 1999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Starter features",
+          "Advanced analytics",
+          "Custom dashboards",
+          "API access",
+          "Priority support",
+          "Data integration (15 sources)"
+        ],
+        bestFor: "Growing businesses and teams",
+        popular: true
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 3999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Professional features",
+          "Custom AI models",
+          "Unlimited data sources",
+          "Dedicated support",
+          "White-label solutions",
+          "Advanced security features"
+        ],
+        bestFor: "Large enterprises and corporations"
+      }
+    ],
+    marketPrice: "$999 - $3,999/month",
+    roi: "400-600% within 12 months",
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "24/7",
+    contactInfo
+  },
+  {
+    id: "quantum-ai-optimization-platform",
+    title: "Quantum AI Optimization Platform",
+    description: "Revolutionary platform combining quantum computing with AI to solve complex optimization problems in real-time.",
+    category: "Quantum Computing",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 1499,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic quantum algorithms",
+          "AI optimization models",
+          "Cloud quantum access",
+          "Email support",
+          "Standard API access"
+        ],
+        bestFor: "Research institutions and startups"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 2999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Starter features",
+          "Advanced quantum algorithms",
+          "Custom optimization models",
+          "Priority support",
+          "Advanced analytics"
+        ],
+        bestFor: "Technology companies and research labs",
+        popular: true
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 5999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Professional features",
+          "Custom quantum solutions",
+          "Dedicated quantum hardware",
+          "24/7 support",
+          "White-label solutions"
+        ],
+        bestFor: "Large tech companies and government agencies"
+      }
+    ],
+    marketPrice: "$1,499 - $5,999/month",
+    roi: "500-800% within 18 months",
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "24/7",
+    contactInfo
+  },
+  {
+    id: "ai-powered-cybersecurity-platform",
+    title: "AI-Powered Cybersecurity Platform",
+    description: "Advanced cybersecurity platform using AI to detect and prevent threats in real-time with automated response capabilities.",
+    category: "Cybersecurity",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 799,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "AI threat detection",
+          "Basic security monitoring",
+          "Email alerts",
+          "Standard support",
+          "Mobile app access"
+        ],
+        bestFor: "Small businesses and startups"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 1599,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Starter features",
+          "Advanced threat intelligence",
+          "Automated response",
+          "Priority support",
+          "Custom security policies"
+        ],
+        bestFor: "Medium businesses and enterprises",
+        popular: true
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 3199,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Professional features",
+          "Custom AI models",
+          "Advanced compliance",
+          "Dedicated security team",
+          "White-label solutions"
+        ],
+        bestFor: "Large enterprises and government agencies"
+      }
+    ],
+    marketPrice: "$799 - $3,199/month",
+    roi: "300-500% within 12 months",
+    estimatedDelivery: "3-5 weeks",
+    supportLevel: "24/7",
+    contactInfo
+  },
+  {
+    id: "ai-powered-content-generation-platform",
+    title: "AI-Powered Content Generation Platform",
+    description: "Comprehensive content creation platform that generates high-quality, SEO-optimized content using advanced AI models.",
+    category: "AI & Analytics",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 299,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "AI content generation",
+          "Basic SEO optimization",
+          "5 content pieces/month",
+          "Email support",
+          "Standard templates"
+        ],
+        bestFor: "Small businesses and content creators"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 599,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Starter features",
+          "Advanced SEO tools",
+          "Unlimited content",
+          "Priority support",
+          "Custom templates"
+        ],
+        bestFor: "Growing businesses and agencies",
+        popular: true
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 1199,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Professional features",
+          "Custom AI models",
+          "White-label solutions",
+          "Dedicated support",
+          "Advanced analytics"
+        ],
+        bestFor: "Large agencies and enterprises"
+      }
+    ],
+    marketPrice: "$299 - $1,199/month",
+    roi: "200-400% within 6 months",
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "24/7",
+    contactInfo
+  },
+  {
+    id: "ai-powered-video-analytics-platform",
+    title: "AI-Powered Video Analytics Platform",
+    description: "Advanced video analysis platform that uses AI to extract insights, detect objects, and analyze behavior patterns in video content.",
+    category: "AI & Analytics",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 499,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic video analysis",
+          "Object detection",
+          "5 hours/month processing",
+          "Email support",
+          "Standard API access"
+        ],
+        bestFor: "Small businesses and content creators"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Starter features",
+          "Advanced analytics",
+          "Unlimited processing",
+          "Priority support",
+          "Custom models"
+        ],
+        bestFor: "Medium businesses and agencies",
+        popular: true
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 1999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Professional features",
+          "Custom AI models",
+          "White-label solutions",
+          "Dedicated support",
+          "Advanced security"
+        ],
+        bestFor: "Large enterprises and government agencies"
+      }
+    ],
+    marketPrice: "$499 - $1,999/month",
+    roi: "250-450% within 9 months",
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "24/7",
+    contactInfo
+  },
+  {
+    id: "blockchain-supply-chain-platform",
+    title: "Blockchain Supply Chain Platform",
+    description: "Transparent and secure supply chain management platform using blockchain technology for end-to-end traceability and verification.",
+    category: "Blockchain & Web3",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 699,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic blockchain tracking",
+          "Supply chain visibility",
+          "5 suppliers",
+          "Email support",
+          "Mobile app access"
+        ],
+        bestFor: "Small manufacturers and retailers"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 1399,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Starter features",
+          "Advanced analytics",
+          "Unlimited suppliers",
+          "Priority support",
+          "Custom integrations"
+        ],
+        bestFor: "Medium businesses and logistics companies",
+        popular: true
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 2799,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Professional features",
+          "Custom blockchain solutions",
+          "White-label platform",
+          "Dedicated support",
+          "Advanced compliance"
+        ],
+        bestFor: "Large enterprises and government agencies"
+      }
+    ],
+    marketPrice: "$699 - $2,799/month",
+    roi: "350-600% within 15 months",
+    estimatedDelivery: "5-7 weeks",
+    supportLevel: "24/7",
+    contactInfo
+  },
+  {
+    id: "ai-powered-financial-trading-platform",
+    title: "AI-Powered Financial Trading Platform",
+    description: "Intelligent trading platform that uses AI algorithms to analyze market data, predict trends, and execute trades automatically.",
+    category: "AI & Analytics",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 899,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "AI market analysis",
+          "Basic trading signals",
+          "5 trading pairs",
+          "Email support",
+          "Mobile app access"
+        ],
+        bestFor: "Individual traders and small funds"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 1799,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Starter features",
+          "Advanced algorithms",
+          "Unlimited trading pairs",
+          "Priority support",
+          "Custom strategies"
+        ],
+        bestFor: "Professional traders and hedge funds",
+        popular: true
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 3599,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Professional features",
+          "Custom AI models",
+          "White-label solutions",
+          "Dedicated support",
+          "Advanced risk management"
+        ],
+        bestFor: "Large financial institutions"
+      }
+    ],
+    marketPrice: "$899 - $3,599/month",
+    roi: "400-700% within 18 months",
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "24/7",
+    contactInfo
+  },
+  {
+    id: "ai-powered-healthcare-diagnostics-platform",
+    title: "AI-Powered Healthcare Diagnostics Platform",
+    description: "Advanced healthcare platform that uses AI to analyze medical images, predict diagnoses, and assist healthcare professionals.",
+    category: "AI & Analytics",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 1299,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic image analysis",
+          "Diagnostic assistance",
+          "5 specialties",
+          "Email support",
+          "Standard compliance"
+        ],
+        bestFor: "Small clinics and medical practices"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 2599,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Starter features",
+          "Advanced diagnostics",
+          "All specialties",
+          "Priority support",
+          "Custom workflows"
+        ],
+        bestFor: "Medium hospitals and medical centers",
+        popular: true
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 5199,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Professional features",
+          "Custom AI models",
+          "White-label solutions",
+          "Dedicated support",
+          "Advanced security"
+        ],
+        bestFor: "Large hospital networks and research institutions"
+      }
+    ],
+    marketPrice: "$1,299 - $5,199/month",
+    roi: "300-500% within 24 months",
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "24/7",
+    contactInfo
+  },
+  {
+    id: "quantum-machine-learning-platform",
+    title: "Quantum Machine Learning Platform",
+    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems in various industries.",
+    category: "Quantum Computing",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 1799,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic quantum ML algorithms",
+          "Cloud quantum access",
+          "5 model types",
+          "Email support",
+          "Standard API access"
+        ],
+        bestFor: "Research institutions and startups"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 3599,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Starter features",
+          "Advanced algorithms",
+          "Unlimited models",
+          "Priority support",
+          "Custom solutions"
+        ],
+        bestFor: "Technology companies and research labs",
+        popular: true
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 7199,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Professional features",
+          "Custom quantum solutions",
+          "White-label platform",
+          "Dedicated support",
+          "Advanced security"
+        ],
+        bestFor: "Large tech companies and government agencies"
+      }
+    ],
+    marketPrice: "$1,799 - $7,199/month",
+    roi: "500-800% within 24 months",
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "24/7",
+    contactInfo
+  },
+  {
+    id: "ai-powered-marketing-automation-platform",
+    title: "AI-Powered Marketing Automation Platform",
+    description: "Intelligent marketing platform that automates campaigns, personalizes content, and optimizes customer engagement using AI.",
+    category: "Marketing & Sales",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 399,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic automation",
+          "Email campaigns",
+          "5 customer segments",
+          "Email support",
+          "Standard analytics"
+        ],
+        bestFor: "Small businesses and startups"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 799,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Starter features",
+          "Advanced automation",
+          "Unlimited segments",
+          "Priority support",
+          "Custom workflows"
+        ],
+        bestFor: "Growing businesses and agencies",
+        popular: true
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 1599,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "All Professional features",
+          "Custom AI models",
+          "White-label solutions",
+          "Dedicated support",
+          "Advanced integrations"
+        ],
+        bestFor: "Large enterprises and agencies"
+      }
+    ],
+    marketPrice: "$399 - $1,599/month",
+    roi: "250-450% within 9 months",
+    estimatedDelivery: "2-4 weeks",
+    supportLevel: "24/7",
+    contactInfo
+  }
+];
+=======
 export const comprehensivePricingGuide2025: ServicePricing[] = [
   {
     id: 'ai-autonomous-business-manager',
@@ -541,3 +1131,4 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 ];
 
 export default comprehensivePricingGuide2025;
+>>>>>>> af3952a87beab0a7961fe3a2e1e9482265ebc0e2

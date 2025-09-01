@@ -79,10 +79,77 @@ export function Header({ className }: HeaderProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
 
+  const navigation = [
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      dropdown: [
+        { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cpu },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
+        { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe },
+        { name: 'Services Showcase', href: '/services-showcase', icon: Sparkles },
+        { name: 'Pricing', href: '/pricing', icon: DollarSign }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target,
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
+        { name: 'AI Business Intelligence', href: '/solutions/ai-business-intelligence', icon: Brain },
+        { name: 'Quantum AI Platform', href: '/solutions/quantum-ai-platform', icon: Atom },
+        { name: 'Digital Twin Solutions', href: '/solutions/digital-twin', icon: Eye },
+        { name: 'Zero Trust Security', href: '/solutions/zero-trust-security', icon: Shield }
+      ]
+    },
+    {
+      name: 'About',
+      href: '/about',
+      icon: Users,
+      dropdown: [
+        { name: 'Our Story', href: '/about/story', icon: FileText },
+        { name: 'Team', href: '/about/team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Briefcase },
+        { name: 'Partners', href: '/partners', icon: Network },
+        { name: 'Press', href: '/press', icon: Newspaper }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      icon: FileText,
+      dropdown: [
+        { name: 'Blog', href: '/blog', icon: Newspaper },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Research & Development', href: '/research-development', icon: Activity },
+        { name: 'Documentation', href: '/docs', icon: FileText },
+        { name: 'API Reference', href: '/api', icon: Cpu },
+        { name: 'Sitemap', href: '/sitemap', icon: FileText },
+        { name: 'Support', href: '/support', icon: FileText },
+        { name: 'Training', href: '/training', icon: FileText },
+        { name: 'Helpdesk', href: '/help', icon: FileText }
+      ]
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone
+    }
+  ];
+=======
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
+>>>>>>> af3952a87beab0a7961fe3a2e1e9482265ebc0e2
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);

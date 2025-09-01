@@ -1,234 +1,275 @@
 
-# Zion Tech Group - Innovative Technology Solutions
+# Zion Tech Group - Advanced Technology Solutions Platform
 
-A comprehensive web application showcasing Zion Tech Group's cutting-edge technology services, AI solutions, and digital transformation capabilities.
+## 🚀 Overview
 
-## 🚀 Quick Start
+Zion Tech Group is a comprehensive technology solutions platform offering cutting-edge AI, cybersecurity, cloud services, and digital transformation solutions. Built with modern web technologies, the platform provides an intuitive user experience with advanced accessibility features, real-time analytics, and performance monitoring.
+
+## ✨ Key Features
+
+### 🎯 Core Functionality
+- **AI-Powered Services**: Machine learning, automation, and intelligent solutions
+- **Cybersecurity Suite**: Advanced threat detection and compliance tools
+- **Cloud & DevOps**: Scalable infrastructure and deployment solutions
+- **Digital Transformation**: Business process optimization and modernization
+
+### 🔧 Technical Enhancements
+- **Enhanced Accessibility**: User-controlled settings for high contrast, large text, reduced motion
+- **Advanced Analytics**: Comprehensive user behavior tracking and performance metrics
+- **Mobile Experience**: Mobile-first navigation with intuitive swipe gestures
+- **Performance Monitoring**: Real-time Core Web Vitals tracking and optimization
+
+### 🎨 User Experience
+- **Modern UI/UX**: Futuristic design with smooth animations
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Progressive Web App**: Offline capabilities and app-like experience
+- **Multi-language Support**: Internationalization with language detection
+
+## 🛠️ Technology Stack
+
+### Frontend
+- **React 18** with TypeScript
+- **Vite** for fast development and building
+- **Tailwind CSS** for styling
+- **React Router** for navigation
+- **Redux Toolkit** for state management
+- **React Query** for data fetching
+
+### Backend & Services
+- **Node.js** with Express
+- **Supabase** for database and authentication
+- **Stripe** for payment processing
+- **Vercel/Netlify** for deployment
+
+### Development Tools
+- **ESLint** and **Prettier** for code quality
+- **Husky** for git hooks
+- **Jest** and **Vitest** for testing
+- **Storybook** for component development
 
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
+A modern, accessible, and performant AI marketplace platform built with Next.js, TypeScript, and Tailwind CSS.
 
-- Git
+## 🚀 Features
 
 
 ### Installation
-```bash
-# Clone the repository
 
-git clone https://github.com/ziontechgroup/zion-tech-app.git
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Zion-Holdings/zion.app.git
+   cd zion.app
+   ```
 
-# Navigate to project directory
-cd zion-tech-app
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env.local
+   # Edit .env.local with your configuration
+   ```
 
-# Install dependencies
-npm install
+4. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-```
-
-
-### Environment Setup
-```bash
-# Copy environment variables
-cp .env.example .env
-
-# Configure your environment variables
-
-VITE_API_URL=your_api_url
-VITE_ANALYTICS_ID=your_analytics_id
-VITE_SENTRY_DSN=your_sentry_dsn
-```
-
-
-### Development Commands
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
-npm run lint         # Run ESLint
-npm run type-check   # Run TypeScript type checking
-```
+5. **Open your browser**
+   Navigate to `http://localhost:5173`
 
 ## 📁 Project Structure
 
-
-### Core Services
-- **AI Solutions**: Enterprise AI orchestration, business intelligence, cybersecurity
-- **IT Infrastructure**: Cloud DevOps, digital transformation, IoT edge computing
-- **Specialized Services**: Healthcare tech, sustainability solutions, blockchain
-- **Micro SaaS**: Productized software solutions for specific business needs
-
-### User Experience
-- **Responsive Design**: Mobile-first approach with touch-friendly interfaces
-- **Dark Theme**: Modern dark theme with customizable color schemes
-- **Interactive Elements**: Smooth animations and micro-interactions
-- **Performance**: Optimized loading times and smooth navigation
-
-### Business Features
-- **Service Catalog**: Comprehensive service listings with detailed information
-- **Case Studies**: Real-world examples and success stories
-- **Team Expertise**: Professional team showcase and credentials
-- **Contact & Support**: Multiple contact methods and support channels
-
-## 🎨 Design System
-
-### Color Palette
-- **Primary**: Zion Cyan (#22ddd2)
-- **Secondary**: Zion Purple (#8c15e9)
-- **Accent**: Zion Blue (#2e73ea)
-- **Neutral**: Zion Slate (#17072b)
-
-### Typography
-- **Headings**: Modern, bold typography with proper hierarchy
-- **Body Text**: Readable fonts optimized for web and mobile
-- **Accessibility**: Support for large text and high contrast modes
-
-### Components
-- **Buttons**: Consistent button styles with hover and focus states
-- **Cards**: Modern card designs with subtle shadows and borders
-- **Forms**: Accessible form components with validation feedback
-- **Navigation**: Intuitive navigation with breadcrumbs and search
-
-## 🔧 Development
-
-### Project Structure
 ```
-src/
-├── components/          # Reusable UI components
-├── pages/              # Page components
-├── layout/             # Layout components
-├── hooks/              # Custom React hooks
-├── utils/              # Utility functions
-├── types/              # TypeScript type definitions
-├── styles/             # Global styles and CSS
-└── services/           # API and external service integrations
+zion.app/
+├── src/
+│   ├── components/          # Reusable UI components
+│   │   ├── ui/             # Base UI components
+│   │   ├── layout/         # Layout components
+│   │   └── [feature]/      # Feature-specific components
+│   ├── pages/              # Page components
+│   ├── services/           # API and external services
+│   ├── store/              # Redux store and slices
+│   ├── utils/              # Utility functions
+│   ├── types/              # TypeScript type definitions
+│   └── styles/             # Global styles and CSS
+├── public/                 # Static assets
+├── tests/                  # Test files
+└── docs/                   # Documentation
 ```
 
-### Code Standards
-- **ESLint**: Code quality and consistency
-- **Prettier**: Code formatting
-- **TypeScript**: Strict type checking
-- **Component Testing**: Unit tests for critical components
+## 🧪 Testing
 
-### Performance Guidelines
-- **Lazy Loading**: Implement lazy loading for all routes and heavy components
-- **Image Optimization**: Use appropriate image formats and lazy loading
-- **Bundle Splitting**: Optimize bundle sizes with code splitting
-- **Caching**: Implement proper caching strategies
-
-## 🚀 Deployment
-
-### Build Process
-### Development Commands
+### Run all tests
 ```bash
-# Production build
+npm run test:all
+```
+
+### Run specific test suites
+```bash
+npm run test:unit          # Unit tests
+npm run test:integration   # Integration tests
+npm run test:e2e          # End-to-end tests
+```
+
+### Test coverage
+```bash
+npm run test:coverage
+```
+
+## 🏗️ Building
+
+### Development build
+```bash
+npm run build:dev
+```
+
+### Production build
+```bash
 npm run build
+```
 
-# Analyze bundle
-npm run analyze
-
-# Preview build
+### Preview production build
+```bash
 npm run preview
 ```
 
-### Deployment Options
-- **Static Hosting**: Netlify, Vercel, AWS S3
-- **CDN**: Cloudflare, AWS CloudFront
-- **Server**: Node.js server with PM2
+## 🚀 Deployment
 
-### Environment Configuration
-- **Development**: Local development with hot reload
-- **Staging**: Pre-production testing environment
-- **Production**: Optimized production build
+### Vercel (Recommended)
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables
+3. Deploy automatically on push to main
 
-## 📊 Analytics & Monitoring
+### Netlify
+1. Connect your GitHub repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
 
+### Manual Deployment
+```bash
+npm run build
+# Upload dist/ folder to your hosting provider
+```
 
-- **Performance Monitoring** - Core Web Vitals tracking
-- **Error Tracking** - Real-time error monitoring
-- **User Analytics** - User behavior and engagement metrics
-- **SEO Optimization** - Meta tags, structured data, sitemap
+## 🔧 Configuration
 
+### Environment Variables
 
-### User Analytics
-- **Page Views**: Track user navigation and engagement
-- **User Behavior**: Analyze user interactions and patterns
-- **Conversion Tracking**: Monitor business goals and conversions
+Create a `.env.local` file with the following variables:
+
+```env
+# API Configuration
+VITE_API_URL=your_api_url
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_key
+
+# Payment Processing
+VITE_STRIPE_PUBLISHABLE_KEY=your_stripe_key
+
+# Analytics
+VITE_GA_TRACKING_ID=your_ga_id
+
+# Feature Flags
+VITE_ENABLE_ANALYTICS=true
+VITE_ENABLE_PWA=true
+```
+
+### Tailwind Configuration
+
+The project uses Tailwind CSS with custom configuration. Edit `tailwind.config.js` to customize:
+
+- Colors and theme
+- Content paths
+- Plugins and extensions
+
+## 📊 Performance Monitoring
+
+The application includes built-in performance monitoring:
+
+- **Core Web Vitals** tracking
+- **Real-time metrics** collection
+- **Performance scoring** and alerts
+- **User experience** analytics
+
+## ♿ Accessibility Features
+
+### Built-in Accessibility
+- **WCAG 2.1 AA** compliance
+- **Screen reader** support
+- **Keyboard navigation** optimization
+- **High contrast** mode
+- **Reduced motion** support
+
+### User Controls
+- **Font size** adjustment
+- **Color scheme** preferences
+- **Focus indicators** customization
+- **Zoom level** controls
 
 ## 🔒 Security
 
 ### Security Features
-- **HTTPS Enforcement**: Secure communication protocols
-- **Content Security Policy**: XSS and injection attack prevention
-- **CSRF Protection**: Cross-site request forgery prevention
-- **Input Validation**: Comprehensive input sanitization and validation
+- **HTTPS** enforcement
+- **Content Security Policy** (CSP)
+- **XSS protection**
+- **CSRF protection**
+- **Input validation** and sanitization
 
-### Security Monitoring
-- **Threat Detection**: Real-time security threat monitoring
-- **Vulnerability Scanning**: Regular security assessments
-- **Incident Response**: Automated security incident handling
-
-## ♿ Accessibility
-
-### WCAG Compliance
-- **Level AA**: Meets WCAG 2.1 Level AA standards
-- **Keyboard Navigation**: Full keyboard accessibility
-- **Screen Reader Support**: Optimized for assistive technologies
-- **Color Contrast**: High contrast mode and color blindness support
-
-### Accessibility Features
-- **Skip Links**: Quick navigation for keyboard users
-- **Focus Management**: Clear focus indicators and logical tab order
-- **Alternative Text**: Comprehensive alt text for images
-- **Semantic HTML**: Proper HTML structure and landmarks
-
-## 🌐 Internationalization
-
-### Language Support
-- **i18n Ready**: Internationalization framework in place
-- **RTL Support**: Right-to-left language support
-- **Localization**: Date, number, and currency formatting
-
-## 📱 Progressive Web App
-
-### PWA Features
-- **Service Worker**: Offline functionality and caching
-- **App Manifest**: Installable web application
-- **Push Notifications**: Real-time user engagement
-- **Offline Support**: Core functionality without internet connection
+### Best Practices
+- Regular security audits
+- Dependency vulnerability scanning
+- Secure coding guidelines
+- Privacy compliance (GDPR, CCPA)
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+We welcome contributions! Please follow these steps:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+
+### Development Guidelines
+- Follow the existing code style
+- Write tests for new features
+- Update documentation as needed
+- Ensure accessibility compliance
+- Test across different browsers
+
 
 ## 📝 License
 
-This project is proprietary to Zion Tech Group. All rights reserved.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Support
+## 🆘 Support
 
-For technical support or questions about the website:
-- Email: [contact@ziontechgroup.com]
-- Website: [https://ziontechgroup.com]
+### Getting Help
+- **Documentation**: Check the `/docs` folder
+- **Issues**: Create an issue on GitHub
+- **Discussions**: Use GitHub Discussions
+- **Email**: support@ziontechgroup.com
+
+### Community
+- **Discord**: Join our community server
+- **Twitter**: Follow us for updates
+- **LinkedIn**: Connect with our team
+
+## 🏆 Acknowledgments
+
+- **React Team** for the amazing framework
+- **Vite Team** for the fast build tool
+- **Tailwind CSS** for the utility-first CSS framework
+- **All contributors** who have helped improve this project
 
 ---
 
-**Zion Tech Group** - Empowering the future through innovative technology solutions.
+**Built with ❤️ by the Zion Tech Group Team**
 
-
-*Built with ❤️ and cutting-edge technology*
+*Empowering businesses with cutting-edge technology solutions*
 
