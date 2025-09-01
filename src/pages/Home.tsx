@@ -1,13 +1,9 @@
-import { Link } from 'react - router - dom';
-import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
-export default function Home () {
-export default Home;
-import { 
-import { motion, AnimatePresence } from 'framer - motion';
-
-
-import { SEO } from "@/components/SEO";
-import { EnhancedHeroSection } from "@/components/EnhancedHeroSection";
+import React, { Suspense, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Brain, Shield, Zap, Star, CheckCircle, Rocket, Target, TrendingUp } from 'lucide-react';
+import EnhancedSEO from "@/components/EnhancedSEO";
+import EnhancedHeroSection from "@/components/EnhancedHeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
 // Lazy load components for better performance
@@ -113,6 +109,10 @@ export default function Home() {
         url="https://ziontechgroup.com"
         type="website"
       />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <EnhancedHeroSection />
 
       {/* Enhanced Hero Section */}
       <EnhancedHeroSection />
