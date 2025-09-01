@@ -85,6 +85,7 @@ export default function Page() {
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
                     className="object-cover"
+                    loading="lazy"
                   />
                 </AspectRatio>
               </div>
