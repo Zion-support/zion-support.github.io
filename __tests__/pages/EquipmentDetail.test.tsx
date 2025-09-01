@@ -47,41 +47,44 @@ describe('EquipmentDetail - Add To Cart', () => {
     mockSuccessFnForToast.mockClear();
 
     for (const key in SAMPLE_EQUIPMENT) {
-        delete SAMPLE_EQUIPMENT[key];
+      delete SAMPLE_EQUIPMENT[key];
     }
-    Object.assign(SAMPLE_EQUIPMENT, JSON.parse(JSON.stringify(originalSampleEquipment)));
-
+    Object.assign(
+      SAMPLE_EQUIPMENT,
+      JSON.parse(JSON.stringify(originalSampleEquipment))
+    );
 
     if (!SAMPLE_EQUIPMENT[testProductId]) {
-        SAMPLE_EQUIPMENT[testProductId] = {
-            id: testProductId,
-            name: "Test Pro Camera",
-            description: "Test camera description.",
-            brand: "TestBrand",
-            category: "Cameras",
-            images: ["/images/equipment-placeholder.svg"],
-            price: 100,
-            currency: "$",
-            inStock: true,
-            specifications: [],
-            features: [],
-            rating: 4.5,
-            reviewCount: 10,
-            expectedShipping: "1 day",
-            warranty: "1 year",
-            returnPolicy: "30 days",
-        };
+      SAMPLE_EQUIPMENT[testProductId] = {
+        id: testProductId,
+        name: 'Test Pro Camera',
+        description: 'Test camera description.',
+        brand: 'TestBrand',
+        category: 'Cameras',
+        images: ['/images/equipment-placeholder.svg'],
+        price: 100,
+        currency: '$',
+        inStock: true,
+        specifications: [],
+        features: [],
+        rating: 4.5,
+        reviewCount: 10,
+        expectedShipping: '1 day',
+        warranty: '1 year',
+        returnPolicy: '30 days',
+      };
     }
 
-
-    require('react-router-dom').useParams.mockReturnValue({ id: testProductId });
+    require('react-router-dom').useParams.mockReturnValue({
+      id: testProductId,
+    });
     require('react-router-dom').useLocation.mockReturnValue({
       pathname: `/equipment/${testProductId}`,
-      search: '?from=test'
+      search: '?from=test',
     });
     require('@/context/CartContext').useCart.mockReturnValue({
       items: [],
-      dispatch: mockDispatch
+      dispatch: mockDispatch,
     });
   });
 
@@ -89,23 +92,30 @@ describe('EquipmentDetail - Add To Cart', () => {
     require('@/hooks/useAuth').useAuth.mockReturnValue({
       isAuthenticated: false,
       user: null,
-      isLoading: false
+      isLoading: false,
     });
 
     render(<EquipmentDetail />);
 
-    const addToCartButton = screen.getByRole('button', { name: /add to cart/i });
+    const addToCartButton = screen.getByRole('button', {
+      name: /add to cart/i,
+    });
     await act(async () => {
-        fireEvent.click(addToCartButton);
+      fireEvent.click(addToCartButton);
     });
 
-
     expect(mockNavigate).toHaveBeenCalledTimes(1);
-    const expectedNextUrl = encodeURIComponent(`/equipment/${testProductId}?from=test`);
-    expect(mockNavigate).toHaveBeenCalledWith(`/login?next=${expectedNextUrl}&msg=login_required`);
+    const expectedNextUrl = encodeURIComponent(
+      `/equipment/${testProductId}?from=test`
+    );
+    expect(mockNavigate).toHaveBeenCalledWith(
+      `/login?next=${expectedNextUrl}&msg=login_required`
+    );
 
     expect(mockInfoFnForToast).toHaveBeenCalledTimes(1);
-    expect(mockInfoFnForToast).toHaveBeenCalledWith('Please log in to add items to your cart.');
+    expect(mockInfoFnForToast).toHaveBeenCalledWith(
+      'Please log in to add items to your cart.'
+    );
 
     expect(mockDispatch).not.toHaveBeenCalled();
     expect(mockSuccessFnForToast).not.toHaveBeenCalled();
@@ -115,15 +125,17 @@ describe('EquipmentDetail - Add To Cart', () => {
     require('@/hooks/useAuth').useAuth.mockReturnValue({
       isAuthenticated: true,
       user: { id: 'test-user' },
-      isLoading: false
+      isLoading: false,
     });
 
     render(<EquipmentDetail />);
 
-    const addToCartButton = screen.getByRole('button', { name: /add to cart/i });
+    const addToCartButton = screen.getByRole('button', {
+      name: /add to cart/i,
+    });
 
     await act(async () => {
-        fireEvent.click(addToCartButton);
+      fireEvent.click(addToCartButton);
     });
 
     const product = SAMPLE_EQUIPMENT[testProductId];
@@ -132,13 +144,22 @@ describe('EquipmentDetail - Add To Cart', () => {
     expect(mockDispatch).toHaveBeenCalledTimes(1);
     expect(mockDispatch).toHaveBeenCalledWith({
       type: 'ADD_ITEM',
-      payload: { id: product.id, name: product.name, price: product.price, quantity: 1 }
+      payload: {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        quantity: 1,
+      },
     });
 
     expect(mockSuccessFnForToast).toHaveBeenCalledTimes(1);
-    expect(mockSuccessFnForToast).toHaveBeenCalledWith(`1× ${product.name} added`);
+    expect(mockSuccessFnForToast).toHaveBeenCalledWith(
+      `1× ${product.name} added`
+    );
 
-    expect(mockNavigate).not.toHaveBeenCalledWith(expect.stringContaining('/login'));
+    expect(mockNavigate).not.toHaveBeenCalledWith(
+      expect.stringContaining('/login')
+    );
     expect(mockInfoFnForToast).not.toHaveBeenCalled();
   });
 });

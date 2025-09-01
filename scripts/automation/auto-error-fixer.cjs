@@ -278,8 +278,7 @@ class AutoErrorFixer {
         const content = fs.readFileSync(file, 'utf8');
 
         // Check for common syntax errors
-        if (content.includes('<<<<<<< HEAD') || content.includes('>>>>>>> ')) {
-          this.log(`⚠️ Merge conflict detected in ${file}`);
+        if (content.includes('<<<<<<< HEAD') || content.includes('          this.log(`⚠️ Merge conflict detected in ${file}`);
           this.errorsFixed.push({
             file,
             type: 'merge_conflict',

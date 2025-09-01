@@ -257,14 +257,12 @@ class FinalMergeAllPRs {
 
     // Strategy: Keep incoming changes (after =======) and remove conflict markers
     resolvedContent = resolvedContent.replace(
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]*/g,
-      '$1'
+      /([\s\S]*?)      '$1'
     );
 
     // Clean up any remaining conflict markers
     resolvedContent = resolvedContent.replace(
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]*/g,
-      '$1'
+      /([\s\S]*?)      '$1'
     );
 
     return resolvedContent;

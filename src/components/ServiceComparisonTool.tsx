@@ -1,0 +1,256 @@
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ProductListing } from '../types/listings';
+import { CheckCircle, X, BarChart3, DollarSign, Clock, TrendingUp, Star, Users } from 'lucide-react';
+
+interface ServiceComparisonToolProps {
+
+  services: ProductListing[];
+  onClose: () => void;
+}
+
+export const ServiceComparisonTool: React.FC<ServiceComparisonToolProps> = ({ services, onClose }) => {
+
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [comparisonMode, setComparisonMode] = useState<'features' | 'pricing' | 'roi'>('features');
+
+  const addServiceToComparison = (serviceId: string) => {
+
+    if (selectedServices.length < 4 && !selectedServices.includes(serviceId)) {
+
+      setSelectedServices([...selectedServices, serviceId]);
+    }
+  };
+
+  const removeServiceFromComparison = (serviceId: string) => {
+
+    setSelectedServices(selectedServices.filter(id => id !== serviceId));
+  };
+
+  const getComparisonData = () => {
+
+    return selectedServices.map(id => services.find(s => s.id === id)).filter(Boolean) as ProductListing[];
+  };
+
+  const comparisonServices = getComparisonData();
+
+  const comparisonMetrics = [
+    { key: 'rating', label: 'Rating', icon: Star, format: (value: number) => `${value}/5` },
+    { key: 'price', label: 'Price', icon: DollarSign, format: (value: number) => `$${value.toLocaleString()}` },
+    { key: 'aiScore', label: 'AI Score', icon: BarChart3, format: (value: number) => `${value}%` },
+    { key: 'setupTime', label: 'Setup Time', icon: Clock, format: (value: string) => value },
+    { key: 'roi', label: 'ROI', icon: TrendingUp, format: (value: string) => value },
+    { key: 'reviewCount', label: 'Reviews', icon: Users, format: (value: number) => value.toLocaleString() }
+  ];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+    >
+      <div className="bg-slate-900 rounded-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden">
+        {/* Header */}
+        <div className="flex items-center justify-between p-6 border-b border-slate-700">
+          <div>
+            <h2 className="text-2xl font-bold text-white">Service Comparison Tool</h2>
+            <p className="text-slate-400">Compare up to 4 services side by side</p>
+          </div>
+          <button
+            onClick={onClose}
+            className="p-2 hover:bg-slate-800 rounded-lg transition-colors"
+          >
+            <X className="h-6 w-6 text-slate-400" />
+          </button>
+        </div>
+
+        {/* Service Selection */}
+        <div className="p-6 border-b border-slate-700">
+          <h3 className="text-lg font-semibold text-white mb-4">Select Services to Compare</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {services.slice(0, 8).map((service) => (
+              <button
+                key={service.id}
+                onClick={() => addServiceToComparison(service.id)}
+                disabled={selectedServices.includes(service.id) || selectedServices.length >= 4}
+                className={`p-3 rounded-lg border-2 transition-all ${
+
+                  selectedServices.includes(service.id)
+                    ? 'border-cyan-500 bg-cyan-500/10'
+                    : selectedServices.length >= 4
+                    ? 'border-slate-600 bg-slate-800/50 cursor-not-allowed'
+                    : 'border-slate-600 hover:border-cyan-500 hover:bg-slate-800'
+                }`}
+              >
+                <div className="text-left">
+                  <h4 className="font-medium text-white text-sm truncate">{service.title}</h4>
+                  <p className="text-slate-400 text-xs mt-1">${service.price.toLocaleString()}</p>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Comparison Mode Tabs */}
+        <div className="flex border-b border-slate-700">
+          {[
+            { key: 'features', label: 'Features & Capabilities', icon: CheckCircle },
+            { key: 'pricing', label: 'Pricing & ROI', icon: DollarSign },
+            { key: 'roi', label: 'ROI Analysis', icon: TrendingUp }
+          ].map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setComparisonMode(tab.key as any)}
+              className={`flex-1 p-4 flex items-center justify-center gap-2 transition-colors ${
+
+                comparisonMode === tab.key
+                  ? 'bg-cyan-500/10 border-b-2 border-cyan-500 text-cyan-400'
+                  : 'text-slate-400 hover:text-white hover:bg-slate-800'
+              }`}
+            >
+              <tab.icon className="h-4 w-4" />
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Comparison Content */}
+        <div className="p-6 overflow-auto max-h-[50vh]">
+          {comparisonServices.length === 0 ? (
+            <div className="text-center py-12">
+              <BarChart3 className="h-16 w-16 text-slate-600 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-slate-400 mb-2">No Services Selected</h3>
+              <p className="text-slate-500">Select up to 4 services above to start comparing</p>
+            </div>
+          ) : (
+            <div className="space-y-6">
+              {/* Metrics Comparison */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {comparisonMetrics.map((metric) => (
+                  <div key={metric.key} className="bg-slate-800 rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-3">
+                      <metric.icon className="h-4 w-4 text-cyan-400" />
+                      <h4 className="font-medium text-white">{metric.label}</h4>
+                    </div>
+                    <div className="space-y-2">
+                      {comparisonServices.map((service) => (
+                        <div key={service.id} className="flex justify-between items-center">
+                          <span className="text-sm text-slate-400 truncate flex-1 mr-2">
+                            {service.title}
+                          </span>
+                          <span className="text-sm font-medium text-white">
+                            {metric.format(service[metric.key as keyof ProductListing] as any)}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Detailed Comparison */}
+              {comparisonMode === 'features' && (
+                <div className="bg-slate-800 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold text-white mb-4">Features Comparison</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {comparisonServices.map((service) => (
+                      <div key={service.id} className="space-y-3">
+                        <h5 className="font-medium text-cyan-400">{service.title}</h5>
+                        <div className="space-y-2">
+                          {service.features?.slice(0, 5).map((feature, index) => (
+                            <div key={index} className="flex items-center gap-2">
+                              <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
+                              <span className="text-sm text-slate-300">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {comparisonMode === 'pricing' && (
+                <div className="bg-slate-800 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold text-white mb-4">Pricing & Market Analysis</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {comparisonServices.map((service) => (
+                      <div key={service.id} className="space-y-3">
+                        <h5 className="font-medium text-cyan-400">{service.title}</h5>
+                        <div className="space-y-2 text-sm">
+                          <div className="flex justify-between">
+                            <span className="text-slate-400">Price:</span>
+                            <span className="text-white font-medium">${service.price.toLocaleString()}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-slate-400">Market Price:</span>
+                            <span className="text-white">{service.marketPrice}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-slate-400">ROI:</span>
+                            <span className="text-green-400 font-medium">{service.roi}</span>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {comparisonMode === 'roi' && (
+                <div className="bg-slate-800 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold text-white mb-4">ROI Analysis</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {comparisonServices.map((service) => (
+                      <div key={service.id} className="space-y-3">
+                        <h5 className="font-medium text-cyan-400">{service.title}</h5>
+                        <div className="space-y-2 text-sm">
+                          <div className="flex justify-between">
+                            <span className="text-slate-400">Setup Time:</span>
+                            <span className="text-white">{service.setupTime}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-slate-400">AI Score:</span>
+                            <span className="text-white">{service.aiScore}%</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-slate-400">Rating:</span>
+                            <span className="text-white">{service.rating}/5</span>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* Footer */}
+        <div className="p-6 border-t border-slate-700 bg-slate-800/50">
+          <div className="flex items-center justify-between">
+            <div className="text-sm text-slate-400">
+              {comparisonServices.length} service{comparisonServices.length !== 1 ? 's' : ''} selected
+            </div>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setSelectedServices([])}
+                className="px-4 py-2 text-slate-400 hover:text-white transition-colors"
+              >
+                Clear All
+              </button>
+              <button
+                onClick={onClose}
+                className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};

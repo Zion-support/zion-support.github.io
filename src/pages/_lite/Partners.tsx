@@ -1,0 +1,11 @@
+import React from 'react';
+export default function Partners() {
+
+  return (
+    <div className="container mx-auto px-4 py-12">
+      <h1 className="text-2xl font-bold mb-2">Partners</h1>
+      <p className="text-gray-300">We collaborate with leading technology partners.</p>
+    </div>
+  );
+}
+

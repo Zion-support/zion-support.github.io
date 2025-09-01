@@ -1,18 +1,17 @@
-import React from 'react';'''
-import { SEO } from '@/components/SEO';'''
-import { DisputeDetail } from '@/components/disputes';'''
+import React from 'react';
+import SEO from '@/components/SEO';
+import { DisputeDetail } from '@/components/disputes';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
-function DisputeDetailPage() {}
+function DisputeDetailPage() {
     return (<ProtectedRoute>
       <>
         <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details"/>
-
+        
         <DisputeDetail />
-
+        
       </>
-    </ProtectedRoute>)};
-export { DisputeDetailPage };
+    </ProtectedRoute>)}
 export default DisputeDetailPage;
-;
-export default DisputeDetailPage;'"""
-export default DisputeDetailPage;'"'"""
+
+export default DisputeDetailPage;
+export default DisputeDetailPage;
