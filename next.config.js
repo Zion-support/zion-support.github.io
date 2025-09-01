@@ -5,47 +5,41 @@ const nextConfig = {
 	optimizeFonts: false,
 	poweredByHeader: false,
 	compress: true,
-	generateEtags: true,
-	onDemandEntries: {
-		maxInactiveAge: 25 * 1000,
-		pagesBufferLength: 2,
-	},
+	generateEtags: false,
 	experimental: {
 		optimizeCss: true,
-		scrollRestoration: true,
+		scrollRestoration: true
 	},
 	images: {
 		domains: [],
-		deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-		imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 		formats: ['image/webp', 'image/avif'],
 		minimumCacheTTL: 60,
+		deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+		imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
 	},
-	headers: async () => {
-		return [
-			{
-				source: '/(.*)',
-				headers: [
-					{
-						key: 'X-Content-Type-Options',
-						value: 'nosniff',
-					},
-					{
-						key: 'X-Frame-Options',
-						value: 'DENY',
-					},
-					{
-						key: 'X-XSS-Protection',
-						value: '1; mode=block',
-					},
-					{
-						key: 'Referrer-Policy',
-						value: 'strict-origin-when-cross-origin',
-					},
-				],
-			},
-		];
-	},
+	headers: async () => [
+		{
+			source: '/(.*)',
+			headers: [
+				{
+					key: 'X-Content-Type-Options',
+					value: 'nosniff'
+				},
+				{
+					key: 'X-Frame-Options',
+					value: 'DENY'
+				},
+				{
+					key: 'X-XSS-Protection',
+					value: '1; mode=block'
+				},
+				{
+					key: 'Referrer-Policy',
+					value: 'strict-origin-when-cross-origin'
+				}
+			]
+		}
+	]
 };
 
 module.exports = nextConfig;
