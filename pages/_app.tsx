@@ -1,15 +1,8 @@
 import type { AppProps } from 'next/app';
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-import { TenantProvider } from '../components/multiverse/TenantProvider';
-import { getServerSideTenant } from '../utils/tenant';
 import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
-import '../styles/globals.css';
+import '../styles/futuristic.css';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <EnhancedLayout>
-      <Component {...pageProps} />
-    </EnhancedLayout>
-  );
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
 }
