@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
-interface HeaderProps {
-  onMenuClick?: () => void;
-  className?: string;
-}
-
-function Header({ onMenuClick, className }: HeaderProps) {
   Menu,
   X,
   Search,
@@ -97,226 +91,15 @@ function Header({ onMenuClick, className }: HeaderProps) {
   Tent,
   Umbrella,
   Sunglasses,
-  Hat,
-  Shirt,
-  Pants,
-  Shoes,
-  Bag,
-  Wallet,
-  Key,
-  Book,
-  Pen,
-  Pencil,
-  Paper,
-  Folder,
-  File,
-  Image,
-  Music,
-  Film,
-  Game,
-  Puzzle,
-  Dice,
-  Cards,
-  Chess,
-  Checkers,
-  Dominoes,
-  Mahjong,
-  Backgammon,
-  Go,
-  Scrabble,
-  Monopoly,
-  Risk,
-  Clue,
-  Battleship,
-  Connect4,
-  TicTacToe,
-  Hangman,
-  Wordle,
-  Sudoku,
-  Crossword,
-  Jigsaw,
-  Rubiks,
-  Lego,
-  Doll,
-  Teddy,
-  Robot,
-  ActionFigure,
-  Model,
-  Painting,
-  Sculpture,
-  Pottery,
-  Weaving,
-  Knitting,
-  Crochet,
-  Sewing,
-  Embroidery,
-  Quilting,
-  Scrapbooking,
-  Origami,
-  Calligraphy,
-  Typography,
-  GraphicDesign,
-  WebDesign,
-  UI,
-  UX,
-  Wireframe,
-  Prototype,
-  Mockup,
-  StyleGuide,
-  Branding,
-  Logo,
-  Icon,
-  Illustration,
-  Animation,
-  Motion,
-  Video,
-  Audio,
-  Podcast,
-  Radio,
-  TV,
-  Streaming,
-  VOD,
-  Live,
-  Broadcast,
-  Cable,
-  Satellite,
-  Internet,
-  WiFi,
-  Bluetooth,
-  NFC,
-  RFID,
-  GPS,
-  GLONASS,
-  Galileo,
-  BeiDou,
-  QZSS,
-  IRNSS,
-  SBAS,
-  WAAS,
-  EGNOS,
-  MSAS,
-  GAGAN,
-  SDCM,
-  SNAS,
-  BDSBAS,
-  QZSSSBAS,
-  IRNSSSBAS,
-  GLONASSK,
-  GLONASSM,
-  GLONASSK1,
-  GLONASSK2,
-  GLONASSM1,
-  GLONASSM2,
-  GLONASSM3,
-  GLONASSM4,
-  GLONASSM5,
-  GLONASSM6,
-  GLONASSM7,
-  GLONASSM8,
-  GLONASSM9,
-  GLONASSM10,
-  GLONASSM11,
-  GLONASSM12,
-  GLONASSM13,
-  GLONASSM14,
-  GLONASSM15,
-  GLONASSM16,
-  GLONASSM17,
-  GLONASSM18,
-  GLONASSM19,
-  GLONASSM20,
-  GLONASSM21,
-  GLONASSM22,
-  GLONASSM23,
-  GLONASSM24,
-  GLONASSM25,
-  GLONASSM26,
-  GLONASSM27,
-  GLONASSM28,
-  GLONASSM29,
-  GLONASSM30,
-  GLONASSM31,
-  GLONASSM32,
-  GLONASSM33,
-  GLONASSM34,
-  GLONASSM35,
-  GLONASSM36,
-  GLONASSM37,
-  GLONASSM38,
-  GLONASSM39,
-  GLONASSM40,
-  GLONASSM41,
-  GLONASSM42,
-  GLONASSM43,
-  GLONASSM44,
-  GLONASSM45,
-  GLONASSM46,
-  GLONASSM47,
-  GLONASSM48,
-  GLONASSM49,
-  GLONASSM50,
-  GLONASSM51,
-  GLONASSM52,
-  GLONASSM53,
-  GLONASSM54,
-  GLONASSM55,
-  GLONASSM56,
-  GLONASSM57,
-  GLONASSM58,
-  GLONASSM59,
-  GLONASSM60,
-  GLONASSM61,
-  GLONASSM62,
-  GLONASSM63,
-  GLONASSM64,
-  GLONASSM65,
-  GLONASSM66,
-  GLONASSM67,
-  GLONASSM68,
-  GLONASSM69,
-  GLONASSM70,
-  GLONASSM71,
-  GLONASSM72,
-  GLONASSM73,
-  GLONASSM74,
-  GLONASSM75,
-  GLONASSM76,
-  GLONASSM77,
-  GLONASSM78,
-  GLONASSM79,
-  GLONASSM80,
-  GLONASSM81,
-  GLONASSM82,
-  GLONASSM83,
-  GLONASSM84,
-  GLONASSM85,
-  GLONASSM86,
-  GLONASSM87,
-  GLONASSM88,
-  GLONASSM89,
-  GLONASSM90,
-  GLONASSM91,
-  GLONASSM92,
-  GLONASSM93,
-  GLONASSM94,
-  GLONASSM95,
-  GLONASSM96,
-  GLONASSM97,
-  GLONASSM98,
-  GLONASSM99,
-  GLONASSM100
+  Hat
 } from 'lucide-react';
 
 interface HeaderProps {
-<<<<<<< HEAD
-  // Add your props here
-
-=======
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
+  onMenuClick?: () => void;
   className?: string;
 }
 
-export function Header({ className }: HeaderProps) {
+function Header({ onMenuClick, className }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
@@ -436,32 +219,24 @@ export function Header({ className }: HeaderProps) {
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
-    
-=======
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
-    // You can add theme switching logic here
-  }}};
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
 
-    // Add search logic here'
-    // console.log('Searching for:', searchQuery)};
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // Add search logic here
     console.log('Searching for:', searchQuery);
   };
 
@@ -477,15 +252,11 @@ export function Header({ className }: HeaderProps) {
 
   return (
     <header 
-      className={cn()
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled "
-          ? "bg-black/95 backdrop-blur-md border-b border-gray-800/50 shadow-lg"
-          : "bg-transparent",
-        className
-      )}
-    >"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-black/95 backdrop-blur-md border-b border-gray-800/50 shadow-lg' : 'bg-transparent'
+      } ${className}`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           
           {/* Logo */}
@@ -570,7 +341,6 @@ export function Header({ className }: HeaderProps) {
               className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
             >
               <Search className="w-5 h-5" />
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
             </button>
 
             {/* Theme toggle */}
@@ -579,7 +349,6 @@ export function Header({ className }: HeaderProps) {
               className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
             >
               {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
             </button>
 
             {/* Contact Button */}
@@ -605,143 +374,129 @@ export function Header({ className }: HeaderProps) {
               className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors duration-200"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
             </button>
           </div>
         </div>
 
         {/* Search Bar */}
-        <AnimatePresence>
-          {isSearchOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="py-4 border-t border-gray-700"
-            >
-              <form onSubmit={handleSearch} className="relative">
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search services, solutions, or resources..."
-                  className="w-full px-4 py-3 pl-12 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              </form>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {isSearchOpen && (
+          <div className="py-4 border-t border-gray-700">
+            <form onSubmit={handleSearch} className="relative">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search services, solutions, or resources..."
+                className="w-full px-4 py-3 pl-12 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+            </form>
+          </div>
+        )}
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-700"
-          >
-            <div className="px-4 py-6 space-y-6">
-              {/* Quick Links */}
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                  Quick Links
-                </h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {quickLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      to={link.href}
-                      onClick={closeMobileMenu}
-                      className="flex items-center space-x-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors duration-200"
-                    >
-                      <link.icon className="w-5 h-5 text-blue-400" />
-                      <span className="text-gray-300">{link.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Main Navigation */}
-              <div className="space-y-4">
-                {navigation.map((item) => (
-                  <div key={item.name}>
-                    <Link
-                      to={item.href}
-                      onClick={closeMobileMenu}
-                      className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200"
-                    >
-                      <div className="flex items-center space-x-3">
-                        <item.icon className="w-5 h-5 text-blue-400" />
-                        <span className="text-gray-300 font-medium">{item.name}</span>
-                      </div>
-                      {item.dropdown && <ChevronRight className="w-4 h-4 text-gray-400" />}
-                    </Link>
-                    
-                    {/* Mobile Dropdown */}
-                    {item.dropdown && (
-                      <div className="ml-8 mt-2 space-y-1">
-                        {item.dropdown.slice(0, 5).map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.href}
-                            onClick={closeMobileMenu}
-                            className="flex items-center justify-between p-2 rounded hover:bg-gray-800/30 transition-colors duration-200"
-                          >
-                            <span className="text-sm text-gray-400">{subItem.name}</span>
-                            {subItem.price && (
-                              <span className="text-xs text-green-400">{subItem.price}</span>
-                            )}
-                          </Link>
-                        ))}
-                        {item.dropdown.length > 5 && (
-                          <Link
-                            to={item.href}
-                            onClick={closeMobileMenu}
-                            className="text-sm text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                          >
-                            View all {item.name.toLowerCase()} →
-                          </Link>
-                        )}
-                      </div>
-                    )}
-                  </div>
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-700">
+          <div className="px-4 py-6 space-y-6">
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                Quick Links
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {quickLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center space-x-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors duration-200"
+                  >
+                    <link.icon className="w-5 h-5 text-blue-400" />
+                    <span className="text-gray-300">{link.name}</span>
+                  </Link>
                 ))}
               </div>
+            </div>
 
-              {/* Contact Information */}
-              <div className="pt-6 border-t border-gray-700">
-                <div className="space-y-3">
-                  <a
-                    href="tel:+13024640950"
-                    className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200"
+            {/* Main Navigation */}
+            <div className="space-y-4">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  <Link
+                    to={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200"
                   >
-                    <Phone className="w-5 h-5 text-blue-400" />
-                    <span>+1 302 464 0950</span>
-                  </a>
-                  <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200"
-                  >
-                    <Mail className="w-5 h-5 text-blue-400" />
-                    <span>kleber@ziontechgroup.com</span>
-                  </a>
-                  <div className="flex items-start space-x-3 text-gray-300">
-                    <MapPin className="w-5 h-5 text-blue-400 mt-0.5" />
-                    <span className="text-sm">
-                      364 E Main St STE 1008<br />
-                      Middletown DE 19709
-                    </span>
-                  </div>
+                    <div className="flex items-center space-x-3">
+                      <item.icon className="w-5 h-5 text-blue-400" />
+                      <span className="text-gray-300 font-medium">{item.name}</span>
+                    </div>
+                    {item.dropdown && <ChevronRight className="w-4 h-4 text-gray-400" />}
+                  </Link>
+                  
+                  {/* Mobile Dropdown */}
+                  {item.dropdown && (
+                    <div className="ml-8 mt-2 space-y-1">
+                      {item.dropdown.slice(0, 5).map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="flex items-center justify-between p-2 rounded hover:bg-gray-800/30 transition-colors duration-200"
+                        >
+                          <span className="text-sm text-gray-400">{subItem.name}</span>
+                          {subItem.price && (
+                            <span className="text-xs text-green-400">{subItem.price}</span>
+                          )}
+                        </Link>
+                      ))}
+                      {item.dropdown.length > 5 && (
+                        <Link
+                          to={item.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-sm text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                        >
+                          View all {item.name.toLowerCase()} →
+                        </Link>
+                      )}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Contact Information */}
+            <div className="pt-6 border-t border-gray-700">
+              <div className="space-y-3">
+                <a
+                  href="tel:+13024640950"
+                  className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  <Phone className="w-5 h-5 text-blue-400" />
+                  <span>+1 302 464 0950</span>
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  <Mail className="w-5 h-5 text-blue-400" />
+                  <span>kleber@ziontechgroup.com</span>
+                </a>
+                <div className="flex items-start space-x-3 text-gray-300">
+                  <MapPin className="w-5 h-5 text-blue-400 mt-0.5" />
+                  <span className="text-sm">
+                    364 E Main St STE 1008<br />
+                    Middletown DE 19709
+                  </span>
                 </div>
               </div>
             </div>
-          </motion.div>) }
-      </AnimatePresence>
-    </header>) }
-'"
-=======
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}
+
 export default Header;
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
