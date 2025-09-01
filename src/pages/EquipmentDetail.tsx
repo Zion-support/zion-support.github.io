@@ -30,6 +30,8 @@ interface EquipmentDetails {
   category: string;
   subcategory?: string;
   images: string[];
+  videoUrl?: string;
+  modelUrl?: string;
   price: number;
   currency: string;
   rating?: number;
@@ -53,8 +55,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     brand: "DataCore",
     category: "Servers",
     images: ["/images/equipment-placeholder.svg"],
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
-    modelUrl: "/models/sample.glb",
+    videoUrl: "/videos/server-demo.mp4",
+    modelUrl: "/models/server.glb",
     price: 4200,
     currency: "$",
     rating: 4.8,
@@ -86,6 +88,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "/images/equipment-placeholder.svg",
       "/images/equipment-placeholder.svg"
     ],
+    videoUrl: "/videos/camera-demo.mp4",
+    modelUrl: "/models/camera.glb",
     price: 6999,
     currency: "$",
     rating: 4.9,
@@ -290,9 +294,9 @@ export default function EquipmentDetail() {
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
+            {/* Left Column - Media */}
             <div className="lg:col-span-2">
-              <ProductGallery images={equipment.images} />
+              <ProductGallery images={equipment.images} videoUrl={equipment.videoUrl} modelUrl={equipment.modelUrl} />
 
               {/* Product Details Tabs */}
               <div className="mt-8">
