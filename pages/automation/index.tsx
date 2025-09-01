@@ -167,21 +167,15 @@ const Index: NextPage = () => {
           </li>
 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Content Freshness Auditor</h2>
-            <p className="text-white/70">Analyzes repo content freshness and publishes a report.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/content-freshness-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Dependency Licenses Audit</h2>
+            <p className="text-white/70">Audits dependency licenses and writes public reports.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/dependency-licenses-audit" target="_blank" rel="noopener">Trigger / View</a>
           </li>
 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Internal Anchor Auditor</h2>
-            <p className="text-white/70">Detects broken in-page anchors across TSX/MD content.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/internal-anchor-audit-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Orphan Asset Scanner</h2>
-            <p className="text-white/70">Finds unreferenced files in public/ for cleanup planning.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/orphan-asset-report-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Tech Debt Dashboard</h2>
+            <p className="text-white/70">Scans TODO/FIXME/HACK across the repo; publishes a dashboard.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/tech-debt-dashboard" target="_blank" rel="noopener">Trigger / View</a>
           </li>
         </ul>
       </main>
