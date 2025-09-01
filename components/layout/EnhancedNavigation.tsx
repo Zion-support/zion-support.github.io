@@ -19,24 +19,13 @@ export default function EnhancedNavigation() {
             Zion
           </a>
         </Link>
-
-        <div className="hidden md:flex items-center gap-6 text-sm">
-          <div className="relative">
-            <button onClick={() => setIsExploreOpen((v) => !v)} className="button-hover px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-900">
-              Explore
-            </button>
-            {isExploreOpen && (
-              <div className="absolute mt-2 w-44 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 shadow-lg py-2">
-                <Link href="/talent"><a className="block px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900">Browse Talent</a></Link>
-                <Link href="/jobs"><a className="block px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900">Browse Jobs</a></Link>
-              </div>
-            )}
-          </div>
-          <Link href={dashboardPath}><a className="hover:underline">Dashboard</a></Link>
-          <Link href="/messages"><a className="hover:underline">Messages</a></Link>
-          {role === 'client' && (
-            <Link href="/jobs/new"><a className="px-3 py-1 rounded-md bg-blue-600 text-white button-hover">Post a Job</a></Link>
-          )}
+        <div className="flex items-center gap-4 text-sm">
+          <Link href="/about"><a>About</a></Link>
+          <Link href="/blog"><a>Blog</a></Link>
+          <Link href="/contact"><a>Contact</a></Link>
+          <Link href="/talent/resume-builder"><a>Resume</a></Link>
+          <Link href="/jobs/new"><a>Post Job</a></Link>
+          <Link href="/proposals/new"><a>Proposal</a></Link>
         </div>
 
         <div className="flex items-center gap-3">
