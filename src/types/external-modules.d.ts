@@ -261,13 +261,32 @@ declare module 'next' {
 }
 declare module 'next-themes';
 declare module 'tailwind-merge';
-declare module 'axios';
-declare module 'react' {
-  export type ReactNode = any;
-  export interface ErrorInfo { componentStack: string }
-  export class Component<P = any, S = any> {
-    props: P;
-    state: S;
+declare module 'js-cookie' {
+  const Cookies: {
+    get: (name: string) => string | undefined;
+    set: (name: string, value: string, options?: any) => void;
+    remove: (name: string) => void;
+  };
+  export default Cookies;
+}
+
+declare module 'react-cookie-consent' {
+  import { ComponentType } from 'react';
+
+  export interface CookieConsentProps {
+    location?: 'top' | 'bottom' | 'none';
+    cookieName?: string;
+    buttonText?: string;
+    declineButtonText?: string;
+    enableDeclineButton?: boolean;
+    disableStyles?: boolean;
+    containerClasses?: string;
+    buttonClasses?: string;
+    declineButtonClasses?: string;
+    onAccept?: () => void;
+    onDecline?: () => void;
   }
-  export default Component;
+
+  const CookieConsent: ComponentType<CookieConsentProps>;
+  export default CookieConsent;
 }
