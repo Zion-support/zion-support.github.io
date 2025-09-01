@@ -9,7 +9,6 @@ import { ShoppingCart, Truck, Shield, RotateCcw, Clock } from "lucide-react";
 import { RatingStars } from "@/components/RatingStars";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
-import { getStripe } from "@/utils/getStripe";
 import { safeStorage } from '@/utils/safeStorage';
 import { useUnitSystem } from '@/context';
 import { formatDimensions, formatWeight } from '@/utils/unitConversion';
@@ -241,8 +240,7 @@ export default function EquipmentDetail() {
 
   const handleBuyNow = async () => {
     if (!isAuthenticated) {
-      const next = encodeURIComponent(`/checkout?sku=${id}`);
-      navigate(`/login?next=${next}`);
+      navigate(`/login?next=/product/${id}`);
       return;
     }
 
