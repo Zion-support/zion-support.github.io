@@ -98,8 +98,7 @@ module.exports = {
     // Auto Fix and Build - Automated build testing
     {
       name: 'auto-fix-and-build',
-      script: 'bash',
-      args: '-lc "export PATH=/home/ubuntu/.nvm/versions/node/v22.16.0/bin:$PATH && npm install --silent && npm run lint || true && npm run type-check || true && npm run build"',
+      script: './scripts/auto-fix-and-build.sh',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -117,8 +116,7 @@ module.exports = {
     // Dev Watch Build - Watches for changes and rebuilds
     {
       name: 'dev-watch-build',
-      script: 'bash',
-      args: '-lc "export PATH=/home/ubuntu/.nvm/versions/node/v22.16.0/bin:$PATH && npm run build"',
+      script: './scripts/dev-watch-build.sh',
       instances: 1,
       watch: ['src', 'public', 'postcss.config.js', 'vite.config.ts'],
       ignore_watch: ['dist', 'node_modules', 'logs'],
