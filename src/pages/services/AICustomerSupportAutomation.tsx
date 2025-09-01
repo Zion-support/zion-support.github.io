@@ -204,7 +204,7 @@ const AICustomerSupportAutomation = () => {
   ];
 
   return (
-    <>
+    <section className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI-Powered Customer Support Automation - Zion Tech Group"
         description="Transform customer support with AI automation. 24/7 availability, instant responses, and 60-80% cost reduction. Start from $199/month."
@@ -608,7 +608,7 @@ const AICustomerSupportAutomation = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -635,10 +635,10 @@ const AICustomerSupportAutomation = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-slate-800/30">
+        <div className="py-20 px-4 bg-slate-800/30">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -670,10 +670,10 @@ const AICustomerSupportAutomation = () => {
               </div>
             </motion.div>
           </div>
-        </section>
+        </div>
       </div>
-    </>
-  );
+      </section>
+    );
 };
 
 // Add missing icon components

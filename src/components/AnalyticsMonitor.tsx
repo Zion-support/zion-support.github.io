@@ -76,7 +76,7 @@ export const AnalyticsMonitor: React.FC = () => {
     
     // Store in localStorage for persistence
     storeEventLocally(event);
-  }, [sessionId]);
+  }, [sessionId, sendToAnalytics, storeEventLocally]);
 
   // Generate unique event ID
   function generateEventId(): string {
@@ -86,22 +86,18 @@ export const AnalyticsMonitor: React.FC = () => {
   // Send event to analytics service
   const sendToAnalytics = useCallback(async (event: AnalyticsEvent) => {
     try {
-      // Replace with your actual analytics endpoint
-      const response = await fetch('/api/analytics', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(event),
-      });
+      // Store event locally instead of sending to non-existent API
+      // TODO: Implement actual analytics service when available
+      storeEventLocally(event);
       
-      if (!response.ok) {
-        console.warn('Failed to send analytics event:', event);
+      // Log event for debugging (remove in production)
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Analytics event stored locally:', event);
       }
     } catch (error) {
-      console.warn('Error sending analytics event:', error);
+      console.warn('Error storing analytics event locally:', error);
     }
-  }, []);
+  }, [storeEventLocally]);
 
   // Store event locally
   const storeEventLocally = useCallback((event: AnalyticsEvent) => {

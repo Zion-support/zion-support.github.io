@@ -38,7 +38,7 @@ import { Code,
   Play,
   ExternalLink
 } from 'lucide-react';
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 
 export default function Developers(...args: any[]): any {
   const apis = [
