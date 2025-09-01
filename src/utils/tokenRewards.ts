@@ -4,6 +4,8 @@ export async function rewardOnboarding(...args: any[]): any {
 
 import api from '@/lib/api';
 
+import api from '@/lib/api';
+
 export async function rewardOnboarding(userId: string) {
   await api.post('/functions/v1/token-manager/earn', {
     userId,
