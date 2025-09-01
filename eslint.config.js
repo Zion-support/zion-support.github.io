@@ -7,6 +7,9 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 
 export default [
+  {
+    ignores: ['automation/**', 'components.disabled/**', 'pages.disabled/**', 'src/components.disabled/**'],
+  },
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
