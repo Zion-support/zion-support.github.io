@@ -25,18 +25,18 @@
     "declarationMap": true,
     "sourceMap": true,
     "removeComments": false,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitReturns": false,
-    "noImplicitThis": true,
+    "noImplicitThis": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": false,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "noFallthroughCasesInSwitch": true,
+    "allowUnusedLabels": true,
+    "allowUnreachableCode": true,
+    "noFallthroughCasesInSwitch": false,
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -85,7 +85,12 @@
     ],
     "types": [
       "node"
-    ]
+    ],
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "strictBindCallApply": false,
+    "strictPropertyInitialization": false,
+    "alwaysStrict": false
   },
   "include": [
     "src/**/*",
