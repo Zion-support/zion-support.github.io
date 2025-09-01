@@ -207,3 +207,6 @@ export function CollaborationPlatform() {
           </div>)}
       </div>
     </div>)}
+
+
+export default CollaborationPlatform;

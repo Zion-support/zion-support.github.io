@@ -120,3 +120,6 @@ export function UpcomingInterviewsCard() {
         </div>
       </CardContent>
     </Card>)}
+
+
+export default UpcomingInterviewsCard;

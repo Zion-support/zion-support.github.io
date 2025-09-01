@@ -49,3 +49,6 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
           </AspectRatio>
         </TabsContent>)}
     </Tabs>)}
+
+
+export default ProductGallery;

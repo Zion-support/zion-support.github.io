@@ -96,3 +96,6 @@ export function ButtonLoader({ size = 'sm', className }) {
     </div>
   );
 }
+
+
+export default LoadingSpinner;

@@ -248,3 +248,6 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
       </div>
     </section>
   )};
+
+
+export default QrCodeDownload;

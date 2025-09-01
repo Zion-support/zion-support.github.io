@@ -629,3 +629,6 @@ export function ClientSuccessStoriesSection() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default ClientSuccessStoriesSection;

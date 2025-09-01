@@ -408,3 +408,6 @@ export function MainSidebar() {
     </>;
   );
 }
+
+
+export default MainSidebar;

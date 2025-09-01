@@ -320,3 +320,6 @@ export function WebhooksManager() {
         </AlertDialogContent>
       </AlertDialog>
     </Card>)}
+
+
+export default WebhooksManager;

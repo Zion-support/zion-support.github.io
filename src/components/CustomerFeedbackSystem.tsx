@@ -782,3 +782,6 @@ showStats:  true,;
     </div>;
   );
 };
+
+
+export default CustomerFeedbackSystem;

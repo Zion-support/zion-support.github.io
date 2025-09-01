@@ -651,3 +651,6 @@ export function AdvancedAICodeGenerator() {
           </div>)}
       </div>
     </div>)}
+
+
+export default AdvancedAICodeGenerator;

@@ -177,3 +177,6 @@ export function GradientBorder({ children, className = '', borderWidth = '2px' }
         {children}
       </div>
     </div>)}
+
+
+export default AnimatedBackground;

@@ -222,3 +222,6 @@ export function MainNavigation({ className }) {
     </nav>
   );
 }
+
+
+export default MainNavigation;

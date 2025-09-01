@@ -280,3 +280,6 @@ export function ServicesBenefitsShowcase() {
         </div>
       </div>
     </div>)}
+
+
+export default ServicesBenefitsShowcase;

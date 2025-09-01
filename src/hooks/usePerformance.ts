@@ -449,3 +449,6 @@ export function useAPIPerformance() {
     getSlowAPIs
   };
 }
+
+
+export default usePerformance;

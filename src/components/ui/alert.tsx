@@ -39,3 +39,6 @@ export function AlertDescription({ children, className = '' }: AlertDescriptionP
     </div>
   );
 }
+
+
+export default alert;

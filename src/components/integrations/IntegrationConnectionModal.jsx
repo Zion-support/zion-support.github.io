@@ -150,3 +150,6 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
           </>)}
       </DialogContent>
     </Dialog>)}
+
+
+export default IntegrationConnectionModal;

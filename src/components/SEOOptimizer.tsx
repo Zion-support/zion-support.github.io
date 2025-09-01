@@ -571,3 +571,6 @@ export const useSEOOptimization = () => {;
     isOptimizing,
     optimizePage
   }};
+
+
+export default SEOOptimizer;

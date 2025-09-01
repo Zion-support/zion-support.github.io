@@ -217,3 +217,6 @@ export const EnterpriseCallToAction = () => {
       </div>
     </section>
   )};
+
+
+export default EnterpriseCallToAction;

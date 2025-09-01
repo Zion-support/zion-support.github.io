@@ -929,3 +929,6 @@ const Resources: React.FC = (): JSX.Element => {;
     </div>;
   );
 }
+
+
+export default Resources;

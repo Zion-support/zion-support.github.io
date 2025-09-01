@@ -79,3 +79,6 @@ export function ContactPublisherModal({ isOpen, onClose, publisherName, publishe
         </Form>
       </DialogContent>
     </Dialog>)}
+
+
+export default ContactPublisherModal;

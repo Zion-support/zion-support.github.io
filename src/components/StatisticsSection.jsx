@@ -72,3 +72,6 @@ export function StatisticsSection() {
         </div>
       </div>
     </section>)}
+
+
+export default StatisticsSection;

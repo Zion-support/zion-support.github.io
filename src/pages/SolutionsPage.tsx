@@ -385,3 +385,5 @@ export function SolutionsPage(...args: any[]): any {
     </div>
   );
 }
+
+export default SolutionsPage;

@@ -30,3 +30,6 @@ import { FileText export function ProfileProjects({ projects }) {
           </Card>))}
       </div>
     </div>)}
+
+
+export default ProfileProjects;

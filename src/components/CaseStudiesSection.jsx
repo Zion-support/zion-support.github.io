@@ -426,3 +426,6 @@ export function CaseStudiesSection() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default CaseStudiesSection;

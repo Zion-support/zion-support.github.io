@@ -89,3 +89,6 @@ import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection 
       </div>;
     </section>
   )};
+
+
+export default FeatureCTAsSection;

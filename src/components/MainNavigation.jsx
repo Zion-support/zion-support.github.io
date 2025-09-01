@@ -196,3 +196,6 @@ export function MainNavigation() {
           </div>)}
       </div>
     </nav>)}
+
+
+export default MainNavigation;

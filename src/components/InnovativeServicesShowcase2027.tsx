@@ -506,3 +506,6 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
     </section>;
   );
 };
+
+
+export default InnovativeServicesShowcase2027;

@@ -50,3 +50,6 @@ export function AdvancedCollaborationPlatform() {
                 message: chatMessage,
                 timestamp: new Date().toISOString(),
                 type: 'text',
+
+
+export default AdvancedCollaborationPlatform;

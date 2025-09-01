@@ -382,3 +382,6 @@ export const FuturisticFooter: React.FC = () => {;
     </footer>;
   );
 };
+
+
+export default FuturisticFooter;

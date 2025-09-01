@@ -178,3 +178,6 @@ export function ServicesShowcase() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default ServicesShowcase;

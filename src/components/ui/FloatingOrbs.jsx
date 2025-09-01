@@ -72,3 +72,6 @@ export function FloatingOrbs({ count = 6, className = '' }) {
             window.removeEventListener('resize', resizeCanvas);
             cancelAnimationFrame(animationId)}}, [count]);
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{ background: 'transparent' }}/>)}
+
+
+export default FloatingOrbs;

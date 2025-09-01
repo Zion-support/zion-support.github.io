@@ -376,3 +376,6 @@ export function PricingSection() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default PricingSection;

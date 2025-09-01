@@ -194,3 +194,6 @@ export function EnhancedServicesShowcase() {
         </div>
       </div>
     </section>)}
+
+
+export default EnhancedServicesShowcase;

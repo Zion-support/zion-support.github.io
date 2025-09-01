@@ -150,3 +150,6 @@ export function MicroSaasServicesSection() {
         </div>
       </div>
     </section>)}
+
+
+export default MicroSaasServicesSection;

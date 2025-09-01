@@ -450,3 +450,5 @@ export function ContactPage(...args: any[]): any {
     </div>
   );
 }
+
+export default ContactPage;

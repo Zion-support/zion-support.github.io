@@ -19,9 +19,24 @@ import {
   Calendar
 } from 'lucide-react';
 
+export default function Pricing() {
+  const [billingCycle, setBillingCycle] = useState('monthly');
+
+  const pricingTiers = [
+    {
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: '$299',
+      period: '/month',
+      features: [
+        'AI Workflow Orchestrator',
+        'Basic Analytics',
+        'Email Support',
+        'Up to 5 users'
+      ],
       popular: false,
-      icon: Rocket,;
-      color: 'from-orange-500 to-red-500';
+      icon: Rocket,
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
@@ -824,4 +839,4 @@ const servicePricing = [
   );
 }
 
-export default Pricing;
+

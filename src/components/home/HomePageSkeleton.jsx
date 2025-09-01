@@ -99,3 +99,6 @@ export function HomePageSkeleton() {
         </div>
       </section>
     </div>)}
+
+
+export default HomePageSkeleton;

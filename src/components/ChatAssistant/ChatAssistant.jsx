@@ -190,3 +190,6 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
           </div>
         </div>)}
     </div>)}
+
+
+export default ChatAssistant;

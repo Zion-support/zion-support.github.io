@@ -144,3 +144,6 @@ export function SecurityHeadersCompact({ className }) {
         <span>Zero-Knowledge</span>
       </div>
     </div>)}
+
+
+export default SecurityHeaders;

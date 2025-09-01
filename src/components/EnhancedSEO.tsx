@@ -310,3 +310,6 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     </Helmet>
   );
 };
+
+
+export default EnhancedSEO;

@@ -259,3 +259,6 @@ export function ServicesShowcase() {
     </section>
   );
 }
+
+
+export default ServicesShowcase;

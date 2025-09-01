@@ -322,3 +322,6 @@ export function AdvancedBusinessIntelligence() {
           </div>)}
       </div>
     </div>)}
+
+
+export default AdvancedBusinessIntelligence;

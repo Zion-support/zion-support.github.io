@@ -187,3 +187,6 @@ export function ServicesComparisonTable() {
         </div>
       </div>
     </div>)}
+
+
+export default ServicesComparisonTable;

@@ -173,3 +173,6 @@ export function TestimonialsSection() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default TestimonialsSection;

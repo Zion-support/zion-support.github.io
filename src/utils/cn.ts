@@ -4,3 +4,5 @@ import { twMerge  } from 'tailwind-merge.ts';
 export function cn(...args: any[]): any {
   return twMerge(clsx(inputs));
 }
+
+export default cn;

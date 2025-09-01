@@ -247,3 +247,6 @@ export function AppHeader() {
     </motion.header>
   );
 }
+
+
+export default AppHeader;

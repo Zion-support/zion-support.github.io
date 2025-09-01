@@ -13,3 +13,6 @@ export function TalentSkeleton() {
           <Skeleton className="h-24 w-full bg-zion-blue-light/20"/>
         </div>))}
     </div>)}
+
+
+export default TalentSkeleton;

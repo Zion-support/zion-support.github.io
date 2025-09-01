@@ -102,3 +102,6 @@ export function ServiceShowcase({ services }) {
         </div>
       </div>
     </div>)}
+
+
+export default ServiceShowcase;

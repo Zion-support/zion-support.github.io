@@ -214,3 +214,6 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
       </div>
     </div>
   )}
+
+
+export default LoginContent;

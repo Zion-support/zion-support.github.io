@@ -288,3 +288,6 @@ export function AdvancedNotificationSystem() {
           </div>)}
       </div>
     </div>)}
+
+
+export default AdvancedNotificationSystem;

@@ -690,3 +690,6 @@ export function AdvancedAIBusinessProcessAutomation() {
           </div>)}
       </div>
     </div>)}
+
+
+export default AdvancedAIBusinessProcessAutomation;

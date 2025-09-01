@@ -213,3 +213,6 @@ export function ExpandedServicesPreview() {
         </div>
       </div>
     </section>)}
+
+
+export default ExpandedServicesPreview;

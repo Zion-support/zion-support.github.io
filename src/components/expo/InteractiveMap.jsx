@@ -22,3 +22,6 @@ export function InteractiveMap() {
         </div>
       </div>
     </section>)}
+
+
+export default InteractiveMap;

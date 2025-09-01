@@ -596,3 +596,6 @@ export function EnhancedAccessibilityPanel() {
     </>
   );
 }
+
+
+export default EnhancedAccessibilityPanel;

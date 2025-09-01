@@ -467,3 +467,6 @@ export function TeamExpertiseSection() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default TeamExpertiseSection;

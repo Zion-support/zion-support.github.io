@@ -235,3 +235,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
     </header>
   );
 }
+
+
+export default Header;

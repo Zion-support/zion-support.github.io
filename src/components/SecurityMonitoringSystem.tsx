@@ -615,3 +615,5 @@ export function SecurityMonitoringSystem({
     </>
   );
 }
+
+export default SecurityMonitoringSystem;

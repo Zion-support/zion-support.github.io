@@ -109,3 +109,6 @@ export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
   sm: 'w-8 h-8',
         md: 'w-10 h-10',
         lg: 'w-12 h-12',
+
+
+export default OptimizedImage;

@@ -208,3 +208,6 @@ showStats:  true,;
 
   // Calculate resource stats
   const resourceStats = {
+
+
+export default ResourceManagementSystem;

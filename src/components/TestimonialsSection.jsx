@@ -104,3 +104,6 @@ export const TestimonialsSection = () => {
         </div>
       </div>
     </section>)};
+
+
+export default TestimonialsSection;

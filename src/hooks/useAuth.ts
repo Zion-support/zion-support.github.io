@@ -136,3 +136,6 @@ export function useAuth() {
     updateProfile,
   };
 }
+
+
+export default useAuth;

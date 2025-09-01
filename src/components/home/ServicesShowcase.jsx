@@ -197,3 +197,6 @@ export function ServicesShowcase() {
         </div>
       </div>
     </section>)}
+
+
+export default ServicesShowcase;

@@ -51,3 +51,6 @@ export function KanbanColumn({ id, title, description, applications, count }) {
         </Droppable>
       </CardContent>
     </Card>)}
+
+
+export default KanbanColumn;

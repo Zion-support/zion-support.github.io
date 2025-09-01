@@ -772,3 +772,6 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     </>
   );
 }
+
+
+export default AppHeader;

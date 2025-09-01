@@ -518,3 +518,6 @@ export function TalentRegistrationForm() {
         </Form>
       </Card>
     </div>)}
+
+
+export default TalentRegistrationForm;

@@ -277,3 +277,6 @@ export function TestimonialCarousel() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default TestimonialCarousel;

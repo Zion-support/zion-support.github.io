@@ -463,3 +463,6 @@ export function ServicesOverview(...args[]):  {
     </div>;
   );
 }
+
+
+export default ServicesOverview;

@@ -181,3 +181,5 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
     </section>;
   );
 }}}}}}}}}}
+
+export default CategoriesSection;

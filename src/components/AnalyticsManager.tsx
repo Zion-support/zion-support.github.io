@@ -448,3 +448,5 @@ export function AnalyticsManager() {
     </motion.div>
   );
 }
+
+export default AnalyticsManager;

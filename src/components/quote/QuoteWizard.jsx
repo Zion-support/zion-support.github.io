@@ -157,3 +157,6 @@ export function QuoteWizard({ category }) {
         </Button>
       </div>)}
     return null}
+
+
+export default QuoteWizard;

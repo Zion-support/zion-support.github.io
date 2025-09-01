@@ -273,3 +273,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
       </div>
     </section>
   )};
+
+
+export default QuoteFormSection;

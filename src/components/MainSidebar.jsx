@@ -94,3 +94,6 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
         </div>
       </div>
     </aside>)}
+
+
+export default MainSidebar;

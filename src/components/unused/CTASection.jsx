@@ -151,3 +151,6 @@ export function CTASection() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default CTASection;

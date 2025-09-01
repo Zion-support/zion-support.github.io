@@ -336,3 +336,5 @@ export function FeaturedListingsSection() {
     </section>
   );
 }
+
+export default FeaturedListingsSection;

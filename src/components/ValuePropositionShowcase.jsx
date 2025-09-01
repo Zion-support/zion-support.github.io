@@ -528,3 +528,6 @@ export function ValuePropositionShowcase() {
       </div>
     </section>
   )}
+
+
+export default ValuePropositionShowcase;

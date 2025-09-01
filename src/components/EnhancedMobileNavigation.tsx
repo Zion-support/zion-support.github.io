@@ -450,3 +450,6 @@ export const EnhancedMobileNavigation: React.FC = () => {
   );
 };
 };
+
+
+export default EnhancedMobileNavigation;

@@ -536,3 +536,5 @@ export const addNotification = (notification: Omit<Notification, 'id' | 'timesta
   // This will be implemented by the component instance
   console.warn('addNotification called before component initialization');
 };
+
+export default SmartNotificationSystem;

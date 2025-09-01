@@ -229,3 +229,6 @@ export function ITServiceRequestHero() {
     </section>;
   );
 }
+
+
+export default ITServiceRequestHero;

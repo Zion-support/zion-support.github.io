@@ -130,3 +130,5 @@ export function NotFoundPage(...args: any[]): any {
     </div>
   );
 }
+
+export default NotFoundPage;

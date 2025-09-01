@@ -713,3 +713,5 @@ export function UserExperienceOptimizer({
     </>
   );
 }
+
+export default UserExperienceOptimizer;

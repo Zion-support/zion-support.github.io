@@ -41,3 +41,6 @@ export function BlogSection() {
         </div>
       </div>
     </section>)}
+
+
+export default BlogSection;

@@ -44,3 +44,6 @@ export function WorkspaceHeader({ comp }) {
         </div>
       </div>
     </div>)}
+
+
+export default WorkspaceHeader;

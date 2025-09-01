@@ -79,3 +79,6 @@ export function MobileBottomNav({ unreadCount = 0 }) {
           </Link>))}
       </div>
     </nav>)}
+
+
+export default MobileBottomNav;

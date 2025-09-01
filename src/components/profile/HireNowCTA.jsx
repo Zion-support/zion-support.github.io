@@ -90,3 +90,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
           </form>)}
       </CardContent>
     </Card>)}
+
+
+export default HireNowCTA;

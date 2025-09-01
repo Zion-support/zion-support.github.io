@@ -140,3 +140,6 @@ export function AdvancedSearch() {
           </div>
         </div>)}
     </div>)}
+
+
+export default AdvancedSearch;

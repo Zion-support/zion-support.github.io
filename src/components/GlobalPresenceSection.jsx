@@ -612,3 +612,6 @@ export function GlobalPresenceSection() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default GlobalPresenceSection;

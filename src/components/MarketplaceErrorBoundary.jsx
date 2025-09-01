@@ -61,3 +61,6 @@ export function MarketplaceErrorBoundary({ children }) {
     return (<ErrorBoundary FallbackComponent={MarketplaceErrorFallback} onError={handleError}>
       {children}
     </ErrorBoundary>)}
+
+
+export default MarketplaceErrorBoundary;

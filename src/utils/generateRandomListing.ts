@@ -109,3 +109,5 @@ export function generateRandomListings(count: number): MarketplaceItem[] {
 
   return listings;
 }}}
+
+export default generateRandomListing;

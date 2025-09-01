@@ -233,3 +233,6 @@ export function NewsletterSection() {
     </section>
   );
 }
+
+
+export default NewsletterSection;

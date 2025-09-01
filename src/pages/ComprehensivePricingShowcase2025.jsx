@@ -76,3 +76,6 @@ const ComprehensivePricingShowcase2025 = () => {
             'Quantum Technology': '🔮',
             'AI & Machine Learning': '🧠',
             'AI & Analytics': '📊',
+
+
+export default ComprehensivePricingShowcase2025;

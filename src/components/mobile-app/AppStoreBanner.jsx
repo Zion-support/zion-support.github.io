@@ -170,3 +170,6 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
       </div>
     </section>
   )};
+
+
+export default AppStoreBanner;

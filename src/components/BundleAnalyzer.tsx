@@ -162,3 +162,5 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     </div>
   );
 };
+
+export default BundleAnalyzer;

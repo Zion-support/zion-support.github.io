@@ -64,3 +64,6 @@ export function ITServiceRequestHero() {
         </div>
       </div>
     </section>)}
+
+
+export default ITServiceRequestHero;

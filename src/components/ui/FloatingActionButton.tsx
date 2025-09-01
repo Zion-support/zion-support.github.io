@@ -231,3 +231,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
     </div>;
   );
 };
+
+
+export default FloatingActionButton;

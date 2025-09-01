@@ -311,3 +311,6 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
     </div>
   );
 }
+
+
+export default AdvancedPerformanceMonitor;

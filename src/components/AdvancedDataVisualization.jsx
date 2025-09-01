@@ -372,3 +372,6 @@ export function AdvancedDataVisualization() {
         </div>
       </div>
     </div>)}
+
+
+export default AdvancedDataVisualization;

@@ -16,3 +16,6 @@ export function GradientHeading({ children, className, level = "h2", id }) {
         </Tag>
     );
 }
+
+
+export default GradientHeading;

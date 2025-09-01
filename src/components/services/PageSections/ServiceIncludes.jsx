@@ -331,3 +331,6 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
       </div>
     </section>
   )};
+
+
+export default ServiceIncludes;

@@ -32,3 +32,5 @@ const Progress: React.FC<ProgressProps> = ({ value, max = 100, className;
 
 export { Progress </div>};
 }
+
+export default progress;

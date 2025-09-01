@@ -113,3 +113,6 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
         </div>
       </div>
     </div>)}
+
+
+export default ProductListingCard;

@@ -20,3 +20,6 @@ export function SocialShareSection() {
         </div>
       </div>
     </section>)}
+
+
+export default SocialShareSection;

@@ -8,428 +8,307 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-const glob = require('glob');
 
 class ErrorFixerAutomation {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'error-reports');
+    this.srcDir = path.join(this.projectRoot, 'src');
     this.fixesApplied = [];
     this.errorsFound = [];
-    this.startTime = Date.now();
   }
 
   async run() {
     console.log('🚀 Starting Error Fixer Automation...');
     
     try {
-      // Create reports directory
-      this.ensureReportsDirectory();
-      
-      // Run all error fixing operations
-      await this.fixMergeConflicts();
-      await this.fixSyntaxErrors();
-      await this.fixUnusedImports();
-      await this.fixTypeScriptErrors();
-      await this.fixLintingErrors();
-      await this.fixDuplicateDeclarations();
+      // Step 1: Fix missing exports
       await this.fixMissingExports();
-      await this.fixImportErrors();
-      await this.fixUndefinedVariables();
-      await this.fixConsoleStatements();
       
-      // Generate report
-      this.generateReport();
+      // Step 2: Fix import/export mismatches
+      await this.fixImportExportMismatches();
+      
+      // Step 3: Fix TypeScript errors
+      await this.fixTypeScriptErrors();
+      
+      // Step 4: Fix ESLint errors
+      await this.fixESLintErrors();
+      
+      // Step 5: Generate report
+      await this.generateReport();
       
       console.log('✅ Error Fixer Automation completed successfully!');
-      console.log(`📊 Fixed ${this.fixesApplied.length} issues`);
-      console.log(`📊 Found ${this.errorsFound.length} remaining issues`);
-      
     } catch (error) {
       console.error('❌ Error Fixer Automation failed:', error);
-      this.logError('Error Fixer Automation failed', error);
-    }
-  }
-
-  ensureReportsDirectory() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  async fixMergeConflicts() {
-    console.log('🔧 Fixing merge conflicts...');
-    
-    const files = glob.sync('**/*.{js,jsx,ts,tsx}', { 
-      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'] 
-    });
-    
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-          console.log(`  Fixing merge conflicts in ${file}`);
-          
-          // Remove merge conflict markers and keep the first version
-          let fixedContent = content
-            .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [a-f0-9]+\n/g, '$1')
-            .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [a-f0-9]+\n/g, '$1');
-          
-          fs.writeFileSync(file, fixedContent);
-          this.fixesApplied.push({
-            type: 'merge_conflict',
-            file,
-            description: 'Removed merge conflict markers'
-          });
-        }
-      } catch (error) {
-        this.logError(`Error fixing merge conflicts in ${file}`, error);
-      }
-    }
-  }
-
-  async fixSyntaxErrors() {
-    console.log('🔧 Fixing syntax errors...');
-    
-    // Fix common syntax errors
-    const syntaxFixes = [
-      {
-        pattern: /(\w+)\s*=\s*{\s*([^}]+)\s*,\s*([^}]+)\s*}/g,
-        replacement: '$1 = {\n  $2,\n  $3\n}',
-        description: 'Fix object literal syntax'
-      },
-      {
-        pattern: /export\s+function\s+(\w+).*?export\s+function\s+\1/g,
-        replacement: 'export function $1',
-        description: 'Remove duplicate function declarations'
-      },
-      {
-        pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2['"]/g,
-        replacement: 'import { $1 } from "$2"',
-        description: 'Remove duplicate imports'
-      }
-    ];
-
-    const files = glob.sync('**/*.{js,jsx,ts,tsx}', { 
-      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'] 
-    });
-
-    for (const file of files) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
-
-        for (const fix of syntaxFixes) {
-          content = content.replace(fix.pattern, fix.replacement);
-        }
-
-        if (content !== originalContent) {
-          fs.writeFileSync(file, content);
-          this.fixesApplied.push({
-            type: 'syntax_error',
-            file,
-            description: 'Fixed syntax errors'
-          });
-        }
-      } catch (error) {
-        this.logError(`Error fixing syntax in ${file}`, error);
-      }
-    }
-  }
-
-  async fixUnusedImports() {
-    console.log('🔧 Fixing unused imports...');
-    
-    try {
-      // Run ESLint with --fix to auto-fix unused imports
-      execSync('npm run lint -- --fix', { 
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      
-      this.fixesApplied.push({
-        type: 'unused_imports',
-        description: 'Fixed unused imports with ESLint --fix'
-      });
-    } catch (error) {
-      this.logError('Error fixing unused imports', error);
-    }
-  }
-
-  async fixTypeScriptErrors() {
-    console.log('🔧 Fixing TypeScript errors...');
-    
-    const files = glob.sync('**/*.{ts,tsx}', { 
-      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'] 
-    });
-
-    for (const file of files) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
-
-        // Fix common TypeScript errors
-        content = content
-          // Fix missing React import
-          .replace(/import\s+React\s+from\s+['"]react['"];\s*import\s+React\s+from\s+['"]react['"]/g, 'import React from "react"')
-          // Fix duplicate interface declarations
-          .replace(/interface\s+(\w+)\s*{[^}]*}\s*interface\s+\1/g, 'interface $1')
-          // Fix missing semicolons
-          .replace(/(\w+)\s*=\s*([^;]+)\s*$/gm, '$1 = $2;')
-          // Fix undefined variables
-          .replace(/\bundefined\b/g, 'null');
-
-        if (content !== originalContent) {
-          fs.writeFileSync(file, content);
-          this.fixesApplied.push({
-            type: 'typescript_error',
-            file,
-            description: 'Fixed TypeScript errors'
-          });
-        }
-      } catch (error) {
-        this.logError(`Error fixing TypeScript in ${file}`, error);
-      }
-    }
-  }
-
-  async fixLintingErrors() {
-    console.log('🔧 Fixing linting errors...');
-    
-    try {
-      // Run ESLint with auto-fix
-      execSync('npm run lint -- --fix', { 
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      
-      this.fixesApplied.push({
-        type: 'linting_error',
-        description: 'Fixed linting errors with ESLint --fix'
-      });
-    } catch (error) {
-      this.logError('Error fixing linting errors', error);
-    }
-  }
-
-  async fixDuplicateDeclarations() {
-    console.log('🔧 Fixing duplicate declarations...');
-    
-    const files = glob.sync('**/*.{js,jsx,ts,tsx}', { 
-      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'] 
-    });
-
-    for (const file of files) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
-
-        // Remove duplicate function declarations
-        content = content.replace(
-          /(export\s+)?(function|const|let|var)\s+(\w+)[^;]*;?\s*(export\s+)?(function|const|let|var)\s+\3/g,
-          '$1$2 $3'
-        );
-
-        // Remove duplicate imports
-        content = content.replace(
-          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2['"]/g,
-          'import { $1 } from "$2"'
-        );
-
-        if (content !== originalContent) {
-          fs.writeFileSync(file, content);
-          this.fixesApplied.push({
-            type: 'duplicate_declaration',
-            file,
-            description: 'Removed duplicate declarations'
-          });
-        }
-      } catch (error) {
-        this.logError(`Error fixing duplicates in ${file}`, error);
-      }
+      process.exit(1);
     }
   }
 
   async fixMissingExports() {
     console.log('🔧 Fixing missing exports...');
     
-    const files = glob.sync('**/*.{js,jsx,ts,tsx}', { 
-      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'] 
-    });
-
+    const files = this.getAllFiles(this.srcDir, ['.tsx', '.ts', '.jsx', '.js']);
+    
     for (const file of files) {
       try {
-        let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
-
-        // Add default export if missing
-        if (content.includes('export default') && !content.includes('export default function') && !content.includes('export default class')) {
-          const functionMatches = content.match(/function\s+(\w+)/g);
-          if (functionMatches && functionMatches.length > 0) {
-            const functionName = functionMatches[0].replace('function ', '');
-            content += `\nexport default ${functionName};`;
-          }
-        }
-
-        if (content !== originalContent) {
-          fs.writeFileSync(file, content);
+        const content = fs.readFileSync(file, 'utf8');
+        const fileName = path.basename(file, path.extname(file));
+        
+        // Check if file has a component but no export
+        if (this.hasReactComponent(content, fileName) && !this.hasDefaultExport(content)) {
+          const fixedContent = this.addDefaultExport(content, fileName);
+          fs.writeFileSync(file, fixedContent);
           this.fixesApplied.push({
             type: 'missing_export',
-            file,
-            description: 'Added missing exports'
+            file: path.relative(this.projectRoot, file),
+            description: `Added default export for ${fileName}`
           });
         }
       } catch (error) {
-        this.logError(`Error fixing exports in ${file}`, error);
+        console.warn(`Warning: Could not process ${file}:`, error.message);
       }
     }
   }
 
-  async fixImportErrors() {
-    console.log('🔧 Fixing import errors...');
+  async fixImportExportMismatches() {
+    console.log('🔧 Fixing import/export mismatches...');
     
-    const files = glob.sync('**/*.{js,jsx,ts,tsx}', { 
-      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'] 
-    });
-
+    const files = this.getAllFiles(this.srcDir, ['.tsx', '.ts', '.jsx', '.js']);
+    
     for (const file of files) {
       try {
-        let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
-
-        // Fix common import issues
-        content = content
-          // Fix missing file extensions
-          .replace(/from\s+['"]([^'"]+)['"]/g, (match, importPath) => {
-            if (importPath.startsWith('.') && !importPath.includes('.')) {
-              return `from '${importPath}.js'`;
-            }
-            return match;
-          })
-          // Fix relative path issues
-          .replace(/from\s+['"]\.\.\/([^'"]+)['"]/g, 'from "../$1"')
-          .replace(/from\s+['"]\.\/([^'"]+)['"]/g, 'from "./$1"');
-
-        if (content !== originalContent) {
-          fs.writeFileSync(file, content);
+        const content = fs.readFileSync(file, 'utf8');
+        
+        // Fix common import patterns
+        let fixedContent = content;
+        
+        // Fix lazy imports that expect named exports but get default exports
+        fixedContent = fixedContent.replace(
+          /lazy\(\(\) => import\(['"]([^'"]+)['"]\)\.then\(module => \(\{ default: module\.(\w+) \}\)\)/g,
+          'lazy(() => import(\'$1\'))'
+        );
+        
+        if (fixedContent !== content) {
+          fs.writeFileSync(file, fixedContent);
           this.fixesApplied.push({
-            type: 'import_error',
-            file,
-            description: 'Fixed import errors'
+            type: 'import_fix',
+            file: path.relative(this.projectRoot, file),
+            description: 'Fixed lazy import pattern'
           });
         }
       } catch (error) {
-        this.logError(`Error fixing imports in ${file}`, error);
+        console.warn(`Warning: Could not process ${file}:`, error.message);
       }
     }
   }
 
-  async fixUndefinedVariables() {
-    console.log('🔧 Fixing undefined variables...');
+  async fixTypeScriptErrors() {
+    console.log('🔧 Fixing TypeScript errors...');
     
-    const files = glob.sync('**/*.{js,jsx,ts,tsx}', { 
-      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'] 
+    try {
+      // Run TypeScript check to get errors
+      const result = execSync('npx tsc --noEmit --pretty false', { 
+        encoding: 'utf8', 
+        cwd: this.projectRoot,
+        stdio: 'pipe'
+      });
+      
+      // Parse TypeScript errors and fix common ones
+      const errors = this.parseTypeScriptErrors(result);
+      
+      for (const error of errors) {
+        await this.fixTypeScriptError(error);
+      }
+    } catch (error) {
+      // TypeScript check failed, which is expected if there are errors
+      const errorOutput = error.stdout || error.stderr || '';
+      const errors = this.parseTypeScriptErrors(errorOutput);
+      
+      for (const tsError of errors) {
+        await this.fixTypeScriptError(tsError);
+      }
+    }
+  }
+
+  async fixESLintErrors() {
+    console.log('🔧 Fixing ESLint errors...');
+    
+    try {
+      // Run ESLint with auto-fix
+      execSync('npx eslint --fix src/**/*.{ts,tsx,js,jsx}', { 
+        cwd: this.projectRoot,
+        stdio: 'pipe'
+      });
+      
+      this.fixesApplied.push({
+        type: 'eslint_fix',
+        file: 'multiple',
+        description: 'Auto-fixed ESLint errors'
+      });
+    } catch (error) {
+      console.warn('Warning: ESLint auto-fix failed:', error.message);
+    }
+  }
+
+  async fixTypeScriptError(error) {
+    const { file, line, message } = error;
+    
+    if (!file || !fs.existsSync(file)) return;
+    
+    try {
+      const content = fs.readFileSync(file, 'utf8');
+      const lines = content.split('\n');
+      
+      // Fix common TypeScript errors
+      if (message.includes('Property \'default\' is missing')) {
+        // Add default export
+        const fileName = path.basename(file, path.extname(file));
+        if (!this.hasDefaultExport(content)) {
+          const fixedContent = this.addDefaultExport(content, fileName);
+          fs.writeFileSync(file, fixedContent);
+          this.fixesApplied.push({
+            type: 'typescript_export_fix',
+            file: path.relative(this.projectRoot, file),
+            description: `Added missing default export for ${fileName}`
+          });
+        }
+      } else if (message.includes('Cannot redeclare block-scoped variable')) {
+        // Remove duplicate declarations
+        const fixedContent = this.removeDuplicateDeclarations(content, message);
+        if (fixedContent !== content) {
+          fs.writeFileSync(file, fixedContent);
+          this.fixesApplied.push({
+            type: 'typescript_duplicate_fix',
+            file: path.relative(this.projectRoot, file),
+            description: 'Removed duplicate variable declaration'
+          });
+        }
+      }
+    } catch (error) {
+      console.warn(`Warning: Could not fix TypeScript error in ${file}:`, error.message);
+    }
+  }
+
+  parseTypeScriptErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    
+    for (const line of lines) {
+      const match = line.match(/^([^(]+)\((\d+),(\d+)\): (.+)$/);
+      if (match) {
+        errors.push({
+          file: match[1].trim(),
+          line: parseInt(match[2]),
+          column: parseInt(match[3]),
+          message: match[4].trim()
+        });
+      }
+    }
+    
+    return errors;
+  }
+
+  hasReactComponent(content, componentName) {
+    const patterns = [
+      new RegExp(`const\\s+${componentName}\\s*=\\s*\\(\\s*\\)\\s*=>`, 'i'),
+      new RegExp(`function\\s+${componentName}\\s*\\(`, 'i'),
+      new RegExp(`const\\s+${componentName}\\s*:\\s*React\\.FC`, 'i')
+    ];
+    
+    return patterns.some(pattern => pattern.test(content));
+  }
+
+  hasDefaultExport(content) {
+    return /export\s+default/.test(content);
+  }
+
+  addDefaultExport(content, componentName) {
+    // Check if there's already an export default at the end
+    if (content.trim().endsWith('export default ' + componentName + ';')) {
+      return content;
+    }
+    
+    // Add export default at the end
+    return content + '\n\nexport default ' + componentName + ';';
+  }
+
+  removeDuplicateDeclarations(content, errorMessage) {
+    // Extract variable name from error message
+    const match = errorMessage.match(/Cannot redeclare block-scoped variable '(\w+)'/);
+    if (!match) return content;
+    
+    const variableName = match[1];
+    const lines = content.split('\n');
+    const declarations = [];
+    
+    // Find all declarations of the variable
+    lines.forEach((line, index) => {
+      if (new RegExp(`const\\s+${variableName}\\s*=`).test(line)) {
+        declarations.push(index);
+      }
     });
-
-    for (const file of files) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
-
-        // Fix common undefined variable issues
-        content = content
-          // Fix navigate function
-          .replace(/\bnavigate\s*\(/g, 'router(')
-          // Fix reject function
-          .replace(/\breject\s*\(/g, 'throw new Error(')
-          // Fix undefined variables
-          .replace(/\bundefined\b/g, 'null');
-
-        if (content !== originalContent) {
-          fs.writeFileSync(file, content);
-          this.fixesApplied.push({
-            type: 'undefined_variable',
-            file,
-            description: 'Fixed undefined variables'
-          });
-        }
-      } catch (error) {
-        this.logError(`Error fixing undefined variables in ${file}`, error);
+    
+    // Remove duplicate declarations (keep the first one)
+    if (declarations.length > 1) {
+      for (let i = declarations.length - 1; i > 0; i--) {
+        lines.splice(declarations[i], 1);
       }
+      return lines.join('\n');
     }
+    
+    return content;
   }
 
-  async fixConsoleStatements() {
-    console.log('🔧 Fixing console statements...');
+  getAllFiles(dir, extensions) {
+    const files = [];
     
-    const files = glob.sync('**/*.{js,jsx,ts,tsx}', { 
-      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'] 
-    });
-
-    for (const file of files) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
-
-        // Comment out console statements in production
-        if (process.env.NODE_ENV === 'production') {
-          content = content.replace(
-            /console\.(log|warn|error|info|debug)\s*\(/g,
-            '// console.$1('
-          );
+    function traverse(currentDir) {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          traverse(fullPath);
+        } else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath);
         }
-
-        if (content !== originalContent) {
-          fs.writeFileSync(file, content);
-          this.fixesApplied.push({
-            type: 'console_statement',
-            file,
-            description: 'Fixed console statements'
-          });
-        }
-      } catch (error) {
-        this.logError(`Error fixing console statements in ${file}`, error);
       }
     }
+    
+    traverse(dir);
+    return files;
   }
 
-  generateReport() {
-    const endTime = Date.now();
-    const duration = endTime - this.startTime;
-    
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
+      duration: Date.now() - this.startTime,
       fixesApplied: this.fixesApplied,
       errorsFound: this.errorsFound,
       summary: {
         totalFixes: this.fixesApplied.length,
-        totalErrors: this.errorsFound.length,
-        successRate: this.fixesApplied.length > 0 ? 
-          Math.round((this.fixesApplied.length / (this.fixesApplied.length + this.errorsFound.length)) * 100) : 0
+        totalErrors: this.errorsFound.length
       }
     };
-
-    const reportFile = path.join(this.reportsDir, `error-fixer-report-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    console.log(`📄 Report saved to: ${reportFile}`);
-  }
-
-  logError(message, error) {
-    this.errorsFound.push({
-      message,
-      error: error.message,
-      stack: error.stack
-    });
-    console.error(`❌ ${message}:`, error.message);
+    const reportPath = path.join(this.projectRoot, 'error-reports', `error-fixer-report-${Date.now()}.json`);
+    
+    // Ensure reports directory exists
+    const reportsDir = path.dirname(reportPath);
+    if (!fs.existsSync(reportsDir)) {
+      fs.mkdirSync(reportsDir, { recursive: true });
+    }
+    
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    console.log(`📊 Report generated: ${reportPath}`);
+    console.log(`📈 Fixes applied: ${this.fixesApplied.length}`);
+    console.log(`⚠️  Errors found: ${this.errorsFound.length}`);
   }
 }
 
 // Run the automation
-if (require.main === module) {
-  const automation = new ErrorFixerAutomation();
-  automation.run().catch(console.error);
-}
-
-module.exports = ErrorFixerAutomation;
+const automation = new ErrorFixerAutomation();
+automation.startTime = Date.now();
+automation.run().catch(console.error);

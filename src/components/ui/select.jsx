@@ -48,3 +48,6 @@ export function SelectItem({ children, className = '', value, ...props }) {
     </div>
   );
 }
+
+
+export default select;

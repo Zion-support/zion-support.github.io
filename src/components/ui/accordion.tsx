@@ -164,3 +164,6 @@ export function AccordionContent({ ;
     </div>;
   );
 }
+
+
+export default accordion;

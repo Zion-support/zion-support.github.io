@@ -230,3 +230,6 @@ export function FeatureHighlights() {
         </section>
     );
 }
+
+
+export default FeatureHighlights;

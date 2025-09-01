@@ -89,3 +89,5 @@ export const buttonVariants = {
 };
 export type { ButtonProps };
 }}}
+
+export default button;

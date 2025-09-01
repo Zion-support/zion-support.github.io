@@ -12,3 +12,6 @@ function Skeleton({ className, ...props }) {
 } {...props}/>);
 }
 export { Skeleton };
+
+
+export default skeleton;

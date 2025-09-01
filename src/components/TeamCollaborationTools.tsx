@@ -1275,3 +1275,6 @@ showProjects:  true,;
     </div>;
   );
 };
+
+
+export default TeamCollaborationTools;

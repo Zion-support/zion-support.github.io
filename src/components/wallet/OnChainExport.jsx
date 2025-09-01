@@ -103,3 +103,6 @@ export function OnChainExport() {
           </div>)}
       </CardContent>
     </Card>)}
+
+
+export default OnChainExport;

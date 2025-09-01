@@ -144,3 +144,6 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
       </div>
     </section>
   )};
+
+
+export default MobileEmailCapture;

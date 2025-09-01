@@ -50,3 +50,6 @@ export const AppScreenshots = () => {
         </div>
       </div>
     </section>)};
+
+
+export default AppScreenshots;

@@ -14,3 +14,6 @@ export function PartnersSection() {
         </div>
       </div>
     </section>)}
+
+
+export default PartnersSection;

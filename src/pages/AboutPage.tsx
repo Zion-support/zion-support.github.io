@@ -369,3 +369,5 @@ export function AboutPage(...args: any[]): any {
     </div>
   );
 }
+
+export default AboutPage;

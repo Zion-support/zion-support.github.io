@@ -694,3 +694,6 @@ setFilters(prev: > ({;
     </div>;
   );
 }
+
+
+export default EnhancedSearch;

@@ -170,3 +170,6 @@ export function ServerErrorState({ onRetry }) {
 
 } : null}/>);
 }
+
+
+export default EmptyState;

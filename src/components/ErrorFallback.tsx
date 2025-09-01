@@ -45,3 +45,6 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
     </div>;
   );
 };
+
+
+export default ErrorFallback;

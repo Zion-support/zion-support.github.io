@@ -266,3 +266,6 @@ export function ChatBotPanel() {
         </form>
       </div>
     </div>)}
+
+
+export default ChatBotPanel;

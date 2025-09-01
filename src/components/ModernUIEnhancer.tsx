@@ -248,3 +248,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
   // Don't render anything - this is a utility component
   return null;
 };
+
+
+export default ModernUIEnhancer;

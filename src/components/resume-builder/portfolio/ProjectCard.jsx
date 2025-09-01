@@ -73,3 +73,6 @@ export function ProjectCard({ project, onEdit, onDelete }) {
         </AlertDialogContent>
       </AlertDialog>
     </Card>)}
+
+
+export default ProjectCard;

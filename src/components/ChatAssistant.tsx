@@ -350,3 +350,6 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
 };
 
+
+
+export default ChatAssistant;

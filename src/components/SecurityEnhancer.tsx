@@ -526,3 +526,5 @@ export function SecurityEnhancer() {
     </>
   );
 }
+
+export default SecurityEnhancer;

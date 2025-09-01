@@ -84,3 +84,6 @@ export function MobileNavigation() {
           </div>
         </div>)}
     </div>)}
+
+
+export default MobileNavigation;

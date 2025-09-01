@@ -4,3 +4,6 @@ export function ServiceDetails({ country }) {
     // Get datacenters for regions (simplified - in production this would come from a real database)
     const getDatacenters = (country) => {
         const dataCenters = {
+
+
+export default ServiceDetails;

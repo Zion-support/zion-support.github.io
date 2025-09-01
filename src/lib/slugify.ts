@@ -41,3 +41,6 @@ export function generateUniqueSlug(text: string, existingSlugs: string[]): strin
 
   return uniqueSlug;
 }
+
+
+export default slugify;

@@ -132,3 +132,6 @@ export function TrustIndicatorsCompact({ className }) {
         <span>99.9% Uptime</span>
       </div>
     </div>)}
+
+
+export default TrustIndicators;

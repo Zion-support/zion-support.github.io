@@ -43,3 +43,6 @@ export function FaqSection() {
         </div>
       </div>
     </div>)}
+
+
+export default FaqSection;

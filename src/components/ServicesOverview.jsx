@@ -391,3 +391,6 @@ export function ServicesOverview() {
         </div>
       </div>
     </div>)}
+
+
+export default ServicesOverview;

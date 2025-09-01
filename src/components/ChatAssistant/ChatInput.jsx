@@ -23,3 +23,6 @@ import { Send export function ChatInput({ onSend, disabled = false }) {
         <Send className="h-5 w-5"/>
       </Button>
     </form>)}
+
+
+export default ChatInput;

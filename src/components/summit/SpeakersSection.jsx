@@ -24,3 +24,6 @@ export function SpeakersSection() {
         </div>
       </div>
     </section>)}
+
+
+export default SpeakersSection;

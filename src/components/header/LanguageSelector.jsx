@@ -38,3 +38,6 @@ import { ChevronDown, Globe export const LanguageSelector = () => {
           </div>
         </div>)}
     </div>)};
+
+
+export default LanguageSelector;

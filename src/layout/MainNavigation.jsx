@@ -21,3 +21,6 @@ export function MainNavigation() {
       </Link>
     </nav>
   )}
+
+
+export default MainNavigation;

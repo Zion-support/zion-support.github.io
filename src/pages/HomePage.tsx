@@ -321,3 +321,5 @@ export function HomePage(...args: any[]): any {
     </div>
   );
 }
+
+export default HomePage;

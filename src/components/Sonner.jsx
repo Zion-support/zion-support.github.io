@@ -28,3 +28,5 @@ export const toast = {
 
 };
 }
+
+export default Sonner;

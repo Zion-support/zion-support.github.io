@@ -97,3 +97,6 @@ export function SitemapPage(...args: any[]): any {
     </div>;
   );
 }
+
+
+export default SitemapPage;

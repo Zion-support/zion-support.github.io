@@ -334,3 +334,6 @@ export function ProductSubmissionForm() {
 }}/>
       </TabsContent>
     </Tabs>)}
+
+
+export default ProductSubmissionForm;

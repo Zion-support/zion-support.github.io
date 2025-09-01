@@ -104,3 +104,6 @@ import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileTe
       purple: 'bg-purple-100 text-purple-600 border-purple-200',
       orange: 'bg-orange-100 text-orange-600 border-orange-200',
       red: 'bg-red-100 text-red-600 border-red-200',
+
+
+export default ServiceProcessSteps;

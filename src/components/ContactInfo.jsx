@@ -215,3 +215,6 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
         </div>
       </div>
     </section>)}
+
+
+export default ContactInfo;

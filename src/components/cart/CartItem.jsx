@@ -23,3 +23,6 @@ export function CartItem({ item, onRemove, onUpdateQuantity }) {
         Remove
       </Button>
     </li>)}
+
+
+export default CartItem;

@@ -111,3 +111,6 @@ export function KanbanBoard({ jobId }) {
         {COLUMNS.map(column => (<KanbanColumn key={column.id} id={column.id} title={column.title} description={column.description} applications={columns[column.id] || []} count={columns[column.id]?.length || 0}/>))}
       </div>
     </DragDropContext>)}
+
+
+export default KanbanBoard;

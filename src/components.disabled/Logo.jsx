@@ -8,3 +8,6 @@ export function Logo({ className = '' }) {
         Zion Tech Group
       </span>
     </motion.div>)}
+
+
+export default Logo;

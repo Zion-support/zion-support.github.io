@@ -9,3 +9,6 @@ export function Separator({ className = '', orientation = 'horizontal', decorati
       {...props}
     />
   )}
+
+
+export default separator;

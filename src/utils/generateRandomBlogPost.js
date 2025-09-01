@@ -10,3 +10,5 @@ export const generateRandomBlogPost = () => {
     slug: "sample-blog-post"
   };
 };
+
+export default generateRandomBlogPost;

@@ -508,3 +508,6 @@ export function ServiceProviderRegistrationForm() {
         </Form>
       </Card>
     </div>)}
+
+
+export default ServiceProviderRegistrationForm;

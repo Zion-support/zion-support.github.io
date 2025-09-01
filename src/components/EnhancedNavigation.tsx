@@ -494,3 +494,5 @@ className:  '',;
     </nav>
   );
 };
+
+export default EnhancedNavigation;

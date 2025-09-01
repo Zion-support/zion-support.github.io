@@ -51,10 +51,10 @@ interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
   autoScroll?: boolean}
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
-showHeader:  true,;
-  showSettings = true,;
-  maxMessages = 50,;
-  autoScroll = true;
+  showHeader = true,
+  showSettings = true,
+  maxMessages = 50,
+  autoScroll = true
 }) => {;
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
@@ -163,9 +163,10 @@ showHeader:  true,;
   };
 
   // Clear chat
-  const clearChat = () => {;
+  const clearChat = () => {
     setMessages([]);
-    setChatHistory([])};
+    setChatHistory([]);
+  };
 
   return (
     <>
@@ -227,7 +228,7 @@ showHeader:  true,;
             className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden"
 
             {/* Header */}
-            {showHeader && (;
+            {showHeader && (
               <div className="p-4 bg-zinc-800/50 border-b border-zinc-700/50">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -251,7 +252,7 @@ showHeader:  true,;
                         aria-label="Chat settings"
 
                         <Settings className="w-4 h-4" />
-                      </button>;
+                      </button>
                     )}
                     <button
                       onClick={clearChat}
@@ -261,7 +262,7 @@ showHeader:  true,;
                       <RefreshCw className="w-4 h-4" />
                     </button>
                   </div>
-                </div>;
+                </div>
               </div>
             )}
 
@@ -504,14 +505,14 @@ showHeader:  true,;
                     </div>
                     <span className="text-sm text-zinc-400">Zion AI is typing...</span>
                   </div>
-                </motion.div>;
+                </motion.div>
               )}
 
               <div ref={messagesEndRef} />
             </div>
 
             {/* Input Area */}
-            <div className="p-4 border-t border-zinc-700/50">;
+            <div className="p-4 border-t border-zinc-700/50">
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
                 <div className="flex-1 relative">
                   <input
@@ -563,7 +564,7 @@ showHeader:  true,;
               </form>
 
               {/* Quick Actions */}
-              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">;
+              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-3 h-3" />
                   <span>Powered by Zion AI</span>
@@ -573,10 +574,13 @@ showHeader:  true,;
                   <span>24/7 Available</span>
                 </div>
               </div>
-            </div>;
-          </motion.div>;
-        )};
-      </AnimatePresence>;
-    </>;
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
+
+
+export default AIChatbotSystem;

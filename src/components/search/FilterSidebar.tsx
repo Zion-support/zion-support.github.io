@@ -117,3 +117,6 @@ export function FilterSidebar({
       </div>
     </>
   )}
+
+
+export default FilterSidebar;

@@ -743,3 +743,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     </footer>;
   );
 };
+
+
+export default EnhancedFuturisticFooter;

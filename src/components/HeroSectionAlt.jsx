@@ -36,3 +36,6 @@ export const HeroSectionAlt = () => {
   };
 
   const floatingVariants = {
+
+
+export default HeroSectionAlt;

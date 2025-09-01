@@ -177,3 +177,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
         </div>
     );
 }
+
+
+export default FloatingCTA;

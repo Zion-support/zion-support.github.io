@@ -509,3 +509,6 @@ export const EnhancedSidebar: React.FC = () => {;
     </aside>;
   );
 };
+
+
+export default EnhancedSidebar;

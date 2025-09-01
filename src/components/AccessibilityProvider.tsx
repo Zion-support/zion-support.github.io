@@ -314,3 +314,6 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isActive]);
 
   return <>{children}</>};
+
+
+export default AccessibilityProvider;

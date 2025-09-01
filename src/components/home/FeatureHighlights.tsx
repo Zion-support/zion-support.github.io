@@ -186,3 +186,6 @@ export function FeatureHighlights() {
 }
 
 
+
+
+export default FeatureHighlights;

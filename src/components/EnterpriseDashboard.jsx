@@ -868,3 +868,6 @@ export const EnterpriseDashboard = () => {
         </AnimatePresence>
       </div>
     </div>)};
+
+
+export default EnterpriseDashboard;

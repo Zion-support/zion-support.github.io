@@ -245,3 +245,5 @@ export function withErrorBoundary(Component, fallback = null) {
         );
     };
 }
+
+export default ErrorBoundary;

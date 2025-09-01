@@ -186,3 +186,6 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, U
         </div>
       </div>
     </section>)}
+
+
+export default ContactSection;

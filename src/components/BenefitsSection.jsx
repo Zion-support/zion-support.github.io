@@ -319,3 +319,6 @@ export function BenefitsSection() {
       </div>
     </section>
   )}
+
+
+export default BenefitsSection;

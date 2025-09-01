@@ -201,3 +201,5 @@ export const PerformanceMonitor = () => {
       </div>
     </motion.div>
   )};
+
+export default PerformanceMonitor;

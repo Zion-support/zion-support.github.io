@@ -99,3 +99,6 @@ export function HeroSkeleton({ className }) {
         </div>
       </div>
     </div>)}
+
+
+export default LoadingSkeleton;

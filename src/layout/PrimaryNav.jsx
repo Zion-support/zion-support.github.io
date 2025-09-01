@@ -185,3 +185,6 @@ export function PrimaryNav() {
         </div>)}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
     </>)}
+
+
+export default PrimaryNav;

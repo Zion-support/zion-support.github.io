@@ -248,3 +248,5 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 }}}}}}
+
+export default FuturisticBackground;

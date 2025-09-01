@@ -33,3 +33,6 @@ const ComprehensiveServicesOverview2025 = () => {
             'Legal Tech & AI': '⚖️',
             'Marketing & AI': '📢',
             'Energy & Sustainability': '⚡',
+
+
+export default ComprehensiveServicesOverview2025;

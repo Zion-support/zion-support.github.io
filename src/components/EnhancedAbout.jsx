@@ -356,3 +356,6 @@ export const EnhancedAbout = () => {
         </motion.div>
       </section>
     </div>)};
+
+
+export default EnhancedAbout;

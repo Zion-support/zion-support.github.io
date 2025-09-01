@@ -14,3 +14,6 @@ export function TrustedBySection() {
         </div>
       </div>
     </section>)}
+
+
+export default TrustedBySection;

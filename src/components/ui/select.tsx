@@ -51,3 +51,6 @@ interface SelectValueProps extends React.PropsWithChildren<{}> {
 
 export function SelectContent(...args[]):  {
   return <div className="relative">{children}</div>};
+
+
+export default select;

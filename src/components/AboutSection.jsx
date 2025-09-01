@@ -130,3 +130,6 @@ export function AboutSection() {
         </div>
       </div>
     </section>)}
+
+
+export default AboutSection;

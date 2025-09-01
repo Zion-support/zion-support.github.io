@@ -223,3 +223,6 @@ export function HomepagePromotion() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default HomepagePromotion;

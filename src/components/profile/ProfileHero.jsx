@@ -54,3 +54,6 @@ export function ProfileHero({ name, title, avatarUrl, coverImageUrl, location, r
         </div>
       </div>
     </div>)}
+
+
+export default ProfileHero;

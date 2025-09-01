@@ -356,3 +356,5 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
       </div>
     </div>);
 }}}}}}
+
+export default DynamicListingPage;

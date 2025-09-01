@@ -527,3 +527,6 @@ export function TechnologyStackSection() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default TechnologyStackSection;

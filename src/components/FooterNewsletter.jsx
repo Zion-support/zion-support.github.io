@@ -17,3 +17,6 @@ export function FooterNewsletter() {
         Subscribe
       </button>
     </form>)}
+
+
+export default FooterNewsletter;

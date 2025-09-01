@@ -57,3 +57,6 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
             'Quantum Technology': '🔮',
             'AI & Machine Learning': '🧠',
             'AI & Analytics': '📊',
+
+
+export default AdvancedInnovativeServicesShowcase2025;

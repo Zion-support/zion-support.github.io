@@ -49,3 +49,6 @@ const InnovativeServicesShowcase = () => {
             'Cybersecurity': <Shield className="h-5 w-5"/>,
             'Metaverse & VR/AR': <Eye className="h-5 w-5"/>,
             'Green Technology': <Leaf className="h-5 w-5"/>,
+
+
+export default InnovativeServicesShowcase;

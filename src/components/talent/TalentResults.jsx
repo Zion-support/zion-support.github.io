@@ -13,3 +13,6 @@ export function TalentResults({ talents, totalCount, isLoading, viewProfile, han
       {/* Talents grid */}
       <TalentGrid talents={talents} isLoading={isLoading} onTalentClick={viewProfile} handleBook={handleBook} handleMessage={handleMessage} isAuthenticated={isAuthenticated} clearFilters={activeFiltersProps.clearFilters}/>
     </div>)}
+
+
+export default TalentResults;

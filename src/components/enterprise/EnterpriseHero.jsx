@@ -42,3 +42,6 @@ export function EnterpriseHero() {
         </div>
       </div>
     </section>)}
+
+
+export default EnterpriseHero;

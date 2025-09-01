@@ -379,3 +379,6 @@ export function AdvancedSecurityDashboard() {
           </div>)}
       </div>
     </div>)}
+
+
+export default AdvancedSecurityDashboard;

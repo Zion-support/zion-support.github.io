@@ -593,3 +593,6 @@ const QuickAccess: React.FC = (): JSX.Element => {
 };
 
 export { QuickAccess };
+
+
+export default QuickAccess;

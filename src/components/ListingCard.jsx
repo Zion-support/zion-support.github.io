@@ -40,3 +40,6 @@ export function ListingCard({ id, title, description, images, category, tags, au
           </div>)}
       </div>
     </Link>)}
+
+
+export default ListingCard;

@@ -272,3 +272,6 @@ showMetrics:  true,;
 
   // Calculate report metrics
   const reportMetrics = {
+
+
+export default AdvancedReportingDashboard;

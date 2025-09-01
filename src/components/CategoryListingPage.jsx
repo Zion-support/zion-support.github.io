@@ -140,3 +140,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
       </div>
       <Footer />
     </>)}
+
+
+export default CategoryListingPage;

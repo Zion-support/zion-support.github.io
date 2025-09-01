@@ -225,3 +225,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         </div>
       </form>
     </Form>)}
+
+
+export default InterviewRequestForm;

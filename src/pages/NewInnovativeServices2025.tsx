@@ -145,12 +145,12 @@ export default function NewInnovativeServices2025() {
       title: "AI Customer Experience Analytics",
       description: "Transform customer insights into actionable intelligence with AI-powered analytics and personalization",
       icon: Brain,
-      category: "Customer Experience",;
-      price: "From $399/month",;
-      features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine"],;
-      link: "/services/ai-customer-experience-analytics",;
-      color: "from-zion-cyan to-zion-purple",;
-      popular: false;
+      category: "Customer Experience",
+      price: "From $399/month",
+      features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine"],
+      link: "/services/ai-customer-experience-analytics",
+      color: "from-zion-cyan to-zion-purple",
+      popular: false
     };
   ];
 
@@ -200,13 +200,13 @@ export default function NewInnovativeServices2025() {
       description: "Streamline operations with intelligent automation",
       services: [
         "AI Workflow Orchestrator",
-        "AI Project Management",;
-        "Customer Support Automation",;
-        "Email Automation",;
-        "Process Optimization";
-      ],;
-      color: "from-zion-purple to-zion-orange";
-    };
+        "AI Project Management",
+        "Customer Support Automation",
+        "Email Automation",
+        "Process Optimization"
+      ],
+      color: "from-zion-purple to-zion-orange"
+    }
   ];
 
   const benefits = [
@@ -679,12 +679,14 @@ export default function NewInnovativeServices2025() {
               </div>
               <div className="flex flex-col items-center">
                 <MapPin className="w-8 h-8 text-zion-cyan mb-4" />
-                <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </div>;
+                <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   );
 }
+
+

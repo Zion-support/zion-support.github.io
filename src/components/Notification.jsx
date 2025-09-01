@@ -68,3 +68,6 @@ export function NotificationContainer({ notifications, onClose }) {
     return (<div className="fixed top-20 right-4 z-50 space-y-2">
       {notifications.map((notification) => (<Notification key={notification.id} {...notification} onClose={onClose}/>))}
     </div>)}
+
+
+export default Notification;

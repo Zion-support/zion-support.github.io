@@ -30,3 +30,6 @@ export function TokenDisplay() {
           </div>)}
       </CardContent>
     </Card>)}
+
+
+export default TokenDisplay;

@@ -156,3 +156,6 @@ export function MobileMenu({ className }) {
     </div>
   );
 }
+
+
+export default MobileMenu;

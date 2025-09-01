@@ -172,3 +172,6 @@ export function FeatureCTAs() {
     </section>
   );
 }
+
+
+export default FeatureCTAs;

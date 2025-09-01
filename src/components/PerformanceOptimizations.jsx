@@ -166,3 +166,6 @@ export function PerformanceOptimizations() {
         </div>
       </div>
     </div>)}
+
+
+export default PerformanceOptimizations;

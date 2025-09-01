@@ -83,3 +83,6 @@ export function PageLoadingFallback() {
         </motion.div>
       </div>
     </div>)}
+
+
+export default LoadingFallback;

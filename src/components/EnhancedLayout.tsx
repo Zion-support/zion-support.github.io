@@ -36,3 +36,6 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
     </div>;
   );
 };
+
+
+export default EnhancedLayout;

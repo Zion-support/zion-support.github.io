@@ -32,3 +32,6 @@ export function ProtectedRoute(...args: any[]): any {;
 
   return <>{children}</>;
 }
+
+
+export default ProtectedRoute;

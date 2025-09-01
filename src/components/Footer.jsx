@@ -287,3 +287,6 @@ export function Footer() {
       </motion.button>
     </footer>
   )}
+
+
+export default Footer;

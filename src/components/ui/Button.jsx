@@ -21,3 +21,6 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
       {children}
     </button>);
 }
+
+
+export default Button;

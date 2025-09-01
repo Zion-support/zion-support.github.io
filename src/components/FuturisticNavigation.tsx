@@ -598,3 +598,6 @@ export const FuturisticNavigation: React.FC = () => {;
     </>;
   );
 };
+
+
+export default FuturisticNavigation;

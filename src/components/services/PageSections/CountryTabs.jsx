@@ -194,3 +194,6 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => {
       </div>
     </section>
   )};
+
+
+export default CountryTabs;

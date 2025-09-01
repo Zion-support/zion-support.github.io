@@ -132,3 +132,6 @@ export function CandidateCard({ application, index }) {
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal isOpen={showHireModal} onClose={() => setShowHireModal(false)} application={application} onConfirm={handleHireConfirmed}/>
     </>)}
+
+
+export default CandidateCard;

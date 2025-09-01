@@ -90,3 +90,6 @@ export const QuickAccess = () => {
         </section>
     );
 };
+
+
+export default QuickAccess;

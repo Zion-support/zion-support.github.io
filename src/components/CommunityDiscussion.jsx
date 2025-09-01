@@ -100,3 +100,6 @@ export const CommunityDiscussion = () => {
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.
       </div>
     </div>)};
+
+
+export default CommunityDiscussion;

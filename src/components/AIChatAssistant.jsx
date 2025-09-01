@@ -187,3 +187,6 @@ export function AIChatAssistant() {
         </div>
       </div>
     </div>)}
+
+
+export default AIChatAssistant;

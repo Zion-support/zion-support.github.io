@@ -161,3 +161,6 @@ setChartData(prev:  > ({;
 
   // Generate line chart data
   const lineChartData = {
+
+
+export default DataVisualization;

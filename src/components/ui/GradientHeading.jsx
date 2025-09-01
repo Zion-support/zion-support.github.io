@@ -34,3 +34,6 @@ export function GradientHeading({ children, variant = 'primary', size = '2xl', c
         </h1>
     );
 }
+
+
+export default GradientHeading;

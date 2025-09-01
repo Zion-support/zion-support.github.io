@@ -70,3 +70,6 @@ export function CardSkeleton() {
       </div>
       <div className="h-10 bg-zion-slate-light/20 rounded w-1/3"></div>
     </div>)}
+
+
+export default loading;

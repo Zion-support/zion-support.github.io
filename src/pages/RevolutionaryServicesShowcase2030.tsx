@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { ArrowRight,
   ChevronLeft,
   ChevronRight,
@@ -47,7 +47,7 @@ import { ArrowRight,
 import { SEO } from "../components/SEO";
 import { REVOLUTIONARY_SERVICES_2030 } from "../data/revolutionaryServices2030";
 
-export default function RevolutionaryServicesShowcase2030(...args[]):  {
+export default function RevolutionaryServicesShowcase2030() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('aiScore');
@@ -61,14 +61,16 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const categories = ['all', ...Array.from(new Set(REVOLUTIONARY_SERVICES_2030.map(service => service.category)))];
 
   // Filter and sort services
-  const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
-    return matchesCategory && matchesSearch});
+    return matchesCategory && matchesSearch;
+  });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  const sortedServices = [...filteredServices].sort((a, b) => {
     let comparison = 0;
     switch (sortBy) {
       case 'aiScore':
@@ -84,16 +86,20 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
         comparison = b.reviewCount - a.reviewCount;
         break;
       case 'roi':
+        const roiA = typeof a.roi === 'string' ? parseInt(a.roi.match(/\d+/)?.[0] || '0') : 0;
         const roiB = typeof b.roi === 'string' ? parseInt(b.roi.match(/\d+/)?.[0] || '0') : 0;
         comparison = roiB - roiA;
         break;
       case 'setupTime':
+        const timeA = typeof a.setupTime === 'string' ? parseInt(a.setupTime.match(/\d+/)?.[0] || '0') : 0;
         const timeB = typeof b.setupTime === 'string' ? parseInt(b.setupTime.match(/\d+/)?.[0] || '0') : 0;
         comparison = timeA - timeB;
         break;
       default:
-        comparison = 0};
-    return sortOrder === 'asc' ? comparison : -comparison});
+        comparison = 0;
+    }
+    return sortOrder === 'asc' ? comparison : -comparison;
+  });
 
   const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;

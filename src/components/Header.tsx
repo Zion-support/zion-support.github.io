@@ -569,3 +569,6 @@ export function Header({ className }: HeaderProps) {
     </header>
   );
 }
+
+
+export default Header;

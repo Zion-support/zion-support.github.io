@@ -64,3 +64,6 @@ export function EnterpriseTestimonials() {
         </Carousel>
       </div>
     </section>)}
+
+
+export default EnterpriseTestimonials;

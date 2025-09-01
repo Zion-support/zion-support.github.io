@@ -537,3 +537,6 @@ function verifyWebhookSignature(payload, signature, secret) {
   const expectedSignature = hmac.update(payload).digest('hex');
   return crypto.timingSafeEqual(
     Buffer.from(signature),
+
+
+export default ApiDocumentation;

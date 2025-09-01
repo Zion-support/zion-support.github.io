@@ -512,3 +512,5 @@ export function AIContentOptimizer({
     </>
   );
 }
+
+export default AIContentOptimizer;

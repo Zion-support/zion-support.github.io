@@ -39,3 +39,6 @@ export function EnhancedCardFooter({ children, className }) {
 }>
       {children}
     </div>)}
+
+
+export default EnhancedCard;

@@ -16,3 +16,6 @@ export function AvatarUpload({ value, onChange }) {
           Upload Avatar
         </CldUploadButton>) : (<p className="text-sm text-gray-500">Image upload feature is currently unavailable.</p>)}
     </div>)}
+
+
+export default AvatarUpload;

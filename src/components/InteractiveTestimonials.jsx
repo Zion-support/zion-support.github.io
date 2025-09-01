@@ -454,3 +454,6 @@ export function InteractiveTestimonials() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default InteractiveTestimonials;

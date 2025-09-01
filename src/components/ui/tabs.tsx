@@ -71,3 +71,6 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
     </div>;
   );
 }
+
+
+export default tabs;

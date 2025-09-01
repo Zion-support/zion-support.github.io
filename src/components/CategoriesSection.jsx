@@ -210,3 +210,6 @@ export function CategoriesSection({ showTitle = true }) {
         </section>
     );
 }
+
+
+export default CategoriesSection;

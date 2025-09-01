@@ -42,3 +42,6 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
         }
     };
     const pulseVariants = {
+
+
+export default PerformanceOptimizedLoader;

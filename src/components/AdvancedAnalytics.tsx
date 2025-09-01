@@ -578,3 +578,5 @@ export function AdvancedAnalytics({
     </>
   );
 }}}}}}}}}}}}}
+
+export default AdvancedAnalytics;

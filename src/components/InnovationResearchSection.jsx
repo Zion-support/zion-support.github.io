@@ -598,3 +598,6 @@ export function InnovationResearchSection() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default InnovationResearchSection;

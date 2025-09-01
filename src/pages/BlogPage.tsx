@@ -246,3 +246,5 @@ export function BlogPage(...args: any[]): any {
     </div>
   );
 }
+
+export default BlogPage;

@@ -382,3 +382,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
     </div>
   );
 };
+
+
+export default Sidebar;

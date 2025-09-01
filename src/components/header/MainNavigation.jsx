@@ -146,3 +146,6 @@ export function MainNavigation({ className }) {
       </NavLink>
     </nav>);
 }
+
+
+export default MainNavigation;

@@ -171,3 +171,6 @@ export function FeaturesSection() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default FeaturesSection;

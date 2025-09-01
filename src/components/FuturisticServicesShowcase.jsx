@@ -298,3 +298,6 @@ export const FuturisticServicesShowcase = () => {
         </motion.div>
       </div>
     </div>)};
+
+
+export default FuturisticServicesShowcase;

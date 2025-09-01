@@ -718,3 +718,6 @@ export function EnhancedContact(...args[]):  {
     </div>;
   );
 }
+
+
+export default EnhancedContact;

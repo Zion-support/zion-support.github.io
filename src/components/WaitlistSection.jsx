@@ -24,3 +24,6 @@ export function WaitlistSection() {
         </form>
       </div>
     </section>)}
+
+
+export default WaitlistSection;

@@ -936,3 +936,5 @@ export function EnhancedNewServices2025(...args: any[]): any {
     </div>
   );
 }
+
+export default EnhancedNewServices2025;

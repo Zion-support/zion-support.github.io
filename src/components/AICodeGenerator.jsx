@@ -807,3 +807,6 @@ export const AICodeGenerator = () => {
           </motion.div>)}
       </div>
     </div>)};
+
+
+export default AICodeGenerator;

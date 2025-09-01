@@ -338,3 +338,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
           </motion.div>)}
       </AnimatePresence>
     </>)};
+
+
+export default BundleAnalyzer;

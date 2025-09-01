@@ -24,18 +24,18 @@ import {
   ShoppingCart
  } from 'lucide-react';
 
-export default function AIServices(...args[]):  {
+export default function AIServices() {
   const aiServices = [
     {
       name: "AI Strategy & Consulting",
       description: "Strategic guidance on implementing AI solutions across your organization",
       icon: Target,
-      features[;
+      features: [
         "AI readiness assessment",
         "Technology roadmap planning",
         "ROI analysis and business case development",
         "Change management strategies"
-      ],;
+      ],
       price: "From $2,500",
       duration: "2-4 weeks"
     },
@@ -43,12 +43,12 @@ export default function AIServices(...args[]):  {
       name: "Machine Learning Development",
       description: "Custom ML models and algorithms tailored to your specific business needs",
       icon: Brain,
-      features[;
+      features: [
         "Custom model development",
         "Data preprocessing and feature engineering",
         "Model training and optimization",
         "Performance monitoring and maintenance"
-      ],;
+      ],
       price: "From $5,000",
       duration: "4-8 weeks"
     },
@@ -56,12 +56,12 @@ export default function AIServices(...args[]):  {
       name: "AI-Powered Applications",
       description: "Intelligent automation and insights through custom AI applications",
       icon: Zap,
-      features[;
+      features: [
         "Chatbot and virtual assistant development",
         "Predictive analytics applications",
         "Computer vision solutions",
         "Natural language processing systems"
-      ],;
+      ],
       price: "From $8,500",
       duration: "6-12 weeks"
     },
@@ -69,48 +69,47 @@ export default function AIServices(...args[]):  {
       name: "AI Infrastructure & MLOps",
       description: "Scalable AI infrastructure and machine learning operations",
       icon: Cloud,
-      features[;
+      features: [
         "ML pipeline automation",
-        "Model versioning and deployment",;
-        "Scalable training infrastructure",;
-        "Monitoring and alerting systems";
-      ],;
-      price: "From $6,000",;
-      duration: "4-10 weeks";
-    };
+        "Model versioning and deployment",
+        "Scalable training infrastructure",
+        "Monitoring and alerting systems"
+      ],
+      price: "From $6,000",
+      duration: "4-10 weeks"
+    }
   ];
 
-  const aiTechnologies = [;
-    { name: "TensorFlow", description: "Open-source ML framework", icon: Code },;
-    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },;
-    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },;
-    { name: "Computer Vision", description: "Image and video analysis", icon: Eye },;
-    { name: "NLP", description: "Natural language processing", icon: MessageSquare },;
-    { name: "AutoML", description: "Automated machine learning", icon: Zap };
+  const aiTechnologies = [
+    { name: "TensorFlow", description: "Open-source ML framework", icon: Code },
+    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },
+    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },
+    { name: "Computer Vision", description: "Image and video analysis", icon: Eye },
+    { name: "NLP", description: "Natural language processing", icon: MessageSquare },
+    { name: "AutoML", description: "Automated machine learning", icon: Zap }
   ];
 
   const useCases = [
     {
       industry: "Healthcare",
-      applications["Medical image analysis", "Drug discovery", "Patient risk prediction"],;
+      applications: ["Medical image analysis", "Drug discovery", "Patient risk prediction"],
       icon: Heart
     },
     {
       industry: "Finance",
-      applications["Fraud detection", "Credit scoring", "Algorithmic trading"],;
+      applications: ["Fraud detection", "Credit scoring", "Algorithmic trading"],
       icon: DollarSign
     },
     {
       industry: "Manufacturing",
-      applications["Predictive maintenance", "Quality control", "Supply chain optimization"],;
+      applications: ["Predictive maintenance", "Quality control", "Supply chain optimization"],
       icon: Factory
     },
-    };
-    {;
-      industry: "Retail",;
-      applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],;
-      icon: ShoppingCart;
-    };
+    {
+      industry: "Retail",
+      applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
+      icon: ShoppingCart
+    }
   ];
 
   return (
@@ -133,7 +132,7 @@ export default function AIServices(...args[]):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-
+              >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -154,7 +153,7 @@ export default function AIServices(...args[]):  {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -170,7 +169,7 @@ export default function AIServices(...args[]):  {
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-
+              >
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
                     <service.icon className="h-8 w-8 text-white" />
@@ -209,7 +208,7 @@ export default function AIServices(...args[]):  {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -225,20 +224,20 @@ export default function AIServices(...args[]):  {
               <div
                 key={index}
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
-
+              >
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <tech.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
                 <p className="text-slate-400 text-sm">{tech.description}</p>
-              </div>;
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -254,7 +253,7 @@ export default function AIServices(...args[]):  {
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
-
+              >
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-12 h-12 mb-4 flex items-center justify-center">
                   <useCase.icon className="h-6 w-6 text-white" />
                 </div>
@@ -267,14 +266,14 @@ export default function AIServices(...args[]):  {
                     </li>
                   ))}
                 </ul>
-              </div>;
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -287,20 +286,20 @@ export default function AIServices(...args[]):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-
+              >
                 Schedule Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-
+              >
                 Explore All Services
               </Link>
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

@@ -133,3 +133,6 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
     </div>;
   );
 }
+
+
+export default ChatAssistant;

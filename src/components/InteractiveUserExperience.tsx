@@ -371,3 +371,5 @@ const InteractiveUserExperience: React.FC = () => {
 };
 
 export { InteractiveUserExperience };
+
+export default InteractiveUserExperience;

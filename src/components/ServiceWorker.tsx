@@ -145,3 +145,5 @@ setSwState(prev: > ({ ;
     </AnimatePresence>;
   );
 }
+
+export default ServiceWorker;

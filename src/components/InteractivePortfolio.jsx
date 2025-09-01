@@ -342,3 +342,6 @@ export function InteractivePortfolio() {
           </div>
         </div>)}
     </section>)}
+
+
+export default InteractivePortfolio;

@@ -392,3 +392,6 @@ export function TechSolutionsSection() {
         </motion.div>
       </div>
     </section>)}
+
+
+export default TechSolutionsSection;

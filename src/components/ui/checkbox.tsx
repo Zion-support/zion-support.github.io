@@ -22,3 +22,6 @@ export function Checkbox(...args[]):  {
     </label>;
   );
 }
+
+
+export default checkbox;

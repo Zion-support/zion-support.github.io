@@ -48,3 +48,6 @@ export function BlogSection(...args[]):  {
     </section>;
   );
 }
+
+
+export default BlogSection;
