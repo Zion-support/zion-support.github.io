@@ -29,7 +29,7 @@ contactInfo: {
     uptime: string;
     security: string[]}}
 
-export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
+export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
   // AI-Powered Cybersecurity Threat Intelligence
   {
     id: "ai-cybersecurity-threat-intelligence",
@@ -1348,4 +1348,4 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
   }
 ];
 
-export default EXPANDED_INNOVATIVE_SERVICES_2025;}}
+export default EXPANDED_INNOVATIVE_SERVICES_2025;}};

@@ -9,7 +9,6 @@ function toCamelCase(str) {
         '3': 'Three',
         '2': 'Two',
         '1': 'One',
-  <<<<<<< HEAD
         '0': 'Zero'
       
 
@@ -43,7 +42,7 @@ function fixFile(filePath) {
     // Replace the export statement
     newContent = newContent.replace(
       new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, '\\$&')};`, 'g'),
-      `export default ${camelCaseName};`
+export default ${camelCaseName};`;
     );
 
     // Update title and meta description

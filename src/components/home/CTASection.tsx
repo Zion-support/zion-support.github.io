@@ -308,4 +308,4 @@ const CTASection: React.FC = (): JSX.Element => {
   );
 };
 
-export default CTASection;}}
+export default CTASection;}};

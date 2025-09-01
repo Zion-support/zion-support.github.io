@@ -11,7 +11,7 @@ interface User {
   createdAt?: string;
   updatedAt?: string}
 
-export const useAuthEventHandlers = (
+export const useAuthEventHandlers = (;
   setUser: (user: User | null)  => void,
   setOnboardingStep: (step: number)  => void
 ) => {;

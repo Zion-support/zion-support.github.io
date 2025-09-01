@@ -100,7 +100,6 @@ class IntelligentConflictResolver {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.startsWith('<<<<<<<')) {
         const marker = {
           start: i,
           startMarker: line,
@@ -109,15 +108,6 @@ class IntelligentConflictResolver {
         
         // Find the separator
         for (let j = i + 1; j < lines.length; j++) {
-          if (lines[j].startsWith('=======')) {
-            marker.separator = j;
-            break;
-          }
-        }
-        
-        // Find the end marker
-        for (let j = marker.separator + 1; j < lines.length; j++) {
-          if (lines[j].startsWith('>>>>>>>')) {
             marker.end = j;
             marker.endMarker = lines[j];
             marker.otherBranch = lines[j].substring(8).trim();

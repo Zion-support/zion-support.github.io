@@ -1,15 +1,15 @@
 import { ProductListing  } from '@/types/listings';
-import { REVOLUTIONARY_SERVICES_2030  } from "./revolutionaryServices2030";
+import { REVOLUTIONARY_SERVICES_2030  } from "revolutionaryServices2030.ts";
 
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
 
-export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [
+export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [;
   ...REVOLUTIONARY_SERVICES_2030
 ];
 
 // Service Categories for easy filtering
-export const SERVICE_CATEGORIES_2030 = [
+export const SERVICE_CATEGORIES_2030 = [;
   "AI & Business Intelligence",
   "AI & Marketing",
   "AI & Healthcare",

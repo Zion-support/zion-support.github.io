@@ -36,7 +36,7 @@ export interface InnovativeService2028 {
   scalabilityFeatures?: string[];
 }
 
-export const INNOVATIVE_SERVICES_2028: InnovativeService2028[] = [
+export const INNOVATIVE_SERVICES_2028: InnovativeService2028[] = [;
   // AI-Powered Enterprise Solutions
   {
     id: "ai-enterprise-architecture-platform",

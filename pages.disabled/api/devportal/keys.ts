@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { ApiScope } from '../../../utils/devportal/types';
-import { createApiKey, getUserIdFromRequest } from '../../../utils/devportal/auth';
+import { { createApiKey, getUserIdFromRequest }, { generateApiToken } } from '../../../utils/devportal/auth';
 import { getApiKeys, saveApiKeys } from '../../../utils/devportal/storage';
-import { generateApiToken } from '../../../utils/devportal/auth';
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const userId = getUserIdFromRequest(req);

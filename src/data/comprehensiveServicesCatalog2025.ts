@@ -1,6 +1,6 @@
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "./innovativeMicroSaasServices2025";
-import { EXPANDED_INNOVATIVE_SERVICES_2025, SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "./expandedInnovativeServices2025";
-import { EMERGING_TECH_SERVICES_2025, EMERGING_TECH_SOLUTIONS_2025 } from "./emergingTechServices2025";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "innovativeMicroSaasServices2025.ts";
+import { EXPANDED_INNOVATIVE_SERVICES_2025, SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "expandedInnovativeServices2025.ts";
+import { EMERGING_TECH_SERVICES_2025, EMERGING_TECH_SOLUTIONS_2025 } from "emergingTechServices2025.ts";
 
 export interface ComprehensiveService2025 {
 
@@ -38,14 +38,14 @@ contactInfo: {
   betaAccess?: boolean}
 
 // Combine all services into one comprehensive catalog
-export const COMPREHENSIVE_SERVICES_CATALOG_2025: ComprehensiveService2025[] = [
+export const COMPREHENSIVE_SERVICES_CATALOG_2025: ComprehensiveService2025[] = [;
   ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
   ...EXPANDED_INNOVATIVE_SERVICES_2025,
   ...EMERGING_TECH_SERVICES_2025
 ];
 
 // Service categories for easy filtering
-export const SERVICE_CATEGORIES = [
+export const SERVICE_CATEGORIES = [;
   "AI & Analytics",
   "AI & Customer Experience",
   "AI & FinTech",
@@ -266,4 +266,4 @@ export const getServiceRecommendations = (preferences: {;
     const bScore = parseInt(b.roi.replace(/\D/g, ''));
     return bScore - aScore})};
 
-export default COMPREHENSIVE_SERVICES_CATALOG_2025;}}}}}
+export default COMPREHENSIVE_SERVICES_CATALOG_2025;}}}}};

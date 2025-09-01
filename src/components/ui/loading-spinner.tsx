@@ -178,4 +178,4 @@ export const SkeletonLoader: React.FC<{
   </div>;
 );
 
-export default LoadingSpinner;</motion.div></motion.div>}
+export default LoadingSpinner;</motion.div></motion.div>};

@@ -241,4 +241,4 @@ export const GridSkeleton: React.FC<{
   </div>;
 );
 
-export default Skeleton;}</motion.div></motion.div>}
+export default Skeleton;}</motion.div></motion.div>};

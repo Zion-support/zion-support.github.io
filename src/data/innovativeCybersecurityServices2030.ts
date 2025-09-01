@@ -68,7 +68,7 @@ const zionContact = {
 
 };
 
-export const innovativeCybersecurityServices2030: CybersecurityService[] = [
+export const innovativeCybersecurityServices2030: CybersecurityService[] = [;
   {
     id: "quantum-resistant-encryption",
     title: "Zion Quantum-Resistant Encryption Platform",
@@ -536,4 +536,4 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   };
 ];
 
-export default innovativeCybersecurityServices2030;}}
+export default innovativeCybersecurityServices2030;}};

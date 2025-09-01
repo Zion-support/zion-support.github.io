@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
-import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap } from "lucide-react";
+import { { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap } } from 'lucide-react';
 export default function MicroSAASServicesPage() {
     const microSAASServices = [
         {
@@ -698,7 +698,7 @@ import {Star,
             FileText,
             MessageCircle,
             ArrowRight,
-            Sparkles} from 'lucide-react';
+
 import {Link} from 'react-router-dom';
 
 export default function MicroSaasServicesPage() { /* empty */ }

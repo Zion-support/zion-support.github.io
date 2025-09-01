@@ -49,7 +49,7 @@ const zionContact = {
 };
 
 // Revolutionary Micro SAAS Services Pricing
-export const revolutionaryMicroSaasPricing: ServicePricing[] = [
+export const revolutionaryMicroSaasPricing: ServicePricing[] = [;
   {
     serviceId: "neuralflow-enterprise",
     serviceName: "NeuralFlow Enterprise",
@@ -266,7 +266,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
 ];
 
 // Revolutionary IT Services Pricing
-export const revolutionaryITServicesPricing: ServicePricing[] = [
+export const revolutionaryITServicesPricing: ServicePricing[] = [;
   {
     serviceId: "quantum-infrastructure-consulting",
     serviceName: "Quantum Infrastructure Consulting",
@@ -353,7 +353,7 @@ export const revolutionaryITServicesPricing: ServicePricing[] = [
 ];
 
 // Revolutionary AI Services Pricing
-export const revolutionaryAIServicesPricing: ServicePricing[] = [
+export const revolutionaryAIServicesPricing: ServicePricing[] = [;
   {
     serviceId: "multimodal-ai-orchestration",
     serviceName: "Multimodal AI Orchestration",

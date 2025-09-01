@@ -31,7 +31,7 @@ contactInfo: {
   competitors?: string[];
   marketSize?: string}
 
-export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3Service[] = [
+export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3Service[] = [;
   // DeFi Platform & Yield Farming
   {
     id: "defi-platform-yield-farming",

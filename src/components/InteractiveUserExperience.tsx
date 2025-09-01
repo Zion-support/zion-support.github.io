@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Progress } from './ui/progress';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import { Card, CardContent, CardHeader, CardTitle } from 'ui/card.tsx';
+import { Button } from 'ui/button.tsx';
+import { Badge } from 'ui/badge.tsx';
+import { Progress } from 'ui/progress.tsx';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from 'ui/tabs.tsx';
 import {
   User,
   Settings,

@@ -55,7 +55,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   );
 };
 
-export const CardSkeleton: React.FC = (): JSX.Element => (
+export const CardSkeleton: React.FC = (): JSX.Element => (;
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-pulse">
     <div className="flex items-center space-x-4 mb-4">
       <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
@@ -70,7 +70,7 @@ export const CardSkeleton: React.FC = (): JSX.Element => (
   </div>
 );
 
-export const HeroSkeleton: React.FC = (): JSX.Element => (
+export const HeroSkeleton: React.FC = (): JSX.Element => (;
   <div className="animate-pulse">
     <div className="h-96 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded-lg mb-8"></div>
     <div className="max-w-4xl mx-auto text-center">
@@ -84,7 +84,7 @@ export const HeroSkeleton: React.FC = (): JSX.Element => (
   </div>
 );
 
-export const ServiceCardSkeleton: React.FC = (): JSX.Element => (
+export const ServiceCardSkeleton: React.FC = (): JSX.Element => (;
   <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 animate-pulse">
     <div className="w-16 h-16 bg-gray-300 rounded-lg mb-4"></div>
     <Skeleton height="h-6" width="w-3/4" className="mb-3" />

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/Button';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { Checkbox } from './ui/checkbox';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from 'ui/card.tsx';
+import { Button } from 'ui/Button.jsx';
+import { Input } from 'ui/input.tsx';
+import { Textarea } from 'ui/textarea.jsx';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from 'ui/select.tsx';
+import { Checkbox } from 'ui/checkbox.tsx';
 import { Mail, Phone, Building, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 export const QuoteRequestForm = () => {

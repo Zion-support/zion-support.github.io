@@ -31,7 +31,7 @@ contactInfo: {
   competitors?: string[];
   marketSize?: string}
 
-export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
+export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [;
   // Zero Trust Network Architecture
   {
     id: "zero-trust-network-architecture",

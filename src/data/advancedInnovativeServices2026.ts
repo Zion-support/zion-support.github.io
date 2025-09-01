@@ -31,7 +31,7 @@ contactInfo: {
   competitors?: string[];
   caseStudies?: string[]}
 
-export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [
+export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [;
   {
     id: 'quantum-ai-neural-networks-2026',
     title: 'Quantum AI Neural Networks',

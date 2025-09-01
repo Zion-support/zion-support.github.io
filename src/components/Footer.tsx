@@ -69,7 +69,6 @@ import {
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
     const handleScroll = () => {

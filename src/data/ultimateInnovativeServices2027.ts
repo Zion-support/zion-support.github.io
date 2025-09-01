@@ -44,7 +44,7 @@ contactInfo: {
   };
 }
 
-export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] = [
+export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] = [;
   // AI-Powered Quantum Computing Platform
   {
     id: "ai-quantum-computing-platform",

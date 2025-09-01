@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieChart, Activity, Star, ArrowUpRight, ArrowDownRight, Shield, Brain, Rocket } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "ui/card.tsx";
+import { Button } from "ui/button.tsx";
+import { Badge } from "ui/badge.tsx";
 const AdvancedAnalyticsDashboard = () => {
     const [timeRange, setTimeRange] = useState('30d');
     const [selectedMetric, setSelectedMetric] = useState('overview');

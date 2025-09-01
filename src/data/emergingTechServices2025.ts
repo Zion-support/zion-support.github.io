@@ -33,7 +33,7 @@ contactInfo: {
   marketSize?: string;
 }
 
-export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
+export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [;
   // Quantum Computing Solutions
   {
     id: "quantum-optimization-platform",
@@ -360,4 +360,4 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
   }
 ];
 
-export default EMERGING_TECH_SERVICES_2025;}}}}}}}}}}}
+export default EMERGING_TECH_SERVICES_2025;}}}}}}}}}}};

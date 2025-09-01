@@ -441,4 +441,4 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
   );
 };
 
-export default AIHRPlatform;}}}
+export default AIHRPlatform;}}};

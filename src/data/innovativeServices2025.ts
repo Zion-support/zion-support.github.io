@@ -31,7 +31,7 @@ export interface InnovativeService {
   technicalSpecs: string[];
 }
 
-export const innovativeServices2025: InnovativeService[] = [
+export const innovativeServices2025: InnovativeService[] = [;
   // AI & Machine Learning Services
   {
     id: 'ai-autonomous-research-assistant',

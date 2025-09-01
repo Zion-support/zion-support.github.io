@@ -1,7 +1,7 @@
 import { ProductListing } from "@/types/listings";
 
 // Enhanced Zion Tech Group Services 2025 - Real Micro SAAS, IT & AI Solutions
-export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
+export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [;
   // AI-Powered Business Intelligence & Analytics
   {
     id: "ai-business-intelligence-suite",

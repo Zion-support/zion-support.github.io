@@ -101,7 +101,7 @@ const zionContact: ServiceContact = {
 };
 
 // Innovative Micro SAAS Services 2031
-export const innovativeMicroSaasServices2031: MicroSaasService[] = [
+export const innovativeMicroSaasServices2031: MicroSaasService[] = [;
   {
     id: 1,
     name: "QuantumFlow Pro",
@@ -335,7 +335,7 @@ export const innovativeMicroSaasServices2031: MicroSaasService[] = [
 ];
 
 // Innovative IT Infrastructure Services 2031
-export const innovativeITInfrastructureServices2031: ITService[] = [
+export const innovativeITInfrastructureServices2031: ITService[] = [;
   {
     id: 1,
     name: "Quantum Cloud Infrastructure",
@@ -554,7 +554,7 @@ export const innovativeITInfrastructureServices2031: ITService[] = [
 ];
 
 // Innovative AI Services 2031
-export const innovativeAIServices2031: AIService[] = [
+export const innovativeAIServices2031: AIService[] = [;
   {
     id: 1,
     name: "Quantum AI Hybrid Platform",

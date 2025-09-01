@@ -59,7 +59,7 @@ const zionContact: ServiceContact = {
 };
 
 // Comprehensive AI Services 2030
-export const comprehensiveAIServices2030: AIService[] = [
+export const comprehensiveAIServices2030: AIService[] = [;
   {
     id: 1,
     name: "AI-Powered Predictive Analytics Platform",
@@ -649,4 +649,4 @@ export const comprehensiveAIServices2030: AIService[] = [
 
 ];
 
-export default comprehensiveAIServices2030;}}}
+export default comprehensiveAIServices2030;}}};

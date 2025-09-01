@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from 'lucide-react';
-import SEO from '@/components/SEO';
+import { SEO, { SEO } } from '@/components/SEO';
 import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitFork } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+
 const features = [
     {
         title: "Automated Code Analysis",

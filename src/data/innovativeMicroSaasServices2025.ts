@@ -35,7 +35,7 @@ export interface InnovativeMicroSaasService {
   documentationUrl?: string;
 }
 
-export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] = [
+export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] = [;
   // AI-Powered Business Intelligence & Analytics
   {
     id: "ai-business-intelligence-platform",

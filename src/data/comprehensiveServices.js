@@ -1,4 +1,4 @@
-export const comprehensiveServices = [
+export const comprehensiveServices = [;
   {
     id: 1,
     name: 'IT Infrastructure Management',
@@ -217,7 +217,7 @@ export const comprehensiveServices = [
   }
 ];
 
-export const serviceCategories = [
+export const serviceCategories = [;
   {
     name: 'Infrastructure',
     description: 'Core IT infrastructure services',
@@ -256,7 +256,7 @@ export const serviceCategories = [
   }
 ];
 
-export const pricingTiers = [
+export const pricingTiers = [;
   {
     name: 'Starter',
     description: 'Perfect for small businesses',
@@ -359,7 +359,7 @@ export const getServiceRecommendations = (businessSize, industry, budget) => {
 };
 
 // Service categories for filtering
-export const SERVICE_CATEGORIES = [
+export const SERVICE_CATEGORIES = [;
   { label: 'Infrastructure', value: 'infrastructure' },
   { label: 'Security', value: 'security' },
   { label: 'Cloud', value: 'cloud' },

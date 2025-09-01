@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';
-import { Button } from "./button";
+import { Button } from "button.tsx";
 export function AccessibilityMenu() {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({

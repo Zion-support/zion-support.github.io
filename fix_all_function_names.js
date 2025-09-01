@@ -15,7 +15,6 @@ function fileName = path.basename(filePath, path.extname(filePath));
           2: "Two",
           1: "One",
           0: "Zero",
-  <<<<<<< HEAD
         
 
 };

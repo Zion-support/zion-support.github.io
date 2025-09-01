@@ -100,4 +100,4 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
   );
 };
 
-export default HeroFeatures;}}
+export default HeroFeatures;}};

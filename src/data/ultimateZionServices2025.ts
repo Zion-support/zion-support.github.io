@@ -107,7 +107,7 @@ const zionContact: ServiceContact = {
 };
 
 // Ultimate Micro SAAS Services 2025
-export const ultimateMicroSaasServices2025: MicroSaasService[] = [
+export const ultimateMicroSaasServices2025: MicroSaasService[] = [;
   {
     id: 1,
     name: "NeuralFlow Enterprise",
@@ -495,7 +495,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
 ];
 
 // Ultimate IT Infrastructure Services 2025
-export const ultimateITInfrastructureServices2025: ITService[] = [
+export const ultimateITInfrastructureServices2025: ITService[] = [;
   {
     id: 1,
     name: "Enterprise Network Architecture",
@@ -634,7 +634,7 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
 ];
 
 // Ultimate AI Services 2025
-export const ultimateAIServices2025: AIService[] = [
+export const ultimateAIServices2025: AIService[] = [;
   {
     id: 1,
     name: "Enterprise AI Platform",

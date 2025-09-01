@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "ui/card.tsx";
+import { Button } from "ui/button.tsx";
+import { Badge } from "ui/badge.tsx";
 const AdvancedServiceRecommendation = () => {
     const [clientProfile, setClientProfile] = useState({
         industry: '',

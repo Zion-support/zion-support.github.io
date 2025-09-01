@@ -33,7 +33,7 @@ author: {
     verified: boolean};
   images: string[];
   createdAt: string}
-export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
+export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
   // AI & Machine Learning Services
   {
     id: "ai-chatbot-builder",

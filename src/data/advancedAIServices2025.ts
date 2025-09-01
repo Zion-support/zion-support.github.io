@@ -33,7 +33,7 @@ contactInfo: {
   competitors?: string[];
   marketSize?: string}
 
-export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
+export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [;
   // AI-Powered Autonomous Business Operations
   {
     id: "ai-autonomous-business-operations",
@@ -577,4 +577,4 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
   }
 ];
 
-export default ADVANCED_AI_SERVICES_2025;}}
+export default ADVANCED_AI_SERVICES_2025;}};

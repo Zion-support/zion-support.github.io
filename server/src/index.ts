@@ -43,7 +43,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Import API routes
-import apiRoutes from "./routes/api";
+import apiRoutes from "routes/api.ts";
 
 // API Routes
 app.use('/api/health', (_req, res) => {

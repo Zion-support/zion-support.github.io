@@ -33,7 +33,7 @@ contactInfo: {
   demoUrl?: string;
   documentationUrl?: string}
 
-export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
+export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [;
   // Quantum Computing Solutions
   {
     id: "quantum-ai-orchestrator",
@@ -638,4 +638,4 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
 
 ];
 
-export default NEXT_GEN_INNOVATIVE_SERVICES_2025;}}
+export default NEXT_GEN_INNOVATIVE_SERVICES_2025;}};

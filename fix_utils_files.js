@@ -11,7 +11,7 @@ function fixUtilsFile(filePath) {
     );
     content = content.replace(
       /export,\s*const\s+([^=]+)\s*=\s*([^;]+);/g,
-      "export const $1 = $2;",
+      "export const $1 = $2;",;
     );
     content = content.replace(
       /import\s+React\s+from\s*'rea\s*c\s*t';;'/g,

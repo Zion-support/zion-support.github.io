@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
-import { LoadingSpinner } from "./ui/loading-spinner";
+import { LoadingSpinner } from "ui/loading-spinner.tsx";
 // Lazy load heavy components
 const LazyExpensiveComponent = lazy(() => import('./ExpensiveComponent'));
 // Memoized component for expensive calculations

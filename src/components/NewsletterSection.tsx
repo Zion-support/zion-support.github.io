@@ -245,4 +245,4 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
   );
 };
 
-export default NewsletterSection;}}}
+export default NewsletterSection;}}};

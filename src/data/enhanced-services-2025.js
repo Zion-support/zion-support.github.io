@@ -1,4 +1,4 @@
-export const enhancedServices2025 = [
+export const enhancedServices2025 = [;
   {
     id: 1,
     title: "AI & Machine Learning Solutions",
@@ -169,4 +169,4 @@ export const enhancedServices2025 = [
   }
 ];
 
-export const EnhancedService2025 = enhancedServices2025[0]; // Default export for compatibility
+export const EnhancedService2025 = enhancedServices2025[0]; // Default export for compatibility;

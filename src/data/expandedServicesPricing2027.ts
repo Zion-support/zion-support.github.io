@@ -68,7 +68,7 @@ starter: {
     address: string}}
 
 // 1. CYBERSECURITY SERVICES PRICING
-export const cybersecurityPricing: ExpandedServicePricing[] = [
+export const cybersecurityPricing: ExpandedServicePricing[] = [;
   {
     serviceId: 'quantum-threat-hunter',
     serviceName: 'Quantum Threat Hunter',
@@ -381,7 +381,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
 ];
 
 // 2. DATA ANALYTICS SERVICES PRICING
-export const dataAnalyticsPricing: ExpandedServicePricing[] = [
+export const dataAnalyticsPricing: ExpandedServicePricing[] = [;
   {
     serviceId: 'predictive-insights-engine',
     serviceName: 'Predictive Insights Engine',
@@ -533,7 +533,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
 ];
 
 // 3. CLOUD & DEVOPS SERVICES PRICING
-export const cloudDevOpsPricing: ExpandedServicePricing[] = [
+export const cloudDevOpsPricing: ExpandedServicePricing[] = [;
   {
     serviceId: 'multi-cloud-orchestrator',
     serviceName: 'Multi-Cloud Orchestrator',
@@ -685,7 +685,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
 ];
 
 // 4. IOT & EDGE COMPUTING SERVICES PRICING
-export const iotEdgePricing: ExpandedServicePricing[] = [
+export const iotEdgePricing: ExpandedServicePricing[] = [;
   {
     serviceId: 'industrial-iot-intelligence',
     serviceName: 'Industrial IoT Intelligence Platform',
@@ -837,7 +837,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
 ];
 
 // 5. FINANCIAL TECHNOLOGY SERVICES PRICING
-export const finTechPricing: ExpandedServicePricing[] = [
+export const finTechPricing: ExpandedServicePricing[] = [;
   {
     serviceId: 'quantum-financial-modeling',
     serviceName: 'Quantum Financial Modeling Platform',
@@ -989,7 +989,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
 ];
 
 // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING
-export const healthcarePricing: ExpandedServicePricing[] = [
+export const healthcarePricing: ExpandedServicePricing[] = [;
   {
     serviceId: 'ai-diagnostic-assistant',
     serviceName: 'AI Diagnostic Assistant',

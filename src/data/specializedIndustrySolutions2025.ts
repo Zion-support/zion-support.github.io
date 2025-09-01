@@ -24,7 +24,7 @@ pricing: {
   status: 'active' | 'beta' | 'coming-soon';
   compliance: string[];
   certifications: string[]}
-export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
+export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [;
   {
     id: 'healthcare-ai-platform',
     title: 'Healthcare AI Platform',

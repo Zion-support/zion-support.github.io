@@ -31,7 +31,7 @@ contactInfo: {
   competitors?: string[];
   marketSize?: string}
 
-export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [
+export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [;
   // Next-Generation Cloud Infrastructure
   {
     id: "next-gen-cloud-infrastructure",

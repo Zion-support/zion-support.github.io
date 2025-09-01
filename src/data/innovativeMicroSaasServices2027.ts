@@ -35,7 +35,7 @@ export interface InnovativeMicroSaasService2027 {
   compliance: string[];
   support: string[];
 }
-export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027[] = [
+export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027[] = [;
   // AI-Powered Business Solutions
   {
     id: "quantum-neural-network-platform",

@@ -4,4 +4,4 @@ import NotFound from "@/pages/NotFound";
 
 };
 
-export default ErrorRoutes;}
+export default ErrorRoutes;};

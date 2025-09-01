@@ -24,7 +24,7 @@ pricing: {
   status: 'active' | 'beta' | 'coming-soon';
   sla: string;
   support: string}
-export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
+export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [;
   {
     id: 'enterprise-cloud-migration',
     title: 'Enterprise Cloud Migration & Strategy',

@@ -34,7 +34,7 @@ contactInfo: {
   marketSize?: string;
 }
 
-export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
+export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [;
   // AI-Powered Financial Services
   {
     id: "ai-credit-risk-assessment",

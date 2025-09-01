@@ -31,7 +31,7 @@ const ${componentName}: NextPage = () => {
       </main>
     </div>
   )};
-export default ${componentName};`}
+export default ${componentName};`};
 // Function to fix empty files
 function files = fs.readdirSync(dir);
   

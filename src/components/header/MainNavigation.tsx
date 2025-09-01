@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
 import { cn } from "@/lib/utils";
-import { NavLink } from "react-router-dom";
+import { { Link }, { NavLink } } from 'react-router-dom';
 import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from "lucide-react";
 export function MainNavigation({ className }) {
     const [isServicesOpen, setIsServicesOpen] = useState(false);

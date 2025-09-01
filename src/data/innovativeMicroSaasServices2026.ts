@@ -1304,7 +1304,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
 ];
 
 // Additional specialized services for 2026
-export const SPECIALIZED_SERVICES_2026 = [
+export const SPECIALIZED_SERVICES_2026 = [;
   {
     id: "ai-powered-seo-optimizer-2026",
     title: "AI-Powered SEO Optimizer 2026",

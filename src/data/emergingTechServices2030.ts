@@ -40,7 +40,7 @@ export interface EmergingTechService2030 {
   scalabilityFeatures: string[];
 }
 
-export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
+export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [;
   {
     id: "quantum-consciousness-simulation-2030",
     title: "Quantum Consciousness Simulation Platform 2030",

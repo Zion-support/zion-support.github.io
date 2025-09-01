@@ -1,16 +1,16 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { Sidebar } from './components/Sidebar';
+import { Header } from 'components/Header.tsx';
+import { Footer } from 'components/Footer.tsx';
+import { Sidebar } from 'components/Sidebar.tsx';
 import { ErrorBoundary } from 'react-error-boundary';
-import { LoadingSpinner } from './components/ui/loading-spinner';
+import { LoadingSpinner } from 'components/ui/loading-spinner.tsx';
 
 // Enhanced Components
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import { ChatAssistant } from './components/ChatAssistant';
+import PerformanceOptimizer from 'components/PerformanceOptimizer.tsx';
+import EnhancedAccessibilityEnhancer from 'components/EnhancedAccessibilityEnhancer.tsx';
+import { MobileExperienceEnhancer } from 'components/MobileExperienceEnhancer.tsx';
+import { ChatAssistant } from 'components/ChatAssistant.tsx';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -24,7 +24,7 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.ServicesPage })));
+const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
 const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
 const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));

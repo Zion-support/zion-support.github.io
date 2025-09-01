@@ -1,4 +1,4 @@
-import { GradientHeading } from "./GradientHeading";
+import { GradientHeading } from "GradientHeading.tsx";
 import { Link } from "react-router-dom";
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
 import { motion } from "framer-motion";

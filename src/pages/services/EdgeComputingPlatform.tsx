@@ -699,4 +699,4 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
   );
 };
 
-export default EdgeComputingPlatform;}}}}}}
+export default EdgeComputingPlatform;}}}}}};

@@ -1,4 +1,4 @@
-export const EXPANDED_SERVICE_SUBCATEGORIES = [
+export const EXPANDED_SERVICE_SUBCATEGORIES = [;
     "Content Creation",
     "Computer Vision",
     "Wealth Management",

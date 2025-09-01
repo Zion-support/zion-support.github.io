@@ -9,7 +9,7 @@ export interface EquipmentItem {
   specs: string[];
   availability: boolean}
 
-export const EQUIPMENT_DETAILS: EquipmentItem[] = [
+export const EQUIPMENT_DETAILS: EquipmentItem[] = [;
   {
     id: "1",
     name: "High-Performance GPU Server",

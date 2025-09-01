@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
-import { Input } from "./ui/input";
+import { Card, CardContent, CardHeader, CardTitle } from "ui/card.tsx";
+import { Button } from "ui/button.tsx";
+import { Badge } from "ui/badge.tsx";
+import { Input } from "ui/input.tsx";
 const COMPLEXITY_LEVELS = ['Basic', 'Intermediate', 'Advanced', 'Enterprise'];
 const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
 export const AdvancedServiceComparison = () => {

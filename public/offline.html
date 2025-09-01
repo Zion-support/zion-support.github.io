@@ -22,7 +22,6 @@
     <!-- Manifest -->
     <link rel="manifest" href="/manifest.json">
     
-=======
     <title>Zion Tech Group - Offline</title>
     <meta name="description" content="You're currently offline. Check your internet connection and try again.">
     <meta name="theme-color" content="#2e73ea">
@@ -33,7 +32,6 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e293b 100%);
             color: #ffffff;
-=======
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
@@ -57,7 +55,6 @@
             font-weight: 700;
             margin-bottom: 20px;
             background: linear-gradient(135deg, #22ddd2, #8c15e9);
-=======
 
         .offline-container {
             max-width: 500px;
@@ -135,7 +132,6 @@
             transition: all 0.3s ease;
             text-decoration: none;
             background: linear-gradient(135deg, #0ea5e9, #3b82f6);
-=======
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -154,7 +150,6 @@
         .btn-secondary {
             background: rgba(255, 255, 255, 0.1);
             color: #f8fafc;
-=======
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
@@ -162,7 +157,6 @@
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.15);
             border-color: rgba(255, 255, 255, 0.3);
-=======
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }
@@ -213,7 +207,6 @@
             border-radius: 20px;
             font-size: 0.9rem;
             backdrop-filter: blur(10px);
-=======
             box-shadow: 0 10px 25px rgba(34, 221, 210, 0.3);
         }
 
@@ -277,12 +270,10 @@
                 font-size: 1rem;
             }
 
-=======
             .offline-subtitle {
                 font-size: 1rem;
             }
 
-=======
         
         .offline-container {
             max-width: 600px;
@@ -351,7 +342,6 @@
         
         .btn {
             padding: 16px 32px;
-=======
         .subtitle {
             font-size: 1.2rem;
             color: #94a3b8;
@@ -653,7 +643,6 @@
                 });
             });
         }
-=======
             const statusElement = document.getElementById('networkStatus');
             statusElement.innerHTML = '❌ Connection lost. Please check your internet.';
             statusElement.style.background = 'rgba(239, 68, 68, 0.1)';
@@ -666,7 +655,6 @@
 
         // Initial check
         checkConnection();
-=======
         // Check connection status
         function updateConnectionStatus() {
             if (navigator.onLine) {

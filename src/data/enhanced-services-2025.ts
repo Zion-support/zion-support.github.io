@@ -29,7 +29,7 @@ pricing: {
     email: string;
     address: string;
     website: string}}
-export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
+export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [;
   // AI-Powered Autonomous Services
   {
     id: "ai-autonomous-business-manager",
@@ -87,7 +87,7 @@ const CONTACT = {
 
 };
 
-export const enhancedServices2025: EnhancedService[] = [
+export const enhancedServices2025: EnhancedService[] = [;
     {
         id: 'ai-powered-code-review-assistant',
         name: 'AI-Powered Code Review Assistant',
@@ -1101,4 +1101,4 @@ export const enhancedServices2025: EnhancedService[] = [
   }
 ];
 
-export default enhancedServices2025;}}
+export default enhancedServices2025;}};

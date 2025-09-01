@@ -33,7 +33,7 @@ contactInfo: {
   uniqueValue?: string;
 }
 
-export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
+export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [;
   // Quantum AI Services
   {
     id: "quantum-ai-optimization-platform",

@@ -27,7 +27,7 @@ function fixCorruptedFile(filePath) {
       .replace(/(\w+),\s*(\w+),\s*(\w+)/g, "$1$2$3")
       .replace(/(\w+),\s*(\w+)/g, "$1$2")
       // Fix export statements
-      .replace(/export,\s*default,\s*(\w+);/g, "export default $1;")
+export default $1;");
       // Fix return statements
       .replace(/retu,\s*r,\s*n\s*\(/g, "return (")
       // Fix closing brackets and parentheses

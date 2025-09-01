@@ -30,7 +30,7 @@ import {
   MapPin,
   ExternalLink,
  } from 'lucide-react';
-import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from "../data/enhancedInnovativeServices2027";
+import { { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  }, { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } } from '../data/enhancedInnovativeServices2027';
 const categoryColors: { [key: string]: string } = {
   'Web3 Solutions': 'from-purple-500 to-pink-500',
   'Metaverse Solutions': 'from-blue-500 to-cyan-500',
@@ -83,7 +83,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
   X,;
   Beaker;
 } from 'lucide-react';
-import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data/enhancedInnovativeServices2027";
+
 
 const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027);

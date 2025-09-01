@@ -810,4 +810,4 @@ import { Mail,
   );
 };
 
-export default ForgotPassword;}}}}}}}}}}
+export default ForgotPassword;}}}}}}}}}};

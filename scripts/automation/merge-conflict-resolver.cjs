@@ -76,9 +76,6 @@ class MergeConflictResolver {
       try {
         const content = fs.readFileSync(file, 'utf8');
         
-        if (content.includes('<<<<<<< HEAD') || 
-            content.includes('=======') || 
-            content.includes('>>>>>>> ')) {
           
           conflicts.push({
             file,
@@ -106,12 +103,8 @@ class MergeConflictResolver {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.includes('<<<<<<< HEAD')) {
         inConflict = true;
         conflictStart = i;
-      } else if (line.includes('=======') && inConflict) {
-        // Middle marker
-      } else if (line.includes('>>>>>>> ') && inConflict) {
         inConflict = false;
         conflictEnd = i;
         
@@ -181,9 +174,6 @@ class MergeConflictResolver {
     let resolved = content;
     
     // Remove all conflict markers
-    resolved = resolved.replace(/<<<<<<< HEAD\n?/g, '');
-    resolved = resolved.replace(/=======\n?/g, '');
-    resolved = resolved.replace(/>>>>>>> [^\n]*\n?/g, '');
     
     // Clean up any duplicate imports
     resolved = this.cleanupDuplicateImports(resolved);
@@ -199,9 +189,6 @@ class MergeConflictResolver {
     let resolved = content;
     
     // Remove all conflict markers
-    resolved = resolved.replace(/<<<<<<< HEAD\n?/g, '');
-    resolved = resolved.replace(/=======\n?/g, '');
-    resolved = resolved.replace(/>>>>>>> [^\n]*\n?/g, '');
     
     // Clean up any duplicate imports
     resolved = this.cleanupDuplicateImports(resolved);
@@ -213,18 +200,6 @@ class MergeConflictResolver {
     // For JSON files, try to merge the objects
     try {
       // Extract the different versions
-      const headMatch = content.match(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n/);
-      const incomingMatch = content.match(/=======\n([\s\S]*?)\n>>>>>>> /);
-      
-      if (headMatch && incomingMatch) {
-        const headJson = JSON.parse(headMatch[1].trim());
-        const incomingJson = JSON.parse(incomingMatch[1].trim());
-        
-        // Merge the objects, preferring incoming for conflicts
-        const merged = { ...headJson, ...incomingJson };
-        
-        // Remove conflict markers and replace with merged content
-        let resolved = content.replace(/<<<<<<< HEAD\n[\s\S]*?=======\n[\s\S]*?>>>>>>> [^\n]*\n?/g, 
           JSON.stringify(merged, null, 2));
         
         return resolved;
@@ -234,39 +209,19 @@ class MergeConflictResolver {
     }
     
     // Fallback: remove conflict markers and keep HEAD
-    return content.replace(/<<<<<<< HEAD\n?/g, '')
-                 .replace(/=======\n?/g, '')
-                 .replace(/>>>>>>> [^\n]*\n?/g, '');
   }
 
   resolveMarkdownConflict(content) {
     // For markdown, prefer the longer version (more content)
-    const headMatch = content.match(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n/);
-    const incomingMatch = content.match(/=======\n([\s\S]*?)\n>>>>>>> /);
-    
-    if (headMatch && incomingMatch) {
-      const headContent = headMatch[1];
-      const incomingContent = incomingMatch[1];
-      
-      // Choose the longer version
-      if (incomingContent.length > headContent.length) {
-        return content.replace(/<<<<<<< HEAD\n[\s\S]*?=======\n[\s\S]*?>>>>>>> [^\n]*\n?/g, incomingContent);
       } else {
-        return content.replace(/<<<<<<< HEAD\n[\s\S]*?=======\n[\s\S]*?>>>>>>> [^\n]*\n?/g, headContent);
       }
     }
     
     // Fallback: remove conflict markers
-    return content.replace(/<<<<<<< HEAD\n?/g, '')
-                 .replace(/=======\n?/g, '')
-                 .replace(/>>>>>>> [^\n]*\n?/g, '');
   }
 
   resolveGenericConflict(content) {
     // Generic resolution: remove conflict markers and keep HEAD
-    return content.replace(/<<<<<<< HEAD\n?/g, '')
-                 .replace(/=======\n?/g, '')
-                 .replace(/>>>>>>> [^\n]*\n?/g, '');
   }
 
   cleanupDuplicateImports(content) {

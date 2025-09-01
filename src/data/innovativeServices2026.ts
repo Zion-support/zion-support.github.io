@@ -25,7 +25,7 @@ export type InnovativeService = {;
   startup?: boolean;
   smb?: boolean};
 
-export const innovativeServices2026: InnovativeService[] = [
+export const innovativeServices2026: InnovativeService[] = [;
   // MICRO SAAS SERVICES
   {
     id: 'ai-powered-customer-churn-predictor',
@@ -607,7 +607,7 @@ export const innovativeServices2026: InnovativeService[] = [
 
 ];
 
-export const serviceCategories = [
+export const serviceCategories = [;
   {
     name: 'Micro SaaS',
     description: 'Scalable software solutions for specific business needs',
@@ -632,4 +632,4 @@ export const serviceCategories = [
   };
 ];
 
-export default innovativeServices2026;}}
+export default innovativeServices2026;}};

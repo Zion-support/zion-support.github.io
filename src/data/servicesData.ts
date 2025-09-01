@@ -30,7 +30,7 @@ contactInfo: {
     security: string[]};
   competitors?: string[];
   marketSize?: string}
-export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
+export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [;
   // AI-Powered Business Intelligence Platform
   {
     id: "ai-business-intelligence-platform",

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
 
-import { useState } from "react";
+
+import { React, { useState }, { useState } } from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useTalentQuotes } from "@/hooks/useTalentQuotes";

@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-09-01T07:18:46.703Z",
+  "duration": "817ms",
+  "summary": {
+    "totalFilesChecked": 2583,
+    "filesFixed": 0,
+    "successRate": "0.00%"
+  },
+  "fixesApplied": [],
+  "metadata": {
+    "script": "import-export-fixer",
+    "version": "1.0.0",
+    "nodeVersion": "v22.16.0",
+    "platform": "linux"
+  }
+}

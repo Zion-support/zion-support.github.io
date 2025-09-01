@@ -1,215 +1,221 @@
 module.exports = {
   apps: [
-    // 🚨 Comprehensive Error Fixer - Main error fixing automation
+    // Main application
     {
-      name: 'comprehensive-error-fixer',
-      script: './scripts/automation/comprehensive-error-fixer.cjs',
+      name: 'bolt-app',
+      script: 'npm',
+      args: 'start',
+      cwd: './',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PORT: 3000
+      },
+      env_production: {
+        NODE_ENV: 'production',
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+      }
+    },
+
+    // CRITICAL ERROR FIXERS - Run every 5 minutes
+    {
+      name: 'merge-conflict-fixer',
+      script: './scripts/automation/merge-conflict-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      },
+      log_file: './logs/merge-conflict-fixer.log',
+      error_file: './logs/merge-conflict-fixer-error.log',
+      out_file: './logs/merge-conflict-fixer-out.log'
+    },
+
+    // TypeScript error fixer - runs every 10 minutes
+    {
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
       },
-      cron_restart: '0 */2 * * *', // Every 2 hours
-      log_file: './logs/comprehensive-error-fixer.log',
-      error_file: './logs/comprehensive-error-fixer-error.log',
-      out_file: './logs/comprehensive-error-fixer-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_file: './logs/typescript-error-fixer.log',
+      error_file: './logs/typescript-error-fixer-error.log',
+      out_file: './logs/typescript-error-fixer-out.log'
     },
 
-    // 🔧 TypeScript Error Monitor - Real-time TypeScript error detection
+    // ESLint error fixer - runs every 15 minutes
     {
-      name: 'typescript-error-monitor',
-      script: './scripts/automation/typescript-error-monitor.cjs',
+      name: 'eslint-error-fixer',
+      script: './scripts/automation/eslint-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
       },
-      cron_restart: '*/15 * * * *', // Every 15 minutes
-      log_file: './logs/typescript-error-monitor.log',
-      error_file: './logs/typescript-error-monitor-error.log',
-      out_file: './logs/typescript-error-monitor-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_file: './logs/eslint-error-fixer.log',
+      error_file: './logs/eslint-error-fixer-error.log',
+      out_file: './logs/eslint-error-fixer-out.log'
     },
 
-    // 🧹 ESLint Error Cleaner - Continuous ESLint error fixing
+    // Import/export error fixer - runs every 20 minutes
     {
-      name: 'eslint-error-cleaner',
-      script: './scripts/automation/eslint-error-cleaner.cjs',
+      name: 'import-export-fixer',
+      script: './scripts/automation/import-export-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
+        AUTOMATION_INTERVAL: '1200000' // 20 minutes
       },
-      cron_restart: '*/20 * * * *', // Every 20 minutes
-      log_file: './logs/eslint-error-cleaner.log',
-      error_file: './logs/eslint-error-cleaner-error.log',
-      out_file: './logs/eslint-error-cleaner-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_file: './logs/import-export-fixer.log',
+      error_file: './logs/import-export-fixer-error.log',
+      out_file: './logs/import-export-fixer-out.log'
     },
 
-    // 🔍 Build Error Detector - Prevents build failures
+    // HIGH PRIORITY FIXERS - Run every 30 minutes
     {
-      name: 'build-error-detector',
-      script: './scripts/automation/build-error-detector.cjs',
+      name: 'syntax-error-fixer',
+      script: './scripts/automation/syntax-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      },
+      log_file: './logs/syntax-error-fixer.log',
+      error_file: './logs/syntax-error-fixer-error.log',
+      out_file: './logs/syntax-error-fixer-out.log'
+    },
+
+    {
+      name: 'dependency-fixer',
+      script: './scripts/automation/dependency-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      },
+      log_file: './logs/dependency-fixer.log',
+      error_file: './logs/dependency-fixer-error.log',
+      out_file: './logs/dependency-fixer-out.log'
+    },
+
+    // MEDIUM PRIORITY FIXERS - Run every hour
+    {
+      name: 'file-extension-fixer',
+      script: './scripts/automation/file-extension-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      },
+      log_file: './logs/file-extension-fixer.log',
+      error_file: './logs/file-extension-fixer-error.log',
+      out_file: './logs/file-extension-fixer-out.log'
+    },
+
+    {
+      name: 'component-error-fixer',
+      script: './scripts/automation/component-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      },
+      log_file: './logs/component-error-fixer.log',
+      error_file: './logs/component-error-fixer-error.log',
+      out_file: './logs/component-error-fixer-out.log'
+    },
+
+    // MASTER ERROR COORDINATOR - Runs every 2 hours
+    {
+      name: 'master-error-coordinator',
+      script: './scripts/automation/master-error-coordinator.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
       },
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      log_file: './logs/build-error-detector.log',
-      error_file: './logs/build-error-detector-error.log',
-      out_file: './logs/build-error-detector-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_file: './logs/master-error-coordinator.log',
+      error_file: './logs/master-error-coordinator-error.log',
+      out_file: './logs/master-error-coordinator-out.log'
     },
 
-    // 🚨 Dependency Error Resolver - Fixes dependency conflicts
+    // CONTINUOUS MONITORING - Runs every 5 minutes
     {
-      name: 'dependency-error-resolver',
-      script: './scripts/automation/dependency-error-resolver.cjs',
+      name: 'error-monitor',
+      script: './scripts/automation/error-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
       },
-      cron_restart: '0 6 * * *', // Daily at 6 AM
-      log_file: './logs/dependency-error-resolver.log',
-      error_file: './logs/dependency-error-resolver-error.log',
-      out_file: './logs/dependency-error-resolver-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_file: './logs/error-monitor.log',
+      error_file: './logs/error-monitor-error.log',
+      out_file: './logs/error-monitor-out.log'
     },
 
-    // 🔧 Configuration Error Fixer - Fixes config file issues
+    // BUILD TESTER - Runs every 30 minutes
     {
-      name: 'config-error-fixer',
-      script: './scripts/automation/config-error-fixer.cjs',
+      name: 'build-tester',
+      script: './scripts/automation/build-tester.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '256M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
       },
-      cron_restart: '0 12 * * *', // Daily at noon
-      log_file: './logs/config-error-fixer.log',
-      error_file: './logs/config-error-fixer-error.log',
-      out_file: './logs/config-error-fixer-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // 🚨 Error Prevention Monitor - Proactive error prevention
-    {
-      name: 'error-prevention-monitor',
-      script: './scripts/automation/error-prevention-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
-      },
-      cron_restart: '*/10 * * * *', // Every 10 minutes
-      log_file: './logs/error-prevention-monitor.log',
-      error_file: './logs/error-prevention-monitor-error.log',
-      out_file: './logs/error-prevention-monitor-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // 📊 Error Analytics Dashboard - Error reporting and analytics
-    {
-      name: 'error-analytics-dashboard',
-      script: './scripts/automation/error-analytics-dashboard.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2',
-        PORT: 3001
-      },
-      cron_restart: '0 0 * * *', // Daily at midnight
-      log_file: './logs/error-analytics-dashboard.log',
-      error_file: './logs/error-analytics-dashboard-error.log',
-      out_file: './logs/error-analytics-dashboard-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // 🔄 Auto-Recovery Manager - Automatically recovers from errors
-    {
-      name: 'auto-recovery-manager',
-      script: './scripts/automation/auto-recovery-manager.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
-      },
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      log_file: './logs/auto-recovery-manager.log',
-      error_file: './logs/auto-recovery-manager-error.log',
-      out_file: './logs/auto-recovery-manager-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // 🚨 Critical Error Alert System - Notifies about critical errors
-    {
-      name: 'critical-error-alert-system',
-      script: './scripts/automation/critical-error-alert-system.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
-      },
-      cron_restart: '*/1 * * * *', // Every minute
-      log_file: './logs/critical-error-alert-system.log',
-      error_file: './logs/critical-error-alert-system-error.log',
-      out_file: './logs/critical-error-alert-system-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_file: './logs/build-tester.log',
+      error_file: './logs/build-tester-error.log',
+      out_file: './logs/build-tester-out.log'
     }
   ],
 
   deploy: {
     production: {
-      user: 'node',
+      user: 'root',
       host: 'localhost',
       ref: 'origin/main',
-      repo: 'git@github.com:username/repo.git',
-      path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem-error-fixing.config.cjs --env production'
+      repo: 'git@github.com:your-username/bolt.new.zion.app.git',
+      path: '/workspace/production',
+      'pre-deploy-local': '',
+      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem-error-fixing.config.cjs --env production',
+      'pre-setup': ''
     }
   }
 };

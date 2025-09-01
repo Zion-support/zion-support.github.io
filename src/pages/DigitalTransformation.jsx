@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database } from 'lucide-react';
-import SEO from '../components/SEO';
+import { SEO, { SEO } } from '../components/SEO';
 const transformationServices = [
     {
         title: "Strategy & Planning",
@@ -73,7 +73,7 @@ const transformationPhases = [
         duration: "6-18 months"
 
 ];
-import { SEO } from "../components/SEO";
+
 const testimonials = [
     {
         content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",

@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { SEO  } from "../components/SEO";
+import { { SEO  }, { SEO } } from '../components/SEO';
 import { Wrench, 
   Clock, 
   Shield, 
@@ -26,7 +26,7 @@ import { Wrench,
   ArrowRight,
   Globe
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
+
 
 export default function OnsiteSupport(...args[]):  {
   const services = [

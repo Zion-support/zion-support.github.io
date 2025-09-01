@@ -45,4 +45,4 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
   );
 };
 
-export default InteractiveSearch;}}
+export default InteractiveSearch;}};

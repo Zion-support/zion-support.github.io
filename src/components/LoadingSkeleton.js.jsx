@@ -136,7 +136,7 @@ export function Shimmer({ className }) {
       <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent"/>
     </div>)}
 // Custom shimmer animation
-export const shimmerAnimation = `
+export const shimmerAnimation = `;
   @keyframes shimmer {
     0% {
       transform: translateX(-100%)}

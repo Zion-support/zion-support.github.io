@@ -26,4 +26,4 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
   );
 };
 
-export default InteractiveStats;}}
+export default InteractiveStats;}};

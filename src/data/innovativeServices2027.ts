@@ -16,7 +16,7 @@ export interface InnovativeService2027 {
   reviews: number;
   launchDate: string;
   status: 'active' | 'beta' | 'coming-soon'}
-export const innovativeServices2027: InnovativeService2027[] = [
+export const innovativeServices2027: InnovativeService2027[] = [;
   {
     id: 'quantum-ai-platform',
     name: 'Quantum AI Platform',
@@ -99,7 +99,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     status: 'active'
 
 ];
-export const serviceCategories2027 = [
+export const serviceCategories2027 = [;
   'All',
   'AI & Consciousness',
   'Quantum AI',

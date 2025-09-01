@@ -7,7 +7,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from "../ui/alert-dialog";
-import CodeBlock from "./CodeBlock";
+import CodeBlock from "CodeBlock.jsx";
 import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from 'lucide-react';
 export default function ApiKeysManager() {
     const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys();

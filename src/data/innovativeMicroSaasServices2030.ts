@@ -57,7 +57,7 @@ const zionContact: ServiceContact = {
 };
 
 // Innovative Micro SAAS Services 2030
-export const innovativeMicroSaasServices2030: MicroSaasService[] = [
+export const innovativeMicroSaasServices2030: MicroSaasService[] = [;
   {
     id: 1,
     name: "AI-Powered Legal Document Analysis Platform",
@@ -620,4 +620,4 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
   }
 ];
 
-export default innovativeMicroSaasServices2030;}}}
+export default innovativeMicroSaasServices2030;}}};

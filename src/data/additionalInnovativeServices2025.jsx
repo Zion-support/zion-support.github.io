@@ -1,4 +1,4 @@
-export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
+export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [;
     // AI-Powered Financial Services
     {
         id: "ai-financial-advisory-platform",

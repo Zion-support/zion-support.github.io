@@ -1,5 +1,5 @@
 // Enhanced Micro SAAS Services for 2025
-export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
+export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
   // AI-Powered Development & DevOps Services
   {
     id: "ai-code-review-assistant",

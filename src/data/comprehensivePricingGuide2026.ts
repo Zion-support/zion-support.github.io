@@ -45,7 +45,7 @@ export interface ServicePricing {
   scalabilityFeatures: string[];
 }
 
-export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
+export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [;
   {
     id: "ai-business-intelligence-platform-2026",
     title: "AI Business Intelligence Platform 2026",
@@ -408,7 +408,7 @@ export const blockchainForgePricing: ServicePricing = {
 };
 
 // Export all pricing guides
-export const ALL_PRICING_GUIDES_2026 = [
+export const ALL_PRICING_GUIDES_2026 = [;
   quantumFlowProPricing,
   neuroSyncAIPricing,
   blockchainForgePricing

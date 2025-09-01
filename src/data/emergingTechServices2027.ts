@@ -34,7 +34,7 @@ author: {
   compliance: string[];
   support: string[]}
 
-export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
+export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
   // Blockchain & DeFi Platform
   {
     id: "blockchain-defi-platform",

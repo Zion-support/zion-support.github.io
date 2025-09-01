@@ -48,7 +48,7 @@ const zionContact = {
 
 };
 
-export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
+export const specializedHealthcareAIServices2025: HealthcareAIService[] = [;
   {
     id: 1,
     name: "MedAI Diagnostics Pro",
@@ -309,4 +309,4 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
   }
 ];
 
-export default specializedHealthcareAIServices2025;}}
+export default specializedHealthcareAIServices2025;}};

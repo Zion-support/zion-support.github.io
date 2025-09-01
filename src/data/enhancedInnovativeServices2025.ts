@@ -66,7 +66,7 @@ export interface AIService {
   compliance: string[];
   aiScore: number;
   useCases: string[]}
-export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
+export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [;
   // Advanced AI & Machine Learning Services
   {
     id: "quantum-ai-processor",

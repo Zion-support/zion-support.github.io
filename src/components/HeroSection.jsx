@@ -1,13 +1,13 @@
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Sparkles, Star, Zap, Shield, Users, Clock, Target, TrendingUp, Award } from 'lucide-react';
+
+
+
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react";
-import { useRef } from "react";
+import { { motion, useScroll, useTransform } } from 'framer-motion';
+import { { ArrowRight, Sparkles, Star, Zap, Shield, Users, Clock, Target, TrendingUp, Award }, { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } } from 'lucide-react';
+import { React, { useRef }, { useRef } } from 'react';
 
 export function HeroSection() {
     const { t } = useTranslation();

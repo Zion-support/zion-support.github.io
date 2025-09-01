@@ -1,9 +1,9 @@
 import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { { useNavigate }, { Link } } from 'react-router-dom';
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/Button";
-import { Link } from "react-router-dom";
+
 // This component handles deep linking to the mobile app
 const OpenAppRedirect = () => {
     const navigate = useNavigate();

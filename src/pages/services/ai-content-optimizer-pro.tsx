@@ -774,4 +774,4 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
   );
 };
 
-export default AIContentOptimizerPro;}}}}}
+export default AIContentOptimizerPro;}}}}};

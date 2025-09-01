@@ -24,7 +24,7 @@ pricing: {
   status: 'active' | 'beta' | 'coming-soon';
   researchLevel: 'production' | 'research' | 'experimental';
   ethicalCompliance: string[]}
-export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
+export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [;
   {
     id: 'autonomous-ai-systems',
     title: 'Autonomous AI Systems',

@@ -152,7 +152,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
 };
 
 // Specialized skeleton components
-export const HeroSkeleton: React.FC = (): JSX.Element => (
+export const HeroSkeleton: React.FC = (): JSX.Element => (;
   <LoadingSkeleton type="hero" />
 );
 

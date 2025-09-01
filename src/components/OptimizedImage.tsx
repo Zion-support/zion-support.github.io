@@ -247,7 +247,7 @@ export const AvatarImage: React.FC<Omit<OptimizedImageProps, 'rounded' | 'object
   );
 };
 
-export const CardImage: React.FC<OptimizedImageProps> = (props) => (
+export const CardImage: React.FC<OptimizedImageProps> = (props) => (;
   <OptimizedImage
     {...props}
     className={`w-full h-48 ${props.className || ''}`}
@@ -258,7 +258,7 @@ export const CardImage: React.FC<OptimizedImageProps> = (props) => (
   />
 );
 
-export const HeroImage: React.FC<OptimizedImageProps> = (props) => (
+export const HeroImage: React.FC<OptimizedImageProps> = (props) => (;
   <OptimizedImage
     {...props}
     className={`w-full h-96 ${props.className || ''}`}

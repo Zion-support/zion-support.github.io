@@ -21,7 +21,7 @@ seller: {
   deliveryTime: string;
   warranty: string}
 
-export const marketplaceItems: MarketplaceItem[] = [
+export const marketplaceItems: MarketplaceItem[] = [;
   {
     id: 'ai-server-cluster',
     title: 'AI-Powered Server Cluster',
@@ -162,7 +162,7 @@ export const marketplaceItems: MarketplaceItem[] = [
   };
 ];
 
-export const marketplaceCategories = [
+export const marketplaceCategories = [;
   {
     id: 'products',
     name: 'Products',
@@ -191,7 +191,7 @@ export const marketplaceCategories = [
   };
 ];
 
-export const marketplaceFilters = [
+export const marketplaceFilters = [;
   {
     title: 'Category',
     key: 'category',

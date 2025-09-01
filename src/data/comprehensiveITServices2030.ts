@@ -55,7 +55,7 @@ const zionContact: ServiceContact = {
 };
 
 // Comprehensive IT Services 2030
-export const comprehensiveITServices2030: ITService[] = [
+export const comprehensiveITServices2030: ITService[] = [;
   {
     id: 1,
     name: "Cloud Infrastructure & DevOps Engineering",
@@ -628,4 +628,4 @@ export const comprehensiveITServices2030: ITService[] = [
 
 ];
 
-export default comprehensiveITServices2030;}}}
+export default comprehensiveITServices2030;}}};

@@ -12,8 +12,8 @@ function filename = path.basename(filePath);
       new RegExp(`const ${filename.replace('.tsx', '')}: NextPage`, 'g'),
       `const ${validName}: NextPage`
     ).replace(
-      new RegExp(`export default ${filename.replace('.tsx', '')};`, 'g'),
-      `export default ${validName};`
+export default ${filename.replace('.tsx', '')};`, 'g'),;
+export default ${validName};`;
     );
 
     fs.writeFileSync(filePath, fixedContent);

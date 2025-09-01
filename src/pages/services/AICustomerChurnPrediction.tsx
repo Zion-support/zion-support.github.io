@@ -596,4 +596,4 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
   );
 };
 
-export default AICustomerChurnPrediction;}}}
+export default AICustomerChurnPrediction;}}};

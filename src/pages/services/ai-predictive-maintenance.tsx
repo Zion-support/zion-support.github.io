@@ -441,4 +441,4 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
   );
 };
 
-export default AIPredictiveMaintenance;}}}
+export default AIPredictiveMaintenance;}}};

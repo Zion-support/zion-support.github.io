@@ -64,7 +64,7 @@ import {
   ExternalLink,
   Cloud
 } from 'lucide-react';
-import { MainNavigation } from './header/MainNavigation';
+import { MainNavigation } from 'header/MainNavigation.tsx';
 import { cn } from '@/lib/utils';
 
 interface HeaderProps {

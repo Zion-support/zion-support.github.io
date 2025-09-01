@@ -33,7 +33,7 @@ export interface SpecializedITInfrastructureService2026 {
   marketSize?: string;
 }
 
-export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastructureService2026[] = [
+export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastructureService2026[] = [;
   // 5G Enterprise Network Solutions
   {
     id: "5g-enterprise-network-solutions-2026",

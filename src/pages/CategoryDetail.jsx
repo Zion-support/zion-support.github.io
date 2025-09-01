@@ -1,9 +1,9 @@
-import { useParams, Link } from "react-router-dom";
+import { { useParams, Link }, { useNavigate } } from 'react-router-dom';
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { useState, useEffect, useRef } from "react";
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase import { MARKETPLACE_LISTINGS } from "@/data/listingData";
-import { useNavigate } from "react-router-dom";
+
 import { toast } from "@/hooks/use-toast";
 const AUTO_SERVICE_TITLES = [
     "AI-Powered Customer Support",

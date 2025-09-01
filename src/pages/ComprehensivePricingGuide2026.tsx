@@ -16,15 +16,15 @@ import {
   Cpu,
   Brain
 } from 'lucide-react';
-import SEO from '../components/SEO';
-import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from '../data/comprehensivePricingGuide2026';
+import { SEO, { SEO } } from '../components/SEO';
+import { { ALL_PRICING_GUIDES_2026, marketSummary2026 } } from '../data/comprehensivePricingGuide2026';
 
 const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
   const [selectedService, setSelectedService] = useState<any>('all');
   const [selectedTier, setSelectedTier] = useState<any>('all');
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
-import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from "../data/comprehensivePricingGuide2026";
+
+
 
 const ComprehensivePricingGuide2026: React.FC = () => {;
   const [selectedService, setSelectedService] = useState<string>('all');

@@ -1,7 +1,7 @@
 import React from 'react';
-import SEO from "@/components/SEO";
+import { SEO, { SEO } } from '@/components/SEO';
 import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Calendar, CheckCircle, Clock, Star, Users import { Link } from "react-router-dom";

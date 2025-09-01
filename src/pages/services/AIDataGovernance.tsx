@@ -686,4 +686,4 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
   );
 };
 
-export default AIDataGovernance;}}}}}}
+export default AIDataGovernance;}}}}}};

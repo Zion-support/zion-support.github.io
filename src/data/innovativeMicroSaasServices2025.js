@@ -1,4 +1,4 @@
-export const innovativeMicroSaasServices2025 = [
+export const innovativeMicroSaasServices2025 = [;
     {
         id: 1,
         name: "Quantum AI Fusion Platform",

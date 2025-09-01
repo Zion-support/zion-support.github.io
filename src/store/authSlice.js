@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Async thunk for login
-export const loginUser = createAsyncThunk(
+export const loginUser = createAsyncThunk(;
   'auth/loginUser',
   async (credentials, { rejectWithValue }) => {
     try {
@@ -36,7 +36,7 @@ export const loginUser = createAsyncThunk(
 );
 
 // Async thunk for signup
-export const signupUser = createAsyncThunk(
+export const signupUser = createAsyncThunk(;
   'auth/signupUser',
   async (userData, { rejectWithValue }) => {
     try {
@@ -71,7 +71,7 @@ export const signupUser = createAsyncThunk(
 );
 
 // Async thunk for logout
-export const logoutUser = createAsyncThunk(
+export const logoutUser = createAsyncThunk(;
   'auth/logoutUser',
   async (_, { rejectWithValue }) => {
     try {
@@ -92,7 +92,7 @@ export const logoutUser = createAsyncThunk(
 );
 
 // Async thunk for checking auth status
-export const checkAuthStatus = createAsyncThunk(
+export const checkAuthStatus = createAsyncThunk(;
   'auth/checkAuthStatus',
   async (_, { rejectWithValue }) => {
     try {

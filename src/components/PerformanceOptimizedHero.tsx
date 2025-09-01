@@ -267,4 +267,4 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   );
 </div></div></div></div>};
 
-export default React.memo(PerformanceOptimizedHero);}}}</motion.div>}
+export default React.memo(PerformanceOptimizedHero);}}}</motion.div>};

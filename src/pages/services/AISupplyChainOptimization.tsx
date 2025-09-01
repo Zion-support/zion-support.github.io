@@ -1,7 +1,7 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import { { SEO } } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+
 import { 
   Truck, 
   TrendingUp, 

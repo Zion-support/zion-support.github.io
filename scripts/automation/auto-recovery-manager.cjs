@@ -109,7 +109,6 @@ class AutoRecoveryManager {
         const content = fs.readFileSync(filePath, 'utf8');
         
         // Check for common corruption patterns
-        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
           corruptedFiles.push({
             type: 'corruption',
             name: 'merge-conflicts',
@@ -397,12 +396,8 @@ class AutoRecoveryManager {
       let content = fs.readFileSync(filePath, 'utf8');
       
       // Remove merge conflict markers and keep HEAD version
-      content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> [^\n]*\n?/g, '$1');
       
       // Clean up any remaining markers
-      content = content.replace(/<<<<<<< HEAD\n?/g, '');
-      content = content.replace(/=======\n?/g, '');
-      content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
       
       fs.writeFileSync(filePath, content);
       

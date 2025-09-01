@@ -1056,4 +1056,4 @@ const TermsOfService = () => {;
   );
 };
 
-export default TermsOfService;}
+export default TermsOfService;};

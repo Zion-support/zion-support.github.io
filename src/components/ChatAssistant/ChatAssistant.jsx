@@ -3,7 +3,7 @@ import { AuthContext } from "../../context/auth/AuthContext";
 import { useDebounce } from "../../hooks/useDebounce";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { ChatMessage } from "./ChatMessage";
-import { ChatInput } from "./ChatInput";
+import { ChatInput } from "ChatInput.jsx";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { X import { focusManagement } from '@/utils/accessibility';

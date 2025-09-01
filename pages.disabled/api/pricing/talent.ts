@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import type { TalentRateRequest } from '@/utils/api/aiPricing';
-import { generateTalentRateSuggestion } from '@/utils/api/aiPricing';
+import { type { TalentRateRequest }, { generateTalentRateSuggestion } } from '@/utils/api/aiPricing';
+
 import { logPricingAnalytics } from '@/utils/data/pricingAnalytics';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

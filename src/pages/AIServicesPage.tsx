@@ -24,7 +24,7 @@ import {
   Star,
   Heart
 } from 'lucide-react';
-import SEO from '../components/SEO';
+import { SEO, { SEO } } from '../components/SEO';
 
 const AIServices = [
     {
@@ -39,7 +39,7 @@ const AIServices = [
     },
     {
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+
 
 const AIServicesPage = () => {
   const aiServices = [
@@ -363,4 +363,4 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-export default AIServicesPage;}}}}
+export default AIServicesPage;}}}};

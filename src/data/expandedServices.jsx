@@ -1,5 +1,5 @@
 // Real, market-competitive micro SAAS services and IT solutions
-export const EXPANDED_SERVICES = [
+export const EXPANDED_SERVICES = [;
     // AI & Machine Learning Services
     {
         id: "ai-chatbot-enterprise",
@@ -480,7 +480,7 @@ export const EXPANDED_SERVICES = [
 
 ];
 // Service categories for filtering
-export const EXPANDED_SERVICE_CATEGORIES = [
+export const EXPANDED_SERVICE_CATEGORIES = [;
     { label: 'AI Development', value: 'ai-development' },
     { label: 'Cloud Services', value: 'cloud-services' },
     { label: 'DevOps', value: 'devops' },

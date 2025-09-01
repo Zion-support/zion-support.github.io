@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
-import { Input } from "./ui/input";
+import { Card, CardContent, CardHeader, CardTitle } from "ui/card.tsx";
+import { Button } from "ui/button.tsx";
+import { Badge } from "ui/badge.tsx";
+import { Input } from "ui/input.tsx";
 const AdvancedServicePortfolioDashboard = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedStatus, setSelectedStatus] = useState('all');

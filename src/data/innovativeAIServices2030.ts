@@ -69,7 +69,7 @@ const zionContact = {
 
 };
 
-export const innovativeAIServices2030: AIService[] = [
+export const innovativeAIServices2030: AIService[] = [;
   {
     id: "ai-voice-cloning-platform",
     title: "Zion AI Voice Cloning Platform",
@@ -542,4 +542,4 @@ export const innovativeAIServices2030: AIService[] = [
   };
 ];
 
-export default innovativeAIServices2030;}}
+export default innovativeAIServices2030;}};

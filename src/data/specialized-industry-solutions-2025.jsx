@@ -1,4 +1,4 @@
-export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
+export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [;
     // 1. Healthcare AI Diagnostic Platform
     {
         id: "healthcare-ai-diagnostics-elite",

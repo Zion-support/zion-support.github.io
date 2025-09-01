@@ -1,9 +1,9 @@
 import React from 'react';
 import { ReactNode } from 'react';
-import { FuturisticNavigation } from "./FuturisticNavigation";
-import { FuturisticFooter } from "./FuturisticFooter";
-import { EnhancedSidebar } from "./EnhancedSidebar";
-import { FuturisticAnimatedBackground } from "./FuturisticAnimatedBackground";
+import { FuturisticNavigation } from "FuturisticNavigation.tsx";
+import { FuturisticFooter } from "FuturisticFooter.tsx";
+import { EnhancedSidebar } from "EnhancedSidebar.tsx";
+import { FuturisticAnimatedBackground } from "FuturisticAnimatedBackground.tsx";
 
   children: ReactNode;
   showSidebar?: boolean}

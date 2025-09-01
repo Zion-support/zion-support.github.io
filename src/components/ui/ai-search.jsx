@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, MicOff, Settings, History, Bookmark, Share2 } from 'lucide-react';
-import { Button } from "./button";
-import { Badge } from "./badge";
+import { Button } from "button.tsx";
+import { Badge } from "badge.tsx";
 export function AISearch({ enabled = true, placeholder = "Search for AI services, talent, or companies...", onSearch, onResultClick, className = "" }) {
     const [isOpen, setIsOpen] = useState(false);
     const [query, setQuery] = useState('');

@@ -44,7 +44,7 @@ export interface ServiceCategory2031 {
   }[];
 }
 
-export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
+export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [;
   {
     id: "ai-powered-micro-saas",
     name: "AI-Powered Micro SAAS Services",

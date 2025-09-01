@@ -8,11 +8,11 @@ import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { useAuth } from '@/context/auth/AuthProvider';
+import { { useAuth } } from '@/context/auth/AuthProvider';
 import { useRouter } from 'next/router';
 // import Image from 'next/image'; // TODO: Replace with regular img or custom Image component
 import React, { useState } from 'react';
-import { useAuth } from '@/context/auth/AuthProvider';
+
 import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'usehooks-ts';
 import { useEnqueueSnackbar } from '@/context/SnackbarContext';

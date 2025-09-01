@@ -180,4 +180,4 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   );
 };
 
-export default StatsSection;}}}}}
+export default StatsSection;}}}}};

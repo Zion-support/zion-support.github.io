@@ -441,7 +441,7 @@ import { Search,
   ShieldCheck
 
  } from 'lucide-react.ts';
-import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedServices';
+import { { EXPANDED_SERVICES, type ExpandedService  }, { CYBERSECURITY_SERVICES  } } from '@/data/expandedServices';
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSubcategory, setSelectedSubcategory] = useState<any>('all');
   const [priceRange, setPriceRange] = useState<any>('all');
@@ -599,7 +599,7 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
   Monitor
 } from "lucide-react";
 
-import { CYBERSECURITY_SERVICES  } from '@/data/expandedServices';
+
 
 const CybersecurityServicesPage = () => {
   return (

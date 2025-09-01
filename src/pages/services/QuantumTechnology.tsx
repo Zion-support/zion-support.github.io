@@ -261,4 +261,4 @@ const QuantumTechnology = () => {
   );
 };
 
-export default QuantumTechnology;}}}
+export default QuantumTechnology;}}};

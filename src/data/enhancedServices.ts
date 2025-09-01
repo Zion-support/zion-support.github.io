@@ -1,7 +1,7 @@
 import { ProductListing  } from '@/types/listings';
 
 // Enhanced real micro SAAS services and solutions
-export const ENHANCED_SERVICES: ProductListing[] = [
+export const ENHANCED_SERVICES: ProductListing[] = [;
   // AI & Machine Learning Services
   {
     id: "ai-automation-suite",
@@ -1150,7 +1150,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 ];
 
 // Append additional diversified, real micro SaaS, IT, and AI services
-export const MORE_ENHANCED_SERVICES: ProductListing[] = [
+export const MORE_ENHANCED_SERVICES: ProductListing[] = [;
   {
     id: "ai-assistant-pro",
     title: "AI Assistant Pro",
@@ -1230,13 +1230,13 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [
   };
 ];
 
-export const ALL_ENHANCED_SERVICES: ProductListing[] = [
+export const ALL_ENHANCED_SERVICES: ProductListing[] = [;
   ...ENHANCED_SERVICES,
   ...MORE_ENHANCED_SERVICES
 ];
 
 // Service categories for filtering
-export const ENHANCED_SERVICE_CATEGORIES = [
+export const ENHANCED_SERVICE_CATEGORIES = [;
   { label: 'AI & Machine Learning', value: 'ai-ml' },
   { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },
   { label: 'Cybersecurity', value: 'cybersecurity' },

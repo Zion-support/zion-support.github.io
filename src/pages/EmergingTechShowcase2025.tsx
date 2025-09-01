@@ -343,4 +343,4 @@ const EmergingTechShowcase2025: React.FC = () => {;
     </div>
   )};
 
-export default EmergingTechShowcase2025;}}
+export default EmergingTechShowcase2025;}};

@@ -22,4 +22,4 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {;
   );
 };
 
-export default ComprehensiveZionTechPricing2025;}}
+export default ComprehensiveZionTechPricing2025;}};

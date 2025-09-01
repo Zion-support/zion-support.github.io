@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X } from 'lucide-react';
-import { Button } from "./button";
-import { Badge } from "./badge";
+import { Button } from "button.tsx";
+import { Badge } from "badge.tsx";
 export function InteractiveTimeline({ enabled = true, events, autoPlay = false, showProgress = true, onEventClick, onStatusChange, className = "" }) {
     const [currentEventIndex, setCurrentEventIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(autoPlay);

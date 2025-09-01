@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
-import { Input } from "./ui/input";
+import { Card, CardContent, CardHeader, CardTitle } from "ui/card.tsx";
+import { Button } from "ui/button.tsx";
+import { Badge } from "ui/badge.tsx";
+import { Input } from "ui/input.tsx";
 const AdvancedServiceInnovationHub = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedImpact, setSelectedImpact] = useState('all');

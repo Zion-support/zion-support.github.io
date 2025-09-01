@@ -24,7 +24,7 @@ pricing: {
   status: 'active' | 'beta' | 'coming-soon';
   scalability: string;
   deployment: string}
-export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
+export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [;
   {
     id: 'smart-city-platform',
     title: 'Smart City IoT Platform',
