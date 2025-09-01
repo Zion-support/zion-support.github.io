@@ -2,6 +2,7 @@
 import { Link, useLocation  } from 'react - router - dom.ts';
 import React, { useState, useEffect, useCallback } from 'react.ts';
 export const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
+
 import { Menu,
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 =======
@@ -36,6 +37,7 @@ import { Menu,
  } from 'lucide-react.ts';
 
 interface NavigationItem {
+
   label: anystring;
   href: string;
   icon?: React.ReactNode;
@@ -52,6 +54,7 @@ interface EnhancedNavigationProps extends React.PropsWithChildren<{}> {
 const navigationItems: NavigationItem[] = ['
   { label: 'Home', href: '/' },
   {
+
 <<<<<<< HEAD
     label: 'AI & Machine Learning',
     href: '/ai - services',
@@ -82,6 +85,7 @@ const navigationItems: NavigationItem[] = ['
     ]
   },
   {
+
     label: 'Cloud & Infrastructure',
     href: '/it - services',
     icon: <Cloud className="w - 4 h - 4" />,
@@ -99,6 +103,7 @@ const navigationItems: NavigationItem[] = ['
     ]
   },
   {
+
     label: 'Cybersecurity & Privacy',
     href: '/services / cybersecurity',
     icon: <Shield className="w - 4 h - 4" />,
@@ -111,6 +116,7 @@ const navigationItems: NavigationItem[] = ['
     ]
   },
   {
+
     label: 'Emerging Technologies',
     href: '/emerging - tech',
     icon: <Atom className="w - 4 h - 4" />,
@@ -125,6 +131,7 @@ const navigationItems: NavigationItem[] = ['
     ]
   },
   {
+
     label: 'Micro SaaS Solutions',
     href: '/micro - saas',
     icon: <ShoppingCart className="w - 4 h - 4" />,
@@ -142,6 +149,7 @@ const navigationItems: NavigationItem[] = ['
     ]
   },
   {
+
     label: 'Solutions',
     href: '/solutions',
     icon: <Building className="w - 4 h - 4" />,
@@ -155,6 +163,7 @@ const navigationItems: NavigationItem[] = ['
     ]
   },
   {
+
     label: 'Comp',
     href: '/about',
     icon: <Users className="w - 4 h - 4" />,
@@ -295,6 +304,7 @@ const navigationItems: NavigationItem[] = ['
     ]
   },
   {
+
 <<<<<<< HEAD
     label: 'Resources',
     href: '/resources',
@@ -332,6 +342,7 @@ className:  '',;
   const [isScrolled, setIsScrolled] = useState(false);
   
   useEffect ( () => {
+
 <<<<<<< HEAD
     const handleScroll = () => {;
       setIsScrolled (window.scrollY > 10) ;
@@ -342,6 +353,7 @@ className:  '',;
   }, []) ;
 
   useEffect ( () => {
+
     setIsOpen (false) ;
     setActiveDropdown (null) ;
   }, [location]) ;
@@ -357,6 +369,7 @@ className:  '',;
       const systemTheme = window.matchMedia (' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
       root.classList.add (systemTheme) ;
     } else {
+
       root.classList.add (newTheme) ;
     }
 
@@ -370,6 +383,7 @@ className:  '',;
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   useEffect(() => {
+
     setIsOpen(false);
     setActiveDropdown(null)}, [location]);
 
@@ -383,6 +397,7 @@ className:  '',;
     if (newTheme = == 'system') {;
       
       root.classList.add(systemTheme)} else {
+
 >>>>>>> main
 
       root.classList.add(newTheme)}
@@ -394,6 +409,7 @@ className:  '',;
 
 <<<<<<< HEAD
   const contactInfo = {
+
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
@@ -401,6 +417,7 @@ className:  '',;
   };
 
   return (<nav className = {`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
+
       isScrolled
         ? 'bg - white / 95 dark:bg - slate - 900 / 95 backdrop - blur - md shadow - lg'
         : 'bg - transparent'
@@ -506,6 +523,7 @@ className:  '',;
             <div role="button" className="flex items - center space - x-2 bg - gray - 100 dark:bg - slate - 800 rounded - lg p - 1">
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('light') }
                 className={`p - 2 rounded - md transition - colors ${
+
                   theme === 'light'
                     ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm'
                     : 'text - gray - 500 dark:text - gray - 400 hover:text - gray - 700 dark:hover:text - gray - 300'
@@ -515,6 +533,7 @@ className:  '',;
               </button>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('dark') }
                 className={`p - 2 rounded - md transition - colors ${
+
                   theme === 'dark'
                     ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm'
                     : 'text - gray - 500 dark:text - gray - 400 hover:text - gray - 700 dark:hover:text - gray - 300'
@@ -524,6 +543,7 @@ className:  '',;
               </button>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('system') }
                 className={`p - 2 rounded - md transition - colors ${
+
                   theme === 'system'
                     ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm'
                     : 'text - gray - 500 dark:text - gray - 400 hover:text - gray - 700 dark:hover:text - gray - 300'
@@ -612,6 +632,7 @@ className:  '',;
 <<<<<<< HEAD
                                 </div>
                                 <ChevronDown className={`w - 5 h - 5 transition - transform duration - 200 ${
+
                                   activeDropdown === item.label ? 'rotate - 180' : ''
                                 }`} />
                               </button>

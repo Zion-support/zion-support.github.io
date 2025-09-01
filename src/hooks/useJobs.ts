@@ -6,6 +6,7 @@ import { useAuth } from "./useAuth";
 import { createJob as createJobService, updateJob as updateJobService, getJobById } from "@/services/jobService"; // Aliased service functions
 
 export const useJobs = (userId?: string, status?: JobStatus) => {
+
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -15,21 +16,24 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
 
   const fetchJobs = useCallback(async () => { // Wrapped in useCallback
     if (!clientId) {
+
       setIsLoading(false);
       setJobs([]); // Clear jobs if no clientId
       return;
     }
 
     try {
+
       setIsLoading(true);
       
-      let query = supabase
+      let query = supabase;
         .from("jobs")
         .select("*")
         .eq("client_id", clientId)
         .order("created_at", { ascending: false });
       
       if (status) {
+
         query = query.eq("status", status);
       }
       
@@ -40,18 +44,22 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       setJobs(data as Job[] || []); // Ensure data is not null
       setError(null);
     } catch (err: any) {
-      console.error("Error fetching jobs:", err);
+
+      // // // console.error("Error fetching jobs:", err);
       setError("Failed to fetch jobs. Please try again.");
       toast.error("Failed to fetch jobs");
       setJobs([]); // Clear jobs on error
     } finally {
+
       setIsLoading(false);
     }
   }, [clientId, status]); // Dependencies for fetchJobs
 
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
+
     if (!clientId) return false;
     try {
+
       const { error: updateError } = await supabase
         .from("jobs")
         .update({ status: newStatus })
@@ -64,15 +72,18 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       toast.success("Job status updated successfully");
       return true;
     } catch (err: any) {
-      console.error("Error updating job status:", err);
+
+      // // // console.error("Error updating job status:", err);
       toast.error("Failed to update job status");
       return false;
     }
   };
   
   const deleteJob = async (jobId: string) => {
+
     if (!clientId) return false;
     try {
+
       const { error: deleteError } = await supabase
         .from("jobs")
         .delete()
@@ -85,17 +96,20 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       toast.success("Job deleted successfully");
       return true;
     } catch (err: any) {
-      console.error("Error deleting job:", err);
+
+      // // // console.error("Error deleting job:", err);
       toast.error("Failed to delete job");
       return false;
     }
   };
   
   useEffect(() => {
+
     fetchJobs();
   }, [fetchJobs]); // Changed dependencies to just fetchJobs
   
   return {
+
     jobs,
     isLoading,
     error,

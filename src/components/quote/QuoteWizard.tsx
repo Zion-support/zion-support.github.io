@@ -2,7 +2,7 @@
 const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
 
 function StepIndicator({ step }: { step: WizardStep }) {
-  
+
   return (
     <div data-testid="step-indicator" className="text-sm text-muted-foreground">
       Step {index + 1} of {WIZARD_STEPS.length}
@@ -10,6 +10,7 @@ function StepIndicator({ step }: { step: WizardStep }) {
   )}
 
 export function QuoteWizard() {
+
   const { step, selectService, submitQuote } = useRequestQuoteWizard();
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const [message, setMessage] = useState('');
@@ -19,7 +20,7 @@ export function QuoteWizard() {
   const { data = [], isPending, error } = queryResult;
 
   if (step === 'Services') {
-    
+
     return (
       <div className="space-y-6">
         <StepIndicator step={step}  />
@@ -63,6 +64,7 @@ export function QuoteWizard() {
     )}
 
   if (step === 'Details') {
+
     return (
       <div data-testid="details-step" className="space-y-4">
         <StepIndicator step={step}  />
@@ -77,6 +79,7 @@ export function QuoteWizard() {
     )}
 
   if (step === 'Success') {
+
     return (
       <div data-testid="success-step" className="space-y-4">
         <StepIndicator step={step}  />

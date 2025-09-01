@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { ArrowRight } from "lucide-react";
 export function ServicesShowcase() {
+
     const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);"
     return (<section className="py-20 relative">
       {/* Background accent */}"

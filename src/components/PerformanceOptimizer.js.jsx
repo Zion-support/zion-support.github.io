@@ -5,7 +5,9 @@ export const PerformanceOptimizer = ({ children }) => {
     const location = useLocation();
     // Preload critical resources
     useEffect(() => {
+
         const preloadCriticalResources = () => {
+
             // Preload critical CSS'
             const criticalCSS = document.createElement('link');
             criticalCSS.rel = 'preload';
@@ -22,6 +24,7 @@ export const PerformanceOptimizer = ({ children }) => {
         preloadCriticalResources()}, []);
     // Optimize images on route change
     useEffect(() => {
+
         const optimizeImages = () => {
 
             const images = document.querySelectorAll('img');
@@ -49,10 +52,12 @@ export const PerformanceOptimizer = ({ children }) => {
     const optimizedChildren = useMemo(() => children, [children]);
     // Optimize scroll performance
     const handleScroll = useCallback(() => {
+
         // Throttle scroll events for better performance
         if (!window.scrollTimeout) {
 
             window.scrollTimeout = setTimeout(() => {
+
                 // Handle scroll-based optimizations here
                 window.scrollTimeout = null}, 16); // ~60fps
         }
@@ -70,10 +75,10 @@ export const PerformanceOptimizer = ({ children }) => {
                 .register('/sw.js')
                 .then((registration) => {
 
-                // console.log('SW registered: ', registration)})
+                // // // // console.log('SW registered: ', registration)})
                 .catch((registrationError) => {
 
-                // console.log('SW registration failed: ', registrationError)})}
+                // // // // console.log('SW registration failed: ', registrationError)})}
     }, []);
     // Intersection Observer for lazy loading
     useEffect(() => {
@@ -110,6 +115,7 @@ if (typeof window !== 'null') {
     if ('scheduler' in window && 'postTask' in window.scheduler) {
 
         window.scheduler.postTask(() => {
+
             // Run non-critical tasks during idle time'
         }, { priority: 'background' })}
     // Optimize memory usage'

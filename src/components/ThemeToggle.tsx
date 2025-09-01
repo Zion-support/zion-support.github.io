@@ -3,6 +3,7 @@ import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
 type Theme = 'dark' | 'light' | 'system';
 
 interface ThemeToggleProps {
+
   // Add your props here
 
 
@@ -18,6 +19,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+
     setMounted(true);
     
     if (savedTheme) {
@@ -25,6 +27,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       setTheme(savedTheme)}
   }, []) ;
   useEffect ( () => {
+
     if (!mounted) return;
 
 <<<<<<< HEAD
@@ -74,6 +77,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
           >
             {themes.map ( (themeOption) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={themeOption.value}
                 onClick={ () => {
+
                   setTheme (themeOption.value) ;
                   setIsOpen (false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
 
@@ -148,6 +152,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       >
 <<<<<<< HEAD
         {themes.map ( (themeOption) => {
+
           const Icon = themeOption.icon;
           const isActive = theme === themeOption.value;
 
@@ -155,8 +160,6 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
 =======
         {themes.map((themeOption) => {
 
-          
-          
           return()
             <motion.button
 >>>>>>> main

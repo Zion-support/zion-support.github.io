@@ -51,6 +51,7 @@ const mockParticipants = [
     avatar: '👩‍🎨'},
 ];
 export function CollaborationPlatform() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -81,18 +82,23 @@ export function CollaborationPlatform() {
   const [meetingDuration, setMeetingDuration] = useState(0);
   const containerRef = useRef(null);
   useEffect(() => {
+
     const interval = setInterval(() => {
+
       setMeetingDuration(prev => prev + 1);
     }, 1000);
     return () => clearInterval(interval);
   }, []);
   const toggleMute = () => {
+
     setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }));
   };
   const toggleRecording = () => {
+
     setIsRecording(!isRecording);
   };
   const sendMessage = () => {
+
     if (newMessage.trim()) {
 
       const message = {
@@ -113,6 +119,7 @@ export function CollaborationPlatform() {
     return `${hours.toString().padStart(2,0')}:${minutes.toString().padStart(2,0')}:${secs.toString().padStart(2,0')}`;
   };
   const toggleChat = () => {
+
     setActiveChat(!activeChat);
   };
   if (!isOpen) {

@@ -56,6 +56,7 @@ export
 // Service Statistics
 <<<<<<< HEAD
 export const SERVICE_STATISTICS_2030 = {
+
   totalServices: COMPREHENSIVE_SERVICES_INDEX_2030.length,
   totalCategories: SERVICE_CATEGORIES_2030.length,
   averagePrice: Math.round(

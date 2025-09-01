@@ -17,7 +17,6 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
   
   if (budgetString.includes('-')) {
 
-    
     min = parseFloat(parts[0].replace(/[$,\s]/g,));
     max = parseFloat(parts[1].replace(/[$,\s]/g,));
     if (parts[0].includes('k')) min = kTo1000(parts[0]);

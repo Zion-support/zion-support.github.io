@@ -4,10 +4,12 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/Textarea';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe export const EnhancedContact = () => {
+
     const [formData, setFormData] = useState({
 
 <<<<<<< HEAD
     const [formData, setFormData] = useState ({
+
 =======
 >>>>>>> main
         name: '',
@@ -127,6 +129,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
         setIsSubmitted (true) ;
         // Reset form after 3 seconds
         setTimeout(() => {
+
             setIsSubmitted(false);
             setFormData({
 
@@ -138,6 +141,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                 message: ''
             }) }, 3000) };
     if (isSubmitted) {
+
 "
         return (<motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex items-center justify-center" initial = {
 

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";"
 import { Link } from "react-router-dom";
 
 export const HeroSectionAlt = () => {
+
 import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles import { motion } from "framer - motion";
 
   const containerVariants = {
@@ -38,4 +39,5 @@ import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles import {
   };
 
   const floatingVariants = {
+
 '"

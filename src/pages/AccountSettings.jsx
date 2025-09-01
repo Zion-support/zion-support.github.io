@@ -9,6 +9,7 @@ import { useAuth } from '@/hooks / useAuth';
 import { Wallet, Database, Save import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import SEO from '@/components / SEO';
 export default function AccountSettings () {
+
 import { toast } from 'sonner';
 
     const { user } = useAuth () ;
@@ -17,9 +18,12 @@ import { toast } from 'sonner';
     const [enableBackup, setEnableBackup] = useState (false) ;
     const [isSubmitting, setIsSubmitting] = useState (false) ;
     useEffect ( () => {
+
         try {
+
             const saved = localStorage.getItem ('account_settings') ;
             if (saved) {
+
                 const parsed = JSON.parse (saved) ;
                 setDisplayWeb3 (!!parsed.displayWeb3) ;
                 setDidHandle (parsed.didHandle || '') ;
@@ -28,22 +32,28 @@ import { toast } from 'sonner';
                 setEnableBackup (!!parsed.enableBackup) }
         }
         catch (e) {
+
             console.error ('Error loading account settings', e) }
     }, []) ;
     const handleSave = () => {
+
         setIsSubmitting (true) ;
         // Simulate API call
         setTimeout ( () => {
+
             try {
+
                 localStorage.setItem ('account_settings', JSON.stringify ({ displayWeb3, didHandle, enableBackup }) ) ;
                 // // // // // // // console.log ('Saved settings', { displayWeb3, didHandle, enableBackup }) ;
                 toast.success ('Account settings updated successfully') ;
 
             catch (e) {
+
                 // // // // // // // console.error ('Failed to save settings', e) ;
                 toast.error ('Failed to save settings') ;
 
             finally {
+
                 setIsSubmitting (false) ;
 
         }, 1000) ;
@@ -51,16 +61,21 @@ import { toast } from 'sonner';
                 console.log ('Saved settings', { displayWeb3, didHandle, enableBackup }) ;
                 toast.success ('Account settings updated successfully') }
             catch (e) {
+
                 console.error ('Failed to save settings', e) ;
                 toast.error ('Failed to save settings') }
             finally {
+
                 setIsSubmitting (false) }
         }, 1000) };
     const handleConnectWallet = async () => {
+
         try {
+
             // Check if wallet is available
             const ethereum = window.ethereum;
             if (!ethereum) {
+
                 toast.error ('No wallet detected. Please install MetaMask or another compatible wallet.') ;
                 return}
             // Request accounts
@@ -68,27 +83,33 @@ import { toast } from 'sonner';
             // Sign message to verify ownership
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date () .toISOString () }`;
             await ethereum.request ({
+
                 method: 'personal_sign',
                 params[address, message];
             }) ;
             // Auto - set DID handle if ENS is available
             try {
+
                 const provider = new window.ethers.providers.Web3Provider (ethereum) ;
                 const ensName = await provider.lookupAddress (address) ;
                 if (ensName) {
+
                 // // // // // // // console.error ('ENS lookup error:', error) ;
             }
             toast.success (`Wallet connected: ${address.slice (0, 6) }...${address.slice (-4) }`) ;
 
         catch (error) {
+
             toast.error (error.message || 'Failed to connect wallet') ;
 
                     setDidHandle (ensName) }
             }
             catch (error) {
+
                 console.error ('ENS lookup error:', error) }
             toast.success (`Wallet connected: ${address.slice (0, 6) }...${address.slice (-4) }`) }
         catch (error) {
+
             toast.error (error.message || 'Failed to connect wallet') }
     };
     return (<>

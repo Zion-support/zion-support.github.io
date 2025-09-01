@@ -1,6 +1,7 @@
 
 
 interface ListingScoreCardProps {
+
   title: string;
   description: string;
   image?: string;
@@ -13,7 +14,8 @@ interface ListingScoreCardProps {
   reviewCount?: number;
   className?: string}
 
-export function ListingScoreCard({ 
+export function ListingScoreCard({
+
   title, 
   description, 
   image, 
@@ -26,6 +28,7 @@ export function ListingScoreCard({
   reviewCount = 0,
   className 
 }: ListingScoreCardProps) {
+
   return (
     <div className={cn(
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",

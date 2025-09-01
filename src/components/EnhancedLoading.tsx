@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -29,7 +30,6 @@ export function LoadingSpinner({
   text = 'Loading...',
   fullScreen = false}: LoadingSpinnerProps) {
 
-  
   ;
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -54,6 +54,7 @@ export function LoadingSpinner({
             scale: [1, 1.1, 1]
           }}
           transition={{
+
 "
             rotate: { duration: 2, repeat: Infinity, ease: "linear" },"
             scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
@@ -219,6 +220,7 @@ export function PageLoader(...args[]):  {
               className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full"
               animate={{ rotate: 360 }}
               transition = {
+
 <<<<<<< HEAD
   { duration: 1, repeat: Infinity,
   ease: "linear"
@@ -279,6 +281,7 @@ export function PageLoader(...args[]):  {
                 initial={{ width: 0 }}"
                 animate={{ width: "100%" }}
                 transition = {
+
 <<<<<<< HEAD
   { duration: 3,
   ease: "easeInOut"

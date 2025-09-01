@@ -1,9 +1,12 @@
 import React from 'react';
 <<<<<<< HEAD
 export function TrustIndicatorsCompact ({ className }) {
+
 import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators ({ className, showStats = true, showCertifications = true }) {
+
 =======
 import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
+
 >>>>>>> main
 
     const indicators = [
@@ -124,6 +127,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
     </section>) }
 // Compact version for smaller spaces
 export function TrustIndicatorsCompact({ className }) {
+
 '`
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>"
       <div className="flex items-center gap-2 text-zion-cyan text-sm">"

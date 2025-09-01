@@ -10,7 +10,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner";
 
 export function WebhookManager() {
-  const { 
+
+  const {
+
     webhooks, 
     loading, 
     error,
@@ -23,6 +25,7 @@ export function WebhookManager() {
   } = useWebhooks();
   
   const [newWebhook, setNewWebhook] = useState({
+
     name: "",
     url: "",
     selectedEvent: "" as WebhookEventType,
@@ -38,18 +41,22 @@ export function WebhookManager() {
   ];
   
   useEffect(() => {
+
     fetchWebhooks();
   }, [fetchWebhooks]); // Added fetchWebhooks
   
   const handleAddEvent = () => {
+
     if (!newWebhook.selectedEvent) return;
     
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
+
       toast.error("This event is already added");
       return;
     }
     
     setNewWebhook({
+
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
       selectedEvent: "" as WebhookEventType
@@ -57,14 +64,18 @@ export function WebhookManager() {
   };
   
   const handleRemoveEvent = (event: WebhookEventType) => {
+
     setNewWebhook({
+
       ...newWebhook,
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
     });
   };
   
   const handleCreateWebhook = async () => {
+
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
+
       toast.error("Please fill in all required fields");
       return;
     }
@@ -78,6 +89,7 @@ export function WebhookManager() {
     
     // Reset form
     setNewWebhook({
+
       name: "",
       url: "",
       selectedEvent: "" as WebhookEventType,
@@ -87,6 +99,7 @@ export function WebhookManager() {
   };
   
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
+
     await testWebhook(webhookId, eventType);
   };
   

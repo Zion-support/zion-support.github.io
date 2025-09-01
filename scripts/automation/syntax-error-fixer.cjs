@@ -1,306 +1,262 @@
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 
-console.log('🔧 Starting syntax error fixer...');
+class SyntaxErrorFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(this.projectRoot, 'automation/logs/syntax-error-fixer.log');
+    this.fixesApplied = [];
+    this.startTime = new Date();
+  }
 
-async function fixSyntaxErrors() {
-  let totalFixes = 0;
-  
-  try {
-    console.log(`🔧 Running syntax error fixer at ${new Date().toISOString()}`);
+  async log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}`;
+    console.log(logMessage);
+    await fs.appendFile(this.logFile, logMessage + '\n');
+  }
+
+  async fixSyntaxErrors() {
+    await this.log('🔧 Fixing syntax errors...');
     
-    // Common syntax fixes
-    const syntaxFixes = [
-      // Fix missing semicolons
-      {
-        pattern: /(\w+)\s*=\s*(\w+)\s*$/gm,
-        replacement: '$1 = $2;',
-        description: 'Add missing semicolons'
-      },
-      // Fix unmatched brackets
-      {
-        pattern: /{\s*$/gm,
-        replacement: '{\n',
-        description: 'Fix unmatched brackets'
-      },
-      // Fix trailing commas
-      {
-        pattern: /,\s*}/g,
-        replacement: '}',
-        description: 'Remove trailing commas'
-      },
-      // Fix import statements with missing commas
-      {
-        pattern: /import\s+\{\s*([^}]+)\s*\}\s*$/gm,
-        replacement: (match, imports) => {
-          const cleanImports = imports.replace(/\s+/g, ' ').trim();
-          return `import { ${cleanImports} }`;
-        },
-        description: 'Fix import statements'
-      },
-      // Fix function declarations
-      {
-        pattern: /function\s+(\w+)\s*\(\s*\)\s*:\s*{\s*$/gm,
-        replacement: 'function $1() {',
-        description: 'Fix function declarations'
-      },
-      // Fix object property assignments
-      {
-        pattern: /(\w+):\s*{\s*;/g,
-        replacement: '$1: {',
-        description: 'Fix object property assignments'
-      },
-      // Fix array declarations
-      {
-        pattern: /(\w+)\s*\[\s*$/gm,
-        replacement: '$1 = [',
-        description: 'Fix array declarations'
-      },
-      // Fix JSX syntax
-      {
-        pattern: /<\s*\/\s*>\s*;$/gm,
-        replacement: '</>',
-        description: 'Fix JSX closing tags'
-      },
-      // Fix TypeScript type annotations
-      {
-        pattern: /:\s*any\s*;/g,
-        replacement: ': unknown;',
-        description: 'Replace any with unknown'
-      },
-      // Fix merge conflict markers
-      {
-        pattern: /^>>>>>>>\s+.+$/gm,
-        replacement: '',
-        description: 'Remove merge conflict markers'
-      },
-      {
-        pattern: /^<<<<<<<\s+.+$/gm,
-        replacement: '',
-        description: 'Remove merge conflict markers'
-      },
-      {
-        pattern: /^=======$/gm,
-        replacement: '',
-        description: 'Remove merge conflict markers'
-      },
-      // Fix unterminated strings
-      {
-        pattern: /'([^']*)$/gm,
-        replacement: "'$1'",
-        description: 'Fix unterminated single quotes'
-      },
-      {
-        pattern: /"([^"]*)$/gm,
-        replacement: '"$1"',
-        description: 'Fix unterminated double quotes'
-      },
-      // Fix missing parentheses
-      {
-        pattern: /(\w+)\s*\(\s*$/gm,
-        replacement: '$1()',
-        description: 'Fix missing parentheses'
-      },
-      // Fix object destructuring
-      {
-        pattern: /const\s+\{\s*([^}]+)\s*\}\s*=\s*(\w+)\s*$/gm,
-        replacement: 'const { $1 } = $2;',
-        description: 'Fix object destructuring'
-      },
-      // Fix array destructuring
-      {
-        pattern: /const\s+\[\s*([^\]]+)\s*\]\s*=\s*(\w+)\s*$/gm,
-        replacement: 'const [ $1 ] = $2;',
-        description: 'Fix array destructuring'
-      },
-      // Fix template literals
-      {
-        pattern: /`([^`]*)$/gm,
-        replacement: '`$1`',
-        description: 'Fix unterminated template literals'
-      },
-      // Fix switch statements
-      {
-        pattern: /switch\s*\(\s*(\w+)\s*\)\s*{\s*$/gm,
-        replacement: 'switch ($1) {',
-        description: 'Fix switch statements'
-      },
-      // Fix case statements
-      {
-        pattern: /case\s+['"`]([^'"`]+)['"`]\s*:\s*$/gm,
-        replacement: "case '$1':",
-        description: 'Fix case statements'
-      },
-      // Fix default statements
-      {
-        pattern: /default\s*:\s*$/gm,
-        replacement: 'default:',
-        description: 'Fix default statements'
-      },
-      // Fix try-catch blocks
-      {
-        pattern: /try\s*{\s*$/gm,
-        replacement: 'try {',
-        description: 'Fix try blocks'
-      },
-      {
-        pattern: /catch\s*\(\s*(\w+)\s*\)\s*{\s*$/gm,
-        replacement: 'catch ($1) {',
-        description: 'Fix catch blocks'
-      },
-      // Fix arrow functions
-      {
-        pattern: /\(\s*\)\s*=>\s*{\s*$/gm,
-        replacement: '() => {',
-        description: 'Fix arrow functions'
-      },
-      // Fix class declarations
-      {
-        pattern: /class\s+(\w+)\s*{\s*$/gm,
-        replacement: 'class $1 {',
-        description: 'Fix class declarations'
-      },
-      // Fix method declarations
-      {
-        pattern: /(\w+)\s*\(\s*\)\s*{\s*$/gm,
-        replacement: '$1() {',
-        description: 'Fix method declarations'
-      },
-      // Fix interface declarations
-      {
-        pattern: /interface\s+(\w+)\s*{\s*$/gm,
-        replacement: 'interface $1 {',
-        description: 'Fix interface declarations'
-      },
-      // Fix type declarations
-      {
-        pattern: /type\s+(\w+)\s*=\s*{\s*$/gm,
-        replacement: 'type $1 = {',
-        description: 'Fix type declarations'
-      },
-      // Fix enum declarations
-      {
-        pattern: /enum\s+(\w+)\s*{\s*$/gm,
-        replacement: 'enum $1 {',
-        description: 'Fix enum declarations'
-      },
-      // Fix namespace declarations
-      {
-        pattern: /namespace\s+(\w+)\s*{\s*$/gm,
-        replacement: 'namespace $1 {',
-        description: 'Fix namespace declarations'
-      },
-      // Fix module declarations
-      {
-        pattern: /module\s+['"`]([^'"`]+)['"`]\s*{\s*$/gm,
-        replacement: "module '$1' {",
-        description: 'Fix module declarations'
-      },
-      // Fix export statements
-      {
-        pattern: /export\s+default\s+(\w+)\s*$/gm,
-        replacement: 'export default $1;',
-        description: 'Fix export statements'
-      },
-      // Fix import statements
-      {
-        pattern: /import\s+(\w+)\s+from\s+['"`]([^'"`]+)['"`]\s*$/gm,
-        replacement: "import $1 from '$2';",
-        description: 'Fix import statements'
-      },
-      // Fix require statements
-      {
-        pattern: /const\s+(\w+)\s*=\s*require\s*\(\s*['"`]([^'"`]+)['"`]\s*\)\s*$/gm,
-        replacement: "const $1 = require('$2');",
-        description: 'Fix require statements'
-      }
+    const filePatterns = [
+      'src/**/*.{js,jsx,ts,tsx}',
+      'scripts/**/*.{js,cjs}',
+      'automation/**/*.{js,cjs}',
+      '*.{js,cjs}'
     ];
     
-    const files = getAllSourceFiles();
-    
-    for (const file of files) {
+    for (const pattern of filePatterns) {
       try {
-        let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
-        let fileFixes = 0;
-        
-        for (const fix of syntaxFixes) {
-          if (fix.pattern.test(content)) {
-            content = content.replace(fix.pattern, fix.replacement);
-            fileFixes++;
-          }
-        }
-        
-        if (content !== originalContent) {
-          fs.writeFileSync(file, content);
-          console.log(`🔧 Applied ${fileFixes} fixes in ${file}`);
-          totalFixes += fileFixes;
+        const files = require('glob').sync(pattern, { cwd: this.projectRoot });
+        for (const file of files) {
+          await this.fixFileSyntax(file);
         }
       } catch (error) {
-        console.log(`⚠️  Could not fix ${file}: ${error.message}`);
+        await this.log(`❌ Error processing pattern ${pattern}: ${error.message}`);
       }
     }
-    
-    // Generate report
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalFixes: totalFixes,
-      status: 'completed',
-      summary: `Syntax error fixer completed with ${totalFixes} fixes applied`
-    };
-    
-    const reportPath = path.join(process.cwd(), 'syntax-error-fixer-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    console.log(`✅ Syntax error fixer completed. Applied ${totalFixes} fixes.`);
-    console.log(`📊 Report saved to: ${reportPath}`);
-    
-    return totalFixes;
-    
-  } catch (error) {
-    console.error('❌ Syntax error fixer failed:', error.message);
-    return totalFixes;
   }
-}
 
-function getAllSourceFiles() {
-  const files = [];
-  const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks', 'types'];
-  
-  for (const dir of sourceDirs) {
-    if (fs.existsSync(dir)) {
-      function traverse(currentDir) {
-        const items = fs.readdirSync(currentDir);
-        for (const item of items) {
-          const fullPath = path.join(currentDir, item);
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory()) {
-            traverse(fullPath);
-          } else if (fullPath.match(/\.(tsx?|jsx?)$/)) {
-            files.push(fullPath);
-          }
+  async fixFileSyntax(filePath) {
+    try {
+      const fullPath = path.join(this.projectRoot, filePath);
+      let content = await fs.readFile(fullPath, 'utf8');
+      let modified = false;
+      
+      // Fix missing commas in objects
+      if (this.hasMissingCommas(content)) {
+        content = this.fixMissingCommas(content);
+        modified = true;
+      }
+      
+      // Fix missing semicolons
+      if (this.hasMissingSemicolons(content)) {
+        content = this.fixMissingSemicolons(content);
+        modified = true;
+      }
+      
+      // Fix unclosed brackets/parentheses
+      if (this.hasUnclosedBrackets(content)) {
+        content = this.fixUnclosedBrackets(content);
+        modified = true;
+      }
+      
+      // Fix template literal syntax
+      if (this.hasTemplateLiteralIssues(content)) {
+        content = this.fixTemplateLiteralIssues(content);
+        modified = true;
+      }
+      
+      // Fix import/export syntax
+      if (this.hasImportExportIssues(content)) {
+        content = this.fixImportExportIssues(content);
+        modified = true;
+      }
+      
+      if (modified) {
+        await fs.writeFile(fullPath, content);
+        await this.log(`✅ Fixed syntax in ${filePath}`);
+        this.fixesApplied.push({
+          type: 'syntax-fix',
+          file: filePath,
+          timestamp: new Date().toISOString()
+        });
+      }
+    } catch (error) {
+      await this.log(`❌ Error fixing ${filePath}: ${error.message}`);
+    }
+  }
+
+  hasMissingCommas(content) {
+    return /(\w+:\s*[^,}]+)\s*\n\s*(\w+:)/.test(content) ||
+           /(\w+:\s*\[[^\]]*\])\s*\n\s*(\w+:)/.test(content);
+  }
+
+  fixMissingCommas(content) {
+    return content
+      .replace(/(\w+:\s*[^,}]+)\s*\n\s*(\w+:)/g, '$1,\n  $2')
+      .replace(/(\w+:\s*\[[^\]]*\])\s*\n\s*(\w+:)/g, '$1,\n  $2');
+  }
+
+  hasMissingSemicolons(content) {
+    return /(\w+)\s*\n\s*(import|export|const|let|var|function|class)/.test(content);
+  }
+
+  fixMissingSemicolons(content) {
+    return content.replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class)/g, '$1;\n$2');
+  }
+
+  hasUnclosedBrackets(content) {
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+    const openBrackets = (content.match(/\[/g) || []).length;
+    const closeBrackets = (content.match(/\]/g) || []).length;
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+    
+    return openBraces !== closeBraces || 
+           openBrackets !== closeBrackets || 
+           openParens !== closeParens;
+  }
+
+  fixUnclosedBrackets(content) {
+    // Count brackets and add missing ones
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+    const openBrackets = (content.match(/\[/g) || []).length;
+    const closeBrackets = (content.match(/\]/g) || []).length;
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+    
+    let fixedContent = content;
+    
+    // Add missing closing braces
+    for (let i = 0; i < openBraces - closeBraces; i++) {
+      fixedContent += '\n}';
+    }
+    
+    // Add missing closing brackets
+    for (let i = 0; i < openBrackets - closeBrackets; i++) {
+      fixedContent += ']';
+    }
+    
+    // Add missing closing parentheses
+    for (let i = 0; i < openParens - closeParens; i++) {
+      fixedContent += ')';
+    }
+    
+    return fixedContent;
+  }
+
+  hasTemplateLiteralIssues(content) {
+    return /`[^`]*\$[^`]*`/.test(content) && !content.includes('${');
+  }
+
+  fixTemplateLiteralIssues(content) {
+    return content.replace(/`([^`]*)\$([^`]*)`/g, '`$1\${$2}`');
+  }
+
+  hasImportExportIssues(content) {
+    return /import\s+{\s*[^}]*\s*}\s*from\s*['"][^'"]*['"]\s*$/.test(content) ||
+           /export\s+{\s*[^}]*\s*}\s*$/.test(content);
+  }
+
+  fixImportExportIssues(content) {
+    return content
+      .replace(/import\s+{\s*([^}]*)\s*}\s*from\s*['"]([^'"]*)['"]\s*$/gm, 'import { $1 } from "$2";')
+      .replace(/export\s+{\s*([^}]*)\s*}\s*$/gm, 'export { $1 };');
+  }
+
+  async validateSyntax() {
+    await this.log('🔍 Validating syntax...');
+    
+    const jsFiles = require('glob').sync('**/*.{js,jsx,ts,tsx}', { cwd: this.projectRoot });
+    let validFiles = 0;
+    let invalidFiles = 0;
+    
+    for (const file of jsFiles) {
+      try {
+        const fullPath = path.join(this.projectRoot, file);
+        const content = await fs.readFile(fullPath, 'utf8');
+        
+        // Basic syntax validation
+        if (this.isValidSyntax(content)) {
+          validFiles++;
+        } else {
+          invalidFiles++;
+          await this.log(`⚠️  Syntax issues detected in ${file}`);
         }
+      } catch (error) {
+        invalidFiles++;
+        await this.log(`❌ Error validating ${file}: ${error.message}`);
       }
-      traverse(dir);
+    }
+    
+    await this.log(`📊 Syntax validation: ${validFiles} valid, ${invalidFiles} invalid files`);
+    return { validFiles, invalidFiles };
+  }
+
+  isValidSyntax(content) {
+    try {
+      // Try to parse as JSON if it looks like JSON
+      if (content.trim().startsWith('{') || content.trim().startsWith('[')) {
+        JSON.parse(content);
+        return true;
+      }
+      
+      // Basic JavaScript syntax checks
+      const hasBalancedBraces = (content.match(/\{/g) || []).length === (content.match(/\}/g) || []).length;
+      const hasBalancedBrackets = (content.match(/\[/g) || []).length === (content.match(/\]/g) || []).length;
+      const hasBalancedParens = (content.match(/\(/g) || []).length === (content.match(/\)/g) || []).length;
+      
+      return hasBalancedBraces && hasBalancedBrackets && hasBalancedParens;
+    } catch (error) {
+      return false;
     }
   }
-  
-  return files;
+
+  async run() {
+    try {
+      await this.log('🚀 Starting Syntax Error Fixer');
+      
+      await this.fixSyntaxErrors();
+      await this.validateSyntax();
+      
+      const endTime = new Date();
+      const duration = endTime - this.startTime;
+      
+      await this.log(`✅ Syntax Error Fixer completed in ${duration.getTime()}ms`);
+      await this.log(`📈 Fixes applied: ${this.fixesApplied.length}`);
+      
+      return {
+        success: true,
+        fixesApplied: this.fixesApplied.length,
+        duration: duration.getTime()
+      };
+      
+    } catch (error) {
+      await this.log(`❌ Syntax Error Fixer failed: ${error.message}`);
+      throw error;
+    }
+  }
 }
 
-// Run the syntax error fixer
+// Run the fixer if called directly
 if (require.main === module) {
-  fixSyntaxErrors().then(fixes => {
-    console.log(`🎉 Syntax error fixer completed with ${fixes} fixes applied`);
-    process.exit(0);
-  }).catch(error => {
-    console.error('❌ Syntax error fixer failed:', error);
-    process.exit(1);
-  });
+  const fixer = new SyntaxErrorFixer();
+  fixer.run()
+    .then(result => {
+      console.log('Syntax error fixer completed successfully');
+      process.exit(0);
+    })
+    .catch(error => {
+      console.error('Syntax error fixer failed:', error);
+      process.exit(1);
+    });
 }
 
-module.exports = { fixSyntaxErrors };
+module.exports = SyntaxErrorFixer;

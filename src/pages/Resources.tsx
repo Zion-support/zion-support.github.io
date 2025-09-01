@@ -1,6 +1,7 @@
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 import {
+
 import { motion } from 'framer - motion';
 
   BookOpen,
@@ -53,6 +54,7 @@ const Resources: React.FC = () : JSX.Element => {;
 
   const featuredResources = [
     {
+
       id: 1,
       title: 'AI Autonomous Research: The Future of Knowledge Discovery',
       description: 'Comprehensive guide on implementing AI Autonomous Research Assistant for accelerated research and discovery.',
@@ -71,6 +73,7 @@ const Resources: React.FC = () : JSX.Element => {;
       downloadUrl: 'https://ziontechgroup.com / resources / ai - autonomous - research.pdf'
     },
     {
+
       id: 2,
       title: 'AI Supply Chain Optimization: Implementation Guide',
       description: 'Step - by - step guide to implementing AI - powered supply chain optimization for maximum efficiency and cost savings.',
@@ -89,6 +92,7 @@ const Resources: React.FC = () : JSX.Element => {;
       downloadUrl: 'https://ziontechgroup.com / resources / ai - supply - chain - optimization.pdf'
     },
     {
+
       id: 3,
       title: 'AI Content Marketing Suite: Complete User Guide',
       description: 'Comprehensive user guide for the AI Content Marketing Suite, covering all features and best practices.',
@@ -107,6 +111,7 @@ const Resources: React.FC = () : JSX.Element => {;
       downloadUrl: 'https://ziontechgroup.com / resources / ai - content - marketing - guide.pdf'
     },
     {
+
       id: 4,
       title: 'AI - Powered Business Transformation: A Complete Guide',
       description: 'Comprehensive guide on implementing AI solutions to transform business operations and drive growth.',
@@ -125,6 +130,7 @@ const Resources: React.FC = () : JSX.Element => {;
       downloadUrl: 'https://ziontechgroup.com / resources / ai - business - transformation.pdf'
     },
     {
+
       id: 5,
       title: 'Quantum Computing Success Story: Financial Services',
       description: 'How we helped a major financial institution achieve 1000x performance improvement using quantum computing.',
@@ -143,6 +149,7 @@ const Resources: React.FC = () : JSX.Element => {;
       downloadUrl: 'https://ziontechgroup.com / resources / quantum - financial - case.pdf'
     },
     {
+
       id: 3,
       title: 'Cybersecurity in the AI Era: Threats & Solutions',
       description: 'Expert analysis of emerging cybersecurity challenges and AI - powered security solutions.',
@@ -161,6 +168,7 @@ const Resources: React.FC = () : JSX.Element => {;
       downloadUrl: 'https://ziontechgroup.com / resources / cybersecurity - ai - webinar.mp4'
     },
     {
+
       id: 4,
       title: 'Blockchain Implementation: Enterprise Case Study',
       description: 'Real - world implementation of blockchain technology in supply chain management.',
@@ -179,6 +187,7 @@ const Resources: React.FC = () : JSX.Element => {;
       downloadUrl: 'https://ziontechgroup.com / resources / blockchain - supply - chain.pdf'
     },
     {
+
       id: 5,
       title: 'IoT Edge Computing: Architecture & Best Practices',
       description: 'Technical deep - dive into IoT edge computing architecture and implementation best practices.',
@@ -197,6 +206,7 @@ const Resources: React.FC = () : JSX.Element => {;
       downloadUrl: 'https://ziontechgroup.com / resources / iot - edge - computing.pdf'
     },
     {
+
       id: 6,
       title: 'AI Consciousness Research: Breakthrough Findings',
       description: 'Latest research findings on AI consciousness simulation and its implications.',
@@ -218,6 +228,7 @@ const Resources: React.FC = () : JSX.Element => {;
       ]
     },
     {
+
       id: 'pricing - guide - 2025',
       title: 'Pricing Guide 2025',
       icon: DollarSign,
@@ -235,6 +246,7 @@ const Resources: React.FC = () : JSX.Element => {;
 
   const additionalResources = [
     {
+
       id: 'api - docs',
       title: 'API Reference',
       icon: GitBranch,
@@ -243,6 +255,7 @@ const Resources: React.FC = () : JSX.Element => {;
       href: '/api - docs'
     },
     {
+
       id: 'developers',
       title: 'Developer Portal',
       icon: GitCommit,
@@ -251,6 +264,7 @@ const Resources: React.FC = () : JSX.Element => {;
       href: '/developers'
     },
     {
+
       id: 'training',
       title: 'Training & Certification',
       icon: Award,
@@ -259,6 +273,7 @@ const Resources: React.FC = () : JSX.Element => {;
       href: '/training'
     },
     {
+
       id: 'community',;
       title: 'Community Forum',;
       icon: Users,;
@@ -269,6 +284,7 @@ const Resources: React.FC = () : JSX.Element => {;
   ];
 
   const contactInfo = {
+
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',;
   ;
@@ -286,11 +302,13 @@ const Resources: React.FC = () : JSX.Element => {;
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -362,6 +380,7 @@ const Resources: React.FC = () : JSX.Element => {;
                   </p>
                   <div className="flex items - center justify - between">
                     <span className={`px - 2 py - 1 text - xs font - medium rounded - full ${
+
                       resource.badge === 'Essential' ? 'bg - blue - 500 / 20 text - blue - 400' :
                       resource.badge === 'Popular' ? 'bg - green - 500 / 20 text - green - 400' :
                       resource.badge === 'Featured' ? 'bg - purple - 500 / 20 text - purple - 400' :
@@ -381,11 +400,13 @@ const Resources: React.FC = () : JSX.Element => {;
           {resourceCategories.map ( (category, categoryIndex) => (;
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -403,16 +424,19 @@ const Resources: React.FC = () : JSX.Element => {;
                 return (<motion.article
                     key = {resource.id}
                     initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                     animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                     transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -482,11 +506,13 @@ const Resources: React.FC = () : JSX.Element => {;
         <div className="max - w-7xl mx - auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -507,16 +533,19 @@ const Resources: React.FC = () : JSX.Element => {;
             {resourceCategories.filter (cat => cat.featured) .map ( (category, index) => (<motion.div
                 key={category.id}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -578,11 +607,13 @@ const Resources: React.FC = () : JSX.Element => {;
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -605,16 +636,19 @@ const Resources: React.FC = () : JSX.Element => {;
                 key={category.id}
                 id={category.id}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.05
 
@@ -657,11 +691,13 @@ const Resources: React.FC = () : JSX.Element => {;
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -683,16 +719,19 @@ const Resources: React.FC = () : JSX.Element => {;
                 key={resource.id}
                 id={resource.id}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -728,11 +767,13 @@ const Resources: React.FC = () : JSX.Element => {;
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

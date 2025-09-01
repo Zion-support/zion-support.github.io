@@ -1,34 +1,41 @@
 import React from 'react';
 import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default function AICodeReview () {
+
 import { motion } from 'framer - motion';
 
     const features = [
         {
+
             icon: Code,
             title: "Automated Code Analysis",
             description: "AI - powered code review that identifies bugs, security vulnerabilities, and performance issues"
         },
         {
+
             icon: Shield,
             title: "Security Scanning",
             description: "Comprehensive security analysis to detect vulnerabilities and compliance issues"
         },
         {
+
             icon: Zap,
             title: "Performance Optimization",
             description: "Identify and fix performance bottlenecks and inefficient code patterns"
         },
         {
+
             icon: Users,
             title: "Team Collaboration",
             description: "Streamlined code review process with team feedback and approval workflows"
         },
         {
+
             icon: BarChart3,
             title: "Quality Metrics",
             description: "Track code quality improvements and maintain high standards across projects"
         },
         {
+
             icon: Target,
             title: "Best Practices",
             description: "Ensure code follows industry best practices and coding standards"
@@ -59,10 +66,12 @@ import { motion } from 'framer - motion';
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">
         <div className="max - w-7xl mx - auto text - center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
@@ -74,14 +83,17 @@ import { motion } from 'framer - motion';
           </motion.div>
 
           <motion.h1 initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: 0.1
 
@@ -90,14 +102,17 @@ import { motion } from 'framer - motion';
           </motion.h1>
 
           <motion.p initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -107,14 +122,17 @@ import { motion } from 'framer - motion';
           </motion.p>
 
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: 0.3
 
@@ -133,10 +151,12 @@ import { motion } from 'framer - motion';
       <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">
         <div className="max - w-7xl mx - auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -152,14 +172,17 @@ import { motion } from 'framer - motion';
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {features.map ( (feature, index) => (<motion.div key={feature.title} initial = {
+
   { opacity: 0,
   y: 30
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -178,10 +201,12 @@ import { motion } from 'framer - motion';
       <section className="py - 16 px - 4 sm:px - 6 lg:px - 8 bg - white / 5">
         <div className="max - w-7xl mx - auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -196,14 +221,17 @@ import { motion } from 'framer - motion';
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 max - w-4xl mx - auto">
             {benefits.map ( (benefit, index) => (<motion.div key={benefit} initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -219,10 +247,12 @@ import { motion } from 'framer - motion';
       <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">
         <div className="max - w-7xl mx - auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -237,14 +267,17 @@ import { motion } from 'framer - motion';
 
           <div className="grid grid - cols - 2 md:grid - cols - 5 gap - 6 max - w-4xl mx - auto">
             {supportedLanguages.map ( (language, index) => (<motion.div key={language} initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }} whileInView = {
+
   { opacity: 1,
   scale: 1
 
 }} transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -260,10 +293,12 @@ import { motion } from 'framer - motion';
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">
         <div className="max - w-4xl mx - auto text - center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 

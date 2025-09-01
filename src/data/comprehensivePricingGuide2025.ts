@@ -36,6 +36,7 @@ export interface ServicePricing {
     category: "AI & Analytics",
     pricingTiers: [
       {
+
 "
         id: "starter","
         name: "Starter",
@@ -52,6 +53,7 @@ export interface ServicePricing {
         bestFor: "Small businesses and startups"
       },
       {
+
 "
         id: "professional","
         name: "Professional",
@@ -70,6 +72,7 @@ export interface ServicePricing {
         popular: true
       },
       {
+
 "
         id: "enterprise","
         name: "Enterprise",
@@ -94,6 +97,7 @@ export interface ServicePricing {
     contactInfo
   },
   {
+
 "
     id: "quantum-ai-optimization-platform","
     title: "Quantum AI Optimization Platform","
@@ -101,6 +105,7 @@ export interface ServicePricing {
     category: "Quantum Computing",
     pricingTiers: [
       {
+
 "
         id: "starter","
         name: "Starter",
@@ -117,6 +122,7 @@ export interface ServicePricing {
         bestFor: "Research institutions and startups"
       },
       {
+
 "
         id: "professional","
         name: "Professional",
@@ -134,6 +140,7 @@ export interface ServicePricing {
         popular: true
       },
       {
+
 "
         id: "enterprise","
         name: "Enterprise",
@@ -157,6 +164,7 @@ export interface ServicePricing {
     contactInfo
   },
   {
+
 "
     id: "ai-powered-cybersecurity-platform","
     title: "AI-Powered Cybersecurity Platform","
@@ -164,6 +172,7 @@ export interface ServicePricing {
     category: "Cybersecurity",
     pricingTiers: [
       {
+
 "
         id: "starter","
         name: "Starter",
@@ -180,6 +189,7 @@ export interface ServicePricing {
         bestFor: "Small businesses and startups"
       },
       {
+
 "
         id: "professional","
         name: "Professional",
@@ -197,6 +207,7 @@ export interface ServicePricing {
         popular: true
       },
       {
+
 "
         id: "enterprise","
         name: "Enterprise",
@@ -220,6 +231,7 @@ export interface ServicePricing {
     contactInfo
   },
   {
+
 "
     id: "ai-powered-content-generation-platform","
     title: "AI-Powered Content Generation Platform","
@@ -227,6 +239,7 @@ export interface ServicePricing {
     category: "AI & Analytics",
     pricingTiers: [
       {
+
 "
         id: "starter","
         name: "Starter",
@@ -243,6 +256,7 @@ export interface ServicePricing {
         bestFor: "Small businesses and content creators"
       },
       {
+
 "
         id: "professional","
         name: "Professional",
@@ -260,6 +274,7 @@ export interface ServicePricing {
         popular: true
       },
       {
+
 "
         id: "enterprise","
         name: "Enterprise",
@@ -283,6 +298,7 @@ export interface ServicePricing {
     contactInfo
   },
   {
+
 "
     id: "ai-powered-video-analytics-platform","
     title: "AI-Powered Video Analytics Platform","
@@ -290,6 +306,7 @@ export interface ServicePricing {
     category: "AI & Analytics",
     pricingTiers: [
       {
+
 "
         id: "starter","
         name: "Starter",
@@ -306,6 +323,7 @@ export interface ServicePricing {
         bestFor: "Small businesses and content creators"
       },
       {
+
 "
         id: "professional","
         name: "Professional",
@@ -323,6 +341,7 @@ export interface ServicePricing {
         popular: true
       },
       {
+
 "
         id: "enterprise","
         name: "Enterprise",
@@ -346,6 +365,7 @@ export interface ServicePricing {
     contactInfo
   },
   {
+
 "
     id: "blockchain-supply-chain-platform","
     title: "Blockchain Supply Chain Platform","
@@ -353,6 +373,7 @@ export interface ServicePricing {
     category: "Blockchain & Web3",
     pricingTiers: [
       {
+
 "
         id: "starter","
         name: "Starter",
@@ -369,6 +390,7 @@ export interface ServicePricing {
         bestFor: "Small manufacturers and retailers"
       },
       {
+
 "
         id: "professional","
         name: "Professional",
@@ -386,6 +408,7 @@ export interface ServicePricing {
         popular: true
       },
       {
+
 "
         id: "enterprise","
         name: "Enterprise",
@@ -409,6 +432,7 @@ export interface ServicePricing {
     contactInfo
   },
   {
+
 "
     id: "ai-powered-financial-trading-platform","
     title: "AI-Powered Financial Trading Platform","
@@ -416,6 +440,7 @@ export interface ServicePricing {
     category: "AI & Analytics",
     pricingTiers: [
       {
+
 "
         id: "starter","
         name: "Starter",
@@ -432,6 +457,7 @@ export interface ServicePricing {
         bestFor: "Individual traders and small funds"
       },
       {
+
 "
         id: "professional","
         name: "Professional",
@@ -449,6 +475,7 @@ export interface ServicePricing {
         popular: true
       },
       {
+
 "
         id: "enterprise","
         name: "Enterprise",
@@ -472,6 +499,7 @@ export interface ServicePricing {
     contactInfo
   },
   {
+
 "
     id: "ai-powered-healthcare-diagnostics-platform","
     title: "AI-Powered Healthcare Diagnostics Platform","
@@ -479,6 +507,7 @@ export interface ServicePricing {
     category: "AI & Analytics",
     pricingTiers: [
       {
+
 "
         id: "starter","
         name: "Starter",
@@ -495,6 +524,7 @@ export interface ServicePricing {
         bestFor: "Small clinics and medical practices"
       },
       {
+
 "
         id: "professional","
         name: "Professional",
@@ -512,6 +542,7 @@ export interface ServicePricing {
         popular: true
       },
       {
+
 "
         id: "enterprise","
         name: "Enterprise",
@@ -535,6 +566,7 @@ export interface ServicePricing {
     contactInfo
   },
   {
+
 "
     id: "quantum-machine-learning-platform","
     title: "Quantum Machine Learning Platform","
@@ -542,6 +574,7 @@ export interface ServicePricing {
     category: "Quantum Computing",
     pricingTiers: [
       {
+
 "
         id: "starter","
         name: "Starter",
@@ -558,6 +591,7 @@ export interface ServicePricing {
         bestFor: "Research institutions and startups"
       },
       {
+
 "
         id: "professional","
         name: "Professional",
@@ -575,6 +609,7 @@ export interface ServicePricing {
         popular: true
       },
       {
+
 "
         id: "enterprise","
         name: "Enterprise",
@@ -598,6 +633,7 @@ export interface ServicePricing {
     contactInfo
   },
   {
+
 "
     id: "ai-powered-marketing-automation-platform","
     title: "AI-Powered Marketing Automation Platform","
@@ -605,6 +641,7 @@ export interface ServicePricing {
     category: "Marketing & Sales",
     pricingTiers: [
       {
+
 "
         id: "starter","
         name: "Starter",
@@ -621,6 +658,7 @@ export interface ServicePricing {
         bestFor: "Small businesses and startups"
       },
       {
+
 "
         id: "professional","
         name: "Professional",
@@ -638,6 +676,7 @@ export interface ServicePricing {
         popular: true
       },
       {
+
 "
         id: "enterprise","
         name: "Enterprise",
@@ -660,7 +699,7 @@ export interface ServicePricing {
     supportLevel: "24/7",
     contactInfo
   }
-];
+};
 
 export const comprehensivePricingGuide2025: ServicePricing[] = [
   {

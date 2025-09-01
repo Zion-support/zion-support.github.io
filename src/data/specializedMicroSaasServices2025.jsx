@@ -46,6 +46,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         supportLevel: "standard","
         marketPrice: "$299 - $999/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -56,6 +57,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Data Privacy"],;"
         integrationCapabilities["WordPress", "Shopify", "Mailchimp", "Social Media APIs", "CMS Platforms"],;
         freeTier: {
+
 "
             features["5 content generations per month", "Basic SEO tools", "Standard templates"],;"
             limitations["Limited AI models", "Basic analytics", "No custom branding"];
@@ -63,6 +65,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
     },
     // Smart Invoice Management System
     {
+
 "
         id: "smart-invoice-management-system","
         title: "Smart Invoice Management System","
@@ -108,6 +111,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         supportLevel: "standard","
         marketPrice: "$199 - $599/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -118,6 +122,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Financial Regulations", "Data Security"],;"
         integrationCapabilities["QuickBooks", "Xero", "Stripe", "PayPal", "Bank APIs"],;
         freeTier: {
+
 "
             features["10 invoices per month", "Basic reporting", "Email support"],;"
             limitations["No API access", "Limited integrations", "Basic templates"];
@@ -125,6 +130,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
     },
     // AI-Powered Customer Support Platform
     {
+
 "
         id: "ai-customer-support-platform","
         title: "AI Customer Support Platform","
@@ -170,6 +176,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         supportLevel: "premium","
         marketPrice: "$399 - $1,299/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -180,6 +187,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Data Privacy", "Security Standards"],;"
         integrationCapabilities["Slack", "Discord", "Website Chat", "Mobile Apps", "CRM Systems"],;
         freeTier: {
+
 "
             features["100 conversations per month", "Basic chatbot", "Email support"],;"
             limitations["Limited AI models", "Basic analytics", "No custom branding"];
@@ -187,6 +195,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
     },
     // Smart Project Management Tool
     {
+
 "
         id: "smart-project-management-tool","
         title: "Smart Project Management Tool","
@@ -232,6 +241,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         supportLevel: "standard","
         marketPrice: "$249 - $799/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -242,6 +252,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Data Security"],;"
         integrationCapabilities["Slack", "Microsoft Teams", "GitHub", "Jira", "Trello"],;
         freeTier: {
+
 "
             features["3 projects", "5 team members", "Basic analytics"],;"
             limitations["Limited AI features", "No advanced reporting", "Basic integrations"];
@@ -249,6 +260,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
     },
     // AI-Powered Email Marketing Platform
     {
+
 "
         id: "ai-email-marketing-platform","
         title: "AI Email Marketing Platform","
@@ -294,6 +306,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         supportLevel: "standard","
         marketPrice: "$179 - $599/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -304,6 +317,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "CAN-SPAM", "Data Privacy"],;"
         integrationCapabilities["Shopify", "WooCommerce", "CRM Systems", "Analytics Tools", "Social Media"],;
         freeTier: {
+
 "
             features["1,000 emails per month", "Basic AI features", "Standard templates"],;"
             limitations["Limited AI models", "Basic analytics", "No custom branding"];
@@ -311,6 +325,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
     },
     // Smart Inventory Management System
     {
+
 "
         id: "smart-inventory-management-system","
         title: "Smart Inventory Management System","
@@ -356,6 +371,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         supportLevel: "premium","
         marketPrice: "$349 - $1,199/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -366,6 +382,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Data Security", "Industry Standards"],;"
         integrationCapabilities["POS Systems", "E-commerce Platforms", "ERP Systems", "Supplier APIs", "Shipping Carriers"],;
         freeTier: {
+
 "
             features["100 SKUs", "Basic forecasting", "Email support"],;"
             limitations["Limited AI features", "Basic reporting", "No API access"];
@@ -373,6 +390,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
     },
     // AI-Powered Social Media Manager
     {
+
 "
         id: "ai-social-media-manager","
         title: "AI Social Media Manager","
@@ -418,6 +436,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         supportLevel: "standard","
         marketPrice: "$199 - $699/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -428,6 +447,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Data Privacy", "Platform Policies"],;"
         integrationCapabilities["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok", "YouTube"],;
         freeTier: {
+
 "
             features["2 social media accounts", "Basic AI features", "Standard templates"],;"
             limitations["Limited AI models", "Basic analytics", "No custom branding"];
@@ -435,6 +455,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
     },
     // Smart Time Tracking Solution
     {
+
 "
         id: "smart-time-tracking-solution","
         title: "Smart Time Tracking Solution","
@@ -480,6 +501,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         supportLevel: "standard","
         marketPrice: "$129 - $399/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -490,6 +512,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Data Privacy"],;"
         integrationCapabilities["Project Management Tools", "CRM Systems", "Accounting Software", "Calendar Apps"],;
         freeTier: {
+
 "
             features["Basic time tracking", "1 project", "Email support"],;"
             limitations["No AI features", "Basic reporting", "Limited integrations"];
@@ -497,6 +520,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
     },
     // AI-Powered Lead Generation Platform
     {
+
 "
         id: "ai-lead-generation-platform","
         title: "AI Lead Generation Platform","
@@ -542,6 +566,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         supportLevel: "premium","
         marketPrice: "$449 - $1,499/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -552,6 +577,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "CAN-SPAM", "Data Privacy"],;"
         integrationCapabilities["CRM Systems", "Email Platforms", "Social Media", "Website Forms", "Analytics Tools"],;
         freeTier: {
+
 "
             features["100 leads per month", "Basic AI features", "Email support"],;"
             limitations["Limited AI models", "Basic analytics", "No custom branding"];
@@ -559,6 +585,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
     },
     // Smart Document Management System
     {
+
 "
         id: "smart-document-management-system","
         title: "Smart Document Management System","
@@ -604,6 +631,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         supportLevel: "premium","
         marketPrice: "$279 - $899/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -614,6 +642,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "SOC2", "Data Security", "Industry Standards"],;"
         integrationCapabilities["Microsoft Office", "Google Workspace", "CRM Systems", "ERP Systems", "Cloud Storage"],;
         freeTier: {
+
 "
             features["5GB storage", "Basic AI features", "Email support"],;"
             limitations["Limited AI models", "Basic workflow", "No advanced security"];

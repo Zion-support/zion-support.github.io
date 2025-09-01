@@ -18,7 +18,9 @@ interface DemoFormData {
   message: string}
 
 const ScheduleDemo: React.FC = () : JSX.Element => {
+
   const [formData, setFormData] = useState < any> ({
+
     firstName: '',
     lastName: '',
     email: '',
@@ -52,14 +54,18 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
 
       // // // // // // // console.error ('Error submitting form:', error) ;
     } finally {
+
       setIsSubmitting (false) ;
 
       setIsSubmitted (true) } catch (error) {
+
       console.error ('Error submitting form:', error) } finally {
+
       setIsSubmitting (false) }
   };
 
   if (isSubmitted) {
+
     return (<div className = "min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex items - center justify - center">
         <SEO
           title="Demo Scheduled - Zion Tech Group"
@@ -67,11 +73,13 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
         />
         <motion.div
           initial = {
+
   { opacity: 0,
   scale: 0.9
 
 }}
           animate = {
+
   { opacity: 1,
   scale: 1
 
@@ -138,11 +146,13 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
         <div className="max - w-7xl mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -183,16 +193,19 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
             <div className="lg:col - span - 2">
               <motion.div
                 initial = {
+
   { opacity: 0,
   x: -20
 
 }}
                 animate = {
+
   { opacity: 1,
   x: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -402,16 +415,19 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
             <div className="lg:col - span - 1">;
               <motion.div
                 initial = {
+
   { opacity: 0,
   x: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   x: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: 0.4
 

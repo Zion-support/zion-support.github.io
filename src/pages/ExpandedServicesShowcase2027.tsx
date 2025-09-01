@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { SEO } from '@/components / SEO';
 export default ExpandedServicesShowcase2027;}}}}}
 import {
+
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   Search,
@@ -90,11 +92,13 @@ import { motion, AnimatePresence } from 'framer - motion';
     return (<motion.div
         key = {service.id}
         initial = {
+
   { opacity: 0,
   y: 20
 
 }}
         animate = {
+
   { opacity: 1,
   y: 0
 
@@ -165,16 +169,19 @@ import { motion, AnimatePresence } from 'framer - motion';
           <AnimatePresence>
             {expandedService === service.id && (<motion.div
                 initial = {
+
   { opacity: 0,
   height: 0
 
 }}
                 animate = {
+
   { opacity: 1,
   height: 'auto'
 
 }}
                 exit = {
+
   { opacity: 0,
   height: 0
 
@@ -238,6 +245,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                 <span>{service.contactInfo.phone}</span>
               </div>
               <span className={`px - 2 py - 1 rounded - full text - xs font - semibold ${
+
                 service.status === 'active' ? 'bg - green - 100 text - green - 800' :
                 service.status === 'beta' ? 'bg - yellow - 100 text - yellow - 800' :
                 'bg - gray - 100 text - gray - 800'
@@ -276,11 +284,13 @@ import { motion, AnimatePresence } from 'framer - motion';
     return (<motion.div
         key = {service.id}
         initial = {
+
   { opacity: 0,
   x: -20
 
 }}
         animate = {
+
   { opacity: 1,
   x: 0
 
@@ -329,6 +339,7 @@ import { motion, AnimatePresence } from 'framer - motion';
               <div>
                 <p className="text - gray - 500 dark:text - gray - 400">Status</p>
                 <span className={`px - 2 py - 1 rounded - full text - xs font - semibold ${
+
                   service.status === 'active' ? 'bg - green - 100 text - green - 800' :
                   service.status === 'beta' ? 'bg - yellow - 100 text - yellow - 800' :
                   'bg - gray - 100 text - gray - 800'
@@ -375,11 +386,13 @@ import { motion, AnimatePresence } from 'framer - motion';
           <div role="button" className="text - center">
             <motion.h1
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -393,16 +406,19 @@ import { motion, AnimatePresence } from 'framer - motion';
             </motion.h1>
             <motion.p
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -416,16 +432,19 @@ import { motion, AnimatePresence } from 'framer - motion';
             {/* Contact Info */}
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.4
 
@@ -496,6 +515,7 @@ import { motion, AnimatePresence } from 'framer - motion';
               <div role="button" className="flex items - center space - x-2 bg - gray - 100 dark:bg - slate - 700 rounded - lg p - 1">
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`p - 2 rounded - md transition - colors duration - 200 ${
+
                     viewMode === 'grid'
                       ? 'bg - white dark:bg - slate - 600 text - gray - 900 dark:text - white shadow - sm'
                       : 'text - gray - 500 dark:text - gray - 400 hover:text - gray - 700 dark:hover:text - gray - 300'
@@ -505,6 +525,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                 </button>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - md transition - colors duration - 200 ${
+
                     viewMode === 'list'
                       ? 'bg - white dark:bg - slate - 600 text - gray - 900 dark:text - white shadow - sm'
                       : 'text - gray - 500 dark:text - gray - 400 hover:text - gray - 700 dark:hover:text - gray - 300'

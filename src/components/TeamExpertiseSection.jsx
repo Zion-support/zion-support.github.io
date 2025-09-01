@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
 export function TeamExpertiseSection () {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
 =======
@@ -113,6 +114,7 @@ const teamMembers = [
 ];
 const expertiseAreas = [
     {
+
 "
         name: "Artificial Intelligence","
         icon: <Brain className="w-8 h-8"/>,"
@@ -123,6 +125,7 @@ const expertiseAreas = [
         success: "98%"
     },
     {
+
 "
         name: "Cloud Infrastructure","
         icon: <Cloud className="w-8 h-8"/>,"
@@ -133,6 +136,7 @@ const expertiseAreas = [
         success: "99%"
     },
     {
+
 "
         name: "Web Development","
         icon: <Globe className="w-8 h-8"/>,"
@@ -143,6 +147,7 @@ const expertiseAreas = [
         success: "97%"
     },
     {
+
 "
         name: "Mobile Development","
         icon: <Zap className="w-8 h-8"/>,"
@@ -153,6 +158,7 @@ const expertiseAreas = [
         success: "96%"
     },
     {
+
 "
         name: "Data Analytics","
         icon: <Database className="w-8 h-8"/>,"
@@ -163,6 +169,7 @@ const expertiseAreas = [
         success: "98%"
     },
     {
+
 "
         name: "Cybersecurity","
         icon: <Shield className="w-8 h-8"/>,"
@@ -307,6 +314,7 @@ const stats = ["
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">
             {expertiseAreas.map ( (area, index) => (<motion.div key={index} initial = {
+
 =======
           "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -397,6 +405,7 @@ const stats = ["
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {teamMembers.map ( (member, index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
+
   { type: "spring",
   stiffness: 300
 
@@ -415,6 +424,7 @@ const stats = ["
           "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
+
 "
   { type: "spring",
   stiffness: 300 
@@ -478,6 +488,7 @@ const stats = ["
   y: 10
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0
@@ -494,6 +505,7 @@ const stats = ["
                         <h5 className="text - zion - cyan font - semibold text - sm mb - 2">Achievements:</h5>
                         <div className="space - y-1 mb - 4">
                           {member.achievements.map ( (achievement, idx) => (<motion.div key={idx} className="flex items - center gap - 2 text - zion - slate - light / 80 text - xs" initial = {
+
 =======
 }} transition={{ duration: 0.3 }}>"
                         <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{member.bio}</p>
@@ -530,6 +542,7 @@ const stats = ["
                               <Github className="w-4 h-4"/>
                             </a>
                             <a href = {
+
 '`
   `mailto:${member.name.toLowerCase().replace(' ',.')
 "`

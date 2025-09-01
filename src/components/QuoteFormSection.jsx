@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = () => {
+
   const [formData, setFormData] = useState({
 
 <<<<<<< HEAD
   const [formData, setFormData] = useState ({
+
 =======
 >>>>>>> main
     name: '',
@@ -42,6 +44,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
 
     // Reset form after 5 seconds
     setTimeout(() => {
+
       setIsSubmitted(false);
       setFormData({
 

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
   const sitemapData = [
     {
+
       title: 'Main Pages',
       links: [
         { name: 'Home', url: '/' },
@@ -13,6 +14,7 @@
       ]
     },
     {
+
       title: 'Services',
       links: [
         { name: 'AI Services', url: '/services / ai' },
@@ -23,6 +25,7 @@
       ]
     },
     {
+
       title: 'Solutions',
       links: [
         { name: 'Enterprise', url: '/solutions / enterprise' },
@@ -32,6 +35,7 @@
       ]
     },
     {
+
       title: 'Resources',
       links: [
         { name: 'Case Studies', url: '/case - studies' },;
@@ -39,7 +43,6 @@
 =======
 export function SitemapPage(...args: any[]): any {
 
-  
         { name: 'White Papers', url: '/white-papers' },;
 >>>>>>> main
         { name: 'Webinars', url: '/webinars' },;

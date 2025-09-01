@@ -6,6 +6,7 @@ export default authService;
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://api.zion.com';
 ;
 class AuthService {
+
   constructor() {
 
     this.token = localStorage.getItem('token');
@@ -16,6 +17,7 @@ class AuthService {
   async login(credentials) {
 
     try {
+
       // Simulate API call delay
       await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
@@ -57,6 +59,7 @@ class AuthService {
   async register(userData) {
 
     try {
+
       // Simulate API call delay
       await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
@@ -96,7 +99,9 @@ class AuthService {
 
   // Logout user
   async logout () {
+
     try {
+
       // Simulate API call delay
       await new Promise (resolve => setTimeout (resolve, 500) ) ;
 
@@ -115,22 +120,27 @@ class AuthService {
 
   // Get current user
   getCurrentUser () {
+
     return this.user;
   }
 
   // Check if user is authenticated
   isAuthenticated () {
+
     return !!this.token && !!this.user;
   }
 
   // Get token
   getToken () {
+
     return this.token;
   }
 
   // Refresh token
   async refreshToken () {
+
     try {
+
       // Simulate API call delay
       await new Promise (resolve => setTimeout (resolve, 500) ) ;
 
@@ -155,6 +165,7 @@ class AuthService {
   async updateProfile(profileData) {
 
     try {
+
       // Simulate API call delay
       await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
@@ -178,6 +189,7 @@ class AuthService {
   async changePassword(passwordData) {
 
     try {
+
       // Simulate API call delay
       await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
@@ -203,6 +215,7 @@ class AuthService {
   async forgotPassword(email) {
 
     try {
+
       // Simulate API call delay
       await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
@@ -223,6 +236,7 @@ class AuthService {
   async resetPassword(token, newPassword) {
 
     try {
+
       // Simulate API call delay
       await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 

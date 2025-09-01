@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -33,6 +34,7 @@ const steps = [
     duration: 'Immediate',
     success: '95% match rate'},
   {
+
 "
     icon: <Users className="w-8 h-8" />,
     title: 'Connect',
@@ -46,6 +48,7 @@ const steps = [
     duration: '2-4 hours',
     success: '98% satisfaction'},
   {
+
 "
     icon: <FileText className="w-8 h-8" />,
     title: 'Plan',
@@ -59,6 +62,7 @@ const steps = [
     duration: '4-8 hours',
     success: '90% on-time delivery'},
   {
+
 "
     icon: <Rocket className="w-8 h-8" />,
     title: 'Execute',
@@ -72,6 +76,7 @@ const steps = [
     duration: '1-4 weeks',
     success: '99% quality score'},
   {
+
 "
     icon: <CheckCircle className="w-8 h-8" />,
     title: 'Deliver',
@@ -88,21 +93,25 @@ const steps = [
 ;
 const stats = [
   {
+
 "
     icon: <Clock className="w-6 h-6" />,
     value: '3x Faster',
     label: 'Implementation'},
   {
+
 "
     icon: <Target className="w-6 h-6" />,
     value: '99.9%',
     label: 'Success Rate'},
   {
+
 "
     icon: <TrendingUp className="w-6 h-6" />,
     value: '50%',
     label: 'Cost Reduction'},
   {
+
 "
     icon: <Award className="w-6 h-6" />,
     value: '1000+',
@@ -110,6 +119,7 @@ const stats = [
 ];
 
 export function HowItWorksSection() {
+
   const [hoveredStep, setHoveredStep] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
 

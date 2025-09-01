@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Star, Zap, TrendingUp import { SERVICE_CATEGORIES } from '@/data/expandedServices';
 export function ExpandedServicesPreview() {
+
     const getCategoryIcon = (category) => {
 
         switch (category) {

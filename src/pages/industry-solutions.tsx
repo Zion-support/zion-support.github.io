@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default IndustrySolutions;
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Building,
@@ -15,12 +16,13 @@ import { motion } from 'framer - motion.ts';
   Brain,
   Cloud,
   Shield,
-  TrendingUp,
-} from 'lucide - react.ts';
+  TrendingUp} from 'lucide - react.ts';
 
 const IndustrySolutions: React.FC = () : JSX.Element => {
+
   const industries = [
     {
+
       title: 'Healthcare',
       description:
         'AI - powered healthcare solutions for improved patient care and operational efficiency.',
@@ -31,9 +33,9 @@ const IndustrySolutions: React.FC = () : JSX.Element => {
         'Predictive Diagnostics',
         'Patient Care Optimization',
         'Compliance Management',
-      ],
-    },
+      ]},
     {
+
       title: 'Manufacturing',
       description:
         'Smart manufacturing solutions with IoT, AI, and automation technologies.',
@@ -44,9 +46,9 @@ const IndustrySolutions: React.FC = () : JSX.Element => {
         'Predictive Maintenance',
         'Quality Control',
         'Supply Chain Optimization',
-      ],
-    },
+      ]},
     {
+
       title: 'Financial Services',
       description:
         'Advanced financial technology solutions for risk management and operational efficiency.',
@@ -57,9 +59,9 @@ const IndustrySolutions: React.FC = () : JSX.Element => {
         'Risk Management',
         'Trading Algorithms',
         'Compliance Automation',
-      ],
-    },
+      ]},
     {
+
       title: 'Automotive',
       description:
         'Connected vehicle solutions and automotive technology innovations.',
@@ -70,9 +72,9 @@ const IndustrySolutions: React.FC = () : JSX.Element => {
         'Predictive Maintenance',
         'Fleet Management',
         'Safety Systems',
-      ],
-    },
+      ]},
     {
+
       title: 'Energy & Utilities',
       description:
         'Smart grid and energy management solutions for sustainability and efficiency.',
@@ -83,9 +85,9 @@ const IndustrySolutions: React.FC = () : JSX.Element => {
         'Energy Optimization',
         'Predictive Maintenance',
         'Sustainability Analytics',
-      ],
-    },
+      ]},
     {
+
       title: 'Retail & E-commerce',
       description:
         'Digital transformation solutions for modern retail and e - commerce operations.',
@@ -96,34 +98,33 @@ const IndustrySolutions: React.FC = () : JSX.Element => {
         'Inventory Management',
         'Personalization',
         'Supply Chain Optimization',
-      ],
-    },
+      ]},
   ];
 
   const benefits = [
     {
+
       title: 'Industry Expertise',
       description:
         'Deep understanding of industry - specific challenges and requirements',
-      icon: Brain,
-    },
+      icon: Brain},
     {
+
       title: 'Customized Solutions',
       description:
         'Tailored technology solutions for your specific industry needs',
-      icon: Building,
-    },
+      icon: Building},
     {
+
       title: 'Proven Results',
       description:
         'Track record of successful implementations across industries',
-      icon: Star,
-    },
+      icon: Star},
     {
+
       title: 'Future - Ready',
       description: 'Scalable solutions that grow with your business',
-      icon: TrendingUp,
-    },
+      icon: TrendingUp},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">

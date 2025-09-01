@@ -1,20 +1,14 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-export const AdvancedReportingDashboard: React.FC < AdvancedReportingDashboardProps> = ({
+import { motion, AnimatePresence } from 'framer-motion';
 import {
-import { motion, AnimatePresence } from 'framer - motion';
 
   BarChart3,
+  PieChart,
   TrendingUp,
   Download,
   Share2,
-=======
-import {
-  BarChart3, 
-  TrendingUp, 
-  Download, 
-  Share2, 
->>>>>>> main
+  Filter,
+  Calendar,
   Users,
   DollarSign,
   Activity,
@@ -26,11 +20,16 @@ import {
   ChevronDown,
   ChevronUp,
   Shield,
-  Server} from 'lucide-react';
-  X'
-} from 'lucide-react';
-
+  Server,
+  Lock,
+  Unlock,
+  Wifi,
+  Smartphone,
+  Monitor,
+  Tablet
+ } from 'lucide-react';
 interface ReportData {
+
   id: string;
   title: string;
   type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
@@ -43,31 +42,29 @@ interface ReportData {
   author: string;
   views: number;
   downloads: number;
-  rating: number
-}
-
+  rating: number}
 interface ReportMetrics {
+
   totalReports: number;
   activeReports: number;
   totalViews: number;
   totalDownloads: number;
   averageRating: number;
-  topCategories: Array < any>;
-  recentActivity: Array < any>}
-
+  topCategories: Array<any>;
+  recentActivity: Array<any>}
 interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
 
   showMetrics?: boolean;
   showFilters?: boolean;
   showCharts?: boolean;
   maxReports?: number}
-
 export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
 
-showMetrics:  true,;
+  showMetrics = true,;
   showFilters = true,;
   showCharts = true,;
-  maxReports = 15}) => {;
+  maxReports = 15;
+}) => {;
   const [reports, setReports] = useState<ReportData[]>([]);
   const [filteredReports, setFilteredReports] = useState<ReportData[]>([]);
   const [selectedType, setSelectedType] = useState<string>('all');
@@ -80,9 +77,9 @@ showMetrics:  true,;
   const [showReportDetails, setShowReportDetails] = useState(false);
   const [sortBy, setSortBy] = useState<any>('date');
   const [sortOrder, setSortOrder] = useState<any>('desc');
-
   // Sample report data
-  useEffect ( () => {
+  useEffect(() => {
+
     const sampleReports: ReportData[] = [
       {
 
@@ -95,24 +92,15 @@ showMetrics:  true,;
           revenue: 2500000,
           expenses: 1800000,
           profit: 700000,
-<<<<<<< HEAD
           growth: 15.5,
-          keyMetrics['Revenue Growth',Profit Margin',Cost Efficiency']},;
+          keyMetrics['Revenue Growth', 'Profit Margin', 'Cost Efficiency']
+        },
         lastUpdated: '2024-01-15',
         status: 'active',
         priority: 'high',
-        tags['Finance',Q4',Performance',Analysis'],;
+        tags['Finance', 'Q4', 'Performance', 'Analysis'],
         description: 'Comprehensive analysis of Q4 financial performance including revenue, expenses, and profit margins',
         author: 'Sarah Johnson',
-=======
-          growth: 15.5,'
-          keyMetrics['Revenue Growth', 'Profit Margin', 'Cost Efficiency']},;'
-        lastUpdated: '2024-01-15','
-        status: 'active','
-        priority: 'high','
-        tags['Finance', 'Q4', 'Performance', 'Analysis'],;'
-        description: 'Comprehensive analysis of Q4 financial performance including revenue, expenses, and profit margins','        author: 'Sarah Johnson',
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         views: 245,
         downloads: 89,
         rating: 4.8
@@ -128,24 +116,15 @@ showMetrics:  true,;
           accuracy: 94.2,
           responseTime: 1.8,
           uptime: 99.9,
-<<<<<<< HEAD
           userSatisfaction: 4.6,
-          keyMetrics['Accuracy',Response Time',Uptime',User Satisfaction']},;
+          keyMetrics['Accuracy', 'Response Time', 'Uptime', 'User Satisfaction']
+        },
         lastUpdated: '2024-01-14',
         status: 'active',
         priority: 'critical',
-        tags['AI',Performance',Metrics',Machine Learning'],;
+        tags['AI', 'Performance', 'Metrics', 'Machine Learning'],
         description: 'Detailed performance metrics for AI services including accuracy, response time, and uptime',
         author: 'Michael Chen',
-=======
-          userSatisfaction: 4.6,'
-          keyMetrics['Accuracy', 'Response Time', 'Uptime', 'User Satisfaction']},;'
-        lastUpdated: '2024-01-14','
-        status: 'active','
-        priority: 'critical','
-        tags['AI', 'Performance', 'Metrics', 'Machine Learning'],;'
-        description: 'Detailed performance metrics for AI services including accuracy, response time, and uptime','        author: 'Michael Chen',
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         views: 189,
         downloads: 67,
         rating: 4.9
@@ -160,26 +139,16 @@ showMetrics:  true,;
 
           threatsDetected: 156,
           incidentsResolved: 154,
-<<<<<<< HEAD
           responseTime: 2.3,
           riskLevel: 'Medium',
-          keyMetrics['Threats Detected',Incidents Resolved',Response Time',Risk Level']},;
+          keyMetrics['Threats Detected', 'Incidents Resolved', 'Response Time', 'Risk Level']
+        },
         lastUpdated: '2024-01-13',
         status: 'active',
         priority: 'high',
-        tags['Security',Threats',Assessment',Risk Management'],;
+        tags['Security', 'Threats', 'Assessment', 'Risk Management'],
         description: 'Comprehensive assessment of cybersecurity threats and incident response metrics',
         author: 'David Kim',
-=======
-          responseTime: 2.3,'
-          riskLevel: 'Medium','
-          keyMetrics['Threats Detected', 'Incidents Resolved', 'Response Time', 'Risk Level']},;'
-        lastUpdated: '2024-01-13','
-        status: 'active','
-        priority: 'high','
-        tags['Security', 'Threats', 'Assessment', 'Risk Management'],;'
-        description: 'Comprehensive assessment of cybersecurity threats and incident response metrics','        author: 'David Kim',
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         views: 312,
         downloads: 134,
         rating: 4.7
@@ -195,24 +164,15 @@ showMetrics:  true,;
           cpuUtilization: 78.5,
           memoryUsage: 82.3,
           storageUsage: 65.8,
-<<<<<<< HEAD
           networkTraffic: 45.2,
-          keyMetrics['CPU Utilization',Memory Usage',Storage Usage',Network Traffic']},;
+          keyMetrics['CPU Utilization', 'Memory Usage', 'Storage Usage', 'Network Traffic']
+        },
         lastUpdated: '2024-01-12',
         status: 'active',
         priority: 'medium',
-        tags['Cloud',Infrastructure',Utilization',Monitoring'],;
+        tags['Cloud', 'Infrastructure', 'Utilization', 'Monitoring'],
         description: 'Real-time monitoring of cloud infrastructure utilization and performance metrics',
         author: 'Lisa Thompson',
-=======
-          networkTraffic: 45.2,'
-          keyMetrics['CPU Utilization', 'Memory Usage', 'Storage Usage', 'Network Traffic']},;'
-        lastUpdated: '2024-01-12','
-        status: 'active','
-        priority: 'medium','
-        tags['Cloud', 'Infrastructure', 'Utilization', 'Monitoring'],;'
-        description: 'Real-time monitoring of cloud infrastructure utilization and performance metrics','        author: 'Lisa Thompson',
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         views: 167,
         downloads: 56,
         rating: 4.5
@@ -227,51 +187,35 @@ showMetrics:  true,;
 
           overallSatisfaction: 4.6,
           netPromoterScore: 72,
-<<<<<<< HEAD
           responseRate: 89.5,
-          topConcerns['Response Time',Documentation',Support Quality'],;
-          keyMetrics['Overall Satisfaction',NPS',Response Rate',Top Concerns']},;
+          topConcerns['Response Time', 'Documentation', 'Support Quality'],
+          keyMetrics['Overall Satisfaction', 'NPS', 'Response Rate', 'Top Concerns']
+        },
         lastUpdated: '2024-01-11',
         status: 'active',
         priority: 'medium',
-        tags['Customer',Satisfaction',Survey',NPS'],;
+        tags['Customer', 'Satisfaction', 'Survey', 'NPS'],
         description: 'Analysis of customer satisfaction survey results and net promoter score metrics',
         author: 'Alex Wong',
-=======
-          responseRate: 89.5,'
-          topConcerns['Response Time', 'Documentation', 'Support Quality'],;'
-          keyMetrics['Overall Satisfaction', 'NPS', 'Response Rate', 'Top Concerns']},;'
-        lastUpdated: '2024-01-11','
-        status: 'active','
-        priority: 'medium','
-        tags['Customer', 'Satisfaction', 'Survey', 'NPS'],;'
-        description: 'Analysis of customer satisfaction survey results and net promoter score metrics','        author: 'Alex Wong',
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         views: 203,
         downloads: 78,
         rating: 4.6
-
     ];
-
-    setReports (sampleReports) ;
-    setFilteredReports (sampleReports) }, []) ;
-
+    setReports(sampleReports);
+    setFilteredReports(sampleReports)}, []);
   // Filter and sort reports
-  useEffect(() => {
-    let filtered = reports;
+  useEffect(()  => {
 
+    let filtered = reports;
     if (selectedType !== 'all') {
 
       filtered = filtered.filter(r => r.type === selectedType)}
-
     if (selectedCategory !== 'all') {
 
       filtered = filtered.filter(r => r.category === selectedCategory)}
-
     if (selectedStatus !== 'all') {
 
       filtered = filtered.filter(r => r.status === selectedStatus)}
-
     if (searchQuery) {
 
       filtered = filtered.filter(r =>
@@ -279,17 +223,17 @@ showMetrics:  true,;
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )};
+=======;
       filtered = filtered.filter(r => ;
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      )}
-
+      );
+    }
     // Sort reports
     filtered.sort((a, b) => {
 
       let aValue: any, bValue: unknown;
-
       switch (sortBy) {
 
         case 'date':
@@ -307,28 +251,121 @@ showMetrics:  true,;
         case 'priority':
           const priorityOrder = {
 
-  low: 1, medium: 2, high: 3,;  ;
+  low: 1, medium: 2, high: 3,;
   ;
   ;
   ;
   ;
-  critical: 4 };          aValue = priorityOrder[a.priority as keyof typeof priorityOrder];
+  ;
+  critical: 4 ;
+};
+          aValue = priorityOrder[a.priority as keyof typeof priorityOrder];
           bValue = priorityOrder[b.priority as keyof typeof priorityOrder];
           break;
-        case 'title':;
-          aValue = a.title.toLowerCase () ;
-          bValue = b.title.toLowerCase () ;
+        case 'title':
+          aValue = a.title.toLowerCase();
+          bValue = b.title.toLowerCase();
           break;
         default:
           aValue = 0;
           bValue = 0}
-
       if (sortOrder = == 'asc') {;
-        return aValue > bValue ? 1 : -1} else {
+        return aValue > bValue ? 1 : -1;
+      } else {
 
-        return aValue < bValue ? 1 : -1}
-    }) ;
-    setFilteredReports (filtered.slice (0, maxReports) ) }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]) ;
-
+        return aValue < bValue ? 1 : -1;
+      }
+    });
+    setFilteredReports(filtered.slice(0, maxReports))}, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]);
   // Calculate report metrics
   const reportMetrics = {
+
+  totalReports: reports.length,
+    activeReports: reports.filter(r = > r.status === 'active').length,
+    totalViews: reports.reduce((sum, r) => sum + r.views, 0),
+    totalDownloads: reports.reduce((sum, r) => sum + r.downloads, 0),
+    averageRating: reports.reduce((sum, r) => sum + r.rating, 0) / reports.length || 0,;
+    topCategories: (() => {;
+      const catCounts = reports.reduce((acc,;
+  ;
+  ;
+  ;
+  r) => {;
+        acc[r.category] = (acc[r.category] || 0) + 1;
+        return acc;
+}, {} as Record<string, number>);
+      return Object.entries(catCounts)
+        .map(([name, count]) => ({
+
+          name,
+          count,
+          percentage: (count / reports.length) * 100
+        }))
+        .sort((a, b)  => b.count - a.count)
+        .slice(0, 5)})(),
+    recentActivity[
+      { action: 'Report viewed', timestamp: '2 minutes ago', user: 'John Doe' },
+      { action: 'Report downloaded', timestamp: '5 minutes ago', user: 'Jane Smith' },
+      { action: 'New report created', timestamp: '1 hour ago', user: 'Mike Johnson' },
+      { action: 'Report updated', timestamp: '2 hours ago', user: 'Sarah Wilson' }
+    ]
+  };
+  // Get type icon and color
+  const getTypeDisplay = (type: string)  => {
+
+    const types = {
+
+  financial: { icon: <DollarSign className="w-4 h-4" />,
+  color: 'text-green-400 bg-green-400/20' 
+;
+},;
+      operational: { icon: <Activity className="w-4 h-4" />, color: 'text-blue-400 bg-blue-400/20' },;
+      performance: { icon: <TrendingUp className="w-4 h-4" />, color: 'text-purple-400 bg-purple-400/20' },;
+      security: { icon: <Shield className="w-4 h-4" />, color: 'text-red-400 bg-red-400/20' },;
+      customer: { icon: <Users className="w-4 h-4" />, color: 'text-yellow-400 bg-yellow-400/20' },;
+      technical: { icon: <Server className="w-4 h-4" />, color: 'text-zion-cyan bg-zion-cyan/20' };
+    };
+    return types[type as keyof typeof types] || { icon: <FileText className="w-4 h-4" />, color: 'text-zinc-400 bg-zinc-400/20' }};
+  // Get priority color
+      default: return 'text-zinc-400 bg-zinc-400/20'}
+  };
+  // Get status color
+      default: return 'text-zinc-400 bg-zinc-400/20'}
+  };
+  // Handle report actions
+          // // // // // // // // // // console.log(`Downloading ${report.title}`);
+          break;
+        case 'share':
+          // Simulate share
+          // // // // // // // // // // console.log(`Sharing ${report.title}`);
+          break;
+        case 'print':
+          // Simulate print
+          // // // // // // // // // // console.log(`Printing ${report.title}`);
+          break;
+  };
+  // Export report data
+  const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv') => {
+
+    // // // // // // // // // // console.log(`Exporting ${report.title} as ${format}`);
+=======
+          // // // // // // // console.log(`Downloading ${report.title}`);
+          break;
+        case 'share':
+          // Simulate share
+          // // // // // // // console.log(`Sharing ${report.title}`);
+          break;
+        case 'print':
+          // Simulate print
+          // // // console.log(`Printing ${report.title}`);
+          break}
+    }
+  };
+  // Export report data
+            </motion.div>;
+          </motion.div>;
+        )};
+      </AnimatePresence>;
+    </div>;
+  );
+};

@@ -4,6 +4,7 @@
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 interface WishlistState {
+
   items: WishlistItem[];
 :src/store/wishlistSlice.tsx
   itemCount: number;
@@ -40,6 +41,7 @@ const wishlistSlice:  createSlice({;
   name: anywishlist',;
   initialState,;
   reducers: {
+
     addToWishlist: (state, action: PayloadAction<WishlistItem>)  => {;
       
       if (!existingItem) {
@@ -56,9 +58,7 @@ const wishlistSlice:  createSlice({;
       state.items = [];
 :src/store/wishlistSlice.tsx
       state.itemCount = 0}}});
-      state.itemCount = 0},
-  },
-});
+      state.itemCount = 0}}});
 
 export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
 export { wishlistSlice };

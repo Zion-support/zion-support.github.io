@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function CloudDevOps () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Cloud,
@@ -40,6 +42,7 @@ import { motion } from 'framer - motion';
     platforms["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
   },
   {
+
     id: 3,
     title: "Container Orchestration",;
     description: "Kubernetes and Docker implementation for scalable containerized applications.",;
@@ -56,6 +59,7 @@ import { motion } from 'framer - motion';
     platforms["Kubernetes", "Docker", "Helm", "Istio"]
   },
   {
+
     id: 4,
     title: "Infrastructure as Code",;
     description: "Automated infrastructure provisioning and management using code.",;
@@ -72,6 +76,7 @@ import { motion } from 'framer - motion';
     platforms["Terraform", "Ansible", "CloudFormation", "ARM Templates"]
   },
   {
+
     id: 5,
     title: "Monitoring & Observability",;
     description: "Comprehensive monitoring and logging solutions for cloud applications.",;
@@ -88,6 +93,7 @@ import { motion } from 'framer - motion';
     platforms["Prometheus", "Grafana", "ELK Stack", "Datadog"]
   },
   {
+
     id: 6,
     title: "Security & Compliance",;
     description: "Cloud security implementation and compliance management for enterprise applications.",;
@@ -107,24 +113,28 @@ import { motion } from 'framer - motion';
 
 const cloudPlatforms = [
   {
+
     name: "Amazon Web Services",
     description: "Leading cloud platform with comprehensive services",
     icon: Cloud,
     features["EC2", "S3", "Lambda", "RDS", "ECS"];
   },;
   {
+
     name: "Microsoft Azure",
     description: "Enterprise cloud platform with strong integration",
     icon: Server,
     features["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "AKS"];
   },;
   {
+
     name: "Google Cloud Platform",
     description: "Innovative cloud platform with AI / ML focus",
     icon: Globe,
     features["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "GKE"];
   },;
   {
+
     name: "Kubernetes",
     description: "Open - source container orchestration platform",
           icon: GitFork,
@@ -136,6 +146,7 @@ const cloudPlatforms = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Tech Startup",
     industry: "SaaS",
@@ -145,6 +156,7 @@ const successStories = [
     logo: "TS"
   },
   {
+
     id: 2,
     comp: "E - commerce Platform",
     industry: "Retail",
@@ -154,6 +166,7 @@ const successStories = [
     logo: "EP"
   },
   {
+
     id: 3,
     comp: "Financial Services",
     industry: "Finance",
@@ -166,6 +179,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Assessment & Planning",
     description: "Evaluate current infrastructure and plan cloud migration strategy",
@@ -173,6 +187,7 @@ const processSteps = [
     duration: "1 - 2 weeks"
   },
   {
+
     step: 2,
     title: "Architecture Design",
     description: "Design scalable cloud architecture and DevOps processes",
@@ -180,6 +195,7 @@ const processSteps = [
     duration: "2 - 3 weeks"
   },
   {
+
     step: 3,
     title: "Implementation",
     description: "Build and deploy cloud infrastructure with automation",
@@ -187,6 +203,7 @@ const processSteps = [
     duration: "6 - 20 weeks"
   },
   {
+
     step: 4,
     title: "Optimization",
     description: "Monitor, optimize, and continuously improve the system",
@@ -216,11 +233,13 @@ const processSteps = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -230,16 +249,19 @@ const processSteps = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -281,11 +303,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -303,16 +327,19 @@ const processSteps = [
             {cloudPlatforms.map ( (platform, index) => (<motion.div
                 key={platform.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -342,11 +369,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -364,16 +393,19 @@ const processSteps = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -404,11 +436,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -428,6 +462,7 @@ const processSteps = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -441,16 +476,19 @@ const processSteps = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -505,11 +543,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -527,16 +567,19 @@ const processSteps = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -582,11 +625,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

@@ -4,6 +4,7 @@ import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
 import { Button } from '@/components/ui/button';
 import {
+
 <<<<<<< HEAD
 import { useMediaQuery } from 'usehooks - ts';
 import { useRouter } from 'next / router';
@@ -67,6 +68,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   // Title is now guaranteed to be a non-empty string by the check above.
   const productTitle = product.title;
   const addToCart = () => {
+
     dispatch()
       addItem({
 

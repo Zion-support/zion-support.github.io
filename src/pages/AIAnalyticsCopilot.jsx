@@ -46,31 +46,37 @@ import { BarChart3, TrendingUp, Brain, ArrowRight, CheckCircle, Zap, Shield, Dat
             <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16">
               {[
             {
+
                 icon: Brain,
                 title: "Natural Language Queries",
                 description: "Ask questions about your data in plain English and get instant, accurate answers"
             },
             {
+
                 icon: TrendingUp,
                 title: "Predictive Analytics",
                 description: "Forecast trends and identify opportunities with advanced machine learning models"
             },
             {
+
                 icon: Database,
                 title: "Multi - Source Integration",
                 description: "Connect and analyze data from multiple sources with seamless data harmonization"
             },
             {
+
                 icon: Shield,
                 title: "Data Security",
                 description: "Enterprise - grade security with encryption, access controls, and compliance features"
             },
             {
+
                 icon: Zap,
                 title: "Real - time Insights",
                 description: "Get instant insights with real - time data processing and automated anomaly detection"
             },
             {
+
                 icon: CheckCircle,
                 title: "Automated Reporting",
                 description: "Generate comprehensive reports and dashboards automatically based on your requirements"
@@ -97,18 +103,22 @@ import { BarChart3, TrendingUp, Brain, ArrowRight, CheckCircle, Zap, Shield, Dat
             <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
               {[
             {
+
                 title: "10x Faster Analysis",
                 description: "Reduce analysis time from days to minutes with automated insights"
             },
             {
+
                 title: "95% Accuracy",
                 description: "Achieve high accuracy in predictions and pattern recognition"
             },
             {
+
                 title: "24 / 7 Monitoring",
                 description: "Continuous monitoring and alerting for critical business metrics"
             },
             {
+
                 title: "Cost Reduction",
                 description: "Reduce analytics costs by up to 60% with automated processes"
 

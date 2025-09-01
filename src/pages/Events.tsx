@@ -1,6 +1,7 @@
 import { Link  } from 'react - router - dom.ts';
 import React, { useState } from 'react.ts';
 export default React.memo (function Events (...args: any[]) : any {
+
 import { Calendar,
 import { motion  } from 'framer - motion.ts';
 
@@ -29,6 +30,7 @@ import { motion  } from 'framer - motion.ts';
 
 const events = [
   {
+
     id: 1,
     title: "AI & Machine Learning Summit 2027",
     type: "Conference",
@@ -50,6 +52,7 @@ const events = [
     image: "/images / ai - summit - 2027.jpg"
   },
   {
+
     id: 2,
     title: "Cybersecurity Best Practices Workshop",
     type: "Workshop",
@@ -71,6 +74,7 @@ const events = [
     image: "/images / cybersecurity - workshop.jpg"
   },
   {
+
     id: 3,
     title: "Cloud Computing & DevOps Conference",
     type: "Conference",
@@ -92,6 +96,7 @@ const events = [
     image: "/images / cloud - devops - conference.jpg"
   },
   {
+
     id: 4,
     title: "Data Analytics & Business Intelligence",
     type: "Webinar",
@@ -113,6 +118,7 @@ const events = [
     image: "/images / data - analytics - webinar.jpg"
   },
   {
+
     id: 5,
     title: "IoT & Edge Computing Symposium",
     type: "Symposium",
@@ -134,6 +140,7 @@ const events = [
     image: "/images / iot - symposium.jpg"
   },
   {
+
     id: 6,
     title: "Digital Transformation Summit",
     type: "Conference",
@@ -193,6 +200,7 @@ const statuses = ['All', 'upcoming', 'past'];
 
   const events = [
     {
+
       id: 1,
       title: 'AI - Powered Cybersecurity Summit 2024',
       description: 'Join industry leaders and cybersecurity experts for a comprehensive exploration of AI - driven security solutions, threat intelligence, and next - generation protection strategies.',
@@ -223,6 +231,7 @@ const statuses = ['All', 'upcoming', 'past'];
       image: '/events / ai - cybersecurity - summit.jpg'
     },
     {
+
       id: 2,
       title: 'Quantum Computing Workshop: From Theory to Practice',
       description: 'Hands - on workshop exploring quantum computing fundamentals, algorithms, and real - world applications in finance, healthcare, and logistics.',
@@ -252,6 +261,7 @@ const statuses = ['All', 'upcoming', 'past'];
       image: '/events / quantum - computing - workshop.jpg'
     },
     {
+
       id: 3,
       title: 'Cloud - Native AI Development Webinar Series',
       description: 'Multi - part webinar series covering the latest trends in cloud - native AI development, MLOps, and scalable machine learning infrastructure.',
@@ -281,6 +291,7 @@ const statuses = ['All', 'upcoming', 'past'];
       image: '/events / cloud - native - ai - webinar.jpg'
     },
     {
+
       id: 4,
       title: 'Blockchain Innovation Meetup',
       description: 'Local meetup for blockchain enthusiasts, developers, and entrepreneurs to discuss the latest developments and network with like - minded professionals.',
@@ -311,6 +322,7 @@ const statuses = ['All', 'upcoming', 'past'];
       image: '/events / blockchain - meetup.jpg'
     },
     {
+
       id: 5,
       title: 'Data Science & Analytics Conference',
       description: 'Comprehensive conference covering data science, analytics, and AI applications across various industries with hands - on workshops and expert presentations.',
@@ -341,6 +353,7 @@ const statuses = ['All', 'upcoming', 'past'];
       image: '/events / data - science - conference.jpg'
     },
     {
+
       id: 6,
       title: 'IoT Edge Computing Hackathon',
       description: '24 - hour hackathon focused on building innovative IoT solutions using edge computing and AI. Compete for prizes and recognition.',
@@ -373,6 +386,7 @@ const statuses = ['All', 'upcoming', 'past'];
   ];
 
   const filteredEvents = events.filter (event => {
+
     const matchesSearch = event.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
                          event.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
     const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory;
@@ -385,8 +399,10 @@ const statuses = ['All', 'upcoming', 'past'];
   const featuredEvents = events.filter (event => event.featured) ;
 
   const formatDate = (dateString: anystring) => {
+
     const date = new Date (dateString) ;
     return date.toLocaleDateString ('en - US', {
+
       weekday: 'long',
       year: 'numeric',
       month: 'long',
@@ -395,7 +411,9 @@ const statuses = ['All', 'upcoming', 'past'];
   };
 
   const getCategoryIcon = (category: anystring) => {
+
     switch (category) {
+
       case 'AI & ML': return Brain;
       case 'Cybersecurity': return Shield;
       case 'Cloud & DevOps': return Cloud;
@@ -407,9 +425,12 @@ const statuses = ['All', 'upcoming', 'past'];
   };
 
   const getStatusBadge = (status: anystring) => {
+
     if (status === 'upcoming') {
+
       return < span className="px - 3 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full border border - green - 500 / 30">Upcoming</span>;
     } else {
+
       return < span className="px - 3 py - 1 bg - gray - 500 / 20 text - gray - 400 text - xs rounded - full border border - gray - 500 / 30">Past</span>;
     }
 
@@ -550,6 +571,7 @@ const statuses = ['All', 'upcoming', 'past'];
 
             <div role="button" className="grid grid - cols - 1 lg: anygrid - cols - 2 gap - 8">
               {upcomingEvents.map ( (event, index) => {
+
                 const CategoryIcon = getCategoryIcon (event.category) ;
                 return (<motion.div
                     key={event.id}
@@ -650,6 +672,7 @@ const statuses = ['All', 'upcoming', 'past'];
                     {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                         onClick={ () => setSelectedCategory (category.id) }
                         className={`w - full text - left px - 3 py - 2 rounded - lg text - sm transition - colors flex items - center justify - between ${
+
                           selectedCategory === category.id
                             ? 'bg - zion - cyan text - zion - blue'
                             : 'text - zion - slate - light hover:bg - zion - purple / 20 hover:text - white'
@@ -666,6 +689,7 @@ const statuses = ['All', 'upcoming', 'past'];
 
             <div role="button" className="grid grid - cols - 1 lg: anygrid - cols - 2 gap - 8">
               {pastEvents.map ( (event, index) => {
+
                 const CategoryIcon = getCategoryIcon (event.category) ;
                 return (<motion.div
                     key={event.id}

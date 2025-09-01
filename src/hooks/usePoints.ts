@@ -4,6 +4,7 @@ import { useAuth } from '@/hooks/useAuth';
 import type { PointsLedgerEntry } from '@/types/points';
 
 export function usePoints() {
+
   const { user } = useAuth();
   const [ledger, setLedger] = useState<PointsLedgerEntry[]>([]);
   const [balance, setBalance] = useState(0);
@@ -11,6 +12,7 @@ export function usePoints() {
 
   const fetchLedger = useCallback(async () => { // Wrapped in useCallback
     if (!user?.id) {
+
       setLedger([]);
       setBalance(0);
       setLoading(false);
@@ -25,12 +27,14 @@ export function usePoints() {
       .order('created_at', { ascending: false });
 
     if (!error && data) {
+
       const entries = data as PointsLedgerEntry[];
       setLedger(entries);
       const total = entries.reduce((sum, e) => sum + e.delta, 0);
       setBalance(total);
     } else if (error) {
-      console.error("Error fetching ledger:", error);
+
+      // // // console.error("Error fetching ledger:", error);
       setLedger([]); // Clear ledger on error
       setBalance(0);  // Clear balance on error
     }
@@ -38,6 +42,7 @@ export function usePoints() {
   }, [user?.id]); // Dependency for fetchLedger
 
   useEffect(() => {
+
     fetchLedger(); // Initial fetch
     const interval = setInterval(fetchLedger, 30000); // Subsequent fetches every 30s
     return () => clearInterval(interval); // Cleanup interval on unmount

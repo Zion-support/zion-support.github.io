@@ -6,4 +6,5 @@ export function ServiceDetails({ country }) {
     const getDatacenters = (country) => {
 
         const dataCenters = {
+
 "

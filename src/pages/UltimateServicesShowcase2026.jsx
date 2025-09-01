@@ -6,6 +6,7 @@ import { motion } from 'framer - motion';
 // import { ultimateInnovativeServices2026 } from '../data / ultimateInnovativeServices2026';
 // import { enterpriseITInfrastructureServices2026 } from '../data / 2025 - enterprise - it - infrastructure - services';
 const UltimateServicesShowcase2026 = () => {
+
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [sortBy, setSortBy] = useState ('name') ;
@@ -37,13 +38,15 @@ const UltimateServicesShowcase2026 = () => {
     'IT Asset Management',
     'Performance Monitoring',
   ];
-  const filteredServices = allServices
+  const filteredServices = allServices;
     .filter (service =>
         selectedCategory === 'all' || service.category === selectedCategory) .filter (service =>
         service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ) .sort ( (a, b) => {
+
       switch (sortBy) {
+
         case 'price':
           return (parseInt (a.price.replace (/[^0 - 9]/g, '') ) -
             parseInt (b.price.replace (/[^0 - 9]/g, '') ) ) ;
@@ -57,7 +60,9 @@ const UltimateServicesShowcase2026 = () => {
       }
     }) ;
   const getCategoryIcon = category => {
+
     const icons = {
+
       'Business Intelligence': '📊',
       'Marketing Automation': '🎯',
       'Customer Service': '🤖',
@@ -77,35 +82,34 @@ const UltimateServicesShowcase2026 = () => {
       'Storage Management': '💾',
       Virtualization: '🖥️',
       'IT Asset Management': '📱',
-      'Performance Monitoring': '📊',
-    };
+      'Performance Monitoring': '📊'};
     return icons[category] || '🚀';
   };
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+
+        staggerChildren: 0.1}}};
 
   const itemVariants = {
+
     hidden: {
+
       y: 20,
-      opacity: 0,
-    },
+      opacity: 0},
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5,
-        ease: 'easeOut',
-      },
-    },
-  };
+        ease: 'easeOut'}}};
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white">
       {/* Hero Section */}
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">

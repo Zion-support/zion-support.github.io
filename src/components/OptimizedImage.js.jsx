@@ -19,6 +19,7 @@ export const OptimizedImage = ({
   const imageRef = useRef(null);
   // Intersection Observer for lazy loading
   useEffect(() => {
+
     if (priority) {
 
       setIsInView(true);
@@ -46,17 +47,20 @@ export const OptimizedImage = ({
   }, [priority]);
   // Load image when in view
   useEffect(() => {
+
     if (isInView && !priority) {
 
       setCurrentSrc(src);
     }
   }, [isInView, src, priority]);
   const handleLoad = () => {
+
     setIsLoaded(true);
     setHasError(false);
     onLoad?.();
   };
   const handleError = () => {
+
     setHasError(true);
     setCurrentSrc(fallback);
     onError?.();

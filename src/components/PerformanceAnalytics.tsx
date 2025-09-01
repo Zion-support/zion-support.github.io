@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 =======
@@ -27,6 +28,7 @@ interface PerformanceMetric {
   icon: React.ComponentType < any>;
 
 interface PerformanceData {
+
   timestamp: number;
   metrics: PerformanceMetric[];
   alerts: string[];
@@ -126,9 +128,9 @@ const PerformanceAnalytics: React.FC = () => {;
       recommendations
     }}, []) ;
   useEffect ( () => {
+
     if (isMonitoring) {
 
-      
         setPerformanceData(generateMockData())}, 5000); // Update every 5 seconds
 
       return () => clearInterval (interval) }

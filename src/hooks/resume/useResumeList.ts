@@ -4,6 +4,7 @@ import { Resume } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
 
 export function useResumeList() {
+
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -11,6 +12,7 @@ export function useResumeList() {
   
   const fetchResumes = useCallback(async () => { // Wrapped in useCallback
     if (!user) {
+
       setError('You must be logged in to access resumes');
       setResumes([]); // Clear resumes if no user
       return [];
@@ -20,6 +22,7 @@ export function useResumeList() {
     setError(null);
     
     try {
+
       const { data: resumeData, error: resumeError } = await supabase
         .from('talent_resumes')
         .select('*')
@@ -30,14 +33,17 @@ export function useResumeList() {
       if (resumeError) throw resumeError;
       
       if (!resumeData || resumeData.length === 0) {
+
         setResumes([]);
         return [];
       }
       
       const transformedResumes: Resume[] = resumeData.map(resume => ({
+
         id: resume.id,
         user_id: resume.user_id,
         basic_info: {
+
           id: resume.id,
           title: resume.title,
           headline: resume.headline,
@@ -53,19 +59,24 @@ export function useResumeList() {
       setResumes(transformedResumes);
       return transformedResumes;
     } catch (e: any) {
-      console.error('Error fetching resumes:', e);
+
+      // // // console.error('Error fetching resumes:', e);
       setError(e.message);
       setResumes([]); // Clear resumes on error
       return [];
     } finally {
+
       setIsLoading(false);
     }
   }, [user]); // user is a dependency of fetchResumes
   
   useEffect(() => {
+
     if (user) {
+
       fetchResumes();
     } else {
+
       // Clear resumes if user logs out or is not available initially
       setResumes([]);
       setError(null); // Clear any previous errors
@@ -73,6 +84,7 @@ export function useResumeList() {
   }, [user, fetchResumes]); // Added fetchResumes
   
   return {
+
     isLoading,
     error,
     resumes,

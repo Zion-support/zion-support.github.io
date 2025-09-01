@@ -46,6 +46,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         supportLevel: "premium","
         marketPrice: "$299 - $1,200/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -62,6 +63,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     },;
     // Autonomous Business Process Automation
     {
+
 "
         id: "autonomous-business-process-automation","
         title: "Autonomous Business Process Automation Platform","
@@ -107,6 +109,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         supportLevel: "premium","
         marketPrice: "$599 - $2,500/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -123,6 +126,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     },;
     // Quantum-Ready Data Analytics Platform
     {
+
 "
         id: "quantum-ready-data-analytics","
         title: "Quantum-Ready Data Analytics Platform","
@@ -168,6 +172,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         supportLevel: "premium","
         marketPrice: "$799 - $3,000/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -184,6 +189,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     },;
     // AI-Powered Customer Experience Platform
     {
+
 "
         id: "ai-customer-experience-platform","
         title: "AI-Powered Customer Experience Platform","
@@ -229,6 +235,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         supportLevel: "premium","
         marketPrice: "$399 - $1,500/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -245,6 +252,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     },;
     // Blockchain-Based Identity Management
     {
+
 "
         id: "blockchain-identity-management","
         title: "Blockchain-Based Identity Management Platform","
@@ -290,6 +298,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         supportLevel: "premium","
         marketPrice: "$199 - $800/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -306,6 +315,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     },;
     // IoT Edge Computing Platform
     {
+
 "
         id: "iot-edge-computing-platform","
         title: "IoT Edge Computing Platform","
@@ -351,6 +361,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         supportLevel: "premium","
         marketPrice: "$499 - $2,000/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","

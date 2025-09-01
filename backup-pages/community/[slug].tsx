@@ -39,13 +39,16 @@ export default function CategoryPage() {
     const res = await fetch('/api/graphql', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: POSTS_QUERY, variables: { slug, cursor: after } }),
+      body: JSON.stringify({
+        query: POSTS_QUERY,
+        variables: { slug, cursor: after },
+      }),
     });
     const json = await res.json();
     const result = json.data?.Posts;
     if (result) {
       const newPosts = result.edges.map((e: any) => e.node) as ForumPost[];
-      setPosts((prev) => (after ? [...prev, ...newPosts] : newPosts));
+      setPosts(prev => (after ? [...prev, ...newPosts] : newPosts));
       setCursor(result.pageInfo.endCursor);
       setHasMore(result.pageInfo.hasNextPage);
     }
@@ -68,7 +71,7 @@ export default function CategoryPage() {
       <main className="container py-8">
         {posts.length > 0 ? (
           <div className="space-y-4">
-            {posts.map((post) => (
+            {posts.map(post => (
               <PostCard key={post.id} post={post} />
             ))}
             {hasMore && (

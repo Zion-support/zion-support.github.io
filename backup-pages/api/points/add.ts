@@ -1,4 +1,8 @@
-import { createClient, SupabaseClient, PostgrestError } from '@supabase/supabase-js';
+import {
+  createClient,
+  SupabaseClient,
+  PostgrestError,
+} from '@supabase/supabase-js';
 import { withErrorLogging } from '@/utils/withErrorLogging';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -36,7 +40,7 @@ const serviceKey =
 const supabase = createClient(supabaseUrl, serviceKey);
 
 async function handler(
-  req: NextApiRequest, 
+  req: NextApiRequest,
   res: NextApiResponse<MutationSuccessResponse | ErrorResponse>
 ) {
   if (req.method !== 'POST') {
@@ -46,7 +50,10 @@ async function handler(
 
   const { userId, amount, orderId } = req.body || {};
   if (!userId || typeof amount !== 'number') {
-    return res.status(400).json({ error: 'Missing or invalid userId or amount. Both userId (string) and amount (number) are required.' });
+    return res.status(400).json({
+      error:
+        'Missing or invalid userId or amount. Both userId (string) and amount (number) are required.',
+    });
   }
 
   const delta = Math.round(amount);
@@ -73,7 +80,10 @@ async function handler(
 
     if (ledgerError) {
       console.error('Error inserting into points_ledger:', ledgerError);
-      return res.status(500).json({ error: 'Failed to record points transaction.', details: ledgerError.message });
+      return res.status(500).json({
+        error: 'Failed to record points transaction.',
+        details: ledgerError.message,
+      });
     }
 
     // Update profile points balance
@@ -86,10 +96,13 @@ async function handler(
     if (profileSelectError) {
       // If profile doesn't exist, this might be an issue. Or points_ledger is source of truth and profile is just a cache.
       // Depending on system design, this might be a critical error or just a warning.
-      console.error(`Error fetching profile for points update (userId: ${userId}):`, profileSelectError);
+      console.error(
+        `Error fetching profile for points update (userId: ${userId}):`,
+        profileSelectError
+      );
       // Proceeding to update, assuming points can be created/updated even if profile fetch had minor issue / profile is new
     }
-    
+
     const currentPoints = profile?.points ?? 0;
     const { error: profileUpdateError } = await supabase
       .from('profiles')
@@ -97,18 +110,29 @@ async function handler(
       .eq('id', userId);
 
     if (profileUpdateError) {
-      console.error(`Error updating profile points (userId: ${userId}):`, profileUpdateError);
+      console.error(
+        `Error updating profile points (userId: ${userId}):`,
+        profileUpdateError
+      );
       // This is more critical as it means the balance might be out of sync.
       // Depending on desired atomicity, you might consider rolling back ledger entry or flagging for reconciliation.
-      return res.status(500).json({ error: 'Failed to update user profile points.', details: profileUpdateError.message });
+      return res.status(500).json({
+        error: 'Failed to update user profile points.',
+        details: profileUpdateError.message,
+      });
     }
 
-    return res.status(200).json({ success: true, message: 'Points added successfully.' });
-
+    return res
+      .status(200)
+      .json({ success: true, message: 'Points added successfully.' });
   } catch (e: unknown) {
     console.error('Unexpected error in /api/points/add:', e);
-    const message = e instanceof Error ? e.message : 'An unexpected server error occurred.';
-    return res.status(500).json({ error: 'Failed to add points due to an unexpected error.', details: message });
+    const message =
+      e instanceof Error ? e.message : 'An unexpected server error occurred.';
+    return res.status(500).json({
+      error: 'Failed to add points due to an unexpected error.',
+      details: message,
+    });
   }
 }
 

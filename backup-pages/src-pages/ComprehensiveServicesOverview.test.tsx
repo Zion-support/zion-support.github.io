@@ -1,11 +1,13 @@
+describe('ComprehensiveServicesOverview', () => {
+  it('renders without crashing', () => {
+    render(<ComprehensiveServicesOverview />);
+    expect(
+      screen.getByRole('main') || screen.getByText(/.*/)
+    ).toBeInTheDocument();
+  });
 
-
-describe ('ComprehensiveServicesOverview', () => {
-  it ('renders without crashing', () => {
-    render (<ComprehensiveServicesOverview  />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-
-  it ('displays expected content', () => {
-    render (<ComprehensiveServicesOverview  />) ;
+  it('displays expected content', () => {
+    render(<ComprehensiveServicesOverview />);
     // Add specific test assertions based on component content
-  }) }) ;
+  });
+});

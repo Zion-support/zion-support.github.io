@@ -12,6 +12,7 @@ import {
 import { Button } from '../ui/button';
 const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {
+
   const context = useContext(AccessibilityContext);
   if (!context) {
 
@@ -43,6 +44,7 @@ export const AccessibilityProvider = ({ children }) => {
   }, []);
   // Save settings to localStorage
   useEffect(() => {
+
     const settings = {
 
       highContrast,
@@ -56,6 +58,7 @@ export const AccessibilityProvider = ({ children }) => {
   }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
   // Apply accessibility settings to document
   useEffect(() => {
+
     const root = document.documentElement;
     // High contrast mode
     if (highContrast) {
@@ -105,6 +108,7 @@ export const AccessibilityProvider = ({ children }) => {
 };
 // Accessibility Panel Component
 export const AccessibilityPanel = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const {
 
@@ -118,6 +122,7 @@ export const AccessibilityPanel = () => {
     setColorBlindMode} = useAccessibility();
   // Keyboard shortcuts
   useEffect(() => {
+
     const handleKeyDown = event => {
 
       // Ctrl/Cmd + Shift + A to open accessibility panel
@@ -369,6 +374,7 @@ export const SkipToContent = () => (
 export const useFocusTrap = isActive => {
 
   useEffect(() => {
+
     if (!isActive) return;
     const focusableElements ='"
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);

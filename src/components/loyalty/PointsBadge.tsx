@@ -2,6 +2,7 @@ import { Gift } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 
 export function PointsBadge() {
+
   const { user, isLoading: isAuthLoading } = useAuth();
 
   const points = user?.points;
@@ -9,6 +10,7 @@ export function PointsBadge() {
   const displayLoading = isAuthLoading || typeof points !== 'number';
 
   if (!user) {
+
     return null; // Don't show points badge if user is not logged in
   }
 

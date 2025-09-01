@@ -4,7 +4,7 @@ import React, { useState, useCallback } from 'react';
 export const toast = ({ title, description, variant = 'default' }) => {
 
   // In a real app, this would integrate with a toast library
-  // console.log(`Toast [${variant}]: ${title} - ${description}`);
+  // // // // console.log(`Toast [${variant}]: ${title} - ${description}`);
 
   // For now, just log to console
   // You can replace this with your preferred toast implementation
@@ -12,6 +12,7 @@ export const toast = ({ title, description, variant = 'default' }) => {
 };
 ;
 export const useToast = () => {
+
   const [toasts, setToasts] = useState([]);
 
   const toast = useCallback(({ title, description, variant = 'default' }) => {
@@ -23,18 +24,18 @@ export const useToast = () => {
 
     // Auto remove after 5 seconds
     setTimeout(() => {
+
       setToasts(prev => prev.filter(t => t.id !== id));
     }, 5000);
 
     return id;
-  }, []);
 
   const dismiss = useCallback(id => {
 
     setToasts(prev => prev.filter(t => t.id !== id));
-  }, []);
 
   const dismissAll = useCallback(() => {
+
     setToasts([]);
   }, []);
 

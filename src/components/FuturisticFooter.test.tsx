@@ -1,10 +1,13 @@
 
 describe ('FuturisticFooter', () => {
+
   it ('renders without crashing', () => {
+
     render (<FuturisticFooter  />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
   it ('displays expected content', () => {
+
     render (<FuturisticFooter  />) ;
     // Add specific test assertions based on component content
   }) }) ;

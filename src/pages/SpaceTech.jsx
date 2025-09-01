@@ -3,8 +3,10 @@ import React from 'react';
 export default SpaceTech;
 
 const SpaceTech = () => {
+
   const spaceTechnologies = [
     {
+
       title: 'Satellite Technology',
       description:
         'Advanced satellite systems for communication, navigation, and Earth observation.',
@@ -13,9 +15,9 @@ const SpaceTech = () => {
         'GPS Navigation',
         'Climate Monitoring',
         'Remote Sensing',
-      ],
-    },
+      ]},
     {
+
       title: 'Space Robotics',
       description:
         'Autonomous robotic systems for space exploration and satellite maintenance.',
@@ -24,9 +26,9 @@ const SpaceTech = () => {
         'Space Debris Cleanup',
         'Planetary Exploration',
         'Space Station Operations',
-      ],
-    },
+      ]},
     {
+
       title: 'Space Communications',
       description:
         'High - speed, secure communication networks for space missions and satellite operations.',
@@ -35,9 +37,9 @@ const SpaceTech = () => {
         'Satellite Networks',
         'Mission Control',
         'Data Transmission',
-      ],
-    },
+      ]},
     {
+
       title: 'Space Analytics',
       description:
         'AI - powered analysis of space data for scientific research and commercial applications.',
@@ -46,8 +48,7 @@ const SpaceTech = () => {
         'Orbital Mechanics',
         'Resource Mapping',
         'Scientific Discovery',
-      ],
-    },
+      ]},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white">

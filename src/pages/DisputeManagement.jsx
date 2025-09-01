@@ -29,6 +29,7 @@ export default function DisputeManagement () {
               <button
                 onClick={ () => setActiveTab ('overview') }
                 className={`px - 6 py - 3 rounded - lg font - semibold transition - colors ${
+
                   activeTab === 'overview'
                     ? 'bg - zion - cyan text - zion - blue - dark'
                     : 'text - zion - slate - light hover:text - white hover:bg - zion - blue'
@@ -39,6 +40,7 @@ export default function DisputeManagement () {
               <button
                 onClick={ () => setActiveTab ('disputes') }
                 className={`px - 6 py - 3 rounded - lg font - semibold transition - colors ${
+
                   activeTab === 'disputes'
                     ? 'bg - zion - cyan text - zion - blue - dark'
                     : 'text - zion - slate - light hover:text - white hover:bg - zion - blue'
@@ -49,6 +51,7 @@ export default function DisputeManagement () {
               <button
                 onClick={ () => setActiveTab ('resolutions') }
                 className={`px - 6 py - 3 rounded - lg font - semibold transition - colors ${
+
                   activeTab === 'resolutions'
                     ? 'bg - zion - cyan text - zion - blue - dark'
                     : 'text - zion - slate - light hover:text - white hover:bg - zion - blue'
@@ -59,6 +62,7 @@ export default function DisputeManagement () {
               <button
                 onClick={ () => setActiveTab ('settings') }
                 className={`px - 6 py - 3 rounded - lg font - semibold transition - colors ${
+
                   activeTab === 'settings'
                     ? 'bg - zion - cyan text - zion - blue - dark'
                     : 'text - zion - slate - light hover:text - white hover:bg - zion - blue'

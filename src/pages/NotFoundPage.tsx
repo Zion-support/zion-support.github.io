@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export function NotFoundPage (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Home,
@@ -10,8 +12,7 @@ import { motion } from 'framer - motion.ts';
   Zap,
   Brain,
   Shield,
-  Cpu,
-} from 'lucide - react.ts';
+  Cpu} from 'lucide - react.ts';
 
   const popularPages = [
     { name: 'Home', href: '/', icon: Home },

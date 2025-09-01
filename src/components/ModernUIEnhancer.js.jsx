@@ -10,7 +10,9 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     const scrollToTopRef = useRef(null);
     // Detect device type
     useEffect ( () => {
+
         const updateDeviceType = () => {
+
             const width = window.innerWidth;
             if (width < 768) {
 
@@ -27,8 +29,10 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         return () => window.removeEventListener('resize', updateDeviceType)}, []);
     // Scroll effects
     useEffect ( () => {
+
         if (!enableScrollEffects) return;
         const handleScroll = () => {
+
             const scrollTop = window.pageYOffset;
             setShowScrollToTop (scrollTop > 300) ;
             // Parallax effect for background elements
@@ -74,12 +78,14 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         setCurrentTheme (nextTheme) ;
         applyTheme (nextTheme) };
     const scrollToTop = () => {
+
         window.scrollTo({
 
             top: 0,
             behavior: 'smooth'})};
     // Add CSS animations to the document
     useEffect(() => {
+
         if (!enableAnimations)
             return;
         const style = document.createElement('style');`
@@ -217,9 +223,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     `;
         document.head.appendChild (style) ;
         return () => {
+
             document.head.removeChild (style) }}, [enableAnimations]) ;
     // Add intersection observer for scroll animations
     useEffect(() => {
+
         if (!enableScrollEffects)
             return;
         const observer = new IntersectionObserver((entries) => {
@@ -231,6 +239,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
                     const element = entry.target;
                     const animationType = element.getAttribute('data-animation');
                     if (animationType) {
+
 `
                         element.classList.add(`${animationType}-visible`)}
                 }
@@ -240,6 +249,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
             observer.observe(element)});
         return () => {
+
             animatedElements.forEach((element) => {
 
                 observer.unobserve(element)})}}, [enableScrollEffects]);
@@ -389,6 +399,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   scale: 0.8 
 
 }} transition = {
+
 "
   { type: "spring", damping: 25,
   stiffness: 300 

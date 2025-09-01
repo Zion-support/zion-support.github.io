@@ -10,6 +10,7 @@ export default function EditPostPage () {
 
 // Mock post data
 const mockPost = {
+
   id: "1",
     title: "Best practices for AI model fine - tuning",
     content: "I've been working on fine - tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
@@ -35,16 +36,19 @@ const mockPost = {
     const [post, setPost] = useState (mockPost) ;
     const [isLoading, setIsLoading] = useState (true) ;
     useEffect ( () => {
+
         // In a real app, we would fetch the post data here
         // For now, we'll just use the mock data
         setIsLoading (false) }, [postId]) ;
     if (isLoading) {
+
         return (<div className="container py - 8">
           <div className="flex justify - center items - center h - 64">
             <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - zion - purple"></div>
           </div>
         </div>) }
     if (!post) {
+
         return (<div className="container py - 8">
           <h1 > Post not found</h1>
           <Button asChild className="mt - 4">
@@ -54,6 +58,7 @@ const mockPost = {
     // Check if the user is the author or an admin
     const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
     if (!isAuthor && !isAdmin) {
+
         return (<div className="container py - 8">
           <h1 className="text - 2xl font - bold mb - 4">Permission Denied</h1>
           <p className="mb - 4">You don't have permission to edit this post.</p>
@@ -62,6 +67,7 @@ const mockPost = {
           </Button>
         </div>) }
     const initialValues = {
+
   title: post.title,
         content: post.content,
         categoryId: post.categoryId,
@@ -70,10 +76,13 @@ const mockPost = {
 
 };
     const handleSubmit = async (values) => {
+
         try {
+
             // Here we would normally update the post in the database
             // For now, we'll just simulate a successful update
             toast ({
+
                 title: "Post updated",
                 description: "Your post has been updated successfully"
             }) ;
@@ -81,7 +90,9 @@ const mockPost = {
             router (`/community / post/${postId}`) ;
         }
         catch (error) {
+
             toast ({
+
                 title: "Error",
                 description: "There was a problem updating your post",
                 variant: "destructive"

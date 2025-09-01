@@ -15,6 +15,7 @@ import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, A
         benefits["Enhanced Security Posture", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"]
     },
     {
+
 "
         name: "SOC 2 Type II","
         category: "Service Organization Control","
@@ -27,6 +28,7 @@ import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, A
         benefits["Third-party Validation", "Customer Assurance", "Competitive Advantage", "Operational Excellence"]
     },
     {
+
 "
         name: "GDPR Compliance","
         category: "Data Protection Regulation","
@@ -39,6 +41,7 @@ import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, A
         benefits["Legal Compliance", "Customer Rights Protection", "Data Transparency", "Global Operations"]
     },
     {
+
 "
         name: "HIPAA","
         category: "Healthcare Data Protection","
@@ -53,6 +56,7 @@ import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, A
 ];
 const complianceFrameworks = [
     {
+
 "
         name: "NIST Cybersecurity Framework","
         category: "Cybersecurity Standards","
@@ -63,6 +67,7 @@ const complianceFrameworks = [
         benefits["Risk-based Approach", "Industry Best Practices", "Continuous Improvement", "Stakeholder Confidence"]
     },
     {
+
 "
         name: "OWASP Top 10","
         category: "Web Application Security","
@@ -73,6 +78,7 @@ const complianceFrameworks = [
         benefits["Secure Development", "Vulnerability Prevention", "Code Quality", "Security Training"]
     },
     {
+
 "
         name: "PCI DSS","
         category: "Payment Card Security","
@@ -83,6 +89,7 @@ const complianceFrameworks = [
         benefits["Payment Processing", "Customer Trust", "Fraud Prevention", "Industry Standards"]
     },
     {
+
 "
         name: "FedRAMP","
         category: "Federal Cloud Security","
@@ -315,6 +322,7 @@ const securityStats = ["
   y: 10
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0
@@ -467,6 +475,7 @@ const securityStats = ["
   y: 10
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0
@@ -596,6 +605,7 @@ const securityStats = ["
   y: 10
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0

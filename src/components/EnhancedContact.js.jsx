@@ -15,6 +15,7 @@ import {
   Users,
   Globe} from 'lucide-react';
 export const EnhancedContact = () => {
+
   const [formData, setFormData] = useState({
 
     name: '',
@@ -115,6 +116,7 @@ export const EnhancedContact = () => {
     setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
+
       setIsSubmitted(false);
       setFormData({
 

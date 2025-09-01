@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 interface Stat {
+
   number: string;
   label: string;
   description: string;
@@ -15,20 +16,18 @@ interface StatsSectionProps extends React.PropsWithChildren<{}> {
 
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
-  
-  
   const [counts, setCounts] = useState<any>({});
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   useEffect(() => {
+
     if (isInView) {
 
-      
-          
           let current = 0;
           
           const countTimer = setInterval(: unknown {
+
             current += increment;            if (current >= targetNumber) {
 
               current = targetNumber;

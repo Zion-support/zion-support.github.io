@@ -1,4 +1,5 @@
 import {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 =======
@@ -43,7 +44,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     this.setState({ errorInfo });
 
     // Log error to console'
-    // console.error('Error caught by boundary:', error, errorInfo);
+    // // // // console.error('Error caught by boundary:', error, errorInfo);
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -55,6 +56,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   private async reportError(error: Error, errorInfo: ErrorInfo) {
 
     try {
+
       // You can integrate with services like Sentry, LogRocket, etc.
       
 <<<<<<< HEAD
@@ -64,15 +66,17 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         method: 'POST',
 =======
       // Send to your error reporting endpoint'      await fetch('/api/error-report', {
+
 '
         method: 'POST','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(errorReport)})} catch (reportError) {
 
-      // console.error('Failed to report error:', reportError)}  }
+      // // // // console.error('Failed to report error:', reportError)}  }
 
   private handleRetry = () => {
+
     this.setState({
 
       hasError: false,
@@ -86,23 +90,28 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.href = '/'};
 
   private handleGoBack = () => {
+
     window.history.back () };
   private handleReportError = async () => {
+
     this.setState({ isReporting: true });
 
     try {
+
       await this.reportError(this.state.error!, this.state.errorInfo!);
       this.setState({ reportSent: true });
 
       // Reset report status after 3 seconds
       setTimeout ( () => {
+
         this.setState ({ reportSent: false }) }, 3000) } catch (error) {
 
-      // console.error('Failed to report error:', error)} finally {
+      // // // // console.error('Failed to report error:', error)} finally {
 
       this.setState({ isReporting: false })}  };
 
   private handleRetry = () => {
+
     this.setState({
 
       hasError: false,
@@ -119,20 +128,25 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
     window.location.href = '/'};
   private handleCopyError = async : unknown {
+
     if (this.state.error) {
+
 `
       
       try {
+
         await navigator.clipboard.writeText (errorText) ;
         // You could show a toast notification here
       } catch (err) {
 
-        // console.error('Failed to copy error details:', err)}    }
+        // // // // console.error('Failed to copy error details:', err)}    }
   };
 
   private toggleDetails = () => {
+
     this.setState (prev => ({ showDetails: !prev.showDetails }) ) };
   render () {
+
     if (this.state.hasError) {
 
       // Custom fallback UI

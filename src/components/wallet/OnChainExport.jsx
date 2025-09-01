@@ -10,18 +10,22 @@ import { Wallet, Info, Check, ArrowUpRight import { Tooltip, TooltipContent, Too
 import { useToast } from "@/hooks/use-toast";"import { useAuth } from "@/hooks/useAuth";
 >>>>>>> main
 export function OnChainExport() {
+
     const [isConnected, setIsConnected] = useState(false);
     const [isExporting, setIsExporting] = useState(false);
     const [exportStatus, setExportStatus] = useState('idle');
     const { toast } = useToast();
     const { user } = useAuth();
     const handleConnectWallet = async () => {
+
         try {
+
             // Check if wallet is available
             const ethereum = window.ethereum;
             if (!ethereum) {
 
                 toast({
+
 "
                     title: "Wallet not detected","
                     description: "Please install MetaMask or another Ethereum wallet to use this feature","
@@ -39,11 +43,14 @@ export function OnChainExport() {
             });
             setIsConnected(true);
             toast({
+
 "
                 title: "Wallet connected",`
                 description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})}
         catch (error) {
+
             toast({
+
 "
                 title: "Connection failed","
                 description: error.message || "Could not connect to wallet","
@@ -51,13 +58,16 @@ export function OnChainExport() {
             })}
     };
     const handleExportTokens = async () => {
+
         setIsExporting(true);
         setExportStatus('processing');
         try {
+
             // Simulate token export
             await new Promise(resolve => setTimeout(resolve, 2000));
             setExportStatus('success');
             toast({
+
 "
                 title: "Tokens exported","
                 description: "Your ZION$ tokens have been exported to your wallet"})}
@@ -65,6 +75,7 @@ export function OnChainExport() {
 
             setExportStatus('error');
             toast({
+
 "
                 title: "Export failed","
                 description: error.message || "Could not export tokens","

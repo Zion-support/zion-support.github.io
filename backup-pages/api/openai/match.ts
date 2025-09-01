@@ -21,7 +21,7 @@ interface ErrorResponse {
 }
 
 export default async function handler(
-  req: NextApiRequest, 
+  req: NextApiRequest,
   res: NextApiResponse<OpenAIMatchSuccessResponse | ErrorResponse>
 ) {
   if (req.method !== 'POST') {
@@ -32,7 +32,9 @@ export default async function handler(
   try {
     const { projectDescription } = req.body as OpenAIMatchRequestBody;
     if (!projectDescription) {
-      return res.status(400).json({ error: 'projectDescription is required in the request body' });
+      return res
+        .status(400)
+        .json({ error: 'projectDescription is required in the request body' });
     }
 
     // TODO: Integrate with OpenAI API using projectDescription
@@ -45,7 +47,6 @@ export default async function handler(
     };
 
     return res.status(200).json(placeholderData);
-
   } catch (err: unknown) {
     console.error('OpenAI match API error:', err);
     let errorMessage = 'Failed to generate match due to an unexpected error.';

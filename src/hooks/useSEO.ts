@@ -1,5 +1,6 @@
 
 interface SEOData {
+
   title: string;
   description: string;
   keywords?: string;
@@ -12,6 +13,7 @@ interface SEOData {
 }
 
 interface UseSEOOptions {
+
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
   enablePerformanceTracking?: boolean;
@@ -63,6 +65,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
 
     // Update or create meta keywords
     if (data.keywords) {
+
 '"
       let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {
@@ -83,6 +86,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
 
     // Update robots meta tag
     if (data.noindex) {
+
 '"
       let robotsMeta = document.querySelector('meta[name="robots"]');
       if (!robotsMeta) {
@@ -115,6 +119,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     ];
 
     ogTags.forEach(({ property, content })  => {
+
 "`
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {
@@ -145,6 +150,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     ];
 
     twitterTags.forEach(({ name, content })  => {
+
 "`
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {
@@ -241,18 +247,18 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 
     // Core Web Vitals'
     if ('web-vital' in window) {
+
       // This would require the web-vitals library
-      // // // // // // // console.log('Web Vitals available')}
-      console.log('Web Vitals available')}
+      // // // // // // // // // // console.log('Web Vitals available')}
+      // // // console.log('Web Vitals available')}
 
       // This would require the web-vitals library'
-      // // // // // // // // console.log('Web Vitals available')}
-      // console.log('Web Vitals available')}
+      // // // // // // // // // // // console.log('Web Vitals available')}
+      // // // // console.log('Web Vitals available')}
 
     // Navigation Timing API'
     if ('performance' in window) {
 
-      
       if (navigation) {
 
         const metrics = {
@@ -291,6 +297,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 
   // Initialize SEO
   useEffect(() => {
+
     // Update document title
     if (enableAutoTitle) {
 
@@ -358,6 +365,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 declare global {
 
   interface Window {
+
     gtag?: (...args[])  => void;
     dataLayer?[]}
 }

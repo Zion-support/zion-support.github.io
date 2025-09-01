@@ -20,9 +20,11 @@ import { useAuth } from "@/hooks / useAuth";
 import { useOnboardingStatus } from "@/hooks / useOnboardingStatus";
 import SEO from "@/components / SEO";
 export default function TalentDashboard () {
+
 import Link from "next / link";
 
 function TalentDashboardContent () {
+
     const { user } = useAuth () ;
     const [activeTab, setActiveTab] = useState ("job - matches") ;
     const onboardingStatus = useOnboardingStatus () ;

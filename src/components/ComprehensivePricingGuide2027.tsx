@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { innovativeServices2027 } from "../data / innovativeServices2027";
 import { motion, AnimatePresence } from 'framer - motion';
@@ -44,6 +45,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect ( () => {
+
         }
       },;
       { threshold: 0.1 }
@@ -52,9 +54,11 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 
     
     if (element) {
+
 =======
 '
     const element = document.getElementById('comprehensive-pricing-guide');    if (element) {
+
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       observer.observe(element)}

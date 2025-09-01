@@ -29,6 +29,7 @@ import {
 } from 'lucide-react';
 
 interface SecurityThreat {
+
   id: string;
   type: 'malware' | 'phishing' | 'ddos' | 'brute-force' | 'sql-injection' | 'xss';
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -55,6 +56,7 @@ interface SecurityMetric {
 }
 
 interface EnhancedSecurityDashboardProps {
+
   // Add your props here
 
 
@@ -161,9 +163,11 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
   const [timeRange, setTimeRange] = useState<'1h' | '6h' | '24h' | '7d'>('24h');
 
   useEffect(: unknown {
+
     if (!autoRefresh) return;
 
     const interval = setInterval(: unknown {
+
       // Simulate new threats
       if (Math.random() > 0.7) {
 
@@ -193,6 +197,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
   const getThreatTypeIcon = (type: string) => {
 
     switch (type) {
+
 '"
       case 'malware': return <Bug className="w-5 h-5" />;'"
       case 'phishing': return <Mail className="w-5 h-5" />;'"

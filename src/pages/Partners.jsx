@@ -1,6 +1,7 @@
 import { Link } from 'react - router - dom';
 import React from 'react';
   import {
+
 export default function Partners () {
 
     Users,
@@ -21,10 +22,10 @@ export default function Partners () {
     Flame,
     Sun,
     Moon,
-    Infinity,
-  } from 'lucide - react';
+    Infinity} from 'lucide - react';
   const partnershipTypes = [
     {
+
       title: 'Technology Partners',
       description:
         'Collaborate with leading tech companies to deliver cutting - edge solutions',
@@ -33,9 +34,9 @@ export default function Partners () {
         'Access to latest technologies',
         'Joint product development',
         'Shared marketing opportunities',
-      ],
-    },
+      ]},
     {
+
       title: 'Channel Partners',
       description:
         'Expand your reach through our global network of resellers and distributors',
@@ -44,9 +45,9 @@ export default function Partners () {
         'Increased market presence',
         'Revenue sharing programs',
         'Training and certification',
-      ],
-    },
+      ]},
     {
+
       title: 'Strategic Partners',
       description:
         'Form long - term alliances for mutual growth and market expansion',
@@ -55,9 +56,9 @@ export default function Partners () {
         'Joint ventures',
         'Market expansion support',
         'Shared R & D initiatives',
-      ],
-    },
+      ]},
     {
+
       title: 'Academic Partners',
       description:
         'Partner with universities and research institutions for innovation',
@@ -66,77 +67,76 @@ export default function Partners () {
         'Research collaboration',
         'Talent pipeline',
         'Innovation programs',
-      ],
-    },
+      ]},
   ];
   const existingPartners = [
     {
+
       name: 'Microsoft',
       logo: 'https://images.unsplash.com / photo - 1634942537034 - 2531766767d9?w = 200 & h=200 & fit = crop',
       category: 'Technology Partner',
       description: 'Leading cloud and AI solutions provider',
-      year: '2020',
-    },
+      year: '2020'},
     {
+
       name: 'Amazon Web Services',
       logo: 'https://images.unsplash.com / photo - 1558618666 - fcd25c85cd64?w = 200 & h=200 & fit = crop',
       category: 'Cloud Partner',
       description: "World's most comprehensive cloud platform",
-      year: '2021',
-    },
+      year: '2021'},
     {
+
       name: 'Google Cloud',
       logo: 'https://images.unsplash.com / photo - 1611162617213 - 2d3e1baee311?w = 200 & h=200 & fit = crop',
       category: 'AI Partner',
       description: 'Advanced AI and machine learning solutions',
-      year: '2022',
-    },
+      year: '2022'},
     {
+
       name: 'IBM',
       logo: 'https://images.unsplash.com / photo - 1612815154858 - 60aa4c59eaa6?w = 200 & h=200 & fit = crop',
       category: 'Enterprise Partner',
       description: 'Enterprise AI and quantum computing',
-      year: '2021',
-    },
+      year: '2021'},
     {
+
       name: 'Stanford University',
       logo: 'https://images.unsplash.com / photo - 1541339907198 - e08756dedf3f?w = 200 & h=200 & fit = crop',
       category: 'Academic Partner',
       description: 'Research collaboration in AI and technology',
-      year: '2023',
-    },
+      year: '2023'},
     {
+
       name: 'MIT',
       logo: 'https://images.unsplash.com / photo - 1562774053 - 701939374585?w = 200 & h=200 & fit = crop',
       category: 'Research Partner',
       description: 'Innovation in emerging technologies',
-      year: '2022',
-    },
+      year: '2022'},
   ];
   const benefits = [
     {
+
       icon: TrendingUp,
       title: 'Revenue Growth',
       description:
-        'Access new markets and customer segments through our global network',
-    },
+        'Access new markets and customer segments through our global network'},
     {
+
       icon: Users,
       title: 'Network Expansion',
       description:
-        'Connect with industry leaders and potential customers worldwide',
-    },
+        'Connect with industry leaders and potential customers worldwide'},
     {
+
       icon: Award,
       title: 'Brand Recognition',
-      description: 'Leverage our established reputation in the tech industry',
-    },
+      description: 'Leverage our established reputation in the tech industry'},
     {
+
       icon: Globe,
       title: 'Global Reach',
       description:
-        'Expand your business presence across multiple countries and regions',
-    },
+        'Expand your business presence across multiple countries and regions'},
   ];
   return (<div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20">
       {/* Hero Section */}

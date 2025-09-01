@@ -11,84 +11,91 @@ import {
   ArrowRight,
   CheckCircle,
   Star,
-  MonitorSpeaker
+  MonitorSpeaker,
 } from 'lucide-react';
 
 const CloudServices = () => {
   const cloudServices = [
     {
-      title: "Cloud DevOps Automation",
-      description: "Streamlined CI/CD pipelines and infrastructure automation for faster deployments",
-      path: "/services/cloud-devops",
+      title: 'Cloud DevOps Automation',
+      description:
+        'Streamlined CI/CD pipelines and infrastructure automation for faster deployments',
+      path: '/services/cloud-devops',
       icon: Zap,
       featured: true,
-      tags: ["DevOps", "Automation", "CI/CD"]
+      tags: ['DevOps', 'Automation', 'CI/CD'],
     },
     {
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation services for modern enterprises",
-      path: "/services/digital-transformation",
+      title: 'Digital Transformation',
+      description:
+        'End-to-end digital transformation services for modern enterprises',
+      path: '/services/digital-transformation',
       icon: Globe,
-      tags: ["Transformation", "Modernization", "Enterprise"]
+      tags: ['Transformation', 'Modernization', 'Enterprise'],
     },
     {
-      title: "FinOps Optimization",
-      description: "Cloud financial operations and cost optimization strategies",
-      path: "/services/cloud-finops-optimizer",
+      title: 'FinOps Optimization',
+      description:
+        'Cloud financial operations and cost optimization strategies',
+      path: '/services/cloud-finops-optimizer',
       icon: Database,
-      tags: ["FinOps", "Cost Optimization", "Financial Management"]
+      tags: ['FinOps', 'Cost Optimization', 'Financial Management'],
     },
     {
-      title: "IoT Edge Computing",
-      description: "Edge computing solutions for IoT devices and real-time processing",
-      path: "/services/iot-edge-computing",
+      title: 'IoT Edge Computing',
+      description:
+        'Edge computing solutions for IoT devices and real-time processing',
+      path: '/services/iot-edge-computing',
       icon: MonitorSpeaker,
-      tags: ["IoT", "Edge Computing", "Real-time"]
+      tags: ['IoT', 'Edge Computing', 'Real-time'],
     },
     {
-      title: "Green IT Solutions",
-      description: "Sustainable cloud infrastructure and energy-efficient computing",
-      path: "/services/green-it",
+      title: 'Green IT Solutions',
+      description:
+        'Sustainable cloud infrastructure and energy-efficient computing',
+      path: '/services/green-it',
       icon: Shield,
-      tags: ["Sustainability", "Green Tech", "Energy Efficiency"]
+      tags: ['Sustainability', 'Green Tech', 'Energy Efficiency'],
     },
     {
-      title: "Micro SaaS Platform",
-      description: "Scalable micro-service architecture for SaaS applications",
-      path: "/services/micro-saas-solutions",
+      title: 'Micro SaaS Platform',
+      description: 'Scalable micro-service architecture for SaaS applications',
+      path: '/services/micro-saas-solutions',
       icon: Server,
-      tags: ["SaaS", "Microservices", "Scalability"]
-    }
+      tags: ['SaaS', 'Microservices', 'Scalability'],
+    },
   ];
 
   const benefits = [
-    { metric: "99.9%", label: "Uptime SLA" },
-    { metric: "60%", label: "Cost Reduction" },
-    { metric: "10x", label: "Faster Deployment" },
-    { metric: "24/7", label: "Monitoring" }
+    { metric: '99.9%', label: 'Uptime SLA' },
+    { metric: '60%', label: 'Cost Reduction' },
+    { metric: '10x', label: 'Faster Deployment' },
+    { metric: '24/7', label: 'Monitoring' },
   ];
 
   const features = [
     {
       icon: Cloud,
-      title: "Multi-Cloud Strategy",
-      description: "Deploy across AWS, Azure, GCP with unified management"
+      title: 'Multi-Cloud Strategy',
+      description: 'Deploy across AWS, Azure, GCP with unified management',
     },
     {
       icon: Shield,
-      title: "Security First",
-      description: "Enterprise-grade security with compliance certifications"
+      title: 'Security First',
+      description: 'Enterprise-grade security with compliance certifications',
     },
     {
       icon: Zap,
-      title: "Auto-Scaling",
-      description: "Intelligent scaling based on demand and performance metrics"
+      title: 'Auto-Scaling',
+      description:
+        'Intelligent scaling based on demand and performance metrics',
     },
     {
       icon: Database,
-      title: "Data Management",
-      description: "Comprehensive data backup, recovery, and migration services"
-    }
+      title: 'Data Management',
+      description:
+        'Comprehensive data backup, recovery, and migration services',
+    },
   ];
 
   return (
@@ -107,13 +114,15 @@ const CloudServices = () => {
               <h1 className="text-5xl md:text-6xl font-bold">
                 Cloud & DevOps
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                  {' '}Services
+                  {' '}
+                  Services
                 </span>
               </h1>
             </div>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Accelerate your digital transformation with our comprehensive cloud solutions, 
-              DevOps automation, and modern infrastructure management services.
+              Accelerate your digital transformation with our comprehensive
+              cloud solutions, DevOps automation, and modern infrastructure
+              management services.
             </p>
           </motion.div>
         </div>
@@ -152,9 +161,12 @@ const CloudServices = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-6">Cloud Infrastructure Features</h2>
+            <h2 className="text-4xl font-bold mb-6">
+              Cloud Infrastructure Features
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Enterprise-grade cloud solutions designed for scalability, security, and performance
+              Enterprise-grade cloud solutions designed for scalability,
+              security, and performance
             </p>
           </motion.div>
 
@@ -189,7 +201,8 @@ const CloudServices = () => {
           >
             <h2 className="text-4xl font-bold mb-6">Our Cloud Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive cloud services to modernize your infrastructure and accelerate growth
+              Comprehensive cloud services to modernize your infrastructure and
+              accelerate growth
             </p>
           </motion.div>
 
@@ -217,7 +230,7 @@ const CloudServices = () => {
                 <service.icon className="w-12 h-12 text-cyan-400 mb-6" />
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {service.tags.map((tag, tagIndex) => (
                     <span
@@ -255,8 +268,8 @@ const CloudServices = () => {
               Ready to Move to the Cloud?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let our cloud experts design and implement a scalable, secure, 
-              and cost-effective cloud strategy for your organization.
+              Let our cloud experts design and implement a scalable, secure, and
+              cost-effective cloud strategy for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

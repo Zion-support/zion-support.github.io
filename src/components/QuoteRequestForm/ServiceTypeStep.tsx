@@ -1,23 +1,25 @@
 
 interface ServiceTypeStepProps {
+
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void}
 
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
+
   const [searchQuery, setSearchQuery] = useState("");
   
   const {
+
     data: listings = [],
     isPending: loading,
-    error,
-  } = useQuery({
+    error} = useQuery({
+
     queryKey: ['services', formData.serviceType, debouncedQuery],
     queryFn: () =>
       fetchServices(formData.serviceType, debouncedQuery),
     enabled: !!formData.serviceType,
-    retry: 2,
-  })}};
+    retry: 2})}};
   
   
   
@@ -34,6 +36,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Card 
             className={`p-4 cursor-pointer border-2 transition-colors ${
+
               formData.serviceType === "service" 
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
@@ -46,6 +49,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           
           <Card 
             className={`p-4 cursor-pointer border-2 transition-colors ${
+
               formData.serviceType === "talent" 
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
@@ -58,6 +62,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           
           <Card 
             className={`p-4 cursor-pointer border-2 transition-colors ${
+
               formData.serviceType === "equipment" 
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
@@ -103,6 +108,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                   key={item.id}
                   onClick={() => handleItemSelect(item)}
                   className={`cursor-pointer transition-all ${
+
                     formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
                   }`}
                 >

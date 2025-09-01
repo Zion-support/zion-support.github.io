@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, useAnimation } from 'framer - motion';
 =======
@@ -16,6 +17,7 @@ import { motion, useAnimation } from 'framer - motion';
  } from 'lucide-react';
 
 interface Stat {
+
   id: string;
   icon: React.ComponentType < any>;
   value: string;
@@ -101,6 +103,7 @@ export default function EnhancedStatsSection(...args[]):  {
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect(() => {
+
     if (inView) {
 
       controls.start('visible')}
@@ -125,11 +128,11 @@ setCountedValues (prev:  > ({;
     return timer};
 
   useEffect ( () => {
+
     if (inView) {
 
       stats.forEach((stat) => {
 
-        
           animateCount(stat.value)}, stats.indexOf(stat) * 200);
         return () => clearTimeout(timer)})}
   }, [inView]) ;

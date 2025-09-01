@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw export const BundleAnalyzer = () => {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 
@@ -16,8 +17,10 @@ import { motion, AnimatePresence } from 'framer - motion';
 >>>>>>> main
     // Analyze bundle size from build output
     const analyzeBundle = useCallback (async () => {
+
         setIsAnalyzing (true) ;
         try {
+
             // Simulate bundle analysis based on build output
             // In a real implementation, this would fetch actual bundle stats
             const mockAnalysis = {
@@ -98,7 +101,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                 score: 78,
                 lastUpdated: new Date()
             };
-            // // // // // // // // console.error('Bundle analysis failed:', error);
+            // // // // // // // // // // // console.error('Bundle analysis failed:', error);
         }
         finally {
 
@@ -107,12 +110,13 @@ import { motion, AnimatePresence } from 'framer - motion';
             setAnalysis (mockAnalysis) }
         catch (error) {
 
-            // console.error('Bundle analysis failed:', error)}
+            // // // // console.error('Bundle analysis failed:', error)}
         finally {
 
             setIsAnalyzing(false)}
     }, []);
     useEffect(() => {
+
         analyzeBundle()}, [analyzeBundle]);
     const formatBytes = (bytes) => {
 
@@ -148,6 +152,7 @@ import { motion, AnimatePresence } from 'framer - motion';
     const getOptimizationIcon = (optimization) => {
 
         switch (optimization) {
+
 '"
             case 'good': return <CheckCircle className="w-4 h-4"/>;'"
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;'"
@@ -179,6 +184,7 @@ import { motion, AnimatePresence } from 'framer - motion';
   scale: 0.9
 
 }} transition = {
+
 "
   { type: "spring", damping: 25,
   stiffness: 300

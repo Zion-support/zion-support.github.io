@@ -95,6 +95,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
     return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">;
       {/* Enhanced Popular Badge */}"
       {isPopular && (<motion.div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10" initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {
+
 "
   { delay: 0.2, type: "spring",
   stiffness: 300
@@ -122,6 +123,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
   rotate: 0
 
 }} transition = {
+
 "
   { delay: 0.3, type: "spring",
   stiffness: 300
@@ -148,6 +150,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
   0]
 
 }} transition = {
+
 <<<<<<< HEAD
   { duration: 3, repeat: Infinity,
   ease: "easeInOut"

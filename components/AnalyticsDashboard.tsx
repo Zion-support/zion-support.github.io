@@ -26,6 +26,7 @@ interface AnalyticsData {
 }
 
 export default function AnalyticsDashboard() {
+
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(
     null
   );
@@ -35,8 +36,10 @@ export default function AnalyticsDashboard() {
   );
 
   useEffect(: unknown {
+
     // Simulate fetching analytics data
     const fetchAnalytics = async : unknown {
+
       setIsLoading(true);
       await new Promise(resolve => setTimeout(resolve, 1500));
 

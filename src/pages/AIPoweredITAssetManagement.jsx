@@ -6,28 +6,34 @@ import { motion } from 'framer - motion';
 import SEOHead from "../components / SEOHead";
 
 const AIPoweredITAssetManagement = () => {
+
   const features = [
     {
+
       icon: Monitor,
       title: "Intelligent Asset Discovery",
       description: "AI - powered automatic discovery and classification of all IT assets across your network infrastructure."
     },
     {
+
       icon: Shield,
       title: "Security & Compliance",
       description: "Continuous monitoring of asset health, performance, and utilization with instant alerts and notifications."
     },
     {
+
       icon: Target,
       title: "Predictive Maintenance",
       description: "AI algorithms predict potential failures and maintenance needs before they impact your operations."
     },
     {
+
       icon: Rocket,
       title: "Lifecycle Management",
       description: "Complete asset lifecycle tracking from procurement to retirement with optimization recommendations."
     },
     {
+
       icon: Globe,
       title: "Multi - Platform Support",
       description: "Unified management across Windows, Linux, macOS, cloud platforms, and mobile devices."
@@ -36,26 +42,31 @@ const AIPoweredITAssetManagement = () => {
 
   const capabilities = [
     {
+
       icon: Cpu,
       title: "Intelligent Asset Discovery",
       description: "AI - powered scanning and discovery of all IT assets across your infrastructure."
     },
     {
+
       icon: Shield,
       title: "Security Monitoring",
       description: "Continuous security assessment and threat detection for all managed assets."
     },
     {
+
       icon: TrendingUp,
       title: "Performance Analytics",
       description: "Real - time performance monitoring and predictive maintenance insights."
     },
     {
+
       icon: Database,
       title: "Centralized Management",
       description: "Single platform for managing all IT assets across your entire infrastructure."
     },
     {
+
       icon: Network,
       title: "Network Optimization",
       description: "AI - powered network performance optimization and bandwidth management."
@@ -74,11 +85,13 @@ const AIPoweredITAssetManagement = () => {
         <div className="max - w-7xl mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -93,16 +106,19 @@ const AIPoweredITAssetManagement = () => {
 
           <motion.h1
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.6,
   delay: 0.1
 
@@ -114,16 +130,19 @@ const AIPoweredITAssetManagement = () => {
 
           <motion.p
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -136,16 +155,19 @@ const AIPoweredITAssetManagement = () => {
 
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.6,
   delay: 0.3
 
@@ -173,11 +195,13 @@ const AIPoweredITAssetManagement = () => {
         <div className="max - w-7xl mx - auto">
           <motion.h2
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -193,16 +217,19 @@ const AIPoweredITAssetManagement = () => {
             {features.map ( (feature, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -227,11 +254,13 @@ const AIPoweredITAssetManagement = () => {
         <div className="max - w-7xl mx - auto">
           <motion.h2
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -247,16 +276,19 @@ const AIPoweredITAssetManagement = () => {
             {capabilities.map ( (capability, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -281,11 +313,13 @@ const AIPoweredITAssetManagement = () => {
         <div className="max - w-4xl mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

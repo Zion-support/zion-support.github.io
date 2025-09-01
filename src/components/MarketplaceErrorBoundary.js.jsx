@@ -8,6 +8,7 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
 function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
 
   const handleRetry = async () => {
+
     try {
 
       // Re-call SWR mutate('*') to refresh all cached data
@@ -15,7 +16,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
       resetErrorBoundary();
     } catch (retryError) {
 
-      // console.error('Error during retry:', retryError);
+      // // // // console.error('Error during retry:', retryError);
       Sentry.captureException(retryError);
     }
   };
@@ -64,7 +65,7 @@ export function MarketplaceErrorBoundary({ children }) {
   const handleError = (error, errorInfo) => {
 
     // Log boundary errors to Sentry'
-    // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
+    // // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
     Sentry.withScope(scope => {
 
       scope.setTag('errorBoundary',marketplace');

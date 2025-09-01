@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Code, 
   Shield, 
   Cloud, 
@@ -18,6 +19,7 @@ import {
 } from 'lucide-react';
 
 interface Service {
+
   id: string;
   name: string;
   description: string;
@@ -29,15 +31,18 @@ interface Service {
 }
 
 const EnhancedMainPage: React.FC = () => {
+
   const [activeTab, setActiveTab] = useState('all');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+
     setIsVisible(true);
   }, []);
 
   const services: Service[] = [
     {
+
       id: 'ai-platform',
       name: 'AI-Powered Platform',
       description: 'Next-generation artificial intelligence solutions for enterprise',
@@ -48,6 +53,7 @@ const EnhancedMainPage: React.FC = () => {
       popular: true
     },
     {
+
       id: 'cybersecurity',
       name: 'Advanced Cybersecurity',
       description: 'Comprehensive security solutions for modern threats',
@@ -57,6 +63,7 @@ const EnhancedMainPage: React.FC = () => {
       pricing: 'Starting at $1,999/month'
     },
     {
+
       id: 'cloud-infrastructure',
       name: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions for growing businesses',
@@ -66,6 +73,7 @@ const EnhancedMainPage: React.FC = () => {
       pricing: 'Starting at $999/month'
     },
     {
+
       id: 'devops-automation',
       name: 'DevOps Automation',
       description: 'Streamline development and deployment processes',
@@ -75,6 +83,7 @@ const EnhancedMainPage: React.FC = () => {
       pricing: 'Starting at $1,499/month'
     },
     {
+
       id: 'quantum-computing',
       name: 'Quantum Computing',
       description: 'Cutting-edge quantum solutions for complex problems',
@@ -84,6 +93,7 @@ const EnhancedMainPage: React.FC = () => {
       pricing: 'Contact for pricing'
     },
     {
+
       id: 'global-expansion',
       name: 'Global Expansion',
       description: 'International business development and localization',
@@ -109,6 +119,7 @@ const EnhancedMainPage: React.FC = () => {
     : services.filter(service => service.category === activeTab);
 
   const contact = {
+
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -218,6 +229,7 @@ const EnhancedMainPage: React.FC = () => {
                 key={category.id}
                 onClick={() => setActiveTab(category.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+
                   activeTab === category.id
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
@@ -240,6 +252,7 @@ const EnhancedMainPage: React.FC = () => {
               <motion.div
                 key={service.id}
                 className={`bg-gray-800 rounded-xl p-6 border-2 transition-all duration-300 hover:scale-105 ${
+
                   service.popular ? 'border-blue-500 bg-gray-800/80' : 'border-gray-700 hover:border-blue-500'
                 }`}
                 initial={{ opacity: 0, y: 30 }}

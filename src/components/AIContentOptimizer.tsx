@@ -1,4 +1,5 @@
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 
@@ -31,6 +32,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide-react';
 
 interface ContentAnalysis {
+
   id: string;
   type: 'seo' | 'performance' | 'accessibility' | 'user-experience';
   score: number;
@@ -40,6 +42,7 @@ interface ContentAnalysis {
   category: string}
 
 interface OptimizationSuggestion {
+
   id: string;
   title: string;
   description: string;
@@ -51,17 +54,20 @@ interface OptimizationSuggestion {
   estimatedTime: string}
 
 interface AIContentOptimizerProps {
+
   enabled?: boolean;
   showRealTime?: boolean;
   autoAnalyze?: boolean;
   onOptimizationComplete?: (suggestions: OptimizationSuggestion[]) => void}
 
 export function AIContentOptimizer({
+
   enabled = true,
   showRealTime = true,
   autoAnalyze = true,
   onOptimizationComplete
 }: AIContentOptimizerProps) {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -81,9 +87,11 @@ export function AIContentOptimizer({
     const analysis: ContentAnalysis[] = [];
 
     categories.forEach(category => {
+
       const score = Math.floor(Math.random() * 40) + 60; // 60-100
       
       analysis.push({
+
         id: category,
         type: category as any,
         score,
@@ -108,12 +116,14 @@ export function AIContentOptimizer({
 
     // Simulate analysis process
     setTimeout(() => {
+
       generateContentAnalysis();
       generateOptimizationSuggestions();
       setIsAnalyzing(false);
       setAnalysisComplete(true);
 
       if (onOptimizationComplete) {
+
         onOptimizationComplete(optimizationSuggestions)}
     }, 3000)}, [
     generateContentAnalysis,
@@ -122,18 +132,22 @@ export function AIContentOptimizer({
   ]);
   // Auto - analyze when component opens
   useEffect ( () => {
+
     if (autoAnalyze && isOpen && !analysisComplete) {
 
       startAnalysis()}
   }, [autoAnalyze, isOpen, analysisComplete, startAnalysis]) ;
   // Setup real - time updates
   useEffect ( () => {
+
     if (showRealTime && isOpen && analysisComplete) {
 
       analysisIntervalRef.current = setInterval(() => {
+
         generateContentAnalysis()}, 60000); // Update every minute
 
       return () => {
+
         if (analysisIntervalRef.current) {
 
           clearInterval(analysisIntervalRef.current)}
@@ -179,6 +193,7 @@ export function AIContentOptimizer({
           >
             <motion.div
               className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${
+
                 isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'
               }`}
               initial={{ scale: 0.9, opacity: 0 }}
@@ -274,6 +289,7 @@ export function AIContentOptimizer({
                             <div
                               className="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full transition-all duration-500"
                               style={{
+
                                 width: `${Math.min((currentScore / targetScore) * 100, 100)}%`
                               }}
                             ></div>
@@ -309,6 +325,7 @@ export function AIContentOptimizer({
                           <div className="text-center">
                             <div
                               className={`text-3xl font-bold mb-2 ${
+
                                 item.score >= 90
                                   ? 'text-green-600'
                                   : item.score >= 80
@@ -327,6 +344,7 @@ export function AIContentOptimizer({
                             <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                               <div
                                 className={`h-2 rounded-full transition-all duration-300 ${
+
                                   item.score >= 90
                                     ? 'bg-green-500'
                                     : item.score >= 80

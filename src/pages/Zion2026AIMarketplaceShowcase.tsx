@@ -65,11 +65,13 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
         <div role="button" className="max - w-7xl mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -162,6 +164,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
                 <div role="button" className="flex bg - slate - 700 rounded - lg p - 1">
                   <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                     className={`p - 2 rounded - md transition - colors ${
+
                       viewMode === 'grid'
                         ? 'bg - blue - 500 text - white'
                         : 'text - gray - 400 hover:text - white'
@@ -171,6 +174,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
                   </button>
                   <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                     className={`p - 2 rounded - md transition - colors ${
+
                       viewMode === 'list'
                         ? 'bg - blue - 500 text - white'
                         : 'text - gray - 400 hover:text - white'
@@ -199,21 +203,25 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
               {filteredServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
 }}
                   className={`bg - slate - 800 rounded - xl overflow - hidden shadow - xl hover:shadow - 2xl transition - all duration - 300 hover:scale - 105 ${
+
                     viewMode === 'list' ? 'flex' : ''
                   }`}
                 >
@@ -222,6 +230,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
                     <div role="button" className="flex items - center justify - between mb - 4">
                       <div role="button" className={`p - 2 rounded - lg bg - gradient - to - r ${getCategoryColor (service.category) }`}>
                         {React.createElement (getCategoryIcon (service.category) , {
+
                           className: 'w - 6 h - 6 text - white'
                         }) }
                       </div>
@@ -288,11 +297,13 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
         <div role="button" className="max - w-4xl mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

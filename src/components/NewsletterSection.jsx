@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 =======
@@ -41,16 +42,19 @@ export function NewsletterSection() {
       title: 'Exclusive Content',
       description: 'Access to premium tech insights and industry reports'},
     {
+
 "
       icon: <Zap className="w-6 h-6" />,
       title: 'Early Access',
       description: 'Be the first to know about new services and features'},
     {
+
 "
       icon: <Shield className="w-6 h-6" />,
       title: 'Expert Tips',
       description: 'Weekly tips from our technology experts'},
     {
+
 "
       icon: <Users className="w-6 h-6" />,
       title: 'Community Access',

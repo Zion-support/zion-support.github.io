@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  * @returns {*} Function return value
  */
 function BenefitsSection () {
+
 =======
 <<<<<<< HEAD
 >>>>>>> main
@@ -44,6 +45,7 @@ const benefits: Benefit[] = [;
   
 },
   {
+
 "
     title: "Global Availability","
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.","
@@ -58,6 +60,7 @@ const benefits: Benefit[] = [;
     ]
   },
   {
+
 "
     title: "24/7 Support","
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.","
@@ -72,6 +75,7 @@ const benefits: Benefit[] = [;
     ]
   },
   {
+
 "
     title: "Cost Reduction","
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.","

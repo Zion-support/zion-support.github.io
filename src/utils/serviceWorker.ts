@@ -1,33 +1,48 @@
 // Service Worker Registration Utility
-export function registerServiceWorker(): void {
-  if ('serviceWorker' in navigator) {
-<<<<<<< HEAD
+export function registerServiceWorker(): Promise<ServiceWorkerRegistration | undefined> {
 
-    
-    
-=======
-    
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    navigator.serviceWorker
-      .register(swUrl)
-      .then((registration) => {
+  return new Promise(async (resolve, reject) => {
+
+    if ('serviceWorker' in navigator) {
+
+      const isDev = process.env.NODE_ENV === 'development';
+      const swUrl = '/sw.js'; // Assuming sw.js is at the root
+
+      try {
+
+        const registration = await navigator.serviceWorker.register(swUrl);
+
+        // Handle updates
         registration.addEventListener('updatefound', () => {
-          
+
+          const newWorker = registration.installing;
           if (newWorker) {
-<<<<<<< HEAD
 
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             newWorker.addEventListener('statechange', () => {
-              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                // New content available
-              }
-            })}
-        })})
-<<<<<<< HEAD
-      .catch(registrationError => {
 
-        // console.error('SW registration failed: ', registrationError)})}
+              if (
+                newWorker.state === 'installed' &&
+                navigator.serviceWorker.controller
+              ) {
+
+                // New content is available
+                // console.log('New content is available; please refresh.');
+              }
+            });
+          }
+        });
+        resolve(registration);
+      } catch (registrationError) {
+
+        // console.error('SW registration failed: ', registrationError);
+        reject(registrationError);
+      }
+    } else {
+
+      resolve(undefined); // Service workers not supported
+    }
+  });
+}
 
 export function unregisterServiceWorker(): void {
 
@@ -36,24 +51,11 @@ export function unregisterServiceWorker(): void {
     navigator.serviceWorker.ready
       .then(registration => {
 
-        registration.unregister()})
+        registration.unregister();
+      })
       .catch(error => {
 
-        // console.error(error.message)})}
+        // console.error(error.message);
+      });
+  }
 }
-=======
-      .catch(() => {
-        // Silent fail
-      })}
-}
-
-export function unregisterServiceWorker(): void {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready
-      .then((registration) => {
-        registration.unregister()})
-      .catch(() => {
-        // Silent fail
-      })}
-}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

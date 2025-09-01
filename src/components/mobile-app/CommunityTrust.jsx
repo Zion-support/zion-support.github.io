@@ -1,5 +1,6 @@
 import React from 'react';
 import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTrust = () => {
+
   const stats = ['
     { icon: Users, value: '50K+', label: 'Active Users', color: 'text-blue-400' },
     { icon: Star, value: '4.8/5', label: 'User Rating', color: 'text-yellow-400' },

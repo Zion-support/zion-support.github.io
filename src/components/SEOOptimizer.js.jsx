@@ -1,13 +1,16 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
 const SEOOptimizer = () => {
+
     const [isOpen, setIsOpen] = useState (false) ;
     const [isAnalyzing, setIsAnalyzing] = useState (false) ;
     const [report, setReport] = useState (null) ;
     const [selectedPage, setSelectedPage] = useState (null) ;
     const analyzeSEO = useCallback (async () => {
+
         setIsAnalyzing (true) ;
         try {
+
             // Simulate analyzing all pages for SEO
             const samplePages = [
                 {
@@ -85,12 +88,13 @@ const SEOOptimizer = () => {
             }) }
         catch (error) {
 
-            // console.error('Error analyzing SEO:', error)}
+            // // // // console.error('Error analyzing SEO:', error)}
         finally {
 
             setIsAnalyzing(false)}
     }, []);
     useEffect(() => {
+
         // Auto-analyze SEO when component mounts
         analyzeSEO()}, [analyzeSEO]);
     const calculateSEOScore = (page) => {
@@ -213,19 +217,24 @@ const SEOOptimizer = () => {
         const poorPages = pageAnalyses.filter (page => page.score < 40) .length;
         let summary = `Analyzed ${totalPages} pages for SEO. `;
         if (excellentPages > 0) {
+
 `
             summary += `${excellentPages} pages have excellent SEO. `}
         if (goodPages > 0) {
+
 `
             summary += `${goodPages} pages have good SEO. `}
         if (poorPages > 0) {
+
 `
             summary += `${poorPages} pages need significant SEO improvement. `}
         if (topIssues.length > 0) {
+
 '`
             summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(',)}.`}
         return summary};
     const exportSEOReport = () => {
+
         if (!report)
             return;
         const csvContent = ['

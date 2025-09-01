@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function HRPlatform () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Users,
@@ -150,6 +152,7 @@ import { motion } from 'framer - motion';
 
 const hrTechnologies = [
   {
+
     name: "Employee Management",
     description: "Comprehensive employee lifecycle management",
     icon: Users,
@@ -157,6 +160,7 @@ const hrTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "AI & Automation",
     description: "Intelligent automation for HR processes",
     icon: Brain,
@@ -164,6 +168,7 @@ const hrTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Data Security",
     description: "Enterprise - grade security and compliance",
     icon: Shield,
@@ -171,6 +176,7 @@ const hrTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Cloud Platform",
     description: "Scalable cloud infrastructure for HR applications",
     icon: Cloud,
@@ -181,6 +187,7 @@ const hrTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Global Corporation",
     industry: "Technology",
@@ -190,6 +197,7 @@ const successStories = [
     logo: "GC"
   },
   {
+
     id: 2,
     comp: "Healthcare Network",
     industry: "Healthcare",
@@ -199,6 +207,7 @@ const successStories = [
     logo: "HN"
   },
   {
+
     id: 3,
     comp: "Manufacturing Comp",
     industry: "Manufacturing",
@@ -211,6 +220,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "HR Assessment",
     description: "Evaluate current HR processes and identify improvement opportunities",
@@ -218,6 +228,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 2,
     title: "Platform Design",
     description: "Design HR platform architecture and user experience",
@@ -225,6 +236,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
   },
   {
+
     step: 3,
     title: "Development",
     description: "Build and integrate HR platform components",
@@ -232,6 +244,7 @@ const processSteps = [
     duration: "16 - 32 weeks"
   },
   {
+
     step: 4,
     title: "Deployment & Training",
     description: "Deploy platform and train HR teams and employees",
@@ -242,24 +255,28 @@ const processSteps = [
 
 const hrBenefits = [
   {
+
     title: "Operational Efficiency",
     description: "Streamlined HR processes reduce administrative overhead and improve productivity",
     icon: Zap,
     examples["Automated workflows", "Reduced paperwork", "Faster processing", "Better accuracy"];
   },;
   {
+
     title: "Employee Experience",
     description: "Improved self - service capabilities and better communication enhance employee satisfaction",
     icon: Users,
     examples["Self - service portals", "Mobile access", "Real - time updates", "Better communication"];
   },;
   {
+
     title: "Data - Driven Decisions",
     description: "Advanced analytics provide insights for better workforce planning and HR strategy",
     icon: BarChart3,
     examples["Workforce analytics", "Performance insights", "Trend analysis", "Predictive modeling"];
   },;
   {
+
     title: "Compliance & Security",
     description: "Built - in compliance features and enterprise - grade security protect sensitive HR data",
     icon: Shield,
@@ -288,11 +305,13 @@ const hrBenefits = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -302,16 +321,19 @@ const hrBenefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -354,11 +376,13 @@ const hrBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -376,16 +400,19 @@ const hrBenefits = [
             {hrBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -416,11 +443,13 @@ const hrBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -438,16 +467,19 @@ const hrBenefits = [
             {hrTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -463,6 +495,7 @@ const hrBenefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -481,11 +514,13 @@ const hrBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -503,16 +538,19 @@ const hrBenefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -543,11 +581,13 @@ const hrBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -567,6 +607,7 @@ const hrBenefits = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -580,16 +621,19 @@ const hrBenefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -644,11 +688,13 @@ const hrBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -666,16 +712,19 @@ const hrBenefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -721,11 +770,13 @@ const hrBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

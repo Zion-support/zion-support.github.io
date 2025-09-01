@@ -2,6 +2,7 @@
 // Complete pricing information for all innovative services
 
 export interface PricingTier {
+
   name: string;
   price: number;
   billing: string;
@@ -10,6 +11,7 @@ export interface PricingTier {
   popular?: boolean}
 ;
 export interface ServicePricing {
+
   serviceId: string;
   serviceName: string;
   category: string;
@@ -19,6 +21,7 @@ export interface ServicePricing {
   roi: string;
   setupTime: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
@@ -29,6 +32,7 @@ export interface ServicePricing {
 export const comprehensivePricingGuide2030: ServicePricing[] = [
   // Micro SaaS Services
   {
+
 "
     serviceId: "ai-autonomous-research-assistant","
     serviceName: "AI Autonomous Research Assistant","
@@ -36,6 +40,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     basePrice: 8999,
     pricingTiers[;
       {
+
 "
         name: "Starter",
         price: 8999,
@@ -51,6 +56,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Email support"
       },
       {
+
 "
         name: "Professional",
         price: 15999,
@@ -67,6 +73,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Priority support + phone"
       },
       {
+
 "
         name: "Enterprise",
         price: 29999,
@@ -93,6 +100,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
 
   // AI-Powered Metaverse Development Platform
   {
+
 "
     serviceId: "ai-metaverse-development-platform","
     serviceName: "AI Metaverse Development Platform","
@@ -100,6 +108,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     basePrice: 12999,
     pricingTiers[;
       {
+
 "
         name: "Creator",
         price: 12999,
@@ -115,6 +124,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Community support"
       },
       {
+
 "
         name: "Studio",
         price: 24999,
@@ -130,6 +140,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Priority support"
       },
       {
+
 "
         name: "Enterprise",
         price: 49999,
@@ -155,6 +166,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
 
   // Zero-Trust Network Access Platform
   {
+
 "
     serviceId: "zero-trust-network-access-platform","
     serviceName: "Zero-Trust Network Access Platform","
@@ -162,6 +174,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     basePrice: 12999,
     pricingTiers[;
       {
+
 "
         name: "Basic",
         price: 12999,
@@ -177,6 +190,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Email support"
       },
       {
+
 "
         name: "Professional",
         price: 21999,
@@ -192,6 +206,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Priority support"
       },
       {
+
 "
         name: "Enterprise",
         price: 39999,
@@ -217,6 +232,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
 
   // AI-Powered Medical Imaging Analysis
   {
+
 "
     serviceId: "ai-medical-imaging-analysis","
     serviceName: "AI Medical Imaging Analysis Platform","
@@ -224,6 +240,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     basePrice: 24999,
     pricingTiers[;
       {
+
 "
         name: "Clinic",
         price: 24999,
@@ -239,6 +256,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Email support"
       },
       {
+
 "
         name: "Hospital",
         price: 44999,
@@ -255,6 +273,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Priority support"
       },
       {
+
 "
         name: "Medical Center",
         price: 79999,
@@ -280,6 +299,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
 
   // AI-Powered Risk Assessment Platform
   {
+
 "
     serviceId: "ai-risk-assessment-platform","
     serviceName: "AI Risk Assessment Platform","
@@ -287,6 +307,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     basePrice: 18999,
     pricingTiers[;
       {
+
 "
         name: "Basic",
         price: 18999,
@@ -302,6 +323,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Email support"
       },
       {
+
 "
         name: "Professional",
         price: 32999,
@@ -318,6 +340,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Priority support"
       },
       {
+
 "
         name: "Enterprise",
         price: 59999,
@@ -345,11 +368,13 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
 <<<<<<< HEAD
 // Pricing Analysis and Insights
 export const PRICING_ANALYSIS_2030 = {
+
   averagePrice: Math.round(
     COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) /
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
   priceRange: {
+
     min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
   max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
   ;
@@ -373,6 +398,7 @@ export
 
 // Payment and Discount Information;
 export const PAYMENT_OPTIONS_2030 = {
+
 "
   paymentMethods["Credit Card", "Bank Transfer", "Wire Transfer", "Cryptocurrency"],;"
   installmentPlans["3-month plan", "6-month plan", "12-month plan"],;

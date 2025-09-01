@@ -17,6 +17,7 @@ export function ProjectCard({ project, onEdit, onDelete }) {
 
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const handleDelete = () => {
+
     if (project.id) {
 
       onDelete(project.id);

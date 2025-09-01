@@ -70,6 +70,7 @@ const priorityColors = {
 
 };
 export function ProjectManagementDashboard() {
+
     const [isVisible, setIsVisible] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
     const [filterStatus, setFilterStatus] = useState('all');
@@ -116,6 +117,7 @@ export function ProjectManagementDashboard() {
             return 'warning';
         return 'healthy'};
     if (!isVisible) {
+
 "
         return (<button onClick={() => setIsVisible(true)} className="fixed bottom-4 left-36 p-3 bg-zion-gold hover:bg-zion-orange text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Show Project Management Dashboard">"
         <BarChart3 className="w-5 h-5"/>
@@ -327,6 +329,7 @@ export function ProjectManagementDashboard() {
                     project.status === 'in-progress' ? 'bg-zion-cyan' :'
                         project.status === 'review' ? 'bg-zion-gold' :'`
                             project.status === 'planning' ? 'bg-zion-blue' : 'bg-zion-slate'}`} style={{
+
 `
                     width: `${project.progress}%`,`
                     left: `${((new Date(project.startDate).getTime() - new Date('2024-01-01').getTime()) / (new Date('2024-12-31').getTime() - new Date('2024-01-01').getTime())) * 100}%`

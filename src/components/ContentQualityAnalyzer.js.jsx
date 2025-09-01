@@ -13,6 +13,7 @@ import {
   TrendingUp,
   Zap} from 'lucide-react';
 const ContentQualityAnalyzer = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [contentIssues, setContentIssues] = useState([]);
@@ -71,6 +72,7 @@ const ContentQualityAnalyzer = () => {
       status: 'open'},
   ];
   useEffect(() => {
+
     setContentIssues(sampleIssues);
     generateReport(sampleIssues);
   }, []);
@@ -94,6 +96,7 @@ const ContentQualityAnalyzer = () => {
       lastUpdated: new Date()});
   };
   const startAnalysis = async () => {
+
     setIsAnalyzing(true);
     // Simulate content analysis
     await new Promise(resolve => setTimeout(resolve, 3000));

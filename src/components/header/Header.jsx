@@ -47,17 +47,89 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
 
   // Handle scroll effect
   useEffect(() => {
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  };
+
+
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  };
+
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  };
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+
+    // Cleanup function
+  };
+}, []);, []);
     const handleScroll = () => {
+
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleSubmit = e => {
 
     e.preventDefault();
     if (query.trim()) {
+
 `
       navigate(`/search?q=${encodeURIComponent(query)}`);
       setQuery('');
@@ -65,6 +137,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
   };
 
   const toggleMobileMenu = () => {
+
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
@@ -103,6 +176,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
               value={query}
               onChange={setQuery}
               onSelectSuggestion={text => {
+
 `
                 navigate(`/search?q=${encodeURIComponent(text)}`);
                 setQuery('');
@@ -148,6 +222,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
               value={query}
               onChange={setQuery}
               onSelectSuggestion={text => {
+
 `
                 navigate(`/search?q=${encodeURIComponent(text)}`);
                 setQuery('');

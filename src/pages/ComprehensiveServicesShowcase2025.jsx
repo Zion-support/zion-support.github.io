@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default ComprehensiveServicesShowcase2025;
 import {
+
 import { CUTTING_EDGE_SERVICES_2025 } from '../data / enhanced - 2025 - cutting - edge - services';
 import { motion } from 'framer - motion';
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data / specialized - industry - solutions - 2025';
@@ -15,9 +16,9 @@ import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data / specialized - ind
   Play,
   Download,
   ExternalLink,
-  Search,
-} from 'lucide - react';
+  Search} from 'lucide - react';
 const ComprehensiveServicesShowcase2025 = () => {
+
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [selectedIndustry, setSelectedIndustry] = useState ('all') ;
@@ -35,6 +36,7 @@ const ComprehensiveServicesShowcase2025 = () => {
   ];
   // Filter services based on selection
   const filteredServices = allServices.filter (service => {
+
     const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
       service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
       service.tags.some (tag =>
@@ -42,24 +44,24 @@ const ComprehensiveServicesShowcase2025 = () => {
     return matchesCategory && matchesIndustry && matchesSearch;
   }) ;
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+
+        staggerChildren: 0.1}}};
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
-      },
-    },
-  };
+
+        duration: 0.5}}};
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">
       {/* Hero Section */}
       <div className="relative overflow - hidden">
@@ -356,6 +358,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             </p>
             <button
               onClick={ () => {
+
                 setSearchTerm ('') ;
                 setSelectedCategory ('all') ;
                 setSelectedIndustry ('all') ;

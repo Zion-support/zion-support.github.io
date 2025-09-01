@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default ServicesPricingPage;
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -24,15 +25,16 @@ import { SEO } from '../components / SEO';
   ShoppingCart,
   Heart,
   GraduationCap,
-  Truck,
-} from 'lucide - react';
+  Truck} from 'lucide - react';
 
 const ServicesPricingPage: React.FC = () => {
+
   const [selectedPlan, setSelectedPlan] = useState ('starter') ;
   const [billingCycle, setBillingCycle] = useState ('monthly') ;
 
   const pricingPlans = [
     {
+
       id: 'starter',
       name: 'Starter',
       description: 'Perfect for small businesses getting started with AI',
@@ -46,9 +48,9 @@ const ServicesPricingPage: React.FC = () => {
         'Monthly Reports',
       ],
       popular: false,
-      icon: Brain,
-    },
+      icon: Brain},
     {
+
       id: 'professional',
       name: 'Professional',
       description: 'Advanced features for growing businesses',
@@ -64,9 +66,9 @@ const ServicesPricingPage: React.FC = () => {
         'API Access',
       ],
       popular: true,
-      icon: Shield,
-    },
+      icon: Shield},
     {
+
       id: 'enterprise',
       name: 'Enterprise',
       description: 'Complete solution for large organizations',
@@ -82,12 +84,12 @@ const ServicesPricingPage: React.FC = () => {
         'On - site Training',
       ],
       popular: false,
-      icon: Cloud,
-    },
+      icon: Cloud},
   ];
 
   const serviceCategories = [
     {
+
       id: 'ai - automation',
       name: 'AI Automation',
       icon: Zap,
@@ -97,9 +99,9 @@ const ServicesPricingPage: React.FC = () => {
         'Workflow Optimization',
         'Intelligent Document Processing',
         'Predictive Analytics',
-      ],
-    },
+      ]},
     {
+
       id: 'cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
@@ -109,9 +111,9 @@ const ServicesPricingPage: React.FC = () => {
         'Vulnerability Assessment',
         'Security Monitoring',
         'Incident Response',
-      ],
-    },
+      ]},
     {
+
       id: 'cloud - management',
       name: 'Cloud Management',
       icon: Cloud,
@@ -121,9 +123,9 @@ const ServicesPricingPage: React.FC = () => {
         'Infrastructure Management',
         'Cost Optimization',
         'Performance Monitoring',
-      ],
-    },
+      ]},
     {
+
       id: 'data - analytics',
       name: 'Data Analytics',
       icon: Database,
@@ -133,12 +135,13 @@ const ServicesPricingPage: React.FC = () => {
         'Data Visualization',
         'Predictive Modeling',
         'Real - time Analytics',
-      ],
-    },
+      ]},
   ];
 
   const getCategoryIcon = (category: string) => {
+
     const categoryIcons: { [key: string]: React.ReactNode } = {
+
       'AI Automation': <Zap className="h - 5 w - 5" />,
       'Customer Intelligence': <Users className="h - 5 w - 5" />,
       'Content Marketing': <TrendingUp className="h - 5 w - 5" />,
@@ -158,8 +161,7 @@ const ServicesPricingPage: React.FC = () => {
       'Healthcare Technology': <Heart className="h - 5 w - 5" />,
       FinTech: <TrendingUp className="h - 5 w - 5" />,
       'Education Technology': <GraduationCap className="h - 5 w - 5" />,
-      'Supply Chain': <Truck className="h - 5 w - 5" />,
-    };
+      'Supply Chain': <Truck className="h - 5 w - 5" />};
     return categoryIcons[category] || <Zap className="h - 5 w - 5" />;
   };
 
@@ -213,6 +215,7 @@ const ServicesPricingPage: React.FC = () => {
               <div role="button" className="bg - slate - 800 / 50 rounded - lg p - 1 border border - slate - 700 / 50">
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle ('monthly') }
                   className={`px - 6 py - 2 rounded - md text - sm font - medium transition - colors ${
+
                     billingCycle === 'monthly'
                       ? 'bg - blue - 500 text - white'
                       : 'text - gray - 300 hover:text - white'
@@ -222,6 +225,7 @@ const ServicesPricingPage: React.FC = () => {
                 </button>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle ('annual') }
                   className={`px - 6 py - 2 rounded - md text - sm font - medium transition - colors ${
+
                     billingCycle === 'annual'
                       ? 'bg - blue - 500 text - white'
                       : 'text - gray - 300 hover:text - white'
@@ -243,6 +247,7 @@ const ServicesPricingPage: React.FC = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg - slate - 800 / 50 backdrop - blur - sm rounded - xl p - 8 border ${
+
                     plan.popular
                       ? 'border - blue - 500 / 50 shadow - lg shadow - blue - 500 / 20'
                       : 'border - slate - 700 / 50'
@@ -282,6 +287,7 @@ const ServicesPricingPage: React.FC = () => {
                   </ul>
 
                   <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full py - 3 px - 6 rounded - lg font - medium transition - all duration - 300 ${
+
                     plan.popular
                       ? 'bg - gradient - to - r from - blue - 500 to - purple - 500 text - white hover:from - blue - 600 hover:to - purple - 600'
                       : 'bg - slate - 700 / 50 text - white hover:bg - slate - 600 / 50 border border - slate - 600 / 50'

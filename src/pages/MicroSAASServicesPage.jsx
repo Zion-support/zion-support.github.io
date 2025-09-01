@@ -14,6 +14,7 @@ import {Header} from '@/components / Header';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
 import SEO from '@/components / SEO';
 export default function MicroSaasServicesPage () {
+
 import {MICRO_SAAS_SERVICES,
 import {Star,
 
@@ -36,17 +37,21 @@ const pricingModels = [
     const [filteredServices, setFilteredServices] = useState (MICRO_SAAS_SERVICES) ;
     const [sortBy, setSortBy] = useState ('rating') ;
     useEffect ( () => {
+
         let filtered = MICRO_SAAS_SERVICES;
         // Filter by category
         if (selectedCategory !== 'all') {
+
             filtered = filtered.filter (service => service.category === selectedCategory) ;
         }
         // Filter by pricing model
         if (selectedPricing !== 'all') {
+
             filtered = filtered.filter (service => service.pricingModel === selectedPricing) ;
         }
         // Filter by search query
         if (searchQuery.trim () ) {
+
             const query = searchQuery.toLowerCase () ;
             filtered = filtered.filter (service => service.title.toLowerCase () .includes (query) ||
                 service.description.toLowerCase () .includes (query) ||
@@ -55,7 +60,9 @@ const pricingModels = [
         }
         // Sort services
         filtered.sort ( (a, b) => {
+
             switch (sortBy) {
+
                 case 'rating':
                     return (b.rating || 0) - (a.rating || 0) ;
                 case 'price':
@@ -374,6 +381,7 @@ const pricingModels = [
             <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>
             <p className="text - zion - slate - light mb - 6">Try adjusting your search criteria or filters</p>
             <Button onClick={ () => {
+
                 setSearchQuery ('') ;
                 setSelectedCategory ('all') ;
                 setSelectedPricing ('all') ;

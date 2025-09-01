@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 export default React.memo (function InnovativeServices2027 () {
+
 import {
+
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data / innovativeMicroSaasServices2027';
 import { motion, AnimatePresence } from 'framer - motion';
 import { SEO } from '../components / SEO';
@@ -34,10 +36,10 @@ import { SEO } from '../components / SEO';
   Satellite,
   Banknote,
   Building,
-  Phone,
-} from 'lucide - react';
+  Phone} from 'lucide - react';
 
 const categoryIcons: { [key: string]: React.ComponentType < any> } = {
+
   'AI & Customer Success': Brain,
   'Blockchain & DeFi': Lock,
   'Quantum Computing': Zap,
@@ -47,10 +49,10 @@ const categoryIcons: { [key: string]: React.ComponentType < any> } = {
   'Green Tech': Leaf,
   'Space Tech': Satellite,
   FinTech: Banknote,
-  'IoT & Smart Cities': Building,
-};
+  'IoT & Smart Cities': Building};
 
 const categoryColors: { [key: string]: string } = {
+
   'AI & Customer Success': 'from - cyan - 500 to - blue - 600',
   'Blockchain & DeFi': 'from - purple - 500 to - indigo - 600',
   'Quantum Computing': 'from - violet - 500 to - purple - 600',
@@ -60,8 +62,7 @@ const categoryColors: { [key: string]: string } = {
   'Green Tech': 'from - green - 500 to - emerald - 600',
   'Space Tech': 'from - slate - 500 to - gray - 600',
   FinTech: 'from - yellow - 500 to - amber - 600',
-  'IoT & Smart Cities': 'from - blue - 500 to - cyan - 600',
-};
+  'IoT & Smart Cities': 'from - blue - 500 to - cyan - 600'};
 
   const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
   const [searchQuery, setSearchQuery] = useState ('') ;
@@ -73,6 +74,7 @@ const categoryColors: { [key: string]: string } = {
   ];
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2027.filter (service => {
+
       const matchesSearch = service.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         service.tags.some (tag =>
@@ -81,7 +83,9 @@ const categoryColors: { [key: string]: string } = {
     }) ;
 
   const sortedServices = [...filteredServices].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'price':
         return a.price - b.price;
       case 'roi':
@@ -153,6 +157,7 @@ const categoryColors: { [key: string]: string } = {
                   whileTap={{ scale: 0.95 }}
                   onClick={ () => setSelectedCategory (category) }
                   className={`px - 4 py - 2 rounded - full font - medium transition - all duration - 300 ${
+
                     selectedCategory === category
                       ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white shadow - lg'
                       : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50'
@@ -211,9 +216,9 @@ const categoryColors: { [key: string]: string } = {
                     <div role="button" className="flex items - center justify - between mb - 4">
                       {React.createElement (categoryIcons[service.category] || Star,
                         {
+
                           className: 'w - 8 h - 8 text - white',
-                          size: 32,
-                        }) }
+                          size: 32}) }
                       <span className="px - 3 py - 1 bg - white / 20 rounded - full text - sm font - medium text - white">
                         {service.innovationLevel}
                       </span>
@@ -345,6 +350,7 @@ const categoryColors: { [key: string]: string } = {
                 No services found matching your criteria
               </div>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+
                   setSelectedCategory ('all') ;
                   setSearchQuery ('') ;
                 }}

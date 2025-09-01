@@ -13,6 +13,7 @@ import React, { useRef } from 'react';
 import { Button } from "@/components / ui / button";
 import { GradientHeading } from "@/components / GradientHeading";
 export function HeroSection () {
+
 import { motion, useScroll, useTransform } from 'framer - motion';
 import { motion, useScroll, useTransform } from "framer - motion";
 
@@ -20,6 +21,7 @@ import { motion, useScroll, useTransform } from "framer - motion";
     const { t } = useTranslation () ;
     const containerRef = useRef (null) ;
     const { scrollYProgress } = useScroll ({
+
         target: containerRef,
         offset: ["start start", "end start"]
     }) ;
@@ -29,6 +31,7 @@ import { motion, useScroll, useTransform } from "framer - motion";
 =======
 
 export function HeroSection() {
+
     const { t } = useTranslation();
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -129,8 +132,10 @@ export function HeroSection() {
   };
 
   const itemVariants = {
+
 <<<<<<< HEAD
     hidden: {
+
 =======
 
     hidden: {
@@ -183,24 +188,28 @@ export function HeroSection() {
 
   const features = [
     {
+
 "
       icon: <Star className="w-6 h-6" />,"
       text: "AI-Powered Solutions","
       color: "text-zion-cyan"
     },
     {
+
 "
       icon: <Zap className="w-6 h-6" />,"
       text: "24/7 Support","
       color: "text-zion-purple"
     },
     {
+
 "
       icon: <Shield className="w-6 h-6" />,"
       text: "Enterprise Security","
       color: "text-zion-cyan-light"
     },
     {
+
 "
       icon: <Users className="w-6 h-6" />,"
       text: "Global Team","

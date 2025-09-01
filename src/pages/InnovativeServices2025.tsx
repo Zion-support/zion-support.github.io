@@ -1,6 +1,7 @@
 import { Link  } from 'react - router - dom.ts';
 import React, { useState, useEffect } from 'react.ts';
 export default React.memo (function InnovativeServices2025 (...args: any[]) : any {
+
 import { Brain,
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 
@@ -150,6 +151,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
   const services = [
     // AI & Machine Learning Services
     {
+
       id: 'ai - business - intelligence',
       name: 'AI Business Intelligence Platform',
       description: 'Advanced AI - powered business analytics and insights platform with predictive modeling and real - time dashboards.',
@@ -166,6 +168,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       reviews: 127
     },
     {
+
       id: 'ai - compliance - assistant',
       name: 'AI Compliance Automation Suite',
       description: 'Automated compliance monitoring and reporting for regulatory requirements across industries.',
@@ -182,6 +185,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       reviews: 89
     },
     {
+
       id: 'ai - sales - copilot',
       name: 'AI Sales Copilot Platform',
       description: 'Intelligent sales automation with lead scoring, customer insights, and sales forecasting.',
@@ -198,6 +202,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       reviews: 156
     },
     {
+
       id: 'ai - content - marketing - suite',
       name: 'AI Content Marketing Suite',
       description: 'Complete content creation, optimization, and distribution platform powered by advanced AI.',
@@ -214,6 +219,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       reviews: 94
     },
     {
+
       id: 'ai - customer - support - automation',
       name: 'AI Customer Support Automation',
       description: 'Intelligent customer service automation with chatbots, ticket routing, and sentiment analysis.',
@@ -230,6 +236,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       reviews: 203
     },
     {
+
       id: 'ai - project - management',
       name: 'AI Project Management Platform',
       description: 'Intelligent project planning, resource allocation, and risk management with AI insights.',
@@ -248,6 +255,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
 
     // IT Infrastructure Services
     {
+
       id: 'cloud - devops - platform',
       name: 'Cloud DevOps Automation Platform',
       description: 'Comprehensive DevOps automation with CI / CD pipelines, infrastructure as code, and monitoring.',
@@ -264,6 +272,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       reviews: 234
     },
     {
+
       id: 'it - infrastructure - management',
       name: 'IT Infrastructure Management Suite',
       description: 'Complete IT infrastructure monitoring, management, and optimization platform.',
@@ -280,6 +289,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       reviews: 167
     },
     {
+
       id: 'cybersecurity - platform',
       name: 'AI - Powered Cybersecurity Platform',
       description: 'Advanced threat detection, vulnerability assessment, and security automation platform.',
@@ -298,6 +308,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
 
     // Micro SaaS Solutions
     {
+
       id: 'finops - advisor',
       name: 'FinOps Cloud Cost Optimizer',
       description: 'Cloud cost optimization and financial operations management platform for enterprises.',
@@ -314,6 +325,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       reviews: 76
     },
     {
+
       id: 'zero - trust - network',
       name: 'Zero Trust Network Access Platform',
       description: 'Secure network access control with identity verification and continuous monitoring.',
@@ -330,6 +342,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       reviews: 134
     },
     {
+
       id: 'dsr - portal',
       name: 'Data Subject Rights Portal',
       description: 'GDPR compliance platform for managing data subject requests and privacy rights.',
@@ -348,6 +361,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
 
     // Emerging Technology Services
     {
+
       id: 'quantum - computing - platform',
       name: 'Quantum Computing Solutions',
       description: 'Quantum computing services for optimization, cryptography, and scientific computing.',
@@ -364,6 +378,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       reviews: 45
     },
     {
+
       id: 'edge - computing - platform',
       name: 'Edge Computing Platform',
       description: 'Distributed edge computing platform for IoT, real - time processing, and low - latency applications.',
@@ -380,6 +395,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       reviews: 123
     },
     {
+
       id: 'blockchain - platform',
       name: 'Enterprise Blockchain Platform',
       description: 'Scalable blockchain solutions for supply chain, finance, and digital identity management.',
@@ -406,6 +422,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
   ];
 
   const filteredServices = services.filter (service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                          service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
@@ -413,7 +430,9 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
   }) ;
 
   const sortedServices = [...filteredServices].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'price - low':
         return parseFloat (a.price.replace (/[^0 - 9.]/g, '') ) - parseFloat (b.price.replace (/[^0 - 9.]/g, '') ) ;
       case 'price - high':
@@ -498,6 +517,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
               {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`flex items - center gap - 2 px - 4 py - 2 rounded - full transition - all duration - 300 ${
+
                     selectedCategory === category.id
                       ? 'bg - zion - blue text - white'
                       : 'bg - zion - slate text - zion - blue - light hover:bg - zion - slate - light'
@@ -560,6 +580,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
                   {/* Badge */}
                   {service.badge && (<div role="button" className="absolute top - 4 right - 4">
                       <span className={`px - 3 py - 1 rounded - full text - xs font - semibold ${
+
                         service.badge === 'New' ? 'bg - green - 500 text - white' :
                         service.badge === 'Popular' ? 'bg - blue - 500 text - white' :
                         service.badge === 'Featured' ? 'bg - purple - 500 text - white' :
@@ -605,6 +626,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
                         {[...Array (5) ].map ( (_, i) => (<Star
                             key={i}
                             className={`w - 4 h - 4 ${
+
                               i < Math.floor (service.rating) ? 'text - yellow - 400 fill - current'
                                 : 'text - zion - slate - light'
                             }`}

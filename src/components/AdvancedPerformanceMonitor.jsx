@@ -16,8 +16,7 @@ import {
     RefreshCw,
     AlertTriangle,
     CheckCircle,
-    Download,
-  } from 'lucide - react';
+    Download} from 'lucide - react';
 =======
   Activity,
   BarChart3,
@@ -37,6 +36,7 @@ import {
 
 const mockSystemMetrics = [
   {
+
 >>>>>>> main
 
     id: '1',
@@ -158,9 +158,11 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
   const containerRef = useRef (null) ;
 
   useEffect ( () => {
+
     if (!enabled) return;
 
     const interval = setInterval ( () => {
+
       refreshMetrics () ;
     }, refreshInterval) ;
 
@@ -168,6 +170,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
   }, [enabled, refreshInterval]) ;
 
   const refreshMetrics = async () => {
+
     setIsRefreshing (true) ;
     // Simulate API call
     await new Promise (resolve => setTimeout (resolve, 1000) ) ;

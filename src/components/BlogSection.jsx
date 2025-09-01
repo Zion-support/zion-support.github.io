@@ -5,6 +5,7 @@ export function BlogSection () {
 =======
 import { Link } from 'react-router-dom';
 export function BlogSection() {
+
 >>>>>>> main
     const blogPosts = [
         {

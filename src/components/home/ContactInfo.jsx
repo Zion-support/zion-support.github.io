@@ -6,5 +6,6 @@ import { Link } from "react-router-dom";"
 import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground";"
 import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink } from "lucide-react";
 export function ContactInfo() {
+
     </section>)}
 '"

@@ -3,7 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data / ultimateInnovativeServices2026";
 import SEO from "@/components / SEO";
 export default React.memo (function ComprehensiveServicesOverview2026 (...args[]) :  {
+
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   Brain,
@@ -92,6 +94,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
   const serviceCategories = [
     {
+
       id: 'quantum - ai',
       name: 'Quantum AI & Computing',
       description: 'Revolutionary quantum computing solutions combined with artificial intelligence',
@@ -103,6 +106,7 @@ import { motion, AnimatePresence } from 'framer - motion';
       innovationLevel: 'Revolutionary'
     },
     {
+
       id: 'neuromorphic - ai',
       name: 'Neuromorphic AI',
       description: 'Brain - inspired computing systems that mimic human neural networks',
@@ -114,6 +118,7 @@ import { motion, AnimatePresence } from 'framer - motion';
       innovationLevel: 'Cutting - edge'
     },
     {
+
       id: 'synthetic - biology',
       name: 'Synthetic Biology AI',
       description: 'AI - powered design and engineering of biological systems',
@@ -125,6 +130,7 @@ import { motion, AnimatePresence } from 'framer - motion';
       innovationLevel: 'Revolutionary'
     },
     {
+
       id: 'space - technology',
       name: 'Space Technology AI',
       description: 'Autonomous space operations and satellite management systems',
@@ -136,6 +142,7 @@ import { motion, AnimatePresence } from 'framer - motion';
       innovationLevel: 'Revolutionary'
     },
     {
+
       id: 'advanced - materials',
       name: 'Advanced Materials AI',
       description: 'AI - powered discovery and design of next - generation materials',
@@ -147,6 +154,7 @@ import { motion, AnimatePresence } from 'framer - motion';
       innovationLevel: 'Cutting - edge'
     },
     {
+
       id: 'brain - computer - interface',
       name: 'Brain - Computer Interface',
       description: 'Direct neural communication between human brain and computers',
@@ -158,6 +166,7 @@ import { motion, AnimatePresence } from 'framer - motion';
       innovationLevel: 'Revolutionary'
     },
     {
+
       id: 'digital - twin',
       name: 'Digital Twin AI',
       description: 'Virtual replicas of physical systems with real - time monitoring',
@@ -169,6 +178,7 @@ import { motion, AnimatePresence } from 'framer - motion';
       innovationLevel: 'Advanced'
     },
     {
+
       id: 'extended - reality',
       name: 'Extended Reality AI',
       description: 'Immersive VR, AR, and MR experiences powered by AI',
@@ -180,6 +190,7 @@ import { motion, AnimatePresence } from 'framer - motion';
       innovationLevel: 'Advanced'
     },
     {
+
       id: 'edge - ai',
       name: 'Edge AI Intelligence',
       description: 'AI processing at the edge of networks for real - time decision making',
@@ -191,6 +202,7 @@ import { motion, AnimatePresence } from 'framer - motion';
       innovationLevel: 'Advanced'
     },
     {
+
       id: 'federated - learning',
       name: 'Federated Learning AI',
       description: 'Collaborative AI training across distributed data sources',
@@ -202,6 +214,7 @@ import { motion, AnimatePresence } from 'framer - motion';
       innovationLevel: 'Advanced'
     },
     {
+
       id: 'sustainable - technology',
       name: 'Sustainable Technology AI',
       description: 'AI solutions for environmental sustainability and green innovation',
@@ -235,11 +248,13 @@ import { motion, AnimatePresence } from 'framer - motion';
         <div role="button" className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -295,6 +310,7 @@ import { motion, AnimatePresence } from 'framer - motion';
           <div role="button" className="flex flex - wrap justify - center gap - 4">
             <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('all') }
               className={`px - 6 py - 3 rounded - lg transition - all duration - 200 ${
+
                 selectedCategory === 'all'
                   ? 'bg - zion - cyan text - white'
                   : 'bg - white / 10 text - zion - slate - 300 hover: bg - white / 20'
@@ -305,6 +321,7 @@ import { motion, AnimatePresence } from 'framer - motion';
             {serviceCategories.map (category  => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                 onClick={ () => setSelectedCategory (category.id) }
                 className={`px - 6 py - 3 rounded - lg transition - all duration - 200 ${
+
                   selectedCategory === category.id
                     ? 'bg - zion - cyan text - white'
                     : 'bg - white / 10 text - zion - slate - 300 hover:bg - white / 20'
@@ -333,21 +350,25 @@ import { motion, AnimatePresence } from 'framer - motion';
               {filteredCategories.map ( (category, index) => (<motion.div
                   key={category.id}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                   exit = {
+
   { opacity: 0,
   y: -20
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -375,6 +396,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                   {/* Innovation Level Badge */}
                   <div role="button" className="flex items - center gap - 4 mb - 6">;
                     <div role="button" className={`px - 4 py - 2 rounded - full text - sm font - semibold ${
+
                       category.innovationLevel === 'Revolutionary'
                         ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                         : category.innovationLevel === 'Cutting - edge'
@@ -427,16 +449,19 @@ import { motion, AnimatePresence } from 'framer - motion';
                   <AnimatePresence>
                     {expandedCategory === category.id && (<motion.div
                         initial = {
+
   { opacity: 0,
   height: 0
 
 }}
                         animate = {
+
   { opacity: 1,
   height: 'auto'
 
 }}
                         exit = {
+
   { opacity: 0,
   height: 0
 
@@ -462,6 +487,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
                               <div role="button" className="flex items - center gap - 2 mb - 4">
                                 <div role="button" className={`px - 2 py - 1 rounded - full text - xs font - semibold ${
+
                                   service.innovationLevel === 'Revolutionary'
                                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                                     : service.innovationLevel === 'Cutting - edge'
@@ -506,11 +532,13 @@ import { motion, AnimatePresence } from 'framer - motion';
         <div role="button" className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 
@@ -8,6 +9,7 @@ import { motion } from 'framer - motion';
  * @returns {*} Function return value
  */
 function ClientSuccessStoriesSection () {
+
 =======
 >>>>>>> main
 
@@ -92,6 +94,7 @@ const successStories = [
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function ClientSuccessStoriesSection() {
+
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">

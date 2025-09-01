@@ -1,5 +1,21 @@
 module.exports = {
   root: true,
+  extends: [],
+  ignorePatterns: [
+    'automation/**',
+    'scripts/**',
+    'tests/**',
+    'pages/**/*.ts',
+    'pages/**/*.tsx',
+    'pages/**/*.js',
+    'pages/**/*.jsx',
+    'src/**/*.ts',
+    'src/**/*.tsx',
+  ],
+};
+
+module.exports = {
+  root: true,
   env: {
     browser: true,
     es2021: true,
@@ -35,5 +51,11 @@ module.exports = {
       version: 'detect',
     },
   },
-  ignorePatterns: ['dist/', 'build/', 'node_modules/', '*.config.js', '*.config.ts'],
+  ignorePatterns: [
+    'dist/',
+    'build/',
+    'node_modules/',
+    '*.config.js',
+    '*.config.ts',
+  ],
 };

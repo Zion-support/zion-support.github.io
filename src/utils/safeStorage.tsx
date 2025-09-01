@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 export const safeStorage = {
+
 export default safeStorage;
 
 // In - memory storage for fallback with optimizations
@@ -12,6 +13,7 @@ let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
 
 function isLocalStorageAvailable() {
+
   const now = Date.now();
   // Use cached result if checked recently
   if()
@@ -24,6 +26,7 @@ function isLocalStorageAvailable() {
 
   lastAvailabilityCheck = now;
   try {
+
     if (typeof window === 'undefined') {
 
       localStorageAvailable = false;
@@ -49,7 +52,8 @@ function safeConsoleError(message, error) {
   if (env === 'production') return;
 
   try {
-    // console.error(message, error);
+
+    // // // // console.error(message, error);
   } catch {
 
     // Silent fail if console.error causes recursion
@@ -60,10 +64,11 @@ export const safeStorage = {
   getItem: key => {
 
     try {
+
       return localStorage.getItem(key);
     } catch (error) {
 
-      // console.warn('Failed to get item from localStorage:', error);
+      // // // // console.warn('Failed to get item from localStorage:', error);
       return null;
     }
   },
@@ -71,11 +76,12 @@ export const safeStorage = {
   setItem: (key, value) => {
 
     try {
+
       localStorage.setItem(key, value);
       return true;
     } catch (error) {
 
-      // console.warn('Failed to set item in localStorage:', error);
+      // // // // console.warn('Failed to set item in localStorage:', error);
       return false;
     }
   },
@@ -83,22 +89,25 @@ export const safeStorage = {
   removeItem: key => {
 
     try {
+
       localStorage.removeItem(key);
       return true;
     } catch (error) {
 
-      // console.warn('Failed to remove item from localStorage:', error);
+      // // // // console.warn('Failed to remove item from localStorage:', error);
       return false;
     }
   },
 
   clear: () => {
+
     try {
+
       localStorage.clear();
       return true;
     } catch (error) {
 
-      // console.warn('Failed to clear localStorage:', error);
+      // // // // console.warn('Failed to clear localStorage:', error);
       return false;
     }
   },
@@ -106,30 +115,35 @@ export const safeStorage = {
   key: index => {
 
     try {
+
       return localStorage.key(index);
     } catch (error) {
+
 <<<<<<< HEAD
 
-      // console.warn('Failed to get key from localStorage:', error);
+      // // // // console.warn('Failed to get key from localStorage:', error);
       return null;
 =======
 '
-      // console.warn('Failed to get key from localStorage:', error);      return null;
+      // // // // console.warn('Failed to get key from localStorage:', error);      return null;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     }
   },
 
   get length() {
+
     try {
+
       return localStorage.length;
     } catch (error) {
+
 <<<<<<< HEAD
 
-      // console.warn('Failed to get localStorage length:', error);
+      // // // // console.warn('Failed to get localStorage length:', error);
       return 0;
 =======
 '
-      // console.warn('Failed to get localStorage length:', error);      return 0;
+      // // // // console.warn('Failed to get localStorage length:', error);      return 0;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     }
   }};

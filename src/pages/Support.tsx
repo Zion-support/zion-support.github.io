@@ -1,6 +1,7 @@
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 import {
+
 import { motion } from 'framer - motion';
 
   HelpCircle,
@@ -28,106 +29,108 @@ import { motion } from 'framer - motion';
   Headphones,
   MessageSquare,
   VideoCall,
-  Mailbox,
-} from 'lucide - react';
+  Mailbox} from 'lucide - react';
 
 const Support = () => {
+
   const [selectedCategory, setSelectedCategory] = useState ('general') ;
   const [contactMethod, setContactMethod] = useState ('email') ;
 
   const supportCategories = [
     {
+
       id: 'help',
       name: 'Help Center',
       icon: HelpCircle,
       description: 'Find answers to common questions',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       id: 'contact',
       name: 'Contact Support',
       icon: MessageCircle,
       description: 'Get in touch with our team',
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     {
+
       id: 'resources',
       name: 'Resources',
       icon: BookOpen,
       description: 'Documentation and guides',
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       id: 'status',
       name: 'System Status',
       icon: Zap,
       description: 'Check service status',
-      color: 'from - orange - 500 to - red - 500',
-    },
+      color: 'from - orange - 500 to - red - 500'},
   ];
 
   const supportResources = [
     {
+
       title: 'Knowledge Base',
       description: 'Browse our comprehensive documentation and guides',
       icon: BookOpen,
       action: 'Browse Docs',
-      color: 'from - indigo - 500 to - purple - 500',
-    },
+      color: 'from - indigo - 500 to - purple - 500'},
     {
+
       title: 'Video Tutorials',
       description: 'Step - by - step video guides for all services',
       icon: Video,
       action: 'Watch Videos',
-      color: 'from - pink - 500 to - rose - 500',
-    },
+      color: 'from - pink - 500 to - rose - 500'},
     {
+
       title: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
       action: 'Join Forum',
-      color: 'from - teal - 500 to - cyan - 500',
-    },
+      color: 'from - teal - 500 to - cyan - 500'},
     {
+
       title: 'Training Programs',
       description: 'Professional training and certification courses',
       icon: Star,
       href: '/training',
-      color: 'from - yellow - 500 to - orange - 500',
-    },
+      color: 'from - yellow - 500 to - orange - 500'},
   ];
 
   const faqItems = [
     {
+
       question: 'How do I get started with Zion Tech Group services?',
       answer:
-        "Getting started is easy ! Simply contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and provide a customized solution.",
-    },
+        "Getting started is easy ! Simply contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and provide a customized solution."},
     {
+
       question: 'What is your typical response time for support requests?',
       answer:
-        'We prioritize support based on urgency. Emergency issues get immediate attention, while general inquiries are typically resolved within 2 - 4 hours during business hours.',
-    },
+        'We prioritize support based on urgency. Emergency issues get immediate attention, while general inquiries are typically resolved within 2 - 4 hours during business hours.'},
     {
+
       question: 'Do you provide 24 / 7 support?',
       answer:
-        'Yes, we provide 24 / 7 emergency support for critical issues. Our team is always available to handle urgent system problems and outages.',
-    },
+        'Yes, we provide 24 / 7 emergency support for critical issues. Our team is always available to handle urgent system problems and outages.'},
     {
+
       question: 'What types of training do you offer?',
       answer:
-        'We offer comprehensive training programs including technical training, user adoption programs, and ongoing support to ensure your team gets the most out of our solutions.',
-    },
+        'We offer comprehensive training programs including technical training, user adoption programs, and ongoing support to ensure your team gets the most out of our solutions.'},
     {
+
       question: 'How do you handle data security and compliance?',
       answer:
-        'Security is our top priority. We implement enterprise - grade security measures and maintain compliance with industry standards including SOC 2, GDPR, and HIPAA where applicable.',
-    },
+        'Security is our top priority. We implement enterprise - grade security measures and maintain compliance with industry standards including SOC 2, GDPR, and HIPAA where applicable.'},
   ];
 
   const handleSearch = useCallback ( (e: React.FormEvent) => {
+
     e.preventDefault () ;
     if (searchQuery.trim () ) {
+
       // Implement search functionality
       console.log ('Searching for:', searchQuery) ;
     }
@@ -193,6 +196,7 @@ const Support = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onClick={ () => setActiveTab (category.id) }
               className={`cursor - pointer p - 6 rounded - xl border transition - all duration - 300 hover:scale - 105 ${
+
                 activeTab === category.id
                   ? 'bg - slate - 700 / 50 border - cyan - 400 / 50'
                   : 'bg - slate - 800 / 30 border - slate - 700 / 30 hover:border - cyan - 400 / 30'
@@ -395,26 +399,26 @@ const Support = () => {
               {[
                 { name: 'AI Services', status: 'operational', icon: Brain },
                 {
+
                   name: 'Cloud Infrastructure',
                   status: 'operational',
-                  icon: Cloud,
-                },
+                  icon: Cloud},
                 {
+
                   name: 'Security Systems',
                   status: 'operational',
-                  icon: Shield,
-                },
+                  icon: Shield},
                 {
+
                   name: 'Data Analytics',
                   status: 'operational',
-                  icon: TrendingUp,
-                },
+                  icon: TrendingUp},
                 { name: 'API Services', status: 'operational', icon: Globe },
                 {
+
                   name: 'Support Portal',
                   status: 'operational',
-                  icon: HelpCircle,
-                },
+                  icon: HelpCircle},
               ].map ( (service, index) => (<motion.div
                   key={service.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -425,8 +429,8 @@ const Support = () => {
                   <div role="button" className="flex items - center justify - between mb - 4">
                     <div role="button" className="w - 10 h - 10 bg - gradient - to - br from - cyan - 500 to - blue - 500 rounded - lg flex items - center justify - center">
                       {React.createElement (service.icon, {
-                        className: 'w - 5 h - 5 text - white',
-                      }) }
+
+                        className: 'w - 5 h - 5 text - white'}) }
                     </div>
                     <div role="button" className="flex items - center gap - 2">
                       <div role="button" className="w - 3 h - 3 bg - green - 400 rounded - full"></div>

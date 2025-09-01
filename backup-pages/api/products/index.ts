@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 export type ProductWithReviewStats = Product & {
   averageRating: number | null;
   reviewCount: number;
-  title: string; 
+  title: string;
   category?: string; // Assuming category might be added or is part of Product model
   images?: { url: string; alt?: string }[] | string[]; // Allow for string array or object array for images
   // price?: number | null; // Already in Product
@@ -20,7 +20,6 @@ interface ErrorResponse {
   error: string;
   details?: string;
 }
-
 
 export default async function handler(
   req: NextApiRequest,
@@ -37,7 +36,13 @@ export default async function handler(
     let products: Product[] = [];
 
     if (typeof searchQuery === 'string' && searchQuery.trim() !== '') {
-      const rawResults = await prisma.$queryRawUnsafe<Array<{ id: string; name_similarity: number; description_similarity: number }>>(
+      const rawResults = await prisma.$queryRawUnsafe<
+        Array<{
+          id: string;
+          name_similarity: number;
+          description_similarity: number;
+        }>
+      >(
         `SELECT
            id,
            similarity(name, $1) AS name_similarity,
@@ -58,17 +63,18 @@ export default async function handler(
             },
           },
         });
-        products.sort((a, b) => productIds.indexOf(a.id) - productIds.indexOf(b.id));
+        products.sort(
+          (a, b) => productIds.indexOf(a.id) - productIds.indexOf(b.id)
+        );
       } else {
         products = [];
       }
-
     } else {
       products = await prisma.product.findMany();
     }
 
     const productsWithStats: ProductWithReviewStats[] = await Promise.all(
-      products.map(async (product) => {
+      products.map(async product => {
         const reviewStats = await prisma.productReview.aggregate({
           _avg: {
             rating: true,
@@ -80,23 +86,26 @@ export default async function handler(
             productId: product.id,
           },
         });
-        
+
         // Ensure images, tags, etc. are handled correctly if they are optional or have specific structures
         // The Product type from Prisma might already define these. If they are added ad-hoc, ensure proper typing.
         let imagesProcessed: { url: string; alt?: string }[] | string[] = [];
         if (Array.isArray(product.images)) {
           if (product.images.every(img => typeof img === 'string')) {
             imagesProcessed = product.images as string[];
-          } else if (product.images.every(img => typeof img === 'object' && img !== null && 'url' in img)) {
+          } else if (
+            product.images.every(
+              img => typeof img === 'object' && img !== null && 'url' in img
+            )
+          ) {
             imagesProcessed = product.images as { url: string; alt?: string }[];
           }
         }
 
-
         return {
           ...product,
-          title: product.name, 
-          averageRating: reviewStats._avg.rating, 
+          title: product.name,
+          averageRating: reviewStats._avg.rating,
           reviewCount: reviewStats._count.id,
           category: product.category || 'Uncategorized', // Assuming category is part of Product
           images: imagesProcessed, // Use processed images
@@ -120,7 +129,7 @@ export default async function handler(
     } else if (typeof e === 'string') {
       errorMessage = e;
     }
-    
+
     return res.status(500).json({ error: errorMessage, details: errorDetails });
   } finally {
     await prisma.$disconnect();

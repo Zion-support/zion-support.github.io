@@ -24,6 +24,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     availability: "16-20 Weeks",
     aiScore: 100,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -37,6 +38,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     integrations["Quantum Computers", "Fiber Networks", "Quantum Repeaters", "Quantum Memory", "Classical Networks"]},;
   // Neuromorphic Computing Platform
   {
+
 "
     id: "neuromorphic-computing-platform","
     title: "Neuromorphic Computing Platform","
@@ -56,6 +58,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     availability: "14-18 Weeks",
     aiScore: 98,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -69,6 +72,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     integrations["AI Frameworks", "Neural Networks", "IoT Devices", "Edge Computing", "Cloud Platforms"]},;
   // DNA Data Storage Platform
   {
+
 "
     id: "dna-data-storage-platform","
     title: "DNA Data Storage Platform","
@@ -88,6 +92,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 97,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -101,6 +106,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     integrations["DNA Synthesizers", "Sequencing Machines", "Data Encoding", "Storage Systems", "Retrieval Tools"]},;
   // Fusion Energy Management Platform
   {
+
 "
     id: "fusion-energy-management-platform","
     title: "Fusion Energy Management Platform","
@@ -120,6 +126,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     availability: "20-24 Weeks",
     aiScore: 99,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -133,6 +140,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     integrations["Fusion Reactors", "Power Grids", "Energy Storage", "Monitoring Systems", "Control Systems"]},;
   // Holographic Display Technology
   {
+
 "
     id: "holographic-display-technology","
     title: "Holographic Display Technology","
@@ -152,6 +160,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     availability: "10-14 Weeks",
     aiScore: 96,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -165,6 +174,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     integrations["3D Content", "Display Systems", "Content Creation Tools", "Streaming Platforms", "VR/AR Systems"]},;
   // Biometric Authentication Platform
   {
+
 "
     id: "biometric-authentication-platform","
     title: "Biometric Authentication Platform","
@@ -184,6 +194,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 95,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -197,6 +208,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     integrations["Mobile Devices", "Access Control Systems", "Identity Management", "Security Systems", "Biometric Sensors"]},;
   // Autonomous Drone Fleet Management
   {
+
 "
     id: "autonomous-drone-fleet-management","
     title: "Autonomous Drone Fleet Management","
@@ -216,6 +228,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     availability: "8-12 Weeks",
     aiScore: 94,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","

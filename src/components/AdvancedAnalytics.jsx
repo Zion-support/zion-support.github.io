@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 export function AdvancedAnalytics() {
+
   const [analyticsData, setAnalyticsData] = useState({
 
 <<<<<<< HEAD
   const [analyticsData, setAnalyticsData] = useState ({
+
 =======
 >>>>>>> main
     visitors: 0,
@@ -18,8 +20,10 @@ export function AdvancedAnalytics() {
   const [timeRange, setTimeRange] = useState('7d');
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
+
     // Simulate API call
     const fetchData = async () => {
+
       setIsLoading(true);
       await new Promise(resolve => setTimeout(resolve, 1500));
       setAnalyticsData({

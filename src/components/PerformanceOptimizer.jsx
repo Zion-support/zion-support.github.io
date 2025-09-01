@@ -11,7 +11,9 @@ export const PerformanceOptimizer = ({ children }) => {
 
   // Preload critical resources
   useEffect(() => {
+
     const preloadCriticalResources = () => {
+
       // Note: CSS is already handled by Vite build process
       // Fonts are loaded via Google Fonts CDN in index.html
     };
@@ -20,6 +22,7 @@ export const PerformanceOptimizer = ({ children }) => {
 
   // Optimize images on route change
   useEffect(() => {
+
     const optimizeImages = () => {
 
       const images = document.querySelectorAll('img');
@@ -55,10 +58,12 @@ export const PerformanceOptimizer = ({ children }) => {
 
   // Optimize scroll performance
   const handleScroll = useCallback(() => {
+
     // Throttle scroll events for better performance
     if (!window.scrollTimeout) {
 
       window.scrollTimeout = setTimeout(() => {
+
         // Handle scroll-based optimizations here
         window.scrollTimeout = null;
       }, 16); // ~60fps
@@ -80,21 +85,23 @@ export const PerformanceOptimizer = ({ children }) => {
         .register('/sw.js')
         .then(registration => {
 
-          // // console.log('SW registered: ', registration);
+          // // // // // console.log('SW registered: ', registration);
 
           // Check for updates'
           registration.addEventListener('updatefound', () => {
+
             const newWorker = registration.installing;
             if (newWorker) {
 
               newWorker.addEventListener('statechange', () => {
+
                 if ('
                   newWorker.state === 'installed' &&
                   navigator.serviceWorker.controller
                 ) {
 
                   // New service worker available'
-                  // // console.log('New service worker available');
+                  // // // // // console.log('New service worker available');
                 }
               });
             }
@@ -102,7 +109,7 @@ export const PerformanceOptimizer = ({ children }) => {
         })
         .catch(registrationError => {
 
-          // // console.warn('SW registration failed: ', registrationError);
+          // // // // // console.warn('SW registration failed: ', registrationError);
         });
     }
   }, []);
@@ -154,6 +161,7 @@ if (typeof window !== 'undefined') {
 
     window.scheduler.postTask()
       () => {
+
         // Run non-critical tasks during idle time
       },
       { priority: 'background' }

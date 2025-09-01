@@ -9,30 +9,39 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge";
 
 export function ApiLogs() {
+
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
   
   useEffect(() => {
+
     fetchApiLogs(pageSize, currentPage * pageSize);
   }, [pageSize, currentPage, fetchApiLogs]); // Added fetchApiLogs
   
   const handleRefresh = () => {
+
     fetchApiLogs(pageSize, currentPage * pageSize);
   };
   
   const formatTimestamp = (timestamp: string) => {
+
     return format(new Date(timestamp), 'yyyy-MM-dd HH:mm:ss');
   };
   
   const getStatusBadge = (statusCode: number) => {
+
     if (statusCode >= 200 && statusCode < 300) {
+
       return <Badge className="bg-green-700">Success</Badge>;
     } else if (statusCode >= 400 && statusCode < 500) {
+
       return <Badge className="bg-amber-700">Client Error</Badge>;
     } else if (statusCode >= 500) {
+
       return <Badge className="bg-red-700">Server Error</Badge>;
     } else {
+
       return <Badge className="bg-blue-700">Other</Badge>;
     }
   };
@@ -59,6 +68,7 @@ export function ApiLogs() {
             <Select
               value={pageSize.toString()}
               onValueChange={(value) => {
+
                 setPageSize(Number(value));
                 setCurrentPage(0); 
               }}
@@ -123,6 +133,7 @@ export function ApiLogs() {
                       <Badge 
                         variant="outline"
                         className={
+
                           log.method === 'GET' 
                             ? "border-green-500 text-green-400" 
                             : log.method === 'POST' 

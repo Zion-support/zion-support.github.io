@@ -11,10 +11,12 @@ export default function CommunityPage () {
 // Mock data for featured posts
 const featuredPosts = [
     {
+
         id: "1",
         title: "Best practices for AI model fine - tuning",
         content: "I've been working on fine - tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
         author: {
+
             id: "user1",
             name: "Alex Johnson",
             avatar: "https://i.pravatar.cc / 150?img = 3",
@@ -40,10 +42,12 @@ const featuredPosts = [
         authorRole: "Verified Talent"
     },
     {
+
         id: "2",
         title: "How to build an effective AI talent profile?",
         content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
         author: {
+
             id: "user2",
             name: "Sarah Chen",
             avatar: "https://i.pravatar.cc / 150?img = 5",
@@ -72,10 +76,12 @@ const featuredPosts = [
 // Mock data for recent posts
 const recentPosts = [
     {
+
         id: "3",
         title: "Looking for feedback on my automated testing approach",
         content: "I've set up a CI / CD pipeline with the following testing strategy...",
         author: {
+
             id: "user3",
             name: "Michael Wong",
             avatar: "https://i.pravatar.cc / 150?img = 7",
@@ -101,10 +107,12 @@ const recentPosts = [
         authorRole: "Developer"
     },
     {
+
         id: "4",
         title: "Feature request: Team collaboration tools",
         content: "It would be really helpful if we could have built - in tools for team collaboration...",
         author: {
+
             id: "user4",
             name: "Emma Davis",
             avatar: "https://i.pravatar.cc / 150?img = 9",
@@ -130,10 +138,12 @@ const recentPosts = [
         authorRole: "Product Manager"
     },
     {
+
         id: "5",
         title: "How to handle client scope creep?",
         content: "I'm working on a project where the client keeps adding requirements...",
         author: {
+
             id: "user5",
             name: "David Lin",
             avatar: "https://i.pravatar.cc / 150?img = 11",

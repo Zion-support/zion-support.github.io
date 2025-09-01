@@ -2,10 +2,12 @@ import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, C
 import { Link } from 'react - router - dom';
 import React from 'react';
 export default function NewServicesOverview () {
+
 import Link from 'next / link';
 
     const serviceCategories = [
         {
+
             id: 'ai - services',
             title: 'Advanced AI Services',
             icon: Brain,
@@ -13,6 +15,7 @@ import Link from 'next / link';
             description: 'Cutting - edge artificial intelligence solutions for modern businesses',
             services[;
                 {
+
                     name: 'AI - Powered Financial Advisory Platform',
                     description: 'Intelligent financial planning and investment advisory system',
                     price: '$2,500 / month',
@@ -20,6 +23,7 @@ import Link from 'next / link';
                     path: '/comprehensive - services - showcase'
                 },
                 {
+
                     name: 'AI Legal Research & Document Analysis',
                     description: 'Advanced legal research platform with NLP capabilities',
                     price: '$1,800 / month',
@@ -27,6 +31,7 @@ import Link from 'next / link';
                     path: '/comprehensive - services - showcase'
                 },
                 {
+
                     name: 'AI Healthcare Diagnostic Imaging',
                     description: 'Medical imaging analysis platform with deep learning',
                     price: '$3,500 / month',
@@ -36,6 +41,7 @@ import Link from 'next / link';
             ];
         },;
         {
+
             id: 'cybersecurity',
             title: 'Cybersecurity Solutions',
             icon: Shield,
@@ -43,6 +49,7 @@ import Link from 'next / link';
             description: 'Enterprise - grade security solutions for the digital age',
             services[;
                 {
+
                     name: 'Zero Trust Security Platform',
                     description: 'Comprehensive zero trust security and access management',
                     price: '$2,800 / month',
@@ -50,6 +57,7 @@ import Link from 'next / link';
                     path: '/comprehensive - services - showcase'
                 },
                 {
+
                     name: 'AI - Powered Threat Detection',
                     description: 'Advanced threat detection with machine learning',
                     price: '$3,200 / month',
@@ -57,6 +65,7 @@ import Link from 'next / link';
                     path: '/comprehensive - services - showcase'
                 },
                 {
+
                     name: 'Cloud Security Posture Management',
                     description: 'Multi - cloud security monitoring and optimization',
                     price: '$2,400 / month',
@@ -66,6 +75,7 @@ import Link from 'next / link';
             ];
         },;
         {
+
             id: 'devops - cloud',
             title: 'DevOps & Cloud Services',
             icon: Cloud,
@@ -73,6 +83,7 @@ import Link from 'next / link';
             description: 'Modern DevOps practices and cloud infrastructure solutions',
             services[;
                 {
+
                     name: 'GitOps Platform & Infrastructure Automation',
                     description: 'Complete GitOps platform for infrastructure management',
                     price: '$2,200 / month',
@@ -80,6 +91,7 @@ import Link from 'next / link';
                     path: '/comprehensive - services - showcase'
                 },
                 {
+
                     name: 'Multi - Cloud Management Platform',
                     description: 'Unified management across AWS, Azure, GCP, and more',
                     price: '$2,800 / month',
@@ -87,6 +99,7 @@ import Link from 'next / link';
                     path: '/comprehensive - services - showcase'
                 },
                 {
+
                     name: 'Enterprise Kubernetes Management',
                     description: 'Comprehensive Kubernetes operations and security',
                     price: '$2,500 / month',
@@ -96,6 +109,7 @@ import Link from 'next / link';
             ];
         },;
         {
+
             id: 'data - analytics',
             title: 'Data Analytics & BI',
             icon: BarChart3,
@@ -103,6 +117,7 @@ import Link from 'next / link';
             description: 'Powerful analytics and business intelligence solutions',
             services[;
                 {
+
                     name: 'Real - Time Data Streaming Platform',
                     description: 'High - performance real - time data processing and analytics',
                     price: '$3,200 / month',
@@ -110,6 +125,7 @@ import Link from 'next / link';
                     path: '/comprehensive - services - showcase'
                 },
                 {
+
                     name: 'AI - Powered Predictive Analytics',
                     description: 'Advanced forecasting and pattern recognition',
                     price: '$2,800 / month',
@@ -117,6 +133,7 @@ import Link from 'next / link';
                     path: '/comprehensive - services - showcase'
                 },
                 {
+
                     name: 'Customer Analytics Platform',
                     description: '360 - degree customer view and behavioral analysis',
                     price: '$2,100 / month',
@@ -126,6 +143,7 @@ import Link from 'next / link';
             ];
         },;
         {
+
             id: 'industry - solutions',
             title: 'Industry - Specific Solutions',
             icon: Building,
@@ -133,6 +151,7 @@ import Link from 'next / link';
             description: 'Tailored solutions for specific industry verticals',
             services[;
                 {
+
                     name: 'Healthcare AI & Clinical Support',
                     description: 'Comprehensive healthcare AI platform for patient care',
                     price: '$4,500 / month',
@@ -140,6 +159,7 @@ import Link from 'next / link';
                     path: '/comprehensive - services - showcase'
                 },
                 {
+
                     name: 'Financial Services AI & Risk Management',
                     description: 'AI - powered risk assessment and fraud detection',
                     price: '$3,800 / month',
@@ -147,6 +167,7 @@ import Link from 'next / link';
                     path: '/comprehensive - services - showcase'
                 },
                 {
+
                     name: 'Manufacturing IoT & Smart Factory',
                     description: 'IoT platform for manufacturing optimization',
                     price: '$3,200 / month',
@@ -158,24 +179,28 @@ import Link from 'next / link';
     ];
     const benefits = [
         {
+
             icon: Brain,
             title: 'AI - First Approach',
             description: 'Leverage cutting - edge artificial intelligence and machine learning technologies',
             color: 'text - blue - 400'
         },
         {
+
             icon: Shield,
             title: 'Enterprise Security',
             description: 'Bank - grade security and compliance built into every solution',
             color: 'text - green - 400'
         },
         {
+
             icon: Rocket,
             title: 'Rapid Deployment',
             description: 'Get up and running quickly with proven implementation methodologies',
             color: 'text - purple - 400'
         },
         {
+
             icon: Users,
             title: 'Expert Support',
             description: '24 / 7 technical support and dedicated success managers',

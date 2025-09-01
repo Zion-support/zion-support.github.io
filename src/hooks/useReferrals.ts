@@ -5,21 +5,24 @@ import { supabase } from "@/integrations/supabase/client";
 import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals";
 
 export function useReferrals() {
+
   const { user } = useAuth();
   const [referralCode, setReferralCode] = useState<ReferralCode | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [referrals, setReferrals] = useState<Referral[]>([]);
   const [rewards, setRewards] = useState<ReferralReward[]>([]);
   const [stats, setStats] = useState<ReferralStats>({
+
     totalReferrals: 0,
     pendingReferrals: 0,
     completedReferrals: 0,
-    totalRewards: 0,
-  });
+    totalRewards: 0});
 
   const fetchReferralCode = useCallback(async () => {
+
     if (!user?.id) return;
     try {
+
       // setIsLoading(true); // Handled by the main useEffect
       const { data, error } = await supabase
         .from('referral_codes')
@@ -27,19 +30,23 @@ export function useReferrals() {
         .eq('user_id', user.id)
         .single();
 
-      if (error && error.code !== 'PGRST116') { 
-        console.error("Error fetching referral code:", error);
+      if (error && error.code !== 'PGRST116') {
+
+        // // // console.error("Error fetching referral code:", error);
         // Not throwing here, allowing other fetches to proceed
       }
       setReferralCode(data || null); // Set to null if no data
     } catch (error) {
-      console.error("Error in fetchReferralCode:", error);
+
+      // // // console.error("Error in fetchReferralCode:", error);
     }
   }, [user?.id]);
 
   const fetchReferrals = useCallback(async () => {
+
     if (!user?.id) return;
     try {
+
       const { data, error } = await supabase
         .from('referrals')
         .select('*')
@@ -49,13 +56,16 @@ export function useReferrals() {
       if (error) throw error;
       setReferrals(data || []);
     } catch (error) {
-      console.error("Error fetching referrals:", error);
+
+      // // // console.error("Error fetching referrals:", error);
     }
   }, [user?.id]);
 
   const fetchRewards = useCallback(async () => {
+
     if (!user?.id) return;
     try {
+
       const { data, error } = await supabase
         .from('referral_rewards')
         .select('*')
@@ -65,13 +75,16 @@ export function useReferrals() {
       if (error) throw error;
       setRewards(data || []);
     } catch (error) {
-      console.error("Error fetching rewards:", error);
+
+      // // // console.error("Error fetching rewards:", error);
     }
   }, [user?.id]);
 
   const fetchReferralStats = useCallback(async () => {
+
     if (!user?.id) return;
     try {
+
       const { data: referralsData, error: refError } = await supabase
         .from('referrals')
         .select('id, status')
@@ -91,10 +104,12 @@ export function useReferrals() {
       const completedReferrals = referralsData ? referralsData.filter(r => r.status === 'completed').length : 0;
       
       const totalRewards = rewardsData ? rewardsData.reduce((sum, item) => {
+
         return sum + (item.amount || 0);
       }, 0) : 0;
       
       setStats({
+
         totalReferrals,
         pendingReferrals,
         completedReferrals,
@@ -102,12 +117,15 @@ export function useReferrals() {
       });
       
     } catch (error) {
-      console.error("Error fetching referral stats:", error);
+
+      // // // console.error("Error fetching referral stats:", error);
     }
   }, [user?.id]);
 
   useEffect(() => {
+
     if (user) {
+
       setIsLoading(true);
       Promise.all([
         fetchReferralCode(),
@@ -116,6 +134,7 @@ export function useReferrals() {
         fetchRewards()
       ]).finally(() => setIsLoading(false));
     } else {
+
       setReferralCode(null);
       setStats({ totalReferrals: 0, pendingReferrals: 0, completedReferrals: 0, totalRewards: 0 });
       setReferrals([]);
@@ -126,38 +145,43 @@ export function useReferrals() {
 
 
   const generateReferralCode = async () => {
+
     try {
+
       if (!user) {
+
         toast({
+
           title: "Authentication required",
           description: "You need to be logged in to generate a referral code",
-          variant: "destructive",
-        });
+          variant: "destructive"});
         return;
       }
 
       const { data, error } = await supabase.rpc('generate_referral_code', {
+
         p_user_id: user.id 
       });
 
       if (error) throw error;
 
       toast({
+
         title: "Success!",
         description: "Your referral code has been generated",
-        variant: "success",
-      });
+        variant: "success"});
 
       await fetchReferralCode(); 
       
       return data;
     } catch (error: any) {
-      console.error("Error generating referral code:", error);
+
+      // // // console.error("Error generating referral code:", error);
       toast({
+
         title: "Error generating code",
         description: error.message || "There was a problem generating your referral code",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     }
   };
 
@@ -171,18 +195,20 @@ export function useReferrals() {
   const copyReferralLink = useCallback(() => { // Wrapped in useCallback
     const link = getReferralLink();
     if (link && typeof navigator !== "undefined" && navigator.clipboard) {
+
       navigator.clipboard.writeText(link);
       toast({
+
         title: "Copied!",
         description: "Referral link copied to clipboard",
-        variant: "success",
-      });
+        variant: "success"});
     } else {
+
       toast({
+
         title: "Cannot copy link",
         description: referralCode ? "Clipboard API not available." : "Please generate a referral code first",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     }
   }, [getReferralLink, referralCode]); // Dependencies
 
@@ -191,17 +217,19 @@ export function useReferrals() {
     const text = "Join Zion AI marketplace for AI talent and opportunities!";
     
     if (!link) {
+
       toast({
+
         title: "Cannot share",
         description: "Please generate a referral code first",
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return;
     }
     
     let shareUrl = '';
     
     switch (platform) {
+
       case 'twitter':
         shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`;
         break;
@@ -214,11 +242,13 @@ export function useReferrals() {
     }
     
     if (shareUrl && typeof window !== "undefined") {
+
       window.open(shareUrl, '_blank');
     }
   }, [getReferralLink]); // Dependency
 
   return {
+
     referralCode,
     isLoading,
     stats,
@@ -231,6 +261,5 @@ export function useReferrals() {
     fetchReferralStats, 
     fetchReferrals,   
     fetchRewards,
-    fetchReferralCode, 
-  };
+    fetchReferralCode};
 }

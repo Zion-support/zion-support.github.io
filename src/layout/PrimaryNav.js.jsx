@@ -19,6 +19,7 @@ import { Menu, X, ShoppingCart } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 export function PrimaryNav() {
+
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const { user } = useAuth();
     const isMobile = useIsMobile();
@@ -28,6 +29,7 @@ export function PrimaryNav() {
     const suggestions = generateSearchSuggestions();
     let unreadCount = 0;
     try {
+
         const messaging = useMessaging();
         unreadCount = messaging.unreadCount}
     catch {
@@ -40,7 +42,7 @@ export function PrimaryNav() {
         e.preventDefault();
         if (query.trim()) {
 
-            // console.log('PrimaryNav search submit:', query);
+            // // // // console.log('PrimaryNav search submit:', query);
             router.push(`/search/${slugify(query)}`);
             setQuery('')}
     };
@@ -67,7 +69,7 @@ export function PrimaryNav() {
 
   (sugg) => {
 
-            // console.log('PrimaryNav search suggestion selected:',
+            // // // // console.log('PrimaryNav search suggestion selected:',
   sugg);
             // Handle different suggestion types with proper navigation
             if (sugg.id) {

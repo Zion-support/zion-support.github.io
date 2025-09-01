@@ -2,7 +2,9 @@ import { Link } from 'react - router - dom';
 import React, { useState, useEffect } from 'react';
 import { SEO } from '@/components / SEO';
 export default React.memo (function ComprehensiveServicesShowcase2025 () {
+
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   Zap,
@@ -81,13 +83,15 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface Service {
+
   id: string;
   name: string;
   description: string;
   category: string;
-  icon: any;
+  icon: unknown;
   features: string[];
   pricing: {
+
     starter: string;
     professional: string;
     enterprise: string;
@@ -101,6 +105,7 @@ interface Service {
 const services: Service[] = [
   // AI Services
   {
+
     id: 'ai - autonomous - research - assistant',
     name: 'AI Autonomous Research Assistant',
     description: 'Advanced AI - powered research platform that autonomously conducts comprehensive research, analyzes data, and generates insights across multiple domains.',
@@ -115,6 +120,7 @@ const services: Service[] = [
       'Advanced analytics dashboard'
     ],
     pricing: {
+
       starter: '$299 / month',
       professional: '$799 / month',
       enterprise: 'Custom'
@@ -137,6 +143,7 @@ const services: Service[] = [
     status: 'available'
   },
   {
+
     id: 'ai - cybersecurity - platform',
     name: 'AI Cybersecurity Platform',
     description: 'Next - generation cybersecurity solution powered by artificial intelligence for real - time threat detection, automated response, and predictive security.',
@@ -151,6 +158,7 @@ const services: Service[] = [
       'Security orchestration'
     ],
     pricing: {
+
       starter: '$499 / month',
       professional: '$1,299 / month',
       enterprise: 'Custom'
@@ -173,6 +181,7 @@ const services: Service[] = [
     status: 'available'
   },
   {
+
     id: 'ai - healthcare - platform',
     name: 'AI Healthcare Platform',
     description: 'Comprehensive AI platform for healthcare providers offering diagnostic assistance, patient monitoring, and predictive healthcare analytics.',
@@ -187,6 +196,7 @@ const services: Service[] = [
       'Healthcare workflow automation'
     ],
     pricing: {
+
       starter: '$399 / month',
       professional: '$999 / month',
       enterprise: 'Custom'
@@ -209,6 +219,7 @@ const services: Service[] = [
     status: 'available'
   },
   {
+
     id: 'ai - supply - chain - optimization',
     name: 'AI Supply Chain Optimization',
     description: 'Intelligent supply chain management platform that optimizes operations, predicts disruptions, and automates decision - making processes.',
@@ -223,6 +234,7 @@ const services: Service[] = [
       'Real - time monitoring'
     ],
     pricing: {
+
       starter: '$599 / month',
       professional: '$1,499 / month',
       enterprise: 'Custom'
@@ -245,6 +257,7 @@ const services: Service[] = [
     status: 'available'
   },
   {
+
     id: 'ai - quantum - hybrid - platform',
     name: 'AI Quantum Hybrid Platform',
     description: 'Revolutionary platform combining AI and quantum computing for solving complex optimization problems and advanced simulations.',
@@ -259,6 +272,7 @@ const services: Service[] = [
       'Performance benchmarking'
     ],
     pricing: {
+
       starter: '$1,999 / month',
       professional: '$4,999 / month',
       enterprise: 'Custom'
@@ -282,6 +296,7 @@ const services: Service[] = [
   },
   // IT Services
   {
+
     id: 'cloud - devops - automation',
     name: 'Cloud DevOps Automation Platform',
     description: 'Comprehensive DevOps automation platform for cloud - native applications with CI / CD pipelines, infrastructure as code, and monitoring.',
@@ -296,6 +311,7 @@ const services: Service[] = [
       'Cost optimization'
     ],
     pricing: {
+
       starter: '$299 / month',
       professional: '$799 / month',
       enterprise: 'Custom'
@@ -318,6 +334,7 @@ const services: Service[] = [
     status: 'available'
   },
   {
+
     id: 'it - infrastructure - management',
     name: 'IT Infrastructure Management',
     description: 'Comprehensive IT infrastructure management solution for enterprise environments with monitoring, automation, and optimization.',
@@ -332,6 +349,7 @@ const services: Service[] = [
       'Capacity planning'
     ],
     pricing: {
+
       starter: '$199 / month',
       professional: '$599 / month',
       enterprise: 'Custom'
@@ -355,6 +373,7 @@ const services: Service[] = [
   },
   // Micro SAAS Services
   {
+
     id: 'micro - crm - platform',
     name: 'Micro CRM Platform',
     description: 'Lightweight, powerful CRM solution designed for small to medium businesses with essential features and easy customization.',
@@ -369,6 +388,7 @@ const services: Service[] = [
       'Mobile app access'
     ],
     pricing: {
+
       starter: '$29 / month',
       professional: '$79 / month',
       enterprise: '$199 / month'
@@ -391,6 +411,7 @@ const services: Service[] = [
     status: 'available'
   },
   {
+
     id: 'ai - business - intelligence',
     name: 'AI Business Intelligence',
     description: 'Intelligent business analytics platform that transforms data into actionable insights using advanced AI and machine learning.',
@@ -405,6 +426,7 @@ const services: Service[] = [
       'Real - time insights'
     ],
     pricing: {
+
       starter: '$399 / month',
       professional: '$999 / month',
       enterprise: 'Custom'
@@ -442,6 +464,7 @@ const categories = [
   const [selectedService, setSelectedService] = useState < Service | null> (null) ;
 
   const filteredServices = services.filter (service => {
+
     const matchesCategory = selectedCategory === 'all' ||
       service.category.toLowerCase () .includes (selectedCategory.replace ('-', ' ') ) ;
     const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
@@ -450,10 +473,12 @@ const categories = [
   }) ;
 
   const handleServiceClick = useCallback ( (service: Service) => {
+
     setSelectedService (service) ;
   };
 
   const closeModal = () => {
+
     setSelectedService (null) ;
   };
 
@@ -523,6 +548,7 @@ const categories = [
               {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`flex items - center space - x-2 px - 6 py - 3 rounded - lg font - medium transition - all duration - 300 ${
+
                     selectedCategory === category.id
                       ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg'
                       : 'bg - zion - blue - darker text - zion - slate - light hover:bg - zion - purple / 20 hover:text - white'
@@ -532,6 +558,7 @@ const categories = [
                 </button>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`flex - 1 px - 3 py - 2 rounded - md text - sm font - medium transition - colors ${
+
                     viewMode === 'list'
                       ? 'bg - zion - cyan text - white'
                       : 'text - zion - slate - light hover:text - white'
@@ -604,6 +631,7 @@ const categories = [
             {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                 onClick={ () => setActiveCategory (category.id) }
                 className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 ${
+
                   activeCategory === category.id
                     ? 'bg - zion - cyan text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - slate - dark text - zion - slate - light hover:bg - zion - slate hover:text - white border border - zion - slate - light / 20'
@@ -633,6 +661,7 @@ const categories = [
                     <service.icon className="w - 6 h - 6 text - white" />
                   </div>
                   <span className={`px - 3 py - 1 rounded - full text - xs font - medium ${
+
                     service.status === 'available' ? 'bg - green - 500 / 20 text - green - 400' :
                     service.status === 'beta' ? 'bg - blue - 500 / 20 text - blue - 400' :
                     'bg - yellow - 500 / 20 text - yellow - 400'

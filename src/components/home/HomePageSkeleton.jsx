@@ -1,6 +1,7 @@
 import React from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
 export function HomePageSkeleton() {
+
   return()
     <div className="min-h-screen bg-background">
       {/* Hero Section Skeleton */}"

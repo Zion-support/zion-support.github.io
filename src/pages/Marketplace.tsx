@@ -3,6 +3,7 @@ import { Button } from '@/components / ui / button';
 import { SEO } from '@/components / SEO';
 export default Marketplace;
 import {
+
 import {
 
   Store,
@@ -21,16 +22,15 @@ import {
   TrendingUp,
   Award,
   Users,
-  ArrowRight,
-} from 'lucide - react';
+  ArrowRight} from 'lucide - react';
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
+  CardTitle} from '@/components / ui / card';
 
 const Marketplace: React.FC = () => {
+
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [selectedType, setSelectedType] = useState ('all') ;
@@ -58,6 +58,7 @@ const Marketplace: React.FC = () => {
   const marketplaceItems = [
     // AI & Machine Learning
     {
+
       id: 1,
       name: 'Quantum AI Optimization Platform',
       category: 'quantum',
@@ -77,9 +78,9 @@ const Marketplace: React.FC = () => {
       badge: 'Most Popular',
       vendor: 'QuantumTech Solutions',
       deployment: 'Cloud & On - Premise',
-      support: '24 / 7 Enterprise Support',
-    },
+      support: '24 / 7 Enterprise Support'},
     {
+
       id: 2,
       name: 'AI Cybersecurity Suite',
       category: 'cybersecurity',
@@ -99,9 +100,9 @@ const Marketplace: React.FC = () => {
       badge: 'Best Seller',
       vendor: 'SecureAI Systems',
       deployment: 'Cloud & Hybrid',
-      support: '24 / 7 Security Support',
-    },
+      support: '24 / 7 Security Support'},
     {
+
       id: 3,
       name: 'Edge Computing Platform',
       category: 'iot',
@@ -121,9 +122,9 @@ const Marketplace: React.FC = () => {
       badge: 'Trending',
       vendor: 'EdgeFlow Technologies',
       deployment: 'Edge & Cloud',
-      support: 'Business Hours Support',
-    },
+      support: 'Business Hours Support'},
     {
+
       id: 'ml - pipeline',
       name: 'ML Pipeline Automation',
       category: 'ai - ml',
@@ -146,9 +147,9 @@ const Marketplace: React.FC = () => {
       tags: ['Machine Learning', 'Automation', 'Data Science', 'MLOps'],
       image: '/api / placeholder / 400 / 300',
       demo: 'https://demo.ziontechgroup.com / ml - pipeline',
-      documentation: 'https://docs.ziontechgroup.com / ml - pipeline',
-    },
+      documentation: 'https://docs.ziontechgroup.com / ml - pipeline'},
     {
+
       id: 'computer - vision',
       name: 'Computer Vision API',
       category: 'ai - ml',
@@ -172,9 +173,9 @@ const Marketplace: React.FC = () => {
       badge: 'New',
       vendor: 'HealthAI Innovations',
       deployment: 'Cloud & On - Premise',
-      support: '24 / 7 Healthcare Support',
-    },
+      support: '24 / 7 Healthcare Support'},
     {
+
       id: 'kubernetes - manager',
       name: 'Kubernetes Management Platform',
       category: 'cloud',
@@ -197,10 +198,10 @@ const Marketplace: React.FC = () => {
       tags: ['Kubernetes', 'Container Orchestration', 'DevOps', 'Cloud Native'],
       image: '/api / placeholder / 400 / 300',
       demo: 'https://demo.ziontechgroup.com / kubernetes - manager',
-      documentation: 'https://docs.ziontechgroup.com / kubernetes - manager',
-    },
+      documentation: 'https://docs.ziontechgroup.com / kubernetes - manager'},
     // Security & Compliance
     {
+
       id: 'threat - detection',
       name: 'Advanced Threat Detection',
       category: 'security',
@@ -223,9 +224,9 @@ const Marketplace: React.FC = () => {
       tags: ['Cybersecurity', 'Threat Detection', 'AI Security', 'SOC'],
       image: '/api / placeholder / 400 / 300',
       demo: 'https://demo.ziontechgroup.com / threat - detection',
-      documentation: 'https://docs.ziontechgroup.com / threat - detection',
-    },
+      documentation: 'https://docs.ziontechgroup.com / threat - detection'},
     {
+
       id: 'compliance - audit',
       name: 'Compliance Audit Service',
       category: 'security',
@@ -249,10 +250,10 @@ const Marketplace: React.FC = () => {
       tags: ['Compliance', 'Security', 'Audit', 'Certification'],
       image: '/api / placeholder / 400 / 300',
       demo: 'https://demo.ziontechgroup.com / compliance - audit',
-      documentation: 'https://docs.ziontechgroup.com / compliance - audit',
-    },
+      documentation: 'https://docs.ziontechgroup.com / compliance - audit'},
     // Data & Analytics
     {
+
       id: 'data - warehouse',
       name: 'Data Warehouse Solution',
       category: 'data',
@@ -280,9 +281,9 @@ const Marketplace: React.FC = () => {
       ],
       image: '/api / placeholder / 400 / 300',
       demo: 'https://demo.ziontechgroup.com / data - warehouse',
-      documentation: 'https://docs.ziontechgroup.com / data - warehouse',
-    },
+      documentation: 'https://docs.ziontechgroup.com / data - warehouse'},
     {
+
       id: 'bi - dashboard',
       name: 'Business Intelligence Dashboard',
       category: 'data',
@@ -305,10 +306,10 @@ const Marketplace: React.FC = () => {
       badge: 'Innovative',
       vendor: 'ChainAI Solutions',
       deployment: 'Cloud & Hybrid',
-      support: 'Business Hours Support',
-    },
+      support: 'Business Hours Support'},
     // Development Tools
     {
+
       id: 'code - generator',
       name: 'AI Code Generator',
       category: 'development',
@@ -331,11 +332,11 @@ const Marketplace: React.FC = () => {
       badge: 'Cost Effective',
       vendor: 'CloudOpt Solutions',
       deployment: 'Multi - Cloud',
-      support: '24 / 7 Cloud Support',
-    },
+      support: '24 / 7 Cloud Support'},
   ];
 
   const filteredSolutions = solutions.filter (solution => {
+
     const matchesCategory = selectedCategory === 'all' || solution.category === selectedCategory;
     const matchesSearch = solution.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
       solution.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
@@ -344,7 +345,9 @@ const Marketplace: React.FC = () => {
   }) ;
 
   const sortedSolutions = [...filteredSolutions].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'rating':
         return b.rating - a.rating;
       case 'price':
@@ -360,7 +363,9 @@ const Marketplace: React.FC = () => {
   }) ;
 
   const getTypeColor = (type: string) => {
+
     switch (type) {
+
       case 'software':
         return 'bg - blue - 500 / 20 text - blue - 400';
       case 'service':
@@ -373,7 +378,9 @@ const Marketplace: React.FC = () => {
   };
 
   const getStatusColor = (status: string) => {
+
     switch (status) {
+
       case 'featured':
         return 'bg - yellow - 500 / 20 text - yellow - 400';
       case 'popular':
@@ -386,20 +393,24 @@ const Marketplace: React.FC = () => {
   };
 
   const renderStars = (rating: number) => {
+
     const stars = [];
     const fullStars = Math.floor (rating) ;
     const hasHalfStar = rating % 1 !== 0;
 
     for (let i = 0; i < fullStars; i++) {
+
       stars.push (<Star key={i} className="w - 4 h - 4 text - yellow - 400 fill - current" />) ;
     }
 
     if (hasHalfStar) {
+
       stars.push (<Star key="half" className="w - 4 h - 4 text - yellow - 400 fill - current" />) ;
     }
 
     const emptyStars = 5 - Math.ceil (rating) ;
     for (let i = 0; i < emptyStars; i++) {
+
       stars.push (<Star key={`empty-${i}`} className="w - 4 h - 4 text - gray - 400" />) ;
     }
 
@@ -407,17 +418,21 @@ const Marketplace: React.FC = () => {
   };
 
   const getCategoryIcon = (categoryId: string) => {
+
     const category = categories.find (cat => cat.id === categoryId) ;
     return category ? category.icon : Globe;
   };
 
   const getCategoryName = (categoryId: string) => {
+
     const category = categories.find (cat => cat.id === categoryId) ;
     return category ? category.name : 'General';
   };
 
   const getBadgeColor = (badge: string) => {
+
     switch (badge) {
+
       case 'Most Popular':
         return 'bg - gradient - to - r from - yellow - 500 to - orange - 500';
       case 'Best Seller':
@@ -493,6 +508,7 @@ const Marketplace: React.FC = () => {
               {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`flex items - center space - x-2 px - 6 py - 3 rounded - xl font - medium transition - all duration - 300 ${
+
                     selectedCategory === category.id
                       ? 'bg - zion - purple text - white shadow - lg'
                       : 'bg - white / 10 text - zion - cyan - light hover:bg - white / 20 border border - white / 20'

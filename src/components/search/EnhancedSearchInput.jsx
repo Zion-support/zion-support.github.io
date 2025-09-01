@@ -8,6 +8,7 @@ import { Search, X, ArrowDown export const EnhancedSearchInput = ({ placeholder 
     const inputRef = useRef(null);
     const suggestionsRef = useRef(null);
     useEffect(() => {
+
         if (query.trim()) {
 
             const filtered = suggestions.filter(suggestion => suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
@@ -21,6 +22,7 @@ import { Search, X, ArrowDown export const EnhancedSearchInput = ({ placeholder 
             setShowSuggestions(false)}
     }, [query, suggestions]);
     useEffect(() => {
+
         const handleClickOutside = (event) => {
 
             if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {

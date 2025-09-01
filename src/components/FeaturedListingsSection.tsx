@@ -12,6 +12,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
  * @returns {*} Function return value
  */
 function FeaturedListingsSection () {
+
 =======
 >>>>>>> main
 
@@ -82,6 +83,7 @@ const featuredListings = [
           className="text - center mb - 16"
 =======
 export function FeaturedListingsSection() {
+
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">

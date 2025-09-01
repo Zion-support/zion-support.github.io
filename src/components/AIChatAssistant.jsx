@@ -7,6 +7,7 @@ import { MessageCircle, Mic, MicOff, Send, Bot, User, Sparkles, X, Minimize2, Ma
     "I can help you understand our pricing structure and find the best solution for your budget."
 ];
 export function AIChatAssistant() {
+
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [messages, setMessages] = useState([
@@ -27,8 +28,10 @@ export function AIChatAssistant() {
 
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
     useEffect(() => {
+
         scrollToBottom()}, [messages]);
     const handleSendMessage = async () => {
+
         if (!inputValue.trim())
             return;
         const userMessage = {
@@ -49,8 +52,7 @@ export function AIChatAssistant() {
     Sparkles,
     X,
     Minimize2,
-    Maximize2,
-  } from 'lucide - react';
+    Maximize2} from 'lucide - react';
 =======
 
 >>>>>>> main
@@ -64,6 +66,7 @@ export function AIChatAssistant() {
         setIsTyping(true);
         // Simulate AI response
         setTimeout(() => {
+
             const randomResponse = mockAIResponses[Math.floor(Math.random() * mockAIResponses.length)];
             const aiMessage = {
 
@@ -82,11 +85,13 @@ export function AIChatAssistant() {
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false)}, 1500 + Math.random() * 1000)};
     const handleVoiceInput = () => {
+
         if (!isListening) {
 
             setIsListening(true);
             // Simulate voice recognition
             setTimeout(() => {
+
 '"
                 const voiceText = "I'm interested in your AI development services";
                 setInputValue(voiceText);
@@ -103,6 +108,7 @@ export function AIChatAssistant() {
             handleSendMessage()}
     };
     const toggleChat = () => {
+
         if (isOpen) {
 
             setIsMinimized(!isMinimized)}
@@ -112,12 +118,14 @@ export function AIChatAssistant() {
             setIsMinimized(false)}
     };
     if (!isOpen) {
+
 "
         return (<button onClick={toggleChat} className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group" title="Chat with Zion AI">"
         <MessageCircle className="w-6 h-6"/>"
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
       </button>)}
     if (isMinimized) {
+
 "
         return (<div className="fixed bottom-4 right-4 z-50">"
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">"

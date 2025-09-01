@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Quote export const AppTestimonials = () => {
+
   const testimonials = [
     {
 
@@ -11,6 +12,7 @@ import { Star, Quote export const AppTestimonials = () => {
       avatar: "/images/testimonials/sarah-chen.jpg"
     },
     {
+
 "
       name: "Michael Rodriguez","
       role: "CTO","
@@ -20,6 +22,7 @@ import { Star, Quote export const AppTestimonials = () => {
       avatar: "/images/testimonials/michael-rodriguez.jpg"
     },
     {
+
 "
       name: "Dr. Emily Watson","
       role: "Data Scientist","
@@ -29,6 +32,7 @@ import { Star, Quote export const AppTestimonials = () => {
       avatar: "/images/testimonials/emily-watson.jpg"
     },
     {
+
 "
       name: "David Kim","
       role: "Project Manager","

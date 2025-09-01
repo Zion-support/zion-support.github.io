@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
 export const ErrorPage = ({
+
 <<<<<<< HEAD
 export default ErrorPage;
 import { Button } from '../ui / button';

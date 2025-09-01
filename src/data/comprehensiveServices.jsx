@@ -204,6 +204,7 @@ export const pricingTiers = [
 ];
 ;
 export const getPopularServices = () => {
+
   return comprehensiveServices.filter(service => service.popular);
 };
 

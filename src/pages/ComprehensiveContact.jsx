@@ -8,6 +8,7 @@ import { Textarea } from '@/components / ui / textarea';
 export default function ComprehensiveContact () {
 
     const [formData, setFormData] = useState ({
+
         name: '',
         email: '',
         comp: '',
@@ -16,13 +17,16 @@ export default function ComprehensiveContact () {
         message: ''
     }) ;
     const handleSubmit = (e) => {
+
         e.preventDefault () ;
         // Handle form submission
         // // // // // // // console.log ('Form submitted:', formData) ;
     };
         console.log ('Form submitted:', formData) };
     const handleChange = (e) => {
+
         setFormData ({
+
             ...formData,
             [e.target.name]: e.target.value
         }) };

@@ -17,7 +17,7 @@ interface ErrorResponse {
 }
 
 export default function handler(
-  req: NextApiRequest, 
+  req: NextApiRequest,
   res: NextApiResponse<TalentProfileWithSocial | ErrorResponse>
 ) {
   if (req.method !== 'GET') {
@@ -31,29 +31,30 @@ export default function handler(
   // It seems the ID format check `isValidObjectId` might be a leftover if IDs are like `t-xxxx`.
   // If IDs are always like `t-xxxx`, this check might not be relevant.
   // For now, keeping it as per original logic.
-  if (!id) { // Simple check if ID is missing
+  if (!id) {
+    // Simple check if ID is missing
     return res.status(400).json({ error: 'Missing id' });
   }
-  
+
   // The original code implies IDs might or might not have 't-' prefix,
   // and it tries to normalize it.
   let searchId = id;
-  if (!id.startsWith('t-') && isValidObjectId(id)) { // Only prepend if it's a valid ObjectId-like string without prefix
-     // This logic seems a bit mixed. If TALENT_PROFILES uses 't-' prefixed IDs,
-     // then the isValidObjectId check might be for a different ID type altogether.
-     // Assuming TALENT_PROFILES uses 't-' prefixed string IDs.
-     // The isValidObjectId might be a red herring or for a different system.
-     // If IDs in TALENT_PROFILES are NOT 't-' prefixed, then this logic is reversed.
-     // Given `searchId = `t-${searchId}`, it implies the array uses prefixed IDs.
-     // Let's assume for now the intent is to find by 't-' prefixed ID.
-     // The original `if (searchId && !searchId.startsWith('t-'))` was simpler.
-     // Reverting to simpler logic: if it doesn't start with 't-', prepend it.
-     // The isValidObjectId check seems inconsistent with 't-' prefixed IDs.
+  if (!id.startsWith('t-') && isValidObjectId(id)) {
+    // Only prepend if it's a valid ObjectId-like string without prefix
+    // This logic seems a bit mixed. If TALENT_PROFILES uses 't-' prefixed IDs,
+    // then the isValidObjectId check might be for a different ID type altogether.
+    // Assuming TALENT_PROFILES uses 't-' prefixed string IDs.
+    // The isValidObjectId might be a red herring or for a different system.
+    // If IDs in TALENT_PROFILES are NOT 't-' prefixed, then this logic is reversed.
+    // Given `searchId = `t-${searchId}`, it implies the array uses prefixed IDs.
+    // Let's assume for now the intent is to find by 't-' prefixed ID.
+    // The original `if (searchId && !searchId.startsWith('t-'))` was simpler.
+    // Reverting to simpler logic: if it doesn't start with 't-', prepend it.
+    // The isValidObjectId check seems inconsistent with 't-' prefixed IDs.
   }
   if (!id.startsWith('t-')) {
-      searchId = `t-${id}`;
+    searchId = `t-${id}`;
   }
-
 
   const profile = TALENT_PROFILES.find(t => t.id === searchId);
 
@@ -62,7 +63,9 @@ export default function handler(
   }
 
   // Assuming profile.full_name is always a non-empty string
-  const firstName = profile.full_name ? profile.full_name.split(' ')[0].toLowerCase() : 'user';
+  const firstName = profile.full_name
+    ? profile.full_name.split(' ')[0].toLowerCase()
+    : 'user';
 
   const socialLinks = {
     twitter: `https://twitter.com/${firstName}`,

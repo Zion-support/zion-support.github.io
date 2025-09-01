@@ -44,6 +44,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
     setSelectedService(service);
   };
   const closeModal = () => {
+
     setSelectedService(null);
   };
   return()

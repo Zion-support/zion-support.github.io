@@ -7,8 +7,10 @@ export function ProductActions({ onAddToCart }) {
   const [loading, setLoading] = useState(false);
   const [label, setLabel] = useState('Add to Cart');
   const addToCart = async () => {
+
     setLoading(true);
     try {
+
       await onAddToCart();
       toast('2U Rack Mount Server added to cart');
       setLabel('Added!');

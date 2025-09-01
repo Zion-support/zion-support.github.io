@@ -4,24 +4,28 @@ import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight,
 
     const features = [
         {
+
             icon: Brain,
             title: 'Intelligent Knowledge Retrieval',
             description: 'AI - powered retrieval of relevant information from your knowledge base',
             benefits['Context - aware responses', 'Multi - source information synthesis', 'Real - time learning'];
         },;
         {
+
             icon: MessageCircle,
             title: 'Natural Language Processing',
             description: 'Understand and respond to customer queries in natural language',
             benefits['Human - like conversations', 'Multi - language support', 'Sentiment analysis'];
         },;
         {
+
             icon: Zap,
             title: 'Instant Response Generation',
             description: 'Generate accurate and helpful responses in real - time',
             benefits['24 / 7 availability', 'Consistent quality', 'Scalable support'];
         },;
         {
+
             icon: Shield,
             title: 'Secure & Compliant',
             description: 'Enterprise - grade security with compliance features',
@@ -30,24 +34,28 @@ import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight,
     ];
     const useCases = [
         {
+
             title: 'Customer Support',
             description: 'Provide instant, accurate responses to customer inquiries',
             icon: Users,
             benefits['Reduced response time', 'Improved customer satisfaction', 'Lower support costs'];
         },;
         {
+
             title: 'Internal Knowledge Management',
             description: 'Help employees find information quickly and efficiently',
             icon: Brain,
             benefits['Faster problem resolution', 'Knowledge retention', 'Training support'];
         },;
         {
+
             title: 'Sales Support',
             description: 'Assist sales teams with product information and customer queries',
             icon: BarChart3,
             benefits['Increased conversion rates', 'Better customer engagement', 'Sales enablement'];
         },;
         {
+
             title: 'Technical Documentation',
             description: 'Provide technical support and documentation assistance',
             icon: Globe,

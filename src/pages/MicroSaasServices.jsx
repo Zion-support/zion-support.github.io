@@ -8,9 +8,11 @@ import { MICRO_SAAS_SERVICES, getMicroSaasCategories } from "@/data / microSaasS
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components / ui / tabs";
 import { TrustedBySection } from "@/components / TrustedBySection";
 export default function MicroSaasServices () {
+
 export default MicroSAASServices;
 
 const categoryIcons = {
+
   'AI Business Solutions': Brain,
     'IT Infrastructure': Cloud,
     'Data Analytics': BarChart3,
@@ -23,21 +25,25 @@ const categoryIcons = {
 };
 const benefits = [
     {
+
         icon: <Zap className="h - 6 w - 6"/>,
         title: "Immediate Deployment",
         description: "All services are ready for immediate deployment with no setup delays"
     },
     {
+
         icon: <Shield className="h - 6 w - 6"/>,
         title: "Enterprise Security",
         description: "Bank - level security with SOC 2 compliance and 24 / 7 monitoring"
     },
     {
+
         icon: <Users className="h - 6 w - 6"/>,
         title: "Dedicated Support",
         description: "24 / 7 technical support with dedicated account managers"
     },
     {
+
         icon: <TrendingUp className="h - 6 w - 6"/>,
         title: "Proven ROI",
         description: "Average 300% ROI within 6 months of implementation"

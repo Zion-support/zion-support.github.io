@@ -12,12 +12,15 @@ declare module "@radix-ui/react-toggle";
 declare module 'react-player';
 declare module '@google/model-viewer';
 declare module '*.module.css' {
+
   const classes: { [key: string]: string };
   export default classes}
 
 declare module '@tanstack/react-query';
 declare module 'react-day-picker' {
+
   export interface DateRange {
+
     from?: Date;
     to?: Date}
 
@@ -29,7 +32,9 @@ declare module 'react-day-picker' {
   export const DayPicker: any}
 declare module 'sonner';
 declare module 'lucide-react' {
+
   export interface LucideProps extends SVGProps<SVGSVGElement> {
+
     size?: number | string;
     color?: string;
     strokeWidth?: number | string}
@@ -231,7 +236,8 @@ declare module 'lucide-react' {
 declare module 'child_process';
 declare module 'date-fns';
 declare module 'jspdf' {
-  export const jsPDF: any;
+
+  export const jsPDF: unknown;
   export default jsPDF}
 declare module '@hookform/resolvers/zod';
 declare module '@radix-ui/react-accordion';
@@ -257,10 +263,12 @@ declare module '@radix-ui/react-toast';
 declare module '@radix-ui/react-tooltip';
 declare module '@supabase/supabase-js';
 declare module 'class-variance-authority' {
+
   export function cva(...inputs: any[]): any
   export type VariantProps<T extends (...args: any) => any> = any
 }
 declare module 'clsx' {
+
   export type ClassValue = any;
   export default function clsx(...classes: ClassValue[]): string}
 declare module 'embla-carousel-react';
@@ -280,6 +288,7 @@ declare module 'react-hook-form' {
   export interface UseFormReturn<
     TFieldValues extends FieldValues = FieldValues,
   > {
+
     control: Control<TFieldValues>
     handleSubmit: any
     register: any
@@ -299,6 +308,7 @@ declare module 'react-hook-form' {
     TFieldValues extends FieldValues = FieldValues,
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
   > {
+
     name: TName
     control?: Control<TFieldValues>
     rules?: any
@@ -311,6 +321,7 @@ declare module 'react-hook-form' {
   export interface FormProviderProps<
     TFieldValues extends FieldValues = FieldValues,
   > {
+
     children?: ReactNode
     [key: string]: any
   }
@@ -329,15 +340,19 @@ declare module 'semver';
 declare module 'ws';
 declare module 'recharts';
 declare module 'next' {
+
   export type GetStaticPaths = any;
   export type GetStaticProps<P = any, Q = any> = any;
   export type GetServerSideProps<P = any, Q = any> = any}
 declare module 'next/link' {
+
   const Link: React.ComponentType<any>
   export default Link
 }
 declare module 'next/router' {
+
   interface NextRouter {
+
     pathname: string
     /**
      * When using `getStaticPaths` with `fallback: true` or `'blocking'`, Next.js

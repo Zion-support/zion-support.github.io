@@ -2,6 +2,7 @@
 // Cutting-edge AI solutions for modern businesses
 ;
 export interface AIService {
+
   id: string;
   title: string;
   description: string;
@@ -56,6 +57,7 @@ export const innovativeAIServices2030: AIService[] = [
 export const innovativeAIServices2030: InnovativeAIService[] = [
 >>>>>>> main
   {
+
 "
     id: "ai-voice-cloning-platform","
     title: "Zion AI Voice Cloning Platform","
@@ -151,6 +153,7 @@ export const innovativeAIServices2030: InnovativeAIService[] = [
     trending: true
   },
   {
+
 "
     id: "ai-code-review-assistant","
     title: "Zion AI Code Review Assistant","
@@ -246,6 +249,7 @@ export const innovativeAIServices2030: InnovativeAIService[] = [
     trending: true
   },
   {
+
 "
     id: "ai-customer-sentiment-analyzer","
     title: "Zion AI Customer Sentiment Analyzer","
@@ -341,6 +345,7 @@ export const innovativeAIServices2030: InnovativeAIService[] = [
     trending: true
   },
   {
+
 "
     id: "ai-predictive-inventory-management","
     title: "Zion AI Predictive Inventory Management","
@@ -436,6 +441,7 @@ export const innovativeAIServices2030: InnovativeAIService[] = [
     trending: true
   },
   {
+
 "
     id: "ai-personalized-learning-platform","
     title: "Zion AI Personalized Learning Platform","

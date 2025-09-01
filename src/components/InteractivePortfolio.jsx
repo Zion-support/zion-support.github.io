@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 export function InteractivePortfolio () {
+
 import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar const portfolioProjects = [;
 
     {
@@ -114,16 +115,19 @@ export function InteractivePortfolio() {
         setSelectedProject(project);
         setIsModalOpen(true)};
     const closeModal = () => {
+
         setIsModalOpen (false) ;
         setSelectedProject (null) ;
         setCurrentImageIndex (0) };
     const nextImage = () => {
+
         if (selectedProject) {
 
             setCurrentImageIndex((prev) => (prev + 1) % 1); // Only one image per project for now
 
     };
     const prevImage = () => {
+
         if (selectedProject) {
 
             setCurrentImageIndex((prev) => (prev - 1 + 1) % 1)}
@@ -135,6 +139,7 @@ export function InteractivePortfolio() {
             closeModal()}
     };
     useEffect ( () => {
+
         if (isModalOpen) {
 
             document.body.style.overflow = 'hidden'}

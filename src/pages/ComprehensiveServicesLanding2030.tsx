@@ -1,5 +1,6 @@
 import React, { useState } from 'react.ts';
 export default React.memo (function ComprehensiveServicesLanding2030 (...args[]) :  {
+
 import { ArrowRight,
 import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030 } from "../data / comprehensivePricingGuide2030";
 import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from "../data / comprehensiveServicesIndex2030";
@@ -53,7 +54,9 @@ import { SEO } from "../components / SEO";
   }) ;
 
   const getCategoryIcon = (category: string) => {
+
     const icons: { [key: string]: React.ReactNode } = {
+
       'AI & Business Intelligence': <Brain className="w - 6 h - 6" />,
       'AI & Healthcare': <Heart className="w - 6 h - 6" />,
       'AI & FinTech': <TrendingUp className="w - 6 h - 6" />,
@@ -77,7 +80,9 @@ import { SEO } from "../components / SEO";
     return icons[category] || <Rocket className="w - 6 h - 6" />};
 
   const getCategoryColor = (category: string) => {
+
     const colors: { [key: string]: string } = {
+
       'AI & Business Intelligence': 'from - purple - 500 to - pink - 500',
       'AI & Healthcare': 'from - pink - 500 to - red - 500',
       'AI & FinTech': 'from - emerald - 500 to - green - 500',

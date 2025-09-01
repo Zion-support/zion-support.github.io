@@ -1,6 +1,7 @@
 import { Link } from 'react - router - dom';
 import React from 'react';
 import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight export default function EnterpriseIT () {
+
 import { motion } from 'framer - motion';
 
     return (<div className="min - h-screen bg - gradient - to - br from - black via - gray - 900 to - blue - 900 text - white">
@@ -31,10 +32,12 @@ import { motion } from 'framer - motion';
         <div className="max - w-7xl mx - auto">
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -49,14 +52,17 @@ import { motion } from 'framer - motion';
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.5,
   delay: 0.1
 
@@ -71,14 +77,17 @@ import { motion } from 'framer - motion';
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.5,
   delay: 0.2
 
@@ -93,14 +102,17 @@ import { motion } from 'framer - motion';
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.5,
   delay: 0.3
 
@@ -115,14 +127,17 @@ import { motion } from 'framer - motion';
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.5,
   delay: 0.4
 
@@ -137,14 +152,17 @@ import { motion } from 'framer - motion';
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.5,
   delay: 0.5
 

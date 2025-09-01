@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -29,6 +30,7 @@ const benefits = [
       'Agile development methodology',Parallel development teams',Automated testing pipeline',Continuous deployment',
     ]},
   {
+
 "
     icon: <Shield className="w-10 h-10" />,
     title: 'Enterprise Security',
@@ -41,6 +43,7 @@ const benefits = [
       'SOC 2 Type II compliant',End-to-end encryption',Regular security audits',GDPR compliance',
     ]},
   {
+
 "
     icon: <TrendingUp className="w-10 h-10" />,
     title: 'Proven ROI',
@@ -52,6 +55,7 @@ const benefits = [
       'Performance optimization',Cost reduction strategies',Revenue growth solutions',Efficiency improvements',
     ]},
   {
+
 "
     icon: <CheckCircle className="w-10 h-10" />,
     title: 'Quality Guaranteed',
@@ -66,6 +70,7 @@ const benefits = [
 ;
 const additionalStats = [
   {
+
 "
     icon: <Users className="w-8 h-8" />,
     value: '500+',
@@ -76,6 +81,7 @@ const additionalStats = [
 ];
 
 export function BenefitsSection() {
+
   const [hoveredIndex, setHoveredIndex] = (useState < number) | (null > null);
 
   const containerVariants = {

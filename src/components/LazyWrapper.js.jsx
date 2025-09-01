@@ -15,11 +15,13 @@ const LazyWrapper = ({
   const ref = useRef(null);
   const inView = useInView(ref, { amount: threshold });
   useEffect(() => {
+
     if (inView && !isInView) {
 
       setIsInView(true);
       // Simulate loading delay for better UX
       const timer = setTimeout(() => {
+
         setIsLoaded(true);
       }, 300);
       return () => clearTimeout(timer);

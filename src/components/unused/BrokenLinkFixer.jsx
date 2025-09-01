@@ -17,6 +17,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     });
     // Find all links on the page
     const findAllLinks = useCallback(() => {
+
         const links = [];
         linkElements.forEach((element, index) => {
 
@@ -120,6 +121,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             }
         }
         catch (error) {
+
             return {
 
                 ...link,
@@ -130,6 +132,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     }, []);
     // Check all links
     const checkAllLinks = useCallback(async () => {
+
         setIsChecking(true);
         const allLinks = findAllLinks();
         setLinks(allLinks);
@@ -236,6 +239,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             link.element?.classList.remove('broken-link-highlight')}, 3000)}, []);
     // Auto-check links
     useEffect(() => {
+
         if (autoCheck) {
 
             const timer = setTimeout(checkAllLinks, 2000);
@@ -463,6 +467,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                   {links.length > 0 && (<button onClick = {
 
   () => {
+
                         const report = {
 
                             timestamp: new Date().toISOString(),

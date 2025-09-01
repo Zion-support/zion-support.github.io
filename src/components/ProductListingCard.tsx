@@ -43,6 +43,7 @@ export default React.memo (ProductListingCard) ;
     if (onRequestQuote) {
 
       onRequestQuote(listing.id)} else {
+
 `
       router(`/request-quote?listing=${listing.id}`)}
   };

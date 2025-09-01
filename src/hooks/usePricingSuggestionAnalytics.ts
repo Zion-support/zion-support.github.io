@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 
 interface PricingSuggestionAnalytics {
+
   totalSuggestions: number;
   acceptanceRate: number;
   averagePriceGap: number;
   suggestionsByCategory: { category: string; count: number; acceptanceRate: number }[];
   recentSuggestions: {
+
     id: string;
     userId: string;
     suggestedMin: number;
@@ -21,7 +23,9 @@ interface PricingSuggestionAnalytics {
 }
 
 export function usePricingSuggestionAnalytics(days = 30) {
+
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
+
     totalSuggestions: 0,
     acceptanceRate: 0,
     averagePriceGap: 0,
@@ -32,11 +36,14 @@ export function usePricingSuggestionAnalytics(days = 30) {
   });
 
   const fetchAnalytics = useCallback(async () => {
+
     setAnalytics(prev => ({ ...prev, isLoading: true, error: null }));
     try {
+
       await new Promise(resolve => setTimeout(resolve, 1000));
 
       const mockData = {
+
         totalSuggestions: 256,
         acceptanceRate: 0.72,
         averagePriceGap: 12.5,
@@ -48,6 +55,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
           { category: 'data', count: 11, acceptanceRate: 0.78 },
         ],
         recentSuggestions: Array(10).fill(null).map((_, i) => ({
+
           id: `suggestion-${i}`,
           userId: `user-${Math.floor(Math.random() * 100)}`,
           suggestedMin: 30 + Math.floor(Math.random() * 30),
@@ -55,19 +63,21 @@ export function usePricingSuggestionAnalytics(days = 30) {
           actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,
           accepted: Math.random() > 0.25,
           createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),
-          type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent',
-        }))
+          type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
       };
 
       setAnalytics({
+
         ...mockData,
         isLoading: false,
         error: null
       });
 
     } catch (error) {
-      console.error("Error fetching pricing suggestion analytics:", error);
-      setAnalytics(prev => ({ 
+
+      // // // console.error("Error fetching pricing suggestion analytics:", error);
+      setAnalytics(prev => ({
+
         ...prev, 
         isLoading: false,
         error: "Failed to load pricing analytics data."
@@ -76,6 +86,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
   }, [days]);
 
   useEffect(() => {
+
     fetchAnalytics();
   }, [fetchAnalytics]);
 

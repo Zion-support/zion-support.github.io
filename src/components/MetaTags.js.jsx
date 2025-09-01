@@ -45,6 +45,7 @@ export const MetaTags = ({ title, description, keywords = 'AI, artificial intell
       {/* Structured Data */}"
       <script type="application/ld+json">
         {JSON.stringify({
+
 "
             "@context": "https://schema.org","
             "@type": type === 'article' ? 'Article' : 'Organization',"
@@ -53,11 +54,13 @@ export const MetaTags = ({ title, description, keywords = 'AI, artificial intell
             "logo": "https://ziontechgroup.com/logo.png","
             "description": "Leading provider of AI-powered solutions, cybersecurity, and enterprise IT services","
             "address": {
+
 "
                 "@type": "PostalAddress","
                 "addressCountry": "US"
             },"
             "contactPoint": {
+
 "
                 "@type": "ContactPoint","
                 "telephone": "+1-302-464-0950","

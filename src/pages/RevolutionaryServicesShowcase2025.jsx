@@ -4,17 +4,18 @@ import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data / emerging -
 import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data / revolutionary - 2025 - advanced - services';
 
 const RevolutionaryServicesShowcase2025 = () => {
+
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [searchTerm, setSearchTerm] = useState ('') ;
   const allServices = [
     ...REVOLUTIONARY_2025_ADVANCED_SERVICES.map (service => ({
+
       ...service,
-      source: 'revolutionary',
-    }) ) ,
+      source: 'revolutionary'}) ) ,
     ...EMERGING_TECH_2025_SPECIALIZED_SERVICES.map (service => ({
+
       ...service,
-      source: 'emerging',
-    }) ) ,
+      source: 'emerging'}) ) ,
   ];
   const categories = [
     'all',
@@ -29,6 +30,7 @@ const RevolutionaryServicesShowcase2025 = () => {
     'Quantum Technology',
   ];
   const filteredServices = allServices.filter (service => {
+
     const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
       service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
       service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
@@ -147,6 +149,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                 <div className="flex items - center justify - between mb - 4">
                   <span
                     className={`px - 3 py - 1 rounded - full text - xs font - medium ${
+
                       service.category === 'Micro SAAS'
                         ? 'bg - blue - 500 / 20 text - blue - 400'
                         : service.category === 'IT Services'

@@ -38,8 +38,10 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
 <<<<<<< HEAD
 
     if (selectedCategory !== 'all') {
+
 =======
 '    if (selectedCategory !== 'all') {
+
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       services = services.filter(service => service.category === selectedCategory)};

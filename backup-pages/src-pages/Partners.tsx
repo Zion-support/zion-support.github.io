@@ -13,85 +13,152 @@ import {
   Zap,
   Shield,
   Brain,
-  Cloud
+  Cloud,
 } from 'lucide-react';
 
 const Partners = () => {
   const partnerCategories = [
     {
-      title: "Technology Partners",
-      description: "Leading technology companies we collaborate with",
+      title: 'Technology Partners',
+      description: 'Leading technology companies we collaborate with',
       icon: Zap,
       partners: [
-        { name: "Microsoft", description: "Cloud and AI solutions", logo: "/api/placeholder/150/80" },
-        { name: "Amazon Web Services", description: "Cloud infrastructure", logo: "/api/placeholder/150/80" },
-        { name: "Google Cloud", description: "Machine learning and data analytics", logo: "/api/placeholder/150/80" },
-        { name: "NVIDIA", description: "AI and GPU computing", logo: "/api/placeholder/150/80" }
-      ]
+        {
+          name: 'Microsoft',
+          description: 'Cloud and AI solutions',
+          logo: '/api/placeholder/150/80',
+        },
+        {
+          name: 'Amazon Web Services',
+          description: 'Cloud infrastructure',
+          logo: '/api/placeholder/150/80',
+        },
+        {
+          name: 'Google Cloud',
+          description: 'Machine learning and data analytics',
+          logo: '/api/placeholder/150/80',
+        },
+        {
+          name: 'NVIDIA',
+          description: 'AI and GPU computing',
+          logo: '/api/placeholder/150/80',
+        },
+      ],
     },
     {
-      title: "Security Partners",
-      description: "Cybersecurity specialists and certification bodies",
+      title: 'Security Partners',
+      description: 'Cybersecurity specialists and certification bodies',
       icon: Shield,
       partners: [
-        { name: "CrowdStrike", description: "Endpoint protection", logo: "/api/placeholder/150/80" },
-        { name: "Palo Alto Networks", description: "Network security", logo: "/api/placeholder/150/80" },
-        { name: "Okta", description: "Identity and access management", logo: "/api/placeholder/150/80" },
-        { name: "Splunk", description: "Security monitoring", logo: "/api/placeholder/150/80" }
-      ]
+        {
+          name: 'CrowdStrike',
+          description: 'Endpoint protection',
+          logo: '/api/placeholder/150/80',
+        },
+        {
+          name: 'Palo Alto Networks',
+          description: 'Network security',
+          logo: '/api/placeholder/150/80',
+        },
+        {
+          name: 'Okta',
+          description: 'Identity and access management',
+          logo: '/api/placeholder/150/80',
+        },
+        {
+          name: 'Splunk',
+          description: 'Security monitoring',
+          logo: '/api/placeholder/150/80',
+        },
+      ],
     },
     {
-      title: "AI & Analytics Partners",
-      description: "Artificial intelligence and data analytics specialists",
+      title: 'AI & Analytics Partners',
+      description: 'Artificial intelligence and data analytics specialists',
       icon: Brain,
       partners: [
-        { name: "IBM Watson", description: "Enterprise AI solutions", logo: "/api/placeholder/150/80" },
-        { name: "Databricks", description: "Unified analytics platform", logo: "/api/placeholder/150/80" },
-        { name: "Palantir", description: "Big data analytics", logo: "/api/placeholder/150/80" },
-        { name: "Snowflake", description: "Cloud data platform", logo: "/api/placeholder/150/80" }
-      ]
+        {
+          name: 'IBM Watson',
+          description: 'Enterprise AI solutions',
+          logo: '/api/placeholder/150/80',
+        },
+        {
+          name: 'Databricks',
+          description: 'Unified analytics platform',
+          logo: '/api/placeholder/150/80',
+        },
+        {
+          name: 'Palantir',
+          description: 'Big data analytics',
+          logo: '/api/placeholder/150/80',
+        },
+        {
+          name: 'Snowflake',
+          description: 'Cloud data platform',
+          logo: '/api/placeholder/150/80',
+        },
+      ],
     },
     {
-      title: "Cloud Partners",
-      description: "Infrastructure and platform service providers",
+      title: 'Cloud Partners',
+      description: 'Infrastructure and platform service providers',
       icon: Cloud,
       partners: [
-        { name: "Docker", description: "Containerization platform", logo: "/api/placeholder/150/80" },
-        { name: "Kubernetes", description: "Container orchestration", logo: "/api/placeholder/150/80" },
-        { name: "HashiCorp", description: "Infrastructure automation", logo: "/api/placeholder/150/80" },
-        { name: "MongoDB", description: "Database solutions", logo: "/api/placeholder/150/80" }
-      ]
-    }
+        {
+          name: 'Docker',
+          description: 'Containerization platform',
+          logo: '/api/placeholder/150/80',
+        },
+        {
+          name: 'Kubernetes',
+          description: 'Container orchestration',
+          logo: '/api/placeholder/150/80',
+        },
+        {
+          name: 'HashiCorp',
+          description: 'Infrastructure automation',
+          logo: '/api/placeholder/150/80',
+        },
+        {
+          name: 'MongoDB',
+          description: 'Database solutions',
+          logo: '/api/placeholder/150/80',
+        },
+      ],
+    },
   ];
 
   const partnershipBenefits = [
     {
       icon: Target,
-      title: "Strategic Alignment",
-      description: "We partner with companies that share our vision for innovation and excellence"
+      title: 'Strategic Alignment',
+      description:
+        'We partner with companies that share our vision for innovation and excellence',
     },
     {
       icon: Award,
-      title: "Certified Expertise",
-      description: "Our team holds certifications from all major technology partners"
+      title: 'Certified Expertise',
+      description:
+        'Our team holds certifications from all major technology partners',
     },
     {
       icon: Heart,
-      title: "Collaborative Approach",
-      description: "We work closely with partners to deliver integrated solutions"
+      title: 'Collaborative Approach',
+      description:
+        'We work closely with partners to deliver integrated solutions',
     },
     {
       icon: Globe,
-      title: "Global Reach",
-      description: "Partner network enables us to serve clients worldwide"
-    }
+      title: 'Global Reach',
+      description: 'Partner network enables us to serve clients worldwide',
+    },
   ];
 
   const achievements = [
-    { metric: "50+", label: "Technology Partners" },
-    { metric: "200+", label: "Certifications" },
-    { metric: "99%", label: "Partner Satisfaction" },
-    { metric: "24/7", label: "Global Support" }
+    { metric: '50+', label: 'Technology Partners' },
+    { metric: '200+', label: 'Certifications' },
+    { metric: '99%', label: 'Partner Satisfaction' },
+    { metric: '24/7', label: 'Global Support' },
   ];
 
   return (
@@ -107,12 +174,14 @@ const Partners = () => {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Our
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                {' '}Partners
+                {' '}
+                Partners
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We collaborate with industry-leading companies to deliver comprehensive 
-              technology solutions that drive innovation and business success.
+              We collaborate with industry-leading companies to deliver
+              comprehensive technology solutions that drive innovation and
+              business success.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -160,7 +229,8 @@ const Partners = () => {
           >
             <h2 className="text-4xl font-bold mb-6">Partnership Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our strategic partnerships enable us to deliver exceptional value to our clients
+              Our strategic partnerships enable us to deliver exceptional value
+              to our clients
             </p>
           </motion.div>
 
@@ -195,7 +265,8 @@ const Partners = () => {
           >
             <h2 className="text-4xl font-bold mb-6">Our Partner Ecosystem</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We work with the best companies across different technology domains
+              We work with the best companies across different technology
+              domains
             </p>
           </motion.div>
 
@@ -214,7 +285,9 @@ const Partners = () => {
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold mb-2">{category.title}</h3>
+                    <h3 className="text-3xl font-bold mb-2">
+                      {category.title}
+                    </h3>
                     <p className="text-gray-300">{category.description}</p>
                   </div>
                 </div>
@@ -229,8 +302,12 @@ const Partners = () => {
                       <div className="w-20 h-12 bg-white/20 rounded-lg mx-auto mb-4 flex items-center justify-center">
                         <Building className="w-8 h-8 text-cyan-400" />
                       </div>
-                      <h4 className="text-lg font-bold mb-2 text-white">{partner.name}</h4>
-                      <p className="text-gray-300 text-sm">{partner.description}</p>
+                      <h4 className="text-lg font-bold mb-2 text-white">
+                        {partner.name}
+                      </h4>
+                      <p className="text-gray-300 text-sm">
+                        {partner.description}
+                      </p>
                     </motion.div>
                   ))}
                 </div>
@@ -250,19 +327,22 @@ const Partners = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-6">Join Our Partner Program</h2>
+              <h2 className="text-4xl font-bold mb-6">
+                Join Our Partner Program
+              </h2>
               <p className="text-xl text-gray-300 mb-8">
-                We're always looking for innovative companies to join our partner ecosystem. 
-                Together, we can deliver exceptional solutions to our clients.
+                We're always looking for innovative companies to join our
+                partner ecosystem. Together, we can deliver exceptional
+                solutions to our clients.
               </p>
-              
+
               <div className="space-y-4 mb-8">
                 {[
-                  "Access to joint go-to-market opportunities",
-                  "Technical integration and support",
-                  "Co-marketing and lead sharing programs",
-                  "Training and certification programs",
-                  "Dedicated partner success manager"
+                  'Access to joint go-to-market opportunities',
+                  'Technical integration and support',
+                  'Co-marketing and lead sharing programs',
+                  'Training and certification programs',
+                  'Dedicated partner success manager',
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
@@ -300,27 +380,31 @@ const Partners = () => {
               <div className="space-y-6">
                 {[
                   {
-                    title: "Technology Partners",
-                    description: "Integrate your solutions with our platform"
+                    title: 'Technology Partners',
+                    description: 'Integrate your solutions with our platform',
                   },
                   {
-                    title: "Channel Partners",
-                    description: "Resell our services to your clients"
+                    title: 'Channel Partners',
+                    description: 'Resell our services to your clients',
                   },
                   {
-                    title: "Implementation Partners",
-                    description: "Deliver our solutions to end customers"
+                    title: 'Implementation Partners',
+                    description: 'Deliver our solutions to end customers',
                   },
                   {
-                    title: "Alliance Partners",
-                    description: "Strategic partnerships for joint solutions"
-                  }
+                    title: 'Alliance Partners',
+                    description: 'Strategic partnerships for joint solutions',
+                  },
                 ].map((type, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mt-3 flex-shrink-0"></div>
                     <div>
-                      <h4 className="font-semibold text-white mb-1">{type.title}</h4>
-                      <p className="text-gray-300 text-sm">{type.description}</p>
+                      <h4 className="font-semibold text-white mb-1">
+                        {type.title}
+                      </h4>
+                      <p className="text-gray-300 text-sm">
+                        {type.description}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -343,7 +427,7 @@ const Partners = () => {
               Ready to Partner With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's explore how we can work together to deliver exceptional 
+              Let's explore how we can work together to deliver exceptional
               value to our mutual clients and grow our businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

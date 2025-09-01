@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -143,6 +144,7 @@ export const EnhancedSidebar: React.FC = () => {;
       ]
     },;
     {
+
 "
       title: "Service Areas",
       icon: Zap,
@@ -160,6 +162,7 @@ export const EnhancedSidebar: React.FC = () => {;
       ]
     },;
     {
+
 "
       title: "Security & Compliance",
       icon: Shield,
@@ -319,12 +322,14 @@ export const EnhancedSidebar: React.FC = () => {;
 <<<<<<< HEAD
                 <ChevronDown
                   className={`w - 4 h - 4 text - slate - 400 transition - transform duration - 200 ${
+
                     expandedSections.has (section.title) ? 'rotate - 180' : ''
                   }`}
                 />
 =======
                 <ChevronDown `
                   className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
+
 <<<<<<< HEAD
 
                     expandedSections.has(section.title) ? 'rotate-180' : ''`

@@ -43,6 +43,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
                   repeat: Infinity,
                   ease: 'easeInOut'}}
                 style={{
+
 `
                   left: `${20 + Math.random() * 60}%`,`
                   top: `${20 + Math.random() * 60}%`}}
@@ -191,6 +192,7 @@ export const FuturisticServicesShowcase = () => {
 
 <<<<<<< HEAD
   const ServiceCard = ({ service, index, isVisible }) => {
+
     const [isHovered, setIsHovered] = useState (false) ;
     return (<motion.div
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -206,6 +208,7 @@ export const FuturisticServicesShowcase = () => {
         {/* Neon Border Effect */}
         <div
           className={`absolute inset - 0 rounded - 2xl transition - all duration - 500 ${
+
             isHovered
               ? 'bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 p-[2px]'
               : 'bg - gradient - to - r from - cyan - 500 / 30 via - blue - 500 / 30 to - purple - 500 / 30'
@@ -218,19 +221,19 @@ export const FuturisticServicesShowcase = () => {
                   key={i}
                   className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60"
                   animate={{
+
                     x: [0, Math.random () * 100 - 50],
                     y: [0, Math.random () * 100 - 50],
-                    opacity: [0.6, 0.2, 0.6],
-                  }}
+                    opacity: [0.6, 0.2, 0.6]}}
                   transition={{
+
                     duration: 3 + Math.random () * 2,
                     repeat: Infinity,
-                    ease: 'easeInOut',
-                  }}
+                    ease: 'easeInOut'}}
                   style={{
+
                     left: `${20 + Math.random () * 60}%`,
-                    top: `${20 + Math.random () * 60}%`,
-                  }}
+                    top: `${20 + Math.random () * 60}%`}}
                 />) ) }
             </div>
 
@@ -386,6 +389,7 @@ export const FuturisticServicesShowcase = () => {
   });
   // Set all services as visible initially for better UX
   useEffect(() => {
+
     const allIndices = new Set(filteredServices.map((_, index) => index));
     setVisibleServices(allIndices);
   }, [filteredServices]);
@@ -399,6 +403,7 @@ export const FuturisticServicesShowcase = () => {
             key={i}"
             className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float"
             style={{
+
 `
               left: `${Math.random() * 100}%`,`
               top: `${Math.random() * 100}%`,`

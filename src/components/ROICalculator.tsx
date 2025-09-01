@@ -1,0 +1,308 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { ProductListing } from '../types/listings';
+import { Calculator, TrendingUp, DollarSign, Clock, Target, BarChart3, X } from 'lucide-react';
+
+interface ROICalculatorProps {
+
+  service: ProductListing;
+  onClose: () => void;
+}
+
+export const ROICalculator: React.FC<ROICalculatorProps> = ({ service, onClose }) => {
+
+  const [inputs, setInputs] = useState({
+
+    initialInvestment: service.price,
+    monthlyRevenue: 0,
+    monthlyCosts: 0,
+    timeFrame: 12,
+    growthRate: 10
+  });
+
+  const [results, setResults] = useState({
+
+    totalRevenue: 0,
+    totalCosts: 0,
+    netProfit: 0,
+    roi: 0,
+    paybackPeriod: 0,
+    monthlyROI: 0
+  });
+
+  const calculateROI = () => {
+
+    const { initialInvestment, monthlyRevenue, monthlyCosts, timeFrame, growthRate } = inputs;
+    
+    let totalRevenue = 0;
+    let totalCosts = initialInvestment;
+    let currentRevenue = monthlyRevenue;
+    
+    for (let month = 1; month <= timeFrame; month++) {
+
+      totalRevenue += currentRevenue;
+      totalCosts += monthlyCosts;
+      currentRevenue *= (1 + growthRate / 100);
+    }
+    
+    const netProfit = totalRevenue - totalCosts;
+    const roi = (netProfit / initialInvestment) * 100;
+    const paybackPeriod = monthlyRevenue > monthlyCosts ? 
+      initialInvestment / (monthlyRevenue - monthlyCosts) : 0;
+    const monthlyROI = roi / timeFrame;
+    
+    setResults({
+
+      totalRevenue,
+      totalCosts,
+      netProfit,
+      roi,
+      paybackPeriod,
+      monthlyROI
+    });
+  };
+
+  const handleInputChange = (field: string, value: number) => {
+
+    setInputs(prev => ({ ...prev, [field]: value }));
+  };
+
+  React.useEffect(() => {
+
+    calculateROI();
+  }, [inputs]);
+
+  const formatCurrency = (amount: number) => {
+
+    return new Intl.NumberFormat('en-US', {
+
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(amount);
+  };
+
+  const formatPercentage = (value: number) => {
+
+    return `${value.toFixed(1)}%`;
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+    >
+      <div className="bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+        {/* Header */}
+        <div className="flex items-center justify-between p-6 border-b border-slate-700">
+          <div className="flex items-center gap-3">
+            <Calculator className="h-8 w-8 text-cyan-400" />
+            <div>
+              <h2 className="text-2xl font-bold text-white">ROI Calculator</h2>
+              <p className="text-slate-400">Calculate return on investment for {service.title}</p>
+            </div>
+          </div>
+          <button
+            onClick={onClose}
+            className="p-2 hover:bg-slate-800 rounded-lg transition-colors"
+          >
+            <X className="h-6 w-6 text-slate-400" />
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6">
+          {/* Input Section */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+              <Target className="h-5 w-5 text-cyan-400" />
+              Investment Parameters
+            </h3>
+            
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">
+                  Initial Investment
+                </label>
+                <div className="relative">
+                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-slate-400" />
+                  <input
+                    type="number"
+                    value={inputs.initialInvestment}
+                    onChange={(e) => handleInputChange('initialInvestment', Number(e.target.value))}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">
+                  Expected Monthly Revenue
+                </label>
+                <div className="relative">
+                  <TrendingUp className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-slate-400" />
+                  <input
+                    type="number"
+                    value={inputs.monthlyRevenue}
+                    onChange={(e) => handleInputChange('monthlyRevenue', Number(e.target.value))}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">
+                  Monthly Operating Costs
+                </label>
+                <div className="relative">
+                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-slate-400" />
+                  <input
+                    type="number"
+                    value={inputs.monthlyCosts}
+                    onChange={(e) => handleInputChange('monthlyCosts', Number(e.target.value))}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">
+                  Time Frame (months)
+                </label>
+                <div className="relative">
+                  <Clock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-slate-400" />
+                  <input
+                    type="number"
+                    value={inputs.timeFrame}
+                    onChange={(e) => handleInputChange('timeFrame', Number(e.target.value))}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                    min="1"
+                    max="60"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">
+                  Monthly Growth Rate (%)
+                </label>
+                <div className="relative">
+                  <BarChart3 className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-slate-400" />
+                  <input
+                    type="number"
+                    value={inputs.growthRate}
+                    onChange={(e) => handleInputChange('growthRate', Number(e.target.value))}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                    step="0.1"
+                    min="0"
+                    max="100"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Results Section */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+              <BarChart3 className="h-5 w-5 text-cyan-400" />
+              ROI Analysis Results
+            </h3>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-slate-800 rounded-lg p-4">
+                <h4 className="text-sm font-medium text-slate-400 mb-2">Total Revenue</h4>
+                <p className="text-2xl font-bold text-green-400">
+                  {formatCurrency(results.totalRevenue)}
+                </p>
+              </div>
+              
+              <div className="bg-slate-800 rounded-lg p-4">
+                <h4 className="text-sm font-medium text-slate-400 mb-2">Total Costs</h4>
+                <p className="text-2xl font-bold text-red-400">
+                  {formatCurrency(results.totalCosts)}
+                </p>
+              </div>
+              
+              <div className="bg-slate-800 rounded-lg p-4">
+                <h4 className="text-sm font-medium text-slate-400 mb-2">Net Profit</h4>
+                <p className={`text-2xl font-bold ${results.netProfit >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  {formatCurrency(results.netProfit)}
+                </p>
+              </div>
+              
+              <div className="bg-slate-800 rounded-lg p-4">
+                <h4 className="text-sm font-medium text-slate-400 mb-2">ROI</h4>
+                <p className={`text-2xl font-bold ${results.roi >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  {formatPercentage(results.roi)}
+                </p>
+              </div>
+              
+              <div className="bg-slate-800 rounded-lg p-4">
+                <h4 className="text-sm font-medium text-slate-400 mb-2">Payback Period</h4>
+                <p className="text-2xl font-bold text-cyan-400">
+                  {results.paybackPeriod > 0 ? `${results.paybackPeriod.toFixed(1)} months` : 'N/A'}
+                </p>
+              </div>
+              
+              <div className="bg-slate-800 rounded-lg p-4">
+                <h4 className="text-sm font-medium text-slate-400 mb-2">Monthly ROI</h4>
+                <p className={`text-2xl font-bold ${results.monthlyROI >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  {formatPercentage(results.monthlyROI)}
+                </p>
+              </div>
+            </div>
+
+            {/* ROI Visualization */}
+            <div className="bg-slate-800 rounded-lg p-4">
+              <h4 className="text-sm font-medium text-slate-400 mb-3">ROI Breakdown</h4>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-slate-300">Investment</span>
+                  <span className="text-sm text-white">{formatCurrency(inputs.initialInvestment)}</span>
+                </div>
+                <div className="w-full bg-slate-700 rounded-full h-2">
+                  <div 
+                    className="bg-red-500 h-2 rounded-full transition-all duration-500"
+                    style={{ width: `${Math.min(100, (inputs.initialInvestment / (inputs.initialInvestment + results.totalRevenue)) * 100)}%` }}
+                  ></div>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-slate-300">Returns</span>
+                  <span className="text-sm text-white">{formatCurrency(results.totalRevenue)}</span>
+                </div>
+                <div className="w-full bg-slate-700 rounded-full h-2">
+                  <div 
+                    className="bg-green-500 h-2 rounded-full transition-all duration-500"
+                    style={{ width: `${Math.min(100, (results.totalRevenue / (inputs.initialInvestment + results.totalRevenue)) * 100)}%` }}
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="p-6 border-t border-slate-700 bg-slate-800/50">
+          <div className="flex items-center justify-between">
+            <div className="text-sm text-slate-400">
+              Service: {service.title} • Base Price: {formatCurrency(service.price)}
+            </div>
+            <button
+              onClick={onClose}
+              className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors"
+            >
+              Close Calculator
+            </button>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};

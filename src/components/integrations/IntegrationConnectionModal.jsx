@@ -15,19 +15,23 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
         syncApplicantData: true
     });
     const handleConnectOAuth = () => {
+
         setIsConnecting(true);
         // Simulate OAuth flow
         setTimeout(() => {
+
             setIsConnecting(false);
             toast.success(`Connected to ${integration.name} successfully`);
             onClose()}, 2000);
         // In a real application, this would open a popup for OAuth authentication`
         // window.open(`/api/oauth/${integration.id}`,oauth',width=600,height=600')};
     const handleDisconnect = () => {
+
         // In a real application, this would revoke the OAuth token`
         toast.info(`Disconnected from ${integration.name}`);
         onClose()};
     const handleSaveSettings = () => {
+
         // In a real application, this would save the sync settings"
         toast.success("Integration settings saved");
         onClose()};
@@ -35,6 +39,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
       <DialogContent className="sm:max-w-md">"
         <DialogHeader className="flex flex-row items-center gap-4">"`
           <img loading="lazy" src={integration.logoUrl} alt={`${integration.name} logo`} className="h-12 w-12 rounded" onError={(e) => {
+
 "
             e.target.src = "/placeholder.svg"}}/>
           <div>

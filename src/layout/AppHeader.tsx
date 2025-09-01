@@ -1,5 +1,6 @@
 
 interface AppHeaderProps {
+
   // Add your props here
 
 
@@ -18,7 +19,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
   const [activeNav, setActiveNav] = useState<any>(null);
 
   useEffect(: unknown {
-    
+
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -30,6 +31,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
 
       setIsSearching(true);
       try {
+
         await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate search
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`} finally {
 
@@ -42,11 +44,13 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
 <<<<<<< HEAD
   const servicesCategories = [
     {
+
       title: 'AI & Machine Learning',
       icon: Brain,
       color: 'from-purple-500 to-cyan-500',
       services: [
         {
+
           name: 'AI Business Intelligence',
           href: '/services/ai-business-intelligence',
           icon: Brain,
@@ -54,6 +58,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'AI Workflow Orchestrator',
           href: '/services/ai-workflow-orchestrator',
           icon: Workflow,
@@ -61,6 +66,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'AI Data Governance Platform',
           href: '/services/ai-data-governance-platform',
           icon: Shield,
@@ -68,6 +74,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'AI Customer Experience Analytics',
           href: '/services/ai-customer-experience-analytics',
           icon: Users,
@@ -75,6 +82,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'AI Healthcare Analytics',
           href: '/services/ai-healthcare-analytics',
           icon: Heart,
@@ -82,6 +90,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'AI Financial Trading',
           href: '/services/ai-financial-trading',
           icon: TrendingUp,
@@ -89,6 +98,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'AI Supply Chain Optimization',
           href: '/services/ai-supply-chain-optimization',
           icon: Workflow,
@@ -96,6 +106,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'AI Content Creation',
           href: '/services/ai-content-creation',
           icon: PenTool,
@@ -103,6 +114,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'AI HR Platform',
           href: '/services/ai-hr-platform',
           icon: Users,
@@ -110,6 +122,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'AI Marketing Automation',
           href: '/services/ai-marketing-automation',
           icon: Target,
@@ -117,6 +130,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'AI Quantum Hybrid Platform',
           href: '/services/ai-quantum-hybrid-platform',
           icon: Atom,
@@ -124,6 +138,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'AI Autonomous Research Assistant',
           href: '/services/ai-autonomous-research-assistant',
           icon: Search,
@@ -131,6 +146,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'AI Cybersecurity Threat Intelligence',
           href: '/services/ai-cybersecurity-threat-intelligence',
           icon: Shield,
@@ -140,11 +156,13 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
       ]
     },
     {
+
       title: 'Cloud & Infrastructure',
       icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
       services: [
         {
+
           name: 'Cloud & DevOps',
           href: '/services/cloud-devops',
           icon: Cloud,
@@ -152,6 +170,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'IT Infrastructure',
           href: '/services/it-infrastructure',
           icon: Building,
@@ -159,6 +178,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'Digital Twin Platform',
           href: '/services/digital-twin',
           icon: Globe,
@@ -166,6 +186,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'IoT Edge Computing',
           href: '/services/iot-edge-computing',
           icon: Wifi,
@@ -173,6 +194,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'Data Analytics',
           href: '/services/data-analytics',
           icon: BarChart3,
@@ -182,11 +204,13 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
       ]
     },
     {
+
       title: 'Security & Compliance',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       services: [
         {
+
           name: 'AI Cybersecurity Suite',
           href: '/services/ai-cybersecurity-suite',
           icon: Shield,
@@ -194,6 +218,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'Zero Trust Network Access',
           href: '/services/zero-trust-network-access',
           icon: Lock,
@@ -201,6 +226,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'Security Headers & CSP',
           href: '/services/security-headers-csp',
           icon: Shield,
@@ -208,6 +234,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'DSR Privacy Portal',
           href: '/services/dsr-portal',
           icon: Lock,
@@ -217,11 +244,13 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
       ]
     },
     {
+
       title: 'Emerging Technologies',
       icon: Atom,
       color: 'from-indigo-500 to-purple-500',
       services: [
         {
+
           name: 'Quantum Computing',
           href: '/services/quantum-computing',
           icon: Atom,
@@ -229,6 +258,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'AI Quantum Hybrid Platform',
           href: '/services/ai-quantum-hybrid-platform',
           icon: Atom,
@@ -236,6 +266,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'Space Technology',
           href: '/services/space-tech',
           icon: Rocket,
@@ -243,6 +274,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'Sustainable Technology',
           href: '/services/sustainable-technology',
           icon: Leaf,
@@ -252,11 +284,13 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
       ]
     },
     {
+
       title: 'Micro SaaS Solutions',
       icon: ShoppingCart,
       color: 'from-orange-500 to-red-500',
       services: [
         {
+
           name: 'Micro SaaS Products',
           href: '/services/micro-saas',
           icon: ShoppingCart,
@@ -264,6 +298,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'Micro CRM',
           href: '/services/micro-crm',
           icon: Users,
@@ -271,6 +306,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'Helpdesk Platform',
           href: '/services/helpdesk',
           icon: HelpCircle,
@@ -278,6 +314,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
           featured: true
         },
         {
+
           name: 'Website Analytics',
           href: '/services/website-analytics',
           icon: BarChart3,
@@ -299,6 +336,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
   
   
       // Close other dropdowns'      if (nav.name === 'Services') {
+
 >>>>>>> main
 
         setServicesDropdownOpen(true);
@@ -310,6 +348,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
         setServicesDropdownOpen(false);
         setCompanyDropdownOpen(false);
         setResourcesDropdownOpen(false)} else if (nav.name === 'Pricing') {
+
         // Use the same dropdown state as solutions for pricing
         setSolutionsDropdownOpen(true);
         setServicesDropdownOpen(false);
@@ -320,6 +359,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
         setServicesDropdownOpen(false);
         setSolutionsDropdownOpen(false);
         setResourcesDropdownOpen(false)} else if (nav.name === 'Resources') {
+
         setResourcesDropdownOpen(true);
         setServicesDropdownOpen(false);
         setSolutionsDropdownOpen(false);
@@ -334,6 +374,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
   };
 
   const closeAllDropdowns = (...args: unknown[]): unknown => {
+
     setServicesDropdownOpen(false);    setSolutionsDropdownOpen(false);
     setCompanyDropdownOpen(false);
     setResourcesDropdownOpen(false);
@@ -342,6 +383,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
   return()
     <>`
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+
 <<<<<<< HEAD
         scrolled
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10'
@@ -731,14 +773,18 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                   <div>
                     <button
                       onClick={() => {
+
                         if (activeDropdown === item.name) {
+
                           setActiveDropdown(null)} else {
+
                           setActiveDropdown(item.name)}
                       }}
                       className="w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-md"
                     >
                       {item.name}
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+
                         activeDropdown === item.name ? 'rotate-180' : ''
                       }`}  />
                     </button>

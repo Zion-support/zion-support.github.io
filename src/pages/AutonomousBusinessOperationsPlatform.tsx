@@ -29,23 +29,28 @@ import { motion   } from 'framer - motion.ts';
   } from 'lucide - react.ts';
 
 const AutonomousBusinessOperationsPlatform: React.FC = () : JSX.Element => {
+
   const features = [
     {
+
       icon: Bot,
       title: 'Intelligent Automation',
       description: 'AI - powered automation that learns from your business processes and continuously improves efficiency.'
     },
     {
+
       icon: Workflow,
       title: 'Process Orchestration',
       description: 'Seamlessly orchestrate complex business workflows across multiple systems and departments.'
     },
     {
+
       icon: Zap,
       title: 'Real - time Optimization',
       description: 'Dynamic optimization of business operations based on real - time data and market conditions.'
     },
     {
+
       icon: Shield,
       title: 'Secure Operations',
       description: 'Enterprise - grade security with role - based access control and audit trails for all operations.';
@@ -54,21 +59,25 @@ const AutonomousBusinessOperationsPlatform: React.FC = () : JSX.Element => {
 
   const useCases = [
     {
+
       title: 'Supply Chain Management',
       description: 'Automated inventory management, demand forecasting, and supplier coordination.',
       icon: Workflow
     },
     {
+
       title: 'Customer Service',
       description: 'Intelligent chatbots, ticket routing, and automated customer support workflows.',
       icon: Users
     },
     {
+
       title: 'Financial Operations',
       description: 'Automated invoicing, expense management, and financial reporting.',
       icon: BarChart3
     },
     {
+
       title: 'HR & Recruitment',
       description: 'Automated candidate screening, onboarding processes, and performance management.',
       icon: Users;
@@ -97,18 +106,21 @@ const AutonomousBusinessOperationsPlatform: React.FC = () : JSX.Element => {
 
   const testimonials = [
     {
+
       name: 'Sarah Chen',
       role: 'CTO, TechFlow Industries',
       content: 'The autonomous operations platform has transformed our business processes. We\'ve seen a 45% reduction in operational costs.',
       rating: 5
     },
     {
+
       name: 'Michael Rodriguez',
       role: 'Operations Director, Global Logistics Co.',
       content: 'Real - time optimization and automated workflows have increased our efficiency by 60%. Game - changing technology.',
       rating: 5
     },
     {
+
       name: 'Dr. Emily Watson',
       role: 'CEO, HealthTech Solutions',
       content: 'The AI - powered automation has streamlined our healthcare operations while maintaining the highest standards of care.',
@@ -172,16 +184,19 @@ const AutonomousBusinessOperationsPlatform: React.FC = () : JSX.Element => {
               {features.map ( (feature, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -214,16 +229,19 @@ const AutonomousBusinessOperationsPlatform: React.FC = () : JSX.Element => {
               {useCases.map ( (useCase, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   x: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -256,16 +274,19 @@ const AutonomousBusinessOperationsPlatform: React.FC = () : JSX.Element => {
               {benefits.map ( (benefit, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -295,16 +316,19 @@ const AutonomousBusinessOperationsPlatform: React.FC = () : JSX.Element => {
               {industries.map ( (industry, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   scale: 0.9
 
 }}
                   whileInView = {
+
   { opacity: 1,
   scale: 1
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -333,16 +357,19 @@ const AutonomousBusinessOperationsPlatform: React.FC = () : JSX.Element => {
               {testimonials.map ( (testimonial, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 

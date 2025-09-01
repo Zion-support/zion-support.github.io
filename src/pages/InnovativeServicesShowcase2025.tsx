@@ -2,7 +2,9 @@ import { Link } from 'react - router - dom';
 import React, { useState, useMemo } from 'react';
 import { SEO } from '@/components / SEO';
 export default React.memo (function InnovativeServicesShowcase2025 () {
+
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -12,6 +14,7 @@ import { SEO } from '../components / SEO';
 
   const services = [
     {
+
       id: 'ai - workflow - orchestrator',
       title: 'AI Workflow Orchestrator',
       description: 'Intelligent workflow automation that learns, optimizes, and orchestrates complex business processes with AI - powered decision making.',
@@ -32,6 +35,7 @@ import { SEO } from '../components / SEO';
       category: 'AI & Automation'
     },
     {
+
       id: 'ai - data - governance - platform',
       title: 'AI Data Governance Platform',
       description: 'Intelligent data governance that automatically discovers, classifies, and protects your data while ensuring full regulatory compliance.',
@@ -52,6 +56,7 @@ import { SEO } from '../components / SEO';
       category: 'AI & Data'
     },
     {
+
       id: 'ai - customer - experience - analytics',
       title: 'AI Customer Experience Analytics',
       description: 'Transform customer insights into actionable intelligence with AI - powered analytics that predict, optimize, and enhance every customer interaction.',
@@ -72,6 +77,7 @@ import { SEO } from '../components / SEO';
       category: 'AI & Analytics'
     },
     {
+
       id: 'ai - supply - chain - optimization',
       title: 'AI Supply Chain Optimization',
       description: 'Revolutionize your supply chain with AI - powered optimization that predicts demand, optimizes inventory, and streamlines logistics for maximum efficiency.',
@@ -92,6 +98,7 @@ import { SEO } from '../components / SEO';
       category: 'AI & Logistics'
     },
     {
+
       id: 'ai - financial - risk - management',
       title: 'AI Financial Risk Management',
       description: 'Intelligent financial risk management that automatically detects, assesses, and mitigates risks while ensuring regulatory compliance and optimizing returns.',
@@ -112,6 +119,7 @@ import { SEO } from '../components / SEO';
       category: 'AI & Finance'
     },
     {
+
       id: 'ai - hr - talent - acquisition',
       title: 'AI HR Talent Acquisition',
       description: 'Revolutionize your hiring process with AI - powered talent acquisition that finds, screens, and matches the perfect candidates for your organization.',
@@ -132,6 +140,7 @@ import { SEO } from '../components / SEO';
       category: 'AI & HR'
     },
     {
+
       id: 'ai - iot - edge - computing',
       title: 'AI IoT Edge Computing',
       description: 'Transform your IoT infrastructure with AI - powered edge computing that processes data locally, reduces latency, and enables real - time intelligent decision making.',
@@ -152,6 +161,7 @@ import { SEO } from '../components / SEO';
       category: 'AI & IoT'
     },
     {
+
       id: 'ai - predictive - maintenance',
       title: 'AI Predictive Maintenance',
       description: 'Transform your maintenance operations with AI - powered predictive maintenance that prevents failures, reduces downtime, and optimizes equipment performance.',
@@ -172,6 +182,7 @@ import { SEO } from '../components / SEO';
       category: 'AI & Maintenance'
     },
     {
+
       id: 'ai - sustainable - technology',
       title: 'AI Sustainable Technology',
       description: 'Transform your organization into a sustainability leader with AI - powered technology that optimizes energy, reduces waste, and minimizes environmental impact.',
@@ -192,6 +203,7 @@ import { SEO } from '../components / SEO';
       category: 'AI & Sustainability'
     },
     {
+
       id: 'ai - quantum - machine - learning',
       title: 'AI Quantum Machine Learning',
       description: 'Revolutionize your computational capabilities with AI - powered quantum machine learning that solves previously impossible problems and accelerates innovation.',

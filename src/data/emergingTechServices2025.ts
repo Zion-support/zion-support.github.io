@@ -1,4 +1,5 @@
 export interface EmergingTechService {
+
   id: string;
   title: string;
   description: string;
@@ -84,12 +85,14 @@ contactInfo: {
     roi: "500-1000%","
     innovationLevel: "Revolutionary",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology: ["Qiskit", "Cirq", "PennyLane", "Python", "React", "PostgreSQL"],"
       integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
@@ -103,6 +106,7 @@ contactInfo: {
 
   // Edge AI Computing Platform
   {
+
 "
     id: "edge-ai-computing-platform","
     title: "Edge AI Computing Platform","
@@ -152,12 +156,14 @@ contactInfo: {
     roi: "300-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology: ["TensorFlow Lite", "ONNX Runtime", "React", "Node.js", "PostgreSQL", "Redis"],"
       integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes", "Docker"],
@@ -171,6 +177,7 @@ contactInfo: {
 
   // Blockchain DeFi Platform
   {
+
 "
     id: "blockchain-defi-platform","
     title: "Blockchain DeFi Platform","
@@ -220,12 +227,14 @@ contactInfo: {
     roi: "400-800%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology: ["Ethereum", "Solidity", "React", "Node.js", "PostgreSQL", "Redis"],"
       integrations: ["MetaMask", "WalletConnect", "Uniswap", "Compound", "Aave"],
@@ -239,6 +248,7 @@ contactInfo: {
 
   // AI-Powered Cybersecurity Mesh
   {
+
 "
     id: "ai-cybersecurity-mesh","
     title: "AI Cybersecurity Mesh Platform","
@@ -288,12 +298,14 @@ contactInfo: {
     roi: "400-700%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Elasticsearch"],"
       integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Cloud platforms", "Identity providers"],
@@ -307,6 +319,7 @@ contactInfo: {
 
   // Metaverse Development Platform
   {
+
 "
     id: "metaverse-development-platform","
     title: "Metaverse Development Platform","
@@ -356,12 +369,14 @@ contactInfo: {
     roi: "300-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology: ["Unity", "Unreal Engine", "React", "Node.js", "PostgreSQL", "Redis"],"
       integrations: ["Meta Quest", "HTC Vive", "Steam VR", "WebXR", "Blockchain networks"],

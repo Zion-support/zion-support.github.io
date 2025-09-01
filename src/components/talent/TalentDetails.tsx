@@ -1,5 +1,6 @@
 
 export interface TalentDetailsProps {
+
   talent: TalentProfile & { social?: Record<string, string> }}
 const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => (
   <main className="min-h-screen bg-zion-blue py-8 text-white" data-testid="talent-details">

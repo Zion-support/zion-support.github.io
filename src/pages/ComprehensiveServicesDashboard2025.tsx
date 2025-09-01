@@ -2,7 +2,9 @@ import { Helmet } from 'react - helmet - async.ts';
 import React, { useState, useMemo } from 'react.ts';
 export default ComprehensiveServicesDashboard2025;
 import {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Search,
@@ -28,16 +30,15 @@ import { motion } from 'framer - motion.ts';
   ExternalLink,
   Plus,
   Database,
-  Layers,
-} from 'lucide - react.ts';
+  Layers} from 'lucide - react.ts';
   comprehensiveServicesIndex2025,
   getServiceStats,
   getServicesByCategory,
   getServicesBySource,
-  ServiceIndex,
-} from '../data / comprehensive - services - index - 2025';
+  ServiceIndex} from '../data / comprehensive - services - index - 2025';
 
 const ComprehensiveServicesDashboard2025: React.FC = () : JSX.Element => {
+
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState < any> ('all') ;
   const [selectedSource, setSelectedSource] = useState < any> ('all') ;
@@ -47,9 +48,11 @@ const ComprehensiveServicesDashboard2025: React.FC = () : JSX.Element => {
   const categories = stats.categoryBreakdown;
 
   const filteredServices = useMemo ( () => {
+
     let filtered = comprehensiveServicesIndex2025;
 
     if (searchTerm) {
+
       filtered = filtered.filter (service =>
           service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
           service.description
@@ -58,10 +61,12 @@ const ComprehensiveServicesDashboard2025: React.FC = () : JSX.Element => {
     }
 
     if (selectedCategory !== 'all') {
+
       filtered = filtered.filter (service => service.category === selectedCategory) ;
     }
 
     if (selectedSource !== 'all') {
+
       filtered = filtered.filter (service => service.source === selectedSource) ;
     }
 
@@ -69,7 +74,9 @@ const ComprehensiveServicesDashboard2025: React.FC = () : JSX.Element => {
   }, [searchTerm, selectedCategory, selectedSource]) ;
 
   const getCategoryColor = (category: anystring) => {
+
     const colors: { [key: string]: string } = {
+
       fintech: 'from - green - 500 to - emerald - 600',
       healthtech: 'from - red - 500 to - pink - 600',
       edutech: 'from - purple - 500 to - violet - 600',
@@ -84,13 +91,14 @@ const ComprehensiveServicesDashboard2025: React.FC = () : JSX.Element => {
       Martech: 'from - pink - 500 to - rose - 600',
       'Micro SaaS': 'from - blue - 500 to - indigo - 600',
       'AI Services': 'from - cyan - 500 to - blue - 600',
-      'IT Services': 'from - slate - 500 to - gray - 600',
-    };
+      'IT Services': 'from - slate - 500 to - gray - 600'};
     return colors[category] || 'from - gray - 500 to - gray - 600';
   };
 
   const getCategoryIcon = (category: anystring) => {
+
     const icons: { [key: string]: React.ReactNode } = {
+
       fintech: <DollarSign className="w - 5 h - 5" />,
       healthtech: <Heart className="w - 5 h - 5" />,
       edutech: <GraduationCap className="w - 5 h - 5" />,
@@ -105,24 +113,24 @@ const ComprehensiveServicesDashboard2025: React.FC = () : JSX.Element => {
       Martech: <Target className="w - 5 h - 5" />,
       'Micro SaaS': <Settings className="w - 5 h - 5" />,
       'AI Services': <Zap className="w - 5 h - 5" />,
-      'IT Services': <Shield className="w - 5 h - 5" />,
-    };
+      'IT Services': <Shield className="w - 5 h - 5" />};
     return icons[category] || <Globe className="w - 5 h - 5" />;
   };
 
   const getSourceBadge = (source: anystring) => {
+
     const badges = {
+
       existing: { color: 'bg - blue - 100 text - blue - 800', text: 'Existing' },
       new: { color: 'bg - green - 100 text - green - 800', text: 'New' },
       'pricing - guide': {
+
         color: 'bg - purple - 100 text - purple - 800',
-        text: 'Pricing Guide',
-      },
-    };
+        text: 'Pricing Guide'}};
     const badge = badges[source as keyof typeof badges] || {
+
       color: 'bg - gray - 100 text - gray - 800',
-      text: source,
-    };
+      text: source};
 
     return (<span
         className={`px - 2 py - 1 rounded - full text - xs font - medium ${badge.color}`}
@@ -342,6 +350,7 @@ const ComprehensiveServicesDashboard2025: React.FC = () : JSX.Element => {
               <div role="button" className="flex border border - gray - 300 rounded - lg">
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`px - 4 py - 3 rounded - l-lg ${
+
                     viewMode === 'grid'
                       ? 'bg - blue - 600 text - white'
                       : 'bg - white text - gray - 600 hover:bg - gray - 50'
@@ -351,6 +360,7 @@ const ComprehensiveServicesDashboard2025: React.FC = () : JSX.Element => {
                 </button>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`px - 4 py - 3 rounded - r-lg ${
+
                     viewMode === 'list'
                       ? 'bg - blue - 600 text - white'
                       : 'bg - white text - gray - 600 hover:bg - gray - 50'

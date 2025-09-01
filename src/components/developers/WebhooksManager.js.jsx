@@ -15,6 +15,7 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { ScrollArea } from "@/components/ui/scroll-area";"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 export function WebhooksManager() {
+
     const { webhooks, loading, testResult, fetchWebhooks, createWebhook, toggleWebhook, deleteWebhook, testWebhook, clearTestResult } = useWebhooks();
     const [showCreateDialog, setShowCreateDialog] = useState(false);
     const [showDeleteConfirm, setShowDeleteConfirm] = useState(null);
@@ -28,8 +29,10 @@ export function WebhooksManager() {
     const [testEventType, setTestEventType] = useState('new_application');
     // Load webhooks on mount
     useEffect(() => {
+
         fetchWebhooks()}, []);
     const handleCreateWebhook = async () => {
+
 "
         if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0)
             return;"
@@ -45,6 +48,7 @@ export function WebhooksManager() {
         await testWebhook(webhookId, testEventType);
         setShowTestResult(true)};
     const resetWebhookForm = () => {
+
 "
         setWebhookName("");"
         setWebhookUrl("");"
@@ -131,6 +135,7 @@ export function WebhooksManager() {
               
               <DialogFooter>"
                 <Button variant="outline" onClick={() => {
+
             setShowCreateDialog(false);
             resetWebhookForm()}}>
                   Cancel
@@ -289,12 +294,14 @@ export function WebhooksManager() {
               
               <DialogFooter>"
                 <Button variant="default" onClick={() => {
+
                 setShowTestDialog(null);
                 setShowTestResult(false);
                 clearTestResult()}}>
                   Close
                 </Button>"
                 <Button variant="outline" onClick={() => {
+
                 setShowTestResult(false);
                 clearTestResult()}}>
                   Test Another Event

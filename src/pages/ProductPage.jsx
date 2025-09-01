@@ -12,19 +12,21 @@ export default function ProductPage () {
   const { dispatch } = useCart () ;
   const [adding, setAdding] = useState (false) ;
   if (!product) {
+
     return < div className="p - 6 text - white">Product not found</div>;
   }
   const handleAdd = () => {
+
     setAdding (true) ;
     dispatch ({
+
       type: 'ADD_ITEM',
       payload: {
+
         id: product.id,
         name: product.title,
         price: product.price ?? 0,
-        quantity: 1,
-      },
-    }) ;
+        quantity: 1}}) ;
     toast ({ title: 'Added to cart', variant: 'success' }) ;
     setTimeout ( () => setAdding (false) , 500) ;
   };

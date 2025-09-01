@@ -39,6 +39,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     // Analyze website performance
     const analyzePerformance = useCallback(async () => {
+
         setIsAnalyzing(true);
         // Simulate performance analysis
         await new Promise(resolve => setTimeout(resolve, 2000));
@@ -57,6 +58,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         setIsAnalyzing(false)}, []);
     // Analyze SEO
     const analyzeSEO = useCallback(async () => {
+
         setIsAnalyzing(true);
         await new Promise(resolve => setTimeout(resolve, 1500));
         // Mock SEO analysis

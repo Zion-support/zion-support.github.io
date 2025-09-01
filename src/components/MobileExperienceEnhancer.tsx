@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 =======
 import {
+
   Smartphone, 
   Tablet, 
   Monitor, 
@@ -34,6 +35,7 @@ interface TouchGesture {
   duration?: number}
 
 interface MobileExperienceEnhancerProps {
+
   enabled?: boolean;
   showControls?: boolean}
 export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({
@@ -53,9 +55,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
   // Detect device type and orientation
   useEffect ( () => {
-    
-      
-      
+
       setIsMobile (isMobileDevice) ;
       setIsTablet (isTabletDevice) ;
 
@@ -66,6 +66,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
         setDeviceOrientation('landscape')}
     }} else {
+
         setOrientation('landscape')}
     }} else {
 
@@ -87,6 +88,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       window.removeEventListener('orientationchange', handleOrientationChange)}}, []) ;
   // Touch gesture handling
   useEffect(() => {
+
     if (!enabled || !enableSwipeNavigation) return;
 
     const handleTouchStart = (e: TouchEvent) => {
@@ -95,8 +97,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
         x: touch.clientX,
         y: touch.clientY,
-        time: Date.now () ,
-      }) }};
+        time: Date.now () }) }};
 
     
       
@@ -115,8 +116,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
           type: 'swipe',
           distance,
-          duration: deltaTime,
-        };
+          duration: deltaTime};
 
         if (Math.abs(deltaX) > Math.abs(deltaY)) {
 
@@ -133,8 +133,10 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 <<<<<<< HEAD
             }
           } else if (gesture.direction === 'right') {
+
 =======
             }'          } else if (gesture.direction === 'right') {
+
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
             // Swipe right - go back
@@ -159,7 +161,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         setGestureHistory(prev => [gesture, ...prev.slice(0, 9)]);
         
         // Log gesture for debugging'
-        // console.log('Touch Gesture:', gesture)}
+        // // // // console.log('Touch Gesture:', gesture)}
     };
 
     document.addEventListener('touchstart', handleTouchStart, { passive: false });
@@ -202,6 +204,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
   // Mobile - specific optimizations
   useEffect ( () => {
+
     if (!enabled || !isMobile) return;
 
     // Add mobile-specific CSS classes'
@@ -216,12 +219,14 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     const style = document.createElement ('style') ;
     style.textContent = `
       .mobile - device * {
+
         touch - action: manipulation;
         -webkit - tap - highlight - color: transparent;
       }
 
       .mobile - device button,
       .mobile - device [role="button"] {
+
         min - height: 44px;
         min - width: 44px;
       }
@@ -229,6 +234,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       .mobile - device input,
       .mobile - device select,
       .mobile - device textarea {
+
         font - size: 16px;
       }
     `;

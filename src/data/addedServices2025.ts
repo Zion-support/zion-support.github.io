@@ -1,4 +1,5 @@
 export type AddedService = {
+
   id: string;
   title: string;
   description: string;
@@ -13,6 +14,7 @@ export type AddedService = {
 
 export const ADDED_SERVICES_2025: AddedService[] = [
   {
+
     id: 'ai-sales-email-copilot',
     title: 'AI Sales Email Copilot',
     description: 'Personalizes outreach, drafts replies, and updates CRM with context-aware follow-ups.',
@@ -33,6 +35,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     href: 'https://ziontechgroup.com/contact'
   },
   {
+
     id: 'enterprise-rag-chat',
     title: 'Enterprise RAG Knowledge Chat',
     description: 'Private chat over docs, wikis, tickets, and data with citations and access controls.',
@@ -53,6 +56,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     href: 'https://ziontechgroup.com/services'
   },
   {
+
     id: 'meeting-notes-agent',
     title: 'Meeting Notes & Action Items Agent',
     description: 'Transcribes meetings, extracts actions/owners, and syncs to Jira, Asana, or CRM.',
@@ -73,6 +77,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     href: 'https://ziontechgroup.com/services'
   },
   {
+
     id: 'cloud-cost-optimizer-pro',
     title: 'Cloud Cost Optimizer Pro',
     description: 'FinOps automation for AWS, Azure, and GCP with savings insights and guardrails.',
@@ -93,6 +98,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     href: 'https://ziontechgroup.com/contact'
   },
   {
+
     id: 'soc2-compliance-automation',
     title: 'SOC 2 Compliance Automation',
     description: 'Evidence collection, control monitoring, and audit prep with policy automation.',
@@ -113,6 +119,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     href: 'https://ziontechgroup.com/contact'
   },
   {
+
     id: 'm365-security-copilot',
     title: 'Microsoft 365 Security Copilot',
     description: 'Detects misconfigurations, risky apps, and insecure sharing across M365.',
@@ -133,6 +140,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     href: 'https://ziontechgroup.com/services'
   },
   {
+
     id: 'devops-release-automation',
     title: 'DevOps Release Automation',
     description: 'GitHub Actions/GitLab CI pipelines with quality gates, test coverage, and blue‑green deploys.',
@@ -153,6 +161,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     href: 'https://ziontechgroup.com/contact'
   },
   {
+
     id: 'data-governance-observability',
     title: 'Data Governance & Observability',
     description: 'Lineage, quality checks, and access control for analytics and ML platforms.',
@@ -173,6 +182,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     href: 'https://ziontechgroup.com/contact'
   },
   {
+
     id: 'developer-productivity-copilot',
     title: 'Developer Productivity Copilot',
     description: 'AI reviews PRs, suggests tests, and highlights risky changes across monorepos.',
@@ -193,6 +203,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     href: 'https://ziontechgroup.com/services'
   },
   {
+
     id: 'customer-support-chatbot-pro',
     title: 'Customer Support Chatbot Pro',
     description: 'Deflects tickets with high‑quality answers grounded in your docs and tickets.',
@@ -213,6 +224,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     href: 'https://ziontechgroup.com/services'
   },
   {
+
     id: 'landing-page-generator',
     title: 'Landing Page Generator',
     description: 'Create SEO‑optimized landing pages from a single prompt with analytics baked in.',
@@ -233,6 +245,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     href: 'https://ziontechgroup.com/services'
   },
   {
+
     id: 'managed-kubernetes-sre',
     title: 'Managed Kubernetes SRE',
     description: 'Production‑grade clusters with IaC, monitoring, and 24/7 on‑call SRE support.',
@@ -253,6 +266,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     href: 'https://ziontechgroup.com/contact'
   },
   {
+
     id: 'mlops-platform-setup',
     title: 'MLOps Platform Setup',
     description: 'End‑to‑end MLOps with experiment tracking, feature store, and automated deployment.',
@@ -273,6 +287,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     href: 'https://ziontechgroup.com/contact'
   },
   {
+
     id: 'bi-dashboards-dbt-duckdb',
     title: 'BI Dashboards with dbt + DuckDB',
     description: 'Modern ELT with dbt and DuckDB for fast, low‑cost analytics and dashboards.',

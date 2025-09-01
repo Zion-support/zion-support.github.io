@@ -1,3 +1,43 @@
+import React from 'react';
+
+type ErrorBoundaryProps = {
+
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+};
+
+type ErrorBoundaryState = {
+
+  hasError: boolean;
+};
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+
+  state: ErrorBoundaryState = { hasError: false };
+
+  static getDerivedStateFromError(): ErrorBoundaryState {
+
+    return { hasError: true };
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  componentDidCatch(_error: unknown, _errorInfo: unknown) {
+
+    // optional: report to monitoring
+  }
+
+  render() {
+
+    if (this.state.hasError) {
+
+      return this.props.fallback ?? <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+export { ErrorBoundary };
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 export default ErrorBoundary;
 import {
@@ -8,15 +48,16 @@ import {
   Mail,
   Bug,
   Shield,
-  ArrowLeft,
-} from 'lucide - react';
+  ArrowLeft} from 'lucide - react';
 
 interface Props {
+
   children: ReactNode;
   fallback?: ReactNode;
 }
 
 interface State {
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
@@ -26,34 +67,39 @@ interface State {
 }
 
 class ErrorBoundary extends Component < Props, State> {
+
   constructor (props: Props) {
+
     super (props) ;
     this.state = {
+
       hasError: false,
       error: null,
       errorInfo: null,
 
       errorId: '',
-      showDetails: false,
-    };
+      showDetails: false};
   }
 
   static getDerivedStateFromError (error: Error) : Partial < State> {
+
     return {
+
       hasError: true,
       error,
 
-      errorId: `error_${Date.now () }_${Math.random () .toString (36) .substr (2, 9) }`,
-    };
+      errorId: `error_${Date.now () }_${Math.random () .toString (36) .substr (2, 9) }`};
   }
 
   componentDidCatch (error: Error, errorInfo: ErrorInfo) {
+
     this.setState ({
-      errorInfo,
-    }) ;
+
+      errorInfo}) ;
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
+
       console.error ('Error caught by boundary:', error, errorInfo) ;
     }
 
@@ -62,31 +108,34 @@ class ErrorBoundary extends Component < Props, State> {
   }
 
   handleRetry = () => {
+
     this.setState ({
+
       hasError: false,
       error: null,
       errorInfo: null,
 
       errorId: '',
-      showDetails: false,
-    }) ;
+      showDetails: false}) ;
   };
 
   handleGoHome = () => {
+
     window.location.href = '/';
   };
 
   handleReportError = () => {
+
     const { error, errorInfo, errorId } = this.state;
     const errorReport = {
+
       errorId,
       message: error?.message,
       stack: error?.stack,
       componentStack: errorInfo?.componentStack,
       url: window.location.href,
       userAgent: navigator.userAgent,
-      timestamp: new Date () .toISOString () ,
-    };
+      timestamp: new Date () .toISOString () };
 
     // In production, send to your error reporting service
     console.log ('Error Report:', errorReport) ;
@@ -97,11 +146,14 @@ class ErrorBoundary extends Component < Props, State> {
   };
 
   toggleDetails = () => {
+
     this.setState (prev => ({ showDetails: !prev.showDetails }) ) ;
   };
 
   render () {
+
     if (this.state.hasError) {
+
       const { error, errorInfo, errorId, showDetails } = this.state;
 
       return (<div

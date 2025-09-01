@@ -51,6 +51,7 @@ export const ADVANCED_MICRO_SERVICES = [
         supportLevel: "premium","
         marketPrice: "$899 - $2,999/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -68,6 +69,7 @@ export const ADVANCED_MICRO_SERVICES = [
     },;
     // Quantum-Safe Cybersecurity Platform
     {
+
 "
         id: "quantum-safe-cybersecurity","
         title: "Quantum-Safe Cybersecurity Platform","
@@ -118,6 +120,7 @@ export const ADVANCED_MICRO_SERVICES = [
         supportLevel: "enterprise","
         marketPrice: "$1,299 - $4,999/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -135,6 +138,7 @@ export const ADVANCED_MICRO_SERVICES = [
     },;
     // Edge Computing Orchestration Platform
     {
+
 "
         id: "edge-computing-orchestration","
         title: "Edge Computing Orchestration Platform","
@@ -185,6 +189,7 @@ export const ADVANCED_MICRO_SERVICES = [
         supportLevel: "premium","
         marketPrice: "$699 - $2,499/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -202,6 +207,7 @@ export const ADVANCED_MICRO_SERVICES = [
     },;
     // Blockchain Supply Chain Transparency
     {
+
 "
         id: "blockchain-supply-chain","
         title: "Blockchain Supply Chain Transparency Platform","
@@ -252,6 +258,7 @@ export const ADVANCED_MICRO_SERVICES = [
         supportLevel: "premium","
         marketPrice: "$599 - $1,999/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -269,6 +276,7 @@ export const ADVANCED_MICRO_SERVICES = [
     },;
     // AI-Powered DevOps Automation
     {
+
 "
         id: "ai-devops-automation","
         title: "AI-Powered DevOps Automation Platform","
@@ -319,6 +327,7 @@ export const ADVANCED_MICRO_SERVICES = [
         supportLevel: "premium","
         marketPrice: "$799 - $2,799/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -336,6 +345,7 @@ export const ADVANCED_MICRO_SERVICES = [
     },;
     // Quantum Machine Learning Platform
     {
+
 "
         id: "quantum-ml-platform","
         title: "Quantum Machine Learning Platform","
@@ -386,6 +396,7 @@ export const ADVANCED_MICRO_SERVICES = [
         supportLevel: "enterprise","
         marketPrice: "$2,499 - $9,999/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -403,6 +414,7 @@ export const ADVANCED_MICRO_SERVICES = [
     },;
     // Autonomous Data Governance Platform
     {
+
 "
         id: "autonomous-data-governance","
         title: "Autonomous Data Governance Platform","
@@ -453,6 +465,7 @@ export const ADVANCED_MICRO_SERVICES = [
         supportLevel: "premium","
         marketPrice: "$899 - $3,499/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -470,6 +483,7 @@ export const ADVANCED_MICRO_SERVICES = [
     },;
     // Intelligent API Management Platform
     {
+
 "
         id: "intelligent-api-management","
         title: "Intelligent API Management Platform","
@@ -520,6 +534,7 @@ export const ADVANCED_MICRO_SERVICES = [
         supportLevel: "premium","
         marketPrice: "$649 - $2,199/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -537,6 +552,7 @@ export const ADVANCED_MICRO_SERVICES = [
     },;
     // Hyperautomation Workflow Platform
     {
+
 "
         id: "hyperautomation-workflow","
         title: "Hyperautomation Workflow Platform","
@@ -587,6 +603,7 @@ export const ADVANCED_MICRO_SERVICES = [
         supportLevel: "premium","
         marketPrice: "$1,099 - $3,999/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","

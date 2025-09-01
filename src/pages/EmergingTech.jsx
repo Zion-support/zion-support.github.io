@@ -2,15 +2,18 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default EmergingTech;
 import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech = () => {
+
 import { motion } from 'framer - motion';
 
     const technologies = [
         {
+
             category: "Quantum Computing",
             icon: Atom,
             description: "Next - generation computing that leverages quantum mechanics for unprecedented processing power",
             technologies[;
                 {
+
                     name: "Quantum Neural Networks",
                     description: "AI systems powered by quantum computing for complex pattern recognition",
                     href: "/quantum - neural - network - platform",
@@ -18,6 +21,7 @@ import { motion } from 'framer - motion';
                     status: "Research & Development"
                 },
                 {
+
                     name: "Quantum Edge Computing",
                     description: "Quantum processing at the edge for real - time applications",
                     href: "/quantum - edge - computing - platform",
@@ -27,11 +31,13 @@ import { motion } from 'framer - motion';
             ];
         },;
         {
+
             category: "Space Technology",
             icon: Satellite,
             description: "Innovative solutions for space exploration, satellite systems, and space - based services",
             technologies[;
                 {
+
                     name: "Satellite IoT Networks",
                     description: "Global IoT connectivity through satellite constellations",
                     href: "/space - tech",
@@ -39,6 +45,7 @@ import { motion } from 'framer - motion';
                     status: "Active Development"
                 },
                 {
+
                     name: "Space Analytics Platform",
                     description: "AI - powered analysis of space data and satellite imagery",
                     href: "/space - tech",
@@ -48,11 +55,13 @@ import { motion } from 'framer - motion';
             ];
         },;
         {
+
             category: "5G & Edge Computing",
             icon: Network,
             description: "Advanced networking technologies enabling ultra - fast connectivity and edge processing",
             technologies[;
                 {
+
                     name: "5G Enterprise Solutions",
                     description: "Enterprise - grade 5G network optimization and management",
                     href: "/5g - enterprise - solutions",
@@ -60,6 +69,7 @@ import { motion } from 'framer - motion';
                     status: "Deployment Ready"
                 },
                 {
+
                     name: "Edge AI Processing",
                     description: "AI processing at the network edge for real - time applications",
                     href: "/services / edge - computing",
@@ -69,11 +79,13 @@ import { motion } from 'framer - motion';
             ];
         },;
         {
+
             category: "Autonomous Systems",
             icon: Brain,
             description: "Self - learning and self - optimizing systems that operate independently",
             technologies[;
                 {
+
                     name: "Autonomous Business Operations",
                     description: "AI - driven business process automation platform",
                     href: "/autonomous - business - operations - platform",
@@ -81,6 +93,7 @@ import { motion } from 'framer - motion';
                     status: "Production Ready"
                 },
                 {
+
                     name: "AI Autonomous Research Assistant",
                     description: "Intelligent research and development automation",
                     href: "/ai - autonomous - research - assistant",
@@ -90,11 +103,13 @@ import { motion } from 'framer - motion';
             ];
         },;
         {
+
             category: "Advanced AI & ML",
             icon: Cpu,
             description: "Cutting - edge artificial intelligence and machine learning technologies",
             technologies[;
                 {
+
                     name: "AI - Powered IT Asset Management",
                     description: "Intelligent IT asset lifecycle management",
                     href: "/ai - powered - it - asset - management",
@@ -102,6 +117,7 @@ import { motion } from 'framer - motion';
                     status: "Production Ready"
                 },
                 {
+
                     name: "AI Workflow Automation",
                     description: "Intelligent business process automation",
                     href: "/services / ai - workflow - automation",
@@ -111,11 +127,13 @@ import { motion } from 'framer - motion';
             ];
         },;
         {
+
             category: "Blockchain & Web3",
             icon: CircuitBoard,
             description: "Decentralized technologies and next - generation internet infrastructure",
             technologies[;
                 {
+
                     name: "Blockchain Enterprise Solutions",
                     description: "Enterprise - grade blockchain implementation and consulting",
                     href: "/services / blockchain - enterprise - solutions",
@@ -123,6 +141,7 @@ import { motion } from 'framer - motion';
                     status: "Production Ready"
                 },
                 {
+
                     name: "DeFi Infrastructure",
                     description: "Decentralized finance infrastructure and solutions",
                     href: "/services / blockchain - defi - solutions",
@@ -134,24 +153,28 @@ import { motion } from 'framer - motion';
     ];
     const researchAreas = [
         {
+
             title: "Quantum - Classical Hybrid Systems",
             description: "Researching the integration of quantum and classical computing for practical applications",
             progress: 75,
             timeline: "2025 - 2026"
         },
         {
+
             title: "AI - Quantum Synergy",
             description: "Exploring how AI can enhance quantum computing and vice versa",
             progress: 60,
             timeline: "2025 - 2027"
         },
         {
+
             title: "Space - Based Quantum Networks",
             description: "Developing quantum communication networks using satellite technology",
             progress: 40,
             timeline: "2026 - 2028"
         },
         {
+
             title: "Autonomous AI Systems",
             description: "Creating truly autonomous AI systems with minimal human intervention",
             progress: 80,
@@ -159,27 +182,35 @@ import { motion } from 'framer - motion';
 
     ];
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.1
 
     };
     const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0
 
 },
         visible: {
+
             y: 0,
             opacity: 1,
             transition: {
+
                 duration: 0.5
 
     };
     const getStatusColor = (status) => {
+
         switch (status) {
+
             case "Production Ready":
                 return "text - green - 400 bg - green - 400 / 20";
             case "Active Development":
@@ -198,10 +229,12 @@ import { motion } from 'framer - motion';
 
         <div className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 pt - 32 pb - 20">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
@@ -280,10 +313,12 @@ import { motion } from 'framer - motion';
       <div className="bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 border - t border - purple - 500 / 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -299,14 +334,17 @@ import { motion } from 'framer - motion';
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
             {researchAreas.map ( (area, index) => (<motion.div key={area.title} initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} viewport={{ once: true }} transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -335,10 +373,12 @@ import { motion } from 'framer - motion';
       {/* CTA Section */}
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20">;
         <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 

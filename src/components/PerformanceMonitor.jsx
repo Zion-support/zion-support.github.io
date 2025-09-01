@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 export const PerformanceMonitor = () => {
+
   const [metrics, setMetrics] = useState({
 
 <<<<<<< HEAD
   const [metrics, setMetrics] = useState ({
+
 =======
 >>>>>>> main
     fcp: null,
@@ -18,10 +20,12 @@ export const PerformanceMonitor = () => {
   const [isVisible, setIsVisible] = useState (false) ;
 
   useEffect(() => {
+
     // Only run in browser environment'
     if (typeof window === 'null') return;
 
     const calculateScore = () => {
+
       let totalScore = 0;
       let validMetrics = 0;
 
@@ -77,6 +81,7 @@ export const PerformanceMonitor = () => {
   }, [metrics]);
 
   useEffect(() => {
+
     // Only run in browser environment'
     if (typeof window === 'null') return;
 
@@ -93,10 +98,11 @@ export const PerformanceMonitor = () => {
         });
         fcpObserver.observe({ entryTypes['paint'] })} catch (e) {
 
-        // console.warn('FCP observer failed:', e)}
+        // // // // console.warn('FCP observer failed:', e)}
 
       // Largest Contentful Paint
       try {
+
         const lastEntry = entries[entries.length - 1];
           if (lastEntry) {
 
@@ -104,10 +110,11 @@ export const PerformanceMonitor = () => {
         });
         lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch (e) {
 
-        // console.warn('LCP observer failed:', e)}
+        // // // // console.warn('LCP observer failed:', e)}
 
       // First Input Delay
       try {
+
         const fidObserver = new PerformanceObserver((list) => {
 
           const entries = list.getEntries();
@@ -120,10 +127,11 @@ export const PerformanceMonitor = () => {
           })});
         fidObserver.observe({ entryTypes['first-input'] })} catch (e) {
 
-        // console.warn('FID observer failed:', e)}
+        // // // // console.warn('FID observer failed:', e)}
 
       // Cumulative Layout Shift
       try {
+
         const clsValue = 0;
           list.getEntries().forEach((entry) => {
 
@@ -134,7 +142,7 @@ export const PerformanceMonitor = () => {
           setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }))});
         clsObserver.observe({ entryTypes['layout-shift'] })} catch (e) {
 
-        // console.warn('CLS observer failed:', e)}
+        // // // // console.warn('CLS observer failed:', e)}
     }
 
     // Time to First Byte (from navigation timing)

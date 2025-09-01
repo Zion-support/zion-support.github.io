@@ -9,6 +9,7 @@ export default function HelpCenterPage () {
 
     const helpCategories = [
         {
+
             icon: <User className="w - 8 h - 8 text - zion - cyan"/>,
             title: "Getting Started",
             description: "Learn the basics of using Zion's marketplace platform",
@@ -16,6 +17,7 @@ export default function HelpCenterPage () {
             color: "text - zion - cyan"
         },
         {
+
             icon: <ShoppingCart className="w - 8 h - 8 text - zion - purple"/>,
             title: "Marketplace",
             description: "Buying and selling on our platform",
@@ -23,6 +25,7 @@ export default function HelpCenterPage () {
             color: "text - zion - purple"
         },
         {
+
             icon: <Users className="w - 8 h - 8 text - zion - cyan"/>,
             title: "Talent & Hiring",
             description: "Finding talent and getting hired",
@@ -30,6 +33,7 @@ export default function HelpCenterPage () {
             color: "text - zion - cyan"
         },
         {
+
             icon: <Settings className="w - 8 h - 8 text - zion - purple"/>,
             title: "Account & Settings",
             description: "Managing your account and preferences",
@@ -39,26 +43,32 @@ export default function HelpCenterPage () {
     ];
     const faqs = [
         {
+
             question: "How do I create an account on Zion?",
             answer: "Creating an account is simple ! Click the 'Sign Up' button in the top right corner, fill in your basic information, verify your email, and you're ready to start using our platform."
         },
         {
+
             question: "What payment methods do you accept?",
             answer: "We accept all major credit cards (Visa, MasterCard, American Express) , PayPal, and bank transfers. All payments are processed securely through our trusted payment partners."
         },
         {
+
             question: "How do I find the right talent for my project?",
             answer: "Use our AI - powered matching system, browse talent profiles by category, or post a job and let qualified professionals come to you. Our platform makes it easy to find the perfect match."
         },
         {
+
             question: "Is my data secure on Zion?",
             answer: "Absolutely ! We use enterprise - grade security measures including SSL encryption, secure data centers, and strict access controls. Your privacy and data security are our top priorities."
         },
         {
+
             question: "What if I'm not satisfied with a service?",
             answer: "We have a comprehensive dispute resolution process. If you're not satisfied, contact our support team within 7 days of service completion, and we'll work to resolve the issue."
         },
         {
+
             question: "How do I contact customer support?",
             answer: "You can reach us through multiple channels: live chat on our website, email at support@ziontechgroup.com, or phone at + 1 (555) 123 - 4567. We typically respond within 2 hours."
 

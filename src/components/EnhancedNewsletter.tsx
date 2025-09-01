@@ -6,6 +6,7 @@ import { motion  } from 'framer - motion.ts';
 >>>>>>> main
 
 interface NewsletterFormData {
+
   email: string;
   firstName: string;
   interests: string[];
@@ -54,24 +55,26 @@ interface NewsletterFormData {
     setStatus('loading');
 
     try {
+
       // Simulate API call
       await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
       // Here you would typically send the data to your newsletter service'
-      // // // // // // // // console.log('Newsletter subscription:', formData);
+      // // // // // // // // // // // console.log('Newsletter subscription:', formData);
 
 <<<<<<< HEAD
       console.log ('Newsletter subscription: ', formData) ;
 
       setStatus ('success') ;
 =======
-      // console.log('Newsletter subscription: ', formData);
+      // // // // console.log('Newsletter subscription: ', formData);
       '
       setStatus('success');
 >>>>>>> main
 
       // Reset form after successful submission
       setTimeout(() => {
+
         setFormData({
 
           email: '',
@@ -79,7 +82,7 @@ interface NewsletterFormData {
           interests[],;
           frequency: 'monthly'
         });
-      // // // // // // // // console.error('Newsletter subscription error:', error);
+      // // // // // // // // // // // console.error('Newsletter subscription error:', error);
 <<<<<<< HEAD
     }
         setStatus('idle')}, 3000)} catch (error) {
@@ -87,10 +90,11 @@ interface NewsletterFormData {
       setStatus('error');
 =======
     }'        setStatus('idle')}, 3000)} catch (error) {
+
 '
       setStatus('error');'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      // console.error('Newsletter subscription error:', error)}
+      // // // // console.error('Newsletter subscription error:', error)}
   };
 
       setErrors (prev => ({ ...prev, interests: null }) ) }
@@ -147,6 +151,7 @@ interface NewsletterFormData {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition = {
+
 "
   { delay: 0.1, type: "spring",
   bounce: 0.4

@@ -12,8 +12,10 @@ export default function CartPage () {
     const [showEmpty, setShowEmpty] = useState (false) ;
 
     useEffect ( () => {
+
         // Simulate loading cart data
         const timer = setTimeout ( () => {
+
             setCartLoading (false) ;
                 // // // // // // // console.error ('Failed to update cart', err) ;
             }
@@ -21,40 +23,50 @@ export default function CartPage () {
         setCartLoading (false) ;
     }, [reduxItems];
     useEffect ( () => {
+
         if (!cartLoading && items.length === 0) {
+
             setShowEmpty (true) ;
 
     }, [cartLoading, items]) ;
     const updateQuantity = (id, qty) => {
+
         dispatch (updateQuantityAction ({ id, quantity: qty }) ) ;
     };
     const removeItem = (id) => {
+
         dispatch (removeItemAction (id) ) ;
     };
     const handleCheckout = () => {
+
         router.push ('/checkout') ;
     };
     const applyCode = async () => {
+
         try {
+
             const res = await apiClient.post ('/coupons / validate', {
+
                 code,
-                amount: subtotal,
-            }) ;
+                amount: subtotal}) ;
             setDiscount (res.data.discount || 0) ;
 
         catch (e) {
+
             setDiscount (0) ;
 
     };
     const subtotal = items.reduce ( (sum, i) => sum + i.price * i.quantity, 0) ;
     const total = subtotal - discount;
     if (cartLoading) {
+
         return (<div className="container py - 10 space - y-4">
         <Skeleton className="h - 8 w - 1/3"/>
         <Skeleton className="h - 32 w - full"/>
       </div>) ;
 
     if (showEmpty) {
+
         return (<div className="container py - 10 text - center">
         <img loading="lazy" src="/images / empty - cart.svg" alt="Empty cart" className="mx - auto mb - 4 w - 48 h - 36"/>
         <p>{t ('cart.empty') }</p>
@@ -103,6 +115,7 @@ export default function CartPage () {
     }, []) ;
 
     if (cartLoading) {
+
         return (<div className="container py - 10 space - y-4">
                 <div className="h - 8 w - 1/3 bg - gray - 200 rounded animate - pulse"/>
                 <div className="h - 32 w - full bg - gray - 200 rounded animate - pulse"/>
@@ -110,6 +123,7 @@ export default function CartPage () {
     }
 
     if (showEmpty) {
+
         return (<div className="container py - 10 text - center">
                 <div className="mx - auto mb - 4 w - 48 h - 36 bg - gray - 200 rounded flex items - center justify - center">
                     <span className="text - gray - 500 text - 4xl">🛒</span>

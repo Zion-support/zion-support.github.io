@@ -76,11 +76,6 @@ const categories: Array<any> = ['
 
 export function generateRandomListing(): MarketplaceItem {
 
-  
-  
-  
-  
-  
   return {
 
     id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,

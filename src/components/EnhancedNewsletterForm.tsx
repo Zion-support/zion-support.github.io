@@ -1,11 +1,13 @@
 
 export function EnhancedNewsletterForm() {
+
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
   
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+
       setErrorMsg("Please enter a valid email address.");
       return}
 
@@ -13,14 +15,17 @@ export function EnhancedNewsletterForm() {
     setIsSubmitting(true);
 
     try {
-      
+
       if (res.ok) {
+
         toast.success("Thanks for subscribing!");
         setEmail("")} else {
-        
+
         toast.error(data.error || "Subscription failed")}
     } catch (err: any) {
+
       toast.error(err.message || "Subscription failed")} finally {
+
       setIsSubmitting(false)}
   };
 

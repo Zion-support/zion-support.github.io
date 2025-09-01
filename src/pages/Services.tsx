@@ -13,6 +13,7 @@ export default Services;
   ];
 
   const filteredServices = allServices.filter (service => {
+
     const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                          service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -183,6 +184,41 @@ export default Services;
               <p className="text - gray - 300 mb - 4">SLAs, patching, endpoint management, and onsite troubleshooting.</p>
               <p className="text - 2xl font - bold text - blue - 400 mb - 4">$2,000 - $25,000 / month</p>
               <a href="https://ziontechgroup.com / contact" className="text - cyan - 300 hover:text - cyan - 200 font - semibold">Contact us →</a>
+            </div>
+          </div>
+        </div>
+
+        {/* New 2032 Services Showcase */}
+        <div className="mt-24 text-left">
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30">
+            <h3 className="text-3xl font-bold mb-4 text-white">🚀 Discover Our 2032 Innovative Services</h3>
+            <p className="text-gray-300 mb-6 max-w-4xl">
+              Explore our revolutionary micro SAAS services, AI solutions, and cutting-edge technology platforms designed to transform your business in 2032 and beyond.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+              <div className="bg-white/10 rounded-lg p-4 border border-white/20">
+                <h4 className="text-lg font-semibold text-white mb-2">AI & Legal Tech</h4>
+                <p className="text-gray-300 text-sm mb-3">AI-powered legal document analysis with 99.2% accuracy</p>
+                <p className="text-blue-400 font-semibold">From $599/month</p>
+              </div>
+              <div className="bg-white/10 rounded-lg p-4 border border-white/20">
+                <h4 className="text-lg font-semibold text-white mb-2">Quantum Security</h4>
+                <p className="text-gray-300 text-sm mb-3">Unbreakable quantum-secured communication platform</p>
+                <p className="text-blue-400 font-semibold">From $1,299/month</p>
+              </div>
+              <div className="bg-white/10 rounded-lg p-4 border border-white/20">
+                <h4 className="text-lg font-semibold text-white mb-2">AI Healthcare Analytics</h4>
+                <p className="text-gray-300 text-sm mb-3">Predictive healthcare analytics and patient monitoring</p>
+                <p className="text-blue-400 font-semibold">From $899/month</p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 items-start md:items-center">
+              <a href="/innovative-services-2032" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                Explore 2032 Services
+              </a>
+              <a href="https://ziontechgroup.com/contact" className="px-6 py-3 rounded-lg border border-blue-500 text-blue-300 hover:bg-blue-500/10 transition-all duration-300">
+                Get Custom Quote
+              </a>
             </div>
           </div>
         </div>

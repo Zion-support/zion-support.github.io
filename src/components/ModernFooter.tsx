@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Mail, 
   Phone, 
   MapPin, 
@@ -16,14 +17,17 @@ import {
 } from 'lucide-react';
 
 const ModernFooter: React.FC = () => {
+
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const footerSections = [
     {
+
       title: 'Services',
       links: [
         { label: 'AI & Machine Learning', href: '#ai' },
@@ -35,6 +39,7 @@ const ModernFooter: React.FC = () => {
       ]
     },
     {
+
       title: 'Solutions',
       links: [
         { label: 'Enterprise', href: '#enterprise' },
@@ -46,6 +51,7 @@ const ModernFooter: React.FC = () => {
       ]
     },
     {
+
       title: 'Company',
       links: [
         { label: 'About Us', href: '#about' },
@@ -57,6 +63,7 @@ const ModernFooter: React.FC = () => {
       ]
     },
     {
+
       title: 'Resources',
       links: [
         { label: 'Blog', href: '#blog' },
@@ -79,6 +86,7 @@ const ModernFooter: React.FC = () => {
   ];
 
   const contact = {
+
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',

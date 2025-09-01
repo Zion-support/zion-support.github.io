@@ -1,5 +1,6 @@
 
 interface User {
+
   id: string;
   email: string;
   displayName?: string;
@@ -11,11 +12,13 @@ interface User {
 }
 
 interface AuthTokens {
+
   accessToken: string | null;
   refreshToken: string | null
 }
 
 interface AuthContextType {
+
   user: User | null;
   isLoading: boolean;
   onboardingStep: number;

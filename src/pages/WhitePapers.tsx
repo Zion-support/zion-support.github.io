@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SEO from '@/components / SEO';
 export default React.memo (function WhitePapers () {
+
 import {
 
   FileText,
@@ -22,8 +23,7 @@ import {
   Globe,
   Target,
   TrendingUp,
-  Award,
-} from 'lucide - react';
+  Award} from 'lucide - react';
 
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [activeCategory, setActiveCategory] = useState ('all') ;
@@ -31,47 +31,47 @@ import {
 
   const categories = [
     {
+
       id: 'all',
       name: 'All Categories',
       icon: <FileText className="w - 5 h - 5" />,
-      count: 0,
-    },
+      count: 0},
     {
+
       id: 'ai - ml',
       name: 'AI & Machine Learning',
       icon: <Brain className="w - 5 h - 5" />,
-      count: 8,
-    },
+      count: 8},
     {
+
       id: 'cloud',
       name: 'Cloud & Infrastructure',
       icon: <Cloud className="w - 5 h - 5" />,
-      count: 6,
-    },
+      count: 6},
     {
+
       id: 'security',
       name: 'Cybersecurity',
       icon: <Shield className="w - 5 h - 5" />,
-      count: 5,
-    },
+      count: 5},
     {
+
       id: 'data',
       name: 'Data & Analytics',
       icon: <Database className="w - 5 h - 5" />,
-      count: 7,
-    },
+      count: 7},
     {
+
       id: 'emerging',
       name: 'Emerging Technologies',
       icon: <Zap className="w - 5 h - 5" />,
-      count: 4,
-    },
+      count: 4},
     {
+
       id: 'strategy',
       name: 'Digital Strategy',
       icon: <Target className="w - 5 h - 5" />,
-      count: 6,
-    },
+      count: 6},
   ];
 
   const sortOptions = [
@@ -83,6 +83,7 @@ import {
 
   const whitePapers = [
     {
+
       id: 1,
       title: 'The Future of AI in Enterprise: 2025 and Beyond',
       description:
@@ -102,9 +103,9 @@ import {
       ],
       coverImage: '/images / whitepapers / ai - autonomous - research.jpg',
       fileSize: '3.2 MB',
-      language: 'English',
-    },
+      language: 'English'},
     {
+
       id: 2,
       title: 'AI Supply Chain Optimization: Reducing Costs by Up to 30%',
       description:
@@ -124,9 +125,9 @@ import {
       ],
       coverImage: '/images / whitepapers / ai - supply - chain - optimization.jpg',
       fileSize: '2.8 MB',
-      language: 'English',
-    },
+      language: 'English'},
     {
+
       id: 4,
       title: 'Data - Driven Decision Making: Analytics for the Modern Enterprise',
       description:
@@ -146,9 +147,9 @@ import {
       ],
       coverImage: '/images / whitepapers / data - driven - decisions.jpg',
       fileSize: '2.6 MB',
-      language: 'English',
-    },
+      language: 'English'},
     {
+
       id: 5,
       title: 'Quantum Computing: Preparing for the Next Computing Revolution',
       description:
@@ -168,9 +169,9 @@ import {
       ],
       coverImage: '/images / whitepapers / quantum - computing.jpg',
       fileSize: '3.5 MB',
-      language: 'English',
-    },
+      language: 'English'},
     {
+
       id: 6,
       title: 'Digital Transformation ROI: Measuring Success in the Digital Age',
       description:
@@ -191,34 +192,35 @@ import {
       tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],
       coverImage: '/images / whitepapers / digital - transformation - roi.jpg',
       fileSize: '2.2 MB',
-      language: 'English',
-    },
+      language: 'English'},
   ];
 
   const featuredInsights = [
     {
+
       title: 'AI Adoption Trends 2025',
       description:
         'Key insights from our latest research on enterprise AI adoption',
       icon: <TrendingUp className="w - 6 h - 6" />,
-      link: '/insights / ai - adoption - 2025',
-    },
+      link: '/insights / ai - adoption - 2025'},
     {
+
       title: 'Cybersecurity Landscape Report',
       description: 'Current threats and emerging security challenges',
       icon: <Shield className="w - 6 h - 6" />,
-      link: '/insights / cybersecurity - 2025',
-    },
+      link: '/insights / cybersecurity - 2025'},
     {
+
       title: 'Cloud Migration Success Stories',
       description: 'Real - world examples of successful cloud transformations',
       icon: <Cloud className="w - 6 h - 6" />,
-      link: '/insights / cloud - success - stories',
-    },
+      link: '/insights / cloud - success - stories'},
   ];
 
   const getCategoryCount = (categoryId: string) => {
+
     if (categoryId === 'all') {
+
       return whitePapers.length;
     }
     return whitePapers.filter (paper => paper.category === categoryId) .length;
@@ -226,10 +228,12 @@ import {
 
   // Update counts
   categories.forEach (cat => {
+
     cat.count = getCategoryCount (cat.id) ;
   }) ;
 
   const filteredPapers = whitePapers.filter (paper => {
+
     const matchesSearch = paper.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       paper.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       paper.tags.some (tag =>
@@ -241,17 +245,21 @@ import {
   }) ;
 
   const formatDate = (dateString: string) => {
+
     return new Date (dateString) .toLocaleDateString ('en - US', {
+
       year: 'numeric',
       month: 'long',
-      day: 'numeric',
-    }) ;
+      day: 'numeric'}) ;
   };
 
   const formatDownloads = (downloads: number) => {
+
     if (downloads >= 1000000) {
+
       return (downloads / 1000000) .toFixed (1) + 'M';
     } else if (downloads >= 1000) {
+
       return (downloads / 1000) .toFixed (1) + 'K';
     }
     return downloads.toString () ;
@@ -300,6 +308,7 @@ import {
                 {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                     onClick={ () => setActiveCategory (category.id) }
                     className={`flex items - center gap - 2 px - 4 py - 2 rounded - lg font - medium transition - colors ${
+
                       activeCategory === category.id
                         ? 'bg - zion - cyan text - zion - slate - dark'
                         : 'bg - zion - slate text - zion - slate - light hover:bg - zion - slate - light hover:text - white'
@@ -355,6 +364,7 @@ import {
                   whileTap={{ scale: 0.95 }}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
+
                     selectedCategory === category.id
                       ? 'bg - cyan - 400 text - slate - 900 shadow - lg shadow - cyan - 400 / 30'
                       : 'bg - slate - 800 text - slate - 300 hover:bg - slate - 700 border border - slate - 600'
@@ -409,6 +419,7 @@ import {
           {filteredPapers.length > 0 ? (<div role="button" className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8 max - w-6xl mx - auto">
               {filteredPapers.map (paper => (<div role="button" key={paper.id}
                   className={`bg - zion - slate border border - zion - slate - light rounded - lg p - 6 hover:shadow - lg transition - shadow ${
+
                     paper.featured ? 'ring - 2 ring - zion - cyan' : ''
                   }`}
                 >

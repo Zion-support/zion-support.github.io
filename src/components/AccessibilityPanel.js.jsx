@@ -16,19 +16,22 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
     const [accessibilityScore, setAccessibilityScore] = useState(85);
     const [activeTab, setActiveTab] = useState('general');
     useEffect(() => {
+
         // Load saved settings from localStorage'
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
 
             try {
+
                 const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }))}
             catch (error) {
 
-                // console.error('Failed to parse accessibility settings:', error)}
+                // // // // console.error('Failed to parse accessibility settings:', error)}
         }
     }, []);
     useEffect(() => {
+
         // Apply settings to document
         applySettings(settings);
         // Save to localStorage'
@@ -78,6 +81,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
         setSettings(prev => ({ ...prev, [key]: value }))};
     const resetSettings = () => {
+
         const defaultSettings = {
 
   highContrast: false,

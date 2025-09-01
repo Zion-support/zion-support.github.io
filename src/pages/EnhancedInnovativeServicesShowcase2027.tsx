@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 export default EnhancedInnovativeServicesShowcase2027;
 export default React.memo (function EnhancedInnovativeServicesShowcase2027 (...args[]) :  {
+
 import {
+
 import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data / enhancedInnovativeServices2027";
 import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from "../data / enhancedInnovativeServices2027";
 import { motion } from 'framer - motion';
@@ -33,9 +35,9 @@ import { motion } from 'framer - motion';
   Phone,
   Mail,
   MapPin,
-  ExternalLink,
- } from 'lucide - react';
+  ExternalLink} from 'lucide - react';
 const categoryColors: { [key: string]: string } = {
+
   'Web3 Solutions': 'from - purple - 500 to - pink - 500',
   'Metaverse Solutions': 'from - blue - 500 to - cyan - 500',
   'Sustainable Tech': 'from - green - 500 to - emerald - 500',
@@ -58,7 +60,9 @@ const categoryColors: { [key: string]: string } = {
                          service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
     return matchesCategory && matchesSearch}) ;
   const sortedServices = [...filteredServices].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'price':
   CheckCircle,
   Clock,
@@ -170,11 +174,13 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
         <div role="button" className="relative z - 10 container mx - auto px - 4 py - 16">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -233,6 +239,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
             <div role="button" className="flex flex - wrap gap - 2">
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('All') }
                 className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all ${
+
                   selectedCategory === 'All'
                     ? 'bg - zion - cyan text - white'
                     : 'bg - zion - slate - dark / 50 text - zion - slate - light hover: bg - zion - slate - dark / 70'
@@ -243,6 +250,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
               {enhancedInnovativeServices2027Categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                   onClick={ () => setSelectedCategory (category) }
                   className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all ${
+
                     selectedCategory === category
                       ? 'bg - zion - cyan text - white'
                       : 'bg - zion - slate - dark / 50 text - zion - slate - light hover:bg - zion - slate - dark / 70'
@@ -256,6 +264,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
               <div role="button" className="flex items - center gap - 2 bg - zion - slate - dark / 50 rounded - lg p - 1">
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`p - 2 rounded - md transition - all ${
+
                     viewMode === 'grid' ? 'bg - zion - cyan text - white' : 'text - zion - slate - light hover:text - white'
                   }`}
 
@@ -263,6 +272,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 </button>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - md transition - all ${
+
                     viewMode === 'list' ? 'bg - zion - cyan text - white' : 'text - zion - slate - light hover:text - white'
                   }`}
 
@@ -359,16 +369,19 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
           {sortedServices.map ( (service, index) => (<motion.div
               key={service.id}
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -432,16 +445,19 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
         <div role="button" className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4">
           <motion.div
             initial = {
+
   { opacity: 0,
   scale: 0.9
 
 }}
             animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
             exit = {
+
   { opacity: 0,
   scale: 0.9
 
@@ -470,6 +486,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 {['Overview', 'Features', 'Technical Specs', 'Contact'].map ( (tab, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={tab}
                     onClick={ () => setCurrentSlide (index) }
                     className={`pb - 2 px - 4 transition - colors ${
+
                       currentSlide === index
                         ? 'text - zion - cyan border - b-2 border - zion - cyan'
                         : 'text - zion - gray - light hover:text - white'
@@ -484,11 +501,13 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 {/* Overview Slide */}
                 {currentSlide === 0 && (<motion.div
                     initial = {
+
   { opacity: 0,
   x: 20
 
 }}
                     animate = {
+
   { opacity: 1,
   x: 0
 
@@ -534,11 +553,13 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 {/* Features Slide */}
                 {currentSlide === 1 && (<motion.div
                     initial = {
+
   { opacity: 0,
   x: 20
 
 }}
                     animate = {
+
   { opacity: 1,
   x: 0
 
@@ -577,11 +598,13 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 {/* Technical Specs Slide */}
                 {currentSlide === 2 && selectedService.technicalSpecs && (<motion.div
                     initial = {
+
   { opacity: 0,
   x: 20
 
 }}
                     animate = {
+
   { opacity: 1,
   x: 0
 
@@ -664,11 +687,13 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 {/* Contact Slide */}
                 {currentSlide === 3 && (<motion.div
                     initial = {
+
   { opacity: 0,
   x: 20
 
 }}
                     animate = {
+
   { opacity: 1,
   x: 0
 
@@ -771,6 +796,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   {[0, 1, 2, 3].map ( (index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
                       onClick={ () => setCurrentSlide (index) }
                       className={`w - 2 h - 2 rounded - full transition - colors ${
+
                         currentSlide === index ? 'bg - zion - cyan' : 'bg - zion - gray - dark'
                       }`}
                     />) ) }

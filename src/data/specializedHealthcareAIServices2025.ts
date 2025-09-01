@@ -2,6 +2,7 @@
 // Advanced AI-powered healthcare technology solutions
 ;
 export interface HealthcareAIService {
+
   id: number;
   name: string;
   category: string;

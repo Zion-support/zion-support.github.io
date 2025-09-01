@@ -44,7 +44,7 @@ export interface OrderRow {
   tracking_number?: string | null;
   tracking_status?: string | null;
   tracking_events?: TrackingEvent[] | null; // Array of TrackingEvent or null
-  items?: OrderItemData[] | null;         // Array of OrderItemData or null
+  items?: OrderItemData[] | null; // Array of OrderItemData or null
   shipping_address?: ShippingAddress | null; // ShippingAddress object or null
   // Add any other fields that come directly from the 'orders' table
   [key: string]: unknown; // Allow other properties
@@ -60,13 +60,15 @@ export interface SerializedOrder {
   trackingNumber?: string | null;
   trackingStatus?: string | null;
   trackingEvents: TrackingEvent[]; // Default to empty array if null/undefined
-  items: OrderItemData[];         // Default to empty array if null/undefined
+  items: OrderItemData[]; // Default to empty array if null/undefined
   shippingAddress: ShippingAddress | null; // Default to null if null/undefined
   // Add any other fields that are part of the serialized order
   [key: string]: unknown;
 }
 
-export function serializeOrder(row: OrderRow | null | undefined): SerializedOrder | null {
+export function serializeOrder(
+  row: OrderRow | null | undefined
+): SerializedOrder | null {
   if (!row) {
     return null;
   }
@@ -84,9 +86,13 @@ export function serializeOrder(row: OrderRow | null | undefined): SerializedOrde
   };
 }
 
-export function serializeOrders(rows: OrderRow[] | null | undefined): SerializedOrder[] {
+export function serializeOrders(
+  rows: OrderRow[] | null | undefined
+): SerializedOrder[] {
   if (!rows) {
     return [];
   }
-  return rows.map(row => serializeOrder(row)).filter(order => order !== null) as SerializedOrder[];
+  return rows
+    .map(row => serializeOrder(row))
+    .filter(order => order !== null) as SerializedOrder[];
 }

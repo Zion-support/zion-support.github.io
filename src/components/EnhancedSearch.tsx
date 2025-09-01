@@ -5,7 +5,9 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useDebounce } from '@/hooks / useDebounce';
 export function EnhancedSearch ({
+
 export function EnhancedSearch ({
+
 import { motion, AnimatePresence } from 'framer - motion';
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -13,6 +15,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 >>>>>>> main
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -26,14 +29,17 @@ interface SearchResult {
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface SearchFilter {
+
   type: string[];
   category: string[];
   tags: string[]}
 
 interface SearchSuggestion {
+
   text: string;
   type: 'recent' | 'trending' | 'ai'}
 interface EnhancedSearchProps {
+
   // Add your props here
 
 
@@ -188,18 +194,24 @@ export function EnhancedSearch({
 
   // Handle keyboard navigation
   useEffect ( () => {
+
     const handleKeyDown = (event: anyKeyboardEvent) => {
+
       if (event.key === 'Escape') {
+
         setIsOpen (false) ;
         setSelectedIndex (-1) ;
       } else if (event.key === 'ArrowDown') {
+
         event.preventDefault () ;
         setSelectedIndex (prev =>
           prev < results.length - 1 ? prev + 1 : prev) ;
       } else if (event.key === 'ArrowUp') {
+
         event.preventDefault () ;
         setSelectedIndex (prev => prev > 0 ? prev - 1 : -1) ;
       } else if (event.key === 'Enter' && selectedIndex >= 0) {
+
         event.preventDefault () ;
 =======
   
@@ -208,7 +220,7 @@ export function EnhancedSearch({
   
   // Handle keyboard navigation
   useEffect(() => {
-    
+
         setSelectedIndex(-1)} else if (event.key === 'ArrowDown') {
 
         event.preventDefault();
@@ -232,14 +244,16 @@ export function EnhancedSearch({
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex]);
   // Search functionality
   useEffect(() => {
+
     if (debouncedQuery.trim().length < 2) {
 
       setResults([]);
       return}
 
 <<<<<<< HEAD
-    const searchResults = searchData
+    const searchResults = searchData;
       .filter (item => {
+
         const matchesQuery = item.title.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ||;
                            item.description.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ||;
                            item.tags.some (tag => tag.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ) ;
@@ -252,7 +266,6 @@ export function EnhancedSearch({
     
       .filter(item => {
 
-        
                            item.description.toLowerCase().includes(debouncedQuery.toLowerCase()) ||;
                            item.tags.some(tag => tag.toLowerCase().includes(debouncedQuery.toLowerCase()));
         
@@ -266,15 +279,15 @@ export function EnhancedSearch({
 
   // Handle click outside
   useEffect(() => {
-    
+
         setRecentSearches (JSON.parse (saved) ) } catch (error) {
 
-        // console.error('Failed to parse recent searches:', error)}    }
+        // // // // console.error('Failed to parse recent searches:', error)}    }
   }, []) ;
 
   // Handle click outside
   useEffect ( () => {
-    
+
       if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
         setIsOpen (false) ;
         setSelectedIndex (-1) ;
@@ -292,6 +305,7 @@ export function EnhancedSearch({
 
   // Handle keyboard navigation
   useEffect ( () => {
+
         inputRef.current?.focus () }
     };
 

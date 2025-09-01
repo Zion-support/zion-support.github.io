@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function FiveGSolutions () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Wifi,
@@ -56,6 +58,7 @@ import { motion } from 'framer - motion';
 
 const fiveGTechnologies = [
   {
+
     name: "5G Core Network",
     description: "Next - generation core network architecture for 5G services",
     icon: Server,
@@ -63,6 +66,7 @@ const fiveGTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Radio Access Network",
     description: "Advanced radio technologies for high - speed wireless connectivity",
     icon: Antenna,
@@ -70,6 +74,7 @@ const fiveGTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Edge Computing",
     description: "Distributed computing at the network edge for low - latency applications",
     icon: Cloud,
@@ -77,6 +82,7 @@ const fiveGTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Network Slicing",
     description: "Virtual network segmentation for different service requirements",
     icon: Layers,
@@ -87,6 +93,7 @@ const fiveGTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Metropolitan City",
     industry: "Municipal",
@@ -96,6 +103,7 @@ const successStories = [
     logo: "MC"
   },
   {
+
     id: 2,
     comp: "Advanced Manufacturing Corp",
     industry: "Manufacturing",
@@ -105,6 +113,7 @@ const successStories = [
     logo: "AMC"
   },
   {
+
     id: 3,
     comp: "Regional Hospital Network",
     industry: "Healthcare",
@@ -117,6 +126,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "5G Assessment",
     description: "Evaluate 5G requirements and network planning",
@@ -124,6 +134,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 2,
     title: "Network Design",
     description: "Design 5G network architecture and infrastructure",
@@ -131,6 +142,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
   },
   {
+
     step: 3,
     title: "Infrastructure Deployment",
     description: "Deploy 5G core network, RAN, and edge computing",
@@ -138,6 +150,7 @@ const processSteps = [
     duration: "24 - 72 weeks"
   },
   {
+
     step: 4,
     title: "Testing & Optimization",
     description: "Test network performance and optimize for efficiency",
@@ -148,24 +161,28 @@ const processSteps = [
 
 const fiveGBenefits = [
   {
+
     title: "Ultra - High Speed",
     description: "10 - 100x faster than 4G for lightning - fast data transmission",
     icon: Zap,
     examples["Gigabit speeds", "Instant downloads", "Real - time streaming"];
   },;
   {
+
     title: "Low Latency",
     description: "Ultra - low latency for real - time applications and services",
     icon: Clock,
     examples["Real - time gaming", "Autonomous vehicles", "Remote surgery"];
   },;
   {
+
     title: "Massive Connectivity",
     description: "Support for millions of IoT devices per square kilometer",
     icon: Network,
     examples["Smart cities", "Industrial IoT", "Connected devices"];
   },;
   {
+
     title: "Network Slicing",
     description: "Virtual network segmentation for different service requirements",
     icon: Layers,
@@ -194,11 +211,13 @@ const fiveGBenefits = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -208,16 +227,19 @@ const fiveGBenefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -259,11 +281,13 @@ const fiveGBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -281,16 +305,19 @@ const fiveGBenefits = [
             {fiveGBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -321,11 +348,13 @@ const fiveGBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -343,16 +372,19 @@ const fiveGBenefits = [
             {fiveGTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -368,6 +400,7 @@ const fiveGBenefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -386,11 +419,13 @@ const fiveGBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -408,16 +443,19 @@ const fiveGBenefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -448,11 +486,13 @@ const fiveGBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -472,6 +512,7 @@ const fiveGBenefits = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -485,16 +526,19 @@ const fiveGBenefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -549,11 +593,13 @@ const fiveGBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -571,16 +617,19 @@ const fiveGBenefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -626,11 +675,13 @@ const fiveGBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

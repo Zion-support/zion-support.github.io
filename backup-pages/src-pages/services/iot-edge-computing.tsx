@@ -1,9 +1,4 @@
-
 export default function IoTEdgeComputing() {
-  
-  
-  
-  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -17,18 +12,20 @@ export default function IoTEdgeComputing() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">
-              <Cpu className="w-4 h-4"  />
+              <Cpu className="w-4 h-4" />
               IoT Edge Computing
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               IoT Edge
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                {' '}Computing
+                {' '}
+                Computing
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your IoT deployments with intelligent edge computing. Process data locally, 
-              reduce latency, and enable real-time decision making with our advanced edge platform.
+              Transform your IoT deployments with intelligent edge computing.
+              Process data locally, reduce latency, and enable real-time
+              decision making with our advanced edge platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -36,7 +33,7 @@ export default function IoTEdgeComputing() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5"  />
+                <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -62,8 +59,9 @@ export default function IoTEdgeComputing() {
               Advanced Edge Computing Features
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our IoT edge computing platform combines cutting-edge hardware, intelligent software, 
-              and AI capabilities to deliver real-time processing at the network edge.
+              Our IoT edge computing platform combines cutting-edge hardware,
+              intelligent software, and AI capabilities to deliver real-time
+              processing at the network edge.
             </p>
           </motion.div>
 
@@ -79,7 +77,9 @@ export default function IoTEdgeComputing() {
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-400">{feature.description}</p>
               </motion.div>
             ))}
@@ -100,7 +100,7 @@ export default function IoTEdgeComputing() {
               Comprehensive Edge Services
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From hardware design to software deployment, our platform provides 
+              From hardware design to software deployment, our platform provides
               end-to-end edge computing solutions for your IoT needs.
             </p>
           </motion.div>
@@ -117,11 +117,16 @@ export default function IoTEdgeComputing() {
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {service.title}
+                </h3>
                 <ul className="space-y-2">
                   {service.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="text-gray-400 text-sm flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-cyan-400"  />
+                    <li
+                      key={itemIndex}
+                      className="text-gray-400 text-sm flex items-center gap-2"
+                    >
+                      <CheckCircle className="w-4 h-4 text-cyan-400" />
                       {item}
                     </li>
                   ))}
@@ -145,13 +150,14 @@ export default function IoTEdgeComputing() {
                 Transform Your IoT Operations
               </h2>
               <p className="text-lg text-gray-400 mb-8">
-                Our edge computing platform delivers measurable improvements in performance, 
-                reliability, and cost efficiency while enabling new IoT use cases and applications.
+                Our edge computing platform delivers measurable improvements in
+                performance, reliability, and cost efficiency while enabling new
+                IoT use cases and applications.
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0"  />
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
@@ -167,20 +173,36 @@ export default function IoTEdgeComputing() {
               <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-8 border border-cyan-500/30">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">90%</div>
-                    <div className="text-sm text-gray-400">Latency reduction</div>
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">
+                      90%
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Latency reduction
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400 mb-2">60%</div>
-                    <div className="text-sm text-gray-400">Bandwidth cost savings</div>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">
+                      60%
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Bandwidth cost savings
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-indigo-400 mb-2">99.9%</div>
-                    <div className="text-sm text-gray-400">Uptime reliability</div>
+                    <div className="text-3xl font-bold text-indigo-400 mb-2">
+                      99.9%
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Uptime reliability
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">10x</div>
-                    <div className="text-sm text-gray-400">Processing speed</div>
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">
+                      10x
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Processing speed
+                    </div>
                   </div>
                 </div>
               </div>
@@ -202,8 +224,9 @@ export default function IoTEdgeComputing() {
               Edge Computing Use Cases
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our platform addresses the most critical challenges in IoT deployment, 
-              providing real-time processing capabilities for various industry applications.
+              Our platform addresses the most critical challenges in IoT
+              deployment, providing real-time processing capabilities for
+              various industry applications.
             </p>
           </motion.div>
 
@@ -216,14 +239,16 @@ export default function IoTEdgeComputing() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300"
               >
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <h3 className="text-2xl font-semibold text-white mb-4">
+                  {useCase.title}
+                </h3>
                 <p className="text-gray-400 mb-6">{useCase.description}</p>
                 <Link
                   to="/request-quote"
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4"  />
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
             ))}
@@ -244,8 +269,9 @@ export default function IoTEdgeComputing() {
               Ready to Edge Your IoT?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join leading organizations that are already using our edge computing platform to 
-              transform their IoT deployments and enable real-time intelligence.
+              Join leading organizations that are already using our edge
+              computing platform to transform their IoT deployments and enable
+              real-time intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -253,7 +279,7 @@ export default function IoTEdgeComputing() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Your Quote
-                <ArrowRight className="w-5 h-5"  />
+                <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -266,4 +292,5 @@ export default function IoTEdgeComputing() {
         </div>
       </section>
     </div>
-  )}
+  );
+}

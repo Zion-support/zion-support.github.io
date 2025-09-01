@@ -4,7 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
   const [isVisible, setIsVisible] = useState (false) ;
 
   useEffect ( () => {
+
     const toggleVisibility = () => {
+
       if (window.pageYOffset > 300) {
 
         setIsVisible(true);
@@ -14,7 +16,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
         const [isVisible, setIsVisible] = useState (false) ;
         useEffect ( () => {
+
             const toggleVisibility = () => {
+
                 if (window.pageYOffset > 300) {
 
                     setIsVisible(true)}
@@ -25,6 +29,7 @@ import { motion, AnimatePresence } from 'framer-motion';
             window.addEventListener('scroll', toggleVisibility);
             return () => window.removeEventListener('scroll', toggleVisibility)}, []);
         const scrollToTop = () => {
+
             window.scrollTo({
 
                 top: 0,
@@ -45,6 +50,7 @@ import { motion, AnimatePresence } from 'framer-motion';
   }, []);
 
   const scrollToTop = () => {
+
     window.scrollTo({
 
       top: 0,
@@ -77,8 +83,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 }}
           whileHover = {
+
 <<<<<<< HEAD
   {
+
             scale: 1.1,
             y: -2,
             boxShadow: "0 20px 25px - 5px rgba (59, 130, 246, 0.3) , 0 10px 10px - 5px rgba (59, 130, 246,
@@ -104,6 +112,7 @@ import { motion, AnimatePresence } from 'framer-motion';
           transition = {
 
   {
+
 "
             type: "spring",
             stiffness: 400,

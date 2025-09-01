@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -231,6 +232,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   useEffect ( () => {
+
     setMobileMenuOpen (false) ;
     setActiveDropdown (null) }, [location.pathname]) ;
 

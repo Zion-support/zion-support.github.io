@@ -10,6 +10,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
     const [selectedElement, setSelectedElement] = useState(null);
     // Analyze content quality
     const analyzeContent = useCallback(async () => {
+
         setIsAnalyzing(true);
         const issues = [];
         const suggestions = [];
@@ -45,6 +46,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             if (words.length > 0 && words.length < 10) {
 
                 issues.push({
+
 `
                     id: `short-content-${index}`,
                     type: 'warning',
@@ -62,6 +64,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             if (words.length > 100) {
 
                 issues.push({
+
 `
                     id: `long-paragraph-${index}`,
                     type: 'warning',
@@ -86,6 +89,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     if (level - lastLevel > 1) {
 
                         issues.push({
+
 `
                             id: `heading-skip-${index}`,
                             type: 'warning',
@@ -114,6 +118,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     if (density > 3) {
 
                         issues.push({
+
 `
                             id: `keyword-stuffing-${index}-${word}`,
                             type: 'warning',
@@ -135,6 +140,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 if (content.length < 50) {
 
                     issues.push({
+
 `
                         id: `short-meta-${index}`,
                         type: 'warning',
@@ -150,6 +156,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 else if (content.length > 160) {
 
                     issues.push({
+
 `
                         id: `long-meta-${index}`,
                         type: 'warning',
@@ -170,6 +177,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 if (href && (href.startsWith('#') || href.startsWith('javascript:'))) {
 
                     issues.push({
+
 `
                         id: `broken-link-${index}`,
                         type: 'warning',
@@ -190,6 +198,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 if (!alt || alt.trim() === '') {
 
                     issues.push({
+
 `
                         id: `missing-alt-${index}`,
                         type: 'error',
@@ -273,6 +282,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         setIsAnalyzing(false)}, [targetElements]);
     // Auto-fix content issues
     const autoFixIssues = useCallback(() => {
+
         if (!analysis)
             return;
         const fixedCount = 0;
@@ -331,6 +341,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             setSelectedElement(null)}, 3000)}, []);
     // Auto-analyze content
     useEffect(() => {
+
         if (autoAnalyze) {
 
             const timer = setTimeout(analyzeContent, 3000);
@@ -610,6 +621,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                   {analysis && (<button onClick = {
 
   () => {
+
                         const report = JSON.stringify(analysis, null, 2);
                         const blob = new Blob([report],
   { type: 'application/json'

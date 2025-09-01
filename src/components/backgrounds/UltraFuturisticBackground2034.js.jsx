@@ -4,6 +4,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
     const canvasRef = useRef(null);
     const animationRef = useRef();
     useEffect(() => {
+
         const canvas = canvasRef.current;
         if (!canvas)
             return;
@@ -37,6 +38,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                 color: selectedColors[Math.floor(Math.random() * selectedColors.length)]
             })}
         const animate = () => {
+
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             // Update and draw particles
             particles.forEach((particle, index) => {
@@ -133,10 +135,12 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
             animationRef.current = requestAnimationFrame(animate)};
         animate();
         const handleResize = () => {
+
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight};
         window.addEventListener('resize', handleResize);
         return () => {
+
             if (animationRef.current) {
 
                 cancelAnimationFrame(animationRef.current)}

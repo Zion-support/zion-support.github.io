@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react.ts';
 import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025  } from '@/data / innovativeServices2025';
 export default React.memo (function InnovativeServicesShowcase2025 (...args: any[]) : any {
+
 import { Brain,
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 =======
@@ -69,6 +70,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
 <<<<<<< HEAD
   const filteredServices = INNOVATIVE_SERVICES_2025.filter (service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
                          service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
@@ -77,6 +79,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
   }) ;
 
   const sortedServices = [...filteredServices].sort ( (a, b) => {
+
     let aValue, bValue;
 
 =======
@@ -121,6 +124,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
 <<<<<<< HEAD
   const getCategoryIcon = (category: anystring) => {
+
     if (category === 'all') return < Rocket className="w - 6 h - 6" />;
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ?
       <span className="text - 2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> :
@@ -141,6 +145,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
 <<<<<<< HEAD
   const closeModal = () => {
+
     setShowModal (false) ;
     setSelectedService (null) ;
   };

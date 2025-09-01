@@ -23,6 +23,7 @@ This project includes a comprehensive PM2-based automation system that continuou
 ```
 
 ### Stop the System
+
 ```bash
 ./start-error-automation.sh stop
 ```
@@ -121,6 +122,7 @@ The system uses `ecosystem.config.cjs` to manage PM2 processes:
 ```
 
 ### Restart Automation
+
 ```bash
 ./start-error-automation.sh restart
 ```
@@ -162,6 +164,7 @@ The system uses `ecosystem.config.cjs` to manage PM2 processes:
 ```
 
 ### View Logs
+
 ```bash
 # View all logs
 ./start-error-automation.sh logs
@@ -203,7 +206,7 @@ pm2 delete all
 
 #### High Memory Usage
 
-```bash
+````bash
 # Increase memory limit in ecosystem.config.cjs
 max_memory_restart: '2G'
 
@@ -244,7 +247,7 @@ jobs:
       - run: npm install
       - run: npm run automation:comprehensive
       - run: npm run automation:status
-```
+````
 
 ### Pre-commit Hooks
 

@@ -5,8 +5,10 @@ import { motion   } from 'framer - motion.ts';
 import { SEO   } from '../components / SEO';
 
 const AIServicesShowcase: React.FC = () : JSX.Element => {
+
   const aiServices = [
     {
+
       id: 'ai - code - review - security',
       title: 'AI - Powered Code Review & Security Analysis',
       description: 'Advanced AI - driven code analysis platform that detects vulnerabilities, bugs, and security issues with unprecedented accuracy and speed.',
@@ -18,6 +20,7 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
       benefits['Reduce security incidents by 60%', 'Faster code review process', 'Compliance ready'];
     },;
     {
+
       id: 'ai - customer - experience - analytics',
       title: 'AI - Powered Customer Experience Analytics Platform',
       description: 'Transform customer insights into actionable intelligence with AI - driven analytics that boost satisfaction by 35% and reduce churn by 25%.',
@@ -29,6 +32,7 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
       benefits['Increase customer satisfaction by 35%', 'Reduce churn by 25%', 'Real - time insights'];
     },;
     {
+
       id: 'ai - devops - automation - platform',
       title: 'AI - Powered DevOps Automation Platform',
       description: 'Revolutionize DevOps workflow with AI - powered automation that reduces deployment time by 80% and decreases failures by 90%.',
@@ -40,6 +44,7 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
       benefits['Reduce deployment time by 80%', 'Decrease failures by 90%', 'Faster time to market'];
     },;
     {
+
       id: 'ai - iot - edge - computing - platform',
       title: 'AI - Powered IoT Edge Computing Platform',
       description: 'Revolutionize IoT with AI - powered edge computing that processes data at the edge with sub - millisecond latency and reduces bandwidth costs by 70%.',
@@ -68,11 +73,13 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
           <div className="max - w-7xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -109,11 +116,13 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -134,16 +143,19 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
               {aiServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -215,11 +227,13 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -239,31 +253,37 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
             <div className="grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 3 gap - 8">
               {[
                 {
+
                   title: "AI - First Approach",
                   description: "All our services leverage the latest AI / ML technology for maximum effectiveness and automation.",
                   icon: "🧠"
                 },
                 {
+
                   title: "Proven Results",
                   description: "Measurable outcomes with quantifiable business impact across all our solutions.",
                   icon: "📈"
                 },
                 {
+
                   title: "Industry Expertise",
                   description: "Deep understanding of various industries with specialized solutions for specific sectors.",
                   icon: "🏢"
                 },
                 {
+
                   title: "Scalable Architecture",
                   description: "Solutions that grow with your business, from startup to enterprise scale.",
                   icon: "⚡"
                 },
                 {
+
                   title: "Compliance Ready",
                   description: "Built - in security and compliance features for regulated industries.",
                   icon: "🔒"
                 },
                 {
+
                   title: "24 / 7 Support",
                   description: "Dedicated support team available around the clock for enterprise customers.",
                   icon: "🛟"
@@ -271,16 +291,19 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
               ].map ( (feature, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -301,11 +324,13 @@ const AIServicesShowcase: React.FC = () : JSX.Element => {
           <div className="max - w-4xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 

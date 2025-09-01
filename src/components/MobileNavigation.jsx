@@ -16,9 +16,11 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
 >>>>>>> main
     // Close menu when route changes
     useEffect ( () => {
+
         onToggle () }, [location.pathname]) ;
     // Close menu when clicking outside
     useEffect ( () => {
+
         const handleClickOutside = (event) => {
 
             if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -90,9 +92,9 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
 
         e.preventDefault();
         // Implement search functionality'
-        // // // // // // // // console.log('Search query:', searchQuery);
+        // // // // // // // // // // // console.log('Search query:', searchQuery);
     };
-        // console.log('Search query:', searchQuery)};
+        // // // // console.log('Search query:', searchQuery)};
     const menuVariants = {
 
   closed: {

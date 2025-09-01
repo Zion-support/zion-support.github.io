@@ -9,10 +9,12 @@ import { Link } from 'react-router-dom';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 export function PointsBadge() {
+
     const { user, signOut, logout } = useAuth();
     const { ledger, balance } = usePoints();
     const [points, setPoints] = useState(balance);
     useEffect(() => {
+
         setPoints(balance)}, [balance]);
     if (!user)
         return null;
@@ -26,6 +28,7 @@ export function PointsBadge() {
             acc.referral += e.delta;
         return acc}, { purchase: 0, post: 0, referral: 0 });
     const handleLogout = async () => {
+
         if (signOut) {
 
             await signOut()}

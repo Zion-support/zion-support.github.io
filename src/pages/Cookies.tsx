@@ -2,7 +2,9 @@ import { Link } from 'react - router - dom';
 import { Shield, Cookie, Settings, Eye, EyeOff, CheckCircle, XCircle, Info, ExternalLink } from 'lucide - react';
 import React, { useState } from 'react';
 export default React.memo (function Cookies () {
+
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -26,6 +28,7 @@ import { SEO } from '../components / SEO';
 
   const [expandedSection, setExpandedSection] = useState < string | null> (null) ;
   const [cookiePreferences, setCookiePreferences] = useState ({
+
     essential: true,
     analytics: false,
     marketing: false,
@@ -34,6 +37,7 @@ import { SEO } from '../components / SEO';
 
   const cookieTypes = [
     {
+
       id: 'essential',
       name: 'Essential Cookies',
       description: 'These cookies are necessary for the website to function and cannot be switched off.',
@@ -48,6 +52,7 @@ import { SEO } from '../components / SEO';
       alwaysActive: true
     },
     {
+
       id: 'analytics',
       name: 'Analytics Cookies',
       description: 'These cookies help us understand how visitors interact with our website.',
@@ -61,6 +66,7 @@ import { SEO } from '../components / SEO';
       color: 'from - purple - 500 to - pink - 500'
     },
     {
+
       id: 'marketing',
       name: 'Marketing Cookies',
       description: 'These cookies are used to deliver personalized advertisements.',
@@ -74,6 +80,7 @@ import { SEO } from '../components / SEO';
       color: 'from - orange - 500 to - red - 500'
     },
     {
+
       id: 'functional',
       name: 'Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.',
@@ -90,6 +97,7 @@ import { SEO } from '../components / SEO';
 
   const cookieDetails = [
     {
+
       name: '_ga',
       purpose: 'Google Analytics - Used to distinguish unique users',
       duration: '2 years',
@@ -97,6 +105,7 @@ import { SEO } from '../components / SEO';
       type: 'analytics'
     },
     {
+
       name: '_gid',
       purpose: 'Google Analytics - Used to distinguish users',
       duration: '24 hours',
@@ -104,6 +113,7 @@ import { SEO } from '../components / SEO';
       type: 'analytics'
     },
     {
+
       name: '_gat',
       purpose: 'Google Analytics - Used to throttle request rate',
       duration: '1 minute',
@@ -111,6 +121,7 @@ import { SEO } from '../components / SEO';
       type: 'analytics'
     },
     {
+
       name: 'session_id',
       purpose: 'Maintains user session state',
       duration: 'Session',
@@ -118,6 +129,7 @@ import { SEO } from '../components / SEO';
       type: 'essential'
     },
     {
+
       name: 'csrf_token',
       purpose: 'Cross - site request forgery protection',
       duration: 'Session',
@@ -125,6 +137,7 @@ import { SEO } from '../components / SEO';
       type: 'essential'
     },
     {
+
       name: 'user_preferences',
       purpose: 'Stores user interface preferences',
       duration: '1 year',
@@ -134,19 +147,23 @@ import { SEO } from '../components / SEO';
   ];
 
   const toggleSection = (sectionId: string) => {
+
     setExpandedSection (expandedSection === sectionId ? null : sectionId) ;
   };
 
   const updateCookiePreference = (type: string, enabled: boolean) => {
+
     if (type === 'essential') return; // Essential cookies cannot be disabled
 
     setCookiePreferences (prev => ({
+
       ...prev,
       [type]: enabled
     }) ) ;
   };
 
   const savePreferences = () => {
+
     // In a real app, this would save preferences and update cookies
     console.log ('Cookie preferences saved:', cookiePreferences) ;
     // Show success message
@@ -154,7 +171,9 @@ import { SEO } from '../components / SEO';
   };
 
   const acceptAll = () => {
+
     setCookiePreferences ({
+
       essential: true,
       analytics: true,
       marketing: true,
@@ -164,7 +183,9 @@ import { SEO } from '../components / SEO';
   };
 
   const rejectAll = () => {
+
     setCookiePreferences ({
+
       essential: true,
       analytics: false,
       marketing: false,
@@ -413,6 +434,7 @@ import { SEO } from '../components / SEO';
                       <div role="button" className="text - gray - 300">{cookie.provider}</div>
                       <div>
                         <span className={`px - 2 py - 1 rounded text - xs font - medium ${
+
                           cookie.type === 'essential' ? 'bg - blue - 500 / 20 text - blue - 400' :
                           cookie.type === 'analytics' ? 'bg - purple - 500 / 20 text - purple - 400' :
                           cookie.type === 'marketing' ? 'bg - orange - 500 / 20 text - orange - 400' :
@@ -424,7 +446,10 @@ import { SEO } from '../components / SEO';
                     </motion.div>) ) }
                 </div>
               </div>
-            </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Cookie Management */}
       <section className="py - 20">
@@ -588,6 +613,7 @@ import { SEO } from '../components / SEO';
                       <span className="text - sm font - medium">Required</span>
                     </div>) : (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleCookieToggle (category.id) }
                       className={`flex items - center px - 4 py - 2 rounded - lg transition - colors ${
+
                         cookiePreferences[category.id as keyof typeof cookiePreferences]
                           ? 'bg - green - 600 hover:bg - green - 700 text - white'
                           : 'bg - gray - 600 hover:bg - gray - 700 text - white'

@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  * @returns {*} Function return value
  */
 function HowItWorksSection () {
+
 =======
 >>>>>>> main
 
@@ -29,6 +30,7 @@ const steps = [
     success: "95% match rate"
   },
   {
+
 "
     icon: <Users className="w-8 h-8"  />,"
     title: "Connect","
@@ -45,6 +47,7 @@ const steps = [
     success: "98% satisfaction"
   },
   {
+
 "
     icon: <FileText className="w-8 h-8"  />,"
     title: "Plan","
@@ -61,6 +64,7 @@ const steps = [
     success: "90% on-time delivery"
   },
   {
+
 "
     icon: <Rocket className="w-8 h-8"  />,"
     title: "Execute","
@@ -77,6 +81,7 @@ const steps = [
     success: "99% quality score"
   },
   {
+
 "
     icon: <CheckCircle className="w-8 h-8"  />,"
     title: "Deliver","
@@ -104,22 +109,26 @@ const stats = [;"
 
   
       transition: {
+
         staggerChildren: 0.2,;
         delayChildren: 0.1}}};
 
 <<<<<<< HEAD
   const statsVariants = {
+
   hidden: { opacity: 0,
   scale: 0.8
 
 },
     visible: {
+
       opacity: 1,;
 =======
   
 >>>>>>> main
       scale: 1,;
       transition: {
+
         duration: 0.5,;"
         ease: "easeOut"}}};
   return ("
@@ -141,6 +150,7 @@ const stats = [;"
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
           animate={{ rotate: 360 }}
           transition = {
+
 <<<<<<< HEAD
   { duration: 20, repeat: Infinity,
   ease: "linear"
@@ -156,6 +166,7 @@ const stats = [;"
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
           animate={{ rotate: -360 }}
           transition = {
+
 <<<<<<< HEAD
   { duration: 25, repeat: Infinity,
   ease: "linear"
@@ -176,6 +187,7 @@ const stats = [;"
 
 }}
           transition = {
+
 <<<<<<< HEAD
   { duration: 3, repeat: Infinity,
   ease: "easeInOut"
@@ -271,6 +283,7 @@ const stats = [;"
                 onHoverEnd={ () => setHoveredStep (null) }
                 whileHover={{ y: -8 }}
                 transition = {
+
 "
   { type: "spring",
   stiffness: 300
@@ -323,6 +336,7 @@ const stats = [;"
 
 }}
                         animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0

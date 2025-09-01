@@ -3,6 +3,7 @@ import React from 'react';
 <<<<<<< HEAD
 import { CONTACT_INFO } from '@/data / comprehensiveServices';
 export function ServicesBenefitsShowcase () {
+
 import { Button } from "./ui / button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui / card";
 
@@ -12,9 +13,11 @@ import { Button } from "./ui/button";
 import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink } from 'lucide-react';
 import { CONTACT_INFO } from '@/data/comprehensiveServices';
 export function ServicesBenefitsShowcase() {
+
 >>>>>>> main
     const serviceBenefits = [
         {
+
 "
             category: "AI Services","
             icon: <Brain className="w-12 h-12"/>,"
@@ -46,6 +49,7 @@ export function ServicesBenefitsShowcase() {
             support: "24/7 expert support included"
         },
         {
+
 "
             category: "IT Services","
             icon: <Cloud className="w-12 h-12"/>,"
@@ -77,6 +81,7 @@ export function ServicesBenefitsShowcase() {
             support: "24/7 dedicated support team"
         },
         {
+
 "
             category: "Micro SAAS","
             icon: <Zap className="w-12 h-12"/>,"

@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default React.memo (function HelpdeskPlatform (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   MessageCircle,
@@ -44,50 +46,50 @@ import { motion } from 'framer - motion.ts';
   UserX,
   TrendingUp,
   PieChart,
-  LineChart,
-} from 'lucide - react.ts';
+  LineChart} from 'lucide - react.ts';
 
   const features = [
     {
+
       icon: Ticket,
       title: 'Ticket Management',
       description: 'Comprehensive ticket tracking and resolution workflow',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       icon: Users,
       title: 'Team Collaboration',
       description: 'Multi - agent support with role - based access control',
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       icon: Clock,
       title: 'Response Time Tracking',
       description: 'Monitor and optimize support response times',
-      color: 'from - yellow - 500 to - orange - 500',
-    },
+      color: 'from - yellow - 500 to - orange - 500'},
     {
+
       icon: BarChart3,
       title: 'Analytics & Reporting',
       description: 'Comprehensive performance metrics and insights',
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     {
+
       icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise - grade security and data protection',
-      color: 'from - red - 500 to - pink - 500',
-    },
+      color: 'from - red - 500 to - pink - 500'},
     {
+
       icon: Cloud,
       title: 'Cloud Platform',
       description: 'Scalable cloud infrastructure for global support',
-      color: 'from - indigo - 500 to - blue - 500',
-    },
+      color: 'from - indigo - 500 to - blue - 500'},
   ];
 
   const services = [
     {
+
       title: 'Customer Support',
       description: 'Multi - channel customer support and ticket management',
       icon: MessageCircle,
@@ -96,9 +98,9 @@ import { motion } from 'framer - motion.ts';
         'Live chat',
         'Phone support',
         'Social media integration',
-      ],
-    },
+      ]},
     {
+
       title: 'Internal IT Support',
       description: 'Employee IT support and technical assistance',
       icon: Cpu,
@@ -107,9 +109,9 @@ import { motion } from 'framer - motion.ts';
         'Software assistance',
         'Network issues',
         'Access management',
-      ],
-    },
+      ]},
     {
+
       title: 'Knowledge Base',
       description: 'Self - service knowledge base and documentation',
       icon: FileText,
@@ -118,9 +120,9 @@ import { motion } from 'framer - motion.ts';
         'Documentation',
         'Video tutorials',
         'Search functionality',
-      ],
-    },
+      ]},
     {
+
       title: 'Automation & AI',
       description: 'AI - powered automation and intelligent routing',
       icon: Brain,
@@ -129,8 +131,7 @@ import { motion } from 'framer - motion.ts';
         'Chatbots',
         'Predictive analytics',
         'Smart suggestions',
-      ],
-    },
+      ]},
   ];
 
   const integrations = [

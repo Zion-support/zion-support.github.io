@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default EmergingTech;
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Atom,
@@ -15,12 +16,13 @@ import { motion } from 'framer - motion.ts';
   Cloud,
   Globe,
   Rocket,
-  Star,
-} from 'lucide - react.ts';
+  Star} from 'lucide - react.ts';
 
 const EmergingTech: React.FC = () : JSX.Element => {
+
   const technologies = [
     {
+
       title: 'Quantum Computing',
       description:
         'Revolutionary quantum computing solutions for complex problem - solving and optimization.',
@@ -31,9 +33,9 @@ const EmergingTech: React.FC = () : JSX.Element => {
         'Optimization problems',
         'Cryptography',
         'Machine learning',
-      ],
-    },
+      ]},
     {
+
       title: 'IoT Edge Computing',
       description:
         'Next - generation IoT solutions with edge computing capabilities for real - time processing.',
@@ -44,9 +46,9 @@ const EmergingTech: React.FC = () : JSX.Element => {
         'Low latency',
         'Edge AI',
         'Smart sensors',
-      ],
-    },
+      ]},
     {
+
       title: 'AI Quantum Hybrid Platform',
       description:
         'Combining AI and quantum computing for unprecedented computational power.',
@@ -57,9 +59,9 @@ const EmergingTech: React.FC = () : JSX.Element => {
         'Quantum ML',
         'AI optimization',
         'Quantum AI',
-      ],
-    },
+      ]},
     {
+
       title: 'Space Technology',
       description:
         'Cutting - edge space technology solutions for satellite and aerospace applications.',
@@ -70,9 +72,9 @@ const EmergingTech: React.FC = () : JSX.Element => {
         'Aerospace solutions',
         'Space data',
         'Orbital mechanics',
-      ],
-    },
+      ]},
     {
+
       title: 'Quantum Machine Learning',
       description:
         'Quantum - enhanced machine learning algorithms for superior pattern recognition.',
@@ -83,9 +85,9 @@ const EmergingTech: React.FC = () : JSX.Element => {
         'Pattern recognition',
         'Optimization',
         'Quantum algorithms',
-      ],
-    },
+      ]},
     {
+
       title: 'AI Predictive Maintenance',
       description:
         'AI - powered predictive maintenance systems for industrial equipment and machinery.',
@@ -96,9 +98,9 @@ const EmergingTech: React.FC = () : JSX.Element => {
         'Predictive analytics',
         'Maintenance scheduling',
         'Cost optimization',
-      ],
-    },
+      ]},
     {
+
       title: 'Sustainable Technology',
       description:
         'Green technology solutions for environmental sustainability and energy efficiency.',
@@ -109,8 +111,7 @@ const EmergingTech: React.FC = () : JSX.Element => {
         'Green computing',
         'Carbon reduction',
         'Sustainable AI',
-      ],
-    },
+      ]},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">

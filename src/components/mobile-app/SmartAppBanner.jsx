@@ -19,12 +19,14 @@ export const SmartAppBanner = ({
     if (isMobile && !safeStorage.getItem('smartBannerDismissed')) {
 
       const timer = setTimeout(() => {
+
         setIsVisible(true);
       }, delay);
       return () => clearTimeout(timer);
     }
   }, [isMobile, delay]);
   const dismissBanner = () => {
+
     setIsVisible(false);
     safeStorage.setItem('smartBannerDismissed',true');
   };

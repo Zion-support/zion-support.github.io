@@ -2,7 +2,9 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default ComprehensiveSitemap;
 export function ComprehensiveSitemap () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Map,
@@ -281,13 +283,13 @@ import { motion } from 'framer - motion';
   USDW,
   USDX,
   USDY,
-  USDZ,
-} from 'lucide - react';
+  USDZ} from 'lucide - react';
 
   const currentYear = new Date () .getFullYear () ;
 
   // Define all the main sections and their pages
   const siteStructure = {
+
     main: [
       { name: 'Home', path: '/', icon: Home, status: 'exists' },
       { name: 'About', path: '/about', icon: Users, status: 'exists' },
@@ -298,544 +300,544 @@ import { motion } from 'framer - motion';
       { name: 'Blog', path: '/blog', icon: FileText, status: 'exists' },
       { name: 'Support', path: '/support', icon: HelpCircle, status: 'exists' },
       {
+
         name: 'Training',
         path: '/training',
         icon: GraduationCap,
-        status: 'exists',
-      },
+        status: 'exists'},
       { name: 'Helpdesk', path: '/help', icon: HelpCircle, status: 'exists' },
       { name: 'Sitemap', path: '/sitemap', icon: Map, status: 'exists' },
       {
+
         name: 'Request Quote',
         path: '/request - quote',
         icon: DollarSign,
-        status: 'exists',
-      },
+        status: 'exists'},
     ],
     services: [
       // AI Services
       {
+
         name: 'AI Solutions',
         path: '/services / ai - solutions',
         icon: Brain,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Business Intelligence',
         path: '/services / ai - business - intelligence',
         icon: Brain,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Sales Copilot',
         path: '/services / ai - sales - copilot',
         icon: Users,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Marketing Automation',
         path: '/services / ai - marketing - automation',
         icon: TrendingUp,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Healthcare Platform',
         path: '/services / ai - healthcare - platform',
         icon: Heart,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Project Management',
         path: '/services / ai - project - management',
         icon: Target,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Content Generator',
         path: '/services / ai - content - generator',
         icon: FileText,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Customer Support',
         path: '/services / ai - customer - support',
         icon: Users,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Compliance Assistant',
         path: '/services / ai - compliance - assistant',
         icon: Shield,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Email Responder',
         path: '/services / ai - email - responder',
         icon: Mail,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI SEO Optimizer',
         path: '/services / ai - seo - optimizer',
         icon: TrendingUp,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI SEO Auditor',
         path: '/services / ai - seo - auditor',
         icon: Search,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Agent Helpdesk',
         path: '/services / customer - support - chatbot',
         icon: Users,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Auto Email',
         path: '/services / ai - auto - email - responder',
         icon: Mail,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'LLM Content Studio',
         path: '/services / llm - content - studio',
         icon: FileText,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Workflow Orchestrator',
         path: '/services / ai - workflow - orchestrator',
         icon: Zap,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Data Governance Platform',
         path: '/services / ai - data - governance - platform',
         icon: Database,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Customer Experience Analytics',
         path: '/services / ai - customer - experience - analytics',
         icon: BarChart3,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Financial Risk Management',
         path: '/services / ai - financial - risk - management',
         icon: DollarSign,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Code Review Security Scanner',
         path: '/services / ai - code - review - security - scanner',
         icon: Code,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Quantum Hybrid Platform',
         path: '/services / ai - quantum - hybrid - platform',
         icon: Atom,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Autonomous Supply Chain',
         path: '/services / ai - autonomous - supply - chain',
         icon: Network,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Cybersecurity Threat Intelligence',
         path: '/services / ai - cybersecurity - threat - intelligence',
         icon: Shield,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Business Intelligence Analytics',
         path: '/services / ai - business - intelligence - analytics',
         icon: BarChart3,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Content Marketing Suite',
         path: '/services / ai - content - marketing - suite',
         icon: FileText,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Customer Support Automation',
         path: '/services / ai - customer - support - automation',
         icon: Users,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Financial Analytics',
         path: '/services / ai - financial - analytics',
         icon: DollarSign,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Legal Document Automation',
         path: '/services / ai - legal - document - automation',
         icon: FileText,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Healthcare Analytics',
         path: '/services / ai - healthcare - analytics',
         icon: Heart,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Financial Trading',
         path: '/services / ai - financial - trading',
         icon: TrendingUp,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Content Creation Suite',
         path: '/services / ai - content - creation - suite',
         icon: FileText,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Predictive Maintenance',
         path: '/services / ai - predictive - maintenance',
         icon: Activity,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Content Creation',
         path: '/services / ai - content - creation',
         icon: FileText,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Analytics',
         path: '/services / ai - analytics',
         icon: BarChart3,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Predictive Analytics',
         path: '/services / predictive - analytics',
         icon: TrendingUp,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Automation',
         path: '/services / automation',
         icon: Zap,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Interview Assessment AI',
         path: '/services / interview - assessment - ai',
         icon: Users,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Mobile Surveys',
         path: '/services / mobile - first - surveys',
         icon: Smartphone,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Meeting Summarizer',
         path: '/services / meeting - summarizer',
         icon: FileText,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Developer API Tester',
         path: '/services / developer - api - tester',
         icon: Code,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Feedback Surveys',
         path: '/services / mobile - feedback - surveys',
         icon: Smartphone,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Landing Page Generator',
         path: '/services / landing - page - generator',
         icon: Globe,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Price Intelligence',
         path: '/services / price - intelligence - service',
         icon: BarChart3,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Dev Productivity Copilot',
         path: '/services / developer - productivity - copilot',
         icon: Code,
-        status: 'missing',
-      },
+        status: 'missing'},
 
       // Quantum Services
       {
+
         name: 'Quantum Computing',
         path: '/services / quantum - computing',
         icon: Atom,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Quantum Machine Learning',
         path: '/services / quantum - machine - learning',
         icon: Atom,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Quantum AI Hybrid Platform',
         path: '/services / ai - quantum - hybrid - platform',
         icon: Atom,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Quantum AI Trading',
         path: '/services / quantum - ai - trading - platform',
         icon: Atom,
-        status: 'missing',
-      },
+        status: 'missing'},
 
       // Cybersecurity Services
       {
+
         name: 'Cybersecurity',
         path: '/services / cybersecurity',
         icon: Shield,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Cybersecurity Platform',
         path: '/services / ai - cybersecurity - platform',
         icon: Shield,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Security Headers & CSP',
         path: '/services / security - headers - csp',
         icon: Shield,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'DSR Privacy Portal',
         path: '/services / dsr - portal',
         icon: Lock,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Zero Trust Network Access',
         path: '/services / zero - trust - network - access',
         icon: Shield,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Zero Trust Security',
         path: '/services / zero - trust - security',
         icon: Shield,
-        status: 'missing',
-      },
+        status: 'missing'},
 
       // Cloud & DevOps Services
       {
+
         name: 'Cloud & DevOps',
         path: '/services / cloud - devops',
         icon: Cloud,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Cloud DevOps',
         path: '/services / cloud - devops',
         icon: Cloud,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'IT Infrastructure',
         path: '/services / it - infrastructure',
         icon: Server,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'FinOps Advisor',
         path: '/services / finops - advisor',
         icon: DollarSign,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Cloud FinOps Optimizer',
         path: '/services / cloud - finops - optimizer',
         icon: DollarSign,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Micro SaaS Solutions',
         path: '/services / micro - saas - solutions',
         icon: ShoppingCart,
-        status: 'missing',
-      },
+        status: 'missing'},
 
       // Digital Transformation Services
       {
+
         name: 'Digital Transformation',
         path: '/services / digital - transformation',
         icon: Rocket,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Digital Twin',
         path: '/services / digital - twin',
         icon: Eye,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Data Analytics',
         path: '/services / data - analytics',
         icon: BarChart3,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Business Intelligence',
         path: '/services / business - intelligence',
         icon: BarChart3,
-        status: 'missing',
-      },
+        status: 'missing'},
 
       // Emerging Technology Services
       {
+
         name: 'IoT Edge Computing',
         path: '/services / iot - edge - computing',
         icon: Activity,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'IoT Edge',
         path: '/services / iot - edge',
         icon: Activity,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Space Technology',
         path: '/services / space - technology',
         icon: Rocket,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Space Tech',
         path: '/services / space - tech',
         icon: Rocket,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Blockchain',
         path: '/services / blockchain',
         icon: Network,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Sustainable Technology',
         path: '/services / sustainable - technology',
         icon: Heart,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Green IT Solutions',
         path: '/services / green - it',
         icon: Heart,
-        status: 'missing',
-      },
+        status: 'missing'},
 
       // Industry - Specific Services
       {
+
         name: 'Healthcare',
         path: '/services / healthcare',
         icon: Heart,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Finance',
         path: '/services / finance',
         icon: DollarSign,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Manufacturing',
         path: '/services / manufacturing',
         icon: Building,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Sustainability',
         path: '/services / sustainability',
         icon: Heart,
-        status: 'missing',
-      },
+        status: 'missing'},
 
       // Specialized Services
       {
+
         name: 'Mobile First Surveys',
         path: '/services / mobile - first - surveys',
         icon: Smartphone,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Customer Support Chatbot',
         path: '/services / customer - support - chatbot',
         icon: Users,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Compliance Copilot',
         path: '/services / ai - compliance - copilot',
         icon: Shield,
-        status: 'missing',
-      },
+        status: 'missing'},
     ],
     solutions: [
       {
+
         name: 'Enterprise Solutions',
         path: '/solutions / enterprise',
         icon: Building,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'AI Business Intelligence',
         path: '/solutions / ai - business - intelligence',
         icon: Brain,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Quantum AI Platform',
         path: '/solutions / quantum - ai - platform',
         icon: Atom,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Digital Twin Solutions',
         path: '/solutions / digital - twin',
         icon: Eye,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Zero Trust Security',
         path: '/solutions / zero - trust - security',
         icon: Shield,
-        status: 'missing',
-      },
+        status: 'missing'},
     ],
     about: [
       {
+
         name: 'Our Story',
         path: '/about / story',
         icon: FileText,
-        status: 'missing',
-      },
+        status: 'missing'},
       { name: 'Team', path: '/about / team', icon: Users, status: 'missing' },
       { name: 'Careers', path: '/careers', icon: Briefcase, status: 'missing' },
       { name: 'Partners', path: '/partners', icon: Network, status: 'missing' },
@@ -843,87 +845,88 @@ import { motion } from 'framer - motion';
     ],
     resources: [
       {
+
         name: 'Case Studies',
         path: '/case - studies',
         icon: FileText,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Research & Development',
         path: '/research - development',
         icon: TestTube,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Documentation',
         path: '/docs',
         icon: FileText,
-        status: 'missing',
-      },
+        status: 'missing'},
       { name: 'API Reference', path: '/api', icon: Code, status: 'missing' },
       {
+
         name: 'Developer Portal',
         path: '/developer',
         icon: Code,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'API Playground',
         path: '/api - playground',
         icon: Code,
-        status: 'missing',
-      },
+        status: 'missing'},
       { name: 'Community', path: '/community', icon: Users, status: 'missing' },
       { name: 'FAQ', path: '/faq', icon: HelpCircle, status: 'missing' },
       {
+
         name: 'Terms of Service',
         path: '/terms - of - service',
         icon: FileText,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Privacy Policy',
         path: '/privacy - policy',
         icon: Lock,
-        status: 'missing',
-      },
+        status: 'missing'},
       {
+
         name: 'Cookie Policy',
         path: '/cookie - policy',
         icon: Lock,
-        status: 'missing',
-      },
+        status: 'missing'},
     ],
     showcase: [
       {
+
         name: 'Comprehensive Services 2025',
         path: '/comprehensive - services',
         icon: Star,
-        status: 'exists',
-      },
+        status: 'exists'},
       {
+
         name: 'Revolutionary Services',
         path: '/revolutionary - services',
         icon: Star,
-        status: 'exists',
-      },
+        status: 'exists'},
       {
+
         name: 'New Services 2025',
         path: '/new - services - 2025',
         icon: Star,
-        status: 'exists',
-      },
+        status: 'exists'},
       {
+
         name: 'Enhanced New Services 2025',
         path: '/enhanced - new - services - 2025',
         icon: Star,
-        status: 'exists',
-      },
-    ],
-  };
+        status: 'exists'},
+    ]};
 
   const getStatusIcon = (status: string) => {
+
     switch (status) {
+
       case 'exists':
         return < CheckCircle className="w - 5 h - 5 text - green - 500" />;
       case 'missing':
@@ -934,7 +937,9 @@ import { motion } from 'framer - motion';
   };
 
   const getStatusColor = (status: string) => {
+
     switch (status) {
+
       case 'exists':
         return 'text - green - 500';
       case 'missing':
@@ -964,6 +969,7 @@ import { motion } from 'framer - motion';
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: index * 0.05 }}
             className={`flex items - center justify - between p - 3 rounded - lg border ${
+
               item.status === 'exists'
                 ? 'border - green - 500 / 20 bg - green - 500 / 5'
                 : item.status === 'missing'
@@ -1043,6 +1049,7 @@ import { motion } from 'framer - motion';
           className="grid grid - cols - 1 md:grid - cols - 4 gap - 6 mb - 12"
         >
           {Object.entries (siteStructure) .map ( ([key, items]) => {
+
             const existing = items.filter (item => item.status === 'exists') .length;
             const missing = items.filter (item => item.status === 'missing') .length;
             const total = items.length;

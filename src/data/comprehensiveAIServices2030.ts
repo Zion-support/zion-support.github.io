@@ -2,6 +2,7 @@
 // Cutting-edge artificial intelligence and machine learning solutions
 ;
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
@@ -9,6 +10,7 @@ export interface ServiceContact {
 }
 ;
 export interface AIService {
+
   id: number;
   name: string;
   category: string;

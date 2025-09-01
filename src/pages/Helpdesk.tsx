@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom.ts';
 import React, { useState } from 'react.ts';
 export default React.memo (function Helpdesk (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   HelpCircle,
@@ -43,8 +45,7 @@ import { motion } from 'framer - motion.ts';
   ChevronUp,
   ExternalLink,
   Code,
-  DollarSign,
-} from 'lucide - react.ts';
+  DollarSign} from 'lucide - react.ts';
 
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
@@ -52,45 +53,46 @@ import { motion } from 'framer - motion.ts';
 
   const supportCategories = [
     {
+
       id: 'all',
       name: 'All Issues',
       icon: HelpCircle,
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       id: 'technical',
       name: 'Technical Issues',
       icon: Monitor,
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     {
+
       id: 'account',
       name: 'Account & Billing',
       icon: Settings,
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       id: 'product',
       name: 'Product Support',
       icon: Rocket,
-      color: 'from - orange - 500 to - red - 500',
-    },
+      color: 'from - orange - 500 to - red - 500'},
     {
+
       id: 'integration',
       name: 'Integration Help',
       icon: Zap,
-      color: 'from - indigo - 500 to - purple - 500',
-    },
+      color: 'from - indigo - 500 to - purple - 500'},
     {
+
       id: 'security',
       name: 'Security Issues',
       icon: Shield,
-      color: 'from - red - 500 to - orange - 500',
-    },
+      color: 'from - red - 500 to - orange - 500'},
   ];
 
   const commonIssues = [
     {
+
       id: 'login - issue',
       title: 'Unable to log in to my account',
       category: 'account',
@@ -101,9 +103,9 @@ import { motion } from 'framer - motion.ts';
         'Try resetting your password using the "Forgot Password" link. If the issue persists, contact our support team.',
       tags: ['login', 'authentication', 'password'],
       status: 'resolved',
-      icon: Lock,
-    },
+      icon: Lock},
     {
+
       id: 'api - error',
       title: 'API integration errors',
       category: 'integration',
@@ -114,9 +116,9 @@ import { motion } from 'framer - motion.ts';
         "Check your API key and ensure you're using the correct endpoint. Verify your request format matches our documentation.",
       tags: ['api', 'integration', 'error'],
       status: 'open',
-      icon: Code,
-    },
+      icon: Code},
     {
+
       id: 'performance - slow',
       title: 'Application running very slow',
       category: 'technical',
@@ -127,9 +129,9 @@ import { motion } from 'framer - motion.ts';
         'Clear your browser cache and cookies. Check your internet connection. If the issue persists, it may be a system - wide issue.',
       tags: ['performance', 'speed', 'browser'],
       status: 'investigating',
-      icon: Zap,
-    },
+      icon: Zap},
     {
+
       id: 'data - sync',
       title: 'Data not syncing between devices',
       category: 'technical',
@@ -140,9 +142,9 @@ import { motion } from 'framer - motion.ts';
         "Ensure all devices are connected to the internet. Try refreshing the application. Check if you're logged into the same account.",
       tags: ['sync', 'data', 'devices'],
       status: 'resolved',
-      icon: Database,
-    },
+      icon: Database},
     {
+
       id: 'billing - question',
       title: 'Billing and subscription questions',
       category: 'account',
@@ -153,9 +155,9 @@ import { motion } from 'framer - motion.ts';
         'Review your billing history in your account settings. Contact our billing team for detailed explanations of charges.',
       tags: ['billing', 'subscription', 'charges'],
       status: 'resolved',
-      icon: DollarSign,
-    },
+      icon: DollarSign},
     {
+
       id: 'security - concern',
       title: 'Security and privacy concerns',
       category: 'security',
@@ -166,12 +168,12 @@ import { motion } from 'framer - motion.ts';
         'We implement enterprise - grade security including encryption, regular audits, and compliance with industry standards.',
       tags: ['security', 'privacy', 'compliance'],
       status: 'resolved',
-      icon: Shield,
-    },
+      icon: Shield},
   ];
 
   const supportChannels = [
     {
+
       type: 'Live Chat',
       icon: MessageCircle,
       description: 'Get instant help from our support team',
@@ -179,9 +181,9 @@ import { motion } from 'framer - motion.ts';
       responseTime: '< 2 minutes',
       priority: 'high',
       href: '/support / chat',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       type: 'Phone Support',
       icon: Phone,
       description: 'Speak directly with our experts',
@@ -189,9 +191,9 @@ import { motion } from 'framer - motion.ts';
       responseTime: 'Immediate',
       priority: 'high',
       href: '/support / phone',
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       type: 'Email Support',
       icon: Mail,
       description: 'Send us detailed questions',
@@ -199,9 +201,9 @@ import { motion } from 'framer - motion.ts';
       responseTime: '< 4 hours',
       priority: 'medium',
       href: '/support / email',
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     {
+
       type: 'Support Tickets',
       icon: Ticket,
       description: 'Submit detailed support requests',
@@ -209,82 +211,81 @@ import { motion } from 'framer - motion.ts';
       responseTime: '< 24 hours',
       priority: 'medium',
       href: '/support / tickets',
-      color: 'from - orange - 500 to - red - 500',
-    },
+      color: 'from - orange - 500 to - red - 500'},
   ];
 
   const quickSolutions = [
     {
+
       icon: BookOpen,
       title: 'Knowledge Base',
       description: 'Browse our comprehensive documentation',
       articles: '500 + articles',
       href: '/docs',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       icon: Video,
       title: 'Video Tutorials',
       description: 'Step - by - step video guides',
       articles: '100 + tutorials',
       href: '/tutorials',
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     {
+
       icon: Users,
       title: 'Community Forum',
       description: 'Connect with other users',
       articles: '10,000 + members',
       href: '/community',
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       icon: FileText,
       title: 'FAQ',
       description: 'Frequently asked questions',
       articles: '200 + FAQs',
       href: '/faq',
-      color: 'from - orange - 500 to - red - 500',
-    },
+      color: 'from - orange - 500 to - red - 500'},
   ];
 
   const systemStatus = [
     {
+
       service: 'AI Services',
       status: 'operational',
       icon: Brain,
-      color: 'green',
-    },
+      color: 'green'},
     {
+
       service: 'Cloud Infrastructure',
       status: 'operational',
       icon: Cloud,
-      color: 'green',
-    },
+      color: 'green'},
     {
+
       service: 'Security Systems',
       status: 'operational',
       icon: Shield,
-      color: 'green',
-    },
+      color: 'green'},
     {
+
       service: 'Data Analytics',
       status: 'operational',
       icon: TrendingUp,
-      color: 'green',
-    },
+      color: 'green'},
     {
+
       service: 'API Services',
       status: 'operational',
       icon: Globe,
-      color: 'green',
-    },
+      color: 'green'},
     {
+
       service: 'Support Portal',
       status: 'operational',
       icon: HelpCircle,
-      color: 'green',
-    },
+      color: 'green'},
   ];
 
   const filteredIssues = selectedCategory === 'all'
@@ -292,15 +293,19 @@ import { motion } from 'framer - motion.ts';
       : anycommonIssues.filter (issue => issue.category === selectedCategory) ;
 
   const handleSearch = useCallback ( (e: anyReact.FormEvent) => {
+
     e.preventDefault () ;
     if (searchQuery.trim () ) {
+
       // Implement search functionality
       console.log ('Searching for:', searchQuery) ;
     }
   };
 
   const getPriorityColor = (priority: anystring) => {
+
     switch (priority) {
+
       case 'high':
         return 'text - red - 400 bg - red - 400 / 20 border - red - 400 / 30';
       case 'medium':
@@ -313,7 +318,9 @@ import { motion } from 'framer - motion.ts';
   };
 
   const getStatusColor = (status: anystring) => {
+
     switch (status) {
+
       case 'resolved':
         return 'text - green - 400 bg - green - 400 / 20 border - green - 400 / 30';
       case 'investigating':
@@ -525,6 +532,7 @@ import { motion } from 'framer - motion.ts';
           {supportCategories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
               onClick={ () => setSelectedCategory (category.id) }
               className={`flex items - center gap - 2 px - 6 py - 3 rounded - xl border transition - all duration - 300 hover:scale - 105 ${
+
                 selectedCategory === category.id
                   ? 'bg - slate - 700 / 50 border - cyan - 400 / 50 text - cyan - 400'
                   : 'bg - slate - 800 / 30 border - slate - 700 / 30 text - gray - 300 hover:border - cyan - 400 / 30 hover:text - cyan - 400'

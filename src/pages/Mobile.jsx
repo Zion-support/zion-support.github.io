@@ -3,23 +3,28 @@ export default Mobile;
 import SEO from "../SEO";
 
 const Mobile = () => {
+
     const mobileStats = [
         {
+
             stat: "73%",
             label: "Mobile Internet Usage",
             description: "Of all internet traffic comes from mobile devices"
         },
         {
+
             stat: "85%",
             label: "User Preference",
             description: "Of users prefer mobile - friendly websites"
         },
         {
+
             stat: "60%",
             label: "Mobile Search",
             description: "Of searches are performed on mobile devices"
         },
         {
+
             stat: "40%",
             label: "Mobile Conversion",
             description: "Higher conversion rates on mobile - optimized sites"

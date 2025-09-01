@@ -9,10 +9,13 @@ export default OpenAppRedirect;
 
 // This component handles deep linking to the mobile app
 const OpenAppRedirect = () => {
+
     const navigate = useNavigate () ;
     const [status, setStatus] = useState ('redirecting') ;
     useEffect ( () => {
+
         const attemptAppOpen = async () => {
+
             const isAndroid = /Android/.test (navigator.userAgent) ;
             // App scheme URLs (these would be your actual app's URL schemes) const androidAppUrl = "market://details?id = app.zion.marketplace";
             const iosAppUrl = "https://apps.apple.com / app / zion - ai - marketplace / id0000000000";
@@ -20,25 +23,33 @@ const OpenAppRedirect = () => {
             let timeout;
             // Try to open the app
             if (isAndroid || isiOS) {
+
                 // Set a timeout to redirect to app store if the app doesn't open
                 timeout = window.setTimeout ( () => {
+
                     setStatus ('timeout') ;
                     if (isAndroid) {
+
                         window.location.href = androidAppUrl}
                     else if (isiOS) {
+
                         window.location.href = iosAppUrl}
                 }, 2500) ; // Wait 2.5 seconds before redirecting to store
                 // Try to open the app
                 window.location.href = appScheme}
             else {
+
                 // Not on mobile, redirect to mobile launch page
                 setStatus ('failed') ;
                 setTimeout ( () => {
+
                     router (fallbackUrl) ;
                 }, 1500) ;
             }
             // Clear timeout if page visibility changes (meaning app opened successfully) document.addEventListener ("visibilitychange", () => {
+
                 if (document.hidden && timeout) {
+
                     clearTimeout (timeout) }
             }) };
         attemptAppOpen () }, [navigate]) ;

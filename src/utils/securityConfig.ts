@@ -64,6 +64,7 @@ export
 
   // Remove SQL injection patterns
   sql: (input: string): string => {
+
 '"
     return input.replace(/['";\\]/g,)},
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SpeakerWaveIcon, AdjustmentsHorizontalIcon, ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
 const EnhancedAccessibility = () => {
+
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
 
@@ -14,19 +15,21 @@ const EnhancedAccessibility = () => {
         colorBlindness: 'none'
     });
     useEffect(() => {
+
         // Load saved settings from localStorage'
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
 
             try {
+
                 const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));
-                // // // // // // // // console.warn('Failed to load accessibility settings:', error);
+                // // // // // // // // // // // console.warn('Failed to load accessibility settings:', error);
             }
                 applySettings({ ...settings, ...parsed })}
             catch (error) {
 
-                // console.warn('Failed to load accessibility settings:', error)}
+                // // // // console.warn('Failed to load accessibility settings:', error)}
         }
         // Check for user preferences'
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches;
@@ -81,12 +84,15 @@ const EnhancedAccessibility = () => {
 
         updateSetting('highContrast', !settings.highContrast)};
     const increaseFontSize = () => {
+
         const newSize = Math.min(settings.fontSize + 2, 24);
         updateSetting('fontSize', newSize)};
     const decreaseFontSize = () => {
+
         const newSize = Math.max(settings.fontSize - 2, 12);
         updateSetting('fontSize', newSize)};
     const resetSettings = () => {
+
         const defaultSettings = {
 
   highContrast: false,

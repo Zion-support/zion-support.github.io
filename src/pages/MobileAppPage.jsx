@@ -9,6 +9,7 @@ import SEO from '@/components / SEO';
 export default MobileAppPage;
 
 const MobileAppPage = () => {
+
   return ( (<SEO
         title="Zion AI Marketplace App"
         description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now."

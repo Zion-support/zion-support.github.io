@@ -1,14 +1,16 @@
 import type { Request, Response } from 'express';
-import { createClient, SupabaseClient } from '@supabase/supabase-js'
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !supabaseServiceKey) {
-  console.error("Supabase URL or Service Role Key is not defined for admin trust scores endpoint.")
+  console.error(
+    'Supabase URL or Service Role Key is not defined for admin trust scores endpoint.'
+  );
 }
 
-const supabaseAdmin = createClient(supabaseUrl!, supabaseServiceKey!)
+const supabaseAdmin = createClient(supabaseUrl!, supabaseServiceKey!);
 
 // Placeholder for admin authentication
 const isAdminAuthenticated = (req: Request): boolean => {
@@ -17,11 +19,13 @@ const isAdminAuthenticated = (req: Request): boolean => {
   // IMPORTANT: This is NOT secure for production.
   const adminSecret = req.headers['x-admin-secret'] as string; // Express headers are string | string[] | undefined
   if (process.env.NODE_ENV === 'development' && !process.env.ADMIN_SECRET_KEY) {
-    console.warn("ADMIN_SECRET_KEY not set in development, allowing access. THIS IS INSECURE.")
+    console.warn(
+      'ADMIN_SECRET_KEY not set in development, allowing access. THIS IS INSECURE.'
+    );
     return true;
   }
   return adminSecret === process.env.ADMIN_SECRET_KEY;
-}
+};
 
 interface UserWithTrustScore {
   id: number;
@@ -33,17 +37,16 @@ interface UserWithTrustScore {
   trustScoreUpdatedAt: string | null;
 }
 
-export default async function handler(
-  req: Request,
-  res: Response
-) {
+export default async function handler(req: Request, res: Response) {
   if (req.method !== 'GET') {
     res.setHeader('Allow', 'GET'); // Express uses string value for setHeader
     return res.status(405).send(`Method ${req.method} Not Allowed`); // Use .send for text/plain
   }
 
   if (!isAdminAuthenticated(req)) {
-    return res.status(403).json({ error: 'Forbidden: Admin privileges required.' });
+    return res
+      .status(403)
+      .json({ error: 'Forbidden: Admin privileges required.' });
   }
 
   try {
@@ -55,7 +58,9 @@ export default async function handler(
 
     if (usersError) {
       console.error('Error fetching users:', usersError);
-      return res.status(500).json({ error: 'Failed to fetch users.', details: usersError.message });
+      return res
+        .status(500)
+        .json({ error: 'Failed to fetch users.', details: usersError.message });
     }
 
     if (!users || users.length === 0) {
@@ -64,7 +69,7 @@ export default async function handler(
 
     // For each user, fetch their latest TrustScore
     const usersWithTrustScores: UserWithTrustScore[] = await Promise.all(
-      users.map(async (user) => {
+      users.map(async user => {
         const { data: trustScore, error: scoreError } = await supabaseAdmin
           .from('TrustScore')
           .select('id, score, operatorGptAnalysis, updatedAt')
@@ -73,8 +78,12 @@ export default async function handler(
           .limit(1)
           .single(); // Assuming one user has at most one active trust score
 
-        if (scoreError && scoreError.code !== 'PGRST116') { // PGRST116: single row not found
-          console.warn(`Error fetching trust score for user ${user.id}:`, scoreError.message);
+        if (scoreError && scoreError.code !== 'PGRST116') {
+          // PGRST116: single row not found
+          console.warn(
+            `Error fetching trust score for user ${user.id}:`,
+            scoreError.message
+          );
           // Continue processing other users, but this user will have null score info
         }
 
@@ -105,9 +114,11 @@ export default async function handler(
       total: usersWithTrustScores.length,
       totalPages: Math.ceil(usersWithTrustScores.length / limit),
     });
-
   } catch (err: any) {
     console.error('Unexpected error in /api/admin/trust-scores:', err);
-    return res.status(500).json({ error: 'An unexpected server error occurred.', details: err.message });
+    return res.status(500).json({
+      error: 'An unexpected server error occurred.',
+      details: err.message,
+    });
   }
 }

@@ -80,6 +80,7 @@ function Header ({ className }: HeaderProps) {
 } from 'lucide-react';
 
 interface HeaderProps {
+
   // Add your props here
 
 
@@ -96,7 +97,7 @@ export function Header({ className }: HeaderProps) {
 
   
   useEffect ( () => {
-    
+
     };
 
 
@@ -109,7 +110,7 @@ export function Header({ className }: HeaderProps) {
 
   
     // Add search logic here'
-    // console.log('Searching for:', searchQuery)};
+    // // // // console.log('Searching for:', searchQuery)};
 
   
   return()
@@ -231,6 +232,7 @@ export function Header({ className }: HeaderProps) {
                       <button"
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-red-400 hover:bg-gray-800 transition-colors w-full text-left"
                         onClick={() => {
+
                           // Add logout logic here
                           setIsUserMenuOpen (false) }}
                       >"

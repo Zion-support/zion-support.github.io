@@ -2,11 +2,13 @@
 import { Helmet } from 'react - helmet - async';
 import React from 'react';
 export const EnhancedSEO: React.FC < SEOProps> = ({
+
 =======
 <<<<<<< HEAD
 >>>>>>> main
 
 interface SEOProps {
+
   title: string;
   description: string;
   canonical?: string;
@@ -14,6 +16,7 @@ interface SEOProps {
   type?: 'website' | 'article' | 'product' | 'service';
   tags?: string[];
   services?: Array<{
+
     name: string;
     description: string;
     url: string;
@@ -68,8 +71,8 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     "description": "Leading provider of AI-powered technology solutions, cloud computing, and cybersecurity services.",
   noindex = false,
 <<<<<<< HEAD
-  canonical,
-}) => {
+  canonical}) => {
+
   const fullTitle = title.includes ('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = canonical || `${url}${window.location.pathname}`;
 
@@ -81,6 +84,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 >>>>>>> main
   // Structured data for better SEO
   const structuredData = {
+
 "
     "@context": "https://schema.org","
     "@type": type === 'website' ? "Organization" : "Article","
@@ -90,6 +94,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     "description": description,"
     "foundingDate": "2020","
     "address": {
+
 "
       "@type": "PostalAddress","
       "streetAddress": "123 Tech Street","
@@ -99,6 +104,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       "addressCountry": "US"
     },"
     "contactPoint": {
+
 "
       "@type": "ContactPoint","
       "telephone": "+1-555-123-4567","
@@ -125,14 +131,17 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     "numberOfEmployees": "100+","
     "serviceArea": "Worldwide","
     "hasOfferCatalog": {
+
 "
       "@type": "OfferCatalog","
       "name": "Technology Services","
       "itemListElement": [
         {
+
 "
           "@type": "Offer","
           "itemOffered": {
+
 "
             "@type": "Service","
             "name": "AI Solutions","
@@ -140,9 +149,11 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
           }
         },
         {
+
 "
           "@type": "Offer","
           "itemOffered": {
+
 "
             "@type": "Service","
             "name": "Cloud Computing","
@@ -150,9 +161,11 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
           }
         },
         {
+
 "
           "@type": "Offer","
           "itemOffered": {
+
 "
             "@type": "Service","
             "name": "Cybersecurity","
@@ -166,7 +179,6 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     // Preload critical images
     if (ogImage) {
 
-      
       imageLink.rel = 'preload';
       imageLink.as = 'image';
       imageLink.href = ogImage;
@@ -176,31 +188,36 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     
     dnsPrefetchDomains.forEach(domain => {
 
-      
       link.rel = 'dns-prefetch';
       link.href = domain;
       document.head.appendChild(link)});
 <<<<<<< HEAD
   }, [ogImage]);
   if (type === 'article') {
+
 =======
   }, [ogImage]);'  if (type === 'article') {
+
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     Object.assign(structuredData, {
+
 "
       "@type": "Article","
       "headline": title,"
       "author": {
+
 "
         "@type": "Person","
         "name": author
       },"
       "publisher": {
+
 "
         "@type": "Organization","
         "name": "Zion Tech Group","
         "logo": {
+
 "
           "@type": "ImageObject","`
           "url": `${url}/images/zion-tech-group-logo.png`
@@ -209,6 +226,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       "datePublished": publishedTime,"
       "dateModified": modifiedTime,"
       "mainEntityOfPage": {
+
 "
         "@type": "WebPage","
         "@id": fullUrl

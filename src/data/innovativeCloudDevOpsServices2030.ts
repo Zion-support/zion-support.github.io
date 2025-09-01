@@ -2,6 +2,7 @@
 // Next-generation infrastructure and development solutions
 ;
 export interface CloudDevOpsService {
+
   id: string;
   title: string;
   description: string;
@@ -69,6 +70,7 @@ const zionContact = {
 >>>>>>> main
 export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
   {
+
 "
     id: "multi-cloud-orchestration-platform","
     title: "Zion Multi-Cloud Orchestration Platform","
@@ -164,6 +166,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
   },
 
   {
+
 "
     id: "ai-powered-devops-automation","
     title: "Zion AI-Powered DevOps Automation","
@@ -259,6 +262,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
   },
 
   {
+
 "
     id: "edge-computing-orchestrator","
     title: "Zion Edge Computing Orchestrator","
@@ -354,6 +358,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
   },
 
   {
+
 "
     id: "serverless-architecture-platform","
     title: "Zion Serverless Architecture Platform","
@@ -449,6 +454,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
   },
 
   {
+
 "
     id: "gitops-workflow-automation","
     title: "Zion GitOps Workflow Automation","

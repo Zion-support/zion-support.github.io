@@ -43,15 +43,18 @@ export function Notification({
   const styles = notificationStyles[type];
   const Icon = styles.icon;
   useEffect(() => {
+
     if (duration > 0) {
 
       const timer = setTimeout(() => {
+
         handleClose();
       }, duration);
       return () => clearTimeout(timer);
     }
   }, [duration]);
   const handleClose = () => {
+
     setIsVisible(false);
     setTimeout(() => onClose(id), 300);
   };

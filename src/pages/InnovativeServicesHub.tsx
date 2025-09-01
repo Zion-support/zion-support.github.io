@@ -1,6 +1,7 @@
 import React from 'react';
 export default InnovativeServicesHub;}}}}}}}
 import {
+
 import { motion } from 'framer - motion';
 
   Rocket,
@@ -37,8 +38,10 @@ import { motion } from 'framer - motion';
  } from 'lucide - react';
 
 const InnovativeServicesHub: React.FC = () : JSX.Element => {
+
   const serviceCategories = [
     {
+
       id: 'ultimate - 2025',
       title: 'Ultimate Innovative Services 2025',
       description: 'Revolutionary micro SAAS, IT, and AI services that push the boundaries of technology',
@@ -49,6 +52,7 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
       stats: { services: 10, avgROI: '500%', innovation: 'Revolutionary' }
     },
     {
+
       id: 'advanced - 2026',
       title: 'Advanced Innovative Services 2026',
       description: 'Cutting - edge futuristic technologies including brain - computer interfaces and space mining',
@@ -59,6 +63,7 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
       stats: { services: 10, avgROI: '1000%', innovation: 'Futuristic' }
     },
     {
+
       id: 'core - it',
       title: 'Core IT & Infrastructure',
       description: 'Enterprise - grade IT solutions and infrastructure services for modern businesses',
@@ -69,11 +74,11 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
       stats: { services: 15, avgROI: '300%', innovation: 'Enterprise' }
     },
     {
+
       id: 'green - tech',
       title: 'Green Technology Solutions',
       description: 'Sustainable and eco - friendly technology solutions for a better future',
-      icon: Globe,
-    };
+      icon: Globe};
       color: 'from - emerald - 600 to - green - 600',;
       route: '/green - it',;
       features: ['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],;
@@ -83,6 +88,7 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
 
   const featuredServices = [
     {
+
       title: 'Quantum AI Neural Networks',
       description: 'Revolutionary AI powered by quantum computing principles',
       category: 'AI & Quantum',
@@ -91,6 +97,7 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
       delivery: '6 months'
     },
     {
+
       title: 'Brain - Computer Interface Platform',
       description: 'Direct neural interface for human - computer interaction',
       category: 'Neurotech',
@@ -99,6 +106,7 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
       delivery: '12 months'
     },
     {
+
       title: 'Autonomous Space Mining System',;
       description: 'AI - powered space exploration and resource extraction',;
       category: 'Space Tech',;
@@ -109,6 +117,7 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
   ];
 
   const containerVariants = {
+
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -119,6 +128,7 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
   };
 
   const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0
 
@@ -145,16 +155,19 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
           <motion.h1
             className="text - 5xl md:text - 7xl font - bold text - white mb - 6"
             initial = {
+
   { y: -50,
   opacity: 0
 
 }}
             animate = {
+
   { y: 0,
   opacity: 1
 
 }}
             transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -165,16 +178,19 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
           <motion.p
             className="text - xl md:text - 2xl text - indigo - 100 max - w-4xl mx - auto mb - 8"
             initial = {
+
   { y: 50,
   opacity: 0
 
 }}
             animate = {
+
   { y: 0,
   opacity: 1
 
 }}
             transition = {
+
   { duration: 0.8,
   delay: 0.4
 
@@ -185,16 +201,19 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
           <motion.div
             className="flex flex - wrap justify - center gap - 4 text - sm"
             initial = {
+
   { scale: 0.8,
   opacity: 0
 
 }}
             animate = {
+
   { scale: 1,
   opacity: 1
 
 }}
             transition = {
+
   { duration: 0.8,
   delay: 0.6
 
@@ -220,16 +239,19 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
       <motion.div
         className="container mx - auto px - 4 py - 16"
         initial = {
+
   { opacity: 0,
   y: 20
 
 }}
         animate = {
+
   { opacity: 1,
   y: 0
 
 }}
         transition = {
+
   { duration: 0.6,
   delay: 0.8
 
@@ -279,6 +301,7 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
                 className="group bg - slate - 800 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - slate - 700 / 50 hover:border - blue - 500 / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - blue - 500 / 20"
                 variants={itemVariants}
                 whileHover = {
+
   { y: -5,
   scale: 1.02
 
@@ -358,21 +381,25 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
               key={index}
               className="bg - slate - 800 / 50 backdrop - blur - sm rounded - 2xl p - 6 border border - slate - 700 / 50 hover:border - blue - 500 / 50 transition - all duration - 300"
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 1.4 + index * 0.1
 
 }}
               whileHover = {
+
   { y: -5,
   scale: 1.02
 
@@ -416,16 +443,19 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
       <motion.div
         className="bg - gradient - to - r from - indigo - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20 border - t border - slate - 700 / 50"
         initial = {
+
   { opacity: 0,
   y: 50 ;
 
 }}
         animate = {
+
   { opacity: 1,
   y: 0 ;
 
 }}
         transition = {
+
   { duration: 0.8,
   delay: 1.6 ;
 

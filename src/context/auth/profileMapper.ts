@@ -1,4 +1,5 @@
 interface SupabaseUser {
+
   id: string;
   email?: string;
 user_metadata?: {
@@ -10,6 +11,7 @@ user_metadata?: {
   updated_at?: string}
 
 interface Profile {
+
   id: string;
   display_name?: string;
   avatar_url?: string;
@@ -20,6 +22,7 @@ interface Profile {
 }
 
 interface MappedUser {
+
   id: string;
   email: string;
   displayName?: string;

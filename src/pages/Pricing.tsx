@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export default Pricing;
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -29,6 +30,7 @@ import { SEO } from '../components / SEO';
 
   const servicePackages = [
     {
+
       name: 'AI Implementation',
       description: 'Custom AI solutions for your business',
       price: 'From $5,000',
@@ -43,6 +45,7 @@ import { SEO } from '../components / SEO';
       icon: Brain
     },
     {
+
       name: 'Cloud Migration',
       description: 'Seamless cloud infrastructure setup',
       price: 'From $10,000',
@@ -57,6 +60,7 @@ import { SEO } from '../components / SEO';
       icon: Cloud
     },
     {
+
       name: 'Security Audit',
       description: 'Comprehensive security assessment',
       price: 'From $3,000',
@@ -74,18 +78,21 @@ import { SEO } from '../components / SEO';
 
   const addOns = [
     {
+
       name: 'Priority Support',
       description: '24 / 7 dedicated support with 2 - hour response time',
       price: '$500 / month',
       icon: MessageSquare
     },
     {
+
       name: 'Custom Development',
       description: 'Bespoke features and integrations',
       price: '$150 / hour',
       icon: Rocket
     },
     {
+
       name: 'Training & Onboarding',
       description: 'Comprehensive team training and setup',
       price: '$2,000 / day',
@@ -95,6 +102,7 @@ import { SEO } from '../components / SEO';
 
   const savings = billingCycle === 'annual' ? 20 : 0;
 interface PricingTier {
+
   name: string;
   description: string;
   price: string;
@@ -102,13 +110,14 @@ interface PricingTier {
   features: string[];
   popular?: boolean;
   color: string;
-  icon: any;
+  icon: unknown;
   cta: string;
   ctaLink: string;
 }
 
 const pricingTiers: PricingTier[] = [
   {
+
     name: 'Starter',
     description: 'Perfect for small businesses and startups',
     price: '$299',
@@ -131,6 +140,7 @@ const pricingTiers: PricingTier[] = [
     ctaLink: '/contact'
   },
   {
+
     name: 'Professional',
     description: 'Ideal for growing businesses and teams',
     price: '$799',
@@ -157,6 +167,7 @@ const pricingTiers: PricingTier[] = [
     ctaLink: '/contact'
   },
   {
+
     name: 'Enterprise',
     description: 'For large organizations with complex needs',
     price: 'Custom',
@@ -183,6 +194,7 @@ const pricingTiers: PricingTier[] = [
 
 const servicePricing = [
   {
+
     category: 'AI & Machine Learning',
     icon: Brain,
     services: [
@@ -193,6 +205,7 @@ const servicePricing = [
     ]
   },
   {
+
     category: 'Cloud & DevOps',
     icon: Cloud,
     services: [
@@ -203,6 +216,7 @@ const servicePricing = [
     ]
   },
   {
+
     category: 'Cybersecurity & Privacy',
     icon: Shield,
     services: [
@@ -213,6 +227,7 @@ const servicePricing = [
     ]
   },
   {
+
     category: 'Micro SaaS Solutions',
     icon: ShoppingCart,
     services: [
@@ -263,6 +278,7 @@ const servicePricing = [
             <div role="button" className="bg - slate - 800 / 50 rounded - xl p - 1 border border - slate - 600 / 50">
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle ('monthly') }
                 className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 200 ${
+
                   billingCycle === 'monthly'
                     ? 'bg - cyan - 400 text - white'
                     : 'text - gray - 300 hover:text - white'
@@ -272,6 +288,7 @@ const servicePricing = [
               </button>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle ('annual') }
                 className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 200 ${
+
                   billingCycle === 'annual'
                     ? 'bg - cyan - 400 text - white'
                     : 'text - white'
@@ -352,6 +369,7 @@ const servicePricing = [
 
                   <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedPlan (plan.name) }
                     className={`w - full py - 3 px - 6 rounded - lg font - semibold transition - all duration - 200 ${
+
                       plan.popular
                         ? 'bg - gradient - to - r from - purple - 500 to - pink - 500 text - white hover:from - purple - 600 hover:to - pink - 600'
                         : 'bg - gradient - to - r from - cyan - 400 to - blue - 500 text - white hover:from - cyan - 500 hover:to - blue - 600'
@@ -464,18 +482,22 @@ const servicePricing = [
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-4xl mx - auto">
             {[
               {
+
                 question: "Can I change my plan at any time?",
                 answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
               },
               {
+
                 question: "What payment methods do you accept?",
                 answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. All payments are processed securely through Stripe."
               },
               {
+
                 question: "Is there a setup fee?",
                 answer: "No setup fees for our subscription plans. Custom service packages may have one - time setup costs depending on complexity."
               },
               {
+
                 question: "Do you offer discounts for nonprofits?",
                 answer: "Yes, we offer special pricing for qualified nonprofit organizations. Contact us for more details about our nonprofit discount program."
               }
@@ -492,6 +514,7 @@ const servicePricing = [
           </div>) }
 
               <div role="button" className={`p - 8 bg - white / 5 backdrop - blur - sm rounded - 2xl border ${
+
                 tier.popular
                   ? 'border - zion - cyan / 40 ring - 2 ring - zion - cyan / 20'
                   : 'border - zion - cyan / 20'
@@ -520,6 +543,7 @@ const servicePricing = [
                 <Link
                   to={tier.ctaLink}
                   className={`w - full py - 3 px - 6 rounded - lg font - semibold transition - all duration - 300 flex items - center justify - center gap - 2 ${
+
                     tier.popular
                       ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white hover:from - zion - cyan / 80 hover:to - zion - purple / 80'
                       : 'bg - white / 10 text - white hover:bg - white / 20 border border - zion - cyan / 20'

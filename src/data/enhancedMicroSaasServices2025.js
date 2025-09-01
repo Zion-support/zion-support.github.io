@@ -51,12 +51,14 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     roi: "300-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "OpenAI GPT-4", "React", "Node.js", "PostgreSQL"],;"
       integrations["GitHub", "GitLab", "Bitbucket", "Slack", "Jira"],;
@@ -69,6 +71,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
   },
   // AI-Powered Marketing & Sales Services
   {
+
 "
     id: "ai-marketing-automation-suite","
     title: "AI Marketing Automation Suite","
@@ -118,12 +121,14 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     roi: "250-400%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "React", "Node.js", "MongoDB"],;"
       integrations["Shopify", "WooCommerce", "Mailchimp", "HubSpot", "Salesforce"],;
@@ -136,6 +141,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
   },
   // AI-Powered Customer Service
   {
+
 "
     id: "ai-customer-service-bot","
     title: "AI Customer Service Bot","
@@ -185,12 +191,14 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     roi: "200-350%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "OpenAI GPT-4", "React", "Node.js", "Redis"],;"
       integrations["Zendesk", "Intercom", "Salesforce", "Shopify", "Slack"],;
@@ -203,6 +211,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
   },
   // AI-Powered Financial Services
   {
+
 "
     id: "ai-financial-forecasting-platform","
     title: "AI Financial Forecasting Platform","
@@ -252,12 +261,14 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     roi: "150-300%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],;"
       integrations["Bloomberg", "Yahoo Finance", "Alpha Vantage", "Plaid", "Stripe"],;
@@ -270,6 +281,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
   },
   // AI-Powered Healthcare Services
   {
+
 "
     id: "ai-healthcare-diagnostic-assistant","
     title: "AI Healthcare Diagnostic Assistant","
@@ -319,12 +331,14 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     roi: "200-400%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "PyTorch", "React", "Node.js"],;"
       integrations["Epic", "Cerner", "Allscripts", "DICOM", "HL7"],;
@@ -337,6 +351,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
   },
   // AI-Powered Legal Services
   {
+
 "
     id: "ai-legal-document-analyzer","
     title: "AI Legal Document Analyzer","
@@ -386,12 +401,14 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     roi: "180-320%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "OpenAI GPT-4", "React", "Node.js", "PostgreSQL"],;"
       integrations["Clio", "MyCase", "PracticePanther", "DocuSign", "Adobe Sign"],;
@@ -404,6 +421,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
   },
   // AI-Powered Education Services
   {
+
 "
     id: "ai-personalized-learning-platform","
     title: "AI Personalized Learning Platform","
@@ -453,12 +471,14 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     roi: "220-380%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "React", "Node.js", "MongoDB"],;"
       integrations["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],;
@@ -471,6 +491,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
   },
   // AI-Powered Supply Chain Services
   {
+
 "
     id: "ai-supply-chain-optimizer","
     title: "AI Supply Chain Optimizer","
@@ -520,12 +541,14 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     roi: "180-320%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],;"
       integrations["SAP", "Oracle", "NetSuite", "Shopify", "WMS systems"],;
@@ -538,6 +561,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
   },
   // AI-Powered Cybersecurity Services
   {
+
 "
     id: "ai-threat-intelligence-platform","
     title: "AI Threat Intelligence Platform","
@@ -587,12 +611,14 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     roi: "250-400%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "React", "Node.js", "Elasticsearch"],;"
       integrations["Splunk", "QRadar", "LogRhythm", "CrowdStrike", "SentinelOne"],;
@@ -605,6 +631,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
   },
   // AI-Powered Real Estate Services
   {
+
 "
     id: "ai-real-estate-analytics-platform","
     title: "AI Real Estate Analytics Platform","
@@ -654,12 +681,14 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     roi: "200-350%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],;"
       integrations["MLS systems", "Zillow", "Redfin", "Realtor.com", "Property databases"],;
@@ -675,6 +704,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
 export const SERVICE_PRICING_TIERS = {
 
   basic: {
+
 "
     name: "Basic","
     features: ["Core functionality", "Basic support", "Standard integrations", "Community forum"],"
@@ -683,12 +713,14 @@ export const SERVICE_PRICING_TIERS = {
 
 },
   professional: {
+
 "
     name: "Professional","
     features["Advanced features", "Priority support", "Custom integrations", "API access", "Analytics dashboard"],;"
     priceRange: "$99 - $399/month"
   },
   enterprise: {
+
 "
     name: "Enterprise","
     features["Full feature set", "24/7 dedicated support", "Custom development", "White-label options", "SLA guarantees", "On-premise deployment"],;"
@@ -710,6 +742,7 @@ export const SERVICE_CATEGORIES = [;"
 ];
 // Contact information for all services;
 export const ZION_TECH_GROUP_CONTACT = {
+
 "
   phone: "+1 302 464 0950","
   email: "kleber@ziontechgroup.com","

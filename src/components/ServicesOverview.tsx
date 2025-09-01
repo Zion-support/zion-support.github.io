@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 =======
@@ -34,7 +35,6 @@ import { motion } from 'framer - motion';
 
 export function ServicesOverview(...args[]):  {
 
-  
       icon: Heart,;
       color: 'from-zion-pink to-zion-purple',;
       description: 'Healthcare artificial intelligence solutions',;

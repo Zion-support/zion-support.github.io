@@ -2,14 +2,17 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw } from 'lucide-react';
 export const BundleAnalyzer = () => {
+
     const [isOpen, setIsOpen] = useState(false);
     const [analysis, setAnalysis] = useState(null);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [activeTab, setActiveTab] = useState('overview');
     // Analyze bundle size from build output
     const analyzeBundle = useCallback (async () => {
+
         setIsAnalyzing (true) ;
         try {
+
             // Simulate bundle analysis based on build output
             // In a real implementation, this would fetch actual bundle stats
             const mockAnalysis = {
@@ -92,12 +95,13 @@ export const BundleAnalyzer = () => {
             setAnalysis (mockAnalysis) }
         catch (error) {
 
-            // console.error('Bundle analysis failed:', error)}
+            // // // // console.error('Bundle analysis failed:', error)}
         finally {
 
             setIsAnalyzing(false)}
     }, []);
     useEffect(() => {
+
         analyzeBundle()}, [analyzeBundle]);
     const formatBytes = (bytes) => {
 
@@ -133,6 +137,7 @@ export const BundleAnalyzer = () => {
     const getOptimizationIcon = (optimization) => {
 
         switch (optimization) {
+
 '"
             case 'good': return <CheckCircle className="w-4 h-4"/>;'"
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;'"
@@ -164,6 +169,7 @@ export const BundleAnalyzer = () => {
   scale: 0.9 
 
 }} transition = {
+
 "
   { type: "spring", damping: 25,
   stiffness: 300 

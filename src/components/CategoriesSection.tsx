@@ -8,45 +8,48 @@ function CategoriesSection ({ showTitle = true }: CategoriesSectionProps) {
 
 const categories = [
   {
+
     title: "AI Services",
     description: "Cutting - edge AI solutions, chatbots, and machine learning",
     icon: "🤖",
     link: "/ai - services",
-    color: "from - purple - 500 to - indigo - 600",
-  },
+    color: "from - purple - 500 to - indigo - 600"},
   {
+
     title: "Micro SAAS",
     description: "Cloud - based software solutions for modern businesses",
     icon: "☁️",
     link: "/micro - saas",
-    color: "from - cyan - 500 to - blue - 600",
-  },
+    color: "from - cyan - 500 to - blue - 600"},
   {
+
     title: "IT Services",
     description: "Infrastructure, security, and technical consulting",
     icon: "⚡",
     link: "/all - services",
-    color: "from - amber - 500 to - orange - 600",
-  },
+    color: "from - amber - 500 to - orange - 600"},
   {
+
     title: "Digital Transformation",
     description: "Business modernization and digital strategy",
     icon: "📈",
     link: "/all - services",
-    color: "from - emerald - 500 to - green - 600",
-  },
+    color: "from - emerald - 500 to - green - 600"},
 ];
 
 const specialServices = [
   {
+
     title: "IT Onsite Services",
     link: "/it - onsite - services"
   },
   {
+
     title: "Comprehensive Services",
     link: "/comprehensive - services"
   },
   {
+
     title: "Services Comparison",
     link: "/services - comparison"
   }
@@ -57,6 +60,7 @@ const specialServices = [
 >>>>>>> main
 
 interface CategoriesSectionProps {
+
   // Add your props here
 
 

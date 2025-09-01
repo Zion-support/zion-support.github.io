@@ -2,6 +2,7 @@
 // Advanced security solutions for the digital age
 ;
 export interface CybersecurityService {
+
   id: string;
   title: string;
   description: string;
@@ -69,6 +70,7 @@ const zionContact = {
 >>>>>>> main
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   {
+
 "
     id: "quantum-resistant-encryption","
     title: "Zion Quantum-Resistant Encryption Platform","
@@ -164,6 +166,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   },
 
   {
+
 "
     id: "ai-threat-hunting-platform","
     title: "Zion AI Threat Hunting Platform","
@@ -259,6 +262,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   },
 
   {
+
 "
     id: "zero-trust-network-access","
     title: "Zion Zero Trust Network Access Platform","
@@ -354,6 +358,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   },
 
   {
+
 "
     id: "ai-powered-vulnerability-management","
     title: "Zion AI-Powered Vulnerability Management","
@@ -449,6 +454,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   },
 
   {
+
 "
     id: "blockchain-security-audit","
     title: "Zion Blockchain Security Audit Platform","

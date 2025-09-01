@@ -1,7 +1,9 @@
 import React from "react";
 import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection = () => {
+
   const ctaItems = [
     {
+
 "
       title: "Watch Demo","
       description: "See our solutions in action",
@@ -11,6 +13,7 @@ import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection 
       hoverColor: "from-blue-700 to-cyan-700"
     },
     {
+
 "
       title: "Download Brochure","
       description: "Get detailed information",
@@ -20,6 +23,7 @@ import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection 
       hoverColor: "from-green-700 to-teal-700"
     },
     {
+
 "
       title: "Meet Our Team","
       description: "Connect with experts",
@@ -29,6 +33,7 @@ import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection 
       hoverColor: "from-purple-700 to-pink-700"
     },
     {
+
 "
       title: "Get Started","
       description: "Start your project today",

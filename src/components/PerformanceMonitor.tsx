@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({
+
 export default PerformanceMonitor;
 import { motion, AnimatePresence } from 'framer - motion';
 
@@ -15,6 +16,7 @@ import {
   CheckCircle} from 'lucide-react';
 >>>>>>> main
 interface PerformanceMetrics {
+
   fcp: number;
   lcp: number;
   fid: number;
@@ -27,6 +29,7 @@ interface PerformanceMetrics {
   ttfbScore: 'good' | 'needs-improvement' | 'poor'}
 
 interface PerformanceMonitorProps {
+
   // Add your props here
 
 
@@ -160,6 +163,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     if (tips.length === 0) {
+
       tips.push('Great performance! Keep monitoring for any regressions')}
 
       const clsObserver = new PerformanceObserver(list => {
@@ -179,24 +183,25 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       
       if (navigationEntry) {
 
-        
         setMetrics(prev =>
           prev ? { ...prev, ttfb } : { fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb }
         )}
 
       return () => {
+
         fcpObserver.disconnect () ;
         lcpObserver.disconnect () ;
         fidObserver.disconnect () ;
         clsObserver.disconnect () }}  }, []);
 
   useEffect(() => {
+
     if (metrics) {
 
-      
       setPerformanceScore(score)}
   }, [metrics, calculatePerformanceScore]) ;
   useEffect ( () => {
+
     // Show monitor after 3 seconds
     
     return () => clearTimeout (timer) }, []) ;

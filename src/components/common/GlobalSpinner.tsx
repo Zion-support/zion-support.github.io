@@ -3,15 +3,18 @@ import { useUIContext } from '@/context/UIContext';
 import { Loader2 } from 'lucide-react';
 
 export const GlobalSpinner = () => {
+
   const { state } = useUIContext();
 
   if (!state.isLoading) {
+
     return null;
   }
 
   return (
     <div
       style={{
+
         position: 'fixed',
         top: 0,
         left: 0,

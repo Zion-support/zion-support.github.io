@@ -4,10 +4,11 @@ export default ScrollToTop;
 export default ScrollToTop;
 export function ScrollToTop = () => {
 
-
         const [isVisible, setIsVisible] = useState (false) ;
         useEffect ( () => {
+
             const toggleVisibility = () => {
+
                 if (window.pageYOffset > 300) {
 
                     setIsVisible(true)}
@@ -18,6 +19,7 @@ export function ScrollToTop = () => {
             window.addEventListener('scroll', toggleVisibility);
             return () => window.removeEventListener('scroll', toggleVisibility)}, []);
         const scrollToTop = () => {
+
             window.scrollTo({
 
                 top: 0,
@@ -59,6 +61,7 @@ whileTap = {};
     scale: 0.95}
 transition = {};
 {
+
 "
     type: "spring",
         stiffness;

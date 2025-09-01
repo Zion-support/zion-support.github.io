@@ -2,6 +2,7 @@
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services
 ;
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
@@ -9,6 +10,7 @@ export interface ServiceContact {
 }
 ;
 export interface MicroSaasService {
+
   id: number;
   name: string;
   category: string;
@@ -37,6 +39,7 @@ export interface MicroSaasService {
 }
 ;
 export interface ITService {
+
   id: number;
   name: string;
   category: string;
@@ -62,6 +65,7 @@ export interface ITService {
 }
 ;
 export interface AIService {
+
   id: number;
   name: string;
   category: string;

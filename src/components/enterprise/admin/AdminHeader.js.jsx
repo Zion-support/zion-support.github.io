@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Download, Settings } from 'lucide-react';
 import { useCompWorkspace } from '@/hooks/useCompWorkspace';
 export function AdminHeader() {
+
   // const { user } = useAuth(); // Unused but available
   const { comp } = useCompWorkspace();
   return()

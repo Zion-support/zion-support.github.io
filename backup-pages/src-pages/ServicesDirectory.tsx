@@ -16,134 +16,136 @@ import {
   Server,
   ArrowRight,
   CheckCircle,
-  Star
+  Star,
 } from 'lucide-react';
 
 const ServicesDirectory = () => {
   const serviceCategories = [
     {
-      title: "Artificial Intelligence & Machine Learning",
-      description: "Advanced AI solutions to transform your business operations",
+      title: 'Artificial Intelligence & Machine Learning',
+      description:
+        'Advanced AI solutions to transform your business operations',
       icon: Brain,
-      color: "from-purple-500 to-indigo-500",
+      color: 'from-purple-500 to-indigo-500',
       services: [
         {
-          name: "AI Quantum Financial Trading",
-          description: "Revolutionary quantum-powered trading algorithms",
-          path: "/services/ai-quantum-financial-trading",
-          featured: true
+          name: 'AI Quantum Financial Trading',
+          description: 'Revolutionary quantum-powered trading algorithms',
+          path: '/services/ai-quantum-financial-trading',
+          featured: true,
         },
         {
-          name: "AI Business Intelligence",
-          description: "Intelligent analytics and decision-making systems",
-          path: "/services/ai-business-intelligence"
+          name: 'AI Business Intelligence',
+          description: 'Intelligent analytics and decision-making systems',
+          path: '/services/ai-business-intelligence',
         },
         {
-          name: "AI Code Review",
-          description: "Automated code analysis and optimization",
-          path: "/services/ai-code-review"
+          name: 'AI Code Review',
+          description: 'Automated code analysis and optimization',
+          path: '/services/ai-code-review',
         },
         {
-          name: "AI Content Generator",
-          description: "Advanced content creation and automation",
-          path: "/services/ai-content-generator"
-        }
-      ]
+          name: 'AI Content Generator',
+          description: 'Advanced content creation and automation',
+          path: '/services/ai-content-generator',
+        },
+      ],
     },
     {
-      title: "Cybersecurity Solutions",
-      description: "Comprehensive security services to protect your digital assets",
+      title: 'Cybersecurity Solutions',
+      description:
+        'Comprehensive security services to protect your digital assets',
       icon: Shield,
-      color: "from-red-500 to-orange-500",
+      color: 'from-red-500 to-orange-500',
       services: [
         {
-          name: "Zero Trust Security",
-          description: "Advanced zero-trust architecture implementation",
-          path: "/services/zero-trust-security",
-          featured: true
+          name: 'Zero Trust Security',
+          description: 'Advanced zero-trust architecture implementation',
+          path: '/services/zero-trust-security',
+          featured: true,
         },
         {
-          name: "Vulnerability Assessment",
-          description: "Comprehensive security vulnerability scanning",
-          path: "/services/vulnerability-assessment"
+          name: 'Vulnerability Assessment',
+          description: 'Comprehensive security vulnerability scanning',
+          path: '/services/vulnerability-assessment',
         },
         {
-          name: "Penetration Testing",
-          description: "Ethical hacking and security testing services",
-          path: "/services/penetration-testing"
+          name: 'Penetration Testing',
+          description: 'Ethical hacking and security testing services',
+          path: '/services/penetration-testing',
         },
         {
-          name: "Security Monitoring",
-          description: "24/7 security monitoring and threat detection",
-          path: "/services/security-monitoring"
-        }
-      ]
+          name: 'Security Monitoring',
+          description: '24/7 security monitoring and threat detection',
+          path: '/services/security-monitoring',
+        },
+      ],
     },
     {
-      title: "Cloud & Infrastructure",
-      description: "Scalable cloud solutions and modern infrastructure",
+      title: 'Cloud & Infrastructure',
+      description: 'Scalable cloud solutions and modern infrastructure',
       icon: Cloud,
-      color: "from-blue-500 to-cyan-500",
+      color: 'from-blue-500 to-cyan-500',
       services: [
         {
-          name: "Cloud Migration",
-          description: "Seamless cloud migration and optimization",
-          path: "/services/cloud-migration",
-          featured: true
+          name: 'Cloud Migration',
+          description: 'Seamless cloud migration and optimization',
+          path: '/services/cloud-migration',
+          featured: true,
         },
         {
-          name: "DevOps Automation",
-          description: "Automated deployment and CI/CD pipelines",
-          path: "/services/devops-automation"
+          name: 'DevOps Automation',
+          description: 'Automated deployment and CI/CD pipelines',
+          path: '/services/devops-automation',
         },
         {
-          name: "Infrastructure as Code",
-          description: "Automated infrastructure management",
-          path: "/services/infrastructure-as-code"
+          name: 'Infrastructure as Code',
+          description: 'Automated infrastructure management',
+          path: '/services/infrastructure-as-code',
         },
         {
-          name: "Container Orchestration",
-          description: "Docker and Kubernetes deployment solutions",
-          path: "/services/container-orchestration"
-        }
-      ]
+          name: 'Container Orchestration',
+          description: 'Docker and Kubernetes deployment solutions',
+          path: '/services/container-orchestration',
+        },
+      ],
     },
     {
-      title: "Data & Analytics",
-      description: "Transform data into actionable business insights",
+      title: 'Data & Analytics',
+      description: 'Transform data into actionable business insights',
       icon: Database,
-      color: "from-green-500 to-teal-500",
+      color: 'from-green-500 to-teal-500',
       services: [
         {
-          name: "Big Data Processing",
-          description: "Large-scale data processing and analytics",
-          path: "/services/big-data-processing",
-          featured: true
+          name: 'Big Data Processing',
+          description: 'Large-scale data processing and analytics',
+          path: '/services/big-data-processing',
+          featured: true,
         },
         {
-          name: "Real-time Analytics",
-          description: "Live data streaming and analysis",
-          path: "/services/real-time-analytics"
+          name: 'Real-time Analytics',
+          description: 'Live data streaming and analysis',
+          path: '/services/real-time-analytics',
         },
         {
-          name: "Data Visualization",
-          description: "Interactive dashboards and reporting",
-          path: "/services/data-visualization"
+          name: 'Data Visualization',
+          description: 'Interactive dashboards and reporting',
+          path: '/services/data-visualization',
         },
         {
-          name: "Business Intelligence",
-          description: "Strategic insights and decision support",
-          path: "/services/business-intelligence"
-        }
-      ]
-    }
+          name: 'Business Intelligence',
+          description: 'Strategic insights and decision support',
+          path: '/services/business-intelligence',
+        },
+      ],
+    },
   ];
 
   const stats = [
-    { number: "500+", label: "Services Delivered" },
-    { number: "99.9%", label: "Success Rate" },
-    { number: "24/7", label: "Support Available" },
-    { number: "150+", label: "Technologies" }
+    { number: '500+', label: 'Services Delivered' },
+    { number: '99.9%', label: 'Success Rate' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '150+', label: 'Technologies' },
   ];
 
   return (
@@ -159,12 +161,13 @@ const ServicesDirectory = () => {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Our
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                {' '}Services
+                {' '}
+                Services
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Comprehensive technology solutions designed to accelerate your digital transformation 
-              and drive business innovation forward.
+              Comprehensive technology solutions designed to accelerate your
+              digital transformation and drive business innovation forward.
             </p>
           </motion.div>
         </div>
@@ -207,11 +210,15 @@ const ServicesDirectory = () => {
                 className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"
               >
                 <div className="flex items-center gap-4 mb-8">
-                  <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color}`}>
+                  <div
+                    className={`p-4 rounded-xl bg-gradient-to-r ${category.color}`}
+                  >
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h2 className="text-3xl font-bold mb-2">{category.title}</h2>
+                    <h2 className="text-3xl font-bold mb-2">
+                      {category.title}
+                    </h2>
                     <p className="text-gray-300">{category.description}</p>
                   </div>
                 </div>
@@ -233,10 +240,14 @@ const ServicesDirectory = () => {
                           </span>
                         </div>
                       )}
-                      
-                      <h3 className="text-lg font-bold mb-3 text-white">{service.name}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                      
+
+                      <h3 className="text-lg font-bold mb-3 text-white">
+                        {service.name}
+                      </h3>
+                      <p className="text-gray-300 text-sm mb-4">
+                        {service.description}
+                      </p>
+
                       <Link
                         to={service.path}
                         className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-semibold"
@@ -262,12 +273,11 @@ const ServicesDirectory = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-6">
-              Need a Custom Solution?
-            </h2>
+            <h2 className="text-4xl font-bold mb-6">Need a Custom Solution?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Don't see exactly what you're looking for? Our expert team can create 
-              tailored solutions designed specifically for your unique business needs.
+              Don't see exactly what you're looking for? Our expert team can
+              create tailored solutions designed specifically for your unique
+              business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

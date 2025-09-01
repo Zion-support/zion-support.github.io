@@ -9,6 +9,7 @@ import {
   Users,
   ArrowRight} from 'lucide-react';
 export const QuickAccess = () => {
+
   const quickLinks = [
     {
 

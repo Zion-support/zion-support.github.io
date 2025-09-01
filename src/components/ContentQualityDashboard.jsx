@@ -17,8 +17,10 @@ const ContentQualityDashboard = ({ className = '' }) => {
     const [filterStatus, setFilterStatus] = useState('all');
     const contentAnalyzer = ContentQualityAnalyzer.getInstance();
     const analyzeAllPages = useCallback(async () => {
+
         setIsLoading(true);
         try {
+
             // Simulate analyzing all pages in the application
             // In a real implementation, you would analyze actual page content
             const samplePages = [
@@ -64,7 +66,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     title: 'Contact Us - Get in Touch',
                     content: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.',
                     metaDescription: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.',
-            // // // // // // // // console.error('Error analyzing pages:', error);
+            // // // // // // // // // // // console.error('Error analyzing pages:', error);
         }
         finally {
 
@@ -81,15 +83,17 @@ const ContentQualityDashboard = ({ className = '' }) => {
             setReport(newReport)}
         catch (error) {
 
-            // console.error('Error analyzing pages:', error)}
+            // // // // console.error('Error analyzing pages:', error)}
         finally {
 
             setIsLoading(false)}
     }, [contentAnalyzer]);
     useEffect(() => {
+
         // Auto-analyze pages when component mounts
         analyzeAllPages()}, [analyzeAllPages]);
     const getFilteredPages = () => {
+
         if (!report) return [];
         let filtered = report.pageMetrics;
         // Apply search filter
@@ -133,6 +137,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
             return 'Fair';
         return 'Poor'};
     const exportReport = () => {
+
         if (!report)
             return;
         const csvContent = ['

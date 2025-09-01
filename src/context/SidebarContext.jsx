@@ -3,6 +3,7 @@ const SidebarProvider({ children }) {
 
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const toggleSidebar = () => {
+
         setIsSidebarOpen(!isSidebarOpen);
     };
     return (<SidebarContext.Provider value = {
@@ -14,6 +15,7 @@ const SidebarProvider({ children }) {
       {children}
     </SidebarContext.Provider>)};
 export function useSidebar() {
+
     const context = useContext(SidebarContext);
     if (context === null) {
 

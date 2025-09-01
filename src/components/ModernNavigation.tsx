@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Menu, 
   X, 
   ChevronDown, 
@@ -15,6 +16,7 @@ import {
 } from 'lucide-react';
 
 interface NavigationItem {
+
   id: string;
   label: string;
   href: string;
@@ -22,13 +24,16 @@ interface NavigationItem {
 }
 
 const ModernNavigation: React.FC = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
+
     const handleScroll = () => {
+
       setIsScrolled(window.scrollY > 20);
     };
 
@@ -38,6 +43,7 @@ const ModernNavigation: React.FC = () => {
 
   const navigationItems: NavigationItem[] = [
     {
+
       id: 'services',
       label: 'Services',
       href: '#services',
@@ -50,6 +56,7 @@ const ModernNavigation: React.FC = () => {
       ]
     },
     {
+
       id: 'solutions',
       label: 'Solutions',
       href: '#solutions',
@@ -62,6 +69,7 @@ const ModernNavigation: React.FC = () => {
       ]
     },
     {
+
       id: 'company',
       label: 'Company',
       href: '#company',
@@ -74,6 +82,7 @@ const ModernNavigation: React.FC = () => {
       ]
     },
     {
+
       id: 'resources',
       label: 'Resources',
       href: '#resources',
@@ -88,20 +97,24 @@ const ModernNavigation: React.FC = () => {
   ];
 
   const toggleDropdown = (id: string) => {
+
     setActiveDropdown(activeDropdown === id ? null : id);
   };
 
   const closeDropdown = () => {
+
     setActiveDropdown(null);
   };
 
   const toggleDarkMode = () => {
+
     setIsDarkMode(!isDarkMode);
     // Here you would typically update the global theme context
   };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+
       isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700' 
         : 'bg-transparent'
@@ -135,6 +148,7 @@ const ModernNavigation: React.FC = () => {
                 >
                   <span>{item.label}</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+
                     activeDropdown === item.id ? 'rotate-180' : ''
                   }`} />
                 </button>
@@ -251,6 +265,7 @@ const ModernNavigation: React.FC = () => {
                   >
                     <span>{item.label}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+
                       activeDropdown === item.id ? 'rotate-180' : ''
                     }`} />
                   </button>

@@ -11,6 +11,7 @@ import CodeBlock from "./CodeBlock";
 import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from 'lucide-react';
 export { function };
 export default function ApiKeysManager() {
+
     const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys();
     const [showCreateDialog, setShowCreateDialog] = useState(false);
     const [newKeyName, setNewKeyName] = useState('');
@@ -25,6 +26,7 @@ export default function ApiKeysManager() {
         { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }
     ];
     const handleCreateKey = async () => {
+
         if (!newKeyName.trim() || selectedScopes.length === 0)
             return;
         await createApiKey(newKeyName.trim(), selectedScopes);
@@ -37,11 +39,13 @@ export default function ApiKeysManager() {
             ? prev.filter(s => s !== scope)
             [...prev, scope])};
     const getExampleCode = (apiKey) => {
+
 "
         return `curl -X GET "https://ziontechgroup.com/api/v1/jobs" \\"
   -H "Authorization: Bearer ${apiKey}" \\"`
   -H "Content-Type: application/json"`};
     if (loading) {
+
 "
         return (<div className="flex items-center justify-center p-8">"
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-zion-cyan"></div>
@@ -201,6 +205,7 @@ export default function ApiKeysManager() {
               Cancel
             </AlertDialogCancel>
             <AlertDialogAction onClick={() => {
+
             if (showRegenerateConfirm) {
 
                 regenerateApiKey(showRegenerateConfirm);
@@ -226,6 +231,7 @@ export default function ApiKeysManager() {
               Cancel
             </AlertDialogCancel>
             <AlertDialogAction onClick={() => {
+
             if (showDeleteConfirm) {
 
                 deleteApiKey(showDeleteConfirm);

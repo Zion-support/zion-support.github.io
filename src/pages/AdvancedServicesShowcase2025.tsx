@@ -149,6 +149,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
               {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`px - 6 py - 3 rounded - lg font - medium transition - colors duration - 200 ${
+
                     selectedCategory === category.id
                       ? 'bg - blue - 600 text - white'
                       : 'bg - slate - 700 text - gray - 300 hover:bg - slate - 600'
@@ -167,6 +168,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
           {filteredServices.map ( (service) => (<div role="button" key={service.id} className="bg - slate - 800 rounded - xl p - 6 hover:bg - slate - 700 transition - colors duration - 200">
               <div role="button" className="flex items - start justify - between mb - 4">
                 <span className={`px - 3 py - 1 rounded - full text - xs font - medium ${
+
                   service.source === 'Micro SaaS' ? 'bg - blue - 100 text - blue - 800' :
                   service.source === 'IT Services' ? 'bg - green - 100 text - green - 800' :
                   'bg - purple - 100 text - purple - 800'

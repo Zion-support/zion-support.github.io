@@ -24,6 +24,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 98,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -37,6 +38,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     integrations["Research Databases", "Academic APIs", "Data Sources", "Publication Platforms", "Collaboration Tools"]},;
   // AI-Powered Metaverse Development Platform
   {
+
 "
     id: "ai-metaverse-development-platform","
     title: "AI Metaverse Development Platform","
@@ -56,6 +58,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 97,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -69,6 +72,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     integrations["VR Headsets", "3D Modeling Tools", "Blockchain Platforms", "Payment Gateways", "Social Platforms"]},;
   // AI-Powered Space Technology Analytics
   {
+
 "
     id: "ai-space-technology-analytics","
     title: "AI Space Technology Analytics","
@@ -88,6 +92,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 99,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -101,6 +106,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     integrations["Satellite APIs", "Ground Stations", "Weather Services", "Navigation Systems", "Space Agencies"]},;
   // AI-Powered Quantum Machine Learning Platform
   {
+
 "
     id: "ai-quantum-machine-learning","
     title: "AI Quantum Machine Learning Platform","
@@ -120,6 +126,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 100,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -133,6 +140,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     integrations["Quantum Computers", "ML Frameworks", "Cloud Platforms", "Data Sources", "AI Models"]},;
   // AI-Powered Environmental Technology Platform
   {
+
 "
     id: "ai-environmental-technology-platform","
     title: "AI Environmental Technology Platform","
@@ -152,6 +160,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 96,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -165,6 +174,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     integrations["IoT Sensors", "Satellite Data", "Weather APIs", "Government Databases", "Sustainability Tools"]},;
   // AI-Powered Entertainment Content Generation
   {
+
 "
     id: "ai-entertainment-content-generation","
     title: "AI Entertainment Content Generation","
@@ -184,6 +194,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 95,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -197,6 +208,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     integrations["Video Editing Tools", "Audio Software", "3D Modeling", "Streaming Platforms", "Social Media"]},;
   // AI-Powered Education Personalization Platform
   {
+
 "
     id: "ai-education-personalization","
     title: "AI Education Personalization Platform","
@@ -216,6 +228,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 94,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","

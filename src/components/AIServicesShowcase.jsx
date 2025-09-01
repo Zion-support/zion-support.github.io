@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
 export function AIServicesShowcase () {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
 =======
@@ -119,6 +120,7 @@ export function AIServicesShowcase() {
     const getStatusBadge = (status) => {
 
         const statusConfig = {
+
 <<<<<<< HEAD
   active: { color: 'bg - green - 500',
   text: 'Active'

@@ -1,4 +1,5 @@
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -30,6 +31,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  } from 'lucide-react';
 
 interface Project {
+
   id: string;
   name: string;
   description: string;
@@ -46,6 +48,7 @@ interface Project {
 }
 
 interface Milestone {
+
   id: string;
   title: string;
   description: string;
@@ -76,6 +79,7 @@ showFilters:  true,;
 
   // Sample project data
   useEffect ( () => {
+
     const sampleProjects: Project[] = [
       {
 
@@ -203,6 +207,7 @@ showFilters:  true,;
 
   // Filter projects
   useEffect(() => {
+
     let filtered = projects;
 
     if (selectedStatus !== 'all') {

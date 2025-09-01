@@ -1,4 +1,5 @@
 const TermsOfService = () => {
+
   return()
     <div className="max-w-4xl mx-auto space-y-8"><div className="text-center">"
         <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>"

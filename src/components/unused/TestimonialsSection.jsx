@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { StarIcon } from '@heroicons/react/24/solid';
 export function TestimonialsSection() {
+
     const testimonials = [
         {
 
@@ -13,6 +14,7 @@ export function TestimonialsSection() {
             avatar: "SJ"
         },
         {
+
 "
             name: "Michael Chen","
             role: "VP of Engineering","
@@ -22,6 +24,7 @@ export function TestimonialsSection() {
             avatar: "MC"
         },
         {
+
 "
             name: "Emily Rodriguez","
             role: "Director of IT","
@@ -31,6 +34,7 @@ export function TestimonialsSection() {
             avatar: "ER"
         },
         {
+
 "
             name: "David Thompson","
             role: "CEO","

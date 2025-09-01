@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 export default SystemStatus;
 import {
+
 import { motion } from 'framer - motion';
 
   CheckCircle,
@@ -16,10 +17,10 @@ import { motion } from 'framer - motion';
   Zap,
   BarChart3,
   TrendingUp,
-  RefreshCw,
-} from 'lucide - react';
+  RefreshCw} from 'lucide - react';
 
 interface ServiceStatus {
+
   id: string;
   name: string;
   status: 'operational' | 'degraded' | 'outage' | 'maintenance';
@@ -31,6 +32,7 @@ interface ServiceStatus {
 }
 
 interface Incident {
+
   id: string;
   title: string;
   description: string;
@@ -43,6 +45,7 @@ interface Incident {
 
 const services: ServiceStatus[] = [
   {
+
     id: 'api',
     name: 'API Services',
     status: 'operational',
@@ -50,9 +53,9 @@ const services: ServiceStatus[] = [
     responseTime: 45,
     lastUpdated: '2025 - 08 - 27T16:48:00Z',
     description: 'Core API endpoints and microservices',
-    icon: Server,
-  },
+    icon: Server},
   {
+
     id: 'database',
     name: 'Database Systems',
     status: 'operational',
@@ -60,9 +63,9 @@ const services: ServiceStatus[] = [
     responseTime: 12,
     lastUpdated: '2025 - 08 - 27T16:48:00Z',
     description: 'Primary and replica database clusters',
-    icon: Database,
-  },
+    icon: Database},
   {
+
     id: 'web',
     name: 'Web Application',
     status: 'operational',
@@ -70,9 +73,9 @@ const services: ServiceStatus[] = [
     responseTime: 180,
     lastUpdated: '2025 - 08 - 27T16:48:00Z',
     description: 'Main website and user interface',
-    icon: Globe,
-  },
+    icon: Globe},
   {
+
     id: 'security',
     name: 'Security Services',
     status: 'operational',
@@ -80,9 +83,9 @@ const services: ServiceStatus[] = [
     responseTime: 8,
     lastUpdated: '2025 - 08 - 27T16:48:00Z',
     description: 'Authentication, authorization, and threat detection',
-    icon: Shield,
-  },
+    icon: Shield},
   {
+
     id: 'ai',
     name: 'AI Services',
     status: 'operational',
@@ -90,9 +93,9 @@ const services: ServiceStatus[] = [
     responseTime: 320,
     lastUpdated: '2025 - 08 - 27T16:48:00Z',
     description: 'Machine learning models and AI processing',
-    icon: Brain,
-  },
+    icon: Brain},
   {
+
     id: 'analytics',
     name: 'Analytics Platform',
     status: 'operational',
@@ -100,12 +103,12 @@ const services: ServiceStatus[] = [
     responseTime: 95,
     lastUpdated: '2025 - 08 - 27T16:48:00Z',
     description: 'Data analytics and reporting services',
-    icon: BarChart3,
-  },
+    icon: BarChart3},
 ];
 
 const incidents: Incident[] = [
   {
+
     id: 'inc - 001',
     title: 'Scheduled Maintenance - Database Optimization',
     description:
@@ -114,24 +117,28 @@ const incidents: Incident[] = [
     severity: 'low',
     startTime: '2025 - 08 - 27T02:00:00Z',
     endTime: '2025 - 08 - 27T04:00:00Z',
-    affectedServices: ['database'],
-  },
+    affectedServices: ['database']},
 ];
 
 const SystemStatus: React.FC = () => {
+
   const [lastUpdated, setLastUpdated] = useState (new Date () ) ;
   const [isRefreshing, setIsRefreshing] = useState (false) ;
 
   const refreshData = () => {
+
     setIsRefreshing (true) ;
     setTimeout ( () => {
+
       setLastUpdated (new Date () ) ;
       setIsRefreshing (false) ;
     }, 1000) ;
   };
 
   const getStatusColor = (status: string) => {
+
     switch (status) {
+
       case 'operational':
         return 'text - green - 400 bg - green - 500 / 20';
       case 'degraded':
@@ -146,7 +153,9 @@ const SystemStatus: React.FC = () => {
   };
 
   const getStatusIcon = (status: string) => {
+
     switch (status) {
+
       case 'operational':
         return < CheckCircle className="w - 5 h - 5" />;
       case 'degraded':
@@ -161,7 +170,9 @@ const SystemStatus: React.FC = () => {
   };
 
   const getSeverityColor = (severity: string) => {
+
     switch (severity) {
+
       case 'critical':
         return 'text - red - 400 bg - red - 500 / 20';
       case 'high':
@@ -437,6 +448,7 @@ const SystemStatus: React.FC = () => {
                       </h4>
                       <div role="button" className="flex flex - wrap gap - 2">
                         {incident.affectedServices.map (serviceId => {
+
                           const service = services.find (s => s.id === serviceId) ;
                           return service ? (<span
                               key={serviceId}

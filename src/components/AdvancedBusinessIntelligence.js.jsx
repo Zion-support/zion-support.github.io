@@ -44,6 +44,7 @@ const mockModels = [
     category: 'Customer Analytics'},
 ];
 export function AdvancedBusinessIntelligence() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -68,12 +69,14 @@ export function AdvancedBusinessIntelligence() {
       ? data
       : data.filter(metric => metric.category === selectedCategory);
   const refreshData = async () => {
+
     setIsRefreshing(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
     setIsRefreshing(false);
   };
   useEffect(() => {
+
     if (autoRefresh) {
 
       const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds

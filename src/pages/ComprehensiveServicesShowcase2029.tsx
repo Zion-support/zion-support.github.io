@@ -3,8 +3,11 @@ import React, { useState } from 'react.ts';
 import { SEO } from '@/components / SEO';
 export default ComprehensiveServicesShowcase2029;
 export default React.memo (function ComprehensiveServicesShowcase2029 (...args: any[]) : any {
+
 import {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Brain,
@@ -34,63 +37,62 @@ import { motion } from 'framer - motion.ts';
   Search,
   Filter,
   ExternalLink,
-  Server,
-} from 'lucide - react.ts';
+  Server} from 'lucide - react.ts';
   innovativeServices2029,
   serviceCategories,
   pricingTiers,
-  Service,
-} from '../data / innovativeServices2029';
+  Service} from '../data / innovativeServices2029';
 
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [searchTerm, setSearchTerm] = useState ('') ;
 
   const categories = {
+
     all: {
+
       name: 'All Services',
       icon: <Rocket className="w - 6 h - 6" />,
-      color: 'from - cyan - 500 to - blue - 500',
-    },
+      color: 'from - cyan - 500 to - blue - 500'},
     'ai - ml': {
+
       name: 'AI & Machine Learning',
       icon: <Brain className="w - 6 h - 6" />,
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     quantum: {
+
       name: 'Quantum Computing',
       icon: <Atom className="w - 6 h - 6" />,
-      color: 'from - indigo - 500 to - purple - 500',
-    },
+      color: 'from - indigo - 500 to - purple - 500'},
     devops: {
+
       name: 'DevOps & Automation',
       icon: <Workflow className="w - 6 h - 6" />,
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     cybersecurity: {
+
       name: 'Cybersecurity',
       icon: <Shield className="w - 6 h - 6" />,
-      color: 'from - red - 500 to - orange - 500',
-    },
+      color: 'from - red - 500 to - orange - 500'},
     analytics: {
+
       name: 'Analytics & BI',
       icon: <BarChart3 className="w - 6 h - 6" />,
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     cloud: {
+
       name: 'Cloud & Infrastructure',
       icon: <Cloud className="w - 6 h - 6" />,
-      color: 'from - sky - 500 to - blue - 500',
-    },
+      color: 'from - sky - 500 to - blue - 500'},
     'micro - saas': {
+
       name: 'Micro SAAS',
       icon: <Code className="w - 6 h - 6" />,
-      color: 'from - yellow - 500 to - orange - 500',
-    },
-  };
+      color: 'from - yellow - 500 to - orange - 500'}};
 
   const services = [
     // AI & Machine Learning
     {
+
       id: 'ai - quantum - hybrid',
       title: 'AI Quantum Hybrid Platform',
       description:
@@ -106,9 +108,9 @@ import { motion } from 'framer - motion.ts';
       icon: <Atom className="w - 8 h - 8" />,
       color: 'from - purple - 500 to - pink - 500',
       link: '/services / ai - quantum - hybrid - platform',
-      featured: true,
-    },
+      featured: true},
     {
+
       id: 'ai - devops - automation',
       title: 'AI DevOps Automation Platform',
       description:
@@ -124,9 +126,9 @@ import { motion } from 'framer - motion.ts';
       icon: <Workflow className="w - 8 h - 8" />,
       color: 'from - blue - 500 to - cyan - 500',
       link: '/services / ai - devops - automation - platform',
-      featured: true,
-    },
+      featured: true},
     {
+
       id: 'ai - business - intelligence',
       title: 'AI Business Intelligence Analytics',
       description:
@@ -142,9 +144,9 @@ import { motion } from 'framer - motion.ts';
       icon: <BarChart3 className="w - 8 h - 8" />,
       color: 'from - green - 500 to - emerald - 500',
       link: '/services / ai - business - intelligence - analytics',
-      featured: true,
-    },
+      featured: true},
     {
+
       id: 'ai - workflow - orchestrator',
       title: 'AI Workflow Orchestrator',
       description:
@@ -160,9 +162,9 @@ import { motion } from 'framer - motion.ts';
       icon: <Brain className="w - 8 h - 8" />,
       color: 'from - purple - 500 to - indigo - 500',
       link: '/services / ai - workflow - orchestrator',
-      featured: false,
-    },
+      featured: false},
     {
+
       id: 'ai - data - governance',
       title: 'AI Data Governance Platform',
       description:
@@ -178,9 +180,9 @@ import { motion } from 'framer - motion.ts';
       icon: <Shield className="w - 8 h - 8" />,
       color: 'from - indigo - 500 to - purple - 500',
       link: '/services / ai - data - governance - platform',
-      featured: false,
-    },
+      featured: false},
     {
+
       id: 'ai - customer - experience',
       title: 'AI Customer Experience Analytics',
       description:
@@ -196,9 +198,9 @@ import { motion } from 'framer - motion.ts';
       icon: <Users className="w - 8 h - 8" />,
       color: 'from - pink - 500 to - rose - 500',
       link: '/services / ai - customer - experience - analytics',
-      featured: false,
-    },
+      featured: false},
     {
+
       id: 'ai - financial - risk',
       title: 'AI Financial Risk Management',
       description:
@@ -214,9 +216,9 @@ import { motion } from 'framer - motion.ts';
       icon: <TrendingUp className="w - 8 h - 8" />,
       color: 'from - emerald - 500 to - teal - 500',
       link: '/services / ai - financial - risk - management',
-      featured: false,
-    },
+      featured: false},
     {
+
       id: 'ai - code - review - security',
       title: 'AI Code Review Security Scanner',
       description:
@@ -232,9 +234,9 @@ import { motion } from 'framer - motion.ts';
       icon: <Code className="w - 8 h - 8" />,
       color: 'from - red - 500 to - pink - 500',
       link: '/services / ai - code - review - security - scanner',
-      featured: false,
-    },
+      featured: false},
     {
+
       id: 'zero - trust - network',
       title: 'Zero Trust Network Access',
       description:
@@ -250,9 +252,9 @@ import { motion } from 'framer - motion.ts';
       icon: <Lock className="w - 8 h - 8" />,
       color: 'from - orange - 500 to - red - 500',
       link: '/services / zero - trust - network - access',
-      featured: false,
-    },
+      featured: false},
     {
+
       id: 'cloud - devops',
       title: 'Cloud DevOps Solutions',
       description:
@@ -268,9 +270,9 @@ import { motion } from 'framer - motion.ts';
       icon: <Cloud className="w - 8 h - 8" />,
       color: 'from - sky - 500 to - blue - 500',
       link: '/services / cloud - devops',
-      featured: false,
-    },
+      featured: false},
     {
+
       id: 'it - infrastructure',
       title: 'IT Infrastructure Solutions',
       description:
@@ -286,9 +288,9 @@ import { motion } from 'framer - motion.ts';
       icon: <Server className="w - 8 h - 8" />,
       color: 'from - slate - 500 to - gray - 500',
       link: '/services / it - infrastructure',
-      featured: false,
-    },
+      featured: false},
     {
+
       id: 'micro - crm',
       title: 'Micro CRM Platform',
       description:
@@ -304,11 +306,11 @@ import { motion } from 'framer - motion.ts';
       icon: <Users className="w - 8 h - 8" />,
       color: 'from - blue - 500 to - indigo - 500',
       link: '/services / micro - crm',
-      featured: false,
-    },
+      featured: false},
   ];
 
   const filteredServices = services.filter (service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
       service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
@@ -318,11 +320,11 @@ import { motion } from 'framer - motion.ts';
   }) ;
 
   const contactInfo = {
+
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
 
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text - white">
       <SEO
@@ -400,6 +402,7 @@ import { motion } from 'framer - motion.ts';
               {Object.entries (categories) .map ( ([key, category]) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={key}
                   onClick={ () => setSelectedCategory (key) }
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 ${
+
                     selectedCategory === key
                       ? `bg - gradient - to - r ${category.color} text - white shadow - lg`
                       : 'bg - white / 5 backdrop - blur - sm border border - cyan - 400 / 20 text - gray - 300 hover:bg - white / 10 hover:border - cyan - 400 / 40'
@@ -441,6 +444,7 @@ import { motion } from 'framer - motion.ts';
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`group cursor - pointer ${
+
                   service.featured ? 'ring - 2 ring - cyan - 400 / 50' : ''
                 }`}
               >
@@ -506,6 +510,7 @@ import { motion } from 'framer - motion.ts';
                 Try adjusting your search or filter criteria
               </p>
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+
                   setSearchTerm ('') ;
                   setSelectedCategory ('all') ;
                 }}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react.ts';
 export default React.memo (function RevolutionaryServicesShowcase2030 (...args[]) :  {
+
 import { ArrowRight,
 import { motion  } from 'framer - motion.ts';
 import { REVOLUTIONARY_SERVICES_2030 } from "../data / revolutionaryServices2030";
@@ -72,6 +73,7 @@ import { SEO } from "../components / SEO";
   const sortedServices = [...filteredServices].sort ( (a, b) => {;
     let comparison = 0;
     switch (sortBy) {
+
       case 'aiScore':
         comparison = b.aiScore - a.aiScore;
         break;
@@ -110,7 +112,9 @@ import { SEO } from "../components / SEO";
   };
 
   const getCategoryIcon = (category: string) => {
+
     const iconMap: { [key: string]: React.ReactNode } = {
+
       'AI & Autonomous Systems': <Rocket className="w - 6 h - 6" />,
       'AI & Business Intelligence': <Brain className="w - 6 h - 6" />,
       'AI & Marketing': <TrendingUp className="w - 6 h - 6" />,
@@ -144,7 +148,9 @@ import { SEO } from "../components / SEO";
     return iconMap[category] || <Rocket className="w - 6 h - 6" />};
 
   const getCategoryColor = (category: string) => {
+
     const colorMap: { [key: string]: string } = {
+
       'AI & Autonomous Systems': 'from - cyan - 500 to - blue - 500',
       'AI & Business Intelligence': 'from - purple - 500 to - pink - 500',
       'AI & Marketing': 'from - green - 500 to - emerald - 500',
@@ -196,11 +202,13 @@ import { SEO } from "../components / SEO";
           <div role="button" className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -295,6 +303,7 @@ import { SEO } from "../components / SEO";
                 <div role="button" className="flex gap - 4">
                   <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                     className={`px - 4 py - 3 rounded - lg transition - colors ${
+
                       viewMode === 'grid'
                         ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 text - white'
                         : 'bg - white / 10 backdrop - blur - sm border border - white / 20 text - white hover:bg - white / 20'
@@ -304,6 +313,7 @@ import { SEO } from "../components / SEO";
                   </button>
                   <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                     className={`px - 4 py - 3 rounded - lg transition - colors ${
+
                       viewMode === 'list'
                         ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 text - white'
                         : 'bg - white / 10 backdrop - blur - sm border border - white / 20 text - white hover:bg - white / 20'
@@ -320,6 +330,7 @@ import { SEO } from "../components / SEO";
                   <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                     onClick={ () => setActiveCategory (category) }
                     className={`px - 6 py - 3 rounded - full transition - all duration - 300 ${
+
                       activeCategory === category
                         ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 text - white shadow - lg'
                         : 'bg - white / 10 backdrop - blur - sm border border - white / 20 text - white hover:bg - white / 20'
@@ -352,16 +363,19 @@ import { SEO } from "../components / SEO";
                 <motion.div
                   key={service.id}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.05
 
@@ -446,6 +460,7 @@ import { SEO } from "../components / SEO";
                   {Array.from ({ length: totalPages }, (_, i) => i + 1) .map ( (page) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={page}
                       onClick={ () => handlePageChange (page) }
                       className={`px - 4 py - 2 rounded - lg transition - colors ${
+
                         currentPage === page
                           ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 text - white'
                           : 'bg - white / 10 backdrop - blur - sm border border - white / 20 text - white hover:bg - white / 20'
@@ -470,11 +485,13 @@ import { SEO } from "../components / SEO";
           <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -495,11 +512,13 @@ import { SEO } from "../components / SEO";
               {/* Contact Form */}
               <motion.div
                 initial = {
+
   { opacity: 0,
   x: -20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0
 
@@ -551,11 +570,13 @@ import { SEO } from "../components / SEO";
               {/* Contact Information */}
               <motion.div
                 initial = {
+
   { opacity: 0,
   x: 20 ;
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0 ;
 
@@ -625,16 +646,19 @@ import { SEO } from "../components / SEO";
       {selectedService && (<div role="button" className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4">
           <motion.div
             initial = {
+
   { opacity: 0,
   scale: 0.9
 
 }}
             animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
             exit = {
+
   { opacity: 0,
   scale: 0.9
 

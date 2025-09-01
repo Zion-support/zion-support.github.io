@@ -5,6 +5,7 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs";
 import { toast } from "sonner";
 
 export const useJobApplications = (jobId?: string) => {
+
   const { user } = useAuth();
   const [applications, setApplications] = useState<JobApplication[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -12,15 +13,17 @@ export const useJobApplications = (jobId?: string) => {
 
   const fetchApplications = useCallback(async () => { // Wrapped in useCallback
     if (!user) {
+
       setIsLoading(false);
       setApplications([]); // Clear applications if no user
       return;
     }
 
     try {
+
       setIsLoading(true);
       
-      let query = supabase
+      let query = supabase;
         .from("job_applications")
         .select(`
           *,
@@ -30,14 +33,18 @@ export const useJobApplications = (jobId?: string) => {
         .order("created_at", { ascending: false });
       
       if (jobId) {
+
         query = query.eq("job_id", jobId);
       }
       
       if (user.userType === "jobSeeker" || user.userType === "creator") {
+
         query = query.eq("talent_id", user.id);
       } 
       else if (user.userType === "employer" || user.userType === "buyer") {
+
         if (!jobId) {
+
           const { data: jobIdsData, error: jobIdsError } = await supabase // Renamed to avoid conflict
             .from("jobs")
             .select("id")
@@ -46,9 +53,11 @@ export const useJobApplications = (jobId?: string) => {
           if (jobIdsError) throw jobIdsError;
 
           if (jobIdsData && jobIdsData.length > 0) {
+
             const jobIdArray = jobIdsData.map(job => job.id);
             query = query.in("job_id", jobIdArray);
           } else {
+
             // If employer has no jobs, they have no applications to see (unless jobId is specified)
             setApplications([]);
             setIsLoading(false);
@@ -62,8 +71,10 @@ export const useJobApplications = (jobId?: string) => {
       if (fetchError) throw fetchError;
       
       const transformedData = data.map((app: any) => ({
+
         ...app,
         talent_profile: app.talent_profile ? {
+
           ...app.talent_profile,
           full_name: app.talent_profile.display_name,
           profile_picture_url: app.talent_profile.avatar_url,
@@ -74,25 +85,31 @@ export const useJobApplications = (jobId?: string) => {
       setApplications(transformedData as JobApplication[]);
       setError(null);
     } catch (err: any) {
-      console.error("Error fetching applications:", err);
+
+      // // // console.error("Error fetching applications:", err);
       setError("Failed to fetch applications: " + err.message);
       toast.error("Failed to fetch applications");
       setApplications([]); // Clear applications on error
     } finally {
+
       setIsLoading(false);
     }
   }, [user, jobId]); // Dependencies for fetchApplications
 
   const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
+
     if (!user) {
+
       toast.error("You must be logged in to apply for jobs");
       return false;
     }
     
     try {
+
       const { data, error } = await supabase
         .from("job_applications")
         .insert({
+
           job_id: jobId,
           talent_id: user.id,
           resume_id: resumeId,
@@ -103,9 +120,12 @@ export const useJobApplications = (jobId?: string) => {
         .single();
       
       if (error) {
-        if (error.code === '23505') { 
+
+        if (error.code === '23505') {
+
           toast.error("You have already applied to this job");
         } else {
+
           throw error;
         }
         return false;
@@ -119,14 +139,17 @@ export const useJobApplications = (jobId?: string) => {
       toast.success("Application submitted successfully");
       return true;
     } catch (err: any) {
-      console.error("Error applying to job:", err);
+
+      // // // console.error("Error applying to job:", err);
       toast.error("Failed to submit application: " + err.message);
       return false;
     }
   };
   
   const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
+
     try {
+
       const { error } = await supabase
         .from("job_applications")
         .update({ status })
@@ -141,17 +164,21 @@ export const useJobApplications = (jobId?: string) => {
       toast.success(`Application status updated to ${status}`);
       return true;
     } catch (err: any) {
-      console.error("Error updating application status:", err);
+
+      // // // console.error("Error updating application status:", err);
       toast.error("Failed to update application status: " + err.message);
       return false;
     }
   };
   
   const markApplicationAsViewed = async (applicationId: string) => {
+
     try {
+
       const { error } = await supabase
         .from("job_applications")
-        .update({ 
+        .update({
+
           status: "viewed", 
           viewed_at: new Date().toISOString() 
         })
@@ -168,21 +195,26 @@ export const useJobApplications = (jobId?: string) => {
       
       return true;
     } catch (err) {
-      console.error("Error marking application as viewed:", err);
+
+      // // // console.error("Error marking application as viewed:", err);
       return false;
     }
   };
   
   useEffect(() => {
+
     if (user) {
+
       fetchApplications();
     } else {
+
       setApplications([]); // Clear applications if user logs out
       setError(null);
     }
   }, [user, fetchApplications]); // Added fetchApplications (jobId is already a dep of fetchApplications)
   
   return {
+
     applications,
     isLoading,
     error,

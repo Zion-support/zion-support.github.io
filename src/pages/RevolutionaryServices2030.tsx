@@ -1,9 +1,12 @@
 import { Link } from 'react - router - dom';
 import React, { useState, useEffect } from 'react';
 export default function RevolutionaryServices2030 () {
+
 export default React.memo (function RevolutionaryServices2030 () {
+
 export default RevolutionaryServices2030;
 import {
+
 import { allRevolutionaryServices2030 } from '../data / revolutionaryServices2030';
 import { motion, AnimatePresence } from 'framer - motion';
 
@@ -97,10 +100,12 @@ import { motion, AnimatePresence } from 'framer - motion';
   }) ;
 
 // Service Card Component
-const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itService' | 'aiService' }) => {
+const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 'itService' | 'aiService' }) => {
+
   const [isExpanded, setIsExpanded] = useState (false) ;
 
   const getIcon = (category: string) => {
+
     if (category.includes ('AI') || category.includes ('Neural') ) return Brain;
     if (category.includes ('Quantum') ) return Atom;
     if (category.includes ('Space') ) return Satellite;
@@ -272,7 +277,9 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
   ];
 
   const getFilteredServices = () => {
+
     switch (activeTab) {
+
       case 'microSaas':
         return allRevolutionaryServices2030.microSaas.map (service => ({ service, type: 'microSaas' as const }) ) ;
       case 'itServices':
@@ -388,6 +395,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
             {tabs.map ( (tab) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={tab.id}
                 onClick={ () => setActiveTab (tab.id as any) }
                 className={`px - 6 py - 3 mx - 2 mb - 2 rounded - xl font - semibold transition - all duration - 300 ${
+
                   activeTab === tab.id
                     ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white shadow - lg shadow - cyan - 500 / 25'
                     : 'bg - slate - 800 / 50 text - slate - 300 hover:bg - slate - 700 / 50 border border - slate - 600 hover:border - cyan - 400 / 50'
@@ -404,21 +412,25 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                 return (<motion.div
                     key = {service.id}
                     initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                     animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                     exit = {
+
   { opacity: 0,
   y: -20
 
 }}
                     transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -438,6 +450,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                 <div role="button" className="flex flex - wrap gap - 3">
                   <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveCategory ('all') }
                     className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 ${
+
                       activeCategory === 'all'
                         ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 text - white'
                         : 'bg - white / 10 backdrop - blur - sm text - white hover: bg - white / 20'
@@ -447,6 +460,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                   {REVOLUTIONARY_SERVICE_CATEGORIES.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                       onClick={ () => setActiveCategory (category) }
                       className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 ${
+
                         activeCategory === category
                           ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 text - white'
                           : 'bg - white / 10 backdrop - blur - sm text - white hover: bg - white / 20'
@@ -462,11 +476,13 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
               {currentServices.map ( (service) => (<motion.div
                   key={service.id}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   animate = {
+
   { opacity: 1,
   y: 0
 

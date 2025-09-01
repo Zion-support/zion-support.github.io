@@ -25,6 +25,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
     }, 1000)};
 
   const getStatusIcon = () => {
+
     switch (status) {
 
       case 'success':
@@ -36,6 +37,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
   };
 
   const getStatusText = () => {
+
     switch (status) {
 
       case 'success':'

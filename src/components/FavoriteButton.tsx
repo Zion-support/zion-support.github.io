@@ -31,14 +31,14 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
     if (isFavorited) {
 
       // Remove from favorites
-      // // // // // // // // console.log(`Removed ${itemType} ${itemId} from favorites`)} else {
+      // // // // // // // // // // // console.log(`Removed ${itemType} ${itemId} from favorites`)} else {
 
       // Add to favorites`
-      // // // // // // // // console.log(`Added ${itemType} ${itemId} to favorites`)}`
-      // console.log(`Removed ${itemType} ${itemId} from favorites`)} else {
+      // // // // // // // // // // // console.log(`Added ${itemType} ${itemId} to favorites`)}`
+      // // // // console.log(`Removed ${itemType} ${itemId} from favorites`)} else {
 
       // Add to favorites`
-      // console.log(`Added ${itemType} ${itemId} to favorites`)}  };
+      // // // // console.log(`Added ${itemType} ${itemId} to favorites`)}  };
 
   return()
     <button
@@ -53,6 +53,7 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
     >
       <Heart`
         className={`w-4 h-4 transition-all duration-300 ${
+
 <<<<<<< HEAD
 
           isFavorited ? 'fill-current' : ''`

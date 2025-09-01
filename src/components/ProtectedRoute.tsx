@@ -16,6 +16,7 @@ interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
   const { user, isAuthenticated, isLoading } = useAuth () ;
   
   if (isLoading) {
+
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
@@ -26,10 +27,12 @@ interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
     )}
 
   if (requireAuth && !isAuthenticated) {
+
 "
     return <Navigate to="/login" state={{ from: location }} replace  />}
 
   if (roles.length > 0 && user && !roles.includes(user.role || 'user')) {
+
 "
     return <Navigate to="/unauthorized" replace  />}
 

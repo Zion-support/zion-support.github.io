@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -64,6 +65,7 @@ interface ChartData {
     borderColor?: string;
     borderWidth?: number}[]}
 interface AdvancedAnalyticsDashboardProps {
+
   // Add your props here
 
 
@@ -100,7 +102,6 @@ export function AdvancedAnalyticsDashboard({
 
       metrics[category as keyof typeof metrics].forEach(metric => {
 
-        
         const change = (Math.random() - 0.5) * 20;        newData.push({
 
           id: `${category}-${metric}`,
@@ -123,6 +124,7 @@ export function AdvancedAnalyticsDashboard({
   // Refresh data
   
     setTimeout ( () => {
+
       generateAnalyticsData () ;
       setIsLoading (false) }, 1000) }, [generateAnalyticsData]) ;
 
@@ -130,10 +132,6 @@ export function AdvancedAnalyticsDashboard({
   
     } else {
 
-      
-      
-      
-      
       a.href = url;'`
       a.download = `analytics-${selectedTimeframe}-${new Date().toISOString().split('T')[0]}.csv`;
       a.click();
@@ -141,12 +139,14 @@ export function AdvancedAnalyticsDashboard({
   }, [analyticsData, selectedTimeframe, onDataExport]) ;
   // Setup real - time updates
   useEffect ( () => {
+
     if (showRealTime && isOpen) {
 
       generateAnalyticsData();
       intervalRef.current = setInterval(generateAnalyticsData, refreshInterval);
 
       return () => {
+
         if (intervalRef.current) {
 
           clearInterval(intervalRef.current)}
@@ -154,6 +154,7 @@ export function AdvancedAnalyticsDashboard({
   }, [showRealTime, isOpen, refreshInterval, generateAnalyticsData]) ;
   // Initial data load
   useEffect ( () => {
+
     if (isOpen) {
 
       generateAnalyticsData()}
@@ -174,6 +175,7 @@ export function AdvancedAnalyticsDashboard({
   const getCategoryIcon = (category: string) => {
 
     const icons: { [key: string]: React.ReactNode } = {
+
 "
       performance: <Zap className="w-5 h-5"  />,"
       users: <Users className="w-5 h-5"  />,"
@@ -301,6 +303,7 @@ export function AdvancedAnalyticsDashboard({
                         <button
                           key={metric}
                           onClick={() => {
+
                             setSelectedMetrics(prev =>
                               prev.includes(metric)
                                 ? prev.filter(m => m !== metric)
@@ -392,6 +395,7 @@ export function AdvancedAnalyticsDashboard({
                                 <div"
                                   className="bg-blue-600 h-2 rounded-full transition-all duration-300"
                                   style={{
+
 `
                                     width: `${Math.min((item.value / item.target) * 100, 100)}%`}}
                                 ></div>

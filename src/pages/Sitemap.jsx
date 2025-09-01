@@ -1,163 +1,164 @@
-import { Link } from 'react - router - dom';
+import { Link } from 'react-router-dom';
 import React from 'react';
 export default Sitemap;
 
 const Sitemap = () => {
+
   const sitemapSections = [
     {
+
       title: 'Main Pages',
       links: [
         { name: 'Home', path: '/', description: 'Welcome to Zion Tech Group' },
         {
+
           name: 'About',
           path: '/about',
-          description: 'Learn about our company',
-        },
+          description: 'Learn about our company'},
         {
+
           name: 'Contact',
           path: '/contact',
-          description: 'Get in touch with us',
-        },
+          description: 'Get in touch with us'},
         {
+
           name: 'Partners',
           path: '/partners',
-          description: 'Our business partners',
-        },
+          description: 'Our business partners'},
         { name: 'Careers', path: '/careers', description: 'Job opportunities' },
-      ],
-    },
+      ]},
     {
+
       title: 'Services',
       links: [
         {
+
           name: 'All Services',
           path: '/services',
-          description: 'Complete service catalog',
-        },
+          description: 'Complete service catalog'},
         {
+
           name: 'AI Solutions',
           path: '/services / ai',
-          description: 'Artificial intelligence services',
-        },
+          description: 'Artificial intelligence services'},
         {
+
           name: 'Cybersecurity',
           path: '/services / cybersecurity',
-          description: 'Security and compliance',
-        },
+          description: 'Security and compliance'},
         {
+
           name: 'Cloud & DevOps',
           path: '/services / cloud - devops',
-          description: 'Cloud infrastructure',
-        },
+          description: 'Cloud infrastructure'},
         {
+
           name: 'Digital Transformation',
           path: '/services / digital - transformation',
-          description: 'Business transformation',
-        },
-      ],
-    },
+          description: 'Business transformation'},
+      ]},
     {
+
       title: 'Marketplace',
       links: [
         {
+
           name: 'Marketplace',
           path: '/marketplace',
-          description: 'Browse our marketplace',
-        },
+          description: 'Browse our marketplace'},
         {
+
           name: 'Products',
           path: '/marketplace / products',
-          description: 'Available products',
-        },
+          description: 'Available products'},
         {
+
           name: 'Services',
           path: '/marketplace / services',
-          description: 'Marketplace services',
-        },
+          description: 'Marketplace services'},
         {
+
           name: 'Talent',
           path: '/marketplace / talent',
-          description: 'Find talent',
-        },
-      ],
-    },
+          description: 'Find talent'},
+      ]},
     {
+
       title: 'Support & Resources',
       links: [
         {
+
           name: 'Blog',
           path: '/blog',
-          description: 'Latest insights and news',
-        },
+          description: 'Latest insights and news'},
         {
+
           name: 'FAQ',
           path: '/faq',
-          description: 'Frequently asked questions',
-        },
+          description: 'Frequently asked questions'},
         {
+
           name: 'Sitemap',
           path: '/sitemap',
-          description: 'Complete site navigation',
-        },
+          description: 'Complete site navigation'},
         {
+
           name: 'Help Center',
           path: '/help',
-          description: 'Self - service support',
-        },
+          description: 'Self - service support'},
         {
+
           name: 'System Status',
           path: '/status',
-          description: 'Service status and uptime',
-        },
+          description: 'Service status and uptime'},
         {
+
           name: 'Security',
           path: '/security',
-          description: 'Security and compliance information',
-        },
-      ],
-    },
+          description: 'Security and compliance information'},
+      ]},
     {
+
       title: 'Legal & Compliance',
       links: [
         {
+
           name: 'Privacy Policy',
           path: '/privacy',
-          description: 'Data protection and privacy',
-        },
+          description: 'Data protection and privacy'},
         {
+
           name: 'Terms of Service',
           path: '/terms',
-          description: 'Terms and conditions',
-        },
+          description: 'Terms and conditions'},
         {
+
           name: 'Cookie Policy',
           path: '/cookies',
-          description: 'Cookie usage information',
-        },
+          description: 'Cookie usage information'},
         {
+
           name: 'Accessibility',
           path: '/accessibility',
-          description: 'Accessibility information',
-        },
-      ],
-    },
+          description: 'Accessibility information'},
+      ]},
     {
+
       title: 'User Account',
       links: [
         { name: 'Login', path: '/login', description: 'User authentication' },
         { name: 'Sign Up', path: '/signup', description: 'Create new account' },
         {
+
           name: 'Dashboard',
           path: '/dashboard',
-          description: 'User dashboard',
-        },
+          description: 'User dashboard'},
         {
+
           name: 'Forgot Password',
           path: '/forgot - password',
-          description: 'Password recovery',
-        },
-      ],
-    },
+          description: 'Password recovery'},
+      ]},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white pt - 24">

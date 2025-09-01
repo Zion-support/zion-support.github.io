@@ -31,6 +31,7 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
 }}/>) ) }
     </div>) ;
     const renderVariant = () => {
+
         switch (variant) {
 
             case 'dots':

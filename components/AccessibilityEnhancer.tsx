@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 interface AccessibilityEnhancerProps {
+
   // Add your props here
 
 
@@ -31,6 +32,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(: unknown {
+
     if (skipToContent && ref.current) {
 
       ref.current.focus();

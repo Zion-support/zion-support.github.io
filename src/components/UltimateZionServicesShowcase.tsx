@@ -37,6 +37,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
 
   
       transition: {
+
         staggerChildren: 0.1,;
 <<<<<<< HEAD
         delayChildren: 0.2;
@@ -45,6 +46,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
   };
 
   const itemVariants = {
+
   hidden: { opacity: 0,
   y: 20
 
@@ -54,6 +56,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
 =======
         delayChildren: 0.2}}}},;
     visible: {
+
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 >>>>>>> main
@@ -251,6 +254,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
               {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`px - 4 py - 2 rounded - lg border transition - all duration - 300 ${
+
                     selectedCategory === category.id
                       ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 border - purple - 400 text - white'
                       : 'bg - white / 10 border - white / 20 text - gray - 300 hover:bg - white / 20 hover:border - white / 40'

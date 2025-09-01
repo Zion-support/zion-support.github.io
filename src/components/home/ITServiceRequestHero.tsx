@@ -9,19 +9,23 @@
       setIsSubmitting(true);
       // Simulate API call
       setTimeout(: unknown {
+
         setIsSubmitting(false);
         router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
 
 <<<<<<< HEAD
   const containerVariants = {
+
   hidden: { opacity: 0,
   y: 20
 
 },
     visible: {
+
       opacity: 1,
       y: 0,
       transition: {
+
         duration: 0.6,
         staggerChildren: 0.2
       };
@@ -29,11 +33,13 @@
   };
 
   const itemVariants = {
+
   hidden: { opacity: 0,
   y: 20
 
 },
     visible: {
+
       opacity: 1,
       y: 0,
       transition: { duration: 0.5 };
@@ -61,6 +67,7 @@ import { Link } from 'react-router-dom';
 
 >>>>>>> main
 export function ITServiceRequestHero() {
+
   return ("
     <section className = "py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
       {/* Background Elements */}"

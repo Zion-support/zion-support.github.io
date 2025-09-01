@@ -1,4 +1,5 @@
 export interface InnovativeBlockchainWeb3Service {
+
   id: string;
   title: string;
   description: string;
@@ -85,12 +86,14 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     roi: "400-800%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL"],;"
       integrations["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],;
@@ -102,6 +105,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
 
   // NFT Marketplace Platform
   {
+
 "
     id: "nft-marketplace-creation-platform","
     title: "NFT Marketplace & Creation Platform Pro","
@@ -151,12 +155,14 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     roi: "300-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Solidity", "IPFS", "React", "Node.js", "MongoDB"],;"
       integrations["Ethereum", "Polygon", "OpenSea API", "MetaMask", "WalletConnect"],;
@@ -168,6 +174,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
 
   // DAO Governance Platform
   {
+
 "
     id: "dao-governance-management-platform","
     title: "DAO Governance & Management Platform","
@@ -217,12 +224,14 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     roi: "250-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL"],;"
       integrations["Ethereum", "Polygon", "Gnosis Safe", "Snapshot", "Discord"],;
@@ -234,6 +243,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
 
   // Web3 Identity Platform
   {
+
 "
     id: "web3-identity-authentication-platform","
     title: "Web3 Identity & Authentication Platform","
@@ -283,12 +293,14 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     roi: "300-600%","
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Solidity", "Zero-Knowledge Proofs", "React", "Node.js", "PostgreSQL"],;"
       integrations["Ethereum", "Polygon", "WalletConnect", "MetaMask", "Discord"],;
@@ -300,6 +312,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
 
   // DeFi Yield Aggregator
   {
+
 "
     id: "cross-chain-bridge-interoperability","
     title: "Cross-Chain Bridge & Interoperability Platform","
@@ -349,12 +362,14 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     roi: "350-700%","
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Solidity", "Rust", "React", "Node.js", "PostgreSQL"],;"
       integrations["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],;

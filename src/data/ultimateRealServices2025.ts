@@ -2,7 +2,9 @@
 import { ProductListing } from "@/types/listings";
 
 export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
+
   "AI Development": {
+
     icon: "🤖",
     description: "Advanced artificial intelligence solutions and development platforms",
   count: 4
@@ -10,56 +12,67 @@ export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
 
 },
   "Cybersecurity": {
+
     icon: "🔒",
     description: "Comprehensive security solutions and threat protection",
     count: 2
   },
   "Cloud Services": {
+
     icon: "☁️",
     description: "Cloud infrastructure and migration solutions",
     count: 1
   },
   "Blockchain": {
+
     icon: "⛓️",
     description: "Distributed ledger technology and smart contract solutions",
     count: 1
   },
   "Quantum Computing": {
+
     icon: "⚛️",
     description: "Quantum computing platforms and quantum-resistant solutions",
     count: 2
   },
   "IoT": {
+
     icon: "📡",
     description: "Internet of Things and edge computing solutions",
     count: 1
   },
   "Compliance": {
+
     icon: "📋",
     description: "Regulatory compliance and data governance solutions",
     count: 1
   },
   "DevOps": {
+
     icon: "🔄",
     description: "Development operations and microservices management",
     count: 1
   },
   "Fintech": {
+
     icon: "💳",
     description: "Financial technology and payment processing solutions",
     count: 1
   },
   "Healthcare AI": {
+
     icon: "🏥",
     description: "AI-powered healthcare and medical diagnostic solutions",
     count: 1
   },
   "Smart Cities": {
+
     icon: "🏙️",
     description: "Smart city infrastructure and urban management solutions",
     count: 1
   },
   "Augmented Reality": {
+
     icon: "👁️",
     description: "AR/VR solutions and immersive technology platforms",
     count: 1;
@@ -77,6 +90,7 @@ export
     count: 1}};
 ;
 export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
+
 "
   "Chatbots": { icon: "💬",
   count: 1
@@ -102,7 +116,9 @@ export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
 };
 
 export const ULTIMATE_PRICING_TIERS_2025 = {
+
   "Starter": {
+
     range: "$8,000 - $15,000",
     description: "Essential solutions for small to medium businesses",
     features: ["Basic functionality", "Standard support", "Core integrations",
@@ -111,6 +127,7 @@ export const ULTIMATE_PRICING_TIERS_2025 = {
 
 },
   "Professional": {
+
     range: "$15,000 - $30,000",
     description: "Advanced solutions with enhanced features and support",
     features: ["Advanced functionality", "Priority support", "Extended integrations", "Customization options", "Training"];
@@ -150,6 +167,7 @@ export
 ;
 >>>>>>> main
 export const ULTIMATE_CONTACT_INFO_2025 = {
+
 "
   phone: "+1 302 464 0950","
   email: "kleber@ziontechgroup.com","
@@ -168,6 +186,7 @@ export const ULTIMATE_CONTACT_INFO_2025 = {
 =======
 >>>>>>> main
 export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
+
 "
   quality: "100% satisfaction guarantee with 30-day money-back policy","
   support: "Comprehensive technical support and maintenance included","

@@ -9,7 +9,9 @@ import ThemeToggle from "./ThemeToggle";
     const [activeDropdown, setActiveDropdown] = useState (null) ;
     const location = useLocation () ;
     useEffect ( () => {
+
         const handleScroll = () => {
+
             setIsScrolled(window.scrollY > 20)};
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll)}, []);
@@ -186,6 +188,7 @@ import ThemeToggle from "./ThemeToggle";
                   "
                   {activeDropdown === item.name && (<div className="ml-4 mt-2 space-y-1">"
                       {item.dropdown.map((subItem) => (<Link key={subItem.name} to={subItem.href} className="block px-4 py-2 text-zion-slate-dark hover:text-zion-cyan hover:bg-zion-cyan/5 rounded-lg transition-colors duration-200" onClick={() => {
+
                             setActiveDropdown(null);
                             setIsOpen(false)}}>
                           {subItem.name}

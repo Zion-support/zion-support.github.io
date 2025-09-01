@@ -1,6 +1,7 @@
 import React from 'react';
 export default Accessibility;
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -18,53 +19,54 @@ import { SEO } from '../components / SEO';
   Ear,
   Hand,
   Brain,
-  Heart,
-} from 'lucide - react';
+  Heart} from 'lucide - react';
 
 const Accessibility: React.FC = () => {
+
   const complianceStandards = [
     {
+
       standard: 'WCAG 2.1 AA',
       description:
         'Web Content Accessibility Guidelines 2.1 Level AA compliance',
       status: 'Fully Compliant',
       icon: CheckCircle,
-      color: 'text - green - 400',
-    },
+      color: 'text - green - 400'},
     {
+
       standard: 'Section 508',
       description:
         'Federal accessibility requirements for electronic and information technology',
       status: 'Fully Compliant',
       icon: CheckCircle,
-      color: 'text - green - 400',
-    },
+      color: 'text - green - 400'},
     {
+
       standard: 'ADA Title III',
       description:
         'Americans with Disabilities Act requirements for public accommodations',
       status: 'Fully Compliant',
       icon: CheckCircle,
-      color: 'text - green - 400',
-    },
+      color: 'text - green - 400'},
     {
+
       standard: 'EN 301 549',
       description:
         'European accessibility requirements for ICT products and services',
       status: 'Fully Compliant',
       icon: CheckCircle,
-      color: 'text - green - 400',
-    },
+      color: 'text - green - 400'},
   ];
 
   const assistiveTechnologies = [
     {
+
       name: 'Screen Readers',
       description: 'Compatible with JAWS, NVDA, VoiceOver, and TalkBack',
       icon: Monitor,
-      examples: ['JAWS', 'NVDA', 'VoiceOver', 'TalkBack', 'Narrator'],
-    },
+      examples: ['JAWS', 'NVDA', 'VoiceOver', 'TalkBack', 'Narrator']},
     {
+
       name: 'Voice Control',
       description:
         'Voice recognition software support for hands - free navigation',
@@ -73,9 +75,9 @@ const Accessibility: React.FC = () => {
         'Dragon NaturallySpeaking',
         'Voice Control (macOS) ',
         'Windows Speech Recognition',
-      ],
-    },
+      ]},
     {
+
       name: 'Switch Devices',
       description: 'Alternative input devices for users with limited mobility',
       icon: Mouse,
@@ -84,9 +86,9 @@ const Accessibility: React.FC = () => {
         'Eye tracking',
         'Sip and puff devices',
         'Foot pedals',
-      ],
-    },
+      ]},
     {
+
       name: 'Mobile Accessibility',
       description: 'Optimized for mobile assistive technologies',
       icon: Smartphone,
@@ -95,40 +97,40 @@ const Accessibility: React.FC = () => {
         'Android TalkBack',
         'Switch Control',
         'AssistiveTouch',
-      ],
-    },
+      ]},
   ];
 
   const accessibilityTools = [
     {
+
       name: 'High Contrast Mode',
       icon: Contrast,
       description: 'Toggle high contrast color schemes for better visibility',
-      shortcut: 'Ctrl + Shift + H',
-    },
+      shortcut: 'Ctrl + Shift + H'},
     {
+
       name: 'Font Size Adjustment',
       icon: Type,
       description: 'Increase or decrease text size for better readability',
-      shortcut: 'Ctrl + Plus / Minus',
-    },
+      shortcut: 'Ctrl + Plus / Minus'},
     {
+
       name: 'Zoom Controls',
       icon: ZoomIn,
       description: 'Zoom in and out of content for better visibility',
-      shortcut: 'Ctrl + Mouse Wheel',
-    },
+      shortcut: 'Ctrl + Mouse Wheel'},
     {
+
       name: 'Color Blindness Support',
       icon: Palette,
       description:
         'Color schemes optimized for various types of color blindness',
-      shortcut: 'Ctrl + Shift + C',
-    },
+      shortcut: 'Ctrl + Shift + C'},
   ];
 
   const accessibilityFeatures = [
     {
+
       category: 'Visual Accessibility',
       icon: Eye,
       features: [
@@ -137,9 +139,9 @@ const Accessibility: React.FC = () => {
         'Screen reader compatibility',
         'Keyboard navigation support',
         'Focus indicators and landmarks',
-      ],
-    },
+      ]},
     {
+
       category: 'Auditory Accessibility',
       icon: Ear,
       features: [
@@ -148,9 +150,9 @@ const Accessibility: React.FC = () => {
         'Visual alerts and notifications',
         'Transcripts for audio content',
         'Volume controls and audio alternatives',
-      ],
-    },
+      ]},
     {
+
       category: 'Motor Accessibility',
       icon: Hand,
       features: [
@@ -159,9 +161,9 @@ const Accessibility: React.FC = () => {
         'Switch device compatibility',
         'Extended time limits',
         'Large click targets',
-      ],
-    },
+      ]},
     {
+
       category: 'Cognitive Accessibility',
       icon: Brain,
       features: [
@@ -170,8 +172,7 @@ const Accessibility: React.FC = () => {
         'Error prevention and recovery',
         'Multiple ways to complete tasks',
         'Reduced distractions and animations',
-      ],
-    },
+      ]},
   ];
 
   return (<>

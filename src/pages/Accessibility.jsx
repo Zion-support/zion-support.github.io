@@ -1,5 +1,6 @@
 import React from 'react';
   import {
+
 export default function Accessibility () {
 
     Accessibility as AccessibilityIcon,
@@ -15,11 +16,11 @@ export default function Accessibility () {
     Globe,
     Users,
     Shield,
-    Heart,
-  } from 'lucide - react';
+    Heart} from 'lucide - react';
 
   const accessibilityFeatures = [
     {
+
       icon: <Eye className="w - 8 h - 8" />,
       title: 'Visual Accessibility',
       description:
@@ -31,9 +32,9 @@ export default function Accessibility () {
         'Alternative text for images',
         'Keyboard navigation support',
         'Focus indicators and landmarks',
-      ],
-    },
+      ]},
     {
+
       icon: <Ear className="w - 8 h - 8" />,
       title: 'Auditory Accessibility',
       description:
@@ -44,9 +45,9 @@ export default function Accessibility () {
         'Transcripts for audio content',
         'Volume controls and audio indicators',
         'Visual alerts and notifications',
-      ],
-    },
+      ]},
     {
+
       icon: <Hand className="w - 8 h - 8" />,
       title: 'Motor Accessibility',
       description:
@@ -58,9 +59,9 @@ export default function Accessibility () {
         'Customizable click targets',
         'Gesture alternatives',
         'Timing adjustments',
-      ],
-    },
+      ]},
     {
+
       icon: <Brain className="w - 8 h - 8" />,
       title: 'Cognitive Accessibility',
       description:
@@ -72,103 +73,102 @@ export default function Accessibility () {
         'Error prevention and recovery',
         'Help and support resources',
         'Minimal distractions',
-      ],
-    },
+      ]},
   ];
 
   const complianceStandards = [
     {
+
       name: 'WCAG 2.1 AA',
       description:
         'Web Content Accessibility Guidelines 2.1 Level AA compliance',
       status: 'Compliant',
-      icon: <CheckCircle className="w - 6 h - 6 text - green - 500" />,
-    },
+      icon: <CheckCircle className="w - 6 h - 6 text - green - 500" />},
     {
+
       name: 'Section 508',
       description:
         'Federal accessibility requirements for electronic and information technology',
       status: 'Compliant',
-      icon: <CheckCircle className="w - 6 h - 6 text - green - 500" />,
-    },
+      icon: <CheckCircle className="w - 6 h - 6 text - green - 500" />},
     {
+
       name: 'ADA Title III',
       description: 'Americans with Disabilities Act accessibility requirements',
       status: 'Compliant',
-      icon: <CheckCircle className="w - 6 h - 6 text - green - 500" />,
-    },
+      icon: <CheckCircle className="w - 6 h - 6 text - green - 500" />},
     {
+
       name: 'EN 301 549',
       description:
         'European accessibility requirements for ICT products and services',
       status: 'Compliant',
-      icon: <CheckCircle className="w - 6 h - 6 text - green - 500" />,
-    },
+      icon: <CheckCircle className="w - 6 h - 6 text - green - 500" />},
   ];
 
   const accessibilityTools = [
     {
+
       title: 'Accessibility Checker',
       description: 'Built - in tool to identify and fix accessibility issues',
       link: '/accessibility - checker',
-      icon: <CheckCircle className="w - 6 h - 6" />,
-    },
+      icon: <CheckCircle className="w - 6 h - 6" />},
     {
+
       title: 'High Contrast Mode',
       description: 'Toggle high contrast color schemes for better visibility',
       link: '/high - contrast',
-      icon: <Eye className="w - 6 h - 6" />,
-    },
+      icon: <Eye className="w - 6 h - 6" />},
     {
+
       title: 'Text Size Adjuster',
       description: 'Increase or decrease text size for better readability',
       link: '/text - size',
-      icon: <Info className="w - 6 h - 6" />,
-    },
+      icon: <Info className="w - 6 h - 6" />},
     {
+
       title: 'Keyboard Navigation Guide',
       description: 'Learn how to navigate using only your keyboard',
       link: '/keyboard - guide',
-      icon: <Hand className="w - 6 h - 6" />,
-    },
+      icon: <Hand className="w - 6 h - 6" />},
   ];
 
   const assistiveTechnologies = [
     {
+
       name: 'Screen Readers',
       description: 'NVDA, JAWS, VoiceOver, TalkBack',
-      icon: <Eye className="w - 6 h - 6" />,
-    },
+      icon: <Eye className="w - 6 h - 6" />},
     {
+
       name: 'Voice Control',
       description: 'Dragon NaturallySpeaking, Voice Control',
-      icon: <Ear className="w - 6 h - 6" />,
-    },
+      icon: <Ear className="w - 6 h - 6" />},
     {
+
       name: 'Switch Devices',
       description: 'Head pointers, eye trackers, sip - and - puff',
-      icon: <Hand className="w - 6 h - 6" />,
-    },
+      icon: <Hand className="w - 6 h - 6" />},
     {
+
       name: 'Magnification Software',
       description: 'ZoomText, Magnifier, built - in OS tools',
-      icon: <Eye className="w - 6 h - 6" />,
-    },
+      icon: <Eye className="w - 6 h - 6" />},
   ];
 
   const contactInfo = [
     {
+
       title: 'Accessibility Support',
       email: 'accessibility@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      responseTime: '24 - 48 hours',
-    },
+      responseTime: '24 - 48 hours'},
     {
+
       title: 'Technical Support',
       email: 'support@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      responseTime: '2 - 4 hours',
-    },
+      responseTime: '2 - 4 hours'},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">

@@ -2,7 +2,9 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default ComprehensivePricingGuide2027;
 export default React.memo (function ComprehensivePricingGuide2027 () {
+
 import {
+
 import { ADVANCED_AI_SERVICES_2025 } from '../data / advancedAIServices2025';
 import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data / innovativeBlockchainWeb3Services2025';
 import { INNOVATIVE_IT_INFRASTRUCTURE_2025 } from '../data / innovativeITInfrastructure2025';
@@ -126,12 +128,14 @@ import { SEO } from '../components / SEO';
 
   const serviceCategories = [
     {
+
       name: "AI & Machine Learning Services",
       icon: Brain,
       description: "Cutting - edge AI solutions for business transformation",
       color: "from - zion - cyan to - zion - purple",
       services: [
         {
+
           name: "AI Workflow Orchestrator",
           description: "Transform business processes with AI - powered workflow automation",
           price: "$299",
@@ -141,6 +145,7 @@ import { SEO } from '../components / SEO';
           link: "/services / ai - workflow - orchestrator"
         },
         {
+
           name: "AI Data Governance Platform",
           description: "Secure, govern, and manage data with AI - powered compliance automation",
           price: "$499",
@@ -150,6 +155,7 @@ import { SEO } from '../components / SEO';
           link: "/services / ai - data - governance - platform"
         },
         {
+
           name: "AI Customer Experience Analytics",
           description: "Transform customer insights into actionable intelligence with AI - powered analytics",
           price: "$399",
@@ -161,12 +167,14 @@ import { SEO } from '../components / SEO';
       ]
     },
     {
+
       name: "Cloud & DevOps Services",
       icon: Network,
       description: "Scalable cloud infrastructure and development operations",
       color: "from - zion - blue to - zion - cyan",
       services: [
         {
+
           name: "Cloud DevOps",
           description: "Infrastructure automation and scaling solutions",
           price: "$599",
@@ -176,6 +184,7 @@ import { SEO } from '../components / SEO';
           link: "/services / cloud - devops"
         },
         {
+
           name: "IT Infrastructure",
           description: "Enterprise - grade infrastructure solutions",
           price: "$799",
@@ -187,12 +196,14 @@ import { SEO } from '../components / SEO';
       ]
     },
     {
+
       name: "Security & Compliance Services",
       icon: Shield,
       description: "Enterprise - grade security and compliance solutions",
       color: "from - zion - red to - zion - orange",
       services: [
         {
+
           name: "Zero Trust Network Access",
           description: "Modern security architecture for enterprise networks",
           price: "$899",
@@ -202,6 +213,7 @@ import { SEO } from '../components / SEO';
           link: "/services / zero - trust - network - access"
         },
         {
+
           name: "Security Headers & CSP",
           description: "Web security hardening and content security policies",
           price: "$299",
@@ -213,12 +225,14 @@ import { SEO } from '../components / SEO';
       ]
     },
     {
+
       name: "Business Process Automation",
               icon: WorkflowIcon,
       description: "Streamline operations with intelligent automation",
       color: "from - zion - purple to - zion - pink",
       services: [
         {
+
           name: "AI Project Management",
           description: "AI - driven project optimization and management",
           price: "$449",
@@ -228,6 +242,7 @@ import { SEO } from '../components / SEO';
           link: "/services / ai - project - management"
         },
         {
+
           name: "AI Customer Support Automation",
           description: "Intelligent customer support with AI automation",
           price: "$349",
@@ -242,6 +257,7 @@ import { SEO } from '../components / SEO';
 
   const enterprisePackages = [
     {
+
       name: "Starter Enterprise",
       price: "$2,999",
       period: "/month",
@@ -257,6 +273,7 @@ import { SEO } from '../components / SEO';
       popular: false
     },
     {
+
       name: "Professional Enterprise",
       price: "$5,999",
       period: "/month",
@@ -273,6 +290,7 @@ import { SEO } from '../components / SEO';
       popular: true
     },
     {
+
       name: "Ultimate Enterprise",
       price: "$12,999",
       period: "/month",
@@ -293,6 +311,7 @@ import { SEO } from '../components / SEO';
 
   const marketComparison = [
     {
+
       feature: "AI Workflow Automation",
       zion: "$299 / month",
       competitor1: "$599 / month",
@@ -300,6 +319,7 @@ import { SEO } from '../components / SEO';
       savings: "50 - 62%"
     },
     {
+
       feature: "Data Governance Platform",
       zion: "$499 / month",
       competitor1: "$1,299 / month",
@@ -307,6 +327,7 @@ import { SEO } from '../components / SEO';
       savings: "61 - 75%"
     },
     {
+
       feature: "Customer Experience Analytics",
       zion: "$399 / month",
       competitor1: "$899 / month",
@@ -314,6 +335,7 @@ import { SEO } from '../components / SEO';
       savings: "56 - 69%"
     },
     {
+
       feature: "Cloud DevOps",
       zion: "$599 / month",
       competitor1: "$1,199 / month",
@@ -417,6 +439,7 @@ import { SEO } from '../components / SEO';
                       transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
                       className={`relative bg - zion - slate - 800 / 50 backdrop - blur - sm border rounded - xl p - 8 hover:border - zion - cyan / 40 transition - all duration - 300 ${
+
                         service.popular ? 'border - zion - cyan / 50 bg - zion - cyan / 5' : 'border - zion - slate - 600 / 50'
                       }`}
                     >
@@ -445,6 +468,7 @@ import { SEO } from '../components / SEO';
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                           className={`w - full py - 3 px - 6 rounded - lg font - semibold transition - all duration - 300 ${
+
                             service.popular
                               ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white hover:shadow - lg hover:shadow - zion - cyan / 25'
                               : 'bg - zion - slate - 700 text - white hover:bg - zion - slate - 600'
@@ -485,6 +509,7 @@ import { SEO } from '../components / SEO';
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative bg - zion - slate - 800 / 50 backdrop - blur - sm border rounded - xl p - 8 ${
+
                     pkg.popular
                       ? 'border - zion - cyan / 50 bg - zion - cyan / 5'
                       : 'border - zion - slate - 600 / 50'
@@ -516,6 +541,7 @@ import { SEO } from '../components / SEO';
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className={`w - full py - 3 px - 6 rounded - lg font - semibold transition - all duration - 300 ${
+
                       pkg.popular
                         ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white hover:shadow - lg hover:shadow - zion - cyan / 25'
                         : 'bg - zion - slate - 700 text - white hover:bg - zion - slate - 600'

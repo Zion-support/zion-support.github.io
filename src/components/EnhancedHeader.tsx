@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { innovativeServices2025 } from '../data / innovativeServices2025';
 import { motion, AnimatePresence } from 'framer - motion';
@@ -9,6 +10,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  * @returns {*} Function return value
  */
 function EnhancedHeader () {
+
 =======
 >>>>>>> main
 
@@ -76,6 +78,7 @@ function EnhancedHeader () {
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function EnhancedHeader() {
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -83,7 +86,7 @@ export function EnhancedHeader() {
   const [isSearching, setIsSearching] = useState(false);
   
   useEffect(() => {
-    
+
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -95,6 +98,7 @@ export function EnhancedHeader() {
 
       setIsSearching(true);
       try {
+
         await new Promise (resolve => setTimeout (resolve, 1000) ) ;
         window.location.href = `/search?q=${encodeURIComponent (searchQuery.trim () ) }`} finally {
 

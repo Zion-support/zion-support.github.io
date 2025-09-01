@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default React.memo (function RequestQuote () {
+
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -42,6 +44,7 @@ import { SEO } from '../components / SEO';
 } from 'lucide - react';
 
   const [formData, setFormData] = useState ({
+
     companyName: '',
     contactName: '',
     email: '',
@@ -126,6 +129,7 @@ import { SEO } from '../components / SEO';
 
   const services = [
     {
+
       id: 'ai - ml',
       name: 'AI & Machine Learning',
       icon: Bot,
@@ -143,6 +147,7 @@ import { SEO } from '../components / SEO';
       category: 'AI Services'
     },
     {
+
       id: 'cloud - devops',
       name: 'Cloud & DevOps',
       icon: Cloud,
@@ -160,6 +165,7 @@ import { SEO } from '../components / SEO';
       category: 'IT Services'
     },
     {
+
       id: 'web - development',
       name: 'Web Development',
       icon: Monitor,
@@ -177,6 +183,7 @@ import { SEO } from '../components / SEO';
       category: 'IT Services'
     },
     {
+
       id: 'mobile - apps',
       name: 'Mobile Applications',
       icon: Smartphone,
@@ -194,6 +201,7 @@ import { SEO } from '../components / SEO';
       category: 'IT Services'
     },
     {
+
       id: 'data - analytics',
       name: 'Data & Analytics',
       icon: BarChart3,
@@ -211,6 +219,7 @@ import { SEO } from '../components / SEO';
       category: 'AI Services'
     },
     {
+
       id: 'cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
@@ -228,6 +237,7 @@ import { SEO } from '../components / SEO';
       category: 'Security'
     },
     {
+
       id: 'micro - saas',
       name: 'Micro SaaS Solutions',
       icon: Package,
@@ -245,6 +255,7 @@ import { SEO } from '../components / SEO';
       category: 'Micro SaaS'
     },
     {
+
       id: 'integration',
       name: 'System Integration',
       icon: Settings,
@@ -265,21 +276,25 @@ import { SEO } from '../components / SEO';
 
   const benefits = [
     {
+
       icon: Calculator,
       title: 'Transparent Pricing',
       description: 'Clear, upfront pricing with no hidden fees'
     },
     {
+
       icon: Clock,
       title: 'Fast Response',
       description: 'Get a detailed quote within 24 - 48 hours'
     },
     {
+
       icon: FileText,
       title: 'Detailed Proposals',
       description: 'Comprehensive project breakdowns and timelines'
     },
     {
+
       icon: CheckCircle,
       title: 'Quality Guarantee',
       description: 'We stand behind our work with satisfaction guarantees'
@@ -287,31 +302,40 @@ import { SEO } from '../components / SEO';
   ];
 
   const handleInputChange = useCallback ( (field: string, value: string | string[]) => {
+
     setFormData (prev => ({
+
       ...prev,
       [field]: value
     }) ) ;
   };
 
   const toggleService = (serviceId: string) => {
+
     setFormData (prev => ({
+
       ...prev,
       services: prev.services.includes (serviceId) ? prev.services.filter (id => id !== serviceId) : [...prev.services, serviceId]
     }) ) ;
   };
 
   const toggleServiceExpansion = (serviceId: string) => {
+
     setExpandedService (expandedService === serviceId ? null : serviceId) ;
   };
 
   const nextStep = () => {
+
     if (formStep < 3) {
+
       setFormStep (formStep + 1) ;
     }
   };
 
   const prevStep = () => {
+
     if (formStep > 1) {
+
       setFormStep (formStep - 1) ;
     }
   };
@@ -328,7 +352,9 @@ import { SEO } from '../components / SEO';
   };
 
   const resetForm = () => {
+
     setFormData ({
+
       companyName: '',
       contactName: '',
       email: '',
@@ -348,6 +374,7 @@ import { SEO } from '../components / SEO';
   };
 
   if (submitted) {
+
     return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex items - center justify - center">
         <SEO
           title="Quote Requested - Zion Tech Group"
@@ -486,6 +513,7 @@ import { SEO } from '../components / SEO';
                   <div role="button" className="flex items - center justify - between mb - 8">
                     {[1, 2, 3].map ( (step) => (<div role="button" key={step} className="flex items - center">
                         <div role="button" className={`w - 10 h - 10 rounded - full flex items - center justify - center font - bold text - sm ${
+
                           formStep >= step
                             ? 'bg - gradient - to - r from - green - 400 to - blue - 500 text - white'
                             : 'bg - slate - 700 text - gray - 400'
@@ -493,6 +521,7 @@ import { SEO } from '../components / SEO';
                           {step}
                         </div>
                         {step < 3 && (<div role="button" className={`w - 16 h - 1 mx - 2 ${
+
                             formStep > step ? 'bg - gradient - to - r from - green - 400 to - blue - 500' : 'bg - slate - 700'
                           }`}></div>) }
                       </div>) ) }
@@ -684,6 +713,7 @@ import { SEO } from '../components / SEO';
                                 <label
                                   htmlFor={service.id}
                                   className={`block p - 4 rounded - lg border - 2 cursor - pointer transition - all duration - 200 ${
+
                                     formData.services.includes (service.id) ? 'border - green - 400 bg - green - 400 / 10'
                                       : 'border - slate - 600 hover:border - slate - 500 bg - slate - 800 / 30'
                                   }`}
@@ -719,6 +749,7 @@ import { SEO } from '../components / SEO';
                                 <label
                                   htmlFor={method.value}
                                   className={`block p - 4 rounded - lg border - 2 cursor - pointer transition - all duration - 200 ${
+
                                     formData.preferredContact === method.value
                                       ? 'border - green - 400 bg - green - 400 / 10'
                                       : 'border - slate - 600 hover:border - slate - 500 bg - slate - 800 / 30'

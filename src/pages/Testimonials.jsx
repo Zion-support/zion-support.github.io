@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 export default function Testimonials () {
+
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   Star,
@@ -12,11 +14,11 @@ import { motion, AnimatePresence } from 'framer - motion';
   CheckCircle,
   ArrowRight,
   Filter,
-  Search,
-} from 'lucide - react';
+  Search} from 'lucide - react';
 
 const testimonials = [
   {
+
     id: 1,
     name: 'Sarah Johnson',
     role: 'Chief Technology Officer',
@@ -32,9 +34,9 @@ const testimonials = [
       'Improved decision - making processes',
     ],
     image: '/api / placeholder / 100 / 100',
-    featured: true,
-  },
+    featured: true},
   {
+
     id: 2,
     name: 'Michael Chen',
     role: 'VP of Engineering',
@@ -50,9 +52,9 @@ const testimonials = [
       'Improved system reliability',
     ],
     image: '/api / placeholder / 100 / 100',
-    featured: true,
-  },
+    featured: true},
   {
+
     id: 3,
     name: 'Emily Rodriguez',
     role: 'Security Director',
@@ -68,9 +70,9 @@ const testimonials = [
       'Enhanced threat detection',
     ],
     image: '/api / placeholder / 100 / 100',
-    featured: true,
-  },
+    featured: true},
   {
+
     id: 4,
     name: 'David Kim',
     role: 'Operations Manager',
@@ -86,9 +88,9 @@ const testimonials = [
       'Reduced waste by 25%',
     ],
     image: '/api / placeholder / 100 / 100',
-    featured: false,
-  },
+    featured: false},
   {
+
     id: 5,
     name: 'Lisa Thompson',
     role: 'Digital Transformation Lead',
@@ -104,9 +106,9 @@ const testimonials = [
       'Streamlined operations',
     ],
     image: '/api / placeholder / 100 / 100',
-    featured: false,
-  },
+    featured: false},
   {
+
     id: 6,
     name: 'Robert Wilson',
     role: 'IT Director',
@@ -122,9 +124,9 @@ const testimonials = [
       'Full regulatory compliance',
     ],
     image: '/api / placeholder / 100 / 100',
-    featured: false,
-  },
+    featured: false},
   {
+
     id: 7,
     name: 'Jennifer Lee',
     role: 'Product Manager',
@@ -140,9 +142,9 @@ const testimonials = [
       'Ongoing technical support',
     ],
     image: '/api / placeholder / 100 / 100',
-    featured: false,
-  },
+    featured: false},
   {
+
     id: 8,
     name: 'Alex Martinez',
     role: 'Chief Innovation Officer',
@@ -158,8 +160,7 @@ const testimonials = [
       'Cutting - edge technology implementation',
     ],
     image: '/api / placeholder / 100 / 100',
-    featured: false,
-  },
+    featured: false},
 ];
 
 const industries = [
@@ -181,6 +182,7 @@ const ratings = ['All Ratings', '5 Stars', '4 + Stars', '3 + Stars'];
   const [searchQuery, setSearchQuery] = useState ('') ;
 
   const filteredTestimonials = testimonials.filter (testimonial => {
+
     const matchesIndustry = selectedIndustry === 'All Industries' ||
       testimonial.industry === selectedIndustry;
     const matchesRating = selectedRating === 'All Ratings' || (selectedRating === '5 Stars' && testimonial.rating === 5) || (selectedRating === '4 + Stars' && testimonial.rating >= 4) || (selectedRating === '3 + Stars' && testimonial.rating >= 3) ;

@@ -1,4 +1,8 @@
-import { createClient, SupabaseClient, PostgrestError } from '@supabase/supabase-js';
+import {
+  createClient,
+  SupabaseClient,
+  PostgrestError,
+} from '@supabase/supabase-js';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 // Define the structure of a Service item based on your DB schema and select query

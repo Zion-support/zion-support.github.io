@@ -1,7 +1,9 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -59,6 +61,7 @@ interface AccessibilitySettings {
 }
 
 interface EnhancedAccessibilityProps {
+
   // Add your props here
 
 ;  enabled?: boolean;
@@ -76,6 +79,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'small' | 'medium' | 'large' | 'xlarge'}
 export const EnhancedAccessibility: React.FC = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
 
@@ -104,7 +108,7 @@ export const EnhancedAccessibility: React.FC = () => {
 
   // Apply accessibility settings
   useEffect ( () => {
-    
+
     // High contrast
     if (settings.highContrast) {
 
@@ -118,6 +122,7 @@ export const EnhancedAccessibility: React.FC = () => {
     if (settings.reducedMotion) {
 
       root.style.setProperty('--reduced-motion',reduce')} else {
+
 <<<<<<< HEAD
 
       root.style.removeProperty('--reduced-motion');
@@ -153,6 +158,7 @@ export const EnhancedAccessibility: React.FC = () => {
     localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
 
   useEffect(() => {
+
     // Load saved settings'
     const saved = localStorage.getItem('accessibility-settings');    if (saved) {
 
@@ -179,11 +185,13 @@ export const EnhancedAccessibility: React.FC = () => {
 
     // Remove after announcement
     setTimeout ( () => {
+
       document.body.removeChild (announcement) }, 1000) ;
 
     setAnnouncements (prev => [...prev, message]) }, []) ;
   // Enhanced keyboard navigation
   useEffect ( () => {
+
     if (!settings.keyboardNavigation) return;
 
     
@@ -228,6 +236,7 @@ modals.forEach(modal:  > {;
 
   // Keyboard navigation support
   useEffect ( () => {
+
     if (!settings.keyboardNavigation) return;
 
     
@@ -270,6 +279,7 @@ modals.forEach(modal:  > {;
 
   // Skip to main content link
   useEffect(() => {
+
 <<<<<<< HEAD
 
     
@@ -286,6 +296,7 @@ modals.forEach(modal:  > {;
     document.body.insertBefore (skipLink, document.body.firstChild) ;
 
     return : unknown {
+
       if (skipLink.parentNode) {
 
         skipLink.parentNode.removeChild(skipLink)}}, []) ;
@@ -297,6 +308,7 @@ modals.forEach(modal:  > {;
       icon: Contrast,
       label: 'Toggle High Contrast',
       action: : unknown {
+
         const newSettings = {
 
   ...settings,;  ;
@@ -313,6 +325,7 @@ modals.forEach(modal:  > {;
       icon: Type,
       label: 'Toggle Large Text',
       action: : unknown {
+
         const newSettings = {
 
   ...settings,;  ;
@@ -329,7 +342,7 @@ modals.forEach(modal:  > {;
       icon: ZoomIn,
       label: 'Increase Zoom',
       action: () => {
-        
+
         const newZoom = Math.min(currentZoom + 0.1, 2.0);`
         document.documentElement.style.fontSize = `${newZoom * 16}px`;`
         announce(`Zoom increased to ${Math.round(newZoom * 100)}%`)},      active: false // Zoom actions are not toggleable, so they are not active
@@ -339,7 +352,7 @@ modals.forEach(modal:  > {;
       icon: ZoomOut,
       label: 'Decrease Zoom',
       action: () => {
-        
+
         const newZoom = Math.max(currentZoom - 0.1, 0.5);`
         document.documentElement.style.fontSize = `${newZoom * 16}px`;`
         announce(`Zoom decreased to ${Math.round(newZoom * 100)}%`)},      active: false // Zoom actions are not toggleable, so they are not active
@@ -371,6 +384,7 @@ modals.forEach(modal:  > {;
       document.body.appendChild (announcement) ;
 
       setTimeout ( () => {
+
         document.body.removeChild (announcement) }, 1000) }
   };
 
@@ -380,6 +394,7 @@ modals.forEach(modal:  > {;
     // Announce changes to screen readers
 <<<<<<< HEAD
     const settingNames = {
+
       highContrast: 'High contrast',
       largeText: 'Large text',
       reducedMotion: 'Reduced motion',
@@ -441,7 +456,7 @@ modals.forEach(modal:  > {;
                         onClick = {
 
   () => {
-                          
+
   ;
   ;
   ;
@@ -710,7 +725,6 @@ const accessibilityStyles = `
 // Inject styles'
 if (typeof document !== 'undefined') {
 
-  
   style.textContent = accessibilityStyles;
   document.head.appendChild (style) }
 export default EnhancedAccessibility;

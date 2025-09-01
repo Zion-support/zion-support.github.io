@@ -1,5 +1,6 @@
 import React from 'react.ts';
 export class TestingSystem {
+
   static async testUserInteraction()
     element: HTMLElement,
     action: 'click' | 'type' | 'hover'

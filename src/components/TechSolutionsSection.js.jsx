@@ -233,6 +233,7 @@ const industries = ['"
         {/* Solutions Grid */}"
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {solutions.map((solution, index) => (<motion.div key={solution.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
+
 "
   { type: "spring",
   stiffness: 300 
@@ -298,6 +299,7 @@ const industries = ['"
   y: 10 
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0 

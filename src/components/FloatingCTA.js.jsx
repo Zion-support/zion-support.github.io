@@ -10,7 +10,9 @@ export function FloatingCTA({
   const [isExpanded, setIsExpanded] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
+
     const handleScroll = () => {
+
       setShowScrollTop(window.scrollY > 400);
     };
     window.addEventListener('scroll', handleScroll);
@@ -21,6 +23,7 @@ export function FloatingCTA({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   const getPositionClasses = () => {
+
     switch (position) {
 
       case 'bottom-left':'
@@ -34,6 +37,7 @@ export function FloatingCTA({
     }
   };
   const getExpandedPositionClasses = () => {
+
     switch (position) {
 
       case 'bottom-left':'

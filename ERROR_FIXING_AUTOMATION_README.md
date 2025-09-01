@@ -5,13 +5,14 @@ This project now includes a comprehensive automated error fixing system that con
 ## 📊 Current Status
 
 <<<<<<< HEAD
+
 ### 1. Start All Error Fixers
 
 =======
 ✅ **System Status**: ACTIVE  
 ✅ **Processes Running**: 12 automation processes  
 ✅ **Initial Fixes Applied**: 2,231 fixes  
-✅ **Last Run**: 2025-09-01T03:06:57.979Z  
+✅ **Last Run**: 2025-09-01T03:06:57.979Z
 
 ## 🎯 What This System Does
 
@@ -29,7 +30,9 @@ The Enhanced Error Fixing Automation System automatically detects and fixes:
 ## 🏃‍♂️ Quick Start
 
 ### Start the Automation System
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+
+> > > > > > > cursor/fix-project-errors-and-automate-future-fixes-1571
+
 ```bash
 # Start all error fixing automation
 ./start-error-fixing-automation.sh
@@ -39,11 +42,15 @@ pm2 start ecosystem-error-fixing.config.cjs --update-env
 ```
 
 <<<<<<< HEAD
+
 ### 2. Check Status
 
 =======
+
 ### Monitor the System
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+
+> > > > > > > cursor/fix-project-errors-and-automate-future-fixes-1571
+
 ```bash
 # Check status
 pm2 status
@@ -56,11 +63,15 @@ pm2 logs enhanced-error-fixing-automation
 ```
 
 <<<<<<< HEAD
+
 ### 3. View Logs
 
 =======
+
 ### Stop the System
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+
+> > > > > > > cursor/fix-project-errors-and-automate-future-fixes-1571
+
 ```bash
 # Stop all automation
 pm2 stop ecosystem-error-fixing.config.cjs
@@ -71,20 +82,20 @@ pm2 stop ecosystem-error-fixing.config.cjs
 
 ## 🔧 Automation Processes
 
-| Process | Frequency | Purpose |
-|---------|-----------|---------|
-| **enhanced-error-fixing-automation** | Every 15 min | Main error fixer |
-| **typescript-error-fixer** | Every 30 min | TypeScript-specific fixes |
-| **eslint-error-fixer** | Every 20 min | ESLint error cleanup |
-| **comprehensive-error-fixer** | Every 40 min | General error fixes |
-| **jsx-error-fixer** | Every 30 min | JSX syntax fixes |
-| **master-error-fixer** | Every hour | Coordinates all fixers |
-| **console-error-fixer** | Every 15 min | Console statement cleanup |
-| **build-error-detector** | Every 10 min | Build error monitoring |
-| **error-analytics-dashboard** | Every 5 min | Progress tracking |
-| **error-prevention-monitor** | Every 5 min | Prevents new errors |
-| **critical-error-alert-system** | Every minute | Critical error alerts |
-| **auto-recovery-manager** | Every 2 min | Failure recovery |
+| Process                              | Frequency    | Purpose                   |
+| ------------------------------------ | ------------ | ------------------------- |
+| **enhanced-error-fixing-automation** | Every 15 min | Main error fixer          |
+| **typescript-error-fixer**           | Every 30 min | TypeScript-specific fixes |
+| **eslint-error-fixer**               | Every 20 min | ESLint error cleanup      |
+| **comprehensive-error-fixer**        | Every 40 min | General error fixes       |
+| **jsx-error-fixer**                  | Every 30 min | JSX syntax fixes          |
+| **master-error-fixer**               | Every hour   | Coordinates all fixers    |
+| **console-error-fixer**              | Every 15 min | Console statement cleanup |
+| **build-error-detector**             | Every 10 min | Build error monitoring    |
+| **error-analytics-dashboard**        | Every 5 min  | Progress tracking         |
+| **error-prevention-monitor**         | Every 5 min  | Prevents new errors       |
+| **critical-error-alert-system**      | Every minute | Critical error alerts     |
+| **auto-recovery-manager**            | Every 2 min  | Failure recovery          |
 
 ## 📁 Generated Files
 
@@ -151,7 +162,8 @@ LOG_LEVEL=info
 ### PM2 Configuration
 
 The system uses `ecosystem-error-fixing.config.cjs` for PM2 configuration. Key settings:
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+
+> > > > > > > cursor/fix-project-errors-and-automate-future-fixes-1571
 
 - **Memory Limits**: 512MB-1GB per process
 - **Auto Restart**: Enabled for all processes
@@ -174,25 +186,30 @@ pm2 logs --lines 50
 ```
 
 ### Generated Reports
+
 <<<<<<< HEAD
 
-Each error fixer generates detailed reports:
-=======
+# Each error fixer generates detailed reports:
+
 The system generates JSON reports with:
+
 - Timestamp of execution
 - Number of fixes applied
 - Duration of execution
 - List of errors fixed
 - Configuration used
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+  > > > > > > > cursor/fix-project-errors-and-automate-future-fixes-1571
 
 ### Log Files
+
 All processes log to `automation/logs/` with separate files for:
+
 - Standard output (`*.log`)
 - Error output (`*-error.log`)
 - Combined logs (`merge_logs: true`)
 
 <<<<<<< HEAD
+
 ### Report Structure
 
 ```json
@@ -203,11 +220,15 @@ All processes log to `automation/logs/` with separate files for:
   "status": "completed"
 }
 ```
+
 =======
+
 ## 🔍 Error Types Fixed
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+
+> > > > > > > cursor/fix-project-errors-and-automate-future-fixes-1571
 
 ### TypeScript Errors
+
 - Missing type annotations
 - Import/export issues
 - Interface definition problems
@@ -215,6 +236,7 @@ All processes log to `automation/logs/` with separate files for:
 - Module resolution issues
 
 <<<<<<< HEAD
+
 ### Run Individual Fixers
 
 ```bash
@@ -305,38 +327,44 @@ The `ecosystem.config.cjs` file contains all automation configurations:
   }
 }
 ```
+
 =======
+
 ### Build Errors
+
 - Compilation failures
 - Dependency conflicts
 - Configuration issues
 - Asset loading problems
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+  > > > > > > > cursor/fix-project-errors-and-automate-future-fixes-1571
 
 ## 🚨 Troubleshooting
 
 ### Common Issues
 
 <<<<<<< HEAD
+
 1. **PM2 Not Found**
 
 =======
+
 1. **Process Not Starting**
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+
+   > > > > > > > cursor/fix-project-errors-and-automate-future-fixes-1571
+
    ```bash
    # Check PM2 status
    pm2 status
-   
+
    # Restart specific process
    pm2 restart enhanced-error-fixing-automation
    ```
 
-<<<<<<< HEAD
-2. **Permission Denied**
+<<<<<<< HEAD 2. **Permission Denied**
 
-   ```bash
-   chmod +x scripts/start-error-fixers.sh
-   ```
+```bash
+chmod +x scripts/start-error-fixers.sh
+```
 
 3. **Script Not Found**
 
@@ -357,21 +385,23 @@ The `ecosystem.config.cjs` file contains all automation configurations:
    ```
 
 ### Debug Mode
-=======
-2. **High Memory Usage**
-   ```bash
-   # Check memory usage
-   pm2 monit
-   
-   # Restart processes
-   pm2 restart all
-   ```
+
+======= 2. **High Memory Usage**
+
+```bash
+# Check memory usage
+pm2 monit
+
+# Restart processes
+pm2 restart all
+```
 
 3. **Log File Issues**
+
    ```bash
    # Clear logs
    pm2 flush
-   
+
    # Check log directory
    ls -la automation/logs/
    ```
@@ -379,7 +409,8 @@ The `ecosystem.config.cjs` file contains all automation configurations:
 ### Manual Error Fixing
 
 If you need to run error fixing manually:
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+
+> > > > > > > cursor/fix-project-errors-and-automate-future-fixes-1571
 
 ```bash
 # Run the main automation script
@@ -394,6 +425,7 @@ node scripts/automation/comprehensive-error-fixer.cjs
 ## 🔄 Maintenance
 
 <<<<<<< HEAD
+
 ### Memory Usage
 
 - Each error fixer uses max 512MB RAM
@@ -450,8 +482,8 @@ For issues or questions:
 
 ---
 
-**Note**: This automation system continuously monitors and fixes errors. Monitor the logs and reports to ensure it's working effectively for your project.
-=======
+# **Note**: This automation system continuously monitors and fixes errors. Monitor the logs and reports to ensure it's working effectively for your project.
+
 ### Regular Maintenance Tasks
 
 1. **Monitor Logs**: Check logs weekly for any recurring issues
@@ -509,7 +541,7 @@ pm2 monit
 ✅ **Performance Optimized**: Minimal resource usage  
 ✅ **Reliable**: Auto-restart and recovery mechanisms  
 ✅ **Transparent**: Detailed logging and reporting  
-✅ **Configurable**: Flexible settings for different needs  
+✅ **Configurable**: Flexible settings for different needs
 
 ## 🔮 Future Enhancements
 
@@ -525,4 +557,5 @@ pm2 monit
 **Last Updated**: 2025-09-01  
 **System Version**: 1.0.0  
 **Status**: ✅ Active and Running
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+
+> > > > > > > cursor/fix-project-errors-and-automate-future-fixes-1571

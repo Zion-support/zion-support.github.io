@@ -1,4 +1,5 @@
 export interface InnovativeMicroSaasService {
+
   id: string;
   title: string;
   description: string;
@@ -84,12 +85,14 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     roi: "250-400%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],;"
       integrations["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],;
@@ -100,6 +103,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
   },
   // AI-Powered Autonomous DevOps Platform
   {
+
 "
     id: "ai-autonomous-devops-platform","
     title: "AI Autonomous DevOps Platform","
@@ -149,12 +153,14 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     roi: "300-500%","
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "Kubernetes", "Docker", "Terraform", "Prometheus"],;"
       integrations["AWS", "Azure", "GCP", "GitHub", "Jenkins", "Slack"],;
@@ -165,6 +171,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
   },
   // Quantum-Safe Cybersecurity Suite
   {
+
 "
     id: "quantum-safe-cybersecurity-suite","
     title: "Quantum-Safe Cybersecurity Suite","
@@ -214,12 +221,14 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     roi: "200-400%","
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Post-quantum algorithms", "Hybrid encryption", "Key management", "React", "Node.js"],;"
       integrations["PKI systems", "Identity management", "SIEM platforms", "Compliance tools"],;
@@ -230,6 +239,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
   },
   // AI-Powered Healthcare Diagnostics Platform
   {
+
 "
     id: "ai-healthcare-diagnostics-platform","
     title: "AI Healthcare Diagnostics Platform","
@@ -279,12 +289,14 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     roi: "150-300%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],;"
       integrations["PACS systems", "EHR platforms", "Lab systems", "Telemedicine platforms"],;
@@ -295,6 +307,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
   },
   // Edge AI Computing Platform
   {
+
 "
     id: "edge-ai-computing-platform","
     title: "Edge AI Computing Platform","
@@ -344,12 +357,14 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     roi: "250-450%","
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["TensorFlow Lite", "ONNX", "Edge TPU", "React", "Node.js", "MongoDB"],;"
       integrations["IoT platforms", "Cloud AI services", "Edge devices", "Data centers"],;

@@ -9,6 +9,7 @@ import { useDebounce } from "@/hooks/useDebounce";"
 import { z } from "zod";
 const listingsSchema = z.array(listingSchema);
 export function ServiceTypeStep({ formData, updateFormData }) {
+
 "
     const [searchQuery, setSearchQuery] = useState("");
     const debouncedQuery = useDebounce(searchQuery, 300);
@@ -17,11 +18,13 @@ export function ServiceTypeStep({ formData, updateFormData }) {
     const [error, setError] = useState(null);
     // Fetch services when the service type or query changes
     useEffect(() => {
+
         if (!formData.serviceType) {
 
             setListings([]);
             return}
         const fetchServices = async () => {
+
             setLoading(true);
             setError(null);
             const url = `/api/public/services?category=${encodeURIComponent(formData.serviceType)}&q=${encodeURIComponent(debouncedQuery)}`;
@@ -29,6 +32,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
             for (let attempt = 0; attempt < maxRetries; attempt++) {
 
                 try {
+
                     const response = await fetch(url);
                     if (!response.ok)
                         throw new Error('Failed to fetch');
@@ -41,11 +45,12 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                     setLoading(false);
                     return}
                 catch (err) {
+
                     if (attempt === maxRetries - 1) {
 
                         if (process.env.NODE_ENV === 'development') {
 
-                            // console.error('Failed to load services:', err)}
+                            // // // // console.error('Failed to load services:', err)}
                         else {
 
                             captureException(err)}

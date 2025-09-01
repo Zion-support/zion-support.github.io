@@ -38,7 +38,10 @@ describe('/api/trust/score/[userId] API Endpoint', () => {
       query: { userId: '1' },
     });
 
-    await handler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
+    await handler(
+      req as unknown as NextApiRequest,
+      res as unknown as NextApiResponse
+    );
 
     expect(res._getStatusCode()).toBe(405);
     expect(res._getHeaders().allow).toBe('GET');
@@ -50,10 +53,15 @@ describe('/api/trust/score/[userId] API Endpoint', () => {
       query: {}, // No userId
     });
 
-    await handler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
+    await handler(
+      req as unknown as NextApiRequest,
+      res as unknown as NextApiResponse
+    );
 
     expect(res._getStatusCode()).toBe(400);
-    expect(JSON.parse(res._getData())).toEqual({ error: 'User ID is required and must be a string.' });
+    expect(JSON.parse(res._getData())).toEqual({
+      error: 'User ID is required and must be a string.',
+    });
   });
 
   test('should return 400 if userId is not a string (e.g. array)', async () => {
@@ -62,12 +70,16 @@ describe('/api/trust/score/[userId] API Endpoint', () => {
       query: { userId: ['1', '2'] },
     });
 
-    await handler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
+    await handler(
+      req as unknown as NextApiRequest,
+      res as unknown as NextApiResponse
+    );
 
     expect(res._getStatusCode()).toBe(400);
-    expect(JSON.parse(res._getData())).toEqual({ error: 'User ID is required and must be a string.' });
+    expect(JSON.parse(res._getData())).toEqual({
+      error: 'User ID is required and must be a string.',
+    });
   });
-
 
   test('should return trust score data if user and score are found', async () => {
     const mockScoreData = {
@@ -75,41 +87,61 @@ describe('/api/trust/score/[userId] API Endpoint', () => {
       score: 85,
       userId: 123,
       operatorGptAnalysis: 'Looks good',
-      components: [{ id: 1, componentType: 'completionRate', value: 0.9, weight: 0.3 }],
+      components: [
+        { id: 1, componentType: 'completionRate', value: 0.9, weight: 0.3 },
+      ],
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };
-    mockSupabaseSingle.mockResolvedValueOnce({ data: mockScoreData, error: null });
+    mockSupabaseSingle.mockResolvedValueOnce({
+      data: mockScoreData,
+      error: null,
+    });
 
     const { req, res } = createMocks({
       method: 'GET',
       query: { userId: '123' },
     });
 
-    await handler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
+    await handler(
+      req as unknown as NextApiRequest,
+      res as unknown as NextApiResponse
+    );
 
     expect(res._getStatusCode()).toBe(200);
     expect(JSON.parse(res._getData())).toEqual(mockScoreData);
     expect(mockSupabaseFrom).toHaveBeenCalledWith('TrustScore');
-    expect(mockSupabaseSelect).toHaveBeenCalledWith(expect.stringContaining('components:TrustScoreComponent(*)'));
+    expect(mockSupabaseSelect).toHaveBeenCalledWith(
+      expect.stringContaining('components:TrustScoreComponent(*)')
+    );
     expect(mockSupabaseEq).toHaveBeenCalledWith('userId', 123); // Ensure string '123' is parsed to number
-    expect(mockSupabaseOrder).toHaveBeenCalledWith('createdAt', { ascending: false });
+    expect(mockSupabaseOrder).toHaveBeenCalledWith('createdAt', {
+      ascending: false,
+    });
     expect(mockSupabaseLimit).toHaveBeenCalledWith(1);
     expect(mockSupabaseSingle).toHaveBeenCalled();
   });
 
   test('should return 404 if trust score is not found for the user', async () => {
-    mockSupabaseSingle.mockResolvedValueOnce({ data: null, error: { code: 'PGRST116', message: 'Row not found' } });
+    mockSupabaseSingle.mockResolvedValueOnce({
+      data: null,
+      error: { code: 'PGRST116', message: 'Row not found' },
+    });
 
     const { req, res } = createMocks({
       method: 'GET',
       query: { userId: '124' },
     });
 
-    await handler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
+    await handler(
+      req as unknown as NextApiRequest,
+      res as unknown as NextApiResponse
+    );
 
     expect(res._getStatusCode()).toBe(404);
-    expect(JSON.parse(res._getData())).toEqual({ error: 'Trust score not found for this user.' });
+    expect(JSON.parse(res._getData())).toEqual({
+      error: 'Trust score not found for this user.',
+    });
   });
 
   test('should also return 404 if data is null without specific PGRST116 error (general not found)', async () => {
@@ -121,12 +153,16 @@ describe('/api/trust/score/[userId] API Endpoint', () => {
       query: { userId: '125' },
     });
 
-    await handler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
+    await handler(
+      req as unknown as NextApiRequest,
+      res as unknown as NextApiResponse
+    );
 
     expect(res._getStatusCode()).toBe(404);
-    expect(JSON.parse(res._getData())).toEqual({ error: 'Trust score not found for this user.' });
+    expect(JSON.parse(res._getData())).toEqual({
+      error: 'Trust score not found for this user.',
+    });
   });
-
 
   test('should return 500 if there is a database error (not PGRST116)', async () => {
     const dbError = { message: 'Internal server error', code: 'XXYYZ' };
@@ -137,10 +173,15 @@ describe('/api/trust/score/[userId] API Endpoint', () => {
       query: { userId: '126' },
     });
 
-    await handler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
+    await handler(
+      req as unknown as NextApiRequest,
+      res as unknown as NextApiResponse
+    );
 
     expect(res._getStatusCode()).toBe(500);
-    expect(JSON.parse(res._getData())).toEqual({ error: 'Internal server error while fetching trust score.' });
+    expect(JSON.parse(res._getData())).toEqual({
+      error: 'Internal server error while fetching trust score.',
+    });
   });
 
   // This assumes that NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are set in the test environment
@@ -151,5 +192,4 @@ describe('/api/trust/score/[userId] API Endpoint', () => {
     // Actual Supabase client functionality is tested by the other cases via mocks.
     expect(handler).toBeDefined();
   });
-
 });

@@ -43,6 +43,7 @@ const technologies = ['
     'Machine Learning',Blockchain',Cloud Computing',IoT',Cybersecurity',Data Analytics'
 ];
 export function FeatureHighlights() {
+
     const containerVariants = {
 
         hidden: { opacity: 0 },

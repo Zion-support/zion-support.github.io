@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { MobileSidebarToggle } from './MobileSidebarToggle';
 import { motion, AnimatePresence } from 'framer - motion';
@@ -102,7 +103,7 @@ import { motion, AnimatePresence } from 'framer - motion';
   MicOff,
   Volume2,
   VolumeX,
-  Handshake,
+  HeartHandshake,
   Play,
   Pause,
   Stop,
@@ -188,15 +189,17 @@ export const FuturisticNavigation: React.FC = () => {;
   const [scrolled, setScrolled] = useState(false);
   
   useEffect(() => {
-    
+
       setScrolled(window.scrollY > 20)};
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
   useEffect(() => {
+
     setActiveDropdown(null)}, [location.pathname]);
   
 =======
   useEffect(() => {
+
     setActiveDropdown(null)}, [location.pathname]);
   
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -231,6 +234,7 @@ export const FuturisticNavigation: React.FC = () => {;
       ]
     },;
     {
+
 "
       name: "Micro SAAS Solutions",
       icon: Cloud,
@@ -244,6 +248,7 @@ export const FuturisticNavigation: React.FC = () => {;
       ]
     },;
     {
+
 "
       name: "IT Infrastructure",
       icon: Server,
@@ -257,6 +262,7 @@ export const FuturisticNavigation: React.FC = () => {;
       ]
     },;
     {
+
 "
       name: "Emerging Technologies",
       icon: Rocket,

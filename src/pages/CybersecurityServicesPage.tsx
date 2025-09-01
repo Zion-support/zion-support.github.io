@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '
 import { TrustedBySection  } from '@/components / TrustedBySection';
 export default CybersecurityServicesPage;
 export default React.memo (function CybersecurityServicesPage (...args: any[]) : any {
+
 import { Search,
 import { SEOHead  } from '../components / seo / SEOHead';
 import { Shield,
@@ -66,12 +67,14 @@ const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter (service =>
   service.category === 'Cybersecurity') ;
 const SECURITY_SERVICE_CATEGORIES = [
   {
+
     id: any'threat - detection',;
     name: 'Threat Detection & Response',
     description: 'AI - powered security monitoring and incident response',
     icon: Eye,
     services: CYBERSECURITY_SERVICES.filter (s  => s.title.includes ('Threat Detection') ) },
   {
+
     id: any'zero - trust',;
     name: 'Zero Trust Security',
     description: 'Identity verification and access management',
@@ -81,12 +84,14 @@ const SECURITY_SERVICE_CATEGORIES = [
 
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const getCategoryIcon = (category: anystring) => {
+
     const categoryData = SECURITY_SERVICE_CATEGORIES.find (cat => cat.id === category) ;
     return categoryData?.icon || Shield;
   };
   const getPricingModelLabel = (model: anystring) => {
 
     switch (model) {
+
       case 'one - time': return 'One - time';
       case 'monthly': return 'Monthly';
       case 'hourly': return 'Hourly';
@@ -100,12 +105,14 @@ const SECURITY_SERVICE_CATEGORIES = [
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
         keywords={['cybersecurity', 'security services', 'threat detection', 'compliance', 'zero trust']}
         structuredData={{
+
           "@context": "https://schema.org",
           "@type": "Service",
           "name": "Cybersecurity Services",
           "description": "Comprehensive cybersecurity solutions",
           "url": "https://ziontechgroup.com / services / cybersecurity",
           "provider": {
+
             "@type": "Organization",
             "name": "Zion Tech Group"
           }
@@ -425,6 +432,7 @@ function SecurityServiceCard (...args: any[]) : any {
   const securityServices = EXPANDED_SERVICES.filter (service =>
     service.category === 'Security Services') ;
   const filteredServices = securityServices.filter (service => {
+
     const matchesSearch = service.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                          service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                          service.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ;
@@ -439,6 +447,7 @@ function SecurityServiceCard (...args: any[]) : any {
   const getPricingModelIcon = (model: anystring) => {
 
     switch (model) {
+
       case 'monthly': return < Clock className="w - 4 h - 4" />;
       case 'hourly': return < Zap className="w - 4 h - 4" />;
       case 'project - based': return < Zap className="w - 4 h - 4" />;
@@ -447,9 +456,11 @@ function SecurityServiceCard (...args: any[]) : any {
   };
 
   const getPricingModelText = (model: anystring) => {
+
   const getPricingModelLabel = (model: anystring) => {
 
     switch (model) {
+
       case 'one - time': return 'One - time';
       case 'monthly': return 'Monthly';
       case 'hourly': return 'Hourly';
@@ -565,6 +576,7 @@ function SecurityServiceCard (...args: any[]) : any {
 } from "lucide - react";
 
 const CybersecurityServicesPage = () => {
+
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 50 to - red - 50">
       {/* Hero Section */}
       <div role="button" className="bg - gradient - to - r from - red - 600 via - red - 700 to - red - 800 text - white">
@@ -742,6 +754,7 @@ const CybersecurityServicesPage = () => {
               <h3 className="text - xl font - semibold text - zion - slate - light mb - 2">No security services found</h3>
               <p className="text - zion - slate - light mb - 4">Try adjusting your search criteria or browse all security categories</p>
               <Button onClick={ () => {
+
                 setSearchQuery ('') ;
                 setSelectedSubcategory ('all') ;
                 setPriceRange ('all') ;

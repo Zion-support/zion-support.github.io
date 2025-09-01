@@ -10,48 +10,53 @@ import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
+
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Link } from "react-router-dom";
 
 // Form validation schema
 const loginSchema = z.object({
+
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-});
+  password: z.string().min(6, "Password must be at least 6 characters")});
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
 export function LoginForm() {
+
   const { isLoading, login } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   const form = useForm<LoginFormValues>({
+
     resolver: zodResolver(loginSchema),
     defaultValues: {
+
       email: "",
-      password: "",
-    },
-  });
+      password: ""}});
 
   const onSubmit = async (data: LoginFormValues) => {
+
     if (isSubmitting) return;
 
     try {
+
       setIsSubmitting(true);
       const result = await login(data.email, data.password);
       if (result.error) {
+
         form.setError("root", { message: result.error }); // Keep this for form-level error display
         toast.error(result.error); // Add this line to show a toast notification
       }
     } finally {
+
       setIsSubmitting(false);
     }
   };
@@ -65,8 +70,10 @@ export function LoginForm() {
       )}
       <form
         onSubmit={form.handleSubmit(onSubmit, (errors) => {
+
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
           if (firstError) {
+
             form.setFocus(firstError);
           }
         })}

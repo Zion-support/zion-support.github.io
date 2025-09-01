@@ -1,4 +1,5 @@
 export interface EmergingTechService2027 {
+
   id: string;
   title: string;
   description: string;
@@ -76,6 +77,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -91,6 +93,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     support["24/7 Support", "Developer Resources", "Security Audits", "Training"]},;
   // Advanced IoT Platform
   {
+
 "
     id: "advanced-iot-platform","
     title: "Advanced IoT & Edge Computing Platform","
@@ -129,6 +132,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -144,6 +148,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     support["24/7 Support", "Implementation", "Training", "Custom Development"]},;
   // Robotics & Automation Platform
   {
+
 "
     id: "robotics-automation-platform","
     title: "Intelligent Robotics & Automation Platform","
@@ -182,6 +187,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     location: "Global","
     availability: "Limited",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -197,6 +203,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     support["24/7 Support", "Installation", "Training", "Maintenance"]},;
   // Augmented Reality Platform
   {
+
 "
     id: "ar-vr-enterprise-platform","
     title: "Enterprise AR/VR & Mixed Reality Platform","
@@ -235,6 +242,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -250,6 +258,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     support["24/7 Support", "Content Creation", "Training", "Custom Development"]},;
   // Digital Twin Platform
   {
+
 "
     id: "digital-twin-platform","
     title: "Digital Twin & Simulation Platform","
@@ -288,6 +297,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -303,6 +313,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     support["24/7 Support", "Implementation", "Training", "Custom Development"]},;
   // Biometric Security Platform
   {
+
 "
     id: "biometric-security-platform","
     title: "Advanced Biometric Security Platform","
@@ -341,6 +352,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -356,6 +368,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     support["24/7 Support", "Implementation", "Training", "Custom Development"]},;
   // Neuromorphic Computing Platform
   {
+
 "
     id: "neuromorphic-computing-platform","
     title: "Neuromorphic Computing & Brain-Inspired AI","
@@ -394,6 +407,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     location: "Global","
     availability: "Limited",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","

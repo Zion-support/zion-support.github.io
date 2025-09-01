@@ -24,12 +24,15 @@ const HeroStats = memo(({ stats }) => (<div className="grid grid-cols-1 md:grid-
       </div>))}
   </div>));
 const PerformanceOptimizedHero = memo(() => {
+
     const [isVisible, setIsVisible] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
     useEffect(() => {
+
         const timer = setTimeout(() => setIsVisible(true), 100);
         const loadTimer = setTimeout(() => setIsLoaded(true), 500);
         return () => {
+
             clearTimeout(timer);
             clearTimeout(loadTimer)}}, []);
     const stats = ["
@@ -39,6 +42,7 @@ const PerformanceOptimizedHero = memo(() => {
         { number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400" }
     ];
     if (!isVisible) {
+
 "
         return (<section className="relative py-20 px-4 overflow-hidden min-h-[600px] flex items-center justify-center">"
         <div className="text-center">"
@@ -60,6 +64,7 @@ const PerformanceOptimizedHero = memo(() => {
       {/* Optimized Matrix Rain Effect - Only render when loaded */}"
       {isLoaded && (<div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">"
           {[...Array(10)].map((_, i) => (<div key={i} className="absolute text-cyan-400 text-xs animate-matrix-rain opacity-20" style={{
+
 `
                     left: `${Math.random() * 100}%`,`
                     animationDelay: `${Math.random() * 20}s`,`

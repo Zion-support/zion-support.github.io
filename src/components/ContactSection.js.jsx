@@ -12,6 +12,7 @@ import {
   Shield,
   Users} from 'lucide-react';
 export function ContactSection() {
+
   const contactMethods = [
     {
 
@@ -22,6 +23,7 @@ export function ContactSection() {
       link: 'mailto:hello@ziontechgroup.com',
       color: 'from-zion-cyan to-zion-blue'},
     {
+
 "
       icon: <Phone className="w-6 h-6" />,
       title: 'Call Us',
@@ -30,6 +32,7 @@ export function ContactSection() {
       link: 'tel:+13024640950',
       color: 'from-zion-purple to-zion-cyan'},
     {
+
 "
       icon: <MessageSquare className="w-6 h-6" />,
       title: 'Live Chat',
@@ -60,21 +63,25 @@ export function ContactSection() {
   ];
   const supportFeatures = [
     {
+
 "
       icon: <Clock className="w-6 h-6" />,
       title: '24/7 Support',
       description: 'Round-the-clock technical support and monitoring'},
     {
+
 "
       icon: <Shield className="w-6 h-6" />,
       title: 'Enterprise Security',
       description: 'Bank-level security for all communications'},
     {
+
 "
       icon: <Users className="w-6 h-6" />,
       title: 'Expert Team',
       description: 'Certified professionals ready to help'},
     {
+
 "
       icon: <Globe className="w-6 h-6" />,
       title: 'Global Reach',

@@ -1,6 +1,7 @@
 import React from 'react.ts';
 export default InnovativeServicesOverview2025;
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Brain,
@@ -24,12 +25,13 @@ import { motion } from 'framer - motion.ts';
   TrendingUp,
   Target,
   Zap,
-  Globe,
-} from 'lucide - react.ts';
+  Globe} from 'lucide - react.ts';
 
 const InnovativeServicesOverview2025 = () => {
+
   const serviceCategories = [
     {
+
       id: 'ai - customer - success',
       title: 'AI Customer Success Platform',
       icon: Users,
@@ -47,9 +49,9 @@ const InnovativeServicesOverview2025 = () => {
         'Reduce churn by 40%',
         'Increase CLV by 35%',
         'Automate 70% of tasks',
-      ],
-    },
+      ]},
     {
+
       id: 'ai - supply - chain',
       title: 'AI Supply Chain Optimization',
       icon: Truck,
@@ -62,9 +64,9 @@ const InnovativeServicesOverview2025 = () => {
         'Reduce costs by 35%',
         'Improve delivery by 40%',
         'Minimize disruptions',
-      ],
-    },
+      ]},
     {
+
       id: 'ai - financial - compliance',
       title: 'AI Financial Compliance Platform',
       icon: Shield,
@@ -82,9 +84,9 @@ const InnovativeServicesOverview2025 = () => {
         'Reduce costs by 60%',
         'Improve accuracy by 95%',
         '24 / 7 monitoring',
-      ],
-    },
+      ]},
     {
+
       id: 'ai - healthcare - analytics',
       title: 'AI Healthcare Analytics Platform',
       icon: Heart,
@@ -101,35 +103,34 @@ const InnovativeServicesOverview2025 = () => {
         'Improve outcomes by 35%',
         'Reduce readmissions by 40%',
         'Lower costs by 30%',
-      ],
-    },
+      ]},
   ];
 
   const additionalServices = [
     {
+
       name: 'AI - Powered SEO Platform',
       description: 'Advanced SEO optimization with machine learning',
       price: '$1,500 / month',
-      path: '/services / ai - powered - seo',
-    },
+      path: '/services / ai - powered - seo'},
     {
+
       name: 'AI Interview Assessment',
       description: 'Intelligent candidate evaluation and screening',
       price: '$800 / month',
-      path: '/services / interview - assessment - ai',
-    },
+      path: '/services / interview - assessment - ai'},
     {
+
       name: 'Zero Trust Network Access',
       description: 'Enterprise - grade security with zero trust principles',
       price: '$2,000 / month',
-      path: '/services / zero - trust - network - access',
-    },
+      path: '/services / zero - trust - network - access'},
     {
+
       name: 'AI Workflow Orchestrator',
       description: 'Intelligent business process automation',
       price: '$1,800 / month',
-      path: '/services / ai - workflow - orchestrator',
-    },
+      path: '/services / ai - workflow - orchestrator'},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light">

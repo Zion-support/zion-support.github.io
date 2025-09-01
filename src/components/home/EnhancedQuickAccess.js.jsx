@@ -4,9 +4,11 @@ import { useTranslation } from "react-i18next";"
 import { motion } from "framer-motion";"
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone, Sparkles, Zap } from "lucide-react";
 export function EnhancedQuickAccess() {
+
     const { t } = useTranslation();
     const quickLinks = [
         {
+
 "
             title: t('home.tool_ai_matcher') || "AI Matcher","
             description: t('home.tool_ai_matcher_desc') || "Find perfect matches","
@@ -18,6 +20,7 @@ export function EnhancedQuickAccess() {
             hoverColor: "hover:border-zion-cyan/40"
         },
         {
+
 '"
             title: t('home.tool_talent') || "Talent Directory","
             description: t('home.tool_talent_desc') || "Browse verified experts","
@@ -29,6 +32,7 @@ export function EnhancedQuickAccess() {
             hoverColor: "hover:border-zion-purple/40"
         },
         {
+
 '"
             title: t('home.tool_services') || "Services","
             description: t('home.tool_services_desc') || "Professional solutions","
@@ -40,6 +44,7 @@ export function EnhancedQuickAccess() {
             hoverColor: "hover:border-zion-cyan/40"
         },
         {
+
 '"
             title: t('home.tool_equipment') || "Equipment","
             description: t('home.tool_equipment_desc') || "Cutting-edge tech","
@@ -51,6 +56,7 @@ export function EnhancedQuickAccess() {
             hoverColor: "hover:border-zion-purple/40"
         },
         {
+
 '"
             title: t('nav.community') || "Community","
             description: t('home.tool_chat_desc') || "Connect & collaborate","
@@ -62,6 +68,7 @@ export function EnhancedQuickAccess() {
             hoverColor: "hover:border-zion-cyan/40"
         },
         {
+
 "
             title: "Mobile App","
             description: "Zion on the go","

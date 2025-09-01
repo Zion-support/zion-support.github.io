@@ -1,6 +1,8 @@
 import React, { useState } from 'react.ts';
 export function ContactPage (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Phone,
@@ -18,31 +20,32 @@ import { motion } from 'framer - motion.ts';
   Twitter,
   Github,
   Facebook,
-  Instagram,
-} from 'lucide - react.ts';
+  Instagram} from 'lucide - react.ts';
 
   const [formData, setFormData] = useState ({
+
     firstName: '',
     lastName: '',
     email: '',
     company: '',
     phone: '',
     service: '',
-    message: '',
-  }) ;
+    message: ''}) ;
 
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) ;
 
   const handleInputChange = useCallback ( (e: anyReact.ChangeEvent < HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >) => {
+
     setFormData ({
+
       ...formData,
-      [e.target.name]: e.target.value,
-    }) ;
+      [e.target.name]: e.target.value}) ;
   };
 
   const handleSubmit = async (e: anyReact.FormEvent) => {
+
     e.preventDefault () ;
     setIsSubmitting (true) ;
 
@@ -54,51 +57,52 @@ import { motion } from 'framer - motion.ts';
 
     // Reset form after 3 seconds
     setTimeout ( () => {
+
       setIsSubmitted (false) ;
       setFormData ({
+
         firstName: '',
         lastName: '',
         email: '',
         company: '',
         phone: '',
         service: '',
-        message: '',
-      }) ;
+        message: ''}) ;
     }, 3000) ;
   };
 
   const contactMethods = [
     {
+
       title: 'Phone',
       value: '+1 302 464 0950',
       icon: Phone,
       description: 'Call us anytime',
       color: 'from - blue - 500 to - cyan - 600',
-      link: 'tel:+13024640950',
-    },
+      link: 'tel:+13024640950'},
     {
+
       title: 'Email',
       value: 'kleber@ziontechgroup.com',
       icon: Mail,
       description: 'Send us a message',
       color: 'from - purple - 500 to - pink - 600',
-      link: 'mailto:kleber@ziontechgroup.com',
-    },
+      link: 'mailto:kleber@ziontechgroup.com'},
     {
+
       title: 'Office',
       value: '364 E Main St STE 1008 Middletown DE 19709',
       icon: MapPin,
       description: 'Visit our headquarters',
       color: 'from - green - 500 to - teal - 600',
-      link: 'https://maps.google.com/?q = 364 + E+Main + St + STE + 1008 + Middletown + DE + 19709',
-    },
+      link: 'https://maps.google.com/?q = 364 + E+Main + St + STE + 1008 + Middletown + DE + 19709'},
     {
+
       title: 'Hours',
       value: '24 / 7 Support',
       icon: Clock,
       description: 'Always here for you',
-      color: 'from - orange - 500 to - red - 600',
-    },
+      color: 'from - orange - 500 to - red - 600'},
   ];
 
   const services = [
@@ -138,29 +142,30 @@ import { motion } from 'framer - motion.ts';
 
   const socialLinks = [
     {
+
       icon: Linkedin,
       href: 'https://linkedin.com / company / ziontechgroup',
-      label: 'LinkedIn',
-    },
+      label: 'LinkedIn'},
     {
+
       icon: Twitter,
       href: 'https://twitter.com / ziontechgroup',
-      label: 'Twitter',
-    },
+      label: 'Twitter'},
     { icon: Github, href: 'https://github.com / ziontechgroup', label: 'GitHub' },
     {
+
       icon: Facebook,
       href: 'https://facebook.com / ziontechgroup',
-      label: 'Facebook',
-    },
+      label: 'Facebook'},
     {
+
       icon: Instagram,
       href: 'https://instagram.com / ziontechgroup',
-      label: 'Instagram',
-    },
+      label: 'Instagram'},
   ];
 
   if (isSubmitted) {
+
     return (<div className="min - h-screen py - 8 flex items - center justify - center">
         <div className="max - w-2xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
           <motion.div
@@ -226,6 +231,7 @@ import { motion } from 'framer - motion.ts';
                   className="text - cyan - 400 font - medium mb - 2 hover:text - cyan - 300 transition - colors cursor - pointer block"
                   target={method.link.startsWith ('http') ? '_blank' : undefined}
                   rel={
+
                     method.link.startsWith ('http') ? 'noopener noreferrer'
                       : undefined
                   }

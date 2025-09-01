@@ -20,16 +20,23 @@ export default {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
-    'no-console': 'warn'
+    'no-console': 'warn',
   },
-  ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/', 'automation/', 'components.disabled/', '**/*.disabled', '**/*.backup', '**/*.tsbackup']
+  ignorePatterns: [
+    'node_modules/',
+    '.next/',
+    'out/',
+    'dist/',
+    'automation/',
+    'components.disabled/',
+    '**/*.disabled',
+    '**/*.backup',
+    '**/*.tsbackup',
+  ],
 };

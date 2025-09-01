@@ -1,4 +1,5 @@
 export interface AdvancedITService {
+
   id: string;
   title: string;
   description: string;
@@ -90,6 +91,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "300-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -97,6 +99,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],;"
       integrations["AWS", "Azure", "Google Cloud", "VMware", "Kubernetes"],;
@@ -112,6 +115,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
 
   // Quantum-Enhanced Cloud Computing
   {
+
 "
     id: "quantum-cloud-computing","
     title: "Quantum-Enhanced Cloud Computing","
@@ -161,6 +165,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "500-1000%","
     innovationLevel: "Revolutionary",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -168,6 +173,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["Quantum algorithms", "Qiskit", "React", "Python", "PostgreSQL"],;"
       integrations["AWS", "Azure", "Google Cloud", "Quantum simulators", "AI platforms"],;
@@ -183,6 +189,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
 
   // Edge Computing & IoT Platform
   {
+
 "
     id: "edge-computing-iot-platform","
     title: "Edge Computing & IoT Platform","
@@ -232,6 +239,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "250-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -239,6 +247,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["Edge nodes", "IoT protocols", "React", "Python", "MongoDB"],;"
       integrations["IoT devices", "Cloud platforms", "Analytics tools", "Security systems"],;
@@ -254,6 +263,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
 
   // Zero-Trust Security Architecture
   {
+
 "
     id: "zero-trust-security-architecture","
     title: "Zero-Trust Security Architecture","
@@ -303,6 +313,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "400-800%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -310,6 +321,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["AI/ML", "Blockchain", "React", "Python", "PostgreSQL"],;"
       integrations["SIEM", "IAM", "Firewalls", "EDR", "Cloud platforms"],;
@@ -325,6 +337,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
 
   // AI-Powered DevOps Automation
   {
+
 "
     id: "ai-devops-automation","
     title: "AI-Powered DevOps Automation","
@@ -374,6 +387,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "300-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -381,6 +395,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["Machine Learning", "Docker", "Kubernetes", "React", "Python"],;"
       integrations["GitHub", "Jenkins", "Docker Hub", "AWS", "Azure"],;
@@ -396,6 +411,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
 
   // Blockchain-Based Identity Management
   {
+
 "
     id: "blockchain-identity-management","
     title: "Blockchain-Based Identity Management","
@@ -445,6 +461,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "250-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -452,6 +469,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["Ethereum", "Hyperledger", "React", "Node.js", "MongoDB"],;"
       integrations["SSO systems", "CRM platforms", "Banking systems", "Government databases"],;
@@ -467,6 +485,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
 
   // Quantum-Enhanced Data Analytics
   {
+
 "
     id: "quantum-data-analytics","
     title: "Quantum-Enhanced Data Analytics","
@@ -516,6 +535,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "400-800%","
     innovationLevel: "Revolutionary",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -523,6 +543,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["Quantum algorithms", "Qiskit", "Python", "React", "PostgreSQL"],;"
       integrations["Data warehouses", "Cloud platforms", "BI tools", "AI platforms"],;

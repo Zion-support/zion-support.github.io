@@ -26,6 +26,7 @@ export interface Notification {
 }
 
 interface NotificationContextType {
+
   notifications: Notification[];
   addNotification: (notification: Omit<Notification,id'>) => void;
   removeNotification: (id: string) => void;
@@ -37,6 +38,7 @@ const NotificationContext = createContext<NotificationContextType | undefined>(
 );
 
 export const useNotifications = () => {
+
   const context = useContext(NotificationContext);
   if (!context) {
 
@@ -48,6 +50,7 @@ export const useNotifications = () => {
 };
 
 interface NotificationProviderProps {
+
   // Add your props here
 
 
@@ -91,6 +94,7 @@ export function NotificationProvider({
       if (newNotification.duration && newNotification.duration > 0) {
 
         setTimeout(() => {
+
           removeNotification(id);
         }, newNotification.duration);
       }
@@ -99,6 +103,7 @@ export function NotificationProvider({
   );
 
   const clearAll = useCallback(: unknown {
+
     setNotifications([]);
   }, []);
 
@@ -113,6 +118,7 @@ export function NotificationProvider({
 }
 ;
 function NotificationContainer(...args: unknown[]): unknown {
+
   const { notifications, removeNotification, clearAll } = useNotifications();
 
   if (notifications.length === 0) return null;
@@ -145,6 +151,7 @@ function NotificationContainer(...args: unknown[]): unknown {
 }
 
 interface NotificationItemProps {
+
   // Add your props here
 
 
@@ -265,6 +272,7 @@ function NotificationItem({ notification, onRemove }: NotificationItemProps) {
 
 // Hook for easy notification creation;
 export const useNotificationActions = (...args: unknown[]): unknown => {
+
   const { addNotification } = useNotifications();
 
   const showSuccess = useCallback()
@@ -304,6 +312,7 @@ export const useNotificationActions = (...args: unknown[]): unknown => {
 
 // Example usage component
 export function NotificationExample() {
+
   const { showSuccess, showError, showWarning, showInfo } =
     useNotificationActions();
 

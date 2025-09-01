@@ -4,8 +4,11 @@ import { Users, MessageCircle, TrendingUp, Star, Clock, Search, Filter, Plus, He
 import React, { useState } from 'react';
 import React, { useState } from 'react';
 export default function Community () {
+
 export default React.memo (function Community (...args[]) :  {
+
 import {
+
 import { motion } from 'framer - motion';
 import { motion } from 'framer - motion';
 import { SEO } from "../components / SEO";
@@ -41,6 +44,7 @@ import { SEO } from "../components / SEO";
 
   const communityForums = [
     {
+
       title: 'AI & Machine Learning',
       description: 'Discuss AI technologies, share projects, and get help with ML implementations',
       icon: Brain,
@@ -51,6 +55,7 @@ import { SEO } from "../components / SEO";
       href: '/community / ai - ml'
     },
     {
+
       title: 'Cloud & DevOps',
       description: 'Cloud infrastructure, DevOps practices, and deployment strategies',
       icon: Cloud,
@@ -61,6 +66,7 @@ import { SEO } from "../components / SEO";
       href: '/community / cloud - devops'
     },
     {
+
       title: 'Cybersecurity',
       description: 'Security best practices, threat discussions, and compliance topics',
       icon: Shield,
@@ -71,6 +77,7 @@ import { SEO } from "../components / SEO";
       href: '/community / cybersecurity'
     },
     {
+
       title: 'Digital Transformation',
       description: 'Business transformation strategies and technology adoption',
       icon: Rocket,;
@@ -84,6 +91,7 @@ import { SEO } from "../components / SEO";
 
   const upcomingEvents = [
     {
+
       title: 'AI Innovation Summit 2025',
       description: 'Join industry leaders for insights on the future of AI in business',
       date: 'March 15 - 17, 2025',
@@ -95,6 +103,7 @@ import { SEO } from "../components / SEO";
       href: '/events / ai - innovation - summit - 2025'
     },
     {
+
       title: 'Cloud Security Workshop',
       description: 'Hands - on workshop on securing cloud infrastructure',
       date: 'March 22, 2025',
@@ -106,6 +115,7 @@ import { SEO } from "../components / SEO";
       href: '/events / cloud - security - workshop'
     },
     {
+
       title: 'DevOps Best Practices Meetup',
       description: 'Local meetup for DevOps professionals to share experiences',
       date: 'March 28, 2025',
@@ -120,6 +130,7 @@ import { SEO } from "../components / SEO";
 
   const featuredDiscussions = [
     {
+
       title: 'Implementing Zero Trust Architecture in Enterprise',
       author: 'Sarah Chen',
       category: 'Cybersecurity',
@@ -132,6 +143,7 @@ import { SEO } from "../components / SEO";
       href: '/community / discussions / zero - trust - enterprise'
     },
     {
+
       title: 'Best Practices for AI Model Deployment',
       author: 'Mike Rodriguez',
       category: 'AI & ML',
@@ -144,6 +156,7 @@ import { SEO } from "../components / SEO";
       href: '/community / discussions / ai - model - deployment'
     },
     {
+
       title: 'Cost Optimization Strategies for Multi - Cloud',
       author: 'Lisa Thompson',
       category: 'Cloud & DevOps',
@@ -159,6 +172,7 @@ import { SEO } from "../components / SEO";
 
   const communityResources = [
     {
+
       title: 'Community Guidelines',
       description: 'Learn about our community standards and participation rules',
       icon: BookOpen,
@@ -166,6 +180,7 @@ import { SEO } from "../components / SEO";
       color: 'from - blue - 500 to - cyan - 500'
     },
     {
+
       title: 'Event Calendar',
       description: 'Browse upcoming community events and webinars',
       icon: Calendar,
@@ -173,6 +188,7 @@ import { SEO } from "../components / SEO";
       color: 'from - green - 500 to - emerald - 500'
     },
     {
+
       title: 'Member Directory',
       description: 'Connect with other community members and experts',
       icon: Users,
@@ -199,11 +215,13 @@ import { SEO } from "../components / SEO";
         <div role="button" className="container mx - auto px - 4 py - 16">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -221,10 +239,12 @@ import { SEO } from "../components / SEO";
               Connect with technology professionals, share knowledge, and stay ahead of industry trends.
 
 interface CommunityPost {
+
   id: string;
   title: string;
   content: string;
   author: {
+
     name: string;
     avatar: string;
     role: string;
@@ -241,22 +261,25 @@ interface CommunityPost {
 }
 
 interface CommunityCategory {
+
   id: string;
   name: string;
   description: string;
-  icon: any;
+  icon: unknown;
   color: string;
   postCount: number;
   topics: string[];
 }
 
 const Community: React.FC = () => {
+
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
   const [sortBy, setSortBy] = useState < string> ('latest') ;
 
   const communityCategories: CommunityCategory[] = [
     {
+
       id: 'general',;
       name: 'General Discussion',
       description: 'General topics about Zion Tech Group and technology',
@@ -266,6 +289,7 @@ const Community: React.FC = () => {
       topics: ['Company News', 'Technology Trends', 'Industry Updates']
     },
     {
+
       id: 'ai - services',;
       name: 'AI Services',
       description: 'Discussions about our AI and machine learning services',
@@ -275,6 +299,7 @@ const Community: React.FC = () => {
       topics: ['AI Integration', 'Machine Learning', 'AI Best Practices']
     },
     {
+
       id: 'cloud - infrastructure',;
       name: 'Cloud & Infrastructure',
       description: 'Cloud computing, DevOps, and infrastructure topics',
@@ -284,6 +309,7 @@ const Community: React.FC = () => {
       topics: ['Cloud Migration', 'DevOps', 'Infrastructure Management']
     },
     {
+
       id: 'security - compliance',;
       name: 'Security & Compliance',
       description: 'Cybersecurity, compliance, and data protection',
@@ -293,6 +319,7 @@ const Community: React.FC = () => {
       topics: ['Cybersecurity', 'Compliance', 'Data Protection']
     },
     {
+
       id: 'micro - saas',;
       name: 'Micro SaaS Solutions',
       description: 'Our micro SaaS products and integrations',
@@ -302,6 +329,7 @@ const Community: React.FC = () => {
       topics: ['Product Updates', 'Integration Guides', 'Best Practices']
     },
     {
+
       id: 'support',;
       name: 'Support & Help',
       description: 'Get help and support from the community',
@@ -314,10 +342,12 @@ const Community: React.FC = () => {
 
   const communityPosts: CommunityPost[] = [
     {
+
       id: '1',;
       title: 'Getting Started with AI Business Intelligence - Best Practices',
       content: 'I\'ve been using Zion Tech Group\'s AI Business Intelligence service for the past month and wanted to share some best practices I\'ve learned...',
       author: {
+
         name: 'Sarah Chen',;
         avatar: '/avatars / sarah.jpg',
         role: 'Senior Data Scientist',
@@ -333,10 +363,12 @@ const Community: React.FC = () => {
       isFeatured: true
     },
     {
+
       id: '2',;
       title: 'Cloud Migration Success Story: From On - Prem to Multi - Cloud',
       content: 'Just completed our migration to Zion Tech Group\'s cloud infrastructure. Here\'s our journey and lessons learned...',
       author: {
+
         name: 'Michael Rodriguez',;
         avatar: '/avatars / michael.jpg',
         role: 'DevOps Engineer',
@@ -352,10 +384,12 @@ const Community: React.FC = () => {
       isFeatured: true
     },
     {
+
       id: '3',;
       title: 'Zero Trust Security Implementation Guide',
       content: 'Comprehensive guide on implementing zero trust security using Zion Tech Group\'s security services...',
       author: {
+
         name: 'Alex Thompson',;
         avatar: '/avatars / alex.jpg',
         role: 'Security Architect',
@@ -371,10 +405,12 @@ const Community: React.FC = () => {
       isFeatured: false
     },
     {
+
       id: '4',;
       title: 'Micro CRM Integration with Salesforce - Step by Step',
       content: 'Detailed walkthrough of integrating our Micro CRM with Salesforce. Includes code examples and troubleshooting tips...',
       author: {
+
         name: 'Jennifer Lee',;
         avatar: '/avatars / jennifer.jpg',
         role: 'Integration Specialist',
@@ -390,10 +426,12 @@ const Community: React.FC = () => {
       isFeatured: false
     },
     {
+
       id: '5',;
       title: 'AI Content Creation API Performance Optimization',
       content: 'Tips and tricks for optimizing performance when using the AI Content Creation API at scale...',
       author: {
+
         name: 'David Kim',;
         avatar: '/avatars / david.jpg',
         role: 'Software Engineer',
@@ -411,6 +449,7 @@ const Community: React.FC = () => {
   ];
 
   const filteredPosts = communityPosts.filter (post => {
+
     const matchesSearch = post.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                          post.content.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                          post.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ;
@@ -419,7 +458,9 @@ const Community: React.FC = () => {
   }) ;
 
   const sortedPosts = [...filteredPosts].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'latest':
         return new Date (b.createdAt) .getTime () - new Date (a.createdAt) .getTime () ;
       case 'popular':
@@ -434,11 +475,13 @@ const Community: React.FC = () => {
   }) ;
 
   const getCategoryColor = (categoryId: string) => {
+
     const category = communityCategories.find (cat => cat.id === categoryId) ;
     return category ? category.color : 'from - gray - 500 to - gray - 600';
   };
 
   const getCategoryName = (categoryId: string) => {
+
     const category = communityCategories.find (cat => cat.id === categoryId) ;
     return category ? category.name : 'Unknown';
   };
@@ -472,16 +515,19 @@ const Community: React.FC = () => {
       <div role="button" className="container mx - auto px - 4 py - 16">
         <motion.h2
           initial = {
+
   { opacity: 0,
   y: 20
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0
 
 }}
           transition = {
+
   { duration: 0.6,
   delay: 0.5
 
@@ -495,16 +541,19 @@ const Community: React.FC = () => {
           {upcomingEvents.map ( (event, index) => (<motion.div
               key={event.title}
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.6 + index * 0.1
 
@@ -518,6 +567,7 @@ const Community: React.FC = () => {
                 <div role="button" className="p - 6">
                   <div role="button" className="flex items - center justify - between mb - 4">
                     <span className={`px - 3 py - 1 rounded - full text - xs font - medium ${
+
                       event.type === 'Conference' ? 'bg - purple - 500 / 20 text - purple - 400' :
                       event.type === 'Workshop' ? 'bg - blue - 500 / 20 text - blue - 400' :
                       'bg - green - 500 / 20 text - green - 400'
@@ -563,16 +613,19 @@ const Community: React.FC = () => {
         <div role="button" className="container mx - auto px - 4">
           <motion.h2
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.6,
   delay: 0.7
 
@@ -586,16 +639,19 @@ const Community: React.FC = () => {
             {featuredDiscussions.map ( (discussion, index) => (<motion.div
                 key={discussion.title}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: 0.8 + index * 0.1
 

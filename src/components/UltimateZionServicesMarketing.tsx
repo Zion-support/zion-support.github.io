@@ -6,6 +6,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
 
   const categories = [
     {
+
       id: 'quantum - computing',
       name: 'Quantum Computing & AI',
       icon: '⚛️',
@@ -15,6 +16,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       growthRate: '500% annually'
     },
     {
+
       id: 'blockchain - web3',
       name: 'Blockchain & Web3',
       icon: '🔗',
@@ -24,6 +26,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       growthRate: '400% annually'
     },
     {
+
       id: 'space - tech',
       name: 'Space Technology',
       icon: '🛰️',
@@ -33,6 +36,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       growthRate: '300% annually'
     },
     {
+
       id: 'biotech - ai',
       name: 'Biotech & AI',
       icon: '🧬',
@@ -42,6 +46,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       growthRate: '600% annually'
     },
     {
+
       id: 'emerging - tech',
       name: 'Emerging Technology',
       icon: '🚀',
@@ -51,6 +56,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       growthRate: '800% annually'
     },
     {
+
       id: 'micro - saas',
       name: 'Micro SAAS Solutions',
       icon: '💻',
@@ -60,6 +66,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       growthRate: '200% annually'
     },
     {
+
       id: 'it - services',
       name: 'Enterprise IT Services', ;
 =======
@@ -313,6 +320,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
             {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                 onClick={ () => setSelectedCategory (category.id) }
                 className={`px - 6 py - 3 rounded - xl border transition - all duration - 300 ${
+
                   selectedCategory === category.id
                     ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 border - purple - 400 text - white shadow - lg'
                     : 'bg - white / 10 border - white / 20 text - gray - 300 hover:bg - white / 20 hover:border - white / 40'

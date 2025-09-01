@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -25,6 +26,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  } from 'lucide-react';
 
 interface SEOAnalysis {
+
   score: number;
   issues: SEOIssue[];
   suggestions: SEOSuggestion[];
@@ -33,6 +35,7 @@ interface SEOAnalysis {
 }
 
 interface SEOIssue {
+
   id: string;
   type: 'error' | 'warning' | 'info';
   title: string;
@@ -42,6 +45,7 @@ interface SEOIssue {
   category: 'content' | 'technical' | 'performance' | 'accessibility'}
 
 interface SEOSuggestion {
+
   id: string;
   title: string;
   description: string;
@@ -51,6 +55,7 @@ interface SEOSuggestion {
 }
 
 interface SEOMetrics {
+
   pageSpeed: number;
   mobileFriendliness: number;
   accessibility: number;
@@ -155,6 +160,7 @@ autoAnalyze:  true,;
       bestPractices: 88,
       seoScore: 87,
       coreWebVitals: {
+
         lcp: 2.8,;
         fid: 45,;
         cls: 0.08}},;
@@ -175,6 +181,7 @@ autoAnalyze:  true,;
 
   // Auto - analyze on mount
   useEffect ( () => {
+
     if (autoAnalyze) {
 
       analyzeSEO()}
@@ -199,6 +206,7 @@ autoAnalyze:  true,;
 
   // Filter suggestions by priority
   const filteredSuggestions = useMemo(() => {
+
     return analysis?.suggestions.sort((a, b) => {
 
       const priorityOrder = {

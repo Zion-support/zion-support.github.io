@@ -4,15 +4,16 @@ import { Button } from '@/components / ui / button';
 import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data / expandedServices';
 import SEO from '@/components / SEO';
 export default function PricingGuidePage () {
+
 import {
+
 import {
 
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
+  CardTitle} from '@/components / ui / card';
   Star,
   Mail,
   Phone,
@@ -24,24 +25,27 @@ import {
   Clock,
   DollarSign,
   Users,
-  Award,
-} from 'lucide - react';
+  Award} from 'lucide - react';
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const filteredServices = selectedCategory === 'all'
       ? EXPANDED_SERVICES
       : EXPANDED_SERVICES.filter (service => service.category === selectedCategory) ;
   const getCategoryStats = category => {
+
     const services = EXPANDED_SERVICES.filter (s => s.category === category) ;
     const avgRating = services.reduce ( (sum, s) => sum + (s.rating || 0) , 0) / services.length;
     return { count: services.length, avgPrice, avgRating };
   };
   const formatPrice = price => {
+
     if (price >= 1000) {
+
       return `$${ (price / 1000) .toFixed (1) }K`;
     }
     return `$${price}`;
   };
   const getServiceTier = price => {
+
     if (price < 2000) return { tier: 'Starter', color: 'bg - green - 100 text - green - 800' };
     if (price < 5000) return { tier: 'Professional', color: 'bg - blue - 100 text - blue - 800' };
     if (price < 10000) return { tier: 'Enterprise', color: 'bg - purple - 100 text - purple - 800' };
@@ -126,6 +130,7 @@ import {
               variant={selectedCategory === 'all' ? 'default' : 'outline'}
               onClick={ () => setSelectedCategory ('all') }
               className={
+
                 selectedCategory === 'all'
                   ? 'bg - zion - cyan text - white'
                   : 'border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10'
@@ -133,14 +138,17 @@ import {
             >
               All Services ({EXPANDED_SERVICES.length}) </Button>
             {SERVICE_CATEGORIES.map (category => {
+
               const stats = getCategoryStats (category.name) ;
               return (<Button
                   key={category.id}
                   variant={
+
                     selectedCategory === category.name ? 'default' : 'outline'
                   }
                   onClick={ () => setSelectedCategory (category.name) }
                   className={
+
                     selectedCategory === category.name
                       ? 'bg - zion - cyan text - white'
                       : 'border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10'
@@ -168,6 +176,7 @@ import {
 
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">
           {filteredServices.map (service => {
+
             const tier = getServiceTier (service.price || 0) ;
             return (<Card
                 key={service.id}
@@ -222,10 +231,10 @@ import {
                   <CardDescription
                     className="text - gray - 600 mb - 4 overflow - hidden text - ellipsis"
                     style={{
+
                       display: '-webkit - box',
                       WebkitLineClamp: 3,
-                      WebkitBoxOrient: 'vertical',
-                    }}
+                      WebkitBoxOrient: 'vertical'}}
                   >
                     {service.description}
                   </CardDescription>

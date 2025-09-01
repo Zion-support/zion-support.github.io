@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 interface Service {
+
   category: string;
 icon: React.ComponentType<{ className?: string
 }>;

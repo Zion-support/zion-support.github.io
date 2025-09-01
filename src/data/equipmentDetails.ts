@@ -1,4 +1,5 @@
 export interface EquipmentItem {
+
   id: string;
   name: string;
   description: string;
@@ -22,6 +23,7 @@ export const EQUIPMENT_DETAILS: EquipmentItem[] = [
     availability: true
   },
   {
+
 "
     id: "2","
     name: "Quantum Computing Simulator","
@@ -33,6 +35,7 @@ export const EQUIPMENT_DETAILS: EquipmentItem[] = [
     availability: true
   },
   {
+
 "
     id: "3","
     name: "Edge Computing Device","

@@ -2,6 +2,7 @@
 // Cutting-edge, real-world micro SAAS solutions with market data and pricing
 ;
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
@@ -9,6 +10,7 @@ export interface ServiceContact {
 }
 ;
 export interface MicroSaasService {
+
   id: number;
   name: string;
   category: string;
@@ -30,10 +32,12 @@ export interface MicroSaasService {
   roi: string;
   innovationLevel: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string};
   technicalSpecs?: {
+
     technology: string[];
     integrations: string[];
     apiEndpoints: number;

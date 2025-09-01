@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import {
+
 <<<<<<< HEAD
 import {
+
 import {
+
 import { Button } from './ui / Button';
 import { Checkbox } from './ui / checkbox';
 import { Input } from './ui / input';
@@ -36,6 +39,7 @@ import {
   AlertCircle} from 'lucide-react';
 
 export const QuoteRequestForm = () => {
+
   const [formData, setFormData] = useState({
 
     firstName: '',
@@ -110,6 +114,7 @@ export const QuoteRequestForm = () => {
   };
 
   const validateForm = () => {
+
     const newErrors = {};
 
     if (!formData.firstName.trim())
@@ -141,6 +146,7 @@ export const QuoteRequestForm = () => {
     setIsSubmitting (true) ;
 
     try {
+
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
 
@@ -163,7 +169,7 @@ export const QuoteRequestForm = () => {
         agreeToMarketing: false});
     } catch (error) {
 
-      // console.error('Error submitting form:', error);
+      // // // // console.error('Error submitting form:', error);
     } finally {
 
       setIsSubmitting(false);

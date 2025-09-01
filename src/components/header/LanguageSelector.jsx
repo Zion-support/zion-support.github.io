@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, Globe export const LanguageSelector = () => {
+
     const [isOpen, setIsOpen] = useState(false);
     const [currentLanguage, setCurrentLanguage] = useState('EN');
     const languages = ['

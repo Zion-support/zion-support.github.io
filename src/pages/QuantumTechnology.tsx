@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default React.memo (function QuantumTechnology (...args[]) :  {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Atom,
@@ -33,6 +35,7 @@ import { motion } from 'framer - motion';
 
   const quantumServices = [
     {
+
       icon: Atom,
       title: "Quantum Computing",
       description: "Leverage quantum algorithms for complex computational problems",
@@ -40,6 +43,7 @@ import { motion } from 'framer - motion';
       color: "from - zion - cyan to - zion - blue"
     },
     {
+
       icon: Shield,
       title: "Quantum Cryptography",
       description: "Unbreakable encryption using quantum key distribution",
@@ -47,6 +51,7 @@ import { motion } from 'framer - motion';
       color: "from - zion - purple to - zion - pink"
     },
     {
+
       icon: Network,
       title: "Quantum Networks",
       description: "Quantum internet infrastructure for secure data transmission",
@@ -54,6 +59,7 @@ import { motion } from 'framer - motion';
       color: "from - zion - green to - zion - emerald"
     },
     {
+
       icon: Brain,
       title: "Quantum Machine Learning",
       description: "AI algorithms enhanced with quantum computing capabilities",
@@ -61,6 +67,7 @@ import { motion } from 'framer - motion';
       color: "from - zion - yellow to - zion - orange"
     },
     {
+
       icon: Database,
       title: "Quantum Databases",
       description: "Quantum - enhanced data storage and retrieval systems",
@@ -68,8 +75,8 @@ import { motion } from 'framer - motion';
       color: "from - zion - red to - zion - pink"
     },
     {
-      icon: Zap,
-    };
+
+      icon: Zap};
       title: "Quantum Sensors",;
       description: "Ultra - sensitive detection using quantum phenomena",;
       features: ["Magnetic Sensing", "Gravitational Detection", "Precision Measurement", "Environmental Monitoring"],;
@@ -88,6 +95,7 @@ import { motion } from 'framer - motion';
 
   const quantumApplications = [
     {
+
       title: "Portfolio Optimization",
       description: "Quantum algorithms for optimal investment portfolio management",
       category: "finance",
@@ -95,6 +103,7 @@ import { motion } from 'framer - motion';
       icon: BarChart3
     },
     {
+
       title: "Drug Discovery",
       description: "Quantum simulation for molecular modeling and drug development",
       category: "healthcare",
@@ -102,6 +111,7 @@ import { motion } from 'framer - motion';
       icon: Monitor
     },
     {
+
       title: "Supply Chain Optimization",
       description: "Quantum optimization for logistics and supply chain management",
       category: "logistics",
@@ -109,6 +119,7 @@ import { motion } from 'framer - motion';
       icon: Network
     },
     {
+
       title: "Cryptographic Security",
       description: "Quantum - resistant encryption and secure communication",
       category: "cybersecurity",
@@ -116,6 +127,7 @@ import { motion } from 'framer - motion';
       icon: Shield
     },
     {
+
       title: "Climate Modeling",
       description: "Quantum computing for complex climate simulations",
       category: "research",
@@ -123,8 +135,8 @@ import { motion } from 'framer - motion';
       icon: Lightbulb
     },
     {
-      title: "AI Training",
-    };
+
+      title: "AI Training"};
       description: "Quantum - enhanced machine learning and neural networks",;
       category: "research",;
       benefits: ["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"],;
@@ -134,36 +146,42 @@ import { motion } from 'framer - motion';
 
   const quantumTechnologies = [
     {
+
       name: "Superconducting Qubits",
       description: "Quantum bits using superconducting circuits for computation",
       advantages["Scalability", "Fast Operations", "Error Correction", "Commercial Viability"],;
       icon: Cpu
     },
     {
+
       name: "Trapped Ions",
       description: "Quantum bits using individual ions for precise control",
       advantages["High Fidelity", "Long Coherence", "Precise Control", "Low Error Rates"],;
       icon: Atom
     },
     {
+
       name: "Topological Qubits",
       description: "Quantum bits with inherent error protection",
       advantages["Error Protection", "Stability", "Fault Tolerance", "Long Coherence"],;
       icon: Shield
     },
     {
+
       name: "Photonic Qubits",
       description: "Quantum bits using light particles for communication",
       advantages["Room Temperature", "Fast Transmission", "Low Loss", "Network Ready"],;
       icon: Network
     },
     {
+
       name: "Silicon Qubits",
       description: "Quantum bits using semiconductor technology",
       advantages["Manufacturing", "Scalability", "Integration", "Cost Effective"],;
       icon: Server
     },
     {
+
     };
       name: "Neutral Atoms",;
       description: "Quantum bits using neutral atoms for computation",;
@@ -180,6 +198,7 @@ import { motion } from 'framer - motion';
   ];
 
   const containerVariants = {
+
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -190,6 +209,7 @@ import { motion } from 'framer - motion';
   };
 
   const itemVariants = {
+
   hidden: { opacity: 0,
   y: 20
 
@@ -217,11 +237,13 @@ import { motion } from 'framer - motion';
         <div role="button" className="container mx - auto px - 4 text - center relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -267,11 +289,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -301,6 +325,7 @@ import { motion } from 'framer - motion';
                 className="bg - zion - blue - dark / 50 backdrop - blur - sm border border - zion - cyan / 20 rounded - xl p - 8 hover:border - zion - cyan / 40 transition - all duration - 300 group"
                 variants={itemVariants}
                 whileHover = {
+
   { y: -5,
   scale: 1.02
 
@@ -330,11 +355,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -356,12 +383,15 @@ import { motion } from 'framer - motion';
             className="flex flex - wrap justify - center gap - 4 mb - 12"
           >
             {applications.map ( (app) => {
+
             initial = {
+
   { opacity: 0,
   y: 20 ;
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -377,6 +407,7 @@ import { motion } from 'framer - motion';
               return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key = {app.id}
                   onClick={ () => setSelectedApplication (app.id) }
                   className={`flex items - center gap - 3 px - 6 py - 3 rounded - xl font - medium transition - all duration - 300 ${
+
                     selectedApplication === app.id
                       ? 'bg - zion - purple text - white shadow - lg shadow - zion - purple / 25'
                       : 'bg - zion - slate - dark / 50 text - zion - slate - light hover:bg - zion - slate - dark hover:text - white border border - zion - purple / 20'
@@ -401,6 +432,7 @@ import { motion } from 'framer - motion';
                 className="bg - zion - slate - dark / 50 backdrop - blur - sm border border - zion - cyan / 20 rounded - xl p - 6 hover:border - zion - cyan / 40 transition - all duration - 300"
                 variants={itemVariants}
                 whileHover = {
+
   { y: -5,
   scale: 1.02
 
@@ -435,11 +467,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -469,6 +503,7 @@ import { motion } from 'framer - motion';
                 className="bg - zion - blue - dark / 50 backdrop - blur - sm border border - zion - cyan / 20 rounded - xl p - 6 hover:border - zion - cyan / 40 transition - all duration - 300 group"
                 variants={itemVariants}
                 whileHover = {
+
   { y: -5,
   scale: 1.02
 
@@ -501,11 +536,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -551,11 +588,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -581,24 +620,28 @@ import { motion } from 'framer - motion';
 
             {[;
               {
+
                 step: "01",
                 title: "Quantum Assessment",
                 description: "Evaluate quantum readiness and identify opportunities",
                 icon: Eye
               },
               {
+
                 step: "02",
                 title: "Strategy Development",
                 description: "Design quantum roadmap and implementation plan",
                 icon: Target
               },
               {
+
                 step: "03",
                 title: "Technology Selection",
                 description: "Choose optimal quantum platforms and solutions",
                 icon: Cpu
               },
               {
+
                 step: "04",
                 title: "Deployment & Optimization",
                 description: "Implement and continuously improve quantum solutions",
@@ -633,11 +676,13 @@ import { motion } from 'framer - motion';
         <div role="button" className="container mx - auto px - 4 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

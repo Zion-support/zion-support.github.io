@@ -1,4 +1,5 @@
 import {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 
@@ -7,6 +8,7 @@ import { motion } from 'framer - motion';
  * @returns {*} Function return value
  */
 function ServicesShowcase () {
+
 =======
 >>>>>>> main
 

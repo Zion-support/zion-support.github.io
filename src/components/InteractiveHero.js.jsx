@@ -12,12 +12,14 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
     const [isHovered, setIsHovered] = useState(false);
     const [activeStat, setActiveStat] = useState(0);
     useEffect(() => {
+
         const handleMouseMove = (e) => {
 
             setMousePosition({ x: e.clientX, y: e.clientY })};
         window.addEventListener('mousemove', handleMouseMove);
         // Auto-rotate stats
         const interval = setInterval(() => {
+
             setActiveStat((prev) => (prev + 1) % stats.length)}, 3000);
         return () => {
 
@@ -161,6 +163,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
           {/* Title */}"
           <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>'"
             {title.split(' ').map((word, index) => (<motion.span key={index} className="inline-block mr-4" whileHover={{ scale: 1.05 }} transition = {
+
 "
   { type: "spring",
   stiffness: 300 
@@ -260,6 +263,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 }} transition = {
 
   {
+
 "
             type: "spring",
             stiffness: 500,

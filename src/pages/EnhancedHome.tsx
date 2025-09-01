@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom';
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 export default EnhancedHome;
 import {
+
 import { EnhancedSEO } from '../components / EnhancedSEO';
 import { LazyLoadWrapper, OptimizedImage } from '../components / PerformanceOptimizer';
 import { motion, AnimatePresence } from 'framer - motion';
@@ -62,8 +63,10 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo ( () => {
+
   const particles = useMemo ( () =>
     [...Array (15) ].map ( (_, i) => ({
+
       id: i,
       left: `${Math.random () * 100}%`,
       top: `${Math.random () * 100}%`,
@@ -80,21 +83,22 @@ const FuturisticBackground = React.memo ( () => {
           key={particle.id}
           className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 80 shadow - lg shadow - cyan - 400 / 50"
           animate={{
+
             x: [0, 200, 0],
             y: [0, -200, 0],
             opacity: [0.4, 1, 0.4],
-            scale: [0.5, 1.2, 0.5],
-          }}
+            scale: [0.5, 1.2, 0.5]}}
           transition={{
+
             duration: particle.duration,
             repeat: Infinity,
             delay: particle.delay,
             ease: "easeInOut"
           }}
           style={{
+
             left: particle.left,
-            top: particle.top,
-          }}
+            top: particle.top}}
         />) ) }
     </div>) ;
 }) ;
@@ -103,28 +107,33 @@ FuturisticBackground.displayName = 'FuturisticBackground';
 
 // Enhanced hero section component
 const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }) => {
+
   const [currentSlide, setCurrentSlide] = useState (0) ;
 
   const heroSlides = useMemo ( () => [
     {
+
       title: "AI - Powered Solutions",
       description: "Transform your business with cutting - edge artificial intelligence",
       icon: Brain,
       features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
     },
     {
+
       title: "Quantum Computing",
       description: "Next - generation computing power for complex problem solving",
       icon: Atom,
       features: ["Quantum Algorithms", "Optimization", "Cryptography", "Simulation"]
     },
     {
+
       title: "Micro SAAS Services",
       description: "Scalable software solutions tailored to your needs",
       icon: Zap,
       features: ["Cloud - Native", "API - First", "Scalable Architecture", "Real - time Analytics"]
     },
     {
+
       title: "Digital Transformation",
       description: "Modernize your infrastructure for the future",
       icon: Rocket,
@@ -133,14 +142,17 @@ const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }
   ], []) ;
 
   const nextSlide = useCallback ( () => {
+
     setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) ;
   }, [heroSlides.length]) ;
 
   const prevSlide = useCallback ( () => {
+
     setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;
   }, [heroSlides.length]) ;
 
   useEffect ( () => {
+
     const interval = setInterval (nextSlide, 5000) ;
     return () => clearInterval (interval) ;
   }, [nextSlide]) ;
@@ -243,6 +255,7 @@ const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }
               {heroSlides.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
                   onClick={ () => setCurrentSlide (index) }
                   className={`w - 3 h - 3 rounded - full transition - colors ${
+
                     index === currentSlide ? 'bg - cyan - 400' : 'bg - white / 30'
                   }`}
                   aria - label={`Go to slide ${index + 1}`}
@@ -258,26 +271,31 @@ HeroSection.displayName = 'HeroSection';
 
 // Enhanced features section
 const FeaturesSection = React.memo ( () => {
+
   const features = useMemo ( () => [
     {
+
       icon: Brain,
       title: "AI & Machine Learning",
       description: "Advanced artificial intelligence solutions for business automation and insights",
       color: "from - purple - 500 to - cyan - 500"
     },
     {
+
       icon: Cloud,
       title: "Cloud & Infrastructure",
       description: "Scalable cloud solutions and modern infrastructure management",
       color: "from - blue - 500 to - cyan - 500"
     },
     {
+
       icon: Shield,
       title: "Cybersecurity",
       description: "Comprehensive security solutions for modern digital threats",
       color: "from - red - 500 to - orange - 500"
     },
     {
+
       icon: Zap,
       title: "Micro SAAS",
       description: "Custom software solutions designed for your specific needs",
@@ -328,6 +346,7 @@ FeaturesSection.displayName = 'FeaturesSection';
 
 // Enhanced stats section
 const StatsSection = React.memo ( () => {
+
   const stats = useMemo ( () => [
     { number: "500+", label: "Projects Completed", icon: CheckCircle },
     { number: "50+", label: "Expert Team Members", icon: Users },
@@ -361,6 +380,7 @@ StatsSection.displayName = 'StatsSection';
 
 // Enhanced CTA section
 const CTASection = React.memo ( () => {
+
   return (<section className="py - 20 px - 4 sm:px - 6 lg:px - 8">
       <div role="button" className="max - w-4xl mx - auto text - center">
         <motion.div
@@ -400,21 +420,26 @@ CTASection.displayName = 'CTASection';
 
 // Main EnhancedHome component
 const EnhancedHome: React.FC = () => {
+
   const [isLoaded, setIsLoaded] = useState (false) ;
 
   useEffect ( () => {
+
     setIsLoaded (true) ;
   }, []) ;
 
   const handleGetStarted = useCallback ( () => {
+
     // Scroll to services section or navigate
     const servicesSection = document.getElementById ('services') ;
     if (servicesSection) {
+
       servicesSection.scrollIntoView ({ behavior: 'smooth' }) ;
     }
   }, []) ;
 
   if (!isLoaded) {
+
     return (<div role="button" className="min - h-screen bg - zion - slate - dark flex items - center justify - center">
         <div role="button" className="animate - spin rounded - full h - 32 w - 32 border - b-2 border - cyan - 400"></div>
       </div>) ;

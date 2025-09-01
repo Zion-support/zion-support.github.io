@@ -53,11 +53,13 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
         <div role="button" className="max - w-7xl mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -128,6 +130,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
               {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setActiveCategory (category.id) }
                   className={`flex items - center gap - 2 px - 4 py - 2 rounded - lg border transition - all ${
+
                     activeCategory === category.id
                       ? 'bg - purple - 600 border - purple - 500 text - white'
                       : 'bg - white / 10 border - white / 20 text - white hover:bg - white / 20'
@@ -151,16 +154,19 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
             {filteredServices.map ( (service, index) => (<motion.div
                 key={service.id}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -297,11 +303,13 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
         <div role="button" className="max - w-7xl mx - auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -321,21 +329,25 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
           <div role="button" className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 4 gap - 8">
             {[
               {
+
                 icon: Award,
                 title: "Industry Expertise",
                 description: "20 + years of experience in cutting - edge technology solutions"
               },
               {
+
                 icon: Zap,
                 title: "Innovation First",
                 description: "Pioneering the latest AI, cybersecurity, and cloud technologies"
               },
               {
+
                 icon: Shield,
                 title: "Enterprise Security",
                 description: "SOC 2, ISO 27001, and industry compliance certifications"
               },
               {
+
                 icon: Users,
                 title: "24 / 7 Support",
                 description: "Round - the - clock technical support and consultation"
@@ -343,16 +355,19 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
             ].map ( (feature, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -375,11 +390,13 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
         <div role="button" className="max - w-4xl mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

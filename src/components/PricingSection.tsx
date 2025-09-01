@@ -31,6 +31,7 @@ const pricingTiers = [
     color: "from-blue-500 to-cyan-500"
   },
   {
+
 "
     name: "Professional","
     price: "$299","
@@ -49,6 +50,7 @@ const pricingTiers = [
     color: "from-purple-500 to-pink-500"
   },
   {
+
 "
     name: "Enterprise","
     price: "$999","
@@ -74,6 +76,7 @@ const pricingTiers = [
           className="text - center mb - 16"
 =======
 export function PricingSection() {
+
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">

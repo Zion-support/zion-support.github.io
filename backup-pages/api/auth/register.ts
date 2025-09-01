@@ -1,4 +1,11 @@
-import { createClient, User, Session, AuthError, AuthApiError, UserIdentity } from '@supabase/supabase-js';
+import {
+  createClient,
+  User,
+  Session,
+  AuthError,
+  AuthApiError,
+  UserIdentity,
+} from '@supabase/supabase-js';
 import { z } from 'zod';
 import { withErrorLogging } from '@/utils/withErrorLogging';
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -15,7 +22,8 @@ type RegisterRequestBody = z.infer<typeof registerSchema>;
 interface RegisterSuccessResponse {
   message?: string;
   emailVerificationRequired?: boolean;
-  user: { // Subset of Supabase User relevant to client
+  user: {
+    // Subset of Supabase User relevant to client
     id: string;
     email?: string;
     display_name?: string;
@@ -41,11 +49,15 @@ const serviceKey =
   '';
 const supabase = createClient(supabaseUrl, serviceKey);
 
-
-async function handler(req: NextApiRequest, res: NextApiResponse<RegisterSuccessResponse | ErrorResponse>) {
+async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<RegisterSuccessResponse | ErrorResponse>
+) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
-    return res.status(405).json({ message: `Method ${req.method} Not Allowed` });
+    return res
+      .status(405)
+      .json({ message: `Method ${req.method} Not Allowed` });
   }
 
   const result = registerSchema.safeParse(req.body);
@@ -58,7 +70,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse<RegisterSuccess
   try {
     let data: { user: User | null; session: Session | null } | null = null;
     let error: AuthError | null = null;
-    
+
     try {
       ({ data, error } = await supabase.auth.signUp({
         email,
@@ -67,7 +79,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse<RegisterSuccess
       }));
     } catch (networkErr: any) {
       console.error('signUp network error', networkErr);
-      return res.status(503).json({ message: 'Network error. Please try again.' });
+      return res
+        .status(503)
+        .json({ message: 'Network error. Please try again.' });
     }
 
     if (error || !data.user) {

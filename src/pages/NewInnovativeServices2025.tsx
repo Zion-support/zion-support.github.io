@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom';
 import React from 'react';
 export default React.memo (function NewInnovativeServices2025 () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Brain,
@@ -121,6 +123,7 @@ import { motion } from 'framer - motion';
 
   const featuredServices = [
     {
+
       title: "AI Workflow Orchestrator",
       description: "Transform business processes with AI - powered workflow automation and intelligent orchestration",
       icon: WorkflowIcon,
@@ -132,6 +135,7 @@ import { motion } from 'framer - motion';
       popular: true
     },
     {
+
       title: "AI Data Governance Platform",
       description: "Secure, govern, and manage data with AI - powered compliance automation and intelligent protection",
       icon: Shield,
@@ -143,6 +147,7 @@ import { motion } from 'framer - motion';
       popular: false
     },
     {
+
       title: "AI Customer Experience Analytics",
       description: "Transform customer insights into actionable intelligence with AI - powered analytics and personalization",
       icon: Brain,
@@ -157,6 +162,7 @@ import { motion } from 'framer - motion';
 
   const serviceCategories = [
     {
+
       name: "AI & Machine Learning",
       icon: Brain,
       description: "Cutting - edge AI solutions for business transformation",
@@ -170,6 +176,7 @@ import { motion } from 'framer - motion';
       color: "from - zion - cyan to - zion - purple"
     },
     {
+
       name: "Data & Analytics",
       icon: BarChart3,
       description: "Advanced data solutions for informed decision - making",
@@ -183,6 +190,7 @@ import { motion } from 'framer - motion';
       color: "from - zion - purple to - zion - cyan"
     },
     {
+
       name: "Security & Compliance",
       icon: Shield,
       description: "Enterprise - grade security and compliance solutions",
@@ -196,6 +204,7 @@ import { motion } from 'framer - motion';
       color: "from - zion - cyan to - zion - green"
     },
     {
+
       name: "Business Process Automation",
       icon: WorkflowIcon,
       description: "Streamline operations with intelligent automation",
@@ -212,16 +221,19 @@ import { motion } from 'framer - motion';
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: "Increased Efficiency",
       description: "Automate repetitive tasks and optimize workflows for 30 - 90% efficiency gains"
     },
     {
+
       icon: DollarSign,
       title: "Cost Reduction",
       description: "Reduce operational costs through intelligent automation and process optimization"
     },
     {
+
       icon: Users,
       title: "Enhanced Customer Experience",
       description: "Deliver personalized, responsive experiences that increase customer satisfaction and loyalty";
@@ -246,11 +258,13 @@ import { motion } from 'framer - motion';
           <div className="max - w-7xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -298,11 +312,13 @@ import { motion } from 'framer - motion';
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -323,22 +339,26 @@ import { motion } from 'framer - motion';
               {featuredServices.map ( (service, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.8,
   delay: index * 0.1
 
 }}
                   viewport={{ once: true }}
                   className={`relative bg - zion - slate - 800 / 50 backdrop - blur - sm border rounded - xl p - 8 hover:border - zion - cyan / 40 transition - all duration - 300 ${
+
                     service.popular ? 'border - zion - cyan / 50 bg - zion - cyan / 5' : 'border - zion - slate - 600 / 50'
                   }`}
                 >
@@ -372,6 +392,7 @@ import { motion } from 'framer - motion';
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       className={`w - full py - 3 px - 6 rounded - lg font - semibold transition - all duration - 300 ${
+
                         service.popular
                           ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white hover:shadow - lg hover:shadow - zion - cyan / 25'
                           : 'bg - zion - slate - 700 text - white hover:bg - zion - slate - 600'
@@ -390,11 +411,13 @@ import { motion } from 'framer - motion';
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -415,16 +438,19 @@ import { motion } from 'framer - motion';
               {serviceCategories.map ( (category, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.8,
   delay: index * 0.1
 
@@ -458,11 +484,13 @@ import { motion } from 'framer - motion';
           <div className="max - w-7xl mx - auto">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -483,16 +511,19 @@ import { motion } from 'framer - motion';
               {benefits.map ( (benefit, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.8,
   delay: index * 0.1
 
@@ -515,11 +546,13 @@ import { motion } from 'framer - motion';
           <div className="max - w-4xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 

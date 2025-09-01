@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 
@@ -8,6 +9,7 @@ import { motion } from 'framer - motion';
  * @returns {*} Function return value
  */
 function SecurityComplianceSection () {
+
 =======
 >>>>>>> main
 
@@ -35,6 +37,7 @@ const securityFeatures = [
     color: "from-green-500 to-emerald-600"
   },
   {
+
 "
     title: "ISO 27001","
     description: "International standard for information security management systems","
@@ -43,6 +46,7 @@ const securityFeatures = [
     color: "from-blue-500 to-cyan-600"
   },
   {
+
 "
     title: "GDPR Compliance","
     description: "Full compliance with European data protection regulations","
@@ -51,6 +55,7 @@ const securityFeatures = [
     color: "from-purple-500 to-pink-600"
   },
   {
+
 "
     title: "HIPAA Compliance","
     description: "Healthcare data protection standards for medical information","
@@ -59,6 +64,7 @@ const securityFeatures = [
     color: "from-orange-500 to-red-600"
   },
   {
+
 "
     title: "Zero Trust Architecture","
     description: "Never trust, always verify security model implementation","
@@ -76,6 +82,7 @@ const securityFeatures = [
 ;
 const complianceFeatures = [
   {
+
 "
     category: "Data Protection",
     features: ["
@@ -86,6 +93,7 @@ const complianceFeatures = [
     ]
   },
   {
+
 "
     category: "Access Control",
     features: ["
@@ -96,6 +104,7 @@ const complianceFeatures = [
     ]
   },
   {
+
 "
     category: "Monitoring & Auditing",
     features: [;"
@@ -116,6 +125,7 @@ const complianceFeatures = [
           className="text - center mb - 16"
 =======
 export function SecurityComplianceSection() {
+
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">

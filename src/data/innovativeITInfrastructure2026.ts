@@ -2,12 +2,14 @@
 // Cutting-edge infrastructure solutions with market data and pricing
 
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
   address: string}
 
 export interface ITInfrastructureService2026 {
+
   id: number;
   name: string;
   category: string;
@@ -37,6 +39,7 @@ export interface ITInfrastructureService2026 {
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
+
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
@@ -46,6 +49,7 @@ const zionContact: ServiceContact = {
 // Innovative IT Infrastructure Services 2026
 export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
   {
+
     id: 1,
     name: "AI-Powered Cloud Infrastructure Optimization Platform",
     category: "Cloud Infrastructure",
@@ -102,6 +106,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "Cloud security standards"]
   },
   {
+
     id: 2,
     name: "Edge Computing & 5G Infrastructure Platform",
     category: "Edge Computing",
@@ -158,6 +163,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     compliance: ["5G standards", "IoT security", "Data privacy", "Network regulations", "Industry standards"]
   },
   {
+
     id: 3,
     name: "AI-Powered Data Center Management & Automation Platform",
     category: "Data Center Management",
@@ -214,6 +220,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     compliance: ["Uptime Institute", "ISO 27001", "SOC 2", "Energy efficiency", "Safety standards"]
   },
   {
+
     id: 4,
     name: "Zero-Trust Network Architecture & Security Platform",
     category: "Network Security",
@@ -270,6 +277,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     compliance: ["NIST", "SOC 2", "ISO 27001", "GDPR", "Industry regulations"]
   },
   {
+
     id: 5,
     name: "AI-Powered DevOps & CI/CD Automation Platform",
     category: "DevOps & Automation",
@@ -326,6 +334,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     compliance: ["Software security", "Code quality", "Development standards", "Security best practices"]
   },
   {
+
     id: 6,
     name: "Hybrid Cloud & Multi-Cloud Management Platform",
     category: "Cloud Management",
@@ -382,6 +391,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     compliance: ["Cloud security", "Data governance", "Industry standards", "Regulatory requirements"]
   },
   {
+
     id: 7,
     name: "AI-Powered Network Performance & Monitoring Platform",
     category: "Network Performance",
@@ -438,6 +448,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     compliance: ["Network security", "Performance standards", "Monitoring requirements", "Industry best practices"]
   },
   {
+
     id: 8,
     name: "Green IT & Sustainable Infrastructure Platform",
     category: "Sustainable IT",
@@ -494,6 +505,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     compliance: ["Environmental regulations", "Sustainability standards", "Energy efficiency", "Green certifications"]
   },
   {
+
     id: 9,
     name: "AI-Powered Disaster Recovery & Business Continuity Platform",
     category: "Disaster Recovery",
@@ -550,6 +562,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     compliance: ["Data protection", "Business continuity", "Industry standards", "Regulatory requirements"]
   },
   {
+
     id: 10,
     name: "AI-Powered IT Asset Management & Lifecycle Platform",
     category: "IT Asset Management",

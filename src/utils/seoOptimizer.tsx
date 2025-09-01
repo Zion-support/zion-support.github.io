@@ -1,4 +1,5 @@
 export class SEOOptimizer {
+
 export const seoOptimizer = new SEOOptimizer () ;
 
     static DEFAULT_META_DESCRIPTIONS = {
@@ -70,6 +71,7 @@ export const seoOptimizer = new SEOOptimizer () ;
             "description": this.generateDescription(path),"
             "url": this.generateCanonicalUrl(path),"
             "publisher": {
+
 "
                 "@type": "Organization","
                 "name": "Zion Tech Group","
@@ -96,6 +98,7 @@ export const seoOptimizer = new SEOOptimizer () ;
                 "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc","
                 "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.","
                 "address": {
+
 "
                     "@type": "PostalAddress","
                     "streetAddress": "364 E Main St STE 1008","
@@ -105,6 +108,7 @@ export const seoOptimizer = new SEOOptimizer () ;
                     "addressCountry": "US"
                 },"
                 "contactPoint": {
+
 "
                     "@type": "ContactPoint","
                     "telephone": "+1-302-464-0950","
@@ -121,6 +125,7 @@ export const seoOptimizer = new SEOOptimizer () ;
                 "@type": "Service","
                 "serviceType": path.split('/').pop()?.replace(/-/g,),"
                 "provider": {
+
 "
                     "@type": "Organization","
                     "name": "Zion Tech Group"
@@ -192,6 +197,7 @@ export const seoOptimizer = new SEOOptimizer () ;
         return issues;
 
     static generateMetaTags(seoData) {
+
 `
         return `
     <title>${seoData.title}</title>"

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 export default ComprehensiveServicesShowcase2027;
 import {
+
 import { comprehensiveServices } from '../data / comprehensiveServices';
 import { motion, AnimatePresence } from 'framer - motion';
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data / ultimateInnovativeServices2026';
@@ -53,12 +54,12 @@ import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data / ultimateInnovativeS
   Activity,
   Gauge,
   ShieldCheck,
-  X,
-} from 'lucide - react';
+  X} from 'lucide - react';
 
 // Import our existing service data
 
 interface Service {
+
   id: string;
   name: string;
   category: string;
@@ -66,6 +67,7 @@ interface Service {
   features: string[];
   benefits: string[];
   pricing: {
+
     starter: number;
     professional: number;
     enterprise: number;
@@ -80,6 +82,7 @@ interface Service {
   estimatedDelivery: string;
   website?: string;
   contactInfo?: {
+
     phone: string;
     email: string;
     address: string;
@@ -87,6 +90,7 @@ interface Service {
 }
 
 const ComprehensiveServicesShowcase2027: React.FC = () => {
+
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState < string> ('All') ;
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'> ('name') ;
@@ -94,11 +98,14 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
 
   // Combine services from multiple sources
   const allServices: Service[] = useMemo ( () => {
+
     const services: Service[] = [];
 
     // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
     ULTIMATE_INNOVATIVE_SERVICES_2026.forEach (service => {
+
       services.push ({
+
         id: service.id,
         name: service.name,
         category: service.category,
@@ -106,12 +113,12 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         features: service.features,
         benefits: service.benefits,
         pricing: {
+
           starter: service.pricing.starter,
           professional: service.pricing.professional,
           enterprise: service.pricing.enterprise,
           currency: service.pricing.currency,
-          billingCycle: service.pricing.billingCycle,
-        },
+          billingCycle: service.pricing.billingCycle},
         rating: service.rating,
         reviewCount: service.reviewCount,
         launchDate: service.launchDate,
@@ -119,13 +126,14 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
-        contactInfo: service.contactInfo,
-      }) ;
+        contactInfo: service.contactInfo}) ;
     }) ;
 
     // Add services from comprehensiveServices
     comprehensiveServices.forEach (service => {
+
       services.push ({
+
         id: service.id,
         name: service.name,
         category: service.category,
@@ -133,12 +141,12 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         features: service.features,
         benefits: service.benefits,
         pricing: {
+
           starter: service.pricing.starter,
           professional: service.pricing.professional,
           enterprise: service.pricing.enterprise,
           currency: service.pricing.currency,
-          billingCycle: service.pricing.billingCycle,
-        },
+          billingCycle: service.pricing.billingCycle},
         rating: service.rating,
         reviewCount: service.reviewCount,
         launchDate: service.launchDate,
@@ -146,14 +154,14 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
-        contactInfo: service.contactInfo,
-      }) ;
+        contactInfo: service.contactInfo}) ;
     }) ;
 
     return services;
   }, []) ;
 
   const categories = useMemo ( () => {
+
     const cats = [
       'All',
       ...Array.from (new Set (allServices.map (s => s.category) ) ) ,
@@ -162,7 +170,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
   }, [allServices]) ;
 
   const filteredServices = useMemo ( () => {
+
     let filtered = allServices.filter (service => {
+
       const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
@@ -172,6 +182,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
 
     // Sort services
     switch (sortBy) {
+
       case 'name':
         filtered.sort ( (a, b) => a.name.localeCompare (b.name) ) ;
         break;
@@ -191,7 +202,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
   }, [allServices, searchTerm, selectedCategory, sortBy]) ;
 
   const getCategoryIcon = (category: string) => {
+
     switch (category) {
+
       case 'Artificial Intelligence':
         return < Brain className="w - 6 h - 6" />;
       case 'Quantum Computing':
@@ -218,7 +231,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
   };
 
   const getStatusColor = (status: string) => {
+
     switch (status.toLowerCase () ) {
+
       case 'live':
         return 'bg - green - 100 text - green - 800';
       case 'beta':

@@ -9,18 +9,22 @@ import { Calendar, Clock, Video } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar"; // Assuming AvatarImage and AvatarFallback are part of this or separate
 
 export function UpcomingInterviewsCard() {
+
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+
     const loadInterviews = async () => {
+
       setIsLoading(true);
       try {
+
         const interviews = await fetchInterviews();
         // const now = new Date(); // Not used here, can be removed if only for filtering future
         
-        const upcoming = interviews
+        const upcoming = interviews;
           .filter(interview => 
             interview.status === 'confirmed' && 
             !isPast(parseISO(interview.scheduled_date))
@@ -32,8 +36,10 @@ export function UpcomingInterviewsCard() {
         
         setUpcomingInterviews(upcoming);
       } catch (error) {
-        console.error("Error loading upcoming interviews:", error);
+
+        // // // console.error("Error loading upcoming interviews:", error);
       } finally {
+
         setIsLoading(false);
       }
     };
@@ -42,6 +48,7 @@ export function UpcomingInterviewsCard() {
   }, [fetchInterviews]); // Added fetchInterviews
 
   if (isLoading) {
+
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
@@ -68,6 +75,7 @@ export function UpcomingInterviewsCard() {
   }
 
   if (upcomingInterviews.length === 0) {
+
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
@@ -100,6 +108,7 @@ export function UpcomingInterviewsCard() {
       <CardContent>
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
+
             const interviewDate = parseISO(interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
             const formattedTime = format(interviewDate, 'h:mm a');

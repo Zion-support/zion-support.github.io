@@ -28,7 +28,7 @@ class EnhancedErrorBoundary extends Component {
 
         this.setState({ errorInfo });
         // Log error to console'
-        // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
+        // // // // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
         if (this.props.onError) {
 
@@ -36,6 +36,7 @@ class EnhancedErrorBoundary extends Component {
         // Send error to error reporting service (if available)
         this.reportError(error, errorInfo)}
     static generateErrorId() {
+
         return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
     reportError(error, errorInfo) {
 
@@ -69,19 +70,20 @@ class EnhancedErrorBoundary extends Component {
         if (process.env.NODE_ENV === 'development') {
 
             console.group('Error Report');
-            // // // // // // // // console.log('Error ID:', errorReport.id);
-            // // // // // // // // console.log('Error Details:', errorReport);
+            // // // // // // // // // // // console.log('Error ID:', errorReport.id);
+            // // // // // // // // // // // console.log('Error Details:', errorReport);
             console.groupEnd();
 
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport });
 
-            // console.log('Error ID:', errorReport.id);
-            // console.log('Error Details:', errorReport);
+            // // // // console.log('Error ID:', errorReport.id);
+            // // // // console.log('Error Details:', errorReport);
             console.groupEnd()}
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport })}
     handleRetry = () => {
+
         this.setState({
 
             hasError: false,
@@ -94,8 +96,10 @@ class EnhancedErrorBoundary extends Component {
 
         window.location.href = '/'};
     handleReportIssue = () => {
+
         const errorInfo = this.state.errorInfo;
         if (error && errorInfo) {
+
 `
             const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
             window.open(issueUrl,_blank')}

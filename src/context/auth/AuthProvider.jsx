@@ -28,6 +28,7 @@ export const AuthProvider = ({ children }) => {
         if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {
 
             toast({
+
 "
                 title: "Login Failed","
                 description: data.error || "Email not confirmed. Please check your inbox to verify your email.","
@@ -42,6 +43,7 @@ export const AuthProvider = ({ children }) => {
             return { error: 'Incorrect email or password' }}
         // Catch-all for other non-200 statuses from loginUser
         if (res.status !== 200) {
+
 '"
             toast({ title: "Login Failed", description: data?.error || 'An unexpected error occurred during login.', variant: "destructive" });
             return { error: data?.error || 'Login failed' }}
@@ -54,7 +56,7 @@ export const AuthProvider = ({ children }) => {
 
             // useEmailAuth.login already shows a toast on error.
             // We just need to return the error to the caller of AuthProvider.login"
-            // // // // // // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
+            // // // // // // // // // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
             // It's possible the server token is valid but client Supabase has an issue.
             // For now, treat as a login failure and let user retry.
             // Potentially clear tokens if this state is problematic: await logout();"
@@ -68,6 +70,7 @@ export const AuthProvider = ({ children }) => {
     const register = async (name, email, password) => {
 
         try {
+
             const { res, data } = await registerUser(name, email, password);
             if (!res.ok || !data?.token || !data?.user) {
 
@@ -98,6 +101,7 @@ export const AuthProvider = ({ children }) => {
         }
         return result};
     useEffect(() => {
+
         // Clean up  potential stale auth state before setting up listeners
         cleanupAuthState();
         const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
@@ -105,6 +109,7 @@ export const AuthProvider = ({ children }) => {
             if (session?.user) {
 
                 try {
+
                     const { data: profile, error } = await getFromProfiles()
                         .select('*')
                         .eq('id', session.user.id)
@@ -136,26 +141,29 @@ export const AuthProvider = ({ children }) => {
                             // --- END MODIFICATION ---
 
                     else if (error) {
+
 "
-                        // // // // // // // // console.error("Error fetching user profile:", error);
+                        // // // // // // // // // // // console.error("Error fetching user profile:", error);
                         setUser(null);
 
                 catch (error) {
+
 "
-                    // // // // // // // // console.error("Error fetching user profile:", error);
+                    // // // // // // // // // // // console.error("Error fetching user profile:", error);
                     setUser(null);
 
 <<<<<<< HEAD
-                        console.error("Error fetching user profile:", error);
+                        // // // console.error("Error fetching user profile:", error);
 =======
 "
-                        // console.error("Error fetching user profile:", error);
+                        // // // // console.error("Error fetching user profile:", error);
 >>>>>>> main
                         setUser(null)}
                 }
                 catch (error) {
+
 "
-                    // console.error("Error fetching user profile:", error);
+                    // // // // console.error("Error fetching user profile:", error);
                     setUser(null)}
             }
             else {
@@ -168,6 +176,7 @@ export const AuthProvider = ({ children }) => {
             }
             setIsLoading(false)});
         return () => {
+
             subscription.unsubscribe()}}, [navigate]);
     const authContextValue = {
 

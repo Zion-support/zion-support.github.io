@@ -24,6 +24,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 95,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -37,6 +38,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     integrations["Active Directory", "SAML/SSO", "Multi-Factor Authentication", "SIEM Systems", "Identity Providers"]},;
   // Edge Computing Orchestration Platform
   {
+
 "
     id: "edge-computing-orchestration-platform","
     title: "Edge Computing Orchestration Platform","
@@ -56,6 +58,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 96,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -69,6 +72,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     integrations["Kubernetes", "Docker", "Cloud Platforms", "IoT Devices", "Monitoring Tools"]},;
   // Quantum-Safe Cryptography Infrastructure
   {
+
 "
     id: "quantum-safe-cryptography-infrastructure","
     title: "Quantum-Safe Cryptography Infrastructure","
@@ -88,6 +92,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 98,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -101,6 +106,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     integrations["PKI Systems", "Certificate Authorities", "Hardware Security Modules", "Key Management", "Security Protocols"]},;
   // Autonomous Data Center Management
   {
+
 "
     id: "autonomous-data-center-management","
     title: "Autonomous Data Center Management","
@@ -120,6 +126,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     availability: "10-14 Weeks",
     aiScore: 97,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -133,6 +140,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     integrations["Building Management Systems", "Power Management", "Cooling Systems", "Monitoring Tools", "IoT Sensors"]},;
   // Software-Defined Network Fabric
   {
+
 "
     id: "software-defined-network-fabric","
     title: "Software-Defined Network Fabric","
@@ -152,6 +160,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     availability: "8-12 Weeks",
     aiScore: 94,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -165,6 +174,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     integrations["Network Controllers", "Virtual Switches", "Load Balancers", "Firewalls", "Monitoring Systems"]},;
   // Hyperconverged Infrastructure Platform
   {
+
 "
     id: "hyperconverged-infrastructure-platform","
     title: "Hyperconverged Infrastructure Platform","
@@ -184,6 +194,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 93,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -197,6 +208,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     integrations["Virtualization Platforms", "Storage Systems", "Network Equipment", "Management Tools", "Backup Solutions"]},;
   // Intelligent Cloud Cost Optimization
   {
+
 "
     id: "intelligent-cloud-cost-optimization","
     title: "Intelligent Cloud Cost Optimization","
@@ -216,6 +228,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 95,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","

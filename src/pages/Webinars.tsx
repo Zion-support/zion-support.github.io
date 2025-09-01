@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default Webinars;
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -27,10 +28,10 @@ import { SEO } from '../components / SEO';
   Download,
   Share2,
   ArrowRight,
-  CheckCircle,
-} from 'lucide - react';
+  CheckCircle} from 'lucide - react';
 
 const Webinars: React.FC = () => {
+
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [activeCategory, setActiveCategory] = useState ('all') ;
   const [filterType, setFilterType] = useState ('all') ;
@@ -54,6 +55,7 @@ const Webinars: React.FC = () => {
 
   const upcomingWebinars = [
     {
+
       id: 1,
       title: 'AI - Powered Business Transformation: Real - World Success Stories',
       description:
@@ -74,9 +76,9 @@ const Webinars: React.FC = () => {
       ],
       thumbnail: '/images / webinars / ai - autonomous - research - 2025.jpg',
       registrationRequired: true,
-      recordingAvailable: false,
-    },
+      recordingAvailable: false},
     {
+
       id: 2,
       title: 'AI Supply Chain Optimization: Reducing Costs by Up to 30%',
       description:
@@ -101,9 +103,9 @@ const Webinars: React.FC = () => {
       ],
       thumbnail: '/images / webinars / ai - supply - chain - 2025.jpg',
       registrationRequired: true,
-      recordingAvailable: false,
-    },
+      recordingAvailable: false},
     {
+
       id: 3,
       title: 'Cloud - Native Security: Protecting Modern Applications',
       description:
@@ -124,12 +126,12 @@ const Webinars: React.FC = () => {
       ],
       thumbnail: '/images / webinars / cloud - security - 2025.jpg',
       registrationRequired: true,
-      recordingAvailable: false,
-    },
+      recordingAvailable: false},
   ];
 
   const onDemandWebinars = [
     {
+
       id: 4,
       title: 'Data - Driven Decision Making: From Insights to Action',
       description:
@@ -149,9 +151,9 @@ const Webinars: React.FC = () => {
       ],
       thumbnail: '/images / webinars / data - driven - decisions - 2024.jpg',
       recordingAvailable: true,
-      watchUrl: '/webinars / data - driven - decision - making',
-    },
+      watchUrl: '/webinars / data - driven - decision - making'},
     {
+
       id: 5,
       title: 'Digital Twin Technology: Measuring ROI in Manufacturing',
       description:
@@ -166,11 +168,11 @@ const Webinars: React.FC = () => {
       tags: ['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],
       thumbnail: '/images / webinars / digital - twin - 2024.jpg',
       recordingAvailable: true,
-      watchUrl: '/webinars / digital - twin - technology - roi',
-    },
+      watchUrl: '/webinars / digital - twin - technology - roi'},
   ];
 
   const filteredWebinars = [...upcomingWebinars, ...onDemandWebinars].filter (webinar => {
+
       const matchesSearch = webinar.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         webinar.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
       const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
@@ -235,6 +237,7 @@ const Webinars: React.FC = () => {
                   {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                       onClick={ () => setActiveCategory (category.id) }
                       className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - colors ${
+
                         activeCategory === category.id
                           ? 'bg - blue - 500 text - white'
                           : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50'
@@ -256,6 +259,7 @@ const Webinars: React.FC = () => {
                   {filterTypes.map (type => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={type.id}
                       onClick={ () => setFilterType (type.id) }
                       className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - colors ${
+
                         filterType === type.id
                           ? 'bg - purple - 500 text - white'
                           : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50'
@@ -300,6 +304,7 @@ const Webinars: React.FC = () => {
                     <div role="button" className="flex items - center gap - 2 mb - 3">
                       <span
                         className={`px - 2 py - 1 rounded - full text - xs font - medium ${
+
                           webinar.type === 'upcoming'
                             ? 'bg - blue - 500 / 20 text - blue - 400'
                             : webinar.type === 'on - demand'

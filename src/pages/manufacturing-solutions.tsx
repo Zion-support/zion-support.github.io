@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default ManufacturingSolutions;
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Factory,
@@ -15,12 +16,13 @@ import { motion } from 'framer - motion.ts';
   Eye,
   Brain,
   Cloud,
-  Star,
-} from 'lucide - react.ts';
+  Star} from 'lucide - react.ts';
 
 const ManufacturingSolutions: React.FC = () : JSX.Element => {
+
   const solutions = [
     {
+
       title: 'Smart Factory Automation',
       description:
         'Intelligent automation systems that optimize production processes and increase efficiency.',
@@ -30,9 +32,9 @@ const ManufacturingSolutions: React.FC = () : JSX.Element => {
         'Real - time monitoring',
         'Predictive maintenance',
         'Quality control',
-      ],
-    },
+      ]},
     {
+
       title: 'Industrial IoT Integration',
       description:
         'Seamless integration of IoT devices for comprehensive manufacturing intelligence.',
@@ -42,9 +44,9 @@ const ManufacturingSolutions: React.FC = () : JSX.Element => {
         'Data collection',
         'Remote monitoring',
         'Predictive analytics',
-      ],
-    },
+      ]},
     {
+
       title: 'AI - Powered Quality Control',
       description:
         'Advanced AI systems for automated quality inspection and defect detection.',
@@ -54,9 +56,9 @@ const ManufacturingSolutions: React.FC = () : JSX.Element => {
         'Defect detection',
         'Quality assurance',
         'Compliance monitoring',
-      ],
-    },
+      ]},
     {
+
       title: 'Predictive Maintenance',
       description:
         'AI - driven maintenance systems that prevent equipment failures and reduce downtime.',
@@ -66,9 +68,9 @@ const ManufacturingSolutions: React.FC = () : JSX.Element => {
         'Failure prediction',
         'Maintenance scheduling',
         'Cost optimization',
-      ],
-    },
+      ]},
     {
+
       title: 'Supply Chain Optimization',
       description:
         'Intelligent supply chain management with AI - powered forecasting and optimization.',
@@ -78,9 +80,9 @@ const ManufacturingSolutions: React.FC = () : JSX.Element => {
         'Inventory optimization',
         'Route planning',
         'Supplier management',
-      ],
-    },
+      ]},
     {
+
       title: 'Digital Twin Technology',
       description:
         'Virtual replicas of physical manufacturing systems for simulation and optimization.',
@@ -90,31 +92,30 @@ const ManufacturingSolutions: React.FC = () : JSX.Element => {
         'Performance optimization',
         'Scenario testing',
         'Real - time monitoring',
-      ],
-    },
+      ]},
   ];
 
   const benefits = [
     {
+
       title: 'Increased Efficiency',
       description: 'Optimize production processes and reduce waste',
-      icon: TrendingUp,
-    },
+      icon: TrendingUp},
     {
+
       title: 'Cost Reduction',
       description: 'Lower operational costs through intelligent automation',
-      icon: BarChart3,
-    },
+      icon: BarChart3},
     {
+
       title: 'Quality Improvement',
       description: 'Enhanced product quality and consistency',
-      icon: Star,
-    },
+      icon: Star},
     {
+
       title: 'Predictive Capabilities',
       description: 'Anticipate and prevent issues before they occur',
-      icon: Brain,
-    },
+      icon: Brain},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">

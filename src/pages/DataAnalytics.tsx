@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default React.memo (function DataAnalytics (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   BarChart3,
@@ -36,62 +38,62 @@ import { motion } from 'framer - motion.ts';
   AlertCircle,
   CheckCircle2,
   XCircle,
-  Info,
-} from 'lucide - react.ts';
+  Info} from 'lucide - react.ts';
 
   const features = [
     {
+
       icon: BarChart3,
       title: 'Advanced Analytics',
       description:
         'Comprehensive business intelligence and data visualization tools',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       icon: Brain,
       title: 'AI - Powered Insights',
       description:
         'Machine learning algorithms for predictive analytics and pattern recognition',
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     {
+
       icon: TrendingUp,
       title: 'Real - time Monitoring',
       description:
         'Live dashboards and instant alerts for critical business metrics',
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       icon: Shield,
       title: 'Data Security',
       description:
         'Enterprise - grade security and compliance for sensitive data',
-      color: 'from - red - 500 to - orange - 500',
-    },
+      color: 'from - red - 500 to - orange - 500'},
     {
+
       icon: Cloud,
       title: 'Cloud Integration',
       description:
         'Seamless integration with major cloud platforms and data warehouses',
-      color: 'from - indigo - 500 to - blue - 500',
-    },
+      color: 'from - indigo - 500 to - blue - 500'},
     {
+
       icon: Users,
       title: 'Collaborative Analytics',
       description: 'Team - based data exploration and shared insights',
-      color: 'from - yellow - 500 to - orange - 500',
-    },
+      color: 'from - yellow - 500 to - orange - 500'},
   ];
 
   const useCases = [
     {
+
       title: 'Business Intelligence',
       description:
         'Transform raw data into actionable insights for strategic decision - making',
       icon: Target,
-      benefits: ['Performance tracking', 'KPI monitoring', 'Trend analysis'],
-    },
+      benefits: ['Performance tracking', 'KPI monitoring', 'Trend analysis']},
     {
+
       title: 'Customer Analytics',
       description:
         'Understand customer behavior and preferences for improved engagement',
@@ -100,16 +102,16 @@ import { motion } from 'framer - motion.ts';
         'Customer segmentation',
         'Behavioral analysis',
         'Churn prediction',
-      ],
-    },
+      ]},
     {
+
       title: 'Financial Analytics',
       description:
         'Monitor financial performance and identify optimization opportunities',
       icon: TrendingUp,
-      benefits: ['Revenue analysis', 'Cost optimization', 'Risk assessment'],
-    },
+      benefits: ['Revenue analysis', 'Cost optimization', 'Risk assessment']},
     {
+
       title: 'Operational Analytics',
       description:
         'Optimize business processes and improve operational efficiency',
@@ -118,8 +120,7 @@ import { motion } from 'framer - motion.ts';
         'Process optimization',
         'Resource allocation',
         'Performance monitoring',
-      ],
-    },
+      ]},
   ];
 
   const technologies = [

@@ -12,6 +12,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["AI Chatbot", "Customer Service", "CRM Integration", "Multi-language"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -27,6 +28,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 96
     },
     {
+
 "
         id: "ai-predictive-analytics","
         title: "AI-Powered Predictive Analytics Platform","
@@ -37,6 +39,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["Predictive Analytics", "Machine Learning", "Business Intelligence", "Forecasting"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -50,6 +53,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 94
     },
     {
+
 "
         id: "ai-document-processing","
         title: "Intelligent Document Processing & OCR","
@@ -60,6 +64,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["OCR", "Document Processing", "Automation", "Data Extraction"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -74,6 +79,7 @@ export const EXPANDED_SERVICES = [
     },
     // Cloud & DevOps Services
     {
+
 "
         id: "cloud-migration-enterprise","
         title: "Enterprise Cloud Migration & Optimization","
@@ -84,6 +90,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["Cloud Migration", "AWS", "Azure", "Cost Optimization", "Security"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -98,6 +105,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 93
     },
     {
+
 "
         id: "devops-automation-suite","
         title: "DevOps Automation & CI/CD Pipeline","
@@ -108,6 +116,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["DevOps", "CI/CD", "Docker", "Kubernetes", "Automation"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -121,6 +130,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 91
     },
     {
+
 "
         id: "kubernetes-management","
         title: "Kubernetes Cluster Management & Monitoring","
@@ -131,6 +141,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["Kubernetes", "Container Orchestration", "Auto-scaling", "Monitoring"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -145,6 +156,7 @@ export const EXPANDED_SERVICES = [
     },
     // Cybersecurity Services
     {
+
 "
         id: "cybersecurity-audit-complete","
         title: "Comprehensive Cybersecurity Audit & Penetration Testing","
@@ -155,6 +167,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["Penetration Testing", "Vulnerability Assessment", "Compliance", "Security Audit"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -169,6 +182,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 95
     },
     {
+
 "
         id: "zero-trust-security","
         title: "Zero Trust Security Architecture Implementation","
@@ -179,6 +193,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["Zero Trust", "Multi-factor Authentication", "Micro-segmentation", "Access Control"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -192,6 +207,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 93
     },
     {
+
 "
         id: "incident-response-planning","
         title: "Incident Response Planning & Tabletop Exercises","
@@ -202,6 +218,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["Incident Response", "Tabletop Exercises", "Ransomware", "Data Breach"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -216,6 +233,7 @@ export const EXPANDED_SERVICES = [
     },
     // Data & Analytics Services
     {
+
 "
         id: "data-warehouse-enterprise","
         title: "Enterprise Data Warehouse & ETL Pipeline","
@@ -226,6 +244,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["Data Warehouse", "ETL", "Business Intelligence", "Data Modeling"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -240,6 +259,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 92
     },
     {
+
 "
         id: "real-time-analytics-dashboard","
         title: "Real-Time Analytics Dashboard & Reporting","
@@ -250,6 +270,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["Real-time Analytics", "Dashboard", "KPI Tracking", "Visualization"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -263,6 +284,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 89
     },
     {
+
 "
         id: "data-governance-compliance","
         title: "Data Governance & Compliance Framework","
@@ -273,6 +295,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["Data Governance", "GDPR", "CCPA", "HIPAA", "Compliance"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -287,6 +310,7 @@ export const EXPANDED_SERVICES = [
     },
     // Web & Mobile Development
     {
+
 "
         id: "progressive-web-app","
         title: "Progressive Web App (PWA) Development","
@@ -297,6 +321,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["PWA", "Offline Functionality", "Push Notifications", "Cross-platform"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -310,6 +335,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 90
     },
     {
+
 "
         id: "mobile-app-cross-platform","
         title: "Cross-Platform Mobile App Development","
@@ -320,6 +346,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["React Native", "Flutter", "iOS", "Android", "Backend API"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -333,6 +360,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 89
     },
     {
+
 "
         id: "ecommerce-platform-custom","
         title: "Custom E-commerce Platform Development","
@@ -343,6 +371,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["E-commerce", "Payment Processing", "Inventory Management", "Admin Dashboard"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -358,6 +387,7 @@ export const EXPANDED_SERVICES = [
     },
     // Blockchain & Web3 Services
     {
+
 "
         id: "smart-contract-development","
         title: "Smart Contract Development & Audit","
@@ -368,6 +398,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["Smart Contracts", "Ethereum", "DeFi", "NFT", "Security Audit"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -381,6 +412,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 91
     },
     {
+
 "
         id: "defi-protocol-development","
         title: "DeFi Protocol Development & Integration","
@@ -391,6 +423,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["DeFi", "Yield Farming", "Liquidity Pools", "Lending", "Security"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -406,6 +439,7 @@ export const EXPANDED_SERVICES = [
     },
     // IoT & Hardware Integration
     {
+
 "
         id: "iot-platform-development","
         title: "IoT Platform Development & Device Integration","
@@ -416,6 +450,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["IoT", "Device Management", "Real-time Monitoring", "Data Collection"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -429,6 +464,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 89
     },
     {
+
 "
         id: "hardware-prototyping","
         title: "Hardware Prototyping & PCB Design","
@@ -439,6 +475,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["PCB Design", "Hardware Prototyping", "Firmware", "IoT", "Robotics"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -453,6 +490,7 @@ export const EXPANDED_SERVICES = [
     },
     // Business Intelligence & Automation
     {
+
 "
         id: "business-process-automation","
         title: "Business Process Automation & RPA","
@@ -463,6 +501,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["RPA", "Process Automation", "Workflow", "Optimization"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -476,6 +515,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 91
     },
     {
+
 "
         id: "erp-system-custom","
         title: "Custom ERP System Development","
@@ -486,6 +526,7 @@ export const EXPANDED_SERVICES = [
         currency: "$","
         tags["ERP", "Finance", "HR", "Inventory", "CRM"],;
         author: {
+
 "
             name: "Zion Tech Group","
             id: "zion-tech-group","
@@ -517,4 +558,5 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 ];
 // Service subcategories for detailed filtering;
 export const EXPANDED_SERVICE_SUBCATEGORIES = {
+
 '"

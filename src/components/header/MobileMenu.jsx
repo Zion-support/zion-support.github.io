@@ -41,8 +41,10 @@ export function MobileMenu({ className }) {
   ];
 
   if (isAuthenticated) {
+
 <<<<<<< HEAD
     navigationItems.push({
+
       href: '/dashboard',
       label: 'Dashboard',
       icon: Settings,

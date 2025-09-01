@@ -6,9 +6,14 @@ import type { NextApiRequest, NextApiResponse } from 'next'; // Using NextApiRes
 // It augments the Node.js http.ServerResponse with a socket property that has the HTTP server
 // and potentially the Socket.IO server instance.
 export interface NextApiResponseWithSocket extends NextApiResponse {
-  socket: NextApiResponse["socket"] & {
+  socket: NextApiResponse['socket'] & {
     server: HTTPServer & {
-      io?: IOServer<ClientToServerEvents, ServerToClientEvents, InterServerEvents, SocketData>; // Typed IOServer
+      io?: IOServer<
+        ClientToServerEvents,
+        ServerToClientEvents,
+        InterServerEvents,
+        SocketData
+      >; // Typed IOServer
     };
   };
   end: () => void; // end is typically called without arguments in this context
@@ -43,7 +48,6 @@ interface SocketData extends Record<string, never> {
   // username?: string;
 }
 
-
 export const config = { api: { bodyParser: false } }; // bodyParser is false for Socket.IO routes
 
 export default function handler(
@@ -62,28 +66,41 @@ export default function handler(
       SocketData
     >(res.socket.server, {
       path: '/api/socket', // Ensure this path matches client-side connection
-      addTrailingSlash: false // Important for Next.js
+      addTrailingSlash: false, // Important for Next.js
     });
     res.socket.server.io = io;
 
-    io.on('connection', (socket: Socket<ClientToServerEvents, ServerToClientEvents, InterServerEvents, SocketData>) => {
-      console.log('A client connected:', socket.id);
+    io.on(
+      'connection',
+      (
+        socket: Socket<
+          ClientToServerEvents,
+          ServerToClientEvents,
+          InterServerEvents,
+          SocketData
+        >
+      ) => {
+        console.log('A client connected:', socket.id);
 
-      socket.on('join-room', (roomId: string) => {
-        console.log(`Socket ${socket.id} joining room ${roomId}`);
-        socket.join(roomId);
-      });
+        socket.on('join-room', (roomId: string) => {
+          console.log(`Socket ${socket.id} joining room ${roomId}`);
+          socket.join(roomId);
+        });
 
-      socket.on('send-message', (payload: ChatMessagePayload) => {
-        // Emit to all clients in the room except the sender
-        console.log(`Message from ${socket.id} in room ${payload.roomId}:`, payload.message);
-        socket.to(payload.roomId).emit('receive-message', payload.message);
-      });
+        socket.on('send-message', (payload: ChatMessagePayload) => {
+          // Emit to all clients in the room except the sender
+          console.log(
+            `Message from ${socket.id} in room ${payload.roomId}:`,
+            payload.message
+          );
+          socket.to(payload.roomId).emit('receive-message', payload.message);
+        });
 
-      socket.on('disconnect', () => {
-        console.log('Client disconnected:', socket.id);
-      });
-    });
+        socket.on('disconnect', () => {
+          console.log('Client disconnected:', socket.id);
+        });
+      }
+    );
   }
   res.end();
 }

@@ -45,6 +45,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
       {/* Structured Data */}"
       <script type="application/ld+json">
         {JSON.stringify({
+
 "
             "@context": "https://schema.org","
             "@type": "Organization","
@@ -53,6 +54,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
             "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png","
             "description": description,"
             "address": {
+
 "
                 "@type": "PostalAddress","
                 "streetAddress": "364 E Main St STE 1008","
@@ -62,6 +64,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 "addressCountry": "US"
             },"
             "contactPoint": {
+
 "
                 "@type": "ContactPoint","
                 "telephone": "+1-302-464-0950","
@@ -79,6 +82,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
       {/* Article specific structured data */}'"
       {type === 'article' && publishedTime && (<script type="application/ld+json">
           {JSON.stringify({
+
 "
                 "@context": "https://schema.org","
                 "@type": "Article","
@@ -86,15 +90,18 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 "description": description,"
                 "image": image,"
                 "author": {
+
 "
                     "@type": "Organization","
                     "name": author
                 },"
                 "publisher": {
+
 "
                     "@type": "Organization","
                     "name": siteName,"
                     "logo": {
+
 "
                         "@type": "ImageObject","
                         "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
@@ -103,6 +110,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 "datePublished": publishedTime,"
                 "dateModified": modifiedTime || publishedTime,"
                 "mainEntityOfPage": {
+
 "
                     "@type": "WebPage","
                     "@id": url

@@ -81,6 +81,7 @@ const technologies = ['
 ];
 ;
 export function FeatureHighlights() {
+
   const containerVariants = {
 
     hidden: { opacity: 0 },

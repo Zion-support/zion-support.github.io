@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react.ts';
 import { SEO } from '@/components / SEO';
 export default React.memo (function Services2028 (...args: any[]) : any {
+
 import {
+
 import { COMPREHENSIVE_IT_SERVICES_2028 } from '../data / comprehensiveITServices2028';
 import { COMPREHENSIVE_PRICING_2028 } from '../data / comprehensivePricingGuide2028';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data / innovativeMicroSaasServices2028';
@@ -46,8 +48,7 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
   ArrowRight,
   ChevronDown,
   CheckCircle,
-  ExternalLink,
-} from 'lucide - react.ts';
+  ExternalLink} from 'lucide - react.ts';
 
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
@@ -68,6 +69,7 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
 
   // Filter services based on search and filters
   const filteredServices = allServices.filter (service => {
+
     const matchesSearch = service.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       service.tags.some (tag =>
@@ -84,7 +86,9 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
 
   // Sort services
   const sortedServices = [...filteredServices].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'price - low':
         return a.price - b.price;
       case 'price - high':
@@ -99,11 +103,11 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
   }) ;
 
   const contactInfo = {
+
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     website: 'https://ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709'};
 
   return (<div className="min - h-screen bg - cyber - black">
       {/* Futuristic Background */}
@@ -112,10 +116,10 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
             key={i}
             className="matrix - rain"
             style={{
+
               left: any`${Math.random () * 100}%`,
               animationDelay: `${Math.random () * 20}s`,
-              animationDuration: `${15 + Math.random () * 10}s`,
-            }}
+              animationDuration: `${15 + Math.random () * 10}s`}}
           >
             {String.fromCharCode (0x30a0 + Math.random () * 96) }
           </div>) ) }
@@ -123,10 +127,10 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
             key={i}
             className="quantum - particles"
             style={{
+
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
-              animationDelay: `${Math.random () * 6}s`,
-            }}
+              animationDelay: `${Math.random () * 6}s`}}
           />) ) }
       </div>
 
@@ -271,6 +275,7 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
                 <div className="flex items - start justify - between mb - 4">
                   <div
                     className={`w - 12 h - 12 rounded - lg flex items - center justify - center ${
+
                       service.featured
                         ? 'bg - gradient - to - br from - neon - cyan to - neon - blue'
                         : 'bg - neon - purple / 20'
