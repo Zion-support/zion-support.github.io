@@ -2,139 +2,96 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Brain, Server, Target, Star, Sparkles, Zap, Users, Award, 
-  Clock, CheckCircle, Globe, Code, ChevronRight, ExternalLink, 
-  TrendingUp, BarChart3, Lock, Eye, FileText, Settings, Monitor, Smartphone,
-  Activity, Target as TargetIcon, Zap as ZapIcon, DollarSign, Rocket,
-  Cpu, Network, Database, Play, HardDrive, Shield, BarChart
+  Shield, Lock, Eye, Brain, Atom, Target, Star, 
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
+  FileText, Settings, Monitor, Smartphone, AlertTriangle, ShieldCheck,
+  Zap as ZapIcon, DollarSign, Rocket
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function AIPoweredITAssetManagementPage() {
+export default function QuantumCybersecurityPage() {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Intelligent asset tracking and predictive maintenance using advanced AI algorithms',
+      icon: Shield,
+      title: 'Quantum-Resistant Encryption',
+      description: 'Advanced cryptographic algorithms that remain secure even against quantum computers',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Server,
-      title: 'Comprehensive Asset Tracking',
-      description: 'Real-time monitoring and management of all IT infrastructure components',
+      icon: Brain,
+      title: 'AI Threat Detection',
+      description: 'Machine learning algorithms that identify and respond to threats in real-time',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: BarChart,
-      title: 'Predictive Insights',
-      description: 'AI-driven predictions for asset lifecycle, performance, and maintenance needs',
+      icon: Lock,
+      title: 'Zero-Trust Architecture',
+      description: 'Verify every user and device before granting access to resources',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Advanced security monitoring and compliance management for all assets',
+      icon: Eye,
+      title: 'Advanced Monitoring',
+      description: '24/7 surveillance of your digital infrastructure with instant threat response',
       color: 'from-orange-500 to-red-500'
     }
   ];
 
-  const capabilities = [
+  const securityLayers = [
     {
-      category: 'Asset Discovery & Inventory',
-      items: [
-        'Automated asset discovery',
-        'Real-time inventory tracking',
-        'Asset classification & tagging',
-        'Location mapping & tracking'
-      ]
+      name: 'Network Security',
+      description: 'Advanced firewall protection and intrusion detection systems',
+      features: ['Next-gen firewalls', 'DDoS protection', 'VPN solutions', 'Network segmentation']
     },
     {
-      category: 'AI Analytics & Insights',
-      items: [
-        'Predictive maintenance',
-        'Performance optimization',
-        'Cost analysis & optimization',
-        'Risk assessment & mitigation'
-      ]
+      name: 'Endpoint Security',
+      description: 'Comprehensive protection for all devices and endpoints',
+      features: ['Antivirus & antimalware', 'Device control', 'Data loss prevention', 'Mobile security']
     },
     {
-      category: 'Lifecycle Management',
-      items: [
-        'Asset lifecycle tracking',
-        'Maintenance scheduling',
-        'Replacement planning',
-        'Depreciation tracking'
-      ]
+      name: 'Cloud Security',
+      description: 'Secure cloud infrastructure and application protection',
+      features: ['Cloud access security', 'API security', 'Container security', 'Cloud compliance']
     },
     {
-      category: 'Security & Compliance',
-      items: [
-        'Security monitoring',
-        'Compliance reporting',
-        'Access control',
-        'Audit trails'
-      ]
-    }
-  ];
-
-  const assetTypes = [
-    {
-      type: 'Hardware Assets',
-      description: 'Servers, workstations, networking equipment, and peripherals',
-      icon: Server,
-      count: '10,000+'
-    },
-    {
-      type: 'Software Assets',
-      description: 'Licenses, applications, and digital tools',
-      icon: Code,
-      count: '500+'
-    },
-    {
-      type: 'Cloud Resources',
-      description: 'Cloud instances, storage, and services',
-      icon: Cloud,
-      count: '2,000+'
-    },
-    {
-      type: 'Network Assets',
-      description: 'Switches, routers, and network infrastructure',
-      icon: Network,
-      count: '1,500+'
+      name: 'Data Protection',
+      description: 'Encryption and access control for sensitive information',
+      features: ['Data encryption', 'Access management', 'Backup security', 'Compliance tools']
     }
   ];
 
   const pricing = {
     starter: {
-      price: '$599/month',
+      price: '$499/month',
       features: [
-        'Up to 1,000 assets',
-        'Basic AI analytics',
-        'Standard reporting',
+        'Basic quantum encryption',
+        'AI threat detection',
+        '24/7 monitoring',
         'Email support',
-        'Cloud deployment'
+        'Up to 100 users'
       ]
     },
     professional: {
-      price: '$1,499/month',
+      price: '$999/month',
       features: [
-        'Up to 10,000 assets',
-        'Advanced AI analytics',
-        'Custom dashboards',
-        'Priority support',
-        'API access',
-        'Advanced reporting',
-        'Predictive maintenance'
+        'Advanced quantum algorithms',
+        'Real-time threat response',
+        'Priority support (2hr)',
+        'Custom security policies',
+        'Up to 1000 users',
+        'Compliance reporting',
+        'Security training'
       ]
     },
     enterprise: {
-      price: '$2,999/month',
+      price: '$2,499/month',
       features: [
-        'Unlimited assets',
-        'Custom AI models',
-        'Dedicated support',
-        'On-premise deployment',
+        'Custom quantum solutions',
+        'Dedicated security team',
+        '24/7 phone support',
+        'Unlimited users',
         'Custom integrations',
         'SLA guarantees',
         'White-label options'
@@ -145,10 +102,10 @@ export default function AIPoweredITAssetManagementPage() {
   return (
     <>
       <Head>
-        <title>AI-Powered IT Asset Management - Zion Tech Group | Intelligent Asset Tracking</title>
-        <meta name="description" content="Revolutionary AI-powered IT asset management platform. Intelligent tracking, predictive maintenance, and comprehensive lifecycle management for all your IT infrastructure." />
-        <meta name="keywords" content="IT asset management, AI asset tracking, predictive maintenance, IT infrastructure management, asset lifecycle" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-powered-it-asset-management" />
+        <title>Quantum Cybersecurity - Zion Tech Group | Future-Proof Security Solutions</title>
+        <meta name="description" content="Future-proof your business with quantum-resistant cybersecurity. AI-powered threat detection, zero-trust architecture, and advanced encryption." />
+        <meta name="keywords" content="quantum cybersecurity, AI security, threat detection, zero-trust security, encryption" />
+        <link rel="canonical" href="https://ziontechgroup.com/quantum-cybersecurity" />
       </Head>
 
       <EnhancedNavigation />
@@ -163,7 +120,7 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             >
-              AI-Powered IT Asset Management
+              Quantum Cybersecurity
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -171,7 +128,7 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="mt-6 text-xl text-gray-300 max-w-4xl mx-auto"
             >
-              Transform your IT infrastructure management with AI-powered asset tracking, predictive maintenance, and intelligent insights. Gain complete visibility and control over all your technology assets.
+              Future-proof your business with quantum-resistant encryption, AI-powered threat detection, and zero-trust security architecture that stays ahead of evolving cyber threats.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -183,15 +140,15 @@ export default function AIPoweredITAssetManagementPage() {
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
-                Start Implementation
-                <Rocket className="w-5 h-5 ml-2" />
+                Get Security Assessment
+                <Shield className="w-5 h-5 ml-2" />
               </a>
               <a
                 href="#demo"
                 className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
               >
                 Watch Demo
-                <Play className="w-5 h-5 ml-2" />
+                <Rocket className="w-5 h-5 ml-2" />
               </a>
             </motion.div>
           </div>
@@ -206,9 +163,9 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Intelligent Asset Management Features</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Advanced Security Features</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Our AI-powered platform provides comprehensive IT asset management with intelligent insights and automation.
+                Our quantum cybersecurity platform combines cutting-edge technology with proven security practices to protect your business from all types of threats.
               </p>
             </motion.div>
 
@@ -232,7 +189,7 @@ export default function AIPoweredITAssetManagementPage() {
           </div>
         </section>
 
-        {/* Asset Types Section */}
+        {/* Security Layers Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -241,66 +198,31 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Comprehensive Asset Coverage</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Multi-Layer Security Architecture</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Manage all types of IT assets from a single, intelligent platform.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {assetTypes.map((asset, index) => (
-                <motion.div
-                  key={asset.type}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 text-center hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="inline-flex p-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 mb-4">
-                    <asset.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{asset.type}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{asset.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400">{asset.count}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Capabilities Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-4">Advanced Management Capabilities</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                From discovery to retirement, our platform handles every aspect of IT asset management.
+                Comprehensive protection across all aspects of your digital infrastructure with multiple security layers working together.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {capabilities.map((capability, index) => (
+              {securityLayers.map((layer, index) => (
                 <motion.div
-                  key={capability.category}
+                  key={layer.name}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50"
                 >
                   <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-                    <ZapIcon className="w-5 h-5 text-cyan-400 mr-2" />
-                    {capability.category}
+                    <ShieldCheck className="w-5 h-5 text-cyan-400 mr-2" />
+                    {layer.name}
                   </h3>
+                  <p className="text-gray-400 mb-4">{layer.description}</p>
                   <ul className="space-y-3">
-                    {capability.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-gray-300">
+                    {layer.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                        {item}
+                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -310,7 +232,7 @@ export default function AIPoweredITAssetManagementPage() {
           </div>
         </section>
 
-        {/* AI Analytics Section */}
+        {/* Threat Intelligence Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -319,26 +241,26 @@ export default function AIPoweredITAssetManagementPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h2 className="text-3xl font-bold text-white mb-6">AI-Powered Analytics & Insights</h2>
+                <h2 className="text-3xl font-bold text-white mb-6">AI-Powered Threat Intelligence</h2>
                 <p className="text-gray-300 text-lg mb-6">
-                  Our AI algorithms analyze asset data to provide predictive insights, optimize performance, and reduce costs across your entire IT infrastructure.
+                  Our advanced AI systems continuously analyze global threat data to identify emerging risks and automatically update your security posture.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Predictive maintenance scheduling and alerts</span>
+                    <span className="text-gray-300">Real-time threat detection and response</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Performance optimization recommendations</span>
+                    <span className="text-gray-300">Machine learning-based anomaly detection</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Cost analysis and budget optimization</span>
+                    <span className="text-gray-300">Automated incident response and recovery</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Risk assessment and mitigation strategies</span>
+                    <span className="text-gray-300">Predictive threat modeling and prevention</span>
                   </li>
                 </ul>
               </motion.div>
@@ -351,24 +273,24 @@ export default function AIPoweredITAssetManagementPage() {
               >
                 <div className="text-center">
                   <div className="inline-flex p-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 mb-4">
-                    <BarChart className="w-12 h-12 text-white" />
+                    <Brain className="w-12 h-12 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">AI Analytics Performance</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">Threat Intelligence Dashboard</h3>
                   <p className="text-gray-300 mb-6">
-                    Real-time insights and predictions for optimal asset management.
+                    Monitor your security posture in real-time with our comprehensive threat intelligence dashboard.
                   </p>
                   <div className="space-y-3 text-left">
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-300">Maintenance Cost Reduction</span>
-                      <span className="text-green-400 font-semibold">-35%</span>
+                      <span className="text-gray-300">Active Threats</span>
+                      <span className="text-red-400 font-semibold">0</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-300">Asset Utilization</span>
-                      <span className="text-cyan-400 font-semibold">+28%</span>
+                      <span className="text-gray-300">Security Score</span>
+                      <span className="text-green-400 font-semibold">98/100</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-300">Predictive Accuracy</span>
-                      <span className="text-blue-400 font-semibold">94.2%</span>
+                      <span className="text-gray-300">Last Scan</span>
+                      <span className="text-cyan-400 font-semibold">2 min ago</span>
                     </div>
                   </div>
                 </div>
@@ -386,9 +308,9 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Choose Your Asset Management Plan</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Security Plans</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Flexible pricing options designed to scale with your asset management needs and infrastructure size.
+                Choose the security plan that best fits your organization&apos;s needs and budget.
               </p>
             </motion.div>
 
@@ -452,18 +374,18 @@ export default function AIPoweredITAssetManagementPage() {
               className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-12 border border-cyan-500/20"
             >
               <h2 className="text-3xl font-bold text-white mb-6">
-                Ready for Intelligent Asset Management?
+                Secure Your Future Today
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Transform your IT infrastructure management with AI-powered insights and automation.
+                Don&apos;t wait for a security breach. Protect your business with quantum-resistant cybersecurity that evolves with emerging threats.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
                 >
-                  Start Implementation
-                  <Rocket className="w-5 h-5 ml-2" />
+                  Get Security Assessment
+                  <Shield className="w-5 h-5 ml-2" />
                 </a>
                 <a
                   href="/pricing"
